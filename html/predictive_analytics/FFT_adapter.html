@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/predictive_analytics/FFT_adapter.md">
-  <title>FFT_adapter</title>
+  <title>Framework Field Theory Adapter</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,7 +92,923 @@
   </aside>
 
   <main>
+<p><img width="1194" height="672" alt="predictive_analytics_FFT_adapter_" src="https://github.com/user-attachments/assets/63ccfc71-3a52-4010-a53c-e3a5c1215224" /></p>
+<h1 id="framework-field-theory-adapter">Framework Field Theory Adapter</h1>
+<blockquote>
+<p><strong>Observe the field around the prediction, not only the predicted point.</strong></p>
+</blockquote>
+<h2 id="module">Module</h2>
+<p>Predictive Analytics</p>
+<h2 id="adapter-id">Adapter ID</h2>
+<p><code>fft</code></p>
+<h2 id="status">Status</h2>
+<p>Experimental.</p>
+<h2 id="source-framework">Source Framework</h2>
+<p>Framework Field Theory (FFT)</p>
+<h2 id="intended-role">Intended Role</h2>
+<p>Substrate / structural observer adapter.</p>
+<hr>
+<h1 id="purpose">Purpose</h1>
+<p>The Framework Field Theory Adapter connects the Predictive Analytics observer architecture to relational and field-oriented observations derived from Framework Field Theory.</p>
+<p>The adapter asks whether a predictive model is treating an observed system primarily as a collection of isolated variables when meaningful information may also exist in:</p>
+<ul>
+<li>relationships,</li>
+<li>boundaries,</li>
+<li>dependencies,</li>
+<li>neighboring states,</li>
+<li>local-to-global structure,</li>
+<li>contextual constraints,</li>
+<li>interacting fields,</li>
+<li>and changes in those relationships.</li>
+</ul>
+<p>The adapter does <strong>not</strong> assume that field-oriented interpretation is superior to conventional statistical representation.</p>
+<p>Its purpose is narrower:</p>
+<blockquote>
+<p><strong>Test whether relational and field-level observations contain independently useful predictive or explanatory information.</strong></p>
+</blockquote>
+<p>If they do not, the adapter should add no authority merely because it provides a richer narrative.</p>
+<hr>
+<h1 id="core-hypothesis">Core Hypothesis</h1>
+<p>Many predictive systems approximately follow a pattern such as:</p>
+<pre><code class="language-text">input variables
+      │
+      ▼
+feature representation
+      │
+      ▼
+model
+      │
+      ▼
+prediction
+</code></pre>
+<p>FFT introduces another observational layer:</p>
+<pre><code class="language-text">                     ┌─────────────────────┐
+                     │   Observed System   │
+                     └──────────┬──────────┘
+                                │
+              ┌─────────────────┼─────────────────┐
+              ▼                 ▼                 ▼
+         Local State       Relationships      Boundaries
+              │                 │                 │
+              └─────────────────┼─────────────────┘
+                                ▼
+                          Field Context
+                                │
+                                ▼
+                       Existing Prediction
+                                │
+                                ▼
+                           FFT Adapter
+                                │
+             ┌──────────────────┼──────────────────┐
+             ▼                  ▼                  ▼
+       local/global         dependency         boundary
+        comparison           mapping           analysis
+             │                  │                  │
+             └──────────────────┼──────────────────┘
+                                ▼
+                     Comparative Assessment
+</code></pre>
+<p>The prediction remains evidence.</p>
+<p>The field representation becomes additional evidence.</p>
+<hr>
+<h1 id="foundational-principle">Foundational Principle</h1>
+<p>The FFT adapter distinguishes:</p>
+<p><strong>state</strong></p>
+<p>from:</p>
+<p><strong>state-in-context</strong></p>
+<p>For an observed element (x):</p>
+<pre><code class="language-text">isolated representation:
+  x
 
+field-aware representation:
+  x + relationships(x) + boundaries(x) + context(x)
+</code></pre>
+<p>This is conceptual notation, not a validated mathematical model.</p>
+<p>The central research question is whether the second representation provides useful information beyond the first.</p>
+<hr>
+<h1 id="what-the-adapter-observes">What the Adapter Observes</h1>
+<p>The initial FFT adapter focuses on six candidate observation classes.</p>
+<h2 id="1-local-state">1. Local State</h2>
+<p>What can be observed directly about the target?</p>
+<p>Examples:</p>
+<ul>
+<li>measured characteristics,</li>
+<li>current performance,</li>
+<li>available evidence,</li>
+<li>model inputs,</li>
+<li>current state,</li>
+<li>immediate behavior.</li>
+</ul>
+<p>The local state should be preserved without field reinterpretation.</p>
+<hr>
+<h2 id="2-relational-state">2. Relational State</h2>
+<p>How does the target relate to other relevant elements?</p>
+<p>Candidate relationships include:</p>
+<ul>
+<li>dependencies,</li>
+<li>constraints,</li>
+<li>correlations,</li>
+<li>influences,</li>
+<li>sequences,</li>
+<li>interactions,</li>
+<li>support structures,</li>
+<li>information flows.</li>
+</ul>
+<p>A relationship must not be inferred merely because two elements appear together.</p>
+<p>Relationship claims require evidence.</p>
+<hr>
+<h2 id="3-boundary-state">3. Boundary State</h2>
+<p>What boundaries define the observation?</p>
+<p>Examples:</p>
+<ul>
+<li>task boundaries,</li>
+<li>domain boundaries,</li>
+<li>model boundaries,</li>
+<li>environmental boundaries,</li>
+<li>temporal boundaries,</li>
+<li>interface boundaries,</li>
+<li>measurement boundaries.</li>
+</ul>
+<p>A boundary can affect what becomes observable.</p>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Changing the boundary may change the apparent system without changing the underlying system itself.</strong></p>
+</blockquote>
+<p>This possibility must be tested rather than assumed.</p>
+<hr>
+<h2 id="4-local-to-global-relationship">4. Local-to-Global Relationship</h2>
+<p>Does a locally observed result remain meaningful at a larger system scale?</p>
+<p>Possible states:</p>
+<pre><code class="language-text">local_signal:
+  persists_globally
+
+local_signal:
+  weakens_globally
+
+local_signal:
+  reverses_globally
+
+local_signal:
+  context_dependent
+
+local_signal:
+  unresolved
+</code></pre>
+<p>A local observation should not automatically become a global identity claim.</p>
+<hr>
+<h2 id="5-contextual-constraint">5. Contextual Constraint</h2>
+<p>Does the surrounding context constrain expression?</p>
+<p>Candidate constraints might include:</p>
+<ul>
+<li>available information,</li>
+<li>interface design,</li>
+<li>time constraints,</li>
+<li>task structure,</li>
+<li>permitted tools,</li>
+<li>social conditions,</li>
+<li>environmental conditions,</li>
+<li>dependency relationships.</li>
+</ul>
+<p>These constraints may or may not be relevant to the construct being assessed.</p>
+<p>The adapter must distinguish:</p>
+<pre><code class="language-text">construct_relevant_constraint
+construct_irrelevant_constraint
+unknown_constraint
+</code></pre>
+<hr>
+<h2 id="6-field-transition">6. Field Transition</h2>
+<p>Does the relationship structure materially change during observation?</p>
+<p>Possible indicators:</p>
+<ul>
+<li>boundary change,</li>
+<li>dependency change,</li>
+<li>context shift,</li>
+<li>task transition,</li>
+<li>resource change,</li>
+<li>tool introduction,</li>
+<li>collaboration change.</li>
+</ul>
+<p>Field transitions may later be passed to the RTT adapter for regime-oriented analysis.</p>
+<p>FFT identifies the candidate structural transition.</p>
+<p>RTT may separately test whether the transition justifies a regime interpretation.</p>
+<hr>
+<h1 id="adapter-inputs">Adapter Inputs</h1>
+<p>The FFT adapter may receive:</p>
+<pre><code class="language-text">observed_system
+existing_prediction
+model_inputs
+model_outputs
+measurement_context
+task_context
+relationship_evidence
+boundary_definitions
+comparison_observations
+temporal_context
+</code></pre>
+<p>Not every invocation requires every field.</p>
+<p>Missing information must remain missing.</p>
+<hr>
+<h1 id="unsupported-inputs">Unsupported Inputs</h1>
+<p>The adapter should reject or abstain from claims requiring:</p>
+<ul>
+<li>unobserved internal states,</li>
+<li>unsupported causal mechanisms,</li>
+<li>undocumented relationships,</li>
+<li>unspecified boundaries,</li>
+<li>hidden capability inferred from poor performance alone,</li>
+<li>metaphoric field relationships presented as measurements.</li>
+</ul>
+<hr>
+<h1 id="core-adapter-pipeline">Core Adapter Pipeline</h1>
+<pre><code class="language-text">Existing Prediction
+        │
+        ▼
+Preserve Original Result
+        │
+        ▼
+Identify Observation Boundary
+        │
+        ▼
+Map Observable Relationships
+        │
+        ▼
+Identify Relevant Constraints
+        │
+        ▼
+Compare Local and Global Structure
+        │
+        ▼
+Test Alternate Boundaries
+        │
+        ▼
+Measure Incremental Information
+        │
+        ▼
+Return:
+  supported
+  partial
+  contradictory
+  no_added_value
+  insufficient_evidence
+</code></pre>
+<hr>
+<h1 id="fft-observation-record">FFT Observation Record</h1>
+<p>Suggested representation:</p>
+<pre><code class="language-yaml">fft_observation:
+  observation_id: fft-observation-001
+
+  target:
+    id: subject-or-system-id
+    boundary: declared
+
+  baseline:
+    model: existing-model
+    prediction: preserved
+
+  local_state:
+    evidence: []
+    confidence: unknown
+
+  relationships:
+    - relationship_id: relation-001
+      source: element-a
+      target: element-b
+      type: dependency
+      evidence: evidence-reference
+      confidence: medium
+
+  boundaries:
+    - boundary_id: task-boundary
+      type: measurement
+      definition: declared
+      confidence: high
+
+  constraints:
+    - constraint_id: time-limit
+      classification: unknown_constraint
+      evidence: evidence-reference
+
+  local_global:
+    status: unresolved
+
+  transition:
+    detected: false
+    evidence: []
+
+  interpretation:
+    status: insufficient_evidence
+
+  limitations:
+    - relational evidence incomplete
+
+  decision_authority: none
+</code></pre>
+<hr>
+<h1 id="fft-operators">FFT Operators</h1>
+<p>The adapter introduces a small internal grammar.</p>
+<h2 id="fft-local"><code>FFT-Local</code></h2>
+<p>Preserves the directly observed state before relational interpretation.</p>
+<pre><code class="language-text">FFT-Local(target)
+  -&gt; local_observation
+</code></pre>
+<hr>
+<h2 id="fft-relate"><code>FFT-Relate</code></h2>
+<p>Maps evidence-supported relationships.</p>
+<pre><code class="language-text">FFT-Relate(target, context)
+  -&gt; relationship_map
+</code></pre>
+<p>This operator must not manufacture missing connections.</p>
+<hr>
+<h2 id="fft-boundary"><code>FFT-Boundary</code></h2>
+<p>Declares and compares observation boundaries.</p>
+<pre><code class="language-text">FFT-Boundary(observation)
+  -&gt; boundary_profile
+</code></pre>
+<p>Questions:</p>
+<ul>
+<li>What is inside the model?</li>
+<li>What is outside it?</li>
+<li>Which boundary choices are arbitrary?</li>
+<li>Which are construct-relevant?</li>
+<li>Does changing the boundary materially alter interpretation?</li>
+</ul>
+<hr>
+<h2 id="fft-constraint"><code>FFT-Constraint</code></h2>
+<p>Identifies constraints affecting the observation.</p>
+<pre><code class="language-text">FFT-Constraint(context)
+  -&gt; constraint_profile
+</code></pre>
+<p>Each constraint should be labeled:</p>
+<pre><code class="language-text">relevant
+irrelevant
+unknown
+</code></pre>
+<hr>
+<h2 id="fft-scale"><code>FFT-Scale</code></h2>
+<p>Compares local observations with larger structural behavior.</p>
+<pre><code class="language-text">FFT-Scale(local, global)
+  -&gt; scale_relationship
+</code></pre>
+<p>Possible outputs:</p>
+<pre><code class="language-text">persistent
+attenuated
+amplified
+reversed
+context_dependent
+unresolved
+</code></pre>
+<hr>
+<h2 id="fft-transition"><code>FFT-Transition</code></h2>
+<p>Identifies changes in relationship or boundary structure.</p>
+<pre><code class="language-text">FFT-Transition(field_t1, field_t2)
+  -&gt; structural_transition_candidate
+</code></pre>
+<p>A detected FFT transition does not automatically constitute an RTT regime transition.</p>
+<hr>
+<h1 id="relationship-classes">Relationship Classes</h1>
+<p>Initial experimental classes:</p>
+<pre><code class="language-text">dependency
+constraint
+support
+inhibition
+sequence
+feedback
+coupling
+translation
+boundary
+containment
+adjacency
+unknown
+</code></pre>
+<p>These classes are provisional.</p>
+<p>They should be removed, merged, or expanded based on validation.</p>
+<hr>
+<h1 id="field-observation-classes">Field Observation Classes</h1>
+<pre><code class="language-text">local
+relational
+boundary
+contextual
+distributed
+temporal
+cross-domain
+tool-mediated
+collaborative
+unknown
+</code></pre>
+<hr>
+<h1 id="adapter-output-states">Adapter Output States</h1>
+<p>Every FFT pass ends in one of the following:</p>
+<h2 id="supported"><code>supported</code></h2>
+<p>The field-oriented observations independently reinforce the baseline interpretation.</p>
+<h2 id="partial"><code>partial</code></h2>
+<p>The baseline appears supported within a narrower boundary than originally implied.</p>
+<h2 id="contradictory"><code>contradictory</code></h2>
+<p>Independent field observations materially conflict with the baseline interpretation.</p>
+<p>This does not automatically invalidate the baseline.</p>
+<h2 id="no_added_value"><code>no_added_value</code></h2>
+<p>The FFT representation does not add meaningful information beyond the baseline.</p>
+<p>This is an important successful outcome.</p>
+<h2 id="insufficient_evidence"><code>insufficient_evidence</code></h2>
+<p>Available evidence cannot support a reliable field interpretation.</p>
+<h2 id="not_applicable"><code>not_applicable</code></h2>
+<p>A field-oriented analysis is not meaningful for the current task.</p>
+<hr>
+<h1 id="model-fit-use">Model-Fit Use</h1>
+<p>FFT can contribute to model-fit analysis by asking whether important relationships were excluded from the predictive representation.</p>
+<p>Example:</p>
+<pre><code class="language-text">baseline_model:
+  variables:
+    - timed_accuracy
+    - completion_rate
+    - correctness
+
+fft_observation:
+  additional_relations:
+    - performance_by_interface
+    - performance_by_context
+    - cross-task_transfer
+
+finding:
+  baseline_prediction: preserved
+  representational_coverage: partial
+  model_fit: unresolved
+</code></pre>
+<p>The adapter does not say:</p>
+<blockquote>
+<p>The original model is wrong.</p>
+</blockquote>
+<p>It says:</p>
+<blockquote>
+<p>The original model does not currently represent all independently observed relationships.</p>
+</blockquote>
+<p>Whether those additional relationships matter must then be tested.</p>
+<hr>
+<h1 id="worked-example-pax-01">Worked Example — PAX-01</h1>
+<h2 id="scenario">Scenario</h2>
+<p>Synthetic subject <code>PAX-01</code> produces weaker performance on a short, timed symbolic assessment but substantially different observations during extended system-level tasks.</p>
+<p>Initial evidence:</p>
+<pre><code class="language-text">timed_symbolic:
+  performance: weak
+
+rapid_classification:
+  performance: weak
+
+system_mapping:
+  performance: strong
+
+cross_domain_problem:
+  performance: strong
+
+long_form_synthesis:
+  performance: strong
+</code></pre>
+<p>The FFT adapter does not interpret this immediately as hidden intelligence.</p>
+<p>It begins structurally.</p>
+<hr>
+<h2 id="pass-1-local-observation">Pass 1 — Local Observation</h2>
+<pre><code class="language-text">FFT-Local(PAX-01)
+
+local:
+  timed_symbolic: weak
+  rapid_classification: weak
+  system_mapping: strong
+  cross_domain_problem: strong
+  long_form_synthesis: strong
+</code></pre>
+<p>Finding:</p>
+<pre><code class="language-text">heterogeneous_performance: observed
+cause: unknown
+</code></pre>
+<hr>
+<h2 id="pass-2-relationship-mapping">Pass 2 — Relationship Mapping</h2>
+<p>Candidate relationship:</p>
+<pre><code class="language-text">task_context
+    │
+    ▼
+observed_performance
+</code></pre>
+<p>Evidence suggests performance differs across task types.</p>
+<p>That establishes variation.</p>
+<p>It does not establish why the variation occurs.</p>
+<pre><code class="language-text">FFT-Relate:
+  relation:
+    task_representation &lt;-&gt; observed_performance
+
+  status: candidate
+  confidence: medium
+</code></pre>
+<hr>
+<h2 id="pass-3-boundary-analysis">Pass 3 — Boundary Analysis</h2>
+<p>Baseline assessment boundary:</p>
+<pre><code class="language-text">rapid symbolic task
++ timed response
++ fixed response format
+</code></pre>
+<p>Extended observation boundary:</p>
+<pre><code class="language-text">multiple tasks
++ longer observation interval
++ relational problems
++ generative responses
+</code></pre>
+<p>The boundaries are materially different.</p>
+<p>Therefore direct global comparison requires caution.</p>
+<pre><code class="language-text">FFT-Boundary:
+  boundary_difference: substantial
+  comparability: partial
+</code></pre>
+<hr>
+<h2 id="pass-4-constraint-analysis">Pass 4 — Constraint Analysis</h2>
+<p>Candidate constraints:</p>
+<pre><code class="language-text">time_limit:
+  status: observed
+
+fixed_response_format:
+  status: observed
+
+context_reduction:
+  status: observed
+
+effect_on_capability:
+  status: unresolved
+</code></pre>
+<p>Notice the distinction.</p>
+<p>The constraints exist.</p>
+<p>Their causal effect has <strong>not</strong> yet been established.</p>
+<hr>
+<h2 id="pass-5-scale-comparison">Pass 5 — Scale Comparison</h2>
+<pre><code class="language-text">local observation:
+  timed symbolic performance: weak
+
+broader observation:
+  structural synthesis performance: strong
+</code></pre>
+<p>FFT result:</p>
+<pre><code class="language-text">local_global_relationship:
+  status: nonuniform
+
+interpretation:
+  single local result does not summarize
+  the broader observation set
+</code></pre>
+<p>That is a structural conclusion.</p>
+<p>It is not yet an intelligence conclusion.</p>
+<hr>
+<h1 id="relationship-to-resonant-iq-fingerprint">Relationship to Resonant IQ Fingerprint</h1>
+<p>Within RIQF, FFT primarily supports dimensions such as:</p>
+<pre><code class="language-text">structural_reasoning
+pattern_recognition
+causal_integration
+cross_domain_transfer
+long_horizon_integration
+</code></pre>
+<p>But FFT does not assign these dimensions merely because their names fit the framework.</p>
+<p>Each dimension requires its own evidence.</p>
+<p>For example:</p>
+<pre><code class="language-yaml">dimension:
+  id: structural_reasoning
+
+  fft_support:
+    relationship_mapping: observed
+    boundary_recognition: observed
+    local_global_translation: observed
+
+  evidence_sources: 3
+  confidence: medium
+
+  status: partially_observed
+</code></pre>
+<hr>
+<h1 id="relationship-to-the-inverted-star">Relationship to The Inverted Star</h1>
+<p>FFT and The Inverted Star investigate different questions.</p>
+<p>FFT asks:</p>
+<blockquote>
+<p><strong>What relationships and boundaries surround the observation?</strong></p>
+</blockquote>
+<p>The Inverted Star asks:</p>
+<blockquote>
+<p><strong>Does the broader evidence create an inversion between expected and demonstrated behavior?</strong></p>
+</blockquote>
+<p>Pipeline:</p>
+<pre><code class="language-text">prediction
+   │
+   ▼
+FFT structural context
+   │
+   ▼
+candidate discrepancy
+   │
+   ▼
+Inverted Star
+   │
+   ▼
+inversion test
+</code></pre>
+<p>FFT should not declare the inversion itself merely because contextual variation exists.</p>
+<hr>
+<h1 id="relationship-to-structural-detection">Relationship to Structural Detection</h1>
+<p>FFT maps relationships.</p>
+<p>Structural Detection examines whether meaningful structural patterns can be detected within those relationships.</p>
+<pre><code class="language-text">FFT:
+  map the field
+
+Structural Detection:
+  inspect the structure
+</code></pre>
+<p>A useful division of responsibility is:</p>
+<pre><code class="language-text">FFT
+  -&gt; relationships
+  -&gt; boundaries
+  -&gt; constraints
+  -&gt; local/global context
+
+Structural Detection
+  -&gt; pattern
+  -&gt; invariant
+  -&gt; faultline
+  -&gt; structural reconstruction
+</code></pre>
+<p>Overlap should be measured rather than assumed away.</p>
+<p>If both adapters ultimately generate equivalent information, the architecture should simplify.</p>
+<hr>
+<h1 id="relationship-to-rtt">Relationship to RTT</h1>
+<p>FFT can identify structural transitions.</p>
+<p>RTT can examine whether those transitions correspond to distinct operating regimes.</p>
+<pre><code class="language-text">FFT:
+  relationship structure changed
+
+RTT:
+  does this constitute a meaningful regime transition?
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-text">field_t1:
+  individual
+  timed
+  symbolic
+
+field_t2:
+  collaborative
+  reflective
+  relational
+</code></pre>
+<p>FFT:</p>
+<pre><code class="language-text">structural_transition_candidate: true
+</code></pre>
+<p>RTT:</p>
+<pre><code class="language-text">regime_transition:
+  status: not_yet_tested
+</code></pre>
+<p>This separation prevents a field change from automatically becoming a regime claim.</p>
+<hr>
+<h1 id="relationship-to-resonance">Relationship to Resonance</h1>
+<p>FFT identifies contextual relationships.</p>
+<p>The Resonance adapter asks whether changes in those relationships repeatedly correspond to amplification, suppression, persistence, or instability.</p>
+<pre><code class="language-text">FFT:
+  context A differs from context B
+
+Resonance:
+  does capability expression change
+  systematically across A and B?
+</code></pre>
+<p>Again, repeated measurement matters.</p>
+<hr>
+<h1 id="validation-requirements">Validation Requirements</h1>
+<p>The FFT adapter should be evaluated against simpler baselines.</p>
+<p>Required comparison:</p>
+<pre><code class="language-text">M0:
+  original predictive model
+
+M1:
+  original model
+  + ordinary contextual variables
+
+M2:
+  multidimensional baseline
+
+M3:
+  M2
+  + explicit relational features
+
+M4:
+  M3
+  + FFT adapter
+
+M5:
+  complete Predictive Analytics ensemble
+</code></pre>
+<p>This distinction is critical.</p>
+<p>If <code>M3</code> performs as well as <code>M4</code>, then FFT terminology may not provide additional analytical value.</p>
+<p>That is a legitimate result.</p>
+<hr>
+<h1 id="primary-metrics">Primary Metrics</h1>
+<h2 id="pa-m08-convergent-association"><code>PA-M08 — Convergent Association</code></h2>
+<p>Do FFT-derived observations relate to independent measures they are expected to relate to?</p>
+<hr>
+<h2 id="pa-m09-discriminant-separation"><code>PA-M09 — Discriminant Separation</code></h2>
+<p>Do FFT concepts represent distinct information, or merely rename neighboring constructs?</p>
+<hr>
+<h2 id="pa-m10-incremental-explanatory-value"><code>PA-M10 — Incremental Explanatory Value</code></h2>
+<p>Does FFT improve explanation beyond simpler representations?</p>
+<hr>
+<h2 id="pa-m11-incremental-predictive-value"><code>PA-M11 — Incremental Predictive Value</code></h2>
+<p>Does FFT improve out-of-sample prediction where prediction is relevant?</p>
+<hr>
+<h2 id="pa-m15-substrate-specificity"><code>PA-M15 — Substrate Specificity</code></h2>
+<p>Do apparent field effects survive appropriate controls?</p>
+<hr>
+<h2 id="pa-m33-irrelevant-perturbation-stability"><code>PA-M33 — Irrelevant Perturbation Stability</code></h2>
+<p>Does the field interpretation remain stable when irrelevant contextual details change?</p>
+<hr>
+<h2 id="pa-m34-relevant-change-sensitivity"><code>PA-M34 — Relevant Change Sensitivity</code></h2>
+<p>Does the adapter respond appropriately when meaningful relationships change?</p>
+<hr>
+<h2 id="pa-m36-adapter-ablation-effect"><code>PA-M36 — Adapter Ablation Effect</code></h2>
+<p>Does removing FFT materially change performance?</p>
+<p>Conceptually:</p>
+<pre><code class="language-text">AAE(FFT) =
+  performance(full_adapter_set)
+  - performance(without_FFT)
+</code></pre>
+<p>If the difference is negligible across appropriate studies, FFT should not receive special status.</p>
+<hr>
+<h1 id="failure-modes">Failure Modes</h1>
+<h2 id="narrative-field-inflation">Narrative Field Inflation</h2>
+<p>Risk:</p>
+<p>Every available contextual detail gets turned into a meaningful relationship.</p>
+<p>Mitigation:</p>
+<p>Require evidence for relationships.</p>
+<hr>
+<h2 id="boundary-shopping">Boundary Shopping</h2>
+<p>Risk:</p>
+<p>Observation boundaries are repeatedly changed until a preferred interpretation appears.</p>
+<p>Mitigation:</p>
+<p>Predeclare relevant boundaries where possible and report every tested boundary.</p>
+<hr>
+<h2 id="favorability-bias">Favorability Bias</h2>
+<p>Risk:</p>
+<p>Field context is introduced only when the conventional result is unfavorable.</p>
+<p>Mitigation:</p>
+<p>Apply the adapter symmetrically to favorable, unfavorable, and neutral baseline results.</p>
+<hr>
+<h2 id="relationship-inflation">Relationship Inflation</h2>
+<p>Risk:</p>
+<p>Correlation, proximity, or co-occurrence is treated as structural dependence.</p>
+<p>Mitigation:</p>
+<p>Use relationship states such as:</p>
+<pre><code class="language-text">observed
+supported
+candidate
+unknown
+rejected
+</code></pre>
+<hr>
+<h2 id="complexity-theater">Complexity Theater</h2>
+<p>Risk:</p>
+<p>The field representation looks sophisticated without improving measurement.</p>
+<p>Mitigation:</p>
+<p>Compare against simpler baselines and require ablation testing.</p>
+<hr>
+<h2 id="causal-overreach">Causal Overreach</h2>
+<p>Risk:</p>
+<p>A structural relationship is converted into a causal explanation.</p>
+<p>Mitigation:</p>
+<p>Keep separate fields:</p>
+<pre><code class="language-text">relationship_observed: true
+causal_evidence: insufficient
+</code></pre>
+<hr>
+<h2 id="canon-confirmation">Canon Confirmation</h2>
+<p>Risk:</p>
+<p>FFT is judged valid because the surrounding TriadicFrameworks canon expects it to be useful.</p>
+<p>Mitigation:</p>
+<p>Treat the adapter as falsifiable.</p>
+<p>Canon alignment is not validation.</p>
+<hr>
+<h1 id="falsification-conditions">Falsification Conditions</h1>
+<p>The FFT adapter should be revised, restricted, deprecated, or rejected if:</p>
+<ul>
+<li>relationship classifications cannot be reproduced,</li>
+<li>evaluator agreement remains poor,</li>
+<li>field observations fail to generalize,</li>
+<li>simpler contextual models perform equivalently,</li>
+<li>FFT adds no incremental explanatory or predictive value,</li>
+<li>field interpretations depend strongly on evaluator preference,</li>
+<li>boundary selection produces arbitrary conclusions,</li>
+<li>the adapter systematically generates preferred interpretations,</li>
+<li>or ablation shows negligible contribution.</li>
+</ul>
+<p>Possible lifecycle:</p>
+<pre><code class="language-text">proposed
+experimental
+pilot
+validated_for_context
+restricted
+deprecated
+rejected
+</code></pre>
+<hr>
+<h1 id="ethical-boundary">Ethical Boundary</h1>
+<p>FFT must not be used to imply:</p>
+<blockquote>
+<p>"The field proves the person is more intelligent than the conventional test suggests."</p>
+</blockquote>
+<p>A defensible output is narrower:</p>
+<blockquote>
+<p><strong>"The available observations vary across materially different relational and measurement contexts, and the current model may not represent all observed structure."</strong></p>
+</blockquote>
+<p>That statement can then be tested.</p>
+<hr>
+<h1 id="decision-authority">Decision Authority</h1>
+<pre><code class="language-text">decision_authority: none
+
+authorized_use:
+  - research
+  - demonstration
+  - framework development
+  - hypothesis generation
+
+prohibited_use:
+  - diagnosis
+  - automated hiring decision
+  - educational exclusion
+  - legal determination
+  - automated adverse decision
+</code></pre>
+<hr>
+<h1 id="minimal-adapter-output-contract">Minimal Adapter Output Contract</h1>
+<p>Every FFT adapter result should carry:</p>
+<pre><code class="language-yaml">fft_result:
+  observation_id:
+
+  target:
+  observation_boundary:
+
+  baseline_prediction:
+  baseline_preserved: true
+
+  local_state:
+  relationships:
+  boundaries:
+  constraints:
+  local_global_relationship:
+
+  transition:
+    detected:
+    evidence:
+
+  added_information:
+  contradictory_information:
+
+  confidence:
+  uncertainty:
+  missing_evidence:
+
+  alternative_interpretations:
+  limitations:
+
+  validation_state:
+  decision_authority: none
+</code></pre>
+<hr>
+<h1 id="research-questions">Research Questions</h1>
+<p>The FFT adapter creates several direct research questions.</p>
+<ol>
+<li>Do relational representations improve prediction beyond conventional feature sets?</li>
+<li>Do explicit boundary observations improve explanation or calibration?</li>
+<li>Can local-to-global mismatch be measured reliably?</li>
+<li>Can independent evaluators reproduce field maps?</li>
+<li>Do field representations generalize across domains?</li>
+<li>Can substrate effects be distinguished from ordinary task difficulty?</li>
+<li>Does FFT add value beyond established relational or network methods?</li>
+<li>Which FFT constructs survive ablation?</li>
+<li>Which should be merged with existing constructs?</li>
+<li>Under what conditions should the adapter abstain?</li>
+</ol>
+<p>These questions matter more than preserving the adapter itself.</p>
+<hr>
+<h1 id="core-invariants">Core Invariants</h1>
+<pre><code class="language-text">field_context != hidden_capability
+relationship != causation
+boundary_change != regime_change
+context_effect != superiority
+complexity != validity
+local_result != global_identity
+adapter_output != decision_authority
+canon_alignment != empirical_validation
+</code></pre>
+<hr>
+<h1 id="closing-principle">Closing Principle</h1>
+<p>A predictive model observes through a boundary.</p>
+<p>FFT asks us to make that boundary visible.</p>
+<p>It then asks whether relationships outside or across the original boundary contain information that materially changes our understanding of the observation.</p>
+<p>Sometimes they will.</p>
+<p>Sometimes they will reinforce the original model.</p>
+<p>Sometimes they will add nothing.</p>
+<p>Sometimes there will not be enough evidence to know.</p>
+<p>All four outcomes are useful.</p>
+<blockquote>
+<p><strong>The FFT adapter succeeds when it makes relational structure testable, not when it makes the prediction more favorable.</strong></p>
+</blockquote>
   </main>
 </body>
 </html>

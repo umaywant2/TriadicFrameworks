@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/predictive_analytics/counterfactual_layer.md">
-  <title>counterfactual_layer</title>
+  <title>Predictive Analytics — Counterfactual Layer</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,7 +92,1633 @@
   </aside>
 
   <main>
+<p><img width="1194" height="672" alt="predictive_analytics_counterfactual_layer_" src="https://github.com/user-attachments/assets/56be6dbd-3b05-4cfd-89f8-b54e68aefe65" /></p>
+<h1 id="predictive-analytics-counterfactual-layer">Predictive Analytics — Counterfactual Layer</h1>
+<blockquote>
+<p><strong>If the interpretation changes when an irrelevant detail changes, the interpretation is unstable. If it does not change when meaningful evidence changes, it is insensitive.</strong></p>
+</blockquote>
+<h2 id="module">Module</h2>
+<p>Predictive Analytics</p>
+<h2 id="layer-id">Layer ID</h2>
+<p><code>counterfactual</code></p>
+<h2 id="status">Status</h2>
+<p>Experimental.</p>
+<h2 id="intended-role">Intended Role</h2>
+<p>Alternative-representation, perturbation, robustness, sensitivity, model-comparison, and interpretation-challenge layer.</p>
+<hr>
+<h1 id="purpose">Purpose</h1>
+<p>The Counterfactual Layer tests whether a Predictive Analytics interpretation remains defensible when reasonable alternatives are introduced.</p>
+<p>It may challenge:</p>
+<ul>
+<li>the original prediction,</li>
+<li>the measurement representation,</li>
+<li>the substrate,</li>
+<li>the regime boundary,</li>
+<li>the task conditions,</li>
+<li>the multidimensional profile,</li>
+<li>an adapter finding,</li>
+<li>an uncertainty classification,</li>
+<li>or the final comparative assessment.</li>
+</ul>
+<p>The Counterfactual Layer does not exist only to challenge conventional models.</p>
+<p>It must also challenge:</p>
+<ul>
+<li>RTT interpretations,</li>
+<li>Structural Detection findings,</li>
+<li>FFT relationships,</li>
+<li>Inverted Star inversions,</li>
+<li>Resonance findings,</li>
+<li>RIQF dimensions,</li>
+<li>and Predictive Analytics itself.</li>
+</ul>
+<p>Its central question is:</p>
+<blockquote>
+<p><strong>What happens to this interpretation if we change something that reasonably could have been different?</strong></p>
+</blockquote>
+<hr>
+<h1 id="core-principle">Core Principle</h1>
+<p>A robust interpretation should exhibit two complementary properties:</p>
+<pre><code class="language-text">stability under irrelevant change
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">sensitivity to relevant change
+</code></pre>
+<p>Both are necessary.</p>
+<p>A model that changes constantly is unstable.</p>
+<p>A model that never changes is insensitive.</p>
+<p>Therefore:</p>
+<pre><code class="language-text">robustness
+  =
+appropriate stability
+  +
+appropriate sensitivity
+</code></pre>
+<p>This is conceptual notation, not a validated metric.</p>
+<hr>
+<h1 id="counterfactual-versus-alternative-observation">Counterfactual Versus Alternative Observation</h1>
+<p>A counterfactual is not automatically another real observation.</p>
+<p>Distinguish:</p>
+<pre><code class="language-text">factual observation
+</code></pre>
+<p>from:</p>
+<pre><code class="language-text">alternate factual observation
+</code></pre>
+<p>from:</p>
+<pre><code class="language-text">counterfactual transformation
+</code></pre>
+<p>from:</p>
+<pre><code class="language-text">hypothetical scenario
+</code></pre>
+<p>These have different evidentiary weight.</p>
+<hr>
+<h1 id="evidence-states">Evidence States</h1>
+<h2 id="factual-observation">Factual Observation</h2>
+<p>An event or result actually observed.</p>
+<pre><code class="language-text">status:
+  observed
+</code></pre>
+<hr>
+<h2 id="alternate-factual-observation">Alternate Factual Observation</h2>
+<p>A second real observation produced under different conditions.</p>
+<pre><code class="language-text">status:
+  observed_alternate
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-text">timed task:
+  actually observed
 
+reflective task:
+  actually observed
+</code></pre>
+<p>This is stronger evidence than merely imagining what would happen under the reflective task.</p>
+<hr>
+<h2 id="counterfactual-transformation">Counterfactual Transformation</h2>
+<p>A controlled modification to an existing observation or model representation.</p>
+<pre><code class="language-text">status:
+  counterfactual
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-text">same evidence
+different classification threshold
+</code></pre>
+<hr>
+<h2 id="hypothetical-scenario">Hypothetical Scenario</h2>
+<p>A proposed but unobserved condition.</p>
+<pre><code class="language-text">status:
+  hypothetical
+</code></pre>
+<p>Hypothetical outcomes must not be reported as observed evidence.</p>
+<hr>
+<h1 id="core-counterfactual-pipeline">Core Counterfactual Pipeline</h1>
+<pre><code class="language-text">Baseline Assessment
+        │
+        ▼
+Preserve Baseline
+        │
+        ▼
+Identify Target Claim
+        │
+        ▼
+Identify Assumptions
+        │
+        ▼
+Select Counterfactual Variable
+        │
+        ▼
+Classify Variable:
+  relevant
+  irrelevant
+  unknown
+        │
+        ▼
+Apply Controlled Change
+        │
+        ▼
+Re-evaluate Assessment
+        │
+        ▼
+Measure Difference
+        │
+        ▼
+Check Expected Direction
+        │
+        ▼
+Classify Robustness
+        │
+        ▼
+Return:
+  stable
+  appropriately_sensitive
+  overly_sensitive
+  insensitive
+  representation_dependent
+  substrate_dependent
+  regime_dependent
+  unresolved
+</code></pre>
+<hr>
+<h1 id="baseline-preservation">Baseline Preservation</h1>
+<p>Every counterfactual test begins with an immutable baseline record.</p>
+<pre><code class="language-yaml">baseline:
+  assessment_id:
+  prediction:
+  profile:
+  adapter_results:
+  confidence:
+  uncertainty:
+  preserved: true
+</code></pre>
+<p>The counterfactual result is compared with the baseline.</p>
+<p>It does not replace it.</p>
+<hr>
+<h1 id="counterfactual-record">Counterfactual Record</h1>
+<p>Suggested representation:</p>
+<pre><code class="language-yaml">counterfactual:
+  id: cf-001
+
+  baseline:
+    assessment_id: assessment-001
+
+  target_claim:
+    structural_reasoning_is_strong
+
+  transformation:
+    variable: time_limit
+    baseline_value: severe
+    counterfactual_value: moderate
+
+  classification:
+    relevance: unknown
+
+  source:
+    type: hypothetical
+
+  result:
+    status: not_observed
+
+  interpretation:
+    status: unresolved
+
+  evidence:
+    - baseline-evidence-reference
+
+  limitations:
+    - counterfactual condition not empirically observed
+
+  decision_authority: none
+</code></pre>
+<p>This record correctly refuses to pretend that the hypothetical result is known.</p>
+<hr>
+<h1 id="counterfactual-classes">Counterfactual Classes</h1>
+<p>The initial layer defines several classes of counterfactual testing.</p>
+<h2 id="1-representation-counterfactual">1. Representation Counterfactual</h2>
+<p>Change how the same evidence is represented.</p>
+<p>Example:</p>
+<pre><code class="language-text">Representation A:
+  scalar composite
+
+Representation B:
+  multidimensional profile
+</code></pre>
+<p>Question:</p>
+<blockquote>
+<p>Does the conclusion change because new evidence was introduced, or because the existing evidence was represented differently?</p>
+</blockquote>
+<p>This distinction is central to RIQF.</p>
+<hr>
+<h1 id="representation-example">Representation Example</h1>
+<p>Baseline:</p>
+<pre><code class="language-text">IQ-like scalar:
+  94
+
+interpretation:
+  below reference expectation
+</code></pre>
+<p>Counterfactual representation:</p>
+<pre><code class="language-text">multidimensional profile:
+  structural reasoning: strong
+  cross-domain transfer: strong
+  rapid symbolic processing: weak
+  timed classification: weak
+</code></pre>
+<p>Possible finding:</p>
+<pre><code class="language-text">representation_dependence:
+  high
+</code></pre>
+<p>But this does not establish that the multidimensional representation is more valid.</p>
+<p>Validation must test that separately.</p>
+<hr>
+<h1 id="2-substrate-counterfactual">2. Substrate Counterfactual</h1>
+<p>Ask what happens when the expression or measurement substrate changes.</p>
+<p>Example:</p>
+<pre><code class="language-text">baseline:
+  symbolic
+  timed
+  fixed-choice
+
+counterfactual:
+  relational
+  reflective
+  generative
+</code></pre>
+<p>If the alternate condition is actually observed, this becomes:</p>
+<pre><code class="language-text">alternate factual observation
+</code></pre>
+<p>rather than purely counterfactual.</p>
+<p>The distinction must be preserved.</p>
+<hr>
+<h1 id="3-regime-counterfactual">3. Regime Counterfactual</h1>
+<p>Change the assumed or detected regime boundary.</p>
+<p>Example:</p>
+<pre><code class="language-text">baseline boundary:
+  t4
+
+counterfactual boundary:
+  t3
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">counterfactual boundary:
+  t5
+</code></pre>
+<p>Question:</p>
+<blockquote>
+<p>Does the regime interpretation survive reasonable boundary movement?</p>
+</blockquote>
+<p>If not:</p>
+<pre><code class="language-text">regime_boundary_sensitivity:
+  high
+</code></pre>
+<p>and confidence should fall.</p>
+<hr>
+<h1 id="4-model-counterfactual">4. Model Counterfactual</h1>
+<p>Compare alternative reasonable predictive models.</p>
+<pre><code class="language-text">Model A:
+  scalar
+
+Model B:
+  multidimensional
+
+Model C:
+  context-conditioned
+
+Model D:
+  substrate-aware
+</code></pre>
+<p>Question:</p>
+<blockquote>
+<p>Which conclusions survive across credible models?</p>
+</blockquote>
+<hr>
+<h1 id="5-adapter-counterfactual">5. Adapter Counterfactual</h1>
+<p>Remove an adapter.</p>
+<pre><code class="language-text">full ensemble
+</code></pre>
+<p>versus:</p>
+<pre><code class="language-text">ensemble without RTT
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">ensemble without Structural Detection
+</code></pre>
+<p>This connects directly to:</p>
+<pre><code class="language-text">PA-M36 — Adapter Ablation Effect
+</code></pre>
+<p>Counterfactual question:</p>
+<blockquote>
+<p>Would the assessment materially change if this adapter did not exist?</p>
+</blockquote>
+<hr>
+<h1 id="6-evidence-counterfactual">6. Evidence Counterfactual</h1>
+<p>Remove or alter one piece of evidence.</p>
+<p>Example:</p>
+<pre><code class="language-text">baseline evidence:
+  E1
+  E2
+  E3
+  E4
+
+counterfactual:
+  remove E3
+</code></pre>
+<p>If the assessment changes dramatically:</p>
+<pre><code class="language-text">evidence_dependency:
+  high
+</code></pre>
+<p>This may be legitimate if <code>E3</code> is genuinely critical.</p>
+<p>The dependency should simply be visible.</p>
+<hr>
+<h1 id="7-order-counterfactual">7. Order Counterfactual</h1>
+<p>Reorder equivalent observations or tasks.</p>
+<pre><code class="language-text">Order A:
+  task1 -&gt; task2 -&gt; task3
+
+Order B:
+  task3 -&gt; task1 -&gt; task2
+</code></pre>
+<p>If order should be irrelevant but the final assessment changes significantly:</p>
+<pre><code class="language-text">order_sensitivity:
+  elevated
+</code></pre>
+<p>This corresponds to:</p>
+<pre><code class="language-text">PA-M35 — Task-Order Sensitivity
+</code></pre>
+<hr>
+<h1 id="8-context-counterfactual">8. Context Counterfactual</h1>
+<p>Change contextual information that should or should not affect the result.</p>
+<p>Examples:</p>
+<pre><code class="language-text">subject name
+formatting
+irrelevant biography
+task ordering
+non-causal descriptive context
+</code></pre>
+<p>This is particularly useful for detecting unintended sensitivity.</p>
+<hr>
+<h1 id="9-observer-counterfactual">9. Observer Counterfactual</h1>
+<p>Change evaluator or observer.</p>
+<pre><code class="language-text">Evaluator A
+Evaluator B
+Evaluator C
+</code></pre>
+<p>If a supposedly structured assessment changes substantially:</p>
+<pre><code class="language-text">observer_dependency:
+  candidate
+</code></pre>
+<p>This should feed into inter-rater validation.</p>
+<hr>
+<h1 id="10-tool-counterfactual">10. Tool Counterfactual</h1>
+<p>Compare:</p>
+<pre><code class="language-text">unassisted
+</code></pre>
+<p>with:</p>
+<pre><code class="language-text">tool-assisted
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">human-AI collaborative
+</code></pre>
+<p>These are not interchangeable system boundaries.</p>
+<p>Results must remain attributed to the correct observed system.</p>
+<hr>
+<h1 id="11-temporal-counterfactual">11. Temporal Counterfactual</h1>
+<p>Ask whether the conclusion depends on the selected observation window.</p>
+<p>Example:</p>
+<pre><code class="language-text">window_a:
+  January -&gt; March
+
+window_b:
+  January -&gt; June
+
+window_c:
+  April -&gt; June
+</code></pre>
+<p>If conclusions differ:</p>
+<pre><code class="language-text">temporal_window_dependence:
+  detected
+</code></pre>
+<p>That may be meaningful rather than erroneous.</p>
+<p>RTT can help interpret it.</p>
+<hr>
+<h1 id="12-threshold-counterfactual">12. Threshold Counterfactual</h1>
+<p>Where another model uses a threshold:</p>
+<pre><code class="language-text">threshold:
+  0.50
+</code></pre>
+<p>test nearby reasonable thresholds:</p>
+<pre><code class="language-text">0.45
+0.50
+0.55
+</code></pre>
+<p>If classification changes constantly:</p>
+<pre><code class="language-text">threshold_fragility:
+  high
+</code></pre>
+<p>The threshold should not be treated as a natural boundary without additional justification.</p>
+<hr>
+<h1 id="13-missing-evidence-counterfactual">13. Missing-Evidence Counterfactual</h1>
+<p>Ask:</p>
+<blockquote>
+<p>What if the unavailable evidence were different?</p>
+</blockquote>
+<p>This must be handled carefully.</p>
+<p>No value should be invented.</p>
+<p>Correct representation:</p>
+<pre><code class="language-yaml">missing_evidence:
+  variable: cross_domain_transfer
+
+  possible_states:
+    - strong
+    - moderate
+    - weak
+
+  result_dependency:
+    strong: assessment_changes
+    moderate: assessment_partially_changes
+    weak: assessment_unchanged
+
+  actual_state:
+    unknown
+</code></pre>
+<p>This is a sensitivity analysis.</p>
+<p>It is not evidence about the person or system.</p>
+<hr>
+<h1 id="counterfactual-relevance">Counterfactual Relevance</h1>
+<p>Every transformation should be classified:</p>
+<pre><code class="language-text">relevant
+irrelevant
+plausibly_relevant
+unknown
+</code></pre>
+<p>The classification itself requires justification.</p>
+<hr>
+<h1 id="irrelevant-perturbation-test">Irrelevant Perturbation Test</h1>
+<p>A robust assessment should generally resist changes that are irrelevant to the intended construct.</p>
+<p>Example:</p>
+<pre><code class="language-text">baseline:
+  subject_id: PAX-01
+
+counterfactual:
+  subject_id: PAX-99
+</code></pre>
+<p>If identity labels should not affect the assessment but the profile changes:</p>
+<pre><code class="language-text">irrelevant_perturbation_stability:
+  poor
+</code></pre>
+<hr>
+<h1 id="relevant-change-test">Relevant Change Test</h1>
+<p>A robust assessment should respond to meaningful evidence.</p>
+<p>Example:</p>
+<pre><code class="language-text">baseline:
+  4 successful structural tasks
+
+updated:
+  4 successful
+  + 8 failed equivalent tasks
+</code></pre>
+<p>If confidence remains unchanged:</p>
+<pre><code class="language-text">relevant_change_sensitivity:
+  poor
+</code></pre>
+<hr>
+<h1 id="stability-sensitivity-matrix">Stability-Sensitivity Matrix</h1>
+<pre><code class="language-text">                         Relevant change
+
+                    responds      ignores
+                 ┌────────────┬────────────┐
+Irrelevant  stable│ DESIRED    │ insensitive│
+change       ├─────┼────────────┼────────────┤
+             changes│ unstable   │ BROKEN     │
+                 └────────────┴────────────┘
+</code></pre>
+<p>Desired behavior:</p>
+<pre><code class="language-text">irrelevant change:
+  stable
+
+relevant change:
+  responsive
+</code></pre>
+<hr>
+<h1 id="minimal-perturbation-principle">Minimal Perturbation Principle</h1>
+<p>When possible:</p>
+<blockquote>
+<p><strong>Change one thing at a time.</strong></p>
+</blockquote>
+<p>Example:</p>
+<p>Bad counterfactual:</p>
+<pre><code class="language-text">timed symbolic individual
+</code></pre>
+<p>versus:</p>
+<pre><code class="language-text">untimed relational collaborative AI-assisted
+</code></pre>
+<p>Too many conditions changed simultaneously.</p>
+<p>Better:</p>
+<pre><code class="language-text">Test 1:
+  timed
+  -&gt;
+  untimed
+</code></pre>
+<p>then:</p>
+<pre><code class="language-text">Test 2:
+  symbolic
+  -&gt;
+  relational
+</code></pre>
+<p>then:</p>
+<pre><code class="language-text">Test 3:
+  individual
+  -&gt;
+  collaborative
+</code></pre>
+<p>then investigate interactions.</p>
+<hr>
+<h1 id="interaction-effects">Interaction Effects</h1>
+<p>Single-variable perturbations are not always sufficient.</p>
+<p>Variables may interact.</p>
+<p>Example:</p>
+<pre><code class="language-text">time constraint alone:
+  small effect
+
+representation alone:
+  small effect
+
+time + representation:
+  large effect
+</code></pre>
+<p>Therefore after isolated tests:</p>
+<pre><code class="language-text">pairwise interaction tests
+</code></pre>
+<p>may be justified.</p>
+<p>But combinatorial growth must be controlled.</p>
+<hr>
+<h1 id="combinatorial-explosion">Combinatorial Explosion</h1>
+<p>With many variables:</p>
+<pre><code class="language-text">substrate
+timing
+tools
+context
+model
+regime
+adapter
+task
+observer
+</code></pre>
+<p>the number of possible counterfactual combinations grows rapidly.</p>
+<p>The layer must not brute-force every conceivable world and then select the most favorable.</p>
+<p>Counterfactual selection should therefore be:</p>
+<pre><code class="language-text">hypothesis_driven
+risk_driven
+validation_driven
+or
+predeclared
+</code></pre>
+<p>where practical.</p>
+<hr>
+<h1 id="counterfactual-selection-record">Counterfactual Selection Record</h1>
+<pre><code class="language-yaml">counterfactual_selection:
+  id: cf-selection-001
+
+  target_claim:
+    structural_reasoning_is_strong
+
+  variable:
+    time_constraint
+
+  selection_reason:
+    repeated performance difference observed
+
+  selected_before_outcome_review:
+    true
+
+  alternatives_tested:
+    - moderate
+    - low
+
+  reporting:
+    all_results_included: true
+</code></pre>
+<hr>
+<h1 id="no-counterfactual-shopping">No Counterfactual Shopping</h1>
+<p>A major failure mode would be:</p>
+<pre><code class="language-text">baseline unfavorable
+       │
+       ▼
+test many transformations
+       │
+       ▼
+find favorable one
+       │
+       ▼
+report favorable case only
+</code></pre>
+<p>This is prohibited.</p>
+<p>All materially relevant tested counterfactuals should be reportable.</p>
+<hr>
+<h1 id="symmetry-requirement">Symmetry Requirement</h1>
+<p>Counterfactual analysis must test both directions.</p>
+<p>If the baseline result is unfavorable:</p>
+<pre><code class="language-text">Can reasonable changes make it stronger?
+Can reasonable changes make it weaker?
+Can they leave it unchanged?
+</code></pre>
+<p>If the baseline result is favorable:</p>
+<pre><code class="language-text">Can reasonable changes weaken it?
+Can they strengthen it?
+Can they leave it unchanged?
+</code></pre>
+<p>The method must not assume a preferred direction.</p>
+<hr>
+<h1 id="worked-example-pax-01">Worked Example — PAX-01</h1>
+<h2 id="baseline">Baseline</h2>
+<p>Synthetic subject:</p>
+<pre><code class="language-text">PAX-01
+</code></pre>
+<p>Baseline observation:</p>
+<pre><code class="language-text">timed symbolic assessment:
+  weak
+</code></pre>
+<p>Extended observation:</p>
+<pre><code class="language-text">structural reasoning:
+  strong
+
+cross-domain transfer:
+  strong
+
+ambiguity navigation:
+  strong
+</code></pre>
+<p>Candidate interpretation:</p>
+<pre><code class="language-text">profile:
+  asymmetric
+</code></pre>
+<p>The Counterfactual Layer challenges this interpretation.</p>
+<hr>
+<h1 id="counterfactual-1-remove-structural-evidence">Counterfactual 1 — Remove Structural Evidence</h1>
+<p>Baseline profile:</p>
+<pre><code class="language-text">structural reasoning:
+  strong
+</code></pre>
+<p>Remove one major structural task:</p>
+<pre><code class="language-text">E3:
+  removed
+</code></pre>
+<p>New profile:</p>
+<pre><code class="language-text">structural reasoning:
+  moderate-to-strong
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-text">single_evidence_dependency:
+  low_to_moderate
+</code></pre>
+<p>If instead the profile collapsed to:</p>
+<pre><code class="language-text">unknown
+</code></pre>
+<p>then:</p>
+<pre><code class="language-text">single_evidence_dependency:
+  high
+</code></pre>
+<p>That would matter.</p>
+<hr>
+<h1 id="counterfactual-2-add-adverse-evidence">Counterfactual 2 — Add Adverse Evidence</h1>
+<p>Suppose we add:</p>
+<pre><code class="language-text">structural_task_08:
+  weak
+
+structural_task_09:
+  weak
+
+structural_task_10:
+  weak
+</code></pre>
+<p>A robust profile should update.</p>
+<p>Correct:</p>
+<pre><code class="language-text">structural_reasoning:
+  previous: strong
+  current: moderate
+
+confidence:
+  previous: medium
+  current: low-to-medium
+</code></pre>
+<p>Incorrect:</p>
+<pre><code class="language-text">structural_reasoning:
+  remains strong
+</code></pre>
+<p>with no explanation.</p>
+<hr>
+<h1 id="counterfactual-3-scalar-versus-profile">Counterfactual 3 — Scalar Versus Profile</h1>
+<p>Baseline:</p>
+<pre><code class="language-text">scalar:
+  below reference expectation
+</code></pre>
+<p>Alternative representation:</p>
+<pre><code class="language-text">multidimensional:
+  structural: strong
+  transfer: strong
+  symbolic speed: weak
+  timed classification: weak
+</code></pre>
+<p>Finding:</p>
+<pre><code class="language-text">representation_dependence:
+  substantial
+</code></pre>
+<p>But the next question becomes:</p>
+<blockquote>
+<p>Which representation better predicts or explains declared external outcomes?</p>
+</blockquote>
+<p>Without that test:</p>
+<pre><code class="language-text">representation_superiority:
+  unresolved
+</code></pre>
+<hr>
+<h1 id="counterfactual-4-remove-rtt">Counterfactual 4 — Remove RTT</h1>
+<p>Full adapter interpretation:</p>
+<pre><code class="language-text">profile difference:
+  possibly regime-conditioned
+</code></pre>
+<p>Remove RTT:</p>
+<pre><code class="language-text">profile difference:
+  still observed
+  regime explanation unavailable
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-text">RTT contribution:
+  explanatory
+  not necessary for detecting variation
+</code></pre>
+<p>This is useful ablation information.</p>
+<hr>
+<h1 id="counterfactual-5-remove-structural-detection">Counterfactual 5 — Remove Structural Detection</h1>
+<p>Full assessment:</p>
+<pre><code class="language-text">reproducible asymmetric pattern:
+  supported
+</code></pre>
+<p>Without Structural Detection:</p>
+<pre><code class="language-text">heterogeneous observations:
+  still visible
+
+structural interpretation:
+  weakened
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-text">Structural Detection contribution:
+  possible organization of evidence
+
+incremental validity:
+  not_yet_established
+</code></pre>
+<hr>
+<h1 id="counterfactual-6-change-task-order">Counterfactual 6 — Change Task Order</h1>
+<p>Original:</p>
+<pre><code class="language-text">symbolic
+relational
+transfer
+</code></pre>
+<p>Alternative:</p>
+<pre><code class="language-text">transfer
+symbolic
+relational
+</code></pre>
+<p>If results remain similar:</p>
+<pre><code class="language-text">task_order_stability:
+  supported
+</code></pre>
+<p>If results shift materially:</p>
+<pre><code class="language-text">task_order_effect:
+  candidate
+</code></pre>
+<p>Possible explanations:</p>
+<ul>
+<li>fatigue,</li>
+<li>priming,</li>
+<li>learning,</li>
+<li>stress,</li>
+<li>carryover effects,</li>
+<li>random variation.</li>
+</ul>
+<hr>
+<h1 id="counterfactual-7-irrelevant-metadata">Counterfactual 7 — Irrelevant Metadata</h1>
+<p>Suppose the same evidence is presented with an irrelevant biographical detail changed.</p>
+<p>Expected:</p>
+<pre><code class="language-text">profile:
+  unchanged
+</code></pre>
+<p>If it changes:</p>
+<pre><code class="language-text">unintended_context_sensitivity:
+  detected
+</code></pre>
+<p>This can be especially important when AI participates in interpretation.</p>
+<hr>
+<h1 id="counterfactual-8-adverse-reinterpretation">Counterfactual 8 — Adverse Reinterpretation</h1>
+<p>The framework must allow an alternate representation to make the interpretation <strong>less favorable</strong>.</p>
+<p>Suppose extended evidence reveals:</p>
+<pre><code class="language-text">initial:
+  cross-domain transfer strong
+
+additional holdout tasks:
+  transfer weak
+</code></pre>
+<p>Correct update:</p>
+<pre><code class="language-text">cross_domain_transfer:
+  confidence reduced
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">cross_domain_transfer:
+  moderate
+</code></pre>
+<p>The module must not protect its original flattering interpretation.</p>
+<hr>
+<h1 id="counterfactual-9-conventional-model-survives">Counterfactual 9 — Conventional Model Survives</h1>
+<p>Suppose all reasonable counterfactuals produce:</p>
+<pre><code class="language-text">baseline interpretation:
+  stable
+</code></pre>
+<p>and adapters add no reliable information.</p>
+<p>Correct result:</p>
+<pre><code class="language-yaml">counterfactual_assessment:
+  baseline_robustness: high
+
+  alternate_models:
+    added_value: low
+
+  model_mismatch:
+    not_supported
+
+  recommendation:
+    retain baseline interpretation
+</code></pre>
+<p>This is a successful Counterfactual Layer outcome.</p>
+<hr>
+<h1 id="counterfactual-10-entire-pa-interpretation-fails">Counterfactual 10 — Entire PA Interpretation Fails</h1>
+<p>Suppose:</p>
+<pre><code class="language-text">baseline model:
+  stable
+
+RIQF:
+  unstable across alternate forms
+
+FFT:
+  no incremental value
+
+Inverted Star:
+  mismatch fails replication
+
+Structural Detection:
+  patterns fail holdout testing
+
+RTT:
+  false regime alarms high
+
+Resonance:
+  context effects fail replication
+</code></pre>
+<p>Correct result:</p>
+<pre><code class="language-text">Predictive Analytics enrichment:
+  not_supported
+</code></pre>
+<p>That possibility must remain structurally allowed.</p>
+<hr>
+<h1 id="relationship-to-fft">Relationship to FFT</h1>
+<p>FFT identifies relationships and boundaries.</p>
+<p>Counterfactual analysis asks:</p>
+<blockquote>
+<p>What happens if those boundaries are moved or relationships are removed?</p>
+</blockquote>
+<p>Example:</p>
+<pre><code class="language-text">FFT:
+  boundary B appears important
+
+Counterfactual:
+  shift B slightly
+
+result:
+  interpretation collapses
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-text">boundary_fragility:
+  high
+</code></pre>
+<hr>
+<h1 id="relationship-to-the-inverted-star">Relationship to The Inverted Star</h1>
+<p>The Inverted Star identifies disagreement.</p>
+<p>Counterfactual analysis asks:</p>
+<blockquote>
+<p>Does the inversion survive reasonable alternate representations?</p>
+</blockquote>
+<pre><code class="language-text">inversion:
+  baseline candidate
+
+counterfactual:
+  alternate task representation
+
+result:
+  inversion disappears
+</code></pre>
+<p>Then:</p>
+<pre><code class="language-text">inversion_stability:
+  low
+</code></pre>
+<hr>
+<h1 id="relationship-to-structural-detection">Relationship to Structural Detection</h1>
+<p>Structural Detection identifies patterns.</p>
+<p>Counterfactual analysis attempts to break them.</p>
+<pre><code class="language-text">structural hypothesis
+       │
+       ▼
+remove evidence
+shuffle relationships
+change irrelevant metadata
+add contradictory evidence
+       │
+       ▼
+does structure survive?
+</code></pre>
+<p>A structure that cannot survive reasonable challenge should lose confidence.</p>
+<hr>
+<h1 id="relationship-to-rtt">Relationship to RTT</h1>
+<p>RTT proposes regimes and boundaries.</p>
+<p>Counterfactual analysis tests:</p>
+<pre><code class="language-text">boundary shift
+alternative regime count
+alternative observation window
+alternative transition location
+</code></pre>
+<p>If RTT conclusions change drastically:</p>
+<pre><code class="language-text">regime_interpretation:
+  fragile
+</code></pre>
+<hr>
+<h1 id="relationship-to-resonance">Relationship to Resonance</h1>
+<p>Resonance may identify amplification or suppression.</p>
+<p>Counterfactual testing asks:</p>
+<pre><code class="language-text">Does the effect survive
+alternative context definitions?
+
+Does it reverse?
+
+Does it disappear?
+
+Is the effect specific
+to one favorable condition?
+</code></pre>
+<p>This protects against resonance cherry-picking.</p>
+<hr>
+<h1 id="relationship-to-coherence-observer">Relationship to Coherence Observer</h1>
+<p>The Coherence Observer asks:</p>
+<blockquote>
+<p>Do the observations form a supportable structure?</p>
+</blockquote>
+<p>The Counterfactual Layer asks:</p>
+<blockquote>
+<p>Does that coherent structure survive challenge?</p>
+</blockquote>
+<p>Conceptually:</p>
+<pre><code class="language-text">Coherence:
+  build relationship structure
+
+Counterfactual:
+  perturb relationship structure
+
+Coherence:
+  reassess
+</code></pre>
+<p>This creates an important loop:</p>
+<pre><code class="language-text">observe
+  -&gt;
+cohere
+  -&gt;
+challenge
+  -&gt;
+re-cohere
+</code></pre>
+<hr>
+<h1 id="relationship-to-uncertainty-layer">Relationship to Uncertainty Layer</h1>
+<p>Counterfactual sensitivity should affect uncertainty.</p>
+<p>Example:</p>
+<pre><code class="language-text">interpretation:
+  changes under tiny irrelevant perturbations
+</code></pre>
+<p>Then:</p>
+<pre><code class="language-text">confidence:
+  should decrease
+</code></pre>
+<p>Conversely:</p>
+<pre><code class="language-text">interpretation:
+  stable across relevant controlled alternatives
+</code></pre>
+<p>may support higher confidence.</p>
+<p>It does not prove correctness.</p>
+<hr>
+<h1 id="relationship-to-human-review">Relationship to Human Review</h1>
+<p>A consequential assessment should be more likely to receive review when:</p>
+<pre><code class="language-text">counterfactual fragility: high
+</code></pre>
+<p>particularly if small reasonable changes produce materially different outcomes.</p>
+<p>Potential trigger:</p>
+<pre><code class="language-yaml">human_review:
+  required: true
+
+  reason:
+    assessment highly sensitive
+    to representation choice
+</code></pre>
+<hr>
+<h1 id="relationship-to-riqf">Relationship to RIQF</h1>
+<p>RIQF should be counterfactually challenged dimension by dimension.</p>
+<p>Example:</p>
+<pre><code class="language-text">structural_reasoning:
+  strong
+</code></pre>
+<p>Tests:</p>
+<pre><code class="language-text">remove one task
+add adverse task
+change equivalent task form
+change irrelevant metadata
+use alternate evaluator
+use alternate substrate
+repeat later
+</code></pre>
+<p>Possible output:</p>
+<pre><code class="language-yaml">dimension:
+  structural_reasoning
+
+  baseline:
+    expression: strong
+    confidence: medium
+
+  counterfactual_stability:
+    irrelevant_perturbations: high
+    evidence_removal: moderate
+    adverse_evidence: responsive
+    alternate_form: unknown
+    alternate_substrate: partial
+</code></pre>
+<p>This is much more informative than simply increasing the dimension score.</p>
+<hr>
+<h1 id="counterfactual-fingerprint">Counterfactual Fingerprint</h1>
+<p>A future extension could attach a robustness profile to each dimension:</p>
+<pre><code class="language-text">STRUCTURAL REASONING
+  evidence robustness      ████████
+  irrelevant stability     █████████
+  alternate-form stability ███████
+  substrate stability      █████
+  temporal stability       ██████
+  observer stability       ███████
+</code></pre>
+<p>These are conceptual display dimensions.</p>
+<p>They must not be presented as validated metrics without evidence.</p>
+<hr>
+<h1 id="primary-metrics">Primary Metrics</h1>
+<h2 id="pa-m33-irrelevant-perturbation-stability"><code>PA-M33 — Irrelevant Perturbation Stability</code></h2>
+<p>Conceptually:</p>
+<pre><code class="language-text">IPS =
+  similarity(
+    original_result,
+    irrelevant_perturbation_result
+  )
+</code></pre>
+<p>Desired direction:</p>
+<pre><code class="language-text">higher_is_better
+</code></pre>
+<p>when the perturbation is genuinely irrelevant.</p>
+<hr>
+<h1 id="pa-m34-relevant-change-sensitivity"><code>PA-M34 — Relevant Change Sensitivity</code></h1>
+<p>Conceptually:</p>
+<pre><code class="language-text">RCS =
+  detected_meaningful_changes
+  /
+  introduced_meaningful_changes
+</code></pre>
+<p>Desired direction:</p>
+<pre><code class="language-text">higher_is_better
+</code></pre>
+<hr>
+<h1 id="pa-m35-task-order-sensitivity"><code>PA-M35 — Task-Order Sensitivity</code></h1>
+<p>Conceptually:</p>
+<pre><code class="language-text">TOS =
+  distance(
+    result_order_a,
+    result_order_b
+  )
+</code></pre>
+<p>When order should be irrelevant:</p>
+<pre><code class="language-text">lower_is_better
+</code></pre>
+<hr>
+<h1 id="pa-m36-adapter-ablation-effect"><code>PA-M36 — Adapter Ablation Effect</code></h1>
+<p>Conceptually:</p>
+<pre><code class="language-text">AAE(adapter_x) =
+  performance(full_adapter_set)
+  -
+  performance(without_adapter_x)
+</code></pre>
+<p>This is a counterfactual by construction.</p>
+<hr>
+<h1 id="related-metrics">Related Metrics</h1>
+<p>The layer may also use:</p>
+<pre><code class="language-text">PA-M04  Test-Retest Stability
+PA-M05  Alternate-Form Stability
+PA-M07  Profile Topology Stability
+PA-M10  Incremental Explanatory Value
+PA-M11  Incremental Predictive Value
+PA-M12  Substrate Effect Magnitude
+PA-M13  Substrate Effect Replicability
+PA-M16  Regime Transition Detection Rate
+PA-M20  Model-Mismatch Precision
+PA-M22  Model-Mismatch False Positive Rate
+PA-M28  Confidence Calibration Error
+PA-M32  Unsupported Assertion Rate
+PA-M43  False Favorable Reinterpretation Rate
+PA-M44  False Adverse Reinterpretation Rate
+</code></pre>
+<hr>
+<h1 id="robustness-record">Robustness Record</h1>
+<p>Suggested output:</p>
+<pre><code class="language-yaml">robustness:
+  assessment_id:
+
+  baseline:
+    result:
+    preserved: true
+
+  perturbations:
+    irrelevant:
+      tested:
+      stable:
+      unstable:
+
+    relevant:
+      tested:
+      responsive:
+      insensitive:
+
+  ablations:
+    tested:
+
+  representation_changes:
+    tested:
+
+  substrate_changes:
+    tested:
+
+  regime_changes:
+    tested:
+
+  observer_changes:
+    tested:
+
+  evidence_removals:
+    tested:
+
+  result:
+    robustness_state:
+
+  confidence:
+  uncertainty:
+</code></pre>
+<hr>
+<h1 id="counterfactual-outcome-states">Counterfactual Outcome States</h1>
+<p>Initial states:</p>
+<pre><code class="language-text">stable
+robust
+appropriately_sensitive
+overly_sensitive
+insensitive
+fragile
+representation_dependent
+substrate_dependent
+regime_dependent
+observer_dependent
+evidence_dependent
+threshold_dependent
+mixed
+unresolved
+insufficient_evidence
+not_applicable
+</code></pre>
+<hr>
+<h1 id="counterfactual-strength">Counterfactual Strength</h1>
+<p>Potential descriptive levels:</p>
+<pre><code class="language-text">weak
+moderate
+strong
+unknown
+</code></pre>
+<p>These should describe evidence strength, not subject capability.</p>
+<hr>
+<h1 id="causal-counterfactual-warning">Causal Counterfactual Warning</h1>
+<p>Counterfactual reasoning is often associated with causal reasoning.</p>
+<p>Predictive Analytics must not automatically make that jump.</p>
+<p>Example:</p>
+<pre><code class="language-text">when time limit changes
+performance changes
+</code></pre>
+<p>does not automatically establish:</p>
+<pre><code class="language-text">time limit caused
+performance change
+</code></pre>
+<p>because other factors may differ.</p>
+<p>Causal counterfactual claims require stronger identification assumptions and appropriate methodology.</p>
+<p>Therefore:</p>
+<pre><code class="language-text">counterfactual_sensitivity
+!=
+causal_identification
+</code></pre>
+<hr>
+<h1 id="synthetic-counterfactuals">Synthetic Counterfactuals</h1>
+<p>Synthetic tests are especially useful for:</p>
+<ul>
+<li>schema validation,</li>
+<li>invariance testing,</li>
+<li>controlled perturbation,</li>
+<li>adapter stress tests,</li>
+<li>known-null examples,</li>
+<li>known-signal examples.</li>
+</ul>
+<p>But synthetic success does not establish real-world validity.</p>
+<hr>
+<h1 id="null-counterfactual-test">Null Counterfactual Test</h1>
+<p>Introduce a transformation known to be irrelevant.</p>
+<p>Expected:</p>
+<pre><code class="language-text">assessment:
+  materially unchanged
+</code></pre>
+<p>If not:</p>
+<pre><code class="language-text">unexpected_sensitivity:
+  detected
+</code></pre>
+<hr>
+<h1 id="positive-control">Positive Control</h1>
+<p>Introduce a change designed to matter.</p>
+<p>Expected:</p>
+<pre><code class="language-text">assessment:
+  responds appropriately
+</code></pre>
+<p>If not:</p>
+<pre><code class="language-text">insensitivity:
+  detected
+</code></pre>
+<hr>
+<h1 id="negative-control">Negative Control</h1>
+<p>Provide a change intentionally unrelated to the assessed construct.</p>
+<p>Expected:</p>
+<pre><code class="language-text">no material change
+</code></pre>
+<p>This is particularly useful for AI-assisted interpretation.</p>
+<hr>
+<h1 id="direction-symmetry-test">Direction Symmetry Test</h1>
+<p>Test whether equivalent evidence changes are treated consistently in both directions.</p>
+<p>Example:</p>
+<pre><code class="language-text">add positive evidence
+</code></pre>
+<p>versus:</p>
+<pre><code class="language-text">add equivalent negative evidence
+</code></pre>
+<p>If positive evidence produces dramatically larger changes without justification:</p>
+<pre><code class="language-text">favorability_asymmetry:
+  candidate
+</code></pre>
+<p>Likewise in the opposite direction.</p>
+<hr>
+<h1 id="counterfactual-budget">Counterfactual Budget</h1>
+<p>Because the possible counterfactual space is enormous, a study should declare a budget.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">counterfactual_budget:
+  primary_tests: 8
+  secondary_tests: 4
+  exploratory_tests: 6
+
+  selection_policy:
+    - hypothesis-driven
+    - preregistered
+    - reported-completely
+</code></pre>
+<p>This can reduce counterfactual shopping.</p>
+<hr>
+<h1 id="predeclaration">Predeclaration</h1>
+<p>Where practical, declare:</p>
+<pre><code class="language-text">target claim
+counterfactual variables
+expected relevant variables
+expected irrelevant variables
+primary metrics
+interpretation thresholds
+</code></pre>
+<p>before reviewing the counterfactual outcomes.</p>
+<p>Exploratory testing remains allowed.</p>
+<p>It should simply be labeled:</p>
+<pre><code class="language-text">exploratory
+</code></pre>
+<p>rather than:</p>
+<pre><code class="language-text">confirmatory
+</code></pre>
+<hr>
+<h1 id="search-space-disclosure">Search-Space Disclosure</h1>
+<p>A strong report should indicate:</p>
+<pre><code class="language-text">counterfactuals_considered
+counterfactuals_tested
+counterfactuals_reported
+selection_rule
+</code></pre>
+<p>This limits selective reporting.</p>
+<hr>
+<h1 id="failure-modes">Failure Modes</h1>
+<h2 id="counterfactual-shopping">Counterfactual Shopping</h2>
+<p>Risk:</p>
+<p>Many alternatives are tested until a preferred result appears.</p>
+<p>Mitigation:</p>
+<p>Predeclare tests and report search space.</p>
+<hr>
+<h1 id="favorability-bias">Favorability Bias</h1>
+<p>Risk:</p>
+<p>Only counterfactuals producing a more favorable profile are emphasized.</p>
+<p>Mitigation:</p>
+<p>Directional symmetry tests and PA-M43 / PA-M44.</p>
+<hr>
+<h1 id="adverse-amplification">Adverse Amplification</h1>
+<p>Risk:</p>
+<p>Only counterfactuals producing a more negative profile are emphasized.</p>
+<p>Mitigation:</p>
+<p>Same evidence and reporting standards in both directions.</p>
+<hr>
+<h1 id="impossible-worlds">Impossible Worlds</h1>
+<p>Risk:</p>
+<p>Counterfactual scenarios violate basic constraints of the system.</p>
+<p>Mitigation:</p>
+<p>Declare plausibility and feasibility.</p>
+<hr>
+<h1 id="counterfactual-as-evidence-error">Counterfactual-as-Evidence Error</h1>
+<p>Risk:</p>
+<p>A hypothetical outcome is presented as if it were observed.</p>
+<p>Mitigation:</p>
+<p>Preserve source type:</p>
+<pre><code class="language-text">observed
+observed_alternate
+counterfactual
+hypothetical
+</code></pre>
+<hr>
+<h1 id="causal-overreach">Causal Overreach</h1>
+<p>Risk:</p>
+<p>Sensitivity to a changed variable is interpreted as proof of causation.</p>
+<p>Mitigation:</p>
+<p>Separate robustness testing from causal inference.</p>
+<hr>
+<h1 id="multi-variable-confounding">Multi-Variable Confounding</h1>
+<p>Risk:</p>
+<p>Several variables change at once.</p>
+<p>Mitigation:</p>
+<p>Use minimal perturbations first where possible.</p>
+<hr>
+<h1 id="representation-favoritism">Representation Favoritism</h1>
+<p>Risk:</p>
+<p>Multidimensional representations are assumed superior because they are richer.</p>
+<p>Mitigation:</p>
+<p>Compare explanatory and predictive value.</p>
+<hr>
+<h1 id="adapter-favoritism">Adapter Favoritism</h1>
+<p>Risk:</p>
+<p>Removing a canon adapter is considered illegitimate.</p>
+<p>Mitigation:</p>
+<p>Every adapter must support ablation and rejection.</p>
+<hr>
+<h1 id="fragility-concealment">Fragility Concealment</h1>
+<p>Risk:</p>
+<p>Only stable counterfactuals are reported.</p>
+<p>Mitigation:</p>
+<p>Report unstable cases explicitly.</p>
+<hr>
+<h1 id="false-robustness">False Robustness</h1>
+<p>Risk:</p>
+<p>The model appears stable because perturbations were too weak or irrelevant.</p>
+<p>Mitigation:</p>
+<p>Include meaningful positive controls.</p>
+<hr>
+<h1 id="overchallenge">Overchallenge</h1>
+<p>Risk:</p>
+<p>An interpretation is subjected to unrealistic perturbations until it eventually fails.</p>
+<p>Mitigation:</p>
+<p>Require plausible counterfactual justification.</p>
+<hr>
+<h1 id="ethical-boundary">Ethical Boundary</h1>
+<p>Counterfactual reasoning about people requires special care.</p>
+<p>Avoid claims such as:</p>
+<blockquote>
+<p>"If this person had grown up differently, they would have had higher intelligence."</p>
+</blockquote>
+<p>unless an appropriate causal research design actually supports such a statement.</p>
+<p>Predictive Analytics should generally prefer:</p>
+<blockquote>
+<p><strong>"The current assessment is sensitive to this measured or modeled condition."</strong></p>
+</blockquote>
+<p>Sensitivity is observable.</p>
+<p>Personal alternate histories usually are not.</p>
+<hr>
+<h1 id="sensitive-traits">Sensitive Traits</h1>
+<p>Counterfactual manipulation of protected or sensitive traits can easily produce misleading conclusions.</p>
+<p>For example:</p>
+<pre><code class="language-text">change race
+keep everything else constant
+</code></pre>
+<p>may describe a mathematically simple feature perturbation while representing an incoherent social or causal counterfactual.</p>
+<p>Such analyses require substantial methodological and ethical justification.</p>
+<p>The Counterfactual Layer should not treat sensitive identity attributes as ordinary interchangeable input variables.</p>
+<hr>
+<h1 id="human-identity-boundary">Human Identity Boundary</h1>
+<p>A person is not a bag of independently swappable features.</p>
+<p>Therefore:</p>
+<pre><code class="language-text">counterfactual_model_input
+!=
+alternate_real_person
+</code></pre>
+<p>This distinction must remain explicit.</p>
+<hr>
+<h1 id="decision-authority">Decision Authority</h1>
+<pre><code class="language-text">decision_authority: none
+
+authorized_use:
+  - research
+  - demonstration
+  - robustness testing
+  - sensitivity analysis
+  - adapter ablation
+  - model comparison
+  - framework development
+
+prohibited_use:
+  - unsupported causal claims about individuals
+  - diagnosis
+  - automated hiring decision
+  - educational exclusion
+  - legal determination
+  - automated adverse decision
+</code></pre>
+<hr>
+<h1 id="minimal-counterfactual-output-contract">Minimal Counterfactual Output Contract</h1>
+<pre><code class="language-yaml">counterfactual_result:
+  counterfactual_id:
+
+  baseline:
+    assessment_id:
+    result:
+    preserved: true
+
+  target_claim:
+
+  transformation:
+    variable:
+    baseline_value:
+    alternate_value:
+
+  classification:
+    source_type:
+      observed
+      observed_alternate
+      counterfactual
+      hypothetical
+
+    relevance:
+      relevant
+      irrelevant
+      plausibly_relevant
+      unknown
+
+    plausibility:
+      supported
+      partial
+      unsupported
+      unknown
+
+  changed_variables:
+  held_constant_variables:
+
+  result:
+    baseline:
+    alternate:
+    difference:
+
+  robustness:
+    irrelevant_stability:
+    relevant_sensitivity:
+
+  dependencies:
+    representation:
+    substrate:
+    regime:
+    time:
+    observer:
+    evidence:
+    threshold:
+
+  causal_status:
+    established: false
+    evidence:
+
+  alternative_interpretations:
+  confounds:
+  missing_evidence:
+  uncertainty:
+  limitations:
+
+  validation_state:
+  review_required:
+  decision_authority: none
+</code></pre>
+<hr>
+<h1 id="research-questions">Research Questions</h1>
+<ol>
+<li>Can counterfactual tests improve detection of fragile assessments?</li>
+<li>Can relevant and irrelevant perturbations be classified reproducibly?</li>
+<li>Can the framework distinguish sensitivity from causation?</li>
+<li>Can counterfactual robustness improve calibration?</li>
+<li>Does perturbation testing reduce unsupported model-mismatch claims?</li>
+<li>Can representation dependence be measured?</li>
+<li>How often do scalar and multidimensional representations produce materially different interpretations?</li>
+<li>When is the multidimensional representation actually more predictive?</li>
+<li>When does it merely add complexity?</li>
+<li>Can substrate dependence survive controlled perturbation?</li>
+<li>Can regime boundaries survive counterfactual boundary shifts?</li>
+<li>Which RTT regime interpretations are fragile?</li>
+<li>Which Structural Detection patterns survive evidence removal?</li>
+<li>Which FFT boundaries survive alternate boundary definitions?</li>
+<li>Which Inverted Star inversions survive alternate representations?</li>
+<li>Which Resonance findings survive context perturbation?</li>
+<li>Can adapter ablation identify redundant modules?</li>
+<li>Can adapter ablation identify harmful modules?</li>
+<li>Can the framework detect favorability asymmetry?</li>
+<li>Can it detect adverse-interpretation asymmetry?</li>
+<li>How large should a counterfactual search space be?</li>
+<li>How should exploratory counterfactuals be reported?</li>
+<li>Which counterfactual transformations are invalid for human assessment?</li>
+<li>How should human-AI collaborative counterfactuals be represented?</li>
+<li>Can counterfactual testing tell us when the baseline model is already sufficient?</li>
+<li>Can counterfactual testing falsify the complete Predictive Analytics interpretation?</li>
+<li>When should the layer abstain?</li>
+<li>What evidence would justify removing the Counterfactual Layer?</li>
+</ol>
+<hr>
+<h1 id="core-invariants">Core Invariants</h1>
+<pre><code class="language-text">counterfactual != observation
+hypothetical != evidence
+sensitivity != causation
+representation_change != capability_change
+substrate_change != causal_explanation
+regime_change != causal_explanation
+model_change != subject_change
+feature_change != alternate_person
+robustness != truth
+stability != validity
+complexity != robustness
+counterfactual_count != evidence_count
+favorable_alternative != better_model
+adverse_alternative != better_model
+ablation != rejection
+fragility != worth
+profile != identity
+counterfactual_output != decision_authority
+canon_alignment != empirical_validation
+</code></pre>
+<hr>
+<h1 id="closing-principle">Closing Principle</h1>
+<p>Every predictive interpretation depends on choices:</p>
+<ul>
+<li>which evidence was included,</li>
+<li>how it was represented,</li>
+<li>which model was used,</li>
+<li>where boundaries were drawn,</li>
+<li>which substrate carried the observation,</li>
+<li>which regime was assumed,</li>
+<li>which adapters were activated,</li>
+<li>and what information was considered relevant.</li>
+</ul>
+<p>The Counterfactual Layer makes those choices testable.</p>
+<p>It asks whether the assessment survives when reasonable alternatives are introduced.</p>
+<p>Sometimes the interpretation should remain stable.</p>
+<p>Sometimes it should change.</p>
+<p>Sometimes the original model will prove more robust than the richer alternative.</p>
+<p>Sometimes an adapter will turn out to contribute nothing.</p>
+<p>Sometimes the entire Predictive Analytics interpretation should be rejected.</p>
+<p>That is exactly why the layer exists.</p>
+<blockquote>
+<p><strong>A useful predictive framework should not merely produce an interpretation. It should help us discover what would make that interpretation fail.</strong></p>
+</blockquote>
   </main>
 </body>
 </html>

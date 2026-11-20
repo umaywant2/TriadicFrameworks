@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/predictive_analytics/adapters.md">
-  <title>adapters</title>
+  <title>Predictive Analytics — Adapter Registry</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,7 +92,1555 @@
   </aside>
 
   <main>
+<p><img width="1194" height="672" alt="predictive_analytics_adapters_" src="https://github.com/user-attachments/assets/86f8ba8d-c986-4b59-9869-f04858263a01" /></p>
+<h1 id="predictive-analytics-adapter-registry">Predictive Analytics — Adapter Registry</h1>
+<blockquote>
+<p><strong>Adapters widen observation. They do not inherit authority.</strong></p>
+</blockquote>
+<h2 id="module">Module</h2>
+<p>Predictive Analytics</p>
+<h2 id="status">Status</h2>
+<p>Experimental.</p>
+<h2 id="purpose">Purpose</h2>
+<p>This document defines the adapter architecture for the Predictive Analytics module.</p>
+<p>Adapters connect existing predictive models and TriadicFrameworks analytical grammars to a shared observer layer without requiring the original predictive system to be replaced.</p>
+<p>The initial adapter family includes:</p>
+<ul>
+<li>Framework Field Theory (FFT)</li>
+<li>The Inverted Star</li>
+<li>Structural Detection</li>
+<li>RTT</li>
+<li>Resonance</li>
+</ul>
+<p>Each adapter examines a different aspect of the relationship between:</p>
+<pre><code class="language-text">prediction
+observation
+substrate
+context
+structure
+regime
+time
+uncertainty
+</code></pre>
+<p>No adapter automatically overrides another.</p>
+<p>No adapter automatically overrides the original predictive model.</p>
+<p>No adapter receives scientific authority merely because it belongs to the TriadicFrameworks canon.</p>
+<hr>
+<h1 id="core-principle">Core Principle</h1>
+<p>Predictive Analytics separates:</p>
+<pre><code class="language-text">prediction
+</code></pre>
+<p>from:</p>
+<pre><code class="language-text">observation of the prediction
+</code></pre>
+<p>and both from:</p>
+<pre><code class="language-text">observation of the system
+</code></pre>
+<p>Adapters operate primarily in the observer layer.</p>
+<pre><code class="language-text">Observed System
+      │
+      ▼
+Measurement Substrate
+      │
+      ▼
+Existing Predictive Model
+      │
+      ▼
+Prediction
+      │
+      ▼
+┌─────────────────────────────────────┐
+│ Predictive Analytics Observer Layer │
+├─────────────────────────────────────┤
+│ FFT                                 │
+│ The Inverted Star                   │
+│ Structural Detection                │
+│ RTT                                 │
+│ Resonance                           │
+└─────────────────────────────────────┘
+      │
+      ▼
+Comparative Assessment
+</code></pre>
+<p>The adapter layer may:</p>
+<ul>
+<li>support the original interpretation,</li>
+<li>narrow its justified scope,</li>
+<li>expose missing information,</li>
+<li>identify disagreement,</li>
+<li>identify context dependence,</li>
+<li>identify regime dependence,</li>
+<li>identify temporal change,</li>
+<li>or add no useful information.</li>
+</ul>
+<p>All are valid outcomes.</p>
+<hr>
+<h1 id="adapter-contract">Adapter Contract</h1>
+<p>Every canonical Predictive Analytics adapter should define:</p>
+<pre><code class="language-text">adapter_id
+source_framework
+purpose
+supported_inputs
+unsupported_inputs
+operators
+outputs
+claims
+limitations
+confounds
+validation_state
+decision_authority
+</code></pre>
+<p>Every adapter should also answer:</p>
+<ol>
+<li>What does this adapter observe?</li>
+<li>What does it not observe?</li>
+<li>Which evidence does it require?</li>
+<li>Which alternative explanations remain?</li>
+<li>What simpler method could explain the same observation?</li>
+<li>Which metrics test its claims?</li>
+<li>What would falsify its usefulness?</li>
+<li>Can the adapter return <code>no_added_value</code>?</li>
+<li>Can the adapter abstain?</li>
+<li>Can the adapter eventually be deprecated or rejected?</li>
+</ol>
+<p>If those questions cannot be answered, the adapter is not mature enough for operational interpretation.</p>
+<hr>
+<h1 id="adapter-registry">Adapter Registry</h1>
+<table>
+<thead>
+<tr>
+<th>Adapter</th>
+<th>ID</th>
+<th>Primary Question</th>
+<th>Primary Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Framework Field Theory</td>
+<td><code>fft</code></td>
+<td>What relationships, boundaries, constraints, and local/global structures surround the prediction?</td>
+<td>Field / relationship context</td>
+</tr>
+<tr>
+<td>The Inverted Star</td>
+<td><code>inverted-star</code></td>
+<td>Do prediction and independently observed behavior materially disagree?</td>
+<td>Inversion candidate</td>
+</tr>
+<tr>
+<td>Structural Detection</td>
+<td><code>structural-detection</code></td>
+<td>Does reproducible structure exist in the evidence?</td>
+<td>Structural profile</td>
+</tr>
+<tr>
+<td>RTT</td>
+<td><code>rtt</code></td>
+<td>Does prediction or capability expression change across time or operating regimes?</td>
+<td>Regime / temporal profile</td>
+</tr>
+<tr>
+<td>Resonance</td>
+<td><code>resonance</code></td>
+<td>Is expression repeatedly amplified, suppressed, stabilized, or destabilized across contexts?</td>
+<td>Resonance profile</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="adapter-roles">Adapter Roles</h1>
+<p>The adapters are intentionally overlapping but not identical.</p>
+<p>A useful shorthand is:</p>
+<pre><code class="language-text">FFT
+  -&gt; map the field
 
+Inverted Star
+  -&gt; preserve the contradiction
+
+Structural Detection
+  -&gt; test the structure
+
+RTT
+  -&gt; test the regime and time
+
+Resonance
+  -&gt; test contextual expression
+</code></pre>
+<p>The adapters should not be treated as five votes on the same question.</p>
+<p>They are different observational passes.</p>
+<hr>
+<h1 id="shared-baseline-requirement">Shared Baseline Requirement</h1>
+<p>Before any adapter pass:</p>
+<pre><code class="language-text">baseline_prediction:
+  preserved: true
+</code></pre>
+<p>The original predictive output must remain available.</p>
+<p>Adapters should not rewrite history by replacing the baseline with the enriched interpretation.</p>
+<p>A comparative record should allow a reviewer to inspect:</p>
+<pre><code class="language-text">before_adapter
+after_adapter
+added_information
+contradictory_information
+unchanged_information
+</code></pre>
+<hr>
+<h1 id="shared-observation-boundary">Shared Observation Boundary</h1>
+<p>Every adapter must declare what system it is observing.</p>
+<p>Possible system boundaries include:</p>
+<pre><code class="language-text">individual_human
+ai_system
+human_ai_pair
+team
+organization
+robotic_system
+distributed_agents
+other
+</code></pre>
+<p>A result observed for:</p>
+<pre><code class="language-text">human_ai_pair
+</code></pre>
+<p>must not automatically be attributed entirely to:</p>
+<pre><code class="language-text">individual_human
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">ai_system
+</code></pre>
+<p>The observation boundary is part of the result.</p>
+<hr>
+<h1 id="shared-evidence-model">Shared Evidence Model</h1>
+<p>Every adapter claim should trace to evidence.</p>
+<p>Minimum conceptual record:</p>
+<pre><code class="language-yaml">evidence:
+  evidence_id:
+  source:
+  observation:
+  timestamp:
+  substrate:
+  regime:
+  evaluator:
+  provenance:
+  independence:
+  limitations:
+</code></pre>
+<p>Where exact information is unavailable:</p>
+<pre><code class="language-text">unknown
+</code></pre>
+<p>should be retained.</p>
+<p>Missing information must not be silently inferred.</p>
+<hr>
+<h1 id="evidence-independence">Evidence Independence</h1>
+<p>This is one of the most important rules in the adapter architecture.</p>
+<p>Suppose one observation:</p>
+<pre><code class="language-text">E1
+</code></pre>
+<p>is interpreted by:</p>
+<pre><code class="language-text">FFT
+Inverted Star
+Structural Detection
+RTT
+Resonance
+</code></pre>
+<p>This produces:</p>
+<pre><code class="language-text">5 adapter interpretations
+</code></pre>
+<p>but still only:</p>
+<pre><code class="language-text">1 evidence source
+</code></pre>
+<p>Therefore:</p>
+<pre><code class="language-text">adapter_count != evidence_count
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">interpretive_agreement != independent_confirmation
+</code></pre>
+<p>Suggested representation:</p>
+<pre><code class="language-yaml">evidence:
+  id: E1
+
+  independent_source: true
+
+adapter_interpretations:
+  - fft
+  - inverted-star
+  - structural-detection
+  - rtt
+  - resonance
+
+independent_evidence_count: 1
+</code></pre>
+<p>This prevents artificial coherence.</p>
+<hr>
+<h1 id="shared-outcome-states">Shared Outcome States</h1>
+<p>Canonical adapters should support comparable high-level outcomes.</p>
+<pre><code class="language-text">supported
+partially_supported
+contradictory
+context_bound
+substrate_bound
+regime_bound
+temporally_bound
+no_added_value
+unresolved
+insufficient_evidence
+not_applicable
+</code></pre>
+<p>Adapters may define additional local states where necessary.</p>
+<hr>
+<h1 id="shared-decision-authority">Shared Decision Authority</h1>
+<p>Initial module policy:</p>
+<pre><code class="language-text">decision_authority: none
+</code></pre>
+<p>Adapter outputs may inform research or review.</p>
+<p>They do not independently authorize consequential decisions.</p>
+<hr>
+<h1 id="1-framework-field-theory-adapter">1. Framework Field Theory Adapter</h1>
+<h2 id="id">ID</h2>
+<p><code>fft</code></p>
+<h2 id="file">File</h2>
+<p><code>FFT_adapter.md</code></p>
+<h2 id="core-question">Core Question</h2>
+<blockquote>
+<p><strong>What relationships and boundaries surround the observation?</strong></p>
+</blockquote>
+<p>FFT focuses on:</p>
+<ul>
+<li>local state,</li>
+<li>relational state,</li>
+<li>boundaries,</li>
+<li>contextual constraints,</li>
+<li>local/global relationships,</li>
+<li>structural transitions.</li>
+</ul>
+<p>Conceptually:</p>
+<pre><code class="language-text">point observation
+      │
+      ▼
+relationships
+      │
+      ▼
+field context
+</code></pre>
+<p>FFT widens the representation around an observation.</p>
+<p>It does not automatically establish that the additional context is relevant.</p>
+<hr>
+<h1 id="fft-candidate-outputs">FFT Candidate Outputs</h1>
+<pre><code class="language-text">relationship_map
+boundary_profile
+constraint_profile
+local_global_relationship
+structural_transition_candidate
+</code></pre>
+<hr>
+<h1 id="fft-primary-risks">FFT Primary Risks</h1>
+<pre><code class="language-text">relationship inflation
+boundary shopping
+context overfitting
+causal overreach
+complexity theater
+</code></pre>
+<hr>
+<h1 id="fft-validation-requirement">FFT Validation Requirement</h1>
+<p>FFT must demonstrate incremental value beyond:</p>
+<ul>
+<li>ordinary contextual variables,</li>
+<li>feature interaction models,</li>
+<li>relational models,</li>
+<li>graph or network representations where appropriate.</li>
+</ul>
+<p>If simpler methods perform equivalently, the FFT layer should not claim additional authority.</p>
+<hr>
+<h1 id="2-the-inverted-star-adapter">2. The Inverted Star Adapter</h1>
+<h2 id="id_1">ID</h2>
+<p><code>inverted-star</code></p>
+<h2 id="file_1">File</h2>
+<p><code>Inverted_Star_adapter.md</code></p>
+<h2 id="core-question_1">Core Question</h2>
+<blockquote>
+<p><strong>Do prediction and independently observed behavior materially disagree?</strong></p>
+</blockquote>
+<p>The Inverted Star preserves discrepancy.</p>
+<p>Possible inversion classes include:</p>
+<pre><code class="language-text">prediction-performance
+local-global
+substrate
+regime
+temporal
+contextual
+representation
+confidence
+</code></pre>
+<p>The inversion itself is not the explanation.</p>
+<hr>
+<h1 id="inverted-star-candidate-outputs">Inverted Star Candidate Outputs</h1>
+<pre><code class="language-text">inversion_candidate
+divergence_direction
+divergence_magnitude
+scope_overextension_candidate
+alternative_explanations
+</code></pre>
+<hr>
+<h1 id="inverted-star-primary-risks">Inverted Star Primary Risks</h1>
+<pre><code class="language-text">rescue bias
+contrarian bias
+exceptionalism bias
+narrative overfitting
+substrate shopping
+direction hiding
+</code></pre>
+<hr>
+<h1 id="inverted-star-validation-requirement">Inverted Star Validation Requirement</h1>
+<p>The adapter must detect both:</p>
+<pre><code class="language-text">prediction_lower_than_observation
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">prediction_higher_than_observation
+</code></pre>
+<p>with comparable evidence standards.</p>
+<p>An adapter that only discovers favorable inversions is invalid by design.</p>
+<hr>
+<h1 id="3-structural-detection-adapter">3. Structural Detection Adapter</h1>
+<h2 id="id_2">ID</h2>
+<p><code>structural-detection</code></p>
+<h2 id="file_2">File</h2>
+<p><code>Structural_Detection_adapter.md</code></p>
+<h2 id="core-question_2">Core Question</h2>
+<blockquote>
+<p><strong>Does reproducible structure exist in the evidence?</strong></p>
+</blockquote>
+<p>Structural Detection focuses on:</p>
+<ul>
+<li>repeated patterns,</li>
+<li>relationships,</li>
+<li>invariants,</li>
+<li>boundaries,</li>
+<li>faultlines,</li>
+<li>topology,</li>
+<li>reconstruction,</li>
+<li>structural compression.</li>
+</ul>
+<p>Conceptually:</p>
+<pre><code class="language-text">observations
+     │
+     ▼
+candidate pattern
+     │
+     ▼
+replication
+     │
+     ▼
+structure
+</code></pre>
+<p>A pattern must not become structure merely because it is interesting.</p>
+<hr>
+<h1 id="structural-detection-candidate-outputs">Structural Detection Candidate Outputs</h1>
+<pre><code class="language-text">pattern_profile
+relationship_map
+invariant_profile
+boundary_profile
+faultline_profile
+topology_profile
+reconstruction_result
+</code></pre>
+<hr>
+<h1 id="structural-detection-primary-risks">Structural Detection Primary Risks</h1>
+<pre><code class="language-text">apophenia
+pattern shopping
+boundary shopping
+structural overfitting
+exception suppression
+topology theater
+causal overreach
+ability inflation
+</code></pre>
+<hr>
+<h1 id="structural-detection-validation-requirement">Structural Detection Validation Requirement</h1>
+<p>The adapter must successfully process cases where:</p>
+<pre><code class="language-text">structure_present
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">structure_absent
+</code></pre>
+<p>Known random or randomized data should form part of the validation program.</p>
+<p>If the detector finds meaningful structure everywhere, it has failed.</p>
+<hr>
+<h1 id="4-rtt-adapter">4. RTT Adapter</h1>
+<h2 id="id_3">ID</h2>
+<p><code>rtt</code></p>
+<h2 id="file_3">File</h2>
+<p><code>RTT_adapter.md</code></p>
+<h2 id="core-question_3">Core Question</h2>
+<blockquote>
+<p><strong>Does prediction quality or observed expression change across meaningful operating regimes and through time?</strong></p>
+</blockquote>
+<p>RTT focuses on:</p>
+<ul>
+<li>temporal sequence,</li>
+<li>regime recognition,</li>
+<li>boundaries,</li>
+<li>transitions,</li>
+<li>drift,</li>
+<li>within-regime stability,</li>
+<li>continuity,</li>
+<li>recovery,</li>
+<li>recalibration,</li>
+<li>prediction validity windows.</li>
+</ul>
+<p>Conceptually:</p>
+<pre><code class="language-text">observation
+     │
+     ▼
+time
+     │
+     ▼
+conditions
+     │
+     ▼
+regime
+     │
+     ▼
+transition / drift
+</code></pre>
+<p>A change is not automatically a regime change.</p>
+<p>Variation is not automatically drift.</p>
+<hr>
+<h1 id="rtt-candidate-outputs">RTT Candidate Outputs</h1>
+<pre><code class="language-text">regime_profile
+transition_candidate
+stability_profile
+drift_profile
+continuity_profile
+recovery_profile
+recalibration_profile
+</code></pre>
+<hr>
+<h1 id="rtt-primary-risks">RTT Primary Risks</h1>
+<pre><code class="language-text">regime inflation
+change-point storytelling
+temporal overfitting
+drift inflation
+retrospective causality
+regime rescue
+temporal cherry-picking
+infinite reclassification
+</code></pre>
+<hr>
+<h1 id="rtt-validation-requirement">RTT Validation Requirement</h1>
+<p>RTT must be compared against credible alternatives such as:</p>
+<ul>
+<li>repeated-measures analysis,</li>
+<li>time-series models,</li>
+<li>state models,</li>
+<li>change-point approaches,</li>
+<li>context-conditioned baselines.</li>
+</ul>
+<p>RTT earns its role only if it contributes useful information beyond those alternatives.</p>
+<hr>
+<h1 id="5-resonance-adapter">5. Resonance Adapter</h1>
+<h2 id="id_4">ID</h2>
+<p><code>resonance</code></p>
+<h2 id="file_4">File</h2>
+<p><code>resonance_adapter.md</code></p>
+<h2 id="core-question_4">Core Question</h2>
+<blockquote>
+<p><strong>Does observed expression change systematically across contexts, substrates, or interactions?</strong></p>
+</blockquote>
+<p>The Resonance Adapter examines candidate states such as:</p>
+<pre><code class="language-text">amplification
+suppression
+persistence
+instability
+alignment
+misalignment
+recovery
+context dependence
+</code></pre>
+<p>These terms must correspond to operational observations.</p>
+<p>They must not remain metaphorical.</p>
+<hr>
+<h1 id="resonance-candidate-outputs">Resonance Candidate Outputs</h1>
+<pre><code class="language-text">amplification_profile
+suppression_profile
+cross_context_persistence
+contextual_instability
+alignment_profile
+</code></pre>
+<hr>
+<h1 id="resonance-primary-risks">Resonance Primary Risks</h1>
+<pre><code class="language-text">metaphorical measurement
+context cherry-picking
+favorability bias
+causal overreach
+observer coupling confusion
+resonance inflation
+</code></pre>
+<hr>
+<h1 id="resonance-validation-requirement">Resonance Validation Requirement</h1>
+<p>The adapter must show that context-dependent changes:</p>
+<ul>
+<li>replicate,</li>
+<li>exceed expected noise,</li>
+<li>survive appropriate controls,</li>
+<li>occur in favorable and adverse directions,</li>
+<li>and add information beyond ordinary interaction-effect modeling.</li>
+</ul>
+<hr>
+<h1 id="adapter-interaction-model">Adapter Interaction Model</h1>
+<p>Adapters may be composed.</p>
+<p>A typical sequence might be:</p>
+<pre><code class="language-text">Existing Prediction
+        │
+        ▼
+FFT
+  map relationships
+        │
+        ▼
+Inverted Star
+  detect disagreement
+        │
+        ▼
+Structural Detection
+  test reproducible structure
+        │
+        ▼
+RTT
+  test regimes and time
+        │
+        ▼
+Resonance
+  test contextual expression
+        │
+        ▼
+Comparative Assessment
+</code></pre>
+<p>This is a useful conceptual sequence.</p>
+<p>It is <strong>not mandatory execution order</strong>.</p>
+<p>Different research questions may justify different adapter combinations.</p>
+<hr>
+<h1 id="parallel-adapter-passes">Parallel Adapter Passes</h1>
+<p>Adapters can also run conceptually in parallel:</p>
+<pre><code class="language-text">                 ┌── FFT
+                 │
+                 ├── Inverted Star
+Prediction ──────┼── Structural Detection
+                 │
+                 ├── RTT
+                 │
+                 └── Resonance
+                         │
+                         ▼
+                  Evidence Merge
+                         │
+                         ▼
+                Comparative Assessment
+</code></pre>
+<p>The merge layer must preserve:</p>
+<ul>
+<li>shared evidence,</li>
+<li>independent evidence,</li>
+<li>agreements,</li>
+<li>contradictions,</li>
+<li>uncertainty,</li>
+<li>adapter-specific limitations.</li>
+</ul>
+<hr>
+<h1 id="adapter-agreement">Adapter Agreement</h1>
+<p>Suppose:</p>
+<pre><code class="language-text">FFT:
+  substrate boundary candidate
+
+Structural Detection:
+  repeated context-conditioned structure
+
+RTT:
+  stable regime difference
+
+Resonance:
+  repeated suppression in context A
+</code></pre>
+<p>This may establish <strong>interpretive coherence</strong>.</p>
+<p>It does not necessarily establish four independent empirical confirmations.</p>
+<p>Therefore report separately:</p>
+<pre><code class="language-yaml">adapter_agreement:
+  count: 4
+
+independent_evidence_sources:
+  count: 2
+</code></pre>
+<p>The second number matters more for evidentiary independence.</p>
+<hr>
+<h1 id="adapter-disagreement">Adapter Disagreement</h1>
+<p>Disagreement is not an error condition.</p>
+<p>Example:</p>
+<pre><code class="language-text">FFT:
+  boundary appears meaningful
+
+Structural Detection:
+  pattern does not replicate
+
+RTT:
+  no stable regime found
+
+Resonance:
+  context effect uncertain
+</code></pre>
+<p>Correct result:</p>
+<pre><code class="language-text">adapter_coherence:
+  low
+
+interpretation:
+  unresolved
+</code></pre>
+<p>Do not average the disagreement away.</p>
+<hr>
+<h1 id="no-adapter-voting">No Adapter Voting</h1>
+<p>Predictive Analytics should not use:</p>
+<pre><code class="language-text">3 adapters agree
+2 disagree
+therefore majority wins
+</code></pre>
+<p>Adapters are not equivalent voters.</p>
+<p>They ask different questions and may consume overlapping evidence.</p>
+<p>Instead evaluate:</p>
+<pre><code class="language-text">evidence quality
+evidence independence
+adapter validity
+applicability
+replication
+uncertainty
+</code></pre>
+<hr>
+<h1 id="adapter-selection">Adapter Selection</h1>
+<p>Adapters should be selected because the research question warrants them.</p>
+<p>Not every assessment requires every adapter.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">adapter_selection:
+  fft:
+    enabled: true
+    reason: relational context relevant
+
+  inverted-star:
+    enabled: false
+    reason: no prediction-observation disagreement
+
+  structural-detection:
+    enabled: true
+    reason: repeated relational evidence available
+
+  rtt:
+    enabled: false
+    reason: insufficient longitudinal evidence
+
+  resonance:
+    enabled: false
+    reason: insufficient cross-context replication
+</code></pre>
+<p>Using fewer adapters can be the more rigorous decision.</p>
+<hr>
+<h1 id="adapter-applicability">Adapter Applicability</h1>
+<p>Canonical applicability states:</p>
+<pre><code class="language-text">applicable
+substrate_dependent
+unsupported
+unknown
+not_applicable
+</code></pre>
+<p>An adapter should not run merely because it exists.</p>
+<hr>
+<h1 id="adapter-eligibility-gate">Adapter Eligibility Gate</h1>
+<p>Suggested gate:</p>
+<pre><code class="language-text">1. Is the adapter relevant to the question?
+2. Are its required inputs available?
+3. Is evidence coverage sufficient?
+4. Is the system boundary declared?
+5. Is the adapter valid for this system class?
+6. Are required comparison conditions available?
+7. Can the output be independently reviewed?
+</code></pre>
+<p>If not:</p>
+<pre><code class="language-text">adapter_status:
+  not_applicable
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">adapter_status:
+  insufficient_evidence
+</code></pre>
+<hr>
+<h1 id="common-observation-record">Common Observation Record</h1>
+<p>Adapters should consume a common observation grammar where possible.</p>
+<pre><code class="language-yaml">observation:
+  observation_id:
+
+  observed_system:
+    id:
+    class:
+    boundary:
+
+  task:
+    id:
+
+  substrate:
+    id:
+
+  regime:
+    id:
+
+  timestamp:
+
+  evaluator:
+
+  evidence:
+    reference:
+    provenance:
+    independence:
+
+  state:
+
+  confidence:
+
+  limitations:
+</code></pre>
+<p>This allows cross-adapter comparison without forcing the adapters to use identical analytical logic.</p>
+<hr>
+<h1 id="common-adapter-result">Common Adapter Result</h1>
+<p>Suggested shared contract:</p>
+<pre><code class="language-yaml">adapter_result:
+  adapter_id:
+  adapter_version:
+
+  observation_id:
+
+  applicability:
+  status:
+
+  baseline:
+    prediction:
+    preserved: true
+
+  evidence:
+    sources:
+    independent_source_count:
+
+  findings:
+
+  added_information:
+  contradictory_information:
+
+  model_fit:
+  substrate_fit:
+  regime_fit:
+
+  confidence:
+  uncertainty:
+
+  alternative_interpretations:
+  counterevidence:
+  missing_evidence:
+  confounds:
+  limitations:
+
+  metrics:
+  validation_state:
+
+  review_required:
+  decision_authority: none
+</code></pre>
+<p>Adapter-specific fields may extend this record.</p>
+<hr>
+<h1 id="model-fit">Model Fit</h1>
+<p>Adapter findings may contribute to a model-fit assessment.</p>
+<p>Canonical states:</p>
+<pre><code class="language-text">high
+moderate
+low
+partial
+mismatch_detected
+unresolved
+unknown
+</code></pre>
+<p><code>mismatch_detected</code> should require stronger evidence than:</p>
+<pre><code class="language-text">prediction_disagreed_with_one_observation
+</code></pre>
+<hr>
+<h1 id="substrate-fit">Substrate Fit</h1>
+<p>Possible states:</p>
+<pre><code class="language-text">high
+moderate
+low
+partial
+mismatch_detected
+unresolved
+unknown
+</code></pre>
+<p>Substrate mismatch should refer to a measurable relationship between the measurement substrate and the construct or behavior being observed.</p>
+<hr>
+<h1 id="regime-fit">Regime Fit</h1>
+<p>Possible states:</p>
+<pre><code class="language-text">high
+moderate
+low
+partial
+mismatch_detected
+unresolved
+unknown
+</code></pre>
+<p>Regime mismatch should not become a universal explanation for prediction failure.</p>
+<hr>
+<h1 id="uncertainty">Uncertainty</h1>
+<p>Adapters should preserve:</p>
+<pre><code class="language-text">measurement_uncertainty
+model_uncertainty
+adapter_uncertainty
+substrate_uncertainty
+regime_uncertainty
+causal_uncertainty
+generalization_uncertainty
+</code></pre>
+<p>These uncertainties need not collapse into one number.</p>
+<hr>
+<h1 id="abstention">Abstention</h1>
+<p>Every adapter must be capable of returning:</p>
+<pre><code class="language-text">insufficient_evidence
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">not_applicable
+</code></pre>
+<p>A framework that always produces an interpretation will eventually manufacture one.</p>
+<hr>
+<h1 id="no_added_value"><code>no_added_value</code></h1>
+<p>Every adapter must also support:</p>
+<pre><code class="language-text">no_added_value
+</code></pre>
+<p>This state is especially important.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">adapter_result:
+  adapter_id: fft
+
+  status: no_added_value
+
+  interpretation:
+    conventional relational analysis
+    sufficiently explains the observation
+</code></pre>
+<p>This is not failure.</p>
+<p>It is evidence that the simpler representation may be preferable.</p>
+<hr>
+<h1 id="adapter-validation">Adapter Validation</h1>
+<p>Every adapter should undergo:</p>
+<ol>
+<li>structural validation,</li>
+<li>content review,</li>
+<li>measurement testing,</li>
+<li>construct testing where relevant,</li>
+<li>contextual or substrate testing,</li>
+<li>predictive/explanatory comparison,</li>
+<li>fairness analysis,</li>
+<li>ablation.</li>
+</ol>
+<p>No adapter should inherit validation from the parent module.</p>
+<hr>
+<h1 id="adapter-validation-matrix">Adapter Validation Matrix</h1>
+<p>Use a staged comparison.</p>
+<pre><code class="language-text">M0:
+  original predictive model
+
+M1:
+  simple multidimensional baseline
+
+M2:
+  standard contextual / relational methods
+
+M3:
+  one adapter
+
+M4:
+  selected adapter pair
+
+M5:
+  selected adapter ensemble
+
+M6:
+  complete Predictive Analytics ensemble
+</code></pre>
+<p>Then compare:</p>
+<pre><code class="language-text">predictive_performance
+calibration
+reliability
+explanatory_value
+profile_stability
+fairness
+evidence_coverage
+uncertainty_quality
+review_burden
+privacy_burden
+complexity
+</code></pre>
+<hr>
+<h1 id="adapter-ablation">Adapter Ablation</h1>
+<p>Every adapter should be removable.</p>
+<p>Conceptually:</p>
+<pre><code class="language-text">AAE(adapter_x) =
+  performance(full_adapter_set)
+  -
+  performance(without_adapter_x)
+</code></pre>
+<p>This corresponds to:</p>
+<pre><code class="language-text">PA-M36 — Adapter Ablation Effect
+</code></pre>
+<p>Possible outcomes:</p>
+<pre><code class="language-text">material_positive_contribution
+small_positive_contribution
+no_detectable_contribution
+negative_contribution
+interaction_dependent
+unknown
+</code></pre>
+<p>An adapter producing <code>negative_contribution</code> should not be protected because it belongs to the canon.</p>
+<hr>
+<h1 id="pairwise-ablation">Pairwise Ablation</h1>
+<p>Adapters may interact.</p>
+<p>Therefore also test:</p>
+<pre><code class="language-text">FFT + Structural Detection
+FFT + RTT
+FFT + Resonance
+Inverted Star + Structural Detection
+Inverted Star + RTT
+Structural Detection + RTT
+Structural Detection + Resonance
+RTT + Resonance
+</code></pre>
+<p>This can reveal redundancy.</p>
+<p>Example:</p>
+<pre><code class="language-text">FFT alone:
+  useful
+
+Structural Detection alone:
+  useful
+
+FFT + Structural Detection:
+  no additional improvement
+</code></pre>
+<p>That may indicate overlap requiring architectural simplification.</p>
+<hr>
+<h1 id="redundancy-test">Redundancy Test</h1>
+<p>Candidate rule:</p>
+<pre><code class="language-text">if:
+  adapter_a_output
+  approximately_equivalent_to
+  adapter_b_output
+
+and:
+  pairwise_ablation_gain
+  approximately_zero
+
+then:
+  investigate_merge_or_deprecation
+</code></pre>
+<p>No adapter receives permanent status.</p>
+<hr>
+<h1 id="validation-metrics">Validation Metrics</h1>
+<p>The adapter layer particularly relies on:</p>
+<pre><code class="language-text">PA-M01  Dimension Evidence Coverage
+PA-M02  Profile Evidence Coverage
+PA-M03  Evidence Independence Ratio
+
+PA-M08  Convergent Association
+PA-M09  Discriminant Separation
+PA-M10  Incremental Explanatory Value
+PA-M11  Incremental Predictive Value
+
+PA-M12  Substrate Effect Magnitude
+PA-M13  Substrate Effect Replicability
+PA-M14  Substrate Symmetry
+PA-M15  Substrate Specificity
+
+PA-M16  Regime Transition Detection Rate
+PA-M17  False Regime Alarm Rate
+PA-M18  Regime Boundary Error
+PA-M19  Regime-Conditioned Stability
+
+PA-M20  Model-Mismatch Precision
+PA-M21  Model-Mismatch Recall
+PA-M22  Model-Mismatch False Positive Rate
+PA-M23  Mismatch Evidence Strength
+
+PA-M24  Cross-Observation Coherence
+PA-M25  Profile Contradiction Density
+
+PA-M28  Confidence Calibration Error
+PA-M30  Abstention Rate
+PA-M31  Abstention Utility
+PA-M32  Unsupported Assertion Rate
+
+PA-M33  Irrelevant Perturbation Stability
+PA-M34  Relevant Change Sensitivity
+PA-M35  Task-Order Sensitivity
+PA-M36  Adapter Ablation Effect
+
+PA-M43  False Favorable Reinterpretation Rate
+PA-M44  False Adverse Reinterpretation Rate
+
+PA-M45  Evidence Reconstruction Rate
+PA-M46  Explanation Completeness
+</code></pre>
+<hr>
+<h1 id="favorability-symmetry">Favorability Symmetry</h1>
+<p>All adapters must obey:</p>
+<blockquote>
+<p><strong>The evidence requirement does not change based on whether the interpretation is favorable.</strong></p>
+</blockquote>
+<p>Required conditions include:</p>
+<pre><code class="language-text">favorable baseline
+unfavorable baseline
+favorable alternate observation
+unfavorable alternate observation
+agreement
+disagreement
+no effect
+unknown
+</code></pre>
+<p>This is necessary to prevent Predictive Analytics from becoming a mechanism for preferred reinterpretation.</p>
+<hr>
+<h1 id="human-ai-team-applicability">Human / AI / Team Applicability</h1>
+<p>Adapters may eventually apply to:</p>
+<pre><code class="language-text">humans
+AI systems
+human-AI pairs
+teams
+organizations
+robotic systems
+distributed agent systems
+other adaptive systems
+</code></pre>
+<p>But applicability must be validated separately.</p>
+<p>The same label does not establish equivalent cognition.</p>
+<p>Example:</p>
+<pre><code class="language-text">human:
+  structural reconstruction observed
+
+AI:
+  structural reconstruction observed
+</code></pre>
+<p>means only that both systems demonstrated an operationally defined behavior.</p>
+<p>It does not prove equivalent internal processes.</p>
+<hr>
+<h1 id="human-ai-pair-boundary">Human-AI Pair Boundary</h1>
+<p>This module requires special care with collaborative systems.</p>
+<p>If:</p>
+<pre><code class="language-text">human + AI
+</code></pre>
+<p>produces an outcome that neither produces independently, the result may belong to:</p>
+<pre><code class="language-text">human_ai_pair
+</code></pre>
+<p>Possible record:</p>
+<pre><code class="language-yaml">system_boundary:
+  type: human_ai_pair
+
+component_observations:
+  human_unassisted: available
+  ai_unassisted: available
+  collaborative: available
+
+attribution:
+  status: partial
+</code></pre>
+<p>The adapters should not force attribution where evidence does not support it.</p>
+<hr>
+<h1 id="resonant-iq-fingerprint-integration">Resonant IQ Fingerprint Integration</h1>
+<p>Within RIQF, adapters are evidence interpreters.</p>
+<p>They are not dimensions themselves.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">dimension:
+  id: structural-reasoning
+
+  evidence:
+    - task-001
+    - task-002
+    - transfer-001
+
+  adapter_support:
+    fft:
+      status: partial
+
+    structural-detection:
+      status: supported
+
+    rtt:
+      status: regime_conditioned
+
+    resonance:
+      status: context_sensitive
+
+  expression: strong
+  confidence: medium
+</code></pre>
+<p>The dimension's confidence should depend on evidence, not adapter count.</p>
+<hr>
+<h1 id="adapter-consensus-example">Adapter Consensus Example</h1>
+<p>Suppose:</p>
+<pre><code class="language-text">FFT:
+  identifies task boundary
+
+Structural Detection:
+  finds repeated performance structure
+
+RTT:
+  finds stable within-condition behavior
+
+Resonance:
+  finds repeatable context-dependent expression
+
+Inverted Star:
+  finds disagreement with broad baseline prediction
+</code></pre>
+<p>A cautious synthesis:</p>
+<pre><code class="language-yaml">comparative_assessment:
+  adapter_coherence: high
+
+  independent_evidence:
+    count: 3
+
+  model_fit:
+    status: partial
+
+  interpretation:
+    broad baseline prediction may not
+    represent the full observed profile
+
+  causal_explanation:
+    unresolved
+
+  decision_authority: none
+</code></pre>
+<p>Not:</p>
+<pre><code class="language-text">five adapters proved the baseline wrong
+</code></pre>
+<hr>
+<h1 id="adapter-disagreement-example">Adapter Disagreement Example</h1>
+<pre><code class="language-text">FFT:
+  boundary candidate
+
+Structural Detection:
+  no stable structure
+
+RTT:
+  no meaningful regime
+
+Resonance:
+  no repeatable context effect
+
+Inverted Star:
+  small discrepancy only
+</code></pre>
+<p>Synthesis:</p>
+<pre><code class="language-yaml">comparative_assessment:
+  model_mismatch:
+    status: not_supported
+
+  alternate_interpretation:
+    status: insufficient_evidence
+
+  baseline:
+    preserved: true
+
+  decision_authority: none
+</code></pre>
+<p>This is an important success case.</p>
+<hr>
+<h1 id="shared-failure-modes">Shared Failure Modes</h1>
+<h2 id="adapter-stacking">Adapter Stacking</h2>
+<p>Risk:</p>
+<p>Adding adapters until a preferred interpretation appears.</p>
+<p>Mitigation:</p>
+<p>Declare adapter selection rationale before interpretation where practical.</p>
+<hr>
+<h2 id="adapter-voting">Adapter Voting</h2>
+<p>Risk:</p>
+<p>Treating each adapter as an independent vote.</p>
+<p>Mitigation:</p>
+<p>Track evidence independence.</p>
+<hr>
+<h2 id="canon-confirmation">Canon Confirmation</h2>
+<p>Risk:</p>
+<p>Adapters validate one another because they share TriadicFrameworks terminology.</p>
+<p>Mitigation:</p>
+<p>Use independent external evidence and credible baseline methods.</p>
+<hr>
+<h2 id="narrative-overfitting">Narrative Overfitting</h2>
+<p>Risk:</p>
+<p>Several adapters create a coherent story from weak evidence.</p>
+<p>Mitigation:</p>
+<p>Require evidence traceability and counterevidence.</p>
+<hr>
+<h2 id="complexity-theater">Complexity Theater</h2>
+<p>Risk:</p>
+<p>The adapter ensemble appears more sophisticated without adding useful information.</p>
+<p>Mitigation:</p>
+<p>Ablation and simpler-model comparisons.</p>
+<hr>
+<h2 id="rescue-bias">Rescue Bias</h2>
+<p>Risk:</p>
+<p>Adapters are selectively used after unfavorable predictions.</p>
+<p>Mitigation:</p>
+<p>Apply predefined selection policies regardless of prediction direction.</p>
+<hr>
+<h2 id="adverse-amplification">Adverse Amplification</h2>
+<p>Risk:</p>
+<p>Adapter layers are used to intensify negative classification.</p>
+<p>Mitigation:</p>
+<p>Apply the same uncertainty and scope requirements to adverse reinterpretation.</p>
+<hr>
+<h2 id="ontology-drift">Ontology Drift</h2>
+<p>Risk:</p>
+<p>Experimental adapter language gradually becomes treated as established scientific terminology.</p>
+<p>Mitigation:</p>
+<p>Preserve lifecycle and validation state in outputs.</p>
+<hr>
+<h2 id="identity-collapse">Identity Collapse</h2>
+<p>Risk:</p>
+<p>Adapter findings become identity statements.</p>
+<p>Mitigation:</p>
+<p>Prefer:</p>
+<pre><code class="language-text">observed under these conditions
+</code></pre>
+<p>over:</p>
+<pre><code class="language-text">is this kind of person
+</code></pre>
+<hr>
+<h1 id="adapter-lifecycle">Adapter Lifecycle</h1>
+<p>Canonical states:</p>
+<pre><code class="language-text">proposed
+experimental
+pilot
+validated_for_context
+restricted
+deprecated
+rejected
+</code></pre>
+<p>Possible lifecycle:</p>
+<pre><code class="language-text">experimental
+   │
+   ▼
+pilot
+   │
+   ├── validated_for_context
+   │
+   ├── restricted
+   │
+   ├── deprecated
+   │
+   └── rejected
+</code></pre>
+<p>There is no guaranteed promotion path.</p>
+<hr>
+<h1 id="adapter-versioning">Adapter Versioning</h1>
+<p>Every result should identify:</p>
+<pre><code class="language-text">adapter_id
+adapter_version
+module_version
+metric_version
+validation_state
+</code></pre>
+<p>A result from an earlier adapter version must not silently inherit evidence from a later one.</p>
+<hr>
+<h1 id="adapter-deprecation">Adapter Deprecation</h1>
+<p>An adapter should be considered for deprecation if:</p>
+<ul>
+<li>it adds no measurable value,</li>
+<li>its constructs cannot be operationalized,</li>
+<li>its outputs duplicate simpler methods,</li>
+<li>it systematically increases unsupported assertions,</li>
+<li>it worsens fairness,</li>
+<li>it produces unstable results,</li>
+<li>it cannot be independently reviewed,</li>
+<li>or its claims fail replication.</li>
+</ul>
+<p>Deprecation preserves lineage.</p>
+<p>It does not erase the research history.</p>
+<hr>
+<h1 id="adapter-rejection">Adapter Rejection</h1>
+<p><code>rejected</code> is stronger than <code>deprecated</code>.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">adapter:
+  id: example-adapter
+
+  lifecycle:
+    state: rejected
+
+  reason:
+    failed_replication
+
+  retained_for:
+    - lineage
+    - negative result
+    - historical reference
+</code></pre>
+<p>A canon that preserves failed experiments may be more useful than one that quietly removes them.</p>
+<hr>
+<h1 id="minimal-adapter-registry-record">Minimal Adapter Registry Record</h1>
+<pre><code class="language-yaml">adapter:
+  id:
+  name:
+  version:
+
+  source_framework:
+  source_document:
+
+  purpose:
+
+  supported_inputs:
+  unsupported_inputs:
+
+  operators:
+  outputs:
+
+  claims:
+  limitations:
+  confounds:
+
+  metrics:
+  validation_state:
+
+  lifecycle:
+  decision_authority:
+</code></pre>
+<hr>
+<h1 id="minimal-ensemble-record">Minimal Ensemble Record</h1>
+<pre><code class="language-yaml">adapter_ensemble:
+  assessment_id:
+
+  observed_system:
+    id:
+    boundary:
+
+  baseline:
+    model:
+    prediction:
+    preserved: true
+
+  selected_adapters:
+    - id:
+      reason:
+      applicability:
+
+  evidence:
+    sources:
+    independent_source_count:
+
+  results:
+    fft:
+    inverted_star:
+    structural_detection:
+    rtt:
+    resonance:
+
+  agreement:
+    status:
+    adapter_count:
+    independent_evidence_count:
+
+  contradictions:
+
+  model_fit:
+  substrate_fit:
+  regime_fit:
+
+  uncertainty:
+  missing_evidence:
+  alternative_interpretations:
+  limitations:
+
+  validation_state:
+  review_required:
+  decision_authority: none
+</code></pre>
+<hr>
+<h1 id="research-program">Research Program</h1>
+<p>The adapter architecture creates several module-level research questions.</p>
+<ol>
+<li>Does any adapter improve prediction beyond credible baseline methods?</li>
+<li>Does any adapter improve calibration?</li>
+<li>Does any adapter improve explanatory usefulness?</li>
+<li>Which adapter outputs replicate?</li>
+<li>Which fail replication?</li>
+<li>Which adapters overlap substantially?</li>
+<li>Which adapter pairs provide complementary information?</li>
+<li>Which merely reinterpret the same evidence?</li>
+<li>Can adapter selection be standardized?</li>
+<li>Can adapter agreement be distinguished from evidence independence?</li>
+<li>Can the system reliably return <code>no_added_value</code>?</li>
+<li>Can it reliably abstain?</li>
+<li>Can adapters detect adverse and favorable reinterpretations symmetrically?</li>
+<li>Which adapters improve model-mismatch precision?</li>
+<li>Which increase false mismatch detection?</li>
+<li>Does the ensemble improve fairness?</li>
+<li>Does it introduce new disparities?</li>
+<li>How much additional operational burden does the ensemble create?</li>
+<li>How much privacy burden does richer observation create?</li>
+<li>Which adapters should eventually be removed?</li>
+<li>Can established statistical methods replace some adapters entirely?</li>
+<li>Does the adapter architecture generalize beyond humans?</li>
+<li>Which concepts fail outside human cognition?</li>
+<li>How should collaborative human-AI observations be attributed?</li>
+<li>At what point does additional adapter complexity stop earning its cost?</li>
+</ol>
+<p>These questions are part of the module.</p>
+<p>They are not objections external to it.</p>
+<hr>
+<h1 id="core-invariants">Core Invariants</h1>
+<pre><code class="language-text">adapter != authority
+adapter_count != evidence_count
+agreement != independent_confirmation
+disagreement != failure
+context != cause
+structure != cause
+regime != cause
+resonance != cause
+inversion != hidden_superiority
+prediction != identity
+profile != identity
+complexity != validity
+richness != truth
+canon_alignment != empirical_validation
+no_added_value != failure
+abstention != failure
+deprecation != erasure
+rejection != wasted_research
+</code></pre>
+<hr>
+<h1 id="closing-principle">Closing Principle</h1>
+<p>Adapters exist because one predictive representation may not capture everything worth observing.</p>
+<p>But every additional observer also introduces:</p>
+<ul>
+<li>assumptions,</li>
+<li>interpretation,</li>
+<li>complexity,</li>
+<li>possible bias,</li>
+<li>possible error,</li>
+<li>and additional validation burden.</li>
+</ul>
+<p>Predictive Analytics should therefore use adapters conservatively.</p>
+<p>The question is never:</p>
+<blockquote>
+<p><strong>How many analytical lenses can we apply?</strong></p>
+</blockquote>
+<p>The better question is:</p>
+<blockquote>
+<p><strong>Which additional observation, if any, earns its place by revealing reproducible information that the simpler model did not preserve?</strong></p>
+</blockquote>
+<p>Sometimes the answer will be FFT.</p>
+<p>Sometimes The Inverted Star.</p>
+<p>Sometimes Structural Detection.</p>
+<p>Sometimes RTT.</p>
+<p>Sometimes Resonance.</p>
+<p>Sometimes several will contribute complementary information.</p>
+<p>And sometimes the strongest result will be:</p>
+<pre><code class="language-text">baseline model sufficient
+additional adapters unnecessary
+</code></pre>
+<p>That is not a defeat for Predictive Analytics.</p>
+<blockquote>
+<p><strong>A framework that knows when not to add another layer has learned something important about prediction.</strong></p>
+</blockquote>
   </main>
 </body>
 </html>

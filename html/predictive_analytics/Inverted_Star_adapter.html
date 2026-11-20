@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/predictive_analytics/Inverted_Star_adapter.md">
-  <title>Inverted_Star_adapter</title>
+  <title>The Inverted Star Adapter</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,7 +92,1093 @@
   </aside>
 
   <main>
+<p><img width="1194" height="672" alt="predictive_analytics_Inverted_Star_adapter_" src="https://github.com/user-attachments/assets/cb45f300-954e-46c1-87b6-1d9dc5f125b7" /></p>
+<h1 id="the-inverted-star-adapter">The Inverted Star Adapter</h1>
+<blockquote>
+<p><strong>When prediction and demonstrated behavior diverge, preserve the inversion before explaining it.</strong></p>
+</blockquote>
+<h2 id="module">Module</h2>
+<p>Predictive Analytics</p>
+<h2 id="adapter-id">Adapter ID</h2>
+<p><code>inverted-star</code></p>
+<h2 id="status">Status</h2>
+<p>Experimental.</p>
+<h2 id="source-framework">Source Framework</h2>
+<p>The Inverted Star</p>
+<h2 id="intended-role">Intended Role</h2>
+<p>Prediction-observation inversion detector and comparative assessment adapter.</p>
+<hr>
+<h1 id="purpose">Purpose</h1>
+<p>The Inverted Star Adapter connects Predictive Analytics to cases where an existing predictive model and independently observed behavior appear to point in materially different directions.</p>
+<p>The adapter does not assume:</p>
+<ul>
+<li>the prediction is wrong,</li>
+<li>the observation is superior,</li>
+<li>the subject possesses hidden capability,</li>
+<li>or the alternate interpretation is more valid because it is more favorable.</li>
+</ul>
+<p>Instead, it identifies and preserves a structural condition:</p>
+<blockquote>
+<p><strong>The expected outcome and the independently observed outcome do not align under the current representation.</strong></p>
+</blockquote>
+<p>That disagreement becomes something to investigate.</p>
+<hr>
+<h1 id="core-hypothesis">Core Hypothesis</h1>
+<p>Predictive systems typically move from evidence toward an expected outcome:</p>
+<pre><code class="language-text">Evidence
+   │
+   ▼
+Model
+   │
+   ▼
+Prediction
+   │
+   ▼
+Expected Behavior
+</code></pre>
+<p>The Inverted Star begins when observation returns something that does not fit cleanly:</p>
+<pre><code class="language-text">Evidence
+   │
+   ▼
+Model
+   │
+   ▼
+Prediction
+   │
+   ▼
+Expected Behavior
+   │
+   │
+   └──────────────┐
+                  │
+                  ▼
+          Observed Behavior
+                  │
+                  ▼
+             Divergence
+                  │
+                  ▼
+         Inverted Star Pass
+                  │
+       ┌──────────┼──────────┐
+       ▼          ▼          ▼
+   model fit   substrate   regime
+                fit         fit
+       │          │          │
+       └──────────┼──────────┘
+                  ▼
+         candidate inversion
+</code></pre>
+<p>The inversion is not itself an explanation.</p>
+<p>It is an observation about disagreement.</p>
+<hr>
+<h1 id="foundational-principle">Foundational Principle</h1>
+<p>The Inverted Star adapter distinguishes:</p>
+<p><strong>predicted capability</strong></p>
+<p>from:</p>
+<p><strong>demonstrated capability</strong></p>
+<p>and both from:</p>
+<p><strong>total capability</strong></p>
+<p>Conceptually:</p>
+<pre><code class="language-text">prediction != demonstration
+demonstration != total capability
+disagreement != proof of model failure
+</code></pre>
+<p>A model may predict poorly.</p>
+<p>An observation may be noisy.</p>
+<p>A task may favor one representation.</p>
+<p>A regime may have changed.</p>
+<p>The subject may have a genuinely asymmetric profile.</p>
+<p>Several possibilities may coexist.</p>
+<hr>
+<h1 id="what-is-an-inversion">What Is an Inversion?</h1>
+<p>An inversion exists when independently supported observations materially conflict with the direction or scope of a prediction.</p>
+<p>Example:</p>
+<pre><code class="language-text">prediction:
+  structural_performance: low
 
+independent_observation:
+  repeated_structural_performance: strong
+</code></pre>
+<p>Candidate state:</p>
+<pre><code class="language-text">inversion:
+  detected: true
+  explanation: unresolved
+</code></pre>
+<p>Another example can run in the opposite direction:</p>
+<pre><code class="language-text">prediction:
+  structural_performance: high
+
+independent_observation:
+  repeated_structural_performance: weak
+</code></pre>
+<p>This is equally important.</p>
+<p>The framework must detect both.</p>
+<hr>
+<h1 id="favorability-symmetry">Favorability Symmetry</h1>
+<p>The Inverted Star must remain directionally neutral.</p>
+<p>These are both legitimate inversion candidates:</p>
+<pre><code class="language-text">low prediction
+    +
+strong observation
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">high prediction
+    +
+weak observation
+</code></pre>
+<p>The adapter fails if it becomes:</p>
+<pre><code class="language-text">unfavorable prediction
+    -&gt; search for hidden strength
+</code></pre>
+<p>Its proper function is:</p>
+<pre><code class="language-text">prediction
+    +
+independent observation
+    -&gt; test discrepancy
+</code></pre>
+<hr>
+<h1 id="inversion-classes">Inversion Classes</h1>
+<p>The first adapter version defines several provisional inversion classes.</p>
+<h2 id="1-prediction-performance-inversion">1. Prediction-Performance Inversion</h2>
+<p>Predicted performance and repeatedly observed performance materially disagree.</p>
+<pre><code class="language-text">predicted: low
+observed: high
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">predicted: high
+observed: low
+</code></pre>
+<hr>
+<h2 id="2-local-global-inversion">2. Local-Global Inversion</h2>
+<p>A narrow local measurement points one way while broader observations point another.</p>
+<p>Example:</p>
+<pre><code class="language-text">local_task:
+  performance: weak
+
+broader_task_family:
+  performance: strong
+</code></pre>
+<p>This does not automatically mean the local task is invalid.</p>
+<p>It may indicate that its scope has been overgeneralized.</p>
+<hr>
+<h2 id="3-substrate-inversion">3. Substrate Inversion</h2>
+<p>Performance changes materially across measurement substrates.</p>
+<pre><code class="language-text">timed_symbolic:
+  weak
+
+reflective_relational:
+  strong
+</code></pre>
+<p>The correct conclusion is not:</p>
+<blockquote>
+<p>The stronger substrate reveals the true person.</p>
+</blockquote>
+<p>The correct initial conclusion is:</p>
+<blockquote>
+<p>Performance varies materially by substrate.</p>
+</blockquote>
+<p>Cause remains open.</p>
+<hr>
+<h2 id="4-regime-inversion">4. Regime Inversion</h2>
+<p>A model performs differently across independently meaningful operating regimes.</p>
+<pre><code class="language-text">regime_a:
+  model fit: high
+
+regime_b:
+  model fit: low
+</code></pre>
+<p>RTT may then evaluate whether the boundary represents a meaningful regime transition.</p>
+<hr>
+<h2 id="5-temporal-inversion">5. Temporal Inversion</h2>
+<p>A prediction and later repeated outcomes diverge.</p>
+<p>Example:</p>
+<pre><code class="language-text">initial_prediction:
+  low persistence
+
+longitudinal_observation:
+  sustained high persistence
+</code></pre>
+<p>Temporal evidence may challenge the predictive interpretation.</p>
+<p>It does not erase the original observation.</p>
+<hr>
+<h2 id="6-contextual-inversion">6. Contextual Inversion</h2>
+<p>Performance changes with contextual conditions.</p>
+<p>Candidate contexts include:</p>
+<ul>
+<li>individual versus collaborative,</li>
+<li>tool-free versus tool-assisted,</li>
+<li>familiar versus novel,</li>
+<li>fixed-choice versus generative,</li>
+<li>low-context versus context-rich.</li>
+</ul>
+<p>Contextual differences require controls before explanation.</p>
+<hr>
+<h2 id="7-representation-inversion">7. Representation Inversion</h2>
+<p>Two reasonable representations of the same evidence produce materially different conclusions.</p>
+<pre><code class="language-text">scalar_representation:
+  low
+
+multidimensional_representation:
+  heterogeneous
+</code></pre>
+<p>The multidimensional result may explain more.</p>
+<p>Or it may merely be more complicated.</p>
+<p>Validation must distinguish the two.</p>
+<hr>
+<h2 id="8-confidence-inversion">8. Confidence Inversion</h2>
+<p>Model confidence is high where observed reliability is low, or vice versa.</p>
+<pre><code class="language-text">model_confidence:
+  high
+
+observed_calibration:
+  poor
+</code></pre>
+<p>This can be particularly important when a model's numerical confidence creates unwarranted authority.</p>
+<hr>
+<h1 id="what-is-not-an-inversion">What Is Not an Inversion?</h1>
+<p>Not every difference qualifies.</p>
+<p>The following should generally not be treated as inversion on their own:</p>
+<pre><code class="language-text">single surprising result
+minor score difference
+normal measurement variance
+subject disagreement
+evaluator preference
+preferred narrative
+unsupported anecdote
+different task with no comparability
+missing evidence
+</code></pre>
+<p>The adapter should be conservative.</p>
+<hr>
+<h1 id="evidence-requirements">Evidence Requirements</h1>
+<p>A candidate inversion should identify:</p>
+<pre><code class="language-text">baseline_prediction
+prediction_scope
+prediction_confidence
+
+independent_observation
+observation_scope
+observation_confidence
+
+comparison_basis
+effect_direction
+effect_magnitude
+
+known_confounds
+missing_evidence
+</code></pre>
+<p>A candidate inversion without independent evidence remains:</p>
+<pre><code class="language-text">status: insufficient_evidence
+</code></pre>
+<hr>
+<h1 id="adapter-inputs">Adapter Inputs</h1>
+<p>The adapter may accept:</p>
+<pre><code class="language-text">existing_prediction
+prediction_confidence
+prediction_scope
+observed_outcomes
+observation_substrate
+observation_regime
+comparison_tasks
+temporal_context
+model_fit
+substrate_fit
+regime_fit
+uncertainty
+</code></pre>
+<hr>
+<h1 id="unsupported-inputs">Unsupported Inputs</h1>
+<p>The adapter should reject claims based solely upon:</p>
+<ul>
+<li>dissatisfaction with a prediction,</li>
+<li>desired reinterpretation,</li>
+<li>undocumented capability,</li>
+<li>intuition without observable evidence,</li>
+<li>metaphor presented as measurement,</li>
+<li>untraceable third-party claims,</li>
+<li>differences without a meaningful comparison basis.</li>
+</ul>
+<hr>
+<h1 id="core-adapter-pipeline">Core Adapter Pipeline</h1>
+<pre><code class="language-text">Existing Prediction
+        │
+        ▼
+Preserve Prediction
+        │
+        ▼
+Identify Prediction Scope
+        │
+        ▼
+Acquire Independent Observation
+        │
+        ▼
+Confirm Comparison Basis
+        │
+        ▼
+Measure Divergence
+        │
+        ▼
+Check Noise / Confounds
+        │
+        ▼
+Check Substrate / Regime / Boundary
+        │
+        ▼
+Classify Candidate Inversion
+        │
+        ▼
+Search Alternative Explanations
+        │
+        ▼
+Return:
+  supported_inversion
+  partial_inversion
+  no_inversion
+  expected_variation
+  unresolved
+  insufficient_evidence
+</code></pre>
+<hr>
+<h1 id="inverted-star-operators">Inverted Star Operators</h1>
+<h2 id="is-preserve"><code>IS-Preserve</code></h2>
+<p>Preserves the baseline prediction.</p>
+<pre><code class="language-text">IS-Preserve(prediction)
+  -&gt; immutable_baseline_record
+</code></pre>
+<p>The original observation must not disappear when an alternative interpretation is introduced.</p>
+<hr>
+<h2 id="is-compare"><code>IS-Compare</code></h2>
+<p>Compares predicted and observed behavior.</p>
+<pre><code class="language-text">IS-Compare(prediction, observation)
+  -&gt; divergence_record
+</code></pre>
+<hr>
+<h2 id="is-scope"><code>IS-Scope</code></h2>
+<p>Tests whether the prediction has been generalized beyond its justified scope.</p>
+<pre><code class="language-text">IS-Scope(prediction)
+  -&gt; scope_profile
+</code></pre>
+<p>Possible states:</p>
+<pre><code class="language-text">appropriate
+narrow
+overextended
+unclear
+unknown
+</code></pre>
+<hr>
+<h2 id="is-divergence"><code>IS-Divergence</code></h2>
+<p>Measures the direction and magnitude of disagreement.</p>
+<pre><code class="language-text">IS-Divergence(predicted, observed)
+  -&gt; divergence_profile
+</code></pre>
+<p>A divergence may be:</p>
+<pre><code class="language-text">negligible
+small
+moderate
+large
+unknown
+</code></pre>
+<p>Thresholds must be study-specific.</p>
+<hr>
+<h2 id="is-confound"><code>IS-Confound</code></h2>
+<p>Enumerates plausible alternative explanations.</p>
+<pre><code class="language-text">IS-Confound(divergence)
+  -&gt; alternative_explanations
+</code></pre>
+<p>Examples:</p>
+<pre><code class="language-text">measurement_noise
+task_difference
+practice_effect
+fatigue
+selection_effect
+substrate_effect
+regime_effect
+evaluator_effect
+missing_variable
+model_error
+unknown
+</code></pre>
+<hr>
+<h2 id="is-invert"><code>IS-Invert</code></h2>
+<p>Classifies an inversion only after the earlier passes.</p>
+<pre><code class="language-text">IS-Invert(divergence, evidence)
+  -&gt; inversion_candidate
+</code></pre>
+<p>This operator does not grant decision authority.</p>
+<hr>
+<h1 id="inversion-record">Inversion Record</h1>
+<p>Suggested representation:</p>
+<pre><code class="language-yaml">inverted_star_observation:
+  observation_id: inversion-001
+
+  baseline:
+    model: existing-model
+    prediction: preserved
+    prediction_scope: declared
+    confidence: medium
+
+  comparison:
+    observation_id: observation-002
+    evidence: evidence-reference
+    independent: true
+    confidence: medium
+
+  divergence:
+    direction: prediction_lower_than_observation
+    magnitude: moderate
+    confidence: medium
+
+  inversion:
+    detected: true
+    class: prediction-performance
+    status: candidate
+
+  alternative_explanations:
+    - substrate_effect
+    - task_difference
+    - model_error
+    - genuine_asymmetric_capability
+
+  unresolved:
+    - causal_explanation
+    - generalizability
+
+  decision_authority: none
+</code></pre>
+<hr>
+<h1 id="inversion-direction">Inversion Direction</h1>
+<p>Explicit direction matters.</p>
+<p>Possible values:</p>
+<pre><code class="language-text">prediction_lower_than_observation
+prediction_higher_than_observation
+local_lower_than_global
+local_higher_than_global
+substrate_a_lower_than_substrate_b
+substrate_a_higher_than_substrate_b
+confidence_higher_than_reliability
+confidence_lower_than_reliability
+mixed
+unknown
+</code></pre>
+<p>Recording direction helps expose favorability bias.</p>
+<hr>
+<h1 id="inversion-status">Inversion Status</h1>
+<pre><code class="language-text">not_tested
+candidate
+supported
+partially_supported
+not_supported
+expected_variation
+confounded
+unresolved
+insufficient_evidence
+</code></pre>
+<hr>
+<h1 id="worked-example-pax-01">Worked Example — PAX-01</h1>
+<h2 id="baseline-observation">Baseline Observation</h2>
+<p>Synthetic subject <code>PAX-01</code> receives a low result on a conventional constrained assessment.</p>
+<pre><code class="language-text">baseline:
+  rapid_symbolic: weak
+  timed_classification: weak
+
+prediction:
+  broad_reasoning_capability: low
+</code></pre>
+<p>The first important question is:</p>
+<blockquote>
+<p>Does the available assessment actually justify the <strong>broad</strong> prediction?</p>
+</blockquote>
+<p>The adapter does not yet answer.</p>
+<hr>
+<h2 id="independent-observations">Independent Observations</h2>
+<p>Additional tasks produce:</p>
+<pre><code class="language-text">system_mapping:
+  strong
+
+cross_domain_transfer:
+  strong
+
+long_form_synthesis:
+  strong
+
+regime_recognition:
+  strong
+
+timed_symbolic:
+  weak
+</code></pre>
+<p>This creates a heterogeneous profile.</p>
+<hr>
+<h2 id="pass-1-preserve">Pass 1 — Preserve</h2>
+<pre><code class="language-text">IS-Preserve:
+
+baseline_result:
+  retained: true
+
+timed_symbolic:
+  weak
+
+timed_classification:
+  weak
+</code></pre>
+<p>Nothing is erased.</p>
+<hr>
+<h2 id="pass-2-scope">Pass 2 — Scope</h2>
+<p>The baseline measure directly observed:</p>
+<pre><code class="language-text">timed symbolic processing
+classification under constraints
+</code></pre>
+<p>The resulting claim was:</p>
+<pre><code class="language-text">broad reasoning capability: low
+</code></pre>
+<p>Candidate finding:</p>
+<pre><code class="language-text">scope:
+  possible_overextension: true
+  status: requires_validation
+</code></pre>
+<p>The adapter is questioning the inference boundary, not the original task score.</p>
+<hr>
+<h2 id="pass-3-compare">Pass 3 — Compare</h2>
+<pre><code class="language-text">predicted:
+  broad reasoning: low
+
+observed:
+  structural reasoning: strong
+  cross-domain transfer: strong
+  long-horizon integration: strong
+  timed symbolic processing: weak
+</code></pre>
+<p>Result:</p>
+<pre><code class="language-text">divergence:
+  detected: true
+  profile: asymmetric
+</code></pre>
+<hr>
+<h2 id="pass-4-confounds">Pass 4 — Confounds</h2>
+<p>Possible explanations:</p>
+<pre><code class="language-text">1. baseline model overgeneralization
+2. real substrate sensitivity
+3. genuinely asymmetric capability
+4. task-family differences
+5. practice or familiarity effects
+6. measurement noise
+7. evaluation bias
+8. unresolved interaction effects
+</code></pre>
+<p>No explanation wins automatically.</p>
+<hr>
+<h2 id="pass-5-inversion">Pass 5 — Inversion</h2>
+<pre><code class="language-yaml">inversion:
+  detected: true
+  class:
+    - prediction-performance
+    - local-global
+
+  status: candidate
+
+  confidence: medium
+
+  finding:
+    baseline result does not currently explain
+    the wider observation set
+
+  not_claimed:
+    - hidden genius
+    - globally high intelligence
+    - invalid conventional test
+</code></pre>
+<p>That is the intended Inverted Star behavior.</p>
+<hr>
+<h1 id="negative-direction-example">Negative-Direction Example</h1>
+<p>The adapter must work the other way too.</p>
+<p>Suppose another synthetic subject receives:</p>
+<pre><code class="language-text">prediction:
+  complex_transfer: strong
+</code></pre>
+<p>but repeated independent observations show:</p>
+<pre><code class="language-text">novel_transfer:
+  weak
+
+unfamiliar_domain_transfer:
+  weak
+
+error_recovery:
+  weak
+</code></pre>
+<p>The adapter should return:</p>
+<pre><code class="language-text">inversion:
+  direction: prediction_higher_than_observation
+  status: candidate
+</code></pre>
+<p>It must not suppress the inversion because the alternate interpretation is less favorable.</p>
+<p>This is essential to validation.</p>
+<hr>
+<h1 id="relationship-to-resonant-iq-fingerprint">Relationship to Resonant IQ Fingerprint</h1>
+<p>RIQF can expose profile shape.</p>
+<p>The Inverted Star asks whether the profile conflicts materially with an existing prediction.</p>
+<p>Example:</p>
+<pre><code class="language-text">Conventional composite:
+  low
+
+RIQF:
+  structural_reasoning: strong
+  cross_domain_transfer: strong
+  regime_recognition: strong
+  rapid_symbolic_processing: weak
+</code></pre>
+<p>The correct output is not:</p>
+<pre><code class="language-text">RIQF says intelligence is high
+</code></pre>
+<p>It is:</p>
+<pre><code class="language-text">scalar_coherence:
+  low
+
+profile_coherence:
+  potentially_higher
+
+inversion_candidate:
+  scalar_vs_profile
+</code></pre>
+<p>Then validation asks whether the richer profile actually explains or predicts something useful.</p>
+<hr>
+<h1 id="relationship-to-fft">Relationship to FFT</h1>
+<p>FFT asks:</p>
+<blockquote>
+<p>What relationships and boundaries surround this observation?</p>
+</blockquote>
+<p>The Inverted Star asks:</p>
+<blockquote>
+<p>Does the broader evidence point in a materially different direction from the prediction?</p>
+</blockquote>
+<pre><code class="language-text">FFT
+  -&gt; boundary
+  -&gt; relationship
+  -&gt; context
+       │
+       ▼
+Inverted Star
+  -&gt; discrepancy
+  -&gt; inversion
+  -&gt; alternate explanation
+</code></pre>
+<p>FFT may help explain where the candidate inversion originates.</p>
+<p>It does not prove the inversion.</p>
+<hr>
+<h1 id="relationship-to-structural-detection">Relationship to Structural Detection</h1>
+<p>Structural Detection may identify reproducible structure within the discrepancy.</p>
+<p>Example:</p>
+<pre><code class="language-text">difference:
+  timed tasks consistently weak
+  relational tasks consistently strong
+</code></pre>
+<p>Structural Detection asks whether that pattern is:</p>
+<pre><code class="language-text">repeatable
+invariant
+boundary-dependent
+or noise
+</code></pre>
+<p>If no stable structure exists, the Inverted Star should lower its confidence.</p>
+<hr>
+<h1 id="relationship-to-rtt">Relationship to RTT</h1>
+<p>RTT may test whether the inversion changes across operating regimes.</p>
+<p>Example:</p>
+<pre><code class="language-text">regime_a:
+  prediction and observation align
+
+regime_b:
+  prediction and observation diverge
+</code></pre>
+<p>This may indicate:</p>
+<pre><code class="language-text">regime-conditioned model fit
+</code></pre>
+<p>But this conclusion must itself be validated.</p>
+<hr>
+<h1 id="relationship-to-resonance">Relationship to Resonance</h1>
+<p>The Resonance adapter can examine whether the observed inversion persists across contexts.</p>
+<p>Example:</p>
+<pre><code class="language-text">context_a:
+  predicted low
+  observed high
+
+context_b:
+  predicted low
+  observed high
+
+context_c:
+  predicted low
+  observed low
+</code></pre>
+<p>Possible result:</p>
+<pre><code class="language-text">inversion:
+  context_sensitive
+
+resonance:
+  amplification_candidate
+</code></pre>
+<p>Neither adapter automatically establishes the cause.</p>
+<hr>
+<h1 id="relationship-to-counterfactual-analysis">Relationship to Counterfactual Analysis</h1>
+<p>A candidate inversion should survive reasonable alternative representations.</p>
+<p>Example:</p>
+<pre><code class="language-text">baseline interpretation:
+  low global capability
+
+counterfactual A:
+  multidimensional profile
+
+counterfactual B:
+  substrate-matched comparison
+
+counterfactual C:
+  repeated longitudinal observation
+</code></pre>
+<p>If the inversion disappears under small reasonable changes, it may not be robust.</p>
+<hr>
+<h1 id="relationship-to-human-review">Relationship to Human Review</h1>
+<p>A strong inversion in a consequential setting should trigger:</p>
+<pre><code class="language-text">review_required: true
+</code></pre>
+<p>rather than:</p>
+<pre><code class="language-text">baseline_overridden: true
+</code></pre>
+<p>Possible review questions:</p>
+<ul>
+<li>Are the observations comparable?</li>
+<li>Is the discrepancy replicated?</li>
+<li>Are substrates different?</li>
+<li>Are regimes different?</li>
+<li>Is the prediction being overgeneralized?</li>
+<li>Is the alternate interpretation overgeneralized?</li>
+<li>Are relevant confounds controlled?</li>
+<li>What evidence could resolve the disagreement?</li>
+</ul>
+<hr>
+<h1 id="primary-metrics">Primary Metrics</h1>
+<h2 id="pa-m20-model-mismatch-precision"><code>PA-M20 — Model-Mismatch Precision</code></h2>
+<p>Of all mismatch or inversion cases identified, how many are supported by independent evidence?</p>
+<pre><code class="language-text">MMP =
+  supported_mismatch_flags
+  /
+  all_mismatch_flags
+</code></pre>
+<hr>
+<h2 id="pa-m21-model-mismatch-recall"><code>PA-M21 — Model-Mismatch Recall</code></h2>
+<p>How many reference mismatch cases are detected?</p>
+<hr>
+<h2 id="pa-m22-model-mismatch-false-positive-rate"><code>PA-M22 — Model-Mismatch False Positive Rate</code></h2>
+<p>How often does the adapter identify mismatch where reference evidence does not support it?</p>
+<p>This is particularly important because a framework designed to challenge conventional predictions can otherwise become overly eager to find exceptions.</p>
+<hr>
+<h2 id="pa-m23-mismatch-evidence-strength"><code>PA-M23 — Mismatch Evidence Strength</code></h2>
+<p>Tracks the evidence supporting an inversion without converting that evidence into a person-level intelligence score.</p>
+<p>Possible components:</p>
+<pre><code class="language-text">independent_sources
+replication
+effect_magnitude
+substrate_comparison
+regime_comparison
+counterfactual_stability
+uncertainty
+</code></pre>
+<hr>
+<h2 id="pa-m33-irrelevant-perturbation-stability"><code>PA-M33 — Irrelevant Perturbation Stability</code></h2>
+<p>Does the inversion remain stable when irrelevant details change?</p>
+<hr>
+<h2 id="pa-m34-relevant-change-sensitivity"><code>PA-M34 — Relevant Change Sensitivity</code></h2>
+<p>Does inversion status update when meaningful evidence changes?</p>
+<hr>
+<h2 id="pa-m36-adapter-ablation-effect"><code>PA-M36 — Adapter Ablation Effect</code></h2>
+<p>Does The Inverted Star add measurable value beyond:</p>
+<ul>
+<li>baseline prediction,</li>
+<li>multidimensional profiling,</li>
+<li>substrate comparison,</li>
+<li>ordinary residual analysis,</li>
+<li>and simpler model-error detection?</li>
+</ul>
+<p>If not, the adapter should be simplified or deprecated.</p>
+<hr>
+<h2 id="pa-m43-false-favorable-reinterpretation-rate"><code>PA-M43 — False Favorable Reinterpretation Rate</code></h2>
+<p>Critical metric.</p>
+<pre><code class="language-text">FFRR =
+  unsupported_favorable_reinterpretations
+  /
+  favorable_reinterpretations
+</code></pre>
+<hr>
+<h2 id="pa-m44-false-adverse-reinterpretation-rate"><code>PA-M44 — False Adverse Reinterpretation Rate</code></h2>
+<p>Equally critical.</p>
+<pre><code class="language-text">FARR =
+  unsupported_adverse_reinterpretations
+  /
+  adverse_reinterpretations
+</code></pre>
+<p>Both are necessary for directional neutrality.</p>
+<hr>
+<h1 id="validation-matrix">Validation Matrix</h1>
+<p>The Inverted Star should be compared against simpler approaches.</p>
+<pre><code class="language-text">M0:
+  original prediction
+
+M1:
+  residual / prediction-error analysis
+
+M2:
+  multidimensional assessment
+
+M3:
+  substrate-aware comparison
+
+M4:
+  explicit model-mismatch classifier
+
+M5:
+  M4 + Inverted Star
+
+M6:
+  complete Predictive Analytics ensemble
+</code></pre>
+<p>The adapter earns its complexity only if <code>M5</code> adds useful information beyond <code>M4</code>.</p>
+<hr>
+<h1 id="required-test-cases">Required Test Cases</h1>
+<p>Validation should deliberately include:</p>
+<pre><code class="language-text">low_prediction + low_observation
+low_prediction + high_observation
+
+high_prediction + high_observation
+high_prediction + low_observation
+
+medium_prediction + mixed_observation
+
+strong_substrate_effect
+no_substrate_effect
+
+strong_regime_effect
+no_regime_effect
+
+real_mismatch
+measurement_noise
+task_difference
+missing_evidence
+</code></pre>
+<p>The adapter must succeed on non-inversion cases too.</p>
+<hr>
+<h1 id="failure-modes">Failure Modes</h1>
+<h2 id="rescue-bias">Rescue Bias</h2>
+<p>Risk:</p>
+<p>The adapter becomes a mechanism for rescuing subjects from unfavorable predictions.</p>
+<p>Mitigation:</p>
+<p>Use favorable and adverse inversion tests symmetrically.</p>
+<hr>
+<h2 id="contrarian-bias">Contrarian Bias</h2>
+<p>Risk:</p>
+<p>The framework assumes disagreement with an established model is inherently more insightful.</p>
+<p>Mitigation:</p>
+<p>Preserve the baseline and explicitly support <code>no_inversion</code>.</p>
+<hr>
+<h2 id="exceptionalism-bias">Exceptionalism Bias</h2>
+<p>Risk:</p>
+<p>Unusual performance is interpreted as evidence of hidden exceptional ability.</p>
+<p>Mitigation:</p>
+<p>Require replication and defined comparison groups or baselines where relevant.</p>
+<hr>
+<h2 id="narrative-overfitting">Narrative Overfitting</h2>
+<p>Risk:</p>
+<p>A compelling explanation is constructed around a discrepancy after the fact.</p>
+<p>Mitigation:</p>
+<p>Predeclare inversion criteria and preserve competing explanations.</p>
+<hr>
+<h2 id="boundary-shopping">Boundary Shopping</h2>
+<p>Risk:</p>
+<p>Assessment scope is repeatedly changed until disagreement appears.</p>
+<p>Mitigation:</p>
+<p>Record every tested boundary and comparison.</p>
+<hr>
+<h2 id="substrate-shopping">Substrate Shopping</h2>
+<p>Risk:</p>
+<p>Multiple substrates are tried until one produces a preferable result.</p>
+<p>Mitigation:</p>
+<p>Report the complete substrate comparison set.</p>
+<hr>
+<h2 id="direction-hiding">Direction Hiding</h2>
+<p>Risk:</p>
+<p>Only favorable inversions are surfaced.</p>
+<p>Mitigation:</p>
+<p>Record explicit inversion direction and report PA-M43 and PA-M44.</p>
+<hr>
+<h2 id="scale-substitution">Scale Substitution</h2>
+<p>Risk:</p>
+<p>A profile of several strong dimensions is silently interpreted as high general intelligence.</p>
+<p>Mitigation:</p>
+<p>Preserve dimension-level findings without converting them into an unsupported master construct.</p>
+<hr>
+<h2 id="causal-story-inflation">Causal Story Inflation</h2>
+<p>Risk:</p>
+<p>The adapter detects disagreement and then invents its cause.</p>
+<p>Mitigation:</p>
+<p>Separate:</p>
+<pre><code class="language-text">inversion_detected
+</code></pre>
+<p>from:</p>
+<pre><code class="language-text">cause_established
+</code></pre>
+<hr>
+<h1 id="falsification-conditions">Falsification Conditions</h1>
+<p>The Inverted Star adapter should be revised, restricted, deprecated, or rejected if:</p>
+<ul>
+<li>independent evaluators cannot reproduce inversion classifications,</li>
+<li>inversion status is highly sensitive to arbitrary boundaries,</li>
+<li>unfavorable predictions are disproportionately classified as model mismatch,</li>
+<li>favorable predictions receive less scrutiny,</li>
+<li>simple residual analysis performs equivalently,</li>
+<li>substrate or regime controls eliminate most claimed inversions,</li>
+<li>counterfactual tests reveal unstable classification,</li>
+<li>the adapter increases unsupported favorable interpretations,</li>
+<li>the adapter increases unsupported adverse interpretations,</li>
+<li>or ablation shows no meaningful contribution.</li>
+</ul>
+<hr>
+<h1 id="anti-rescue-test">Anti-Rescue Test</h1>
+<p>One specific validation test should deliberately ask:</p>
+<blockquote>
+<p><strong>Can The Inverted Star conclude that the original unfavorable prediction was substantially correct?</strong></p>
+</blockquote>
+<p>Required answer:</p>
+<pre><code class="language-text">yes
+</code></pre>
+<p>Likewise:</p>
+<blockquote>
+<p><strong>Can The Inverted Star conclude that an initially favorable prediction was overextended?</strong></p>
+</blockquote>
+<p>Required answer:</p>
+<pre><code class="language-text">yes
+</code></pre>
+<p>If either answer becomes functionally impossible, the adapter is biased by design.</p>
+<hr>
+<h1 id="ethical-boundary">Ethical Boundary</h1>
+<p>The Inverted Star should never tell a person:</p>
+<blockquote>
+<p>"The model says you scored low, but our framework sees your real higher intelligence."</p>
+</blockquote>
+<p>That converts an experimental discrepancy detector into an unsupported authority claim.</p>
+<p>A defensible interpretation is:</p>
+<blockquote>
+<p><strong>"The prediction and the current broader observation set materially disagree. The disagreement warrants investigation before either representation is treated as globally descriptive."</strong></p>
+</blockquote>
+<p>That preserves both dignity and scientific caution.</p>
+<hr>
+<h1 id="decision-authority">Decision Authority</h1>
+<pre><code class="language-text">decision_authority: none
+
+authorized_use:
+  - research
+  - demonstration
+  - model comparison
+  - framework development
+  - hypothesis generation
+
+prohibited_use:
+  - diagnosis
+  - automated hiring decision
+  - educational exclusion
+  - legal determination
+  - automated adverse decision
+</code></pre>
+<hr>
+<h1 id="minimal-adapter-output-contract">Minimal Adapter Output Contract</h1>
+<pre><code class="language-yaml">inverted_star_result:
+  observation_id:
+
+  baseline:
+    model:
+    prediction:
+    scope:
+    confidence:
+    preserved: true
+
+  comparison:
+    observation:
+    evidence:
+    independence:
+    confidence:
+
+  divergence:
+    detected:
+    direction:
+    magnitude:
+    confidence:
+
+  inversion:
+    class:
+    status:
+
+  substrate_fit:
+  regime_fit:
+  model_fit:
+
+  alternative_explanations:
+  counterevidence:
+  missing_evidence:
+
+  uncertainty:
+  limitations:
+
+  favorable_reinterpretation:
+  adverse_reinterpretation:
+
+  review_required:
+
+  validation_state:
+  decision_authority: none
+</code></pre>
+<hr>
+<h1 id="research-questions">Research Questions</h1>
+<ol>
+<li>Can prediction-observation inversion be classified reproducibly?</li>
+<li>What magnitude of divergence is meaningful for a given model and task?</li>
+<li>How often do apparent inversions disappear after controlling for ordinary measurement noise?</li>
+<li>How often are inversions explained by substrate differences?</li>
+<li>How often are they explained by regime differences?</li>
+<li>How often do they indicate prediction-scope overextension?</li>
+<li>Does explicit inversion analysis improve calibration?</li>
+<li>Does it improve explanatory usefulness?</li>
+<li>Does it reduce inappropriate global inference?</li>
+<li>Does it introduce rescue bias?</li>
+<li>Can evaluators detect favorable and adverse inversions symmetrically?</li>
+<li>Does the adapter add value beyond conventional residual and model-error analysis?</li>
+<li>Which inversion classes survive empirical validation?</li>
+<li>Which should be removed?</li>
+<li>When should the adapter abstain entirely?</li>
+</ol>
+<hr>
+<h1 id="core-invariants">Core Invariants</h1>
+<pre><code class="language-text">disagreement != model_failure
+inversion != hidden_superiority
+low_prediction != mismatch
+high_prediction != correctness
+strong_observation != universal_capability
+local_result != global_identity
+substrate_effect != causal_explanation
+regime_effect != causal_explanation
+alternate_model != better_model
+richer_profile != truer_profile
+inversion_candidate != decision_authority
+canon_alignment != empirical_validation
+</code></pre>
+<hr>
+<h1 id="closing-principle">Closing Principle</h1>
+<p>The Inverted Star exists for the moment when prediction and observation stop pointing in the same direction.</p>
+<p>Its job is not to decide which side deserves to win.</p>
+<p>Its job is to keep the disagreement visible long enough to investigate it.</p>
+<p>Sometimes the original model will survive that investigation.</p>
+<p>Sometimes the broader observations will reveal that its inference was too broad.</p>
+<p>Sometimes the answer will depend on substrate or regime.</p>
+<p>Sometimes both representations will prove incomplete.</p>
+<p>And sometimes there will simply not be enough evidence.</p>
+<blockquote>
+<p><strong>The Inverted Star succeeds when contradiction becomes a testable object instead of something the assessment quietly averages away.</strong></p>
+</blockquote>
   </main>
 </body>
 </html>

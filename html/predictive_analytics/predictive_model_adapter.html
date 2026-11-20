@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/predictive_analytics/predictive_model_adapter.md">
-  <title>predictive_model_adapter</title>
+  <title>Predictive Analytics — Predictive Model Adapter</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,7 +92,2026 @@
   </aside>
 
   <main>
+<p><img width="1194" height="672" alt="predictive_analytics_predictive_model_adapter_" src="https://github.com/user-attachments/assets/089f425c-07ed-47ec-a6e4-9536152323a6" /></p>
+<h1 id="predictive-analytics-predictive-model-adapter">Predictive Analytics — Predictive Model Adapter</h1>
+<blockquote>
+<p><strong>Wrap the model before you reinterpret the prediction.</strong></p>
+</blockquote>
+<h2 id="module">Module</h2>
+<p>Predictive Analytics</p>
+<h2 id="adapter-id">Adapter ID</h2>
+<p><code>predictive-model</code></p>
+<h2 id="operator">Operator</h2>
+<p><code>PA-Predict</code></p>
+<h2 id="status">Status</h2>
+<p>Experimental.</p>
+<h2 id="validation-state">Validation State</h2>
+<p>Unvalidated.</p>
+<h2 id="intended-role">Intended Role</h2>
+<p>Interoperability boundary between existing predictive systems and the Predictive Analytics observer architecture.</p>
+<h2 id="decision-authority">Decision Authority</h2>
+<p>None.</p>
+<hr>
+<h1 id="purpose">Purpose</h1>
+<p>The Predictive Model Adapter allows an existing predictive model to participate in Predictive Analytics without requiring that model to adopt:</p>
+<ul>
+<li>RTT,</li>
+<li>Resonance,</li>
+<li>Framework Field Theory,</li>
+<li>The Inverted Star,</li>
+<li>Structural Detection,</li>
+<li>RIQF,</li>
+<li>the Predictive Analytics operator grammar,</li>
+<li>or any TriadicFrameworks-specific internal representation.</li>
+</ul>
+<p>The source model is treated as an external predictive system.</p>
+<p>Its output is first preserved.</p>
+<p>Only afterward may Predictive Analytics observe, compare, contextualize, challenge, or reinterpret the prediction.</p>
+<p>The central rule is:</p>
+<blockquote>
+<p><strong>Normalize the interface, not the meaning.</strong></p>
+</blockquote>
+<hr>
+<h1 id="core-principle">Core Principle</h1>
+<p>An adapter must not silently change:</p>
+<pre><code class="language-text">what the source model predicted
+</code></pre>
+<p>into:</p>
+<pre><code class="language-text">what Predictive Analytics thinks
+the model should have predicted
+</code></pre>
+<p>Therefore:</p>
+<pre><code class="language-text">source_prediction
+  -&gt;
+preserved_prediction_record
+  -&gt;
+normalized_adapter_record
+  -&gt;
+observer layer
+</code></pre>
+<p>Not:</p>
+<pre><code class="language-text">source_prediction
+  -&gt;
+reinterpretation
+  -&gt;
+pretend this was source output
+</code></pre>
+<hr>
+<h1 id="why-an-adapter-layer-exists">Why an Adapter Layer Exists</h1>
+<p>Predictive systems may produce very different outputs.</p>
+<p>Examples include:</p>
+<pre><code class="language-text">class
+probability
+score
+ranking
+forecast
+interval
+risk category
+embedding
+anomaly signal
+time-series forecast
+recommendation
+structured profile
+natural-language assessment
+</code></pre>
+<p>Their inputs may also differ.</p>
+<p>Examples:</p>
+<pre><code class="language-text">tabular data
+text
+images
+sensor streams
+transaction data
+behavioral observations
+assessment responses
+graph data
+time series
+multimodal inputs
+</code></pre>
+<p>Predictive Analytics should not require every source model to expose the same internal architecture.</p>
+<p>Instead:</p>
+<pre><code class="language-text">Model A ─┐
+Model B ─┤
+Model C ─┤
+Model D ─┼─► Predictive Model Adapter
+Model E ─┤           │
+         │           ▼
+         │    normalized record
+         │           │
+         └───────────▼
+             PA Observer Layer
+</code></pre>
+<hr>
+<h1 id="adapter-boundary">Adapter Boundary</h1>
+<p>The adapter is responsible for:</p>
+<pre><code class="language-text">capture
+preservation
+provenance
+normalization
+scope declaration
+confidence representation
+missing-field handling
+version tracking
+</code></pre>
+<p>It is <strong>not</strong> responsible for:</p>
+<pre><code class="language-text">declaring model mismatch
+declaring substrate mismatch
+declaring regime mismatch
+assigning intelligence dimensions
+overriding prediction
+creating hidden capability
+determining causation
+making consequential decisions
+</code></pre>
+<p>Those belong elsewhere in the architecture.</p>
+<hr>
+<h1 id="adapter-responsibilities">Adapter Responsibilities</h1>
+<p>The Predictive Model Adapter has ten primary responsibilities.</p>
+<pre><code class="language-text">1. identify the source model
+2. identify the model version
+3. capture the source prediction
+4. preserve source semantics
+5. declare intended target
+6. declare known model scope
+7. preserve confidence where available
+8. preserve source evidence references
+9. normalize the record for PA observers
+10. expose unknown fields as unknown
+</code></pre>
+<hr>
+<h1 id="source-model-record">Source Model Record</h1>
+<p>Suggested representation:</p>
+<pre><code class="language-yaml">source_model:
+  id:
+  name:
+  version:
 
+  provider:
+  source:
+
+  model_type:
+
+  intended_target:
+  intended_use:
+
+  validated_scope:
+  known_limitations:
+
+  prediction_timestamp:
+
+  provenance:
+</code></pre>
+<p>Fields unavailable from the source should remain:</p>
+<pre><code class="language-text">unknown
+</code></pre>
+<hr>
+<h1 id="prediction-record">Prediction Record</h1>
+<p>The canonical preserved prediction record should distinguish:</p>
+<pre><code class="language-text">raw source output
+</code></pre>
+<p>from:</p>
+<pre><code class="language-text">normalized interpretation
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-yaml">prediction_record:
+  prediction_id:
+
+  source_model:
+    id:
+    version:
+
+  raw_output:
+    preserved: true
+    value:
+
+  normalized_output:
+    type:
+    value:
+    units:
+
+  confidence:
+    source_value:
+    representation:
+    normalized: false
+
+  generated_at:
+
+  intended_target:
+  intended_scope:
+
+  evidence_refs:
+
+  limitations:
+
+  adapter_version:
+
+  altered_by_adapter:
+    false
+</code></pre>
+<hr>
+<h1 id="raw-output-preservation">Raw Output Preservation</h1>
+<p>Where permissible and technically practical, retain the original model output.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">raw_output:
+  value:
+    class: low
+    probability: 0.72
+
+  preserved: true
+</code></pre>
+<p>If Predictive Analytics later translates this to:</p>
+<pre><code class="language-yaml">normalized_output:
+  category: low
+  confidence_source: 0.72
+</code></pre>
+<p>the raw form remains available.</p>
+<hr>
+<h1 id="normalization-is-not-recalibration">Normalization Is Not Recalibration</h1>
+<p>Suppose a model returns:</p>
+<pre><code class="language-text">0.72
+</code></pre>
+<p>The adapter must not assume this means:</p>
+<pre><code class="language-text">72% objectively correct
+</code></pre>
+<p>unless the source model and its documentation justify that interpretation.</p>
+<p>Correct:</p>
+<pre><code class="language-yaml">confidence:
+  source_value: 0.72
+  semantic_type: source_model_probability
+  calibration_status: unknown
+</code></pre>
+<p>Later:</p>
+<pre><code class="language-text">PA-Calibrate
+</code></pre>
+<p>may evaluate calibration.</p>
+<hr>
+<h1 id="prediction-types">Prediction Types</h1>
+<p>Initial source-output types may include:</p>
+<pre><code class="language-text">categorical
+binary
+multiclass
+ordinal
+continuous
+probability
+score
+ranking
+forecast
+interval
+time_series
+anomaly
+profile
+recommendation
+natural_language
+structured_unknown
+</code></pre>
+<p>The adapter should preserve the source type.</p>
+<hr>
+<h1 id="categorical-prediction">Categorical Prediction</h1>
+<p>Example:</p>
+<pre><code class="language-yaml">prediction:
+  type: categorical
+
+  value:
+    low
+
+  categories:
+    - low
+    - moderate
+    - high
+</code></pre>
+<p>The adapter should not infer numeric spacing between categories.</p>
+<hr>
+<h1 id="continuous-prediction">Continuous Prediction</h1>
+<p>Example:</p>
+<pre><code class="language-yaml">prediction:
+  type: continuous
+
+  value:
+    74.2
+
+  units:
+    source_defined
+
+  range:
+    min:
+    max:
+</code></pre>
+<p>If the range is unknown:</p>
+<pre><code class="language-text">range:
+  unknown
+</code></pre>
+<hr>
+<h1 id="probabilistic-prediction">Probabilistic Prediction</h1>
+<p>Example:</p>
+<pre><code class="language-yaml">prediction:
+  type: probability
+
+  target:
+    event_x
+
+  value:
+    0.72
+
+  calibration:
+    status: unknown
+</code></pre>
+<p>Probability should remain distinct from certainty.</p>
+<hr>
+<h1 id="ranking-prediction">Ranking Prediction</h1>
+<p>Example:</p>
+<pre><code class="language-yaml">prediction:
+  type: ranking
+
+  items:
+    - A
+    - B
+    - C
+</code></pre>
+<p>Ranking may preserve order while saying nothing about:</p>
+<pre><code class="language-text">distance between ranks
+</code></pre>
+<hr>
+<h1 id="interval-prediction">Interval Prediction</h1>
+<p>Example:</p>
+<pre><code class="language-yaml">prediction:
+  type: interval
+
+  estimate:
+    lower:
+    center:
+    upper:
+
+  semantics:
+    source_defined
+</code></pre>
+<p>Do not label the interval:</p>
+<pre><code class="language-text">confidence interval
+</code></pre>
+<p>unless that is actually what the source model provides.</p>
+<hr>
+<h1 id="natural-language-prediction">Natural-Language Prediction</h1>
+<p>Some systems return narrative output.</p>
+<p>Example:</p>
+<pre><code class="language-text">&quot;The subject appears likely to...&quot;
+</code></pre>
+<p>The adapter should retain:</p>
+<pre><code class="language-yaml">raw_output:
+  type: natural_language
+</code></pre>
+<p>Any structured extraction should be marked:</p>
+<pre><code class="language-text">derived
+</code></pre>
+<p>rather than represented as direct source output.</p>
+<hr>
+<h1 id="structured-profile-prediction">Structured Profile Prediction</h1>
+<p>An existing model may already return a multidimensional profile.</p>
+<p>Predictive Analytics must not assume:</p>
+<pre><code class="language-text">external multidimensional model
+&lt;
+RIQF
+</code></pre>
+<p>The source profile should be preserved.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">source_profile:
+  dimension_a:
+  dimension_b:
+  dimension_c:
+</code></pre>
+<p>Then PA can compare:</p>
+<pre><code class="language-text">source profile
+vs
+PA profile
+</code></pre>
+<p>without privileging either by default.</p>
+<hr>
+<h1 id="missing-source-metadata">Missing Source Metadata</h1>
+<p>A source model may not expose:</p>
+<pre><code class="language-text">version
+training data
+feature set
+confidence calibration
+intended population
+validated regime
+measurement assumptions
+</code></pre>
+<p>Correct representation:</p>
+<pre><code class="language-yaml">metadata:
+  model_version:
+    unknown
+
+  calibration:
+    unknown
+
+  intended_regime:
+    unknown
+</code></pre>
+<p>Not:</p>
+<pre><code class="language-text">assume typical defaults
+</code></pre>
+<hr>
+<h1 id="unsupported-source-claims">Unsupported Source Claims</h1>
+<p>The adapter should not manufacture claims such as:</p>
+<pre><code class="language-text">model was trained for this population
+model supports this regime
+probability is calibrated
+output is fair
+score measures intelligence
+ranking implies causal superiority
+</code></pre>
+<p>unless those claims are supported by source documentation or validation evidence.</p>
+<hr>
+<h1 id="adapter-pipeline">Adapter Pipeline</h1>
+<pre><code class="language-text">Source Model
+     │
+     ▼
+Identify Model
+     │
+     ▼
+Capture Version
+     │
+     ▼
+Capture Raw Output
+     │
+     ▼
+Freeze Raw Output
+     │
+     ▼
+Capture Declared Target
+     │
+     ▼
+Capture Scope
+     │
+     ▼
+Capture Confidence
+     │
+     ▼
+Capture Evidence References
+     │
+     ▼
+Normalize Representation
+     │
+     ▼
+Record Missing Metadata
+     │
+     ▼
+Emit PA Prediction Record
+</code></pre>
+<p>Only after this:</p>
+<pre><code class="language-text">PA-Observe
+PA-Substrate
+PA-Regime
+PA-Coherence
+PA-Counterfactual
+...
+</code></pre>
+<p>should operate.</p>
+<hr>
+<h1 id="pa-predict"><code>PA-Predict</code></h1>
+<p>The canonical module operator:</p>
+<pre><code class="language-text">PA-Predict(model, evidence)
+  -&gt; prediction_record
+</code></pre>
+<p>For a pre-existing prediction, this may behave conceptually as:</p>
+<pre><code class="language-text">PA-Predict(existing_output)
+  -&gt; normalized_prediction_record
+</code></pre>
+<p>It does not require the source model to be rerun.</p>
+<hr>
+<h1 id="adapter-modes">Adapter Modes</h1>
+<p>The adapter may conceptually operate in several modes.</p>
+<pre><code class="language-text">capture
+wrapper
+batch
+comparison
+monitoring
+</code></pre>
+<p>These describe architectural intent.</p>
+<p>They are not yet prescribed implementations.</p>
+<hr>
+<h1 id="capture-mode">Capture Mode</h1>
+<p>Use when a source prediction already exists.</p>
+<pre><code class="language-text">existing output
+      │
+      ▼
+adapter
+      │
+      ▼
+prediction record
+</code></pre>
+<p>No source-model execution is required.</p>
+<hr>
+<h1 id="wrapper-mode">Wrapper Mode</h1>
+<p>Use when a source predictive system can be invoked through an integration layer.</p>
+<p>Conceptually:</p>
+<pre><code class="language-text">input
+  │
+  ▼
+source model
+  │
+  ▼
+raw output
+  │
+  ▼
+adapter capture
+</code></pre>
+<p>Any implementation-specific execution contract belongs outside this foundational document.</p>
+<hr>
+<h1 id="batch-mode">Batch Mode</h1>
+<p>Multiple preserved predictions may be normalized into a common comparison grammar.</p>
+<pre><code class="language-text">Model A outputs
+Model B outputs
+Model C outputs
+      │
+      ▼
+normalized prediction records
+</code></pre>
+<p>Normalization must not imply that the models are directly comparable unless their targets and semantics align.</p>
+<hr>
+<h1 id="comparison-mode">Comparison Mode</h1>
+<p>Different models may predict the same target.</p>
+<p>Example:</p>
+<pre><code class="language-text">Model A:
+  low
+
+Model B:
+  moderate
+
+Model C:
+  high
+</code></pre>
+<p>The adapter preserves each result.</p>
+<p>It does not average them automatically.</p>
+<hr>
+<h1 id="monitoring-mode">Monitoring Mode</h1>
+<p>A model can be observed repeatedly over time.</p>
+<p>Example:</p>
+<pre><code class="language-text">Model v1 at T1
+Model v1 at T2
+Model v2 at T3
+</code></pre>
+<p>The adapter preserves:</p>
+<pre><code class="language-text">model version
+prediction time
+input context
+output
+</code></pre>
+<p>so Drift and RTT can later interpret changes.</p>
+<hr>
+<h1 id="model-family-neutrality">Model Family Neutrality</h1>
+<p>The adapter should not assume one modeling family.</p>
+<p>Potential source types may include:</p>
+<pre><code class="language-text">linear model
+generalized linear model
+decision tree
+random forest
+gradient boosting
+neural network
+Bayesian model
+time-series model
+survival model
+rules engine
+expert system
+LLM
+multimodal model
+ensemble
+human-generated assessment
+hybrid system
+unknown predictive model
+</code></pre>
+<p>Predictive Analytics observes the model's interface and evidence relationships.</p>
+<p>It does not require uniform internal mechanics.</p>
+<hr>
+<h1 id="human-prediction-as-source-model">Human Prediction as Source Model</h1>
+<p>A human evaluator may also generate a prediction.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">source_model:
+  type: human_assessment
+
+  evaluator:
+    id:
+
+  prediction:
+    category: moderate
+</code></pre>
+<p>The adapter can preserve the prediction without pretending the evaluator is an algorithm.</p>
+<p>This allows:</p>
+<pre><code class="language-text">human prediction
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">machine prediction
+</code></pre>
+<p>to enter comparable provenance-aware workflows.</p>
+<hr>
+<h1 id="hybrid-prediction">Hybrid Prediction</h1>
+<p>A prediction may arise from:</p>
+<pre><code class="language-text">human
++
+model
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-text">model recommends
+human modifies
+final assessment produced
+</code></pre>
+<p>Correct provenance should preserve:</p>
+<pre><code class="language-text">model output
+human modification
+final output
+</code></pre>
+<p>rather than attributing everything to one source.</p>
+<hr>
+<h1 id="prediction-target">Prediction Target</h1>
+<p>Every adapted prediction should identify what it predicts.</p>
+<p>Examples:</p>
+<pre><code class="language-text">future event
+classification
+score
+performance
+risk
+response
+duration
+ranking
+behavior
+probability
+</code></pre>
+<p>Without a target, later model-fit analysis becomes ambiguous.</p>
+<hr>
+<h1 id="target-record">Target Record</h1>
+<pre><code class="language-yaml">target:
+  id:
+  description:
+  type:
+  horizon:
+  units:
+  system_boundary:
+</code></pre>
+<p>Unknown fields remain unknown.</p>
+<hr>
+<h1 id="intended-use">Intended Use</h1>
+<p>Where known, preserve the intended use.</p>
+<pre><code class="language-yaml">intended_use:
+  description:
+  decision_context:
+  validation_state:
+</code></pre>
+<p>A model fit for:</p>
+<pre><code class="language-text">research exploration
+</code></pre>
+<p>does not automatically become fit for:</p>
+<pre><code class="language-text">high-stakes automation
+</code></pre>
+<hr>
+<h1 id="intended-population-or-system-class">Intended Population or System Class</h1>
+<p>Where known:</p>
+<pre><code class="language-yaml">scope:
+  system_class:
+    - human
+
+  population:
+  domain:
+</code></pre>
+<p>For AI evaluation:</p>
+<pre><code class="language-yaml">scope:
+  system_class:
+    - ai_system
+
+  model_family:
+  versions:
+</code></pre>
+<hr>
+<h1 id="source-evidence">Source Evidence</h1>
+<p>Where available, identify evidence used by the predictive model.</p>
+<pre><code class="language-yaml">source_evidence:
+  references:
+    - E1
+    - E2
+
+  feature_visibility:
+    status:
+      complete
+      partial
+      unavailable
+</code></pre>
+<p>The adapter should not imply knowledge of source-model features if they are unavailable.</p>
+<hr>
+<h1 id="evidence-provenance">Evidence Provenance</h1>
+<p>Distinguish:</p>
+<pre><code class="language-text">evidence supplied to source model
+</code></pre>
+<p>from:</p>
+<pre><code class="language-text">evidence added later by Predictive Analytics
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-yaml">evidence:
+  source_model:
+    - E1
+    - E2
+
+  predictive_analytics:
+    - E3
+    - E4
+</code></pre>
+<p>This is central to model-mismatch analysis.</p>
+<hr>
+<h1 id="information-boundary">Information Boundary</h1>
+<p>A model should not be criticized for failing to use evidence it never received unless the research question is explicitly about representation or measurement sufficiency.</p>
+<p>Example:</p>
+<pre><code class="language-text">model input:
+  E1, E2
+
+later evidence:
+  E3, E4
+</code></pre>
+<p>Appropriate question:</p>
+<blockquote>
+<p><strong>Would E3 and E4 have materially improved the intended inference?</strong></p>
+</blockquote>
+<p>Not:</p>
+<blockquote>
+<p>Why did the original model ignore E3 and E4?</p>
+</blockquote>
+<p>if they were unavailable.</p>
+<hr>
+<h1 id="adapter-and-model-scope">Adapter and Model Scope</h1>
+<p>The adapter should preserve:</p>
+<pre><code class="language-text">validated scope
+claimed scope
+observed scope
+unknown scope
+</code></pre>
+<p>These are different.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">scope:
+  claimed:
+    broad_reasoning
+
+  directly_observed:
+    timed_symbolic
+
+  validated:
+    unknown
+</code></pre>
+<p>This becomes important for:</p>
+<pre><code class="language-text">scope mismatch
+</code></pre>
+<p>later.</p>
+<hr>
+<h1 id="model-assumptions">Model Assumptions</h1>
+<p>Where documented, preserve assumptions.</p>
+<p>Possible examples:</p>
+<pre><code class="language-text">distribution assumptions
+independence assumptions
+stationarity assumptions
+feature availability
+population assumptions
+measurement assumptions
+decision threshold assumptions
+</code></pre>
+<p>If undocumented:</p>
+<pre><code class="language-text">assumptions:
+  unknown
+</code></pre>
+<hr>
+<h1 id="prediction-time">Prediction Time</h1>
+<p>Predictions should carry time where available.</p>
+<pre><code class="language-yaml">prediction:
+  generated_at:
+</code></pre>
+<p>This supports:</p>
+<pre><code class="language-text">validity window
+drift
+regime comparison
+model-version tracking
+</code></pre>
+<hr>
+<h1 id="prediction-horizon">Prediction Horizon</h1>
+<p>Some predictions refer to a future horizon.</p>
+<p>Example:</p>
+<pre><code class="language-text">next event
+next week
+next year
+</code></pre>
+<p>The adapter should preserve the source horizon exactly where available.</p>
+<p>A later observer should not silently change it.</p>
+<hr>
+<h1 id="prediction-validity-window">Prediction Validity Window</h1>
+<p>Where known:</p>
+<pre><code class="language-yaml">validity_window:
+  start:
+  end:
+</code></pre>
+<p>Where unknown:</p>
+<pre><code class="language-yaml">validity_window:
+  status: unknown
+</code></pre>
+<p>RTT or Drift may later ask whether the prediction has been applied beyond its useful window.</p>
+<hr>
+<h1 id="confidence">Confidence</h1>
+<p>Source models may expose:</p>
+<pre><code class="language-text">probability
+confidence
+interval
+uncertainty
+margin
+none
+</code></pre>
+<p>The adapter preserves the semantic type.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">confidence:
+  type: source_probability
+  value: 0.72
+  calibration_status: unknown
+</code></pre>
+<p>Do not normalize every confidence representation into one universal probability.</p>
+<hr>
+<h1 id="source-explanation">Source Explanation</h1>
+<p>A predictive system may expose:</p>
+<pre><code class="language-text">feature importance
+rationale
+rule trace
+natural-language explanation
+attention-like signal
+none
+</code></pre>
+<p>The adapter may preserve this.</p>
+<p>It should label the explanation type.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">source_explanation:
+  type: feature_importance
+  value:
+  validation_status: source_defined
+</code></pre>
+<p>Predictive Analytics should not assume that an explanation is causal merely because the source provides one.</p>
+<hr>
+<h1 id="source-limitations">Source Limitations</h1>
+<p>Where available:</p>
+<pre><code class="language-yaml">source_limitations:
+  - limited to domain X
+  - not evaluated under regime Y
+</code></pre>
+<p>Source-declared limitations should remain visible throughout the PA pipeline.</p>
+<hr>
+<h1 id="unknown-limitations">Unknown Limitations</h1>
+<p>No documented limitation does not mean:</p>
+<pre><code class="language-text">no limitation
+</code></pre>
+<p>Correct:</p>
+<pre><code class="language-text">documented_limitations:
+  none_available
+
+actual_limitations:
+  unknown
+</code></pre>
+<hr>
+<h1 id="source-calibration">Source Calibration</h1>
+<p>Where calibration evidence exists, preserve provenance.</p>
+<pre><code class="language-yaml">calibration:
+  status:
+  source:
+  population:
+  period:
+  metric:
+</code></pre>
+<p>The adapter should not independently assert calibration without such evidence.</p>
+<hr>
+<h1 id="source-validation">Source Validation</h1>
+<p>Likewise:</p>
+<pre><code class="language-yaml">validation:
+  state:
+  source:
+  intended_scope:
+</code></pre>
+<p>A model's validation should not silently transfer to another:</p>
+<pre><code class="language-text">population
+substrate
+regime
+time
+decision context
+</code></pre>
+<hr>
+<h1 id="security-boundary">Security Boundary</h1>
+<p>The adapter should treat source-model content as data.</p>
+<p>A natural-language source prediction may contain:</p>
+<pre><code class="language-text">instructions
+commands
+embedded prompts
+markup
+</code></pre>
+<p>Those should not automatically become instructions to the Predictive Analytics system.</p>
+<p>Conceptually:</p>
+<pre><code class="language-text">source output:
+  evidence
+
+not:
+  control authority
+</code></pre>
+<hr>
+<h1 id="trust-boundary">Trust Boundary</h1>
+<p>A prediction record should distinguish:</p>
+<pre><code class="language-text">source asserted
+adapter observed
+PA inferred
+human reviewed
+</code></pre>
+<p>Suggested provenance classes:</p>
+<pre><code class="language-text">source
+adapter
+observer
+reviewer
+external_validation
+</code></pre>
+<hr>
+<h1 id="adapter-output-contract">Adapter Output Contract</h1>
+<pre><code class="language-yaml">predictive_model_adapter:
+  adapter_id: predictive-model
+  adapter_version:
+
+  prediction_id:
+
+  source_model:
+    id:
+    name:
+    type:
+    version:
+    provider:
+
+  provenance:
+    source:
+    captured_at:
+
+  raw_output:
+    type:
+    value:
+    preserved: true
+
+  normalized_output:
+    type:
+    value:
+    units:
+
+  target:
+    id:
+    description:
+    type:
+    horizon:
+    system_boundary:
+
+  confidence:
+    source_type:
+    source_value:
+    calibration_status:
+
+  scope:
+    intended_population:
+    system_class:
+    domain:
+    substrate:
+    regime:
+    decision_context:
+    validation_state:
+
+  evidence:
+    source_model_refs:
+    visibility:
+    provenance:
+
+  assumptions:
+  limitations:
+
+  source_explanation:
+    type:
+    value:
+
+  normalization:
+    applied:
+    transformations:
+    semantic_change:
+      false
+
+  unknown_fields:
+
+  altered_by_adapter:
+    false
+
+  validation_state:
+  decision_authority: none
+</code></pre>
+<hr>
+<h1 id="normalization-contract">Normalization Contract</h1>
+<p>Normalization should be transparent.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">normalization:
+  source:
+    &quot;LOW&quot;
+
+  normalized:
+    category: low
+
+  transformation:
+    case_normalization
+
+  semantic_change:
+    false
+</code></pre>
+<p>Another:</p>
+<pre><code class="language-yaml">normalization:
+  source:
+    72
+
+  normalized:
+    value: 0.72
+
+  transformation:
+    divide_by_100
+
+  semantic_change:
+    false
+
+  reason:
+    source scale explicitly documented as percent
+</code></pre>
+<p>Without documented scale:</p>
+<pre><code class="language-text">do not divide
+</code></pre>
+<hr>
+<h1 id="lossy-normalization">Lossy Normalization</h1>
+<p>Some transformations may lose information.</p>
+<p>Example:</p>
+<pre><code class="language-text">source:
+  continuous probability
+
+normalized:
+  low / medium / high
+</code></pre>
+<p>Record:</p>
+<pre><code class="language-yaml">normalization:
+  lossy: true
+  information_lost:
+    - continuous_probability
+</code></pre>
+<p>The richer raw output remains preferred for later analysis.</p>
+<hr>
+<h1 id="semantic-transformation">Semantic Transformation</h1>
+<p>If Predictive Analytics intentionally converts source semantics:</p>
+<pre><code class="language-text">source:
+  risk score
+
+PA:
+  broad capability estimate
+</code></pre>
+<p>this is <strong>not normalization</strong>.</p>
+<p>It is interpretation.</p>
+<p>It belongs in a later layer.</p>
+<hr>
+<h1 id="adapter-failure-states">Adapter Failure States</h1>
+<p>Possible adapter outcomes:</p>
+<pre><code class="language-text">adapted
+adapted_with_missing_metadata
+adapted_with_loss
+partial
+unsupported_source_type
+invalid_source_record
+provenance_missing
+scope_unknown
+semantic_ambiguity
+abstain
+</code></pre>
+<hr>
+<h1 id="adapted"><code>adapted</code></h1>
+<p>The prediction was captured with sufficient provenance and no known semantic modification.</p>
+<hr>
+<h1 id="adapted_with_missing_metadata"><code>adapted_with_missing_metadata</code></h1>
+<p>Example:</p>
+<pre><code class="language-text">prediction available
+model version unknown
+</code></pre>
+<p>The prediction can still be preserved.</p>
+<p>The limitation becomes explicit.</p>
+<hr>
+<h1 id="adapted_with_loss"><code>adapted_with_loss</code></h1>
+<p>Normalization required information loss.</p>
+<p>The raw source representation must remain available where possible.</p>
+<hr>
+<h1 id="partial"><code>partial</code></h1>
+<p>Only part of the source output could be normalized.</p>
+<p>No missing fields should be fabricated.</p>
+<hr>
+<h1 id="unsupported_source_type"><code>unsupported_source_type</code></h1>
+<p>The adapter cannot responsibly represent the source output.</p>
+<p>Correct response:</p>
+<pre><code class="language-text">abstain
+</code></pre>
+<p>not:</p>
+<pre><code class="language-text">force into nearest schema
+</code></pre>
+<hr>
+<h1 id="multi-model-comparison">Multi-Model Comparison</h1>
+<p>Suppose three models provide:</p>
+<pre><code class="language-text">Model A:
+  probability 0.70
+
+Model B:
+  category moderate
+
+Model C:
+  score 62
+</code></pre>
+<p>The adapter should not fabricate a common scale.</p>
+<p>Instead:</p>
+<pre><code class="language-yaml">comparability:
+  direct:
+    false
+
+  shared_target:
+    true
+
+  normalization:
+    semantically_equivalent_scale:
+      unknown
+</code></pre>
+<p>Later model-comparison methods may establish a valid mapping.</p>
+<hr>
+<h1 id="ensemble-models">Ensemble Models</h1>
+<p>If the source is itself an ensemble:</p>
+<pre><code class="language-yaml">source_model:
+  type: ensemble
+
+  components:
+    known:
+      - model-a
+      - model-b
+
+  aggregation:
+    source_defined
+</code></pre>
+<p>Predictive Analytics should not decompose the ensemble unless component outputs are actually available.</p>
+<hr>
+<h1 id="black-box-models">Black-Box Models</h1>
+<p>A model may expose:</p>
+<pre><code class="language-text">inputs
+output
+</code></pre>
+<p>but not:</p>
+<pre><code class="language-text">internal logic
+</code></pre>
+<p>Correct:</p>
+<pre><code class="language-yaml">model_transparency:
+  internal:
+    unavailable
+</code></pre>
+<p>The adapter can still preserve the prediction.</p>
+<p>Lack of internals should influence what later claims are justified.</p>
+<hr>
+<h1 id="white-box-models">White-Box Models</h1>
+<p>If rules or coefficients are available, preserve them where relevant.</p>
+<p>That may support later analysis of:</p>
+<ul>
+<li>scope,</li>
+<li>assumptions,</li>
+<li>feature dependence,</li>
+<li>model specification,</li>
+<li>counterfactual behavior.</li>
+</ul>
+<p>But transparent internals do not automatically establish model validity.</p>
+<hr>
+<h1 id="external-model-versus-pa-model">External Model Versus PA Model</h1>
+<p>Predictive Analytics should distinguish:</p>
+<pre><code class="language-text">source model
+</code></pre>
+<p>from:</p>
+<pre><code class="language-text">PA interpretation model
+</code></pre>
+<p>If PA itself uses a model to interpret the source:</p>
+<pre><code class="language-yaml">models:
+  source:
+    id:
+
+  observer:
+    id:
+</code></pre>
+<p>This prevents the observer from disappearing inside the provenance chain.</p>
+<hr>
+<h1 id="model-chain">Model Chain</h1>
+<p>Some predictions come from multiple systems.</p>
+<p>Example:</p>
+<pre><code class="language-text">Model A
+  -&gt;
+Model B
+  -&gt;
+Rules Engine
+  -&gt;
+Human Review
+  -&gt;
+Final Prediction
+</code></pre>
+<p>The adapter should preserve the chain where available.</p>
+<p>Suggested:</p>
+<pre><code class="language-yaml">prediction_chain:
+  - stage: source_model
+    id: A
+
+  - stage: derived_model
+    id: B
+
+  - stage: rules
+    id: R1
+
+  - stage: human_review
+    id: H1
+</code></pre>
+<hr>
+<h1 id="derived-prediction">Derived Prediction</h1>
+<p>If one model consumes another model's output:</p>
+<pre><code class="language-text">Model A prediction
+       │
+       ▼
+Model B prediction
+</code></pre>
+<p>the dependency should remain visible.</p>
+<p>Two predictions are not fully independent if one depends on the other.</p>
+<hr>
+<h1 id="evidence-independence-across-models">Evidence Independence Across Models</h1>
+<p>Suppose:</p>
+<pre><code class="language-text">Model A
+Model B
+Model C
+</code></pre>
+<p>all use the same evidence.</p>
+<p>Their agreement is:</p>
+<pre><code class="language-text">model agreement
+</code></pre>
+<p>not:</p>
+<pre><code class="language-text">independent evidence convergence
+</code></pre>
+<p>The Coherence Observer should preserve this distinction.</p>
+<hr>
+<h1 id="worked-example-conventional-scalar-model">Worked Example — Conventional Scalar Model</h1>
+<h2 id="source-model">Source Model</h2>
+<p>Synthetic source:</p>
+<pre><code class="language-yaml">source_model:
+  id: conventional-001
+  type: scalar_assessment
+  version: demo
+</code></pre>
+<p>Output:</p>
+<pre><code class="language-text">94
+</code></pre>
+<p>Source interpretation:</p>
+<pre><code class="language-text">below reference expectation
+</code></pre>
+<p>Adapter:</p>
+<pre><code class="language-yaml">prediction_record:
+  raw_output:
+    value: 94
+    preserved: true
+
+  normalized_output:
+    type: continuous
+    value: 94
+    units: source_scale
+
+  confidence:
+    calibration_status: unknown
+
+  intended_target:
+    reasoning_assessment
+
+  altered_by_adapter:
+    false
+</code></pre>
+<p>Only after this may PA compare the prediction with the broader PAX-01 evidence.</p>
+<hr>
+<h1 id="pax-01-model-adapter-example">PAX-01 Model Adapter Example</h1>
+<pre><code class="language-yaml">predictive_model_adapter:
+  adapter_id: predictive-model
+  adapter_version: 0.1.0
+
+  prediction_id: pax01-baseline
+
+  source_model:
+    id: synthetic-conventional-model
+    name: Synthetic Conventional Assessment
+    type: scalar_assessment
+    version: demo
+    provider: synthetic
+
+  provenance:
+    source: PAX-01 synthetic example
+    captured_at: synthetic
+
+  raw_output:
+    type: continuous
+    value: 94
+    preserved: true
+
+  normalized_output:
+    type: continuous
+    value: 94
+    units: source_defined
+
+  target:
+    id: reasoning-assessment
+    description: Synthetic baseline reasoning assessment
+    type: score
+    horizon: current_assessment
+    system_boundary: individual_human
+
+  confidence:
+    source_type: unavailable
+    source_value: unknown
+    calibration_status: unknown
+
+  scope:
+    intended_population: synthetic
+    system_class: human
+    domain: reasoning
+    substrate:
+      - timed
+      - symbolic
+      - fixed-choice
+    regime: unknown
+    decision_context: demonstration
+    validation_state: unvalidated
+
+  evidence:
+    source_model_refs:
+      - E1
+    visibility: partial
+    provenance: synthetic
+
+  assumptions:
+    - synthetic demonstration only
+
+  limitations:
+    - no empirical validation
+    - synthetic source model
+    - no real psychometric interpretation
+
+  normalization:
+    applied: false
+    transformations: []
+    semantic_change: false
+
+  unknown_fields:
+    - calibration
+    - empirical reliability
+    - population validity
+
+  altered_by_adapter:
+    false
+
+  validation_state: unvalidated
+  decision_authority: none
+</code></pre>
+<hr>
+<h1 id="what-happens-next">What Happens Next?</h1>
+<p>The adapter's job ends.</p>
+<p>Then:</p>
+<pre><code class="language-text">PA-Observe
+</code></pre>
+<p>can ask:</p>
+<pre><code class="language-text">What did this model directly measure?
+</code></pre>
+<p><code>PA-Substrate</code> can ask:</p>
+<pre><code class="language-text">Does performance vary across substrates?
+</code></pre>
+<p><code>PA-Regime</code> can ask:</p>
+<pre><code class="language-text">Does model fit change across regimes?
+</code></pre>
+<p><code>PA-Structure</code> can ask:</p>
+<pre><code class="language-text">Does broader evidence have reproducible structure?
+</code></pre>
+<p><code>PA-Counterfactual</code> can ask:</p>
+<pre><code class="language-text">Does the interpretation survive alternate assumptions?
+</code></pre>
+<p><code>PA-Uncertainty</code> can ask:</p>
+<pre><code class="language-text">What remains unknown?
+</code></pre>
+<p>The Predictive Model Adapter should not answer those questions itself.</p>
+<hr>
+<h1 id="existing-multidimensional-model-example">Existing Multidimensional Model Example</h1>
+<p>Suppose a source model already outputs:</p>
+<pre><code class="language-yaml">profile:
+  verbal: moderate
+  spatial: strong
+  symbolic: moderate
+  memory: weak
+</code></pre>
+<p>Correct:</p>
+<pre><code class="language-text">preserve source profile
+</code></pre>
+<p>Not:</p>
+<pre><code class="language-text">convert immediately to RIQF
+</code></pre>
+<p>RIQF becomes a separate comparison representation.</p>
+<hr>
+<h1 id="existing-regime-aware-model-example">Existing Regime-Aware Model Example</h1>
+<p>Suppose a source model already conditions on:</p>
+<pre><code class="language-text">regime A
+regime B
+</code></pre>
+<p>Predictive Analytics should preserve that.</p>
+<p>RTT should not pretend regime-awareness was added by RTT.</p>
+<p>Potential comparison:</p>
+<pre><code class="language-text">source regime model
+vs
+RTT regime interpretation
+</code></pre>
+<p>This is important for provenance and ablation.</p>
+<hr>
+<h1 id="existing-substrate-aware-model-example">Existing Substrate-Aware Model Example</h1>
+<p>Likewise, if the source model already represents:</p>
+<pre><code class="language-text">substrate
+</code></pre>
+<p>then PA should not claim substrate awareness as novel added information.</p>
+<p>Instead ask:</p>
+<blockquote>
+<p><strong>Does the PA substrate layer improve anything beyond the source model's representation?</strong></p>
+</blockquote>
+<hr>
+<h1 id="existing-model-already-sufficient">Existing Model Already Sufficient</h1>
+<p>Suppose the source model already captures:</p>
+<pre><code class="language-text">multidimensional profile
+substrate
+regime
+uncertainty
+temporal validity
+</code></pre>
+<p>and performs well.</p>
+<p>Correct potential result:</p>
+<pre><code class="language-yaml">predictive_analytics:
+  added_value:
+    low
+
+  adapter_ensemble:
+    unnecessary_for_current_use: true
+</code></pre>
+<p>This is a successful outcome.</p>
+<hr>
+<h1 id="existing-binary-model">Existing Binary Model</h1>
+<p>A simple binary classifier may output:</p>
+<pre><code class="language-text">yes
+no
+</code></pre>
+<p>Predictive Analytics should not disparage it because it is binary.</p>
+<p>A binary model may be exactly appropriate for a binary target.</p>
+<p>The relevant question is:</p>
+<blockquote>
+<p><strong>Does the binary representation match the intended problem?</strong></p>
+</blockquote>
+<p>Not:</p>
+<blockquote>
+<p>Is binary logic inherently too simple?</p>
+</blockquote>
+<hr>
+<h1 id="binary-representation-mismatch">Binary Representation Mismatch</h1>
+<p>If the target itself is not adequately binary:</p>
+<pre><code class="language-text">continuous or multidimensional phenomenon
+</code></pre>
+<p>but the classifier is interpreted as a complete ontology:</p>
+<pre><code class="language-text">yes / no
+</code></pre>
+<p>then:</p>
+<pre><code class="language-text">representation mismatch
+</code></pre>
+<p>may become a valid hypothesis.</p>
+<p>This distinction matters.</p>
+<hr>
+<h1 id="existing-threshold-model">Existing Threshold Model</h1>
+<p>A continuous model may become binary after thresholding.</p>
+<pre><code class="language-text">score
+  │
+  ▼
+threshold
+  │
+  ├── yes
+  └── no
+</code></pre>
+<p>The adapter should preserve where possible:</p>
+<pre><code class="language-text">raw score
+threshold
+binary output
+</code></pre>
+<p>rather than only:</p>
+<pre><code class="language-text">binary output
+</code></pre>
+<p>This enables later counterfactual threshold analysis.</p>
+<hr>
+<h1 id="threshold-record">Threshold Record</h1>
+<pre><code class="language-yaml">threshold:
+  value:
+  source:
+  validation_state:
+</code></pre>
+<p>Unknown threshold rationale remains unknown.</p>
+<hr>
+<h1 id="existing-ranking-model">Existing Ranking Model</h1>
+<p>A ranking system may produce:</p>
+<pre><code class="language-text">A
+B
+C
+D
+</code></pre>
+<p>PA should ask later:</p>
+<pre><code class="language-text">Is ranking the intended target?
+</code></pre>
+<p>not assume ranking itself is inappropriate.</p>
+<hr>
+<h1 id="existing-risk-model">Existing Risk Model</h1>
+<p>If a source predicts:</p>
+<pre><code class="language-text">risk
+</code></pre>
+<p>do not reinterpret:</p>
+<pre><code class="language-text">high risk
+</code></pre>
+<p>as:</p>
+<pre><code class="language-text">bad person
+</code></pre>
+<p>The adapter preserves target semantics.</p>
+<p>Identity interpretation belongs outside the prediction and may be inappropriate entirely.</p>
+<hr>
+<h1 id="existing-ai-evaluation-model">Existing AI Evaluation Model</h1>
+<p>A model may predict AI performance.</p>
+<p>Example:</p>
+<pre><code class="language-text">task success probability:
+  0.84
+</code></pre>
+<p>The same adapter grammar can preserve:</p>
+<pre><code class="language-text">AI model version
+prompt regime
+tool access
+retrieval configuration
+task
+prediction
+</code></pre>
+<p>This allows PA to examine mismatch without pretending the observed system is human.</p>
+<hr>
+<h1 id="existing-organizational-model">Existing Organizational Model</h1>
+<p>A model may predict:</p>
+<pre><code class="language-text">project completion
+system load
+failure probability
+resource demand
+</code></pre>
+<p>The same adapter can preserve predictions.</p>
+<p>RIQF dimensions need not be involved.</p>
+<p>Predictive Analytics is broader than the intelligence example.</p>
+<hr>
+<h1 id="adapter-validation">Adapter Validation</h1>
+<p>The Predictive Model Adapter itself must be tested.</p>
+<p>Questions include:</p>
+<pre><code class="language-text">Does it preserve source semantics?
+
+Does it preserve source values?
+
+Does it preserve provenance?
+
+Does normalization introduce errors?
+
+Are unknown fields kept unknown?
+
+Can lossy transformations be detected?
+
+Can model versions be reconstructed?
+
+Can prediction chains be reconstructed?
+
+Can source and PA interpretations be separated?
+</code></pre>
+<hr>
+<h1 id="adapter-fidelity">Adapter Fidelity</h1>
+<p>A future adapter-specific metric may measure:</p>
+<pre><code class="language-text">source preservation fidelity
+</code></pre>
+<p>Conceptually:</p>
+<pre><code class="language-text">adapter record
+</code></pre>
+<p>should reconstruct the semantically relevant source prediction without reinterpretation.</p>
+<p>This should not enter the canonical <code>PA-M##</code> registry until its definition is reviewed.</p>
+<hr>
+<h1 id="round-trip-test">Round-Trip Test</h1>
+<p>Where possible:</p>
+<pre><code class="language-text">source output
+  -&gt;
+adapter record
+  -&gt;
+reconstructed source representation
+</code></pre>
+<p>Then compare:</p>
+<pre><code class="language-text">source
+vs
+reconstructed source
+</code></pre>
+<p>Semantic equivalence should be preserved.</p>
+<hr>
+<h1 id="loss-detection-test">Loss Detection Test</h1>
+<p>Provide a source with:</p>
+<pre><code class="language-text">continuous output
+confidence interval
+subcategories
+</code></pre>
+<p>Then force a normalization.</p>
+<p>The adapter should report:</p>
+<pre><code class="language-text">lossy: true
+</code></pre>
+<p>if those fields cannot all be preserved.</p>
+<hr>
+<h1 id="unknown-field-test">Unknown-Field Test</h1>
+<p>Provide a prediction without:</p>
+<pre><code class="language-text">model version
+</code></pre>
+<p>Correct:</p>
+<pre><code class="language-text">model_version:
+  unknown
+</code></pre>
+<p>Incorrect:</p>
+<pre><code class="language-text">model_version:
+  latest
+</code></pre>
+<p>unless the version is actually known.</p>
+<hr>
+<h1 id="scope-test">Scope Test</h1>
+<p>Provide a source model validated for:</p>
+<pre><code class="language-text">task family A
+</code></pre>
+<p>and request adaptation for:</p>
+<pre><code class="language-text">task family B
+</code></pre>
+<p>The adapter should preserve:</p>
+<pre><code class="language-text">validated_scope:
+  A
+
+requested_context:
+  B
+</code></pre>
+<p>and allow later mismatch analysis.</p>
+<p>It should not claim:</p>
+<pre><code class="language-text">valid_for_B
+</code></pre>
+<hr>
+<h1 id="confidence-test">Confidence Test</h1>
+<p>Provide:</p>
+<pre><code class="language-text">score: 72
+</code></pre>
+<p>with no documented probabilistic semantics.</p>
+<p>The adapter must <strong>not</strong> convert it to:</p>
+<pre><code class="language-text">72% confidence
+</code></pre>
+<p>This is a critical semantic test.</p>
+<hr>
+<h1 id="multi-model-test">Multi-Model Test</h1>
+<p>Provide three models using different output semantics.</p>
+<p>The adapter should preserve them separately.</p>
+<p>It should not create a common scale without an explicit validated mapping.</p>
+<hr>
+<h1 id="version-test">Version Test</h1>
+<p>Provide predictions from:</p>
+<pre><code class="language-text">model_v1
+model_v2
+</code></pre>
+<p>The adapter should preserve version differences so Drift can avoid misattributing model change to the subject or environment.</p>
+<hr>
+<h1 id="human-ai-boundary-test">Human-AI Boundary Test</h1>
+<p>Provide an output generated jointly by:</p>
+<pre><code class="language-text">human reviewer
++
+AI model
+</code></pre>
+<p>The adapter should preserve the hybrid provenance rather than attributing the result solely to AI or human.</p>
+<hr>
+<h1 id="adapter-failure-modes">Adapter Failure Modes</h1>
+<h2 id="semantic-drift">Semantic Drift</h2>
+<p>Risk:</p>
+<p>Normalization changes the meaning of the prediction.</p>
+<p>Mitigation:</p>
+<p>Preserve raw output and transformation record.</p>
+<hr>
+<h1 id="confidence-inflation">Confidence Inflation</h1>
+<p>Risk:</p>
+<p>A source score is converted into confidence.</p>
+<p>Mitigation:</p>
+<p>Preserve semantic type.</p>
+<hr>
+<h1 id="scope-inflation">Scope Inflation</h1>
+<p>Risk:</p>
+<p>A narrow model target becomes a broad capability claim.</p>
+<p>Mitigation:</p>
+<p>Separate target from later interpretation.</p>
+<hr>
+<h1 id="provenance-loss">Provenance Loss</h1>
+<p>Risk:</p>
+<p>Later layers cannot determine which model produced the prediction.</p>
+<p>Mitigation:</p>
+<p>Require model ID and preserve unknown version explicitly.</p>
+<hr>
+<h1 id="version-collapse">Version Collapse</h1>
+<p>Risk:</p>
+<p>Predictions from multiple model versions are treated as one stable model.</p>
+<p>Mitigation:</p>
+<p>Version every prediction where information exists.</p>
+<hr>
+<h1 id="evidence-collapse">Evidence Collapse</h1>
+<p>Risk:</p>
+<p>Source-model evidence and later PA evidence are merged without distinction.</p>
+<p>Mitigation:</p>
+<p>Separate evidence namespaces.</p>
+<hr>
+<h1 id="interpretation-leakage">Interpretation Leakage</h1>
+<p>Risk:</p>
+<p>PA observations become embedded into the source prediction record.</p>
+<p>Mitigation:</p>
+<p>Immutable baseline field.</p>
+<hr>
+<h1 id="adapter-overreach">Adapter Overreach</h1>
+<p>Risk:</p>
+<p>The adapter itself declares mismatch.</p>
+<p>Mitigation:</p>
+<p>Keep mismatch analysis in Model Mismatch / observer layers.</p>
+<hr>
+<h1 id="forced-comparability">Forced Comparability</h1>
+<p>Risk:</p>
+<p>Different source scales are normalized into one artificial scale.</p>
+<p>Mitigation:</p>
+<p>Allow:</p>
+<pre><code class="language-text">not_directly_comparable
+</code></pre>
+<hr>
+<h1 id="missing-metadata-fabrication">Missing-Metadata Fabrication</h1>
+<p>Risk:</p>
+<p>Unknown source fields are filled with plausible values.</p>
+<p>Mitigation:</p>
+<p>Use:</p>
+<pre><code class="language-text">unknown
+</code></pre>
+<hr>
+<h1 id="rich-model-bias">Rich-Model Bias</h1>
+<p>Risk:</p>
+<p>The adapter privileges complex models.</p>
+<p>Mitigation:</p>
+<p>Model-family neutrality.</p>
+<hr>
+<h1 id="simple-model-bias">Simple-Model Bias</h1>
+<p>Risk:</p>
+<p>Simple models are dismissed as unsophisticated.</p>
+<p>Mitigation:</p>
+<p>Judge fitness for intended target.</p>
+<hr>
+<h1 id="pa-supremacy-bias">PA Supremacy Bias</h1>
+<p>Risk:</p>
+<p>Source models are treated as merely primitive inputs to the "better" PA framework.</p>
+<p>Mitigation:</p>
+<p>Require incremental-value validation.</p>
+<hr>
+<h1 id="falsification-conditions">Falsification Conditions</h1>
+<p>The Predictive Model Adapter should be revised or rejected if:</p>
+<ul>
+<li>it cannot preserve source semantics,</li>
+<li>normalized outputs routinely differ materially from source outputs,</li>
+<li>provenance is lost,</li>
+<li>confidence semantics are distorted,</li>
+<li>model versions cannot be preserved,</li>
+<li>missing metadata is routinely fabricated,</li>
+<li>source and PA interpretations cannot be separated,</li>
+<li>lossy transformations remain hidden,</li>
+<li>source models are systematically forced into inappropriate common scales,</li>
+<li>or another simpler interoperability layer performs the same role more reliably.</li>
+</ul>
+<hr>
+<h1 id="relationship-to-model-mismatch">Relationship to Model Mismatch</h1>
+<p>The Predictive Model Adapter supplies:</p>
+<pre><code class="language-text">what the model actually said
+</code></pre>
+<p>Model Mismatch asks:</p>
+<pre><code class="language-text">whether that prediction and its scope
+adequately fit the later evidence
+and intended inference
+</code></pre>
+<p>This separation is essential.</p>
+<hr>
+<h1 id="relationship-to-substrate-adapter">Relationship to Substrate Adapter</h1>
+<p>The Predictive Model Adapter may record:</p>
+<pre><code class="language-text">source substrate
+</code></pre>
+<p>The Substrate Adapter then asks:</p>
+<pre><code class="language-text">Does the source substrate adequately
+support the intended inference?
+</code></pre>
+<hr>
+<h1 id="relationship-to-rtt">Relationship to RTT</h1>
+<p>The adapter records:</p>
+<pre><code class="language-text">prediction time
+model version
+known regime
+</code></pre>
+<p>RTT examines:</p>
+<pre><code class="language-text">regime compatibility
+transition
+temporal continuity
+</code></pre>
+<hr>
+<h1 id="relationship-to-drift">Relationship to Drift</h1>
+<p>The adapter enables Drift to distinguish:</p>
+<pre><code class="language-text">target changed
+</code></pre>
+<p>from:</p>
+<pre><code class="language-text">model changed
+</code></pre>
+<p>by preserving model versions and prediction timestamps.</p>
+<hr>
+<h1 id="relationship-to-coherence">Relationship to Coherence</h1>
+<p>Coherence compares:</p>
+<pre><code class="language-text">source prediction
+</code></pre>
+<p>with:</p>
+<pre><code class="language-text">additional observations
+</code></pre>
+<p>while preserving:</p>
+<pre><code class="language-text">evidence dependence
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">model provenance
+</code></pre>
+<hr>
+<h1 id="relationship-to-counterfactual-layer">Relationship to Counterfactual Layer</h1>
+<p>Counterfactual analysis may test:</p>
+<pre><code class="language-text">alternate source model
+alternate threshold
+alternate representation
+adapter ablation
+</code></pre>
+<p>but must preserve the original prediction.</p>
+<hr>
+<h1 id="relationship-to-human-review">Relationship to Human Review</h1>
+<p>Human review should see:</p>
+<pre><code class="language-text">raw source output
+normalized output
+transformation history
+source scope
+source limitations
+PA interpretation
+</code></pre>
+<p>as distinct layers.</p>
+<p>This reduces interpretation leakage.</p>
+<hr>
+<h1 id="relationship-to-riqf">Relationship to RIQF</h1>
+<p>A conventional intelligence-like model can be adapted as:</p>
+<pre><code class="language-text">source prediction
+</code></pre>
+<p>RIQF becomes:</p>
+<pre><code class="language-text">alternate multidimensional representation
+</code></pre>
+<p>The adapter must not pre-decide which is better.</p>
+<p>That question belongs to validation.</p>
+<hr>
+<h1 id="recommended-source-comparison-record">Recommended Source Comparison Record</h1>
+<pre><code class="language-yaml">model_comparison:
+  target:
+
+  models:
+    - id:
+      version:
+      output_type:
+      prediction:
+      scope:
+
+    - id:
+      version:
+      output_type:
+      prediction:
+      scope:
+
+  direct_comparability:
+    status:
+
+  shared_evidence:
+  independent_evidence:
+
+  calibration:
+  validation_state:
+
+  interpretation:
+    status:
+</code></pre>
+<hr>
+<h1 id="minimal-adapter-requirements">Minimal Adapter Requirements</h1>
+<p>Before a prediction enters the PA observer layer, the record should contain at least:</p>
+<pre><code class="language-text">prediction identifier
+source model identifier or unknown
+raw output
+output type
+target or unknown
+system boundary or unknown
+provenance or unknown
+adapter version
+baseline preserved
+decision authority
+</code></pre>
+<p>The adapter should not block research merely because optional metadata is missing.</p>
+<p>It should expose the gap.</p>
+<hr>
+<h1 id="research-questions">Research Questions</h1>
+<ol>
+<li>Can heterogeneous predictive models be normalized without semantic distortion?</li>
+<li>Which source output types require specialized adapters?</li>
+<li>How should natural-language predictions be structured?</li>
+<li>How should uncertainty representations be preserved?</li>
+<li>Can confidence semantics be normalized at all?</li>
+<li>How should rankings be compared with continuous predictions?</li>
+<li>How should interval forecasts enter PA?</li>
+<li>How should source-model validation scope be represented?</li>
+<li>How should undocumented model scope be handled?</li>
+<li>Can source evidence provenance be reconstructed reliably?</li>
+<li>How should models with inaccessible internals be represented?</li>
+<li>How should human predictions be adapted?</li>
+<li>How should hybrid human-AI predictions be adapted?</li>
+<li>How should prediction chains be represented?</li>
+<li>Can source-model independence be distinguished from evidence independence?</li>
+<li>How should model ensembles be represented?</li>
+<li>Can lossy normalization be detected automatically?</li>
+<li>Can semantic transformations be distinguished from normalization?</li>
+<li>Can round-trip tests validate adapter fidelity?</li>
+<li>How should model versions be handled longitudinally?</li>
+<li>How should unknown model versions affect drift analysis?</li>
+<li>How should source thresholds be represented?</li>
+<li>Can threshold provenance be retained?</li>
+<li>Can existing regime-aware models map cleanly into PA?</li>
+<li>Can existing substrate-aware models map cleanly into PA?</li>
+<li>How should existing multidimensional models compare with RIQF?</li>
+<li>Can PA recognize when the source model already provides sufficient context?</li>
+<li>When should adapter output remain non-comparable?</li>
+<li>When should normalization be refused?</li>
+<li>What constitutes acceptable adapter information loss?</li>
+<li>How should source explanations be represented without implying causality?</li>
+<li>How should source limitations propagate to downstream layers?</li>
+<li>Can downstream layers preserve baseline immutability?</li>
+<li>Can reviewers reconstruct the original source output?</li>
+<li>Can provenance survive multi-stage agentic pipelines?</li>
+<li>How should AI-generated source predictions be versioned?</li>
+<li>How should source-model security/trust boundaries be represented?</li>
+<li>Can a simpler interoperability schema replace this adapter?</li>
+<li>When does this adapter add no value?</li>
+<li>What evidence would justify redesigning the Predictive Model Adapter entirely?</li>
+</ol>
+<hr>
+<h1 id="core-invariants">Core Invariants</h1>
+<pre><code class="language-text">adapter != source_model
+normalized_output != source_semantics_by_default
+normalization != reinterpretation
+score != probability
+probability != certainty
+confidence != calibration
+prediction != identity
+prediction != observed_system
+prediction != decision
+source_output != PA_interpretation
+source_evidence != later_evidence
+model_agreement != evidence_independence
+different_scale != comparable_scale
+binary_model != inherently_bad_model
+complex_model != inherently_better_model
+multidimensional_model != inherently_better_model
+missing_metadata != permission_to_infer
+unknown != zero
+unknown != default
+model_version_change != subject_change
+measurement_change != model_change
+human_ai_output != AI_only_output
+human_ai_output != human_only_output
+raw_output != normalized_output
+lossy_normalization != neutral_normalization
+source_explanation != causal_truth
+adapter_output != model_mismatch
+adapter_output != decision_authority
+PA_enrichment != guaranteed_improvement
+canon_alignment != empirical_validation
+</code></pre>
+<hr>
+<h1 id="closing-principle">Closing Principle</h1>
+<p>Predictive Analytics is designed to observe existing models without requiring those models to speak its language.</p>
+<p>That makes the Predictive Model Adapter one of the simplest parts of the architecture and one of the most important.</p>
+<p>Before asking whether a prediction is:</p>
+<pre><code class="language-text">mismatched
+substrate-limited
+regime-bound
+structurally incomplete
+counterfactually fragile
+or incoherent
+</code></pre>
+<p>we need to know:</p>
+<pre><code class="language-text">what the original model actually said
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">what it did not say
+</code></pre>
+<p>The adapter preserves that boundary.</p>
+<p>A score remains a score.</p>
+<p>A probability remains a probability.</p>
+<p>A ranking remains a ranking.</p>
+<p>A profile remains a profile.</p>
+<p>An unknown remains unknown.</p>
+<p>Only after the original prediction has been preserved faithfully should the rest of Predictive Analytics begin asking deeper questions.</p>
+<blockquote>
+<p><strong>The adapter succeeds when an existing model can enter Predictive Analytics without having its prediction rewritten to fit the framework.</strong></p>
+</blockquote>
   </main>
 </body>
 </html>

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/predictive_analytics/substrate_expression_profile.md">
-  <title>substrate_expression_profile</title>
+  <title>Predictive Analytics — Substrate Expression Profile</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,7 +92,2309 @@
   </aside>
 
   <main>
+<h1 id="predictive-analytics-substrate-expression-profile">Predictive Analytics — Substrate Expression Profile</h1>
+<blockquote>
+<p><strong>Capability is not observed in the abstract. It is observed through conditions that shape how expression becomes measurable.</strong></p>
+</blockquote>
+<h2 id="module">Module</h2>
+<p>Predictive Analytics</p>
+<h2 id="profile-id">Profile ID</h2>
+<p><code>substrate-expression-profile</code></p>
+<h2 id="short-name">Short Name</h2>
+<p>SEP</p>
+<h2 id="operator">Operator</h2>
+<p><code>PA-Substrate</code></p>
+<h2 id="status">Status</h2>
+<p>Experimental.</p>
+<h2 id="validation-state">Validation State</h2>
+<p>Unvalidated.</p>
+<h2 id="decision-authority">Decision Authority</h2>
+<p>None.</p>
+<hr>
+<h1 id="purpose">Purpose</h1>
+<p>The Substrate Expression Profile represents how a defined target capability, behavior, or system property is observed across multiple measurement or interaction substrates.</p>
+<p>It aggregates substrate-aware observations without assuming that:</p>
+<ul>
+<li>one substrate reveals the "true" system,</li>
+<li>stronger performance is more authentic,</li>
+<li>weaker performance is less authentic,</li>
+<li>every cross-substrate difference is meaningful,</li>
+<li>every difference is caused by substrate,</li>
+<li>or all substrates measure the same construct.</li>
+</ul>
+<p>The central question is:</p>
+<blockquote>
+<p><strong>How does observed expression vary across defined substrates, and which parts of that variation are reproducible enough to preserve in the profile?</strong></p>
+</blockquote>
+<hr>
+<h1 id="adapter-versus-profile">Adapter Versus Profile</h1>
+<p>The distinction is important.</p>
+<h2 id="substrate-adapter">Substrate Adapter</h2>
+<p>The Substrate Adapter evaluates a defined comparison.</p>
+<p>Conceptually:</p>
+<pre><code class="language-text">Target Capability
+       │
+       ├── Substrate A
+       │      │
+       │      ▼
+       │  Expression A
+       │
+       └── Substrate B
+              │
+              ▼
+          Expression B
+              │
+              ▼
+       Substrate Adapter
+              │
+              ▼
+       comparison result
+</code></pre>
+<hr>
+<h2 id="substrate-expression-profile">Substrate Expression Profile</h2>
+<p>The profile integrates many substrate observations.</p>
+<pre><code class="language-text">Substrate Result A ─┐
+Substrate Result B ─┤
+Substrate Result C ─┼──► Substrate Expression Profile
+Substrate Result D ─┤                 │
+Independent E1 ─────┤                 ▼
+Independent E2 ─────┘          expression topology
+</code></pre>
+<p>The adapter asks:</p>
+<blockquote>
+<p><strong>Does this comparison reveal a substrate-related difference?</strong></p>
+</blockquote>
+<p>The profile asks:</p>
+<blockquote>
+<p><strong>What larger cross-substrate expression structure, if any, survives across the available evidence?</strong></p>
+</blockquote>
+<hr>
+<h1 id="foundational-principle">Foundational Principle</h1>
+<p>The Substrate Expression Profile distinguishes:</p>
+<pre><code class="language-text">capability
+</code></pre>
+<p>from:</p>
+<pre><code class="language-text">expression
+</code></pre>
+<p>from:</p>
+<pre><code class="language-text">measurement
+</code></pre>
+<p>from:</p>
+<pre><code class="language-text">interpretation
+</code></pre>
+<p>These are related but not interchangeable.</p>
+<p>A profile describes:</p>
+<pre><code class="language-text">observed expression
+under specified conditions
+</code></pre>
+<p>It does not directly reveal:</p>
+<pre><code class="language-text">total underlying capability
+</code></pre>
+<hr>
+<h1 id="expression-is-conditional">Expression Is Conditional</h1>
+<p>A substrate expression statement should conceptually read:</p>
+<blockquote>
+<p><strong>For target X, under substrate S, within regime R, during observation window T, expression E was observed with confidence C.</strong></p>
+</blockquote>
+<p>This is deliberately more specific than:</p>
+<blockquote>
+<p>X is strong.</p>
+</blockquote>
+<hr>
+<h1 id="core-representation">Core Representation</h1>
+<p>Conceptually:</p>
+<pre><code class="language-text">                         Target
+                           │
+                           ▼
+                ┌────────────────────┐
+                │ Capability Target  │
+                └─────────┬──────────┘
+                          │
+        ┌─────────────────┼─────────────────┐
+        ▼                 ▼                 ▼
+   Substrate A        Substrate B      Substrate C
+        │                 │                 │
+        ▼                 ▼                 ▼
+ Expression A        Expression B      Expression C
+        │                 │                 │
+        └─────────────────┼─────────────────┘
+                          ▼
+                 Cross-Substrate
+                Expression Profile
+</code></pre>
+<p>The profile preserves differences rather than immediately averaging them.</p>
+<hr>
+<h1 id="profile-inputs">Profile Inputs</h1>
+<p>The profile may consume:</p>
+<pre><code class="language-text">direct observations
+Substrate Adapter results
+RIQF dimension observations
+model predictions
+task results
+regime metadata
+temporal metadata
+accessibility metadata
+counterfactual tests
+confidence records
+uncertainty records
+evidence provenance
+</code></pre>
+<p>Not every profile requires every input.</p>
+<p>Missing information remains missing.</p>
+<hr>
+<h1 id="system-boundary">System Boundary</h1>
+<p>Every profile must declare what system was observed.</p>
+<p>Possible boundaries:</p>
+<pre><code class="language-text">individual_human
+ai_system
+human_ai_pair
+team
+organization
+robotic_system
+distributed_agents
+other
+</code></pre>
+<p>This becomes especially important when a substrate includes tools or collaborators.</p>
+<hr>
+<h1 id="target-boundary">Target Boundary</h1>
+<p>A profile must identify what expression is being compared.</p>
+<p>Examples:</p>
+<pre><code class="language-text">structural reasoning
+symbolic reasoning
+retrieval performance
+cross-domain transfer
+task accuracy
+error recovery
+calibration
+long-horizon integration
+</code></pre>
+<p>Avoid profiles whose target is merely:</p>
+<pre><code class="language-text">intelligence
+</code></pre>
+<p>unless intelligence has itself been operationally defined for the study.</p>
+<hr>
+<h1 id="substrate-configuration">Substrate Configuration</h1>
+<p>A substrate should generally be represented as a configuration rather than one label.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">substrate:
+  id: substrate-a
 
+  modality:
+    textual
+
+  representation:
+    relational
+
+  response_structure:
+    generative
+
+  timing:
+    reflective
+
+  tools:
+    none
+
+  interaction:
+    individual
+
+  environment:
+    controlled
+</code></pre>
+<p>This exposes the actual observation conditions.</p>
+<hr>
+<h1 id="why-configuration-matters">Why Configuration Matters</h1>
+<p>Compare:</p>
+<pre><code class="language-text">timed symbolic fixed-choice
+</code></pre>
+<p>with:</p>
+<pre><code class="language-text">reflective relational generative
+</code></pre>
+<p>Calling these simply:</p>
+<pre><code class="language-text">symbolic
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">relational
+</code></pre>
+<p>hides several changed variables.</p>
+<p>The profile should preserve:</p>
+<pre><code class="language-text">what differs
+</code></pre>
+<p>before interpreting why expression differs.</p>
+<hr>
+<h1 id="initial-substrate-axes">Initial Substrate Axes</h1>
+<p>A substrate configuration may include several independent or interacting axes.</p>
+<pre><code class="language-text">SEP-A01  Modality
+SEP-A02  Representation
+SEP-A03  Response Structure
+SEP-A04  Timing
+SEP-A05  Tool Access
+SEP-A06  Interaction Mode
+SEP-A07  Environmental Interface
+SEP-A08  Accessibility Conditions
+SEP-A09  Measurement Instrument
+SEP-A10  System Boundary
+</code></pre>
+<p>These axes are provisional.</p>
+<hr>
+<h1 id="sep-a01-modality">SEP-A01 — Modality</h1>
+<p>Candidate modalities:</p>
+<pre><code class="language-text">textual
+verbal
+visual
+auditory
+spatial
+embodied
+multimodal
+unknown
+</code></pre>
+<hr>
+<h1 id="sep-a02-representation">SEP-A02 — Representation</h1>
+<p>Candidate representation structures:</p>
+<pre><code class="language-text">symbolic
+relational
+narrative
+diagrammatic
+numerical
+spatial
+graph
+naturalistic
+mixed
+unknown
+</code></pre>
+<hr>
+<h1 id="sep-a03-response-structure">SEP-A03 — Response Structure</h1>
+<p>Possible response forms:</p>
+<pre><code class="language-text">binary
+fixed-choice
+ranking
+short-response
+generative
+interactive
+constructive
+embodied
+mixed
+unknown
+</code></pre>
+<hr>
+<h1 id="sep-a04-timing">SEP-A04 — Timing</h1>
+<p>Possible timing conditions:</p>
+<pre><code class="language-text">severely_constrained
+constrained
+moderate
+reflective
+self_paced
+unknown
+</code></pre>
+<p>These require operational definitions in actual studies.</p>
+<hr>
+<h1 id="sep-a05-tool-access">SEP-A05 — Tool Access</h1>
+<p>Possible states:</p>
+<pre><code class="language-text">none
+calculator
+reference_material
+search
+software
+external_memory
+AI
+specialized_instrument
+multiple_tools
+unknown
+</code></pre>
+<p>Tool availability can materially change the observed system.</p>
+<hr>
+<h1 id="sep-a06-interaction-mode">SEP-A06 — Interaction Mode</h1>
+<p>Possible:</p>
+<pre><code class="language-text">individual
+paired
+team
+human_ai
+multi_agent
+human_tool
+other
+unknown
+</code></pre>
+<hr>
+<h1 id="sep-a07-environmental-interface">SEP-A07 — Environmental Interface</h1>
+<p>Possible:</p>
+<pre><code class="language-text">controlled
+simulation
+physical
+remote
+field
+high_noise
+low_noise
+unknown
+</code></pre>
+<p>Environmental conditions should be represented only where they are relevant to the observation.</p>
+<hr>
+<h1 id="sep-a08-accessibility-conditions">SEP-A08 — Accessibility Conditions</h1>
+<p>Possible:</p>
+<pre><code class="language-text">standard
+accommodated
+partially_accessible
+barrier_detected
+unknown
+</code></pre>
+<p>This state alone does not determine whether the accommodation changes the construct.</p>
+<hr>
+<h1 id="sep-a09-measurement-instrument">SEP-A09 — Measurement Instrument</h1>
+<p>A profile should preserve:</p>
+<pre><code class="language-text">instrument
+instrument version
+scoring process
+evaluator
+</code></pre>
+<p>where available.</p>
+<p>Different instruments may create apparent substrate differences.</p>
+<hr>
+<h1 id="sep-a10-system-boundary">SEP-A10 — System Boundary</h1>
+<p>Examples:</p>
+<pre><code class="language-text">human alone
+AI alone
+human + calculator
+human + AI
+team
+robot + environment
+</code></pre>
+<p>The boundary must not disappear when results are aggregated.</p>
+<hr>
+<h1 id="expression-record">Expression Record</h1>
+<p>Each substrate observation may use:</p>
+<pre><code class="language-yaml">expression:
+  observation_id:
+
+  target:
+    id:
+
+  substrate:
+    id:
+
+  regime:
+    id:
+
+  system_boundary:
+
+  value:
+  state:
+  confidence:
+
+  timestamp:
+
+  evidence:
+    source:
+    independent:
+
+  limitations:
+</code></pre>
+<hr>
+<h1 id="expression-states">Expression States</h1>
+<p>For descriptive profiles:</p>
+<pre><code class="language-text">very_weak
+weak
+moderate
+strong
+very_strong
+variable
+unknown
+not_applicable
+</code></pre>
+<p>These are experimental ordinal labels.</p>
+<p>They are not assumed to have equal numerical spacing.</p>
+<hr>
+<h1 id="observation-states">Observation States</h1>
+<p>Separate from expression:</p>
+<pre><code class="language-text">observed
+partially_observed
+not_observed
+insufficient_evidence
+conflicting_evidence
+unknown
+not_applicable
+</code></pre>
+<hr>
+<h1 id="missing-is-not-weak">Missing Is Not Weak</h1>
+<p>Critical rules:</p>
+<pre><code class="language-text">not_observed != weak
+unknown != moderate
+not_applicable != zero
+insufficient_evidence != low_capability
+</code></pre>
+<p>A profile may legitimately contain large unknown regions.</p>
+<hr>
+<h1 id="confidence">Confidence</h1>
+<p>Confidence should describe the evidence supporting the substrate-expression relationship.</p>
+<p>Possible states:</p>
+<pre><code class="language-text">none
+very_low
+low
+medium
+high
+very_high
+unknown
+</code></pre>
+<p>Avoid converting these labels into probabilities without validated calibration.</p>
+<hr>
+<h1 id="profile-construction-pipeline">Profile Construction Pipeline</h1>
+<pre><code class="language-text">Declare Observed System
+        │
+        ▼
+Declare Target
+        │
+        ▼
+Collect Substrate Observations
+        │
+        ▼
+Preserve Raw Observations
+        │
+        ▼
+Normalize Metadata
+        │
+        ▼
+Deduplicate Shared Evidence
+        │
+        ▼
+Check Target Comparability
+        │
+        ▼
+Check Regime Compatibility
+        │
+        ▼
+Check Measurement Compatibility
+        │
+        ▼
+Map Substrate Configurations
+        │
+        ▼
+Map Expression
+        │
+        ▼
+Preserve Contradictions
+        │
+        ▼
+Test Replication
+        │
+        ▼
+Challenge Counterfactually
+        │
+        ▼
+Construct Expression Topology
+        │
+        ▼
+Return Profile
+</code></pre>
+<hr>
+<h1 id="evidence-independence">Evidence Independence</h1>
+<p>Suppose one task result is interpreted by:</p>
+<pre><code class="language-text">Substrate Adapter
+FFT
+Structural Detection
+Resonance
+RTT
+</code></pre>
+<p>Correct:</p>
+<pre><code class="language-yaml">interpretations:
+  count: 5
+
+independent_evidence_sources:
+  count: 1
+</code></pre>
+<p>Not:</p>
+<pre><code class="language-text">evidence count:
+  5
+</code></pre>
+<hr>
+<h1 id="evidence-lineage">Evidence Lineage</h1>
+<p>Suggested structure:</p>
+<pre><code class="language-yaml">evidence:
+  id: E1
+
+  observation:
+    structural-task-01
+
+  interpretations:
+    - substrate
+    - fft
+    - structural-detection
+    - resonance
+
+  independence:
+    shared_source
+
+  count_as_independent:
+    true
+</code></pre>
+<p>The source should be counted once.</p>
+<hr>
+<h1 id="cross-substrate-comparability">Cross-Substrate Comparability</h1>
+<p>The most important question before comparison is:</p>
+<blockquote>
+<p><strong>Are these observations sufficiently comparable to support a cross-substrate claim?</strong></p>
+</blockquote>
+<p>Possible states:</p>
+<pre><code class="language-text">high
+moderate
+partial
+low
+unsupported
+unknown
+</code></pre>
+<hr>
+<h1 id="comparability-factors">Comparability Factors</h1>
+<p>Consider:</p>
+<pre><code class="language-text">target construct
+task difficulty
+task content
+response demand
+timing
+regime
+environment
+measurement instrument
+evaluator
+system boundary
+prior exposure
+</code></pre>
+<p>A cross-substrate profile should not imply equivalence merely because two tasks have similar names.</p>
+<hr>
+<h1 id="exact-comparison">Exact Comparison</h1>
+<p>The strongest comparison may change only one substrate component.</p>
+<p>Example:</p>
+<pre><code class="language-text">Task A:
+  symbolic
+  timed
+  fixed-choice
+
+Task B:
+  symbolic
+  reflective
+  fixed-choice
+</code></pre>
+<p>Changed:</p>
+<pre><code class="language-text">timing
+</code></pre>
+<p>Held constant:</p>
+<pre><code class="language-text">representation
+response structure
+target
+</code></pre>
+<p>This is easier to interpret than changing everything at once.</p>
+<hr>
+<h1 id="partial-comparison">Partial Comparison</h1>
+<p>Sometimes complete matching is impossible.</p>
+<p>Example:</p>
+<pre><code class="language-text">verbal explanation
+</code></pre>
+<p>versus:</p>
+<pre><code class="language-text">visual reconstruction
+</code></pre>
+<p>The profile can still preserve both observations while marking:</p>
+<pre><code class="language-text">direct comparability:
+  partial
+</code></pre>
+<hr>
+<h1 id="non-comparable-observation">Non-Comparable Observation</h1>
+<p>Some observations should remain side by side without direct comparison.</p>
+<p>Example:</p>
+<pre><code class="language-text">human unassisted structural task
+</code></pre>
+<p>versus:</p>
+<pre><code class="language-text">human-AI pair open research synthesis
+</code></pre>
+<p>Both are meaningful.</p>
+<p>They observe different system boundaries.</p>
+<p>Correct:</p>
+<pre><code class="language-text">non_comparable_for_individual_attribution
+</code></pre>
+<hr>
+<h1 id="expression-matrix">Expression Matrix</h1>
+<p>A profile can conceptually represent expression as a matrix.</p>
+<pre><code class="language-text">                         Substrate
+
+                 Text   Visual   Symbolic   Relational
+              ┌───────┬────────┬──────────┬───────────┐
+Structural    │ strong│ strong │ moderate │ strong    │
+              ├───────┼────────┼──────────┼───────────┤
+Temporal      │ strong│ moderate│ moderate │ strong    │
+              ├───────┼────────┼──────────┼───────────┤
+Symbolic      │ moder.│ unknown │ strong   │ moderate  │
+              ├───────┼────────┼──────────┼───────────┤
+Transfer      │ strong│ moderate│ weak     │ strong    │
+              └───────┴────────┴──────────┴───────────┘
+</code></pre>
+<p>This is conceptual.</p>
+<p>Real profiles should retain confidence, provenance, and comparability.</p>
+<hr>
+<h1 id="expression-topology">Expression Topology</h1>
+<p>The profile may identify broad descriptive patterns.</p>
+<p>Possible topologies:</p>
+<pre><code class="language-text">substrate_stable
+localized
+clustered
+substrate_sensitive
+interaction_sensitive
+mixed
+fragmented
+unstable
+unknown
+</code></pre>
+<p>These describe the observation structure.</p>
+<p>They do not describe human worth or global intelligence.</p>
+<hr>
+<h1 id="substrate-stable-profile">Substrate-Stable Profile</h1>
+<p>Example:</p>
+<pre><code class="language-text">text:
+  moderate
+
+visual:
+  moderate
+
+symbolic:
+  moderate
+
+relational:
+  moderate
+</code></pre>
+<p>Possible:</p>
+<pre><code class="language-yaml">topology:
+  substrate_stable
+</code></pre>
+<p>within the observed conditions.</p>
+<p>This is a meaningful successful outcome.</p>
+<hr>
+<h1 id="localized-expression">Localized Expression</h1>
+<p>Example:</p>
+<pre><code class="language-text">relational:
+  strong
+
+everything else:
+  moderate
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-text">localized substrate-associated expression
+</code></pre>
+<p>Generalization remains unknown.</p>
+<hr>
+<h1 id="clustered-expression">Clustered Expression</h1>
+<p>Example:</p>
+<pre><code class="language-text">reflective textual:
+  strong
+
+reflective relational:
+  strong
+
+reflective visual:
+  strong
+
+timed versions:
+  weaker
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-text">reflective-condition cluster
+</code></pre>
+<p>This may implicate timing more than modality.</p>
+<p>Counterfactual isolation should test that.</p>
+<hr>
+<h1 id="mixed-expression">Mixed Expression</h1>
+<p>Example:</p>
+<pre><code class="language-text">tool assistance:
+  retrieval improves
+  calibration worsens
+  structural reasoning unchanged
+</code></pre>
+<p>Correct:</p>
+<pre><code class="language-text">mixed substrate profile
+</code></pre>
+<p>Not:</p>
+<pre><code class="language-text">tool assistance helps
+</code></pre>
+<p>globally.</p>
+<hr>
+<h1 id="fragmented-profile">Fragmented Profile</h1>
+<p>Expression varies substantially with no stable substrate relationship.</p>
+<p>Example:</p>
+<pre><code class="language-text">Text A:
+  strong
+
+Text B:
+  weak
+
+Visual A:
+  weak
+
+Visual B:
+  strong
+</code></pre>
+<p>Correct:</p>
+<pre><code class="language-yaml">topology:
+  fragmented_or_unresolved
+</code></pre>
+<p>Do not invent a deeper substrate explanation merely because the simple one failed.</p>
+<hr>
+<h1 id="contradictory-evidence">Contradictory Evidence</h1>
+<p>The profile must preserve contradictions.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">relational_substrate:
+  supporting:
+    - E1 strong
+    - E2 strong
+
+  contradictory:
+    - E3 weak
+
+  state:
+    mixed
+
+  confidence:
+    low_to_medium
+</code></pre>
+<p>The contradictory result should not disappear into an average automatically.</p>
+<hr>
+<h1 id="substrate-fit-profile">Substrate Fit Profile</h1>
+<p>A substrate expression profile may contribute to substrate fit.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">substrate_fit:
+  timed_symbolic:
+    target:
+      structural_reasoning
+    status:
+      partial
+
+  reflective_relational:
+    target:
+      structural_reasoning
+    status:
+      candidate_high
+
+  validation:
+    unresolved
+</code></pre>
+<p>Fit is always relative to a target.</p>
+<hr>
+<h1 id="difference-versus-effect">Difference Versus Effect</h1>
+<p>Observed:</p>
+<pre><code class="language-text">Expression A
+!=
+Expression B
+</code></pre>
+<p>This establishes:</p>
+<pre><code class="language-text">difference
+</code></pre>
+<p>A replicated and appropriately controlled relationship may support:</p>
+<pre><code class="language-text">substrate effect
+</code></pre>
+<p>A demonstrated threat to inference may support:</p>
+<pre><code class="language-text">substrate mismatch
+</code></pre>
+<p>These are three different levels.</p>
+<hr>
+<h1 id="interpretation-ladder">Interpretation Ladder</h1>
+<p>Use:</p>
+<pre><code class="language-text">Level 0:
+  observation
+
+Level 1:
+  difference
+
+Level 2:
+  replicated difference
+
+Level 3:
+  substrate effect candidate
+
+Level 4:
+  substrate-specific effect supported
+
+Level 5:
+  substrate mismatch candidate
+
+Level 6:
+  validated substrate mismatch for context
+</code></pre>
+<p>Do not jump directly from:</p>
+<pre><code class="language-text">difference
+</code></pre>
+<p>to:</p>
+<pre><code class="language-text">mismatch
+</code></pre>
+<hr>
+<h1 id="no-preferred-substrate-by-default">No Preferred Substrate by Default</h1>
+<p>The profile should not automatically label one substrate:</p>
+<pre><code class="language-text">best
+natural
+true
+authentic
+</code></pre>
+<p>A substrate can produce stronger observed expression because it:</p>
+<ul>
+<li>fits the target better,</li>
+<li>is easier,</li>
+<li>is more familiar,</li>
+<li>permits more time,</li>
+<li>provides more information,</li>
+<li>provides external tools,</li>
+<li>changes the observed system,</li>
+<li>or differs in another relevant way.</li>
+</ul>
+<p>The explanation requires evidence.</p>
+<hr>
+<h1 id="profile-versus-preference">Profile Versus Preference</h1>
+<p>A person may report:</p>
+<pre><code class="language-text">I prefer visual tasks.
+</code></pre>
+<p>This is a preference observation.</p>
+<p>It is not automatically:</p>
+<pre><code class="language-text">visual performance is stronger
+</code></pre>
+<p>and neither establishes:</p>
+<pre><code class="language-text">visual learning style
+</code></pre>
+<p>or another external construct.</p>
+<p>Self-report and measured expression should remain separate.</p>
+<hr>
+<h1 id="accessibility-layer">Accessibility Layer</h1>
+<p>The profile may record accessibility.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">substrate:
+  verbal:
+    accessibility:
+      barrier_detected: true
+
+  textual:
+    accessibility:
+      barrier_detected: false
+</code></pre>
+<p>This may help distinguish measurement barriers from target capability.</p>
+<hr>
+<h1 id="accessibility-is-not-preference">Accessibility Is Not Preference</h1>
+<p>A substrate may be:</p>
+<pre><code class="language-text">accessible
+</code></pre>
+<p>without being:</p>
+<pre><code class="language-text">preferred
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">high-performing
+</code></pre>
+<p>These fields should remain distinct.</p>
+<hr>
+<h1 id="accommodation-profile">Accommodation Profile</h1>
+<p>Example:</p>
+<pre><code class="language-yaml">accommodation:
+  baseline:
+    severe_time_limit
+
+  modified:
+    extended_time
+
+  target:
+    structural_reasoning
+
+  result:
+    expression_changed: true
+
+  construct_impact:
+    unknown
+
+  interpretation:
+    requires_review
+</code></pre>
+<p>An accommodation result should not automatically be treated as the true capability measurement.</p>
+<hr>
+<h1 id="temporal-layer">Temporal Layer</h1>
+<p>Substrate expression may change over time.</p>
+<p>Example:</p>
+<pre><code class="language-text">T1:
+  tool-assisted strong
+  unassisted moderate
+
+T2:
+  tool-assisted strong
+  unassisted strong
+</code></pre>
+<p>Possible explanations:</p>
+<pre><code class="language-text">learning
+tool transfer
+practice
+measurement change
+regime change
+unknown
+</code></pre>
+<p>The Drift Observer examines the temporal relationship.</p>
+<hr>
+<h1 id="substrate-profile-drift">Substrate Profile Drift</h1>
+<p>Conceptually:</p>
+<pre><code class="language-text">SEP(t1)
+    │
+    ▼
+SEP(t2)
+</code></pre>
+<p>Possible outcomes:</p>
+<pre><code class="language-text">stable
+localized_change
+broad_change
+converging
+diverging
+reversing
+unknown
+</code></pre>
+<hr>
+<h1 id="convergence">Convergence</h1>
+<p>Example:</p>
+<pre><code class="language-text">T1:
+  substrate A strong
+  substrate B weak
+
+T2:
+  substrate A strong
+  substrate B moderate
+
+T3:
+  substrate A strong
+  substrate B strong
+</code></pre>
+<p>The substrate-expression difference narrows.</p>
+<p>Possible:</p>
+<pre><code class="language-text">cross-substrate convergence
+</code></pre>
+<p>Cause remains unresolved.</p>
+<hr>
+<h1 id="divergence">Divergence</h1>
+<p>The opposite pattern may occur.</p>
+<p>Again:</p>
+<pre><code class="language-text">divergence
+!=
+degradation
+</code></pre>
+<hr>
+<h1 id="regime-layer">Regime Layer</h1>
+<p>The same substrate may behave differently across regimes.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">relational_substrate:
+  regime_a:
+    expression: strong
+
+  regime_b:
+    expression: moderate
+</code></pre>
+<p>Correct:</p>
+<pre><code class="language-text">substrate expression is regime-conditioned
+</code></pre>
+<p>rather than assuming one global substrate effect.</p>
+<hr>
+<h1 id="resonance-layer">Resonance Layer</h1>
+<p>The Resonance Observer may examine whether substrate expression forms patterns of:</p>
+<pre><code class="language-text">amplification
+suppression
+stability
+instability
+</code></pre>
+<p>The SEP provides the cross-substrate observation map.</p>
+<p>Resonance supplies a relational interpretation.</p>
+<hr>
+<h1 id="coherence-layer">Coherence Layer</h1>
+<p>The Coherence Observer asks whether substrate observations form a supportable structure.</p>
+<p>Possible:</p>
+<pre><code class="language-yaml">coherence:
+  within_substrate:
+    high
+
+  cross_substrate:
+    moderate
+
+  contradictions:
+    retained
+
+  evidence_independence:
+    medium
+</code></pre>
+<hr>
+<h1 id="counterfactual-layer">Counterfactual Layer</h1>
+<p>The profile should survive reasonable perturbation.</p>
+<p>Tests:</p>
+<pre><code class="language-text">remove strongest observation
+add contradictory evidence
+change task order
+change evaluator
+change irrelevant metadata
+match task difficulty
+hold timing constant
+hold response structure constant
+</code></pre>
+<hr>
+<h1 id="profile-robustness">Profile Robustness</h1>
+<p>Example:</p>
+<pre><code class="language-yaml">robustness:
+  irrelevant_metadata:
+    stable
+
+  single_evidence_removal:
+    moderate
+
+  alternate_form:
+    partial
+
+  adverse_evidence:
+    responsive
+
+  difficulty_matching:
+    stable
+
+  evaluator_change:
+    unknown
+</code></pre>
+<hr>
+<h1 id="model-mismatch-layer">Model Mismatch Layer</h1>
+<p>A substrate expression profile can support model mismatch analysis.</p>
+<p>Example:</p>
+<pre><code class="language-text">model predicts:
+  broad low structural capability
+
+SEP shows:
+  weak on one substrate
+  strong on several matched substrates
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-text">substrate-conditioned model mismatch
+</code></pre>
+<p>if sufficient evidence exists.</p>
+<p>Not:</p>
+<pre><code class="language-text">model invalid
+</code></pre>
+<hr>
+<h1 id="predictive-model-adapter-integration">Predictive Model Adapter Integration</h1>
+<p>The baseline prediction may already encode substrate.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">source_model:
+  intended_substrate:
+    timed_fixed_choice
+</code></pre>
+<p>The SEP should preserve that provenance.</p>
+<p>If the source model was never intended for:</p>
+<pre><code class="language-text">reflective generative
+</code></pre>
+<p>then later comparisons should not pretend otherwise.</p>
+<hr>
+<h1 id="riqf-integration">RIQF Integration</h1>
+<p>RIQF dimensions can consume SEP data.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">riqf:
+  dimension:
+    structural-reasoning:
+
+      expression:
+        overall:
+          strong_candidate
+
+      substrate_profile:
+        relational:
+          strong
+
+        visual:
+          strong
+
+        symbolic:
+          moderate
+
+        timed_symbolic:
+          weak
+
+      substrate_stability:
+        partial
+
+      confidence:
+        medium
+</code></pre>
+<p>The overall dimension should not erase the substrate structure.</p>
+<hr>
+<h1 id="multiple-dimension-sep">Multiple-Dimension SEP</h1>
+<p>A full fingerprint may attach different substrate profiles to different dimensions.</p>
+<p>Example:</p>
+<pre><code class="language-text">STRUCTURAL REASONING
+  relational        strong
+  symbolic          moderate
+  timed symbolic    weak
+
+SYMBOLIC REASONING
+  relational        moderate
+  symbolic          strong
+  timed symbolic    moderate
+
+TRANSFER
+  relational        strong
+  symbolic          moderate
+  generative        strong
+</code></pre>
+<p>This demonstrates why one universal:</p>
+<pre><code class="language-text">preferred substrate
+</code></pre>
+<p>may be misleading.</p>
+<hr>
+<h1 id="dimension-specific-substrate-effects">Dimension-Specific Substrate Effects</h1>
+<p>A substrate can help one target and hinder another.</p>
+<p>Example:</p>
+<pre><code class="language-text">tool assistance:
+  retrieval         stronger
+  calibration       weaker
+  synthesis         unchanged
+</code></pre>
+<p>Correct:</p>
+<pre><code class="language-text">dimension-specific mixed effect
+</code></pre>
+<hr>
+<h1 id="human-ai-pair-profile">Human-AI Pair Profile</h1>
+<p>A human-AI pair may need a separate SEP.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">observed_system:
+  class:
+    human_ai_pair
+
+substrates:
+  conversational:
+    synthesis: strong
+
+  independent_then_merge:
+    synthesis: very_strong
+
+  ai_leads:
+    verification: moderate
+
+  human_leads:
+    retrieval: strong
+</code></pre>
+<p>These are pair-level observations.</p>
+<hr>
+<h1 id="individual-versus-pair-profiles">Individual Versus Pair Profiles</h1>
+<p>Maintain separately:</p>
+<pre><code class="language-text">SEP-H:
+  human unassisted
+
+SEP-A:
+  AI alone
+
+SEP-HA:
+  human-AI pair
+</code></pre>
+<p>Do not merge:</p>
+<pre><code class="language-text">SEP-HA
+</code></pre>
+<p>into:</p>
+<pre><code class="language-text">SEP-H
+</code></pre>
+<p>without an attribution design.</p>
+<hr>
+<h1 id="ai-substrate-expression-profile">AI Substrate Expression Profile</h1>
+<p>An AI system may have:</p>
+<pre><code class="language-text">text-only
+vision-language
+retrieval-assisted
+tool-assisted
+long-context
+short-context
+multi-agent
+</code></pre>
+<p>substrates or configurations.</p>
+<p>Again, shared substrate grammar does not imply equivalent cognition with humans.</p>
+<hr>
+<h1 id="robot-substrate-expression-profile">Robot Substrate Expression Profile</h1>
+<p>Possible:</p>
+<pre><code class="language-text">simulation
+physical environment
+limited sensor array
+full sensor array
+manual assistance
+autonomous
+</code></pre>
+<p>The same profile grammar may be useful.</p>
+<p>The constructs and mechanisms differ.</p>
+<hr>
+<h1 id="organizational-substrate-expression-profile">Organizational Substrate Expression Profile</h1>
+<p>Possible functional substrates:</p>
+<pre><code class="language-text">email
+ticketing system
+shared dashboard
+synchronous meeting
+distributed agent workflow
+</code></pre>
+<p>The profile can describe organizational expression.</p>
+<p>It should not anthropomorphize the organization.</p>
+<hr>
+<h1 id="worked-example-pax-01">Worked Example — PAX-01</h1>
+<h2 id="target">Target</h2>
+<p>Synthetic target:</p>
+<pre><code class="language-text">structural reasoning
+</code></pre>
+<p>Observed system:</p>
+<pre><code class="language-text">PAX-01
+</code></pre>
+<p>System boundary:</p>
+<pre><code class="language-text">individual_human
+</code></pre>
+<hr>
+<h1 id="substrate-s1-timed-symbolic-fixed-choice">Substrate S1 — Timed Symbolic Fixed Choice</h1>
+<pre><code class="language-yaml">S1:
+  modality:
+    textual_symbolic
+
+  representation:
+    symbolic
+
+  response_structure:
+    fixed_choice
+
+  timing:
+    constrained
+
+  tools:
+    none
+
+  interaction:
+    individual
+
+  expression:
+    weak
+
+  confidence:
+    medium
+</code></pre>
+<hr>
+<h1 id="substrate-s2-reflective-symbolic-fixed-choice">Substrate S2 — Reflective Symbolic Fixed Choice</h1>
+<pre><code class="language-yaml">S2:
+  modality:
+    textual_symbolic
+
+  representation:
+    symbolic
+
+  response_structure:
+    fixed_choice
+
+  timing:
+    reflective
+
+  tools:
+    none
+
+  interaction:
+    individual
+
+  expression:
+    moderate
+
+  confidence:
+    medium
+</code></pre>
+<hr>
+<h1 id="substrate-s3-reflective-relational-fixed-choice">Substrate S3 — Reflective Relational Fixed Choice</h1>
+<pre><code class="language-yaml">S3:
+  modality:
+    textual
+
+  representation:
+    relational
+
+  response_structure:
+    fixed_choice
+
+  timing:
+    reflective
+
+  tools:
+    none
+
+  interaction:
+    individual
+
+  expression:
+    moderate_to_strong
+
+  confidence:
+    medium
+</code></pre>
+<hr>
+<h1 id="substrate-s4-reflective-relational-generative">Substrate S4 — Reflective Relational Generative</h1>
+<pre><code class="language-yaml">S4:
+  modality:
+    textual
+
+  representation:
+    relational
+
+  response_structure:
+    generative
+
+  timing:
+    reflective
+
+  tools:
+    none
+
+  interaction:
+    individual
+
+  expression:
+    strong
+
+  confidence:
+    medium
+</code></pre>
+<hr>
+<h1 id="initial-pax-01-profile">Initial PAX-01 Profile</h1>
+<pre><code class="language-text">STRUCTURAL REASONING
+
+S1 Timed Symbolic Fixed     ███
+S2 Reflective Symbolic      █████
+S3 Reflective Relational    ███████
+S4 Relational Generative    ████████
+</code></pre>
+<p>Bars are illustrative only.</p>
+<p>They are not validated quantitative values.</p>
+<hr>
+<h1 id="difference-decomposition">Difference Decomposition</h1>
+<p>Comparisons:</p>
+<pre><code class="language-text">S1 -&gt; S2
+  timing changes
+
+S2 -&gt; S3
+  representation changes
+
+S3 -&gt; S4
+  response structure changes
+</code></pre>
+<p>This provides a cleaner decomposition than comparing only:</p>
+<pre><code class="language-text">S1
+vs
+S4
+</code></pre>
+<hr>
+<h1 id="candidate-pax-01-relationships">Candidate PAX-01 Relationships</h1>
+<p>Synthetic:</p>
+<pre><code class="language-text">timing relaxation:
+  expression increases
+
+relational representation:
+  expression increases
+
+generative response:
+  expression increases slightly
+</code></pre>
+<p>Correct:</p>
+<pre><code class="language-text">candidate contributors
+</code></pre>
+<p>Not:</p>
+<pre><code class="language-text">causes established
+</code></pre>
+<hr>
+<h1 id="add-contradictory-evidence">Add Contradictory Evidence</h1>
+<p>Suppose:</p>
+<pre><code class="language-text">S4 replicate 1:
+  strong
+
+S4 replicate 2:
+  moderate
+
+S4 replicate 3:
+  weak
+</code></pre>
+<p>Profile must update.</p>
+<p>Possible:</p>
+<pre><code class="language-yaml">S4:
+  expression:
+    variable
+
+  confidence:
+    low
+
+  replication:
+    mixed
+</code></pre>
+<p>This is required.</p>
+<hr>
+<h1 id="pax-01-sep-result">PAX-01 SEP Result</h1>
+<pre><code class="language-yaml">substrate_expression_profile:
+  profile_id:
+    pax01-structural-sep
+
+  target:
+    structural_reasoning
+
+  observed_system:
+    id:
+      PAX-01
+
+    class:
+      individual_human
+
+  substrates:
+    S1:
+      expression: weak
+      confidence: medium
+
+    S2:
+      expression: moderate
+      confidence: medium
+
+    S3:
+      expression: moderate_to_strong
+      confidence: medium
+
+    S4:
+      expression: strong
+      confidence: medium
+
+  topology:
+    substrate_sensitive_candidate
+
+  timing_relation:
+    candidate
+
+  representation_relation:
+    candidate
+
+  response_structure_relation:
+    candidate
+
+  interactions:
+    unresolved
+
+  substrate_mismatch:
+    status:
+      candidate_unresolved
+
+  causal_status:
+    unresolved
+
+  empirical_validation:
+    unvalidated
+
+  decision_authority:
+    none
+</code></pre>
+<hr>
+<h1 id="important-non-conclusion">Important Non-Conclusion</h1>
+<p>The SEP does not conclude:</p>
+<blockquote>
+<p>"PAX-01 is really a strong structural reasoner."</p>
+</blockquote>
+<p>It can conclude only:</p>
+<blockquote>
+<p><strong>"Within this synthetic example, observed structural-reasoning expression differs across the defined substrate configurations, with stronger expression under the reflective relational conditions. Replication, causal interpretation, and generalization remain unresolved."</strong></p>
+</blockquote>
+<hr>
+<h1 id="baseline-sufficient-profile">Baseline-Sufficient Profile</h1>
+<p>Suppose:</p>
+<pre><code class="language-text">S1:
+  moderate
+
+S2:
+  moderate
+
+S3:
+  moderate
+
+S4:
+  moderate
+</code></pre>
+<p>Correct:</p>
+<pre><code class="language-yaml">topology:
+  substrate_stable_candidate
+
+substrate_effect:
+  not_supported
+</code></pre>
+<p>The profile still provides useful evidence:</p>
+<pre><code class="language-text">expression appears relatively stable
+across the observed substrates
+</code></pre>
+<hr>
+<h1 id="noisy-profile">Noisy Profile</h1>
+<p>Suppose:</p>
+<pre><code class="language-text">S1:
+  strong
+  weak
+  strong
+
+S2:
+  weak
+  strong
+  weak
+</code></pre>
+<p>Correct:</p>
+<pre><code class="language-yaml">topology:
+  unstable
+
+substrate_interpretation:
+  unresolved
+</code></pre>
+<p>Not:</p>
+<pre><code class="language-text">complex bidirectional substrate resonance
+</code></pre>
+<hr>
+<h1 id="non-comparable-profile">Non-Comparable Profile</h1>
+<p>Suppose:</p>
+<pre><code class="language-text">S1:
+  rapid symbolic classification
+
+S2:
+  open-ended creative synthesis
+</code></pre>
+<p>Correct:</p>
+<pre><code class="language-yaml">comparability:
+  low
+
+direct_cross_substrate_inference:
+  not_supported
+</code></pre>
+<p>Both observations may remain in the broader assessment.</p>
+<hr>
+<h1 id="profile-metrics">Profile Metrics</h1>
+<p>The SEP may particularly use:</p>
+<pre><code class="language-text">PA-M03  Evidence Independence Ratio
+
+PA-M04  Test-Retest Stability
+PA-M05  Alternate-Form Stability
+PA-M06  Inter-Rater Agreement
+PA-M07  Profile Topology Stability
+
+PA-M12  Substrate Effect Magnitude
+PA-M13  Substrate Effect Replicability
+PA-M14  Substrate Symmetry
+PA-M15  Substrate Specificity
+
+PA-M19  Regime-Conditioned Stability
+
+PA-M24  Cross-Observation Coherence
+PA-M25  Profile Contradiction Density
+
+PA-M27  Profile Drift Magnitude
+
+PA-M28  Confidence Calibration Error
+PA-M32  Unsupported Assertion Rate
+
+PA-M33  Irrelevant Perturbation Stability
+PA-M34  Relevant Change Sensitivity
+PA-M35  Task-Order Sensitivity
+
+PA-M42  Evidence Coverage Difference
+PA-M43  False Favorable Reinterpretation Rate
+PA-M44  False Adverse Reinterpretation Rate
+
+PA-M45  Evidence Reconstruction Rate
+PA-M46  Explanation Completeness
+
+PA-M51  Evidence Acquisition Burden
+</code></pre>
+<hr>
+<h1 id="sep-specific-candidate-metrics">SEP-Specific Candidate Metrics</h1>
+<p>Some profile properties may eventually warrant adapter-local experimental metrics.</p>
+<p>Possible candidates:</p>
+<pre><code class="language-text">SEP-X01  Cross-Substrate Expression Variance
+SEP-X02  Substrate Rank Stability
+SEP-X03  Substrate Generalization Rate
+SEP-X04  Matched-Task Substrate Difference
+SEP-X05  Substrate Interaction Density
+SEP-X06  Accessibility Sensitivity
+</code></pre>
+<p>These should <strong>not</strong> enter the canonical <code>PA-M##</code> registry until operational definitions and value are reviewed.</p>
+<hr>
+<h1 id="cross-substrate-expression-variance">Cross-Substrate Expression Variance</h1>
+<p>Conceptual question:</p>
+<blockquote>
+<p>How much does expression vary across comparable substrate conditions?</p>
+</blockquote>
+<p>This may eventually be useful.</p>
+<p>But a numerical variance requires compatible quantitative scales.</p>
+<p>Ordinal categories should not be treated as equally spaced numbers without justification.</p>
+<hr>
+<h1 id="substrate-rank-stability">Substrate Rank Stability</h1>
+<p>Question:</p>
+<blockquote>
+<p>Does the relative ordering of substrate-associated expression reproduce?</p>
+</blockquote>
+<p>Example:</p>
+<pre><code class="language-text">Study 1:
+  relational &gt; visual &gt; symbolic
+
+Study 2:
+  relational &gt; visual &gt; symbolic
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-text">rank stability
+</code></pre>
+<p>But ranking can obscure effect magnitude.</p>
+<hr>
+<h1 id="matched-task-difference">Matched-Task Difference</h1>
+<p>The strongest substrate evidence may come from matched tasks.</p>
+<p>Conceptually:</p>
+<pre><code class="language-text">MTSD =
+  expression(task_on_A)
+  -
+  expression(matched_task_on_B)
+</code></pre>
+<p>The exact measure depends on the task.</p>
+<hr>
+<h1 id="accessibility-sensitivity">Accessibility Sensitivity</h1>
+<p>A future metric may compare expression before and after removing an identified construct-irrelevant barrier.</p>
+<p>This requires especially careful construct validation.</p>
+<hr>
+<h1 id="validation-ladder">Validation Ladder</h1>
+<h2 id="stage-0-structural">Stage 0 — Structural</h2>
+<p>Can the profile represent:</p>
+<pre><code class="language-text">multiple substrates
+unknowns
+contradictions
+system boundaries
+evidence provenance
+</code></pre>
+<p>without losing them?</p>
+<hr>
+<h2 id="stage-1-comparability">Stage 1 — Comparability</h2>
+<p>Can meaningful matched tasks be constructed?</p>
+<hr>
+<h2 id="stage-2-reliability">Stage 2 — Reliability</h2>
+<p>Do observations repeat within substrate?</p>
+<hr>
+<h2 id="stage-3-cross-substrate-replication">Stage 3 — Cross-Substrate Replication</h2>
+<p>Do observed differences replicate?</p>
+<hr>
+<h2 id="stage-4-specificity">Stage 4 — Specificity</h2>
+<p>Do differences persist after controlling alternative explanations?</p>
+<hr>
+<h2 id="stage-5-topology-stability">Stage 5 — Topology Stability</h2>
+<p>Does the substrate profile retain shape across alternate forms?</p>
+<hr>
+<h2 id="stage-6-counterfactual-robustness">Stage 6 — Counterfactual Robustness</h2>
+<p>Does the profile survive irrelevant changes and respond to relevant ones?</p>
+<hr>
+<h2 id="stage-7-incremental-value">Stage 7 — Incremental Value</h2>
+<p>Does preserving substrate expression improve:</p>
+<pre><code class="language-text">prediction
+calibration
+explanation
+fairness
+model mismatch detection
+</code></pre>
+<hr>
+<h1 id="validation-baselines">Validation Baselines</h1>
+<p>Compare SEP against:</p>
+<pre><code class="language-text">single-substrate model
+ordinary task-effect model
+interaction model
+multilevel model
+measurement invariance analysis
+matched-condition analysis
+accessibility-aware assessment
+</code></pre>
+<p>where applicable.</p>
+<hr>
+<h1 id="null-profile-test">Null Profile Test</h1>
+<p>Use a process where substrate should not affect expression.</p>
+<p>Expected:</p>
+<pre><code class="language-text">substrate_stable
+</code></pre>
+<p>within expected variation.</p>
+<p>If the SEP always produces interesting topology, it has failed.</p>
+<hr>
+<h1 id="known-effect-test">Known-Effect Test</h1>
+<p>Use synthetic or controlled data containing a defined substrate effect.</p>
+<p>Expected:</p>
+<pre><code class="language-text">correct directional structure
+</code></pre>
+<p>without additional invented effects.</p>
+<hr>
+<h1 id="randomization-test">Randomization Test</h1>
+<p>Shuffle substrate labels.</p>
+<p>Expected:</p>
+<pre><code class="language-text">structured substrate profile:
+  degrades
+</code></pre>
+<p>If it survives unchanged:</p>
+<pre><code class="language-text">possible narrative overfitting
+</code></pre>
+<hr>
+<h1 id="holdout-test">Holdout Test</h1>
+<p>Construct the SEP using one task set.</p>
+<p>Predict performance relationships across new matched tasks.</p>
+<p>This tests whether the profile generalizes.</p>
+<hr>
+<h1 id="adverse-evidence-test">Adverse-Evidence Test</h1>
+<p>Start with a strong substrate pattern.</p>
+<p>Add credible contradictory evidence.</p>
+<p>Required:</p>
+<pre><code class="language-text">profile updates
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">confidence decreases
+</code></pre>
+<hr>
+<h1 id="favorable-evidence-test">Favorable-Evidence Test</h1>
+<p>Do the same in the opposite direction.</p>
+<p>Symmetry matters.</p>
+<hr>
+<h1 id="unknown-test">Unknown Test</h1>
+<p>Sparse evidence should allow:</p>
+<pre><code class="language-text">insufficient_evidence
+</code></pre>
+<p>The profile should not force every substrate cell to contain a value.</p>
+<hr>
+<h1 id="human-ai-attribution-test">Human-AI Attribution Test</h1>
+<p>Pair-level substrate results should remain pair-level.</p>
+<p>Required:</p>
+<pre><code class="language-text">pair != human
+pair != AI
+</code></pre>
+<hr>
+<h1 id="accessibility-test">Accessibility Test</h1>
+<p>Introduce a known construct-irrelevant barrier.</p>
+<p>The profile should preserve:</p>
+<pre><code class="language-text">barrier condition
+</code></pre>
+<p>rather than interpreting lower performance as lower target capability automatically.</p>
+<hr>
+<h1 id="failure-modes">Failure Modes</h1>
+<h2 id="profile-completion-bias">Profile Completion Bias</h2>
+<p>Risk:</p>
+<p>Unknown cells are filled to make the profile look complete.</p>
+<p>Mitigation:</p>
+<p>Preserve unknown.</p>
+<hr>
+<h1 id="substrate-ranking-bias">Substrate Ranking Bias</h1>
+<p>Risk:</p>
+<p>A descriptive profile becomes a universal hierarchy of substrates.</p>
+<p>Mitigation:</p>
+<p>Keep target specificity.</p>
+<hr>
+<h1 id="true-substrate-myth">True-Substrate Myth</h1>
+<p>Risk:</p>
+<p>The strongest-performing substrate is treated as the authentic one.</p>
+<p>Mitigation:</p>
+<p>Require purpose and construct evidence.</p>
+<hr>
+<h1 id="substrate-shopping">Substrate Shopping</h1>
+<p>Risk:</p>
+<p>Many conditions are tried until one produces strong performance.</p>
+<p>Mitigation:</p>
+<p>Predeclare primary comparisons and disclose all tested conditions.</p>
+<hr>
+<h1 id="interaction-erasure">Interaction Erasure</h1>
+<p>Risk:</p>
+<p>A multi-factor condition is attributed to one substrate axis.</p>
+<p>Mitigation:</p>
+<p>Record full configuration.</p>
+<hr>
+<h1 id="construct-confusion">Construct Confusion</h1>
+<p>Risk:</p>
+<p>Tasks under different substrates measure different capabilities.</p>
+<p>Mitigation:</p>
+<p>Comparability gate.</p>
+<hr>
+<h1 id="time-confusion">Time Confusion</h1>
+<p>Risk:</p>
+<p>learning
+fatigue
+practice</p>
+<pre><code>
+is attributed to substrate.
+
+Mitigation:
+
+temporal metadata and task-order controls.
+
+---
+
+# Regime Confusion
+
+Risk:
+
+Regime differences are attributed solely to substrate.
+
+Mitigation:
+
+Regime Observer integration.
+
+---
+
+# Observer Confusion
+
+Risk:
+
+Evaluator differences appear as substrate effects.
+
+Mitigation:
+
+Evaluator provenance.
+
+---
+
+# Tool Attribution Error
+
+Risk:
+
+Tool-mediated capability is attributed entirely to the user.
+
+Mitigation:
+
+System boundary.
+
+---
+
+# Pair Attribution Error
+
+Risk:
+
+Human-AI pair behavior becomes an individual fingerprint.
+
+Mitigation:
+
+Separate SEP for each system boundary.
+
+---
+
+# Accessibility Overreach
+
+Risk:
+
+Every weaker condition is called inaccessible.
+
+Mitigation:
+
+Require accessibility evidence.
+
+---
+
+# Accommodation Overreach
+
+Risk:
+
+Every stronger accommodated result is considered more valid.
+
+Mitigation:
+
+Analyze construct impact.
+
+---
+
+# Suppression Narrative
+
+Risk:
+
+A weaker substrate is automatically described as suppressing intelligence.
+
+Mitigation:
+
+Use descriptive expression language first.
+
+---
+
+# Precision Theater
+
+Risk:
+
+A visually detailed matrix implies validated numerical precision.
+
+Mitigation:
+
+Display uncertainty, provenance, and validation status.
+
+---
+
+# Identity Collapse
+
+Risk:
+
+A person becomes:
+
+```text
+a relational thinker
+a visual learner
+a poor timed thinker
+</code></pre>
+<p>based on limited observations.</p>
+<p>Mitigation:</p>
+<p>Use observation-bound statements.</p>
+<hr>
+<h1 id="privacy-expansion">Privacy Expansion</h1>
+<p>Risk:</p>
+<p>Fine-grained substrate profiles reveal sensitive performance conditions.</p>
+<p>Mitigation:</p>
+<p>Purpose limitation and data minimization.</p>
+<hr>
+<h1 id="manipulation-risk">Manipulation Risk</h1>
+<p>Risk:</p>
+<p>Profiles are used to discover contexts that weaken judgment or increase vulnerability.</p>
+<p>Mitigation:</p>
+<p>Prohibit exploitative use.</p>
+<hr>
+<h1 id="canon-confirmation">Canon Confirmation</h1>
+<p>Risk:</p>
+<p>Substrate sensitivity is expected by the framework and therefore always found.</p>
+<p>Mitigation:</p>
+<p>Null controls and falsification.</p>
+<hr>
+<h1 id="falsification-conditions">Falsification Conditions</h1>
+<p>The Substrate Expression Profile should be revised, restricted, deprecated, or rejected if:</p>
+<ul>
+<li>substrate cells cannot be measured reliably,</li>
+<li>matched tasks cannot be constructed,</li>
+<li>profile topology fails replication,</li>
+<li>apparent substrate effects disappear after basic controls,</li>
+<li>profile structure depends heavily on task order,</li>
+<li>evaluator changes produce unstable topology,</li>
+<li>unknown cells are routinely inferred without evidence,</li>
+<li>human-AI pair output is systematically misattributed,</li>
+<li>profile shape fails holdout testing,</li>
+<li>simpler interaction models explain the same observations equally well,</li>
+<li>substrate profiling introduces unacceptable fairness problems,</li>
+<li>privacy burden exceeds demonstrated benefit,</li>
+<li>or the profile adds complexity without useful information.</li>
+</ul>
+<hr>
+<h1 id="anti-rescue-test">Anti-Rescue Test</h1>
+<p>Ask:</p>
+<blockquote>
+<p><strong>Can the profile show consistently weak expression across substrates?</strong></p>
+</blockquote>
+<p>Required answer:</p>
+<pre><code class="language-text">yes
+</code></pre>
+<p>The profile must not guarantee a hidden high-performing substrate.</p>
+<hr>
+<h1 id="anti-adverse-test">Anti-Adverse Test</h1>
+<p>Ask:</p>
+<blockquote>
+<p><strong>Can a weak result in one substrate remain localized without contaminating the whole profile?</strong></p>
+</blockquote>
+<p>Required answer:</p>
+<pre><code class="language-text">yes
+</code></pre>
+<hr>
+<h1 id="no-effect-test">No-Effect Test</h1>
+<p>Ask:</p>
+<blockquote>
+<p><strong>Can the profile be substrate-stable?</strong></p>
+</blockquote>
+<p>Required answer:</p>
+<pre><code class="language-text">yes
+</code></pre>
+<hr>
+<h1 id="unknown-test_1">Unknown Test</h1>
+<p>Ask:</p>
+<blockquote>
+<p><strong>Can most of the profile remain unknown?</strong></p>
+</blockquote>
+<p>Required answer:</p>
+<pre><code class="language-text">yes
+</code></pre>
+<hr>
+<h1 id="non-comparable-test">Non-Comparable Test</h1>
+<p>Ask:</p>
+<blockquote>
+<p><strong>Can two meaningful substrate observations remain non-comparable?</strong></p>
+</blockquote>
+<p>Required answer:</p>
+<pre><code class="language-text">yes
+</code></pre>
+<hr>
+<h1 id="simpler-model-test">Simpler-Model Test</h1>
+<p>Ask:</p>
+<blockquote>
+<p><strong>Can a conventional interaction model make SEP unnecessary?</strong></p>
+</blockquote>
+<p>Required answer:</p>
+<pre><code class="language-text">yes
+</code></pre>
+<p>Then:</p>
+<pre><code class="language-text">SEP:
+  no_added_value
+</code></pre>
+<p>is a valid result.</p>
+<hr>
+<h1 id="ethics-boundary">Ethics Boundary</h1>
+<p>The profile should not tell someone:</p>
+<blockquote>
+<p>"This is the substrate where your real intelligence exists."</p>
+</blockquote>
+<p>Prefer:</p>
+<blockquote>
+<p><strong>"Across the current observations, expression of this defined target varied across these measurement configurations. The profile records that variation without assuming which configuration is more authentic."</strong></p>
+</blockquote>
+<hr>
+<h1 id="human-worth-boundary">Human Worth Boundary</h1>
+<p>A substrate profile says nothing about:</p>
+<pre><code class="language-text">dignity
+moral worth
+social value
+right to opportunity
+</code></pre>
+<p>Those are not measurement targets.</p>
+<hr>
+<h1 id="privacy-boundary">Privacy Boundary</h1>
+<p>SEP may expose:</p>
+<ul>
+<li>accessibility needs,</li>
+<li>places where performance weakens,</li>
+<li>preferred or effective interfaces,</li>
+<li>tool dependencies,</li>
+<li>collaboration effects,</li>
+<li>temporal responses,</li>
+<li>environmental sensitivities.</li>
+</ul>
+<p>These can be sensitive.</p>
+<p>The ability to construct the profile does not justify collecting it universally.</p>
+<hr>
+<h1 id="manipulation-boundary">Manipulation Boundary</h1>
+<p>The profile must not be used to optimize conditions intended to:</p>
+<ul>
+<li>confuse,</li>
+<li>overload,</li>
+<li>pressure,</li>
+<li>destabilize,</li>
+<li>exploit vulnerability,</li>
+<li>or manipulate behavior.</li>
+</ul>
+<p>Its intended purpose is better measurement and research.</p>
+<hr>
+<h1 id="decision-authority_1">Decision Authority</h1>
+<pre><code class="language-text">decision_authority: none
+
+authorized_use:
+  - research
+  - demonstration
+  - measurement comparison
+  - RIQF development
+  - accessibility research
+  - substrate validation
+  - human-AI research
+  - model comparison
+  - framework testing
+
+prohibited_use:
+  - psychological manipulation
+  - vulnerability exploitation
+  - diagnosis
+  - automated hiring decision
+  - educational exclusion
+  - legal determination
+  - insurance determination
+  - lending determination
+  - automated adverse decision
+</code></pre>
+<hr>
+<h1 id="minimal-sep-contract">Minimal SEP Contract</h1>
+<pre><code class="language-yaml">substrate_expression_profile:
+  profile_id:
+
+  framework:
+    module_version:
+    profile_version:
+
+  observed_system:
+    id:
+    class:
+    boundary:
+
+  target:
+    id:
+    operational_definition:
+
+  observation_window:
+    start:
+    end:
+
+  evidence:
+    total_sources:
+    independent_sources:
+    provenance:
+
+  substrates:
+    - id:
+
+      configuration:
+        modality:
+        representation:
+        response_structure:
+        timing:
+        tools:
+        interaction:
+        environment:
+
+      accessibility:
+        status:
+        construct_relevance:
+
+      regime:
+        id:
+
+      measurement:
+        instrument:
+        version:
+        evaluator:
+
+      observation:
+        state:
+        expression:
+        confidence:
+
+      evidence:
+        sources:
+        counterevidence:
+
+      limitations:
+
+  comparability:
+    matrix:
+    limitations:
+
+  topology:
+    type:
+
+  relationships:
+    timing:
+    representation:
+    response_structure:
+    modality:
+    tools:
+    interaction:
+
+  interactions:
+
+  substrate_fit:
+  substrate_effect:
+  substrate_mismatch:
+
+  coherence:
+  drift:
+  resonance:
+  counterfactual:
+
+  uncertainty:
+  alternative_interpretations:
+  confounds:
+  missing_evidence:
+  counterevidence:
+
+  validation_state:
+  review_required:
+  decision_authority: none
+</code></pre>
+<hr>
+<h1 id="research-questions">Research Questions</h1>
+<ol>
+<li>Can substrate expression profiles be measured reliably?</li>
+<li>Can substrate configurations be decomposed into useful axes?</li>
+<li>Which substrate axes are redundant?</li>
+<li>Can cross-substrate comparability be operationalized?</li>
+<li>Can matched tasks be constructed across modalities?</li>
+<li>Can task difficulty be separated from substrate?</li>
+<li>Can timing effects be isolated?</li>
+<li>Can response-structure effects be isolated?</li>
+<li>Can representation effects be isolated?</li>
+<li>Can tool effects be isolated?</li>
+<li>Can interaction-mode effects be isolated?</li>
+<li>Can substrate interactions be measured reliably?</li>
+<li>Does substrate topology replicate?</li>
+<li>Does topology survive alternate forms?</li>
+<li>Does topology survive holdout testing?</li>
+<li>Does topology survive irrelevant perturbation?</li>
+<li>Does it respond to meaningful substrate changes?</li>
+<li>Can contradictory substrate observations remain visible?</li>
+<li>Can unknown profile regions remain unknown?</li>
+<li>Can accessibility effects be distinguished from capability?</li>
+<li>Can accommodations be evaluated without changing the construct?</li>
+<li>How should substrate profiles vary by regime?</li>
+<li>How should they change through time?</li>
+<li>Can substrate-profile drift be measured?</li>
+<li>Can cross-substrate convergence be measured?</li>
+<li>Can divergence be measured?</li>
+<li>Does SEP improve model-mismatch detection?</li>
+<li>Does SEP improve prediction?</li>
+<li>Does SEP improve calibration?</li>
+<li>Does SEP improve explanation?</li>
+<li>Does SEP improve fairness?</li>
+<li>Can SEP worsen fairness?</li>
+<li>Does SEP reduce inappropriate global inference?</li>
+<li>Can profiles be constructed without excessive burden?</li>
+<li>What privacy risks arise from fine-grained substrate profiling?</li>
+<li>How should profiles expire?</li>
+<li>How should human profiles differ from AI profiles?</li>
+<li>How should human-AI pair profiles be represented?</li>
+<li>Can pair-level effects be attributed safely?</li>
+<li>Can organizational substrate profiles be useful without anthropomorphism?</li>
+<li>Does SEP add anything beyond conventional interaction models?</li>
+<li>Does it add anything beyond measurement-invariance methods?</li>
+<li>Which SEP-specific candidate metrics deserve canonical status?</li>
+<li>Which substrate categories should merge?</li>
+<li>Which should be deprecated?</li>
+<li>Can SEP detect when there is no meaningful substrate structure?</li>
+<li>When should it return <code>no_added_value</code>?</li>
+<li>When should it abstain?</li>
+<li>Can the profile detect its own narrative overfitting?</li>
+<li>What evidence would falsify the usefulness of SEP entirely?</li>
+</ol>
+<hr>
+<h1 id="core-invariants">Core Invariants</h1>
+<pre><code class="language-text">expression != capability
+expression != identity
+substrate != identity
+substrate != regime
+substrate != context
+substrate_difference != substrate_effect
+substrate_effect != substrate_mismatch
+difference != causation
+stronger_expression != truer_expression
+weaker_expression != false_expression
+preferred != superior
+accessible != easier
+accommodated != automatically_more_valid
+timed != invalid
+reflective != superior
+fixed_choice != inferior
+generative != superior
+tool_assisted != unassisted
+human_ai_pair != individual_human
+human_ai_pair != ai_system
+pair_expression != individual_expression
+different_task != substrate_effect
+different_construct != substrate_effect
+unknown != weak
+unknown != average
+not_observed != zero
+not_applicable != zero
+contradiction != failure
+mixed_profile != failure
+substrate_stable != framework_failure
+no_effect != framework_failure
+no_added_value != failure
+profile_detail != validity
+topology != cognition
+profile != destiny
+many_substrates != better_measurement
+adapter_agreement != independent_evidence
+measurement != total_capability
+capability != human_worth
+observer_output != decision_authority
+canon_alignment != empirical_validation
+</code></pre>
+<hr>
+<h1 id="closing-principle">Closing Principle</h1>
+<p>The Substrate Adapter asks whether two measurement conditions differ.</p>
+<p>The Substrate Expression Profile asks what happens when many such observations are allowed to coexist.</p>
+<p>Sometimes the profile will reveal a stable pattern.</p>
+<p>Sometimes one variable such as timing will explain most of the difference.</p>
+<p>Sometimes representation and response structure will interact.</p>
+<p>Sometimes accessibility will prove important.</p>
+<p>Sometimes human-AI collaboration will create an entirely different system boundary.</p>
+<p>Sometimes apparently strong substrate effects will disappear under matched tasks.</p>
+<p>Sometimes the observations will remain contradictory.</p>
+<p>And sometimes the profile will be almost completely flat.</p>
+<p>All of those outcomes are useful.</p>
+<p>The goal is not to discover:</p>
+<blockquote>
+<p><strong>the substrate where the real intelligence lives.</strong></p>
+</blockquote>
+<p>The better question is:</p>
+<blockquote>
+<p><strong>How does this defined capability become observable across different measurement configurations, and which parts of that variation survive comparison, replication, and challenge?</strong></p>
+<p><strong>A Substrate Expression Profile earns its place when it preserves meaningful variation without turning measurement conditions into identity.</strong></p>
+</blockquote>
   </main>
 </body>
 </html>

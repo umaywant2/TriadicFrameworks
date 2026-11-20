@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/predictive_analytics/substrate_adapter.md">
-  <title>substrate_adapter</title>
+  <title>Predictive Analytics — Substrate Adapter</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,7 +92,2117 @@
   </aside>
 
   <main>
+<h1 id="predictive-analytics-substrate-adapter">Predictive Analytics — Substrate Adapter</h1>
+<blockquote>
+<p><strong>What becomes observable depends partly on how observation is made.</strong></p>
+</blockquote>
+<h2 id="module">Module</h2>
+<p>Predictive Analytics</p>
+<h2 id="adapter-id">Adapter ID</h2>
+<p><code>substrate</code></p>
+<h2 id="operator">Operator</h2>
+<p><code>PA-Substrate</code></p>
+<h2 id="status">Status</h2>
+<p>Experimental.</p>
+<h2 id="validation-state">Validation State</h2>
+<p>Unvalidated.</p>
+<h2 id="intended-role">Intended Role</h2>
+<p>Measurement-substrate, expression-substrate, accessibility, cross-substrate comparison, and substrate-fit adapter.</p>
+<h2 id="decision-authority">Decision Authority</h2>
+<p>None.</p>
+<hr>
+<h1 id="purpose">Purpose</h1>
+<p>The Substrate Adapter examines whether observed performance changes across the medium, representation, interface, interaction structure, or measurement conditions through which capability becomes observable.</p>
+<p>Its purpose is to ask:</p>
+<blockquote>
+<p><strong>Does the measurement substrate provide an adequate opportunity to observe the capability or behavior being inferred?</strong></p>
+</blockquote>
+<p>The adapter may compare observations across:</p>
+<ul>
+<li>textual substrates,</li>
+<li>verbal substrates,</li>
+<li>visual substrates,</li>
+<li>spatial substrates,</li>
+<li>symbolic substrates,</li>
+<li>relational substrates,</li>
+<li>embodied substrates,</li>
+<li>tool-mediated substrates,</li>
+<li>collaborative substrates,</li>
+<li>human-AI substrates,</li>
+<li>fixed-choice formats,</li>
+<li>generative formats,</li>
+<li>timed formats,</li>
+<li>reflective formats.</li>
+</ul>
+<p>These categories are provisional.</p>
+<p>They require operational definition and validation.</p>
+<hr>
+<h1 id="core-principle">Core Principle</h1>
+<p>The adapter distinguishes:</p>
+<pre><code class="language-text">observed performance
+</code></pre>
+<p>from:</p>
+<pre><code class="language-text">underlying capability
+</code></pre>
+<p>and both from:</p>
+<pre><code class="language-text">measurement substrate
+</code></pre>
+<p>Conceptually:</p>
+<pre><code class="language-text">Observed Expression
+       │
+       ▼
+interaction of
+       │
+       ├── capability
+       ├── substrate
+       ├── task
+       ├── regime
+       ├── environment
+       ├── observer
+       └── measurement process
+</code></pre>
+<p>Therefore:</p>
+<pre><code class="language-text">performance_difference
+!=
+substrate_effect
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">substrate_effect
+!=
+substrate_mismatch
+</code></pre>
+<hr>
+<h1 id="working-definition">Working Definition</h1>
+<p>Within Predictive Analytics:</p>
+<blockquote>
+<p><strong>A substrate is the medium or interaction structure through which a target behavior, capability, or system state becomes observable.</strong></p>
+</blockquote>
+<p>A substrate may affect:</p>
+<ul>
+<li>what information is available,</li>
+<li>how information is represented,</li>
+<li>how the observed system interacts with it,</li>
+<li>what responses are possible,</li>
+<li>which tools are available,</li>
+<li>how much time is available,</li>
+<li>and what the measurement process records.</li>
+</ul>
+<hr>
+<h1 id="substrate-is-not-just-hardware">Substrate Is Not Just Hardware</h1>
+<p>In this module, substrate is broader than:</p>
+<pre><code class="language-text">physical material
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">computing hardware
+</code></pre>
+<p>A predictive observation may have substrates such as:</p>
+<pre><code class="language-text">spoken language
+written language
+symbolic notation
+visual diagram
+physical environment
+multiple-choice interface
+open-response interface
+human-AI collaboration
+tool-mediated interaction
+</code></pre>
+<p>These are functional observation substrates.</p>
+<hr>
+<h1 id="substrate-is-not-automatically-regime">Substrate Is Not Automatically Regime</h1>
+<p>A substrate describes:</p>
+<pre><code class="language-text">the medium or interaction structure
+through which expression is observed
+</code></pre>
+<p>A regime describes:</p>
+<pre><code class="language-text">the broader operating conditions
+under which relevant relationships remain sufficiently stable
+</code></pre>
+<p>Therefore:</p>
+<pre><code class="language-text">substrate != regime
+</code></pre>
+<p>A single substrate can occur inside multiple regimes.</p>
+<p>A regime can contain multiple substrates.</p>
+<hr>
+<h1 id="substrate-is-not-context">Substrate Is Not Context</h1>
+<p>Context may include:</p>
+<pre><code class="language-text">social setting
+task framing
+domain
+history
+environment
+instructions
+available information
+</code></pre>
+<p>Substrate may be one component of context.</p>
+<p>Therefore:</p>
+<pre><code class="language-text">context_difference
+!=
+substrate_difference
+</code></pre>
+<hr>
+<h1 id="substrate-pipeline">Substrate Pipeline</h1>
+<pre><code class="language-text">Observed System
+       │
+       ▼
+Declare Target Capability
+       │
+       ▼
+Declare Baseline Substrate
+       │
+       ▼
+Measure Baseline Expression
+       │
+       ▼
+Declare Comparison Substrate
+       │
+       ▼
+Measure Comparison Expression
+       │
+       ▼
+Check Task Comparability
+       │
+       ▼
+Check Regime
+       │
+       ▼
+Check Time
+       │
+       ▼
+Check Accessibility
+       │
+       ▼
+Estimate Expected Variation
+       │
+       ▼
+Test Replication
+       │
+       ▼
+Control Alternative Explanations
+       │
+       ▼
+Challenge Counterfactually
+       │
+       ▼
+Classify Substrate Relationship
+       │
+       ▼
+Return:
+  comparable
+  effect_candidate
+  effect_supported
+  mismatch_candidate
+  partial_fit
+  no_detectable_effect
+  unresolved
+  insufficient_evidence
+</code></pre>
+<hr>
+<h1 id="substrate-record">Substrate Record</h1>
+<p>Suggested representation:</p>
+<pre><code class="language-yaml">substrate:
+  id: substrate-001
 
+  name:
+    reflective-relational-text
+
+  class:
+    relational
+
+  modality:
+    textual
+
+  response_structure:
+    generative
+
+  timing:
+    reflective
+
+  interaction:
+    individual
+
+  tools:
+    none
+
+  accessibility:
+    status: unknown
+
+  measurement:
+    instrument:
+    version:
+
+  evidence:
+    - observation-reference
+
+  validation_state:
+    unvalidated
+</code></pre>
+<hr>
+<h1 id="substrate-classes">Substrate Classes</h1>
+<p>The initial module may use:</p>
+<pre><code class="language-text">SA-01  Textual
+SA-02  Verbal
+SA-03  Visual
+SA-04  Spatial
+SA-05  Symbolic
+SA-06  Relational
+SA-07  Embodied
+SA-08  Fixed Choice
+SA-09  Generative
+SA-10  Timed
+SA-11  Reflective
+SA-12  Tool-Mediated
+SA-13  Collaborative
+SA-14  Human-AI
+SA-15  Multimodal
+SA-16  Unknown / Mixed
+</code></pre>
+<p>These classes can overlap.</p>
+<p>Example:</p>
+<pre><code class="language-text">reflective
++
+relational
++
+textual
++
+generative
+</code></pre>
+<p>may describe one actual substrate configuration.</p>
+<hr>
+<h1 id="sa-01-textual">SA-01 — Textual</h1>
+<p>Expression occurs primarily through written language.</p>
+<p>Possible forms:</p>
+<pre><code class="language-text">reading
+writing
+text interpretation
+text generation
+structured textual reasoning
+</code></pre>
+<p>Potential confounds:</p>
+<pre><code class="language-text">literacy
+language familiarity
+typing
+reading accessibility
+domain vocabulary
+</code></pre>
+<hr>
+<h1 id="sa-02-verbal">SA-02 — Verbal</h1>
+<p>Expression occurs primarily through spoken language.</p>
+<p>Possible influences include:</p>
+<pre><code class="language-text">speech production
+hearing
+language fluency
+social interaction
+response latency
+</code></pre>
+<p>A verbal result should not automatically be compared directly with a written result without considering these differences.</p>
+<hr>
+<h1 id="sa-03-visual">SA-03 — Visual</h1>
+<p>The task principally communicates or receives information visually.</p>
+<p>Examples:</p>
+<pre><code class="language-text">images
+graphs
+diagrams
+patterns
+visual maps
+</code></pre>
+<p>Possible confounds:</p>
+<pre><code class="language-text">vision
+visual literacy
+display quality
+color accessibility
+diagram familiarity
+</code></pre>
+<hr>
+<h1 id="sa-04-spatial">SA-04 — Spatial</h1>
+<p>The task requires interaction with spatial relationships.</p>
+<p>Examples:</p>
+<pre><code class="language-text">rotation
+placement
+navigation
+relative position
+physical layout
+</code></pre>
+<p>Spatial and visual substrates may overlap.</p>
+<p>They should not be treated as identical by default.</p>
+<hr>
+<h1 id="sa-05-symbolic">SA-05 — Symbolic</h1>
+<p>Information is represented primarily using formal or abstract symbols.</p>
+<p>Examples:</p>
+<pre><code class="language-text">numbers
+logic notation
+algebra
+code
+abstract token systems
+</code></pre>
+<p>Important distinction:</p>
+<pre><code class="language-text">symbolic reasoning
+!=
+symbolic processing speed
+</code></pre>
+<hr>
+<h1 id="sa-06-relational">SA-06 — Relational</h1>
+<p>The task foregrounds relationships among components.</p>
+<p>Examples:</p>
+<pre><code class="language-text">graphs
+systems
+dependency maps
+network relations
+causal diagrams
+structured comparisons
+</code></pre>
+<p>The FFT and Structural Detection adapters may be especially relevant here.</p>
+<hr>
+<h1 id="sa-07-embodied">SA-07 — Embodied</h1>
+<p>Expression depends materially on interaction with a physical environment.</p>
+<p>Examples may include:</p>
+<pre><code class="language-text">navigation
+physical manipulation
+sensorimotor coordination
+robotic interaction
+real-world task execution
+</code></pre>
+<p>Applicability varies strongly by system class.</p>
+<hr>
+<h1 id="sa-08-fixed-choice">SA-08 — Fixed Choice</h1>
+<p>The response space is predefined.</p>
+<p>Example:</p>
+<pre><code class="language-text">A
+B
+C
+D
+</code></pre>
+<p>Advantages may include:</p>
+<pre><code class="language-text">standardization
+easy scoring
+controlled comparison
+</code></pre>
+<p>Potential limitation:</p>
+<pre><code class="language-text">expression constrained to predefined options
+</code></pre>
+<p>The limitation must not be assumed to matter unless evidence supports it.</p>
+<hr>
+<h1 id="sa-09-generative">SA-09 — Generative</h1>
+<p>The response is constructed rather than selected.</p>
+<p>Examples:</p>
+<pre><code class="language-text">free response
+system reconstruction
+explanation
+design
+open problem solving
+</code></pre>
+<p>Generative tasks may reveal additional information.</p>
+<p>They may also introduce:</p>
+<pre><code class="language-text">scoring complexity
+language confounds
+evaluator variability
+</code></pre>
+<p>More expressive does not automatically mean more valid.</p>
+<hr>
+<h1 id="sa-10-timed">SA-10 — Timed</h1>
+<p>Available response time is deliberately constrained.</p>
+<p>Timing may itself be construct-relevant.</p>
+<p>Example:</p>
+<pre><code class="language-text">processing speed assessment
+</code></pre>
+<p>In that case:</p>
+<pre><code class="language-text">time constraint
+</code></pre>
+<p>is not necessarily a substrate defect.</p>
+<hr>
+<h1 id="timed-task-principle">Timed-Task Principle</h1>
+<p>If the target is:</p>
+<pre><code class="language-text">rapid processing under time constraint
+</code></pre>
+<p>then removing the time limit may change the construct.</p>
+<p>Correct:</p>
+<pre><code class="language-text">different measurement target
+</code></pre>
+<p>possibly.</p>
+<p>Not automatically:</p>
+<pre><code class="language-text">better substrate
+</code></pre>
+<hr>
+<h1 id="sa-11-reflective">SA-11 — Reflective</h1>
+<p>The task allows a longer or less constrained response interval.</p>
+<p>A reflective substrate may reveal capabilities suppressed by speed requirements.</p>
+<p>Or it may simply measure different capabilities.</p>
+<p>This must be tested.</p>
+<hr>
+<h1 id="sa-12-tool-mediated">SA-12 — Tool-Mediated</h1>
+<p>The observed system is allowed to use external tools.</p>
+<p>Examples:</p>
+<pre><code class="language-text">calculator
+search
+database
+software
+AI
+simulation
+external memory
+</code></pre>
+<p>Tool-mediated performance is meaningful.</p>
+<p>Its attribution depends on the declared system boundary.</p>
+<hr>
+<h1 id="sa-13-collaborative">SA-13 — Collaborative</h1>
+<p>Multiple participants contribute to the observed result.</p>
+<p>Possible systems:</p>
+<pre><code class="language-text">human pair
+team
+human-tool system
+human-AI pair
+multi-agent system
+</code></pre>
+<p>Collaborative performance must not automatically become individual capability.</p>
+<hr>
+<h1 id="sa-14-human-ai">SA-14 — Human-AI</h1>
+<p>The observed system includes both human and AI participation.</p>
+<p>Correct boundary:</p>
+<pre><code class="language-yaml">observed_system:
+  class:
+    human_ai_pair
+</code></pre>
+<p>unless an experimental design separately isolates component contributions.</p>
+<hr>
+<h1 id="sa-15-multimodal">SA-15 — Multimodal</h1>
+<p>Multiple modalities contribute materially.</p>
+<p>Example:</p>
+<pre><code class="language-text">text + image + speech
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">vision + sensor + language
+</code></pre>
+<p>A multimodal substrate may not be cleanly reducible to its components.</p>
+<hr>
+<h1 id="sa-16-unknown-mixed">SA-16 — Unknown / Mixed</h1>
+<p>Where substrate structure cannot be adequately specified:</p>
+<pre><code class="language-text">unknown
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">mixed
+</code></pre>
+<p>should remain available.</p>
+<p>Do not force classification.</p>
+<hr>
+<h1 id="substrate-configuration">Substrate Configuration</h1>
+<p>A real observation may use multiple substrate descriptors.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">substrate_configuration:
+  modality:
+    textual
+
+  representation:
+    relational
+
+  response:
+    generative
+
+  timing:
+    reflective
+
+  tool_access:
+    none
+
+  interaction:
+    individual
+</code></pre>
+<p>This is generally more informative than a single label:</p>
+<pre><code class="language-text">text
+</code></pre>
+<hr>
+<h1 id="target-capability">Target Capability</h1>
+<p>Substrate analysis must declare what capability is being observed.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">target:
+  id:
+    structural_reasoning
+
+  operational_definition:
+    ability to reconstruct
+    defined system relationships
+</code></pre>
+<p>Without a target, substrate fit becomes vague.</p>
+<hr>
+<h1 id="baseline-substrate">Baseline Substrate</h1>
+<p>Substrate analysis requires a comparison reference.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">baseline_substrate:
+  modality: symbolic
+  response: fixed_choice
+  timing: timed
+</code></pre>
+<hr>
+<h1 id="comparison-substrate">Comparison Substrate</h1>
+<p>Example:</p>
+<pre><code class="language-yaml">comparison_substrate:
+  modality: textual
+  representation: relational
+  response: generative
+  timing: reflective
+</code></pre>
+<p>Several variables changed.</p>
+<p>The adapter must expose that.</p>
+<hr>
+<h1 id="changed-variables">Changed Variables</h1>
+<p>Suggested record:</p>
+<pre><code class="language-yaml">substrate_comparison:
+  changed:
+    - modality
+    - representation
+    - response_structure
+    - timing
+
+  held_constant:
+    - target
+    - evaluator
+
+  unknown:
+    - difficulty_equivalence
+</code></pre>
+<p>This prevents false causal simplification.</p>
+<hr>
+<h1 id="minimal-change-principle">Minimal-Change Principle</h1>
+<p>Where possible:</p>
+<blockquote>
+<p><strong>Change one substrate dimension at a time before evaluating interactions.</strong></p>
+</blockquote>
+<p>Example:</p>
+<pre><code class="language-text">Test 1:
+  timed
+  -&gt;
+  reflective
+
+Test 2:
+  fixed-choice
+  -&gt;
+  generative
+
+Test 3:
+  symbolic
+  -&gt;
+  relational
+</code></pre>
+<p>Then investigate interactions.</p>
+<hr>
+<h1 id="factorial-substrate-analysis">Factorial Substrate Analysis</h1>
+<p>Some effects may arise only from combinations.</p>
+<p>Example:</p>
+<pre><code class="language-text">timing alone:
+  small effect
+
+representation alone:
+  small effect
+
+timing + representation:
+  large effect
+</code></pre>
+<p>Therefore:</p>
+<pre><code class="language-text">one-variable tests
+</code></pre>
+<p>may be followed by:</p>
+<pre><code class="language-text">interaction tests
+</code></pre>
+<p>where appropriate.</p>
+<hr>
+<h1 id="substrate-fit">Substrate Fit</h1>
+<p>Substrate fit asks:</p>
+<blockquote>
+<p><strong>Does this measurement configuration provide an adequate basis for the intended inference?</strong></p>
+</blockquote>
+<p>Possible states:</p>
+<pre><code class="language-text">high
+moderate
+low
+partial
+mismatch_candidate
+mismatch_supported
+unknown
+not_applicable
+</code></pre>
+<hr>
+<h1 id="fit-is-purpose-dependent">Fit Is Purpose-Dependent</h1>
+<p>A substrate may be excellent for:</p>
+<pre><code class="language-text">rapid classification
+</code></pre>
+<p>and poor for:</p>
+<pre><code class="language-text">open structural synthesis
+</code></pre>
+<p>Neither fact makes the substrate universally good or bad.</p>
+<p>Therefore:</p>
+<pre><code class="language-text">substrate_fit
+</code></pre>
+<p>must always refer to:</p>
+<pre><code class="language-text">target + intended inference
+</code></pre>
+<hr>
+<h1 id="substrate-mismatch">Substrate Mismatch</h1>
+<p>A mismatch candidate occurs when evidence suggests:</p>
+<pre><code class="language-text">measurement substrate
+</code></pre>
+<p>systematically obscures, distorts, constrains, or differently samples the target in a way that makes the intended inference unreliable or overbroad.</p>
+<p>This is stronger than:</p>
+<pre><code class="language-text">performance differs
+</code></pre>
+<hr>
+<h1 id="mismatch-requirements">Mismatch Requirements</h1>
+<p>A substrate mismatch claim should ideally include:</p>
+<pre><code class="language-text">defined target
+baseline substrate
+comparison substrate
+matched observations
+replication
+effect magnitude
+alternative explanations
+counterevidence
+specificity
+appropriate regime controls
+</code></pre>
+<hr>
+<h1 id="example-difference-without-mismatch">Example — Difference Without Mismatch</h1>
+<pre><code class="language-text">Task target:
+  rapid symbolic processing
+
+Timed symbolic:
+  strong
+
+Untimed relational:
+  strong
+</code></pre>
+<p>Different substrates.</p>
+<p>No mismatch is apparent.</p>
+<hr>
+<h1 id="example-different-construct">Example — Different Construct</h1>
+<pre><code class="language-text">Timed symbolic:
+  weak
+
+Untimed creative writing:
+  strong
+</code></pre>
+<p>These observations differ greatly.</p>
+<p>But the tasks may not observe the same construct.</p>
+<p>Correct:</p>
+<pre><code class="language-text">direct comparison:
+  unsupported
+</code></pre>
+<p>Not:</p>
+<pre><code class="language-text">substrate mismatch
+</code></pre>
+<hr>
+<h1 id="example-candidate-mismatch">Example — Candidate Mismatch</h1>
+<pre><code class="language-text">Target:
+  structural reconstruction
+
+Fixed-choice structural representation:
+  repeatedly weak
+
+Generative structural reconstruction:
+  repeatedly strong
+</code></pre>
+<p>with matched difficulty and replicated tasks.</p>
+<p>Candidate:</p>
+<pre><code class="language-yaml">substrate_mismatch:
+  status:
+    candidate
+</code></pre>
+<p>Further validation remains necessary.</p>
+<hr>
+<h1 id="substrate-effect">Substrate Effect</h1>
+<p>A substrate effect describes a reproducible performance difference.</p>
+<p>Conceptually:</p>
+<pre><code class="language-text">Effect(Sa, Sb)
+  =
+Expression(Sa)
+-
+Expression(Sb)
+</code></pre>
+<p>This notation is conceptual.</p>
+<p>The actual metric should fit the measurement scale.</p>
+<hr>
+<h1 id="effect-direction">Effect Direction</h1>
+<p>Possible states:</p>
+<pre><code class="language-text">higher_in_a
+higher_in_b
+equivalent
+mixed
+unknown
+</code></pre>
+<p>Avoid:</p>
+<pre><code class="language-text">better substrate
+</code></pre>
+<p>unless a declared objective defines what better means.</p>
+<hr>
+<h1 id="effect-magnitude">Effect Magnitude</h1>
+<p>Possible descriptive states:</p>
+<pre><code class="language-text">negligible
+small
+moderate
+large
+unknown
+</code></pre>
+<p>Empirical work should use appropriate effect-size methods.</p>
+<hr>
+<h1 id="effect-replication">Effect Replication</h1>
+<p>Possible states:</p>
+<pre><code class="language-text">single
+partial
+replicated
+failed_replication
+mixed
+unknown
+</code></pre>
+<p>A candidate mismatch should weaken when replication fails.</p>
+<hr>
+<h1 id="substrate-symmetry">Substrate Symmetry</h1>
+<p>A strong safeguard:</p>
+<blockquote>
+<p><strong>The adapter must detect both favorable and adverse substrate effects.</strong></p>
+</blockquote>
+<p>If:</p>
+<pre><code class="language-text">substrate B
+</code></pre>
+<p>produces stronger performance:</p>
+<pre><code class="language-text">record it
+</code></pre>
+<p>If it produces weaker performance:</p>
+<pre><code class="language-text">record that too
+</code></pre>
+<hr>
+<h1 id="favorability-symmetry">Favorability Symmetry</h1>
+<p>The adapter fails if it becomes:</p>
+<pre><code class="language-text">unfavorable score
+  -&gt;
+search for better substrate
+  -&gt;
+report only improvement
+</code></pre>
+<p>Instead:</p>
+<pre><code class="language-text">all declared substrate comparisons
+  -&gt;
+report complete results
+</code></pre>
+<hr>
+<h1 id="accessibility">Accessibility</h1>
+<p>Accessibility deserves explicit representation.</p>
+<p>A measurement difficulty may originate from:</p>
+<pre><code class="language-text">construct-relevant demand
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">construct-irrelevant accessibility barrier
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">unknown relationship
+</code></pre>
+<hr>
+<h1 id="accessibility-record">Accessibility Record</h1>
+<pre><code class="language-yaml">accessibility:
+  condition:
+
+  relationship_to_construct:
+    relevant
+    irrelevant
+    unknown
+
+  accommodation:
+  evidence:
+
+  interpretation:
+</code></pre>
+<p>A barrier should not automatically be removed from the assessment if it is part of the construct being measured.</p>
+<p>Likewise it should not automatically be treated as capability if it is irrelevant to the intended construct.</p>
+<hr>
+<h1 id="accommodation-versus-substrate-change">Accommodation Versus Substrate Change</h1>
+<p>An accommodation may alter the substrate.</p>
+<p>Question:</p>
+<blockquote>
+<p><strong>Does the accommodation remove an irrelevant barrier or alter the target construct?</strong></p>
+</blockquote>
+<p>That determination may require specialist judgment.</p>
+<p>The adapter should preserve the change without pretending to resolve it automatically.</p>
+<hr>
+<h1 id="measurement-accessibility-principle">Measurement Accessibility Principle</h1>
+<pre><code class="language-text">accessible measurement
+!=
+easier measurement
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">harder measurement
+!=
+more valid measurement
+</code></pre>
+<p>Validity depends on the construct.</p>
+<hr>
+<h1 id="substrate-and-model-fit">Substrate and Model Fit</h1>
+<p>A predictive model trained under one substrate may perform differently under another.</p>
+<p>Example:</p>
+<pre><code class="language-text">model training:
+  fixed-choice
+
+deployment:
+  generative
+
+prediction error:
+  increases
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-text">substrate-conditioned model fit
+</code></pre>
+<hr>
+<h1 id="substrate-and-model-mismatch">Substrate and Model Mismatch</h1>
+<p>The Model Mismatch layer may classify:</p>
+<pre><code class="language-text">substrate_mismatch
+</code></pre>
+<p>when the substrate relationship threatens the model's intended inference.</p>
+<p>The Substrate Adapter supplies the evidence.</p>
+<p>It does not make the final mismatch claim alone.</p>
+<hr>
+<h1 id="substrate-and-fft">Substrate and FFT</h1>
+<p>FFT may map:</p>
+<pre><code class="language-text">relationships
+boundaries
+constraints
+local/global context
+</code></pre>
+<p>that surround substrate changes.</p>
+<p>Example:</p>
+<pre><code class="language-text">tool availability
+</code></pre>
+<p>changes the relationship structure of the task.</p>
+<p>FFT may make that structural change explicit.</p>
+<hr>
+<h1 id="substrate-and-inverted-star">Substrate and Inverted Star</h1>
+<p>Inverted Star may detect:</p>
+<pre><code class="language-text">prediction low
+</code></pre>
+<p>but:</p>
+<pre><code class="language-text">performance stronger
+under another substrate
+</code></pre>
+<p>This produces:</p>
+<pre><code class="language-text">substrate inversion candidate
+</code></pre>
+<p>The Substrate Adapter asks whether the difference itself is reliable.</p>
+<hr>
+<h1 id="substrate-and-structural-detection">Substrate and Structural Detection</h1>
+<p>Structural Detection asks whether performance variation across substrates has reproducible structure.</p>
+<p>Example:</p>
+<pre><code class="language-text">relational:
+  strong
+  strong
+  strong
+
+symbolic:
+  weak
+  weak
+  moderate
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-text">structured substrate dependence
+</code></pre>
+<hr>
+<h1 id="substrate-and-rtt">Substrate and RTT</h1>
+<p>RTT asks whether substrate differences align with:</p>
+<pre><code class="language-text">regime
+time
+transition
+continuity
+drift
+</code></pre>
+<p>Substrate change can coincide with regime transition.</p>
+<p>They should not be conflated automatically.</p>
+<hr>
+<h1 id="substrate-and-resonance">Substrate and Resonance</h1>
+<p>The Resonance Adapter asks whether a substrate relationship behaves like:</p>
+<pre><code class="language-text">amplification
+suppression
+stabilization
+</code></pre>
+<p>The Substrate Adapter should establish the cross-substrate difference first.</p>
+<hr>
+<h1 id="substrate-and-coherence">Substrate and Coherence</h1>
+<p>The Coherence Observer can ask:</p>
+<pre><code class="language-text">are within-substrate observations coherent?
+
+are cross-substrate differences coherent?
+
+do observations contradict one another?
+
+are they conditionally compatible?
+</code></pre>
+<hr>
+<h1 id="substrate-and-drift">Substrate and Drift</h1>
+<p>A substrate may change through time.</p>
+<p>Example:</p>
+<pre><code class="language-text">T1:
+  unassisted
+
+T2:
+  calculator-assisted
+
+T3:
+  AI-assisted
+</code></pre>
+<p>Performance movement may reflect:</p>
+<pre><code class="language-text">substrate drift
+</code></pre>
+<p>rather than underlying capability drift alone.</p>
+<hr>
+<h1 id="substrate-and-counterfactuals">Substrate and Counterfactuals</h1>
+<p>Substrate claims should be challenged.</p>
+<p>Examples:</p>
+<pre><code class="language-text">match task difficulty
+change only timing
+change only response format
+change only modality
+change evaluator
+change task order
+remove one favorable observation
+add adverse observation
+</code></pre>
+<p>If the effect disappears:</p>
+<pre><code class="language-text">substrate_interpretation:
+  weakened
+</code></pre>
+<hr>
+<h1 id="substrate-and-uncertainty">Substrate and Uncertainty</h1>
+<p>Confidence should fall when:</p>
+<pre><code class="language-text">many substrate variables changed simultaneously
+few observations exist
+difficulty matching is weak
+regime changed
+system boundary changed
+measurement changed
+observer changed
+replication failed
+</code></pre>
+<hr>
+<h1 id="substrate-and-human-review">Substrate and Human Review</h1>
+<p>Review may be appropriate when a consequential interpretation depends heavily on substrate mismatch.</p>
+<p>Review questions:</p>
+<ol>
+<li>What exactly was measured?</li>
+<li>What changed between substrates?</li>
+<li>Were tasks comparable?</li>
+<li>Was difficulty comparable?</li>
+<li>Did timing change?</li>
+<li>Did response structure change?</li>
+<li>Did accessibility change?</li>
+<li>Did regime change?</li>
+<li>Did the observed system boundary change?</li>
+<li>Did tool availability change?</li>
+<li>Did the effect replicate?</li>
+<li>Were adverse comparisons retained?</li>
+<li>Could a simpler interaction model explain the finding?</li>
+</ol>
+<hr>
+<h1 id="substrate-and-riqf">Substrate and RIQF</h1>
+<p>RIQF can attach substrate expression to each candidate dimension.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">dimension:
+  structural-reasoning
+
+  substrates:
+    relational:
+      expression: strong
+      confidence: medium
+
+    visual:
+      expression: strong
+      confidence: medium
+
+    symbolic:
+      expression: moderate
+      confidence: medium
+
+    timed_symbolic:
+      expression: weak
+      confidence: medium
+
+  substrate_effect:
+    status: candidate
+
+  causal_status:
+    unresolved
+</code></pre>
+<p>This preserves the structure without defining a "true" substrate.</p>
+<hr>
+<h1 id="worked-example-pax-01">Worked Example — PAX-01</h1>
+<h2 id="baseline">Baseline</h2>
+<p>Synthetic PAX-01 baseline:</p>
+<pre><code class="language-text">timed
+symbolic
+fixed-choice
+individual
+</code></pre>
+<p>Observed:</p>
+<pre><code class="language-text">rapid symbolic:
+  weak
+
+timed classification:
+  weak
+</code></pre>
+<p>Extended tasks:</p>
+<pre><code class="language-text">reflective relational:
+  strong
+
+generative structural:
+  strong
+
+context-rich synthesis:
+  strong
+</code></pre>
+<p>The initial result is:</p>
+<pre><code class="language-text">performance differs across measurement conditions
+</code></pre>
+<p>Nothing more.</p>
+<hr>
+<h1 id="pass-1-declare-targets">Pass 1 — Declare Targets</h1>
+<p>Baseline directly targets:</p>
+<pre><code class="language-text">rapid symbolic processing
+timed classification
+</code></pre>
+<p>Extended tasks target:</p>
+<pre><code class="language-text">structural reasoning
+cross-domain transfer
+synthesis
+</code></pre>
+<p>These are not fully equivalent constructs.</p>
+<p>Therefore:</p>
+<pre><code class="language-text">direct global cross-substrate comparison:
+  limited
+</code></pre>
+<p>This is important.</p>
+<hr>
+<h1 id="pass-2-create-matched-structural-tasks">Pass 2 — Create Matched Structural Tasks</h1>
+<p>Synthetic matched target:</p>
+<pre><code class="language-text">structural reconstruction
+</code></pre>
+<p>Task A:</p>
+<pre><code class="language-text">symbolic
+fixed-choice
+timed
+</code></pre>
+<p>Task B:</p>
+<pre><code class="language-text">relational
+generative
+reflective
+</code></pre>
+<p>Observed:</p>
+<pre><code class="language-text">A:
+  weak
+
+B:
+  strong
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-text">condition effect
+</code></pre>
+<hr>
+<h1 id="pass-3-identify-changed-variables">Pass 3 — Identify Changed Variables</h1>
+<pre><code class="language-yaml">changed:
+  - representation
+  - response_structure
+  - timing
+
+held_constant:
+  - target
+
+unknown:
+  - exact difficulty equivalence
+</code></pre>
+<p>Therefore:</p>
+<pre><code class="language-text">substrate cause:
+  underdetermined
+</code></pre>
+<hr>
+<h1 id="pass-4-isolate-timing">Pass 4 — Isolate Timing</h1>
+<p>Create matched tasks:</p>
+<pre><code class="language-text">symbolic fixed-choice timed
+</code></pre>
+<p>versus:</p>
+<pre><code class="language-text">symbolic fixed-choice reflective
+</code></pre>
+<p>Synthetic observation:</p>
+<pre><code class="language-text">timed:
+  weak
+
+reflective:
+  moderate
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-text">timing contribution
+</code></pre>
+<hr>
+<h1 id="pass-5-isolate-response-structure">Pass 5 — Isolate Response Structure</h1>
+<pre><code class="language-text">reflective fixed-choice:
+  moderate
+
+reflective generative:
+  moderate-strong
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-text">response-structure contribution
+</code></pre>
+<hr>
+<h1 id="pass-6-isolate-representation">Pass 6 — Isolate Representation</h1>
+<pre><code class="language-text">reflective symbolic:
+  moderate
+
+reflective relational:
+  strong
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-text">representation contribution
+</code></pre>
+<hr>
+<h1 id="pass-7-interaction">Pass 7 — Interaction</h1>
+<p>The strongest difference occurs when:</p>
+<pre><code class="language-text">reflective
++
+relational
++
+generative
+</code></pre>
+<p>appear together.</p>
+<p>Possible:</p>
+<pre><code class="language-text">interaction effect
+</code></pre>
+<p>This requires further testing.</p>
+<hr>
+<h1 id="pass-8-replication">Pass 8 — Replication</h1>
+<p>Suppose matched tasks show:</p>
+<pre><code class="language-text">Relational:
+  strong
+  strong
+  moderate-strong
+
+Symbolic:
+  moderate
+  moderate
+  weak-moderate
+</code></pre>
+<p>Synthetic result:</p>
+<pre><code class="language-text">cross-substrate pattern:
+  demonstration candidate
+</code></pre>
+<p>Still not empirical validation.</p>
+<hr>
+<h1 id="pass-9-counterevidence">Pass 9 — Counterevidence</h1>
+<p>Add:</p>
+<pre><code class="language-text">relational task:
+  weak
+</code></pre>
+<p>Correct behavior:</p>
+<pre><code class="language-text">substrate confidence:
+  decreases
+</code></pre>
+<p>The adapter must retain the contradictory observation.</p>
+<hr>
+<h1 id="pax-01-substrate-result">PAX-01 Substrate Result</h1>
+<pre><code class="language-yaml">substrate_result:
+  target:
+    structural_reasoning
+
+  baseline:
+    symbolic_timed_fixed:
+      expression: weak
+
+  comparisons:
+    symbolic_reflective:
+      expression: moderate
+
+    relational_reflective:
+      expression: strong
+
+    relational_generative_reflective:
+      expression: strong
+
+  effect:
+    status: candidate
+
+  timing_contribution:
+    candidate
+
+  representation_contribution:
+    candidate
+
+  response_structure_contribution:
+    candidate
+
+  interaction:
+    possible
+
+  mismatch:
+    status: unresolved_candidate
+
+  causal_status:
+    unresolved
+
+  validation_state:
+    unvalidated
+
+  decision_authority:
+    none
+</code></pre>
+<hr>
+<h1 id="important-non-conclusion">Important Non-Conclusion</h1>
+<p>The adapter does <strong>not</strong> conclude:</p>
+<blockquote>
+<p>"PAX-01's true intelligence appears only on relational tasks."</p>
+</blockquote>
+<p>It may conclude:</p>
+<blockquote>
+<p><strong>"In this synthetic example, observed structural-reasoning performance varies across the defined measurement conditions. Timing, representation, and response structure are candidate contributors, but their causal roles and generalizability remain unresolved."</strong></p>
+</blockquote>
+<p>That is the intended level of interpretation.</p>
+<hr>
+<h1 id="baseline-sufficient-example">Baseline-Sufficient Example</h1>
+<p>Suppose matched tasks produce:</p>
+<pre><code class="language-text">timed symbolic:
+  moderate
+
+reflective symbolic:
+  moderate
+
+reflective relational:
+  moderate
+
+generative relational:
+  moderate
+</code></pre>
+<p>Correct:</p>
+<pre><code class="language-yaml">substrate_effect:
+  status: not_supported
+
+baseline_model:
+  substrate_robustness:
+    supported_candidate
+</code></pre>
+<p>The adapter added no substantive information.</p>
+<hr>
+<h1 id="false-substrate-effect">False Substrate Effect</h1>
+<p>Initial:</p>
+<pre><code class="language-text">visual:
+  strong
+
+textual:
+  weak
+</code></pre>
+<p>Later matched observations:</p>
+<pre><code class="language-text">visual:
+  weak
+  moderate
+
+textual:
+  strong
+  moderate
+</code></pre>
+<p>Correct:</p>
+<pre><code class="language-yaml">initial_substrate_effect:
+  failed_replication: true
+
+current_status:
+  unresolved_or_not_supported
+</code></pre>
+<hr>
+<h1 id="favorable-effect-failure">Favorable Effect Failure</h1>
+<p>Baseline:</p>
+<pre><code class="language-text">weak
+</code></pre>
+<p>New substrate:</p>
+<pre><code class="language-text">strong
+</code></pre>
+<p>Replications:</p>
+<pre><code class="language-text">weak
+moderate
+weak
+</code></pre>
+<p>Correct:</p>
+<pre><code class="language-text">favorable_substrate_interpretation:
+  rejected_or_weakened
+</code></pre>
+<hr>
+<h1 id="adverse-effect-failure">Adverse Effect Failure</h1>
+<p>Baseline:</p>
+<pre><code class="language-text">strong
+</code></pre>
+<p>New substrate:</p>
+<pre><code class="language-text">weak
+</code></pre>
+<p>Replications:</p>
+<pre><code class="language-text">strong
+moderate
+strong
+</code></pre>
+<p>Correct:</p>
+<pre><code class="language-text">adverse_substrate_interpretation:
+  rejected_or_weakened
+</code></pre>
+<p>Same evidentiary standard.</p>
+<hr>
+<h1 id="human-ai-example">Human-AI Example</h1>
+<p>Human alone:</p>
+<pre><code class="language-text">structural synthesis:
+  moderate
+</code></pre>
+<p>AI alone:</p>
+<pre><code class="language-text">structural synthesis:
+  moderate
+</code></pre>
+<p>Human-AI pair:</p>
+<pre><code class="language-text">structural synthesis:
+  strong
+</code></pre>
+<p>Correct:</p>
+<pre><code class="language-yaml">substrate_or_system_change:
+  human_ai_pair:
+    observed: true
+
+system_boundary:
+  changed: true
+
+individual_human_inference:
+  unsupported
+</code></pre>
+<p>Human-AI collaboration is more than a simple substrate shift because the observed system itself changes.</p>
+<hr>
+<h1 id="tool-mediated-example">Tool-Mediated Example</h1>
+<p>Human:</p>
+<pre><code class="language-text">unassisted:
+  moderate
+
+calculator-assisted:
+  strong
+</code></pre>
+<p>If the target is:</p>
+<pre><code class="language-text">real-world quantitative problem solving
+</code></pre>
+<p>the tool-assisted condition may be relevant.</p>
+<p>If the target is:</p>
+<pre><code class="language-text">unaided calculation
+</code></pre>
+<p>the tool changes the construct.</p>
+<p>Substrate fit depends on intended use.</p>
+<hr>
+<h1 id="ai-system-example">AI-System Example</h1>
+<p>AI model:</p>
+<pre><code class="language-text">text-only:
+  moderate
+
+text + image:
+  strong
+</code></pre>
+<p>Correct:</p>
+<pre><code class="language-text">multimodal performance difference
+</code></pre>
+<p>before:</p>
+<pre><code class="language-text">multimodal substrate mismatch
+</code></pre>
+<p>is claimed.</p>
+<p>Possible causes:</p>
+<pre><code class="language-text">model architecture
+training
+task design
+information availability
+representation
+unknown
+</code></pre>
+<hr>
+<h1 id="robotic-example">Robotic Example</h1>
+<p>Robot:</p>
+<pre><code class="language-text">simulation:
+  strong
+
+physical environment:
+  weak
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-text">simulation-to-embodied substrate difference
+</code></pre>
+<p>This may be operationally important.</p>
+<p>It does not establish the causal source of the gap.</p>
+<hr>
+<h1 id="organizational-example">Organizational Example</h1>
+<p>Organization:</p>
+<pre><code class="language-text">email-only coordination:
+  slow
+
+shared operational dashboard:
+  faster
+</code></pre>
+<p>Possible:</p>
+<pre><code class="language-text">coordination substrate effect
+</code></pre>
+<p>But workflow, process, training, and incentives may also differ.</p>
+<p>The analogy is functional.</p>
+<hr>
+<h1 id="substrate-fit-matrix">Substrate Fit Matrix</h1>
+<p>A future representation may compare:</p>
+<pre><code class="language-text">                 Target Capability
+
+                A      B      C      D
+            ┌──────┬──────┬──────┬──────┐
+Textual     │ high │ mod. │ high │ unk. │
+            ├──────┼──────┼──────┼──────┤
+Visual      │ mod. │ high │ mod. │ high │
+            ├──────┼──────┼──────┼──────┤
+Symbolic    │ high │ low  │ mod. │ low  │
+            ├──────┼──────┼──────┼──────┤
+Relational  │ mod. │ high │ high │ mod. │
+            └──────┴──────┴──────┴──────┘
+</code></pre>
+<p>This is conceptual.</p>
+<p>No such universal matrix is currently validated.</p>
+<hr>
+<h1 id="substrate-metrics">Substrate Metrics</h1>
+<h2 id="pa-m12-substrate-effect-magnitude"><code>PA-M12 — Substrate Effect Magnitude</code></h2>
+<p>Conceptually:</p>
+<pre><code class="language-text">SEM =
+  standardized_difference(
+    performance_a,
+    performance_b
+  )
+</code></pre>
+<p>The statistical form must match the measurement.</p>
+<hr>
+<h1 id="pa-m13-substrate-effect-replicability"><code>PA-M13 — Substrate Effect Replicability</code></h1>
+<pre><code class="language-text">SER =
+  replicated_effects_in_expected_direction
+  /
+  eligible_replications
+</code></pre>
+<hr>
+<h1 id="pa-m14-substrate-symmetry"><code>PA-M14 — Substrate Symmetry</code></h1>
+<p>Tests whether favorable and adverse effects are detected under comparable evidence standards.</p>
+<hr>
+<h1 id="pa-m15-substrate-specificity"><code>PA-M15 — Substrate Specificity</code></h1>
+<p>Tests whether the apparent substrate effect survives control for relevant alternatives.</p>
+<hr>
+<h1 id="related-metrics">Related Metrics</h1>
+<p>Substrate analysis may also use:</p>
+<pre><code class="language-text">PA-M01  Dimension Evidence Coverage
+PA-M03  Evidence Independence Ratio
+
+PA-M04  Test-Retest Stability
+PA-M05  Alternate-Form Stability
+PA-M06  Inter-Rater Agreement
+
+PA-M10  Incremental Explanatory Value
+PA-M11  Incremental Predictive Value
+
+PA-M19  Regime-Conditioned Stability
+
+PA-M20  Model-Mismatch Precision
+PA-M21  Model-Mismatch Recall
+PA-M22  Model-Mismatch False Positive Rate
+
+PA-M24  Cross-Observation Coherence
+PA-M25  Profile Contradiction Density
+
+PA-M28  Confidence Calibration Error
+PA-M32  Unsupported Assertion Rate
+
+PA-M33  Irrelevant Perturbation Stability
+PA-M34  Relevant Change Sensitivity
+PA-M35  Task-Order Sensitivity
+
+PA-M43  False Favorable Reinterpretation Rate
+PA-M44  False Adverse Reinterpretation Rate
+
+PA-M45  Evidence Reconstruction Rate
+PA-M46  Explanation Completeness
+</code></pre>
+<hr>
+<h1 id="substrate-validation-ladder">Substrate Validation Ladder</h1>
+<h2 id="stage-0-define-target">Stage 0 — Define Target</h2>
+<p>What capability or behavior is being observed?</p>
+<hr>
+<h2 id="stage-1-define-substrates">Stage 1 — Define Substrates</h2>
+<p>What precisely differs between the substrate conditions?</p>
+<hr>
+<h2 id="stage-2-establish-comparability">Stage 2 — Establish Comparability</h2>
+<p>Are the tasks sufficiently comparable?</p>
+<hr>
+<h2 id="stage-3-observe-difference">Stage 3 — Observe Difference</h2>
+<p>Does performance differ?</p>
+<hr>
+<h2 id="stage-4-replicate">Stage 4 — Replicate</h2>
+<p>Does the difference repeat?</p>
+<hr>
+<h2 id="stage-5-isolate-variables">Stage 5 — Isolate Variables</h2>
+<p>Can timing, modality, response structure, tool access, and other components be separated?</p>
+<hr>
+<h2 id="stage-6-test-specificity">Stage 6 — Test Specificity</h2>
+<p>Does the effect survive controls?</p>
+<hr>
+<h2 id="stage-7-counterfactual-challenge">Stage 7 — Counterfactual Challenge</h2>
+<p>Does the interpretation survive reasonable perturbations?</p>
+<hr>
+<h2 id="stage-8-incremental-value">Stage 8 — Incremental Value</h2>
+<p>Does substrate awareness improve:</p>
+<pre><code class="language-text">prediction
+calibration
+explanation
+fairness
+model-mismatch detection
+</code></pre>
+<hr>
+<h1 id="validation-baselines">Validation Baselines</h1>
+<p>Compare substrate-aware interpretation against:</p>
+<pre><code class="language-text">ordinary task-effect models
+interaction models
+matched task comparisons
+mixed-effects models
+multilevel models
+accessibility-aware assessment approaches
+measurement invariance methods
+</code></pre>
+<p>where appropriate.</p>
+<p>The Substrate Adapter earns its role only if it contributes useful information beyond credible baselines.</p>
+<hr>
+<h1 id="null-substrate-test">Null Substrate Test</h1>
+<p>Provide matched substrate conditions that should not affect the target.</p>
+<p>Expected:</p>
+<pre><code class="language-text">substrate_effect:
+  not_detected
+</code></pre>
+<p>A system finding mismatch regardless has failed.</p>
+<hr>
+<h1 id="known-effect-test">Known Effect Test</h1>
+<p>Use a controlled process where substrate affects observable performance.</p>
+<p>Expected:</p>
+<pre><code class="language-text">effect:
+  detected
+</code></pre>
+<p>without overclaiming cause beyond the design.</p>
+<hr>
+<h1 id="difficulty-matching-test">Difficulty-Matching Test</h1>
+<p>Create apparent substrate differences using unequal task difficulty.</p>
+<p>Then match difficulty.</p>
+<p>If effect disappears:</p>
+<pre><code class="language-text">substrate_effect:
+  not_supported
+</code></pre>
+<hr>
+<h1 id="accessibility-test">Accessibility Test</h1>
+<p>Introduce an interface barrier unrelated to the target.</p>
+<p>An appropriate measurement process should detect:</p>
+<pre><code class="language-text">accessibility issue
+</code></pre>
+<p>rather than:</p>
+<pre><code class="language-text">low target capability
+</code></pre>
+<p>where the construct definition supports that distinction.</p>
+<hr>
+<h1 id="construct-relevance-test">Construct-Relevance Test</h1>
+<p>Conversely, if timing is explicitly part of the target:</p>
+<pre><code class="language-text">rapid response under time constraint
+</code></pre>
+<p>removing timing should not automatically be called an accessibility correction.</p>
+<p>It may change the construct.</p>
+<hr>
+<h1 id="randomization-test">Randomization Test</h1>
+<p>Randomize substrate labels.</p>
+<p>A true substrate-dependent pattern should weaken substantially.</p>
+<p>If it persists:</p>
+<pre><code class="language-text">possible leakage
+overfitting
+or unrelated structure
+</code></pre>
+<hr>
+<h1 id="holdout-test">Holdout Test</h1>
+<p>Discover a substrate effect on one set.</p>
+<p>Predict:</p>
+<pre><code class="language-text">which substrate should produce
+different expression
+</code></pre>
+<p>on held-out observations.</p>
+<p>This is stronger than retrospective interpretation.</p>
+<hr>
+<h1 id="counterfactual-test">Counterfactual Test</h1>
+<p>Change:</p>
+<pre><code class="language-text">irrelevant metadata
+</code></pre>
+<p>while holding the substrate fixed.</p>
+<p>The interpretation should remain stable.</p>
+<p>Change:</p>
+<pre><code class="language-text">relevant substrate component
+</code></pre>
+<p>where the synthetic process makes it meaningful.</p>
+<p>The system should respond.</p>
+<hr>
+<h1 id="symmetry-test">Symmetry Test</h1>
+<p>Include:</p>
+<pre><code class="language-text">substrate improves performance
+substrate worsens performance
+substrate has no effect
+</code></pre>
+<p>The adapter must represent all three.</p>
+<hr>
+<h1 id="human-ai-boundary-test">Human-AI Boundary Test</h1>
+<p>Move from:</p>
+<pre><code class="language-text">human alone
+</code></pre>
+<p>to:</p>
+<pre><code class="language-text">human-AI pair
+</code></pre>
+<p>The adapter should detect:</p>
+<pre><code class="language-text">system boundary changed
+</code></pre>
+<p>and avoid treating the result as merely an individual-level substrate effect.</p>
+<hr>
+<h1 id="failure-modes">Failure Modes</h1>
+<h2 id="substrate-rescue">Substrate Rescue</h2>
+<p>Risk:</p>
+<p>After an unfavorable result, substrates are searched until stronger performance appears.</p>
+<p>Mitigation:</p>
+<p>Predeclare comparisons and report all outcomes.</p>
+<hr>
+<h1 id="substrate-blame">Substrate Blame</h1>
+<p>Risk:</p>
+<p>Weak performance is always attributed to substrate.</p>
+<p>Mitigation:</p>
+<p>Permit baseline-supported results.</p>
+<hr>
+<h1 id="favorability-bias">Favorability Bias</h1>
+<p>Risk:</p>
+<p>Stronger alternate performance gets more interpretive weight than weaker alternate performance.</p>
+<p>Mitigation:</p>
+<p>PA-M14, PA-M43, PA-M44.</p>
+<hr>
+<h1 id="adverse-bias">Adverse Bias</h1>
+<p>Risk:</p>
+<p>Poor performance on one substrate receives disproportionate global interpretation.</p>
+<p>Mitigation:</p>
+<p>Scope conclusions to conditions.</p>
+<hr>
+<h1 id="construct-substitution">Construct Substitution</h1>
+<p>Risk:</p>
+<p>Different tasks actually measure different constructs.</p>
+<p>Mitigation:</p>
+<p>Declare target and comparability.</p>
+<hr>
+<h1 id="difficulty-confounding">Difficulty Confounding</h1>
+<p>Risk:</p>
+<p>One substrate condition is simply easier.</p>
+<p>Mitigation:</p>
+<p>Matched difficulty and appropriate controls.</p>
+<hr>
+<h1 id="multi-variable-confounding">Multi-Variable Confounding</h1>
+<p>Risk:</p>
+<p>Timing, modality, response structure, and tools change simultaneously.</p>
+<p>Mitigation:</p>
+<p>Minimal-change testing.</p>
+<hr>
+<h1 id="accessibility-confusion">Accessibility Confusion</h1>
+<p>Risk:</p>
+<p>A construct-irrelevant barrier is treated as capability.</p>
+<p>Mitigation:</p>
+<p>Accessibility review.</p>
+<hr>
+<h1 id="accommodation-inflation">Accommodation Inflation</h1>
+<p>Risk:</p>
+<p>Every stronger accommodated result is called the true capability.</p>
+<p>Mitigation:</p>
+<p>Require construct analysis.</p>
+<hr>
+<h1 id="tool-attribution-error">Tool Attribution Error</h1>
+<p>Risk:</p>
+<p>Tool-assisted performance is attributed entirely to the individual.</p>
+<p>Mitigation:</p>
+<p>Explicit system boundary.</p>
+<hr>
+<h1 id="human-ai-boundary-collapse">Human-AI Boundary Collapse</h1>
+<p>Risk:</p>
+<p>Pair-level performance becomes human or AI individual performance.</p>
+<p>Mitigation:</p>
+<p>Separate pair profile.</p>
+<hr>
+<h1 id="regime-confusion">Regime Confusion</h1>
+<p>Risk:</p>
+<p>A regime change is mislabeled purely as substrate effect.</p>
+<p>Mitigation:</p>
+<p>Regime Observer integration.</p>
+<hr>
+<h1 id="time-confusion">Time Confusion</h1>
+<p>Risk:</p>
+<p>Later performance improvement is attributed to substrate when learning occurred.</p>
+<p>Mitigation:</p>
+<p>Temporal controls.</p>
+<hr>
+<h1 id="observer-confusion">Observer Confusion</h1>
+<p>Risk:</p>
+<p>Different evaluators create apparent substrate differences.</p>
+<p>Mitigation:</p>
+<p>Evaluator provenance.</p>
+<hr>
+<h1 id="precision-theater">Precision Theater</h1>
+<p>Risk:</p>
+<p>Substrate fit receives a precise numeric score without validated scale.</p>
+<p>Mitigation:</p>
+<p>Use descriptive states until measurement supports precision.</p>
+<hr>
+<h1 id="causal-overreach">Causal Overreach</h1>
+<p>Risk:</p>
+<p>Substrate association becomes causal claim.</p>
+<p>Mitigation:</p>
+<p>Preserve:</p>
+<pre><code class="language-text">effect detected
+cause unresolved
+</code></pre>
+<hr>
+<h1 id="canon-confirmation">Canon Confirmation</h1>
+<p>Risk:</p>
+<p>Substrate sensitivity is assumed because PA expects it.</p>
+<p>Mitigation:</p>
+<p>Null controls and baseline comparison.</p>
+<hr>
+<h1 id="falsification-conditions">Falsification Conditions</h1>
+<p>The Substrate Adapter should be revised, restricted, deprecated, or rejected if:</p>
+<ul>
+<li>null substrate comparisons routinely produce effects,</li>
+<li>candidate effects fail replication,</li>
+<li>effects disappear after basic difficulty controls,</li>
+<li>effects depend heavily on evaluator choice,</li>
+<li>substrate categories cannot be operationalized,</li>
+<li>favorable and adverse effects are treated asymmetrically,</li>
+<li>system-boundary changes are misclassified as individual substrate effects,</li>
+<li>matched tasks do not support cross-substrate differences,</li>
+<li>simpler interaction models explain the same results equally well,</li>
+<li>substrate-aware analysis does not improve any claimed outcome,</li>
+<li>or ablation shows negligible contribution.</li>
+</ul>
+<hr>
+<h1 id="anti-rescue-test">Anti-Rescue Test</h1>
+<p>Ask:</p>
+<blockquote>
+<p><strong>Can the adapter conclude that an unfavorable result remains valid across appropriate substrates?</strong></p>
+</blockquote>
+<p>Required answer:</p>
+<pre><code class="language-text">yes
+</code></pre>
+<hr>
+<h1 id="anti-adverse-test">Anti-Adverse Test</h1>
+<p>Ask:</p>
+<blockquote>
+<p><strong>Can the adapter reject an unsupported adverse substrate interpretation?</strong></p>
+</blockquote>
+<p>Required answer:</p>
+<pre><code class="language-text">yes
+</code></pre>
+<hr>
+<h1 id="no-effect-test">No-Effect Test</h1>
+<p>Ask:</p>
+<blockquote>
+<p><strong>Can the adapter conclude that substrate had no detectable effect?</strong></p>
+</blockquote>
+<p>Required answer:</p>
+<pre><code class="language-text">yes
+</code></pre>
+<hr>
+<h1 id="different-construct-test">Different-Construct Test</h1>
+<p>Ask:</p>
+<blockquote>
+<p><strong>Can the adapter refuse comparison when two substrate tasks measure different targets?</strong></p>
+</blockquote>
+<p>Required answer:</p>
+<pre><code class="language-text">yes
+</code></pre>
+<hr>
+<h1 id="unknown-test">Unknown Test</h1>
+<p>Ask:</p>
+<blockquote>
+<p><strong>Can the adapter return <code>unresolved</code> when several variables changed simultaneously?</strong></p>
+</blockquote>
+<p>Required answer:</p>
+<pre><code class="language-text">yes
+</code></pre>
+<hr>
+<h1 id="simpler-model-test">Simpler-Model Test</h1>
+<p>Ask:</p>
+<blockquote>
+<p><strong>Can a conventional interaction model fully explain the observed variation?</strong></p>
+</blockquote>
+<p>Required answer:</p>
+<pre><code class="language-text">yes
+</code></pre>
+<p>Then:</p>
+<pre><code class="language-text">Substrate Adapter:
+  no_added_value
+</code></pre>
+<p>may be appropriate.</p>
+<hr>
+<h1 id="ethics-boundary">Ethics Boundary</h1>
+<p>The Substrate Adapter should not tell a person:</p>
+<blockquote>
+<p>"This assessment underestimated your true intelligence because you used the wrong substrate."</p>
+</blockquote>
+<p>unless the necessary construct and causal evidence actually exists.</p>
+<p>Prefer:</p>
+<blockquote>
+<p><strong>"Observed performance differed across these defined measurement conditions. The current evidence supports further investigation of measurement fit; the causal interpretation and broader generalization remain unresolved."</strong></p>
+</blockquote>
+<hr>
+<h1 id="identity-boundary">Identity Boundary</h1>
+<p>A person's preferred or stronger-performing substrate should not become a permanent identity category.</p>
+<p>Avoid:</p>
+<pre><code class="language-text">visual person
+relational person
+timed-deficient person
+</code></pre>
+<p>unless a separately validated construct and legitimate context support such classification.</p>
+<p>Prefer observation-linked language.</p>
+<hr>
+<h1 id="privacy-boundary">Privacy Boundary</h1>
+<p>Substrate profiles may reveal:</p>
+<ul>
+<li>preferred interaction conditions,</li>
+<li>accessibility needs,</li>
+<li>contexts where performance improves,</li>
+<li>tool-mediated dependencies,</li>
+<li>conditions associated with weaker performance.</li>
+</ul>
+<p>These may be sensitive.</p>
+<p>Collection should be purpose-limited.</p>
+<hr>
+<h1 id="manipulation-boundary">Manipulation Boundary</h1>
+<p>Substrate analysis should not be repurposed to identify conditions for exploiting:</p>
+<ul>
+<li>stress,</li>
+<li>fatigue,</li>
+<li>confusion,</li>
+<li>vulnerability,</li>
+<li>compliance,</li>
+<li>dependence.</li>
+</ul>
+<p>The module is intended to improve measurement and understanding, not optimize manipulation.</p>
+<hr>
+<h1 id="decision-authority_1">Decision Authority</h1>
+<pre><code class="language-text">decision_authority: none
+
+authorized_use:
+  - research
+  - demonstration
+  - measurement comparison
+  - accessibility research
+  - substrate hypothesis generation
+  - model comparison
+  - human-AI research
+  - framework development
+
+prohibited_use:
+  - diagnosis
+  - psychological manipulation
+  - automated hiring decision
+  - educational exclusion
+  - legal determination
+  - insurance determination
+  - lending determination
+  - automated adverse decision
+</code></pre>
+<hr>
+<h1 id="minimal-substrate-adapter-contract">Minimal Substrate Adapter Contract</h1>
+<pre><code class="language-yaml">substrate_result:
+  observation_id:
+
+  observed_system:
+    id:
+    class:
+    boundary:
+
+  target:
+    id:
+    operational_definition:
+
+  baseline:
+    substrate:
+      modality:
+      representation:
+      response_structure:
+      timing:
+      tools:
+      interaction:
+
+    expression:
+
+  comparison:
+    substrate:
+      modality:
+      representation:
+      response_structure:
+      timing:
+      tools:
+      interaction:
+
+    expression:
+
+  variables:
+    changed:
+    held_constant:
+    unknown:
+
+  comparability:
+    target:
+    difficulty:
+    measurement:
+    regime:
+    time:
+    evaluator:
+
+  accessibility:
+    baseline:
+    comparison:
+    construct_relevance:
+
+  effect:
+    detected:
+    direction:
+    magnitude:
+    replication:
+
+  substrate_fit:
+  mismatch:
+    status:
+
+  specificity:
+  counterfactual_stability:
+
+  evidence:
+    sources:
+    independent_source_count:
+    provenance:
+
+  alternative_interpretations:
+  confounds:
+  counterevidence:
+  missing_evidence:
+
+  causal_status:
+  uncertainty:
+  confidence:
+  limitations:
+
+  model_fit:
+  regime_fit:
+
+  review_required:
+
+  validation_state:
+  decision_authority: none
+</code></pre>
+<hr>
+<h1 id="research-questions">Research Questions</h1>
+<ol>
+<li>Can substrate categories be operationalized reliably?</li>
+<li>Which substrate categories overlap?</li>
+<li>Which should merge?</li>
+<li>Can substrate effects be distinguished from task difficulty?</li>
+<li>Can substrate effects be separated from timing?</li>
+<li>Can they be separated from response structure?</li>
+<li>Can they be separated from tool access?</li>
+<li>Can they be separated from regime?</li>
+<li>Can they be separated from evaluator effects?</li>
+<li>Can they be separated from learning and practice?</li>
+<li>Can matched cross-substrate tasks be constructed?</li>
+<li>Do substrate effects replicate?</li>
+<li>Are substrate effects symmetric?</li>
+<li>Can substrate specificity be measured reliably?</li>
+<li>Can substrate fit improve model-mismatch detection?</li>
+<li>Can substrate awareness improve prediction?</li>
+<li>Can it improve calibration?</li>
+<li>Can it improve explanatory value?</li>
+<li>Can it improve fairness?</li>
+<li>Can it identify accessibility barriers?</li>
+<li>Can accessibility barriers be distinguished from construct-relevant demands?</li>
+<li>When does accommodation change the construct?</li>
+<li>Can substrate profiles survive alternate forms?</li>
+<li>Can substrate profiles survive counterfactual challenge?</li>
+<li>Can substrate effects predict held-out performance?</li>
+<li>Can substrate analysis remain valid across cultures and languages?</li>
+<li>How should multimodal substrates be decomposed?</li>
+<li>How should tool-mediated substrates be represented?</li>
+<li>When does tool mediation change the observed system?</li>
+<li>How should human-AI pair substrates be represented?</li>
+<li>Can pair performance be separated from component performance?</li>
+<li>How should substrate analysis apply to AI systems?</li>
+<li>How should it apply to robotics?</li>
+<li>How should it apply to organizations?</li>
+<li>Does Substrate analysis add anything beyond established interaction models?</li>
+<li>Does it add anything beyond measurement-invariance approaches?</li>
+<li>Does the adapter increase false favorable reinterpretation?</li>
+<li>Does it increase false adverse reinterpretation?</li>
+<li>How should substrate confidence be calibrated?</li>
+<li>How should substrate profiles expire or be reassessed?</li>
+<li>Which substrate concepts should be deprecated?</li>
+<li>When should the adapter return <code>no_added_value</code>?</li>
+<li>When should it abstain?</li>
+<li>What evidence would justify removing the Substrate Adapter entirely?</li>
+</ol>
+<hr>
+<h1 id="core-invariants">Core Invariants</h1>
+<pre><code class="language-text">substrate != capability
+substrate != identity
+substrate != regime
+substrate != context
+substrate_difference != substrate_effect
+substrate_effect != substrate_mismatch
+substrate_effect != causation
+performance_difference != capability_difference
+stronger_substrate_performance != true_intelligence
+weaker_substrate_performance != low_intelligence
+timed != invalid
+reflective != superior
+generative != superior
+fixed_choice != inferior
+tool_assisted != unassisted
+human_ai_pair != individual_human
+human_ai_pair != ai_system
+accessibility_barrier != capability
+accommodation != automatic_score_inflation
+different_task != substrate_effect
+different_difficulty != substrate_effect
+adapter_agreement != independent_evidence
+strong_effect != global_generalization
+no_substrate_effect != framework_failure
+baseline_supported != framework_failure
+unknown != failure
+unresolved != failure
+no_added_value != failure
+adapter_output != decision_authority
+measurement != identity
+capability != human_worth
+canon_alignment != empirical_validation
+</code></pre>
+<hr>
+<h1 id="closing-principle">Closing Principle</h1>
+<p>Every measurement needs a way for the observed system to express itself.</p>
+<p>That way is never entirely neutral.</p>
+<p>A question can be spoken or written.</p>
+<p>A relationship can be described or drawn.</p>
+<p>A response can be selected or generated.</p>
+<p>A task can be timed or reflective.</p>
+<p>A person can work alone or with tools.</p>
+<p>An AI can operate with or without retrieval.</p>
+<p>A robot can act in simulation or in the physical world.</p>
+<p>Those differences may matter.</p>
+<p>They may also matter far less than we expect.</p>
+<p>The Substrate Adapter exists to make the question testable.</p>
+<p>Not:</p>
+<blockquote>
+<p><strong>Which substrate reveals the true system?</strong></p>
+</blockquote>
+<p>But:</p>
+<blockquote>
+<p><strong>Does the observed relationship change across measurement substrates, does that change replicate, and does it matter for the inference we are trying to make?</strong></p>
+</blockquote>
+<p>Sometimes the answer will reveal a meaningful measurement limitation.</p>
+<p>Sometimes it will reveal a genuine interaction.</p>
+<p>Sometimes different substrates will simply be measuring different things.</p>
+<p>Sometimes ordinary task difficulty will explain the whole effect.</p>
+<p>And sometimes:</p>
+<pre><code class="language-text">no meaningful substrate effect detected
+</code></pre>
+<p>will be the strongest result.</p>
+<blockquote>
+<p><strong>A substrate earns analytical importance only when distinguishing it makes observation more faithful without turning measurement conditions into an excuse for the result we hoped to find.</strong></p>
+</blockquote>
   </main>
 </body>
 </html>

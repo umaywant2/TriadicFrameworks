@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/predictive_analytics/drift_observer.md">
-  <title>drift_observer</title>
+  <title>Predictive Analytics — Drift Observer</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,7 +92,1893 @@
   </aside>
 
   <main>
+<p><img width="1194" height="672" alt="predictive_analytics_drift_observer_" src="https://github.com/user-attachments/assets/0fccfaeb-27b7-4cf3-8043-60e034b3881e" /></p>
+<h1 id="predictive-analytics-drift-observer">Predictive Analytics — Drift Observer</h1>
+<blockquote>
+<p><strong>Change is observable. Drift is a claim about change relative to a reference.</strong></p>
+</blockquote>
+<h2 id="module">Module</h2>
+<p>Predictive Analytics</p>
+<h2 id="observer-id">Observer ID</h2>
+<p><code>drift</code></p>
+<h2 id="status">Status</h2>
+<p>Experimental.</p>
+<h2 id="intended-role">Intended Role</h2>
+<p>Longitudinal change, prediction divergence, profile movement, representation drift, substrate drift, regime-conditioned drift, and recalibration observer.</p>
+<hr>
+<h1 id="purpose">Purpose</h1>
+<p>The Drift Observer examines whether a prediction, observation, model, profile, substrate, or relationship changes materially across time or successive observations.</p>
+<p>Its purpose is to distinguish:</p>
+<pre><code class="language-text">ordinary variation
+measurement noise
+temporary perturbation
+regime transition
+learning or adaptation
+system change
+model change
+sustained drift
+</code></pre>
+<p>where the available evidence permits those distinctions.</p>
+<p>The Drift Observer does not assume that all change is undesirable.</p>
+<p>It does not assume that a person, AI system, model, or organization should remain static.</p>
+<p>It does not interpret movement away from a baseline as automatic degradation.</p>
+<p>Instead:</p>
+<blockquote>
+<p><strong>Drift is interpreted relative to the thing being tracked, the reference state, the observation interval, and the conditions under which comparison remains meaningful.</strong></p>
+</blockquote>
+<hr>
+<h1 id="core-principle">Core Principle</h1>
+<p>The observer distinguishes:</p>
+<pre><code class="language-text">difference
+</code></pre>
+<p>from:</p>
+<pre><code class="language-text">variation
+</code></pre>
+<p>from:</p>
+<pre><code class="language-text">drift
+</code></pre>
+<p>from:</p>
+<pre><code class="language-text">transition
+</code></pre>
+<p>from:</p>
+<pre><code class="language-text">development
+</code></pre>
+<p>These are not interchangeable.</p>
+<hr>
+<h1 id="basic-concept">Basic Concept</h1>
+<p>Suppose:</p>
+<pre><code class="language-text">t1: 52
+t2: 54
+t3: 51
+t4: 53
+</code></pre>
+<p>This may simply represent normal variability.</p>
+<p>Compare:</p>
+<pre><code class="language-text">t1: 52
+t2: 57
+t3: 63
+t4: 69
+t5: 74
+</code></pre>
+<p>This may represent a sustained directional change.</p>
+<p>But even here, the cause remains unknown.</p>
+<p>Possible explanations include:</p>
+<pre><code class="language-text">learning
+measurement drift
+model drift
+substrate change
+regime change
+environmental change
+system adaptation
+practice effect
+sampling change
+instrument change
+unknown cause
+</code></pre>
+<p>Therefore:</p>
+<pre><code class="language-text">drift_detected
+!=
+cause_established
+</code></pre>
+<hr>
+<h1 id="reference-requirement">Reference Requirement</h1>
+<p>Drift cannot be meaningfully interpreted without a reference.</p>
+<p>A drift claim should identify:</p>
+<pre><code class="language-text">reference_state
+reference_window
+reference_model
+reference_substrate
+reference_regime
+reference_measurement
+comparison_window
+</code></pre>
+<p>If the reference is undefined:</p>
+<pre><code class="language-text">drift_status:
+  unresolved
+</code></pre>
+<hr>
+<h1 id="reference-types">Reference Types</h1>
+<p>Possible reference types include:</p>
+<pre><code class="language-text">initial_observation
+rolling_baseline
+validated_baseline
+model_training_reference
+population_reference
+subject_specific_reference
+regime_specific_reference
+substrate_specific_reference
+previous_model_version
+previous_profile_version
+external_standard
+</code></pre>
+<p>Each reference answers a different question.</p>
+<hr>
+<h1 id="drift-observation-model">Drift Observation Model</h1>
+<p>Conceptually, let:</p>
+<ul>
+<li><strong>X(t)</strong> = observed quantity or profile at time <code>t</code></li>
+<li><strong>B(t)</strong> = applicable baseline or reference</li>
+<li><strong>R(t)</strong> = regime</li>
+<li><strong>S(t)</strong> = substrate</li>
+<li><strong>M(t)</strong> = model version</li>
+<li><strong>U(t)</strong> = uncertainty</li>
+</ul>
+<p>Then drift may be represented conceptually as:</p>
+<pre><code class="language-text">D(t) =
+  compare(
+    X(t),
+    B(t),
+    R(t),
+    S(t),
+    M(t),
+    U(t)
+  )
+</code></pre>
+<p>This is conceptual notation.</p>
+<p>It is not a validated drift equation.</p>
+<hr>
+<h1 id="core-pipeline">Core Pipeline</h1>
+<pre><code class="language-text">Observations
+     │
+     ▼
+Order Temporally
+     │
+     ▼
+Declare Reference
+     │
+     ▼
+Check Measurement Compatibility
+     │
+     ▼
+Check Model Version
+     │
+     ▼
+Check Substrate
+     │
+     ▼
+Check Regime
+     │
+     ▼
+Estimate Expected Variation
+     │
+     ▼
+Measure Change
+     │
+     ▼
+Test Persistence
+     │
+     ▼
+Test Direction
+     │
+     ▼
+Test Recovery
+     │
+     ▼
+Classify Drift
+     │
+     ▼
+Return:
+  stable
+  ordinary_variation
+  transient_change
+  directional_drift
+  structural_drift
+  regime_conditioned
+  recovered
+  unresolved
+  insufficient_evidence
+</code></pre>
+<hr>
+<h1 id="drift-classes">Drift Classes</h1>
+<p>The initial observer recognizes several provisional drift classes.</p>
+<h2 id="1-prediction-drift">1. Prediction Drift</h2>
+<p>The relationship between predictions and observed outcomes changes.</p>
+<p>Example:</p>
+<pre><code class="language-text">early:
+  prediction error: low
 
+later:
+  prediction error: high
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-text">prediction_drift
+</code></pre>
+<p>Possible causes remain open.</p>
+<hr>
+<h1 id="2-model-drift">2. Model Drift</h1>
+<p>A predictive model's behavior changes across versions or updates.</p>
+<p>Example:</p>
+<pre><code class="language-text">model_v1:
+  assessment: moderate
+
+model_v2:
+  assessment: low
+</code></pre>
+<p>Before interpreting the subject as changed:</p>
+<pre><code class="language-text">model_version_change:
+  must_be_recorded
+</code></pre>
+<hr>
+<h1 id="3-observation-drift">3. Observation Drift</h1>
+<p>Repeated observations of the same target show persistent change.</p>
+<p>Example:</p>
+<pre><code class="language-text">January:
+  strong
+
+March:
+  moderate
+
+June:
+  weak
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-text">observation_drift
+</code></pre>
+<p>The observer must then examine whether comparison conditions remain valid.</p>
+<hr>
+<h1 id="4-profile-drift">4. Profile Drift</h1>
+<p>A multidimensional profile changes shape.</p>
+<p>Example:</p>
+<pre><code class="language-text">t1:
+  structural: strong
+  temporal: moderate
+  symbolic: weak
+
+t2:
+  structural: strong
+  temporal: strong
+  symbolic: moderate
+</code></pre>
+<p>This may represent:</p>
+<ul>
+<li>learning,</li>
+<li>adaptation,</li>
+<li>changed measurement,</li>
+<li>changed substrate,</li>
+<li>changed regime,</li>
+<li>or actual capability change.</li>
+</ul>
+<p>The observer records the movement before explaining it.</p>
+<hr>
+<h1 id="5-dimension-drift">5. Dimension Drift</h1>
+<p>A specific dimension changes over time.</p>
+<p>Example:</p>
+<pre><code class="language-text">cross_domain_transfer:
+  t1: moderate
+  t2: moderate
+  t3: strong
+  t4: strong
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-text">positive_directional_change
+</code></pre>
+<p>Whether this should even be called drift depends on the construct and research design.</p>
+<p>For some capability dimensions:</p>
+<pre><code class="language-text">development
+</code></pre>
+<p>may be a better term.</p>
+<hr>
+<h1 id="6-representation-drift">6. Representation Drift</h1>
+<p>The representation changes while the underlying observations may not.</p>
+<p>Example:</p>
+<pre><code class="language-text">version_1:
+  8 dimensions
+
+version_2:
+  15 dimensions
+</code></pre>
+<p>A profile difference may partly reflect:</p>
+<pre><code class="language-text">ontology_change
+</code></pre>
+<p>rather than subject change.</p>
+<p>This must be distinguished.</p>
+<hr>
+<h1 id="7-semantic-drift">7. Semantic Drift</h1>
+<p>Definitions change over time.</p>
+<p>Example:</p>
+<pre><code class="language-text">v1:
+  structural_reasoning means X
+
+v2:
+  structural_reasoning means X + Y
+</code></pre>
+<p>Results across versions may not be directly comparable.</p>
+<p>Correct output:</p>
+<pre><code class="language-text">semantic_compatibility:
+  partial
+</code></pre>
+<hr>
+<h1 id="8-substrate-drift">8. Substrate Drift</h1>
+<p>The measurement or expression substrate changes.</p>
+<p>Example:</p>
+<pre><code class="language-text">t1:
+  typed response
+
+t2:
+  verbal response
+
+t3:
+  human-AI collaborative response
+</code></pre>
+<p>Observed change may reflect the substrate transition.</p>
+<p>The substrate itself must remain part of the record.</p>
+<hr>
+<h1 id="9-regime-drift">9. Regime Drift</h1>
+<p>Operating conditions gradually move away from a previous regime definition.</p>
+<p>Example:</p>
+<pre><code class="language-text">regime_a:
+  initially stable
+
+later:
+  boundary conditions weaken
+
+eventually:
+  regime_b candidate emerges
+</code></pre>
+<p>RTT may determine whether the accumulated change becomes better described as:</p>
+<pre><code class="language-text">regime_transition
+</code></pre>
+<p>rather than continued drift.</p>
+<hr>
+<h1 id="10-calibration-drift">10. Calibration Drift</h1>
+<p>Confidence and actual reliability gradually diverge.</p>
+<p>Example:</p>
+<pre><code class="language-text">t1:
+  confidence: high
+  accuracy: high
+
+t2:
+  confidence: high
+  accuracy: moderate
+
+t3:
+  confidence: high
+  accuracy: low
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-text">calibration_drift
+</code></pre>
+<p>This may be more operationally important than raw prediction drift.</p>
+<hr>
+<h1 id="11-evidence-drift">11. Evidence Drift</h1>
+<p>The evidence available to the system changes.</p>
+<p>Example:</p>
+<pre><code class="language-text">t1:
+  sparse evidence
+
+t2:
+  moderate evidence
+
+t3:
+  rich evidence
+</code></pre>
+<p>A change in interpretation may reflect better evidence rather than changed capability.</p>
+<hr>
+<h1 id="12-observer-drift">12. Observer Drift</h1>
+<p>Evaluator behavior changes.</p>
+<p>Example:</p>
+<pre><code class="language-text">evaluator calibration:
+  shifts over time
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">AI interpretation model:
+  updated
+</code></pre>
+<p>The observed system may be stable while the observer changes.</p>
+<p>This is especially important for long-running agentic systems.</p>
+<hr>
+<h1 id="13-tool-drift">13. Tool Drift</h1>
+<p>Performance changes because available tools change.</p>
+<p>Example:</p>
+<pre><code class="language-text">t1:
+  no AI assistance
+
+t2:
+  basic AI assistance
+
+t3:
+  advanced agentic assistance
+</code></pre>
+<p>If the observed boundary is:</p>
+<pre><code class="language-text">human_ai_pair
+</code></pre>
+<p>this may be meaningful system development.</p>
+<p>If the intended boundary is:</p>
+<pre><code class="language-text">individual_human_unassisted
+</code></pre>
+<p>the comparisons may no longer be equivalent.</p>
+<hr>
+<h1 id="drift-direction">Drift Direction</h1>
+<p>Possible directions:</p>
+<pre><code class="language-text">positive
+negative
+increasing
+decreasing
+diverging
+converging
+oscillating
+mixed
+none
+unknown
+</code></pre>
+<p>The terms:</p>
+<pre><code class="language-text">positive
+negative
+</code></pre>
+<p>should refer to metric direction where clearly defined.</p>
+<p>They should not imply human worth.</p>
+<hr>
+<h1 id="drift-magnitude">Drift Magnitude</h1>
+<p>Potential descriptive states:</p>
+<pre><code class="language-text">negligible
+small
+moderate
+large
+unknown
+</code></pre>
+<p>Thresholds must be specific to:</p>
+<ul>
+<li>metric,</li>
+<li>dimension,</li>
+<li>model,</li>
+<li>task,</li>
+<li>system class,</li>
+<li>intended use.</li>
+</ul>
+<p>No universal drift threshold should be assumed.</p>
+<hr>
+<h1 id="drift-persistence">Drift Persistence</h1>
+<p>Possible states:</p>
+<pre><code class="language-text">single_observation
+transient
+repeated
+sustained
+recovered
+cyclic
+unstable
+unknown
+</code></pre>
+<p>A single unusual observation should rarely justify a sustained-drift claim.</p>
+<hr>
+<h1 id="drift-record">Drift Record</h1>
+<p>Suggested representation:</p>
+<pre><code class="language-yaml">drift:
+  id: drift-001
+
+  target:
+    system_id:
+    system_boundary:
+
+  tracked_property:
+    type: profile_dimension
+    id: structural_reasoning
+
+  reference:
+    type: subject_specific_reference
+    start:
+    end:
+    model_version:
+    substrate:
+    regime:
+
+  comparison:
+    start:
+    end:
+
+  observations:
+    - id:
+      timestamp:
+      value:
+      confidence:
+
+  change:
+    detected: true
+    direction: increasing
+    magnitude: moderate
+    persistence: repeated
+
+  conditioning:
+    substrate: unchanged
+    regime: unchanged
+    model_version: unchanged
+
+  candidate_class:
+    dimension_drift
+
+  cause:
+    status: unresolved
+
+  confidence: medium
+
+  limitations:
+    - limited observation window
+
+  decision_authority: none
+</code></pre>
+<hr>
+<h1 id="drift-observer-operators">Drift Observer Operators</h1>
+<h2 id="drift-baseline"><code>DRIFT-Baseline</code></h2>
+<p>Declares the reference state.</p>
+<pre><code class="language-text">DRIFT-Baseline(observations)
+  -&gt; reference_record
+</code></pre>
+<hr>
+<h1 id="drift-sequence"><code>DRIFT-Sequence</code></h1>
+<p>Orders observations.</p>
+<pre><code class="language-text">DRIFT-Sequence(observations)
+  -&gt; temporal_series
+</code></pre>
+<hr>
+<h1 id="drift-compat"><code>DRIFT-Compat</code></h1>
+<p>Tests whether observations are meaningfully comparable.</p>
+<pre><code class="language-text">DRIFT-Compat(t1, t2)
+  -&gt; compatibility_record
+</code></pre>
+<p>Checks may include:</p>
+<pre><code class="language-text">measurement
+substrate
+regime
+model_version
+observer
+task
+system_boundary
+</code></pre>
+<hr>
+<h1 id="drift-delta"><code>DRIFT-Delta</code></h1>
+<p>Measures change relative to the reference.</p>
+<pre><code class="language-text">DRIFT-Delta(reference, observation)
+  -&gt; change_record
+</code></pre>
+<hr>
+<h1 id="drift-persist"><code>DRIFT-Persist</code></h1>
+<p>Tests whether change persists.</p>
+<pre><code class="language-text">DRIFT-Persist(change_series)
+  -&gt; persistence_profile
+</code></pre>
+<hr>
+<h1 id="drift-direction_1"><code>DRIFT-Direction</code></h1>
+<p>Classifies the direction of change.</p>
+<pre><code class="language-text">DRIFT-Direction(change_series)
+  -&gt; direction_profile
+</code></pre>
+<hr>
+<h1 id="drift-recover"><code>DRIFT-Recover</code></h1>
+<p>Tests whether the tracked property returns toward or reaches a prior reference.</p>
+<pre><code class="language-text">DRIFT-Recover(series)
+  -&gt; recovery_profile
+</code></pre>
+<hr>
+<h1 id="drift-split"><code>DRIFT-Split</code></h1>
+<p>Decomposes observed drift into candidate conditioning variables.</p>
+<pre><code class="language-text">DRIFT-Split(series)
+  -&gt; {
+       substrate_component,
+       regime_component,
+       model_component,
+       observer_component,
+       unexplained_component
+     }
+</code></pre>
+<p>This decomposition remains experimental and must not imply causation automatically.</p>
+<hr>
+<h1 id="drift-rebase"><code>DRIFT-Rebase</code></h1>
+<p>Changes the reference where justified.</p>
+<pre><code class="language-text">DRIFT-Rebase(new_reference)
+  -&gt; updated_reference
+</code></pre>
+<p>Rebasing must be explicit.</p>
+<p>It must not erase previous drift history.</p>
+<hr>
+<h1 id="rebase-rule">Rebase Rule</h1>
+<p>Suppose a system legitimately changes.</p>
+<p>A new baseline may become appropriate.</p>
+<p>Example:</p>
+<pre><code class="language-text">AI model:
+  version 1
+  -&gt;
+  version 2
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">human:
+  pre-training
+  -&gt;
+  post-training
+</code></pre>
+<p>The observer may create:</p>
+<pre><code class="language-text">baseline_v1
+baseline_v2
+</code></pre>
+<p>rather than pretending the historical reference remains permanently normative.</p>
+<hr>
+<h1 id="baseline-drift">Baseline Drift</h1>
+<p>The baseline itself can become stale.</p>
+<p>Therefore:</p>
+<pre><code class="language-text">reference != eternal_truth
+</code></pre>
+<p>A reference should carry:</p>
+<pre><code class="language-text">created_at
+validity_window
+system_version
+measurement_version
+regime
+substrate
+review_status
+</code></pre>
+<hr>
+<h1 id="rolling-baseline">Rolling Baseline</h1>
+<p>For continuously evolving systems:</p>
+<pre><code class="language-text">rolling_baseline
+</code></pre>
+<p>may be appropriate.</p>
+<p>Example:</p>
+<pre><code class="language-text">B(t) =
+  recent stable observation window
+</code></pre>
+<p>But rolling baselines can conceal slow drift.</p>
+<p>Therefore preserve a longer-horizon reference as well where relevant.</p>
+<hr>
+<h1 id="fast-and-slow-drift">Fast and Slow Drift</h1>
+<p>A useful distinction:</p>
+<pre><code class="language-text">fast drift:
+  visible across short intervals
+
+slow drift:
+  accumulates across long intervals
+</code></pre>
+<p>A rolling baseline may detect fast drift well while normalizing slow drift away.</p>
+<p>Multiple temporal scales may therefore be required.</p>
+<hr>
+<h1 id="multi-scale-drift">Multi-Scale Drift</h1>
+<p>Suggested profile:</p>
+<pre><code class="language-yaml">drift_scales:
+  short:
+    status: stable
+
+  medium:
+    status: moderate_change
+
+  long:
+    status: sustained_drift
+</code></pre>
+<p>This connects naturally to RTT's temporal grammar.</p>
+<hr>
+<h1 id="drift-versus-regime-transition">Drift Versus Regime Transition</h1>
+<h2 id="drift">Drift</h2>
+<pre><code class="language-text">A
+ \
+  \
+   \
+    B
+</code></pre>
+<p>A relationship moves progressively.</p>
+<h2 id="transition">Transition</h2>
+<pre><code class="language-text">AAAAAA
+      |
+      BBBBBB
+</code></pre>
+<p>A relatively stable state gives way to another.</p>
+<p>Real observations may show:</p>
+<pre><code class="language-text">drift
+  -&gt;
+transition
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">transition
+  -&gt;
+new drift
+</code></pre>
+<p>RTT should help evaluate the distinction.</p>
+<hr>
+<h1 id="drift-versus-noise">Drift Versus Noise</h1>
+<p>Noise may produce:</p>
+<pre><code class="language-text">up
+down
+up
+down
+</code></pre>
+<p>without sustained direction.</p>
+<p>The observer should estimate expected measurement variability before declaring drift.</p>
+<p>Possible output:</p>
+<pre><code class="language-text">observed_change:
+  within_expected_variation
+
+drift:
+  not_supported
+</code></pre>
+<hr>
+<h1 id="drift-versus-development">Drift Versus Development</h1>
+<p>Particularly for people:</p>
+<pre><code class="language-text">learning
+practice
+education
+adaptation
+recovery
+</code></pre>
+<p>may produce meaningful change.</p>
+<p>Calling all change:</p>
+<pre><code class="language-text">drift
+</code></pre>
+<p>can imply that movement away from a prior state is undesirable.</p>
+<p>Therefore where an interpretable developmental process exists, use more precise language.</p>
+<p>Example:</p>
+<pre><code class="language-text">dimension_change:
+  detected
+
+candidate_interpretation:
+  learning_effect
+
+drift_status:
+  not_required
+</code></pre>
+<hr>
+<h1 id="drift-versus-degradation">Drift Versus Degradation</h1>
+<p>Drift is direction-neutral until the metric defines otherwise.</p>
+<p>Example:</p>
+<pre><code class="language-text">calibration error:
+  increasing
+</code></pre>
+<p>may clearly represent degradation.</p>
+<p>But:</p>
+<pre><code class="language-text">profile topology:
+  changing
+</code></pre>
+<p>does not inherently mean worse.</p>
+<hr>
+<h1 id="worked-example-pax-01">Worked Example — PAX-01</h1>
+<h2 id="initial-profile">Initial Profile</h2>
+<p>Synthetic subject:</p>
+<pre><code class="language-text">PAX-01
+</code></pre>
+<p>At <code>T1</code>:</p>
+<pre><code class="language-text">structural reasoning:
+  strong
+
+cross-domain transfer:
+  strong
+
+rapid symbolic processing:
+  weak
+
+ambiguity navigation:
+  strong
+</code></pre>
+<p>At <code>T2</code>:</p>
+<pre><code class="language-text">structural reasoning:
+  strong
+
+cross-domain transfer:
+  moderate
+
+rapid symbolic processing:
+  moderate
+
+ambiguity navigation:
+  strong
+</code></pre>
+<p>At <code>T3</code>:</p>
+<pre><code class="language-text">structural reasoning:
+  strong
+
+cross-domain transfer:
+  moderate
+
+rapid symbolic processing:
+  moderate
+
+ambiguity navigation:
+  strong
+</code></pre>
+<p>The profile changed.</p>
+<p>What drifted?</p>
+<hr>
+<h1 id="pass-1-preserve-reference">Pass 1 — Preserve Reference</h1>
+<pre><code class="language-yaml">reference:
+  time: T1
+  system_boundary: individual_human
+  substrate: declared
+  regime: declared
+  model_version: v1
+</code></pre>
+<hr>
+<h1 id="pass-2-compatibility">Pass 2 — Compatibility</h1>
+<p>Suppose:</p>
+<pre><code class="language-text">task family:
+  comparable
+
+measurement:
+  comparable
+
+substrate:
+  comparable
+
+model version:
+  unchanged
+
+regime:
+  apparently stable
+</code></pre>
+<p>Then longitudinal comparison may be meaningful.</p>
+<hr>
+<h1 id="pass-3-dimension-change">Pass 3 — Dimension Change</h1>
+<pre><code class="language-text">structural reasoning:
+  strong -&gt; strong
+
+cross-domain transfer:
+  strong -&gt; moderate -&gt; moderate
+
+rapid symbolic processing:
+  weak -&gt; moderate -&gt; moderate
+
+ambiguity navigation:
+  strong -&gt; strong
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-text">profile_change:
+  detected
+</code></pre>
+<hr>
+<h1 id="pass-4-direction">Pass 4 — Direction</h1>
+<pre><code class="language-text">cross-domain transfer:
+  downward change candidate
+
+rapid symbolic:
+  upward change candidate
+
+structural:
+  stable
+
+ambiguity:
+  stable
+</code></pre>
+<p>The changes run in different directions.</p>
+<p>Therefore:</p>
+<pre><code class="language-text">global_drift:
+  inappropriate_summary
+</code></pre>
+<p>A multidimensional drift profile is more faithful.</p>
+<hr>
+<h1 id="pass-5-persistence">Pass 5 — Persistence</h1>
+<p>The changes from <code>T1</code> repeat at <code>T3</code>.</p>
+<p>Candidate:</p>
+<pre><code class="language-text">persistence:
+  repeated
+</code></pre>
+<p>Still not enough to establish cause.</p>
+<hr>
+<h1 id="pass-6-interpretation">Pass 6 — Interpretation</h1>
+<p>Possible explanations:</p>
+<pre><code class="language-text">learning
+task exposure
+measurement noise
+fatigue differences
+true capability change
+environmental change
+unknown
+</code></pre>
+<p>Correct:</p>
+<pre><code class="language-text">cause:
+  unresolved
+</code></pre>
+<hr>
+<h1 id="pax-01-drift-profile">PAX-01 Drift Profile</h1>
+<pre><code class="language-yaml">drift_profile:
+  structural_reasoning:
+    status: stable
+
+  cross_domain_transfer:
+    status: repeated_change
+    direction: decreasing
+
+  rapid_symbolic_processing:
+    status: repeated_change
+    direction: increasing
+
+  ambiguity_navigation:
+    status: stable
+
+  global_scalar:
+    status: inappropriate_without_loss_warning
+
+  cause:
+    status: unresolved
+</code></pre>
+<p>This demonstrates why drift itself should remain multidimensional.</p>
+<hr>
+<h1 id="negative-example-no-drift">Negative Example — No Drift</h1>
+<p>Suppose:</p>
+<pre><code class="language-text">T1: 74
+T2: 72
+T3: 75
+T4: 73
+T5: 74
+</code></pre>
+<p>and the observed variation falls inside the expected measurement range.</p>
+<p>Correct:</p>
+<pre><code class="language-yaml">drift:
+  detected: false
+
+variation:
+  status: expected
+
+interpretation:
+  stable_within_measurement_uncertainty
+</code></pre>
+<p>This is a successful observer outcome.</p>
+<hr>
+<h1 id="negative-example-measurement-changed">Negative Example — Measurement Changed</h1>
+<p>Suppose:</p>
+<pre><code class="language-text">T1:
+  instrument_v1
+  score: 60
+
+T2:
+  instrument_v2
+  score: 78
+</code></pre>
+<p>Without calibration between instruments:</p>
+<pre><code class="language-text">subject_drift:
+  unresolved
+
+measurement_change:
+  detected
+</code></pre>
+<p>The observer must not attribute instrument movement to the subject.</p>
+<hr>
+<h1 id="negative-example-model-changed">Negative Example — Model Changed</h1>
+<pre><code class="language-text">T1:
+  model_v1
+  prediction: low
+
+T2:
+  model_v2
+  prediction: high
+
+observed behavior:
+  unchanged
+</code></pre>
+<p>Correct:</p>
+<pre><code class="language-text">prediction_change:
+  detected
+
+subject_change:
+  not_supported
+
+candidate:
+  model_drift_or_version_effect
+</code></pre>
+<hr>
+<h1 id="negative-example-observer-changed">Negative Example — Observer Changed</h1>
+<p>Suppose:</p>
+<pre><code class="language-text">Evaluator A:
+  structural profile: strong
+
+Evaluator B:
+  structural profile: moderate
+</code></pre>
+<p>Before declaring subject drift:</p>
+<pre><code class="language-text">observer_difference:
+  must_be_tested
+</code></pre>
+<hr>
+<h1 id="relationship-to-fft">Relationship to FFT</h1>
+<p>FFT maps:</p>
+<pre><code class="language-text">relationships
+boundaries
+constraints
+local/global structure
+</code></pre>
+<p>The Drift Observer asks whether those mappings change through time.</p>
+<p>Example:</p>
+<pre><code class="language-text">T1:
+  relationship A -&gt; B
+
+T2:
+  relationship A -&gt; B
+
+T3:
+  relationship A -&gt; C
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-text">relationship_drift
+</code></pre>
+<p>Structural Detection should determine whether the changed relationship is reproducible.</p>
+<hr>
+<h1 id="relationship-to-the-inverted-star">Relationship to The Inverted Star</h1>
+<p>The Inverted Star identifies disagreement between prediction and observation.</p>
+<p>The Drift Observer asks whether the disagreement:</p>
+<pre><code class="language-text">appears suddenly
+accumulates gradually
+remains stable
+oscillates
+or recovers
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-text">t1:
+  model fit high
+
+t2:
+  model fit moderate
+
+t3:
+  model fit low
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-text">model_subject_divergence:
+  increasing
+</code></pre>
+<hr>
+<h1 id="relationship-to-structural-detection">Relationship to Structural Detection</h1>
+<p>Structural Detection may identify a stable pattern.</p>
+<p>The Drift Observer asks whether that structure changes.</p>
+<pre><code class="language-text">Structural Detection:
+  topology X
+
+later:
+  topology Y
+
+Drift Observer:
+  structural change candidate
+</code></pre>
+<p>Conversely:</p>
+<pre><code class="language-text">topology remains X
+</code></pre>
+<p>may indicate structural continuity despite changing scalar results.</p>
+<hr>
+<h1 id="relationship-to-rtt">Relationship to RTT</h1>
+<p>RTT provides:</p>
+<pre><code class="language-text">temporal sequence
+regime candidates
+regime boundaries
+transitions
+continuity
+recalibration
+</code></pre>
+<p>The Drift Observer uses those structures to avoid conflating:</p>
+<pre><code class="language-text">within-regime drift
+</code></pre>
+<p>with:</p>
+<pre><code class="language-text">between-regime difference
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-yaml">drift:
+  within_regime_a: none
+  within_regime_b: none
+
+between_regimes:
+  difference: large
+</code></pre>
+<p>Correct interpretation may be:</p>
+<pre><code class="language-text">regime_conditioned_difference
+</code></pre>
+<p>rather than:</p>
+<pre><code class="language-text">continuous drift
+</code></pre>
+<hr>
+<h1 id="relationship-to-resonance">Relationship to Resonance</h1>
+<p>Resonance may identify context-sensitive amplification or suppression.</p>
+<p>The Drift Observer asks whether those effects change over time.</p>
+<p>Example:</p>
+<pre><code class="language-text">Month 1:
+  context A strongly amplifying
+
+Month 6:
+  context A neutral
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-text">resonance_profile_drift
+</code></pre>
+<p>Again, cause remains separate.</p>
+<hr>
+<h1 id="relationship-to-coherence-observer">Relationship to Coherence Observer</h1>
+<p>Coherence evaluates whether observations form a supportable structure.</p>
+<p>Drift asks whether that structure remains stable.</p>
+<p>Conceptually:</p>
+<pre><code class="language-text">Coherence(t1)
+      │
+      ▼
+Coherence(t2)
+      │
+      ▼
+compare
+      │
+      ▼
+coherence_drift
+</code></pre>
+<p>An assessment can be:</p>
+<pre><code class="language-text">coherent at t1
+coherent at t2
+</code></pre>
+<p>while the actual coherent profiles differ substantially.</p>
+<hr>
+<h1 id="relationship-to-counterfactual-layer">Relationship to Counterfactual Layer</h1>
+<p>The Counterfactual Layer challenges drift interpretations.</p>
+<p>Example:</p>
+<pre><code class="language-text">drift detected using baseline B1
+</code></pre>
+<p>Counterfactual:</p>
+<pre><code class="language-text">use reasonable baseline B2
+</code></pre>
+<p>If the drift disappears:</p>
+<pre><code class="language-text">baseline_sensitivity:
+  high
+</code></pre>
+<p>Likewise test:</p>
+<pre><code class="language-text">alternate window
+alternate boundary
+alternate measurement
+alternate model version
+</code></pre>
+<p>Drift should survive reasonable specification changes before confidence rises.</p>
+<hr>
+<h1 id="relationship-to-uncertainty-layer">Relationship to Uncertainty Layer</h1>
+<p>Drift uncertainty should increase when:</p>
+<pre><code class="language-text">few observations
+large measurement noise
+changing instruments
+changing model versions
+unclear regimes
+changing substrates
+missing timestamps
+high observer variation
+</code></pre>
+<p>A drift result should never hide these conditions.</p>
+<hr>
+<h1 id="relationship-to-riqf">Relationship to RIQF</h1>
+<p>A Resonant IQ Fingerprint should be allowed to evolve.</p>
+<p>Example:</p>
+<pre><code class="language-text">RIQF v1:
+  structural: strong
+  temporal: moderate
+  ambiguity: strong
+
+RIQF v2:
+  structural: strong
+  temporal: strong
+  ambiguity: strong
+</code></pre>
+<p>Possible interpretation:</p>
+<pre><code class="language-text">temporal dimension:
+  repeated upward change
+</code></pre>
+<p>Not:</p>
+<pre><code class="language-text">person's intelligence increased by 12%
+</code></pre>
+<p>unless an appropriate validated quantitative model supports such a claim.</p>
+<hr>
+<h1 id="fingerprint-drift">Fingerprint Drift</h1>
+<p>A future RIQF may track both:</p>
+<pre><code class="language-text">dimension drift
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">topology drift
+</code></pre>
+<p>Example conceptual record:</p>
+<pre><code class="language-yaml">riqf_drift:
+  dimension_changes:
+    structural_reasoning: stable
+    temporal_reasoning: increasing
+    symbolic_reasoning: stable
+
+  topology:
+    similarity_to_reference: high
+
+  interpretation:
+    profile mostly stable with
+    localized dimension change
+</code></pre>
+<p>This is more useful than tracking only a composite.</p>
+<hr>
+<h1 id="profile-topology-drift">Profile Topology Drift</h1>
+<p>Suppose:</p>
+<pre><code class="language-text">T1:
+  structural &gt; temporal &gt; symbolic
+
+T2:
+  temporal &gt; structural &gt; symbolic
+</code></pre>
+<p>The individual dimensions may have changed modestly, while their relative profile ordering changed.</p>
+<p>That change may matter.</p>
+<p>Hence:</p>
+<pre><code class="language-text">profile_topology_stability
+</code></pre>
+<p>should be tracked separately from absolute scores.</p>
+<hr>
+<h1 id="drift-and-human-development">Drift and Human Development</h1>
+<p>For human systems, temporal change is expected.</p>
+<p>The framework should avoid pathologizing:</p>
+<pre><code class="language-text">learning
+maturation
+recovery
+new strategy
+tool adoption
+education
+practice
+</code></pre>
+<p>as drift merely because the current state differs from the past.</p>
+<p>A better record:</p>
+<pre><code class="language-yaml">change:
+  detected: true
+
+drift:
+  status: descriptive_only
+
+candidate_interpretation:
+  development_or_learning
+
+cause:
+  unresolved
+</code></pre>
+<hr>
+<h1 id="drift-and-ai-systems">Drift and AI Systems</h1>
+<p>For AI systems, possible change sources include:</p>
+<pre><code class="language-text">model update
+system prompt change
+retrieval change
+tool change
+context-window change
+routing change
+policy change
+fine-tuning
+environment change
+evaluation change
+</code></pre>
+<p>Versioning is therefore essential.</p>
+<p>An AI behavior difference across versions should not be presented as unexplained drift when a known system change occurred.</p>
+<hr>
+<h1 id="drift-and-human-ai-pair-systems">Drift and Human-AI Pair Systems</h1>
+<p>A human-AI pair can drift even if both components remain individually stable.</p>
+<p>Example:</p>
+<pre><code class="language-text">human:
+  stable
+
+AI:
+  stable
+
+collaboration protocol:
+  changes
+</code></pre>
+<p>Observed pair performance may change.</p>
+<p>Therefore:</p>
+<pre><code class="language-text">system_boundary:
+  human_ai_pair
+</code></pre>
+<p>must remain explicit.</p>
+<hr>
+<h1 id="drift-and-organizations">Drift and Organizations</h1>
+<p>Organizations may exhibit changes in:</p>
+<pre><code class="language-text">decision structure
+communication topology
+resource allocation
+policy
+tooling
+staff composition
+workflow
+environment
+</code></pre>
+<p>The same rule applies:</p>
+<p>shared vocabulary does not establish identical mechanisms across:</p>
+<pre><code class="language-text">human
+AI
+team
+organization
+</code></pre>
+<p>Drift constructs require context-specific validation.</p>
+<hr>
+<h1 id="drift-detection-thresholds">Drift Detection Thresholds</h1>
+<p>No universal threshold should initially exist.</p>
+<p>Correct policy:</p>
+<pre><code class="language-text">threshold_status:
+  study_specific
+
+universal_thresholds:
+  prohibited
+
+preregistration_required:
+  true
+</code></pre>
+<p>A meaningful threshold should document:</p>
+<pre><code class="language-text">metric
+system_class
+expected_variation
+measurement_error
+observation_window
+risk_context
+rationale
+</code></pre>
+<hr>
+<h1 id="primary-metrics">Primary Metrics</h1>
+<h2 id="pa-m04-test-retest-stability"><code>PA-M04 — Test-Retest Stability</code></h2>
+<p>Provides a baseline estimate of expected repeated-observation consistency.</p>
+<hr>
+<h1 id="pa-m07-profile-topology-stability"><code>PA-M07 — Profile Topology Stability</code></h1>
+<p>Conceptually:</p>
+<pre><code class="language-text">PTS =
+  similarity(
+    normalized_profile_t1,
+    normalized_profile_t2
+  )
+</code></pre>
+<p>Useful for profile-shape drift.</p>
+<hr>
+<h1 id="pa-m19-regime-conditioned-stability"><code>PA-M19 — Regime-Conditioned Stability</code></h1>
+<p>Distinguishes:</p>
+<pre><code class="language-text">within-regime variation
+</code></pre>
+<p>from:</p>
+<pre><code class="language-text">between-regime difference
+</code></pre>
+<hr>
+<h1 id="pa-m24-cross-observation-coherence"><code>PA-M24 — Cross-Observation Coherence</code></h1>
+<p>Can reveal whether drifting observations remain structurally coherent.</p>
+<hr>
+<h1 id="pa-m26-dimension-drift-rate"><code>PA-M26 — Dimension Drift Rate</code></h1>
+<p>Conceptually:</p>
+<pre><code class="language-text">DDR =
+  dimension_change
+  /
+  observation_interval
+</code></pre>
+<p>Only where the dimension and interval support such a calculation.</p>
+<hr>
+<h1 id="pa-m27-profile-drift-magnitude"><code>PA-M27 — Profile Drift Magnitude</code></h1>
+<p>Conceptually:</p>
+<pre><code class="language-text">PDM =
+  distance(
+    profile_t1,
+    profile_t2
+  )
+</code></pre>
+<p>This should always be decomposed by dimension where possible.</p>
+<hr>
+<h1 id="pa-m28-confidence-calibration-error"><code>PA-M28 — Confidence Calibration Error</code></h1>
+<p>Tests whether high-confidence drift classifications actually replicate.</p>
+<hr>
+<h1 id="pa-m33-irrelevant-perturbation-stability"><code>PA-M33 — Irrelevant Perturbation Stability</code></h1>
+<p>Tests whether drift conclusions survive irrelevant analytical changes.</p>
+<hr>
+<h1 id="pa-m34-relevant-change-sensitivity"><code>PA-M34 — Relevant Change Sensitivity</code></h1>
+<p>Tests whether meaningful system changes are detected.</p>
+<hr>
+<h1 id="pa-m35-task-order-sensitivity"><code>PA-M35 — Task-Order Sensitivity</code></h1>
+<p>Helps identify apparent drift created by ordering effects.</p>
+<hr>
+<h1 id="pa-m45-evidence-reconstruction-rate"><code>PA-M45 — Evidence Reconstruction Rate</code></h1>
+<p>Tests whether reviewers can reconstruct why drift was declared.</p>
+<hr>
+<h1 id="pa-m46-explanation-completeness"><code>PA-M46 — Explanation Completeness</code></h1>
+<p>Ensures drift reports retain:</p>
+<pre><code class="language-text">reference
+observations
+time
+substrate
+regime
+model version
+confidence
+uncertainty
+alternative explanations
+limitations
+</code></pre>
+<hr>
+<h1 id="drift-detection-matrix">Drift Detection Matrix</h1>
+<p>A useful conceptual matrix:</p>
+<pre><code class="language-text">                      Persistent?
+
+                    No          Yes
+                ┌──────────┬──────────┐
+Directional  No │ variation│ structure│
+change           │ / noise  │ / cycle  │
+                ├──────────┼──────────┤
+             Yes│ transient│ drift     │
+                │ change   │ candidate │
+                └──────────┴──────────┘
+</code></pre>
+<p>This is only a reasoning aid.</p>
+<p>It is not a validated classifier.</p>
+<hr>
+<h1 id="multi-axis-drift-profile">Multi-Axis Drift Profile</h1>
+<p>Prefer:</p>
+<pre><code class="language-yaml">drift_profile:
+  prediction_drift: moderate
+  model_drift: none
+  dimension_drift: mixed
+  profile_drift: low
+  substrate_drift: none
+  regime_drift: unknown
+  calibration_drift: moderate
+  observer_drift: unknown
+</code></pre>
+<p>over:</p>
+<pre><code class="language-text">Drift Score = 67
+</code></pre>
+<p>The former preserves structure.</p>
+<hr>
+<h1 id="drift-severity-warning">Drift Severity Warning</h1>
+<p>A large numerical change is not automatically consequential.</p>
+<p>Impact depends on:</p>
+<pre><code class="language-text">construct
+measurement reliability
+decision context
+direction
+persistence
+uncertainty
+system boundary
+</code></pre>
+<p>Magnitude and importance are separate concepts.</p>
+<hr>
+<h1 id="validation-requirements">Validation Requirements</h1>
+<p>Drift Observer validation should include:</p>
+<pre><code class="language-text">known stable sequence
+known noisy sequence
+known gradual drift
+known abrupt transition
+known cyclical sequence
+instrument change
+model version change
+substrate change
+regime change
+observer change
+true recovery
+false recovery
+developmental change
+sparse observations
+missing observations
+</code></pre>
+<hr>
+<h1 id="stable-control">Stable Control</h1>
+<p>Provide a known stable process with realistic noise.</p>
+<p>Expected:</p>
+<pre><code class="language-text">drift:
+  not_supported
+</code></pre>
+<p>A detector that finds drift here is too sensitive.</p>
+<hr>
+<h1 id="drift-positive-control">Drift Positive Control</h1>
+<p>Provide a known sustained change.</p>
+<p>Expected:</p>
+<pre><code class="language-text">drift:
+  detected
+</code></pre>
+<p>A detector that misses it is insufficiently sensitive.</p>
+<hr>
+<h1 id="regime-challenge">Regime Challenge</h1>
+<p>Provide two stable regimes with a sharp transition.</p>
+<p>Expected:</p>
+<pre><code class="language-text">within_regime_drift:
+  low
+
+between_regime_difference:
+  high
+
+transition:
+  candidate
+</code></pre>
+<p>A detector that calls the whole sequence continuous drift may be structurally imprecise.</p>
+<hr>
+<h1 id="instrument-challenge">Instrument Challenge</h1>
+<p>Change the measurement instrument while keeping the underlying simulated process stable.</p>
+<p>Expected:</p>
+<pre><code class="language-text">measurement_change:
+  detected
+
+subject_drift:
+  not_supported
+</code></pre>
+<hr>
+<h1 id="baseline-challenge">Baseline Challenge</h1>
+<p>Evaluate the same series against multiple reasonable baselines.</p>
+<p>If interpretation changes dramatically:</p>
+<pre><code class="language-text">baseline_sensitivity:
+  high
+</code></pre>
+<p>Confidence should decrease.</p>
+<hr>
+<h1 id="missingness-challenge">Missingness Challenge</h1>
+<p>Remove observations.</p>
+<p>Expected behavior:</p>
+<pre><code class="language-text">uncertainty:
+  increases
+</code></pre>
+<p>not:</p>
+<pre><code class="language-text">missing values:
+  silently reconstructed as fact
+</code></pre>
+<hr>
+<h1 id="failure-modes">Failure Modes</h1>
+<h2 id="drift-inflation">Drift Inflation</h2>
+<p>Risk:</p>
+<p>Ordinary variation becomes drift.</p>
+<p>Mitigation:</p>
+<p>Estimate expected variability and persistence.</p>
+<hr>
+<h1 id="baseline-worship">Baseline Worship</h1>
+<p>Risk:</p>
+<p>The initial state is treated as inherently correct or ideal.</p>
+<p>Mitigation:</p>
+<p>Allow explicit baseline review and rebasing.</p>
+<hr>
+<h1 id="baseline-shopping">Baseline Shopping</h1>
+<p>Risk:</p>
+<p>A reference is selected because it produces the desired drift interpretation.</p>
+<p>Mitigation:</p>
+<p>Predeclare baseline rules and report sensitivity to alternatives.</p>
+<hr>
+<h1 id="time-window-shopping">Time-Window Shopping</h1>
+<p>Risk:</p>
+<p>Observation windows are selected to exaggerate or suppress change.</p>
+<p>Mitigation:</p>
+<p>Report predefined and materially relevant windows.</p>
+<hr>
+<h1 id="regression-to-the-mean-error">Regression-to-the-Mean Error</h1>
+<p>Risk:</p>
+<p>An extreme initial observation naturally moves toward typical performance and is labeled recovery or drift.</p>
+<p>Mitigation:</p>
+<p>Use repeated baselines and appropriate statistical controls.</p>
+<hr>
+<h1 id="measurement-drift-confusion">Measurement Drift Confusion</h1>
+<p>Risk:</p>
+<p>The instrument changes but the subject is blamed.</p>
+<p>Mitigation:</p>
+<p>Track measurement version.</p>
+<hr>
+<h1 id="model-drift-confusion">Model Drift Confusion</h1>
+<p>Risk:</p>
+<p>The predictive model changes but the target is treated as changed.</p>
+<p>Mitigation:</p>
+<p>Track model version.</p>
+<hr>
+<h1 id="observer-drift-confusion">Observer Drift Confusion</h1>
+<p>Risk:</p>
+<p>Evaluator behavior changes.</p>
+<p>Mitigation:</p>
+<p>Track evaluator and inter-rater evidence.</p>
+<hr>
+<h1 id="regime-confusion">Regime Confusion</h1>
+<p>Risk:</p>
+<p>Between-regime differences are labeled continuous drift.</p>
+<p>Mitigation:</p>
+<p>Use RTT regime information.</p>
+<hr>
+<h1 id="development-pathologizing">Development Pathologizing</h1>
+<p>Risk:</p>
+<p>Human learning or development is labeled deviation from a preferred baseline.</p>
+<p>Mitigation:</p>
+<p>Use direction-neutral language and alternative interpretations.</p>
+<hr>
+<h1 id="favorability-bias">Favorability Bias</h1>
+<p>Risk:</p>
+<p>Positive movement is labeled development while negative movement is labeled drift.</p>
+<p>Mitigation:</p>
+<p>Use symmetric definitions.</p>
+<hr>
+<h1 id="adverse-bias">Adverse Bias</h1>
+<p>Risk:</p>
+<p>Positive movement is treated as noise while negative movement is treated as meaningful.</p>
+<p>Mitigation:</p>
+<p>Use identical persistence and evidence requirements.</p>
+<hr>
+<h1 id="drift-as-identity">Drift as Identity</h1>
+<p>Risk:</p>
+<p>A temporal pattern becomes a permanent identity claim.</p>
+<p>Mitigation:</p>
+<p>Every drift result must carry its observation window.</p>
+<hr>
+<h1 id="causal-overreach">Causal Overreach</h1>
+<p>Risk:</p>
+<p>A drift pattern is assigned a cause merely because the timing aligns.</p>
+<p>Mitigation:</p>
+<p>Separate detection from causal inference.</p>
+<hr>
+<h1 id="over-smoothing">Over-Smoothing</h1>
+<p>Risk:</p>
+<p>Slow but meaningful change disappears inside rolling averages.</p>
+<p>Mitigation:</p>
+<p>Evaluate multiple temporal scales.</p>
+<hr>
+<h1 id="under-smoothing">Under-Smoothing</h1>
+<p>Risk:</p>
+<p>Normal short-term variability appears as persistent movement.</p>
+<p>Mitigation:</p>
+<p>Use measurement-error and variability estimates.</p>
+<hr>
+<h1 id="canon-confirmation">Canon Confirmation</h1>
+<p>Risk:</p>
+<p>Drift is found because TriadicFrameworks expects drift to exist.</p>
+<p>Mitigation:</p>
+<p>Include known-null controls and credible conventional change-detection baselines.</p>
+<hr>
+<h1 id="falsification-conditions">Falsification Conditions</h1>
+<p>The Drift Observer should be revised, restricted, deprecated, or rejected if:</p>
+<ul>
+<li>stable controls repeatedly produce drift,</li>
+<li>known drift is not detected,</li>
+<li>conclusions depend excessively on arbitrary baselines,</li>
+<li>time-window changes reverse conclusions unpredictably,</li>
+<li>measurement changes are misattributed to subjects,</li>
+<li>model-version changes are misattributed to subjects,</li>
+<li>regime transitions are routinely mislabeled as continuous drift,</li>
+<li>confidence is unrelated to replication,</li>
+<li>drift explanations systematically favor preferred narratives,</li>
+<li>simpler longitudinal methods perform equivalently,</li>
+<li>or the observer adds complexity without useful information.</li>
+</ul>
+<hr>
+<h1 id="anti-narrative-test">Anti-Narrative Test</h1>
+<p>Provide a changing sequence with no known causal label.</p>
+<p>The observer should return:</p>
+<pre><code class="language-text">change:
+  detected
+
+drift:
+  candidate
+
+cause:
+  unresolved
+</code></pre>
+<p>It should not invent a story.</p>
+<hr>
+<h1 id="anti-stasis-test">Anti-Stasis Test</h1>
+<p>Provide legitimate learning or adaptive improvement.</p>
+<p>The observer should not imply:</p>
+<pre><code class="language-text">deviation_from_baseline:
+  inherently_bad
+</code></pre>
+<p>Instead:</p>
+<pre><code class="language-text">change:
+  detected
+
+direction:
+  metric_specific
+
+interpretation:
+  development_candidate
+
+cause:
+  requires_evidence
+</code></pre>
+<hr>
+<h1 id="additional-negative-test">Additional Negative Test</h1>
+<p>Provide a stable subject measured by a changing instrument.</p>
+<p>The observer must be capable of concluding:</p>
+<pre><code class="language-text">tracked_system:
+  stable_or_unknown
+
+measurement_system:
+  changed
+
+subject_drift:
+  not_supported
+</code></pre>
+<hr>
+<h1 id="human-review-trigger">Human Review Trigger</h1>
+<p>Review may be appropriate when:</p>
+<pre><code class="language-text">large sustained drift
+high consequence
+unclear reference
+model version change
+measurement version change
+regime uncertainty
+contradictory drift directions
+profile topology change
+subject contest
+</code></pre>
+<p>Review does not mean the drift interpretation is correct.</p>
+<p>It means the evidence deserves inspection.</p>
+<hr>
+<h1 id="ethics-boundary">Ethics Boundary</h1>
+<p>The Drift Observer should avoid telling a person:</p>
+<blockquote>
+<p>"You are declining."</p>
+</blockquote>
+<p>when the evidence only establishes:</p>
+<pre><code class="language-text">performance changed
+</code></pre>
+<p>under a limited set of conditions.</p>
+<p>Prefer:</p>
+<blockquote>
+<p><strong>"Across the current observation window, this measured dimension changed relative to the declared reference. The cause and generalizability remain unresolved."</strong></p>
+</blockquote>
+<p>That statement is narrower and testable.</p>
+<hr>
+<h1 id="decision-authority">Decision Authority</h1>
+<pre><code class="language-text">decision_authority: none
+
+authorized_use:
+  - research
+  - demonstration
+  - longitudinal observation
+  - model monitoring
+  - profile comparison
+  - hypothesis generation
+  - framework development
+
+prohibited_use:
+  - diagnosis
+  - automated hiring decision
+  - educational exclusion
+  - legal determination
+  - automated adverse decision
+</code></pre>
+<hr>
+<h1 id="minimal-observer-output-contract">Minimal Observer Output Contract</h1>
+<pre><code class="language-yaml">drift_result:
+  drift_id:
+
+  target:
+    id:
+    system_class:
+    system_boundary:
+
+  tracked_property:
+    type:
+    id:
+
+  reference:
+    type:
+    start:
+    end:
+    model_version:
+    measurement_version:
+    substrate:
+    regime:
+    observer:
+
+  comparison:
+    start:
+    end:
+    observation_count:
+
+  compatibility:
+    measurement:
+    model:
+    substrate:
+    regime:
+    observer:
+    task:
+
+  change:
+    detected:
+    direction:
+    magnitude:
+    persistence:
+
+  drift:
+    status:
+    class:
+    confidence:
+
+  temporal_scale:
+    resolution:
+    window:
+
+  conditioning:
+    substrate:
+    regime:
+    model_version:
+    measurement_version:
+    observer:
+
+  continuity:
+  recovery:
+  recalibration:
+
+  baseline_sensitivity:
+  window_sensitivity:
+
+  alternative_interpretations:
+  confounds:
+  counterevidence:
+  missing_evidence:
+
+  uncertainty:
+  limitations:
+
+  review_required:
+
+  validation_state:
+  decision_authority: none
+</code></pre>
+<hr>
+<h1 id="research-questions">Research Questions</h1>
+<ol>
+<li>Can drift be reliably distinguished from ordinary variation?</li>
+<li>Can sustained drift be distinguished from abrupt regime transitions?</li>
+<li>Can multiple temporal scales improve drift detection?</li>
+<li>How should stable baselines be defined?</li>
+<li>When should a baseline be rebased?</li>
+<li>How can long-term references coexist with rolling baselines?</li>
+<li>Can dimension drift be measured without inventing universal scales?</li>
+<li>Can profile topology drift predict meaningful outcomes?</li>
+<li>Can prediction drift be separated from model-version effects?</li>
+<li>Can subject change be separated from measurement drift?</li>
+<li>Can observer drift be measured?</li>
+<li>Can substrate drift be separated from capability change?</li>
+<li>Can regime-conditioned differences be separated from continuous drift?</li>
+<li>Can learning be distinguished from measurement drift?</li>
+<li>Can recovery be distinguished from regression to the mean?</li>
+<li>Can recalibration predict lower future error?</li>
+<li>Can confidence in drift classifications be calibrated?</li>
+<li>Does drift monitoring improve model-mismatch detection?</li>
+<li>Does it improve longitudinal explanatory value?</li>
+<li>Does it improve prediction?</li>
+<li>Which drift classes are reproducible?</li>
+<li>Which are redundant?</li>
+<li>Which should be removed?</li>
+<li>Can conventional time-series methods fully replace parts of this observer?</li>
+<li>Does the Drift Observer add value beyond established change-detection methods?</li>
+<li>How should drift be represented in human-AI pair systems?</li>
+<li>How should drift be represented across AI model updates?</li>
+<li>When should the observer return <code>no_added_value</code>?</li>
+<li>When should it abstain?</li>
+<li>What evidence would justify removing the Drift Observer entirely?</li>
+</ol>
+<hr>
+<h1 id="core-invariants">Core Invariants</h1>
+<pre><code class="language-text">change != drift
+difference != drift
+variation != drift
+drift != degradation
+drift != cause
+drift != regime_transition
+development != defect
+baseline != truth
+reference != identity
+rolling_baseline != historical_baseline
+measurement_change != subject_change
+model_change != subject_change
+observer_change != subject_change
+substrate_change != capability_change
+prediction_drift != capability_drift
+profile_drift != global_intelligence_change
+recovery != proof_of_cause
+recalibration != recovery
+temporal_correlation != causation
+positive_change != superiority
+negative_change != human_worth
+drift_profile != identity
+observer_output != decision_authority
+canon_alignment != empirical_validation
+</code></pre>
+<hr>
+<h1 id="closing-principle">Closing Principle</h1>
+<p>Predictive systems often assume continuity.</p>
+<p>People change.</p>
+<p>AI systems change.</p>
+<p>Models change.</p>
+<p>Tools change.</p>
+<p>Measurements change.</p>
+<p>Organizations change.</p>
+<p>Contexts change.</p>
+<p>Sometimes those changes are noise.</p>
+<p>Sometimes they are temporary.</p>
+<p>Sometimes they form stable new regimes.</p>
+<p>Sometimes they represent learning or recovery.</p>
+<p>Sometimes the model itself is what moved.</p>
+<p>The Drift Observer exists to keep those possibilities separate for as long as the evidence requires.</p>
+<p>Its job is not to label every movement as drift.</p>
+<p>Its job is to determine whether a meaningful reference-relative change exists, whether it persists, and what we still do not know about why it happened.</p>
+<blockquote>
+<p><strong>Drift becomes useful when change is measured without pretending that the baseline was permanent, the direction was inherently good or bad, or the cause was already known.</strong></p>
+</blockquote>
   </main>
 </body>
 </html>

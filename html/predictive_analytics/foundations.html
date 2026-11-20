@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/predictive_analytics/foundations.md">
-  <title>foundations</title>
+  <title>Predictive Analytics — Foundations</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,7 +92,1777 @@
   </aside>
 
   <main>
+<p><img width="1194" height="672" alt="predictive_analytics_foundations_" src="https://github.com/user-attachments/assets/dbc48ea7-2d8c-4e51-bbea-ac12355ce156" /></p>
+<h1 id="predictive-analytics-foundations">Predictive Analytics — Foundations</h1>
+<blockquote>
+<p><strong>A prediction is an observation produced through a model. It is not the observed system itself.</strong></p>
+</blockquote>
+<h2 id="module">Module</h2>
+<p>Predictive Analytics</p>
+<h2 id="document-role">Document Role</h2>
+<p>Foundational architecture and reasoning grammar.</p>
+<h2 id="status">Status</h2>
+<p>Experimental.</p>
+<h2 id="validation-state">Validation State</h2>
+<p>Unvalidated.</p>
+<h2 id="decision-authority">Decision Authority</h2>
+<p>None.</p>
+<hr>
+<h1 id="purpose">Purpose</h1>
+<p>Predictive Analytics is a TriadicFrameworks research module for examining predictions, predictive models, observations, measurement substrates, operating regimes, and the relationships among them.</p>
+<p>The module begins with a simple distinction:</p>
+<pre><code class="language-text">prediction != observed system
+</code></pre>
+<p>A prediction may be:</p>
+<ul>
+<li>useful,</li>
+<li>calibrated,</li>
+<li>reproducible,</li>
+<li>operationally valuable,</li>
+<li>and appropriate for its intended purpose.</li>
+</ul>
+<p>Yet it remains a representation produced from:</p>
+<pre><code class="language-text">evidence
++
+measurement
++
+model
++
+assumptions
++
+context
+</code></pre>
+<p>Predictive Analytics therefore asks not only:</p>
+<blockquote>
+<p><strong>What does the model predict?</strong></p>
+</blockquote>
+<p>but also:</p>
+<blockquote>
+<p><strong>Under what conditions is that prediction justified?</strong></p>
+</blockquote>
+<p>and:</p>
+<blockquote>
+<p><strong>What information was preserved or lost while producing it?</strong></p>
+</blockquote>
+<hr>
+<h1 id="foundational-proposition">Foundational Proposition</h1>
+<p>A predictive assessment is not merely a relationship between:</p>
+<pre><code class="language-text">input
+  -&gt;
+output
+</code></pre>
+<p>It is embedded inside a larger observational system.</p>
+<p>Conceptually:</p>
+<pre><code class="language-text">Observed System
+      │
+      ▼
+Environment
+      │
+      ▼
+Expression Substrate
+      │
+      ▼
+Measurement Process
+      │
+      ▼
+Evidence Representation
+      │
+      ▼
+Predictive Model
+      │
+      ▼
+Prediction
+      │
+      ▼
+Interpretation
+      │
+      ▼
+Decision or Action
+</code></pre>
+<p>Every transition introduces assumptions.</p>
+<p>Predictive Analytics makes those transitions observable.</p>
+<hr>
+<h1 id="prediction-is-a-compression">Prediction Is a Compression</h1>
+<p>Predictive models often compress complex evidence into simpler outputs.</p>
+<p>For example:</p>
+<pre><code class="language-text">hundreds of observations
+      │
+      ▼
+feature representation
+      │
+      ▼
+model
+      │
+      ▼
+single prediction
+</code></pre>
+<p>Compression can be extremely useful.</p>
+<p>It allows:</p>
+<ul>
+<li>classification,</li>
+<li>ranking,</li>
+<li>forecasting,</li>
+<li>comparison,</li>
+<li>decision support,</li>
+<li>summarization,</li>
+<li>efficient computation.</li>
+</ul>
+<p>But compression also removes information.</p>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>The existence of information loss does not make compression invalid.</strong></p>
+</blockquote>
+<p>The relevant question is:</p>
+<blockquote>
+<p><strong>Did the compression preserve the information required for the intended inference?</strong></p>
+</blockquote>
+<hr>
+<h1 id="observation-boundary">Observation Boundary</h1>
+<p>Every model observes only part of a system.</p>
+<p>Call this the:</p>
+<pre><code class="language-text">observation boundary
+</code></pre>
+<p>Inside the boundary:</p>
+<pre><code class="language-text">measured variables
+recorded behavior
+available context
+selected evidence
+</code></pre>
+<p>Outside the boundary:</p>
+<pre><code class="language-text">unmeasured variables
+unknown context
+unavailable evidence
+unsupported dimensions
+unobserved behavior
+</code></pre>
+<p>A model should not silently convert:</p>
+<pre><code class="language-text">not measured
+</code></pre>
+<p>into:</p>
+<pre><code class="language-text">does not exist
+</code></pre>
+<hr>
+<h1 id="observation-boundary-principle">Observation Boundary Principle</h1>
+<blockquote>
+<p><strong>Absence of measurement is not evidence of absence of capability.</strong></p>
+</blockquote>
+<p>But the inverse is equally important:</p>
+<blockquote>
+<p><strong>Evidence of capability in one context is not evidence of universal capability.</strong></p>
+</blockquote>
+<p>Together:</p>
+<pre><code class="language-text">unmeasured != absent
+observed_once != universal
+</code></pre>
+<p>Both constraints are required.</p>
+<p>Without the first, the model may become reductive.</p>
+<p>Without the second, the alternate framework may become overly generous.</p>
+<hr>
+<h1 id="direct-observation-versus-inference">Direct Observation Versus Inference</h1>
+<p>Predictive Analytics distinguishes:</p>
+<pre><code class="language-text">direct observation
+</code></pre>
+<p>from:</p>
+<pre><code class="language-text">derived observation
+</code></pre>
+<p>from:</p>
+<pre><code class="language-text">model inference
+</code></pre>
+<p>from:</p>
+<pre><code class="language-text">global interpretation
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-text">direct observation:
+  subject solved 7 of 10 defined tasks
 
+derived observation:
+  task accuracy = 0.70
+
+model inference:
+  predicted future accuracy = moderate
+
+global interpretation:
+  subject has moderate reasoning ability
+</code></pre>
+<p>Each step increases interpretive distance from the original evidence.</p>
+<p>That distance should remain visible.</p>
+<hr>
+<h1 id="inference-ladder">Inference Ladder</h1>
+<p>Conceptually:</p>
+<pre><code class="language-text">Evidence
+   │
+   ▼
+Observation
+   │
+   ▼
+Measurement
+   │
+   ▼
+Representation
+   │
+   ▼
+Inference
+   │
+   ▼
+Interpretation
+   │
+   ▼
+Generalization
+</code></pre>
+<p>Predictive Analytics becomes increasingly cautious as an interpretation moves upward through this ladder.</p>
+<hr>
+<h1 id="measurement-is-not-identity">Measurement Is Not Identity</h1>
+<p>Suppose a person produces:</p>
+<pre><code class="language-text">timed symbolic performance:
+  weak
+</code></pre>
+<p>That supports the statement:</p>
+<pre><code class="language-text">Under the observed timed symbolic conditions,
+performance was weak.
+</code></pre>
+<p>It does not automatically support:</p>
+<pre><code class="language-text">The person is unintelligent.
+</code></pre>
+<p>Likewise:</p>
+<pre><code class="language-text">structural reasoning task:
+  strong
+</code></pre>
+<p>does not automatically support:</p>
+<pre><code class="language-text">The person is highly intelligent.
+</code></pre>
+<p>The first statements describe observations.</p>
+<p>The second statements transform observations into broad identity claims.</p>
+<p>Predictive Analytics attempts to preserve that distinction.</p>
+<hr>
+<h1 id="prediction-is-conditional">Prediction Is Conditional</h1>
+<p>A prediction should conceptually be interpreted as:</p>
+<pre><code class="language-text">Given:
+  evidence E
+  model M
+  substrate S
+  regime R
+  observation boundary B
+  time T
+
+the model predicts:
+  outcome P
+</code></pre>
+<p>Not:</p>
+<pre><code class="language-text">P is the system.
+</code></pre>
+<p>This conditional structure becomes especially important when:</p>
+<ul>
+<li>the substrate changes,</li>
+<li>the regime changes,</li>
+<li>the model changes,</li>
+<li>the evidence changes,</li>
+<li>or the observation boundary expands.</li>
+</ul>
+<hr>
+<h1 id="substrate">Substrate</h1>
+<p>Within Predictive Analytics, a <strong>substrate</strong> is the medium or structure through which behavior, information, or capability becomes observable.</p>
+<p>Candidate substrates include:</p>
+<pre><code class="language-text">textual
+verbal
+visual
+symbolic
+spatial
+relational
+embodied
+tool-mediated
+collaborative
+human-AI
+fixed-choice
+generative
+timed
+reflective
+</code></pre>
+<p>These categories are provisional.</p>
+<p>They require operational definition and validation.</p>
+<hr>
+<h1 id="substrate-principle">Substrate Principle</h1>
+<p>Observed performance may depend partly on:</p>
+<pre><code class="language-text">capability
+x
+substrate
+</code></pre>
+<p>Conceptually:</p>
+<pre><code class="language-text">Observed Expression
+  =
+Capability
+  interacting with
+Expression Substrate
+</code></pre>
+<p>This does <strong>not</strong> establish that the substrate caused a particular result.</p>
+<p>Instead it creates a testable question:</p>
+<blockquote>
+<p><strong>Does observed performance vary reproducibly across defined substrates?</strong></p>
+</blockquote>
+<hr>
+<h1 id="substrate-mismatch">Substrate Mismatch</h1>
+<p>A substrate mismatch is a candidate state where the measurement substrate may poorly represent the construct or capability being inferred.</p>
+<p>It is not:</p>
+<pre><code class="language-text">low performance
+</code></pre>
+<p>and it is not:</p>
+<pre><code class="language-text">undesired score
+</code></pre>
+<p>A mismatch claim requires evidence.</p>
+<p>Possible state:</p>
+<pre><code class="language-yaml">substrate_fit:
+  status: partial
+
+evidence:
+  repeated_cross_substrate_difference: true
+
+causal_status:
+  unresolved
+</code></pre>
+<hr>
+<h1 id="regime">Regime</h1>
+<p>A <strong>regime</strong> is a bounded set of operating conditions in which relevant relationships remain sufficiently stable to support meaningful comparison.</p>
+<p>Candidate regime components include:</p>
+<pre><code class="language-text">task structure
+environment
+substrate
+available tools
+time constraints
+information availability
+interaction mode
+system state
+model version
+observer configuration
+</code></pre>
+<p>A regime is not simply a descriptive label.</p>
+<p>It must correspond to operationally meaningful structure.</p>
+<hr>
+<h1 id="regime-principle">Regime Principle</h1>
+<p>A model may perform well in one regime and poorly in another.</p>
+<p>Conceptually:</p>
+<pre><code class="language-text">Model M
+  in Regime A
+  -&gt; reliable
+
+Model M
+  in Regime B
+  -&gt; unreliable
+</code></pre>
+<p>This does not automatically mean:</p>
+<pre><code class="language-text">Model M is bad
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">Regime B is bad
+</code></pre>
+<p>A more precise interpretation may be:</p>
+<pre><code class="language-text">model_fit:
+  regime_conditioned
+</code></pre>
+<hr>
+<h1 id="model-fit">Model Fit</h1>
+<p>Model fit describes the compatibility between:</p>
+<pre><code class="language-text">model assumptions
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">observed conditions
+</code></pre>
+<p>Possible states:</p>
+<pre><code class="language-text">high
+moderate
+low
+partial
+mismatch_detected
+unresolved
+unknown
+</code></pre>
+<p>Model fit does not describe the value of the observed system.</p>
+<p>Therefore:</p>
+<pre><code class="language-text">low_model_fit != low_subject_value
+</code></pre>
+<hr>
+<h1 id="model-mismatch">Model Mismatch</h1>
+<p>A model mismatch occurs when evidence indicates that the representation or assumptions of a predictive model do not adequately support the inference being made.</p>
+<p>Possible indicators include:</p>
+<ul>
+<li>poor out-of-sample performance,</li>
+<li>repeated prediction-observation disagreement,</li>
+<li>substrate-dependent error,</li>
+<li>regime-conditioned failure,</li>
+<li>poor calibration,</li>
+<li>missing relevant dimensions,</li>
+<li>unstable model behavior,</li>
+<li>scope overextension.</li>
+</ul>
+<p>Mismatch is never inferred merely because:</p>
+<pre><code class="language-text">the result is unfavorable
+</code></pre>
+<hr>
+<h1 id="prediction-observation-disagreement">Prediction-Observation Disagreement</h1>
+<p>Disagreement between prediction and observation creates a research state:</p>
+<pre><code class="language-text">prediction:
+  A
+
+observation:
+  B
+
+status:
+  disagreement
+</code></pre>
+<p>It does not immediately establish:</p>
+<pre><code class="language-text">prediction_wrong
+</code></pre>
+<p>Possible explanations include:</p>
+<pre><code class="language-text">model error
+measurement error
+task difference
+substrate effect
+regime effect
+temporal change
+observer effect
+genuine variability
+missing variable
+incomplete evidence
+unknown cause
+</code></pre>
+<p>The disagreement itself is evidence.</p>
+<p>Its explanation remains separate.</p>
+<hr>
+<h1 id="multidimensionality">Multidimensionality</h1>
+<p>Many systems may be better described through multiple observable dimensions than through a single scalar.</p>
+<p>Conceptually:</p>
+<pre><code class="language-text">System X
+  ├── Dimension A
+  ├── Dimension B
+  ├── Dimension C
+  ├── Dimension D
+  └── Dimension E
+</code></pre>
+<p>This does not mean every system <strong>must</strong> be multidimensional.</p>
+<p>Nor does it mean a multidimensional representation is automatically better.</p>
+<p>The research question is:</p>
+<blockquote>
+<p><strong>Does preserving multiple dimensions add reliable, useful information for the intended purpose?</strong></p>
+</blockquote>
+<hr>
+<h1 id="scalar-representations">Scalar Representations</h1>
+<p>Predictive Analytics does not prohibit scalar outputs.</p>
+<p>A scalar may be useful when it is:</p>
+<ul>
+<li>validated,</li>
+<li>calibrated,</li>
+<li>appropriately scoped,</li>
+<li>interpreted within known limits.</li>
+</ul>
+<p>The module instead requires a scalar to remain recognizable as compression.</p>
+<pre><code class="language-yaml">composite:
+  permitted: true
+  interpretive_status: lossy_projection
+  sufficient_alone: false
+  profile_required: true
+</code></pre>
+<p>where the intended assessment explicitly requires the richer profile.</p>
+<hr>
+<h1 id="no-hidden-master-score">No Hidden Master Score</h1>
+<p>A multidimensional system can secretly recreate a scalar hierarchy.</p>
+<p>Example:</p>
+<pre><code class="language-text">Dimension A * 0.20
+Dimension B * 0.15
+Dimension C * 0.25
+Dimension D * 0.40
+       │
+       ▼
+Universal Capability Score
+</code></pre>
+<p>This may be defensible for a particular validated purpose.</p>
+<p>It must not silently become:</p>
+<pre><code class="language-text">overall human worth
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">complete intelligence
+</code></pre>
+<p>Therefore:</p>
+<pre><code class="language-text">hidden_master_score:
+  prohibited
+</code></pre>
+<hr>
+<h1 id="profile-topology">Profile Topology</h1>
+<p>A multidimensional profile can be thought of as a shape.</p>
+<p>Example:</p>
+<pre><code class="language-text">Structural        █████████
+Temporal          ███████
+Symbolic          ████
+Transfer          █████████
+Ambiguity         ████████
+</code></pre>
+<p>The important information may lie in:</p>
+<ul>
+<li>relative strengths,</li>
+<li>relative weaknesses,</li>
+<li>asymmetries,</li>
+<li>stability,</li>
+<li>cross-context persistence,</li>
+<li>substrate dependence,</li>
+<li>regime dependence.</li>
+</ul>
+<p>This collection is called:</p>
+<pre><code class="language-text">profile topology
+</code></pre>
+<p>in the experimental module grammar.</p>
+<hr>
+<h1 id="topology-is-not-identity">Topology Is Not Identity</h1>
+<p>A profile shape is an observation.</p>
+<p>It is not the person.</p>
+<p>Therefore prefer:</p>
+<pre><code class="language-text">Current observations show
+a strongly asymmetric profile.
+</code></pre>
+<p>Avoid:</p>
+<pre><code class="language-text">The subject is an asymmetric intelligence.
+</code></pre>
+<hr>
+<h1 id="temporal-dimension">Temporal Dimension</h1>
+<p>No profile should be assumed permanent.</p>
+<p>Conceptually:</p>
+<pre><code class="language-text">Profile(t1)
+     │
+     ▼
+Profile(t2)
+     │
+     ▼
+Profile(t3)
+</code></pre>
+<p>Possible relationships include:</p>
+<pre><code class="language-text">stable
+developing
+drifting
+regime-conditioned
+temporarily perturbed
+recovered
+unknown
+</code></pre>
+<p>The temporal dimension is especially important for:</p>
+<ul>
+<li>humans,</li>
+<li>AI systems,</li>
+<li>human-AI pairs,</li>
+<li>organizations,</li>
+<li>adaptive systems.</li>
+</ul>
+<hr>
+<h1 id="drift">Drift</h1>
+<p>Drift is sustained reference-relative change.</p>
+<p>It is not every difference.</p>
+<pre><code class="language-text">change != drift
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">drift != degradation
+</code></pre>
+<p>Possible drift targets include:</p>
+<pre><code class="language-text">prediction
+model
+observation
+dimension
+profile
+representation
+calibration
+substrate
+regime
+observer
+tooling
+</code></pre>
+<p>A drift claim requires a reference.</p>
+<hr>
+<h1 id="coherence">Coherence</h1>
+<p>Coherence concerns the relationships among observations.</p>
+<p>It does not require uniformity.</p>
+<p>A profile such as:</p>
+<pre><code class="language-text">structural:
+  strong
+
+symbolic_speed:
+  weak
+
+temporal:
+  strong
+</code></pre>
+<p>may be coherent if those observations replicate under relevant conditions.</p>
+<p>Therefore:</p>
+<pre><code class="language-text">different != incoherent
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">coherent != true
+</code></pre>
+<hr>
+<h1 id="contradiction">Contradiction</h1>
+<p>Contradiction is preserved as information.</p>
+<p>Possible states:</p>
+<pre><code class="language-text">supporting
+contradictory
+conditionally_compatible
+independent
+redundant
+non_comparable
+unknown
+</code></pre>
+<p>A contradiction does not need to be resolved immediately.</p>
+<pre><code class="language-text">unresolved
+</code></pre>
+<p>is a legitimate state.</p>
+<hr>
+<h1 id="evidence-independence">Evidence Independence</h1>
+<p>A foundational rule:</p>
+<blockquote>
+<p><strong>Interpretation count is not evidence count.</strong></p>
+</blockquote>
+<p>Suppose one observation is processed by:</p>
+<pre><code class="language-text">FFT
+Inverted Star
+Structural Detection
+RTT
+Resonance
+</code></pre>
+<p>Then:</p>
+<pre><code class="language-text">adapter_interpretations:
+  5
+
+independent_evidence_sources:
+  1
+</code></pre>
+<p>Therefore:</p>
+<pre><code class="language-text">adapter agreement
+!=
+independent confirmation
+</code></pre>
+<p>This distinction protects the architecture from self-confirmation.</p>
+<hr>
+<h1 id="evidence-provenance">Evidence Provenance</h1>
+<p>Every important claim should ideally trace to:</p>
+<pre><code class="language-text">observation
+task
+substrate
+regime
+time
+evaluator
+source
+model version
+measurement version
+</code></pre>
+<p>Conceptual record:</p>
+<pre><code class="language-yaml">evidence:
+  id:
+
+  source:
+  observation:
+  timestamp:
+
+  task:
+  substrate:
+  regime:
+
+  evaluator:
+
+  model_version:
+  measurement_version:
+
+  provenance:
+  independence:
+
+  limitations:
+</code></pre>
+<p>If provenance is unavailable:</p>
+<pre><code class="language-text">provenance:
+  unknown
+</code></pre>
+<p>is preferable to invention.</p>
+<hr>
+<h1 id="observer-effects">Observer Effects</h1>
+<p>The observer may affect interpretation.</p>
+<p>Possible observers include:</p>
+<pre><code class="language-text">human evaluator
+statistical model
+AI model
+agent ensemble
+measurement device
+software pipeline
+hybrid process
+</code></pre>
+<p>Therefore:</p>
+<pre><code class="language-text">observer
+</code></pre>
+<p>belongs inside the measurement system.</p>
+<hr>
+<h1 id="observer-principle">Observer Principle</h1>
+<pre><code class="language-text">observed_result
+  =
+target
+  interacting with
+measurement system
+</code></pre>
+<p>At minimum, Predictive Analytics attempts to track both.</p>
+<p>The framework does not assume observers are neutral simply because they are automated.</p>
+<hr>
+<h1 id="existing-models-remain-evidence">Existing Models Remain Evidence</h1>
+<p>Predictive Analytics is not built on the assumption that conventional models are defective.</p>
+<p>An existing model may outperform the richer framework.</p>
+<p>Possible result:</p>
+<pre><code class="language-yaml">assessment:
+  baseline_model:
+    status: supported
+
+  adapters:
+    added_value: none
+
+  recommendation:
+    retain_baseline
+</code></pre>
+<p>This is a successful Predictive Analytics outcome.</p>
+<hr>
+<h1 id="adapter-architecture">Adapter Architecture</h1>
+<p>The module initially includes five major adapters:</p>
+<pre><code class="language-text">FFT
+Inverted Star
+Structural Detection
+RTT
+Resonance
+</code></pre>
+<p>Their shorthand roles are:</p>
+<pre><code class="language-text">FFT
+  -&gt; map the field
+
+Inverted Star
+  -&gt; preserve disagreement
+
+Structural Detection
+  -&gt; test structure
+
+RTT
+  -&gt; test regime and time
+
+Resonance
+  -&gt; test contextual expression
+</code></pre>
+<p>Adapters do not inherit authority from their names.</p>
+<p>Each must be validated independently.</p>
+<hr>
+<h1 id="observer-architecture">Observer Architecture</h1>
+<p>Predictive Analytics also contains observer layers such as:</p>
+<pre><code class="language-text">substrate observer
+regime observer
+resonance observer
+drift observer
+coherence observer
+uncertainty observer
+counterfactual layer
+human review hook
+</code></pre>
+<p>These layers organize questions.</p>
+<p>They do not establish answers merely by existing.</p>
+<hr>
+<h1 id="core-predictive-analytics-pipeline">Core Predictive Analytics Pipeline</h1>
+<pre><code class="language-text">Observed System
+      │
+      ▼
+Evidence
+      │
+      ▼
+Measurement Substrate
+      │
+      ▼
+Existing Model
+      │
+      ▼
+Prediction
+      │
+      ▼
+Preserve Baseline
+      │
+      ▼
+Observer Layer
+      │
+      ├── Substrate
+      ├── Regime
+      ├── Resonance
+      ├── Drift
+      ├── Coherence
+      ├── Structure
+      ├── Counterfactual
+      └── Uncertainty
+      │
+      ▼
+Comparative Assessment
+      │
+      ├── baseline supported
+      ├── scope narrowed
+      ├── model mismatch candidate
+      ├── substrate effect candidate
+      ├── regime effect candidate
+      ├── no added value
+      ├── unresolved
+      └── insufficient evidence
+      │
+      ▼
+Review / Research Action
+</code></pre>
+<hr>
+<h1 id="foundational-operators">Foundational Operators</h1>
+<p>The module-level grammar begins with:</p>
+<pre><code class="language-text">PA-Predict
+PA-Observe
+PA-Substrate
+PA-Regime
+PA-Resonance
+PA-Drift
+PA-Coherence
+PA-Structure
+PA-Counterfactual
+PA-Uncertainty
+PA-Calibrate
+PA-Escalate
+</code></pre>
+<hr>
+<h1 id="pa-predict"><code>PA-Predict</code></h1>
+<p>Represents the baseline prediction.</p>
+<pre><code class="language-text">PA-Predict(model, evidence)
+  -&gt; prediction_record
+</code></pre>
+<p>The output is preserved.</p>
+<hr>
+<h1 id="pa-observe"><code>PA-Observe</code></h1>
+<p>Observes the prediction and system context.</p>
+<pre><code class="language-text">PA-Observe(prediction, observations)
+  -&gt; observer_record
+</code></pre>
+<hr>
+<h1 id="pa-substrate"><code>PA-Substrate</code></h1>
+<p>Examines measurement and expression substrate.</p>
+<pre><code class="language-text">PA-Substrate(observations, substrate)
+  -&gt; substrate_fit
+</code></pre>
+<hr>
+<h1 id="pa-regime"><code>PA-Regime</code></h1>
+<p>Examines operating conditions.</p>
+<pre><code class="language-text">PA-Regime(observations, context)
+  -&gt; regime_fit
+</code></pre>
+<hr>
+<h1 id="pa-resonance"><code>PA-Resonance</code></h1>
+<p>Examines reproducible contextual amplification or suppression.</p>
+<pre><code class="language-text">PA-Resonance(observations)
+  -&gt; resonance_profile
+</code></pre>
+<hr>
+<h1 id="pa-drift"><code>PA-Drift</code></h1>
+<p>Examines longitudinal change.</p>
+<pre><code class="language-text">PA-Drift(series)
+  -&gt; drift_profile
+</code></pre>
+<hr>
+<h1 id="pa-coherence"><code>PA-Coherence</code></h1>
+<p>Examines relationships among observations.</p>
+<pre><code class="language-text">PA-Coherence(observations)
+  -&gt; coherence_profile
+</code></pre>
+<hr>
+<h1 id="pa-structure"><code>PA-Structure</code></h1>
+<p>Tests candidate structure.</p>
+<pre><code class="language-text">PA-Structure(evidence)
+  -&gt; structural_profile
+</code></pre>
+<hr>
+<h1 id="pa-counterfactual"><code>PA-Counterfactual</code></h1>
+<p>Challenges interpretations through reasonable alternate conditions.</p>
+<pre><code class="language-text">PA-Counterfactual(assessment, transformation)
+  -&gt; robustness_result
+</code></pre>
+<hr>
+<h1 id="pa-uncertainty"><code>PA-Uncertainty</code></h1>
+<p>Represents what remains unknown.</p>
+<pre><code class="language-text">PA-Uncertainty(assessment)
+  -&gt; uncertainty_record
+</code></pre>
+<hr>
+<h1 id="pa-calibrate"><code>PA-Calibrate</code></h1>
+<p>Compares confidence and prediction against observed outcomes.</p>
+<pre><code class="language-text">PA-Calibrate(predictions, outcomes)
+  -&gt; calibration_record
+</code></pre>
+<hr>
+<h1 id="pa-escalate"><code>PA-Escalate</code></h1>
+<p>Recommends additional evidence or review.</p>
+<pre><code class="language-text">PA-Escalate(assessment)
+  -&gt; review_recommendation
+</code></pre>
+<p>Escalation does not automatically invalidate the baseline.</p>
+<hr>
+<h1 id="counterfactual-principle">Counterfactual Principle</h1>
+<p>Every meaningful interpretation should ideally expose what would change it.</p>
+<p>Questions include:</p>
+<pre><code class="language-text">What if one observation is removed?
+
+What if adverse evidence is added?
+
+What if the substrate changes?
+
+What if the regime boundary moves?
+
+What if the evaluator changes?
+
+What if the adapter is removed?
+
+What if the baseline model is correct?
+
+What if the richer model is wrong?
+</code></pre>
+<p>A framework incapable of challenging itself is poorly suited to challenge other models.</p>
+<hr>
+<h1 id="counterfactual-symmetry">Counterfactual Symmetry</h1>
+<p>Counterfactual testing must permit:</p>
+<pre><code class="language-text">more favorable outcome
+less favorable outcome
+unchanged outcome
+unknown outcome
+</code></pre>
+<p>The method must not be designed to search only for improvement.</p>
+<hr>
+<h1 id="uncertainty-principle">Uncertainty Principle</h1>
+<p>Uncertainty is not a defect to be hidden.</p>
+<p>Possible states include:</p>
+<pre><code class="language-text">known
+unknown
+insufficient_evidence
+not_observed
+not_applicable
+conflicting_evidence
+unresolved
+</code></pre>
+<p>A strong predictive system should know when it lacks a justified answer.</p>
+<hr>
+<h1 id="abstention">Abstention</h1>
+<p>The module explicitly supports:</p>
+<pre><code class="language-text">abstain
+</code></pre>
+<p>when evidence is inadequate.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">assessment:
+  model_mismatch:
+    status: unknown
+
+  reason:
+    insufficient independent observations
+
+  recommendation:
+    collect_more_evidence
+</code></pre>
+<p>This is preferable to manufactured certainty.</p>
+<hr>
+<h1 id="validation-principle">Validation Principle</h1>
+<p>Predictive Analytics must be subjected to the same scrutiny it applies to existing models.</p>
+<p>The framework receives no special validation status because it is:</p>
+<ul>
+<li>multidimensional,</li>
+<li>substrate-aware,</li>
+<li>RTT-aligned,</li>
+<li>canon-aligned,</li>
+<li>AI-assisted,</li>
+<li>structurally rich,</li>
+<li>or philosophically appealing.</li>
+</ul>
+<p>Every major component must be capable of failing.</p>
+<hr>
+<h1 id="validation-ladder">Validation Ladder</h1>
+<p>The module defines:</p>
+<pre><code class="language-text">Level 0
+  Structural Validation
+
+Level 1
+  Content Validation
+
+Level 2
+  Measurement Validation
+
+Level 3
+  Construct Validation
+
+Level 4
+  Substrate and Regime Validation
+
+Level 5
+  Predictive and Explanatory Validation
+
+Level 6
+  Fairness and Harm Validation
+
+Level 7
+  Decision Validation
+</code></pre>
+<p>Passing one level does not automatically imply the next.</p>
+<hr>
+<h1 id="falsifiability">Falsifiability</h1>
+<p>The architecture should permit conclusions such as:</p>
+<pre><code class="language-text">FFT adds no measurable value
+
+Inverted Star produces excessive false mismatch flags
+
+Structural Detection finds patterns in noise
+
+RTT produces excessive false regime alarms
+
+Resonance effects fail replication
+
+RIQF dimensions collapse into existing constructs
+
+multidimensional representation adds no predictive value
+
+baseline model performs better
+</code></pre>
+<p>These are legitimate research outcomes.</p>
+<hr>
+<h1 id="favorability-symmetry">Favorability Symmetry</h1>
+<p>A central safeguard:</p>
+<blockquote>
+<p><strong>Evidence requirements must not change depending on whether the interpretation is flattering.</strong></p>
+</blockquote>
+<p>The framework must permit:</p>
+<pre><code class="language-text">original unfavorable result confirmed
+original favorable result weakened
+alternate favorable result rejected
+alternate adverse result rejected
+no change
+unknown
+</code></pre>
+<hr>
+<h1 id="complexity-budget">Complexity Budget</h1>
+<p>Every additional analytical layer introduces costs:</p>
+<pre><code class="language-text">assumptions
+data requirements
+validation burden
+interpretation burden
+privacy risk
+computation
+review burden
+possible bias
+</code></pre>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>A deeper model must earn its complexity.</strong></p>
+</blockquote>
+<p>If a simpler model performs comparably:</p>
+<pre><code class="language-text">prefer simpler model
+</code></pre>
+<p>where appropriate.</p>
+<hr>
+<h1 id="no-added-value-principle">No-Added-Value Principle</h1>
+<p>Canonical result:</p>
+<pre><code class="language-text">no_added_value
+</code></pre>
+<p>must remain available throughout the system.</p>
+<p>Examples:</p>
+<pre><code class="language-text">FFT:
+  no_added_value
+
+RTT:
+  no_added_value
+
+Resonance:
+  no_added_value
+
+full_adapter_ensemble:
+  no_added_value
+</code></pre>
+<p>This is evidence, not embarrassment.</p>
+<hr>
+<h1 id="intelligence-example">Intelligence Example</h1>
+<p>The Resonant IQ Fingerprint is the first major worked example.</p>
+<p>Its purpose is not to establish a new IQ test.</p>
+<p>It demonstrates the more general Predictive Analytics principle:</p>
+<pre><code class="language-text">flat prediction
+      │
+      ▼
+broader observations
+      │
+      ▼
+multidimensional profile
+      │
+      ▼
+substrate analysis
+      │
+      ▼
+regime analysis
+      │
+      ▼
+uncertainty
+</code></pre>
+<p>The intelligence example is therefore one application of the module.</p>
+<p>It is not the module itself.</p>
+<hr>
+<h1 id="resonant-iq-fingerprint-principle">Resonant IQ Fingerprint Principle</h1>
+<p>RIQF begins with:</p>
+<blockquote>
+<p><strong>A flat intelligence score is a lossy projection of a potentially multidimensional capability profile.</strong></p>
+</blockquote>
+<p>That proposition remains a research framing.</p>
+<p>The empirical questions are:</p>
+<ol>
+<li>Which dimensions are real and reproducible?</li>
+<li>Which are redundant?</li>
+<li>Which relate to meaningful outcomes?</li>
+<li>Which depend on substrate?</li>
+<li>Which depend on regime?</li>
+<li>Which remain stable?</li>
+<li>Which change?</li>
+<li>Which existing models already capture the same information?</li>
+<li>Does the richer profile improve anything?</li>
+<li>What harms might it create?</li>
+</ol>
+<hr>
+<h1 id="intelligence-as-observed-shape">Intelligence as Observed Shape</h1>
+<p>Conceptually:</p>
+<pre><code class="language-text">              Structural
+                  █████
+
+       Transfer             Temporal
+       ██████               ████
+
+Ambiguity                         Symbolic
+██████                            ███
+
+       Regime               Coherence
+       █████                ████
+
+              Adaptive
+               █████
+</code></pre>
+<p>The profile preserves unevenness.</p>
+<p>It does not establish rank.</p>
+<hr>
+<h1 id="beyond-intelligence-assessment">Beyond Intelligence Assessment</h1>
+<p>The same module grammar may eventually apply to:</p>
+<ul>
+<li>forecasting,</li>
+<li>educational assessment,</li>
+<li>AI evaluation,</li>
+<li>scientific model comparison,</li>
+<li>organizational prediction,</li>
+<li>model monitoring,</li>
+<li>human-AI collaboration,</li>
+<li>agentic systems,</li>
+<li>adaptive infrastructure,</li>
+<li>domain-specific risk models.</li>
+</ul>
+<p>Each application requires separate validation.</p>
+<hr>
+<h1 id="beyond-humans">Beyond Humans</h1>
+<p>The architecture may potentially observe:</p>
+<pre><code class="language-text">human
+AI
+human-AI pair
+team
+organization
+robotic system
+distributed agent system
+other adaptive system
+</code></pre>
+<p>But shared dimensions do not prove equivalent internal cognition.</p>
+<p>Example:</p>
+<pre><code class="language-text">human:
+  structural reconstruction strong
+
+AI:
+  structural reconstruction strong
+</code></pre>
+<p>means only:</p>
+<blockquote>
+<p>Both demonstrated strong performance according to the operational task.</p>
+</blockquote>
+<p>It does not establish identical mechanisms.</p>
+<hr>
+<h1 id="system-boundary">System Boundary</h1>
+<p>Every assessment should declare:</p>
+<pre><code class="language-text">who or what is being observed
+</code></pre>
+<p>Possible boundaries:</p>
+<pre><code class="language-text">individual
+tool
+human-tool pair
+team
+organization
+network
+</code></pre>
+<p>A collaborative result should not automatically be attributed to one component.</p>
+<hr>
+<h1 id="human-ai-pair-principle">Human-AI Pair Principle</h1>
+<p>Suppose:</p>
+<pre><code class="language-text">human alone:
+  moderate
+
+AI alone:
+  moderate
+
+human + AI:
+  strong
+</code></pre>
+<p>Correct initial conclusion:</p>
+<pre><code class="language-text">pair performance:
+  strong
+</code></pre>
+<p>Not:</p>
+<pre><code class="language-text">human intelligence:
+  strong
+</code></pre>
+<p>and not:</p>
+<pre><code class="language-text">AI intelligence:
+  strong
+</code></pre>
+<p>Attribution is a separate research problem.</p>
+<hr>
+<h1 id="fairness">Fairness</h1>
+<p>Predictive Analytics does not assume that one fairness metric resolves fairness.</p>
+<p>Relevant questions include:</p>
+<pre><code class="language-text">Who experiences error?
+
+Who receives uncertainty?
+
+Who receives human review?
+
+Whose evidence coverage is poor?
+
+Whose substrate is poorly represented?
+
+Who is falsely marked as model mismatch?
+
+Who is incorrectly denied mismatch review?
+
+Who is harmed by false favorable interpretation?
+
+Who is harmed by false adverse interpretation?
+</code></pre>
+<p>Fairness belongs throughout the architecture.</p>
+<hr>
+<h1 id="ethics">Ethics</h1>
+<p>The module maintains several foundational ethical distinctions:</p>
+<pre><code class="language-text">prediction != identity
+measurement != total_capability
+capability != human_worth
+detail != validity
+complexity != truth
+correlation != causation
+profile != destiny
+model_fit != subject_value
+unknown != failure
+difference != superiority
+</code></pre>
+<p>These are architectural invariants.</p>
+<hr>
+<h1 id="privacy">Privacy</h1>
+<p>A richer model may create richer privacy risk.</p>
+<p>A multidimensional profile can reveal more about an observed system than a simple score.</p>
+<p>Therefore:</p>
+<pre><code class="language-text">information_gain
+  -&gt;
+privacy_responsibility_gain
+</code></pre>
+<p>Data minimization remains important.</p>
+<hr>
+<h1 id="cognitive-fingerprint-boundary">Cognitive Fingerprint Boundary</h1>
+<p>The term:</p>
+<pre><code class="language-text">fingerprint
+</code></pre>
+<p>describes profile shape.</p>
+<p>It should not imply:</p>
+<pre><code class="language-text">biometric identity
+persistent tracking
+cross-platform recognition
+covert surveillance
+</code></pre>
+<p>Capability representation and identity tracking should remain separate functions.</p>
+<hr>
+<h1 id="contestability">Contestability</h1>
+<p>Consequential human-facing assessments should eventually support:</p>
+<pre><code class="language-text">inspect evidence
+challenge factual errors
+add contextual evidence
+request review
+correct data
+preserve disagreement
+</code></pre>
+<p>A person should not become permanently trapped inside a previous model output.</p>
+<hr>
+<h1 id="decision-authority_1">Decision Authority</h1>
+<p>The current module state:</p>
+<pre><code class="language-text">decision_authority:
+  none
+</code></pre>
+<p>Authorized uses:</p>
+<pre><code class="language-text">research
+demonstration
+framework development
+validation design
+model comparison
+hypothesis generation
+education
+</code></pre>
+<p>Prohibited independent uses include:</p>
+<pre><code class="language-text">diagnosis
+hiring
+firing
+educational exclusion
+legal determination
+insurance eligibility
+lending eligibility
+sentencing
+automated adverse decision
+</code></pre>
+<p>unless a future specific use receives appropriate independent validation and governance.</p>
+<hr>
+<h1 id="worked-foundational-example">Worked Foundational Example</h1>
+<p>Consider a fictional predictive system.</p>
+<p>Baseline:</p>
+<pre><code class="language-text">Model:
+  predicts low performance
+
+Evidence:
+  timed symbolic task
+</code></pre>
+<p>Additional observations:</p>
+<pre><code class="language-text">relational task:
+  strong
+
+structural reconstruction:
+  strong
+
+cross-domain transfer:
+  strong
+
+timed symbolic:
+  weak
+</code></pre>
+<p>Predictive Analytics should <strong>not</strong> conclude:</p>
+<pre><code class="language-text">The model is wrong.
+</code></pre>
+<p>It should begin:</p>
+<pre><code class="language-yaml">assessment:
+  baseline:
+    preserved: true
+
+  observations:
+    heterogeneous: true
+
+  model_scope:
+    requires_review: true
+
+  substrate_effect:
+    candidate: true
+
+  structural_pattern:
+    candidate: true
+
+  model_mismatch:
+    status: unresolved
+
+  uncertainty:
+    high
+
+  next_action:
+    collect_replicated_comparable_evidence
+</code></pre>
+<p>That is the foundational behavior.</p>
+<hr>
+<h1 id="baseline-wins-example">Baseline-Wins Example</h1>
+<p>Suppose the additional observations instead show:</p>
+<pre><code class="language-text">relational task:
+  weak
+
+structural reconstruction:
+  weak
+
+cross-domain transfer:
+  weak
+
+timed symbolic:
+  weak
+</code></pre>
+<p>Correct:</p>
+<pre><code class="language-yaml">assessment:
+  baseline:
+    supported: true
+
+  model_mismatch:
+    not_supported
+
+  adapter_added_value:
+    low
+
+  alternate_high_capability_interpretation:
+    unsupported
+</code></pre>
+<p>This possibility is essential.</p>
+<hr>
+<h1 id="unknown-example">Unknown Example</h1>
+<p>Suppose:</p>
+<pre><code class="language-text">Task A:
+  strong
+
+Task B:
+  weak
+</code></pre>
+<p>with no reliable context explaining the difference.</p>
+<p>Correct:</p>
+<pre><code class="language-yaml">assessment:
+  profile:
+    unstable_or_unknown
+
+  substrate_effect:
+    unknown
+
+  regime_effect:
+    unknown
+
+  model_mismatch:
+    unknown
+
+  recommendation:
+    observe_more
+</code></pre>
+<p>Not everything needs an explanation immediately.</p>
+<hr>
+<h1 id="framework-failure-example">Framework Failure Example</h1>
+<p>Suppose future research finds:</p>
+<pre><code class="language-text">baseline model:
+  reliable
+
+FFT:
+  no incremental value
+
+Inverted Star:
+  excessive false mismatch
+
+Structural Detection:
+  poor holdout performance
+
+RTT:
+  excessive false regime alarms
+
+Resonance:
+  effects fail replication
+
+RIQF:
+  poor reliability
+
+full ensemble:
+  greater complexity
+  no predictive improvement
+</code></pre>
+<p>Correct conclusion:</p>
+<pre><code class="language-text">Predictive Analytics enrichment:
+  not_supported
+</code></pre>
+<p>The architecture must be capable of reaching this result.</p>
+<hr>
+<h1 id="comparative-evaluation">Comparative Evaluation</h1>
+<p>A foundational evaluation sequence should compare:</p>
+<pre><code class="language-text">M0:
+  original predictive model
+
+M1:
+  conventional multidimensional baseline
+
+M2:
+  contextual baseline
+
+M3:
+  substrate-aware baseline
+
+M4:
+  selected adapters
+
+M5:
+  complete Predictive Analytics ensemble
+</code></pre>
+<p>Then measure:</p>
+<pre><code class="language-text">predictive performance
+calibration
+reliability
+explanatory value
+profile stability
+fairness
+uncertainty quality
+evidence coverage
+interpretability
+review burden
+privacy burden
+complexity
+</code></pre>
+<hr>
+<h1 id="foundation-of-validation">Foundation of Validation</h1>
+<p>The central empirical question is not:</p>
+<blockquote>
+<p>Does Predictive Analytics tell a better story?</p>
+</blockquote>
+<p>It is:</p>
+<blockquote>
+<p><strong>Does the additional structure improve appropriately defined outcomes while remaining reliable, calibrated, fair, interpretable, and worth its added complexity?</strong></p>
+</blockquote>
+<hr>
+<h1 id="foundation-of-falsification">Foundation of Falsification</h1>
+<p>Every module claim should have a failure condition.</p>
+<p>Examples:</p>
+<pre><code class="language-text">substrate effect
+  fails if it does not replicate
+
+regime effect
+  fails if stable regimes cannot be reproduced
+
+structural pattern
+  fails if it disappears under holdout
+
+adapter value
+  fails if ablation shows no contribution
+
+profile dimension
+  fails if it cannot be measured reliably
+
+coherence claim
+  fails if it depends on evidence echo
+
+model mismatch
+  fails if false-positive mismatch is excessive
+</code></pre>
+<hr>
+<h1 id="foundation-of-interpretation">Foundation of Interpretation</h1>
+<p>Every assessment should distinguish:</p>
+<pre><code class="language-text">what was observed
+what was measured
+what was inferred
+what was generalized
+what remains unknown
+</code></pre>
+<p>Suggested template:</p>
+<pre><code class="language-yaml">interpretation:
+  observed:
+  measured:
+  inferred:
+  generalized:
+
+  evidence:
+  counterevidence:
+
+  confidence:
+  uncertainty:
+
+  applicability:
+  limitations:
+
+  validation_state:
+  decision_authority:
+</code></pre>
+<hr>
+<h1 id="foundation-of-review">Foundation of Review</h1>
+<p>Review should be triggered by evidence conditions, not merely by disagreement with the model.</p>
+<p>Possible triggers:</p>
+<pre><code class="language-text">high consequence
+low model fit
+major contradiction
+high uncertainty
+low evidence coverage
+high counterfactual fragility
+regime uncertainty
+substrate uncertainty
+subject contest
+adapter disagreement
+</code></pre>
+<p>Review does not guarantee reversal.</p>
+<hr>
+<h1 id="foundation-of-simplicity">Foundation of Simplicity</h1>
+<p>Use the smallest architecture that adequately supports the intended inference.</p>
+<p>Conceptually:</p>
+<pre><code class="language-text">if:
+  baseline model sufficient
+
+then:
+  do not require richer ensemble
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">if:
+  multidimensional baseline sufficient
+
+then:
+  do not require five adapters
+</code></pre>
+<p>The module should not reward unnecessary complexity.</p>
+<hr>
+<h1 id="foundation-of-extension">Foundation of Extension</h1>
+<p>New adapters, dimensions, metrics, and observers may be added.</p>
+<p>Each extension should declare:</p>
+<pre><code class="language-text">purpose
+new information contributed
+overlap with existing components
+supported inputs
+unsupported inputs
+metrics
+validation plan
+failure conditions
+ethical limits
+deprecation path
+</code></pre>
+<p>Canon membership does not eliminate these requirements.</p>
+<hr>
+<h1 id="minimal-predictive-analytics-assessment-contract">Minimal Predictive Analytics Assessment Contract</h1>
+<pre><code class="language-yaml">predictive_analytics_assessment:
+  assessment_id:
+
+  observed_system:
+    id:
+    class:
+    boundary:
+
+  intended_use:
+
+  baseline:
+    model:
+    model_version:
+    prediction:
+    confidence:
+    preserved: true
+
+  evidence:
+    sources:
+    independent_source_count:
+    provenance:
+
+  observations:
+
+  measurement:
+    substrate:
+    measurement_version:
+
+  regime:
+    id:
+    confidence:
+
+  dimensions:
+
+  adapters:
+    selected:
+    excluded:
+    selection_reason:
+
+  model_fit:
+  substrate_fit:
+  regime_fit:
+
+  coherence:
+  drift:
+  counterfactual:
+
+  uncertainty:
+  missing_evidence:
+  counterevidence:
+  alternative_interpretations:
+
+  validation_state:
+  limitations:
+
+  review_required:
+  review_path:
+
+  decision_authority: none
+</code></pre>
+<hr>
+<h1 id="research-questions">Research Questions</h1>
+<p>The foundational research program includes:</p>
+<ol>
+<li>When does a richer representation improve prediction?</li>
+<li>When does it improve explanation?</li>
+<li>When does it merely improve storytelling?</li>
+<li>How should model-fit boundaries be measured?</li>
+<li>How should substrate fit be operationalized?</li>
+<li>How should regimes be operationalized?</li>
+<li>Can prediction-observation disagreement be classified reliably?</li>
+<li>Can model mismatch be distinguished from ordinary error?</li>
+<li>Which dimensions are reproducible?</li>
+<li>Which dimensions are redundant?</li>
+<li>Which substrate effects replicate?</li>
+<li>Which disappear after controls?</li>
+<li>Which regime effects replicate?</li>
+<li>Which are merely arbitrary segmentation?</li>
+<li>Does Structural Detection improve holdout performance?</li>
+<li>Does RTT add value beyond established temporal models?</li>
+<li>Does FFT add value beyond existing relational methods?</li>
+<li>Does Resonance add value beyond interaction-effect analysis?</li>
+<li>Does The Inverted Star add value beyond residual and mismatch analysis?</li>
+<li>Can adapter agreement be separated reliably from evidence independence?</li>
+<li>Can coherence be measured without becoming narrative fit?</li>
+<li>Can uncertainty be calibrated?</li>
+<li>Can counterfactual robustness improve interpretation?</li>
+<li>Can the module reliably return <code>no_added_value</code>?</li>
+<li>Can it reliably abstain?</li>
+<li>Does multidimensional assessment improve fairness?</li>
+<li>Can multidimensional assessment introduce new unfairness?</li>
+<li>How much privacy risk does richer representation add?</li>
+<li>How much review burden does it add?</li>
+<li>When should the entire Predictive Analytics enrichment be rejected?</li>
+</ol>
+<hr>
+<h1 id="core-invariants">Core Invariants</h1>
+<pre><code class="language-text">prediction != observed_system
+prediction != identity
+measurement != total_capability
+observation != inference
+inference != identity
+unmeasured != absent
+observed_once != universal
+difference != mismatch
+difference != superiority
+variation != drift
+change != degradation
+pattern != structure
+structure != cause
+regime != cause
+substrate != cause
+resonance != cause
+coherence != truth
+agreement != independence
+adapter_count != evidence_count
+richer_profile != better_model
+complexity != validity
+detail != truth
+counterfactual != observation
+hypothetical != evidence
+confidence != correctness
+unknown != failure
+abstention != failure
+no_added_value != failure
+profile != destiny
+capability != human_worth
+decision_authority != inherited
+canon_alignment != empirical_validation
+</code></pre>
+<hr>
+<h1 id="closing-principle">Closing Principle</h1>
+<p>Predictive Analytics begins with prediction.</p>
+<p>But the real subject of the module is the boundary around prediction.</p>
+<p>What was measured?</p>
+<p>What was omitted?</p>
+<p>Which substrate carried the observation?</p>
+<p>Which regime was active?</p>
+<p>How stable was the relationship?</p>
+<p>What changed through time?</p>
+<p>Which evidence was genuinely independent?</p>
+<p>What happens under another reasonable representation?</p>
+<p>Which claims survive challenge?</p>
+<p>Which collapse?</p>
+<p>What remains unknown?</p>
+<p>And ultimately:</p>
+<blockquote>
+<p><strong>How much does the available evidence actually justify us saying?</strong></p>
+</blockquote>
+<p>Sometimes the correct answer will be more than the original model said.</p>
+<p>Sometimes it will be less.</p>
+<p>Sometimes the baseline will already be sufficient.</p>
+<p>Sometimes the richer framework will fail.</p>
+<p>That symmetry is foundational.</p>
+<blockquote>
+<p><strong>Predictive Analytics is not an attempt to make every prediction broader. It is an attempt to make the boundary of every prediction visible.</strong></p>
+</blockquote>
   </main>
 </body>
 </html>

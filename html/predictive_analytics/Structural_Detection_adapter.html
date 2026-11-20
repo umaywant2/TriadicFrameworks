@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/predictive_analytics/Structural_Detection_adapter.md">
-  <title>Structural_Detection_adapter</title>
+  <title>Structural Detection Adapter</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,7 +92,1735 @@
   </aside>
 
   <main>
+<p><img width="1194" height="672" alt="predictive_analytics_Structural_Detection_adapter_" src="https://github.com/user-attachments/assets/6189c7c7-9d95-4e95-b004-c40d3709eed8" /></p>
+<h1 id="structural-detection-adapter">Structural Detection Adapter</h1>
+<blockquote>
+<p><strong>Do not infer the person from the score. Detect the structure in the evidence.</strong></p>
+</blockquote>
+<h2 id="module">Module</h2>
+<p>Predictive Analytics</p>
+<h2 id="adapter-id">Adapter ID</h2>
+<p><code>structural-detection</code></p>
+<h2 id="status">Status</h2>
+<p>Experimental.</p>
+<h2 id="source-framework">Source Framework</h2>
+<p>Structural Detection</p>
+<h2 id="intended-role">Intended Role</h2>
+<p>Structural pattern, invariant, boundary, faultline, topology, and reconstruction observer.</p>
+<hr>
+<h1 id="purpose">Purpose</h1>
+<p>The Structural Detection Adapter connects Predictive Analytics to structured observations that may not be represented adequately by a conventional scalar, feature set, or single-task prediction.</p>
+<p>Its purpose is to test whether independently observable structure exists across evidence such as:</p>
+<ul>
+<li>recurring relationships,</li>
+<li>invariants,</li>
+<li>boundaries,</li>
+<li>faultlines,</li>
+<li>asymmetries,</li>
+<li>partial-pattern reconstruction,</li>
+<li>cross-context persistence,</li>
+<li>topology,</li>
+<li>and structural changes.</li>
+</ul>
+<p>The adapter does not assume that every pattern is meaningful.</p>
+<p>It does not assume that complexity implies intelligence.</p>
+<p>It does not treat surprising results as hidden structure.</p>
+<p>It does not promote a detected pattern directly into a causal explanation.</p>
+<p>Instead:</p>
+<blockquote>
+<p><strong>Structural Detection asks whether a candidate pattern is reproducible, distinguishable from noise, and useful beyond the original observation.</strong></p>
+</blockquote>
+<hr>
+<h1 id="core-hypothesis">Core Hypothesis</h1>
+<p>Many predictive systems reduce evidence into a representation optimized for prediction:</p>
+<pre><code class="language-text">raw evidence
+     │
+     ▼
+features
+     │
+     ▼
+model
+     │
+     ▼
+prediction
+</code></pre>
+<p>This compression may be entirely appropriate.</p>
+<p>But it may also discard relationships that are useful for understanding why predictions succeed or fail.</p>
+<p>Structural Detection introduces a parallel pass:</p>
+<pre><code class="language-text">                 Evidence
+                    │
+                    ▼
+          ┌───────────────────┐
+          │ Structural Pass   │
+          └─────────┬─────────┘
+                    │
+       ┌────────────┼─────────────┐
+       ▼            ▼             ▼
+    patterns     boundaries    invariants
+       │            │             │
+       ├────────────┼─────────────┤
+       ▼            ▼             ▼
+   faultlines    topology    reconstruction
+       │            │             │
+       └────────────┼─────────────┘
+                    ▼
+          structural profile
+                    │
+                    ▼
+          compare with prediction
+</code></pre>
+<p>The original prediction remains intact.</p>
+<p>Structural observations become additional evidence.</p>
+<hr>
+<h1 id="foundational-principle">Foundational Principle</h1>
+<p>The adapter distinguishes:</p>
+<pre><code class="language-text">pattern
+</code></pre>
+<p>from:</p>
+<pre><code class="language-text">structure
+</code></pre>
+<p>and structure from:</p>
+<pre><code class="language-text">cause
+</code></pre>
+<p>A visible pattern may be:</p>
+<ul>
+<li>random,</li>
+<li>transient,</li>
+<li>task-specific,</li>
+<li>measurement-induced,</li>
+<li>substrate-induced,</li>
+<li>regime-dependent,</li>
+<li>or structurally meaningful.</li>
+</ul>
+<p>Structural Detection exists to test those alternatives.</p>
+<hr>
+<h1 id="structural-observation-model">Structural Observation Model</h1>
+<p>For an evidence set <code>E</code>, the adapter conceptually searches for:</p>
+<pre><code class="language-text">S(E) = {
+  patterns,
+  relationships,
+  invariants,
+  boundaries,
+  faultlines,
+  transformations,
+  topology,
+  reconstruction
+}
+</code></pre>
+<p>This is conceptual notation.</p>
+<p>It is not a validated Structural Detection equation.</p>
+<p>The important requirement is that every claimed element in <code>S(E)</code> must trace back to observable evidence.</p>
+<hr>
+<h1 id="primary-questions">Primary Questions</h1>
+<p>The adapter asks:</p>
+<ol>
+<li>Does a reproducible pattern exist?</li>
+<li>Is the pattern distinguishable from expected noise?</li>
+<li>What relationships define it?</li>
+<li>Which properties remain invariant?</li>
+<li>Where are its boundaries?</li>
+<li>Where does the structure fail?</li>
+<li>Does it persist across tasks?</li>
+<li>Does it persist across substrates?</li>
+<li>Does it persist across regimes?</li>
+<li>Can missing structure be reconstructed from partial evidence?</li>
+<li>Does the reconstruction predict withheld evidence?</li>
+<li>Does the structure add information beyond simpler models?</li>
+<li>What evidence would falsify the structural interpretation?</li>
+</ol>
+<hr>
+<h1 id="observation-classes">Observation Classes</h1>
+<p>The initial adapter uses seven primary observation classes.</p>
+<h2 id="1-pattern">1. Pattern</h2>
+<p>A repeated configuration in defined evidence.</p>
+<p>Examples:</p>
+<pre><code class="language-text">repeated relationship
+repeated sequence
+repeated error form
+repeated successful strategy
+repeated transition signature
+</code></pre>
+<p>A pattern is initially only:</p>
+<pre><code class="language-text">candidate_pattern
+</code></pre>
+<p>until replication establishes otherwise.</p>
+<hr>
+<h2 id="2-invariant">2. Invariant</h2>
+<p>A feature or relationship that remains sufficiently stable across defined transformations.</p>
+<p>Example:</p>
+<pre><code class="language-text">task_a:
+  relation X -&gt; Y
 
+task_b:
+  relation X -&gt; Y
+
+substrate_b:
+  relation X -&gt; Y
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-text">invariant:
+  X -&gt; Y
+</code></pre>
+<p>But an invariant must declare the transformations across which it was tested.</p>
+<p>No observation is universally invariant merely because it appeared repeatedly.</p>
+<hr>
+<h1 id="invariant-record">Invariant Record</h1>
+<pre><code class="language-yaml">invariant:
+  id: invariant-001
+
+  relation:
+    source: X
+    target: Y
+
+  tested_across:
+    - task_a
+    - task_b
+    - substrate_b
+
+  preserved:
+    - task_a
+    - task_b
+
+  violated:
+    - substrate_b
+
+  status: partial
+
+  confidence: medium
+</code></pre>
+<p>This may be more informative than forcing:</p>
+<pre><code class="language-text">invariant: true
+</code></pre>
+<hr>
+<h1 id="3-boundary">3. Boundary</h1>
+<p>A boundary marks where an observed structural relationship begins, ends, weakens, reverses, or becomes unsupported.</p>
+<p>Candidate boundaries include:</p>
+<pre><code class="language-text">task boundary
+substrate boundary
+temporal boundary
+domain boundary
+regime boundary
+interaction boundary
+tool boundary
+model boundary
+</code></pre>
+<p>Structural Detection identifies evidence around the boundary.</p>
+<p>It does not automatically explain why the boundary exists.</p>
+<hr>
+<h1 id="boundary-example">Boundary Example</h1>
+<pre><code class="language-text">relational_tasks:
+  pattern: strong
+
+symbolic_tasks:
+  pattern: weak
+</code></pre>
+<p>Candidate finding:</p>
+<pre><code class="language-text">boundary:
+  type: task_representation
+  status: candidate
+</code></pre>
+<p>Further analysis is required before calling this a substrate effect.</p>
+<hr>
+<h1 id="4-faultline">4. Faultline</h1>
+<p>A faultline is a location where an otherwise coherent structure becomes unstable, contradictory, or discontinuous.</p>
+<p>Conceptually:</p>
+<pre><code class="language-text">structure:
+  A -&gt; B -&gt; C -&gt; D -&gt; E
+
+faultline:
+             ^
+             between C and D
+</code></pre>
+<p>Possible manifestations:</p>
+<ul>
+<li>sudden prediction error,</li>
+<li>contradiction,</li>
+<li>transfer failure,</li>
+<li>instability,</li>
+<li>boundary violation,</li>
+<li>context-specific collapse,</li>
+<li>unexpected dependence.</li>
+</ul>
+<hr>
+<h1 id="faultline-record">Faultline Record</h1>
+<pre><code class="language-yaml">faultline:
+  id: faultline-001
+
+  structure_id: structure-001
+
+  location:
+    between:
+      - C
+      - D
+
+  evidence:
+    - observation-17
+    - observation-19
+
+  persistence:
+    status: not_tested
+
+  regime_conditioned: unknown
+  substrate_conditioned: unknown
+
+  confidence: low
+</code></pre>
+<hr>
+<h1 id="5-topology">5. Topology</h1>
+<p>Topology describes the shape of relationships among observed elements.</p>
+<p>Candidate structures might include:</p>
+<pre><code class="language-text">chain
+branch
+hub
+cluster
+cycle
+hierarchy
+mesh
+bridge
+isolated_component
+mixed
+unknown
+</code></pre>
+<p>These are descriptive candidates.</p>
+<p>They are not claims that cognition literally possesses a particular physical topology.</p>
+<hr>
+<h1 id="topology-example">Topology Example</h1>
+<pre><code class="language-text">        B
+        │
+A ───── C ───── D
+        │
+        E
+</code></pre>
+<p>Candidate interpretation:</p>
+<pre><code class="language-text">C:
+  role: hub
+</code></pre>
+<p>Whether that structural role matters predictively must be tested.</p>
+<hr>
+<h1 id="6-reconstruction">6. Reconstruction</h1>
+<p>Structural reconstruction asks whether a system can recover meaningful structure from incomplete evidence.</p>
+<p>Example:</p>
+<pre><code class="language-text">Known:
+  A -&gt; B
+  B -&gt; C
+  ? -&gt; D
+
+Observed reconstruction:
+  C -&gt; D
+</code></pre>
+<p>A reconstruction should be tested against withheld evidence.</p>
+<p>A convincing narrative completion is not enough.</p>
+<hr>
+<h1 id="reconstruction-test">Reconstruction Test</h1>
+<pre><code class="language-text">training_evidence:
+  partial structure
+
+held_out_evidence:
+  hidden
+
+reconstruction:
+  predicted missing relationship
+
+evaluation:
+  compare reconstruction
+  against held_out evidence
+</code></pre>
+<p>Possible outputs:</p>
+<pre><code class="language-text">supported
+partially_supported
+unsupported
+ambiguous
+insufficient_evidence
+</code></pre>
+<hr>
+<h1 id="7-structural-compression">7. Structural Compression</h1>
+<p>A useful structural representation may explain multiple observations with fewer independent assumptions.</p>
+<p>Conceptually:</p>
+<pre><code class="language-text">20 isolated observations
+</code></pre>
+<p>may compress to:</p>
+<pre><code class="language-text">3 structural rules
+</code></pre>
+<p>if those rules reconstruct or predict the observations reliably.</p>
+<p>Compression is useful only if it preserves relevant information.</p>
+<hr>
+<h1 id="compression-warning">Compression Warning</h1>
+<p>Highly compressed explanations can be seductive.</p>
+<p>A simple structural story may appear elegant while discarding important exceptions.</p>
+<p>Therefore structural compression must retain:</p>
+<pre><code class="language-text">explained_evidence
+unexplained_evidence
+contradictions
+exceptions
+uncertainty
+</code></pre>
+<hr>
+<h1 id="adapter-inputs">Adapter Inputs</h1>
+<p>The Structural Detection Adapter may accept:</p>
+<pre><code class="language-text">existing_prediction
+prediction_scope
+
+observations
+observation_context
+
+relationship_map
+boundary_map
+
+task_results
+substrate_results
+regime_results
+
+temporal_series
+comparison_groups
+
+held_out_evidence
+uncertainty
+</code></pre>
+<hr>
+<h1 id="unsupported-inputs">Unsupported Inputs</h1>
+<p>The adapter should abstain from claims based on:</p>
+<ul>
+<li>isolated anecdotes,</li>
+<li>undocumented relationships,</li>
+<li>unsupported causal explanations,</li>
+<li>metaphoric patterns presented as measurement,</li>
+<li>patterns selected after seeing preferred outcomes,</li>
+<li>arbitrary graph construction,</li>
+<li>hidden capability inferred from disagreement alone,</li>
+<li>aesthetically appealing diagrams without measurable evidence.</li>
+</ul>
+<hr>
+<h1 id="core-adapter-pipeline">Core Adapter Pipeline</h1>
+<pre><code class="language-text">Preserve Existing Prediction
+        │
+        ▼
+Normalize Observation Records
+        │
+        ▼
+Generate Candidate Patterns
+        │
+        ▼
+Test Replication
+        │
+        ▼
+Map Relationships
+        │
+        ▼
+Identify Candidate Invariants
+        │
+        ▼
+Identify Boundaries
+        │
+        ▼
+Identify Faultlines
+        │
+        ▼
+Test Reconstruction
+        │
+        ▼
+Test Held-Out Evidence
+        │
+        ▼
+Compare Against Simpler Models
+        │
+        ▼
+Return:
+  structure_supported
+  partial_structure
+  context_bound_structure
+  contradictory_structure
+  no_structure_detected
+  no_added_value
+  insufficient_evidence
+</code></pre>
+<hr>
+<h1 id="structural-detection-operators">Structural Detection Operators</h1>
+<h2 id="sd-pattern"><code>SD-Pattern</code></h2>
+<p>Generates candidate patterns from observations.</p>
+<pre><code class="language-text">SD-Pattern(evidence)
+  -&gt; candidate_patterns
+</code></pre>
+<p>Candidate generation should be separate from confirmation.</p>
+<hr>
+<h2 id="sd-replicate"><code>SD-Replicate</code></h2>
+<p>Tests whether a candidate pattern repeats.</p>
+<pre><code class="language-text">SD-Replicate(pattern, evidence_set)
+  -&gt; replication_record
+</code></pre>
+<hr>
+<h2 id="sd-invariant"><code>SD-Invariant</code></h2>
+<p>Tests whether a property survives defined transformations.</p>
+<pre><code class="language-text">SD-Invariant(pattern, transformations)
+  -&gt; invariant_profile
+</code></pre>
+<p>The transformation set must be recorded.</p>
+<hr>
+<h2 id="sd-boundary"><code>SD-Boundary</code></h2>
+<p>Identifies where a structural relationship changes or fails.</p>
+<pre><code class="language-text">SD-Boundary(structure)
+  -&gt; boundary_candidates
+</code></pre>
+<hr>
+<h2 id="sd-faultline"><code>SD-Faultline</code></h2>
+<p>Identifies instability or contradiction inside an otherwise coherent structure.</p>
+<pre><code class="language-text">SD-Faultline(structure)
+  -&gt; faultline_profile
+</code></pre>
+<hr>
+<h2 id="sd-topology"><code>SD-Topology</code></h2>
+<p>Represents the relational shape.</p>
+<pre><code class="language-text">SD-Topology(relationships)
+  -&gt; topology_profile
+</code></pre>
+<hr>
+<h2 id="sd-reconstruct"><code>SD-Reconstruct</code></h2>
+<p>Attempts reconstruction from incomplete evidence.</p>
+<pre><code class="language-text">SD-Reconstruct(partial_evidence)
+  -&gt; reconstruction_candidate
+</code></pre>
+<hr>
+<h2 id="sd-holdout"><code>SD-Holdout</code></h2>
+<p>Tests reconstruction against withheld evidence.</p>
+<pre><code class="language-text">SD-Holdout(reconstruction, held_out_evidence)
+  -&gt; reconstruction_validation
+</code></pre>
+<hr>
+<h2 id="sd-compress"><code>SD-Compress</code></h2>
+<p>Tests whether a structural representation reduces complexity without unacceptable information loss.</p>
+<pre><code class="language-text">SD-Compress(evidence)
+  -&gt; structural_compression
+</code></pre>
+<hr>
+<h1 id="candidate-structural-states">Candidate Structural States</h1>
+<pre><code class="language-text">not_tested
+candidate
+replicated
+partially_replicated
+stable
+context_bound
+substrate_bound
+regime_bound
+temporally_bound
+contradictory
+unstable
+unsupported
+unknown
+</code></pre>
+<hr>
+<h1 id="confidence-states">Confidence States</h1>
+<pre><code class="language-text">none
+very_low
+low
+medium
+high
+very_high
+unknown
+</code></pre>
+<p>Confidence should be based on explicit evidence rules.</p>
+<p>It should not represent evaluator enthusiasm.</p>
+<hr>
+<h1 id="structural-detection-record">Structural Detection Record</h1>
+<p>Suggested representation:</p>
+<pre><code class="language-yaml">structural_detection:
+  observation_id: sd-observation-001
+
+  target:
+    id: subject-or-system-id
+    boundary: declared
+
+  baseline:
+    prediction: preserved
+    scope: declared
+
+  evidence:
+    observations:
+      - observation-001
+      - observation-002
+      - observation-003
+
+  patterns:
+    - id: pattern-001
+      status: candidate
+      confidence: medium
+
+  relationships:
+    - source: A
+      target: B
+      type: dependency
+      evidence:
+        - observation-001
+
+  invariants:
+    - id: invariant-001
+      status: partial
+      confidence: low
+
+  boundaries:
+    - id: boundary-001
+      status: candidate
+
+  faultlines:
+    - id: faultline-001
+      status: not_tested
+
+  topology:
+    type: mixed
+    confidence: low
+
+  reconstruction:
+    tested: false
+
+  held_out_validation:
+    tested: false
+
+  interpretation:
+    status: partial_structure
+
+  uncertainty:
+    - limited observations
+
+  decision_authority: none
+</code></pre>
+<hr>
+<h1 id="worked-example-pax-01">Worked Example — PAX-01</h1>
+<h2 id="scenario">Scenario</h2>
+<p>Synthetic subject <code>PAX-01</code> demonstrates this illustrative profile:</p>
+<pre><code class="language-text">timed_symbolic_1:
+  weak
+
+timed_symbolic_2:
+  weak
+
+relational_mapping_1:
+  strong
+
+relational_mapping_2:
+  strong
+
+cross_domain_transfer_1:
+  strong
+
+cross_domain_transfer_2:
+  strong
+
+long_form_synthesis_1:
+  strong
+
+novel_symbolic_1:
+  weak
+</code></pre>
+<p>A traditional aggregate might report:</p>
+<pre><code class="language-text">overall:
+  moderate-or-low
+</code></pre>
+<p>Structural Detection does not begin by replacing that result.</p>
+<p>It asks whether the variation has reproducible structure.</p>
+<hr>
+<h1 id="pass-1-pattern-detection">Pass 1 — Pattern Detection</h1>
+<p>Candidate patterns:</p>
+<pre><code class="language-text">Pattern A:
+  timed symbolic tasks
+  -&gt; repeated weak performance
+
+Pattern B:
+  relational structure tasks
+  -&gt; repeated strong performance
+
+Pattern C:
+  cross-domain structural transfer
+  -&gt; repeated strong performance
+</code></pre>
+<p>Status:</p>
+<pre><code class="language-text">candidate
+</code></pre>
+<p>Nothing has yet been established as a general trait.</p>
+<hr>
+<h1 id="pass-2-replication">Pass 2 — Replication</h1>
+<pre><code class="language-text">timed_symbolic:
+  observations: 3
+  direction: consistently weak
+
+relational_mapping:
+  observations: 2
+  direction: consistently strong
+
+cross_domain_transfer:
+  observations: 2
+  direction: consistently strong
+</code></pre>
+<p>For a real study, these counts alone would not establish reliability.</p>
+<p>They merely illustrate the grammar.</p>
+<p>Candidate result:</p>
+<pre><code class="language-text">pattern_replication:
+  observed_in_example
+</code></pre>
+<hr>
+<h1 id="pass-3-structural-relationship">Pass 3 — Structural Relationship</h1>
+<p>Candidate relationship:</p>
+<pre><code class="language-text">task_representation
+        │
+        ▼
+observed_performance
+</code></pre>
+<p>But this remains underdetermined.</p>
+<p>Possible explanations include:</p>
+<pre><code class="language-text">substrate effect
+task difficulty
+domain familiarity
+time pressure
+working memory demand
+motivation
+practice
+measurement noise
+unknown interaction
+</code></pre>
+<p>Correct output:</p>
+<pre><code class="language-text">relationship:
+  candidate
+
+causal_explanation:
+  unresolved
+</code></pre>
+<hr>
+<h1 id="pass-4-boundary-detection">Pass 4 — Boundary Detection</h1>
+<p>A possible boundary appears between:</p>
+<pre><code class="language-text">rapid / constrained / symbolic
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">reflective / relational / generative
+</code></pre>
+<p>Structural Detection records:</p>
+<pre><code class="language-text">boundary_candidate:
+  detected: true
+
+materiality:
+  plausible
+
+cause:
+  unresolved
+</code></pre>
+<p>FFT may map this boundary structurally.</p>
+<p>RTT may test whether observations organize into stable regimes.</p>
+<p>Resonance may test whether expression is repeatedly suppressed or amplified.</p>
+<hr>
+<h1 id="pass-5-invariant-detection">Pass 5 — Invariant Detection</h1>
+<p>Across several relational tasks, PAX-01 repeatedly:</p>
+<pre><code class="language-text">identifies system relationships
+preserves relevant constraints
+detects structural inconsistencies
+transfers relationships into a new domain
+</code></pre>
+<p>Candidate invariant:</p>
+<pre><code class="language-text">structural_relationship_preservation
+</code></pre>
+<p>But:</p>
+<pre><code class="language-text">tested_domains:
+  limited
+
+generalizability:
+  unknown
+</code></pre>
+<p>Therefore:</p>
+<pre><code class="language-text">invariant:
+  status: partial
+</code></pre>
+<hr>
+<h1 id="pass-6-faultline-detection">Pass 6 — Faultline Detection</h1>
+<p>Suppose PAX-01 succeeds on structural reconstruction until severe time constraints are introduced.</p>
+<pre><code class="language-text">reflective structure:
+  strong
+
+moderate time constraint:
+  strong
+
+severe time constraint:
+  weak
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-yaml">faultline:
+  location: severe_time_constraint
+
+  status: candidate
+
+  cause:
+    unresolved
+
+  possible_interpretations:
+    - processing-speed interaction
+    - measurement artifact
+    - stress response
+    - working-memory interaction
+    - substrate mismatch
+    - ordinary difficulty effect
+</code></pre>
+<p>The faultline is observable.</p>
+<p>Its explanation remains open.</p>
+<hr>
+<h1 id="pass-7-reconstruction">Pass 7 — Reconstruction</h1>
+<p>PAX-01 receives a partially specified system:</p>
+<pre><code class="language-text">A -&gt; B
+B -&gt; C
+C -&gt; ?
+? -&gt; E
+</code></pre>
+<p>Task:</p>
+<pre><code class="language-text">infer missing relationships
+</code></pre>
+<p>If the reconstruction matches held-out evidence repeatedly, Structural Detection may record:</p>
+<pre><code class="language-text">partial_evidence_reconstruction:
+  supported
+</code></pre>
+<p>That is a directly testable operation.</p>
+<hr>
+<h1 id="pass-8-holdout-validation">Pass 8 — Holdout Validation</h1>
+<p>Suppose the system hides:</p>
+<pre><code class="language-text">C -&gt; D
+D -&gt; E
+</code></pre>
+<p>PAX-01 predicts:</p>
+<pre><code class="language-text">C -&gt; D
+D -&gt; E
+</code></pre>
+<p>Result:</p>
+<pre><code class="language-text">reconstruction:
+  accurate_on_this_task
+</code></pre>
+<p>Not:</p>
+<pre><code class="language-text">general_reconstruction_intelligence:
+  high
+</code></pre>
+<p>The latter requires considerably more evidence.</p>
+<hr>
+<h1 id="pass-9-structural-profile">Pass 9 — Structural Profile</h1>
+<p>Illustrative result:</p>
+<pre><code class="language-yaml">structural_profile:
+  pattern_detection:
+    expression: strong
+    confidence: medium
+
+  relationship_mapping:
+    expression: strong
+    confidence: medium
+
+  boundary_detection:
+    expression: moderate
+    confidence: low
+
+  invariant_recognition:
+    expression: strong
+    confidence: low
+
+  partial_evidence_reconstruction:
+    expression: strong
+    confidence: medium
+
+  timed_symbolic_processing:
+    expression: weak
+    confidence: medium
+
+  generalization:
+    status: insufficient_evidence
+</code></pre>
+<p>The important feature is the <strong>shape</strong>.</p>
+<p>No master score is required.</p>
+<hr>
+<h1 id="negative-example">Negative Example</h1>
+<p>Structural Detection must also successfully report:</p>
+<pre><code class="language-text">no stable structure detected
+</code></pre>
+<p>Suppose:</p>
+<pre><code class="language-text">Task A: strong
+Task B: weak
+Task C: moderate
+Task D: strong
+Task E: weak
+Task F: moderate
+</code></pre>
+<p>with no repeatable relationship across:</p>
+<ul>
+<li>task representation,</li>
+<li>substrate,</li>
+<li>regime,</li>
+<li>time,</li>
+<li>difficulty,</li>
+<li>or context.</li>
+</ul>
+<p>Correct result:</p>
+<pre><code class="language-yaml">structure:
+  detected: false
+
+variation:
+  present: true
+
+interpretation:
+  status: unresolved
+
+decision_authority: none
+</code></pre>
+<p>Variation alone is not structure.</p>
+<hr>
+<h1 id="another-negative-example-false-pattern">Another Negative Example — False Pattern</h1>
+<p>Suppose the first three observations are:</p>
+<pre><code class="language-text">A: strong
+B: strong
+C: strong
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-text">performance invariant
+</code></pre>
+<p>Then held-out observations produce:</p>
+<pre><code class="language-text">D: weak
+E: weak
+F: moderate
+</code></pre>
+<p>Correct response:</p>
+<pre><code class="language-text">candidate_invariant:
+  rejected_or_revised
+</code></pre>
+<p>Not:</p>
+<pre><code class="language-text">D, E, and F are exceptions
+</code></pre>
+<p>unless an independently supported structural reason exists.</p>
+<p>This is critical.</p>
+<p>The framework must allow evidence to destroy a preferred pattern.</p>
+<hr>
+<h1 id="relationship-to-fft">Relationship to FFT</h1>
+<p>FFT primarily maps:</p>
+<pre><code class="language-text">relationships
+boundaries
+constraints
+local/global context
+</code></pre>
+<p>Structural Detection asks whether stable structure exists within those mappings.</p>
+<p>Useful shorthand:</p>
+<pre><code class="language-text">FFT:
+  map the field
+
+Structural Detection:
+  test the structure
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-text">FFT:
+  task representation changes
+
+Structural Detection:
+  repeated performance pattern aligns
+  with that boundary
+</code></pre>
+<p>If Structural Detection cannot reproduce the pattern, the FFT relationship should remain weak.</p>
+<hr>
+<h1 id="relationship-to-the-inverted-star">Relationship to The Inverted Star</h1>
+<p>The Inverted Star asks:</p>
+<pre><code class="language-text">Does prediction materially disagree
+with demonstrated behavior?
+</code></pre>
+<p>Structural Detection asks:</p>
+<pre><code class="language-text">Does that disagreement contain
+reproducible structure?
+</code></pre>
+<p>Pipeline:</p>
+<pre><code class="language-text">prediction
+    │
+    ▼
+observation disagreement
+    │
+    ▼
+Inverted Star
+    │
+    ▼
+inversion candidate
+    │
+    ▼
+Structural Detection
+    │
+    ▼
+structured discrepancy?
+</code></pre>
+<p>A single inversion does not establish a structural pattern.</p>
+<hr>
+<h1 id="relationship-to-rtt">Relationship to RTT</h1>
+<p>RTT examines time, regime, transition, drift, continuity, and recalibration.</p>
+<p>Structural Detection can operate:</p>
+<pre><code class="language-text">within regime
+between regimes
+across transitions
+across time
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-text">Regime A:
+  pattern X
+
+Regime B:
+  pattern X
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-text">cross_regime_invariant
+</code></pre>
+<p>Or:</p>
+<pre><code class="language-text">Regime A:
+  pattern X
+
+Regime B:
+  pattern Y
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-text">structural_transition
+</code></pre>
+<p>RTT tests whether the regime distinction itself is meaningful.</p>
+<hr>
+<h1 id="relationship-to-resonance">Relationship to Resonance</h1>
+<p>Structural Detection identifies stable patterns.</p>
+<p>Resonance examines whether capability expression changes systematically across contexts.</p>
+<p>Example:</p>
+<pre><code class="language-text">Context A:
+  structural reconstruction strong
+
+Context B:
+  structural reconstruction weak
+</code></pre>
+<p>Structural Detection:</p>
+<pre><code class="language-text">context-conditioned pattern candidate
+</code></pre>
+<p>Resonance:</p>
+<pre><code class="language-text">amplification_or_suppression candidate
+</code></pre>
+<p>Neither should assign cause automatically.</p>
+<hr>
+<h1 id="relationship-to-resonant-iq-fingerprint">Relationship to Resonant IQ Fingerprint</h1>
+<p>Structural Detection is especially relevant to candidate RIQF dimensions such as:</p>
+<pre><code class="language-text">pattern_recognition
+structural_reasoning
+cross_domain_transfer
+regime_recognition
+anomaly_detection
+coherence_maintenance
+reconstruction_from_partial_evidence
+long_horizon_integration
+</code></pre>
+<p>But adapter output and dimension output must remain distinct.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">adapter:
+  structural_detection:
+    relationship_mapping: supported
+    boundary_detection: candidate
+    invariant_recognition: partial
+
+dimension:
+  structural_reasoning:
+    expression: strong
+    confidence: medium
+</code></pre>
+<p>The dimension requires its own evidence rule.</p>
+<p>It cannot simply inherit the adapter's label.</p>
+<hr>
+<h1 id="relationship-to-conventional-iq-like-assessment">Relationship to Conventional IQ-Like Assessment</h1>
+<p>The Structural Detection Adapter does not claim:</p>
+<pre><code class="language-text">structural_reasoning
+  =
+intelligence
+</code></pre>
+<p>Nor:</p>
+<pre><code class="language-text">structural reasoning score
+  -&gt;
+better IQ
+</code></pre>
+<p>Instead it allows an assessment to say:</p>
+<pre><code class="language-text">conventional observation:
+  rapid symbolic performance: weak
+
+additional structural observations:
+  relationship mapping: strong
+  partial reconstruction: strong
+  invariant recognition: partial
+
+global inference:
+  insufficient evidence
+</code></pre>
+<p>This is more descriptive without pretending the new profile is automatically more valid.</p>
+<hr>
+<h1 id="model-mismatch-use">Model Mismatch Use</h1>
+<p>Structural patterns may contribute to mismatch analysis.</p>
+<p>Example:</p>
+<pre><code class="language-text">model predicts:
+  uniformly weak reasoning performance
+
+observations show:
+  weak symbolic speed
+  strong relational mapping
+  strong structural reconstruction
+
+structural finding:
+  prediction does not capture observed heterogeneity
+</code></pre>
+<p>The correct initial conclusion:</p>
+<pre><code class="language-text">model_scope:
+  potentially_overextended
+</code></pre>
+<p>Not:</p>
+<pre><code class="language-text">model:
+  invalid
+</code></pre>
+<hr>
+<h1 id="structural-detection-versus-classification">Structural Detection Versus Classification</h1>
+<p>Classification asks:</p>
+<blockquote>
+<p>Which predefined category does this observation belong to?</p>
+</blockquote>
+<p>Structural Detection may instead ask:</p>
+<blockquote>
+<p>What relationships organize the observations before categories are imposed?</p>
+</blockquote>
+<p>Both are useful.</p>
+<p>Potential workflow:</p>
+<pre><code class="language-text">evidence
+   │
+   ├── classification model
+   │        │
+   │        ▼
+   │      category
+   │
+   └── structural detection
+            │
+            ▼
+         topology
+            │
+            ▼
+         compare
+</code></pre>
+<p>Disagreement between the two can itself become analyzable evidence.</p>
+<hr>
+<h1 id="structural-detection-versus-clustering">Structural Detection Versus Clustering</h1>
+<p>Clustering can reveal groups in data.</p>
+<p>Structural Detection is broader and may include:</p>
+<pre><code class="language-text">clusters
+boundaries
+relationships
+invariants
+faultlines
+transformations
+reconstruction
+</code></pre>
+<p>However, where ordinary clustering or graph analysis explains an observation sufficiently, the adapter should not claim additional value.</p>
+<hr>
+<h1 id="structural-detection-versus-narrative-pattern-recognition">Structural Detection Versus Narrative Pattern Recognition</h1>
+<p>Humans and models are both capable of seeing patterns in noise.</p>
+<p>Therefore Structural Detection must distinguish:</p>
+<pre><code class="language-text">pattern proposed
+</code></pre>
+<p>from:</p>
+<pre><code class="language-text">pattern replicated
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">pattern replicated
+</code></pre>
+<p>from:</p>
+<pre><code class="language-text">pattern useful
+</code></pre>
+<p>These are separate stages.</p>
+<hr>
+<h1 id="validation-requirements">Validation Requirements</h1>
+<p>The adapter should be evaluated against simpler baselines.</p>
+<pre><code class="language-text">M0:
+  original predictive model
+
+M1:
+  original model
+  + conventional feature interactions
+
+M2:
+  multidimensional baseline
+
+M3:
+  clustering / relational baseline
+
+M4:
+  graph or network baseline where appropriate
+
+M5:
+  M4 + Structural Detection
+
+M6:
+  complete Predictive Analytics ensemble
+</code></pre>
+<p>Structural Detection earns its complexity only if <code>M5</code> contributes useful information beyond credible simpler alternatives.</p>
+<hr>
+<h1 id="primary-metrics">Primary Metrics</h1>
+<h2 id="pa-m04-test-retest-stability"><code>PA-M04 — Test-Retest Stability</code></h2>
+<p>Do structural observations reproduce across comparable administrations?</p>
+<hr>
+<h2 id="pa-m05-alternate-form-stability"><code>PA-M05 — Alternate-Form Stability</code></h2>
+<p>Do the same candidate dimensions appear across meaningfully equivalent tasks?</p>
+<hr>
+<h2 id="pa-m06-inter-rater-agreement"><code>PA-M06 — Inter-Rater Agreement</code></h2>
+<p>Can independent evaluators reproduce structural classifications?</p>
+<hr>
+<h2 id="pa-m07-profile-topology-stability"><code>PA-M07 — Profile Topology Stability</code></h2>
+<p>Does the overall relational shape remain reasonably stable where expected?</p>
+<hr>
+<h2 id="pa-m08-convergent-association"><code>PA-M08 — Convergent Association</code></h2>
+<p>Do structural findings relate to independent observations expected to represent similar operations?</p>
+<hr>
+<h2 id="pa-m09-discriminant-separation"><code>PA-M09 — Discriminant Separation</code></h2>
+<p>Are Structural Detection constructs actually distinct?</p>
+<p>For example:</p>
+<pre><code class="language-text">pattern recognition
+structural reasoning
+anomaly detection
+boundary detection
+</code></pre>
+<p>should not remain separate dimensions if empirical evidence shows they are functionally redundant.</p>
+<hr>
+<h2 id="pa-m10-incremental-explanatory-value"><code>PA-M10 — Incremental Explanatory Value</code></h2>
+<p>Does Structural Detection explain outcomes beyond simpler models?</p>
+<hr>
+<h2 id="pa-m11-incremental-predictive-value"><code>PA-M11 — Incremental Predictive Value</code></h2>
+<p>Does it improve out-of-sample prediction where prediction is part of the intended use?</p>
+<hr>
+<h2 id="pa-m24-cross-observation-coherence"><code>PA-M24 — Cross-Observation Coherence</code></h2>
+<p>Do independent structural observations align?</p>
+<hr>
+<h2 id="pa-m25-profile-contradiction-density"><code>PA-M25 — Profile Contradiction Density</code></h2>
+<p>Where does the structural profile contradict itself?</p>
+<p>Those contradictions should remain visible.</p>
+<hr>
+<h2 id="pa-m33-irrelevant-perturbation-stability"><code>PA-M33 — Irrelevant Perturbation Stability</code></h2>
+<p>Does the detected structure survive irrelevant changes?</p>
+<hr>
+<h2 id="pa-m34-relevant-change-sensitivity"><code>PA-M34 — Relevant Change Sensitivity</code></h2>
+<p>Does the structure update when meaningful evidence changes?</p>
+<hr>
+<h2 id="pa-m36-adapter-ablation-effect"><code>PA-M36 — Adapter Ablation Effect</code></h2>
+<p>Conceptually:</p>
+<pre><code class="language-text">AAE(Structural Detection) =
+  performance(full_adapter_set)
+  -
+  performance(without_structural_detection)
+</code></pre>
+<p>If removing the adapter produces no material loss, its contribution has not been demonstrated.</p>
+<hr>
+<h1 id="special-metric-reconstruction-performance">Special Metric — Reconstruction Performance</h1>
+<p>A future dedicated metric should test structural reconstruction against held-out evidence.</p>
+<p>Candidate:</p>
+<pre><code class="language-text">PA-SD-RP
+
+reconstruction_performance =
+  correctly_reconstructed_relationships
+  /
+  held_out_relationships
+</code></pre>
+<p>This should not enter the canonical <code>PA-M##</code> registry until the metric definition and applicability are reviewed.</p>
+<hr>
+<h1 id="special-metric-invariant-survival">Special Metric — Invariant Survival</h1>
+<p>Candidate experimental metric:</p>
+<pre><code class="language-text">PA-SD-IS
+
+invariant_survival =
+  transformations_preserving_relation
+  /
+  eligible_transformations
+</code></pre>
+<p>Again, this remains adapter-local until validated for inclusion in the module metric registry.</p>
+<hr>
+<h1 id="required-validation-cases">Required Validation Cases</h1>
+<p>Structural Detection studies should include:</p>
+<pre><code class="language-text">true repeated pattern
+random noise
+
+stable invariant
+false invariant
+
+clear boundary
+no boundary
+
+real faultline
+random discontinuity
+
+reconstructable missing structure
+non-reconstructable missing structure
+
+stable topology
+changing topology
+
+substrate-bound pattern
+regime-bound pattern
+
+high-domain-expertise condition
+low-domain-expertise condition
+
+favorable structural interpretation
+adverse structural interpretation
+no meaningful structure
+</code></pre>
+<p>The adapter must perform correctly when structure is absent.</p>
+<hr>
+<h1 id="failure-modes">Failure Modes</h1>
+<h2 id="apophenia">Apophenia</h2>
+<p>Risk:</p>
+<p>Random or weakly related events are interpreted as meaningful structure.</p>
+<p>Mitigation:</p>
+<p>Replication, holdout testing, preregistration, independent review, and null comparisons.</p>
+<hr>
+<h2 id="pattern-shopping">Pattern Shopping</h2>
+<p>Risk:</p>
+<p>Many candidate patterns are explored until one appears meaningful.</p>
+<p>Mitigation:</p>
+<p>Record search space and distinguish exploratory findings from confirmatory findings.</p>
+<hr>
+<h2 id="boundary-shopping">Boundary Shopping</h2>
+<p>Risk:</p>
+<p>Boundaries move until a preferred structure appears.</p>
+<p>Mitigation:</p>
+<p>Predeclare boundaries where possible and report sensitivity to alternatives.</p>
+<hr>
+<h2 id="structural-overfitting">Structural Overfitting</h2>
+<p>Risk:</p>
+<p>A complex relation map perfectly explains observed evidence but fails on new observations.</p>
+<p>Mitigation:</p>
+<p>Use holdout and out-of-sample validation.</p>
+<hr>
+<h2 id="exception-suppression">Exception Suppression</h2>
+<p>Risk:</p>
+<p>Contradictory evidence is dismissed as an exception to protect an appealing structure.</p>
+<p>Mitigation:</p>
+<p>Record contradiction density and counterevidence.</p>
+<hr>
+<h2 id="topology-theater">Topology Theater</h2>
+<p>Risk:</p>
+<p>Graph or network representations create visual sophistication without measurable benefit.</p>
+<p>Mitigation:</p>
+<p>Require incremental explanatory or predictive value.</p>
+<hr>
+<h2 id="causal-overreach">Causal Overreach</h2>
+<p>Risk:</p>
+<p>A repeated structure is treated as causal.</p>
+<p>Mitigation:</p>
+<p>Maintain:</p>
+<pre><code class="language-text">structure_observed: true
+causal_evidence: unresolved
+</code></pre>
+<hr>
+<h2 id="ability-inflation">Ability Inflation</h2>
+<p>Risk:</p>
+<p>Structural competence on selected tasks is generalized into high overall intelligence.</p>
+<p>Mitigation:</p>
+<p>Keep dimension scope explicit.</p>
+<hr>
+<h2 id="rescue-bias">Rescue Bias</h2>
+<p>Risk:</p>
+<p>Strong structural observations are selectively sought after an unfavorable conventional result.</p>
+<p>Mitigation:</p>
+<p>Apply the adapter symmetrically across the evaluation set.</p>
+<hr>
+<h2 id="adverse-amplification">Adverse Amplification</h2>
+<p>Risk:</p>
+<p>Weak structural observations are used to make an existing adverse profile even more globally negative.</p>
+<p>Mitigation:</p>
+<p>Apply the same scope and uncertainty limitations in both directions.</p>
+<hr>
+<h2 id="adapter-echo">Adapter Echo</h2>
+<p>Risk:</p>
+<p>FFT, RTT, Resonance, and Structural Detection reinterpret the same evidence and are then counted as independent confirmation.</p>
+<p>Mitigation:</p>
+<p>Track evidence provenance separately from adapter outputs.</p>
+<pre><code class="language-text">five interpretations
+of one observation
+!=
+five independent observations
+</code></pre>
+<hr>
+<h2 id="canon-confirmation">Canon Confirmation</h2>
+<p>Risk:</p>
+<p>Structural Detection is accepted because it fits TriadicFrameworks grammar.</p>
+<p>Mitigation:</p>
+<p>Test it against established alternatives and permit rejection.</p>
+<hr>
+<h1 id="evidence-independence">Evidence Independence</h1>
+<p>This deserves special emphasis.</p>
+<p>Suppose:</p>
+<pre><code class="language-text">Evidence E1
+</code></pre>
+<p>is interpreted by:</p>
+<pre><code class="language-text">FFT
+Structural Detection
+RTT
+Resonance
+Inverted Star
+</code></pre>
+<p>That creates:</p>
+<pre><code class="language-text">5 interpretations
+</code></pre>
+<p>but only:</p>
+<pre><code class="language-text">1 evidence source
+</code></pre>
+<p>The assessment must preserve that distinction.</p>
+<p>Suggested record:</p>
+<pre><code class="language-yaml">evidence:
+  id: E1
+
+interpretations:
+  - adapter: fft
+  - adapter: structural-detection
+  - adapter: rtt
+  - adapter: resonance
+  - adapter: inverted-star
+
+independent_evidence_count: 1
+</code></pre>
+<p>This prevents artificial coherence.</p>
+<hr>
+<h1 id="falsification-conditions">Falsification Conditions</h1>
+<p>The Structural Detection Adapter should be revised, restricted, deprecated, or rejected if:</p>
+<ul>
+<li>candidate patterns fail replication,</li>
+<li>inter-rater agreement remains poor,</li>
+<li>structural classifications depend excessively on evaluator preference,</li>
+<li>detected invariants collapse under reasonable transformations,</li>
+<li>boundaries are unstable under small irrelevant changes,</li>
+<li>reconstruction fails against held-out evidence,</li>
+<li>simple clustering or graph methods perform equivalently,</li>
+<li>structural profiles fail out-of-sample evaluation,</li>
+<li>the adapter systematically finds structure in known random data,</li>
+<li>favorable structural interpretations receive weaker evidence requirements,</li>
+<li>adverse structural interpretations receive weaker evidence requirements,</li>
+<li>or ablation shows negligible value.</li>
+</ul>
+<hr>
+<h1 id="noise-challenge">Noise Challenge</h1>
+<p>A required test should deliberately provide data with no meaningful designed structure.</p>
+<p>The adapter must be able to return:</p>
+<pre><code class="language-text">structure:
+  not_detected
+
+confidence:
+  appropriate
+
+interpretation:
+  no_supported_structure
+</code></pre>
+<p>If Structural Detection always finds something interesting, it has failed.</p>
+<hr>
+<h1 id="destruction-test">Destruction Test</h1>
+<p>Another required test:</p>
+<ol>
+<li>Establish a candidate structural hypothesis.</li>
+<li>Present evidence designed to contradict it.</li>
+<li>Observe whether the adapter revises or rejects the structure.</li>
+</ol>
+<p>Required capability:</p>
+<pre><code class="language-text">preferred_pattern_can_be_destroyed: true
+</code></pre>
+<p>A framework unable to lose its favorite patterns is not performing structural detection.</p>
+<hr>
+<h1 id="blind-pattern-test">Blind Pattern Test</h1>
+<p>Where practical:</p>
+<pre><code class="language-text">evaluator:
+  sees evidence
+
+evaluator:
+  does not see conventional score
+
+evaluator:
+  does not see preferred interpretation
+
+evaluator:
+  does not see expected adapter output
+</code></pre>
+<p>This can help determine whether structural classification survives expectation bias.</p>
+<hr>
+<h1 id="randomization-test">Randomization Test</h1>
+<p>Where appropriate, scramble relationships while preserving superficial features.</p>
+<p>Example:</p>
+<pre><code class="language-text">original:
+  relational structure preserved
+
+randomized:
+  surface elements preserved
+  relationships shuffled
+</code></pre>
+<p>A useful detector should generally distinguish the two when the target structure depends on those relationships.</p>
+<hr>
+<h1 id="ablation-test">Ablation Test</h1>
+<p>Remove individual structural features:</p>
+<pre><code class="language-text">patterns
+boundaries
+invariants
+faultlines
+topology
+reconstruction
+</code></pre>
+<p>Then evaluate whether performance changes.</p>
+<p>This asks whether each internal component contributes measurable value.</p>
+<p>The adapter itself should be decomposable.</p>
+<hr>
+<h1 id="riqf-use">RIQF Use</h1>
+<p>For the Resonant IQ Fingerprint, Structural Detection should remain one source of evidence among many.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">riqf:
+  structural_reasoning:
+    expression: strong
+
+    evidence:
+      - structural_detection_task_01
+      - structural_detection_task_02
+      - independent_transfer_task
+
+    adapter_support:
+      structural_detection: medium
+      fft: medium
+
+    confidence: medium
+
+    generalizability: unknown
+</code></pre>
+<p>The adapter must not simply issue:</p>
+<pre><code class="language-text">structural_reasoning: high
+</code></pre>
+<p>without provenance.</p>
+<hr>
+<h1 id="model-fit-use">Model-Fit Use</h1>
+<p>Structural Detection may indicate that a predictive model compresses an asymmetric structure into an overly broad conclusion.</p>
+<p>Example:</p>
+<pre><code class="language-text">prediction:
+  reasoning capability: low
+
+observations:
+  symbolic speed: weak
+  structural reconstruction: strong
+  relationship mapping: strong
+  anomaly detection: moderate
+
+structural finding:
+  profile is heterogeneous
+
+model-fit interpretation:
+  broad scalar inference may be overextended
+</code></pre>
+<p>This remains a hypothesis until independently validated.</p>
+<hr>
+<h1 id="cross-system-use">Cross-System Use</h1>
+<p>Structural Detection may eventually apply to:</p>
+<pre><code class="language-text">human
+AI
+human-AI pair
+robotic system
+team
+organization
+distributed agent network
+</code></pre>
+<p>But equivalent structural labels do not imply equivalent internal cognition.</p>
+<p>Example:</p>
+<pre><code class="language-text">human:
+  structural reconstruction: strong
+
+AI:
+  structural reconstruction: strong
+</code></pre>
+<p>means:</p>
+<blockquote>
+<p>Both performed strongly on operationally defined reconstruction tasks.</p>
+</blockquote>
+<p>It does not establish:</p>
+<blockquote>
+<p>Both reason through the same cognitive process.</p>
+</blockquote>
+<hr>
+<h1 id="ethical-boundary">Ethical Boundary</h1>
+<p>Structural Detection should not transform a person's behavior into an immutable identity.</p>
+<p>Avoid:</p>
+<blockquote>
+<p>"You are a structural thinker."</p>
+</blockquote>
+<p>Prefer:</p>
+<blockquote>
+<p><strong>"Across the current observation set, repeated structural-reasoning behaviors were observed under these specified conditions."</strong></p>
+</blockquote>
+<p>The second statement preserves:</p>
+<ul>
+<li>evidence,</li>
+<li>scope,</li>
+<li>time,</li>
+<li>context,</li>
+<li>and revisability.</li>
+</ul>
+<hr>
+<h1 id="decision-authority">Decision Authority</h1>
+<pre><code class="language-text">decision_authority: none
+
+authorized_use:
+  - research
+  - demonstration
+  - structural hypothesis generation
+  - model comparison
+  - framework development
+
+prohibited_use:
+  - diagnosis
+  - automated hiring decision
+  - educational exclusion
+  - legal determination
+  - automated adverse decision
+</code></pre>
+<hr>
+<h1 id="minimal-adapter-output-contract">Minimal Adapter Output Contract</h1>
+<pre><code class="language-yaml">structural_detection_result:
+  observation_id:
+
+  target:
+    id:
+    boundary:
+
+  baseline:
+    model:
+    prediction:
+    scope:
+    preserved: true
+
+  evidence:
+    sources:
+    independent_source_count:
+
+  patterns:
+    - id:
+      status:
+      evidence:
+      confidence:
+
+  relationships:
+    - source:
+      target:
+      type:
+      evidence:
+      confidence:
+
+  invariants:
+    - id:
+      tested_across:
+      preserved:
+      violated:
+      status:
+      confidence:
+
+  boundaries:
+    - id:
+      type:
+      status:
+      evidence:
+      confidence:
+
+  faultlines:
+    - id:
+      location:
+      status:
+      evidence:
+      confidence:
+
+  topology:
+    type:
+    confidence:
+
+  reconstruction:
+    attempted:
+    status:
+    held_out_tested:
+    performance:
+
+  compression:
+    attempted:
+    explained_evidence:
+    unexplained_evidence:
+
+  substrate_conditioning:
+  regime_conditioning:
+  temporal_conditioning:
+
+  model_fit:
+  added_information:
+  contradictory_information:
+
+  alternative_interpretations:
+  counterevidence:
+  missing_evidence:
+  uncertainty:
+  limitations:
+
+  review_required:
+
+  validation_state:
+  decision_authority: none
+</code></pre>
+<hr>
+<h1 id="research-questions">Research Questions</h1>
+<ol>
+<li>Can candidate structural patterns be identified reproducibly?</li>
+<li>Can independent evaluators distinguish structure from noise?</li>
+<li>Which Structural Detection constructs survive alternate-form testing?</li>
+<li>Can invariants be operationally defined?</li>
+<li>Can invariants survive meaningful transformations?</li>
+<li>Can boundaries be detected without outcome-driven boundary shopping?</li>
+<li>Can faultlines predict future failure or transition?</li>
+<li>Does topology add value beyond conventional relational modeling?</li>
+<li>Can structural reconstruction predict held-out evidence?</li>
+<li>Does structural compression preserve relevant exceptions?</li>
+<li>Does Structural Detection improve explanation?</li>
+<li>Does it improve out-of-sample prediction?</li>
+<li>Does it improve model-mismatch precision?</li>
+<li>Does it reduce inappropriate scalar generalization?</li>
+<li>Can it detect when no meaningful structure exists?</li>
+<li>How often does it produce false structure in randomized data?</li>
+<li>Does Structural Detection add anything beyond conventional clustering, graph analysis, or feature interaction modeling?</li>
+<li>Which components survive ablation?</li>
+<li>Which components should be merged?</li>
+<li>Which should be rejected?</li>
+<li>When should the adapter abstain?</li>
+<li>Does structural evidence generalize across substrates?</li>
+<li>Does it generalize across regimes?</li>
+<li>Can structural findings be transferred responsibly across humans, AI systems, and collaborative systems?</li>
+<li>What evidence would justify removing Structural Detection from Predictive Analytics entirely?</li>
+</ol>
+<hr>
+<h1 id="core-invariants">Core Invariants</h1>
+<pre><code class="language-text">pattern != structure
+structure != cause
+correlation != dependency
+relationship != causation
+repetition != universal_invariant
+boundary != explanation
+faultline != defect
+topology != cognition
+reconstruction != universal_reasoning
+compression != truth
+complexity != validity
+variation != structure
+interesting != meaningful
+adapter_agreement != independent_evidence
+strong_structural_task != global_intelligence
+weak_structural_task != low_human_worth
+profile != identity
+adapter_output != decision_authority
+canon_alignment != empirical_validation
+</code></pre>
+<hr>
+<h1 id="closing-principle">Closing Principle</h1>
+<p>Predictive systems compress.</p>
+<p>Compression is often necessary and useful.</p>
+<p>But compression can hide shape.</p>
+<p>Structural Detection asks whether the evidence contains reproducible organization that the predictive representation has flattened, averaged, or omitted.</p>
+<p>Sometimes it will reveal:</p>
+<ul>
+<li>a stable pattern,</li>
+<li>an invariant,</li>
+<li>a boundary,</li>
+<li>a faultline,</li>
+<li>a reconstructable structure,</li>
+<li>or an important asymmetry.</li>
+</ul>
+<p>Sometimes the apparent structure will disappear under replication.</p>
+<p>Sometimes a simpler method will explain it just as well.</p>
+<p>And sometimes there will be nothing there.</p>
+<p>That final outcome matters enormously.</p>
+<blockquote>
+<p><strong>Structural Detection succeeds not when it finds structure everywhere, but when it can reliably distinguish structure worth preserving from patterns we merely want to see.</strong></p>
+</blockquote>
   </main>
 </body>
 </html>

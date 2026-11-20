@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/predictive_analytics/examples.md">
-  <title>examples</title>
+  <title>Predictive Analytics — Examples</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,7 +92,1393 @@
   </aside>
 
   <main>
+<p><img width="1194" height="672" alt="predictive_analytics_examples_" src="https://github.com/user-attachments/assets/b562233f-1d0d-4e11-98df-219881287266" /></p>
+<h1 id="predictive-analytics-examples">Predictive Analytics — Examples</h1>
+<blockquote>
+<p><strong>A useful framework must demonstrate where it helps, where it changes nothing, where it remains uncertain, and where it fails.</strong></p>
+</blockquote>
+<h2 id="module">Module</h2>
+<p>Predictive Analytics</p>
+<h2 id="status">Status</h2>
+<p>Experimental example catalog.</p>
+<h2 id="purpose">Purpose</h2>
+<p>This document provides worked and compact examples for the Predictive Analytics module.</p>
+<p>The examples are designed to demonstrate:</p>
+<ul>
+<li>prediction preservation,</li>
+<li>model-fit analysis,</li>
+<li>substrate-aware observation,</li>
+<li>regime-aware observation,</li>
+<li>multidimensional profiling,</li>
+<li>model mismatch,</li>
+<li>coherence,</li>
+<li>drift,</li>
+<li>counterfactual testing,</li>
+<li>uncertainty,</li>
+<li>human review,</li>
+<li>adapter selection,</li>
+<li>adapter disagreement,</li>
+<li>and failure cases.</li>
+</ul>
+<p>Unless explicitly labeled otherwise, examples in this document are:</p>
+<pre><code class="language-text">synthetic
+illustrative
+unvalidated
+non-diagnostic
+non-authoritative
+</code></pre>
+<p>They exist to test and communicate the architecture.</p>
+<p>They do not establish the validity of the framework.</p>
+<hr>
+<h1 id="example-philosophy">Example Philosophy</h1>
+<p>A Predictive Analytics example should not always end with:</p>
+<pre><code class="language-text">richer model wins
+</code></pre>
+<p>The example library must contain cases where:</p>
+<pre><code class="language-text">baseline wins
+</code></pre>
+<p>cases where:</p>
+<pre><code class="language-text">alternate observation adds value
+</code></pre>
+<p>cases where:</p>
+<pre><code class="language-text">both models remain plausible
+</code></pre>
+<p>cases where:</p>
+<pre><code class="language-text">available evidence is insufficient
+</code></pre>
+<p>and cases where:</p>
+<pre><code class="language-text">Predictive Analytics fails
+</code></pre>
+<p>Otherwise the example library would encode the result before the analysis begins.</p>
+<hr>
+<h1 id="example-outcome-classes">Example Outcome Classes</h1>
+<p>Every example should end in one or more explicit outcome states.</p>
+<pre><code class="language-text">baseline_supported
+baseline_scope_narrowed
+model_mismatch_candidate
+model_mismatch_supported
+substrate_effect_candidate
+regime_effect_candidate
+multidimensional_profile_useful
+adapter_added_value
+adapter_no_added_value
+adapter_disagreement
+uncertainty_high
+human_review_recommended
+framework_enrichment_not_supported
+insufficient_evidence
+not_applicable
+</code></pre>
+<hr>
+<h1 id="example-index">Example Index</h1>
+<pre><code class="language-text">EX-01  Baseline Model Sufficient
+EX-02  Scalar Compression Hides Profile Shape
+EX-03  Low Score Without Mismatch
+EX-04  Candidate Substrate Effect
+EX-05  False Substrate Effect
+EX-06  Prediction-Observation Inversion
+EX-07  False Inversion
+EX-08  Structural Pattern Across Tasks
+EX-09  Pattern Disappears Under Holdout
+EX-10  Candidate Regime Difference
+EX-11  False Regime Detection
+EX-12  Prediction Drift
+EX-13  Measurement Drift, Not Subject Drift
+EX-14  Counterfactual Fragility
+EX-15  Counterfactual Robustness
+EX-16  Adapter Agreement With Shared Evidence
+EX-17  Independent Convergence
+EX-18  Adapter Disagreement
+EX-19  Human-AI Pair Outperforms Both Components
+EX-20  Tool Access Changes Observation Boundary
+EX-21  Unknown Is the Correct Answer
+EX-22  Human Review Trigger
+EX-23  Favorable Reinterpretation Rejected
+EX-24  Adverse Reinterpretation Rejected
+EX-25  Full Predictive Analytics Enrichment Fails
+EX-26  Resonant IQ Fingerprint — PAX-01
+</code></pre>
+<hr>
+<h1 id="ex-01-baseline-model-sufficient">EX-01 — Baseline Model Sufficient</h1>
+<h2 id="scenario">Scenario</h2>
+<p>A conventional predictive system estimates that a synthetic subject will perform moderately on a defined task.</p>
+<pre><code class="language-yaml">baseline:
+  prediction: moderate
+  confidence: medium
+</code></pre>
+<p>Repeated observations:</p>
+<pre><code class="language-text">Task 1: moderate
+Task 2: moderate
+Task 3: moderate
+Task 4: moderate
+</code></pre>
+<p>Substrate comparison:</p>
+<pre><code class="language-text">textual: moderate
+visual: moderate
+reflective: moderate
+timed: moderate
+</code></pre>
+<p>Adapter results:</p>
+<pre><code class="language-text">FFT:
+  no_added_value
 
+Inverted Star:
+  no_inversion
+
+Structural Detection:
+  no_additional_structure
+
+RTT:
+  stable_single_regime
+
+Resonance:
+  no_repeatable_context_effect
+</code></pre>
+<h2 id="result">Result</h2>
+<pre><code class="language-yaml">assessment:
+  baseline_supported: true
+
+  model_mismatch:
+    status: not_supported
+
+  predictive_analytics_added_value:
+    low
+
+  recommendation:
+    retain baseline interpretation
+</code></pre>
+<h2 id="lesson">Lesson</h2>
+<p>Predictive Analytics should be capable of concluding:</p>
+<blockquote>
+<p><strong>The simpler model is sufficient for the current purpose.</strong></p>
+</blockquote>
+<p>This is a successful result.</p>
+<hr>
+<h1 id="ex-02-scalar-compression-hides-profile-shape">EX-02 — Scalar Compression Hides Profile Shape</h1>
+<h2 id="scenario_1">Scenario</h2>
+<p>Synthetic observations:</p>
+<pre><code class="language-text">Structural reasoning:       strong
+Temporal reasoning:         strong
+Cross-domain transfer:      strong
+Rapid symbolic processing:  weak
+Timed classification:       weak
+Short-context recall:       moderate
+</code></pre>
+<p>A composite converts these into:</p>
+<pre><code class="language-text">Composite:
+  moderate
+</code></pre>
+<h2 id="scalar-representation">Scalar Representation</h2>
+<pre><code class="language-text">PAX-X
+
+Composite: 100
+</code></pre>
+<h2 id="profile-representation">Profile Representation</h2>
+<pre><code class="language-text">Structural             █████████
+Temporal               ████████
+Transfer               █████████
+Symbolic Speed         ████
+Timed Classification   ███
+Short Recall           █████
+</code></pre>
+<h2 id="result_1">Result</h2>
+<pre><code class="language-yaml">assessment:
+  scalar:
+    valid_as_compression: possible
+
+  scalar_information_loss:
+    high
+
+  multidimensional_profile:
+    preserves_shape: true
+
+  representation_superiority:
+    status: not_established
+</code></pre>
+<h2 id="lesson_1">Lesson</h2>
+<p>The profile preserves more information.</p>
+<p>That does <strong>not</strong> automatically prove it predicts meaningful outcomes better.</p>
+<hr>
+<h1 id="ex-03-low-score-without-mismatch">EX-03 — Low Score Without Mismatch</h1>
+<h2 id="scenario_2">Scenario</h2>
+<p>Conventional prediction:</p>
+<pre><code class="language-text">expected performance:
+  low
+</code></pre>
+<p>Extended observations:</p>
+<pre><code class="language-text">structural tasks: low
+transfer tasks: low
+ambiguity tasks: low
+temporal tasks: low
+symbolic tasks: low
+</code></pre>
+<p>Adapter results:</p>
+<pre><code class="language-text">FFT:
+  no_added_value
+
+Inverted Star:
+  no_inversion
+
+Structural Detection:
+  weak performance pattern replicated
+
+RTT:
+  no meaningful regime dependence
+
+Resonance:
+  no repeatable amplification condition
+</code></pre>
+<h2 id="result_2">Result</h2>
+<pre><code class="language-yaml">assessment:
+  baseline:
+    supported: true
+
+  model_mismatch:
+    status: not_supported
+
+  alternative_high_capability_interpretation:
+    status: unsupported
+</code></pre>
+<h2 id="lesson_2">Lesson</h2>
+<p>A low result is not itself evidence of model mismatch.</p>
+<p>Predictive Analytics is not a rescue mechanism.</p>
+<hr>
+<h1 id="ex-04-candidate-substrate-effect">EX-04 — Candidate Substrate Effect</h1>
+<h2 id="scenario_3">Scenario</h2>
+<p>Synthetic subject performs:</p>
+<pre><code class="language-text">timed symbolic:
+  weak
+
+reflective symbolic:
+  moderate
+
+reflective relational:
+  strong
+</code></pre>
+<p>Repeated alternate forms show similar differences.</p>
+<h2 id="initial-interpretation">Initial Interpretation</h2>
+<pre><code class="language-text">performance varies by substrate
+</code></pre>
+<p>Not:</p>
+<pre><code class="language-text">substrate caused the performance difference
+</code></pre>
+<h2 id="result_3">Result</h2>
+<pre><code class="language-yaml">substrate:
+  effect_candidate: true
+
+  replicability:
+    status: partial
+
+  specificity:
+    status: not_tested
+
+  causal_status:
+    unresolved
+</code></pre>
+<h2 id="lesson_3">Lesson</h2>
+<p>Substrate variation can be observed before substrate causation is established.</p>
+<hr>
+<h1 id="ex-05-false-substrate-effect">EX-05 — False Substrate Effect</h1>
+<h2 id="scenario_4">Scenario</h2>
+<p>First observations:</p>
+<pre><code class="language-text">visual:
+  strong
+
+textual:
+  weak
+</code></pre>
+<p>Initial candidate:</p>
+<pre><code class="language-text">visual substrate advantage
+</code></pre>
+<p>Additional matched tasks:</p>
+<pre><code class="language-text">visual 2:
+  weak
+
+visual 3:
+  moderate
+
+textual 2:
+  strong
+
+textual 3:
+  moderate
+</code></pre>
+<h2 id="result_4">Result</h2>
+<pre><code class="language-yaml">substrate:
+  initial_effect:
+    not_replicated
+
+  current_status:
+    unresolved
+
+  alternate_explanations:
+    - task_specificity
+    - measurement_noise
+</code></pre>
+<h2 id="lesson_4">Lesson</h2>
+<p>The framework must allow early substrate interpretations to disappear.</p>
+<hr>
+<h1 id="ex-06-prediction-observation-inversion">EX-06 — Prediction-Observation Inversion</h1>
+<h2 id="scenario_5">Scenario</h2>
+<p>Prediction:</p>
+<pre><code class="language-text">structural performance:
+  low
+</code></pre>
+<p>Independent observations:</p>
+<pre><code class="language-text">structural task A:
+  strong
+
+structural task B:
+  strong
+
+structural task C:
+  strong
+</code></pre>
+<h2 id="inverted-star">Inverted Star</h2>
+<pre><code class="language-yaml">inversion:
+  detected: true
+
+  direction:
+    prediction_lower_than_observation
+
+  status:
+    candidate
+
+  confidence:
+    medium
+</code></pre>
+<h2 id="result_5">Result</h2>
+<pre><code class="language-yaml">model_mismatch:
+  candidate: true
+
+  cause:
+    unresolved
+
+  original_prediction:
+    preserved: true
+</code></pre>
+<h2 id="lesson_5">Lesson</h2>
+<p>Disagreement is enough to investigate.</p>
+<p>It is not enough to declare the model wrong.</p>
+<hr>
+<h1 id="ex-07-false-inversion">EX-07 — False Inversion</h1>
+<h2 id="scenario_6">Scenario</h2>
+<p>Prediction:</p>
+<pre><code class="language-text">performance:
+  low
+</code></pre>
+<p>One later observation:</p>
+<pre><code class="language-text">performance:
+  high
+</code></pre>
+<p>Further observations:</p>
+<pre><code class="language-text">low
+low
+moderate
+low
+</code></pre>
+<h2 id="result_6">Result</h2>
+<pre><code class="language-yaml">inversion:
+  initial_candidate: true
+
+  after_replication:
+    status: not_supported
+
+  outlier:
+    plausible: true
+</code></pre>
+<h2 id="lesson_6">Lesson</h2>
+<p>One surprising observation is not necessarily inversion.</p>
+<hr>
+<h1 id="ex-08-structural-pattern-across-tasks">EX-08 — Structural Pattern Across Tasks</h1>
+<h2 id="scenario_7">Scenario</h2>
+<p>Observed repeatedly:</p>
+<pre><code class="language-text">relational mapping:
+  strong
+
+partial reconstruction:
+  strong
+
+boundary detection:
+  strong
+
+rapid fixed-choice:
+  weak
+</code></pre>
+<p>Structural Detection finds:</p>
+<pre><code class="language-text">repeatable asymmetric pattern
+</code></pre>
+<h2 id="result_7">Result</h2>
+<pre><code class="language-yaml">structural_detection:
+  pattern:
+    replicated: candidate
+
+  generalizability:
+    unknown
+
+  causal_explanation:
+    unresolved
+</code></pre>
+<h2 id="lesson_7">Lesson</h2>
+<p>Repeated task structure can become a testable profile component without becoming a global intelligence claim.</p>
+<hr>
+<h1 id="ex-09-pattern-disappears-under-holdout">EX-09 — Pattern Disappears Under Holdout</h1>
+<h2 id="scenario_8">Scenario</h2>
+<p>Initial tasks:</p>
+<pre><code class="language-text">A: strong
+B: strong
+C: strong
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-text">stable structural capability
+</code></pre>
+<p>Held-out tasks:</p>
+<pre><code class="language-text">D: weak
+E: weak
+F: moderate
+</code></pre>
+<h2 id="result_8">Result</h2>
+<pre><code class="language-yaml">structural_detection:
+  initial_pattern:
+    rejected_or_revised: true
+
+  current_profile:
+    unstable
+
+  confidence:
+    low
+</code></pre>
+<h2 id="lesson_8">Lesson</h2>
+<p>Holdout evidence must be allowed to destroy a preferred pattern.</p>
+<hr>
+<h1 id="ex-10-candidate-regime-difference">EX-10 — Candidate Regime Difference</h1>
+<h2 id="scenario_9">Scenario</h2>
+<p>Condition A:</p>
+<pre><code class="language-text">timed
+symbolic
+fixed-choice
+</code></pre>
+<p>Repeated performance:</p>
+<pre><code class="language-text">weak
+weak
+weak
+</code></pre>
+<p>Condition B:</p>
+<pre><code class="language-text">reflective
+relational
+generative
+</code></pre>
+<p>Repeated performance:</p>
+<pre><code class="language-text">strong
+strong
+strong
+</code></pre>
+<h2 id="rtt">RTT</h2>
+<pre><code class="language-yaml">regime:
+  candidate_difference: true
+
+  within_a:
+    stable: candidate
+
+  within_b:
+    stable: candidate
+
+  causal_variable:
+    unresolved
+</code></pre>
+<h2 id="lesson_9">Lesson</h2>
+<p>The evidence may support different operating states without identifying the cause.</p>
+<hr>
+<h1 id="ex-11-false-regime-detection">EX-11 — False Regime Detection</h1>
+<h2 id="scenario_10">Scenario</h2>
+<p>Observations:</p>
+<pre><code class="language-text">A1: weak
+A2: strong
+A3: moderate
+
+B1: strong
+B2: weak
+B3: moderate
+</code></pre>
+<p>No stable within-condition structure appears.</p>
+<h2 id="result_9">Result</h2>
+<pre><code class="language-yaml">rtt:
+  candidate_regime:
+    status: not_supported
+
+  variation:
+    status: unresolved
+</code></pre>
+<h2 id="lesson_10">Lesson</h2>
+<p>Different labels on task groups do not automatically create meaningful regimes.</p>
+<hr>
+<h1 id="ex-12-prediction-drift">EX-12 — Prediction Drift</h1>
+<h2 id="scenario_11">Scenario</h2>
+<p>Prediction error through time:</p>
+<pre><code class="language-text">T1: low
+T2: low
+T3: moderate
+T4: moderate
+T5: high
+T6: high
+</code></pre>
+<p>Measurement, model version, and substrate remain stable.</p>
+<h2 id="result_10">Result</h2>
+<pre><code class="language-yaml">drift:
+  class: prediction_drift
+
+  direction:
+    increasing_error
+
+  persistence:
+    sustained_candidate
+
+  cause:
+    unresolved
+</code></pre>
+<h2 id="lesson_11">Lesson</h2>
+<p>Drift can be detected before its cause is understood.</p>
+<hr>
+<h1 id="ex-13-measurement-drift-not-subject-drift">EX-13 — Measurement Drift, Not Subject Drift</h1>
+<h2 id="scenario_12">Scenario</h2>
+<p>Synthetic subject behavior remains stable.</p>
+<p>Measurement changes:</p>
+<pre><code class="language-text">T1:
+  instrument_v1
+
+T2:
+  instrument_v2
+</code></pre>
+<p>Observed output changes materially.</p>
+<h2 id="result_11">Result</h2>
+<pre><code class="language-yaml">drift:
+  subject_drift:
+    status: not_supported
+
+  measurement_change:
+    status: detected
+
+  comparability:
+    partial
+</code></pre>
+<h2 id="lesson_12">Lesson</h2>
+<p>The observer must be capable of locating change in the measurement system rather than the subject.</p>
+<hr>
+<h1 id="ex-14-counterfactual-fragility">EX-14 — Counterfactual Fragility</h1>
+<h2 id="scenario_13">Scenario</h2>
+<p>Assessment:</p>
+<pre><code class="language-text">structural reasoning:
+  strong
+</code></pre>
+<p>Remove one observation:</p>
+<pre><code class="language-text">result:
+  unknown
+</code></pre>
+<p>Change task order:</p>
+<pre><code class="language-text">result:
+  moderate
+</code></pre>
+<p>Change evaluator:</p>
+<pre><code class="language-text">result:
+  weak
+</code></pre>
+<h2 id="result_12">Result</h2>
+<pre><code class="language-yaml">counterfactual:
+  robustness:
+    low
+
+  evidence_dependency:
+    high
+
+  observer_dependency:
+    high
+
+  confidence:
+    reduced
+</code></pre>
+<h2 id="lesson_13">Lesson</h2>
+<p>A compelling profile that collapses under small reasonable changes is fragile.</p>
+<hr>
+<h1 id="ex-15-counterfactual-robustness">EX-15 — Counterfactual Robustness</h1>
+<h2 id="scenario_14">Scenario</h2>
+<p>Assessment:</p>
+<pre><code class="language-text">structural reasoning:
+  strong
+</code></pre>
+<p>Tests:</p>
+<pre><code class="language-text">remove one observation:
+  remains strong
+
+alternate equivalent task:
+  remains strong
+
+alternate evaluator:
+  remains strong
+
+irrelevant metadata change:
+  remains strong
+
+substantive adverse evidence:
+  changes to moderate
+</code></pre>
+<h2 id="result_13">Result</h2>
+<pre><code class="language-yaml">counterfactual:
+  irrelevant_stability:
+    high
+
+  relevant_sensitivity:
+    high
+
+  overall:
+    appropriately_robust
+</code></pre>
+<h2 id="lesson_14">Lesson</h2>
+<p>Good robustness means both stability and responsiveness.</p>
+<hr>
+<h1 id="ex-16-adapter-agreement-with-shared-evidence">EX-16 — Adapter Agreement With Shared Evidence</h1>
+<h2 id="scenario_15">Scenario</h2>
+<p>One observation:</p>
+<pre><code class="language-text">E1
+</code></pre>
+<p>is interpreted by:</p>
+<pre><code class="language-text">FFT
+Inverted Star
+Structural Detection
+RTT
+Resonance
+</code></pre>
+<p>All produce compatible interpretations.</p>
+<h2 id="result_14">Result</h2>
+<pre><code class="language-yaml">adapter_agreement:
+  count: 5
+  status: high
+
+evidence:
+  independent_sources: 1
+
+evidence_independence:
+  status: low
+
+confidence_increase_from_adapter_count:
+  prohibited: true
+</code></pre>
+<h2 id="lesson_15">Lesson</h2>
+<p>Five interpretations of one observation do not equal five independent observations.</p>
+<hr>
+<h1 id="ex-17-independent-convergence">EX-17 — Independent Convergence</h1>
+<h2 id="scenario_16">Scenario</h2>
+<p>Independent task families:</p>
+<pre><code class="language-text">E1:
+  structural mapping
+
+E2:
+  cross-domain reconstruction
+
+E3:
+  held-out relationship inference
+
+E4:
+  unrelated evaluator replication
+</code></pre>
+<p>All support the same candidate dimension.</p>
+<h2 id="result_15">Result</h2>
+<pre><code class="language-yaml">evidence:
+  independent_sources: 4
+
+coherence:
+  convergence:
+    status: high_candidate
+
+confidence:
+  eligible_for_increase: true
+</code></pre>
+<h2 id="lesson_16">Lesson</h2>
+<p>Independent convergence is stronger than adapter echo.</p>
+<hr>
+<h1 id="ex-18-adapter-disagreement">EX-18 — Adapter Disagreement</h1>
+<h2 id="scenario_17">Scenario</h2>
+<pre><code class="language-text">FFT:
+  boundary appears meaningful
+
+Inverted Star:
+  small inversion candidate
+
+Structural Detection:
+  pattern fails replication
+
+RTT:
+  no regime structure
+
+Resonance:
+  context effect unresolved
+</code></pre>
+<h2 id="result_16">Result</h2>
+<pre><code class="language-yaml">adapter_coherence:
+  status: low
+
+model_mismatch:
+  status: unresolved
+
+recommendation:
+  collect_more_evidence
+</code></pre>
+<h2 id="lesson_17">Lesson</h2>
+<p>Adapters are allowed to disagree.</p>
+<p>They do not vote.</p>
+<hr>
+<h1 id="ex-19-human-ai-pair-outperforms-both-components">EX-19 — Human-AI Pair Outperforms Both Components</h1>
+<h2 id="scenario_18">Scenario</h2>
+<p>Synthetic task:</p>
+<pre><code class="language-text">Human alone:
+  moderate
+
+AI alone:
+  moderate
+
+Human + AI:
+  strong
+</code></pre>
+<h2 id="incorrect-interpretation">Incorrect Interpretation</h2>
+<pre><code class="language-text">human intelligence:
+  strong
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">AI intelligence:
+  strong
+</code></pre>
+<p>based solely on the collaborative result.</p>
+<h2 id="correct-representation">Correct Representation</h2>
+<pre><code class="language-yaml">system_boundary:
+  human:
+    performance: moderate
+
+  ai:
+    performance: moderate
+
+  human_ai_pair:
+    performance: strong
+
+attribution:
+  source_of_gain:
+    unresolved
+</code></pre>
+<h2 id="lesson_18">Lesson</h2>
+<p>The collaborative system may itself be the relevant unit of intelligence.</p>
+<hr>
+<h1 id="ex-20-tool-access-changes-observation-boundary">EX-20 — Tool Access Changes Observation Boundary</h1>
+<h2 id="scenario_19">Scenario</h2>
+<pre><code class="language-text">unassisted:
+  moderate
+
+tool-assisted:
+  strong
+</code></pre>
+<h2 id="possible-interpretations">Possible Interpretations</h2>
+<pre><code class="language-text">tool skill
+tool dependence
+effective collaboration
+task suitability
+practice effect
+substrate effect
+unknown
+</code></pre>
+<h2 id="result_17">Result</h2>
+<pre><code class="language-yaml">tool_assisted_performance:
+  observed: true
+
+individual_unassisted_capability:
+  unchanged_by_definition: false
+
+causal_interpretation:
+  unresolved
+</code></pre>
+<h2 id="lesson_19">Lesson</h2>
+<p>Tool-mediated performance is real performance, but attribution depends on the system boundary.</p>
+<hr>
+<h1 id="ex-21-unknown-is-the-correct-answer">EX-21 — Unknown Is the Correct Answer</h1>
+<h2 id="scenario_20">Scenario</h2>
+<p>One task produces:</p>
+<pre><code class="language-text">strong
+</code></pre>
+<p>Another:</p>
+<pre><code class="language-text">weak
+</code></pre>
+<p>No substrate, regime, temporal, evaluator, or task-family explanation can be established.</p>
+<h2 id="result_18">Result</h2>
+<pre><code class="language-yaml">assessment:
+  stable_profile:
+    status: insufficient_evidence
+
+  model_mismatch:
+    status: unknown
+
+  causal_explanation:
+    status: unknown
+
+  recommendation:
+    observe_more
+</code></pre>
+<h2 id="lesson_20">Lesson</h2>
+<p>A framework should not fill every blank.</p>
+<hr>
+<h1 id="ex-22-human-review-trigger">EX-22 — Human Review Trigger</h1>
+<h2 id="scenario_21">Scenario</h2>
+<p>A hypothetical future validated system produces:</p>
+<pre><code class="language-text">baseline adverse decision candidate
+</code></pre>
+<p>but extended evidence shows:</p>
+<pre><code class="language-text">major contradiction
+high substrate sensitivity
+low model-fit confidence
+high counterfactual fragility
+</code></pre>
+<h2 id="result_19">Result</h2>
+<pre><code class="language-yaml">review:
+  recommended: true
+
+  reasons:
+    - consequential_context
+    - model_fit_uncertain
+    - contradictory_evidence
+    - counterfactual_fragility
+
+automated_override:
+  allowed: false
+</code></pre>
+<h2 id="lesson_21">Lesson</h2>
+<p>The appropriate action may be review, not alternate automated judgment.</p>
+<hr>
+<h1 id="ex-23-favorable-reinterpretation-rejected">EX-23 — Favorable Reinterpretation Rejected</h1>
+<h2 id="scenario_22">Scenario</h2>
+<p>Baseline:</p>
+<pre><code class="language-text">performance:
+  low
+</code></pre>
+<p>Researcher wants a substrate-aware reinterpretation.</p>
+<p>Alternate task:</p>
+<pre><code class="language-text">high
+</code></pre>
+<p>Replication:</p>
+<pre><code class="language-text">low
+low
+moderate
+</code></pre>
+<h2 id="result_20">Result</h2>
+<pre><code class="language-yaml">favorable_reinterpretation:
+  status: rejected
+
+reason:
+  alternate high observation failed replication
+
+baseline:
+  preserved: true
+</code></pre>
+<h2 id="lesson_22">Lesson</h2>
+<p>Predictive Analytics must reject flattering interpretations when evidence fails.</p>
+<hr>
+<h1 id="ex-24-adverse-reinterpretation-rejected">EX-24 — Adverse Reinterpretation Rejected</h1>
+<h2 id="scenario_23">Scenario</h2>
+<p>Baseline:</p>
+<pre><code class="language-text">performance:
+  strong
+</code></pre>
+<p>One structural task produces:</p>
+<pre><code class="language-text">weak
+</code></pre>
+<p>A researcher proposes:</p>
+<pre><code class="language-text">hidden structural deficiency
+</code></pre>
+<p>Replication:</p>
+<pre><code class="language-text">strong
+strong
+moderate
+</code></pre>
+<h2 id="result_21">Result</h2>
+<pre><code class="language-yaml">adverse_reinterpretation:
+  status: rejected
+
+reason:
+  weak result failed replication
+</code></pre>
+<h2 id="lesson_23">Lesson</h2>
+<p>The same skepticism applies in the adverse direction.</p>
+<hr>
+<h1 id="ex-25-full-predictive-analytics-enrichment-fails">EX-25 — Full Predictive Analytics Enrichment Fails</h1>
+<h2 id="scenario_24">Scenario</h2>
+<p>A validation study finds:</p>
+<pre><code class="language-text">baseline model:
+  reliable
+
+multidimensional profile:
+  unstable
+
+FFT:
+  no incremental value
+
+Inverted Star:
+  high false-positive mismatch rate
+
+Structural Detection:
+  poor holdout performance
+
+RTT:
+  high false regime alarm rate
+
+Resonance:
+  effects fail replication
+
+Coherence:
+  narrative consistency without external validity
+
+Counterfactual:
+  enriched profile highly fragile
+</code></pre>
+<h2 id="result_22">Result</h2>
+<pre><code class="language-yaml">predictive_analytics:
+  enrichment:
+    status: not_supported
+
+baseline:
+  preferred: true
+
+adapters:
+  review_for_deprecation: true
+</code></pre>
+<h2 id="lesson_24">Lesson</h2>
+<p>The architecture must structurally permit the possibility that its central experimental additions fail.</p>
+<hr>
+<h1 id="ex-26-resonant-iq-fingerprint-pax-01">EX-26 — Resonant IQ Fingerprint: PAX-01</h1>
+<p>The full flagship example is maintained separately:</p>
+<pre><code class="language-text">example_resonant_iq_fingerprint.md
+</code></pre>
+<p>PAX-01 demonstrates:</p>
+<ul>
+<li>baseline preservation,</li>
+<li>scalar compression,</li>
+<li>multidimensional profiling,</li>
+<li>substrate comparison,</li>
+<li>FFT analysis,</li>
+<li>Inverted Star analysis,</li>
+<li>Structural Detection,</li>
+<li>RTT regime observations,</li>
+<li>Resonance observations,</li>
+<li>coherence analysis,</li>
+<li>drift,</li>
+<li>counterfactual testing,</li>
+<li>uncertainty,</li>
+<li>validation state,</li>
+<li>and review boundaries.</li>
+</ul>
+<p>The example remains:</p>
+<pre><code class="language-text">synthetic
+unvalidated
+non-authoritative
+</code></pre>
+<hr>
+<h1 id="compact-example-template">Compact Example Template</h1>
+<p>New examples should generally use:</p>
+<pre><code class="language-yaml">example:
+  id:
+  title:
+
+  status:
+    synthetic:
+    validation_state:
+    decision_authority:
+
+  question:
+
+  observed_system:
+    class:
+    boundary:
+
+  baseline:
+    model:
+    prediction:
+    confidence:
+    preserved: true
+
+  evidence:
+    sources:
+    independent_sources:
+
+  observation:
+
+  substrate:
+  regime:
+  temporal_scope:
+
+  adapters:
+    selected:
+    excluded:
+
+  findings:
+
+  coherence:
+  drift:
+  counterfactual:
+
+  uncertainty:
+  alternative_interpretations:
+  counterevidence:
+  missing_evidence:
+
+  result:
+  review_required:
+
+  lesson:
+</code></pre>
+<hr>
+<h1 id="example-selection-rules">Example Selection Rules</h1>
+<p>Examples should not be selected only because they make the framework look useful.</p>
+<p>The library should intentionally include:</p>
+<pre><code class="language-text">true positives
+false positives
+true negatives
+false negatives
+
+stable cases
+unstable cases
+
+favorable reinterpretations
+adverse reinterpretations
+
+supported mismatches
+unsupported mismatches
+
+real substrate effects
+false substrate effects
+
+real regime effects
+false regime effects
+
+adapter agreement
+adapter disagreement
+
+high evidence coverage
+low evidence coverage
+
+human cases
+AI cases
+human-AI cases
+
+framework success
+framework failure
+</code></pre>
+<hr>
+<h1 id="synthetic-examples">Synthetic Examples</h1>
+<p>Synthetic examples are especially appropriate for:</p>
+<ul>
+<li>demonstrating schemas,</li>
+<li>testing architecture,</li>
+<li>showing edge cases,</li>
+<li>creating known-null conditions,</li>
+<li>creating known-positive conditions,</li>
+<li>stress testing adapters,</li>
+<li>testing failure states.</li>
+</ul>
+<p>Synthetic examples should always be labeled.</p>
+<hr>
+<h1 id="real-world-examples">Real-World Examples</h1>
+<p>A future real-world example should require appropriate:</p>
+<pre><code class="language-text">evidence provenance
+privacy review
+consent where applicable
+source protection
+ethical review
+validation context
+uncertainty
+limitations
+</code></pre>
+<p>Real people should not be transformed into public cognitive case studies merely because the framework makes such analysis technically possible.</p>
+<hr>
+<h1 id="example-provenance">Example Provenance</h1>
+<p>Every example should identify:</p>
+<pre><code class="language-yaml">provenance:
+  synthetic:
+  source:
+  author:
+  created_at:
+  framework_version:
+  adapter_versions:
+  metric_versions:
+  validation_state:
+</code></pre>
+<p>This prevents examples from silently becoming evidence.</p>
+<hr>
+<h1 id="example-versus-evidence">Example Versus Evidence</h1>
+<p>Important invariant:</p>
+<pre><code class="language-text">example != validation
+</code></pre>
+<p>A beautifully coherent example shows that:</p>
+<pre><code class="language-text">the grammar can represent the scenario
+</code></pre>
+<p>It does not show that:</p>
+<pre><code class="language-text">the grammar accurately represents reality
+</code></pre>
+<hr>
+<h1 id="example-confidence">Example Confidence</h1>
+<p>Synthetic examples should generally avoid claims such as:</p>
+<pre><code class="language-text">confidence:
+  high
+</code></pre>
+<p>when confidence refers to real-world validity.</p>
+<p>Instead use:</p>
+<pre><code class="language-text">demonstration_status:
+  structurally_consistent
+</code></pre>
+<p>and separately:</p>
+<pre><code class="language-text">empirical_validation:
+  not_tested
+</code></pre>
+<hr>
+<h1 id="example-metrics">Example Metrics</h1>
+<p>Examples may illustrate metric structure without inventing validation data.</p>
+<p>Preferred:</p>
+<pre><code class="language-yaml">metric:
+  PA-M20:
+    status: not_tested
+</code></pre>
+<p>Avoid:</p>
+<pre><code class="language-yaml">metric:
+  PA-M20:
+    value: 0.91
+</code></pre>
+<p>unless that number comes from an actual documented study or is unmistakably labeled as synthetic test data.</p>
+<hr>
+<h1 id="example-ladder">Example Ladder</h1>
+<p>Examples can be organized by complexity.</p>
+<h2 id="level-a-baseline">Level A — Baseline</h2>
+<pre><code class="language-text">single prediction
+single observation
+</code></pre>
+<h2 id="level-b-comparison">Level B — Comparison</h2>
+<pre><code class="language-text">prediction
+multiple observations
+</code></pre>
+<h2 id="level-c-substrate">Level C — Substrate</h2>
+<pre><code class="language-text">same target
+different substrates
+</code></pre>
+<h2 id="level-d-structure">Level D — Structure</h2>
+<pre><code class="language-text">multiple tasks
+repeatable pattern
+</code></pre>
+<h2 id="level-e-regime">Level E — Regime</h2>
+<pre><code class="language-text">multiple stable operating conditions
+</code></pre>
+<h2 id="level-f-temporal">Level F — Temporal</h2>
+<pre><code class="language-text">profile changes through time
+</code></pre>
+<h2 id="level-g-ensemble">Level G — Ensemble</h2>
+<pre><code class="language-text">multiple adapters
+coherence layer
+counterfactual layer
+uncertainty
+</code></pre>
+<h2 id="level-h-consequential-review">Level H — Consequential Review</h2>
+<pre><code class="language-text">validated-use hypothetical
+human review
+contestability
+governance
+</code></pre>
+<p>This creates a teaching progression.</p>
+<hr>
+<h1 id="suggested-future-examples">Suggested Future Examples</h1>
+<p>Potential future synthetic examples:</p>
+<pre><code class="language-text">EX-AI-01
+  AI model with strong retrieval
+  but poor uncertainty calibration
+
+EX-AI-02
+  AI model stable in one prompt regime
+  and unstable in another
+
+EX-PAIR-01
+  human-AI pair demonstrating
+  emergent collaborative performance
+
+EX-ORG-01
+  organization with a prediction model
+  that fails after workflow transition
+
+EX-EDU-01
+  student demonstrating strong
+  untimed transfer but weaker
+  timed classification performance
+
+EX-ROBOT-01
+  controller stable in simulation
+  but unstable after substrate change
+
+EX-MODEL-01
+  predictive model experiencing
+  calibration drift
+
+EX-NULL-01
+  random observations intentionally
+  containing no meaningful structure
+</code></pre>
+<p>Each would test a different portion of the grammar.</p>
+<hr>
+<h1 id="example-anti-patterns">Example Anti-Patterns</h1>
+<p>Do not create examples where:</p>
+<pre><code class="language-text">conventional model always loses
+RTT always explains the difference
+resonance always reveals hidden strength
+Structural Detection always finds structure
+Inverted Star always finds inversion
+FFT always discovers missing context
+human-AI collaboration always improves performance
+a richer profile always wins
+</code></pre>
+<p>That would turn examples into propaganda for the framework.</p>
+<hr>
+<h1 id="required-negative-cases">Required Negative Cases</h1>
+<p>At least some maintained examples should demonstrate:</p>
+<pre><code class="language-text">no substrate effect
+no regime effect
+no drift
+no structure
+no inversion
+no adapter added value
+no model mismatch
+baseline sufficient
+uncertainty unresolved
+framework failure
+</code></pre>
+<p>A theory that only demonstrates success has not demonstrated its boundaries.</p>
+<hr>
+<h1 id="required-symmetry-cases">Required Symmetry Cases</h1>
+<p>The corpus should preserve examples where:</p>
+<pre><code class="language-text">alternate assessment improves interpretation
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">alternate assessment worsens interpretation
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">alternate assessment changes nothing
+</code></pre>
+<p>This supports the favorability-symmetry requirement.</p>
+<hr>
+<h1 id="required-cross-system-cases">Required Cross-System Cases</h1>
+<p>If Predictive Analytics expands beyond humans, examples should eventually include:</p>
+<pre><code class="language-text">human
+AI
+human-AI pair
+team
+organization
+robotic system
+distributed agent system
+</code></pre>
+<p>But shared example structure must not imply identical internal cognition.</p>
+<hr>
+<h1 id="example-review-questions">Example Review Questions</h1>
+<p>Every example should ask:</p>
+<ol>
+<li>What was directly observed?</li>
+<li>What was inferred?</li>
+<li>Which evidence was independent?</li>
+<li>Which evidence was reused across adapters?</li>
+<li>What did the baseline model actually measure?</li>
+<li>How broad was the baseline inference?</li>
+<li>Did substrate matter?</li>
+<li>Did regime matter?</li>
+<li>Did time matter?</li>
+<li>Was structure reproducible?</li>
+<li>Was inversion supported?</li>
+<li>Did resonance replicate?</li>
+<li>Did the profile survive counterfactual challenge?</li>
+<li>What remains unknown?</li>
+<li>Did any adapter add measurable value?</li>
+<li>Could a simpler model explain the same observations?</li>
+<li>What evidence would reverse the conclusion?</li>
+<li>Does the result justify review?</li>
+<li>Does the result justify a decision?</li>
+<li>What would falsify the example's interpretation?</li>
+</ol>
+<hr>
+<h1 id="example-result-rule">Example Result Rule</h1>
+<p>Every example should make a distinction between:</p>
+<pre><code class="language-text">demonstrated_in_example
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">validated_in_reality
+</code></pre>
+<p>A synthetic example may strongly demonstrate internal logic.</p>
+<p>Its real-world validation state remains:</p>
+<pre><code class="language-text">unvalidated
+</code></pre>
+<p>until actual evidence exists.</p>
+<hr>
+<h1 id="decision-authority">Decision Authority</h1>
+<p>For the current example library:</p>
+<pre><code class="language-text">decision_authority: none
+
+authorized_use:
+  - research
+  - demonstration
+  - education
+  - framework testing
+  - schema testing
+  - validation design
+  - hypothesis generation
+
+prohibited_use:
+  - diagnosis
+  - automated hiring decision
+  - educational exclusion
+  - legal determination
+  - insurance determination
+  - lending determination
+  - automated adverse decision
+</code></pre>
+<hr>
+<h1 id="core-invariants">Core Invariants</h1>
+<pre><code class="language-text">example != evidence
+example != validation
+synthetic != empirical
+interesting_case != representative_case
+richer_result != better_result
+conventional_result != automatically_wrong
+alternate_result != automatically_right
+low_score != model_mismatch
+high_score != model_fit
+variation != substrate_effect
+change != drift
+difference != regime
+pattern != structure
+agreement != independence
+adapter_count != evidence_count
+profile != identity
+capability != human_worth
+human_ai_pair != individual_human
+uncertainty != failure
+baseline_supported != framework_failure
+framework_failure != wasted_research
+</code></pre>
+<hr>
+<h1 id="closing-principle">Closing Principle</h1>
+<p>Examples teach a framework what kinds of answers it is allowed to produce.</p>
+<p>If every example ends with:</p>
+<pre><code class="language-text">the richer framework discovered
+that the original model underestimated the subject
+</code></pre>
+<p>then the framework has already encoded its conclusion.</p>
+<p>A trustworthy example library needs harder cases.</p>
+<p>Cases where the baseline wins.</p>
+<p>Cases where a promising pattern disappears.</p>
+<p>Cases where a regime was imagined rather than detected.</p>
+<p>Cases where an adapter contributes nothing.</p>
+<p>Cases where humans and AI together behave differently from either alone.</p>
+<p>Cases where the richer profile survives challenge.</p>
+<p>Cases where it does not.</p>
+<p>And cases where the only responsible output is:</p>
+<pre><code class="language-text">we do not know
+</code></pre>
+<blockquote>
+<p><strong>Predictive Analytics becomes more credible when its examples teach it how to lose.</strong></p>
+</blockquote>
   </main>
 </body>
 </html>

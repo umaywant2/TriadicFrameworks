@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/predictive_analytics/regime_observer.md">
-  <title>regime_observer</title>
+  <title>Predictive Analytics — Regime Observer</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,7 +92,1862 @@
   </aside>
 
   <main>
+<p><img width="1194" height="672" alt="predictive_analytics_regime_observer_" src="https://github.com/user-attachments/assets/70bf93af-df68-44bc-babd-7601e67969b5" /></p>
+<h1 id="predictive-analytics-regime-observer">Predictive Analytics — Regime Observer</h1>
+<blockquote>
+<p><strong>A prediction is meaningful only within conditions where its relationships remain meaningful.</strong></p>
+</blockquote>
+<h2 id="module">Module</h2>
+<p>Predictive Analytics</p>
+<h2 id="observer-id">Observer ID</h2>
+<p><code>regime</code></p>
+<h2 id="operator">Operator</h2>
+<p><code>PA-Regime</code></p>
+<h2 id="status">Status</h2>
+<p>Experimental.</p>
+<h2 id="validation-state">Validation State</h2>
+<p>Unvalidated.</p>
+<h2 id="decision-authority">Decision Authority</h2>
+<p>None.</p>
+<hr>
+<h1 id="purpose">Purpose</h1>
+<p>The Regime Observer examines whether a predictive model, observed system, measurement process, and intended inference operate under sufficiently compatible conditions for meaningful comparison.</p>
+<p>It asks:</p>
+<blockquote>
+<p><strong>Under what operating conditions does this prediction remain justified?</strong></p>
+</blockquote>
+<p>The observer is especially concerned with cases where:</p>
+<ul>
+<li>relationships change,</li>
+<li>model performance changes,</li>
+<li>measurement behavior changes,</li>
+<li>substrate conditions change,</li>
+<li>tool access changes,</li>
+<li>task structure changes,</li>
+<li>environmental conditions change,</li>
+<li>system configuration changes,</li>
+<li>or temporal structure suggests a transition between operating states.</li>
+</ul>
+<p>The Regime Observer does not assume that every contextual difference forms a regime.</p>
+<p>It does not create new regimes simply because prediction fails.</p>
+<p>A regime must earn its distinction through observable structure.</p>
+<hr>
+<h1 id="core-principle">Core Principle</h1>
+<p>The observer distinguishes:</p>
+<pre><code class="language-text">condition
+</code></pre>
+<p>from:</p>
+<pre><code class="language-text">context
+</code></pre>
+<p>from:</p>
+<pre><code class="language-text">regime
+</code></pre>
+<p>from:</p>
+<pre><code class="language-text">transition
+</code></pre>
+<p>A condition may differ without creating a new regime.</p>
+<p>A context may matter without defining a regime.</p>
+<p>A transition may occur without invalidating the predictive model.</p>
+<hr>
+<h1 id="working-definition">Working Definition</h1>
+<p>Within Predictive Analytics:</p>
+<blockquote>
+<p><strong>A regime is a bounded set of operating conditions under which relevant relationships are sufficiently stable to support meaningful observation, comparison, or prediction.</strong></p>
+</blockquote>
+<p>The phrase:</p>
+<pre><code class="language-text">sufficiently stable
+</code></pre>
+<p>is important.</p>
+<p>A regime need not be perfectly static.</p>
+<p>It needs enough structural continuity for the intended inference to remain meaningful.</p>
+<hr>
+<h1 id="conceptual-model">Conceptual Model</h1>
+<p>Let:</p>
+<ul>
+<li><strong>M</strong> = predictive model</li>
+<li><strong>O</strong> = observed system</li>
+<li><strong>S</strong> = substrate</li>
+<li><strong>E</strong> = environment</li>
+<li><strong>T</strong> = temporal state</li>
+<li><strong>X</strong> = task configuration</li>
+<li><strong>G</strong> = regime</li>
+<li><strong>P</strong> = prediction</li>
+</ul>
+<p>Conceptually:</p>
+<pre><code class="language-text">P =
+  M(
+    O,
+    S,
+    E,
+    T,
+    X
+  )
 
+subject to regime G
+</code></pre>
+<p>The Regime Observer asks whether:</p>
+<pre><code class="language-text">G_prediction
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">G_observation
+</code></pre>
+<p>remain sufficiently compatible.</p>
+<p>This notation is conceptual.</p>
+<p>It is not a validated mathematical model.</p>
+<hr>
+<h1 id="regime-compatibility">Regime Compatibility</h1>
+<p>Possible high-level states:</p>
+<pre><code class="language-text">compatible
+mostly_compatible
+partially_compatible
+regime_mismatch_candidate
+regime_mismatch_supported
+transitioning
+unstable
+unknown
+not_applicable
+</code></pre>
+<p>These states remain experimental.</p>
+<hr>
+<h1 id="regime-observer-pipeline">Regime Observer Pipeline</h1>
+<pre><code class="language-text">Prediction Record
+       │
+       ▼
+Observed System
+       │
+       ▼
+Declare System Boundary
+       │
+       ▼
+Capture Operating Conditions
+       │
+       ▼
+Identify Candidate Regimes
+       │
+       ▼
+Test Within-Regime Stability
+       │
+       ▼
+Test Between-Regime Difference
+       │
+       ▼
+Inspect Substrate
+       │
+       ▼
+Inspect Time / Drift
+       │
+       ▼
+Inspect Model Fit
+       │
+       ▼
+Challenge Boundaries
+       │
+       ▼
+Evaluate Regime Compatibility
+       │
+       ▼
+Return:
+  compatible
+  regime_conditioned
+  transition_candidate
+  mismatch_candidate
+  mismatch_supported
+  unresolved
+  insufficient_evidence
+</code></pre>
+<hr>
+<h1 id="regime-components">Regime Components</h1>
+<p>A regime may be defined partly by:</p>
+<pre><code class="language-text">task structure
+measurement process
+substrate
+environment
+available tools
+time constraints
+interaction mode
+information availability
+system state
+model configuration
+observer configuration
+decision context
+</code></pre>
+<p>Not every component must change when a regime changes.</p>
+<p>Likewise, changing one component does not automatically create a new regime.</p>
+<hr>
+<h1 id="regime-record">Regime Record</h1>
+<p>Suggested representation:</p>
+<pre><code class="language-yaml">regime:
+  id: regime-001
+
+  label:
+    reflective-relational
+
+  system_boundary:
+    type: individual_human
+
+  conditions:
+    task_structure:
+      relational
+
+    substrate:
+      textual_relational
+
+    timing:
+      reflective
+
+    interaction_mode:
+      individual
+
+    tools:
+      none
+
+    environment:
+      controlled
+
+    model_version:
+      model-v1
+
+    measurement_version:
+      instrument-v1
+
+  evidence:
+    - observation-001
+    - observation-002
+
+  stability:
+    status: candidate
+
+  confidence:
+    medium
+
+  limitations:
+    - limited observation count
+</code></pre>
+<hr>
+<h1 id="regime-state">Regime State</h1>
+<p>Candidate lifecycle states:</p>
+<pre><code class="language-text">candidate
+observed
+stable
+transitional
+unstable
+merged
+split
+superseded
+unsupported
+unknown
+</code></pre>
+<p>These describe the state of the regime hypothesis.</p>
+<p>They do not describe the value of the observed system.</p>
+<hr>
+<h1 id="regime-identity">Regime Identity</h1>
+<p>A regime should have enough descriptive structure that later observations can ask:</p>
+<pre><code class="language-text">Does this observation belong to regime A?
+</code></pre>
+<p>rather than:</p>
+<pre><code class="language-text">Can we invent a regime around this observation?
+</code></pre>
+<p>This distinction helps prevent post-hoc regime creation.</p>
+<hr>
+<h1 id="regime-membership">Regime Membership</h1>
+<p>Possible membership states:</p>
+<pre><code class="language-text">member
+probable_member
+partial_member
+boundary_case
+non_member
+unknown
+</code></pre>
+<p>Where probabilistic membership is used, its semantics must be explicitly defined.</p>
+<hr>
+<h1 id="regime-boundary">Regime Boundary</h1>
+<p>A regime boundary marks a transition between operating structures.</p>
+<p>Possible boundary properties:</p>
+<pre><code class="language-text">temporal
+structural
+substrate
+environmental
+task
+interaction
+model-version
+measurement-version
+mixed
+</code></pre>
+<hr>
+<h1 id="boundary-record">Boundary Record</h1>
+<pre><code class="language-yaml">regime_boundary:
+  id: boundary-001
+
+  from:
+    regime-a
+
+  to:
+    regime-b
+
+  location:
+    timestamp:
+    observation_index:
+
+  changed_conditions:
+    - timing
+    - representation
+
+  evidence:
+    - observation-reference
+
+  boundary_type:
+    mixed
+
+  confidence:
+    low
+
+  status:
+    candidate
+</code></pre>
+<hr>
+<h1 id="boundary-uncertainty">Boundary Uncertainty</h1>
+<p>A regime transition may not occur at a single crisp point.</p>
+<p>Possible:</p>
+<pre><code class="language-text">A A A A
+      A/B
+       A/B
+          B B B B
+</code></pre>
+<p>Therefore boundary representation may include:</p>
+<pre><code class="language-text">exact
+interval
+probabilistic
+gradual
+unknown
+</code></pre>
+<hr>
+<h1 id="regime-transition">Regime Transition</h1>
+<p>A transition occurs when the operating structure changes sufficiently that a new regime representation is justified.</p>
+<p>Conceptually:</p>
+<pre><code class="language-text">Regime A
+────────────
+            \
+             \
+              Transition
+                    \
+                     \
+                      ────────────
+                       Regime B
+</code></pre>
+<p>Possible transition forms:</p>
+<pre><code class="language-text">abrupt
+gradual
+cyclic
+intermittent
+reversible
+irreversible
+mixed
+unknown
+</code></pre>
+<p>These terms require operational definitions in empirical use.</p>
+<hr>
+<h1 id="change-is-not-transition">Change Is Not Transition</h1>
+<p>Important invariant:</p>
+<pre><code class="language-text">change != regime_transition
+</code></pre>
+<p>Suppose:</p>
+<pre><code class="language-text">temperature changes by 1 degree
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">task response time changes slightly
+</code></pre>
+<p>This may not justify a new regime.</p>
+<p>A regime distinction should materially improve observation or prediction.</p>
+<hr>
+<h1 id="regime-materiality">Regime Materiality</h1>
+<p>A candidate regime difference becomes more useful when it corresponds to reproducible differences in relevant relationships.</p>
+<p>Possible tests:</p>
+<pre><code class="language-text">prediction error changes
+relationship topology changes
+measurement behavior changes
+dimension expression changes
+calibration changes
+substrate effect changes
+drift behavior changes
+</code></pre>
+<hr>
+<h1 id="within-regime-stability">Within-Regime Stability</h1>
+<p>Before claiming:</p>
+<pre><code class="language-text">Regime A differs from Regime B
+</code></pre>
+<p>the observer should ask:</p>
+<pre><code class="language-text">Is A internally stable enough
+to be meaningfully called A?
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">Is B internally stable enough
+to be meaningfully called B?
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-text">A:
+  41
+  43
+  42
+  40
+
+B:
+  72
+  74
+  73
+  71
+</code></pre>
+<p>This is structurally different from:</p>
+<pre><code class="language-text">A:
+  41
+  73
+  49
+  68
+
+B:
+  74
+  42
+  66
+  47
+</code></pre>
+<p>even if their means differ.</p>
+<hr>
+<h1 id="between-regime-difference">Between-Regime Difference</h1>
+<p>A regime hypothesis should test whether:</p>
+<pre><code class="language-text">between-regime difference
+</code></pre>
+<p>is meaningfully larger or structurally different from:</p>
+<pre><code class="language-text">within-regime variation
+</code></pre>
+<p>The exact statistical method depends on the application.</p>
+<hr>
+<h1 id="regime-conditioned-prediction">Regime-Conditioned Prediction</h1>
+<p>A predictive model may have:</p>
+<pre><code class="language-text">high fit in A
+low fit in B
+</code></pre>
+<p>Suggested record:</p>
+<pre><code class="language-yaml">model_fit:
+  regime_a:
+    status: high
+
+  regime_b:
+    status: low
+
+  overall:
+    status: regime_conditioned
+</code></pre>
+<p>This is more precise than:</p>
+<pre><code class="language-text">model good
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">model bad
+</code></pre>
+<hr>
+<h1 id="regime-conditioned-capability-expression">Regime-Conditioned Capability Expression</h1>
+<p>An observed capability may also vary.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">structural_reasoning:
+  regime_a:
+    expression: moderate
+
+  regime_b:
+    expression: strong
+
+  cross_regime:
+    status: variable
+</code></pre>
+<p>This does not establish why expression changed.</p>
+<p>It preserves where the difference occurred.</p>
+<hr>
+<h1 id="model-regime">Model Regime</h1>
+<p>Predictive models themselves may operate under regimes.</p>
+<p>Examples:</p>
+<pre><code class="language-text">model version
+routing strategy
+retrieval configuration
+tool configuration
+prompt configuration
+threshold policy
+ensemble configuration
+</code></pre>
+<p>A model update may change the predictive regime even when the observed target remains stable.</p>
+<hr>
+<h1 id="measurement-regime">Measurement Regime</h1>
+<p>Measurement instruments may also have regimes.</p>
+<p>Example:</p>
+<pre><code class="language-text">instrument_v1
+</code></pre>
+<p>versus:</p>
+<pre><code class="language-text">instrument_v2
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">human-rated
+</code></pre>
+<p>versus:</p>
+<pre><code class="language-text">automated-rated
+</code></pre>
+<p>Observed differences must not automatically be attributed to the subject.</p>
+<hr>
+<h1 id="observer-regime">Observer Regime</h1>
+<p>The observer may change.</p>
+<p>Examples:</p>
+<pre><code class="language-text">human evaluator A
+human evaluator B
+AI evaluator v1
+AI evaluator v2
+hybrid reviewer
+</code></pre>
+<p>This can matter in longitudinal comparisons.</p>
+<hr>
+<h1 id="substrate-and-regime">Substrate and Regime</h1>
+<p>Substrate and regime overlap but are not identical.</p>
+<p>A substrate describes:</p>
+<pre><code class="language-text">the medium or structure
+through which expression is observed
+</code></pre>
+<p>A regime describes:</p>
+<pre><code class="language-text">the broader operating conditions
+under which relationships remain stable
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-yaml">substrate:
+  relational_text
+
+regime:
+  reflective_individual_relational
+</code></pre>
+<p>A single substrate may appear in multiple regimes.</p>
+<hr>
+<h1 id="task-and-regime">Task and Regime</h1>
+<p>Different tasks do not automatically imply different regimes.</p>
+<p>Example:</p>
+<pre><code class="language-text">Task A
+Task B
+Task C
+</code></pre>
+<p>may all occur within:</p>
+<pre><code class="language-text">Regime R1
+</code></pre>
+<p>if the relevant operating structure remains compatible.</p>
+<hr>
+<h1 id="context-and-regime">Context and Regime</h1>
+<p>Similarly:</p>
+<pre><code class="language-text">context difference
+</code></pre>
+<p>is not always:</p>
+<pre><code class="language-text">regime difference
+</code></pre>
+<p>A context variable becomes regime-relevant only when evidence justifies treating it as structurally meaningful.</p>
+<hr>
+<h1 id="regime-granularity">Regime Granularity</h1>
+<p>Regimes can be defined too broadly.</p>
+<p>Example:</p>
+<pre><code class="language-text">all human reasoning
+</code></pre>
+<p>may conceal important variation.</p>
+<p>They can also be defined too narrowly.</p>
+<p>Example:</p>
+<pre><code class="language-text">every observation is its own regime
+</code></pre>
+<p>makes regime analysis meaningless.</p>
+<p>The correct granularity is an empirical question.</p>
+<hr>
+<h1 id="over-segmentation">Over-Segmentation</h1>
+<p>Risk:</p>
+<pre><code class="language-text">every failure
+  -&gt;
+new regime
+</code></pre>
+<p>This can make any model appear valid.</p>
+<p>Mitigation:</p>
+<ul>
+<li>require stable regime definitions,</li>
+<li>require minimum evidence,</li>
+<li>compare with simpler segmentation,</li>
+<li>measure false regime alarms,</li>
+<li>challenge boundaries counterfactually.</li>
+</ul>
+<hr>
+<h1 id="under-segmentation">Under-Segmentation</h1>
+<p>The opposite risk:</p>
+<pre><code class="language-text">all observations
+  -&gt;
+one regime
+</code></pre>
+<p>may conceal meaningful state changes.</p>
+<p>The observer therefore needs both:</p>
+<pre><code class="language-text">split pressure
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">merge pressure
+</code></pre>
+<p>conceptually.</p>
+<hr>
+<h1 id="regime-split">Regime Split</h1>
+<p>A regime may require splitting if evidence shows stable internal substructures.</p>
+<p>Example:</p>
+<pre><code class="language-text">Regime A
+  ├── A1
+  └── A2
+</code></pre>
+<p>The split should improve:</p>
+<ul>
+<li>prediction,</li>
+<li>explanation,</li>
+<li>calibration,</li>
+<li>stability,</li>
+<li>or structural coherence</li>
+</ul>
+<p>enough to justify the added complexity.</p>
+<hr>
+<h1 id="regime-merge">Regime Merge</h1>
+<p>Two regimes may turn out to be operationally indistinguishable.</p>
+<p>Example:</p>
+<pre><code class="language-text">A
++
+B
+</code></pre>
+<p>may become:</p>
+<pre><code class="language-text">AB
+</code></pre>
+<p>if their distinctions add no useful information.</p>
+<p>A richer regime map is not automatically better.</p>
+<hr>
+<h1 id="regime-lifecycle">Regime Lifecycle</h1>
+<p>Suggested lifecycle:</p>
+<pre><code class="language-text">candidate
+experimental
+pilot
+supported_for_context
+restricted
+merged
+split
+deprecated
+rejected
+</code></pre>
+<p>Regime definitions may change as evidence improves.</p>
+<hr>
+<h1 id="rtt-relationship">RTT Relationship</h1>
+<p>The RTT Adapter focuses on:</p>
+<pre><code class="language-text">time
+sequence
+transition
+regime candidate
+drift
+continuity
+recalibration
+</code></pre>
+<p>The Regime Observer operates at the broader Predictive Analytics layer.</p>
+<p>Useful distinction:</p>
+<pre><code class="language-text">RTT Adapter:
+  proposes and tests temporal-regime structure
+
+Regime Observer:
+  integrates regime evidence into
+  model-fit and comparative assessment
+</code></pre>
+<p>RTT is therefore a contributor.</p>
+<p>It is not the sole authority on regime definition.</p>
+<hr>
+<h1 id="fft-relationship">FFT Relationship</h1>
+<p>FFT may identify:</p>
+<pre><code class="language-text">boundary change
+relationship change
+field transition
+</code></pre>
+<p>The Regime Observer asks:</p>
+<blockquote>
+<p><strong>Does that structural change justify a distinct operating regime?</strong></p>
+</blockquote>
+<p>Therefore:</p>
+<pre><code class="language-text">FFT transition candidate
+!=
+regime transition
+</code></pre>
+<hr>
+<h1 id="structural-detection-relationship">Structural Detection Relationship</h1>
+<p>Structural Detection can examine:</p>
+<pre><code class="language-text">within-regime patterns
+cross-regime invariants
+faultlines
+structural transitions
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-text">Regime A:
+  pattern X
+
+Regime B:
+  pattern Y
+</code></pre>
+<p>This may strengthen a regime distinction.</p>
+<hr>
+<h1 id="inverted-star-relationship">Inverted Star Relationship</h1>
+<p>The Inverted Star may identify:</p>
+<pre><code class="language-text">prediction-observation disagreement
+</code></pre>
+<p>The Regime Observer asks:</p>
+<pre><code class="language-text">Does that disagreement occur only
+in particular operating regimes?
+</code></pre>
+<p>Possible result:</p>
+<pre><code class="language-yaml">inversion:
+  status: supported
+
+regime_conditioning:
+  status: supported_candidate
+</code></pre>
+<hr>
+<h1 id="resonance-relationship">Resonance Relationship</h1>
+<p>Resonance may describe:</p>
+<pre><code class="language-text">amplification
+suppression
+persistence
+instability
+</code></pre>
+<p>across conditions.</p>
+<p>The Regime Observer asks whether the contexts associated with those differences form reproducible operating regimes.</p>
+<hr>
+<h1 id="drift-relationship">Drift Relationship</h1>
+<p>Drift and regime transition are related but distinct.</p>
+<p>Possible progression:</p>
+<pre><code class="language-text">Regime A
+   │
+   ▼
+slow drift
+   │
+   ▼
+transition
+   │
+   ▼
+Regime B
+</code></pre>
+<p>Or:</p>
+<pre><code class="language-text">Regime A
+   │
+   ▼
+temporary perturbation
+   │
+   ▼
+Regime A
+</code></pre>
+<p>The Regime Observer should preserve the distinction.</p>
+<hr>
+<h1 id="coherence-relationship">Coherence Relationship</h1>
+<p>A profile may show:</p>
+<pre><code class="language-text">high coherence within regime
+low coherence across regimes
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-yaml">coherence:
+  regime_a:
+    high
+
+  regime_b:
+    high
+
+  cross_regime:
+    low
+</code></pre>
+<p>This may indicate that a single global profile is hiding regime structure.</p>
+<hr>
+<h1 id="counterfactual-relationship">Counterfactual Relationship</h1>
+<p>Regime interpretations should be challenged.</p>
+<p>Example:</p>
+<pre><code class="language-text">detected boundary:
+  t4
+</code></pre>
+<p>Counterfactuals:</p>
+<pre><code class="language-text">boundary:
+  t3
+
+boundary:
+  t5
+</code></pre>
+<p>If conclusions collapse:</p>
+<pre><code class="language-text">boundary_fragility:
+  high
+</code></pre>
+<p>Confidence should fall.</p>
+<hr>
+<h1 id="uncertainty-relationship">Uncertainty Relationship</h1>
+<p>Regime uncertainty should increase when:</p>
+<pre><code class="language-text">few observations
+unstable boundaries
+changing measurements
+changing substrates
+unclear task equivalence
+large within-regime variance
+high observer variation
+missing timestamps
+</code></pre>
+<p>The regime label should not hide these conditions.</p>
+<hr>
+<h1 id="predictive-model-adapter-relationship">Predictive Model Adapter Relationship</h1>
+<p>The Predictive Model Adapter should preserve:</p>
+<pre><code class="language-text">model version
+prediction timestamp
+known intended regime
+known validation scope
+</code></pre>
+<p>The Regime Observer then compares those with actual observation conditions.</p>
+<hr>
+<h1 id="known-regime">Known Regime</h1>
+<p>If a source model explicitly declares:</p>
+<pre><code class="language-text">validated for regime A
+</code></pre>
+<p>the observer should preserve that provenance.</p>
+<p>It should not redefine the model's stated regime without explicit reason.</p>
+<hr>
+<h1 id="unknown-regime">Unknown Regime</h1>
+<p>Many source models will provide no regime metadata.</p>
+<p>Correct:</p>
+<pre><code class="language-yaml">source_model:
+  validated_regime:
+    unknown
+</code></pre>
+<p>Then regime analysis remains exploratory.</p>
+<hr>
+<h1 id="worked-example-pax-01">Worked Example — PAX-01</h1>
+<h2 id="baseline-conditions">Baseline Conditions</h2>
+<p>Synthetic PAX-01 baseline:</p>
+<pre><code class="language-text">task:
+  timed symbolic
+
+response:
+  fixed-choice
+
+interaction:
+  individual
+
+tools:
+  none
+
+observed performance:
+  weak
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-text">Regime A
+</code></pre>
+<hr>
+<h1 id="extended-conditions">Extended Conditions</h1>
+<p>Additional synthetic observations:</p>
+<pre><code class="language-text">task:
+  relational / structural
+
+response:
+  generative
+
+timing:
+  reflective
+
+interaction:
+  individual or collaborative
+
+observed performance:
+  strong
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-text">Regime B
+</code></pre>
+<hr>
+<h1 id="important-warning">Important Warning</h1>
+<p>Several variables changed simultaneously:</p>
+<pre><code class="language-text">task structure
+response format
+timing
+interaction mode
+possibly tool access
+</code></pre>
+<p>Therefore:</p>
+<pre><code class="language-text">Regime A != Regime B
+</code></pre>
+<p>may be descriptively useful.</p>
+<p>But:</p>
+<pre><code class="language-text">which variable caused the difference?
+</code></pre>
+<p>remains unresolved.</p>
+<hr>
+<h1 id="pass-1-candidate-regimes">Pass 1 — Candidate Regimes</h1>
+<pre><code class="language-yaml">regime_a:
+  task_structure: symbolic
+  timing: constrained
+  response: fixed_choice
+  interaction: individual
+
+regime_b:
+  task_structure: relational
+  timing: reflective
+  response: generative
+  interaction: variable
+</code></pre>
+<hr>
+<h1 id="pass-2-within-regime-pattern">Pass 2 — Within-Regime Pattern</h1>
+<p>Synthetic demonstration:</p>
+<pre><code class="language-text">A1: weak
+A2: weak
+A3: weak
+
+B1: strong
+B2: strong
+B3: strong
+</code></pre>
+<p>Candidate result:</p>
+<pre><code class="language-yaml">within_regime_stability:
+  regime_a:
+    candidate_high
+
+  regime_b:
+    candidate_high
+</code></pre>
+<hr>
+<h1 id="pass-3-between-regime-difference">Pass 3 — Between-Regime Difference</h1>
+<pre><code class="language-text">A:
+  weak
+
+B:
+  strong
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-text">between-regime difference:
+  substantial in synthetic data
+</code></pre>
+<p>This is constructed example data, not empirical evidence.</p>
+<hr>
+<h1 id="pass-4-model-fit">Pass 4 — Model Fit</h1>
+<p>Suppose conventional baseline predicts:</p>
+<pre><code class="language-text">broad reasoning:
+  low
+</code></pre>
+<p>Then:</p>
+<pre><code class="language-yaml">model_fit:
+  regime_a:
+    status: moderate_to_high
+
+  regime_b:
+    status: low
+
+  overall:
+    status: regime_conditioned_candidate
+</code></pre>
+<p>More precise than:</p>
+<pre><code class="language-text">model wrong
+</code></pre>
+<hr>
+<h1 id="pass-5-counterfactual-boundary-test">Pass 5 — Counterfactual Boundary Test</h1>
+<p>Suppose observations occur:</p>
+<pre><code class="language-text">A1
+A2
+A3
+B1
+B2
+B3
+</code></pre>
+<p>Move the proposed boundary.</p>
+<p>If:</p>
+<pre><code class="language-text">boundary after A2
+</code></pre>
+<p>produces unstable groups, but:</p>
+<pre><code class="language-text">boundary after A3
+</code></pre>
+<p>produces stable groups, that may strengthen the original boundary interpretation.</p>
+<p>A real study would require appropriate statistical testing.</p>
+<hr>
+<h1 id="pass-6-substrate-isolation">Pass 6 — Substrate Isolation</h1>
+<p>Now attempt to hold:</p>
+<pre><code class="language-text">task
+timing
+interaction
+</code></pre>
+<p>constant while changing only:</p>
+<pre><code class="language-text">substrate
+</code></pre>
+<p>If performance changes:</p>
+<pre><code class="language-text">substrate contribution:
+  candidate
+</code></pre>
+<p>If not:</p>
+<pre><code class="language-text">original regime difference
+may have depended on another factor
+</code></pre>
+<p>This is why regime analysis and substrate analysis should remain separate.</p>
+<hr>
+<h1 id="pass-7-timing-isolation">Pass 7 — Timing Isolation</h1>
+<p>Likewise compare:</p>
+<pre><code class="language-text">same task
+same substrate
+same response structure
+
+timed
+vs
+reflective
+</code></pre>
+<p>Possible result:</p>
+<pre><code class="language-text">time_constraint effect:
+  candidate
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">no effect
+</code></pre>
+<hr>
+<h1 id="pass-8-tool-isolation">Pass 8 — Tool Isolation</h1>
+<p>Compare:</p>
+<pre><code class="language-text">individual unassisted
+</code></pre>
+<p>with:</p>
+<pre><code class="language-text">human-AI pair
+</code></pre>
+<p>but recognize that this changes:</p>
+<pre><code class="language-text">system boundary
+</code></pre>
+<p>not merely regime.</p>
+<p>Correct:</p>
+<pre><code class="language-text">human_ai_pair:
+  distinct observed system
+</code></pre>
+<p>Do not fold the pair result into the individual's regime without explicit justification.</p>
+<hr>
+<h1 id="pax-01-regime-result">PAX-01 Regime Result</h1>
+<p>A cautious synthetic result:</p>
+<pre><code class="language-yaml">regime_result:
+  candidate_regimes:
+    - regime_a
+    - regime_b
+
+  within_regime_stability:
+    demonstration_only
+
+  between_regime_difference:
+    demonstration_only
+
+  model_fit:
+    status: regime_conditioned_candidate
+
+  substrate_contribution:
+    unresolved
+
+  timing_contribution:
+    unresolved
+
+  response_format_contribution:
+    unresolved
+
+  interaction_mode_contribution:
+    unresolved
+
+  causal_interpretation:
+    unresolved
+
+  validation_state:
+    unvalidated
+</code></pre>
+<p>This is enough to demonstrate the grammar without pretending the cause is known.</p>
+<hr>
+<h1 id="baseline-wins-example">Baseline-Wins Example</h1>
+<p>Suppose:</p>
+<pre><code class="language-text">Regime A:
+  weak
+  weak
+  weak
+
+Regime B:
+  weak
+  weak
+  weak
+</code></pre>
+<p>Correct:</p>
+<pre><code class="language-yaml">regime_difference:
+  status: not_supported
+
+model_mismatch:
+  status: not_supported_by_regime_analysis
+</code></pre>
+<p>Different conditions did not produce a meaningful difference.</p>
+<hr>
+<h1 id="false-regime-example">False-Regime Example</h1>
+<p>Suppose:</p>
+<pre><code class="language-text">A:
+  weak
+  strong
+  moderate
+
+B:
+  strong
+  weak
+  moderate
+</code></pre>
+<p>Correct:</p>
+<pre><code class="language-yaml">regime:
+  classification:
+    unsupported
+
+reason:
+  low within_condition_stability
+</code></pre>
+<p>Do not force the distinction.</p>
+<hr>
+<h1 id="model-only-regime-change">Model-Only Regime Change</h1>
+<p>Suppose the subject remains stable.</p>
+<pre><code class="language-text">model_v1:
+  low error
+
+model_v2:
+  high error
+</code></pre>
+<p>Correct candidate:</p>
+<pre><code class="language-text">model regime changed
+</code></pre>
+<p>not:</p>
+<pre><code class="language-text">subject regime changed
+</code></pre>
+<hr>
+<h1 id="measurement-only-regime-change">Measurement-Only Regime Change</h1>
+<p>Suppose:</p>
+<pre><code class="language-text">instrument_v1
+  -&gt;
+instrument_v2
+</code></pre>
+<p>and results change.</p>
+<p>Correct:</p>
+<pre><code class="language-text">measurement regime changed
+</code></pre>
+<p>until subject change is independently supported.</p>
+<hr>
+<h1 id="environmental-regime-change">Environmental Regime Change</h1>
+<p>Example:</p>
+<pre><code class="language-text">controlled environment
+</code></pre>
+<p>versus:</p>
+<pre><code class="language-text">high-noise environment
+</code></pre>
+<p>If model fit changes reproducibly:</p>
+<pre><code class="language-text">environment-conditioned model fit
+</code></pre>
+<p>may be appropriate.</p>
+<p>Cause still requires analysis.</p>
+<hr>
+<h1 id="ai-regime-example">AI Regime Example</h1>
+<p>For an AI system:</p>
+<pre><code class="language-text">Regime A:
+  no tools
+  short context
+  static prompt configuration
+
+Regime B:
+  tools enabled
+  extended context
+  retrieval available
+</code></pre>
+<p>Behavior differences may be substantial.</p>
+<p>But several conditions changed.</p>
+<p>A good study decomposes them before making causal claims.</p>
+<hr>
+<h1 id="human-ai-regime-example">Human-AI Regime Example</h1>
+<p>A human-AI pair may itself operate under regimes:</p>
+<pre><code class="language-text">Regime A:
+  human leads
+  AI retrieves
+
+Regime B:
+  AI proposes
+  human verifies
+
+Regime C:
+  parallel independent reasoning
+  then merge
+</code></pre>
+<p>These are pair-level regimes.</p>
+<p>They should not automatically define the individual's cognitive regimes.</p>
+<hr>
+<h1 id="organizational-regime-example">Organizational Regime Example</h1>
+<p>An organization may shift from:</p>
+<pre><code class="language-text">centralized decision process
+</code></pre>
+<p>to:</p>
+<pre><code class="language-text">distributed decision process
+</code></pre>
+<p>A predictive model calibrated under the first may require reevaluation under the second.</p>
+<p>Again:</p>
+<pre><code class="language-text">organizational regime
+</code></pre>
+<p>is a functional analogy.</p>
+<p>It does not imply that an organization has human cognition.</p>
+<hr>
+<h1 id="regime-validity-window">Regime Validity Window</h1>
+<p>A model prediction should ideally record:</p>
+<pre><code class="language-yaml">regime_validity:
+  model:
+  validated_regimes:
+  unknown_regimes:
+
+  current_regime:
+
+  compatibility:
+    status:
+</code></pre>
+<p>Where validation is unavailable:</p>
+<pre><code class="language-text">compatibility:
+  unknown
+</code></pre>
+<hr>
+<h1 id="prediction-validity-window">Prediction Validity Window</h1>
+<p>Regime is one component of a broader validity window.</p>
+<pre><code class="language-yaml">prediction_validity:
+  generated_at:
+
+  intended_regime:
+  intended_substrate:
+  model_version:
+  measurement_version:
+
+  current_regime:
+  current_substrate:
+
+  status:
+</code></pre>
+<p>A prediction can become temporally stale without a clean regime transition, and can encounter a new regime immediately after generation.</p>
+<p>Both dimensions matter.</p>
+<hr>
+<h1 id="regime-metrics">Regime Metrics</h1>
+<hr>
+<h1 id="pa-m16-regime-transition-detection-rate"><code>PA-M16 — Regime Transition Detection Rate</code></h1>
+<pre><code class="language-text">RTDR =
+  detected_transitions
+  /
+  reference_transitions
+</code></pre>
+<p>Question:</p>
+<blockquote>
+<p>When meaningful reference transitions occur, how often does the observer detect them?</p>
+</blockquote>
+<hr>
+<h1 id="pa-m17-false-regime-alarm-rate"><code>PA-M17 — False Regime Alarm Rate</code></h1>
+<pre><code class="language-text">FRAR =
+  false_transition_flags
+  /
+  stable_regime_opportunities
+</code></pre>
+<p>This is essential.</p>
+<p>A regime observer that always finds transitions is not useful.</p>
+<hr>
+<h1 id="pa-m18-regime-boundary-error"><code>PA-M18 — Regime Boundary Error</code></h1>
+<pre><code class="language-text">RBE =
+  distance(
+    detected_boundary,
+    reference_boundary
+  )
+</code></pre>
+<p>Useful when a reference boundary exists.</p>
+<hr>
+<h1 id="pa-m19-regime-conditioned-stability"><code>PA-M19 — Regime-Conditioned Stability</code></h1>
+<p>Conceptually:</p>
+<pre><code class="language-text">RCS =
+  within_regime_stability
+</code></pre>
+<p>This helps distinguish:</p>
+<pre><code class="language-text">stable different regimes
+</code></pre>
+<p>from:</p>
+<pre><code class="language-text">general instability
+</code></pre>
+<hr>
+<h1 id="related-metrics">Related Metrics</h1>
+<p>Regime analysis may also use:</p>
+<pre><code class="language-text">PA-M04  Test-Retest Stability
+PA-M07  Profile Topology Stability
+
+PA-M10  Incremental Explanatory Value
+PA-M11  Incremental Predictive Value
+
+PA-M12  Substrate Effect Magnitude
+PA-M13  Substrate Effect Replicability
+PA-M15  Substrate Specificity
+
+PA-M20  Model-Mismatch Precision
+PA-M21  Model-Mismatch Recall
+PA-M22  Model-Mismatch False Positive Rate
+
+PA-M24  Cross-Observation Coherence
+PA-M25  Profile Contradiction Density
+
+PA-M26  Dimension Drift Rate
+PA-M27  Profile Drift Magnitude
+
+PA-M28  Confidence Calibration Error
+PA-M32  Unsupported Assertion Rate
+
+PA-M33  Irrelevant Perturbation Stability
+PA-M34  Relevant Change Sensitivity
+PA-M35  Task-Order Sensitivity
+
+PA-M36  Adapter Ablation Effect
+</code></pre>
+<hr>
+<h1 id="regime-validation-ladder">Regime Validation Ladder</h1>
+<h2 id="stage-1-candidate-identification">Stage 1 — Candidate Identification</h2>
+<p>Can candidate operating states be described?</p>
+<hr>
+<h2 id="stage-2-within-regime-stability">Stage 2 — Within-Regime Stability</h2>
+<p>Do observations within each candidate regime show enough structure to justify grouping?</p>
+<hr>
+<h2 id="stage-3-between-regime-separation">Stage 3 — Between-Regime Separation</h2>
+<p>Are the regimes materially different?</p>
+<hr>
+<h2 id="stage-4-boundary-stability">Stage 4 — Boundary Stability</h2>
+<p>Does the distinction survive reasonable boundary changes?</p>
+<hr>
+<h2 id="stage-5-replication">Stage 5 — Replication</h2>
+<p>Does the regime structure appear in new observations?</p>
+<hr>
+<h2 id="stage-6-incremental-value">Stage 6 — Incremental Value</h2>
+<p>Does regime representation improve:</p>
+<pre><code class="language-text">prediction
+calibration
+explanation
+coherence
+mismatch detection
+</code></pre>
+<p>beyond simpler methods?</p>
+<hr>
+<h2 id="stage-7-generalization">Stage 7 — Generalization</h2>
+<p>Does the regime definition generalize to appropriate new cases?</p>
+<hr>
+<h1 id="validation-baselines">Validation Baselines</h1>
+<p>Compare against:</p>
+<pre><code class="language-text">single-state model
+simple contextual model
+time-series baseline
+change-point model
+state-space model
+cluster/state segmentation
+interaction model
+</code></pre>
+<p>where applicable.</p>
+<p>RTT-derived regime analysis must earn value beyond credible alternatives.</p>
+<hr>
+<h1 id="null-regime-test">Null Regime Test</h1>
+<p>Generate or select data from a stable process.</p>
+<p>Expected:</p>
+<pre><code class="language-text">regime_transition:
+  not_detected
+</code></pre>
+<p>If the observer repeatedly invents regimes:</p>
+<pre><code class="language-text">false alarm problem
+</code></pre>
+<hr>
+<h1 id="known-transition-test">Known Transition Test</h1>
+<p>Use a process with a known change.</p>
+<p>Expected:</p>
+<pre><code class="language-text">regime_transition:
+  detected
+</code></pre>
+<p>with reasonable boundary accuracy.</p>
+<hr>
+<h1 id="gradual-transition-test">Gradual Transition Test</h1>
+<p>Use a process that changes gradually.</p>
+<p>The observer should not force:</p>
+<pre><code class="language-text">one precise instant
+</code></pre>
+<p>if the evidence supports:</p>
+<pre><code class="language-text">transition interval
+</code></pre>
+<hr>
+<h1 id="recurring-regime-test">Recurring Regime Test</h1>
+<p>Example:</p>
+<pre><code class="language-text">A
+B
+A
+B
+A
+</code></pre>
+<p>The observer should permit:</p>
+<pre><code class="language-text">recurring regimes
+</code></pre>
+<p>rather than inventing:</p>
+<pre><code class="language-text">A1
+B1
+A2
+B2
+A3
+</code></pre>
+<p>unless evidence supports distinct states.</p>
+<hr>
+<h1 id="novel-regime-test">Novel Regime Test</h1>
+<p>Introduce:</p>
+<pre><code class="language-text">Regime C
+</code></pre>
+<p>not present in reference data.</p>
+<p>The observer should be able to return:</p>
+<pre><code class="language-text">unknown_regime_candidate
+</code></pre>
+<p>rather than forcing C into A or B.</p>
+<hr>
+<h1 id="regime-merge-test">Regime Merge Test</h1>
+<p>Provide two nominal regimes with indistinguishable relevant behavior.</p>
+<p>Correct potential output:</p>
+<pre><code class="language-text">merge_candidate
+</code></pre>
+<hr>
+<h1 id="regime-split-test">Regime Split Test</h1>
+<p>Provide one nominal regime containing two stable internal patterns.</p>
+<p>Correct potential output:</p>
+<pre><code class="language-text">split_candidate
+</code></pre>
+<hr>
+<h1 id="counterfactual-boundary-test">Counterfactual Boundary Test</h1>
+<p>Move candidate boundaries.</p>
+<p>Desired:</p>
+<pre><code class="language-text">reasonable boundary changes
+do not arbitrarily reverse interpretation
+</code></pre>
+<p>If they do:</p>
+<pre><code class="language-text">boundary_fragility:
+  high
+</code></pre>
+<hr>
+<h1 id="task-order-test">Task-Order Test</h1>
+<p>Reorder tasks where order should not matter.</p>
+<p>If regime classification changes:</p>
+<pre><code class="language-text">PA-M35
+</code></pre>
+<p>may reveal order sensitivity.</p>
+<hr>
+<h1 id="model-version-test">Model-Version Test</h1>
+<p>Change only:</p>
+<pre><code class="language-text">model version
+</code></pre>
+<p>Keep the observed system stable.</p>
+<p>The observer should attribute the changed regime evidence appropriately.</p>
+<hr>
+<h1 id="measurement-version-test">Measurement-Version Test</h1>
+<p>Change only:</p>
+<pre><code class="language-text">measurement instrument
+</code></pre>
+<p>The observer should not label the subject's regime as changed without additional evidence.</p>
+<hr>
+<h1 id="substrate-isolation-test">Substrate Isolation Test</h1>
+<p>Change only substrate where possible.</p>
+<p>This helps distinguish:</p>
+<pre><code class="language-text">substrate effect
+</code></pre>
+<p>from:</p>
+<pre><code class="language-text">broader regime difference
+</code></pre>
+<hr>
+<h1 id="human-ai-boundary-test">Human-AI Boundary Test</h1>
+<p>Change:</p>
+<pre><code class="language-text">individual
+</code></pre>
+<p>to:</p>
+<pre><code class="language-text">human-AI pair
+</code></pre>
+<p>The observer should identify:</p>
+<pre><code class="language-text">system-boundary change
+</code></pre>
+<p>rather than treating this merely as a new individual regime.</p>
+<hr>
+<h1 id="failure-modes">Failure Modes</h1>
+<h2 id="regime-inflation">Regime Inflation</h2>
+<p>Risk:</p>
+<p>Every condition difference becomes a regime.</p>
+<p>Mitigation:</p>
+<p>Require materiality and within-regime stability.</p>
+<hr>
+<h1 id="infinite-reclassification">Infinite Reclassification</h1>
+<p>Risk:</p>
+<p>Every predictive error creates a new regime.</p>
+<p>Mitigation:</p>
+<p>Define regimes independently of prediction correctness.</p>
+<hr>
+<h1 id="boundary-shopping">Boundary Shopping</h1>
+<p>Risk:</p>
+<p>Boundary positions are adjusted until expected results appear.</p>
+<p>Mitigation:</p>
+<p>Counterfactual boundary testing and preregistration.</p>
+<hr>
+<h1 id="regime-rescue">Regime Rescue</h1>
+<p>Risk:</p>
+<p>Poor performance is dismissed as occurring in the "wrong regime."</p>
+<p>Mitigation:</p>
+<p>Symmetric analysis and anti-rescue tests.</p>
+<hr>
+<h1 id="favorability-bias">Favorability Bias</h1>
+<p>Risk:</p>
+<p>Regime differences are emphasized only when they improve the subject's profile.</p>
+<p>Mitigation:</p>
+<p>Test adverse and favorable shifts equally.</p>
+<hr>
+<h1 id="adverse-bias">Adverse Bias</h1>
+<p>Risk:</p>
+<p>Negative regime performance is treated as more globally informative than favorable performance.</p>
+<p>Mitigation:</p>
+<p>Same scope requirements both directions.</p>
+<hr>
+<h1 id="context-inflation">Context Inflation</h1>
+<p>Risk:</p>
+<p>Any contextual variable associated with performance becomes regime-defining.</p>
+<p>Mitigation:</p>
+<p>Require incremental value.</p>
+<hr>
+<h1 id="post-hoc-segmentation">Post-Hoc Segmentation</h1>
+<p>Risk:</p>
+<p>Regimes are created after viewing outcomes.</p>
+<p>Mitigation:</p>
+<p>Label exploratory regime discovery and validate on holdout data.</p>
+<hr>
+<h1 id="temporal-overfitting">Temporal Overfitting</h1>
+<p>Risk:</p>
+<p>A sequence is divided into too many regimes.</p>
+<p>Mitigation:</p>
+<p>Complexity control and simpler baselines.</p>
+<hr>
+<h1 id="regime-permanence">Regime Permanence</h1>
+<p>Risk:</p>
+<p>Once a system receives a regime label, the label becomes permanent.</p>
+<p>Mitigation:</p>
+<p>Version and reassess regimes.</p>
+<hr>
+<h1 id="cause-inflation">Cause Inflation</h1>
+<p>Risk:</p>
+<p>A regime difference becomes a causal explanation.</p>
+<p>Mitigation:</p>
+<p>Separate:</p>
+<pre><code class="language-text">regime_difference
+</code></pre>
+<p>from:</p>
+<pre><code class="language-text">cause
+</code></pre>
+<hr>
+<h1 id="rtt-authority-bias">RTT Authority Bias</h1>
+<p>Risk:</p>
+<p>RTT terminology is assumed to establish regime validity.</p>
+<p>Mitigation:</p>
+<p>Compare against established change and state models.</p>
+<hr>
+<h1 id="canon-confirmation">Canon Confirmation</h1>
+<p>Risk:</p>
+<p>TriadicFrameworks expects regimes, therefore regimes are found.</p>
+<p>Mitigation:</p>
+<p>Null tests, negative controls, ablation, external comparison.</p>
+<hr>
+<h1 id="regime-as-identity">Regime as Identity</h1>
+<p>Risk:</p>
+<p>A person becomes labeled:</p>
+<pre><code class="language-text">a Regime B person
+</code></pre>
+<p>Mitigation:</p>
+<p>Regimes describe observation conditions, not personal essence.</p>
+<hr>
+<h1 id="falsification-conditions">Falsification Conditions</h1>
+<p>The Regime Observer should be revised, restricted, deprecated, or rejected if:</p>
+<ul>
+<li>stable controls routinely generate regime changes,</li>
+<li>known transitions are missed,</li>
+<li>boundaries cannot be reproduced,</li>
+<li>within-regime stability is poor,</li>
+<li>regime definitions depend on prediction correctness,</li>
+<li>minor contextual differences routinely produce new regimes,</li>
+<li>boundary shifts arbitrarily reverse interpretations,</li>
+<li>simpler state models perform equivalently,</li>
+<li>regime-aware modeling adds no incremental value,</li>
+<li>regime labels increase unsupported assertions,</li>
+<li>favorable and adverse regime effects are treated asymmetrically,</li>
+<li>or regime terminology creates complexity without measurable benefit.</li>
+</ul>
+<hr>
+<h1 id="anti-rescue-test">Anti-Rescue Test</h1>
+<p>Ask:</p>
+<blockquote>
+<p><strong>Can the Regime Observer conclude that an unfavorable observation occurred in a perfectly appropriate regime?</strong></p>
+</blockquote>
+<p>Required answer:</p>
+<pre><code class="language-text">yes
+</code></pre>
+<hr>
+<h1 id="anti-favorability-test">Anti-Favorability Test</h1>
+<p>Ask:</p>
+<blockquote>
+<p><strong>Can the Regime Observer conclude that a favorable observation occurred only under a narrow regime and should not be generalized?</strong></p>
+</blockquote>
+<p>Required answer:</p>
+<pre><code class="language-text">yes
+</code></pre>
+<hr>
+<h1 id="no-regime-test">No-Regime Test</h1>
+<p>Ask:</p>
+<blockquote>
+<p><strong>Can the observer conclude that no meaningful regime structure exists?</strong></p>
+</blockquote>
+<p>Required answer:</p>
+<pre><code class="language-text">yes
+</code></pre>
+<hr>
+<h1 id="baseline-sufficient-test">Baseline-Sufficient Test</h1>
+<p>Ask:</p>
+<blockquote>
+<p><strong>Can a non-regime-aware model outperform or equal the regime-aware system?</strong></p>
+</blockquote>
+<p>Required answer:</p>
+<pre><code class="language-text">yes
+</code></pre>
+<p>Then:</p>
+<pre><code class="language-text">regime_added_value:
+  not_demonstrated
+</code></pre>
+<hr>
+<h1 id="unknown-regime-test">Unknown-Regime Test</h1>
+<p>Ask:</p>
+<blockquote>
+<p><strong>Can the observer return <code>unknown</code> instead of assigning an observation to the nearest regime?</strong></p>
+</blockquote>
+<p>Required answer:</p>
+<pre><code class="language-text">yes
+</code></pre>
+<hr>
+<h1 id="review-trigger">Review Trigger</h1>
+<p>Human review may be appropriate when:</p>
+<pre><code class="language-text">regime mismatch candidate
+high consequence
+boundary uncertainty
+unknown regime
+large between-regime effect
+model validated only for another regime
+subject contest
+measurement regime changed
+system boundary changed
+</code></pre>
+<p>Review does not automatically invalidate the model.</p>
+<hr>
+<h1 id="ethics-boundary">Ethics Boundary</h1>
+<p>The Regime Observer should not tell a person:</p>
+<blockquote>
+<p>"You perform badly because you are in the wrong regime."</p>
+</blockquote>
+<p>unless evidence supports the causal interpretation.</p>
+<p>Prefer:</p>
+<blockquote>
+<p><strong>"Performance differs across the currently defined operating conditions. The evidence supports investigating whether model fit or capability expression is regime-dependent."</strong></p>
+</blockquote>
+<p>The observation comes before the explanation.</p>
+<hr>
+<h1 id="privacy">Privacy</h1>
+<p>Regime profiles may reveal:</p>
+<pre><code class="language-text">when a person performs better
+when performance weakens
+which environments matter
+which tools matter
+which interaction modes matter
+</code></pre>
+<p>This can be sensitive.</p>
+<p>Regime metadata should therefore follow the module's broader privacy and purpose-limitation principles.</p>
+<hr>
+<h1 id="decision-authority_1">Decision Authority</h1>
+<pre><code class="language-text">decision_authority: none
+
+authorized_use:
+  - research
+  - demonstration
+  - regime hypothesis generation
+  - model comparison
+  - longitudinal analysis
+  - system monitoring
+  - framework development
+
+prohibited_use:
+  - diagnosis
+  - automated hiring decision
+  - educational exclusion
+  - legal determination
+  - insurance determination
+  - lending determination
+  - automated adverse decision
+</code></pre>
+<hr>
+<h1 id="minimal-regime-observer-contract">Minimal Regime Observer Contract</h1>
+<pre><code class="language-yaml">regime_result:
+  observation_id:
+
+  observed_system:
+    id:
+    class:
+    boundary:
+
+  baseline:
+    model:
+    model_version:
+    prediction:
+    intended_regime:
+    preserved: true
+
+  measurement:
+    instrument:
+    version:
+
+  substrate:
+    id:
+
+  temporal_scope:
+    start:
+    end:
+
+  candidate_regimes:
+    - id:
+      label:
+      conditions:
+      evidence:
+      stability:
+      confidence:
+
+  memberships:
+    - observation_id:
+      regime_id:
+      status:
+      confidence:
+
+  boundaries:
+    - id:
+      from:
+      to:
+      type:
+      location:
+      evidence:
+      confidence:
+
+  transitions:
+    - id:
+      status:
+      type:
+      confidence:
+
+  stability:
+    within_regime:
+    between_regime:
+
+  compatibility:
+    model:
+    measurement:
+    substrate:
+    observer:
+    system_boundary:
+
+  model_fit:
+    overall:
+    by_regime:
+
+  substrate_fit:
+  regime_fit:
+
+  drift:
+  coherence:
+  counterfactual:
+
+  alternative_interpretations:
+  counterevidence:
+  confounds:
+  missing_evidence:
+
+  uncertainty:
+  limitations:
+
+  review_required:
+
+  validation_state:
+  decision_authority: none
+</code></pre>
+<hr>
+<h1 id="research-questions">Research Questions</h1>
+<ol>
+<li>Can meaningful regimes be operationally defined?</li>
+<li>Can regime membership be reproduced?</li>
+<li>How much within-regime stability is necessary?</li>
+<li>How much between-regime difference is meaningful?</li>
+<li>Can regime boundaries be estimated reliably?</li>
+<li>Can gradual transitions be represented without false precision?</li>
+<li>Can recurring regimes be recognized?</li>
+<li>Can novel regimes be detected without forced classification?</li>
+<li>Can over-segmented regimes be merged?</li>
+<li>Can under-segmented regimes be split?</li>
+<li>Can regime differences be separated from substrate effects?</li>
+<li>Can regime differences be separated from task difficulty?</li>
+<li>Can regime differences be separated from measurement changes?</li>
+<li>Can regime differences be separated from model-version changes?</li>
+<li>Can regime differences be separated from observer changes?</li>
+<li>Can regime-conditioned prediction improve accuracy?</li>
+<li>Can it improve calibration?</li>
+<li>Can it improve model-mismatch detection?</li>
+<li>Can it improve explanatory value?</li>
+<li>Can it reduce inappropriate global inference?</li>
+<li>How high is the false regime alarm rate?</li>
+<li>Can boundary error be measured meaningfully?</li>
+<li>Can regime interpretation survive counterfactual boundary shifts?</li>
+<li>Does RTT add value beyond conventional regime methods?</li>
+<li>Does FFT improve regime identification?</li>
+<li>Does Structural Detection improve regime definition?</li>
+<li>Does Resonance improve identification of context-dependent regimes?</li>
+<li>Does adapter agreement merely create regime echo?</li>
+<li>Can regime-aware analysis remain fair across groups?</li>
+<li>Can regime metadata create privacy risks?</li>
+<li>How should regimes be represented for AI systems?</li>
+<li>How should regimes be represented for human-AI pairs?</li>
+<li>How should organizational regimes be validated?</li>
+<li>How should system-boundary changes interact with regime definition?</li>
+<li>When should a model be recalibrated for a new regime?</li>
+<li>When should a new model be trained?</li>
+<li>When should no regime distinction be used?</li>
+<li>When should the observer return <code>unknown</code>?</li>
+<li>When should regime analysis be removed because it adds no value?</li>
+<li>What evidence would falsify the usefulness of the Regime Observer?</li>
+</ol>
+<hr>
+<h1 id="core-invariants">Core Invariants</h1>
+<pre><code class="language-text">condition != regime
+context != regime
+change != regime_transition
+difference != regime_mismatch
+prediction_error != regime_mismatch
+poor_performance != wrong_regime
+strong_performance != correct_regime
+regime != cause
+regime != identity
+regime_label != human_type
+substrate != regime
+task != regime
+time_period != regime
+model_version != subject_regime
+measurement_version != subject_regime
+system_boundary_change != individual_regime_change
+within_regime_variation != between_regime_difference
+regime_difference != superiority
+high_regime_fit != human_worth
+low_regime_fit != subject_failure
+RTT_output != regime_truth
+adapter_agreement != independent_evidence
+many_regimes != better_model
+fewer_regimes != better_model
+unknown_regime != failure
+no_regime_structure != framework_failure
+regime_complexity != validity
+observer_output != decision_authority
+canon_alignment != empirical_validation
+</code></pre>
+<hr>
+<h1 id="closing-principle">Closing Principle</h1>
+<p>Predictive models do not operate in empty space.</p>
+<p>They operate under conditions.</p>
+<p>The observed system does too.</p>
+<p>Sometimes those conditions vary without changing anything important.</p>
+<p>Sometimes they gradually drift.</p>
+<p>Sometimes they reorganize into meaningfully different operating states.</p>
+<p>Sometimes the model remains reliable across all of them.</p>
+<p>Sometimes the prediction only makes sense inside one.</p>
+<p>The purpose of the Regime Observer is not to divide reality into as many regimes as possible.</p>
+<p>It is to discover whether a prediction depends on an operating structure that the assessment would otherwise leave implicit.</p>
+<p>And equally importantly, it must be able to conclude:</p>
+<pre><code class="language-text">no meaningful regime difference detected
+</code></pre>
+<p>when the evidence does not support one.</p>
+<blockquote>
+<p><strong>A regime earns its place when distinguishing it makes prediction, explanation, calibration, or uncertainty more faithful to the observed system.</strong></p>
+</blockquote>
   </main>
 </body>
 </html>

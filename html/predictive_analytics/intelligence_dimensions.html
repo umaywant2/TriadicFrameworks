@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/predictive_analytics/intelligence_dimensions.md">
-  <title>intelligence_dimensions</title>
+  <title>Predictive Analytics — Intelligence Dimensions</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,7 +92,2168 @@
   </aside>
 
   <main>
+<p><img width="1194" height="672" alt="predictive_analytics_intelligence_dimensions_" src="https://github.com/user-attachments/assets/a7d9bace-c6c9-4fcb-98de-f8bc47e641dc" /></p>
+<h1 id="predictive-analytics-intelligence-dimensions">Predictive Analytics — Intelligence Dimensions</h1>
+<blockquote>
+<p><strong>Intelligence may have shape before it has a score.</strong></p>
+</blockquote>
+<h2 id="module">Module</h2>
+<p>Predictive Analytics</p>
+<h2 id="profile-system">Profile System</h2>
+<p>Resonant IQ Fingerprint (RIQF)</p>
+<h2 id="document-role">Document Role</h2>
+<p>Candidate intelligence-dimension registry and operationalization grammar.</p>
+<h2 id="status">Status</h2>
+<p>Experimental.</p>
+<h2 id="validation-state">Validation State</h2>
+<p>Unvalidated.</p>
+<h2 id="decision-authority">Decision Authority</h2>
+<p>None.</p>
+<hr>
+<h1 id="purpose">Purpose</h1>
+<p>This document defines the initial candidate dimensions used by the Resonant IQ Fingerprint.</p>
+<p>The dimensions are intended to support multidimensional observation of intelligent performance without assuming that:</p>
+<ul>
+<li>intelligence is fully captured by these dimensions,</li>
+<li>every dimension is independent,</li>
+<li>every dimension applies to every system,</li>
+<li>every dimension represents a stable trait,</li>
+<li>every dimension is equally important,</li>
+<li>every dimension should be quantified,</li>
+<li>or the dimensions should be combined into a master intelligence score.</li>
+</ul>
+<p>The registry is deliberately provisional.</p>
+<p>Dimensions may eventually be:</p>
+<pre><code class="language-text">validated
+split
+merged
+renamed
+restricted
+redefined
+deprecated
+rejected
+</code></pre>
+<p>based on evidence.</p>
+<hr>
+<h1 id="foundational-principle">Foundational Principle</h1>
+<p>The dimensions describe:</p>
+<pre><code class="language-text">observed capability expression
+</code></pre>
+<p>not:</p>
+<pre><code class="language-text">human worth
+</code></pre>
+<p>and not automatically:</p>
+<pre><code class="language-text">permanent cognitive identity
+</code></pre>
+<p>A dimension should therefore be read as:</p>
+<blockquote>
+<p><strong>Under these specified conditions, evidence consistent with this capability was observed to this degree and with this level of uncertainty.</strong></p>
+</blockquote>
+<p>Not:</p>
+<blockquote>
+<p><strong>This is what the person fundamentally is.</strong></p>
+</blockquote>
+<hr>
+<h1 id="dimension-versus-trait">Dimension Versus Trait</h1>
+<p>RIQF begins with <strong>dimensions of observation</strong>, not declarations of immutable traits.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">dimension:
+  id: structural-reasoning
 
+  expression:
+    strong
+
+  evidence:
+    current_observations
+
+  stability:
+    not_validated
+
+  generalizability:
+    unknown
+</code></pre>
+<p>This is intentionally different from:</p>
+<pre><code class="language-text">PAX-01 possesses permanently
+high structural intelligence.
+</code></pre>
+<hr>
+<h1 id="dimension-contract">Dimension Contract</h1>
+<p>Every candidate dimension should eventually define:</p>
+<pre><code class="language-text">id
+name
+status
+operational_definition
+
+what_it_attempts_to_measure
+what_it_does_not_measure
+
+observable_indicators
+counter_indicators
+
+supported_substrates
+possible_suppressors
+known_confounds
+
+applicability
+
+evidence_requirements
+confidence_rules
+
+related_dimensions
+
+validation_state
+metric_refs
+</code></pre>
+<hr>
+<h1 id="core-dimension-states">Core Dimension States</h1>
+<p>Possible observation states:</p>
+<pre><code class="language-text">observed
+partially_observed
+not_observed
+insufficient_evidence
+conflicting_evidence
+unknown
+not_applicable
+</code></pre>
+<p>Possible expression labels:</p>
+<pre><code class="language-text">very_weak
+weak
+moderate
+strong
+very_strong
+variable
+unknown
+not_applicable
+</code></pre>
+<p>These labels are experimental.</p>
+<p>They are not validated psychometric scales.</p>
+<hr>
+<h1 id="confidence">Confidence</h1>
+<p>Possible descriptive confidence states:</p>
+<pre><code class="language-text">none
+very_low
+low
+medium
+high
+very_high
+unknown
+not_applicable
+</code></pre>
+<p>Confidence describes:</p>
+<pre><code class="language-text">confidence in the current observation
+</code></pre>
+<p>not:</p>
+<pre><code class="language-text">magnitude of intelligence
+</code></pre>
+<hr>
+<h1 id="applicability">Applicability</h1>
+<p>Each dimension should declare applicability by system type.</p>
+<p>Possible states:</p>
+<pre><code class="language-text">applicable
+substrate_dependent
+unsupported
+unknown
+not_applicable
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-yaml">applicability:
+  human: applicable
+  ai: applicable
+  human_ai_pair: substrate_dependent
+  organization: unknown
+</code></pre>
+<p>Same label does not establish identical internal cognition across system types.</p>
+<hr>
+<h1 id="initial-dimension-registry">Initial Dimension Registry</h1>
+<p>The initial RIQF vocabulary contains 24 candidate dimensions.</p>
+<pre><code class="language-text">D01  Pattern Recognition
+D02  Structural Reasoning
+D03  Causal Integration
+D04  Temporal Reasoning
+D05  Spatial Reasoning
+D06  Symbolic Reasoning
+D07  Linguistic Reasoning
+D08  Cross-Domain Transfer
+D09  Regime Recognition
+D10  Anomaly Detection
+D11  Contradiction Handling
+D12  Ambiguity Navigation
+D13  Adaptive Reframing
+D14  Coherence Maintenance
+D15  Drift Awareness
+D16  Compression / Abstraction
+D17  Reconstruction From Partial Evidence
+D18  Novelty Response
+D19  Metacognitive Calibration
+D20  Tool Collaboration
+D21  Social Interpretation
+D22  Embodied / Environmental Fit
+D23  Long-Horizon Integration
+D24  Recovery / Recalibration
+</code></pre>
+<p>This list is a research starting point.</p>
+<p>It is not intended as a final taxonomy of intelligence.</p>
+<hr>
+<h1 id="d01-pattern-recognition">D01 — Pattern Recognition</h1>
+<h2 id="id">ID</h2>
+<p><code>pattern-recognition</code></p>
+<h2 id="question">Question</h2>
+<blockquote>
+<p><strong>Can the observed system detect meaningful regularities in defined evidence?</strong></p>
+</blockquote>
+<h2 id="candidate-definition">Candidate Definition</h2>
+<p>Pattern Recognition describes observed ability to identify recurring, relational, sequential, or structural regularities within defined evidence.</p>
+<p>Potential forms include:</p>
+<pre><code class="language-text">visual pattern
+symbolic pattern
+relational pattern
+temporal pattern
+linguistic pattern
+behavioral pattern
+cross-domain pattern
+</code></pre>
+<hr>
+<h2 id="observable-indicators">Observable Indicators</h2>
+<p>Possible indicators:</p>
+<ul>
+<li>detecting repeated relationships,</li>
+<li>identifying regularities above an appropriate baseline,</li>
+<li>transferring a pattern into a novel but comparable task,</li>
+<li>distinguishing signal from defined distractors,</li>
+<li>maintaining performance across alternate forms.</li>
+</ul>
+<hr>
+<h2 id="counter-indicators">Counter-Indicators</h2>
+<p>Possible counter-indicators:</p>
+<ul>
+<li>chance-level detection,</li>
+<li>strong false-positive pattern detection,</li>
+<li>pattern claims that fail replication,</li>
+<li>sensitivity to irrelevant changes,</li>
+<li>detecting structure in randomized controls.</li>
+</ul>
+<hr>
+<h2 id="known-confounds">Known Confounds</h2>
+<pre><code class="language-text">prior exposure
+task familiarity
+domain expertise
+memorization
+selection effects
+noise
+cue leakage
+</code></pre>
+<hr>
+<h2 id="structural-detection-hook">Structural Detection Hook</h2>
+<p>Structural Detection may test:</p>
+<pre><code class="language-text">candidate_pattern
+replication
+holdout performance
+randomization control
+</code></pre>
+<hr>
+<h2 id="important-limit">Important Limit</h2>
+<p>Pattern recognition must not become:</p>
+<pre><code class="language-text">seeing meaning everywhere
+</code></pre>
+<p>False-positive pattern detection matters.</p>
+<hr>
+<h1 id="d02-structural-reasoning">D02 — Structural Reasoning</h1>
+<h2 id="id_1">ID</h2>
+<p><code>structural-reasoning</code></p>
+<h2 id="question_1">Question</h2>
+<blockquote>
+<p><strong>Can the observed system reason about relationships, boundaries, constraints, dependencies, and organization?</strong></p>
+</blockquote>
+<h2 id="candidate-definition_1">Candidate Definition</h2>
+<p>Structural Reasoning describes performance on tasks requiring the observed system to identify or manipulate relationships among multiple interacting components.</p>
+<hr>
+<h2 id="candidate-indicators">Candidate Indicators</h2>
+<pre><code class="language-text">relationship mapping
+boundary identification
+dependency tracing
+system reconstruction
+constraint preservation
+faultline detection
+local-global translation
+</code></pre>
+<hr>
+<h2 id="counter-indicators_1">Counter-Indicators</h2>
+<pre><code class="language-text">relationship confusion
+lost constraints
+unstable reconstruction
+failure to distinguish relevant boundaries
+</code></pre>
+<hr>
+<h2 id="possible-substrates">Possible Substrates</h2>
+<pre><code class="language-text">relational
+visual
+spatial
+textual
+diagrammatic
+symbolic
+system-level
+</code></pre>
+<hr>
+<h2 id="known-confounds_1">Known Confounds</h2>
+<pre><code class="language-text">domain knowledge
+diagram literacy
+task familiarity
+working memory
+language complexity
+</code></pre>
+<hr>
+<h2 id="related-dimensions">Related Dimensions</h2>
+<pre><code class="language-text">pattern-recognition
+causal-integration
+cross-domain-transfer
+reconstruction-from-partial-evidence
+</code></pre>
+<hr>
+<h1 id="d03-causal-integration">D03 — Causal Integration</h1>
+<h2 id="id_2">ID</h2>
+<p><code>causal-integration</code></p>
+<h2 id="question_2">Question</h2>
+<blockquote>
+<p><strong>Can the observed system reason across multiple candidate causes and consequences without collapsing correlation into causation?</strong></p>
+</blockquote>
+<h2 id="candidate-definition_2">Candidate Definition</h2>
+<p>Causal Integration describes the ability to construct, compare, revise, and constrain candidate causal explanations using available evidence.</p>
+<hr>
+<h2 id="candidate-indicators_1">Candidate Indicators</h2>
+<pre><code class="language-text">multiple-hypothesis generation
+dependency tracing
+cause/effect distinction
+confound recognition
+counterevidence integration
+causal uncertainty preservation
+</code></pre>
+<hr>
+<h2 id="counter-indicators_2">Counter-Indicators</h2>
+<pre><code class="language-text">correlation treated as causation
+single-story lock-in
+ignored confounds
+unsupported causal certainty
+</code></pre>
+<hr>
+<h2 id="important-limit_1">Important Limit</h2>
+<p>Predictive success does not itself demonstrate causal understanding.</p>
+<p>Therefore:</p>
+<pre><code class="language-text">prediction_accuracy
+!=
+causal_integration
+</code></pre>
+<hr>
+<h1 id="d04-temporal-reasoning">D04 — Temporal Reasoning</h1>
+<h2 id="id_3">ID</h2>
+<p><code>temporal-reasoning</code></p>
+<h2 id="question_3">Question</h2>
+<blockquote>
+<p><strong>Can the observed system reason across order, sequence, duration, dependency, and transition?</strong></p>
+</blockquote>
+<h2 id="candidate-indicators_2">Candidate Indicators</h2>
+<pre><code class="language-text">sequence reconstruction
+temporal dependency
+transition recognition
+event ordering
+lag recognition
+multi-step temporal integration
+</code></pre>
+<hr>
+<h2 id="counter-indicators_3">Counter-Indicators</h2>
+<pre><code class="language-text">systematic ordering errors
+lost temporal dependencies
+inconsistent sequence reconstruction
+</code></pre>
+<hr>
+<h2 id="relationship-to-rtt">Relationship to RTT</h2>
+<p>RTT may contribute tasks or observations involving:</p>
+<pre><code class="language-text">regime sequence
+transition
+continuity
+drift
+recovery
+</code></pre>
+<p>But RTT terminology does not automatically validate this dimension.</p>
+<hr>
+<h1 id="d05-spatial-reasoning">D05 — Spatial Reasoning</h1>
+<h2 id="id_4">ID</h2>
+<p><code>spatial-reasoning</code></p>
+<h2 id="question_4">Question</h2>
+<blockquote>
+<p><strong>Can the observed system represent and transform spatial relationships?</strong></p>
+</blockquote>
+<h2 id="candidate-indicators_3">Candidate Indicators</h2>
+<pre><code class="language-text">rotation
+relative position
+spatial transformation
+layout reconstruction
+geometric relationship
+navigation
+</code></pre>
+<hr>
+<h2 id="cross-system-warning">Cross-System Warning</h2>
+<p>Spatial reasoning for:</p>
+<pre><code class="language-text">human
+robot
+AI model
+</code></pre>
+<p>may involve materially different mechanisms.</p>
+<p>Equivalent task performance does not establish equivalent cognition.</p>
+<hr>
+<h1 id="d06-symbolic-reasoning">D06 — Symbolic Reasoning</h1>
+<h2 id="id_5">ID</h2>
+<p><code>symbolic-reasoning</code></p>
+<h2 id="question_5">Question</h2>
+<blockquote>
+<p><strong>Can the observed system manipulate symbolic representations according to relevant rules and relationships?</strong></p>
+</blockquote>
+<p>Candidate symbolic systems may include:</p>
+<pre><code class="language-text">numbers
+algebra
+logic
+formal notation
+code
+abstract tokens
+</code></pre>
+<hr>
+<h2 id="candidate-indicators_4">Candidate Indicators</h2>
+<pre><code class="language-text">rule-preserving manipulation
+symbol transformation
+formal inference
+logical relationship tracking
+</code></pre>
+<hr>
+<h2 id="important-distinction">Important Distinction</h2>
+<p>Symbolic reasoning is not identical to:</p>
+<pre><code class="language-text">rapid symbolic processing
+</code></pre>
+<p>A system may reason effectively with symbols while operating slowly.</p>
+<p>Therefore:</p>
+<pre><code class="language-text">symbolic_reasoning
+!=
+symbolic_speed
+</code></pre>
+<hr>
+<h1 id="d07-linguistic-reasoning">D07 — Linguistic Reasoning</h1>
+<h2 id="id_6">ID</h2>
+<p><code>linguistic-reasoning</code></p>
+<h2 id="question_6">Question</h2>
+<blockquote>
+<p><strong>Can the observed system interpret, transform, relate, and generate meaning through language?</strong></p>
+</blockquote>
+<p>Candidate operations:</p>
+<pre><code class="language-text">semantic interpretation
+analogy
+argument analysis
+context integration
+meaning preservation
+ambiguity recognition
+language transformation
+</code></pre>
+<hr>
+<h2 id="known-confounds_2">Known Confounds</h2>
+<pre><code class="language-text">native language
+education
+vocabulary exposure
+culture
+literacy
+accessibility
+domain knowledge
+</code></pre>
+<p>Language-heavy assessment requires particular caution before making global cognitive claims.</p>
+<hr>
+<h1 id="d08-cross-domain-transfer">D08 — Cross-Domain Transfer</h1>
+<h2 id="id_7">ID</h2>
+<p><code>cross-domain-transfer</code></p>
+<h2 id="question_7">Question</h2>
+<blockquote>
+<p><strong>Can useful structure learned or demonstrated in one domain be applied appropriately in another?</strong></p>
+</blockquote>
+<h2 id="candidate-indicators_5">Candidate Indicators</h2>
+<pre><code class="language-text">structural analogy
+novel transfer
+constraint preservation
+domain translation
+cross-domain reconstruction
+</code></pre>
+<hr>
+<h2 id="counter-indicators_4">Counter-Indicators</h2>
+<pre><code class="language-text">surface analogy without structural fit
+inappropriate transfer
+constraint loss
+failure on novel domains
+</code></pre>
+<hr>
+<h2 id="important-limit_2">Important Limit</h2>
+<p>Transfer must involve genuinely distinct contexts.</p>
+<p>Repeating nearly identical tasks under different labels is not strong evidence of cross-domain transfer.</p>
+<hr>
+<h1 id="d09-regime-recognition">D09 — Regime Recognition</h1>
+<h2 id="id_8">ID</h2>
+<p><code>regime-recognition</code></p>
+<h2 id="question_8">Question</h2>
+<blockquote>
+<p><strong>Can the observed system identify materially different operating conditions and adjust interpretation appropriately?</strong></p>
+</blockquote>
+<h2 id="candidate-indicators_6">Candidate Indicators</h2>
+<pre><code class="language-text">transition recognition
+state differentiation
+condition-dependent strategy
+within-regime consistency
+boundary recognition
+regime-specific prediction
+</code></pre>
+<hr>
+<h2 id="rtt-hook">RTT Hook</h2>
+<p>RTT may operationalize candidate regimes.</p>
+<p>But:</p>
+<pre><code class="language-text">different conditions
+!=
+different regimes
+</code></pre>
+<p>Regime recognition depends on meaningful regime definitions.</p>
+<hr>
+<h1 id="d10-anomaly-detection">D10 — Anomaly Detection</h1>
+<h2 id="id_9">ID</h2>
+<p><code>anomaly-detection</code></p>
+<h2 id="question_9">Question</h2>
+<blockquote>
+<p><strong>Can the observed system identify meaningful deviations from an established pattern, expectation, or regime?</strong></p>
+</blockquote>
+<h2 id="candidate-indicators_7">Candidate Indicators</h2>
+<pre><code class="language-text">outlier recognition
+unexpected relationship detection
+pattern violation
+faultline recognition
+distribution shift recognition
+</code></pre>
+<hr>
+<h2 id="required-companion-metric">Required Companion Metric</h2>
+<p>False-positive behavior matters.</p>
+<p>A system claiming every unusual event is anomalous should not score highly merely because it detects many anomalies.</p>
+<hr>
+<h1 id="d11-contradiction-handling">D11 — Contradiction Handling</h1>
+<h2 id="id_10">ID</h2>
+<p><code>contradiction-handling</code></p>
+<h2 id="question_10">Question</h2>
+<blockquote>
+<p><strong>Can the observed system recognize and responsibly preserve incompatible evidence or claims?</strong></p>
+</blockquote>
+<h2 id="candidate-indicators_8">Candidate Indicators</h2>
+<pre><code class="language-text">contradiction recognition
+counterevidence retention
+competing-model representation
+resolution when justified
+unresolved-state preservation
+</code></pre>
+<hr>
+<h2 id="counter-indicators_5">Counter-Indicators</h2>
+<pre><code class="language-text">contradiction suppression
+forced averaging
+premature resolution
+selective evidence removal
+</code></pre>
+<hr>
+<h2 id="coherence-hook">Coherence Hook</h2>
+<p>A sophisticated coherence system should be able to retain:</p>
+<pre><code class="language-text">unresolved contradiction
+</code></pre>
+<p>without treating it as system failure.</p>
+<hr>
+<h1 id="d12-ambiguity-navigation">D12 — Ambiguity Navigation</h1>
+<h2 id="id_11">ID</h2>
+<p><code>ambiguity-navigation</code></p>
+<h2 id="question_11">Question</h2>
+<blockquote>
+<p><strong>Can the observed system reason appropriately when information is incomplete or multiple interpretations remain plausible?</strong></p>
+</blockquote>
+<h2 id="candidate-indicators_9">Candidate Indicators</h2>
+<pre><code class="language-text">alternative interpretation generation
+uncertainty preservation
+probabilistic thinking
+conditional reasoning
+appropriate abstention
+</code></pre>
+<hr>
+<h2 id="counter-indicators_6">Counter-Indicators</h2>
+<pre><code class="language-text">unjustified certainty
+false binary collapse
+indecision without analysis
+arbitrary interpretation switching
+</code></pre>
+<hr>
+<h2 id="important-distinction_1">Important Distinction</h2>
+<p>Ambiguity navigation is not:</p>
+<pre><code class="language-text">always refusing to conclude
+</code></pre>
+<p>A capable system should narrow uncertainty when evidence justifies doing so.</p>
+<hr>
+<h1 id="d13-adaptive-reframing">D13 — Adaptive Reframing</h1>
+<h2 id="id_12">ID</h2>
+<p><code>adaptive-reframing</code></p>
+<h2 id="question_12">Question</h2>
+<blockquote>
+<p><strong>Can the observed system revise its representation when relevant evidence changes?</strong></p>
+</blockquote>
+<h2 id="candidate-indicators_10">Candidate Indicators</h2>
+<pre><code class="language-text">appropriate interpretation revision
+model switching
+new representation adoption
+assumption revision
+counterfactual responsiveness
+</code></pre>
+<hr>
+<h2 id="counter-indicators_7">Counter-Indicators</h2>
+<pre><code class="language-text">failure to update
+arbitrary update
+overreaction to irrelevant information
+persistent invalid framing
+</code></pre>
+<hr>
+<h2 id="counterfactual-hook">Counterfactual Hook</h2>
+<p>Adaptive Reframing should demonstrate both:</p>
+<pre><code class="language-text">stability to irrelevant changes
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">sensitivity to relevant changes
+</code></pre>
+<hr>
+<h1 id="d14-coherence-maintenance">D14 — Coherence Maintenance</h1>
+<h2 id="id_13">ID</h2>
+<p><code>coherence-maintenance</code></p>
+<h2 id="question_13">Question</h2>
+<blockquote>
+<p><strong>Can the observed system maintain compatible relationships among claims while incorporating new information?</strong></p>
+</blockquote>
+<h2 id="candidate-indicators_11">Candidate Indicators</h2>
+<pre><code class="language-text">cross-observation consistency
+constraint preservation
+contradiction tracking
+update consistency
+long-form integration
+</code></pre>
+<hr>
+<h2 id="counter-indicators_8">Counter-Indicators</h2>
+<pre><code class="language-text">self-contradiction
+constraint loss
+unsupported narrative repair
+inconsistent revisions
+</code></pre>
+<hr>
+<h2 id="important-limit_3">Important Limit</h2>
+<p>Coherence is not truth.</p>
+<p>A completely wrong theory can be internally coherent.</p>
+<p>Therefore:</p>
+<pre><code class="language-text">coherent
+!=
+correct
+</code></pre>
+<hr>
+<h1 id="d15-drift-awareness">D15 — Drift Awareness</h1>
+<h2 id="id_14">ID</h2>
+<p><code>drift-awareness</code></p>
+<h2 id="question_14">Question</h2>
+<blockquote>
+<p><strong>Can the observed system detect material changes in evidence, assumptions, definitions, relationships, or operating conditions?</strong></p>
+</blockquote>
+<h2 id="candidate-indicators_12">Candidate Indicators</h2>
+<pre><code class="language-text">assumption change detection
+semantic drift recognition
+model change recognition
+behavioral shift recognition
+reference-relative comparison
+</code></pre>
+<hr>
+<h2 id="counter-indicators_9">Counter-Indicators</h2>
+<pre><code class="language-text">missed sustained change
+false drift inflation
+failure to update baseline
+</code></pre>
+<hr>
+<h2 id="drift-observer-hook">Drift Observer Hook</h2>
+<p>The module's Drift Observer may provide standardized tasks or evidence for this dimension.</p>
+<hr>
+<h1 id="d16-compression-abstraction">D16 — Compression / Abstraction</h1>
+<h2 id="id_15">ID</h2>
+<p><code>compression-abstraction</code></p>
+<h2 id="question_15">Question</h2>
+<blockquote>
+<p><strong>Can the observed system reduce complex evidence into a smaller representation while preserving relevant structure?</strong></p>
+</blockquote>
+<p>Candidate forms:</p>
+<pre><code class="language-text">concept formation
+summary
+rule extraction
+structural compression
+abstraction
+generalization
+</code></pre>
+<hr>
+<h2 id="compression-principle">Compression Principle</h2>
+<p>Useful compression should preserve what matters for the intended purpose.</p>
+<p>Therefore:</p>
+<pre><code class="language-text">shorter
+!=
+better
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">simpler
+!=
+more intelligent
+</code></pre>
+<hr>
+<h2 id="candidate-indicators_13">Candidate Indicators</h2>
+<pre><code class="language-text">compact rule discovery
+constraint-preserving abstraction
+transferable concept formation
+redundancy reduction
+</code></pre>
+<hr>
+<h2 id="counter-indicators_10">Counter-Indicators</h2>
+<pre><code class="language-text">critical information loss
+overgeneralization
+false simplification
+exception erasure
+</code></pre>
+<hr>
+<h1 id="d17-reconstruction-from-partial-evidence">D17 — Reconstruction From Partial Evidence</h1>
+<h2 id="id_16">ID</h2>
+<p><code>reconstruction-from-partial-evidence</code></p>
+<h2 id="question_16">Question</h2>
+<blockquote>
+<p><strong>Can the observed system infer missing structure from incomplete evidence and survive holdout checking?</strong></p>
+</blockquote>
+<h2 id="candidate-pipeline">Candidate Pipeline</h2>
+<pre><code class="language-text">partial evidence
+      │
+      ▼
+candidate reconstruction
+      │
+      ▼
+held-out evidence
+      │
+      ▼
+evaluation
+</code></pre>
+<hr>
+<h2 id="candidate-indicators_14">Candidate Indicators</h2>
+<pre><code class="language-text">missing relationship reconstruction
+partial-system completion
+constraint-aware inference
+held-out accuracy
+</code></pre>
+<hr>
+<h2 id="important-limit_4">Important Limit</h2>
+<p>A plausible reconstruction is not enough.</p>
+<p>Where possible, reconstruction should be tested against evidence withheld from the reconstruction process.</p>
+<hr>
+<h1 id="d18-novelty-response">D18 — Novelty Response</h1>
+<h2 id="id_17">ID</h2>
+<p><code>novelty-response</code></p>
+<h2 id="question_17">Question</h2>
+<blockquote>
+<p><strong>How effectively does the observed system respond to genuinely unfamiliar tasks or conditions?</strong></p>
+</blockquote>
+<h2 id="candidate-indicators_15">Candidate Indicators</h2>
+<pre><code class="language-text">novel problem adaptation
+initial strategy generation
+transfer without direct precedent
+uncertainty calibration
+exploration
+recovery after failed attempt
+</code></pre>
+<hr>
+<h2 id="known-confounds_3">Known Confounds</h2>
+<pre><code class="language-text">prior hidden exposure
+task resemblance
+domain expertise
+motivation
+stress
+tool availability
+</code></pre>
+<p>Novelty must be operationally defined.</p>
+<hr>
+<h1 id="d19-metacognitive-calibration">D19 — Metacognitive Calibration</h1>
+<h2 id="id_18">ID</h2>
+<p><code>metacognitive-calibration</code></p>
+<h2 id="question_18">Question</h2>
+<blockquote>
+<p><strong>Does expressed confidence correspond appropriately to observed correctness or reproducibility?</strong></p>
+</blockquote>
+<h2 id="candidate-indicators_16">Candidate Indicators</h2>
+<pre><code class="language-text">appropriate confidence
+appropriate uncertainty
+appropriate abstention
+confidence correction after error
+</code></pre>
+<hr>
+<h2 id="counter-indicators_11">Counter-Indicators</h2>
+<pre><code class="language-text">systematic overconfidence
+systematic underconfidence
+confidence unaffected by evidence
+failure to recognize uncertainty
+</code></pre>
+<hr>
+<h2 id="primary-metrics">Primary Metrics</h2>
+<p>Relevant module metrics include:</p>
+<pre><code class="language-text">PA-M28  Confidence Calibration Error
+PA-M29  Brier Score
+PA-M30  Abstention Rate
+PA-M31  Abstention Utility
+</code></pre>
+<p>where applicable.</p>
+<hr>
+<h1 id="d20-tool-collaboration">D20 — Tool Collaboration</h1>
+<h2 id="id_19">ID</h2>
+<p><code>tool-collaboration</code></p>
+<h2 id="question_19">Question</h2>
+<blockquote>
+<p><strong>Can the observed system use external tools productively while maintaining appropriate attribution and verification?</strong></p>
+</blockquote>
+<p>Possible tools:</p>
+<pre><code class="language-text">calculator
+search
+software
+AI
+simulation
+database
+instrument
+robotic system
+external memory
+</code></pre>
+<hr>
+<h2 id="candidate-indicators_17">Candidate Indicators</h2>
+<pre><code class="language-text">tool selection
+tool orchestration
+output verification
+error correction
+task decomposition
+appropriate reliance
+productive collaboration
+</code></pre>
+<hr>
+<h2 id="counter-indicators_12">Counter-Indicators</h2>
+<pre><code class="language-text">blind tool acceptance
+tool misuse
+failure to verify
+inappropriate tool selection
+loss of task understanding
+</code></pre>
+<hr>
+<h2 id="system-boundary-rule">System Boundary Rule</h2>
+<p>Tool-assisted performance belongs initially to the combined system used during observation.</p>
+<pre><code class="language-text">human + AI
+</code></pre>
+<p>may be:</p>
+<pre><code class="language-text">human_ai_pair
+</code></pre>
+<p>rather than evidence of entirely unassisted human performance.</p>
+<hr>
+<h1 id="d21-social-interpretation">D21 — Social Interpretation</h1>
+<h2 id="id_20">ID</h2>
+<p><code>social-interpretation</code></p>
+<h2 id="question_20">Question</h2>
+<blockquote>
+<p><strong>Can the observed system interpret behavior, perspectives, communication, incentives, or social context appropriately within a defined task?</strong></p>
+</blockquote>
+<p>Possible observations:</p>
+<pre><code class="language-text">perspective tracking
+communication interpretation
+coordination
+social-context recognition
+intent uncertainty
+incentive recognition
+</code></pre>
+<hr>
+<h2 id="important-limits">Important Limits</h2>
+<p>Social interpretation is especially sensitive to:</p>
+<ul>
+<li>culture,</li>
+<li>language,</li>
+<li>norms,</li>
+<li>context,</li>
+<li>disability,</li>
+<li>neurodiversity,</li>
+<li>evaluator assumptions.</li>
+</ul>
+<p>A framework should be cautious about universalizing one social style.</p>
+<hr>
+<h1 id="d22-embodied-environmental-fit">D22 — Embodied / Environmental Fit</h1>
+<h2 id="id_21">ID</h2>
+<p><code>embodied-environmental-fit</code></p>
+<h2 id="question_21">Question</h2>
+<blockquote>
+<p><strong>How effectively does the observed system interact with the physical or operational environment relevant to its task?</strong></p>
+</blockquote>
+<p>This may include:</p>
+<pre><code class="language-text">sensorimotor adaptation
+physical navigation
+environmental responsiveness
+real-world task execution
+resource constraints
+operational awareness
+</code></pre>
+<hr>
+<h2 id="applicability_1">Applicability</h2>
+<p>For a text-only AI:</p>
+<pre><code class="language-text">embodied_environmental_fit:
+  not_applicable
+</code></pre>
+<p>may be appropriate.</p>
+<p>For a robotic system:</p>
+<pre><code class="language-text">applicable
+</code></pre>
+<p>may be appropriate.</p>
+<p>Do not penalize a system for a dimension that does not meaningfully apply to its architecture or intended function.</p>
+<hr>
+<h1 id="d23-long-horizon-integration">D23 — Long-Horizon Integration</h1>
+<h2 id="id_22">ID</h2>
+<p><code>long-horizon-integration</code></p>
+<h2 id="question_22">Question</h2>
+<blockquote>
+<p><strong>Can relevant information, constraints, and relationships be preserved and integrated across extended sequences or periods?</strong></p>
+</blockquote>
+<h2 id="candidate-indicators_18">Candidate Indicators</h2>
+<pre><code class="language-text">long-range dependency preservation
+cross-session continuity
+multi-stage planning coherence
+historical constraint retention
+delayed integration
+</code></pre>
+<hr>
+<h2 id="counter-indicators_13">Counter-Indicators</h2>
+<pre><code class="language-text">loss of earlier constraints
+context collapse
+unnoticed assumption drift
+incompatible long-range conclusions
+</code></pre>
+<hr>
+<h2 id="temporal-rule">Temporal Rule</h2>
+<p>Observation window matters.</p>
+<pre><code class="language-text">strong over 10 minutes
+</code></pre>
+<p>does not establish:</p>
+<pre><code class="language-text">strong over 10 months
+</code></pre>
+<p>Long-horizon claims require an explicit horizon.</p>
+<hr>
+<h1 id="d24-recovery-recalibration">D24 — Recovery / Recalibration</h1>
+<h2 id="id_23">ID</h2>
+<p><code>recovery-recalibration</code></p>
+<h2 id="question_23">Question</h2>
+<blockquote>
+<p><strong>Can the observed system recover after perturbation and update appropriately after discovering error?</strong></p>
+</blockquote>
+<p>This dimension contains two related but distinct operations.</p>
+<hr>
+<h2 id="recovery">Recovery</h2>
+<p>Question:</p>
+<blockquote>
+<p>What happens to performance after disruption?</p>
+</blockquote>
+<p>Possible states:</p>
+<pre><code class="language-text">no_recovery
+partial_recovery
+baseline_recovery
+adaptive_recovery
+unstable_recovery
+unknown
+</code></pre>
+<hr>
+<h2 id="recalibration">Recalibration</h2>
+<p>Question:</p>
+<blockquote>
+<p>Does the system appropriately update its expectation or behavior after evidence of error?</p>
+</blockquote>
+<p>Candidate indicators:</p>
+<pre><code class="language-text">error recognition
+reduced repeated error
+confidence adjustment
+strategy revision
+model update
+</code></pre>
+<hr>
+<h2 id="important-distinction_2">Important Distinction</h2>
+<pre><code class="language-text">recovery
+!=
+recalibration
+</code></pre>
+<p>A system can recover performance without understanding its previous error.</p>
+<p>A system can recalibrate its expectations while performance remains limited.</p>
+<hr>
+<h1 id="additional-candidate-dimensions">Additional Candidate Dimensions</h1>
+<p>The initial 24 dimensions should not prevent future proposals.</p>
+<p>Possible research candidates include:</p>
+<pre><code class="language-text">working-memory integration
+processing speed
+attention control
+creative synthesis
+value reasoning
+coordination intelligence
+exploration efficiency
+planning
+simulation
+error localization
+epistemic humility
+multi-agent coordination
+</code></pre>
+<p>These should not enter the canonical registry merely because they sound useful.</p>
+<p>They require:</p>
+<pre><code class="language-text">definition
+distinctness
+measurement grammar
+validation plan
+</code></pre>
+<hr>
+<h1 id="processing-speed">Processing Speed</h1>
+<p>Processing speed deserves special handling because it is often captured by conventional tasks.</p>
+<p>It may be represented as a dimension in future RIQF versions.</p>
+<p>For the initial framework, it can remain a directly observed performance characteristic such as:</p>
+<pre><code class="language-text">rapid_symbolic_processing
+timed_classification
+response_latency
+</code></pre>
+<p>without assuming:</p>
+<pre><code class="language-text">speed = intelligence
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">speed is irrelevant
+</code></pre>
+<p>Both extremes would be premature.</p>
+<hr>
+<h1 id="memory">Memory</h1>
+<p>Memory may similarly require decomposition.</p>
+<p>Candidate future distinctions:</p>
+<pre><code class="language-text">short-term recall
+working-memory manipulation
+long-term recall
+associative memory
+context retention
+retrieval fidelity
+external-memory coordination
+</code></pre>
+<p>A single:</p>
+<pre><code class="language-text">memory
+</code></pre>
+<p>dimension may be too coarse.</p>
+<hr>
+<h1 id="creativity">Creativity</h1>
+<p>Creativity is intentionally not included as one initial master dimension.</p>
+<p>Possible components may involve:</p>
+<pre><code class="language-text">novelty
+usefulness
+divergence
+constraint satisfaction
+cross-domain synthesis
+reframing
+</code></pre>
+<p>These overlap with several existing candidate dimensions.</p>
+<p>Whether a distinct creativity dimension adds value should be tested.</p>
+<hr>
+<h1 id="intelligence-dimension-is-not-moral-dimension">Intelligence Dimension Is Not Moral Dimension</h1>
+<p>RIQF does not include:</p>
+<pre><code class="language-text">kindness
+honesty
+moral worth
+political belief
+religious belief
+social status
+wealth
+productivity
+obedience
+</code></pre>
+<p>as intelligence dimensions.</p>
+<p>A system should not quietly turn social approval into cognitive measurement.</p>
+<hr>
+<h1 id="preferred-expression">Preferred Expression</h1>
+<p>A dimension may be more observable through certain substrates.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">dimension:
+  structural-reasoning
+
+  preferred_expression:
+    - relational
+    - spatial
+    - system-level
+</code></pre>
+<p>This should be treated as a hypothesis to test.</p>
+<p>It must not become a way to select only favorable conditions.</p>
+<hr>
+<h1 id="possible-suppressors">Possible Suppressors</h1>
+<p>Candidate suppressors may include:</p>
+<pre><code class="language-text">severe time pressure
+context removal
+inaccessible interface
+irrelevant language complexity
+tool restriction
+environmental noise
+fatigue
+stress
+poor task fit
+</code></pre>
+<p>A suppressor must not be inferred simply because performance was low.</p>
+<p>Its effect requires evidence.</p>
+<hr>
+<h1 id="dimension-profile-record">Dimension Profile Record</h1>
+<p>Suggested canonical grammar:</p>
+<pre><code class="language-yaml">dimension:
+  id: structural-reasoning
+  name: Structural Reasoning
+
+  status: experimental
+
+  observation:
+    state: observed
+    expression: strong
+    confidence: medium
+
+  evidence:
+    sources:
+      - structural-task-01
+      - structural-task-02
+      - transfer-task-01
+
+    independent_source_count: 3
+
+    coverage:
+      status: partial
+
+  context:
+    substrates:
+      - relational
+      - visual
+
+    regimes:
+      - reflective
+
+    observation_window:
+
+  stability:
+    test_retest: not_tested
+    alternate_form: not_tested
+    topology: not_tested
+
+  confounds:
+    - domain_expertise
+    - task_familiarity
+
+  adapters:
+    structural_detection:
+      status: candidate_support
+
+    fft:
+      status: candidate_support
+
+  applicability:
+    human: applicable
+    ai: applicable
+    human_ai_pair: substrate_dependent
+
+  generalizability:
+    status: unknown
+
+  validation_state:
+    unvalidated
+
+  decision_authority:
+    none
+</code></pre>
+<hr>
+<h1 id="multi-dimension-profile">Multi-Dimension Profile</h1>
+<p>Example:</p>
+<pre><code class="language-yaml">profile:
+  pattern-recognition:
+    expression: strong
+    confidence: medium
+
+  structural-reasoning:
+    expression: strong
+    confidence: medium
+
+  temporal-reasoning:
+    expression: moderate
+    confidence: medium
+
+  symbolic-reasoning:
+    expression: moderate
+    confidence: medium
+
+  cross-domain-transfer:
+    expression: strong
+    confidence: low
+
+  embodied-environmental-fit:
+    expression: unknown
+    confidence: none
+</code></pre>
+<p>The profile should not automatically compute:</p>
+<pre><code class="language-text">overall intelligence
+</code></pre>
+<hr>
+<h1 id="dimension-relationships">Dimension Relationships</h1>
+<p>Dimensions may interact.</p>
+<p>Possible relationship states:</p>
+<pre><code class="language-text">positively_associated
+negatively_associated
+conditionally_associated
+independent
+redundant
+causally_unknown
+unresolved
+</code></pre>
+<p>These relationships require empirical evidence.</p>
+<hr>
+<h1 id="dimension-graph">Dimension Graph</h1>
+<p>A future representation might resemble:</p>
+<pre><code class="language-text">Pattern Recognition
+       │
+       ├──────── Structural Reasoning
+       │               │
+       │               ├──── Reconstruction
+       │               │
+       │               └──── Cross-Domain Transfer
+       │
+       └──────── Anomaly Detection
+
+Temporal Reasoning
+       │
+       ├──────── Regime Recognition
+       │
+       └──────── Drift Awareness
+
+Ambiguity Navigation
+       │
+       ├──────── Adaptive Reframing
+       │
+       └──────── Metacognitive Calibration
+</code></pre>
+<p>This graph is conceptual.</p>
+<p>It must not be treated as established cognitive architecture.</p>
+<hr>
+<h1 id="dimension-redundancy">Dimension Redundancy</h1>
+<p>If two dimensions repeatedly behave as the same construct:</p>
+<pre><code class="language-text">Dimension A
+approximately equals
+Dimension B
+</code></pre>
+<p>then the correct action may be:</p>
+<pre><code class="language-text">merge
+</code></pre>
+<p>not:</p>
+<pre><code class="language-text">keep both because the taxonomy looks richer
+</code></pre>
+<hr>
+<h1 id="dimension-split">Dimension Split</h1>
+<p>The reverse may also occur.</p>
+<p>Example:</p>
+<pre><code class="language-text">Tool Collaboration
+</code></pre>
+<p>might eventually separate into:</p>
+<pre><code class="language-text">tool selection
+tool verification
+tool orchestration
+human-AI coordination
+</code></pre>
+<p>if evidence supports distinct constructs.</p>
+<hr>
+<h1 id="dimension-lifecycle">Dimension Lifecycle</h1>
+<p>Canonical states:</p>
+<pre><code class="language-text">proposed
+experimental
+pilot
+validated_for_context
+restricted
+deprecated
+rejected
+</code></pre>
+<p>No candidate dimension is guaranteed promotion.</p>
+<hr>
+<h1 id="dimension-validation-requirements">Dimension Validation Requirements</h1>
+<p>A candidate dimension should ideally demonstrate:</p>
+<ol>
+<li>operational clarity,</li>
+<li>observable indicators,</li>
+<li>counter-indicators,</li>
+<li>adequate evidence coverage,</li>
+<li>test-retest behavior appropriate to the construct,</li>
+<li>alternate-form behavior,</li>
+<li>inter-rater reliability where relevant,</li>
+<li>convergent value,</li>
+<li>discriminant value,</li>
+<li>incremental value where claimed,</li>
+<li>robustness,</li>
+<li>fairness,</li>
+<li>explainability,</li>
+<li>appropriate uncertainty,</li>
+<li>applicability boundaries.</li>
+</ol>
+<hr>
+<h1 id="primary-dimension-metrics">Primary Dimension Metrics</h1>
+<p>Relevant metrics include:</p>
+<pre><code class="language-text">PA-M01  Dimension Evidence Coverage
+PA-M03  Evidence Independence Ratio
+
+PA-M04  Test-Retest Stability
+PA-M05  Alternate-Form Stability
+PA-M06  Inter-Rater Agreement
+
+PA-M08  Convergent Association
+PA-M09  Discriminant Separation
+PA-M10  Incremental Explanatory Value
+PA-M11  Incremental Predictive Value
+
+PA-M28  Confidence Calibration Error
+PA-M32  Unsupported Assertion Rate
+
+PA-M33  Irrelevant Perturbation Stability
+PA-M34  Relevant Change Sensitivity
+
+PA-M37  Group Error Difference
+PA-M38  Group Calibration Difference
+PA-M42  Evidence Coverage Difference
+
+PA-M45  Evidence Reconstruction Rate
+PA-M46  Explanation Completeness
+</code></pre>
+<hr>
+<h1 id="dimension-evidence-coverage">Dimension Evidence Coverage</h1>
+<p>Conceptually:</p>
+<pre><code class="language-text">DEC =
+  supported_indicators
+  /
+  required_indicators
+</code></pre>
+<p>High coverage does not establish validity.</p>
+<p>It means the dimension interpretation is supported by more of its declared evidence requirements.</p>
+<hr>
+<h1 id="evidence-independence">Evidence Independence</h1>
+<p>Suppose Structural Reasoning is supported by:</p>
+<pre><code class="language-text">FFT interpretation of E1
+Structural Detection interpretation of E1
+RTT interpretation of E1
+</code></pre>
+<p>Then:</p>
+<pre><code class="language-text">adapter_support_count:
+  3
+
+independent_evidence_count:
+  1
+</code></pre>
+<p>Confidence should not increase as though three independent tasks were observed.</p>
+<hr>
+<h1 id="convergent-validation">Convergent Validation</h1>
+<p>A dimension should relate appropriately to other measurements that theory predicts are related.</p>
+<p>Example:</p>
+<pre><code class="language-text">structural_reasoning
+</code></pre>
+<p>might be expected to relate to independently designed structural reconstruction tasks.</p>
+<p>The relationship must be preregistered where possible.</p>
+<hr>
+<h1 id="discriminant-validation">Discriminant Validation</h1>
+<p>A dimension should remain distinguishable from constructs it claims not to represent.</p>
+<p>Example:</p>
+<p>If:</p>
+<pre><code class="language-text">structural_reasoning
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">pattern_recognition
+</code></pre>
+<p>cannot be empirically distinguished, the registry should question whether both are necessary.</p>
+<hr>
+<h1 id="incremental-value">Incremental Value</h1>
+<p>A new dimension should not survive merely because it creates a compelling description.</p>
+<p>Ask:</p>
+<blockquote>
+<p><strong>Does it add useful information beyond simpler or established constructs?</strong></p>
+</blockquote>
+<p>If not:</p>
+<pre><code class="language-text">dimension:
+  candidate_for_merge_or_deprecation
+</code></pre>
+<hr>
+<h1 id="counterfactual-testing">Counterfactual Testing</h1>
+<p>Every dimension should be challenged.</p>
+<p>Example:</p>
+<pre><code class="language-text">Structural Reasoning:
+  strong
+</code></pre>
+<p>Then:</p>
+<pre><code class="language-text">remove one favorable task
+add adverse task
+change alternate form
+change evaluator
+change irrelevant metadata
+change substrate
+repeat later
+</code></pre>
+<p>A robust dimension responds appropriately.</p>
+<hr>
+<h1 id="relevant-versus-irrelevant-change">Relevant Versus Irrelevant Change</h1>
+<p>Desired:</p>
+<pre><code class="language-text">irrelevant change
+  -&gt;
+stable dimension interpretation
+
+relevant evidence change
+  -&gt;
+responsive interpretation
+</code></pre>
+<p>Failure modes:</p>
+<pre><code class="language-text">irrelevant change
+  -&gt;
+large profile movement
+
+or
+
+relevant change
+  -&gt;
+no profile movement
+</code></pre>
+<hr>
+<h1 id="substrate-sensitivity">Substrate Sensitivity</h1>
+<p>Dimension expression may vary by substrate.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">structural-reasoning:
+  relational:
+    expression: strong
+
+  visual:
+    expression: strong
+
+  symbolic:
+    expression: moderate
+
+  severe_time_constraint:
+    expression: weak
+</code></pre>
+<p>This may represent useful context.</p>
+<p>It does not automatically establish a substrate effect.</p>
+<p>Replication and controls are required.</p>
+<hr>
+<h1 id="regime-sensitivity">Regime Sensitivity</h1>
+<p>Dimension expression may vary by regime.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">structural-reasoning:
+  regime_a:
+    expression: moderate
+
+  regime_b:
+    expression: strong
+
+  cross_regime:
+    status: partially_stable
+</code></pre>
+<p>RTT may help define the regimes.</p>
+<p>The dimension still requires independent evidence.</p>
+<hr>
+<h1 id="temporal-stability">Temporal Stability</h1>
+<p>A dimension should record time.</p>
+<pre><code class="language-yaml">dimension:
+  id: cross-domain-transfer
+
+  T1:
+    expression: strong
+
+  T2:
+    expression: moderate
+
+  T3:
+    expression: moderate
+</code></pre>
+<p>Possible interpretations:</p>
+<pre><code class="language-text">drift
+learning
+fatigue
+measurement change
+regime change
+substrate change
+unknown
+</code></pre>
+<p>Cause requires evidence.</p>
+<hr>
+<h1 id="profile-topology">Profile Topology</h1>
+<p>The shape across dimensions may be more informative than a simple average.</p>
+<p>Example:</p>
+<pre><code class="language-text">          Structural
+             █████
+
+Transfer █████     ███ Temporal
+
+Ambiguity █████   ██ Symbolic
+
+             ████
+            Regime
+</code></pre>
+<p>Topology may be:</p>
+<pre><code class="language-text">asymmetric
+balanced
+clustered
+spiked
+flat
+unstable
+unknown
+</code></pre>
+<p>These are descriptive states.</p>
+<p>They do not imply superiority.</p>
+<hr>
+<h1 id="asymmetry">Asymmetry</h1>
+<p>An asymmetric profile is not a defect.</p>
+<p>Nor is it automatically exceptional.</p>
+<p>It means:</p>
+<pre><code class="language-text">different dimensions show
+materially different observed expression
+</code></pre>
+<p>Possible interpretation:</p>
+<pre><code class="language-text">profile:
+  asymmetric
+
+human_worth:
+  not_inferred
+
+global_intelligence_rank:
+  not_inferred
+</code></pre>
+<hr>
+<h1 id="fingerprint-similarity">Fingerprint Similarity</h1>
+<p>Two profiles may look similar.</p>
+<p>That does not mean the systems are:</p>
+<pre><code class="language-text">the same
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">equally intelligent
+</code></pre>
+<p>Similarity should be interpreted only relative to the dimensions and contexts actually observed.</p>
+<hr>
+<h1 id="cross-system-dimensions">Cross-System Dimensions</h1>
+<p>Some candidate dimensions may generalize functionally across:</p>
+<pre><code class="language-text">human
+AI
+human-AI pair
+robotic system
+team
+organization
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-text">anomaly detection
+</code></pre>
+<p>can be operationalized in multiple system classes.</p>
+<p>But:</p>
+<pre><code class="language-text">same task label
+!=
+same cognitive mechanism
+</code></pre>
+<hr>
+<h1 id="cross-system-comparison">Cross-System Comparison</h1>
+<p>Appropriate comparison:</p>
+<pre><code class="language-text">System A and System B both
+performed strongly on
+operational task X.
+</code></pre>
+<p>Inappropriate inference:</p>
+<pre><code class="language-text">System A and System B
+possess equivalent intelligence.
+</code></pre>
+<p>The framework should preserve the narrower claim.</p>
+<hr>
+<h1 id="human-ai-pair-dimensions">Human-AI Pair Dimensions</h1>
+<p>A human-AI pair may exhibit capabilities not reducible to either participant.</p>
+<p>Candidate pair-level dimensions may include:</p>
+<pre><code class="language-text">tool collaboration
+coordination
+error correction
+joint structural synthesis
+division of cognitive labor
+cross-checking
+</code></pre>
+<p>These may eventually require their own registry.</p>
+<p>The initial RIQF should not assume individual and pair profiles are directly comparable.</p>
+<hr>
+<h1 id="environmental-fit">Environmental Fit</h1>
+<p>One system may excel in:</p>
+<pre><code class="language-text">high-context environment
+</code></pre>
+<p>another in:</p>
+<pre><code class="language-text">rapid low-context classification
+</code></pre>
+<p>Neither context defines universal intelligence.</p>
+<p>The profile should preserve:</p>
+<pre><code class="language-text">where capability becomes observable
+</code></pre>
+<p>without converting environmental fit into global rank.</p>
+<hr>
+<h1 id="speed-versus-depth">Speed Versus Depth</h1>
+<p>A recurring research question:</p>
+<pre><code class="language-text">rapid performance
+</code></pre>
+<p>versus:</p>
+<pre><code class="language-text">reflective performance
+</code></pre>
+<p>These may be partially distinct.</p>
+<p>Example:</p>
+<pre><code class="language-text">rapid symbolic:
+  weak
+
+reflective structural:
+  strong
+</code></pre>
+<p>Correct initial finding:</p>
+<pre><code class="language-text">performance differs
+</code></pre>
+<p>Not:</p>
+<pre><code class="language-text">deep thinker
+</code></pre>
+<p>until a validated construct supports such a label.</p>
+<hr>
+<h1 id="breadth-versus-depth">Breadth Versus Depth</h1>
+<p>A system may show:</p>
+<pre><code class="language-text">high depth
+narrow domain breadth
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">moderate depth
+broad transfer
+</code></pre>
+<p>Future RIQF versions may need explicit measures for:</p>
+<pre><code class="language-text">breadth
+depth
+</code></pre>
+<p>The current dimensions should not pretend to fully capture this distinction.</p>
+<hr>
+<h1 id="dimension-interactions">Dimension Interactions</h1>
+<p>Performance may emerge from interaction among dimensions.</p>
+<p>Example:</p>
+<pre><code class="language-text">Pattern Recognition
++
+Structural Reasoning
++
+Temporal Reasoning
++
+Ambiguity Navigation
+</code></pre>
+<p>may jointly support:</p>
+<pre><code class="language-text">complex system diagnosis
+</code></pre>
+<p>Interaction is not equivalent to simple addition.</p>
+<hr>
+<h1 id="no-dimension-summation-rule">No Dimension Summation Rule</h1>
+<p>Avoid:</p>
+<pre><code class="language-text">pattern = 8
+structural = 9
+temporal = 7
+
+IQ = 8 + 9 + 7
+</code></pre>
+<p>This does not become valid merely because several dimensions were measured.</p>
+<hr>
+<h1 id="composite-policy">Composite Policy</h1>
+<p>If a future use legitimately requires composites:</p>
+<pre><code class="language-yaml">composite:
+  permitted: true
+
+  intended_use:
+    explicitly_declared
+
+  validation:
+    required
+
+  interpretive_status:
+    lossy_projection
+
+  sufficient_alone:
+    false
+
+  profile_required:
+    true
+</code></pre>
+<p>No universal intelligence composite is assumed.</p>
+<hr>
+<h1 id="pax-01-example">PAX-01 Example</h1>
+<p>Synthetic PAX-01 illustrates:</p>
+<pre><code class="language-text">Pattern Recognition             strong
+Structural Reasoning            strong
+Causal Integration              strong
+Temporal Reasoning              moderate-strong
+Spatial Reasoning               moderate
+Symbolic Reasoning              moderate
+Linguistic Reasoning            moderate-strong
+Cross-Domain Transfer           strong
+Regime Recognition              strong
+Anomaly Detection               strong
+Contradiction Handling          strong
+Ambiguity Navigation            strong
+Adaptive Reframing              strong
+Coherence Maintenance           moderate-strong
+Drift Awareness                 strong
+Compression / Abstraction       strong
+Partial-Evidence Reconstruction strong
+Novelty Response                strong
+Metacognitive Calibration       moderate
+Tool Collaboration              strong
+Social Interpretation           moderate
+Embodied / Environmental Fit    unknown
+Long-Horizon Integration        strong
+Recovery / Recalibration        moderate-strong
+</code></pre>
+<p>This is synthetic demonstration data.</p>
+<p>It does not establish that these dimensions are valid or that a real person possesses this profile.</p>
+<hr>
+<h1 id="pax-01-asymmetry">PAX-01 Asymmetry</h1>
+<p>The synthetic example also includes:</p>
+<pre><code class="language-text">Rapid Symbolic Processing:
+  weak-moderate
+
+Timed Classification:
+  weak
+
+Short-Context Recall:
+  moderate
+</code></pre>
+<p>The purpose is to demonstrate:</p>
+<pre><code class="language-text">strong dimensions
++
+weak dimensions
++
+unknown dimensions
+</code></pre>
+<p>inside one profile.</p>
+<p>The system does not need to average them into a judgment of the person.</p>
+<hr>
+<h1 id="dimension-unknowns">Dimension Unknowns</h1>
+<p>A dimension may remain:</p>
+<pre><code class="language-text">unknown
+</code></pre>
+<p>because:</p>
+<ul>
+<li>no suitable task exists,</li>
+<li>evidence is missing,</li>
+<li>applicability is uncertain,</li>
+<li>the dimension cannot be measured reliably,</li>
+<li>the system boundary is inappropriate,</li>
+<li>the required substrate is unavailable.</li>
+</ul>
+<p>Unknown must not become:</p>
+<pre><code class="language-text">average
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">zero
+</code></pre>
+<p>by default.</p>
+<hr>
+<h1 id="missing-data">Missing Data</h1>
+<p>Conceptual rule:</p>
+<pre><code class="language-text">missing != weak
+</code></pre>
+<p>If a dimension was not assessed:</p>
+<pre><code class="language-yaml">dimension:
+  state: not_observed
+</code></pre>
+<p>If evidence is insufficient:</p>
+<pre><code class="language-yaml">dimension:
+  state: insufficient_evidence
+</code></pre>
+<p>If irrelevant:</p>
+<pre><code class="language-yaml">dimension:
+  state: not_applicable
+</code></pre>
+<p>These are different states.</p>
+<hr>
+<h1 id="dimension-conflict">Dimension Conflict</h1>
+<p>A dimension can contain contradictory observations.</p>
+<p>Example:</p>
+<pre><code class="language-text">structural task A:
+  strong
+
+structural task B:
+  weak
+</code></pre>
+<p>Correct:</p>
+<pre><code class="language-yaml">structural-reasoning:
+  state: conflicting_evidence
+  expression: variable
+</code></pre>
+<p>rather than immediately:</p>
+<pre><code class="language-text">moderate
+</code></pre>
+<p>Averaging can erase meaningful disagreement.</p>
+<hr>
+<h1 id="dimension-coherence">Dimension Coherence</h1>
+<p>Dimension-level coherence might consider:</p>
+<pre><code class="language-text">evidence independence
+task similarity
+substrate similarity
+regime similarity
+temporal stability
+counterfactual robustness
+</code></pre>
+<p>A high number of observations alone should not establish high confidence.</p>
+<hr>
+<h1 id="fairness-requirements">Fairness Requirements</h1>
+<p>Dimension validation should examine whether:</p>
+<pre><code class="language-text">task accessibility differs
+language exposure differs
+cultural assumptions differ
+technology access differs
+education exposure differs
+evaluator behavior differs
+missing evidence differs
+substrate fit differs
+</code></pre>
+<p>across relevant groups.</p>
+<p>A dimension that works well only for a narrow population should not silently claim universal applicability.</p>
+<hr>
+<h1 id="accessibility">Accessibility</h1>
+<p>Accessibility conditions may materially affect observed performance.</p>
+<p>The framework should distinguish:</p>
+<pre><code class="language-text">construct_relevant_constraint
+construct_irrelevant_barrier
+unknown_constraint
+</code></pre>
+<p>Removing an irrelevant barrier may improve construct measurement rather than compromise it.</p>
+<p>That classification requires expertise and evidence.</p>
+<hr>
+<h1 id="privacy">Privacy</h1>
+<p>A 24-dimension cognitive profile may be substantially more sensitive than a single score.</p>
+<p>Possible privacy risks include revealing:</p>
+<pre><code class="language-text">strength patterns
+weakness patterns
+preferred substrates
+context sensitivity
+uncertainty patterns
+tool dependence
+social interpretation patterns
+temporal changes
+</code></pre>
+<p>Therefore collection should be purpose-limited.</p>
+<hr>
+<h1 id="sensitive-inference-boundary">Sensitive Inference Boundary</h1>
+<p>Dimensions should not casually become proxies for:</p>
+<pre><code class="language-text">medical diagnosis
+psychiatric condition
+disability status
+political belief
+religious belief
+criminal propensity
+protected identity
+</code></pre>
+<p>Such inferences require separate legitimate purpose, evidence, governance, and validation.</p>
+<hr>
+<h1 id="dimension-naming">Dimension Naming</h1>
+<p>Names influence interpretation.</p>
+<p>Avoid labels that imply:</p>
+<pre><code class="language-text">defect
+inferiority
+superiority
+normality
+abnormality
+</code></pre>
+<p>unless the construct and context genuinely justify such terms.</p>
+<p>Prefer descriptive functional language.</p>
+<hr>
+<h1 id="versioning">Versioning</h1>
+<p>Every profile should record:</p>
+<pre><code class="language-text">dimension_registry_version
+</code></pre>
+<p>because definitions may change.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">riqf:
+  dimension_registry_version: 0.1.0
+</code></pre>
+<p>A profile created under:</p>
+<pre><code class="language-text">0.1.0
+</code></pre>
+<p>must not silently be interpreted under:</p>
+<pre><code class="language-text">2.0.0
+</code></pre>
+<p>if meanings have materially changed.</p>
+<hr>
+<h1 id="registry-change-record">Registry Change Record</h1>
+<p>Future updates should document:</p>
+<pre><code class="language-yaml">dimension_change:
+  dimension_id:
+
+  change_type:
+    added
+    renamed
+    split
+    merged
+    restricted
+    deprecated
+    rejected
+
+  previous_definition:
+  current_definition:
+
+  reason:
+  evidence:
+  compatibility:
+</code></pre>
+<hr>
+<h1 id="deprecation">Deprecation</h1>
+<p>A dimension should be considered for deprecation when:</p>
+<ul>
+<li>evidence cannot support reliable measurement,</li>
+<li>it duplicates another dimension,</li>
+<li>it adds no incremental value,</li>
+<li>it creates unacceptable fairness problems,</li>
+<li>its definition remains unstable,</li>
+<li>its intended meaning cannot be operationalized.</li>
+</ul>
+<p>Deprecation preserves lineage.</p>
+<hr>
+<h1 id="rejection">Rejection</h1>
+<p>A stronger state:</p>
+<pre><code class="language-text">rejected
+</code></pre>
+<p>may be appropriate if evidence consistently contradicts the usefulness or validity of the proposed dimension.</p>
+<p>Rejected dimensions should remain visible in research lineage.</p>
+<p>Negative results matter.</p>
+<hr>
+<h1 id="minimal-dimension-validation-record">Minimal Dimension Validation Record</h1>
+<pre><code class="language-yaml">dimension_validation:
+  id:
+
+  operational_definition:
+    status:
+
+  content_review:
+    status:
+
+  reliability:
+    test_retest:
+    alternate_form:
+    inter_rater:
+
+  validity:
+    convergent:
+    discriminant:
+    incremental:
+
+  robustness:
+    irrelevant_perturbation:
+    relevant_change:
+
+  substrate:
+    status:
+
+  regime:
+    status:
+
+  fairness:
+    status:
+
+  explainability:
+    status:
+
+  lifecycle:
+    state:
+</code></pre>
+<hr>
+<h1 id="required-negative-controls">Required Negative Controls</h1>
+<p>Dimension research should include cases where the target capability is deliberately absent or randomized.</p>
+<p>Examples:</p>
+<pre><code class="language-text">random pattern task
+invalid structural mapping
+false anomaly set
+non-reconstructable evidence
+irrelevant context changes
+false regime boundary
+</code></pre>
+<p>A dimension detector that always produces a positive signal is not useful.</p>
+<hr>
+<h1 id="required-adverse-evidence">Required Adverse Evidence</h1>
+<p>Validation datasets should contain evidence capable of lowering an interpretation.</p>
+<p>Example:</p>
+<pre><code class="language-text">initial:
+  structural reasoning strong
+
+additional:
+  repeated failures on equivalent tasks
+</code></pre>
+<p>Correct:</p>
+<pre><code class="language-text">confidence decreases
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">dimension classification changes
+</code></pre>
+<p>The dimension must not become self-protecting.</p>
+<hr>
+<h1 id="required-favorable-evidence">Required Favorable Evidence</h1>
+<p>Likewise the system must recognize new positive evidence.</p>
+<p>Symmetry matters.</p>
+<hr>
+<h1 id="dimension-anti-rescue-test">Dimension Anti-Rescue Test</h1>
+<p>Ask:</p>
+<blockquote>
+<p><strong>Can the dimension remain weak after rich substrate-aware assessment?</strong></p>
+</blockquote>
+<p>Required answer:</p>
+<pre><code class="language-text">yes
+</code></pre>
+<p>Ask:</p>
+<blockquote>
+<p><strong>Can the dimension become weaker after additional evidence?</strong></p>
+</blockquote>
+<p>Required answer:</p>
+<pre><code class="language-text">yes
+</code></pre>
+<p>Ask:</p>
+<blockquote>
+<p><strong>Can the dimension remain unknown?</strong></p>
+</blockquote>
+<p>Required answer:</p>
+<pre><code class="language-text">yes
+</code></pre>
+<hr>
+<h1 id="dimension-anti-ranking-test">Dimension Anti-Ranking Test</h1>
+<p>Ask:</p>
+<blockquote>
+<p><strong>Can two profiles be compared without declaring one person globally smarter?</strong></p>
+</blockquote>
+<p>Required answer:</p>
+<pre><code class="language-text">yes
+</code></pre>
+<p>Possible comparison:</p>
+<pre><code class="language-text">Profile A:
+  stronger on dimensions X and Y
+
+Profile B:
+  stronger on dimensions Z and Q
+
+global_ranking:
+  not_generated
+</code></pre>
+<hr>
+<h1 id="dimension-anti-anthropocentrism-test">Dimension Anti-Anthropocentrism Test</h1>
+<p>Ask:</p>
+<blockquote>
+<p><strong>Can a dimension be marked not applicable to an AI, robot, animal, team, or organization?</strong></p>
+</blockquote>
+<p>Required answer:</p>
+<pre><code class="language-text">yes
+</code></pre>
+<p>No system should be penalized simply for failing to express a human-specific construct.</p>
+<hr>
+<h1 id="dimension-anti-ai-equivalence-test">Dimension Anti-AI-Equivalence Test</h1>
+<p>Ask:</p>
+<blockquote>
+<p><strong>Does strong AI performance on a human-designed task prove equivalent internal cognition?</strong></p>
+</blockquote>
+<p>Required answer:</p>
+<pre><code class="language-text">no
+</code></pre>
+<p>The framework evaluates observable function unless stronger evidence supports stronger claims.</p>
+<hr>
+<h1 id="research-questions">Research Questions</h1>
+<ol>
+<li>Do the proposed dimensions represent reproducible constructs?</li>
+<li>Which dimensions overlap?</li>
+<li>Which dimensions should merge?</li>
+<li>Which should split?</li>
+<li>Which should be rejected?</li>
+<li>Which dimensions add information beyond existing assessment frameworks?</li>
+<li>Which merely rename established constructs?</li>
+<li>How stable are dimensions across time?</li>
+<li>How stable are they across alternate forms?</li>
+<li>How sensitive are they to substrate?</li>
+<li>How sensitive are they to regime?</li>
+<li>Which dimensions generalize across domains?</li>
+<li>Which remain domain-specific?</li>
+<li>Which dimensions apply meaningfully to AI systems?</li>
+<li>Which apply to human-AI pairs?</li>
+<li>Which apply to organizations?</li>
+<li>Can profile topology be measured reliably?</li>
+<li>Does profile topology improve prediction?</li>
+<li>Does it improve explanation?</li>
+<li>Does it improve calibration?</li>
+<li>Does it improve fairness?</li>
+<li>Does it create new fairness problems?</li>
+<li>How should speed be represented?</li>
+<li>How should memory be decomposed?</li>
+<li>Is creativity a distinct dimension?</li>
+<li>Should social interpretation remain an intelligence dimension?</li>
+<li>Should embodied fit remain part of the same registry?</li>
+<li>Can tool collaboration be separated from tool access?</li>
+<li>Can long-horizon integration be measured independently of memory?</li>
+<li>Can recovery be separated from recalibration?</li>
+<li>Can ambiguity navigation be separated from metacognitive calibration?</li>
+<li>Can structural reasoning be separated from pattern recognition?</li>
+<li>Can causal integration be measured without rewarding verbal explanation alone?</li>
+<li>Can dimension confidence be calibrated?</li>
+<li>How should missing evidence affect profile topology?</li>
+<li>How should contradictory evidence be represented?</li>
+<li>Can multidimensional profiles remain useful without composites?</li>
+<li>When is a composite legitimately necessary?</li>
+<li>What privacy risks arise from detailed fingerprints?</li>
+<li>What evidence would justify abandoning the RIQF dimension model entirely?</li>
+</ol>
+<hr>
+<h1 id="core-invariants">Core Invariants</h1>
+<pre><code class="language-text">dimension != identity
+dimension != human_worth
+dimension != permanent_trait
+observed_strength != universal_strength
+observed_weakness != universal_weakness
+missing != weak
+unknown != average
+not_applicable != zero
+variation != defect
+asymmetry != superiority
+speed != intelligence
+slowness != low_intelligence
+pattern != truth
+structure != intelligence
+coherence != correctness
+confidence != capability
+adapter_support != independent_evidence
+dimension_count != intelligence
+profile_complexity != validity
+profile_similarity != cognitive_equivalence
+tool_assisted != unassisted
+human_ai_pair != individual_human
+same_label != same_mechanism
+composite != total_intelligence
+profile != destiny
+canon_alignment != empirical_validation
+</code></pre>
+<hr>
+<h1 id="closing-principle">Closing Principle</h1>
+<p>The initial RIQF dimension registry is intentionally larger than a flat intelligence score.</p>
+<p>That does not make it more correct.</p>
+<p>Its value must come from whether the dimensions can be:</p>
+<ul>
+<li>defined,</li>
+<li>observed,</li>
+<li>distinguished,</li>
+<li>replicated,</li>
+<li>challenged,</li>
+<li>calibrated,</li>
+<li>validated,</li>
+<li>revised,</li>
+<li>and, when necessary, discarded.</li>
+</ul>
+<p>The purpose is not to replace:</p>
+<pre><code class="language-text">one number
+</code></pre>
+<p>with:</p>
+<pre><code class="language-text">twenty-four unquestionable numbers
+</code></pre>
+<p>That would simply create a higher-dimensional version of the same mistake.</p>
+<p>The purpose is to preserve more of the observable shape while keeping the limits of observation visible.</p>
+<p>A future mature profile might therefore say:</p>
+<pre><code class="language-text">strong here
+weak here
+variable here
+substrate-sensitive here
+regime-sensitive here
+stable here
+changing here
+unknown here
+not applicable here
+</code></pre>
+<p>and stop there when the evidence stops.</p>
+<blockquote>
+<p><strong>An intelligence dimension earns its place not because it sounds like intelligence, but because it survives measurement, comparison, counterevidence, and time.</strong></p>
+</blockquote>
   </main>
 </body>
 </html>

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/predictive_analytics/example_resonant_iq_fingerprint.md">
-  <title>example_resonant_iq_fingerprint</title>
+  <title>Example — Resonant IQ Fingerprint</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,7 +92,1870 @@
   </aside>
 
   <main>
+<p><img width="1194" height="672" alt="predictive_analytics_example_resonant_iq_fingerprint_" src="https://github.com/user-attachments/assets/0eaa4968-1721-4d0e-9507-64dad1c5a4d2" /></p>
+<h1 id="example-resonant-iq-fingerprint">Example — Resonant IQ Fingerprint</h1>
+<blockquote>
+<p><strong>The purpose of the fingerprint is not to find a better number. It is to preserve the shape that a number compresses away.</strong></p>
+</blockquote>
+<h2 id="module">Module</h2>
+<p>Predictive Analytics</p>
+<h2 id="example-id">Example ID</h2>
+<p><code>PAX-01</code></p>
+<h2 id="example-type">Example Type</h2>
+<p>Resonant IQ Fingerprint</p>
+<h2 id="status">Status</h2>
+<p>Synthetic demonstration.</p>
+<h2 id="validation-state">Validation State</h2>
+<p>Unvalidated.</p>
+<h2 id="decision-authority">Decision Authority</h2>
+<p>None.</p>
+<hr>
+<h1 id="important-notice">Important Notice</h1>
+<p><code>PAX-01</code> is a fictional subject created solely to demonstrate the Predictive Analytics and Resonant IQ Fingerprint representation grammar.</p>
+<p>This example is <strong>not</strong>:</p>
+<ul>
+<li>a psychological diagnosis,</li>
+<li>a validated intelligence assessment,</li>
+<li>an educational placement instrument,</li>
+<li>an employment assessment,</li>
+<li>a medical assessment,</li>
+<li>a clinical assessment,</li>
+<li>a legal assessment,</li>
+<li>or an assessment of any real person.</li>
+</ul>
+<p>All values, observations, task results, confidence labels, and profile shapes in this document are illustrative.</p>
+<p>They are synthetic.</p>
+<p>They must not be interpreted as empirical results.</p>
+<hr>
+<h1 id="example-objective">Example Objective</h1>
+<p>This example demonstrates a simple problem.</p>
+<p>Suppose an existing assessment produces a relatively low composite result.</p>
+<p>Additional observations later reveal that the subject performs quite differently across other tasks and contexts.</p>
+<p>What should happen?</p>
+<p>A naive response might be:</p>
+<pre><code class="language-text">Original score:
+  low
 
+New framework:
+  high
+
+Therefore:
+  original assessment was wrong
+</code></pre>
+<p>Predictive Analytics rejects that shortcut.</p>
+<p>Instead:</p>
+<pre><code class="language-text">Original observation
+      │
+      ▼
+Preserve it
+      │
+      ▼
+Collect additional evidence
+      │
+      ▼
+Identify dimensions
+      │
+      ▼
+Compare substrates
+      │
+      ▼
+Apply relevant adapters
+      │
+      ▼
+Check coherence
+      │
+      ▼
+Challenge counterfactually
+      │
+      ▼
+Preserve uncertainty
+      │
+      ▼
+Produce profile
+</code></pre>
+<p>The goal is not rescue.</p>
+<p>The goal is better observation.</p>
+<hr>
+<h1 id="scenario">Scenario</h1>
+<p>Synthetic subject <code>PAX-01</code> participates in a conventional assessment emphasizing:</p>
+<ul>
+<li>timed symbolic reasoning,</li>
+<li>fixed-choice classification,</li>
+<li>short-context problem solving,</li>
+<li>rapid selection among predefined alternatives.</li>
+</ul>
+<p>The simplified conventional result is:</p>
+<pre><code class="language-text">Composite:
+  94
+</code></pre>
+<p>For purposes of this fictional example, assume the originating system describes that result as:</p>
+<pre><code class="language-text">below reference expectation
+</code></pre>
+<p>No claim is made here that a real instrument would use this exact score, interpretation, or task structure.</p>
+<p>They are demonstration values.</p>
+<hr>
+<h1 id="baseline-observation">Baseline Observation</h1>
+<pre><code class="language-yaml">baseline_assessment:
+  subject: PAX-01
+  synthetic: true
+
+  representation:
+    type: scalar_composite
+
+  composite:
+    value: 94
+    status: synthetic_demo_value
+
+  directly_observed:
+    rapid_symbolic_processing: weak
+    timed_classification: weak
+    short_context_recall: moderate
+
+  global_interpretation:
+    broad_reasoning_capability: low
+
+  confidence:
+    direct_task_observations: medium
+    global_interpretation: unknown
+</code></pre>
+<p>The crucial distinction is immediately visible.</p>
+<p>The assessment directly observed:</p>
+<pre><code class="language-text">rapid symbolic processing
+timed classification
+short-context performance
+</code></pre>
+<p>But the broad interpretation claims:</p>
+<pre><code class="language-text">reasoning capability generally
+</code></pre>
+<p>Predictive Analytics asks whether the evidence warrants that larger inference.</p>
+<p>It does not assume the answer is no.</p>
+<hr>
+<h1 id="baseline-preservation">Baseline Preservation</h1>
+<p>The original result remains part of the record.</p>
+<pre><code class="language-yaml">baseline:
+  preserved: true
+
+  composite: 94
+
+  direct_observations:
+    rapid_symbolic_processing: weak
+    timed_classification: weak
+    short_context_recall: moderate
+
+  rejected: false
+  overridden: false
+</code></pre>
+<p>Nothing later in the example is allowed to erase these observations merely because another representation becomes more flattering.</p>
+<hr>
+<h1 id="additional-observation-program">Additional Observation Program</h1>
+<p>PAX-01 then completes a broader synthetic task set.</p>
+<p>The new tasks intentionally sample different forms of observable performance.</p>
+<p>They include:</p>
+<pre><code class="language-text">T01  Pattern Completion
+T02  Structural Mapping
+T03  Causal System Reconstruction
+T04  Temporal Sequence Reasoning
+T05  Spatial Transformation
+T06  Symbolic Manipulation
+T07  Linguistic Reasoning
+T08  Cross-Domain Transfer
+T09  Regime Change Recognition
+T10  Anomaly Detection
+T11  Contradiction Handling
+T12  Ambiguity Navigation
+T13  Adaptive Reframing
+T14  Coherence Maintenance
+T15  Drift Recognition
+T16  Abstraction / Compression
+T17  Partial-Evidence Reconstruction
+T18  Novelty Response
+T19  Confidence Calibration
+T20  Tool Collaboration
+T21  Social Interpretation
+T22  Environmental Adaptation
+T23  Long-Horizon Integration
+T24  Recovery / Recalibration
+</code></pre>
+<p>These task names are illustrative.</p>
+<p>They are not validated psychometric instruments.</p>
+<hr>
+<h1 id="evidence-boundary">Evidence Boundary</h1>
+<p>Several forms of evidence are deliberately separated.</p>
+<pre><code class="language-yaml">evidence_sources:
+  E1:
+    source: conventional_assessment
+    independent: true
+
+  E2:
+    source: structural_task_family
+    independent: true
+
+  E3:
+    source: transfer_task_family
+    independent: true
+
+  E4:
+    source: temporal_task_family
+    independent: true
+
+  E5:
+    source: ambiguity_task_family
+    independent: true
+
+  E6:
+    source: longitudinal_task_family
+    independent: true
+
+  E7:
+    source: tool_collaboration_task
+    independent: true
+</code></pre>
+<p>If multiple adapters interpret <code>E2</code>, that remains:</p>
+<pre><code class="language-text">one independent evidence source
+</code></pre>
+<p>not:</p>
+<pre><code class="language-text">one evidence source per adapter
+</code></pre>
+<hr>
+<h1 id="synthetic-observations">Synthetic Observations</h1>
+<p>Illustrative observations:</p>
+<pre><code class="language-text">Pattern Recognition             strong
+Structural Reasoning            strong
+Causal Integration              strong
+Temporal Reasoning              moderate-strong
+Spatial Reasoning               moderate
+Symbolic Reasoning              moderate
+Linguistic Reasoning            moderate-strong
+Cross-Domain Transfer           strong
+Regime Recognition              strong
+Anomaly Detection               strong
+Contradiction Handling          strong
+Ambiguity Navigation            strong
+Adaptive Reframing              strong
+Coherence Maintenance           moderate-strong
+Drift Awareness                 strong
+Compression / Abstraction       strong
+Partial-Evidence Reconstruction strong
+Novelty Response                strong
+Metacognitive Calibration       moderate
+Tool Collaboration              strong
+Social Interpretation           moderate
+Embodied / Environmental Fit    unknown
+Long-Horizon Integration        strong
+Recovery / Recalibration        moderate-strong
+
+Rapid Symbolic Processing       weak-moderate
+Timed Classification            weak
+Short-Context Recall            moderate
+</code></pre>
+<p>Again:</p>
+<pre><code class="language-text">strong
+moderate
+weak
+</code></pre>
+<p>are illustrative ordinal labels.</p>
+<p>They are not IQ scores.</p>
+<hr>
+<h1 id="initial-riqf-profile">Initial RIQF Profile</h1>
+<p>A first profile might appear:</p>
+<pre><code class="language-text">                      PAX-01
+
+Pattern Recognition             ████████░░
+Structural Reasoning            █████████░
+Causal Integration              ████████░░
+Temporal Reasoning              ███████░░░
+Spatial Reasoning               ██████░░░░
+Symbolic Reasoning              ██████░░░░
+Linguistic Reasoning            ███████░░░
+Cross-Domain Transfer           █████████░
+Regime Recognition              ████████░░
+Anomaly Detection               █████████░
+Contradiction Handling          ████████░░
+Ambiguity Navigation            █████████░
+Adaptive Reframing              ████████░░
+Coherence Maintenance           ███████░░░
+Drift Awareness                 ████████░░
+Compression / Abstraction       ████████░░
+Partial-Evidence Reconstruction █████████░
+Novelty Response                ████████░░
+Metacognitive Calibration       ██████░░░░
+Tool Collaboration              ████████░░
+Social Interpretation           ██████░░░░
+Environmental Fit               ??????????
+Long-Horizon Integration        █████████░
+Recovery / Recalibration        ███████░░░
+
+Rapid Symbolic Processing       ████░░░░░░
+Timed Classification            ███░░░░░░░
+Short-Context Recall            █████░░░░░
+</code></pre>
+<p>The bars are visual demonstration aids only.</p>
+<p>They do not represent validated intervals or population percentiles.</p>
+<hr>
+<h1 id="first-important-result">First Important Result</h1>
+<p>The profile is:</p>
+<pre><code class="language-text">asymmetric
+</code></pre>
+<p>This alone establishes very little.</p>
+<p>It does <strong>not</strong> establish:</p>
+<pre><code class="language-text">hidden genius
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">conventional assessment invalid
+</code></pre>
+<p>It establishes:</p>
+<blockquote>
+<p><strong>The synthetic observation set is heterogeneous enough that a single scalar does not preserve all observed variation.</strong></p>
+</blockquote>
+<p>That is the first meaningful finding.</p>
+<hr>
+<h1 id="riqf-layer-1-capability">RIQF Layer 1 — Capability</h1>
+<p>The capability layer records what was directly observed.</p>
+<pre><code class="language-yaml">capability_profile:
+  structural_reasoning:
+    expression: strong
+    confidence: medium
+
+  cross_domain_transfer:
+    expression: strong
+    confidence: medium
+
+  ambiguity_navigation:
+    expression: strong
+    confidence: medium
+
+  regime_recognition:
+    expression: strong
+    confidence: medium
+
+  long_horizon_integration:
+    expression: strong
+    confidence: medium
+
+  rapid_symbolic_processing:
+    expression: weak
+    confidence: medium
+
+  timed_classification:
+    expression: weak
+    confidence: medium
+
+  environmental_fit:
+    expression: unknown
+    confidence: none
+</code></pre>
+<p>Unknown remains unknown.</p>
+<hr>
+<h1 id="riqf-layer-2-expression-substrate">RIQF Layer 2 — Expression Substrate</h1>
+<p>PAX-01 is then observed under several synthetic substrates.</p>
+<pre><code class="language-text">Reflective textual              strong
+Relational mapping              strong
+System-level visual             strong
+Open generative                 strong
+Cross-domain conversational     strong
+Tool-assisted                   strong
+Human-AI collaborative          strong
+
+Fixed-choice                    moderate
+Isolated symbolic               moderate
+Short-context                   moderate
+
+Severely timed symbolic         weak
+Severely timed classification   weak
+</code></pre>
+<p>This produces a candidate:</p>
+<pre><code class="language-text">substrate sensitivity:
+  observed
+</code></pre>
+<p>But not yet:</p>
+<pre><code class="language-text">substrate causation:
+  established
+</code></pre>
+<hr>
+<h1 id="substrate-expression-profile">Substrate Expression Profile</h1>
+<pre><code class="language-yaml">substrate_expression:
+  reflective_textual:
+    expression: strong
+
+  relational:
+    expression: strong
+
+  system_level_visual:
+    expression: strong
+
+  generative:
+    expression: strong
+
+  tool_assisted:
+    expression: strong
+
+  human_ai_collaborative:
+    expression: strong
+
+  fixed_choice:
+    expression: moderate
+
+  symbolic:
+    expression: moderate
+
+  severe_time_constraint:
+    expression: weak
+
+  causal_status:
+    unresolved
+</code></pre>
+<hr>
+<h1 id="important-boundary">Important Boundary</h1>
+<p>Tool-assisted performance belongs to a different observational boundary.</p>
+<pre><code class="language-text">PAX-01 alone
+</code></pre>
+<p>is not identical to:</p>
+<pre><code class="language-text">PAX-01 + AI
+</code></pre>
+<p>Therefore:</p>
+<pre><code class="language-yaml">system_boundaries:
+  individual_human:
+    id: PAX-01
+
+  human_ai_pair:
+    id: PAX-01-AI
+
+attribution:
+  collaborative_result:
+    belongs_to: PAX-01-AI
+
+  individual_credit:
+    status: partial
+</code></pre>
+<p>The collaborative result may be meaningful.</p>
+<p>It is not automatically an individual-human score.</p>
+<hr>
+<h1 id="riqf-layer-3-resonance-context">RIQF Layer 3 — Resonance / Context</h1>
+<p>The example next asks whether performance changes systematically across contexts.</p>
+<p>Illustrative patterns:</p>
+<pre><code class="language-text">context-rich:
+  amplification candidate
+
+system-level:
+  amplification candidate
+
+reflective:
+  amplification candidate
+
+tool-collaborative:
+  amplification candidate
+
+severely time-constrained:
+  suppression candidate
+
+fixed binary-choice:
+  suppression candidate
+</code></pre>
+<p>These remain candidate observations until replication.</p>
+<hr>
+<h1 id="existing-model-interpretation">Existing Model Interpretation</h1>
+<p>The conventional model says, in simplified demonstration form:</p>
+<pre><code class="language-text">composite:
+  94
+
+broad interpretation:
+  low reasoning capability
+</code></pre>
+<p>The richer observation set says:</p>
+<pre><code class="language-text">profile:
+  highly uneven
+
+strong:
+  structural
+  transfer
+  ambiguity
+  anomaly
+  regime
+  long-horizon
+
+weak:
+  rapid symbolic
+  timed classification
+</code></pre>
+<p>This creates a disagreement.</p>
+<hr>
+<h1 id="model-mismatch-question">Model Mismatch Question</h1>
+<p>The question is <strong>not</strong>:</p>
+<blockquote>
+<p>Which result do we like better?</p>
+</blockquote>
+<p>The question is:</p>
+<blockquote>
+<p><strong>Does the conventional representation have sufficient scope to justify the global interpretation being made?</strong></p>
+</blockquote>
+<p>Candidate model-fit record:</p>
+<pre><code class="language-yaml">model_fit:
+  direct_task_fit:
+    status: supported
+
+  global_profile_fit:
+    status: low
+
+  reason:
+    baseline directly reflects several observed
+    weaknesses but does not explain the larger
+    heterogeneous observation profile
+
+  confidence:
+    low_to_medium
+</code></pre>
+<p>The conventional task observations remain supported.</p>
+<p>The global inference becomes less certain.</p>
+<hr>
+<h1 id="fft-adapter-pass">FFT Adapter Pass</h1>
+<p>The Framework Field Theory adapter asks:</p>
+<blockquote>
+<p>What relationships and boundaries surround the prediction?</p>
+</blockquote>
+<p>It finds:</p>
+<pre><code class="language-text">local observation:
+  timed symbolic performance weak
+
+broader observations:
+  structural and relational tasks strong
+</code></pre>
+<p>Candidate field relationships:</p>
+<pre><code class="language-text">task representation
+     ↕
+observed performance
+
+time constraint
+     ↕
+observed performance
+
+interaction mode
+     ↕
+observed performance
+</code></pre>
+<p>Correct result:</p>
+<pre><code class="language-yaml">fft:
+  relationships:
+    status: candidate
+
+  boundary_difference:
+    status: supported_in_example
+
+  causal_interpretation:
+    status: unresolved
+
+  added_information:
+    broader observation boundary matters
+</code></pre>
+<p>FFT does not declare PAX-01 globally more intelligent.</p>
+<hr>
+<h1 id="inverted-star-adapter-pass">Inverted Star Adapter Pass</h1>
+<p>The Inverted Star asks whether prediction and independent observations materially disagree.</p>
+<pre><code class="language-text">baseline:
+  broad_reasoning: low
+
+extended:
+  structural_reasoning: strong
+  transfer: strong
+  ambiguity_navigation: strong
+  long_horizon_integration: strong
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-yaml">inverted_star:
+  inversion:
+    detected: true
+
+  class:
+    - prediction-performance
+    - local-global
+    - representation
+
+  direction:
+    prediction_lower_than_broader_observation
+
+  confidence:
+    medium
+
+  cause:
+    unresolved
+</code></pre>
+<p>Importantly:</p>
+<pre><code class="language-text">inversion
+!=
+proof of hidden superior intelligence
+</code></pre>
+<hr>
+<h1 id="structural-detection-adapter-pass">Structural Detection Adapter Pass</h1>
+<p>Structural Detection looks for reproducible structure in the variation.</p>
+<p>Candidate pattern:</p>
+<pre><code class="language-text">rapid / constrained / fixed:
+  weaker
+
+relational / structural / generative:
+  stronger
+</code></pre>
+<p>Synthetic repeated observations support:</p>
+<pre><code class="language-text">heterogeneous but structured profile
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-yaml">structural_detection:
+  pattern:
+    status: replicated_in_demo
+
+  structural_reasoning:
+    status: supported_in_demo
+
+  boundary:
+    candidate: task_representation
+
+  invariant:
+    candidate: relational_structure_preservation
+
+  generalizability:
+    unknown
+</code></pre>
+<p>Again:</p>
+<pre><code class="language-text">demo replication
+!=
+empirical validation
+</code></pre>
+<hr>
+<h1 id="rtt-adapter-pass">RTT Adapter Pass</h1>
+<p>RTT asks whether the observations organize into meaningful operating regimes.</p>
+<p>Candidate Regime A:</p>
+<pre><code class="language-text">timed
+symbolic
+fixed-choice
+individual
+</code></pre>
+<p>Candidate Regime B:</p>
+<pre><code class="language-text">reflective
+relational
+generative
+individual or collaborative
+</code></pre>
+<p>Synthetic performance:</p>
+<pre><code class="language-text">Regime A:
+  repeatedly weaker
+
+Regime B:
+  repeatedly stronger
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-yaml">rtt:
+  regime_difference:
+    status: candidate
+
+  within_regime_stability:
+    status: demonstration_only
+
+  model_fit:
+    regime_a: plausible
+    regime_b: weaker
+
+  causal_interpretation:
+    unresolved
+</code></pre>
+<p>RTT does not establish which changed variable caused the difference.</p>
+<hr>
+<h1 id="resonance-adapter-pass">Resonance Adapter Pass</h1>
+<p>Resonance asks whether expression repeatedly amplifies or suppresses under particular contexts.</p>
+<p>Candidate:</p>
+<pre><code class="language-yaml">resonance:
+  amplification:
+    - reflective
+    - relational
+    - context-rich
+
+  suppression:
+    - severe_time_constraint
+    - forced_fixed_choice
+
+  replication:
+    status: demonstration_only
+
+  cause:
+    unresolved
+</code></pre>
+<p>The vocabulary is useful only if future work can operationalize it.</p>
+<hr>
+<h1 id="coherence-observer-pass">Coherence Observer Pass</h1>
+<p>The Coherence Observer compares the observations.</p>
+<p>Supporting cluster:</p>
+<pre><code class="language-text">structural reasoning
+cross-domain transfer
+anomaly detection
+regime recognition
+long-horizon integration
+ambiguity navigation
+</code></pre>
+<p>Contrasting cluster:</p>
+<pre><code class="language-text">rapid symbolic processing
+timed classification
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-yaml">coherence:
+  profile_coherence:
+    status: moderate_to_high
+
+  scalar_coherence:
+    status: low
+
+  cross_substrate_coherence:
+    status: conditional
+
+  cross_regime_coherence:
+    status: unresolved
+
+  adapter_coherence:
+    status: moderate
+
+  evidence_independence:
+    status: medium
+</code></pre>
+<p>This does not mean the richer model is true.</p>
+<p>It means it organizes the synthetic evidence with fewer unresolved contradictions.</p>
+<hr>
+<h1 id="scalar-coherence">Scalar Coherence</h1>
+<p>The scalar compresses:</p>
+<pre><code class="language-text">strong structural performance
+strong transfer
+strong ambiguity navigation
+weak timed symbolic performance
+weak fixed-choice performance
+</code></pre>
+<p>into:</p>
+<pre><code class="language-text">94
+</code></pre>
+<p>That may be useful for some purposes.</p>
+<p>But for this synthetic observation set:</p>
+<pre><code class="language-text">information_loss:
+  substantial
+</code></pre>
+<p>Therefore:</p>
+<pre><code class="language-yaml">composite:
+  permitted: true
+
+  value: 94
+
+  interpretive_status:
+    lossy_projection
+
+  sufficient_alone:
+    false
+
+  profile_required:
+    true
+</code></pre>
+<hr>
+<h1 id="counterfactual-challenge-1-remove-favorable-evidence">Counterfactual Challenge 1 — Remove Favorable Evidence</h1>
+<p>Remove one strong structural task.</p>
+<p>Original:</p>
+<pre><code class="language-text">structural_reasoning:
+  strong
+</code></pre>
+<p>After removal:</p>
+<pre><code class="language-text">structural_reasoning:
+  still strong
+  confidence reduced
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-text">single_favorable_evidence_dependency:
+  low
+</code></pre>
+<hr>
+<h1 id="counterfactual-challenge-2-add-adverse-evidence">Counterfactual Challenge 2 — Add Adverse Evidence</h1>
+<p>Add several weak structural tasks.</p>
+<p>New synthetic results:</p>
+<pre><code class="language-text">structural_task_08:
+  weak
+
+structural_task_09:
+  weak
+
+structural_task_10:
+  moderate
+</code></pre>
+<p>Updated profile:</p>
+<pre><code class="language-text">structural_reasoning:
+  moderate
+</code></pre>
+<p>Confidence changes.</p>
+<p>This is required behavior.</p>
+<p>The profile is not protected from adverse evidence.</p>
+<hr>
+<h1 id="counterfactual-challenge-3-remove-rtt">Counterfactual Challenge 3 — Remove RTT</h1>
+<p>Without RTT:</p>
+<pre><code class="language-text">performance variation:
+  still present
+
+regime explanation:
+  unavailable
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-text">RTT:
+  explanatory contribution possible
+
+variation detection:
+  not dependent on RTT
+</code></pre>
+<p>This prevents RTT from taking credit for evidence that existed before it was applied.</p>
+<hr>
+<h1 id="counterfactual-challenge-4-remove-structural-detection">Counterfactual Challenge 4 — Remove Structural Detection</h1>
+<p>Without Structural Detection:</p>
+<pre><code class="language-text">heterogeneous observations:
+  still present
+
+structured pattern interpretation:
+  reduced
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-text">Structural Detection:
+  organizational contribution possible
+
+incremental validity:
+  unresolved
+</code></pre>
+<hr>
+<h1 id="counterfactual-challenge-5-remove-resonance">Counterfactual Challenge 5 — Remove Resonance</h1>
+<p>Without Resonance:</p>
+<pre><code class="language-text">context variation:
+  still visible
+
+amplification / suppression vocabulary:
+  absent
+</code></pre>
+<p>This asks whether resonance adds measurable information or merely terminology.</p>
+<hr>
+<h1 id="counterfactual-challenge-6-restore-scalar-only">Counterfactual Challenge 6 — Restore Scalar Only</h1>
+<p>Use only:</p>
+<pre><code class="language-text">composite:
+  94
+</code></pre>
+<p>Question:</p>
+<blockquote>
+<p>Does the scalar explain the held-out structural and transfer tasks?</p>
+</blockquote>
+<p>Synthetic answer for this example:</p>
+<pre><code class="language-text">poorly
+</code></pre>
+<p>That makes scalar-only representation less explanatory <strong>within the demonstration</strong>.</p>
+<p>It does not establish the same result empirically.</p>
+<hr>
+<h1 id="counterfactual-challenge-7-baseline-model-wins">Counterfactual Challenge 7 — Baseline Model Wins</h1>
+<p>Now deliberately modify the synthetic evidence.</p>
+<p>Suppose additional observations instead show:</p>
+<pre><code class="language-text">structural reasoning:
+  weak
+
+cross-domain transfer:
+  weak
+
+ambiguity navigation:
+  weak
+
+long-horizon integration:
+  weak
+</code></pre>
+<p>Then:</p>
+<pre><code class="language-text">baseline prediction:
+  increasingly coherent
+
+model mismatch:
+  not supported
+
+RIQF:
+  no rescue
+</code></pre>
+<p>This counterexample is essential.</p>
+<p>If the module could not produce this outcome, it would be biased by design.</p>
+<hr>
+<h1 id="drift-observer-pass">Drift Observer Pass</h1>
+<p>The example now introduces fictional repeated observations.</p>
+<p>At <code>T1</code>:</p>
+<pre><code class="language-text">structural reasoning:
+  strong
+
+cross-domain transfer:
+  strong
+
+rapid symbolic:
+  weak
+</code></pre>
+<p>At <code>T2</code>:</p>
+<pre><code class="language-text">structural reasoning:
+  strong
+
+cross-domain transfer:
+  moderate
+
+rapid symbolic:
+  moderate
+</code></pre>
+<p>At <code>T3</code>:</p>
+<pre><code class="language-text">structural reasoning:
+  strong
+
+cross-domain transfer:
+  moderate
+
+rapid symbolic:
+  moderate
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-yaml">drift:
+  structural_reasoning:
+    status: stable
+
+  cross_domain_transfer:
+    status: repeated_change
+    direction: decreasing
+
+  rapid_symbolic_processing:
+    status: repeated_change
+    direction: increasing
+
+  global_drift:
+    status: inappropriate_summary
+
+  cause:
+    unresolved
+</code></pre>
+<p>The fingerprint changes shape.</p>
+<p>That is allowed.</p>
+<hr>
+<h1 id="profile-topology">Profile Topology</h1>
+<p>Instead of asking:</p>
+<pre><code class="language-text">Did IQ go up or down?
+</code></pre>
+<p>the richer question becomes:</p>
+<blockquote>
+<p><strong>How did the observed capability topology change?</strong></p>
+</blockquote>
+<p>Conceptually:</p>
+<pre><code class="language-text">T1
+  structural      █████████
+  transfer        █████████
+  symbolic        ████
+
+T3
+  structural      █████████
+  transfer        ██████
+  symbolic        ██████
+</code></pre>
+<p>The change is multidirectional.</p>
+<p>A single drift number would conceal that.</p>
+<hr>
+<h1 id="uncertainty-layer">Uncertainty Layer</h1>
+<p>The framework now asks what it <strong>does not know</strong>.</p>
+<pre><code class="language-yaml">uncertainty:
+  biological_cause:
+    status: unknown
+
+  developmental_cause:
+    status: unknown
+
+  clinical_significance:
+    status: unknown
+
+  population_percentile:
+    status: unknown
+
+  cross_cultural_generalization:
+    status: unknown
+
+  long_term_stability:
+    status: unvalidated
+
+  transfer_to_unobserved_domains:
+    status: unknown
+
+  causal_substrate_effect:
+    status: unresolved
+
+  causal_regime_effect:
+    status: unresolved
+</code></pre>
+<p>This may be one of the most important sections of the entire fingerprint.</p>
+<hr>
+<h1 id="known">Known</h1>
+<p>Within the synthetic example:</p>
+<pre><code class="language-text">performance varies across tasks
+performance varies across substrates
+profile is asymmetric
+several patterns repeat by construction
+conventional task weaknesses remain present
+broader observations include strengths not represented by baseline scalar
+</code></pre>
+<hr>
+<h1 id="unknown">Unknown</h1>
+<pre><code class="language-text">why the variation exists
+whether the dimensions correspond to stable real constructs
+whether effects replicate in real populations
+whether RTT adds predictive value
+whether resonance adds predictive value
+whether FFT adds predictive value
+whether Structural Detection adds predictive value
+whether the profile predicts real external outcomes
+whether the profile is culturally portable
+whether the profile is fair across groups
+</code></pre>
+<hr>
+<h1 id="not-authorized">Not Authorized</h1>
+<pre><code class="language-text">diagnosis
+clinical interpretation
+disability classification
+employment decision
+educational exclusion
+legal determination
+insurance decision
+lending decision
+automated adverse action
+</code></pre>
+<hr>
+<h1 id="human-review-hook">Human Review Hook</h1>
+<p>Suppose this were someday a validated, appropriately governed consequential context.</p>
+<p>A discrepancy such as:</p>
+<pre><code class="language-text">broad adverse scalar inference
++
+strong contradictory multidimensional evidence
+</code></pre>
+<p>might trigger:</p>
+<pre><code class="language-yaml">review:
+  required: true
+
+  reasons:
+    - model_scope_question
+    - profile_asymmetry
+    - prediction_observation_disagreement
+    - substrate_dependence_candidate
+</code></pre>
+<p>The review action would <strong>not</strong> be:</p>
+<pre><code class="language-text">replace 94 with higher score
+</code></pre>
+<p>It would be:</p>
+<pre><code class="language-text">inspect evidence
+inspect intended use
+inspect model scope
+inspect alternative observations
+preserve uncertainty
+determine whether additional assessment is justified
+</code></pre>
+<hr>
+<h1 id="resonant-iq-fingerprint-summary">Resonant IQ Fingerprint Summary</h1>
+<pre><code class="language-text">PAX-01 — SYNTHETIC
+
+CAPABILITY SHAPE
+────────────────────────────────────────
+
+Structural Reasoning            █████████░
+Cross-Domain Transfer           █████████░
+Pattern Recognition             ████████░░
+Anomaly Detection               █████████░
+Regime Recognition              ████████░░
+Ambiguity Navigation            █████████░
+Adaptive Reframing              ████████░░
+Long-Horizon Integration        █████████░
+Causal Integration              ████████░░
+Coherence Maintenance           ███████░░░
+Temporal Reasoning              ███████░░░
+Linguistic Reasoning            ███████░░░
+Spatial Reasoning               ██████░░░░
+Metacognitive Calibration       ██████░░░░
+Social Interpretation           ██████░░░░
+
+Rapid Symbolic Processing       ████░░░░░░
+Timed Classification            ███░░░░░░░
+Short-Context Recall            █████░░░░░
+
+Environmental Fit               UNKNOWN
+</code></pre>
+<hr>
+<h1 id="substrate-profile">Substrate Profile</h1>
+<pre><code class="language-text">Reflective textual              ████████
+Relational                      █████████
+System-level                    █████████
+Generative                      ████████
+Context-rich                    █████████
+Tool-assisted                   ████████
+Human-AI pair                   █████████
+
+Fixed-choice                    █████
+Isolated symbolic               █████
+
+Severely timed                  ███
+</code></pre>
+<p>Again:</p>
+<pre><code class="language-text">these bars are illustrative
+</code></pre>
+<p>They are not validated scores.</p>
+<hr>
+<h1 id="model-fit-profile">Model-Fit Profile</h1>
+<pre><code class="language-yaml">model_fit:
+  conventional_direct_tasks:
+    status: supported
+
+  conventional_global_inference:
+    status: low_confidence
+
+  multidimensional_profile:
+    status: better_fit_in_demo
+
+  substrate_aware_profile:
+    status: candidate
+
+  regime_aware_profile:
+    status: candidate
+
+  final:
+    status: unresolved_without_empirical_validation
+</code></pre>
+<p>This preserves a subtle but crucial distinction:</p>
+<blockquote>
+<p>The original measurement can be accurate about what it measured while still being too narrow for a global claim.</p>
+</blockquote>
+<hr>
+<h1 id="adapter-summary">Adapter Summary</h1>
+<pre><code class="language-yaml">adapters:
+  fft:
+    finding:
+      broader field relationships matter
+    validation:
+      unvalidated
+
+  inverted_star:
+    finding:
+      prediction-observation inversion candidate
+    validation:
+      unvalidated
+
+  structural_detection:
+    finding:
+      asymmetric structural pattern candidate
+    validation:
+      unvalidated
+
+  rtt:
+    finding:
+      regime-conditioned expression candidate
+    validation:
+      unvalidated
+
+  resonance:
+    finding:
+      contextual amplification/suppression candidate
+    validation:
+      unvalidated
+</code></pre>
+<hr>
+<h1 id="adapter-agreement-warning">Adapter Agreement Warning</h1>
+<p>All five adapters agreeing does not imply five independent confirmations.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">adapter_agreement:
+  count: 5
+
+independent_evidence_sources:
+  count: 7
+
+interpretation:
+  adapter coherence and evidence independence
+  are reported separately
+</code></pre>
+<p>That distinction must remain explicit.</p>
+<hr>
+<h1 id="validation-record">Validation Record</h1>
+<p>The values below describe <strong>validation status</strong>, not synthetic performance numbers.</p>
+<pre><code class="language-yaml">validation_record:
+  subject: PAX-01
+
+  data_type:
+    synthetic
+
+  empirical_subject:
+    false
+
+  framework_validation:
+    state: unvalidated
+
+  evidence:
+    dimension_coverage:
+      status: demonstration_only
+
+    profile_coverage:
+      status: demonstration_only
+
+    evidence_independence:
+      status: structurally_demonstrated
+
+  reliability:
+    test_retest:
+      status: not_tested
+
+    alternate_form:
+      status: not_tested
+
+    inter_rater:
+      status: not_tested
+
+    topology_stability:
+      status: not_tested
+
+  validity:
+    convergent:
+      status: not_tested
+
+    discriminant:
+      status: not_tested
+
+    incremental_explanatory:
+      status: not_tested
+
+    incremental_predictive:
+      status: not_tested
+
+  substrate:
+    effect_magnitude:
+      status: demonstration_only
+
+    replicability:
+      status: not_tested
+
+    symmetry:
+      status: structurally_demonstrated
+
+    specificity:
+      status: not_tested
+
+  regime:
+    transition_detection:
+      status: not_tested
+
+    false_alarm_rate:
+      status: not_tested
+
+    regime_conditioned_stability:
+      status: demonstration_only
+
+  model_mismatch:
+    precision:
+      status: not_tested
+
+    recall:
+      status: not_tested
+
+    false_positive_rate:
+      status: not_tested
+
+  uncertainty:
+    calibration:
+      status: not_tested
+
+    unsupported_assertion_rate:
+      status: not_tested
+
+  adapters:
+    ablation:
+      status: demonstration_only
+
+  fairness:
+    subgroup_analysis:
+      status: not_applicable_to_single_synthetic_case
+
+  explainability:
+    evidence_reconstruction:
+      status: demonstration_only
+
+    explanation_completeness:
+      status: demonstration_only
+
+  decision:
+    authority: none
+</code></pre>
+<hr>
+<h1 id="selected-metric-mapping">Selected Metric Mapping</h1>
+<p>The first real RIQF pilot should consider at least:</p>
+<pre><code class="language-text">PA-M01  Dimension Evidence Coverage
+PA-M02  Profile Evidence Coverage
+PA-M03  Evidence Independence Ratio
+
+PA-M04  Test-Retest Stability
+PA-M05  Alternate-Form Stability
+PA-M06  Inter-Rater Agreement
+PA-M07  Profile Topology Stability
+
+PA-M08  Convergent Association
+PA-M09  Discriminant Separation
+PA-M10  Incremental Explanatory Value
+PA-M11  Incremental Predictive Value
+
+PA-M12  Substrate Effect Magnitude
+PA-M13  Substrate Effect Replicability
+PA-M14  Substrate Symmetry
+PA-M15  Substrate Specificity
+
+PA-M16  Regime Transition Detection Rate
+PA-M17  False Regime Alarm Rate
+PA-M19  Regime-Conditioned Stability
+
+PA-M20  Model-Mismatch Precision
+PA-M21  Model-Mismatch Recall
+PA-M22  Model-Mismatch False Positive Rate
+
+PA-M24  Cross-Observation Coherence
+PA-M25  Profile Contradiction Density
+
+PA-M26  Dimension Drift Rate
+PA-M27  Profile Drift Magnitude
+
+PA-M28  Confidence Calibration Error
+PA-M30  Abstention Rate
+PA-M31  Abstention Utility
+PA-M32  Unsupported Assertion Rate
+
+PA-M33  Irrelevant Perturbation Stability
+PA-M34  Relevant Change Sensitivity
+PA-M35  Task-Order Sensitivity
+PA-M36  Adapter Ablation Effect
+
+PA-M37  Group Error Difference
+PA-M38  Group Calibration Difference
+PA-M42  Evidence Coverage Difference
+PA-M43  False Favorable Reinterpretation Rate
+PA-M44  False Adverse Reinterpretation Rate
+
+PA-M45  Evidence Reconstruction Rate
+PA-M46  Explanation Completeness
+
+PA-M51  Evidence Acquisition Burden
+</code></pre>
+<hr>
+<h1 id="comparative-evaluation-matrix">Comparative Evaluation Matrix</h1>
+<p>A real validation program should avoid comparing only:</p>
+<pre><code class="language-text">traditional IQ
+vs
+RIQF
+</code></pre>
+<p>That comparison is too crude.</p>
+<p>A better progression:</p>
+<pre><code class="language-text">M0:
+  conventional scalar
+
+M1:
+  conventional subscales
+
+M2:
+  baseline multidimensional profile
+
+M3:
+  multidimensional
+  + substrate observations
+
+M4:
+  M3
+  + Structural Detection
+
+M5:
+  M4
+  + RTT / regime observation
+
+M6:
+  M5
+  + resonance observation
+
+M7:
+  full Predictive Analytics ensemble
+</code></pre>
+<p>Then ask:</p>
+<pre><code class="language-text">Which layer actually adds value?
+</code></pre>
+<hr>
+<h1 id="what-would-count-as-success">What Would Count as Success?</h1>
+<p>RIQF should not be considered successful merely because users like the resulting profiles better.</p>
+<p>Success could eventually include evidence that it:</p>
+<ul>
+<li>improves explanatory value,</li>
+<li>predicts relevant external outcomes,</li>
+<li>improves calibration,</li>
+<li>detects model mismatch reliably,</li>
+<li>preserves meaningful asymmetry,</li>
+<li>exposes uncertainty,</li>
+<li>survives alternate forms,</li>
+<li>survives irrelevant perturbations,</li>
+<li>responds to relevant evidence changes,</li>
+<li>reduces unsupported global inference,</li>
+<li>and behaves acceptably across relevant groups.</li>
+</ul>
+<hr>
+<h1 id="what-would-count-as-failure">What Would Count as Failure?</h1>
+<p>RIQF should be revised or rejected if it:</p>
+<ul>
+<li>produces unstable profiles,</li>
+<li>cannot distinguish dimensions,</li>
+<li>merely redescribes conventional subscales,</li>
+<li>systematically generates flattering narratives,</li>
+<li>labels most unfavorable assessments as mismatches,</li>
+<li>produces poor inter-rater agreement,</li>
+<li>adds complexity without predictive or explanatory value,</li>
+<li>fails counterfactual tests,</li>
+<li>creates new fairness problems,</li>
+<li>cannot abstain,</li>
+<li>or secretly recreates a master intelligence score.</li>
+</ul>
+<hr>
+<h1 id="falsification-example">Falsification Example</h1>
+<p>Suppose a future study finds:</p>
+<pre><code class="language-text">RIQF dimensions:
+  low test-retest reliability
+
+adapter outputs:
+  poor inter-rater agreement
+
+substrate effects:
+  fail replication
+
+RTT contribution:
+  no ablation effect
+
+resonance contribution:
+  no ablation effect
+
+Structural Detection:
+  equivalent to simpler methods
+
+predictive value:
+  no improvement
+
+explanatory value:
+  no improvement
+</code></pre>
+<p>Correct conclusion:</p>
+<pre><code class="language-text">RIQF:
+  not_supported_in_current_form
+</code></pre>
+<p>Not:</p>
+<pre><code class="language-text">researchers did not understand the framework
+</code></pre>
+<p>unless evidence independently supports that explanation.</p>
+<hr>
+<h1 id="no-hidden-master-number">No Hidden Master Number</h1>
+<p>The example deliberately refuses:</p>
+<pre><code class="language-text">Resonant IQ:
+  143
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">RIQF Score:
+  91%
+</code></pre>
+<p>because that would immediately recreate the reduction the profile was designed to investigate.</p>
+<p>Preferred:</p>
+<pre><code class="language-yaml">profile:
+  dimensions:
+    multidimensional
+
+  topology:
+    asymmetric
+
+  evidence:
+    variable
+
+  uncertainty:
+    explicit
+
+  composite:
+    permitted: true
+    interpretive_status: lossy_projection
+    sufficient_alone: false
+</code></pre>
+<hr>
+<h1 id="why-keep-the-conventional-scalar">Why Keep the Conventional Scalar?</h1>
+<p>Because compression is sometimes useful.</p>
+<p>A scalar can be:</p>
+<ul>
+<li>easy to communicate,</li>
+<li>easy to compare,</li>
+<li>computationally convenient,</li>
+<li>operationally useful for a validated purpose.</li>
+</ul>
+<p>The error is not necessarily producing a scalar.</p>
+<p>The error is silently transforming:</p>
+<pre><code class="language-text">useful compressed observation
+</code></pre>
+<p>into:</p>
+<pre><code class="language-text">complete description of intelligence
+</code></pre>
+<p>The RIQF example preserves both.</p>
+<hr>
+<h1 id="flat-number-versus-fingerprint">Flat Number Versus Fingerprint</h1>
+<h2 id="flat-representation">Flat representation</h2>
+<pre><code class="language-text">PAX-01
+
+Composite: 94
+</code></pre>
+<p>Advantages:</p>
+<pre><code class="language-text">compact
+simple
+comparable
+</code></pre>
+<p>Limitations:</p>
+<pre><code class="language-text">high information compression
+profile shape lost
+substrate effects lost
+regime effects lost
+uncertainty often hidden
+</code></pre>
+<hr>
+<h1 id="fingerprint-representation">Fingerprint Representation</h1>
+<pre><code class="language-text">PAX-01
+
+Structural             █████████
+Transfer               █████████
+Pattern                ████████
+Regime                 ████████
+Ambiguity              █████████
+Anomaly                █████████
+Temporal               ███████
+Symbolic               ██████
+Rapid Symbolic         ████
+Timed Classification   ███
+</code></pre>
+<p>Advantages:</p>
+<pre><code class="language-text">shape preserved
+heterogeneity visible
+context can be attached
+uncertainty can be attached
+</code></pre>
+<p>Limitations:</p>
+<pre><code class="language-text">higher complexity
+higher evidence burden
+harder comparison
+higher privacy risk
+greater validation burden
+greater narrative-overfit risk
+</code></pre>
+<p>Neither representation is inherently superior for every purpose.</p>
+<hr>
+<h1 id="beyond-humans">Beyond Humans</h1>
+<p>The same grammar might eventually describe other systems.</p>
+<p>Example AI profile:</p>
+<pre><code class="language-text">retrieval fidelity
+structural reasoning
+uncertainty calibration
+cross-domain transfer
+contradiction detection
+tool collaboration
+long-horizon coherence
+error recovery
+regime recognition
+</code></pre>
+<p>But this does <strong>not</strong> imply that AI intelligence and human intelligence are internally equivalent.</p>
+<p>It means the same high-level observation grammar may sometimes be useful across different system classes.</p>
+<p>That claim itself requires validation.</p>
+<hr>
+<h1 id="human-ai-pair-example">Human-AI Pair Example</h1>
+<p>A collaborative profile may look different from both components.</p>
+<pre><code class="language-text">Human:
+  structural synthesis        strong
+  retrieval                   moderate
+  long-context recall         moderate
+
+AI:
+  structural synthesis        moderate
+  retrieval                   strong
+  long-context recall         strong
+
+Human-AI Pair:
+  structural synthesis        strong
+  retrieval                   strong
+  long-context integration    strong
+</code></pre>
+<p>The pair may be the meaningful system.</p>
+<p>Do not automatically redistribute the pair result back onto the components.</p>
+<hr>
+<h1 id="long-term-opportunity">Long-Term Opportunity</h1>
+<p>The larger possibility is not merely:</p>
+<pre><code class="language-text">better IQ testing
+</code></pre>
+<p>It is a scalable grammar for representing intelligent performance as:</p>
+<pre><code class="language-text">multidimensional
+substrate-sensitive
+regime-sensitive
+temporal
+uncertain
+contextual
+revisable
+</code></pre>
+<p>That could potentially support comparisons within:</p>
+<ul>
+<li>humans,</li>
+<li>AI systems,</li>
+<li>teams,</li>
+<li>human-AI collaborations,</li>
+<li>organizations,</li>
+<li>robotic systems,</li>
+<li>other adaptive systems.</li>
+</ul>
+<p>Cross-system comparisons require separate validation.</p>
+<hr>
+<h1 id="ethical-boundary">Ethical Boundary</h1>
+<p>The fingerprint must never become:</p>
+<pre><code class="language-text">a new caste system
+a covert ranking
+a hiring shortcut
+a school exclusion mechanism
+a diagnostic substitute
+a behavioral surveillance identifier
+</code></pre>
+<p>A richer profile can produce richer harm if treated as authority before validation.</p>
+<hr>
+<h1 id="privacy-boundary">Privacy Boundary</h1>
+<p>A multidimensional cognitive profile may be more sensitive than a single conventional score.</p>
+<p>It could reveal:</p>
+<ul>
+<li>observed strengths,</li>
+<li>observed weaknesses,</li>
+<li>preferred substrates,</li>
+<li>context sensitivities,</li>
+<li>uncertainty patterns,</li>
+<li>collaboration patterns,</li>
+<li>temporal change.</li>
+</ul>
+<p>Therefore:</p>
+<pre><code class="language-text">more information
+  =
+more privacy responsibility
+</code></pre>
+<p>The fingerprint should not silently become an identity-tracking fingerprint.</p>
+<hr>
+<h1 id="contestability">Contestability</h1>
+<p>If a future real-person PAX-style profile had consequential use, the subject should be able to:</p>
+<ul>
+<li>inspect relevant evidence,</li>
+<li>identify factual errors,</li>
+<li>challenge interpretation,</li>
+<li>provide contextual information,</li>
+<li>request review,</li>
+<li>add appropriate evidence,</li>
+<li>preserve unresolved disagreement.</li>
+</ul>
+<p>The profile should not trap a person inside its own previous observations.</p>
+<hr>
+<h1 id="temporal-boundary">Temporal Boundary</h1>
+<p>A future real profile should carry:</p>
+<pre><code class="language-yaml">profile:
+  observed_at:
+  evidence_window:
+  framework_version:
+  dimension_registry_version:
+  adapter_versions:
+  substrates_observed:
+  regimes_observed:
+  model_versions:
+  reassessment_status:
+</code></pre>
+<p>The profile is a snapshot of observations.</p>
+<p>It is not timeless identity.</p>
+<hr>
+<h1 id="minimal-riqf-example-record">Minimal RIQF Example Record</h1>
+<pre><code class="language-yaml">resonant_iq_fingerprint:
+  subject:
+    id: PAX-01
+    synthetic: true
+
+  assessment:
+    status: demonstration
+    validation_state: unvalidated
+    decision_authority: none
+
+  baseline:
+    model: synthetic_conventional_model
+    composite: 94
+    preserved: true
+
+  dimensions:
+    pattern_recognition:
+      expression: strong
+      confidence: medium
+
+    structural_reasoning:
+      expression: strong
+      confidence: medium
+
+    cross_domain_transfer:
+      expression: strong
+      confidence: medium
+
+    regime_recognition:
+      expression: strong
+      confidence: medium
+
+    ambiguity_navigation:
+      expression: strong
+      confidence: medium
+
+    long_horizon_integration:
+      expression: strong
+      confidence: medium
+
+    rapid_symbolic_processing:
+      expression: weak
+      confidence: medium
+
+    timed_classification:
+      expression: weak
+      confidence: medium
+
+    environmental_fit:
+      expression: unknown
+      confidence: none
+
+  substrate_profile:
+    reflective:
+      expression: strong
+
+    relational:
+      expression: strong
+
+    severe_time_constraint:
+      expression: weak
+
+  adapters:
+    fft:
+      status: candidate
+
+    inverted_star:
+      status: candidate
+
+    structural_detection:
+      status: candidate
+
+    rtt:
+      status: candidate
+
+    resonance:
+      status: candidate
+
+  coherence:
+    profile: moderate_to_high
+    scalar: low
+    adapter: moderate
+
+  drift:
+    status: multidimensional
+
+  uncertainty:
+    causal_explanation: unresolved
+    external_validity: unvalidated
+    population_generalization: unknown
+
+  composite:
+    permitted: true
+    interpretive_status: lossy_projection
+    sufficient_alone: false
+    profile_required: true
+</code></pre>
+<hr>
+<h1 id="example-final-assessment">Example Final Assessment</h1>
+<p>A defensible conclusion for this <strong>synthetic example</strong> is:</p>
+<blockquote>
+<p><strong>PAX-01 demonstrates an asymmetric synthetic capability profile in which performance varies materially across task types and measurement conditions. The fictional conventional assessment accurately preserves several observed weaknesses, particularly rapid symbolic and timed classification performance, but its broad scalar interpretation does not adequately represent the full constructed observation set. The multidimensional profile provides a more complete representation of this synthetic evidence, while the causal meaning, population validity, and scientific validity of the proposed RIQF dimensions and adapters remain unestablished.</strong></p>
+</blockquote>
+<p>That is intentionally narrower than:</p>
+<blockquote>
+<p>"PAX-01 is actually highly intelligent."</p>
+</blockquote>
+<p>The latter is exactly the kind of unsupported identity claim this module is designed to avoid.</p>
+<hr>
+<h1 id="what-the-example-demonstrates">What the Example Demonstrates</h1>
+<p>The example demonstrates:</p>
+<pre><code class="language-text">how to preserve a baseline
+how to add multidimensional observations
+how to represent substrate variation
+how adapters can contribute
+how adapter agreement differs from evidence independence
+how coherence can be multidimensional
+how drift can change profile shape
+how counterfactual tests can challenge the profile
+how uncertainty remains explicit
+how validation status remains separate from representation
+how a composite can remain without becoming identity
+</code></pre>
+<hr>
+<h1 id="what-the-example-does-not-demonstrate">What the Example Does Not Demonstrate</h1>
+<p>The example does <strong>not</strong> establish:</p>
+<pre><code class="language-text">RIQF validity
+RIQF reliability
+a new theory of intelligence
+the validity of FFT for intelligence assessment
+the validity of The Inverted Star for intelligence assessment
+the validity of Structural Detection for intelligence assessment
+the validity of RTT for intelligence assessment
+the validity of Resonance for intelligence assessment
+real substrate effects
+real regime effects
+real cognitive dimensions
+population norms
+clinical significance
+employment validity
+educational validity
+cross-cultural validity
+human-AI cognitive equivalence
+</code></pre>
+<p>Those are research questions.</p>
+<hr>
+<h1 id="core-invariants">Core Invariants</h1>
+<pre><code class="language-text">scalar != identity
+profile != identity
+measurement != total_capability
+weak_dimension != low_human_worth
+strong_dimension != high_human_worth
+asymmetry != superiority
+difference != disorder
+substrate_effect != causal_explanation
+regime_effect != causal_explanation
+adapter_agreement != independent_evidence
+coherence != truth
+counterfactual != observation
+drift != degradation
+collaborative_performance != individual_performance
+synthetic_example != validation
+richer_profile != better_model
+experimental_dimension != established_construct
+composite != total_intelligence
+unknown != failure
+</code></pre>
+<hr>
+<h1 id="closing-principle">Closing Principle</h1>
+<p>The simplest version of the example is:</p>
+<pre><code class="language-text">94
+</code></pre>
+<p>The richer version says:</p>
+<pre><code class="language-text">strong here
+moderate here
+weak here
+unknown here
+
+strong under these conditions
+weak under these conditions
+
+stable here
+changing here
+
+supported here
+uncertain here
+
+prediction fits here
+prediction fits poorly here
+</code></pre>
+<p>The richer representation is unquestionably larger.</p>
+<p>Whether it is scientifically <strong>better</strong> is something the module must earn through validation.</p>
+<p>That is the opportunity.</p>
+<p>Not to manufacture a more flattering intelligence score.</p>
+<p>Not to prove that every person misunderstood by one system is secretly exceptional.</p>
+<p>But to create a grammar capable of asking a better question:</p>
+<blockquote>
+<p><strong>What if intelligence is not best represented as where a system lands on one line, but as the reproducible shape of what it can do, under which conditions, across which substrates and regimes, with what stability, evidence, and uncertainty?</strong></p>
+</blockquote>
+<p><code>PAX-01</code> is only a synthetic example.</p>
+<p>The field gets to decide, through evidence, whether the larger idea survives.</p>
   </main>
 </body>
 </html>

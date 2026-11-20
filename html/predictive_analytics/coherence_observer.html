@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/predictive_analytics/coherence_observer.md">
-  <title>coherence_observer</title>
+  <title>Predictive Analytics — Coherence Observer</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,7 +92,1600 @@
   </aside>
 
   <main>
+<p><img width="1194" height="672" alt="predictive_analytics_coherence_observer_" src="https://github.com/user-attachments/assets/d0d2d7db-5ff8-4b04-a74e-a245e8f7adaa" /></p>
+<h1 id="predictive-analytics-coherence-observer">Predictive Analytics — Coherence Observer</h1>
+<blockquote>
+<p><strong>Coherence is not agreement everywhere. It is the ability to preserve what agrees, what disagrees, and why we do not yet know.</strong></p>
+</blockquote>
+<h2 id="module">Module</h2>
+<p>Predictive Analytics</p>
+<h2 id="observer-id">Observer ID</h2>
+<p><code>coherence</code></p>
+<h2 id="status">Status</h2>
+<p>Experimental.</p>
+<h2 id="intended-role">Intended Role</h2>
+<p>Cross-observation coherence, contradiction, compatibility, evidence-independence, and profile-consistency observer.</p>
+<hr>
+<h1 id="purpose">Purpose</h1>
+<p>The Coherence Observer examines whether observations within a Predictive Analytics assessment form a sufficiently consistent and interpretable structure.</p>
+<p>It operates across:</p>
+<ul>
+<li>conventional predictions,</li>
+<li>direct observations,</li>
+<li>multidimensional profiles,</li>
+<li>substrate comparisons,</li>
+<li>adapter outputs,</li>
+<li>regime observations,</li>
+<li>temporal observations,</li>
+<li>counterfactual results,</li>
+<li>and uncertainty records.</li>
+</ul>
+<p>Its purpose is <strong>not</strong> to make all evidence agree.</p>
+<p>Its purpose is to determine:</p>
+<blockquote>
+<p><strong>Which observations support one another, which observations contradict one another, which are conditionally compatible, and which cannot yet be meaningfully compared?</strong></p>
+</blockquote>
+<p>Contradiction is preserved.</p>
+<p>Uncertainty is preserved.</p>
+<p>Evidence provenance is preserved.</p>
+<hr>
+<h1 id="core-principle">Core Principle</h1>
+<p>The Coherence Observer distinguishes:</p>
+<pre><code class="language-text">agreement
+</code></pre>
+<p>from:</p>
+<pre><code class="language-text">coherence
+</code></pre>
+<p>A set of observations may disagree while still forming a coherent profile.</p>
+<p>Example:</p>
+<pre><code class="language-text">timed_symbolic:
+  weak
 
+structural_mapping:
+  strong
+
+cross_domain_transfer:
+  strong
+</code></pre>
+<p>These observations disagree if the model assumes:</p>
+<pre><code class="language-text">intelligence = single uniform scalar
+</code></pre>
+<p>But they may be coherent under:</p>
+<pre><code class="language-text">capability = multidimensional profile
+</code></pre>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Coherence depends partly on the representational assumptions being tested.</strong></p>
+</blockquote>
+<p>The observer must keep those assumptions visible.</p>
+<hr>
+<h1 id="coherence-is-not-truth">Coherence Is Not Truth</h1>
+<p>A highly coherent model can still be wrong.</p>
+<p>A highly coherent narrative can still be overfit.</p>
+<p>Several adapters may agree because they:</p>
+<ul>
+<li>share assumptions,</li>
+<li>consume the same evidence,</li>
+<li>reuse the same ontology,</li>
+<li>or inherit the same modeling error.</li>
+</ul>
+<p>Therefore:</p>
+<pre><code class="language-text">coherence != truth
+agreement != validity
+adapter_agreement != independent_confirmation
+</code></pre>
+<p>Coherence is one property of an assessment.</p>
+<p>It is not final authority.</p>
+<hr>
+<h1 id="observation-model">Observation Model</h1>
+<p>Let:</p>
+<ul>
+<li><strong>O</strong> = a set of observations,</li>
+<li><strong>E</strong> = evidence provenance,</li>
+<li><strong>R</strong> = regime context,</li>
+<li><strong>S</strong> = substrate context,</li>
+<li><strong>T</strong> = temporal context,</li>
+<li><strong>A</strong> = adapter interpretations,</li>
+<li><strong>U</strong> = uncertainty.</li>
+</ul>
+<p>Conceptually:</p>
+<pre><code class="language-text">C = coherence(O, E, R, S, T, A, U)
+</code></pre>
+<p>This is conceptual notation.</p>
+<p>It is not a validated coherence equation.</p>
+<p>The observer's task is to preserve enough structure that future empirical work can determine which coherence measures are useful.</p>
+<hr>
+<h1 id="core-pipeline">Core Pipeline</h1>
+<pre><code class="language-text">Predictions
+    │
+Observations
+    │
+Profiles
+    │
+Adapters
+    │
+    ▼
+Normalize Evidence References
+    │
+    ▼
+Identify Independent Evidence
+    │
+    ▼
+Construct Observation Relationships
+    │
+    ▼
+Classify:
+  support
+  contradiction
+  conditional compatibility
+  independence
+  non-comparability
+    │
+    ▼
+Check Substrate
+    │
+    ▼
+Check Regime
+    │
+    ▼
+Check Time
+    │
+    ▼
+Compare Alternative Representations
+    │
+    ▼
+Produce Coherence Profile
+</code></pre>
+<hr>
+<h1 id="observation-relationship-states">Observation Relationship States</h1>
+<p>Every evaluated pair or group of observations should be assigned an explicit relationship state.</p>
+<p>Initial states:</p>
+<pre><code class="language-text">supporting
+contradictory
+conditionally_compatible
+independent
+redundant
+non_comparable
+insufficient_evidence
+unknown
+</code></pre>
+<p>These states are intentionally more expressive than:</p>
+<pre><code class="language-text">agree
+disagree
+</code></pre>
+<hr>
+<h1 id="1-supporting-observations">1. Supporting Observations</h1>
+<p>Two observations are supporting when they provide compatible evidence about a defined claim.</p>
+<p>Example:</p>
+<pre><code class="language-text">observation_1:
+  structural reconstruction: strong
+
+observation_2:
+  relationship mapping: strong
+</code></pre>
+<p>These may support:</p>
+<pre><code class="language-text">candidate:
+  structural reasoning expression
+</code></pre>
+<p>But support requires the observations to be relevant to the same claim.</p>
+<p>Similarity alone is insufficient.</p>
+<hr>
+<h1 id="supporting-record">Supporting Record</h1>
+<pre><code class="language-yaml">relationship:
+  id: coherence-rel-001
+
+  observations:
+    - observation-001
+    - observation-002
+
+  type: supporting
+
+  target_claim:
+    structural_reasoning
+
+  evidence_independence:
+    status: partial
+
+  confidence: medium
+
+  limitations:
+    - both tasks use similar representations
+</code></pre>
+<hr>
+<h1 id="2-contradictory-observations">2. Contradictory Observations</h1>
+<p>Two observations are contradictory when they support materially incompatible interpretations under the same declared comparison conditions.</p>
+<p>Example:</p>
+<pre><code class="language-text">observation_1:
+  structural transfer: strong
+
+observation_2:
+  structural transfer: weak
+</code></pre>
+<p>Contradiction should trigger investigation.</p>
+<p>It should not trigger automatic averaging.</p>
+<hr>
+<h1 id="contradiction-record">Contradiction Record</h1>
+<pre><code class="language-yaml">contradiction:
+  id: contradiction-001
+
+  observations:
+    - observation-011
+    - observation-012
+
+  target:
+    cross_domain_transfer
+
+  status: unresolved
+
+  candidate_explanations:
+    - task_difference
+    - substrate_difference
+    - regime_difference
+    - temporal_change
+    - measurement_error
+    - evaluator_difference
+    - genuine_variability
+    - unknown
+
+  confidence: medium
+</code></pre>
+<hr>
+<h1 id="3-conditional-compatibility">3. Conditional Compatibility</h1>
+<p>Some observations appear contradictory until context is retained.</p>
+<p>Example:</p>
+<pre><code class="language-text">timed_condition:
+  performance: weak
+
+reflective_condition:
+  performance: strong
+</code></pre>
+<p>If the task and construct are otherwise sufficiently comparable, the correct relationship may become:</p>
+<pre><code class="language-text">conditionally_compatible
+</code></pre>
+<p>rather than:</p>
+<pre><code class="language-text">contradictory
+</code></pre>
+<p>because the observations may jointly describe:</p>
+<pre><code class="language-text">context-sensitive performance
+</code></pre>
+<p>This interpretation itself requires evidence.</p>
+<hr>
+<h1 id="conditional-compatibility-record">Conditional Compatibility Record</h1>
+<pre><code class="language-yaml">relationship:
+  observations:
+    - timed-observation
+    - reflective-observation
+
+  type: conditionally_compatible
+
+  conditioning_variable:
+    candidate: time_constraint
+
+  evidence:
+    replication: partial
+
+  causal_status:
+    unresolved
+
+  confidence: low
+</code></pre>
+<hr>
+<h1 id="4-independent-observations">4. Independent Observations</h1>
+<p>Independent evidence is especially valuable.</p>
+<p>However:</p>
+<pre><code class="language-text">different file
+!=
+independent evidence
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">different adapter
+!=
+independent evidence
+</code></pre>
+<p>Evidence independence should consider:</p>
+<ul>
+<li>source,</li>
+<li>task,</li>
+<li>data,</li>
+<li>evaluator,</li>
+<li>model,</li>
+<li>measurement method,</li>
+<li>observation event,</li>
+<li>derivation chain.</li>
+</ul>
+<hr>
+<h1 id="evidence-dependence-example">Evidence Dependence Example</h1>
+<p>Suppose:</p>
+<pre><code class="language-text">Evidence E1
+</code></pre>
+<p>is interpreted by:</p>
+<pre><code class="language-text">FFT
+Structural Detection
+RTT
+Resonance
+Inverted Star
+</code></pre>
+<p>Then:</p>
+<pre><code class="language-text">adapter_interpretations: 5
+independent_evidence_sources: 1
+</code></pre>
+<p>The Coherence Observer must not convert:</p>
+<pre><code class="language-text">5 agreeing interpretations
+</code></pre>
+<p>into:</p>
+<pre><code class="language-text">5 independent confirmations
+</code></pre>
+<hr>
+<h1 id="evidence-lineage">Evidence Lineage</h1>
+<p>Suggested record:</p>
+<pre><code class="language-yaml">evidence:
+  id: E1
+
+  source_event:
+    observation-001
+
+  derived_outputs:
+    - fft-result-001
+    - structural-result-001
+    - rtt-result-001
+    - resonance-result-001
+
+  independence_class:
+    shared_source
+
+  independent_evidence_count: 1
+</code></pre>
+<hr>
+<h1 id="5-redundant-observations">5. Redundant Observations</h1>
+<p>Two observations may be technically separate while measuring almost the same thing.</p>
+<p>Example:</p>
+<pre><code class="language-text">task_a:
+  near-identical item form
+
+task_b:
+  near-identical item form
+</code></pre>
+<p>Repeated success may provide reliability evidence.</p>
+<p>It may not provide much independent construct coverage.</p>
+<p>Therefore:</p>
+<pre><code class="language-text">replication_value:
+  high
+
+independent_coverage_value:
+  low
+</code></pre>
+<p>Both should be recorded.</p>
+<hr>
+<h1 id="6-non-comparable-observations">6. Non-Comparable Observations</h1>
+<p>Some observations should not be compared directly.</p>
+<p>Example:</p>
+<pre><code class="language-text">human verbal reasoning
+</code></pre>
+<p>versus:</p>
+<pre><code class="language-text">AI token retrieval throughput
+</code></pre>
+<p>Both may belong within a broader intelligence research program.</p>
+<p>They do not automatically occupy the same measurement scale.</p>
+<p>Correct state:</p>
+<pre><code class="language-text">non_comparable
+</code></pre>
+<p>This is preferable to manufacturing equivalence.</p>
+<hr>
+<h1 id="7-unknown-relationship">7. Unknown Relationship</h1>
+<p>When there is insufficient basis for classifying the relationship:</p>
+<pre><code class="language-text">relationship:
+  unknown
+</code></pre>
+<p>Unknown is a valid outcome.</p>
+<hr>
+<h1 id="coherence-levels">Coherence Levels</h1>
+<p>The initial observer may use descriptive levels:</p>
+<pre><code class="language-text">high
+moderate
+low
+mixed
+unstable
+unknown
+not_applicable
+</code></pre>
+<p>These labels should not imply validated thresholds.</p>
+<p>During the experimental phase:</p>
+<pre><code class="language-text">threshold_policy:
+  study_specific
+</code></pre>
+<hr>
+<h1 id="two-distinct-coherence-questions">Two Distinct Coherence Questions</h1>
+<p>The observer should distinguish:</p>
+<h2 id="observation-coherence">Observation Coherence</h2>
+<p>Do the observations form a reasonably consistent pattern?</p>
+<h2 id="model-coherence">Model Coherence</h2>
+<p>Does the model provide a representation capable of explaining those observations without excessive contradiction?</p>
+<p>These are related but not identical.</p>
+<p>Example:</p>
+<pre><code class="language-text">observations:
+  internally coherent heterogeneous profile
+
+scalar model:
+  poor explanatory coherence
+</code></pre>
+<p>Possible result:</p>
+<pre><code class="language-text">observation_coherence:
+  high
+
+scalar_model_coherence:
+  low
+</code></pre>
+<p>That distinction is central to the Resonant IQ Fingerprint example.</p>
+<hr>
+<h1 id="profile-coherence">Profile Coherence</h1>
+<p>A multidimensional profile may be internally coherent even when dimensions differ strongly.</p>
+<p>Example:</p>
+<pre><code class="language-text">structural_reasoning:
+  strong
+
+rapid_symbolic_processing:
+  weak
+
+ambiguity_navigation:
+  strong
+
+short_context_recall:
+  moderate
+</code></pre>
+<p>The profile is not incoherent because the values differ.</p>
+<p>A fingerprint is expected to have shape.</p>
+<p>Profile coherence therefore concerns:</p>
+<ul>
+<li>repeatability,</li>
+<li>evidence support,</li>
+<li>relationship consistency,</li>
+<li>contextual compatibility,</li>
+<li>and uncertainty.</li>
+</ul>
+<p>Not flatness.</p>
+<hr>
+<h1 id="scalar-coherence">Scalar Coherence</h1>
+<p>A scalar model may attempt:</p>
+<pre><code class="language-text">multiple dimensions
+      │
+      ▼
+single composite
+</code></pre>
+<p>The Coherence Observer asks whether the scalar adequately preserves the observation structure.</p>
+<p>Possible output:</p>
+<pre><code class="language-yaml">scalar_coherence:
+  status: low
+
+  reason:
+    heterogeneous dimensions collapse
+    into a representation that does not
+    explain cross-context observations
+
+  composite:
+    retained: true
+
+  global_inference:
+    confidence: low
+</code></pre>
+<p>The scalar is not deleted.</p>
+<p>Its explanatory boundary becomes visible.</p>
+<hr>
+<h1 id="coherence-and-contradiction">Coherence and Contradiction</h1>
+<p>Contradictions should be classified rather than automatically eliminated.</p>
+<p>Candidate contradiction types:</p>
+<pre><code class="language-text">measurement_contradiction
+substrate_contradiction
+regime_contradiction
+temporal_contradiction
+model_contradiction
+adapter_contradiction
+evidence_contradiction
+semantic_contradiction
+scope_contradiction
+unknown_contradiction
+</code></pre>
+<hr>
+<h1 id="contradiction-severity">Contradiction Severity</h1>
+<p>Possible descriptive states:</p>
+<pre><code class="language-text">minor
+moderate
+major
+critical
+unknown
+</code></pre>
+<p>Severity must be context-specific.</p>
+<p>A contradiction becomes important when it materially affects the justified interpretation.</p>
+<hr>
+<h1 id="contradiction-resolution-states">Contradiction Resolution States</h1>
+<pre><code class="language-text">unresolved
+explained_by_substrate
+explained_by_regime
+explained_by_time
+explained_by_scope
+explained_by_measurement_error
+explained_by_task_difference
+partially_resolved
+resolved
+not_a_true_contradiction
+unknown
+</code></pre>
+<p>An explanation should not be assigned without evidence.</p>
+<hr>
+<h1 id="preservation-rule">Preservation Rule</h1>
+<p>Until supported resolution exists:</p>
+<pre><code class="language-text">contradiction:
+  preserved: true
+</code></pre>
+<p>This prevents the module from quietly removing inconvenient evidence.</p>
+<hr>
+<h1 id="coherence-and-substrate">Coherence and Substrate</h1>
+<p>Suppose:</p>
+<pre><code class="language-text">textual:
+  strong
+
+verbal:
+  strong
+
+visual:
+  strong
+
+timed_symbolic:
+  weak
+</code></pre>
+<p>The initial profile contains a discrepancy.</p>
+<p>The Coherence Observer may ask:</p>
+<pre><code class="language-text">Is the discrepancy reproducibly
+associated with substrate?
+</code></pre>
+<p>If yes:</p>
+<pre><code class="language-text">cross_substrate_coherence:
+  conditional
+</code></pre>
+<p>If not:</p>
+<pre><code class="language-text">cross_substrate_coherence:
+  unresolved
+</code></pre>
+<p>Do not invent substrate mismatch merely because the values differ.</p>
+<hr>
+<h1 id="coherence-and-regime">Coherence and Regime</h1>
+<p>Suppose:</p>
+<pre><code class="language-text">Regime A:
+  repeated weak performance
+
+Regime B:
+  repeated strong performance
+</code></pre>
+<p>Possible interpretation:</p>
+<pre><code class="language-text">within_regime_coherence:
+  high
+
+cross_regime_coherence:
+  conditional
+</code></pre>
+<p>RTT provides regime evidence.</p>
+<p>The Coherence Observer evaluates how that evidence changes the relationship among observations.</p>
+<hr>
+<h1 id="coherence-and-time">Coherence and Time</h1>
+<p>An apparently incoherent profile may reflect change.</p>
+<p>Example:</p>
+<pre><code class="language-text">January:
+  weak
+
+March:
+  moderate
+
+June:
+  strong
+</code></pre>
+<p>Possible explanations:</p>
+<pre><code class="language-text">learning
+practice
+system update
+environmental change
+measurement change
+drift
+recovery
+unknown
+</code></pre>
+<p>The observer should not average away the temporal structure.</p>
+<hr>
+<h1 id="coherence-and-model-version">Coherence and Model Version</h1>
+<p>For AI or evolving predictive systems:</p>
+<pre><code class="language-text">model_v1:
+  behavior A
+
+model_v2:
+  behavior B
+</code></pre>
+<p>A difference may reflect:</p>
+<pre><code class="language-text">model_version_change
+</code></pre>
+<p>rather than incoherence within one stable system.</p>
+<p>Version provenance therefore matters.</p>
+<hr>
+<h1 id="coherence-and-adapters">Coherence and Adapters</h1>
+<p>Adapters may agree, disagree, overlap, or remain non-comparable.</p>
+<p>Example:</p>
+<pre><code class="language-text">FFT:
+  task boundary appears meaningful
+
+Structural Detection:
+  repeated structural pattern
+
+RTT:
+  no stable regime detected
+
+Resonance:
+  context effect unresolved
+
+Inverted Star:
+  prediction-observation inversion candidate
+</code></pre>
+<p>The observer should produce something like:</p>
+<pre><code class="language-yaml">adapter_coherence:
+  state: mixed
+
+  agreements:
+    - fft + structural-detection
+
+  disagreements:
+    - rtt does not support regime interpretation
+
+  unresolved:
+    - resonance context effect
+
+  evidence_independence:
+    low
+
+  interpretation:
+    structural difference supported more strongly
+    than regime explanation
+</code></pre>
+<p>This is more useful than:</p>
+<pre><code class="language-text">3 of 5 adapters agree
+</code></pre>
+<hr>
+<h1 id="no-adapter-voting">No Adapter Voting</h1>
+<p>Adapters are not equivalent voters.</p>
+<p>Never infer:</p>
+<pre><code class="language-text">majority adapters
+  -&gt;
+truth
+</code></pre>
+<p>Instead evaluate:</p>
+<pre><code class="language-text">evidence quality
+evidence independence
+adapter validation
+applicability
+replication
+model fit
+uncertainty
+</code></pre>
+<hr>
+<h1 id="worked-example-pax-01">Worked Example — PAX-01</h1>
+<h2 id="baseline">Baseline</h2>
+<p>Synthetic subject <code>PAX-01</code> receives:</p>
+<pre><code class="language-text">conventional assessment:
+  overall result: below reference expectation
+
+rapid symbolic:
+  weak
+
+timed classification:
+  weak
+</code></pre>
+<p>Extended observations show:</p>
+<pre><code class="language-text">structural reasoning:
+  strong
+
+cross-domain transfer:
+  strong
+
+regime recognition:
+  strong
+
+ambiguity navigation:
+  strong
+
+long-horizon integration:
+  strong
+</code></pre>
+<p>The Coherence Observer asks:</p>
+<blockquote>
+<p>Is this evidence incoherent, or is the representation too narrow?</p>
+</blockquote>
+<hr>
+<h1 id="pass-1-preserve-all-observations">Pass 1 — Preserve All Observations</h1>
+<pre><code class="language-text">weak:
+  rapid symbolic
+  timed classification
+
+strong:
+  structural reasoning
+  cross-domain transfer
+  regime recognition
+  ambiguity navigation
+  long-horizon integration
+</code></pre>
+<p>Nothing is removed.</p>
+<hr>
+<h1 id="pass-2-evidence-independence">Pass 2 — Evidence Independence</h1>
+<p>Suppose:</p>
+<pre><code class="language-text">rapid_symbolic + timed_classification
+  derived from assessment A
+
+structural_reasoning
+  derived from task B
+
+cross_domain_transfer
+  derived from task C
+
+regime_recognition
+  derived from task D
+
+ambiguity_navigation
+  derived from task E
+
+long_horizon_integration
+  derived from tasks F + G
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-text">independent_evidence_sources:
+  multiple
+
+coverage:
+  broader_than_baseline
+</code></pre>
+<p>This is stronger than five adapters reinterpreting the same assessment.</p>
+<hr>
+<h1 id="pass-3-scalar-representation">Pass 3 — Scalar Representation</h1>
+<p>Suppose the conventional model produces:</p>
+<pre><code class="language-text">composite:
+  94
+</code></pre>
+<p>The scalar representation implies:</p>
+<pre><code class="language-text">one-axis summary
+</code></pre>
+<p>but the observations show:</p>
+<pre><code class="language-text">strong variation by dimension
+</code></pre>
+<p>Candidate output:</p>
+<pre><code class="language-yaml">scalar_coherence:
+  status: low
+
+  reason:
+    single-axis representation does not
+    preserve observed heterogeneity
+
+  baseline:
+    retained: true
+</code></pre>
+<p>This says nothing yet about which representation predicts meaningful external outcomes better.</p>
+<hr>
+<h1 id="pass-4-multidimensional-representation">Pass 4 — Multidimensional Representation</h1>
+<p>RIQF represents:</p>
+<pre><code class="language-text">structural reasoning        strong
+cross-domain transfer       strong
+regime recognition          strong
+ambiguity navigation        strong
+rapid symbolic processing   weak
+timed classification        weak
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-text">profile_coherence:
+  moderate_to_high
+
+reason:
+  repeated observations form
+  an interpretable asymmetric profile
+</code></pre>
+<p>Again:</p>
+<pre><code class="language-text">profile_coherence != profile_validity
+</code></pre>
+<hr>
+<h1 id="pass-5-contradiction-classification">Pass 5 — Contradiction Classification</h1>
+<p>The apparent contradiction becomes:</p>
+<pre><code class="language-text">scalar_prediction:
+  broad capability low
+
+multidimensional_observation:
+  mixed / asymmetric
+</code></pre>
+<p>Candidate contradiction:</p>
+<pre><code class="language-yaml">contradiction:
+  type: scope_contradiction
+
+  status: unresolved
+
+  candidate_interpretation:
+    conventional result may be
+    overgeneralized beyond directly
+    observed dimensions
+</code></pre>
+<p>Not:</p>
+<pre><code class="language-text">conventional score is false
+</code></pre>
+<hr>
+<h1 id="pass-6-substrate-conditioning">Pass 6 — Substrate Conditioning</h1>
+<p>Suppose repeated evidence shows:</p>
+<pre><code class="language-text">timed symbolic:
+  weak
+
+reflective relational:
+  strong
+</code></pre>
+<p>The observer may report:</p>
+<pre><code class="language-text">cross_substrate_coherence:
+  conditionally_compatible
+</code></pre>
+<p>if replication supports that interpretation.</p>
+<hr>
+<h1 id="pass-7-adapter-comparison">Pass 7 — Adapter Comparison</h1>
+<p>Suppose:</p>
+<pre><code class="language-text">FFT:
+  task boundary supported
+
+Inverted Star:
+  local-global inversion candidate
+
+Structural Detection:
+  asymmetric pattern replicated
+
+RTT:
+  regime interpretation unresolved
+
+Resonance:
+  substrate/context effect candidate
+</code></pre>
+<p>Coherence output:</p>
+<pre><code class="language-yaml">adapter_coherence:
+  overall: mixed
+
+  strongly_supported:
+    - heterogeneous profile
+
+  partially_supported:
+    - substrate conditioning
+
+  unresolved:
+    - regime explanation
+
+  prohibited_inference:
+    - hidden global intelligence
+</code></pre>
+<p>This is the desired behavior.</p>
+<hr>
+<h1 id="negative-example-artificial-coherence">Negative Example — Artificial Coherence</h1>
+<p>Suppose all five adapters consume only one observation:</p>
+<pre><code class="language-text">E1
+</code></pre>
+<p>and all say:</p>
+<pre><code class="language-text">possible model mismatch
+</code></pre>
+<p>The system must report:</p>
+<pre><code class="language-yaml">adapter_agreement:
+  high
+
+evidence_independence:
+  low
+
+independent_evidence_count: 1
+
+coherence_confidence:
+  low
+</code></pre>
+<p>Adapter repetition must not inflate evidentiary confidence.</p>
+<hr>
+<h1 id="negative-example-contradiction-without-resolution">Negative Example — Contradiction Without Resolution</h1>
+<p>Suppose:</p>
+<pre><code class="language-text">Task A:
+  structural reasoning strong
+
+Task B:
+  structural reasoning weak
+
+Task C:
+  structural reasoning strong
+
+Task D:
+  structural reasoning weak
+</code></pre>
+<p>and no stable difference exists across:</p>
+<ul>
+<li>substrate,</li>
+<li>regime,</li>
+<li>time,</li>
+<li>task type,</li>
+<li>evaluator,</li>
+<li>or measurement method.</li>
+</ul>
+<p>Correct output:</p>
+<pre><code class="language-yaml">coherence:
+  status: low
+
+contradiction:
+  status: unresolved
+
+structural_reasoning:
+  stability: low
+
+interpretation:
+  insufficient_evidence_for_stable_profile
+</code></pre>
+<p>Do not manufacture a hidden condition.</p>
+<hr>
+<h1 id="negative-example-conventional-model-wins">Negative Example — Conventional Model Wins</h1>
+<p>Suppose:</p>
+<pre><code class="language-text">baseline prediction:
+  moderate capability
+
+extended observations:
+  consistently moderate
+
+adapter results:
+  no meaningful discrepancy
+
+profile:
+  stable
+</code></pre>
+<p>Correct output:</p>
+<pre><code class="language-text">baseline_coherence:
+  high
+
+multidimensional_added_value:
+  low
+
+model_mismatch:
+  not_supported
+</code></pre>
+<p>This is a successful Coherence Observer outcome.</p>
+<hr>
+<h1 id="coherence-across-human-ai-collaboration">Coherence Across Human-AI Collaboration</h1>
+<p>Suppose:</p>
+<pre><code class="language-text">human_unassisted:
+  moderate
+
+ai_unassisted:
+  strong
+
+human_ai_pair:
+  very_strong
+</code></pre>
+<p>The collaborative observation belongs initially to:</p>
+<pre><code class="language-text">human_ai_pair
+</code></pre>
+<p>The Coherence Observer must not make:</p>
+<pre><code class="language-text">human:
+  very_strong
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">AI:
+  very_strong
+</code></pre>
+<p>from the pair result alone.</p>
+<p>Correct representation:</p>
+<pre><code class="language-yaml">system_boundaries:
+  human:
+    observed: true
+
+  ai:
+    observed: true
+
+  human_ai_pair:
+    observed: true
+
+cross_boundary_attribution:
+  status: unresolved
+</code></pre>
+<hr>
+<h1 id="coherence-across-system-types">Coherence Across System Types</h1>
+<p>The same principle applies to:</p>
+<pre><code class="language-text">human
+AI
+robotic system
+team
+organization
+distributed agents
+</code></pre>
+<p>Shared labels do not establish comparable internal mechanisms.</p>
+<p>Example:</p>
+<pre><code class="language-text">human:
+  anomaly detection strong
+
+AI:
+  anomaly detection strong
+</code></pre>
+<p>means:</p>
+<blockquote>
+<p>Both systems performed strongly under the operational anomaly-detection definition.</p>
+</blockquote>
+<p>It does not mean they detect anomalies through equivalent cognition.</p>
+<hr>
+<h1 id="model-coherence-test">Model Coherence Test</h1>
+<p>The observer should compare representations when appropriate.</p>
+<p>Example:</p>
+<pre><code class="language-text">M0:
+  conventional scalar
+
+M1:
+  conventional subscales
+
+M2:
+  multidimensional baseline
+
+M3:
+  substrate-aware profile
+
+M4:
+  full Predictive Analytics profile
+</code></pre>
+<p>For each:</p>
+<pre><code class="language-text">observation coverage
+contradictions
+unexplained evidence
+calibration
+stability
+predictive value
+complexity
+</code></pre>
+<p>A more coherent model must still justify its added complexity.</p>
+<hr>
+<h1 id="coherence-compression">Coherence Compression</h1>
+<p>A model may explain many observations with a smaller structural representation.</p>
+<p>Useful compression:</p>
+<pre><code class="language-text">many observations
+     │
+     ▼
+small set of reproducible relationships
+</code></pre>
+<p>But compression must retain:</p>
+<pre><code class="language-text">exceptions
+contradictions
+uncertainty
+missing evidence
+</code></pre>
+<p>Otherwise coherence becomes narrative simplification.</p>
+<hr>
+<h1 id="coherence-score-warning">Coherence Score Warning</h1>
+<p>The module should resist immediately generating:</p>
+<pre><code class="language-text">Coherence Score = 87
+</code></pre>
+<p>because this can conceal:</p>
+<ul>
+<li>which observations agree,</li>
+<li>which disagree,</li>
+<li>evidence independence,</li>
+<li>conditional compatibility,</li>
+<li>missing data,</li>
+<li>and uncertainty.</li>
+</ul>
+<p>Prefer a profile:</p>
+<pre><code class="language-yaml">coherence:
+  observation_coherence: high
+  cross_substrate_coherence: moderate
+  cross_regime_coherence: unknown
+  temporal_coherence: moderate
+  adapter_coherence: mixed
+  evidence_independence: medium
+  contradiction_density: moderate
+</code></pre>
+<p>If a future composite is validated, it must remain explicitly lossy.</p>
+<hr>
+<h1 id="primary-metrics">Primary Metrics</h1>
+<h2 id="pa-m03-evidence-independence-ratio"><code>PA-M03 — Evidence Independence Ratio</code></h2>
+<p>Conceptually:</p>
+<pre><code class="language-text">EIR =
+  independent_evidence_sources
+  /
+  total_evidence_sources
+</code></pre>
+<p>This prevents interpretive multiplication from masquerading as evidence multiplication.</p>
+<hr>
+<h2 id="pa-m04-test-retest-stability"><code>PA-M04 — Test-Retest Stability</code></h2>
+<p>Tests whether observations expected to remain stable actually do.</p>
+<hr>
+<h2 id="pa-m05-alternate-form-stability"><code>PA-M05 — Alternate-Form Stability</code></h2>
+<p>Tests whether observations generalize across appropriate alternate forms.</p>
+<hr>
+<h2 id="pa-m06-inter-rater-agreement"><code>PA-M06 — Inter-Rater Agreement</code></h2>
+<p>Tests whether independent evaluators classify coherence relationships similarly.</p>
+<hr>
+<h2 id="pa-m07-profile-topology-stability"><code>PA-M07 — Profile Topology Stability</code></h2>
+<p>Tests whether multidimensional profile shape persists where expected.</p>
+<hr>
+<h2 id="pa-m24-cross-observation-coherence"><code>PA-M24 — Cross-Observation Coherence</code></h2>
+<p>Conceptually:</p>
+<pre><code class="language-text">COC =
+  coherent_observation_relationships
+  /
+  eligible_observation_relationships
+</code></pre>
+<p>The exact operational definition requires validation.</p>
+<hr>
+<h2 id="pa-m25-profile-contradiction-density"><code>PA-M25 — Profile Contradiction Density</code></h2>
+<p>Conceptually:</p>
+<pre><code class="language-text">PCD =
+  unresolved_contradictions
+  /
+  evaluated_relationships
+</code></pre>
+<p>Contradictions are preserved rather than hidden.</p>
+<hr>
+<h2 id="pa-m28-confidence-calibration-error"><code>PA-M28 — Confidence Calibration Error</code></h2>
+<p>Tests whether confidence in coherence classifications corresponds to observed reliability.</p>
+<hr>
+<h2 id="pa-m32-unsupported-assertion-rate"><code>PA-M32 — Unsupported Assertion Rate</code></h2>
+<p>Tests whether the observer creates explanations without sufficient evidence.</p>
+<hr>
+<h2 id="pa-m33-irrelevant-perturbation-stability"><code>PA-M33 — Irrelevant Perturbation Stability</code></h2>
+<p>Tests whether coherence interpretation survives irrelevant changes.</p>
+<hr>
+<h2 id="pa-m34-relevant-change-sensitivity"><code>PA-M34 — Relevant Change Sensitivity</code></h2>
+<p>Tests whether meaningful evidence changes update the coherence profile.</p>
+<hr>
+<h2 id="pa-m45-evidence-reconstruction-rate"><code>PA-M45 — Evidence Reconstruction Rate</code></h2>
+<p>Tests whether independent reviewers can reconstruct why the observer reached its conclusion.</p>
+<hr>
+<h2 id="pa-m46-explanation-completeness"><code>PA-M46 — Explanation Completeness</code></h2>
+<p>Ensures reports retain:</p>
+<pre><code class="language-text">observation
+evidence
+substrate
+regime
+confidence
+uncertainty
+limitations
+alternatives
+recommended_action
+</code></pre>
+<hr>
+<h1 id="coherence-pair-matrix">Coherence Pair Matrix</h1>
+<p>For a small observation set:</p>
+<pre><code class="language-text">O1
+O2
+O3
+O4
+</code></pre>
+<p>the observer may construct:</p>
+<pre><code class="language-text">      O1   O2   O3   O4
+
+O1     -    S    C    I
+O2     S    -    P    I
+O3     C    P    -    U
+O4     I    I    U    -
+</code></pre>
+<p>Where:</p>
+<pre><code class="language-text">S = supporting
+C = contradictory
+P = conditionally compatible
+I = independent / unrelated
+U = unknown
+</code></pre>
+<p>The matrix preserves structure better than one number.</p>
+<hr>
+<h1 id="evidence-graph">Evidence Graph</h1>
+<p>A future implementation may represent coherence as a provenance-aware graph.</p>
+<p>Conceptually:</p>
+<pre><code class="language-text">Evidence E1 ──► Observation O1 ──► FFT interpretation
+          │
+          └──► Observation O2 ──► Structural interpretation
+
+Evidence E2 ──► Observation O3 ──► RTT interpretation
+
+Evidence E3 ──► Observation O4 ──► Resonance interpretation
+</code></pre>
+<p>Then the observer can distinguish:</p>
+<pre><code class="language-text">interpretation_count
+</code></pre>
+<p>from:</p>
+<pre><code class="language-text">source_count
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">observation_count
+</code></pre>
+<p>This is important for agentic systems.</p>
+<hr>
+<h1 id="coherence-observer-operators">Coherence Observer Operators</h1>
+<h2 id="coh-normalize"><code>COH-Normalize</code></h2>
+<p>Normalizes observation references without erasing differences.</p>
+<pre><code class="language-text">COH-Normalize(observations)
+  -&gt; normalized_observation_set
+</code></pre>
+<hr>
+<h2 id="coh-lineage"><code>COH-Lineage</code></h2>
+<p>Traces evidence provenance.</p>
+<pre><code class="language-text">COH-Lineage(observation)
+  -&gt; evidence_lineage
+</code></pre>
+<hr>
+<h2 id="coh-independence"><code>COH-Independence</code></h2>
+<p>Classifies evidence dependence.</p>
+<pre><code class="language-text">COH-Independence(evidence_set)
+  -&gt; independence_profile
+</code></pre>
+<hr>
+<h2 id="coh-compare"><code>COH-Compare</code></h2>
+<p>Compares observation relationships.</p>
+<pre><code class="language-text">COH-Compare(Oa, Ob)
+  -&gt; relationship_state
+</code></pre>
+<hr>
+<h2 id="coh-contradict"><code>COH-Contradict</code></h2>
+<p>Identifies materially incompatible observations.</p>
+<pre><code class="language-text">COH-Contradict(observation_set)
+  -&gt; contradiction_set
+</code></pre>
+<hr>
+<h2 id="coh-condition"><code>COH-Condition</code></h2>
+<p>Tests whether apparent contradiction becomes compatible under a supported condition.</p>
+<pre><code class="language-text">COH-Condition(contradiction, context)
+  -&gt; conditional_relationship
+</code></pre>
+<hr>
+<h2 id="coh-profile"><code>COH-Profile</code></h2>
+<p>Builds the multidimensional coherence representation.</p>
+<pre><code class="language-text">COH-Profile(observations)
+  -&gt; coherence_profile
+</code></pre>
+<hr>
+<h2 id="coh-reconstruct"><code>COH-Reconstruct</code></h2>
+<p>Allows an independent reviewer or process to reproduce the interpretation from recorded evidence.</p>
+<pre><code class="language-text">COH-Reconstruct(profile, provenance)
+  -&gt; reconstruction_result
+</code></pre>
+<hr>
+<h1 id="observer-output-states">Observer Output States</h1>
+<pre><code class="language-text">coherent
+mostly_coherent
+mixed
+conditionally_coherent
+low_coherence
+unstable
+contradictory
+unresolved
+insufficient_evidence
+not_applicable
+</code></pre>
+<p>These remain experimental states.</p>
+<hr>
+<h1 id="failure-modes">Failure Modes</h1>
+<h2 id="consensus-inflation">Consensus Inflation</h2>
+<p>Risk:</p>
+<p>Agreement is treated as truth.</p>
+<p>Mitigation:</p>
+<p>Track validity and evidence independence separately.</p>
+<hr>
+<h2 id="adapter-echo">Adapter Echo</h2>
+<p>Risk:</p>
+<p>Several adapters repeat interpretations of the same observation.</p>
+<p>Mitigation:</p>
+<p>Trace evidence lineage.</p>
+<hr>
+<h2 id="contradiction-suppression">Contradiction Suppression</h2>
+<p>Risk:</p>
+<p>Evidence that weakens the preferred profile is discarded.</p>
+<p>Mitigation:</p>
+<p>Preserve contradiction records.</p>
+<hr>
+<h2 id="forced-resolution">Forced Resolution</h2>
+<p>Risk:</p>
+<p>Every contradiction receives an explanatory story.</p>
+<p>Mitigation:</p>
+<p>Allow:</p>
+<pre><code class="language-text">unresolved
+</code></pre>
+<hr>
+<h2 id="conditionality-inflation">Conditionality Inflation</h2>
+<p>Risk:</p>
+<p>Every contradiction is explained as substrate or regime dependence.</p>
+<p>Mitigation:</p>
+<p>Require evidence for conditioning variables.</p>
+<hr>
+<h2 id="coherence-theater">Coherence Theater</h2>
+<p>Risk:</p>
+<p>A sophisticated profile looks scientifically stronger simply because it is organized.</p>
+<p>Mitigation:</p>
+<p>Separate structural coherence from empirical validity.</p>
+<hr>
+<h2 id="scalar-collapse">Scalar Collapse</h2>
+<p>Risk:</p>
+<p>The full coherence profile is reduced to one opaque number.</p>
+<p>Mitigation:</p>
+<p>Keep the multidimensional profile primary.</p>
+<hr>
+<h2 id="narrative-overfitting">Narrative Overfitting</h2>
+<p>Risk:</p>
+<p>Scattered evidence is assembled into an elegant story.</p>
+<p>Mitigation:</p>
+<p>Require independent evidence, counterevidence, and reconstruction.</p>
+<hr>
+<h2 id="independence-inflation">Independence Inflation</h2>
+<p>Risk:</p>
+<p>Derived outputs are counted as independent observations.</p>
+<p>Mitigation:</p>
+<p>Use evidence lineage.</p>
+<hr>
+<h2 id="context-erasure">Context Erasure</h2>
+<p>Risk:</p>
+<p>Observations from different substrates, regimes, or times are treated as directly equivalent.</p>
+<p>Mitigation:</p>
+<p>Preserve context metadata.</p>
+<hr>
+<h2 id="excessive-fragmentation">Excessive Fragmentation</h2>
+<p>Risk:</p>
+<p>Every difference becomes its own context, making any profile appear coherent.</p>
+<p>Mitigation:</p>
+<p>Require justified context distinctions.</p>
+<hr>
+<h1 id="falsification-conditions">Falsification Conditions</h1>
+<p>The Coherence Observer should be revised, restricted, deprecated, or rejected if:</p>
+<ul>
+<li>independent reviewers cannot reproduce relationship classifications,</li>
+<li>evidence lineage cannot be reconstructed,</li>
+<li>contradictory evidence is systematically underreported,</li>
+<li>adapter agreement consistently inflates confidence without independent evidence,</li>
+<li>conditional explanations are routinely invented after the fact,</li>
+<li>coherence labels fail predictive or explanatory validation,</li>
+<li>simpler consistency measures perform equivalently,</li>
+<li>profile coherence does not replicate,</li>
+<li>the observer systematically favors richer models regardless of performance,</li>
+<li>or the coherence layer adds complexity without useful information.</li>
+</ul>
+<hr>
+<h1 id="contradiction-preservation-test">Contradiction Preservation Test</h1>
+<p>A required validation test should present deliberately incompatible evidence.</p>
+<p>The observer must be capable of returning:</p>
+<pre><code class="language-text">contradiction:
+  unresolved
+</code></pre>
+<p>without forcing either side to win.</p>
+<p>Required capability:</p>
+<pre><code class="language-text">unresolved_contradiction_supported: true
+</code></pre>
+<hr>
+<h1 id="false-consensus-test">False Consensus Test</h1>
+<p>Provide multiple adapter interpretations derived from the same evidence.</p>
+<p>Correct behavior:</p>
+<pre><code class="language-text">adapter_agreement:
+  high
+
+evidence_independence:
+  low
+</code></pre>
+<p>Incorrect behavior:</p>
+<pre><code class="language-text">confidence:
+  very_high
+</code></pre>
+<p>solely because many adapters agree.</p>
+<hr>
+<h1 id="independent-convergence-test">Independent Convergence Test</h1>
+<p>Provide genuinely independent observations supporting the same candidate finding.</p>
+<p>Expected behavior:</p>
+<pre><code class="language-text">adapter_agreement:
+  possibly_high
+
+evidence_independence:
+  high
+
+coherence:
+  increased_support
+</code></pre>
+<p>This distinguishes convergence from echo.</p>
+<hr>
+<h1 id="representation-challenge">Representation Challenge</h1>
+<p>Compare:</p>
+<pre><code class="language-text">scalar model
+multidimensional model
+substrate-aware model
+full adapter model
+</code></pre>
+<p>The observer should not automatically prefer the richest representation.</p>
+<p>A simpler model may win if it explains the observations sufficiently with:</p>
+<ul>
+<li>fewer assumptions,</li>
+<li>equal or better calibration,</li>
+<li>equal or better predictive performance,</li>
+<li>better reliability,</li>
+<li>lower burden.</li>
+</ul>
+<hr>
+<h1 id="human-review-trigger">Human Review Trigger</h1>
+<p>Human review should be considered where:</p>
+<pre><code class="language-text">major contradiction
+high consequence
+low evidence independence
+adapter disagreement
+low confidence
+model mismatch
+subject contest
+unresolved applicability
+</code></pre>
+<p>Review does not mean the alternate interpretation should win.</p>
+<p>It means the disagreement deserves inspection.</p>
+<hr>
+<h1 id="ethics-boundary">Ethics Boundary</h1>
+<p>The Coherence Observer must not turn:</p>
+<pre><code class="language-text">coherent profile
+</code></pre>
+<p>into:</p>
+<pre><code class="language-text">true identity
+</code></pre>
+<p>For human assessments, prefer:</p>
+<blockquote>
+<p><strong>"The current observations form a relatively coherent profile under these specified conditions."</strong></p>
+</blockquote>
+<p>Avoid:</p>
+<blockquote>
+<p>"This is who you are."</p>
+</blockquote>
+<p>Likewise:</p>
+<pre><code class="language-text">low coherence
+</code></pre>
+<p>does not imply:</p>
+<pre><code class="language-text">defective person
+</code></pre>
+<p>It may indicate:</p>
+<ul>
+<li>incomplete evidence,</li>
+<li>changing conditions,</li>
+<li>poor measurement,</li>
+<li>invalid modeling assumptions,</li>
+<li>natural variability,</li>
+<li>or genuine complexity.</li>
+</ul>
+<hr>
+<h1 id="decision-authority">Decision Authority</h1>
+<pre><code class="language-text">decision_authority: none
+
+authorized_use:
+  - research
+  - demonstration
+  - evidence comparison
+  - contradiction analysis
+  - profile development
+  - framework evaluation
+
+prohibited_use:
+  - diagnosis
+  - automated hiring decision
+  - educational exclusion
+  - legal determination
+  - automated adverse decision
+</code></pre>
+<hr>
+<h1 id="minimal-observer-output-contract">Minimal Observer Output Contract</h1>
+<pre><code class="language-yaml">coherence_result:
+  observation_id:
+
+  target:
+    id:
+    system_boundary:
+
+  baseline:
+    model:
+    prediction:
+    preserved: true
+
+  evidence:
+    total_sources:
+    independent_sources:
+    derived_sources:
+    lineage_complete:
+
+  observations:
+    total:
+    comparable:
+    non_comparable:
+
+  relationships:
+    supporting:
+    contradictory:
+    conditionally_compatible:
+    independent:
+    redundant:
+    unknown:
+
+  contradiction_profile:
+    unresolved:
+    partially_resolved:
+    resolved:
+
+  coherence:
+    observation_coherence:
+    profile_coherence:
+    scalar_coherence:
+    cross_substrate_coherence:
+    cross_regime_coherence:
+    temporal_coherence:
+    adapter_coherence:
+
+  independence:
+    status:
+    ratio:
+
+  model_fit:
+  substrate_fit:
+  regime_fit:
+
+  counterevidence:
+  alternative_interpretations:
+  missing_evidence:
+
+  uncertainty:
+  confidence:
+  limitations:
+
+  review_required:
+
+  validation_state:
+  decision_authority: none
+</code></pre>
+<hr>
+<h1 id="research-questions">Research Questions</h1>
+<ol>
+<li>Can observation coherence be measured reproducibly?</li>
+<li>Can independent evaluators distinguish support from contradiction?</li>
+<li>Can conditional compatibility be detected without post-hoc storytelling?</li>
+<li>Can evidence independence be operationalized reliably?</li>
+<li>Can adapter echo be detected automatically?</li>
+<li>Does provenance-aware coherence improve interpretation?</li>
+<li>Does it improve model-mismatch precision?</li>
+<li>Does profile coherence predict meaningful external outcomes?</li>
+<li>Does scalar coherence differ systematically from multidimensional profile coherence?</li>
+<li>When does a richer profile explain contradictions better?</li>
+<li>When does richer representation merely overfit?</li>
+<li>Can unresolved contradiction improve calibration by preventing overconfidence?</li>
+<li>Can coherence measurement remain stable across substrates?</li>
+<li>Can it remain stable across regimes?</li>
+<li>Can temporal change be distinguished from incoherence?</li>
+<li>How should non-comparable observations be represented?</li>
+<li>Can human-AI pair observations be kept separate from component attribution?</li>
+<li>Which coherence metrics survive validation?</li>
+<li>Is <code>PA-M24</code> useful beyond ordinary consistency statistics?</li>
+<li>Is <code>PA-M25</code> useful beyond ordinary residual analysis?</li>
+<li>Does the Coherence Observer add value beyond simpler probabilistic or statistical methods?</li>
+<li>When should it return <code>no_added_value</code>?</li>
+<li>When should it abstain?</li>
+<li>What kinds of contradiction cannot responsibly be resolved?</li>
+<li>What evidence would justify removing the Coherence Observer entirely?</li>
+</ol>
+<hr>
+<h1 id="core-invariants">Core Invariants</h1>
+<pre><code class="language-text">coherence != truth
+agreement != validity
+agreement != independence
+adapter_count != evidence_count
+interpretation_count != evidence_count
+contradiction != failure
+variation != incoherence
+difference != contradiction
+conditionality != excuse
+profile_shape != identity
+scalar_simplicity != validity
+model_complexity != validity
+unresolved != failure
+unknown != failure
+non_comparable != inferior
+coherent_story != empirical_support
+adapter_agreement != independent_confirmation
+observer_output != decision_authority
+canon_alignment != empirical_validation
+</code></pre>
+<hr>
+<h1 id="closing-principle">Closing Principle</h1>
+<p>Predictive systems often reward consistency.</p>
+<p>Real systems do not always provide it.</p>
+<p>A person may be strong in one dimension and weak in another.</p>
+<p>An AI may be reliable in one regime and unstable in another.</p>
+<p>A model may predict correctly in one context and fail in another.</p>
+<p>Several observers may agree while sharing the same underlying evidence.</p>
+<p>Two apparently contradictory observations may both be legitimate.</p>
+<p>The Coherence Observer exists to preserve those relationships rather than flatten them prematurely.</p>
+<p>Its goal is not to make the assessment internally harmonious.</p>
+<p>Its goal is to make the structure of agreement and disagreement visible enough to test.</p>
+<blockquote>
+<p><strong>A coherent assessment is not one in which everything agrees. It is one in which agreement, contradiction, dependence, conditionality, and uncertainty are all represented honestly.</strong></p>
+</blockquote>
   </main>
 </body>
 </html>

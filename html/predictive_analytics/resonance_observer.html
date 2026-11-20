@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/predictive_analytics/resonance_observer.md">
-  <title>resonance_observer</title>
+  <title>Predictive Analytics — Resonance Observer</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,7 +92,2075 @@
   </aside>
 
   <main>
+<h1 id="predictive-analytics-resonance-observer">Predictive Analytics — Resonance Observer</h1>
+<blockquote>
+<p><strong>Do not ask only whether expression changed. Ask whether the relationship between system and conditions is reproducible, bounded, and worth preserving.</strong></p>
+</blockquote>
+<h2 id="module">Module</h2>
+<p>Predictive Analytics</p>
+<h2 id="observer-id">Observer ID</h2>
+<p><code>resonance</code></p>
+<h2 id="operator">Operator</h2>
+<p><code>PA-Resonance</code></p>
+<h2 id="status">Status</h2>
+<p>Experimental.</p>
+<h2 id="validation-state">Validation State</h2>
+<p>Unvalidated.</p>
+<h2 id="intended-role">Intended Role</h2>
+<p>Module-level observer for contextual expression, amplification, suppression, persistence, stability, coupling, alignment, interaction, and cross-condition resonance patterns.</p>
+<h2 id="decision-authority">Decision Authority</h2>
+<p>None.</p>
+<hr>
+<h1 id="purpose">Purpose</h1>
+<p>The Resonance Observer integrates resonance-related evidence across the Predictive Analytics architecture.</p>
+<p>Where the Resonance Adapter asks:</p>
+<blockquote>
+<p><strong>Does a defined comparison show a candidate amplification, suppression, alignment, or interaction effect?</strong></p>
+</blockquote>
+<p>the Resonance Observer asks:</p>
+<blockquote>
+<p><strong>What larger resonance structure, if any, is supported across observations?</strong></p>
+</blockquote>
+<p>The observer may integrate:</p>
+<ul>
+<li>direct observations,</li>
+<li>substrate comparisons,</li>
+<li>regime observations,</li>
+<li>temporal series,</li>
+<li>Structural Detection findings,</li>
+<li>FFT relationships,</li>
+<li>Inverted Star discrepancies,</li>
+<li>Resonance Adapter outputs,</li>
+<li>Coherence Observer results,</li>
+<li>Drift Observer results,</li>
+<li>counterfactual tests,</li>
+<li>uncertainty,</li>
+<li>and independent evidence.</li>
+</ul>
+<p>The observer does not assume resonance exists.</p>
+<p>It must be capable of returning:</p>
+<pre><code class="language-text">no_detectable_resonance
+</code></pre>
+<hr>
+<h1 id="adapter-versus-observer">Adapter Versus Observer</h1>
+<p>The distinction is important.</p>
+<h2 id="resonance-adapter">Resonance Adapter</h2>
+<p>Operates on a defined comparison.</p>
+<pre><code class="language-text">Condition A
+     │
+     ▼
+Condition B
+     │
+     ▼
+candidate resonance relationship
+</code></pre>
+<p>Typical question:</p>
+<blockquote>
+<p>Does expression change reproducibly between these conditions?</p>
+</blockquote>
+<hr>
+<h2 id="resonance-observer">Resonance Observer</h2>
+<p>Integrates many candidate relationships.</p>
+<pre><code class="language-text">Adapter Result A ─┐
+Adapter Result B ─┤
+Substrate Result ─┤
+Regime Result ────┤
+Temporal Result ──┼──► Resonance Observer
+Coherence Result ─┤            │
+Evidence E1 ──────┤            ▼
+Evidence E2 ──────┘     resonance profile
+</code></pre>
+<p>Typical question:</p>
+<blockquote>
+<p><strong>Do the available relationships form a reproducible resonance profile, and what are its boundaries?</strong></p>
+</blockquote>
+<hr>
+<h1 id="foundational-principle">Foundational Principle</h1>
+<p>Resonance is treated as:</p>
+<pre><code class="language-text">relational
+conditional
+contextual
+revisable
+</code></pre>
+<p>not:</p>
+<pre><code class="language-text">intrinsic identity
+</code></pre>
+<p>Prefer:</p>
+<pre><code class="language-text">structural reasoning was repeatedly
+stronger under reflective relational conditions
+</code></pre>
+<p>over:</p>
+<pre><code class="language-text">the subject has high resonance
+</code></pre>
+<hr>
+<h1 id="resonance-is-not-a-trait">Resonance Is Not a Trait</h1>
+<p>The observer should not create a universal:</p>
+<pre><code class="language-text">Resonance Score
+</code></pre>
+<p>for a person, AI, team, or organization.</p>
+<p>Instead, it should preserve relationships such as:</p>
+<pre><code class="language-text">target expression
+condition
+comparison condition
+direction
+magnitude
+persistence
+confidence
+uncertainty
+</code></pre>
+<hr>
+<h1 id="core-observation-model">Core Observation Model</h1>
+<p>Conceptually, a resonance observation involves:</p>
+<pre><code class="language-text">Observed System
+      │
+      ▼
+Target Expression
+      │
+      ▼
+Condition Set
+      │
+      ▼
+Comparison
+      │
+      ▼
+Repeatability
+      │
+      ▼
+Contextual Relationship
+</code></pre>
+<p>The observer then asks whether multiple such relationships form a meaningful larger structure.</p>
+<hr>
+<h1 id="resonance-profile">Resonance Profile</h1>
+<p>A resonance profile is not:</p>
+<pre><code class="language-text">how resonant is the subject?
+</code></pre>
+<p>It is:</p>
+<pre><code class="language-text">under which observed conditions
+does defined expression strengthen,
+weaken, stabilize, destabilize,
+persist, disappear, or change?
+</code></pre>
+<hr>
+<h1 id="resonance-profile-record">Resonance Profile Record</h1>
+<pre><code class="language-yaml">resonance_profile:
+  profile_id:
 
+  observed_system:
+    id:
+    class:
+    boundary:
+
+  targets:
+    - id:
+      measurement:
+
+  conditions:
+    - id:
+      substrate:
+      regime:
+      context:
+      interaction:
+
+  relationships:
+    - target:
+      baseline_condition:
+      comparison_condition:
+      direction:
+      magnitude:
+      persistence:
+      confidence:
+
+  structure:
+    cross_substrate:
+    cross_regime:
+    temporal:
+    collaborative:
+
+  evidence:
+    sources:
+    independent_source_count:
+
+  uncertainty:
+  limitations:
+
+  validation_state:
+  decision_authority: none
+</code></pre>
+<hr>
+<h1 id="observer-pipeline">Observer Pipeline</h1>
+<pre><code class="language-text">Collect Resonance Candidates
+        │
+        ▼
+Preserve Source Evidence
+        │
+        ▼
+Deduplicate Shared Evidence
+        │
+        ▼
+Declare System Boundary
+        │
+        ▼
+Declare Target Expressions
+        │
+        ▼
+Normalize Condition Metadata
+        │
+        ▼
+Map Pairwise Relationships
+        │
+        ▼
+Test Replication
+        │
+        ▼
+Test Cross-Substrate Structure
+        │
+        ▼
+Test Cross-Regime Structure
+        │
+        ▼
+Test Temporal Persistence
+        │
+        ▼
+Test Collaborative Boundary
+        │
+        ▼
+Inspect Coherence
+        │
+        ▼
+Inspect Drift
+        │
+        ▼
+Challenge Counterfactually
+        │
+        ▼
+Preserve Contradictions
+        │
+        ▼
+Build Resonance Profile
+        │
+        ▼
+Return:
+  supported_pattern
+  partial_pattern
+  context_bound
+  regime_bound
+  substrate_bound
+  unstable
+  contradictory
+  no_detectable_resonance
+  unresolved
+  insufficient_evidence
+</code></pre>
+<hr>
+<h1 id="observation-unit">Observation Unit</h1>
+<p>The smallest useful resonance observation should identify:</p>
+<pre><code class="language-text">system
+target
+condition A
+condition B
+observed difference
+evidence
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-yaml">resonance_unit:
+  system:
+    PAX-01
+
+  target:
+    structural_reasoning
+
+  condition_a:
+    reflective_relational
+
+  condition_b:
+    timed_symbolic
+
+  observation:
+    expression_a: strong
+    expression_b: weak
+
+  status:
+    candidate
+
+  cause:
+    unresolved
+</code></pre>
+<hr>
+<h1 id="evidence-independence">Evidence Independence</h1>
+<p>The Resonance Observer must separate:</p>
+<pre><code class="language-text">number of resonance interpretations
+</code></pre>
+<p>from:</p>
+<pre><code class="language-text">number of independent observations
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-text">E1
+</code></pre>
+<p>is interpreted by:</p>
+<pre><code class="language-text">FFT
+Structural Detection
+RTT
+Resonance Adapter
+</code></pre>
+<p>Correct:</p>
+<pre><code class="language-yaml">interpretations:
+  count: 4
+
+independent_evidence:
+  count: 1
+</code></pre>
+<p>Not:</p>
+<pre><code class="language-text">four independent confirmations
+</code></pre>
+<hr>
+<h1 id="evidence-deduplication">Evidence Deduplication</h1>
+<p>Before profile construction:</p>
+<pre><code class="language-text">Adapter Result A ─┐
+Adapter Result B ─┤
+Adapter Result C ─┤
+                  ├──► Evidence E1
+Adapter Result D ─┘
+</code></pre>
+<p>The observer should collapse these to:</p>
+<pre><code class="language-text">one evidence lineage
+multiple interpretations
+</code></pre>
+<p>while preserving adapter disagreement.</p>
+<hr>
+<h1 id="observer-dimensions">Observer Dimensions</h1>
+<p>The initial Resonance Observer examines eight dimensions of resonance structure.</p>
+<pre><code class="language-text">RO-01  Direction
+RO-02  Magnitude
+RO-03  Persistence
+RO-04  Specificity
+RO-05  Cross-Substrate Structure
+RO-06  Cross-Regime Structure
+RO-07  Temporal Stability
+RO-08  Collaborative / System-Boundary Structure
+</code></pre>
+<p>These are properties of resonance observations.</p>
+<p>They are not RIQF intelligence dimensions.</p>
+<hr>
+<h1 id="ro-01-direction">RO-01 — Direction</h1>
+<p>Candidate directions:</p>
+<pre><code class="language-text">amplifying
+suppressing
+stabilizing
+destabilizing
+converging
+diverging
+mixed
+none
+unknown
+</code></pre>
+<p>Direction refers to the target expression.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">direction:
+  target: error_rate
+  relationship: suppressing
+</code></pre>
+<p>may mean:</p>
+<pre><code class="language-text">error decreased
+</code></pre>
+<p>depending on the metric.</p>
+<p>Therefore direction requires target semantics.</p>
+<hr>
+<h1 id="ro-02-magnitude">RO-02 — Magnitude</h1>
+<p>Candidate descriptive states:</p>
+<pre><code class="language-text">negligible
+small
+moderate
+large
+unknown
+</code></pre>
+<p>No universal thresholds are defined.</p>
+<p>Magnitude should ideally be represented using an appropriate task-specific measure where possible.</p>
+<hr>
+<h1 id="magnitude-is-not-importance">Magnitude Is Not Importance</h1>
+<p>A large effect can be operationally irrelevant.</p>
+<p>A small effect can be meaningful in another context.</p>
+<p>Therefore:</p>
+<pre><code class="language-text">effect_magnitude
+!=
+decision_importance
+</code></pre>
+<hr>
+<h1 id="ro-03-persistence">RO-03 — Persistence</h1>
+<p>Question:</p>
+<blockquote>
+<p>Does the relationship survive repeated observation?</p>
+</blockquote>
+<p>Candidate states:</p>
+<pre><code class="language-text">single
+transient
+repeated
+persistent
+cyclic
+decaying
+unstable
+unknown
+</code></pre>
+<p>A persistent effect usually warrants stronger attention than a one-time observation.</p>
+<p>Persistence still does not prove cause.</p>
+<hr>
+<h1 id="ro-04-specificity">RO-04 — Specificity</h1>
+<p>Question:</p>
+<blockquote>
+<p>Is the effect specifically associated with the proposed condition?</p>
+</blockquote>
+<p>Example:</p>
+<pre><code class="language-text">performance improves
+under relational substrate
+</code></pre>
+<p>but:</p>
+<pre><code class="language-text">relational tasks were easier
+</code></pre>
+<p>After matching difficulty:</p>
+<pre><code class="language-text">effect disappears
+</code></pre>
+<p>Correct:</p>
+<pre><code class="language-yaml">specificity:
+  status: not_supported
+</code></pre>
+<p>The resonance interpretation should weaken or disappear.</p>
+<hr>
+<h1 id="ro-05-cross-substrate-structure">RO-05 — Cross-Substrate Structure</h1>
+<p>The observer may build a substrate-specific expression map.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">cross_substrate:
+  target:
+    structural_reasoning
+
+  textual:
+    strong
+
+  verbal:
+    moderate
+
+  visual:
+    strong
+
+  symbolic:
+    moderate
+
+  timed_symbolic:
+    weak
+</code></pre>
+<p>The first conclusion is:</p>
+<pre><code class="language-text">expression varies across substrates
+</code></pre>
+<p>not:</p>
+<pre><code class="language-text">preferred substrate discovered
+</code></pre>
+<hr>
+<h1 id="substrate-relationship-matrix">Substrate Relationship Matrix</h1>
+<p>Conceptually:</p>
+<pre><code class="language-text">                   Comparison Substrate
+
+              Text   Visual   Symbolic   Timed
+           ┌───────┬────────┬──────────┬───────┐
+Text       │   -   │ similar│ stronger │stronger│
+           ├───────┼────────┼──────────┼───────┤
+Visual     │similar│   -    │ stronger │stronger│
+           ├───────┼────────┼──────────┼───────┤
+Symbolic   │weaker │ weaker │    -     │stronger│
+           ├───────┼────────┼──────────┼───────┤
+Timed      │weaker │ weaker │  weaker  │   -   │
+           └───────┴────────┴──────────┴───────┘
+</code></pre>
+<p>This is conceptual.</p>
+<p>The real representation should preserve uncertainty and evidence counts.</p>
+<hr>
+<h1 id="ro-06-cross-regime-structure">RO-06 — Cross-Regime Structure</h1>
+<p>A resonance candidate may exist only within certain regimes.</p>
+<p>Example:</p>
+<pre><code class="language-text">Regime A:
+  reflective relational
+
+Regime B:
+  high-pressure symbolic
+</code></pre>
+<p>Possible result:</p>
+<pre><code class="language-yaml">resonance:
+  structural_reasoning:
+    regime_a:
+      amplification_candidate
+
+    regime_b:
+      no_amplification
+
+  regime_conditioned:
+    true
+</code></pre>
+<p>This is not a global resonance trait.</p>
+<hr>
+<h1 id="ro-07-temporal-stability">RO-07 — Temporal Stability</h1>
+<p>Resonance profiles may change over time.</p>
+<p>Example:</p>
+<pre><code class="language-text">T1:
+  collaboration strongly improves performance
+
+T2:
+  collaboration moderately improves performance
+
+T3:
+  collaboration makes little difference
+</code></pre>
+<p>Possible:</p>
+<pre><code class="language-text">resonance_profile_drift
+</code></pre>
+<p>The Drift Observer should investigate whether the relationship itself changed.</p>
+<hr>
+<h1 id="ro-08-collaborative-system-boundary-structure">RO-08 — Collaborative / System-Boundary Structure</h1>
+<p>A resonance pattern may exist at:</p>
+<pre><code class="language-text">individual
+pair
+team
+organization
+network
+</code></pre>
+<p>boundaries.</p>
+<p>Example:</p>
+<pre><code class="language-text">human alone:
+  moderate
+
+AI alone:
+  strong retrieval
+  weaker synthesis
+
+human-AI pair:
+  strong synthesis
+  strong retrieval
+</code></pre>
+<p>Correct observation:</p>
+<pre><code class="language-text">pair-level interaction differs
+</code></pre>
+<p>Not:</p>
+<pre><code class="language-text">human gained AI retrieval ability
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">AI gained human cognition
+</code></pre>
+<hr>
+<h1 id="resonance-profile-topology">Resonance Profile Topology</h1>
+<p>A resonance profile may itself have shape.</p>
+<p>Example:</p>
+<pre><code class="language-text">                   Reflective
+                       ▲
+                       │
+               strong amplification
+                       │
+Relational ◄────────── ● ──────────► Symbolic
+ strong                               weak
+                       │
+                       │
+                suppression
+                       ▼
+                     Timed
+</code></pre>
+<p>This is a conceptual representation of relational differences.</p>
+<p>It is not a validated diagrammatic score.</p>
+<hr>
+<h1 id="resonance-topology-states">Resonance Topology States</h1>
+<p>Possible descriptive states:</p>
+<pre><code class="language-text">localized
+distributed
+clustered
+substrate_bound
+regime_bound
+temporally_bound
+interaction_bound
+mixed
+unstable
+unknown
+</code></pre>
+<hr>
+<h1 id="localized-resonance">Localized Resonance</h1>
+<p>A relationship appears only under a narrow condition.</p>
+<p>Example:</p>
+<pre><code class="language-text">one particular collaborative workflow
+  -&gt;
+improved accuracy
+</code></pre>
+<p>Generalization:</p>
+<pre><code class="language-text">unknown
+</code></pre>
+<p>This may still be useful.</p>
+<hr>
+<h1 id="distributed-resonance">Distributed Resonance</h1>
+<p>Similar directional effects appear across several independently observed conditions.</p>
+<p>Example:</p>
+<pre><code class="language-text">reflective textual:
+  stronger
+
+reflective visual:
+  stronger
+
+reflective relational:
+  stronger
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-text">distributed reflective-condition effect
+</code></pre>
+<p>Still not necessarily causal.</p>
+<hr>
+<h1 id="clustered-resonance">Clustered Resonance</h1>
+<p>Effects appear in a related group of contexts but not elsewhere.</p>
+<p>Example:</p>
+<pre><code class="language-text">context-rich conditions:
+  stronger
+
+low-context conditions:
+  weaker
+</code></pre>
+<p>Structural Detection may help evaluate whether the cluster is reproducible.</p>
+<hr>
+<h1 id="mixed-resonance">Mixed Resonance</h1>
+<p>Different dimensions respond differently to the same condition.</p>
+<p>Example:</p>
+<pre><code class="language-text">tool assistance:
+  retrieval: strongly improved
+  structural reasoning: unchanged
+  calibration: worsened
+</code></pre>
+<p>Correct:</p>
+<pre><code class="language-text">mixed resonance profile
+</code></pre>
+<p>Not:</p>
+<pre><code class="language-text">tool assistance is beneficial
+</code></pre>
+<p>globally.</p>
+<hr>
+<h1 id="dimension-specific-resonance">Dimension-Specific Resonance</h1>
+<p>RIQF dimensions should be allowed to carry different contextual profiles.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">dimensions:
+  structural_reasoning:
+    reflective:
+      strong
+
+    timed:
+      weak
+
+  symbolic_reasoning:
+    reflective:
+      moderate
+
+    timed:
+      moderate
+
+  tool_collaboration:
+    pair_mode:
+      strong
+</code></pre>
+<p>The system should not average this into:</p>
+<pre><code class="language-text">overall resonance
+</code></pre>
+<p>unless a specific validated purpose requires it.</p>
+<hr>
+<h1 id="resonance-and-model-fit">Resonance and Model Fit</h1>
+<p>Suppose a predictive model is trained primarily under:</p>
+<pre><code class="language-text">Condition A
+</code></pre>
+<p>but deployed under:</p>
+<pre><code class="language-text">Condition B
+</code></pre>
+<p>and the target expression changes systematically.</p>
+<p>Possible downstream state:</p>
+<pre><code class="language-text">model fit:
+  context-conditioned
+</code></pre>
+<p>The Resonance Observer contributes evidence.</p>
+<p>The Model Mismatch layer decides whether the model is mismatched.</p>
+<hr>
+<h1 id="resonance-and-substrate-fit">Resonance and Substrate Fit</h1>
+<p>The observer may detect:</p>
+<pre><code class="language-text">expression stronger on substrate B
+</code></pre>
+<p>but substrate fit asks something slightly different:</p>
+<blockquote>
+<p>Does B more adequately expose the intended construct?</p>
+</blockquote>
+<p>An observed performance difference alone does not answer that.</p>
+<hr>
+<h1 id="resonance-and-regime-fit">Resonance and Regime Fit</h1>
+<p>A resonance relationship may explain why:</p>
+<pre><code class="language-text">model fit
+</code></pre>
+<p>differs between regimes.</p>
+<p>But the observer should not assume:</p>
+<pre><code class="language-text">resonance caused model mismatch
+</code></pre>
+<hr>
+<h1 id="resonance-and-coherence">Resonance and Coherence</h1>
+<p>The Coherence Observer asks whether the resonance observations fit together.</p>
+<p>Example:</p>
+<pre><code class="language-text">R1:
+  reflective amplification
+
+R2:
+  reflective amplification
+
+R3:
+  reflective suppression
+</code></pre>
+<p>Correct:</p>
+<pre><code class="language-text">resonance coherence:
+  mixed
+</code></pre>
+<p>The contradictory observation remains visible.</p>
+<hr>
+<h1 id="resonance-and-drift">Resonance and Drift</h1>
+<p>The Drift Observer can compare:</p>
+<pre><code class="language-text">Resonance Profile(t1)
+</code></pre>
+<p>with:</p>
+<pre><code class="language-text">Resonance Profile(t2)
+</code></pre>
+<p>Possible states:</p>
+<pre><code class="language-text">stable
+strengthening
+weakening
+reversing
+fragmenting
+unknown
+</code></pre>
+<p>Again, these describe the relationship.</p>
+<p>Not the worth of the subject.</p>
+<hr>
+<h1 id="resonance-and-counterfactuals">Resonance and Counterfactuals</h1>
+<p>Counterfactual testing is essential.</p>
+<p>Examples:</p>
+<pre><code class="language-text">remove strongest favorable observation
+
+add adverse observation
+
+change task order
+
+change evaluator
+
+change irrelevant metadata
+
+hold substrate constant
+
+hold regime constant
+
+remove collaboration
+
+remove Resonance Adapter
+</code></pre>
+<p>A robust relationship should respond appropriately.</p>
+<hr>
+<h1 id="resonance-and-uncertainty">Resonance and Uncertainty</h1>
+<p>Uncertainty should be multidimensional.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">resonance_uncertainty:
+  direction:
+    low
+
+  magnitude:
+    medium
+
+  persistence:
+    high
+
+  specificity:
+    high
+
+  causation:
+    very_high
+
+  generalization:
+    high
+</code></pre>
+<p>This is often more useful than one confidence label.</p>
+<hr>
+<h1 id="resonance-and-human-review">Resonance and Human Review</h1>
+<p>Review may be warranted when a consequential assessment depends strongly on a resonance interpretation.</p>
+<p>Questions:</p>
+<ol>
+<li>What target changed?</li>
+<li>Under which conditions?</li>
+<li>Was the relationship replicated?</li>
+<li>Was evidence independent?</li>
+<li>Were tasks comparable?</li>
+<li>Was substrate isolated?</li>
+<li>Was regime isolated?</li>
+<li>Did the system boundary change?</li>
+<li>Were adverse observations retained?</li>
+<li>Did simpler interaction models explain the effect?</li>
+<li>Did the relationship survive counterfactual tests?</li>
+<li>Does it matter for the intended decision?</li>
+</ol>
+<hr>
+<h1 id="worked-example-pax-01">Worked Example — PAX-01</h1>
+<h2 id="target">Target</h2>
+<p>Synthetic target:</p>
+<pre><code class="language-text">structural reasoning
+</code></pre>
+<p>Baseline condition:</p>
+<pre><code class="language-text">timed
+symbolic
+fixed-choice
+individual
+</code></pre>
+<p>Observed expression:</p>
+<pre><code class="language-text">weak
+</code></pre>
+<p>Comparison condition:</p>
+<pre><code class="language-text">reflective
+relational
+generative
+individual
+</code></pre>
+<p>Observed expression:</p>
+<pre><code class="language-text">strong
+</code></pre>
+<hr>
+<h1 id="resonance-adapter-result">Resonance Adapter Result</h1>
+<p>The adapter reports:</p>
+<pre><code class="language-yaml">context_dependence:
+  status: candidate
+
+amplification:
+  reflective_relational:
+    status: candidate
+
+suppression:
+  timed_symbolic:
+    status: candidate
+
+cause:
+  unresolved
+</code></pre>
+<p>Now the Resonance Observer asks whether this forms a broader pattern.</p>
+<hr>
+<h1 id="additional-evidence">Additional Evidence</h1>
+<p>Synthetic evidence:</p>
+<pre><code class="language-text">E1:
+  reflective relational task
+  strong
+
+E2:
+  reflective structural task
+  strong
+
+E3:
+  timed symbolic task
+  weak
+
+E4:
+  timed classification task
+  weak
+
+E5:
+  context-rich synthesis
+  strong
+
+E6:
+  reflective symbolic task
+  moderate
+
+E7:
+  generative relational task
+  strong
+</code></pre>
+<hr>
+<h1 id="pass-1-evidence-independence">Pass 1 — Evidence Independence</h1>
+<p>Suppose:</p>
+<pre><code class="language-text">E1
+E3
+E5
+E6
+</code></pre>
+<p>are independently sourced task families.</p>
+<p>Then:</p>
+<pre><code class="language-yaml">evidence:
+  total_observations: 7
+  independent_sources: 4
+</code></pre>
+<p>This is stronger than seven interpretations of one source.</p>
+<hr>
+<h1 id="pass-2-target-alignment">Pass 2 — Target Alignment</h1>
+<p>All observations do not necessarily measure exactly the same thing.</p>
+<p>Classify:</p>
+<pre><code class="language-text">E1:
+  structural reasoning
+
+E2:
+  structural reasoning
+
+E3:
+  rapid symbolic processing
+
+E4:
+  classification
+
+E5:
+  synthesis
+
+E6:
+  symbolic reasoning
+
+E7:
+  structural reasoning
+</code></pre>
+<p>Therefore the observer should not casually put all seven onto one scale.</p>
+<hr>
+<h1 id="pass-3-structural-target-subset">Pass 3 — Structural Target Subset</h1>
+<p>Comparable structural observations:</p>
+<pre><code class="language-text">E1:
+  strong
+
+E2:
+  strong
+
+E7:
+  strong
+</code></pre>
+<p>Timed baseline:</p>
+<pre><code class="language-text">additional matched task:
+  weak-to-moderate
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-text">condition-linked structural expression
+</code></pre>
+<hr>
+<h1 id="pass-4-cross-substrate-profile">Pass 4 — Cross-Substrate Profile</h1>
+<pre><code class="language-yaml">structural_reasoning:
+  relational:
+    strong
+
+  generative:
+    strong
+
+  timed_symbolic:
+    weak_to_moderate
+
+  reflective_symbolic:
+    moderate
+</code></pre>
+<p>Candidate interpretation:</p>
+<pre><code class="language-text">expression varies systematically
+across the current synthetic conditions
+</code></pre>
+<hr>
+<h1 id="pass-5-resonance-topology">Pass 5 — Resonance Topology</h1>
+<p>Synthetic pattern:</p>
+<pre><code class="language-text">reflective + relational:
+  strongest
+
+reflective + symbolic:
+  moderate
+
+timed + symbolic:
+  weakest
+</code></pre>
+<p>This suggests that:</p>
+<pre><code class="language-text">timing
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">representation
+</code></pre>
+<p>may interact.</p>
+<p>But the observer cannot identify the cause yet.</p>
+<hr>
+<h1 id="pass-6-counterfactual-isolation">Pass 6 — Counterfactual Isolation</h1>
+<p>Hold representation constant.</p>
+<pre><code class="language-text">symbolic + timed:
+  weak
+
+symbolic + reflective:
+  moderate
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-text">timing relation:
+  partial
+</code></pre>
+<p>Hold timing constant.</p>
+<pre><code class="language-text">reflective + symbolic:
+  moderate
+
+reflective + relational:
+  strong
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-text">representation relation:
+  partial
+</code></pre>
+<p>Possible interaction:</p>
+<pre><code class="language-text">timing x representation
+</code></pre>
+<p>requires further testing.</p>
+<hr>
+<h1 id="pass-7-regime-integration">Pass 7 — Regime Integration</h1>
+<p>RTT / Regime Observer may identify:</p>
+<pre><code class="language-text">Regime A:
+  timed constrained
+
+Regime B:
+  reflective generative
+</code></pre>
+<p>Resonance result:</p>
+<pre><code class="language-yaml">regime_conditioning:
+  status: candidate
+
+  regime_a:
+    structural_expression:
+      lower
+
+  regime_b:
+    structural_expression:
+      higher
+</code></pre>
+<p>This remains descriptive.</p>
+<hr>
+<h1 id="pass-8-coherence-integration">Pass 8 — Coherence Integration</h1>
+<p>Suppose the Coherence Observer finds:</p>
+<pre><code class="language-text">cross-observation support:
+  moderate
+
+contradiction:
+  low-to-moderate
+
+evidence independence:
+  medium
+</code></pre>
+<p>Then resonance confidence may remain:</p>
+<pre><code class="language-text">medium candidate
+</code></pre>
+<p>not:</p>
+<pre><code class="language-text">high certainty
+</code></pre>
+<hr>
+<h1 id="pass-9-drift-integration">Pass 9 — Drift Integration</h1>
+<p>Suppose six months later in a synthetic longitudinal sequence:</p>
+<pre><code class="language-text">timed symbolic:
+  moderate
+
+reflective relational:
+  strong
+</code></pre>
+<p>The gap narrows.</p>
+<p>Candidate:</p>
+<pre><code class="language-text">resonance profile changed
+</code></pre>
+<p>not:</p>
+<pre><code class="language-text">subject became less resonant
+</code></pre>
+<hr>
+<h1 id="pax-01-resonance-observer-result">PAX-01 Resonance Observer Result</h1>
+<pre><code class="language-yaml">resonance_observer:
+  target:
+    structural_reasoning
+
+  system_boundary:
+    individual_human
+
+  profile:
+    reflective_relational:
+      expression: strong
+
+    reflective_symbolic:
+      expression: moderate
+
+    timed_symbolic:
+      expression: weak_to_moderate
+
+  relationships:
+    amplification:
+      reflective_relational:
+        status: candidate
+
+    suppression:
+      severe_time_constraint:
+        status: candidate
+
+  topology:
+    type: mixed_context_bound
+
+  substrate_conditioning:
+    status: candidate
+
+  regime_conditioning:
+    status: candidate
+
+  temporal_stability:
+    status: not_tested
+
+  causal_status:
+    unresolved
+
+  generalization:
+    unknown
+
+  confidence:
+    medium
+
+  validation_state:
+    unvalidated
+
+  decision_authority:
+    none
+</code></pre>
+<hr>
+<h1 id="important-non-conclusion">Important Non-Conclusion</h1>
+<p>The observer does <strong>not</strong> conclude:</p>
+<pre><code class="language-text">PAX-01's true intelligence
+is revealed by reflective relational tasks.
+</code></pre>
+<p>It concludes only:</p>
+<blockquote>
+<p><strong>Within the synthetic example, observed structural-reasoning expression differs across the defined conditions, with stronger performance in the reflective relational condition. The causal interpretation and generalizability remain unresolved.</strong></p>
+</blockquote>
+<hr>
+<h1 id="baseline-wins-example">Baseline-Wins Example</h1>
+<p>Suppose additional matched observations show:</p>
+<pre><code class="language-text">reflective relational:
+  moderate
+
+timed symbolic:
+  moderate
+
+visual:
+  moderate
+
+generative:
+  moderate
+</code></pre>
+<p>Correct:</p>
+<pre><code class="language-yaml">resonance:
+  no_detectable_pattern: true
+
+baseline_model:
+  context_independence:
+    increasingly_supported: true
+</code></pre>
+<p>The richer observer adds no useful explanation.</p>
+<hr>
+<h1 id="favorable-effect-fails-replication">Favorable Effect Fails Replication</h1>
+<p>Initial:</p>
+<pre><code class="language-text">reflective relational:
+  strong
+</code></pre>
+<p>Replication:</p>
+<pre><code class="language-text">weak
+moderate
+moderate
+</code></pre>
+<p>Correct:</p>
+<pre><code class="language-yaml">amplification_candidate:
+  status: not_supported
+
+profile:
+  confidence: reduced
+</code></pre>
+<hr>
+<h1 id="adverse-effect-fails-replication">Adverse Effect Fails Replication</h1>
+<p>Initial:</p>
+<pre><code class="language-text">timed:
+  weak
+</code></pre>
+<p>Replication:</p>
+<pre><code class="language-text">strong
+moderate
+strong
+</code></pre>
+<p>Correct:</p>
+<pre><code class="language-yaml">suppression_candidate:
+  status: not_supported
+</code></pre>
+<p>Same standard.</p>
+<hr>
+<h1 id="contradictory-resonance">Contradictory Resonance</h1>
+<p>Suppose:</p>
+<pre><code class="language-text">relational task A:
+  strong
+
+relational task B:
+  weak
+
+relational task C:
+  strong
+
+relational task D:
+  weak
+</code></pre>
+<p>Correct:</p>
+<pre><code class="language-yaml">resonance:
+  topology:
+    unstable
+
+  relational_amplification:
+    unsupported
+
+  interpretation:
+    unresolved
+</code></pre>
+<p>Do not create a more elaborate resonance story simply because the simple one failed.</p>
+<hr>
+<h1 id="mixed-dimension-example">Mixed-Dimension Example</h1>
+<p>Tool assistance produces:</p>
+<pre><code class="language-text">retrieval:
+  improved
+
+structural reasoning:
+  unchanged
+
+confidence calibration:
+  worsened
+
+completion time:
+  improved
+</code></pre>
+<p>Correct:</p>
+<pre><code class="language-yaml">resonance_profile:
+  retrieval:
+    amplification_candidate
+
+  structural_reasoning:
+    no_effect
+
+  calibration:
+    adverse_effect_candidate
+
+  completion_time:
+    improvement_candidate
+
+  global_effect:
+    mixed
+</code></pre>
+<p>Not:</p>
+<pre><code class="language-text">tools improve intelligence
+</code></pre>
+<hr>
+<h1 id="human-ai-pair-example">Human-AI Pair Example</h1>
+<p>Individual human:</p>
+<pre><code class="language-text">structural synthesis:
+  strong
+
+retrieval:
+  moderate
+</code></pre>
+<p>AI:</p>
+<pre><code class="language-text">structural synthesis:
+  moderate
+
+retrieval:
+  strong
+</code></pre>
+<p>Pair:</p>
+<pre><code class="language-text">structural synthesis:
+  strong
+
+retrieval:
+  strong
+
+error checking:
+  strong
+</code></pre>
+<p>Possible observer result:</p>
+<pre><code class="language-yaml">collaborative_resonance:
+  system_boundary:
+    human_ai_pair
+
+  interaction_structure:
+    complementary
+
+  performance:
+    candidate_amplification
+
+  attribution_to_human:
+    unresolved
+
+  attribution_to_ai:
+    unresolved
+</code></pre>
+<hr>
+<h1 id="pair-topology">Pair Topology</h1>
+<p>Different collaboration structures may produce different outcomes.</p>
+<pre><code class="language-text">Human leads / AI retrieves
+        │
+        ▼
+      Profile A
+
+AI leads / Human verifies
+        │
+        ▼
+      Profile B
+
+Independent solve / Cross-check
+        │
+        ▼
+      Profile C
+</code></pre>
+<p>The observer may compare these as pair-level resonance regimes.</p>
+<hr>
+<h1 id="ai-system-example">AI-System Example</h1>
+<p>For an AI system:</p>
+<pre><code class="language-text">No Retrieval:
+  moderate
+
+Retrieval:
+  strong
+
+Retrieval + Tool Use:
+  strong
+
+Extended Context:
+  strong
+
+Extended Context + Noisy Retrieval:
+  weak
+</code></pre>
+<p>Possible profile:</p>
+<pre><code class="language-yaml">ai_resonance:
+  retrieval:
+    amplification_candidate
+
+  noisy_retrieval:
+    suppression_candidate
+
+  tool_use:
+    incremental_effect:
+      unresolved
+</code></pre>
+<p>This does not imply human-like psychological resonance.</p>
+<hr>
+<h1 id="organizational-example">Organizational Example</h1>
+<p>An organization may exhibit:</p>
+<pre><code class="language-text">centralized planning:
+  fast decisions
+  low error correction
+
+distributed cross-check:
+  slower decisions
+  stronger error detection
+</code></pre>
+<p>A resonance profile can describe that interaction.</p>
+<p>It should not imply the organization literally experiences human-like resonance.</p>
+<hr>
+<h1 id="resonance-profile-drift">Resonance Profile Drift</h1>
+<p>A resonance profile itself may change.</p>
+<pre><code class="language-text">T1:
+  collaboration strongly amplifying
+
+T2:
+  collaboration moderately amplifying
+
+T3:
+  collaboration neutral
+</code></pre>
+<p>Possible:</p>
+<pre><code class="language-yaml">resonance_drift:
+  direction:
+    weakening
+
+  cause:
+    unresolved
+</code></pre>
+<p>Potential explanations:</p>
+<pre><code class="language-text">learning
+tool change
+system adaptation
+task change
+model update
+human adaptation
+measurement change
+unknown
+</code></pre>
+<hr>
+<h1 id="resonance-stability">Resonance Stability</h1>
+<p>A stable profile should persist under comparable conditions.</p>
+<p>Possible states:</p>
+<pre><code class="language-text">stable
+moderately_stable
+unstable
+regime_conditioned
+substrate_conditioned
+temporally_variable
+unknown
+</code></pre>
+<hr>
+<h1 id="resonance-coherence">Resonance Coherence</h1>
+<p>A resonance profile may contain both supporting and contradictory relationships.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">resonance_coherence:
+  supporting:
+    4
+
+  contradictory:
+    2
+
+  unknown:
+    3
+</code></pre>
+<p>Counts alone are insufficient.</p>
+<p>Evidence independence and meaning matter.</p>
+<hr>
+<h1 id="resonance-confidence">Resonance Confidence</h1>
+<p>Confidence should consider:</p>
+<pre><code class="language-text">evidence coverage
+evidence independence
+replication
+effect magnitude
+specificity
+counterfactual robustness
+cross-task consistency
+regime clarity
+substrate clarity
+temporal stability
+</code></pre>
+<p>Not:</p>
+<pre><code class="language-text">how compelling the story sounds
+</code></pre>
+<hr>
+<h1 id="resonance-confidence-profile">Resonance Confidence Profile</h1>
+<p>Prefer:</p>
+<pre><code class="language-yaml">confidence:
+  direction:
+    medium
+
+  magnitude:
+    low
+
+  persistence:
+    medium
+
+  specificity:
+    low
+
+  generalization:
+    low
+
+  causation:
+    very_low
+</code></pre>
+<p>over:</p>
+<pre><code class="language-text">resonance confidence:
+  83%
+</code></pre>
+<p>unless a validated calibration supports the latter.</p>
+<hr>
+<h1 id="metrics">Metrics</h1>
+<hr>
+<h1 id="pa-m12-substrate-effect-magnitude"><code>PA-M12 — Substrate Effect Magnitude</code></h1>
+<p>Useful for substrate-conditioned resonance.</p>
+<hr>
+<h1 id="pa-m13-substrate-effect-replicability"><code>PA-M13 — Substrate Effect Replicability</code></h1>
+<p>Tests whether directional differences repeat.</p>
+<hr>
+<h1 id="pa-m14-substrate-symmetry"><code>PA-M14 — Substrate Symmetry</code></h1>
+<p>Checks whether beneficial and adverse substrate effects receive similar detection standards.</p>
+<hr>
+<h1 id="pa-m15-substrate-specificity"><code>PA-M15 — Substrate Specificity</code></h1>
+<p>Tests whether the effect survives relevant controls.</p>
+<hr>
+<h1 id="pa-m19-regime-conditioned-stability"><code>PA-M19 — Regime-Conditioned Stability</code></h1>
+<p>Tests whether resonance relationships remain stable within regimes.</p>
+<hr>
+<h1 id="pa-m24-cross-observation-coherence"><code>PA-M24 — Cross-Observation Coherence</code></h1>
+<p>Tests whether resonance observations form a supportable pattern.</p>
+<hr>
+<h1 id="pa-m25-profile-contradiction-density"><code>PA-M25 — Profile Contradiction Density</code></h1>
+<p>Tracks unresolved contradictions inside the resonance profile.</p>
+<hr>
+<h1 id="pa-m27-profile-drift-magnitude"><code>PA-M27 — Profile Drift Magnitude</code></h1>
+<p>Potentially applicable to longitudinal resonance-profile change.</p>
+<hr>
+<h1 id="pa-m28-confidence-calibration-error"><code>PA-M28 — Confidence Calibration Error</code></h1>
+<p>Tests whether confidence in resonance findings corresponds to observed reliability.</p>
+<hr>
+<h1 id="pa-m32-unsupported-assertion-rate"><code>PA-M32 — Unsupported Assertion Rate</code></h1>
+<p>Critical for detecting metaphor-to-measurement overreach.</p>
+<hr>
+<h1 id="pa-m33-irrelevant-perturbation-stability"><code>PA-M33 — Irrelevant Perturbation Stability</code></h1>
+<p>Tests whether resonance profiles survive irrelevant changes.</p>
+<hr>
+<h1 id="pa-m34-relevant-change-sensitivity"><code>PA-M34 — Relevant Change Sensitivity</code></h1>
+<p>Tests whether profiles update under meaningful changes.</p>
+<hr>
+<h1 id="pa-m36-adapter-ablation-effect"><code>PA-M36 — Adapter Ablation Effect</code></h1>
+<p>Tests whether the Resonance Adapter provides measurable added value.</p>
+<hr>
+<h1 id="pa-m43-false-favorable-reinterpretation-rate"><code>PA-M43 — False Favorable Reinterpretation Rate</code></h1>
+<p>Detects unsupported amplification narratives.</p>
+<hr>
+<h1 id="pa-m44-false-adverse-reinterpretation-rate"><code>PA-M44 — False Adverse Reinterpretation Rate</code></h1>
+<p>Detects unsupported suppression narratives.</p>
+<hr>
+<h1 id="pa-m45-evidence-reconstruction-rate"><code>PA-M45 — Evidence Reconstruction Rate</code></h1>
+<p>Tests whether reviewers can reconstruct the resonance profile from its evidence.</p>
+<hr>
+<h1 id="pa-m46-explanation-completeness"><code>PA-M46 — Explanation Completeness</code></h1>
+<p>Ensures resonance reporting includes:</p>
+<pre><code class="language-text">target
+conditions
+evidence
+direction
+magnitude
+persistence
+regime
+substrate
+uncertainty
+limitations
+alternatives
+</code></pre>
+<hr>
+<h1 id="validation-matrix">Validation Matrix</h1>
+<p>The observer should be compared against simpler approaches.</p>
+<pre><code class="language-text">M0:
+  no context model
+
+M1:
+  context-conditioned baseline
+
+M2:
+  interaction model
+
+M3:
+  mixed-effects / multilevel model where appropriate
+
+M4:
+  substrate-aware model
+
+M5:
+  regime-aware model
+
+M6:
+  M5 + Resonance Adapter
+
+M7:
+  full Resonance Observer
+
+M8:
+  complete Predictive Analytics ensemble
+</code></pre>
+<p>The observer earns complexity only if it adds useful information.</p>
+<hr>
+<h1 id="required-validation-cases">Required Validation Cases</h1>
+<pre><code class="language-text">no contextual effect
+single contextual effect
+persistent effect
+transient effect
+positive effect
+negative effect
+mixed effect
+cyclic effect
+substrate-specific effect
+regime-specific effect
+task-difficulty confound
+measurement confound
+observer confound
+system-boundary change
+human-AI pair effect
+randomized null relationship
+counterfactual fragile relationship
+counterfactual robust relationship
+</code></pre>
+<hr>
+<h1 id="null-resonance-corpus">Null Resonance Corpus</h1>
+<p>A validation corpus should intentionally contain cases where:</p>
+<pre><code class="language-text">context changes
+</code></pre>
+<p>but:</p>
+<pre><code class="language-text">target expression does not systematically change
+</code></pre>
+<p>Correct:</p>
+<pre><code class="language-text">no_detectable_resonance
+</code></pre>
+<p>Without null cases, false-positive rates cannot be understood.</p>
+<hr>
+<h1 id="known-interaction-corpus">Known Interaction Corpus</h1>
+<p>Synthetic or controlled cases can contain known interaction effects.</p>
+<p>Question:</p>
+<blockquote>
+<p>Does the observer detect the interaction without inventing additional unsupported structure?</p>
+</blockquote>
+<hr>
+<h1 id="direction-symmetry-corpus">Direction Symmetry Corpus</h1>
+<p>Include:</p>
+<pre><code class="language-text">amplification cases
+suppression cases
+neutral cases
+mixed cases
+</code></pre>
+<p>The system must not privilege improvement narratives.</p>
+<hr>
+<h1 id="randomization-challenge">Randomization Challenge</h1>
+<p>Randomize:</p>
+<pre><code class="language-text">condition labels
+</code></pre>
+<p>while preserving the outcome distribution.</p>
+<p>Expected:</p>
+<pre><code class="language-text">resonance signal:
+  collapses
+</code></pre>
+<p>If it persists, the observer may be detecting noise or leakage.</p>
+<hr>
+<h1 id="holdout-challenge">Holdout Challenge</h1>
+<p>Discover a candidate resonance profile on one evidence set.</p>
+<p>Then predict:</p>
+<pre><code class="language-text">which contexts should amplify
+which should suppress
+which should remain neutral
+</code></pre>
+<p>Test on held-out data.</p>
+<p>This is substantially stronger than retrospective storytelling.</p>
+<hr>
+<h1 id="counterfactual-challenge">Counterfactual Challenge</h1>
+<p>Move or change:</p>
+<pre><code class="language-text">context labels
+substrate definitions
+regime boundaries
+task order
+evaluator
+evidence inclusion
+</code></pre>
+<p>A robust profile should survive irrelevant changes while responding to meaningful ones.</p>
+<hr>
+<h1 id="ablation-challenge">Ablation Challenge</h1>
+<p>Remove Resonance entirely.</p>
+<p>If:</p>
+<pre><code class="language-text">prediction
+explanation
+calibration
+model-mismatch detection
+</code></pre>
+<p>remain unchanged:</p>
+<pre><code class="language-text">resonance_observer_added_value:
+  not_demonstrated
+</code></pre>
+<p>This is a legitimate outcome.</p>
+<hr>
+<h1 id="failure-modes">Failure Modes</h1>
+<h2 id="resonance-inflation">Resonance Inflation</h2>
+<p>Risk:</p>
+<p>Every context effect becomes resonance.</p>
+<p>Mitigation:</p>
+<p>Use staged labels:</p>
+<pre><code class="language-text">context difference
+context dependence
+resonance candidate
+supported resonance relationship
+</code></pre>
+<hr>
+<h1 id="narrative-resonance">Narrative Resonance</h1>
+<p>Risk:</p>
+<p>A compelling metaphor is mistaken for measurement.</p>
+<p>Mitigation:</p>
+<p>Require operational target and conditions.</p>
+<hr>
+<h1 id="amplification-bias">Amplification Bias</h1>
+<p>Risk:</p>
+<p>Positive effects receive more attention than negative effects.</p>
+<p>Mitigation:</p>
+<p>Direction symmetry.</p>
+<hr>
+<h1 id="suppression-bias">Suppression Bias</h1>
+<p>Risk:</p>
+<p>Adverse conditions are overgeneralized into subject weakness.</p>
+<p>Mitigation:</p>
+<p>Preserve context and scope.</p>
+<hr>
+<h1 id="context-shopping">Context Shopping</h1>
+<p>Risk:</p>
+<p>Many conditions are tested until a preferred effect appears.</p>
+<p>Mitigation:</p>
+<p>Search-space disclosure and preregistration.</p>
+<hr>
+<h1 id="condition-collapse">Condition Collapse</h1>
+<p>Risk:</p>
+<p>Multiple changed variables are treated as one causal factor.</p>
+<p>Mitigation:</p>
+<p>Factor isolation where possible.</p>
+<hr>
+<h1 id="system-boundary-collapse">System-Boundary Collapse</h1>
+<p>Risk:</p>
+<p>Pair-level or team-level resonance is attributed to one member.</p>
+<p>Mitigation:</p>
+<p>Explicit system boundaries.</p>
+<hr>
+<h1 id="regime-collapse">Regime Collapse</h1>
+<p>Risk:</p>
+<p>Regime-conditioned resonance is generalized globally.</p>
+<p>Mitigation:</p>
+<p>Preserve regime scope.</p>
+<hr>
+<h1 id="temporal-collapse">Temporal Collapse</h1>
+<p>Risk:</p>
+<p>A transient effect becomes permanent profile identity.</p>
+<p>Mitigation:</p>
+<p>Track persistence and observation window.</p>
+<hr>
+<h1 id="evidence-echo">Evidence Echo</h1>
+<p>Risk:</p>
+<p>Adapter agreement is treated as independent confirmation.</p>
+<p>Mitigation:</p>
+<p>Evidence lineage.</p>
+<hr>
+<h1 id="coherence-overreach">Coherence Overreach</h1>
+<p>Risk:</p>
+<p>A coherent resonance profile is assumed correct.</p>
+<p>Mitigation:</p>
+<p>Holdout validation.</p>
+<hr>
+<h1 id="causal-overreach">Causal Overreach</h1>
+<p>Risk:</p>
+<p>Repeated contextual association becomes causal explanation.</p>
+<p>Mitigation:</p>
+<p>Keep causal status separate.</p>
+<hr>
+<h1 id="complexity-theater">Complexity Theater</h1>
+<p>Risk:</p>
+<p>A sophisticated resonance topology adds no useful information beyond ordinary interaction analysis.</p>
+<p>Mitigation:</p>
+<p>Ablation and baseline comparison.</p>
+<hr>
+<h1 id="identity-collapse">Identity Collapse</h1>
+<p>Risk:</p>
+<p>Relational effects become identity labels.</p>
+<p>Mitigation:</p>
+<p>Always attach conditions.</p>
+<hr>
+<h1 id="canon-confirmation">Canon Confirmation</h1>
+<p>Risk:</p>
+<p>Resonance is preserved because it belongs to TriadicFrameworks vocabulary.</p>
+<p>Mitigation:</p>
+<p>Allow deprecation and rejection.</p>
+<hr>
+<h1 id="falsification-conditions">Falsification Conditions</h1>
+<p>The Resonance Observer should be revised, restricted, deprecated, or rejected if:</p>
+<ul>
+<li>null cases routinely produce resonance profiles,</li>
+<li>amplification and suppression are detected asymmetrically without justification,</li>
+<li>candidate relationships fail replication,</li>
+<li>condition labels fail randomization tests,</li>
+<li>holdout predictions fail,</li>
+<li>profile construction depends strongly on evaluator preference,</li>
+<li>regime boundaries create arbitrary resonance patterns,</li>
+<li>substrate controls eliminate most observed effects,</li>
+<li>ordinary interaction models perform equivalently,</li>
+<li>counterfactual tests reveal severe fragility,</li>
+<li>pair-level effects are repeatedly misattributed,</li>
+<li>causal claims exceed evidence,</li>
+<li>or ablation demonstrates negligible contribution.</li>
+</ul>
+<hr>
+<h1 id="no-resonance-test">No-Resonance Test</h1>
+<p>Required capability:</p>
+<pre><code class="language-text">Can the observer conclude that
+no resonance structure is supported?
+</code></pre>
+<p>Required answer:</p>
+<pre><code class="language-text">yes
+</code></pre>
+<hr>
+<h1 id="baseline-sufficient-test">Baseline-Sufficient Test</h1>
+<p>Required capability:</p>
+<pre><code class="language-text">Can the observer conclude that
+a simple context-conditioned model
+already explains the observations?
+</code></pre>
+<p>Required answer:</p>
+<pre><code class="language-text">yes
+</code></pre>
+<p>Possible output:</p>
+<pre><code class="language-text">Resonance Observer:
+  no_added_value
+</code></pre>
+<hr>
+<h1 id="adverse-update-test">Adverse-Update Test</h1>
+<p>Begin with a favorable resonance profile.</p>
+<p>Add contradictory evidence.</p>
+<p>Required:</p>
+<pre><code class="language-text">confidence decreases
+or
+profile changes
+</code></pre>
+<p>The profile must not protect itself.</p>
+<hr>
+<h1 id="favorable-update-test">Favorable-Update Test</h1>
+<p>Begin with a suppressive profile.</p>
+<p>Add strong replicated positive evidence.</p>
+<p>Required:</p>
+<pre><code class="language-text">profile updates
+</code></pre>
+<p>Symmetry matters.</p>
+<hr>
+<h1 id="unknown-test">Unknown Test</h1>
+<p>Insufficient evidence should produce:</p>
+<pre><code class="language-text">unknown
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">insufficient_evidence
+</code></pre>
+<p>not invented resonance structure.</p>
+<hr>
+<h1 id="human-review-trigger">Human Review Trigger</h1>
+<p>Review may be warranted when:</p>
+<pre><code class="language-text">high consequence
+strong resonance dependence
+low specificity
+high counterfactual fragility
+major contradiction
+uncertain system boundary
+regime-conditioned interpretation
+subject contest
+fairness signal
+</code></pre>
+<p>Review does not automatically accept the resonance interpretation.</p>
+<hr>
+<h1 id="ethics-boundary">Ethics Boundary</h1>
+<p>The observer should not turn:</p>
+<pre><code class="language-text">conditions under which performance changes
+</code></pre>
+<p>into:</p>
+<pre><code class="language-text">instructions for manipulating a person
+</code></pre>
+<p>Contextual performance profiling can reveal sensitive information.</p>
+<p>It should not be used to exploit:</p>
+<ul>
+<li>stress responses,</li>
+<li>vulnerabilities,</li>
+<li>psychological pressure,</li>
+<li>dependency,</li>
+<li>behavioral susceptibility.</li>
+</ul>
+<p>The observer is intended for research and responsible assessment, not manipulation.</p>
+<hr>
+<h1 id="privacy-boundary">Privacy Boundary</h1>
+<p>A resonance profile may reveal:</p>
+<pre><code class="language-text">where performance improves
+where it weakens
+which interactions matter
+which tools matter
+which conditions stabilize behavior
+which conditions destabilize behavior
+</code></pre>
+<p>This may be more sensitive than a conventional score.</p>
+<p>Collection should be purpose-limited.</p>
+<hr>
+<h1 id="decision-authority_1">Decision Authority</h1>
+<pre><code class="language-text">decision_authority: none
+
+authorized_use:
+  - research
+  - demonstration
+  - context comparison
+  - interaction analysis
+  - substrate comparison
+  - regime comparison
+  - human-AI collaboration research
+  - profile development
+  - framework testing
+
+prohibited_use:
+  - psychological manipulation
+  - vulnerability exploitation
+  - diagnosis
+  - automated hiring decision
+  - educational exclusion
+  - legal determination
+  - insurance determination
+  - lending determination
+  - automated adverse decision
+</code></pre>
+<hr>
+<h1 id="minimal-resonance-observer-contract">Minimal Resonance Observer Contract</h1>
+<pre><code class="language-yaml">resonance_observer_result:
+  profile_id:
+
+  observed_system:
+    id:
+    class:
+    boundary:
+
+  target_expressions:
+    - id:
+      measurement:
+
+  evidence:
+    total_sources:
+    independent_sources:
+    provenance:
+
+  conditions:
+    - id:
+      context:
+      substrate:
+      regime:
+      interaction:
+      temporal_scope:
+
+  relationships:
+    - target:
+      baseline_condition:
+      comparison_condition:
+      direction:
+      magnitude:
+      persistence:
+      specificity:
+      evidence:
+      confidence:
+
+  topology:
+    type:
+
+  cross_substrate:
+    status:
+
+  cross_regime:
+    status:
+
+  temporal_stability:
+    status:
+
+  collaborative_structure:
+    status:
+
+  coherence:
+  drift:
+  counterfactual:
+
+  model_fit:
+  substrate_fit:
+  regime_fit:
+
+  causal_status:
+
+  alternative_interpretations:
+  confounds:
+  counterevidence:
+  missing_evidence:
+
+  uncertainty:
+  confidence:
+  limitations:
+
+  review_required:
+
+  validation_state:
+  decision_authority: none
+</code></pre>
+<hr>
+<h1 id="research-questions">Research Questions</h1>
+<ol>
+<li>Can resonance profiles be constructed reproducibly?</li>
+<li>Can relational expression be separated from ordinary context effects?</li>
+<li>Does resonance add anything beyond conventional interaction modeling?</li>
+<li>Can resonance direction be classified reliably?</li>
+<li>Can magnitude be measured appropriately?</li>
+<li>Can persistence be separated from repeated noise?</li>
+<li>Can specificity survive confound controls?</li>
+<li>Can cross-substrate resonance be distinguished from substrate fit?</li>
+<li>Can cross-regime resonance be distinguished from regime mismatch?</li>
+<li>Can resonance-profile drift be measured?</li>
+<li>Can collaborative resonance be separated from simple additive performance?</li>
+<li>Can pair-level resonance be kept separate from individual capability?</li>
+<li>Can resonance topology be measured reliably?</li>
+<li>Does topology improve prediction?</li>
+<li>Does topology improve explanation?</li>
+<li>Does resonance improve calibration?</li>
+<li>Does it improve model-mismatch detection?</li>
+<li>Does it improve human-AI collaboration analysis?</li>
+<li>Can resonance profile confidence be calibrated?</li>
+<li>Can resonance survive holdout validation?</li>
+<li>Can it survive randomization?</li>
+<li>Can it survive counterfactual testing?</li>
+<li>Can it survive alternate-form testing?</li>
+<li>Can independent reviewers reconstruct resonance profiles?</li>
+<li>Does observer choice materially alter profile construction?</li>
+<li>Which resonance classes are redundant?</li>
+<li>Which should merge?</li>
+<li>Which should be deprecated?</li>
+<li>Which should be rejected?</li>
+<li>Can standard statistical interactions replace the observer?</li>
+<li>Can mixed-effects models replace parts of the observer?</li>
+<li>Does resonance terminology improve understanding or increase narrative overconfidence?</li>
+<li>Can null resonance be detected reliably?</li>
+<li>Can favorable effects be rejected?</li>
+<li>Can adverse effects be rejected?</li>
+<li>Can mixed effects remain mixed without forced summary?</li>
+<li>How should resonance be compared across humans and AI?</li>
+<li>Which resonance concepts do not transfer across system classes?</li>
+<li>What privacy risks arise from resonance profiles?</li>
+<li>What safeguards prevent resonance analysis from becoming vulnerability mapping?</li>
+<li>When should the observer return <code>no_added_value</code>?</li>
+<li>When should it abstain?</li>
+<li>Can the observer detect its own overfitting?</li>
+<li>What evidence would justify removing the Resonance Observer entirely?</li>
+</ol>
+<hr>
+<h1 id="core-invariants">Core Invariants</h1>
+<pre><code class="language-text">resonance != identity
+resonance != trait
+resonance != similarity
+resonance != causation
+resonance != model_fit
+resonance != substrate_fit
+resonance != regime
+context_difference != resonance
+interaction != causation
+amplification != superiority
+suppression != inferiority
+persistence != validity
+coherence != truth
+topology != cognition
+adapter_result != independent_evidence
+adapter_count != evidence_count
+condition_count != evidence_count
+pair_performance != individual_performance
+human_ai_pair != individual_human
+human_ai_pair != ai_system
+regime_bound != universal
+substrate_bound != universal
+transient != permanent
+strong_effect != important_effect
+large_magnitude != human_worth
+profile != destiny
+mixed_result != failure
+no_resonance != failure
+no_added_value != failure
+unknown != failure
+metaphor != measurement
+complexity != validity
+observer_output != decision_authority
+canon_alignment != empirical_validation
+</code></pre>
+<hr>
+<h1 id="closing-principle">Closing Principle</h1>
+<p>The Resonance Adapter can identify a candidate relationship.</p>
+<p>The Resonance Observer has the harder job.</p>
+<p>It must decide whether many such relationships form anything worth calling a profile.</p>
+<p>That requires more than seeing performance rise and fall.</p>
+<p>It requires knowing:</p>
+<pre><code class="language-text">what changed
+what stayed constant
+what was measured
+which system was observed
+which substrate was active
+which regime was active
+how long the effect lasted
+whether it replicated
+whether other evidence contradicted it
+whether a simpler model explains it
+and whether the relationship survives challenge
+</code></pre>
+<p>Only then does resonance begin to become structural rather than rhetorical.</p>
+<p>Sometimes the observer will find a stable relationship.</p>
+<p>Sometimes it will find a mixed topology.</p>
+<p>Sometimes a pair or team will exhibit behavior not represented well by its components.</p>
+<p>Sometimes the supposed resonance will dissolve once task difficulty is controlled.</p>
+<p>Sometimes the effect will drift away.</p>
+<p>And sometimes the strongest possible output will be:</p>
+<pre><code class="language-text">no detectable resonance
+</code></pre>
+<p>That is not a failure of the observer.</p>
+<p>It is evidence that the word was not needed.</p>
+<blockquote>
+<p><strong>The Resonance Observer succeeds when it tells us not merely where expression changed, but whether the relationship behind that change survives evidence, context, time, and challenge.</strong></p>
+</blockquote>
   </main>
 </body>
 </html>

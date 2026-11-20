@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/predictive_analytics/uncertainty_layer.md">
-  <title>uncertainty_layer</title>
+  <title>Predictive Analytics — Uncertainty Layer</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,7 +92,2142 @@
   </aside>
 
   <main>
+<h1 id="predictive-analytics-uncertainty-layer">Predictive Analytics — Uncertainty Layer</h1>
+<blockquote>
+<p><strong>Uncertainty is not missing confidence. It is information about the boundary of what the evidence currently supports.</strong></p>
+</blockquote>
+<h2 id="module">Module</h2>
+<p>Predictive Analytics</p>
+<h2 id="layer-id">Layer ID</h2>
+<p><code>uncertainty</code></p>
+<h2 id="operator">Operator</h2>
+<p><code>PA-Uncertainty</code></p>
+<h2 id="status">Status</h2>
+<p>Experimental.</p>
+<h2 id="validation-state">Validation State</h2>
+<p>Unvalidated.</p>
+<h2 id="intended-role">Intended Role</h2>
+<p>Evidence uncertainty, measurement uncertainty, model uncertainty, substrate uncertainty, regime uncertainty, causal uncertainty, generalization uncertainty, confidence calibration, abstention, and uncertainty propagation.</p>
+<h2 id="decision-authority">Decision Authority</h2>
+<p>None.</p>
+<hr>
+<h1 id="purpose">Purpose</h1>
+<p>The Uncertainty Layer represents what Predictive Analytics does not know, cannot distinguish, has not measured, or cannot currently justify.</p>
+<p>It operates across:</p>
+<ul>
+<li>predictions,</li>
+<li>observations,</li>
+<li>evidence,</li>
+<li>dimensions,</li>
+<li>substrates,</li>
+<li>regimes,</li>
+<li>model mismatch,</li>
+<li>resonance,</li>
+<li>coherence,</li>
+<li>drift,</li>
+<li>counterfactuals,</li>
+<li>adapters,</li>
+<li>profiles,</li>
+<li>and review.</li>
+</ul>
+<p>The layer exists to prevent a common failure:</p>
+<pre><code class="language-text">missing information
+      │
+      ▼
+implicit assumption
+      │
+      ▼
+apparently complete assessment
+</code></pre>
+<p>Instead:</p>
+<pre><code class="language-text">missing information
+      │
+      ▼
+explicit uncertainty
+</code></pre>
+<hr>
+<h1 id="core-principle">Core Principle</h1>
+<p>Uncertainty should remain visible until evidence justifies reducing it.</p>
+<p>Therefore:</p>
+<pre><code class="language-text">unknown != zero
+unknown != average
+unknown != weak
+unknown != false
+uncertain != incorrect
+confidence != certainty
+</code></pre>
+<hr>
+<h1 id="uncertainty-is-an-output">Uncertainty Is an Output</h1>
+<p>Predictive systems often produce:</p>
+<pre><code class="language-text">prediction
++
+confidence
+</code></pre>
+<p>Predictive Analytics expands this to something closer to:</p>
+<pre><code class="language-text">prediction
++
+evidence quality
++
+measurement uncertainty
++
+model uncertainty
++
+substrate uncertainty
++
+regime uncertainty
++
+causal uncertainty
++
+generalization uncertainty
++
+applicability uncertainty
++
+known unknowns
+</code></pre>
+<p>Not every use requires every uncertainty field.</p>
+<p>The important principle is that uncertainty may itself have structure.</p>
+<hr>
+<h1 id="uncertainty-is-multidimensional">Uncertainty Is Multidimensional</h1>
+<p>Avoid:</p>
+<pre><code class="language-text">Overall Uncertainty:
+  37%
+</code></pre>
+<p>unless a validated aggregation rule exists.</p>
+<p>Prefer:</p>
+<pre><code class="language-yaml">uncertainty:
+  measurement: low
+  evidence: medium
+  model_fit: medium
+  substrate: high
+  regime: high
+  causal: very_high
+  generalization: high
+</code></pre>
+<p>This preserves where uncertainty comes from.</p>
+<hr>
+<h1 id="working-definition">Working Definition</h1>
+<p>Within Predictive Analytics:</p>
+<blockquote>
+<p><strong>Uncertainty is an explicit representation of limits on justified inference arising from incomplete evidence, measurement variability, model limitations, ambiguous context, unknown applicability, unresolved alternatives, or incomplete knowledge.</strong></p>
+</blockquote>
+<p>This definition is intentionally broad.</p>
+<p>Individual uncertainty classes should be operationalized separately.</p>
+<hr>
+<h1 id="uncertainty-pipeline">Uncertainty Pipeline</h1>
+<pre><code class="language-text">Assessment
+    │
+    ▼
+Identify Claims
+    │
+    ▼
+Trace Evidence
+    │
+    ▼
+Inspect Missing Evidence
+    │
+    ▼
+Inspect Measurement
+    │
+    ▼
+Inspect Model
+    │
+    ▼
+Inspect Substrate
+    │
+    ▼
+Inspect Regime
+    │
+    ▼
+Inspect Time / Drift
+    │
+    ▼
+Inspect Counterevidence
+    │
+    ▼
+Inspect Alternative Interpretations
+    │
+    ▼
+Inspect Counterfactual Fragility
+    │
+    ▼
+Classify Uncertainty
+    │
+    ▼
+Calibrate Confidence
+    │
+    ▼
+Decide:
+  report
+  narrow claim
+  request evidence
+  abstain
+  escalate
+</code></pre>
+<hr>
+<h1 id="uncertainty-classes">Uncertainty Classes</h1>
+<p>The initial layer defines fourteen provisional uncertainty classes.</p>
+<pre><code class="language-text">UL-01  Evidence Uncertainty
+UL-02  Measurement Uncertainty
+UL-03  Sampling Uncertainty
+UL-04  Model Uncertainty
+UL-05  Representation Uncertainty
+UL-06  Substrate Uncertainty
+UL-07  Regime Uncertainty
+UL-08  Temporal Uncertainty
+UL-09  Observer Uncertainty
+UL-10  Causal Uncertainty
+UL-11  Generalization Uncertainty
+UL-12  Applicability Uncertainty
+UL-13  Counterfactual Uncertainty
+UL-14  Framework Uncertainty
+</code></pre>
+<p>These may overlap.</p>
+<p>Their purpose is diagnostic separation rather than taxonomy for its own sake.</p>
+<hr>
+<h1 id="ul-01-evidence-uncertainty">UL-01 — Evidence Uncertainty</h1>
+<h2 id="question">Question</h2>
+<blockquote>
+<p><strong>Do we have enough relevant and sufficiently independent evidence to support the claim?</strong></p>
+</blockquote>
+<p>Potential sources:</p>
+<pre><code class="language-text">few observations
+missing evidence
+low evidence coverage
+shared evidence sources
+uncertain provenance
+contradictory evidence
+weak replication
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-yaml">evidence_uncertainty:
+  status: high
 
+  reasons:
+    - one independent observation
+    - no alternate-form replication
+</code></pre>
+<hr>
+<h1 id="evidence-count-is-not-independence">Evidence Count Is Not Independence</h1>
+<p>Suppose:</p>
+<pre><code class="language-text">five adapters
+</code></pre>
+<p>interpret:</p>
+<pre><code class="language-text">one observation
+</code></pre>
+<p>Correct:</p>
+<pre><code class="language-text">evidence uncertainty:
+  remains high
+</code></pre>
+<p>if one observation is inadequate.</p>
+<p>Adapter agreement does not multiply independent evidence.</p>
+<hr>
+<h1 id="ul-02-measurement-uncertainty">UL-02 — Measurement Uncertainty</h1>
+<h2 id="question_1">Question</h2>
+<blockquote>
+<p><strong>How uncertain is the observed value itself?</strong></p>
+</blockquote>
+<p>Potential sources:</p>
+<pre><code class="language-text">instrument reliability
+scoring variability
+measurement noise
+rater disagreement
+limited resolution
+ambiguous response
+instrument version
+</code></pre>
+<p>Measurement uncertainty may exist even when the model is perfectly specified.</p>
+<hr>
+<h1 id="measurement-versus-model-uncertainty">Measurement Versus Model Uncertainty</h1>
+<pre><code class="language-text">measurement uncertainty:
+  uncertainty about observation
+
+model uncertainty:
+  uncertainty about representation or prediction
+</code></pre>
+<p>They should remain separate.</p>
+<hr>
+<h1 id="ul-03-sampling-uncertainty">UL-03 — Sampling Uncertainty</h1>
+<h2 id="question_2">Question</h2>
+<blockquote>
+<p><strong>How much could the inference depend on which observations, tasks, cases, or samples happened to be included?</strong></p>
+</blockquote>
+<p>Examples:</p>
+<pre><code class="language-text">small task set
+small sample
+uneven sampling
+missing subgroups
+limited domains
+limited time windows
+</code></pre>
+<p>Sampling uncertainty is especially important before population-level generalization.</p>
+<hr>
+<h1 id="ul-04-model-uncertainty">UL-04 — Model Uncertainty</h1>
+<h2 id="question_3">Question</h2>
+<blockquote>
+<p><strong>How uncertain are we that the chosen model adequately represents the relevant relationship?</strong></p>
+</blockquote>
+<p>Possible sources:</p>
+<pre><code class="language-text">model selection
+parameter uncertainty
+poor calibration
+limited validation
+model version change
+unknown assumptions
+competing models
+</code></pre>
+<p>Possible record:</p>
+<pre><code class="language-yaml">model_uncertainty:
+  candidate_models:
+    - M1
+    - M2
+    - M3
+
+  materially_different_results:
+    true
+
+  status:
+    high
+</code></pre>
+<hr>
+<h1 id="ul-05-representation-uncertainty">UL-05 — Representation Uncertainty</h1>
+<h2 id="question_4">Question</h2>
+<blockquote>
+<p><strong>Would another reasonable representation of the same evidence materially change the interpretation?</strong></p>
+</blockquote>
+<p>Example:</p>
+<pre><code class="language-text">scalar:
+  low
+
+multidimensional:
+  heterogeneous
+</code></pre>
+<p>Possible:</p>
+<pre><code class="language-text">representation uncertainty:
+  high
+</code></pre>
+<p>until one representation demonstrates stronger validity for the intended use.</p>
+<hr>
+<h1 id="representation-uncertainty-and-riqf">Representation Uncertainty and RIQF</h1>
+<p>RIQF does not eliminate representation uncertainty.</p>
+<p>It creates another representation.</p>
+<p>Therefore:</p>
+<pre><code class="language-text">scalar uncertainty
+</code></pre>
+<p>should not be replaced by:</p>
+<pre><code class="language-text">RIQF certainty
+</code></pre>
+<p>without validation.</p>
+<hr>
+<h1 id="ul-06-substrate-uncertainty">UL-06 — Substrate Uncertainty</h1>
+<h2 id="question_5">Question</h2>
+<blockquote>
+<p><strong>How uncertain are we about the relationship between observed expression and measurement substrate?</strong></p>
+</blockquote>
+<p>Sources may include:</p>
+<pre><code class="language-text">few matched comparisons
+several variables changed simultaneously
+unclear task comparability
+accessibility uncertainty
+tool-access difference
+system-boundary difference
+failed replication
+</code></pre>
+<hr>
+<h1 id="substrate-uncertainty-example">Substrate Uncertainty Example</h1>
+<pre><code class="language-yaml">substrate_uncertainty:
+  timing_effect:
+    medium
+
+  representation_effect:
+    high
+
+  response_structure_effect:
+    high
+
+  causal_attribution:
+    very_high
+</code></pre>
+<p>This is more informative than:</p>
+<pre><code class="language-text">substrate mismatch:
+  yes
+</code></pre>
+<hr>
+<h1 id="ul-07-regime-uncertainty">UL-07 — Regime Uncertainty</h1>
+<h2 id="question_6">Question</h2>
+<blockquote>
+<p><strong>How certain are we that meaningful operating regimes have been correctly identified?</strong></p>
+</blockquote>
+<p>Possible sources:</p>
+<pre><code class="language-text">weak within-regime stability
+unclear boundaries
+small observation count
+boundary sensitivity
+post-hoc segmentation
+overlapping regimes
+unknown regime
+</code></pre>
+<hr>
+<h1 id="regime-boundary-uncertainty">Regime Boundary Uncertainty</h1>
+<p>A boundary may be:</p>
+<pre><code class="language-text">exact
+interval
+gradual
+probabilistic
+unknown
+</code></pre>
+<p>The uncertainty representation should preserve that.</p>
+<hr>
+<h1 id="ul-08-temporal-uncertainty">UL-08 — Temporal Uncertainty</h1>
+<h2 id="question_7">Question</h2>
+<blockquote>
+<p><strong>How much uncertainty arises from observation time, validity window, change, or temporal sampling?</strong></p>
+</blockquote>
+<p>Possible sources:</p>
+<pre><code class="language-text">old evidence
+short observation window
+missing timestamps
+sparse longitudinal data
+possible drift
+unknown recovery
+model update
+instrument update
+</code></pre>
+<hr>
+<h1 id="temporal-validity">Temporal Validity</h1>
+<p>A prediction may be well supported at:</p>
+<pre><code class="language-text">T1
+</code></pre>
+<p>and uncertain at:</p>
+<pre><code class="language-text">T2
+</code></pre>
+<p>if the relevant system or environment changed.</p>
+<p>Therefore:</p>
+<pre><code class="language-text">confidence
+</code></pre>
+<p>should not necessarily remain constant forever.</p>
+<hr>
+<h1 id="ul-09-observer-uncertainty">UL-09 — Observer Uncertainty</h1>
+<h2 id="question_8">Question</h2>
+<blockquote>
+<p><strong>How much uncertainty arises from the evaluator, interpretation process, or observing system?</strong></p>
+</blockquote>
+<p>Potential sources:</p>
+<pre><code class="language-text">inter-rater disagreement
+AI model version
+reviewer expertise
+ambiguous rubric
+observer bias
+interpretive inconsistency
+</code></pre>
+<hr>
+<h1 id="observer-transparency">Observer Transparency</h1>
+<p>Where possible:</p>
+<pre><code class="language-yaml">observer:
+  type:
+  id:
+  version:
+  qualification:
+  reliability:
+</code></pre>
+<p>Unknown fields remain unknown.</p>
+<hr>
+<h1 id="ul-10-causal-uncertainty">UL-10 — Causal Uncertainty</h1>
+<h2 id="question_9">Question</h2>
+<blockquote>
+<p><strong>How uncertain are we about why the observed relationship occurred?</strong></p>
+</blockquote>
+<p>This uncertainty should often remain high.</p>
+<p>Example:</p>
+<pre><code class="language-text">timed performance:
+  weak
+
+reflective performance:
+  strong
+</code></pre>
+<p>Known:</p>
+<pre><code class="language-text">performance differs
+</code></pre>
+<p>Unknown:</p>
+<pre><code class="language-text">why
+</code></pre>
+<p>Therefore:</p>
+<pre><code class="language-yaml">causal_uncertainty:
+  status: very_high
+</code></pre>
+<p>may coexist with:</p>
+<pre><code class="language-yaml">difference_confidence:
+  high
+</code></pre>
+<p>This is an important distinction.</p>
+<hr>
+<h1 id="observational-confidence-versus-causal-confidence">Observational Confidence Versus Causal Confidence</h1>
+<p>Example:</p>
+<pre><code class="language-yaml">confidence:
+  observed_difference:
+    high
+
+  substrate_association:
+    medium
+
+  causal_explanation:
+    very_low
+</code></pre>
+<p>A single global confidence value would erase this structure.</p>
+<hr>
+<h1 id="ul-11-generalization-uncertainty">UL-11 — Generalization Uncertainty</h1>
+<h2 id="question_10">Question</h2>
+<blockquote>
+<p><strong>How uncertain are we that the observed result extends beyond the current observations?</strong></p>
+</blockquote>
+<p>Potential targets:</p>
+<pre><code class="language-text">new tasks
+new domains
+new substrates
+new regimes
+future time
+other populations
+other organizations
+other AI models
+other environments
+</code></pre>
+<hr>
+<h1 id="generalization-boundaries">Generalization Boundaries</h1>
+<p>A result may generalize across:</p>
+<pre><code class="language-text">alternate forms
+</code></pre>
+<p>but not:</p>
+<pre><code class="language-text">domains
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">substrates
+</code></pre>
+<p>Therefore generalization itself can be multidimensional.</p>
+<hr>
+<h1 id="ul-12-applicability-uncertainty">UL-12 — Applicability Uncertainty</h1>
+<h2 id="question_11">Question</h2>
+<blockquote>
+<p><strong>Is this construct, metric, adapter, or model appropriate for this type of observed system?</strong></p>
+</blockquote>
+<p>Example:</p>
+<pre><code class="language-text">Embodied / Environmental Fit
+</code></pre>
+<p>for:</p>
+<pre><code class="language-text">text-only AI
+</code></pre>
+<p>may be:</p>
+<pre><code class="language-text">not_applicable
+</code></pre>
+<p>rather than uncertain or weak.</p>
+<p>Applicability uncertainty asks whether that classification itself is clear.</p>
+<hr>
+<h1 id="ul-13-counterfactual-uncertainty">UL-13 — Counterfactual Uncertainty</h1>
+<h2 id="question_12">Question</h2>
+<blockquote>
+<p><strong>Would small reasonable changes materially alter the interpretation?</strong></p>
+</blockquote>
+<p>Possible sources:</p>
+<pre><code class="language-text">threshold sensitivity
+task-order sensitivity
+evidence removal
+model choice
+boundary movement
+evaluator choice
+representation choice
+</code></pre>
+<p>High fragility should generally increase uncertainty.</p>
+<hr>
+<h1 id="ul-14-framework-uncertainty">UL-14 — Framework Uncertainty</h1>
+<h2 id="question_13">Question</h2>
+<blockquote>
+<p><strong>How uncertain are we that Predictive Analytics itself provides a useful representation?</strong></p>
+</blockquote>
+<p>Possible sources:</p>
+<pre><code class="language-text">unvalidated adapters
+unvalidated dimensions
+poor ablation results
+redundant constructs
+weak external validity
+unstable profiles
+alternative conventional methods perform equally well
+</code></pre>
+<p>This uncertainty is required.</p>
+<p>The framework must not place itself outside the uncertainty model.</p>
+<hr>
+<h1 id="framework-uncertainty-record">Framework Uncertainty Record</h1>
+<pre><code class="language-yaml">framework_uncertainty:
+  RIQF:
+    validation_state:
+      unvalidated
+
+  FFT:
+    validation_state:
+      experimental
+
+  RTT:
+    validation_state:
+      experimental
+
+  Resonance:
+    validation_state:
+      experimental
+
+  Structural_Detection:
+    validation_state:
+      experimental
+
+  confidence_in_incremental_value:
+    unknown
+</code></pre>
+<hr>
+<h1 id="confidence">Confidence</h1>
+<p>Confidence is an expressed degree of support for a claim.</p>
+<p>Uncertainty is the broader structure limiting that support.</p>
+<p>They are related.</p>
+<p>They are not exact opposites.</p>
+<hr>
+<h1 id="confidence-is-claim-specific">Confidence Is Claim-Specific</h1>
+<p>Bad:</p>
+<pre><code class="language-text">Confidence:
+  82%
+</code></pre>
+<p>Good:</p>
+<pre><code class="language-yaml">confidence:
+  direct_observation:
+    high
+
+  model_fit:
+    medium
+
+  substrate_interpretation:
+    low
+
+  causal_explanation:
+    very_low
+</code></pre>
+<p>unless a validated probabilistic confidence system exists.</p>
+<hr>
+<h1 id="confidence-states">Confidence States</h1>
+<p>For descriptive use:</p>
+<pre><code class="language-text">none
+very_low
+low
+medium
+high
+very_high
+unknown
+</code></pre>
+<p>These labels should not be treated as numerical probabilities by default.</p>
+<hr>
+<h1 id="confidence-provenance">Confidence Provenance</h1>
+<p>Every confidence claim should ideally identify:</p>
+<pre><code class="language-text">who or what assigned it
+based on what evidence
+using what rule
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-yaml">confidence:
+  value: medium
+
+  assigned_by:
+    Predictive Analytics observer
+
+  basis:
+    - three independent observations
+    - one contradictory observation
+
+  calibration:
+    status: not_validated
+</code></pre>
+<hr>
+<h1 id="calibrated-confidence">Calibrated Confidence</h1>
+<p>A calibrated confidence system should eventually answer:</p>
+<blockquote>
+<p><strong>When the system reports this confidence level, how often do similarly classified claims actually hold under appropriate reference evaluation?</strong></p>
+</blockquote>
+<p>This is the purpose of:</p>
+<pre><code class="language-text">PA-M28 — Confidence Calibration Error
+</code></pre>
+<hr>
+<h1 id="probability-versus-confidence">Probability Versus Confidence</h1>
+<p>A model may output:</p>
+<pre><code class="language-text">P(event) = 0.72
+</code></pre>
+<p>That is not automatically:</p>
+<pre><code class="language-text">72% confidence in the entire interpretation
+</code></pre>
+<p>The probability refers to its defined event.</p>
+<p>Predictive Analytics confidence may refer to:</p>
+<pre><code class="language-text">measurement
+model fit
+mismatch classification
+substrate interpretation
+regime interpretation
+</code></pre>
+<p>These should remain distinct.</p>
+<hr>
+<h1 id="epistemic-and-data-related-uncertainty">Epistemic and Data-Related Uncertainty</h1>
+<p>Where useful, uncertainty may be conceptually separated into:</p>
+<pre><code class="language-text">uncertainty reducible through
+better knowledge or modeling
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">variation intrinsic to
+the observed process
+</code></pre>
+<p>However, the module should not force formal labels unless they are operationally justified in the study.</p>
+<p>The practical question is:</p>
+<blockquote>
+<p><strong>What additional evidence, if any, could reduce this uncertainty?</strong></p>
+</blockquote>
+<hr>
+<h1 id="reducible-uncertainty">Reducible Uncertainty</h1>
+<p>Examples may include:</p>
+<pre><code class="language-text">missing replication
+unknown model version
+missing substrate comparison
+missing regime metadata
+insufficient evidence coverage
+unknown instrument reliability
+</code></pre>
+<p>Possible action:</p>
+<pre><code class="language-text">collect evidence
+</code></pre>
+<hr>
+<h1 id="irreducible-or-residual-uncertainty">Irreducible or Residual Uncertainty</h1>
+<p>Some variability may remain even after strong observation.</p>
+<p>Correct:</p>
+<pre><code class="language-text">residual uncertainty:
+  preserved
+</code></pre>
+<p>not:</p>
+<pre><code class="language-text">force deterministic explanation
+</code></pre>
+<hr>
+<h1 id="known-unknowns">Known Unknowns</h1>
+<p>Known unknowns should be explicit.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">known_unknowns:
+  - causal mechanism
+  - long-term stability
+  - cross-cultural generalization
+  - external validity
+</code></pre>
+<hr>
+<h1 id="unknown-unknowns">Unknown Unknowns</h1>
+<p>A system cannot enumerate what it truly does not know exists.</p>
+<p>Therefore Predictive Analytics should preserve a broader limitation:</p>
+<pre><code class="language-text">unmodeled uncertainty exists
+</code></pre>
+<p>especially where the observation boundary is narrow.</p>
+<hr>
+<h1 id="uncertainty-propagation">Uncertainty Propagation</h1>
+<p>Uncertainty should travel through derived interpretations.</p>
+<p>Conceptually:</p>
+<pre><code class="language-text">uncertain evidence
+      │
+      ▼
+measurement
+      │
+      ▼
+dimension
+      │
+      ▼
+profile
+      │
+      ▼
+model mismatch
+</code></pre>
+<p>A downstream layer should not become more certain merely because uncertainty was hidden upstream.</p>
+<hr>
+<h1 id="propagation-principle">Propagation Principle</h1>
+<pre><code class="language-text">derived certainty
+cannot legitimately exceed
+what evidence and method justify
+</code></pre>
+<p>This does not mean downstream uncertainty is always numerically larger.</p>
+<p>It means certainty must be independently justified.</p>
+<hr>
+<h1 id="evidence-to-dimension-propagation">Evidence-to-Dimension Propagation</h1>
+<p>Example:</p>
+<pre><code class="language-yaml">evidence:
+  source_count: 1
+  reliability: unknown
+
+dimension:
+  structural_reasoning:
+    expression: strong
+    confidence: low
+</code></pre>
+<p>Correct.</p>
+<p>Not:</p>
+<pre><code class="language-text">expression strong
+therefore confidence high
+</code></pre>
+<hr>
+<h1 id="dimension-to-profile-propagation">Dimension-to-Profile Propagation</h1>
+<p>Suppose:</p>
+<pre><code class="language-text">5 dimensions:
+  medium confidence
+
+10 dimensions:
+  unknown
+
+9 dimensions:
+  not observed
+</code></pre>
+<p>The profile should not be described as:</p>
+<pre><code class="language-text">high-confidence complete fingerprint
+</code></pre>
+<hr>
+<h1 id="adapter-to-profile-propagation">Adapter-to-Profile Propagation</h1>
+<p>Five adapters may agree.</p>
+<p>If they consume one evidence source:</p>
+<pre><code class="language-text">profile confidence
+</code></pre>
+<p>should not rise as though five independent observations existed.</p>
+<hr>
+<h1 id="contradiction-and-uncertainty">Contradiction and Uncertainty</h1>
+<p>Contradictory evidence usually increases uncertainty unless a supported conditional explanation exists.</p>
+<p>Example:</p>
+<pre><code class="language-text">Task A:
+  strong
+
+Task B:
+  weak
+</code></pre>
+<p>Correct initial result:</p>
+<pre><code class="language-yaml">uncertainty:
+  stability:
+    high
+
+  explanation:
+    high
+</code></pre>
+<p>not:</p>
+<pre><code class="language-text">moderate
+</code></pre>
+<p>by simple averaging.</p>
+<hr>
+<h1 id="conditional-resolution">Conditional Resolution</h1>
+<p>If further evidence demonstrates:</p>
+<pre><code class="language-text">Task A:
+  Regime 1
+
+Task B:
+  Regime 2
+</code></pre>
+<p>with a reproducible pattern, uncertainty may shift.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">uncertainty:
+  existence_of_difference:
+    low
+
+  regime_conditioning:
+    medium
+
+  causal_explanation:
+    high
+</code></pre>
+<p>Uncertainty is transformed, not necessarily eliminated.</p>
+<hr>
+<h1 id="uncertainty-and-coherence">Uncertainty and Coherence</h1>
+<p>High coherence may reduce uncertainty about:</p>
+<pre><code class="language-text">profile structure
+</code></pre>
+<p>but not necessarily:</p>
+<pre><code class="language-text">truth
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-text">coherent wrong model
+</code></pre>
+<p>remains possible.</p>
+<p>Therefore:</p>
+<pre><code class="language-text">coherence != certainty
+</code></pre>
+<hr>
+<h1 id="uncertainty-and-drift">Uncertainty and Drift</h1>
+<p>Potential drift increases uncertainty about whether historical observations remain current.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">temporal_uncertainty:
+  status: high
+
+  reason:
+    material profile drift candidate
+</code></pre>
+<p>A new assessment may be required.</p>
+<hr>
+<h1 id="uncertainty-and-counterfactuals">Uncertainty and Counterfactuals</h1>
+<p>Counterfactual stability can inform uncertainty.</p>
+<p>If:</p>
+<pre><code class="language-text">tiny irrelevant perturbation
+  -&gt;
+major interpretation change
+</code></pre>
+<p>then:</p>
+<pre><code class="language-text">counterfactual uncertainty:
+  high
+</code></pre>
+<p>If:</p>
+<pre><code class="language-text">irrelevant perturbations
+  -&gt;
+stable result
+
+relevant changes
+  -&gt;
+appropriate updates
+</code></pre>
+<p>confidence may increase.</p>
+<hr>
+<h1 id="uncertainty-and-model-mismatch">Uncertainty and Model Mismatch</h1>
+<p>Model mismatch itself may be uncertain.</p>
+<p>Prefer:</p>
+<pre><code class="language-yaml">model_mismatch:
+  status: candidate
+
+  confidence: medium
+
+  uncertainty:
+    mismatch_class: high
+    causal_explanation: very_high
+</code></pre>
+<p>over:</p>
+<pre><code class="language-text">model mismatch:
+  yes
+</code></pre>
+<p>when the evidence is incomplete.</p>
+<hr>
+<h1 id="uncertainty-and-substrate">Uncertainty and Substrate</h1>
+<p>Possible:</p>
+<pre><code class="language-yaml">substrate:
+  observed_difference:
+    high_confidence
+
+  substrate_specificity:
+    low_confidence
+
+  causal_effect:
+    very_low_confidence
+</code></pre>
+<p>Again, the difference and its explanation are separate claims.</p>
+<hr>
+<h1 id="uncertainty-and-regime">Uncertainty and Regime</h1>
+<p>Possible:</p>
+<pre><code class="language-yaml">regime:
+  regime_a_exists:
+    medium
+
+  regime_b_exists:
+    medium
+
+  exact_boundary:
+    low
+
+  causal_meaning:
+    very_low
+</code></pre>
+<p>A regime label should not create false precision.</p>
+<hr>
+<h1 id="uncertainty-and-resonance">Uncertainty and Resonance</h1>
+<p>Resonance may have:</p>
+<pre><code class="language-yaml">resonance:
+  direction:
+    medium
+
+  magnitude:
+    low
+
+  persistence:
+    medium
+
+  specificity:
+    low
+
+  generalization:
+    very_low
+
+  causation:
+    very_low
+</code></pre>
+<p>This should be expected during early research.</p>
+<hr>
+<h1 id="uncertainty-and-riqf">Uncertainty and RIQF</h1>
+<p>Every RIQF fingerprint should include an uncertainty profile.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">riqf_uncertainty:
+  dimension_confidence:
+    structural_reasoning: medium
+    temporal_reasoning: medium
+    transfer: low
+    environmental_fit: none
+
+  substrate_uncertainty:
+    medium
+
+  regime_uncertainty:
+    high
+
+  temporal_uncertainty:
+    medium
+
+  generalization_uncertainty:
+    high
+
+  causal_uncertainty:
+    very_high
+
+  framework_uncertainty:
+    high
+</code></pre>
+<p>This is more informative than:</p>
+<pre><code class="language-text">RIQF Confidence:
+  76%
+</code></pre>
+<hr>
+<h1 id="uncertainty-visualization">Uncertainty Visualization</h1>
+<p>A human-facing display may conceptually show:</p>
+<pre><code class="language-text">Structural Reasoning
+  Expression   ████████
+  Confidence   █████
+  Evidence     ████
+  Unknown      ██
+
+Transfer
+  Expression   ███████
+  Confidence   ███
+  Evidence     ██
+  Unknown      ████
+</code></pre>
+<p>The bars are conceptual.</p>
+<p>A real implementation must avoid implying validated precision where none exists.</p>
+<hr>
+<h1 id="unknown-region">Unknown Region</h1>
+<p>A fingerprint should be allowed to look incomplete.</p>
+<p>Example:</p>
+<pre><code class="language-text">Structural              STRONG
+Temporal                MODERATE
+Transfer                UNKNOWN
+Environmental Fit       NOT OBSERVED
+Social Interpretation   INSUFFICIENT EVIDENCE
+</code></pre>
+<p>This may be a better assessment than a fully populated but speculative chart.</p>
+<hr>
+<h1 id="abstention">Abstention</h1>
+<p>The Uncertainty Layer supports explicit abstention.</p>
+<p>Possible states:</p>
+<pre><code class="language-text">abstain_dimension
+abstain_profile
+abstain_mismatch
+abstain_substrate
+abstain_regime
+abstain_causal
+abstain_decision
+</code></pre>
+<hr>
+<h1 id="abstention-is-scoped">Abstention Is Scoped</h1>
+<p>The system does not always need to abandon the entire assessment.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">assessment:
+  direct_observation:
+    report
+
+  dimension:
+    report_with_uncertainty
+
+  model_mismatch:
+    abstain
+
+  causal_explanation:
+    abstain
+</code></pre>
+<p>This preserves what is known without overreaching.</p>
+<hr>
+<h1 id="abstention-trigger">Abstention Trigger</h1>
+<p>Possible triggers:</p>
+<pre><code class="language-text">evidence below requirement
+conflicting evidence
+unknown applicability
+poor confidence calibration
+high counterfactual fragility
+unknown system boundary
+unknown model version
+unsupported generalization
+</code></pre>
+<hr>
+<h1 id="abstention-rate">Abstention Rate</h1>
+<p>Relevant metric:</p>
+<pre><code class="language-text">PA-M30 — Abstention Rate
+</code></pre>
+<p>High abstention is not automatically good.</p>
+<p>Low abstention is not automatically good.</p>
+<hr>
+<h1 id="abstention-utility">Abstention Utility</h1>
+<p>Relevant metric:</p>
+<pre><code class="language-text">PA-M31 — Abstention Utility
+</code></pre>
+<p>The research question is:</p>
+<blockquote>
+<p><strong>Does abstention reduce unsupported or harmful error enough to justify the lost coverage and added burden?</strong></p>
+</blockquote>
+<hr>
+<h1 id="request-more-evidence">Request More Evidence</h1>
+<p>Some uncertainty can trigger:</p>
+<pre><code class="language-text">collect_more_evidence
+</code></pre>
+<p>Possible request:</p>
+<pre><code class="language-text">matched alternate task
+independent replication
+alternate evaluator
+substrate comparison
+regime observation
+longitudinal follow-up
+</code></pre>
+<p>But additional data has costs.</p>
+<hr>
+<h1 id="evidence-acquisition-boundary">Evidence Acquisition Boundary</h1>
+<p>More evidence may increase:</p>
+<pre><code class="language-text">privacy burden
+subject burden
+time
+cost
+stress
+review burden
+</code></pre>
+<p>Therefore:</p>
+<pre><code class="language-text">uncertainty reduction
+</code></pre>
+<p>must be balanced against:</p>
+<pre><code class="language-text">evidence acquisition burden
+</code></pre>
+<p>Relevant metric:</p>
+<pre><code class="language-text">PA-M51
+</code></pre>
+<hr>
+<h1 id="stop-rule">Stop Rule</h1>
+<p>Sometimes the correct action is:</p>
+<pre><code class="language-text">stop collecting
+</code></pre>
+<p>because the additional information is not justified by the intended use.</p>
+<p>Uncertainty does not create an unlimited license to observe.</p>
+<hr>
+<h1 id="human-review">Human Review</h1>
+<p>The Uncertainty Layer may recommend human review when:</p>
+<pre><code class="language-text">consequence is high
+uncertainty is material
+model mismatch is unresolved
+evidence is contradictory
+subject contests evidence
+system boundary is unclear
+counterfactual fragility is high
+</code></pre>
+<p>Review does not eliminate uncertainty automatically.</p>
+<hr>
+<h1 id="review-uncertainty">Review Uncertainty</h1>
+<p>A reviewer may conclude:</p>
+<pre><code class="language-text">still uncertain
+</code></pre>
+<p>That result should remain supported.</p>
+<p>Human presence is not uncertainty erasure.</p>
+<hr>
+<h1 id="reviewer-confidence">Reviewer Confidence</h1>
+<p>Reviewer confidence should remain separate from model confidence.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">confidence:
+  model:
+    medium
+
+  reviewer:
+    low
+</code></pre>
+<p>This disagreement may itself be informative.</p>
+<hr>
+<h1 id="calibration-loop">Calibration Loop</h1>
+<p>Conceptually:</p>
+<pre><code class="language-text">Prediction
+   │
+   ▼
+Confidence
+   │
+   ▼
+Outcome
+   │
+   ▼
+Calibration Analysis
+   │
+   ▼
+Future Confidence Rules
+</code></pre>
+<p>Confidence systems should learn from repeated outcomes where possible.</p>
+<hr>
+<h1 id="pa-calibrate"><code>PA-Calibrate</code></h1>
+<p>Conceptual operator:</p>
+<pre><code class="language-text">PA-Calibrate(predictions, confidence, outcomes)
+  -&gt; calibration_record
+</code></pre>
+<p>It does not guarantee calibration.</p>
+<p>It represents the operation to be tested.</p>
+<hr>
+<h1 id="calibration-record">Calibration Record</h1>
+<pre><code class="language-yaml">calibration:
+  target_claim_type:
+
+  stated_confidence:
+  observed_reliability:
+
+  sample_size:
+
+  metric:
+  uncertainty:
+
+  status:
+</code></pre>
+<hr>
+<h1 id="confidence-without-calibration">Confidence Without Calibration</h1>
+<p>If no empirical calibration exists:</p>
+<pre><code class="language-yaml">confidence:
+  value: medium
+
+  calibration:
+    status: unvalidated
+</code></pre>
+<p>This qualifier matters.</p>
+<hr>
+<h1 id="unsupported-assertion-rate">Unsupported Assertion Rate</h1>
+<p>Relevant metric:</p>
+<pre><code class="language-text">PA-M32 — Unsupported Assertion Rate
+</code></pre>
+<p>Conceptually:</p>
+<pre><code class="language-text">unsupported assertions
+/
+all profile assertions
+</code></pre>
+<p>A lower rate is desirable.</p>
+<hr>
+<h1 id="unsupported-certainty">Unsupported Certainty</h1>
+<p>The Uncertainty Layer should specifically monitor statements that remove uncertainty without evidence.</p>
+<p>Examples:</p>
+<pre><code class="language-text">definitely
+proves
+reveals true capability
+caused by
+always
+never
+</code></pre>
+<p>Such language may be justified occasionally.</p>
+<p>It requires proportionately strong evidence.</p>
+<hr>
+<h1 id="uncertainty-ledger">Uncertainty Ledger</h1>
+<p>A useful assessment may include an uncertainty ledger.</p>
+<pre><code class="language-yaml">uncertainty_ledger:
+  known:
+    - observed structural difference
+    - baseline prediction preserved
+
+  uncertain:
+    - substrate specificity
+    - regime boundary
+
+  unknown:
+    - causal mechanism
+    - long-term generalization
+
+  not_observed:
+    - environmental fit
+
+  not_applicable:
+    - none
+
+  unresolved:
+    - model mismatch class
+</code></pre>
+<p>This provides an auditable boundary around inference.</p>
+<hr>
+<h1 id="assumption-ledger">Assumption Ledger</h1>
+<p>Uncertainty also arises from assumptions.</p>
+<p>Suggested:</p>
+<pre><code class="language-yaml">assumptions:
+  - id: A1
+    claim:
+      tasks are sufficiently comparable
+
+    support:
+      partial
+
+    sensitivity:
+      high
+
+  - id: A2
+    claim:
+      evaluator differences are negligible
+
+    support:
+      unknown
+</code></pre>
+<p>Counterfactual analysis can challenge these assumptions.</p>
+<hr>
+<h1 id="alternative-interpretation-ledger">Alternative Interpretation Ledger</h1>
+<pre><code class="language-yaml">alternatives:
+  - task_difficulty
+  - substrate_effect
+  - regime_effect
+  - practice
+  - measurement_noise
+  - genuine_capability_variation
+  - model_error
+  - unknown
+</code></pre>
+<p>Alternatives do not all need equal probability.</p>
+<p>They simply should not disappear prematurely.</p>
+<hr>
+<h1 id="pax-01-example">PAX-01 Example</h1>
+<p>Synthetic PAX-01:</p>
+<pre><code class="language-text">baseline:
+  timed symbolic weak
+
+extended:
+  structural strong
+  transfer strong
+  ambiguity strong
+</code></pre>
+<p>The observation difference is deliberately obvious in the example.</p>
+<p>The explanation is not.</p>
+<hr>
+<h1 id="pax-01-uncertainty-pass">PAX-01 Uncertainty Pass</h1>
+<pre><code class="language-yaml">uncertainty:
+  baseline_measurement:
+    medium
+
+  extended_observations:
+    medium
+
+  evidence_independence:
+    medium
+
+  structural_reasoning_dimension:
+    medium
+
+  cross_domain_transfer_dimension:
+    high
+
+  substrate_effect:
+    high
+
+  substrate_specificity:
+    very_high
+
+  regime_effect:
+    high
+
+  model_mismatch:
+    medium_to_high
+
+  causal_explanation:
+    very_high
+
+  population_generalization:
+    very_high
+
+  longitudinal_stability:
+    very_high
+
+  RIQF_validity:
+    very_high
+</code></pre>
+<p>These descriptors indicate uncertainty magnitude, not performance.</p>
+<hr>
+<h1 id="what-pax-01-supports">What PAX-01 Supports</h1>
+<p>Within the synthetic example:</p>
+<pre><code class="language-text">observations differ across tasks
+profile is asymmetric by construction
+baseline weaknesses remain present
+extended strengths remain present
+</code></pre>
+<p>These are demonstration facts of the synthetic scenario.</p>
+<hr>
+<h1 id="what-pax-01-does-not-support">What PAX-01 Does Not Support</h1>
+<pre><code class="language-text">real-world RIQF validity
+causal substrate interpretation
+causal regime interpretation
+clinical interpretation
+population percentile
+persistent trait inference
+hidden global intelligence
+</code></pre>
+<p>The Uncertainty Layer keeps those boundaries explicit.</p>
+<hr>
+<h1 id="pax-01-claim-decomposition">PAX-01 Claim Decomposition</h1>
+<p>Claim:</p>
+<pre><code class="language-text">PAX-01 performed better on
+reflective relational tasks.
+</code></pre>
+<p>Uncertainty:</p>
+<pre><code class="language-text">low in synthetic scenario
+</code></pre>
+<p>Claim:</p>
+<pre><code class="language-text">reflection caused the improvement.
+</code></pre>
+<p>Uncertainty:</p>
+<pre><code class="language-text">high
+</code></pre>
+<p>Claim:</p>
+<pre><code class="language-text">reflective performance reveals
+PAX-01's true intelligence.
+</code></pre>
+<p>Status:</p>
+<pre><code class="language-text">unsupported
+</code></pre>
+<p>This demonstrates why claim-specific uncertainty matters.</p>
+<hr>
+<h1 id="baseline-sufficient-example">Baseline-Sufficient Example</h1>
+<p>Suppose wider observations consistently support the baseline.</p>
+<p>Then uncertainty about:</p>
+<pre><code class="language-text">model mismatch
+</code></pre>
+<p>may decrease.</p>
+<p>Possible:</p>
+<pre><code class="language-yaml">model_mismatch:
+  status:
+    not_supported
+
+  confidence:
+    medium_to_high_candidate
+</code></pre>
+<p>Uncertainty does not always work against the conventional model.</p>
+<hr>
+<h1 id="conflicting-evidence-example">Conflicting Evidence Example</h1>
+<pre><code class="language-text">Task A:
+  strong
+
+Task B:
+  weak
+
+Task C:
+  strong
+
+Task D:
+  weak
+</code></pre>
+<p>No stable explanation emerges.</p>
+<p>Correct:</p>
+<pre><code class="language-yaml">uncertainty:
+  profile_stability:
+    high
+
+  substrate_effect:
+    high
+
+  regime_effect:
+    high
+
+  causal_explanation:
+    very_high
+
+assessment:
+  stable_dimension:
+    abstain
+</code></pre>
+<hr>
+<h1 id="unknown-model-version-example">Unknown Model Version Example</h1>
+<p>Prediction:</p>
+<pre><code class="language-text">low
+</code></pre>
+<p>Model version:</p>
+<pre><code class="language-text">unknown
+</code></pre>
+<p>Later prediction:</p>
+<pre><code class="language-text">high
+</code></pre>
+<p>Before inferring subject drift:</p>
+<pre><code class="language-yaml">uncertainty:
+  model_version:
+    high
+
+subject_drift:
+  status:
+    unresolved
+</code></pre>
+<hr>
+<h1 id="human-ai-example">Human-AI Example</h1>
+<p>Human-AI pair performs strongly.</p>
+<p>Uncertainty questions:</p>
+<pre><code class="language-text">How much came from the human?
+
+How much came from the AI?
+
+How much came from interaction structure?
+
+Would another AI produce the same result?
+
+Would another human?
+
+Would another workflow?
+</code></pre>
+<p>Correct:</p>
+<pre><code class="language-yaml">attribution_uncertainty:
+  high
+</code></pre>
+<p>until an experimental design addresses it.</p>
+<hr>
+<h1 id="ai-system-example">AI-System Example</h1>
+<p>AI output may vary with:</p>
+<pre><code class="language-text">model version
+prompt
+context
+retrieval
+tools
+routing
+system configuration
+</code></pre>
+<p>Uncertainty should preserve those variables.</p>
+<p>A behavior observed once should not automatically become a permanent AI capability claim.</p>
+<hr>
+<h1 id="organization-example">Organization Example</h1>
+<p>Organizational outcomes may have uncertainty arising from:</p>
+<pre><code class="language-text">staff changes
+policy
+environment
+workflow
+resource constraints
+measurement changes
+external events
+</code></pre>
+<p>The same structure can be useful without implying equivalence to human cognitive uncertainty.</p>
+<hr>
+<h1 id="uncertainty-metrics">Uncertainty Metrics</h1>
+<hr>
+<h1 id="pa-m28-confidence-calibration-error"><code>PA-M28 — Confidence Calibration Error</code></h1>
+<p>Measures correspondence between expressed confidence and observed reliability.</p>
+<p>Conceptually:</p>
+<pre><code class="language-text">CCE =
+  average(
+    |confidence - observed_frequency|
+  )
+</code></pre>
+<p>only where confidence has a defensible quantitative interpretation.</p>
+<hr>
+<h1 id="pa-m29-brier-score"><code>PA-M29 — Brier Score</code></h1>
+<p>Applicable to probabilistic binary predictions where appropriate.</p>
+<pre><code class="language-text">BS =
+  mean(
+    (forecast_probability - outcome)^2
+  )
+</code></pre>
+<p>This is not a universal uncertainty metric.</p>
+<hr>
+<h1 id="pa-m30-abstention-rate"><code>PA-M30 — Abstention Rate</code></h1>
+<pre><code class="language-text">AR =
+  abstained_results
+  /
+  eligible_results
+</code></pre>
+<p>Descriptive.</p>
+<hr>
+<h1 id="pa-m31-abstention-utility"><code>PA-M31 — Abstention Utility</code></h1>
+<p>Conceptually:</p>
+<pre><code class="language-text">AU =
+  error_reduction
+  -
+  abstention_cost
+</code></pre>
+<p>The cost model must be declared.</p>
+<hr>
+<h1 id="pa-m32-unsupported-assertion-rate"><code>PA-M32 — Unsupported Assertion Rate</code></h1>
+<pre><code class="language-text">UAR =
+  unsupported_assertions
+  /
+  all_profile_assertions
+</code></pre>
+<p>This is especially important for experimental framework outputs.</p>
+<hr>
+<h1 id="related-metrics">Related Metrics</h1>
+<p>The Uncertainty Layer also consumes:</p>
+<pre><code class="language-text">PA-M01  Dimension Evidence Coverage
+PA-M02  Profile Evidence Coverage
+PA-M03  Evidence Independence Ratio
+
+PA-M04  Test-Retest Stability
+PA-M05  Alternate-Form Stability
+PA-M06  Inter-Rater Agreement
+PA-M07  Profile Topology Stability
+
+PA-M13  Substrate Effect Replicability
+PA-M15  Substrate Specificity
+
+PA-M17  False Regime Alarm Rate
+PA-M18  Regime Boundary Error
+
+PA-M20  Model-Mismatch Precision
+PA-M21  Model-Mismatch Recall
+PA-M22  Model-Mismatch False Positive Rate
+
+PA-M24  Cross-Observation Coherence
+PA-M25  Profile Contradiction Density
+
+PA-M33  Irrelevant Perturbation Stability
+PA-M34  Relevant Change Sensitivity
+PA-M35  Task-Order Sensitivity
+PA-M36  Adapter Ablation Effect
+
+PA-M43  False Favorable Reinterpretation Rate
+PA-M44  False Adverse Reinterpretation Rate
+
+PA-M45  Evidence Reconstruction Rate
+PA-M46  Explanation Completeness
+
+PA-M51  Evidence Acquisition Burden
+PA-M52  Decision Deferral Rate
+</code></pre>
+<hr>
+<h1 id="uncertainty-validation">Uncertainty Validation</h1>
+<p>The Uncertainty Layer itself must be tested.</p>
+<p>Questions include:</p>
+<pre><code class="language-text">Are high-uncertainty cases actually less reliable?
+
+Are low-uncertainty cases more reliable?
+
+Does uncertainty decrease appropriately with good evidence?
+
+Does it increase with contradictions?
+
+Does it increase with missing evidence?
+
+Does it respond to counterfactual fragility?
+
+Does abstention improve outcomes?
+
+</code></pre>
+<hr>
+<h1 id="known-certainty-challenge">Known-Certainty Challenge</h1>
+<p>Provide strong, repeated, controlled synthetic evidence.</p>
+<p>Expected:</p>
+<pre><code class="language-text">relevant uncertainty classes:
+  decrease
+</code></pre>
+<p>The framework should not remain permanently vague.</p>
+<hr>
+<h1 id="known-uncertainty-challenge">Known-Uncertainty Challenge</h1>
+<p>Remove evidence or add ambiguity.</p>
+<p>Expected:</p>
+<pre><code class="language-text">uncertainty:
+  increases
+</code></pre>
+<hr>
+<h1 id="contradiction-challenge">Contradiction Challenge</h1>
+<p>Add contradictory evidence.</p>
+<p>Expected:</p>
+<pre><code class="language-text">uncertainty increases
+</code></pre>
+<p>unless the contradiction is resolved by supported context.</p>
+<hr>
+<h1 id="irrelevant-perturbation-challenge">Irrelevant Perturbation Challenge</h1>
+<p>Change irrelevant metadata.</p>
+<p>Expected:</p>
+<pre><code class="language-text">uncertainty:
+  stable
+</code></pre>
+<hr>
+<h1 id="relevant-change-challenge">Relevant Change Challenge</h1>
+<p>Add material evidence.</p>
+<p>Expected:</p>
+<pre><code class="language-text">uncertainty:
+  updates
+</code></pre>
+<hr>
+<h1 id="false-certainty-challenge">False-Certainty Challenge</h1>
+<p>Give the framework:</p>
+<pre><code class="language-text">one observation
+five agreeing adapters
+</code></pre>
+<p>Expected:</p>
+<pre><code class="language-text">evidence uncertainty:
+  remains substantial
+</code></pre>
+<p>because evidence independence is low.</p>
+<hr>
+<h1 id="false-uncertainty-challenge">False-Uncertainty Challenge</h1>
+<p>Provide strong independent replication.</p>
+<p>The framework should be able to reduce uncertainty.</p>
+<p>A system that always says:</p>
+<pre><code class="language-text">we cannot know
+</code></pre>
+<p>is not calibrated either.</p>
+<hr>
+<h1 id="abstention-challenge">Abstention Challenge</h1>
+<p>Create cases where:</p>
+<pre><code class="language-text">forced prediction:
+  high error
+</code></pre>
+<p>but:</p>
+<pre><code class="language-text">abstention:
+  avoids unsupported claim
+</code></pre>
+<p>Then compare the burden and benefit.</p>
+<hr>
+<h1 id="confidence-calibration-challenge">Confidence Calibration Challenge</h1>
+<p>If the framework uses confidence categories, empirical work should evaluate whether:</p>
+<pre><code class="language-text">high confidence
+</code></pre>
+<p>actually corresponds to more reliable outcomes than:</p>
+<pre><code class="language-text">medium
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">low
+</code></pre>
+<p>If not, the labels should be revised or removed.</p>
+<hr>
+<h1 id="failure-modes">Failure Modes</h1>
+<h2 id="false-precision">False Precision</h2>
+<p>Risk:</p>
+<p>Uncertainty is represented with unsupported numerical precision.</p>
+<p>Mitigation:</p>
+<p>Use descriptive states until calibration exists.</p>
+<hr>
+<h1 id="confidence-theater">Confidence Theater</h1>
+<p>Risk:</p>
+<p>Adding a confidence field makes an unsupported claim appear rigorous.</p>
+<p>Mitigation:</p>
+<p>Require confidence provenance and validation.</p>
+<hr>
+<h1 id="unknown-erasure">Unknown Erasure</h1>
+<p>Risk:</p>
+<p>Missing values silently become defaults.</p>
+<p>Mitigation:</p>
+<p>First-class unknown states.</p>
+<hr>
+<h1 id="uncertainty-collapse">Uncertainty Collapse</h1>
+<p>Risk:</p>
+<p>Many uncertainty types become one score.</p>
+<p>Mitigation:</p>
+<p>Preserve uncertainty vector/profile.</p>
+<hr>
+<h1 id="causal-certainty-inflation">Causal Certainty Inflation</h1>
+<p>Risk:</p>
+<p>Strong observational evidence becomes strong causal confidence.</p>
+<p>Mitigation:</p>
+<p>Separate observational and causal uncertainty.</p>
+<hr>
+<h1 id="adapter-consensus-inflation">Adapter Consensus Inflation</h1>
+<p>Risk:</p>
+<p>Adapter agreement reduces uncertainty despite shared evidence.</p>
+<p>Mitigation:</p>
+<p>Evidence independence.</p>
+<hr>
+<h1 id="rich-model-confidence-bias">Rich-Model Confidence Bias</h1>
+<p>Risk:</p>
+<p>A complex profile receives higher confidence simply because it contains more detail.</p>
+<p>Mitigation:</p>
+<p>Confidence follows evidence, not detail.</p>
+<hr>
+<h1 id="conventional-model-confidence-bias">Conventional-Model Confidence Bias</h1>
+<p>Risk:</p>
+<p>Established-looking models receive certainty beyond available validation.</p>
+<p>Mitigation:</p>
+<p>Apply uncertainty symmetrically.</p>
+<hr>
+<h1 id="permanent-uncertainty">Permanent Uncertainty</h1>
+<p>Risk:</p>
+<p>The framework refuses to become confident even when evidence is strong.</p>
+<p>Mitigation:</p>
+<p>Calibration tests.</p>
+<hr>
+<h1 id="forced-certainty">Forced Certainty</h1>
+<p>Risk:</p>
+<p>Downstream systems require a value, causing unknown to be converted into a guess.</p>
+<p>Mitigation:</p>
+<p>Support abstention and deferral.</p>
+<hr>
+<h1 id="defensive-abstention">Defensive Abstention</h1>
+<p>Risk:</p>
+<p>The system abstains excessively to avoid measurable errors.</p>
+<p>Mitigation:</p>
+<p>PA-M31.</p>
+<hr>
+<h1 id="evidence-gluttony">Evidence Gluttony</h1>
+<p>Risk:</p>
+<p>Every uncertainty triggers more surveillance or data collection.</p>
+<p>Mitigation:</p>
+<p>Evidence burden and privacy limits.</p>
+<hr>
+<h1 id="framework-exceptionalism">Framework Exceptionalism</h1>
+<p>Risk:</p>
+<p>PA applies uncertainty to external models while treating its own constructs as certain.</p>
+<p>Mitigation:</p>
+<p>UL-14 Framework Uncertainty.</p>
+<hr>
+<h1 id="narrative-certainty">Narrative Certainty</h1>
+<p>Risk:</p>
+<p>A coherent explanation feels more certain than the evidence warrants.</p>
+<p>Mitigation:</p>
+<p>Separate coherence from confidence.</p>
+<hr>
+<h1 id="uncertainty-as-weakness">Uncertainty as Weakness</h1>
+<p>Risk:</p>
+<p>Users interpret uncertainty as a defect.</p>
+<p>Mitigation:</p>
+<p>Present uncertainty as information about evidence boundaries.</p>
+<hr>
+<h1 id="identity-uncertainty-misuse">Identity Uncertainty Misuse</h1>
+<p>Risk:</p>
+<p>Uncertain assessment becomes a stigmatizing label.</p>
+<p>Mitigation:</p>
+<p>Keep uncertainty attached to the claim, not the person's worth.</p>
+<hr>
+<h1 id="falsification-conditions">Falsification Conditions</h1>
+<p>The Uncertainty Layer should be revised, restricted, deprecated, or rejected if:</p>
+<ul>
+<li>confidence labels do not correlate with reliability,</li>
+<li>uncertainty fails to rise when evidence is removed,</li>
+<li>uncertainty fails to respond to contradiction,</li>
+<li>uncertainty falls simply because more adapters agree,</li>
+<li>confidence increases with profile complexity rather than evidence,</li>
+<li>abstention does not improve supported outcomes where claimed,</li>
+<li>the layer remains permanently uncertain despite strong evidence,</li>
+<li>numerical uncertainty implies precision unsupported by calibration,</li>
+<li>framework uncertainty is omitted,</li>
+<li>or a simpler calibrated uncertainty method performs better.</li>
+</ul>
+<hr>
+<h1 id="anti-certainty-test">Anti-Certainty Test</h1>
+<p>Ask:</p>
+<blockquote>
+<p><strong>Can the system say "we do not know"?</strong></p>
+</blockquote>
+<p>Required answer:</p>
+<pre><code class="language-text">yes
+</code></pre>
+<hr>
+<h1 id="anti-vagueness-test">Anti-Vagueness Test</h1>
+<p>Ask:</p>
+<blockquote>
+<p><strong>Can the system become more confident when strong independent evidence accumulates?</strong></p>
+</blockquote>
+<p>Required answer:</p>
+<pre><code class="language-text">yes
+</code></pre>
+<hr>
+<h1 id="causal-separation-test">Causal Separation Test</h1>
+<p>Ask:</p>
+<blockquote>
+<p><strong>Can observational confidence be high while causal confidence remains low?</strong></p>
+</blockquote>
+<p>Required answer:</p>
+<pre><code class="language-text">yes
+</code></pre>
+<hr>
+<h1 id="framework-uncertainty-test">Framework-Uncertainty Test</h1>
+<p>Ask:</p>
+<blockquote>
+<p><strong>Can the system express uncertainty about RIQF, RTT, Resonance, FFT, Structural Detection, and Predictive Analytics itself?</strong></p>
+</blockquote>
+<p>Required answer:</p>
+<pre><code class="language-text">yes
+</code></pre>
+<hr>
+<h1 id="unknown-preservation-test">Unknown-Preservation Test</h1>
+<p>Ask:</p>
+<blockquote>
+<p><strong>Can unknown remain unknown all the way through profile construction?</strong></p>
+</blockquote>
+<p>Required answer:</p>
+<pre><code class="language-text">yes
+</code></pre>
+<hr>
+<h1 id="abstention-test">Abstention Test</h1>
+<p>Ask:</p>
+<blockquote>
+<p><strong>Can the model report some observations while abstaining from broader interpretation?</strong></p>
+</blockquote>
+<p>Required answer:</p>
+<pre><code class="language-text">yes
+</code></pre>
+<hr>
+<h1 id="evidence-burden-test">Evidence-Burden Test</h1>
+<p>Ask:</p>
+<blockquote>
+<p><strong>Can the system decide that reducing uncertainty further is not worth additional data collection?</strong></p>
+</blockquote>
+<p>Required answer:</p>
+<pre><code class="language-text">yes
+</code></pre>
+<hr>
+<h1 id="ethics-boundary">Ethics Boundary</h1>
+<p>Uncertainty should not be used to disguise arbitrary decision-making.</p>
+<p>Bad:</p>
+<pre><code class="language-text">we are uncertain,
+but we will treat the person
+as high risk anyway
+</code></pre>
+<p>without appropriate policy, evidence, and authority.</p>
+<p>Likewise uncertainty should not be selectively invoked only when a model produces an inconvenient result.</p>
+<hr>
+<h1 id="fairness-boundary">Fairness Boundary</h1>
+<p>Uncertainty itself can be distributed unequally.</p>
+<p>Questions include:</p>
+<pre><code class="language-text">Which groups receive more unknown classifications?
+
+Which receive lower confidence?
+
+Which receive more abstentions?
+
+Which experience poorer evidence coverage?
+
+Which are escalated more frequently?
+
+Which have less representative measurement substrates?
+</code></pre>
+<p>Uncertainty disparities require investigation.</p>
+<hr>
+<h1 id="privacy-boundary">Privacy Boundary</h1>
+<p>Reducing uncertainty often requires collecting more information.</p>
+<p>That creates a direct tradeoff:</p>
+<pre><code class="language-text">certainty
+vs
+privacy
+</code></pre>
+<p>The system should not assume that maximum certainty is always desirable.</p>
+<hr>
+<h1 id="decision-authority_1">Decision Authority</h1>
+<pre><code class="language-text">decision_authority: none
+
+authorized_use:
+  - research
+  - demonstration
+  - uncertainty representation
+  - confidence calibration research
+  - abstention research
+  - model comparison
+  - validation design
+  - human review support
+  - framework development
+
+prohibited_use:
+  - diagnosis
+  - unsupported risk classification
+  - automated hiring decision
+  - educational exclusion
+  - legal determination
+  - insurance determination
+  - lending determination
+  - automated adverse decision
+</code></pre>
+<hr>
+<h1 id="minimal-uncertainty-contract">Minimal Uncertainty Contract</h1>
+<pre><code class="language-yaml">uncertainty_result:
+  assessment_id:
+
+  observed_system:
+    id:
+    class:
+    boundary:
+
+  target_claim:
+
+  uncertainty:
+    evidence:
+      level:
+      reasons:
+
+    measurement:
+      level:
+      reasons:
+
+    sampling:
+      level:
+      reasons:
+
+    model:
+      level:
+      reasons:
+
+    representation:
+      level:
+      reasons:
+
+    substrate:
+      level:
+      reasons:
+
+    regime:
+      level:
+      reasons:
+
+    temporal:
+      level:
+      reasons:
+
+    observer:
+      level:
+      reasons:
+
+    causal:
+      level:
+      reasons:
+
+    generalization:
+      level:
+      reasons:
+
+    applicability:
+      level:
+      reasons:
+
+    counterfactual:
+      level:
+      reasons:
+
+    framework:
+      level:
+      reasons:
+
+  confidence:
+    claim:
+    level:
+    calibration_status:
+    basis:
+
+  evidence:
+    sources:
+    independent_source_count:
+    missing:
+    contradictory:
+
+  assumptions:
+  alternatives:
+
+  reducible_uncertainty:
+    items:
+    possible_evidence:
+
+  residual_uncertainty:
+
+  action:
+    report:
+    narrow_claim:
+    request_evidence:
+    abstain:
+    escalate:
+
+  review_required:
+
+  validation_state:
+  decision_authority: none
+</code></pre>
+<hr>
+<h1 id="research-questions">Research Questions</h1>
+<ol>
+<li>Can uncertainty classes be operationalized reliably?</li>
+<li>Are all fourteen classes necessary?</li>
+<li>Which overlap?</li>
+<li>Which should merge?</li>
+<li>Can evidence uncertainty be measured?</li>
+<li>Can measurement uncertainty be separated from model uncertainty?</li>
+<li>Can sampling uncertainty be represented appropriately in profile systems?</li>
+<li>Can representation uncertainty be quantified?</li>
+<li>Can substrate uncertainty be distinguished from regime uncertainty?</li>
+<li>Can temporal uncertainty be separated from drift?</li>
+<li>Can observer uncertainty be measured?</li>
+<li>Can causal uncertainty remain separate from observational confidence?</li>
+<li>Can generalization uncertainty be measured across domains?</li>
+<li>Can applicability uncertainty be detected automatically?</li>
+<li>Can counterfactual fragility predict unreliable interpretation?</li>
+<li>Can framework uncertainty be expressed without making the system useless?</li>
+<li>Can confidence labels be calibrated?</li>
+<li>Should confidence remain ordinal?</li>
+<li>When are probabilities justified?</li>
+<li>Can abstention improve accuracy?</li>
+<li>Can abstention improve calibration?</li>
+<li>Can abstention improve fairness?</li>
+<li>Can abstention create unfair denial of coverage?</li>
+<li>Can abstention utility be measured responsibly?</li>
+<li>Does explicit uncertainty reduce unsupported claims?</li>
+<li>Does it improve human review?</li>
+<li>Does it improve user understanding?</li>
+<li>Does it merely create confidence theater?</li>
+<li>Can known unknowns be represented consistently?</li>
+<li>How should unmodeled uncertainty be communicated?</li>
+<li>Can uncertainty propagate through adapter ensembles?</li>
+<li>Can evidence independence prevent false confidence?</li>
+<li>How should contradictory evidence affect confidence?</li>
+<li>How should missing data affect profile uncertainty?</li>
+<li>Can profile uncertainty be displayed without overwhelming users?</li>
+<li>Can profile uncertainty avoid becoming another scalar?</li>
+<li>How should uncertainty behave through time?</li>
+<li>When should historical confidence expire?</li>
+<li>How should model-version changes alter uncertainty?</li>
+<li>How should human-AI attribution uncertainty be represented?</li>
+<li>How should AI system uncertainty differ from human assessment uncertainty?</li>
+<li>Can organizational uncertainty usefully share the same grammar?</li>
+<li>How much evidence collection is justified to reduce uncertainty?</li>
+<li>When should privacy override further uncertainty reduction?</li>
+<li>Can fairness disparities in uncertainty be detected?</li>
+<li>Can uncertainty classifications themselves become biased?</li>
+<li>When should the layer request human review?</li>
+<li>When should the layer abstain entirely?</li>
+<li>When should uncertainty itself return <code>unknown</code>?</li>
+<li>What evidence would justify redesigning the Uncertainty Layer entirely?</li>
+</ol>
+<hr>
+<h1 id="core-invariants">Core Invariants</h1>
+<pre><code class="language-text">uncertainty != error
+uncertainty != weakness
+uncertainty != ignorance
+unknown != zero
+unknown != average
+unknown != false
+unknown != weak
+not_observed != not_present
+not_applicable != unknown
+confidence != certainty
+confidence != capability
+confidence != correctness
+probability != global_confidence
+observation_confidence != causal_confidence
+coherence != certainty
+agreement != certainty
+adapter_agreement != independent_evidence
+more_data != automatically_better
+more_detail != lower_uncertainty
+more_adapters != lower_uncertainty
+complexity != confidence
+abstention != failure
+deferral != failure
+contradiction != failure
+missing_evidence != negative_evidence
+strong_observation != strong_generalization
+model_uncertainty != subject_uncertainty
+framework_output != truth
+reviewer_confidence != ground_truth
+residual_uncertainty != system_failure
+measurement != identity
+capability != human_worth
+observer_output != decision_authority
+canon_alignment != empirical_validation
+</code></pre>
+<hr>
+<h1 id="closing-principle">Closing Principle</h1>
+<p>Predictive systems create pressure to finish the sentence.</p>
+<p>To say:</p>
+<pre><code class="language-text">the score means this
+the model predicts this
+the person is this
+the system will do this
+the cause was this
+</code></pre>
+<p>The Uncertainty Layer exists to interrupt that pressure when the evidence stops earlier.</p>
+<p>Sometimes we know the observation.</p>
+<p>Sometimes we know the pattern.</p>
+<p>Sometimes we know the pattern but not the cause.</p>
+<p>Sometimes we know the model fails but not why.</p>
+<p>Sometimes two reasonable representations disagree.</p>
+<p>Sometimes the regime is unclear.</p>
+<p>Sometimes the substrate matters but cannot yet be isolated.</p>
+<p>Sometimes the evidence is simply too thin.</p>
+<p>And sometimes strong independent evidence accumulates and uncertainty genuinely decreases.</p>
+<p>Both directions matter.</p>
+<p>A useful uncertainty system must know how to remain uncertain.</p>
+<p>It must also know how to learn.</p>
+<blockquote>
+<p><strong>The goal is not maximum certainty. The goal is for certainty to stop exactly where the evidence stops.</strong></p>
+</blockquote>
   </main>
 </body>
 </html>

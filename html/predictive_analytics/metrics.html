@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/predictive_analytics/metrics.md">
-  <title>metrics</title>
+  <title>Predictive Analytics — Metrics</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,7 +92,2012 @@
   </aside>
 
   <main>
+<p><img width="1194" height="672" alt="predictive_analytics_metrics_" src="https://github.com/user-attachments/assets/610e1449-7561-4a86-a895-5ecd3a6333bc" /></p>
+<h1 id="predictive-analytics-metrics">Predictive Analytics — Metrics</h1>
+<blockquote>
+<p><strong>Measure the framework's failures at least as carefully as its successes.</strong></p>
+</blockquote>
+<h2 id="module">Module</h2>
+<p>Predictive Analytics</p>
+<h2 id="document-role">Document Role</h2>
+<p>Canonical experimental metric registry.</p>
+<h2 id="status">Status</h2>
+<p>Experimental.</p>
+<h2 id="validation-state">Validation State</h2>
+<p>Unvalidated.</p>
+<h2 id="decision-authority">Decision Authority</h2>
+<p>None.</p>
+<hr>
+<h1 id="purpose">Purpose</h1>
+<p>This document defines the initial measurement grammar for Predictive Analytics.</p>
+<p>The metrics are intended to test:</p>
+<ul>
+<li>evidence coverage,</li>
+<li>evidence independence,</li>
+<li>reliability,</li>
+<li>profile stability,</li>
+<li>construct validity,</li>
+<li>predictive value,</li>
+<li>substrate effects,</li>
+<li>regime effects,</li>
+<li>model mismatch,</li>
+<li>coherence,</li>
+<li>drift,</li>
+<li>uncertainty,</li>
+<li>calibration,</li>
+<li>counterfactual robustness,</li>
+<li>adapter contribution,</li>
+<li>fairness,</li>
+<li>explainability,</li>
+<li>human review,</li>
+<li>and operational burden.</li>
+</ul>
+<p>The metrics are not themselves validated merely because they have formulas.</p>
+<p>A formula provides:</p>
+<pre><code class="language-text">calculation structure
+</code></pre>
+<p>It does not automatically provide:</p>
+<pre><code class="language-text">valid measurement
+</code></pre>
+<hr>
+<h1 id="metric-principle">Metric Principle</h1>
+<p>Every metric should answer four questions:</p>
+<pre><code class="language-text">What is being measured?
 
+Why is it useful?
+
+What assumptions does it require?
+
+What could make it misleading?
+</code></pre>
+<p>A metric without a clear answer to these questions should not receive operational authority.</p>
+<hr>
+<h1 id="no-universal-score">No Universal Score</h1>
+<p>Predictive Analytics intentionally does not define:</p>
+<pre><code class="language-text">Predictive Analytics Score
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">Resonant IQ Score
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">Human Capability Score
+</code></pre>
+<p>The metric system instead preserves multiple properties.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">assessment_metrics:
+  evidence_coverage:
+  evidence_independence:
+  reliability:
+  calibration:
+  substrate_stability:
+  regime_stability:
+  coherence:
+  counterfactual_robustness:
+  fairness:
+  explanation_quality:
+</code></pre>
+<p>A composite may eventually be justified for a specific validated use.</p>
+<p>It is not assumed here.</p>
+<hr>
+<h1 id="metric-categories">Metric Categories</h1>
+<p>The initial registry contains 52 canonical metrics.</p>
+<pre><code class="language-text">Evidence                    PA-M01 – PA-M03
+Reliability / Stability     PA-M04 – PA-M07
+Validity                    PA-M08 – PA-M11
+Substrate                   PA-M12 – PA-M15
+Regime                      PA-M16 – PA-M19
+Model Mismatch              PA-M20 – PA-M23
+Coherence / Drift           PA-M24 – PA-M27
+Uncertainty / Calibration   PA-M28 – PA-M32
+Counterfactual / Robustness PA-M33 – PA-M36
+Fairness                    PA-M37 – PA-M44
+Explainability / Review     PA-M45 – PA-M48
+Operational                 PA-M49 – PA-M52
+</code></pre>
+<hr>
+<h1 id="metric-record-contract">Metric Record Contract</h1>
+<p>Every production-quality metric should eventually declare:</p>
+<pre><code class="language-yaml">metric:
+  id:
+  name:
+  version:
+
+  category:
+  purpose:
+  definition:
+
+  formula:
+
+  scale:
+  direction:
+
+  required_inputs:
+  supported_systems:
+  applicability:
+
+  interpretation:
+  limitations:
+  known_confounds:
+
+  missing_data_policy:
+  subgroup_policy:
+
+  threshold:
+    status:
+    value:
+    rationale:
+
+  validation_state:
+  lifecycle:
+</code></pre>
+<hr>
+<h1 id="metric-lifecycle">Metric Lifecycle</h1>
+<p>Canonical states:</p>
+<pre><code class="language-text">proposed
+pilot
+validated
+restricted
+deprecated
+rejected
+</code></pre>
+<p>A metric may be removed if it:</p>
+<ul>
+<li>cannot be measured reliably,</li>
+<li>adds no useful information,</li>
+<li>duplicates another metric,</li>
+<li>creates misleading interpretations,</li>
+<li>behaves unfairly,</li>
+<li>or encourages inappropriate optimization.</li>
+</ul>
+<hr>
+<h1 id="threshold-policy">Threshold Policy</h1>
+<p>Initial policy:</p>
+<pre><code class="language-yaml">threshold_policy:
+  status: study_specific
+  universal_thresholds: false
+  preregistration_required: true
+  post_hoc_changes_disclosed: true
+</code></pre>
+<p>No universal numeric pass/fail thresholds are defined by the experimental module.</p>
+<hr>
+<h1 id="metric-direction">Metric Direction</h1>
+<p>Possible direction states:</p>
+<pre><code class="language-text">higher_is_better
+lower_is_better
+target_range
+descriptive
+context_dependent
+</code></pre>
+<p>A metric must not silently imply:</p>
+<pre><code class="language-text">larger number = better person
+</code></pre>
+<hr>
+<h1 id="1-evidence-metrics">1. Evidence Metrics</h1>
+<hr>
+<h1 id="pa-m01-dimension-evidence-coverage">PA-M01 — Dimension Evidence Coverage</h1>
+<h2 id="purpose_1">Purpose</h2>
+<p>Measure how much of a dimension's declared evidence requirement is supported by available observations.</p>
+<h2 id="conceptual-formula">Conceptual Formula</h2>
+<pre><code class="language-text">DEC =
+  supported_indicators
+  /
+  required_indicators
+</code></pre>
+<h2 id="direction">Direction</h2>
+<pre><code class="language-text">higher_is_better
+</code></pre>
+<p>for evidence coverage only.</p>
+<h2 id="interpretation">Interpretation</h2>
+<p>Higher coverage means:</p>
+<pre><code class="language-text">more of the declared evidence
+for this dimension is available
+</code></pre>
+<p>It does <strong>not</strong> mean:</p>
+<pre><code class="language-text">dimension magnitude is higher
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">dimension is valid
+</code></pre>
+<h2 id="example">Example</h2>
+<pre><code class="language-yaml">structural_reasoning:
+  required_indicators: 5
+  supported_indicators: 4
+
+  PA-M01:
+    value: 0.80
+</code></pre>
+<p>The example demonstrates arithmetic only.</p>
+<p>No universal <code>0.80</code> adequacy threshold is implied.</p>
+<h2 id="risks">Risks</h2>
+<pre><code class="language-text">weak indicators counted equally with strong indicators
+poorly designed requirements
+circular evidence
+duplicate evidence
+</code></pre>
+<hr>
+<h1 id="pa-m02-profile-evidence-coverage">PA-M02 — Profile Evidence Coverage</h1>
+<h2 id="purpose_2">Purpose</h2>
+<p>Measure the proportion of applicable dimensions with sufficient evidence.</p>
+<h2 id="formula">Formula</h2>
+<pre><code class="language-text">PEC =
+  dimensions_with_sufficient_evidence
+  /
+  applicable_dimensions
+</code></pre>
+<h2 id="required-companion-states">Required Companion States</h2>
+<pre><code class="language-text">applicable
+unsupported
+unknown
+not_applicable
+</code></pre>
+<h2 id="important-rule">Important Rule</h2>
+<pre><code class="language-text">not_applicable
+</code></pre>
+<p>must not be treated as:</p>
+<pre><code class="language-text">zero
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">unknown
+</code></pre>
+<p>must not be treated as:</p>
+<pre><code class="language-text">average
+</code></pre>
+<hr>
+<h1 id="pa-m03-evidence-independence-ratio">PA-M03 — Evidence Independence Ratio</h1>
+<h2 id="purpose_3">Purpose</h2>
+<p>Prevent multiple interpretations of the same evidence from being mistaken for multiple independent confirmations.</p>
+<h2 id="formula_1">Formula</h2>
+<pre><code class="language-text">EIR =
+  independent_evidence_sources
+  /
+  total_evidence_sources
+</code></pre>
+<h2 id="example_1">Example</h2>
+<p>One observation is processed by five adapters.</p>
+<pre><code class="language-text">FFT
+Inverted Star
+Structural Detection
+RTT
+Resonance
+</code></pre>
+<p>Correct:</p>
+<pre><code class="language-yaml">adapter_interpretations: 5
+independent_evidence_sources: 1
+</code></pre>
+<p>Not:</p>
+<pre><code class="language-text">evidence count: 5
+</code></pre>
+<h2 id="core-invariant">Core Invariant</h2>
+<pre><code class="language-text">adapter_count != evidence_count
+</code></pre>
+<hr>
+<h1 id="2-reliability-and-stability-metrics">2. Reliability and Stability Metrics</h1>
+<hr>
+<h1 id="pa-m04-test-retest-stability">PA-M04 — Test-Retest Stability</h1>
+<h2 id="purpose_4">Purpose</h2>
+<p>Measure consistency across repeated observations where the target capability is expected to remain sufficiently stable.</p>
+<h2 id="candidate-methods">Candidate Methods</h2>
+<p>Depending on the measurement:</p>
+<pre><code class="language-text">intraclass correlation
+rank correlation
+weighted agreement
+categorical agreement
+profile similarity
+</code></pre>
+<p>The method must fit the data.</p>
+<h2 id="important-limit">Important Limit</h2>
+<p>Some dimensions may legitimately change.</p>
+<p>Therefore:</p>
+<pre><code class="language-text">low_test_retest
+</code></pre>
+<p>does not automatically mean:</p>
+<pre><code class="language-text">bad_dimension
+</code></pre>
+<p>until expected stability is defined.</p>
+<hr>
+<h1 id="pa-m05-alternate-form-stability">PA-M05 — Alternate-Form Stability</h1>
+<h2 id="purpose_5">Purpose</h2>
+<p>Determine whether different tasks intended to observe the same dimension produce sufficiently comparable results.</p>
+<h2 id="conceptual-formula_1">Conceptual Formula</h2>
+<pre><code class="language-text">AFS =
+  agreement(
+    dimension_form_a,
+    dimension_form_b
+  )
+</code></pre>
+<h2 id="possible-explanations-for-low-stability">Possible Explanations for Low Stability</h2>
+<pre><code class="language-text">poor form equivalence
+unstable capability
+substrate effect
+regime effect
+practice effect
+task artifact
+invalid dimension
+</code></pre>
+<p>The metric does not identify the cause.</p>
+<hr>
+<h1 id="pa-m06-inter-rater-agreement">PA-M06 — Inter-Rater Agreement</h1>
+<h2 id="purpose_6">Purpose</h2>
+<p>Measure agreement among independent evaluators.</p>
+<h2 id="candidate-statistics">Candidate Statistics</h2>
+<p>Where appropriate:</p>
+<pre><code class="language-text">Cohen's kappa
+weighted kappa
+Fleiss' kappa
+Krippendorff's alpha
+intraclass correlation
+</code></pre>
+<p>Raw agreement may also be reported but should not substitute for a suitable reliability measure when chance agreement matters.</p>
+<h2 id="applies-to">Applies To</h2>
+<pre><code class="language-text">dimension classification
+adapter interpretation
+coherence relationship
+human review
+model-mismatch interpretation
+</code></pre>
+<hr>
+<h1 id="pa-m07-profile-topology-stability">PA-M07 — Profile Topology Stability</h1>
+<h2 id="purpose_7">Purpose</h2>
+<p>Measure whether the relative shape of a multidimensional profile remains stable under comparable conditions.</p>
+<h2 id="conceptual-formula_2">Conceptual Formula</h2>
+<pre><code class="language-text">PTS =
+  similarity(
+    normalized_profile_t1,
+    normalized_profile_t2
+  )
+</code></pre>
+<h2 id="candidate-methods_1">Candidate Methods</h2>
+<pre><code class="language-text">cosine similarity
+rank-profile correlation
+distance-based similarity
+graph similarity
+</code></pre>
+<h2 id="important-rule_1">Important Rule</h2>
+<p>Always accompany profile-level similarity with dimension-level changes.</p>
+<p>Two profiles may have high overall similarity while containing one important local shift.</p>
+<hr>
+<h1 id="3-validity-metrics">3. Validity Metrics</h1>
+<hr>
+<h1 id="pa-m08-convergent-association">PA-M08 — Convergent Association</h1>
+<h2 id="purpose_8">Purpose</h2>
+<p>Test whether a proposed dimension relates to independent observations it is theoretically expected to relate to.</p>
+<h2 id="conceptual-formula_3">Conceptual Formula</h2>
+<pre><code class="language-text">CA =
+  association(
+    proposed_dimension,
+    related_external_measure
+  )
+</code></pre>
+<h2 id="interpretation_1">Interpretation</h2>
+<p>Expected direction and magnitude should be declared before confirmatory analysis where possible.</p>
+<h2 id="warning">Warning</h2>
+<p>Convergence does not establish identity.</p>
+<pre><code class="language-text">A correlates with B
+</code></pre>
+<p>does not mean:</p>
+<pre><code class="language-text">A = B
+</code></pre>
+<hr>
+<h1 id="pa-m09-discriminant-separation">PA-M09 — Discriminant Separation</h1>
+<h2 id="purpose_9">Purpose</h2>
+<p>Test whether two dimensions claiming to measure different constructs are actually distinguishable.</p>
+<h2 id="conceptual-form">Conceptual Form</h2>
+<pre><code class="language-text">DS =
+  related_association
+  -
+  unrelated_association
+</code></pre>
+<p>Alternative methods may include:</p>
+<pre><code class="language-text">multitrait-multimethod analysis
+latent-variable analysis
+network analysis
+classification separation
+preregistered correlation contrasts
+</code></pre>
+<h2 id="practical-question">Practical Question</h2>
+<p>If:</p>
+<pre><code class="language-text">structural_reasoning
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">pattern_recognition
+</code></pre>
+<p>cannot be empirically distinguished, should they remain separate?</p>
+<p>Possibly not.</p>
+<hr>
+<h1 id="pa-m10-incremental-explanatory-value">PA-M10 — Incremental Explanatory Value</h1>
+<h2 id="purpose_10">Purpose</h2>
+<p>Measure whether the richer model explains observations better than a simpler baseline.</p>
+<h2 id="conceptual-formula_4">Conceptual Formula</h2>
+<pre><code class="language-text">IEV =
+  explanatory_performance(full_model)
+  -
+  explanatory_performance(baseline)
+</code></pre>
+<h2 id="possible-performance-measures">Possible Performance Measures</h2>
+<p>Depending on study design:</p>
+<pre><code class="language-text">explained variance
+likelihood
+information criteria
+prediction residual structure
+validated explanation reconstruction
+</code></pre>
+<h2 id="complexity-requirement">Complexity Requirement</h2>
+<p>A more complex model should not win simply because it has more parameters or concepts.</p>
+<p>Complexity penalties or appropriate holdout methods should be considered.</p>
+<hr>
+<h1 id="pa-m11-incremental-predictive-value">PA-M11 — Incremental Predictive Value</h1>
+<h2 id="purpose_11">Purpose</h2>
+<p>Measure out-of-sample predictive improvement.</p>
+<h2 id="conceptual-form_1">Conceptual Form</h2>
+<pre><code class="language-text">IPV =
+  baseline_error
+  -
+  full_model_error
+</code></pre>
+<p>or an equivalent comparison appropriate to the outcome.</p>
+<h2 id="candidate-measures">Candidate Measures</h2>
+<pre><code class="language-text">mean absolute error
+root mean squared error
+log loss
+Brier score
+appropriate discrimination metric
+task-specific utility
+</code></pre>
+<h2 id="core-principle">Core Principle</h2>
+<p>A richer model that explains more but predicts no better can still be useful.</p>
+<p>Its contribution should simply be labeled:</p>
+<pre><code class="language-text">explanatory
+</code></pre>
+<p>rather than:</p>
+<pre><code class="language-text">predictive
+</code></pre>
+<hr>
+<h1 id="4-substrate-metrics">4. Substrate Metrics</h1>
+<hr>
+<h1 id="pa-m12-substrate-effect-magnitude">PA-M12 — Substrate Effect Magnitude</h1>
+<h2 id="purpose_12">Purpose</h2>
+<p>Measure change in observed performance across defined substrates.</p>
+<h2 id="conceptual-formula_5">Conceptual Formula</h2>
+<pre><code class="language-text">SEM =
+  standardized_difference(
+    performance_substrate_a,
+    performance_substrate_b
+  )
+</code></pre>
+<h2 id="interpretation_2">Interpretation</h2>
+<p>A large effect means:</p>
+<pre><code class="language-text">observations differ across substrates
+</code></pre>
+<p>Not automatically:</p>
+<pre><code class="language-text">substrate caused the difference
+</code></pre>
+<hr>
+<h1 id="pa-m13-substrate-effect-replicability">PA-M13 — Substrate Effect Replicability</h1>
+<h2 id="purpose_13">Purpose</h2>
+<p>Measure whether a candidate substrate effect repeats.</p>
+<h2 id="formula_2">Formula</h2>
+<pre><code class="language-text">SER =
+  replicated_effects_in_expected_direction
+  /
+  eligible_replications
+</code></pre>
+<h2 id="required-companion-information">Required Companion Information</h2>
+<p>Always include:</p>
+<pre><code class="language-text">effect magnitude
+uncertainty
+task comparability
+confounds
+</code></pre>
+<p>A high replication ratio for a trivial effect may not be operationally important.</p>
+<hr>
+<h1 id="pa-m14-substrate-symmetry">PA-M14 — Substrate Symmetry</h1>
+<h2 id="purpose_14">Purpose</h2>
+<p>Detect whether the framework recognizes both favorable and adverse substrate effects.</p>
+<h2 id="conceptual-formula_6">Conceptual Formula</h2>
+<pre><code class="language-text">SS =
+  min(
+    detection_rate_positive_effects,
+    detection_rate_negative_effects
+  )
+</code></pre>
+<h2 id="purpose-of-the-minimum">Purpose of the Minimum</h2>
+<p>If the framework detects:</p>
+<pre><code class="language-text">performance improves
+</code></pre>
+<p>very well but ignores:</p>
+<pre><code class="language-text">performance worsens
+</code></pre>
+<p>the symmetry metric should expose the imbalance.</p>
+<hr>
+<h1 id="pa-m15-substrate-specificity">PA-M15 — Substrate Specificity</h1>
+<h2 id="purpose_15">Purpose</h2>
+<p>Determine whether an apparent substrate effect remains after controlling for relevant alternative explanations.</p>
+<h2 id="conceptual-form_2">Conceptual Form</h2>
+<pre><code class="language-text">SSP =
+  substrate_effect_after_controls
+</code></pre>
+<p>Potential controls:</p>
+<pre><code class="language-text">task difficulty
+exposure
+time
+fatigue
+order
+familiarity
+accessibility
+evaluator
+</code></pre>
+<h2 id="limit">Limit</h2>
+<p>Unknown confounds remain possible.</p>
+<hr>
+<h1 id="5-regime-metrics">5. Regime Metrics</h1>
+<hr>
+<h1 id="pa-m16-regime-transition-detection-rate">PA-M16 — Regime Transition Detection Rate</h1>
+<h2 id="purpose_16">Purpose</h2>
+<p>Measure detection of independently defined regime transitions.</p>
+<h2 id="formula_3">Formula</h2>
+<pre><code class="language-text">RTDR =
+  detected_transitions
+  /
+  reference_transitions
+</code></pre>
+<h2 id="warning_1">Warning</h2>
+<p>Reference transitions must not be defined solely by whether the model succeeded or failed.</p>
+<p>Otherwise the metric becomes circular.</p>
+<hr>
+<h1 id="pa-m17-false-regime-alarm-rate">PA-M17 — False Regime Alarm Rate</h1>
+<h2 id="purpose_17">Purpose</h2>
+<p>Measure how often regime transitions are declared where no meaningful reference transition exists.</p>
+<h2 id="formula_4">Formula</h2>
+<pre><code class="language-text">FRAR =
+  false_transition_flags
+  /
+  stable_regime_opportunities
+</code></pre>
+<h2 id="importance">Importance</h2>
+<p>A framework that finds new regimes every time prediction fails can explain anything and therefore validate very little.</p>
+<hr>
+<h1 id="pa-m18-regime-boundary-error">PA-M18 — Regime Boundary Error</h1>
+<h2 id="purpose_18">Purpose</h2>
+<p>Measure distance between a detected and reference boundary.</p>
+<h2 id="conceptual-formula_7">Conceptual Formula</h2>
+<pre><code class="language-text">RBE =
+  distance(
+    detected_boundary,
+    reference_boundary
+  )
+</code></pre>
+<p>Possible distance units may include:</p>
+<pre><code class="language-text">time
+events
+state distance
+structural position
+</code></pre>
+<p>depending on the application.</p>
+<hr>
+<h1 id="pa-m19-regime-conditioned-stability">PA-M19 — Regime-Conditioned Stability</h1>
+<h2 id="purpose_19">Purpose</h2>
+<p>Measure whether observations remain relatively stable within a regime even when they differ between regimes.</p>
+<h2 id="conceptual-form_3">Conceptual Form</h2>
+<pre><code class="language-text">RCS =
+  within_regime_stability
+</code></pre>
+<h2 id="example_2">Example</h2>
+<pre><code class="language-text">Regime A:
+  40
+  42
+  41
+
+Regime B:
+  72
+  74
+  73
+</code></pre>
+<p>The interesting result may be:</p>
+<pre><code class="language-text">high within-regime stability
++
+large between-regime difference
+</code></pre>
+<p>rather than generic instability.</p>
+<hr>
+<h1 id="6-model-mismatch-metrics">6. Model-Mismatch Metrics</h1>
+<hr>
+<h1 id="pa-m20-model-mismatch-precision">PA-M20 — Model-Mismatch Precision</h1>
+<h2 id="purpose_20">Purpose</h2>
+<p>Measure how often declared mismatch is supported by reference evidence.</p>
+<h2 id="formula_5">Formula</h2>
+<pre><code class="language-text">MMP =
+  supported_mismatch_flags
+  /
+  all_mismatch_flags
+</code></pre>
+<h2 id="importance_1">Importance</h2>
+<p>This metric protects against:</p>
+<pre><code class="language-text">unfavorable result
+  -&gt;
+declare mismatch
+</code></pre>
+<hr>
+<h1 id="pa-m21-model-mismatch-recall">PA-M21 — Model-Mismatch Recall</h1>
+<h2 id="purpose_21">Purpose</h2>
+<p>Measure how many reference mismatch cases the framework detects.</p>
+<h2 id="formula_6">Formula</h2>
+<pre><code class="language-text">MMR =
+  detected_reference_mismatches
+  /
+  all_reference_mismatches
+</code></pre>
+<h2 id="required-pairing">Required Pairing</h2>
+<p>Interpret with:</p>
+<pre><code class="language-text">PA-M20
+PA-M22
+</code></pre>
+<p>High recall with very low precision may be unacceptable.</p>
+<hr>
+<h1 id="pa-m22-model-mismatch-false-positive-rate">PA-M22 — Model-Mismatch False Positive Rate</h1>
+<h2 id="purpose_22">Purpose</h2>
+<p>Measure mismatch declarations in reference non-mismatch cases.</p>
+<h2 id="formula_7">Formula</h2>
+<pre><code class="language-text">MMFPR =
+  false_mismatch_flags
+  /
+  reference_non_mismatch_cases
+</code></pre>
+<h2 id="critical-test">Critical Test</h2>
+<p>A framework that labels every disappointing prediction as mismatch should perform poorly here.</p>
+<hr>
+<h1 id="pa-m23-mismatch-evidence-strength">PA-M23 — Mismatch Evidence Strength</h1>
+<h2 id="purpose_23">Purpose</h2>
+<p>Represent strength of evidence supporting a mismatch interpretation without producing a capability or intelligence score.</p>
+<p>Possible evidence components:</p>
+<pre><code class="language-text">independent sources
+replication
+substrate effect
+regime effect
+counterfactual consistency
+prediction error
+calibration
+uncertainty
+</code></pre>
+<h2 id="important-restriction">Important Restriction</h2>
+<p>If components are aggregated, the aggregation rule must be:</p>
+<pre><code class="language-text">transparent
+validated
+versioned
+</code></pre>
+<p>It must not become a hidden global score.</p>
+<hr>
+<h1 id="7-coherence-and-drift-metrics">7. Coherence and Drift Metrics</h1>
+<hr>
+<h1 id="pa-m24-cross-observation-coherence">PA-M24 — Cross-Observation Coherence</h1>
+<h2 id="purpose_24">Purpose</h2>
+<p>Measure the degree to which observations expected to relate form compatible relationships.</p>
+<h2 id="conceptual-formula_8">Conceptual Formula</h2>
+<pre><code class="language-text">COC =
+  coherent_observation_relationships
+  /
+  eligible_observation_relationships
+</code></pre>
+<h2 id="relationship-classes">Relationship Classes</h2>
+<p>The Coherence Observer may distinguish:</p>
+<pre><code class="language-text">supporting
+contradictory
+conditionally_compatible
+independent
+redundant
+non_comparable
+unknown
+</code></pre>
+<p>The exact definition of:</p>
+<pre><code class="language-text">coherent
+</code></pre>
+<p>must therefore be study-specific.</p>
+<hr>
+<h1 id="pa-m25-profile-contradiction-density">PA-M25 — Profile Contradiction Density</h1>
+<h2 id="purpose_25">Purpose</h2>
+<p>Measure unresolved contradictions relative to evaluated relationships.</p>
+<h2 id="formula_8">Formula</h2>
+<pre><code class="language-text">PCD =
+  unresolved_contradictions
+  /
+  evaluated_relationships
+</code></pre>
+<h2 id="important-rule_2">Important Rule</h2>
+<p>Higher contradiction density is not automatically bad.</p>
+<p>It may indicate:</p>
+<pre><code class="language-text">real heterogeneity
+regime dependence
+substrate dependence
+poor measurement
+invalid assumptions
+insufficient evidence
+</code></pre>
+<p>The metric describes structure.</p>
+<hr>
+<h1 id="pa-m26-dimension-drift-rate">PA-M26 — Dimension Drift Rate</h1>
+<h2 id="purpose_26">Purpose</h2>
+<p>Measure change in a defined dimension across a declared observation interval.</p>
+<h2 id="conceptual-formula_9">Conceptual Formula</h2>
+<pre><code class="language-text">DDR =
+  dimension_change
+  /
+  observation_interval
+</code></pre>
+<h2 id="limit_1">Limit</h2>
+<p>Use only where:</p>
+<pre><code class="language-text">dimension_change
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">observation_interval
+</code></pre>
+<p>have defensible quantitative meaning.</p>
+<p>Otherwise use descriptive longitudinal states.</p>
+<hr>
+<h1 id="pa-m27-profile-drift-magnitude">PA-M27 — Profile Drift Magnitude</h1>
+<h2 id="purpose_27">Purpose</h2>
+<p>Measure overall change between multidimensional profiles.</p>
+<h2 id="conceptual-formula_10">Conceptual Formula</h2>
+<pre><code class="language-text">PDM =
+  distance(
+    profile_t1,
+    profile_t2
+  )
+</code></pre>
+<h2 id="required-companion-output">Required Companion Output</h2>
+<p>Include:</p>
+<pre><code class="language-text">dimension-level changes
+</code></pre>
+<p>because one overall distance may hide different directions.</p>
+<hr>
+<h1 id="8-uncertainty-and-calibration-metrics">8. Uncertainty and Calibration Metrics</h1>
+<hr>
+<h1 id="pa-m28-confidence-calibration-error">PA-M28 — Confidence Calibration Error</h1>
+<h2 id="purpose_28">Purpose</h2>
+<p>Measure correspondence between stated confidence and observed correctness or reproducibility.</p>
+<h2 id="conceptual-form_4">Conceptual Form</h2>
+<pre><code class="language-text">CCE =
+  average(
+    abs(
+      stated_confidence
+      -
+      observed_frequency
+    )
+  )
+</code></pre>
+<h2 id="direction_1">Direction</h2>
+<pre><code class="language-text">lower_is_better
+</code></pre>
+<h2 id="important-limit_1">Important Limit</h2>
+<p>Ordinal labels such as:</p>
+<pre><code class="language-text">low
+medium
+high
+</code></pre>
+<p>must not be converted into numerical probabilities without a validated mapping.</p>
+<hr>
+<h1 id="pa-m29-brier-score">PA-M29 — Brier Score</h1>
+<h2 id="purpose_29">Purpose</h2>
+<p>Evaluate probabilistic binary predictions where appropriate.</p>
+<h2 id="formula_9">Formula</h2>
+<pre><code class="language-text">BS =
+  mean(
+    (forecast_probability - outcome)^2
+  )
+</code></pre>
+<h2 id="direction_2">Direction</h2>
+<pre><code class="language-text">lower_is_better
+</code></pre>
+<h2 id="applicability">Applicability</h2>
+<p>Only where the outcome and prediction format make the Brier score appropriate.</p>
+<p>It is not a universal Predictive Analytics metric.</p>
+<hr>
+<h1 id="pa-m30-abstention-rate">PA-M30 — Abstention Rate</h1>
+<h2 id="purpose_30">Purpose</h2>
+<p>Measure how often the system returns:</p>
+<pre><code class="language-text">abstain
+unknown
+insufficient_evidence
+</code></pre>
+<p>for eligible assessment opportunities.</p>
+<h2 id="formula_10">Formula</h2>
+<pre><code class="language-text">AR =
+  abstained_results
+  /
+  eligible_results
+</code></pre>
+<h2 id="direction_3">Direction</h2>
+<pre><code class="language-text">descriptive
+</code></pre>
+<p>High abstention is not automatically better.</p>
+<p>Low abstention is not automatically better.</p>
+<hr>
+<h1 id="pa-m31-abstention-utility">PA-M31 — Abstention Utility</h1>
+<h2 id="purpose_31">Purpose</h2>
+<p>Measure whether abstention reduces error or unsupported inference enough to justify its cost.</p>
+<h2 id="conceptual-formula_11">Conceptual Formula</h2>
+<pre><code class="language-text">AU =
+  error_reduction_after_abstention
+  -
+  abstention_cost
+</code></pre>
+<h2 id="cost-may-include">Cost May Include</h2>
+<pre><code class="language-text">delay
+review burden
+lost coverage
+resource cost
+missed opportunity
+</code></pre>
+<p>The cost model must be declared.</p>
+<hr>
+<h1 id="pa-m32-unsupported-assertion-rate">PA-M32 — Unsupported Assertion Rate</h1>
+<h2 id="purpose_32">Purpose</h2>
+<p>Measure claims that exceed available evidence.</p>
+<h2 id="formula_11">Formula</h2>
+<pre><code class="language-text">UAR =
+  assertions_without_sufficient_evidence
+  /
+  all_profile_assertions
+</code></pre>
+<h2 id="direction_4">Direction</h2>
+<pre><code class="language-text">lower_is_better
+</code></pre>
+<h2 id="examples-of-unsupported-assertions">Examples of Unsupported Assertions</h2>
+<pre><code class="language-text">hidden intelligence inferred from one discrepant result
+
+causal substrate claim without causal evidence
+
+global capability inferred from narrow observation
+
+AI cognition equivalence inferred from task similarity
+</code></pre>
+<hr>
+<h1 id="9-counterfactual-and-robustness-metrics">9. Counterfactual and Robustness Metrics</h1>
+<hr>
+<h1 id="pa-m33-irrelevant-perturbation-stability">PA-M33 — Irrelevant Perturbation Stability</h1>
+<h2 id="purpose_33">Purpose</h2>
+<p>Measure whether an interpretation remains stable when irrelevant details change.</p>
+<h2 id="conceptual-formula_12">Conceptual Formula</h2>
+<pre><code class="language-text">IPS =
+  similarity(
+    original_result,
+    irrelevant_perturbation_result
+  )
+</code></pre>
+<h2 id="direction_5">Direction</h2>
+<pre><code class="language-text">higher_is_better
+</code></pre>
+<p>when the perturbation is genuinely irrelevant.</p>
+<hr>
+<h1 id="pa-m34-relevant-change-sensitivity">PA-M34 — Relevant Change Sensitivity</h1>
+<h2 id="purpose_34">Purpose</h2>
+<p>Measure whether meaningful evidence changes cause appropriate assessment changes.</p>
+<h2 id="formula_12">Formula</h2>
+<pre><code class="language-text">RCS =
+  detected_meaningful_changes
+  /
+  introduced_meaningful_changes
+</code></pre>
+<h2 id="direction_6">Direction</h2>
+<pre><code class="language-text">higher_is_better
+</code></pre>
+<hr>
+<h1 id="stability-sensitivity-pair">Stability-Sensitivity Pair</h1>
+<p>Desired:</p>
+<pre><code class="language-text">irrelevant change:
+  stable
+
+relevant change:
+  responsive
+</code></pre>
+<p>Failure mode 1:</p>
+<pre><code class="language-text">irrelevant change:
+  large response
+</code></pre>
+<p>means:</p>
+<pre><code class="language-text">fragility
+</code></pre>
+<p>Failure mode 2:</p>
+<pre><code class="language-text">relevant change:
+  no response
+</code></pre>
+<p>means:</p>
+<pre><code class="language-text">insensitivity
+</code></pre>
+<hr>
+<h1 id="pa-m35-task-order-sensitivity">PA-M35 — Task-Order Sensitivity</h1>
+<h2 id="purpose_35">Purpose</h2>
+<p>Measure changes caused by task ordering where order should not materially affect the construct.</p>
+<h2 id="formula_13">Formula</h2>
+<pre><code class="language-text">TOS =
+  distance(
+    result_order_a,
+    result_order_b
+  )
+</code></pre>
+<h2 id="direction_7">Direction</h2>
+<p>Usually:</p>
+<pre><code class="language-text">lower_is_better
+</code></pre>
+<p>when order independence is expected.</p>
+<hr>
+<h1 id="pa-m36-adapter-ablation-effect">PA-M36 — Adapter Ablation Effect</h1>
+<h2 id="purpose_36">Purpose</h2>
+<p>Measure what an adapter contributes.</p>
+<h2 id="formula_14">Formula</h2>
+<pre><code class="language-text">AAE(adapter_x) =
+  performance(full_adapter_set)
+  -
+  performance(without_adapter_x)
+</code></pre>
+<h2 id="adapters">Adapters</h2>
+<pre><code class="language-text">FFT
+Inverted Star
+Structural Detection
+RTT
+Resonance
+</code></pre>
+<h2 id="candidate-outcomes">Candidate Outcomes</h2>
+<pre><code class="language-text">material_positive_contribution
+small_positive_contribution
+no_detectable_contribution
+negative_contribution
+interaction_dependent
+unknown
+</code></pre>
+<h2 id="core-principle_1">Core Principle</h2>
+<p>An adapter must be removable.</p>
+<p>If removing it changes nothing useful:</p>
+<pre><code class="language-text">its contribution has not been demonstrated
+</code></pre>
+<hr>
+<h1 id="10-fairness-metrics">10. Fairness Metrics</h1>
+<hr>
+<h1 id="pa-m37-group-error-difference">PA-M37 — Group Error Difference</h1>
+<h2 id="purpose_37">Purpose</h2>
+<p>Compare error patterns across relevant groups or contexts.</p>
+<h2 id="formula_15">Formula</h2>
+<pre><code class="language-text">GED =
+  error_rate_group_a
+  -
+  error_rate_group_b
+</code></pre>
+<p>Both absolute and relative comparisons may be useful.</p>
+<h2 id="warning_2">Warning</h2>
+<p>A difference does not independently establish unfairness.</p>
+<p>It establishes a signal requiring contextual investigation.</p>
+<hr>
+<h1 id="pa-m38-group-calibration-difference">PA-M38 — Group Calibration Difference</h1>
+<h2 id="purpose_38">Purpose</h2>
+<p>Test whether confidence means approximately the same thing across relevant groups.</p>
+<h2 id="formula_16">Formula</h2>
+<pre><code class="language-text">GCD =
+  calibration_error_group_a
+  -
+  calibration_error_group_b
+</code></pre>
+<h2 id="research-question">Research Question</h2>
+<p>Does:</p>
+<pre><code class="language-text">80% confidence
+</code></pre>
+<p>correspond to similar observed reliability across relevant populations?</p>
+<hr>
+<h1 id="pa-m39-mismatch-flag-rate-difference">PA-M39 — Mismatch Flag Rate Difference</h1>
+<h2 id="purpose_39">Purpose</h2>
+<p>Compare how often groups are flagged for model mismatch.</p>
+<h2 id="formula_17">Formula</h2>
+<pre><code class="language-text">MFRD =
+  mismatch_flag_rate_group_a
+  -
+  mismatch_flag_rate_group_b
+</code></pre>
+<h2 id="interpretation_3">Interpretation</h2>
+<p>A difference may arise from:</p>
+<pre><code class="language-text">true model-fit differences
+unequal evidence
+substrate bias
+model bias
+measurement differences
+sample differences
+unknown causes
+</code></pre>
+<p>It requires investigation.</p>
+<hr>
+<h1 id="pa-m40-abstention-coverage-difference">PA-M40 — Abstention Coverage Difference</h1>
+<h2 id="purpose_40">Purpose</h2>
+<p>Compare abstention rates across relevant groups.</p>
+<h2 id="formula_18">Formula</h2>
+<pre><code class="language-text">ACD =
+  abstention_rate_group_a
+  -
+  abstention_rate_group_b
+</code></pre>
+<h2 id="why-it-matters">Why It Matters</h2>
+<p>A system may appear fair on classified cases while disproportionately returning:</p>
+<pre><code class="language-text">unknown
+</code></pre>
+<p>for another group.</p>
+<hr>
+<h1 id="pa-m41-escalation-rate-difference">PA-M41 — Escalation Rate Difference</h1>
+<h2 id="purpose_41">Purpose</h2>
+<p>Compare human-review escalation rates.</p>
+<h2 id="formula_19">Formula</h2>
+<pre><code class="language-text">ERD =
+  human_review_rate_group_a
+  -
+  human_review_rate_group_b
+</code></pre>
+<p>Review may be:</p>
+<pre><code class="language-text">protective
+burdensome
+delaying
+opportunity-enhancing
+</code></pre>
+<p>depending on context.</p>
+<p>The metric is therefore descriptive until consequences are evaluated.</p>
+<hr>
+<h1 id="pa-m42-evidence-coverage-difference">PA-M42 — Evidence Coverage Difference</h1>
+<h2 id="purpose_42">Purpose</h2>
+<p>Measure differences in evidence coverage.</p>
+<h2 id="formula_20">Formula</h2>
+<pre><code class="language-text">ECD =
+  evidence_coverage_group_a
+  -
+  evidence_coverage_group_b
+</code></pre>
+<h2 id="importance_2">Importance</h2>
+<p>A model may appear less reliable for one population simply because the measurement system provides poorer coverage.</p>
+<p>That distinction should be investigated.</p>
+<hr>
+<h1 id="pa-m43-false-favorable-reinterpretation-rate">PA-M43 — False Favorable Reinterpretation Rate</h1>
+<h2 id="purpose_43">Purpose</h2>
+<p>Detect unsupported reinterpretations that make an assessment more favorable.</p>
+<h2 id="formula_21">Formula</h2>
+<pre><code class="language-text">FFRR =
+  unsupported_favorable_reinterpretations
+  /
+  favorable_reinterpretations
+</code></pre>
+<h2 id="direction_8">Direction</h2>
+<pre><code class="language-text">lower_is_better
+</code></pre>
+<h2 id="example_3">Example</h2>
+<pre><code class="language-text">baseline:
+  low
+
+one stronger alternate observation:
+  high
+
+framework:
+  declares hidden high ability
+
+replication:
+  fails
+</code></pre>
+<p>This would contribute to the false favorable reinterpretation problem.</p>
+<hr>
+<h1 id="pa-m44-false-adverse-reinterpretation-rate">PA-M44 — False Adverse Reinterpretation Rate</h1>
+<h2 id="purpose_44">Purpose</h2>
+<p>Detect unsupported reinterpretations that make an assessment more adverse.</p>
+<h2 id="formula_22">Formula</h2>
+<pre><code class="language-text">FARR =
+  unsupported_adverse_reinterpretations
+  /
+  adverse_reinterpretations
+</code></pre>
+<h2 id="direction_9">Direction</h2>
+<pre><code class="language-text">lower_is_better
+</code></pre>
+<h2 id="symmetry-principle">Symmetry Principle</h2>
+<p>Both PA-M43 and PA-M44 are required.</p>
+<p>Fairness cannot mean challenging only unfavorable conventional models.</p>
+<hr>
+<h1 id="11-explainability-and-review-metrics">11. Explainability and Review Metrics</h1>
+<hr>
+<h1 id="pa-m45-evidence-reconstruction-rate">PA-M45 — Evidence Reconstruction Rate</h1>
+<h2 id="purpose_45">Purpose</h2>
+<p>Measure whether qualified independent reviewers can reconstruct how an assessment was reached.</p>
+<h2 id="formula_23">Formula</h2>
+<pre><code class="language-text">ERR =
+  successfully_reconstructed_results
+  /
+  reviewed_results
+</code></pre>
+<h2 id="reconstruction-requires">Reconstruction Requires</h2>
+<p>Reviewer access to relevant:</p>
+<pre><code class="language-text">evidence
+rules
+model outputs
+adapter outputs
+uncertainty
+limitations
+</code></pre>
+<p>A reviewer does not need to reach the same subjective preference.</p>
+<p>They should be able to understand the reasoning chain.</p>
+<hr>
+<h1 id="pa-m46-explanation-completeness">PA-M46 — Explanation Completeness</h1>
+<h2 id="purpose_46">Purpose</h2>
+<p>Measure whether required explanation components are present.</p>
+<h2 id="required-components">Required Components</h2>
+<p>Initial set:</p>
+<pre><code class="language-text">observation
+evidence
+substrate
+regime
+confidence
+uncertainty
+limitations
+alternative interpretations
+recommended action
+</code></pre>
+<h2 id="formula_24">Formula</h2>
+<pre><code class="language-text">EC =
+  present_required_components
+  /
+  total_required_components
+</code></pre>
+<h2 id="warning_3">Warning</h2>
+<p>A complete explanation can still be wrong.</p>
+<pre><code class="language-text">completeness != validity
+</code></pre>
+<hr>
+<h1 id="pa-m47-reviewer-override-rate">PA-M47 — Reviewer Override Rate</h1>
+<h2 id="purpose_47">Purpose</h2>
+<p>Measure how frequently qualified review changes automated interpretation or recommendation.</p>
+<h2 id="formula_25">Formula</h2>
+<pre><code class="language-text">ROR =
+  reviewer_overrides
+  /
+  reviewed_results
+</code></pre>
+<h2 id="override-reason-classes">Override Reason Classes</h2>
+<pre><code class="language-text">incorrect_evidence
+incorrect_rule
+missing_context
+unjustified_confidence
+fairness_concern
+applicability_error
+model_scope_error
+measurement_error
+identity_error
+other
+</code></pre>
+<h2 id="direction_10">Direction</h2>
+<pre><code class="language-text">descriptive
+</code></pre>
+<p>High or low override rates require interpretation.</p>
+<hr>
+<h1 id="pa-m48-contest-resolution-rate">PA-M48 — Contest Resolution Rate</h1>
+<h2 id="purpose_48">Purpose</h2>
+<p>Measure whether subject or stakeholder contests receive documented resolution.</p>
+<h2 id="formula_26">Formula</h2>
+<pre><code class="language-text">CRR =
+  resolved_contests
+  /
+  submitted_contests
+</code></pre>
+<h2 id="resolution-states">Resolution States</h2>
+<pre><code class="language-text">accepted
+partially_accepted
+rejected
+unresolved
+</code></pre>
+<p>A contest does not guarantee reversal.</p>
+<hr>
+<h1 id="12-operational-metrics">12. Operational Metrics</h1>
+<hr>
+<h1 id="pa-m49-profile-completion-rate">PA-M49 — Profile Completion Rate</h1>
+<h2 id="purpose_49">Purpose</h2>
+<p>Measure the proportion of initiated profiles that can actually be completed under declared evidence requirements.</p>
+<h2 id="formula_27">Formula</h2>
+<pre><code class="language-text">PCR =
+  completed_profiles
+  /
+  initiated_profiles
+</code></pre>
+<h2 id="direction_11">Direction</h2>
+<pre><code class="language-text">descriptive
+</code></pre>
+<p>A high completion rate is not inherently desirable if completion requires unsupported inference.</p>
+<hr>
+<h1 id="pa-m50-time-to-review">PA-M50 — Time to Review</h1>
+<h2 id="purpose_50">Purpose</h2>
+<p>Measure review latency.</p>
+<h2 id="formula_28">Formula</h2>
+<pre><code class="language-text">TTR =
+  review_completion_time
+  -
+  review_start_time
+</code></pre>
+<h2 id="direction_12">Direction</h2>
+<pre><code class="language-text">context_dependent
+</code></pre>
+<p>Faster review is not automatically better if review quality deteriorates.</p>
+<hr>
+<h1 id="pa-m51-evidence-acquisition-burden">PA-M51 — Evidence Acquisition Burden</h1>
+<h2 id="purpose_51">Purpose</h2>
+<p>Represent the cost required to build a richer assessment.</p>
+<p>Components may include:</p>
+<pre><code class="language-text">subject time
+evaluator time
+computational cost
+tool requirements
+accessibility burden
+privacy burden
+financial burden
+specialist burden
+</code></pre>
+<h2 id="preferred-representation">Preferred Representation</h2>
+<p>Initially:</p>
+<pre><code class="language-text">component-wise
+</code></pre>
+<p>rather than one universal number.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">evidence_burden:
+  subject_time:
+  evaluator_time:
+  computational_cost:
+  privacy_burden:
+  accessibility_burden:
+</code></pre>
+<h2 id="core-principle_2">Core Principle</h2>
+<p>A richer profile must justify its additional burden.</p>
+<hr>
+<h1 id="pa-m52-decision-deferral-rate">PA-M52 — Decision Deferral Rate</h1>
+<h2 id="purpose_52">Purpose</h2>
+<p>Measure how often a decision is deferred because evidence or authority is insufficient.</p>
+<h2 id="formula_29">Formula</h2>
+<pre><code class="language-text">DDR =
+  deferred_decisions
+  /
+  decision_opportunities
+</code></pre>
+<h2 id="direction_13">Direction</h2>
+<pre><code class="language-text">descriptive
+</code></pre>
+<p>Interpret alongside:</p>
+<pre><code class="language-text">error reduction
+harm avoidance
+delay cost
+review burden
+fairness
+</code></pre>
+<p>The current experimental module has:</p>
+<pre><code class="language-text">decision_authority:
+  none
+</code></pre>
+<p>so this metric is primarily intended for future context-validated workflows.</p>
+<hr>
+<h1 id="required-metric-pairings">Required Metric Pairings</h1>
+<p>Metrics should not be optimized in isolation.</p>
+<p>Recommended pairings:</p>
+<pre><code class="language-text">predictive accuracy
++
+calibration
+</code></pre>
+<pre><code class="language-text">evidence coverage
++
+evidence independence
+</code></pre>
+<pre><code class="language-text">test-retest stability
++
+relevant change sensitivity
+</code></pre>
+<pre><code class="language-text">model-mismatch precision
++
+model-mismatch recall
++
+false-positive mismatch rate
+</code></pre>
+<pre><code class="language-text">substrate effect magnitude
++
+substrate replicability
++
+substrate symmetry
+</code></pre>
+<pre><code class="language-text">regime transition detection
++
+false regime alarm rate
++
+boundary error
+</code></pre>
+<pre><code class="language-text">abstention rate
++
+abstention utility
+</code></pre>
+<pre><code class="language-text">counterfactual stability
++
+relevant change sensitivity
+</code></pre>
+<pre><code class="language-text">fairness difference
++
+evidence coverage
+</code></pre>
+<pre><code class="language-text">explanation completeness
++
+evidence reconstruction
+</code></pre>
+<pre><code class="language-text">predictive gain
++
+evidence acquisition burden
+</code></pre>
+<hr>
+<h1 id="metric-triads">Metric Triads</h1>
+<p>Some module questions benefit from three-metric bundles.</p>
+<h2 id="model-mismatch-triad">Model Mismatch Triad</h2>
+<pre><code class="language-text">PA-M20  Precision
+PA-M21  Recall
+PA-M22  False Positive Rate
+</code></pre>
+<hr>
+<h1 id="substrate-triad">Substrate Triad</h1>
+<pre><code class="language-text">PA-M12  Effect Magnitude
+PA-M13  Replicability
+PA-M15  Specificity
+</code></pre>
+<p>with:</p>
+<pre><code class="language-text">PA-M14
+</code></pre>
+<p>as a directional-bias safeguard.</p>
+<hr>
+<h1 id="regime-triad">Regime Triad</h1>
+<pre><code class="language-text">PA-M16  Transition Detection
+PA-M17  False Alarm Rate
+PA-M18  Boundary Error
+</code></pre>
+<hr>
+<h1 id="counterfactual-triad">Counterfactual Triad</h1>
+<pre><code class="language-text">PA-M33  Irrelevant Stability
+PA-M34  Relevant Sensitivity
+PA-M35  Task-Order Sensitivity
+</code></pre>
+<hr>
+<h1 id="fairness-symmetry-pair">Fairness Symmetry Pair</h1>
+<pre><code class="language-text">PA-M43
++
+PA-M44
+</code></pre>
+<p>A system should measure unsupported favorable and adverse reinterpretation.</p>
+<hr>
+<h1 id="riqf-core-metric-set">RIQF Core Metric Set</h1>
+<p>A first real Resonant IQ Fingerprint pilot should consider at minimum:</p>
+<pre><code class="language-text">PA-M01  Dimension Evidence Coverage
+PA-M02  Profile Evidence Coverage
+PA-M03  Evidence Independence Ratio
+
+PA-M04  Test-Retest Stability
+PA-M05  Alternate-Form Stability
+PA-M06  Inter-Rater Agreement
+PA-M07  Profile Topology Stability
+
+PA-M08  Convergent Association
+PA-M09  Discriminant Separation
+PA-M10  Incremental Explanatory Value
+
+PA-M12  Substrate Effect Magnitude
+PA-M13  Substrate Effect Replicability
+PA-M14  Substrate Symmetry
+PA-M15  Substrate Specificity
+
+PA-M20  Model-Mismatch Precision
+PA-M21  Model-Mismatch Recall
+PA-M22  Model-Mismatch False Positive Rate
+
+PA-M24  Cross-Observation Coherence
+PA-M25  Profile Contradiction Density
+
+PA-M28  Confidence Calibration Error
+PA-M30  Abstention Rate
+PA-M31  Abstention Utility
+PA-M32  Unsupported Assertion Rate
+
+PA-M33  Irrelevant Perturbation Stability
+PA-M34  Relevant Change Sensitivity
+PA-M35  Task-Order Sensitivity
+PA-M36  Adapter Ablation Effect
+
+PA-M37  Group Error Difference
+PA-M38  Group Calibration Difference
+PA-M42  Evidence Coverage Difference
+PA-M43  False Favorable Reinterpretation Rate
+PA-M44  False Adverse Reinterpretation Rate
+
+PA-M45  Evidence Reconstruction Rate
+PA-M46  Explanation Completeness
+
+PA-M51  Evidence Acquisition Burden
+</code></pre>
+<p>Not every study needs all metrics.</p>
+<p>Metric selection must follow the research question.</p>
+<hr>
+<h1 id="comparative-model-matrix">Comparative Model Matrix</h1>
+<p>The module should avoid testing only:</p>
+<pre><code class="language-text">conventional model
+vs
+full Predictive Analytics
+</code></pre>
+<p>A more informative comparison is:</p>
+<pre><code class="language-text">M0:
+  conventional scalar
+
+M1:
+  conventional subscales
+
+M2:
+  baseline multidimensional profile
+
+M3:
+  multidimensional
+  + substrate observations
+
+M4:
+  M3
+  + Structural Detection
+
+M5:
+  M4
+  + RTT / regime observations
+
+M6:
+  M5
+  + Resonance observations
+
+M7:
+  full Predictive Analytics ensemble
+</code></pre>
+<p>Possible additional ablations:</p>
+<pre><code class="language-text">M7 - FFT
+M7 - Inverted Star
+M7 - Structural Detection
+M7 - RTT
+M7 - Resonance
+</code></pre>
+<p>This helps identify what actually contributes.</p>
+<hr>
+<h1 id="comparative-reporting">Comparative Reporting</h1>
+<p>For each model configuration, report where appropriate:</p>
+<pre><code class="language-text">predictive_performance
+calibration
+reliability
+profile_stability
+model-mismatch performance
+substrate robustness
+regime robustness
+counterfactual robustness
+fairness
+evidence coverage
+evidence independence
+uncertainty quality
+explainability
+review burden
+privacy burden
+computational burden
+</code></pre>
+<hr>
+<h1 id="metric-provenance">Metric Provenance</h1>
+<p>Every computed metric should carry provenance.</p>
+<pre><code class="language-yaml">metric_result:
+  metric_id:
+  metric_version:
+
+  assessment_id:
+  study_id:
+
+  inputs:
+  source_refs:
+
+  calculation_method:
+
+  output:
+  uncertainty:
+
+  threshold:
+    status:
+
+  calculated_at:
+
+  validation_state:
+</code></pre>
+<hr>
+<h1 id="metric-versioning">Metric Versioning</h1>
+<p>Definitions may change.</p>
+<p>Therefore:</p>
+<pre><code class="language-text">PA-M20 v0.1
+</code></pre>
+<p>may not be directly equivalent to:</p>
+<pre><code class="language-text">PA-M20 v1.0
+</code></pre>
+<p>if the mismatch reference definition changed.</p>
+<p>Profiles and validation reports should retain metric versions.</p>
+<hr>
+<h1 id="missing-data">Missing Data</h1>
+<p>Every metric should declare its missing-data policy.</p>
+<p>Possible approaches:</p>
+<pre><code class="language-text">exclude_with_disclosure
+unknown
+not_applicable
+partial_calculation
+validated_imputation
+</code></pre>
+<p>The framework should not silently treat missing information as:</p>
+<pre><code class="language-text">zero
+</code></pre>
+<p>unless a validated measurement rule explicitly justifies it.</p>
+<hr>
+<h1 id="small-samples">Small Samples</h1>
+<p>Metric estimates from very small samples may be unstable.</p>
+<p>A technically computable value is not necessarily an informative value.</p>
+<p>Therefore:</p>
+<pre><code class="language-text">metric_computable
+!=
+metric_reliable
+</code></pre>
+<p>Sample size and uncertainty should accompany empirical metric reports.</p>
+<hr>
+<h1 id="confidence-intervals-and-uncertainty">Confidence Intervals and Uncertainty</h1>
+<p>Where a statistical metric supports uncertainty estimation, empirical studies should report it.</p>
+<p>Avoid:</p>
+<pre><code class="language-text">metric = 0.82
+</code></pre>
+<p>when the evidence actually supports something more like:</p>
+<pre><code class="language-text">estimate:
+  0.82
+
+uncertainty:
+  substantial
+</code></pre>
+<p>The exact uncertainty representation depends on the method.</p>
+<hr>
+<h1 id="synthetic-metric-data">Synthetic Metric Data</h1>
+<p>Synthetic examples may use invented metric values only when unmistakably labeled.</p>
+<p>Preferred demonstration:</p>
+<pre><code class="language-yaml">PA-M20:
+  status: not_tested
+</code></pre>
+<p>If synthetic values are needed to test software:</p>
+<pre><code class="language-yaml">PA-M20:
+  value: 0.80
+  data_type: synthetic_test_data
+</code></pre>
+<p>Never allow synthetic metric values to appear as real validation evidence.</p>
+<hr>
+<h1 id="metric-gaming">Metric Gaming</h1>
+<p>Any metric can become a target.</p>
+<p>Possible gaming patterns:</p>
+<pre><code class="language-text">optimizing coverage by lowering evidence requirements
+
+increasing precision by abstaining excessively
+
+reducing false regime alarms by never detecting transitions
+
+increasing review resolution rate by closing cases prematurely
+
+reducing unsupported assertions by making trivial claims
+
+improving profile stability by ignoring relevant change
+</code></pre>
+<p>Therefore metric families should be interpreted together.</p>
+<hr>
+<h1 id="goodhart-boundary">Goodhart Boundary</h1>
+<p>Conceptually:</p>
+<blockquote>
+<p><strong>When a metric becomes a target, behavior can shift toward optimizing the metric rather than the underlying goal.</strong></p>
+</blockquote>
+<p>Predictive Analytics should therefore avoid governance based on one headline metric.</p>
+<hr>
+<h1 id="metric-conflict">Metric Conflict</h1>
+<p>Metrics may legitimately conflict.</p>
+<p>Example:</p>
+<pre><code class="language-text">higher recall
+  -&gt;
+more false positives
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">lower abstention
+  -&gt;
+higher unsupported assertion rate
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">richer evidence
+  -&gt;
+higher privacy burden
+</code></pre>
+<p>These are tradeoffs, not necessarily implementation errors.</p>
+<hr>
+<h1 id="metric-tradeoff-record">Metric Tradeoff Record</h1>
+<p>Suggested structure:</p>
+<pre><code class="language-yaml">tradeoff:
+  metric_a:
+  metric_b:
+
+  observed_relationship:
+
+  desired_balance:
+
+  consequence:
+
+  decision:
+    status:
+</code></pre>
+<hr>
+<h1 id="evidence-coverage-versus-burden">Evidence Coverage Versus Burden</h1>
+<p>A core optimization problem:</p>
+<pre><code class="language-text">more evidence
+  -&gt;
+better coverage
+</code></pre>
+<p>but:</p>
+<pre><code class="language-text">more evidence
+  -&gt;
+more burden
+  -&gt;
+more privacy exposure
+</code></pre>
+<p>Therefore:</p>
+<pre><code class="language-text">PA-M01 / PA-M02
+</code></pre>
+<p>should sometimes be examined with:</p>
+<pre><code class="language-text">PA-M51
+</code></pre>
+<hr>
+<h1 id="precision-versus-coverage">Precision Versus Coverage</h1>
+<p>A conservative framework may produce:</p>
+<pre><code class="language-text">high mismatch precision
+low mismatch recall
+high abstention
+</code></pre>
+<p>Another may produce:</p>
+<pre><code class="language-text">high recall
+low precision
+low abstention
+</code></pre>
+<p>Neither is universally better.</p>
+<p>The intended use and harms matter.</p>
+<hr>
+<h1 id="metric-use-in-human-review">Metric Use in Human Review</h1>
+<p>Reviewers should not receive only:</p>
+<pre><code class="language-text">metric values
+</code></pre>
+<p>They should receive:</p>
+<pre><code class="language-text">metric meaning
+source evidence
+uncertainty
+validation state
+applicable limits
+</code></pre>
+<p>Metric dashboards can otherwise create false precision.</p>
+<hr>
+<h1 id="metric-use-in-ai-systems">Metric Use in AI Systems</h1>
+<p>AI systems consuming the metric registry should preserve:</p>
+<pre><code class="language-text">metric id
+metric version
+applicability
+direction
+uncertainty
+validation state
+</code></pre>
+<p>They should not infer:</p>
+<pre><code class="language-text">high number = universally good
+</code></pre>
+<p>unless the metric explicitly defines that relationship.</p>
+<hr>
+<h1 id="cross-system-metric-comparisons">Cross-System Metric Comparisons</h1>
+<p>A metric may have different meaning across:</p>
+<pre><code class="language-text">human
+AI
+human-AI pair
+team
+organization
+robotic system
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-text">PA-M04 Test-Retest Stability
+</code></pre>
+<p>may be meaningful across all of them.</p>
+<p>But expected stability and causes of variation may differ dramatically.</p>
+<p>Cross-system numeric equality does not establish equivalent cognitive behavior.</p>
+<hr>
+<h1 id="metric-applicability-record">Metric Applicability Record</h1>
+<pre><code class="language-yaml">metric_applicability:
+  metric_id: PA-M04
+
+  human:
+    status: applicable
+
+  ai:
+    status: applicable
+
+  human_ai_pair:
+    status: applicable
+
+  organization:
+    status: context_dependent
+
+  expected_behavior:
+    system_specific: true
+</code></pre>
+<hr>
+<h1 id="metric-threshold-record">Metric Threshold Record</h1>
+<p>Before operational use:</p>
+<pre><code class="language-yaml">threshold:
+  metric_id:
+
+  intended_use:
+  population_or_system_class:
+
+  value:
+  direction:
+
+  rationale:
+  evidence:
+
+  expected_error:
+  subgroup_behavior:
+
+  version:
+  review_date:
+</code></pre>
+<p>A threshold without context should not become canon-wide policy.</p>
+<hr>
+<h1 id="metric-deprecation">Metric Deprecation</h1>
+<p>A metric may be deprecated when:</p>
+<ul>
+<li>it fails reproducibility,</li>
+<li>it creates frequent misinterpretation,</li>
+<li>it duplicates a better metric,</li>
+<li>input requirements are unrealistic,</li>
+<li>fairness behavior is unacceptable,</li>
+<li>it encourages undesirable gaming,</li>
+<li>it no longer matches the architecture.</li>
+</ul>
+<hr>
+<h1 id="metric-rejection">Metric Rejection</h1>
+<p>A rejected metric should remain in lineage when useful.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">metric:
+  id: PA-MXX
+
+  lifecycle:
+    state: rejected
+
+  reason:
+    failed_reliability
+
+  retained_for:
+    - lineage
+    - negative_result
+    - historical_reference
+</code></pre>
+<p>Negative measurement results are part of the research record.</p>
+<hr>
+<h1 id="riqf-metric-warning">RIQF Metric Warning</h1>
+<p>The metrics in this registry mostly evaluate:</p>
+<pre><code class="language-text">the assessment system
+</code></pre>
+<p>not:</p>
+<pre><code class="language-text">the intelligence of the subject
+</code></pre>
+<p>For example:</p>
+<pre><code class="language-text">PA-M07
+</code></pre>
+<p>measures profile stability.</p>
+<p>It is not a measure of intelligence.</p>
+<pre><code class="language-text">PA-M14
+</code></pre>
+<p>measures substrate symmetry.</p>
+<p>It is not a measure of intelligence.</p>
+<pre><code class="language-text">PA-M45
+</code></pre>
+<p>measures explanation reconstruction.</p>
+<p>It is not a measure of intelligence.</p>
+<p>This distinction must remain explicit.</p>
+<hr>
+<h1 id="no-metric-to-iq-shortcut">No Metric-to-IQ Shortcut</h1>
+<p>Prohibited interpretation:</p>
+<pre><code class="language-text">high stability
++
+high coherence
++
+high structural score
+=
+high IQ
+</code></pre>
+<p>That composition is not established.</p>
+<hr>
+<h1 id="metric-failure-dashboard">Metric Failure Dashboard</h1>
+<p>A useful future dashboard should intentionally foreground failure indicators.</p>
+<p>Example:</p>
+<pre><code class="language-text">Unsupported Assertion Rate        HIGH
+False Mismatch Positive Rate      HIGH
+Regime False Alarm Rate           MODERATE
+Counterfactual Fragility          HIGH
+Evidence Independence             LOW
+Substrate Replication             LOW
+</code></pre>
+<p>This may be more important than a favorable capability profile.</p>
+<hr>
+<h1 id="model-comparison-example">Model Comparison Example</h1>
+<p>Synthetic demonstration:</p>
+<pre><code class="language-yaml">M0:
+  predictive_error: moderate
+  evidence_burden: low
+  explanation_completeness: low
+
+M3:
+  predictive_error: moderate
+  evidence_burden: moderate
+  explanation_completeness: high
+
+M7:
+  predictive_error: moderate
+  evidence_burden: high
+  explanation_completeness: high
+</code></pre>
+<p>Possible interpretation:</p>
+<pre><code class="language-text">M7 does not earn its added complexity
+for predictive performance alone.
+</code></pre>
+<p>It might still provide explanatory value.</p>
+<p>That claim would require separate evidence.</p>
+<hr>
+<h1 id="adapter-ablation-example">Adapter Ablation Example</h1>
+<p>Synthetic demonstration:</p>
+<pre><code class="language-text">Full ensemble:
+  performance = X
+
+Without FFT:
+  performance approximately X
+
+Without RTT:
+  performance approximately X
+
+Without Structural Detection:
+  performance materially decreases
+</code></pre>
+<p>Possible interpretation:</p>
+<pre><code class="language-text">Structural Detection:
+  candidate incremental contribution
+
+FFT:
+  no detectable contribution in this study
+
+RTT:
+  no detectable contribution in this study
+</code></pre>
+<p>This is exactly the kind of result the framework should allow.</p>
+<hr>
+<h1 id="metric-review-questions">Metric Review Questions</h1>
+<p>Before using a metric, ask:</p>
+<ol>
+<li>What exactly does it measure?</li>
+<li>What does it not measure?</li>
+<li>What scale is appropriate?</li>
+<li>Is direction meaningful?</li>
+<li>Is a numeric representation justified?</li>
+<li>Are inputs independently observed?</li>
+<li>What assumptions are required?</li>
+<li>How does missing evidence affect it?</li>
+<li>How stable is it?</li>
+<li>How does it behave across groups?</li>
+<li>How does it behave across system classes?</li>
+<li>What could game it?</li>
+<li>What could make it misleading?</li>
+<li>Which companion metric is required?</li>
+<li>What threshold, if any, is justified?</li>
+<li>Has the threshold been validated?</li>
+<li>What decision authority does the metric have?</li>
+<li>What evidence would cause the metric to be deprecated?</li>
+</ol>
+<hr>
+<h1 id="research-questions">Research Questions</h1>
+<ol>
+<li>Which metrics are reliably measurable?</li>
+<li>Which are redundant?</li>
+<li>Which are misleading?</li>
+<li>Which require better operational definitions?</li>
+<li>Which metrics improve model comparison?</li>
+<li>Can evidence independence be measured reliably?</li>
+<li>Can profile topology stability be measured meaningfully?</li>
+<li>Can substrate effects be isolated from task effects?</li>
+<li>Can substrate symmetry detect favorability bias?</li>
+<li>Can regime transitions be detected without circularity?</li>
+<li>Can false regime alarms be controlled?</li>
+<li>Can model mismatch be defined independently enough to estimate precision and recall?</li>
+<li>Does mismatch evidence strength add information beyond its components?</li>
+<li>Can coherence be quantified without collapsing meaningful contradiction?</li>
+<li>Can profile drift be measured without implying degradation?</li>
+<li>Can confidence calibration work with ordinal confidence labels?</li>
+<li>When is Brier score appropriate?</li>
+<li>Can abstention utility be defined without hiding moral and operational tradeoffs?</li>
+<li>Can unsupported assertions be audited reliably?</li>
+<li>Can irrelevant perturbations be distinguished from relevant changes?</li>
+<li>Does adapter ablation reveal useful simplifications?</li>
+<li>Which adapters add negative value?</li>
+<li>Can fairness metrics remain interpretable when group base rates differ?</li>
+<li>How should evidence coverage disparities be measured?</li>
+<li>Can false favorable reinterpretation be identified consistently?</li>
+<li>Can false adverse reinterpretation be identified consistently?</li>
+<li>Does evidence reconstruction predict explainability quality?</li>
+<li>Does explanation completeness improve review?</li>
+<li>What reviewer override rate indicates system problems?</li>
+<li>How should contest quality be measured beyond resolution rate?</li>
+<li>How should evidence burden be quantified?</li>
+<li>Can privacy burden be represented without oversimplification?</li>
+<li>Can metric gaming be detected?</li>
+<li>Which metric pairs expose gaming attempts?</li>
+<li>Which metrics generalize across humans and AI?</li>
+<li>Which require system-specific definitions?</li>
+<li>Which metrics should never be combined?</li>
+<li>Which composites might eventually be justified?</li>
+<li>How should metric uncertainty be reported?</li>
+<li>What evidence would justify replacing the entire metric registry?</li>
+</ol>
+<hr>
+<h1 id="core-invariants">Core Invariants</h1>
+<pre><code class="language-text">metric != truth
+metric != identity
+metric != human_worth
+formula != validity
+precision != correctness
+coverage != validity
+stability != truth
+coherence != correctness
+confidence != accuracy
+correlation != causation
+effect_size != causal_effect
+difference != unfairness
+equality != fairness
+review_rate != review_quality
+override_rate != success
+resolution_rate != justice
+higher != always_better
+lower != always_better
+numeric != objective
+composite != complete_representation
+metric_count != evidence_count
+adapter_count != evidence_count
+synthetic_value != empirical_result
+threshold != natural_boundary
+profile_metric != intelligence_score
+measurement != total_capability
+decision_authority != inherited
+canon_alignment != empirical_validation
+</code></pre>
+<hr>
+<h1 id="closing-principle">Closing Principle</h1>
+<p>Metrics are attractive because they turn complicated observations into comparable objects.</p>
+<p>That is useful.</p>
+<p>It is also dangerous.</p>
+<p>The moment something becomes a number, it becomes easy to:</p>
+<ul>
+<li>rank,</li>
+<li>threshold,</li>
+<li>optimize,</li>
+<li>automate,</li>
+<li>compare,</li>
+<li>and overinterpret.</li>
+</ul>
+<p>Predictive Analytics therefore treats every metric as another model.</p>
+<p>Every metric has:</p>
+<pre><code class="language-text">a boundary
+an assumption
+an uncertainty
+an intended use
+a failure mode
+</code></pre>
+<p>The metric registry should help the framework discover not only when its richer observations succeed, but when they:</p>
+<pre><code class="language-text">fail to replicate
+overfit
+drift
+become unfair
+create false mismatch
+inflate confidence
+increase burden
+or add no value
+</code></pre>
+<p>That is especially important for RIQF.</p>
+<p>The goal is not to escape one reductive number by constructing fifty-two new ones.</p>
+<blockquote>
+<p><strong>The purpose of measurement is to expose structure responsibly, not to make uncertainty disappear behind arithmetic.</strong></p>
+</blockquote>
   </main>
 </body>
 </html>

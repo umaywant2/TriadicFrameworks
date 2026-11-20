@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/predictive_analytics/human_review_hook.md">
-  <title>human_review_hook</title>
+  <title>Predictive Analytics — Human Review Hook</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,7 +92,1849 @@
   </aside>
 
   <main>
+<p><img width="1194" height="672" alt="predictive_analytics_human_review_hook_" src="https://github.com/user-attachments/assets/3a336466-a70e-4b9d-9887-9da7e83b920f" /></p>
+<h1 id="predictive-analytics-human-review-hook">Predictive Analytics — Human Review Hook</h1>
+<blockquote>
+<p><strong>Escalation is not failure. Sometimes the correct automated decision is to stop deciding.</strong></p>
+</blockquote>
+<h2 id="module">Module</h2>
+<p>Predictive Analytics</p>
+<h2 id="hook-id">Hook ID</h2>
+<p><code>human-review</code></p>
+<h2 id="operator">Operator</h2>
+<p><code>PA-Escalate</code></p>
+<h2 id="status">Status</h2>
+<p>Experimental.</p>
+<h2 id="validation-state">Validation State</h2>
+<p>Unvalidated.</p>
+<h2 id="intended-role">Intended Role</h2>
+<p>Escalation, contestability, evidence review, uncertainty review, model-mismatch review, and decision-boundary enforcement.</p>
+<h2 id="decision-authority">Decision Authority</h2>
+<p>None.</p>
+<hr>
+<h1 id="purpose">Purpose</h1>
+<p>The Human Review Hook defines when and how Predictive Analytics should defer interpretation or consequential action to qualified human review.</p>
+<p>The hook exists because a predictive system may encounter situations where:</p>
+<ul>
+<li>evidence is contradictory,</li>
+<li>evidence coverage is poor,</li>
+<li>model fit is uncertain,</li>
+<li>substrate mismatch is plausible,</li>
+<li>regime mismatch is plausible,</li>
+<li>counterfactual fragility is high,</li>
+<li>adapters materially disagree,</li>
+<li>confidence is poorly calibrated,</li>
+<li>the subject contests the evidence,</li>
+<li>the intended use is consequential,</li>
+<li>or the system has reached the boundary of its validated authority.</li>
+</ul>
+<p>The purpose of review is not automatically to overturn the predictive model.</p>
+<p>It is to make unresolved structure inspectable.</p>
+<hr>
+<h1 id="core-principle">Core Principle</h1>
+<p>Human review is not:</p>
+<pre><code class="language-text">machine says X
+human says Y
+therefore Y wins
+</code></pre>
+<p>Nor is it:</p>
+<pre><code class="language-text">machine says X
+human clicks approve
+therefore X is legitimate
+</code></pre>
+<p>The intended structure is:</p>
+<pre><code class="language-text">Automated Assessment
+        │
+        ▼
+Review Trigger
+        │
+        ▼
+Freeze / Preserve Baseline
+        │
+        ▼
+Evidence Package
+        │
+        ▼
+Qualified Human Review
+        │
+        ├── confirm
+        ├── narrow
+        ├── revise
+        ├── request evidence
+        ├── defer
+        ├── contest interpretation
+        └── escalate further
+        │
+        ▼
+Documented Resolution
+</code></pre>
+<hr>
+<h1 id="foundational-review-principle">Foundational Review Principle</h1>
+<blockquote>
+<p><strong>Human review should add accountable judgment, not merely human presence.</strong></p>
+</blockquote>
+<p>A human being present in the workflow does not automatically make a decision:</p>
+<ul>
+<li>fair,</li>
+<li>accurate,</li>
+<li>explainable,</li>
+<li>lawful,</li>
+<li>unbiased,</li>
+<li>evidence-based,</li>
+<li>or valid.</li>
+</ul>
+<p>Human review itself must be evaluated.</p>
+<hr>
+<h1 id="review-is-a-distinct-layer">Review Is a Distinct Layer</h1>
+<p>Predictive Analytics separates:</p>
+<pre><code class="language-text">prediction
+observation
+interpretation
+decision
+review
+</code></pre>
+<p>These are not the same operation.</p>
+<p>A reviewer should be able to inspect how the system moved from:</p>
+<pre><code class="language-text">evidence
+</code></pre>
+<p>to:</p>
+<pre><code class="language-text">prediction
+</code></pre>
+<p>to:</p>
+<pre><code class="language-text">interpretation
+</code></pre>
+<p>to:</p>
+<pre><code class="language-text">recommended action
+</code></pre>
+<p>before evaluating whether the chain is justified.</p>
+<hr>
+<h1 id="review-boundary">Review Boundary</h1>
+<p>Each review must declare what the reviewer is authorized to do.</p>
+<p>Possible review scopes:</p>
+<pre><code class="language-text">evidence_review
+measurement_review
+model_fit_review
+substrate_review
+regime_review
+profile_review
+fairness_review
+decision_review
+technical_review
+domain_review
+ethics_review
+</code></pre>
+<p>A reviewer qualified for one scope should not silently assume authority over all others.</p>
+<hr>
+<h1 id="review-trigger-classes">Review Trigger Classes</h1>
+<p>The initial architecture defines nine major trigger families.</p>
+<hr>
+<h1 id="1-consequence-trigger">1. Consequence Trigger</h1>
+<p>Review should become more likely as potential consequences increase.</p>
+<p>Examples may include contexts affecting:</p>
+<pre><code class="language-text">education
+employment
+health
+finance
+legal status
+access to services
+significant opportunity
+reputation
+safety
+</code></pre>
+<p>For the current experimental module:</p>
+<pre><code class="language-text">decision_authority:
+  none
+</code></pre>
+<p>Therefore no high-stakes automated decision is authorized by this framework.</p>
+<hr>
+<h1 id="2-uncertainty-trigger">2. Uncertainty Trigger</h1>
+<p>Review may be warranted when:</p>
+<pre><code class="language-text">confidence:
+  low
 
+evidence_coverage:
+  low
+
+missing_evidence:
+  material
+
+causal_status:
+  unresolved
+
+applicability:
+  unknown
+</code></pre>
+<p>The system should not hide uncertainty simply because a downstream process expects an answer.</p>
+<hr>
+<h1 id="3-contradiction-trigger">3. Contradiction Trigger</h1>
+<p>Review may be appropriate when major observations materially disagree.</p>
+<p>Example:</p>
+<pre><code class="language-text">prediction:
+  low
+
+direct observations:
+  mixed
+
+structural profile:
+  strong in several dimensions
+
+substrate comparison:
+  inconsistent
+
+regime analysis:
+  unresolved
+</code></pre>
+<p>Correct action may be:</p>
+<pre><code class="language-text">review
+</code></pre>
+<p>rather than:</p>
+<pre><code class="language-text">average everything
+</code></pre>
+<hr>
+<h1 id="4-model-mismatch-trigger">4. Model-Mismatch Trigger</h1>
+<p>Review may be appropriate when:</p>
+<pre><code class="language-text">model_fit:
+  low
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">model_mismatch:
+  candidate
+</code></pre>
+<p>especially when the consequence is material.</p>
+<p>A mismatch candidate does not itself justify reversal.</p>
+<p>It justifies inspection.</p>
+<hr>
+<h1 id="5-substrate-trigger">5. Substrate Trigger</h1>
+<p>Review may be appropriate when observed performance varies materially across substrates.</p>
+<p>Example:</p>
+<pre><code class="language-text">substrate_a:
+  weak
+
+substrate_b:
+  strong
+</code></pre>
+<p>Questions for review:</p>
+<ul>
+<li>Are tasks genuinely comparable?</li>
+<li>Is the substrate difference construct-relevant?</li>
+<li>Is accessibility involved?</li>
+<li>Is the difference replicated?</li>
+<li>Is the original inference overgeneralized?</li>
+<li>Is the alternate interpretation overgeneralized?</li>
+<li>Are other variables changing simultaneously?</li>
+</ul>
+<hr>
+<h1 id="6-regime-trigger">6. Regime Trigger</h1>
+<p>Review may be appropriate where:</p>
+<pre><code class="language-text">model_fit:
+  high in regime A
+  low in regime B
+</code></pre>
+<p>Questions:</p>
+<ul>
+<li>Are the regimes operationally justified?</li>
+<li>Did the model's intended operating conditions change?</li>
+<li>Is the boundary stable?</li>
+<li>Is the apparent regime merely post-hoc segmentation?</li>
+<li>Does the intended decision belong to the validated regime?</li>
+</ul>
+<hr>
+<h1 id="7-counterfactual-fragility-trigger">7. Counterfactual Fragility Trigger</h1>
+<p>If a small reasonable change produces a major assessment change:</p>
+<pre><code class="language-text">baseline:
+  adverse
+
+small perturbation:
+  favorable
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">baseline:
+  favorable
+
+small perturbation:
+  adverse
+</code></pre>
+<p>then:</p>
+<pre><code class="language-text">counterfactual_fragility:
+  high
+</code></pre>
+<p>may justify review.</p>
+<hr>
+<h1 id="8-adapter-disagreement-trigger">8. Adapter Disagreement Trigger</h1>
+<p>Suppose:</p>
+<pre><code class="language-text">FFT:
+  model boundary incomplete
+
+Inverted Star:
+  inversion candidate
+
+Structural Detection:
+  pattern unsupported
+
+RTT:
+  regime effect unsupported
+
+Resonance:
+  unresolved
+</code></pre>
+<p>The disagreement should not be converted into adapter voting.</p>
+<p>Possible action:</p>
+<pre><code class="language-text">review_required:
+  true
+</code></pre>
+<p>where consequence warrants it.</p>
+<hr>
+<h1 id="9-contest-trigger">9. Contest Trigger</h1>
+<p>A real person should have a meaningful path to challenge:</p>
+<pre><code class="language-text">incorrect facts
+missing context
+incorrect attribution
+outdated evidence
+unsupported interpretation
+identity confusion
+measurement error
+model applicability
+</code></pre>
+<p>A contest is evidence that the assessment may require review.</p>
+<p>It is not automatic proof that the assessment is wrong.</p>
+<hr>
+<h1 id="trigger-severity">Trigger Severity</h1>
+<p>Possible descriptive states:</p>
+<pre><code class="language-text">none
+low
+moderate
+high
+critical
+unknown
+</code></pre>
+<p>Thresholds must eventually be context-specific.</p>
+<p>No universal human-review threshold is assumed by the experimental module.</p>
+<hr>
+<h1 id="review-trigger-record">Review Trigger Record</h1>
+<pre><code class="language-yaml">review_trigger:
+  id: review-trigger-001
+
+  assessment_id:
+
+  trigger_type:
+    - uncertainty
+    - contradiction
+    - model_mismatch
+
+  severity:
+    high
+
+  evidence:
+    - evidence-reference
+
+  consequence:
+    level: high
+
+  automated_authority:
+    status: none
+
+  review:
+    required: true
+</code></pre>
+<hr>
+<h1 id="escalation-matrix">Escalation Matrix</h1>
+<p>Conceptual matrix:</p>
+<pre><code class="language-text">                         Consequence
+
+                    Low      Medium      High
+                 ┌────────┬──────────┬──────────┐
+Uncertainty Low  │ proceed│ monitor  │ review   │
+            ─────┼────────┼──────────┼──────────┤
+            Med  │ monitor│ review   │ review   │
+            ─────┼────────┼──────────┼──────────┤
+            High │ review │ review   │ escalate │
+                 └────────┴──────────┴──────────┘
+</code></pre>
+<p>This is a conceptual reasoning aid.</p>
+<p>It is <strong>not</strong> a validated operational policy.</p>
+<p>Actual thresholds require context-specific validation and governance.</p>
+<hr>
+<h1 id="pa-escalate"><code>PA-Escalate</code></h1>
+<p>The module-level escalation operator:</p>
+<pre><code class="language-text">PA-Escalate(assessment)
+  -&gt; review_recommendation
+</code></pre>
+<p>Candidate inputs:</p>
+<pre><code class="language-text">consequence
+confidence
+evidence_coverage
+model_fit
+substrate_fit
+regime_fit
+contradictions
+counterfactual_fragility
+fairness_signals
+contest_status
+validation_state
+decision_authority
+</code></pre>
+<hr>
+<h1 id="escalation-output">Escalation Output</h1>
+<pre><code class="language-yaml">escalation:
+  required:
+  reason:
+  priority:
+
+  review_scope:
+  reviewer_requirements:
+
+  baseline_frozen:
+  evidence_package_created:
+
+  automated_action:
+    status:
+
+  decision_authority:
+</code></pre>
+<hr>
+<h1 id="baseline-freeze">Baseline Freeze</h1>
+<p>When review begins, the system should preserve the state that triggered review.</p>
+<pre><code class="language-yaml">review_snapshot:
+  assessment_version:
+  model_version:
+  evidence_version:
+  adapter_versions:
+  metric_versions:
+  timestamp:
+
+  baseline_prediction:
+  baseline_interpretation:
+  confidence:
+  uncertainty:
+
+  preserved: true
+</code></pre>
+<p>Later updates must not silently rewrite the original assessment.</p>
+<hr>
+<h1 id="why-baseline-freeze-matters">Why Baseline Freeze Matters</h1>
+<p>Without preservation:</p>
+<pre><code class="language-text">model changes
+evidence changes
+profile changes
+</code></pre>
+<p>and reviewers may no longer know:</p>
+<blockquote>
+<p>What exactly triggered the review?</p>
+</blockquote>
+<p>Review requires provenance.</p>
+<hr>
+<h1 id="review-evidence-package">Review Evidence Package</h1>
+<p>A reviewer should receive evidence appropriate to the review scope.</p>
+<p>Minimal conceptual package:</p>
+<pre><code class="language-yaml">review_package:
+  assessment_id:
+
+  intended_use:
+
+  observed_system:
+    id:
+    class:
+    boundary:
+
+  baseline:
+    model:
+    version:
+    prediction:
+    interpretation:
+    confidence:
+
+  evidence:
+    sources:
+    independent_source_count:
+    provenance:
+
+  observations:
+
+  substrate:
+  regime:
+
+  dimensions:
+
+  adapters:
+    selected:
+    results:
+
+  coherence:
+  drift:
+  counterfactual:
+
+  uncertainty:
+  contradictions:
+  counterevidence:
+  missing_evidence:
+
+  validation_state:
+  limitations:
+
+  trigger:
+  consequence:
+
+  contest:
+</code></pre>
+<p>The reviewer should not have to reconstruct this from scattered system outputs.</p>
+<hr>
+<h1 id="evidence-versus-interpretation">Evidence Versus Interpretation</h1>
+<p>The review package should distinguish:</p>
+<pre><code class="language-text">evidence
+</code></pre>
+<p>from:</p>
+<pre><code class="language-text">derived measurement
+</code></pre>
+<p>from:</p>
+<pre><code class="language-text">model output
+</code></pre>
+<p>from:</p>
+<pre><code class="language-text">adapter interpretation
+</code></pre>
+<p>from:</p>
+<pre><code class="language-text">final recommendation
+</code></pre>
+<p>Suggested structure:</p>
+<pre><code class="language-text">Layer 1:
+  raw / source evidence
+
+Layer 2:
+  measured observations
+
+Layer 3:
+  predictive model output
+
+Layer 4:
+  adapter / observer interpretations
+
+Layer 5:
+  comparative assessment
+
+Layer 6:
+  proposed action
+</code></pre>
+<p>This helps prevent interpretive output from masquerading as source evidence.</p>
+<hr>
+<h1 id="evidence-independence-in-review">Evidence Independence in Review</h1>
+<p>The review interface should explicitly show:</p>
+<pre><code class="language-text">adapter interpretations:
+  5
+
+independent evidence sources:
+  2
+</code></pre>
+<p>rather than merely:</p>
+<pre><code class="language-text">5 systems support this interpretation
+</code></pre>
+<p>Five interpretations of two sources are still two underlying evidence sources.</p>
+<hr>
+<h1 id="reviewer-actions">Reviewer Actions</h1>
+<p>Canonical reviewer actions:</p>
+<pre><code class="language-text">confirm
+confirm_with_limits
+narrow_scope
+revise_interpretation
+reject_interpretation
+request_evidence
+request_reassessment
+request_specialist_review
+defer
+escalate
+record_unresolved
+</code></pre>
+<hr>
+<h1 id="confirm"><code>confirm</code></h1>
+<p>The reviewer finds the assessment adequately supported for the declared use.</p>
+<pre><code class="language-yaml">review_result:
+  action: confirm
+</code></pre>
+<p>This should not increase the framework's validation state globally.</p>
+<hr>
+<h1 id="confirm_with_limits"><code>confirm_with_limits</code></h1>
+<p>The assessment is useful within narrower bounds.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">review_result:
+  action: confirm_with_limits
+
+  limit:
+    valid_for:
+      timed_symbolic_performance
+
+    not_valid_for:
+      global_intelligence_inference
+</code></pre>
+<p>This is a particularly important review outcome.</p>
+<hr>
+<h1 id="narrow_scope"><code>narrow_scope</code></h1>
+<p>The model measured something real but the interpretation exceeded its evidence.</p>
+<p>Example:</p>
+<pre><code class="language-text">original:
+  broad reasoning capability low
+
+review:
+  evidence supports only
+  timed symbolic weakness
+</code></pre>
+<p>Result:</p>
+<pre><code class="language-yaml">review_result:
+  action: narrow_scope
+</code></pre>
+<hr>
+<h1 id="revise_interpretation"><code>revise_interpretation</code></h1>
+<p>The evidence remains largely intact, but the interpretation changes.</p>
+<pre><code class="language-yaml">review_result:
+  action: revise_interpretation
+
+  previous:
+    broad_capability_low
+
+  revised:
+    asymmetric_profile_with_timed_symbolic_weakness
+</code></pre>
+<p>This is not automatically more favorable.</p>
+<p>It is intended to be more evidence-aligned.</p>
+<hr>
+<h1 id="reject_interpretation"><code>reject_interpretation</code></h1>
+<p>The reviewer finds the interpretation unsupported.</p>
+<p>The evidence itself may remain valid.</p>
+<pre><code class="language-yaml">review_result:
+  action: reject_interpretation
+
+  evidence:
+    preserved: true
+</code></pre>
+<hr>
+<h1 id="request_evidence"><code>request_evidence</code></h1>
+<p>The reviewer cannot responsibly decide.</p>
+<pre><code class="language-yaml">review_result:
+  action: request_evidence
+
+  missing:
+    - matched alternate form
+    - independent evaluator
+    - cross-substrate replication
+</code></pre>
+<hr>
+<h1 id="request_reassessment"><code>request_reassessment</code></h1>
+<p>Used when the existing assessment process itself requires repetition or redesign.</p>
+<p>Possible reasons:</p>
+<pre><code class="language-text">measurement failure
+identity mismatch
+instrument issue
+invalid conditions
+insufficient accessibility
+corrupted evidence
+</code></pre>
+<hr>
+<h1 id="request_specialist_review"><code>request_specialist_review</code></h1>
+<p>Some questions require expertise outside the system or current reviewer.</p>
+<p>Possible scopes:</p>
+<pre><code class="language-text">psychometric
+statistical
+domain-specific
+clinical
+accessibility
+legal
+ethical
+technical
+security
+model-risk
+</code></pre>
+<p>Predictive Analytics should not pretend one reviewer possesses every kind of expertise.</p>
+<hr>
+<h1 id="defer"><code>defer</code></h1>
+<p>A decision is postponed because evidence is inadequate.</p>
+<pre><code class="language-yaml">review_result:
+  action: defer
+
+  reason:
+    unresolved_material_uncertainty
+</code></pre>
+<p>Deferral is different from rejection.</p>
+<hr>
+<h1 id="escalate"><code>escalate</code></h1>
+<p>The reviewer identifies a need for a higher governance level.</p>
+<pre><code class="language-yaml">review_result:
+  action: escalate
+
+  destination:
+    governance_review
+</code></pre>
+<hr>
+<h1 id="record_unresolved"><code>record_unresolved</code></h1>
+<p>Some disagreements should remain unresolved.</p>
+<pre><code class="language-yaml">review_result:
+  action: record_unresolved
+
+  competing_interpretations:
+    - interpretation_a
+    - interpretation_b
+</code></pre>
+<p>A forced answer may be worse than explicit uncertainty.</p>
+<hr>
+<h1 id="reviewer-confidence">Reviewer Confidence</h1>
+<p>Reviewers should express confidence separately from the assessment.</p>
+<pre><code class="language-yaml">reviewer:
+  conclusion:
+  confidence:
+    low
+    medium
+    high
+</code></pre>
+<p>A reviewer saying:</p>
+<pre><code class="language-text">confirmed
+</code></pre>
+<p>with:</p>
+<pre><code class="language-text">confidence: low
+</code></pre>
+<p>should remain distinguishable from:</p>
+<pre><code class="language-text">confirmed
+confidence: high
+</code></pre>
+<p>These confidence labels themselves require eventual validation if used operationally.</p>
+<hr>
+<h1 id="reviewer-independence">Reviewer Independence</h1>
+<p>Possible review configurations:</p>
+<pre><code class="language-text">original evaluator
+independent evaluator
+specialist evaluator
+panel
+adversarial reviewer
+subject-informed reviewer
+blind reviewer
+</code></pre>
+<p>Different contexts may warrant different levels of independence.</p>
+<hr>
+<h1 id="blind-review">Blind Review</h1>
+<p>Where appropriate, a reviewer may initially be blinded to:</p>
+<pre><code class="language-text">subject preference
+expected interpretation
+adapter consensus
+conventional composite
+prior reviewer conclusion
+</code></pre>
+<p>This can help test whether the evidence independently supports the interpretation.</p>
+<p>Blind review is not appropriate in every context.</p>
+<hr>
+<h1 id="adversarial-review">Adversarial Review</h1>
+<p>An adversarial reviewer is asked:</p>
+<blockquote>
+<p><strong>What evidence would make this interpretation fail?</strong></p>
+</blockquote>
+<p>They may search for:</p>
+<ul>
+<li>unsupported assumptions,</li>
+<li>weak evidence,</li>
+<li>alternative explanations,</li>
+<li>counterexamples,</li>
+<li>confounds,</li>
+<li>inappropriate scope,</li>
+<li>unfairness,</li>
+<li>counterfactual fragility.</li>
+</ul>
+<p>The purpose is not to attack the subject.</p>
+<p>It is to challenge the interpretation.</p>
+<hr>
+<h1 id="dual-review">Dual Review</h1>
+<p>A useful experimental structure may include:</p>
+<pre><code class="language-text">Reviewer A:
+  reconstruct strongest supported interpretation
+
+Reviewer B:
+  construct strongest evidence-based challenge
+</code></pre>
+<p>Then:</p>
+<pre><code class="language-text">Reviewer C or panel:
+  inspect disagreement
+</code></pre>
+<p>This should only be used where the burden is justified.</p>
+<hr>
+<h1 id="human-review-is-not-ground-truth">Human Review Is Not Ground Truth</h1>
+<p>A critical invariant:</p>
+<pre><code class="language-text">human_reviewer != ground_truth
+</code></pre>
+<p>Humans can introduce:</p>
+<ul>
+<li>bias,</li>
+<li>fatigue,</li>
+<li>overconfidence,</li>
+<li>inconsistency,</li>
+<li>anchoring,</li>
+<li>authority effects,</li>
+<li>narrative preference,</li>
+<li>misunderstanding,</li>
+<li>domain limitations.</li>
+</ul>
+<p>Review itself requires validation.</p>
+<hr>
+<h1 id="automation-bias">Automation Bias</h1>
+<p>A reviewer may over-trust an automated assessment.</p>
+<p>Example:</p>
+<pre><code class="language-text">system:
+  confidence high
+
+reviewer:
+  accepts without inspecting evidence
+</code></pre>
+<p>This is not meaningful human review.</p>
+<p>Potential mitigation:</p>
+<pre><code class="language-text">hide recommendation initially
+show evidence first
+require rationale
+measure reconstruction
+</code></pre>
+<p>where appropriate.</p>
+<hr>
+<h1 id="reverse-automation-bias">Reverse Automation Bias</h1>
+<p>A reviewer may distrust automated results simply because they are automated.</p>
+<p>This can also distort judgment.</p>
+<p>Therefore the goal is not:</p>
+<pre><code class="language-text">trust AI
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">distrust AI
+</code></pre>
+<p>It is:</p>
+<pre><code class="language-text">inspect evidence
+inspect model
+inspect limitations
+</code></pre>
+<hr>
+<h1 id="anchoring">Anchoring</h1>
+<p>If reviewers see:</p>
+<pre><code class="language-text">Composite: 94
+</code></pre>
+<p>before examining evidence, the number may affect later interpretation.</p>
+<p>A validation study may compare:</p>
+<pre><code class="language-text">score-first review
+</code></pre>
+<p>against:</p>
+<pre><code class="language-text">evidence-first review
+</code></pre>
+<p>to measure anchoring.</p>
+<hr>
+<h1 id="adapter-anchoring">Adapter Anchoring</h1>
+<p>Reviewers can also become anchored by richer terminology.</p>
+<p>For example:</p>
+<pre><code class="language-text">FFT says...
+RTT says...
+Structural Detection says...
+</code></pre>
+<p>may create authority through jargon.</p>
+<p>Review materials should preserve experimental status.</p>
+<hr>
+<h1 id="review-rationale">Review Rationale</h1>
+<p>Every consequential review should record rationale.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">review_rationale:
+  supported_evidence:
+    - E1
+    - E4
+
+  contradictory_evidence:
+    - E7
+
+  rejected_assumptions:
+    - universal_scalar_interpretation
+
+  unresolved:
+    - substrate_causation
+
+  conclusion:
+    confirm_with_limits
+</code></pre>
+<hr>
+<h1 id="reviewer-override">Reviewer Override</h1>
+<p>An override occurs when the reviewer materially changes an automated recommendation.</p>
+<p>Possible reasons:</p>
+<pre><code class="language-text">incorrect_evidence
+incorrect_rule
+missing_context
+unjustified_confidence
+fairness_concern
+applicability_error
+model_scope_error
+measurement_error
+identity_error
+other
+</code></pre>
+<p>Overrides should be measured.</p>
+<hr>
+<h1 id="reviewer-override-is-not-automatically-success">Reviewer Override Is Not Automatically Success</h1>
+<p>A high override rate may indicate:</p>
+<pre><code class="language-text">useful review
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">bad automated system
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">inconsistent reviewers
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">poor interface
+</code></pre>
+<p>Therefore:</p>
+<pre><code class="language-text">override_rate
+</code></pre>
+<p>is descriptive.</p>
+<p>It requires interpretation.</p>
+<hr>
+<h1 id="contestability">Contestability</h1>
+<p>A subject contest may involve:</p>
+<pre><code class="language-text">fact incorrect
+evidence missing
+evidence outdated
+wrong person
+wrong context
+wrong substrate
+wrong regime
+incorrect attribution
+unsupported inference
+disputed meaning
+</code></pre>
+<p>Contest records should preserve:</p>
+<pre><code class="language-text">submitted claim
+evidence provided
+review action
+resolution
+unresolved issues
+</code></pre>
+<hr>
+<h1 id="contest-record">Contest Record</h1>
+<pre><code class="language-yaml">contest:
+  id: contest-001
+
+  assessment_id:
+
+  submitted_by:
+    subject
+
+  issue_type:
+    incorrect_context
+
+  claim:
+    assessment occurred under
+    nonstandard conditions
+
+  evidence:
+    - reference
+
+  review_status:
+    pending
+
+  outcome:
+    unresolved
+</code></pre>
+<hr>
+<h1 id="contest-does-not-guarantee-reversal">Contest Does Not Guarantee Reversal</h1>
+<p>A fair system must support:</p>
+<pre><code class="language-text">contest accepted
+contest partially accepted
+contest rejected
+contest unresolved
+</code></pre>
+<p>The subject has a right to meaningful process, not an automatic favorable outcome.</p>
+<hr>
+<h1 id="pax-01-review-example">PAX-01 Review Example</h1>
+<h2 id="baseline">Baseline</h2>
+<p>Synthetic PAX-01:</p>
+<pre><code class="language-text">composite:
+  94
+
+baseline interpretation:
+  broad reasoning capability low
+</code></pre>
+<p>Extended observations:</p>
+<pre><code class="language-text">structural reasoning:
+  strong
+
+cross-domain transfer:
+  strong
+
+ambiguity navigation:
+  strong
+
+rapid symbolic:
+  weak
+
+timed classification:
+  weak
+</code></pre>
+<hr>
+<h1 id="review-trigger">Review Trigger</h1>
+<pre><code class="language-yaml">review_trigger:
+  contradiction:
+    high
+
+  model_fit:
+    low_or_partial
+
+  substrate_effect:
+    candidate
+
+  model_scope:
+    questionable
+
+  counterfactual_fragility:
+    moderate
+
+  consequence:
+    hypothetical_high
+</code></pre>
+<p>Therefore:</p>
+<pre><code class="language-text">review_recommended:
+  true
+</code></pre>
+<hr>
+<h1 id="reviewer-evidence-package">Reviewer Evidence Package</h1>
+<pre><code class="language-text">Baseline:
+  94
+
+Direct baseline observations:
+  rapid symbolic weak
+  timed classification weak
+
+Extended independent observations:
+  structural strong
+  transfer strong
+  ambiguity strong
+
+Adapter interpretations:
+  FFT: boundary candidate
+  Inverted Star: inversion candidate
+  Structural Detection: asymmetric pattern candidate
+  RTT: regime interpretation unresolved
+  Resonance: substrate/context effect candidate
+
+Uncertainty:
+  causal explanation unresolved
+  empirical validity unestablished
+</code></pre>
+<hr>
+<h1 id="possible-review-outcome-a-narrow-scope">Possible Review Outcome A — Narrow Scope</h1>
+<pre><code class="language-yaml">review_result:
+  action:
+    confirm_with_limits
+
+  confirmed:
+    - weak timed symbolic performance
+    - weak timed classification performance
+
+  not_confirmed:
+    - global low-intelligence inference
+
+  reason:
+    available evidence supports
+    narrower interpretation than
+    original global claim
+</code></pre>
+<p>This does not assign PAX-01 a higher IQ.</p>
+<hr>
+<h1 id="possible-review-outcome-b-baseline-confirmed">Possible Review Outcome B — Baseline Confirmed</h1>
+<p>Suppose additional evidence instead shows:</p>
+<pre><code class="language-text">structural:
+  weak
+
+transfer:
+  weak
+
+ambiguity:
+  weak
+</code></pre>
+<p>Review may conclude:</p>
+<pre><code class="language-yaml">review_result:
+  action:
+    confirm
+
+  model_mismatch:
+    not_supported
+</code></pre>
+<p>The system must allow this.</p>
+<hr>
+<h1 id="possible-review-outcome-c-evidence-insufficient">Possible Review Outcome C — Evidence Insufficient</h1>
+<p>Suppose:</p>
+<pre><code class="language-text">baseline:
+  low
+
+one alternate task:
+  strong
+
+everything else:
+  missing
+</code></pre>
+<p>Correct:</p>
+<pre><code class="language-yaml">review_result:
+  action:
+    request_evidence
+
+  model_mismatch:
+    unresolved
+
+  decision:
+    defer_where_required
+</code></pre>
+<hr>
+<h1 id="possible-review-outcome-d-alternate-interpretation-rejected">Possible Review Outcome D — Alternate Interpretation Rejected</h1>
+<p>Suppose:</p>
+<pre><code class="language-text">alternate favorable result:
+  fails replication
+</code></pre>
+<p>Correct:</p>
+<pre><code class="language-yaml">review_result:
+  action:
+    reject_interpretation
+
+  rejected:
+    hidden_high_capability_claim
+
+  baseline:
+    preserved
+</code></pre>
+<p>Human review must not become a rescue valve.</p>
+<hr>
+<h1 id="possible-review-outcome-e-both-representations-limited">Possible Review Outcome E — Both Representations Limited</h1>
+<p>The reviewer may conclude:</p>
+<pre><code class="language-yaml">review_result:
+  action:
+    record_unresolved
+
+  baseline:
+    partially_supported
+
+  multidimensional_profile:
+    partially_supported
+
+  model_mismatch:
+    unresolved
+
+  recommendation:
+    collect_better_evidence
+</code></pre>
+<p>This may be the most honest result.</p>
+<hr>
+<h1 id="human-review-and-counterfactuals">Human Review and Counterfactuals</h1>
+<p>Reviewers should see major counterfactual findings.</p>
+<p>Example:</p>
+<pre><code class="language-text">remove one observation:
+  interpretation collapses
+
+change evaluator:
+  interpretation changes
+
+add adverse evidence:
+  confidence decreases appropriately
+
+change irrelevant metadata:
+  interpretation stable
+</code></pre>
+<p>This tells the reviewer how fragile the assessment is.</p>
+<hr>
+<h1 id="human-review-and-drift">Human Review and Drift</h1>
+<p>Longitudinal review should distinguish:</p>
+<pre><code class="language-text">subject change
+model change
+measurement change
+observer change
+substrate change
+regime change
+</code></pre>
+<p>Before concluding:</p>
+<pre><code class="language-text">person declined
+</code></pre>
+<p>the reviewer should ask whether the measurement system changed.</p>
+<hr>
+<h1 id="human-review-and-coherence">Human Review and Coherence</h1>
+<p>A reviewer should receive:</p>
+<pre><code class="language-text">supporting observations
+contradictory observations
+conditional relationships
+non-comparable observations
+evidence lineage
+</code></pre>
+<p>not merely:</p>
+<pre><code class="language-text">Coherence Score: 82
+</code></pre>
+<hr>
+<h1 id="human-review-and-riqf">Human Review and RIQF</h1>
+<p>A Resonant IQ Fingerprint should never be presented to a reviewer as:</p>
+<pre><code class="language-text">the subject's true intelligence
+</code></pre>
+<p>Instead:</p>
+<pre><code class="language-text">multidimensional observation profile
+</code></pre>
+<p>with:</p>
+<pre><code class="language-text">dimension evidence
+substrate conditions
+regime conditions
+time window
+uncertainty
+validation state
+</code></pre>
+<hr>
+<h1 id="review-before-composite">Review Before Composite</h1>
+<p>Where appropriate, a reviewer interface might show:</p>
+<pre><code class="language-text">observations
+profile
+uncertainty
+</code></pre>
+<p>before:</p>
+<pre><code class="language-text">composite score
+</code></pre>
+<p>as an experimental design for studying anchoring.</p>
+<p>Whether this improves review quality must itself be tested.</p>
+<hr>
+<h1 id="explanation-requirement">Explanation Requirement</h1>
+<p>A reviewer should be able to answer:</p>
+<ol>
+<li>What did the original model predict?</li>
+<li>What evidence produced that prediction?</li>
+<li>What did the model directly measure?</li>
+<li>What did it infer?</li>
+<li>Which additional evidence exists?</li>
+<li>Which evidence is independent?</li>
+<li>Which evidence contradicts the prediction?</li>
+<li>Which evidence contradicts the alternate interpretation?</li>
+<li>What substrate conditions apply?</li>
+<li>What regime conditions apply?</li>
+<li>What changed through time?</li>
+<li>Which interpretations survive counterfactual challenge?</li>
+<li>What remains unknown?</li>
+<li>What decision is actually being proposed?</li>
+<li>Is the system authorized to make it?</li>
+</ol>
+<hr>
+<h1 id="review-quality-metrics">Review Quality Metrics</h1>
+<h2 id="pa-m45-evidence-reconstruction-rate"><code>PA-M45 — Evidence Reconstruction Rate</code></h2>
+<p>Conceptually:</p>
+<pre><code class="language-text">ERR =
+  successfully_reconstructed_results
+  /
+  reviewed_results
+</code></pre>
+<p>Can qualified reviewers reconstruct how the conclusion arose?</p>
+<hr>
+<h1 id="pa-m46-explanation-completeness"><code>PA-M46 — Explanation Completeness</code></h1>
+<p>Tests whether the review package contains:</p>
+<pre><code class="language-text">observation
+evidence
+substrate
+regime
+confidence
+uncertainty
+limitations
+alternatives
+recommended action
+</code></pre>
+<hr>
+<h1 id="pa-m47-reviewer-override-rate"><code>PA-M47 — Reviewer Override Rate</code></h1>
+<p>Conceptually:</p>
+<pre><code class="language-text">ROR =
+  reviewer_overrides
+  /
+  reviewed_results
+</code></pre>
+<p>Override reasons must be categorized.</p>
+<hr>
+<h1 id="pa-m48-contest-resolution-rate"><code>PA-M48 — Contest Resolution Rate</code></h1>
+<p>Conceptually:</p>
+<pre><code class="language-text">CRR =
+  resolved_contests
+  /
+  submitted_contests
+</code></pre>
+<p>Resolution may include:</p>
+<pre><code class="language-text">confirmed
+revised
+partially revised
+rejected
+unresolved
+</code></pre>
+<hr>
+<h1 id="pa-m50-time-to-review"><code>PA-M50 — Time to Review</code></h1>
+<p>Conceptually:</p>
+<pre><code class="language-text">TTR =
+  review_completion_time
+  -
+  review_start_time
+</code></pre>
+<p>Faster is not automatically better.</p>
+<p>Speed must be considered alongside review quality.</p>
+<hr>
+<h1 id="related-metrics">Related Metrics</h1>
+<p>Review can also consume:</p>
+<pre><code class="language-text">PA-M01  Dimension Evidence Coverage
+PA-M02  Profile Evidence Coverage
+PA-M03  Evidence Independence Ratio
+PA-M06  Inter-Rater Agreement
+
+PA-M20  Model-Mismatch Precision
+PA-M21  Model-Mismatch Recall
+PA-M22  Model-Mismatch False Positive Rate
+
+PA-M25  Profile Contradiction Density
+
+PA-M28  Confidence Calibration Error
+PA-M30  Abstention Rate
+PA-M31  Abstention Utility
+PA-M32  Unsupported Assertion Rate
+
+PA-M33  Irrelevant Perturbation Stability
+PA-M34  Relevant Change Sensitivity
+
+PA-M37  Group Error Difference
+PA-M38  Group Calibration Difference
+PA-M39  Mismatch Flag Rate Difference
+PA-M40  Abstention Coverage Difference
+PA-M41  Escalation Rate Difference
+PA-M42  Evidence Coverage Difference
+PA-M43  False Favorable Reinterpretation Rate
+PA-M44  False Adverse Reinterpretation Rate
+
+PA-M51  Evidence Acquisition Burden
+PA-M52  Decision Deferral Rate
+</code></pre>
+<hr>
+<h1 id="review-fairness">Review Fairness</h1>
+<p>Human review itself must be analyzed across relevant populations and contexts.</p>
+<p>Questions include:</p>
+<pre><code class="language-text">Who gets reviewed?
+
+Who does not?
+
+Who waits longer?
+
+Who is overridden?
+
+Who is confirmed?
+
+Who successfully contests?
+
+Who lacks evidence coverage?
+
+Who is more often marked uncertain?
+
+Who receives specialist review?
+</code></pre>
+<p>Disparities require investigation.</p>
+<hr>
+<h1 id="escalation-rate-difference">Escalation Rate Difference</h1>
+<p><code>PA-M41</code> can help monitor:</p>
+<pre><code class="language-text">human_review_rate_group_a
+-
+human_review_rate_group_b
+</code></pre>
+<p>A difference is not automatically unfair.</p>
+<p>But it should not remain invisible.</p>
+<hr>
+<h1 id="review-burden">Review Burden</h1>
+<p>Human review can itself impose harm or friction.</p>
+<p>Possible burdens:</p>
+<pre><code class="language-text">time
+delay
+cost
+privacy exposure
+repeated testing
+stress
+documentation burden
+accessibility burden
+expert availability
+</code></pre>
+<p>Therefore:</p>
+<pre><code class="language-text">more_review != automatically_better
+</code></pre>
+<p>Escalation should be justified.</p>
+<hr>
+<h1 id="review-fatigue">Review Fatigue</h1>
+<p>A system that escalates too often may cause:</p>
+<pre><code class="language-text">review fatigue
+rubber stamping
+delay
+inconsistency
+resource exhaustion
+</code></pre>
+<p>The Human Review Hook therefore needs both:</p>
+<pre><code class="language-text">sensitivity
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">specificity
+</code></pre>
+<p>A useful system should escalate meaningful cases without escalating everything.</p>
+<hr>
+<h1 id="review-cascade">Review Cascade</h1>
+<p>Some cases may require multiple stages.</p>
+<p>Example:</p>
+<pre><code class="language-text">Automated Assessment
+      │
+      ▼
+General Reviewer
+      │
+      ▼
+Specialist Reviewer
+      │
+      ▼
+Governance Review
+</code></pre>
+<p>Each stage should add a specific capability.</p>
+<p>More stages do not automatically mean better governance.</p>
+<hr>
+<h1 id="review-loop-prevention">Review Loop Prevention</h1>
+<p>Avoid indefinite loops:</p>
+<pre><code class="language-text">review
+  -&gt;
+new evidence
+  -&gt;
+review
+  -&gt;
+new evidence
+  -&gt;
+review
+  -&gt; ...
+</code></pre>
+<p>A governance policy should define:</p>
+<pre><code class="language-text">resolution states
+maximum review stages
+defer criteria
+closure criteria
+reopening criteria
+</code></pre>
+<p>for actual deployments.</p>
+<p>The current research module does not prescribe universal thresholds.</p>
+<hr>
+<h1 id="review-provenance">Review Provenance</h1>
+<p>Every review should record:</p>
+<pre><code class="language-yaml">review:
+  id:
+
+  assessment_version:
+  reviewer:
+  reviewer_role:
+  reviewer_scope:
+
+  started_at:
+  completed_at:
+
+  evidence_version:
+  model_version:
+  adapter_versions:
+
+  action:
+  rationale:
+
+  confidence:
+  unresolved:
+
+  next_action:
+</code></pre>
+<hr>
+<h1 id="reviewer-identity-and-privacy">Reviewer Identity and Privacy</h1>
+<p>Reviewer provenance can matter for auditability.</p>
+<p>But reviewer data itself may be sensitive.</p>
+<p>A deployed system should balance:</p>
+<pre><code class="language-text">accountability
+</code></pre>
+<p>with:</p>
+<pre><code class="language-text">privacy
+security
+appropriate access
+</code></pre>
+<hr>
+<h1 id="review-versioning">Review Versioning</h1>
+<p>A review of:</p>
+<pre><code class="language-text">assessment version 1
+</code></pre>
+<p>must not silently apply to:</p>
+<pre><code class="language-text">assessment version 3
+</code></pre>
+<p>after major evidence, model, or adapter changes.</p>
+<p>Where change is material:</p>
+<pre><code class="language-text">review_status:
+  reassessment_required
+</code></pre>
+<p>may be appropriate.</p>
+<hr>
+<h1 id="reopening-review">Reopening Review</h1>
+<p>Possible triggers:</p>
+<pre><code class="language-text">new material evidence
+corrected evidence
+model update
+measurement correction
+validated new assessment
+material profile drift
+successful contest
+governance change
+</code></pre>
+<p>A review should not be reopened merely because someone prefers another outcome.</p>
+<hr>
+<h1 id="human-review-failure-modes">Human Review Failure Modes</h1>
+<h2 id="rubber-stamp-review">Rubber Stamp Review</h2>
+<p>Risk:</p>
+<p>Reviewer simply approves automated output.</p>
+<p>Mitigation:</p>
+<p>Evidence reconstruction and rationale requirements.</p>
+<hr>
+<h1 id="automation-bias_1">Automation Bias</h1>
+<p>Risk:</p>
+<p>Reviewer over-trusts model output.</p>
+<p>Mitigation:</p>
+<p>Evidence-first review experiments and calibration.</p>
+<hr>
+<h1 id="anti-automation-bias">Anti-Automation Bias</h1>
+<p>Risk:</p>
+<p>Reviewer rejects automated findings merely because they are automated.</p>
+<p>Mitigation:</p>
+<p>Require evidence-based rationale.</p>
+<hr>
+<h1 id="anchoring_1">Anchoring</h1>
+<p>Risk:</p>
+<p>Early exposure to scores shapes interpretation.</p>
+<p>Mitigation:</p>
+<p>Test blinded or evidence-first workflows.</p>
+<hr>
+<h1 id="adapter-authority-bias">Adapter Authority Bias</h1>
+<p>Risk:</p>
+<p>Technical terminology creates unwarranted trust.</p>
+<p>Mitigation:</p>
+<p>Display experimental validation states.</p>
+<hr>
+<h1 id="narrative-capture">Narrative Capture</h1>
+<p>Risk:</p>
+<p>Reviewer becomes persuaded by a coherent story unsupported by independent evidence.</p>
+<p>Mitigation:</p>
+<p>Display counterevidence and evidence independence.</p>
+<hr>
+<h1 id="favorability-bias">Favorability Bias</h1>
+<p>Risk:</p>
+<p>Review is more skeptical of adverse results than favorable alternate interpretations, or vice versa.</p>
+<p>Mitigation:</p>
+<p>Use symmetric evidence standards.</p>
+<hr>
+<h1 id="rescue-bias">Rescue Bias</h1>
+<p>Risk:</p>
+<p>Human review becomes a mechanism for rescuing subjects from unwanted scores.</p>
+<p>Mitigation:</p>
+<p>Include baseline-confirmation cases and adverse alternate evidence.</p>
+<hr>
+<h1 id="adverse-amplification">Adverse Amplification</h1>
+<p>Risk:</p>
+<p>Reviewers use rich profile information to justify broader negative judgments.</p>
+<p>Mitigation:</p>
+<p>Scope every conclusion to evidence.</p>
+<hr>
+<h1 id="reviewer-overreach">Reviewer Overreach</h1>
+<p>Risk:</p>
+<p>Reviewer makes claims outside their expertise.</p>
+<p>Mitigation:</p>
+<p>Explicit review scope and specialist escalation.</p>
+<hr>
+<h1 id="false-finality">False Finality</h1>
+<p>Risk:</p>
+<p>Human review is treated as unquestionable truth.</p>
+<p>Mitigation:</p>
+<p>Preserve contestability and uncertainty.</p>
+<hr>
+<h1 id="context-collapse">Context Collapse</h1>
+<p>Risk:</p>
+<p>Reviewer ignores substrate, regime, or temporal conditions.</p>
+<p>Mitigation:</p>
+<p>Include these directly in the review package.</p>
+<hr>
+<h1 id="review-inflation">Review Inflation</h1>
+<p>Risk:</p>
+<p>Every uncertain result goes to human review.</p>
+<p>Mitigation:</p>
+<p>Validate escalation thresholds and abstention paths.</p>
+<hr>
+<h1 id="privacy-expansion">Privacy Expansion</h1>
+<p>Risk:</p>
+<p>Review unnecessarily exposes sensitive profile details.</p>
+<p>Mitigation:</p>
+<p>Apply minimum-necessary evidence access where appropriate.</p>
+<hr>
+<h1 id="falsification-conditions">Falsification Conditions</h1>
+<p>The Human Review Hook should be revised, restricted, or rejected if:</p>
+<ul>
+<li>reviewers cannot reconstruct assessments,</li>
+<li>review does not improve error handling,</li>
+<li>reviewers merely rubber stamp automated outputs,</li>
+<li>reviewer disagreement remains uncontrolled,</li>
+<li>escalation creates unacceptable delays or burdens,</li>
+<li>review systematically increases subgroup disparities,</li>
+<li>contests are not meaningfully resolved,</li>
+<li>reviewers routinely exceed their scope,</li>
+<li>evidence packages hide uncertainty,</li>
+<li>adapter terminology creates authority effects,</li>
+<li>or review adds procedural ceremony without measurable governance value.</li>
+</ul>
+<hr>
+<h1 id="review-validation-cases">Review Validation Cases</h1>
+<p>A validation program should include:</p>
+<pre><code class="language-text">correct baseline
+incorrect baseline
+
+supported mismatch
+false mismatch
+
+high uncertainty
+low uncertainty
+
+major contradiction
+minor contradiction
+
+high consequence
+low consequence
+
+supported contest
+unsupported contest
+
+favorable alternate evidence
+adverse alternate evidence
+
+adapter agreement
+adapter disagreement
+
+model update
+measurement update
+subject drift
+
+rubber-stamp reviewer
+careful reviewer
+overriding reviewer
+overconfident reviewer
+</code></pre>
+<hr>
+<h1 id="blind-reconstruction-test">Blind Reconstruction Test</h1>
+<p>Give a reviewer:</p>
+<pre><code class="language-text">evidence
+model description
+assessment rules
+</code></pre>
+<p>but not:</p>
+<pre><code class="language-text">final recommendation
+</code></pre>
+<p>Ask them to reconstruct the result.</p>
+<p>This supports:</p>
+<pre><code class="language-text">PA-M45
+</code></pre>
+<p>If reconstruction consistently fails, the assessment may not be sufficiently explainable.</p>
+<hr>
+<h1 id="review-override-test">Review Override Test</h1>
+<p>Deliberately include incorrect automated interpretations.</p>
+<p>Question:</p>
+<blockquote>
+<p>Can review detect and correct them?</p>
+</blockquote>
+<p>Then deliberately include correct automated interpretations.</p>
+<p>Question:</p>
+<blockquote>
+<p>Can review refrain from needless override?</p>
+</blockquote>
+<p>Both are necessary.</p>
+<hr>
+<h1 id="contest-test">Contest Test</h1>
+<p>Create synthetic contests:</p>
+<pre><code class="language-text">correct factual correction
+incorrect factual correction
+missing context
+irrelevant context
+outdated evidence
+identity mismatch
+unsupported disagreement
+</code></pre>
+<p>A useful process should distinguish among them.</p>
+<hr>
+<h1 id="review-symmetry-test">Review Symmetry Test</h1>
+<p>Provide:</p>
+<pre><code class="language-text">adverse baseline
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">favorable baseline
+</code></pre>
+<p>with equivalent evidence uncertainty.</p>
+<p>Review sensitivity should not depend merely on favorability.</p>
+<hr>
+<h1 id="high-uncertainty-success-case">High-Uncertainty Success Case</h1>
+<p>Sometimes the best review outcome is:</p>
+<pre><code class="language-yaml">review_result:
+  action: record_unresolved
+
+  decision:
+    defer
+
+  confidence:
+    low
+</code></pre>
+<p>A system capable of stopping is often safer than a system required to conclude.</p>
+<hr>
+<h1 id="minimal-review-hook-contract">Minimal Review Hook Contract</h1>
+<pre><code class="language-yaml">human_review_hook:
+  review_id:
+
+  assessment_id:
+
+  trigger:
+    types:
+    severity:
+
+  consequence:
+    level:
+
+  baseline:
+    preserved: true
+    assessment_version:
+    model_version:
+    evidence_version:
+
+  observed_system:
+    id:
+    class:
+    boundary:
+
+  evidence:
+    sources:
+    independent_source_count:
+    provenance_complete:
+
+  assessment:
+    prediction:
+    interpretation:
+    confidence:
+
+  fit:
+    model:
+    substrate:
+    regime:
+
+  coherence:
+  drift:
+  counterfactual:
+
+  uncertainty:
+  contradictions:
+  counterevidence:
+  missing_evidence:
+
+  contest:
+    present:
+    status:
+
+  review:
+    required:
+    scope:
+    reviewer_requirements:
+    independence_requirement:
+
+  permitted_actions:
+    - confirm
+    - confirm_with_limits
+    - narrow_scope
+    - revise_interpretation
+    - reject_interpretation
+    - request_evidence
+    - request_reassessment
+    - request_specialist_review
+    - defer
+    - escalate
+    - record_unresolved
+
+  result:
+    action:
+    rationale:
+    confidence:
+    unresolved:
+
+  next_action:
+
+  validation_state:
+  decision_authority:
+</code></pre>
+<hr>
+<h1 id="research-questions">Research Questions</h1>
+<ol>
+<li>Which conditions genuinely benefit from human review?</li>
+<li>Which can be handled safely through abstention alone?</li>
+<li>What evidence should trigger review?</li>
+<li>How should consequence interact with uncertainty?</li>
+<li>Can escalation thresholds be calibrated?</li>
+<li>Can review reduce model-mismatch false positives?</li>
+<li>Can review reduce model-mismatch false negatives?</li>
+<li>Can reviewers reliably inspect substrate effects?</li>
+<li>Can reviewers reliably inspect regime effects?</li>
+<li>Does showing adapter output improve or bias review?</li>
+<li>Does showing the conventional score first create anchoring?</li>
+<li>Does evidence-first review improve reconstruction?</li>
+<li>Can reviewers distinguish adapter agreement from evidence independence?</li>
+<li>How much independent evidence is sufficient for review?</li>
+<li>Can reviewers preserve unresolved contradiction?</li>
+<li>How often do reviewers force resolution where none is justified?</li>
+<li>How often do reviewers rubber stamp?</li>
+<li>How often do reviewers override correct assessments?</li>
+<li>How often do reviewers fail to override incorrect assessments?</li>
+<li>Does adversarial review improve outcomes?</li>
+<li>When is specialist review worth the burden?</li>
+<li>How should subject contests affect review priority?</li>
+<li>Can contestability improve factual accuracy?</li>
+<li>Can contestability introduce new gaming or bias?</li>
+<li>Does review behave symmetrically for favorable and adverse interpretations?</li>
+<li>Which groups receive disproportionate review?</li>
+<li>Which groups experience disproportionate delay?</li>
+<li>How should privacy be protected during review?</li>
+<li>How should human-AI assessments be reviewed?</li>
+<li>Can the reviewer distinguish pair performance from individual attribution?</li>
+<li>How should review handle profile drift?</li>
+<li>When should a previous review expire after model or evidence updates?</li>
+<li>When should review be reopened?</li>
+<li>When should the system defer rather than review?</li>
+<li>When does human review add no value?</li>
+<li>What evidence would justify removing the Human Review Hook for a particular use?</li>
+</ol>
+<hr>
+<h1 id="core-invariants">Core Invariants</h1>
+<pre><code class="language-text">human_review != ground_truth
+human_presence != meaningful_review
+review != automatic_override
+review != automatic_confirmation
+contest != automatic_reversal
+escalation != model_failure
+escalation != subject_failure
+uncertainty != failure
+defer != failure
+unresolved != failure
+override != success
+confirmation != success
+review_count != review_quality
+more_review != better_governance
+adapter_agreement != independent_evidence
+richer_profile != stronger_evidence
+high_consequence != high_confidence
+low_model_fit != low_subject_value
+prediction != identity
+profile != identity
+reviewer_opinion != evidence
+reviewer_authority != universal_expertise
+decision_authority != inherited
+canon_alignment != empirical_validation
+</code></pre>
+<hr>
+<h1 id="closing-principle">Closing Principle</h1>
+<p>Predictive systems are often designed to produce answers.</p>
+<p>Good governance sometimes requires something harder:</p>
+<pre><code class="language-text">stop
+</code></pre>
+<p>Inspect the evidence.</p>
+<p>Inspect what the model actually measured.</p>
+<p>Inspect what it inferred.</p>
+<p>Inspect which observations disagree.</p>
+<p>Inspect whether the substrate changed.</p>
+<p>Inspect whether the regime changed.</p>
+<p>Inspect whether multiple adapters merely echoed the same evidence.</p>
+<p>Inspect what happens under reasonable counterfactuals.</p>
+<p>Inspect what remains unknown.</p>
+<p>And then decide whether anyone, human or machine, currently has enough evidence and authority to go further.</p>
+<p>Human review does not exist because humans are infallible.</p>
+<p>It exists because consequential uncertainty should have somewhere accountable to go.</p>
+<blockquote>
+<p><strong>The Human Review Hook succeeds when escalation creates a real opportunity to question the model, question the alternate interpretation, question the evidence, and, when necessary, refuse premature certainty.</strong></p>
+</blockquote>
   </main>
 </body>
 </html>

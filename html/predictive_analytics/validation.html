@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/predictive_analytics/validation.md">
-  <title>validation</title>
+  <title>Predictive Analytics — Validation</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,7 +92,2393 @@
   </aside>
 
   <main>
+<h1 id="predictive-analytics-validation">Predictive Analytics — Validation</h1>
+<blockquote>
+<p><strong>A framework becomes research when its claims can lose.</strong></p>
+</blockquote>
+<h2 id="module">Module</h2>
+<p>Predictive Analytics</p>
+<h2 id="document-role">Document Role</h2>
+<p>Validation architecture, falsification program, benchmark strategy, and evidence progression.</p>
+<h2 id="status">Status</h2>
+<p>Experimental.</p>
+<h2 id="validation-state">Validation State</h2>
+<p>Unvalidated.</p>
+<h2 id="decision-authority">Decision Authority</h2>
+<p>None.</p>
+<hr>
+<h1 id="purpose">Purpose</h1>
+<p>This document defines the validation program for Predictive Analytics.</p>
+<p>The module introduces experimental constructs including:</p>
+<ul>
+<li>multidimensional capability profiles,</li>
+<li>the Resonant IQ Fingerprint (RIQF),</li>
+<li>substrate-aware observation,</li>
+<li>substrate expression profiles,</li>
+<li>regime-aware observation,</li>
+<li>resonance analysis,</li>
+<li>model-mismatch detection,</li>
+<li>Structural Detection,</li>
+<li>FFT observations,</li>
+<li>Inverted Star analysis,</li>
+<li>RTT analysis,</li>
+<li>coherence observation,</li>
+<li>drift observation,</li>
+<li>counterfactual testing,</li>
+<li>uncertainty representation,</li>
+<li>and human review.</li>
+</ul>
+<p>None of these constructs becomes valid merely because it is:</p>
+<pre><code class="language-text">internally coherent
+mathematically expressible
+technically implementable
+philosophically appealing
+canon-aligned
+useful in a synthetic example
+</code></pre>
+<p>Validation must be earned empirically.</p>
+<hr>
+<h1 id="core-principle">Core Principle</h1>
+<p>Predictive Analytics applies a simple rule to itself:</p>
+<blockquote>
+<p><strong>Every claim made about another predictive model must also be permitted to challenge Predictive Analytics.</strong></p>
+</blockquote>
+<p>Therefore the framework must ask:</p>
+<pre><code class="language-text">Does PA fit the observed system?
 
+Does RIQF preserve useful information?
+
+Are the dimensions real?
+
+Do substrate effects replicate?
+
+Are detected regimes reproducible?
+
+Does resonance add anything?
+
+Does Structural Detection find structure
+rather than noise?
+
+Does FFT add anything beyond ordinary
+relational analysis?
+
+Does The Inverted Star improve mismatch
+detection?
+
+Does RTT improve temporal or regime
+interpretation?
+
+Does the full ensemble outperform
+simpler alternatives?
+</code></pre>
+<p>The answer may be:</p>
+<pre><code class="language-text">no
+</code></pre>
+<hr>
+<h1 id="validation-is-layered">Validation Is Layered</h1>
+<p>Predictive Analytics distinguishes several questions that are often collapsed into one.</p>
+<pre><code class="language-text">Can we implement it?
+       │
+       ▼
+Can we measure it?
+       │
+       ▼
+Can we measure it reliably?
+       │
+       ▼
+Does it represent the intended construct?
+       │
+       ▼
+Does it generalize?
+       │
+       ▼
+Does it add value?
+       │
+       ▼
+Is it fair enough?
+       │
+       ▼
+Is it useful enough?
+       │
+       ▼
+Is a particular real-world use justified?
+</code></pre>
+<p>Passing one stage does not guarantee the next.</p>
+<hr>
+<h1 id="validation-ladder">Validation Ladder</h1>
+<p>The initial validation architecture uses eight levels.</p>
+<pre><code class="language-text">Level 0  Structural Validation
+Level 1  Content Validation
+Level 2  Measurement Validation
+Level 3  Construct Validation
+Level 4  Substrate and Regime Validation
+Level 5  Predictive and Explanatory Validation
+Level 6  Fairness, Robustness, and Harm Validation
+Level 7  Decision Validation
+</code></pre>
+<hr>
+<h1 id="level-0-structural-validation">Level 0 — Structural Validation</h1>
+<h2 id="question">Question</h2>
+<blockquote>
+<p><strong>Does the architecture faithfully represent what it claims to represent?</strong></p>
+</blockquote>
+<p>This is primarily a structural and software validation stage.</p>
+<p>Questions include:</p>
+<pre><code class="language-text">Can evidence provenance be preserved?
+
+Can unknown remain unknown?
+
+Can contradictory evidence remain contradictory?
+
+Can adapters preserve baseline predictions?
+
+Can source-model semantics survive normalization?
+
+Can system boundaries be preserved?
+
+Can human-AI pair results remain pair-level?
+
+Can versions be reconstructed?
+
+Can confidence and uncertainty remain separate?
+
+Can lossy transformations be identified?
+
+Can adapters return no_added_value?
+
+Can observers abstain?
+</code></pre>
+<hr>
+<h1 id="required-level-0-tests">Required Level 0 Tests</h1>
+<pre><code class="language-text">schema validation
+round-trip prediction tests
+provenance reconstruction
+missing-field tests
+unknown-preservation tests
+version-preservation tests
+loss-detection tests
+system-boundary tests
+adapter-ablation plumbing
+contradiction-preservation tests
+</code></pre>
+<hr>
+<h1 id="level-0-failure-example">Level 0 Failure Example</h1>
+<p>Source model output:</p>
+<pre><code class="language-text">probability = 0.72
+</code></pre>
+<p>PA adapter record:</p>
+<pre><code class="language-text">confidence = 72%
+</code></pre>
+<p>when the source did not define the value as global confidence.</p>
+<p>Result:</p>
+<pre><code class="language-text">structural validation:
+  failed
+</code></pre>
+<p>The framework has changed the source semantics.</p>
+<p>No deeper validation should rescue that error.</p>
+<hr>
+<h1 id="level-1-content-validation">Level 1 — Content Validation</h1>
+<h2 id="question_1">Question</h2>
+<blockquote>
+<p><strong>Are the constructs defined well enough to study?</strong></p>
+</blockquote>
+<p>This applies especially to:</p>
+<ul>
+<li>RIQF dimensions,</li>
+<li>substrate classes,</li>
+<li>regime definitions,</li>
+<li>resonance classes,</li>
+<li>mismatch classes,</li>
+<li>uncertainty classes.</li>
+</ul>
+<p>Questions include:</p>
+<pre><code class="language-text">Are definitions clear?
+
+Are constructs distinguishable?
+
+Are important constructs missing?
+
+Are some constructs redundant?
+
+Do qualified evaluators interpret
+the definitions similarly?
+
+Can examples and counterexamples
+be generated?
+</code></pre>
+<hr>
+<h1 id="construct-review">Construct Review</h1>
+<p>Candidate review groups may include appropriate expertise such as:</p>
+<pre><code class="language-text">measurement
+statistics
+psychometrics where relevant
+machine learning
+domain expertise
+human factors
+accessibility
+ethics
+human-computer interaction
+AI evaluation
+</code></pre>
+<p>No single expertise should be assumed sufficient for every application.</p>
+<hr>
+<h1 id="content-validation-outcome">Content Validation Outcome</h1>
+<p>Possible states:</p>
+<pre><code class="language-text">definition_supported
+definition_needs_revision
+merge_candidate
+split_candidate
+scope_restriction
+insufficient_clarity
+deprecated
+rejected
+</code></pre>
+<hr>
+<h1 id="level-2-measurement-validation">Level 2 — Measurement Validation</h1>
+<h2 id="question_2">Question</h2>
+<blockquote>
+<p><strong>Can the proposed constructs be measured with adequate reliability?</strong></p>
+</blockquote>
+<p>Relevant metrics include:</p>
+<pre><code class="language-text">PA-M01  Dimension Evidence Coverage
+PA-M02  Profile Evidence Coverage
+PA-M03  Evidence Independence Ratio
+
+PA-M04  Test-Retest Stability
+PA-M05  Alternate-Form Stability
+PA-M06  Inter-Rater Agreement
+PA-M07  Profile Topology Stability
+</code></pre>
+<hr>
+<h1 id="test-retest-validation">Test-Retest Validation</h1>
+<p>Ask:</p>
+<blockquote>
+<p>Under conditions where the construct is expected to remain sufficiently stable, does measurement remain correspondingly stable?</p>
+</blockquote>
+<p>Possible failures:</p>
+<pre><code class="language-text">task sensitivity
+evaluator sensitivity
+measurement noise
+profile instability
+construct instability
+poor operationalization
+</code></pre>
+<p>Low stability does not automatically identify which failure occurred.</p>
+<hr>
+<h1 id="alternate-form-validation">Alternate-Form Validation</h1>
+<p>Create different tasks intended to observe the same dimension.</p>
+<p>Example:</p>
+<pre><code class="language-text">Structural Reasoning A:
+  system map
+
+Structural Reasoning B:
+  dependency reconstruction
+
+Structural Reasoning C:
+  relational transformation
+</code></pre>
+<p>Question:</p>
+<blockquote>
+<p>Do these tasks produce sufficiently compatible evidence?</p>
+</blockquote>
+<p>If not, possible explanations include:</p>
+<pre><code class="language-text">forms not equivalent
+dimension too broad
+substrate sensitivity
+domain specificity
+invalid construct
+</code></pre>
+<hr>
+<h1 id="inter-rater-validation">Inter-Rater Validation</h1>
+<p>Where human or AI interpretation is involved, compare evaluators.</p>
+<p>Potential outputs:</p>
+<pre><code class="language-text">agreement
+disagreement
+systematic bias
+version effect
+expertise effect
+unknown
+</code></pre>
+<p>An interpretation requiring one particular evaluator to work is not yet robust.</p>
+<hr>
+<h1 id="profile-topology-validation">Profile Topology Validation</h1>
+<p>RIQF claims that profile shape may matter.</p>
+<p>Therefore test:</p>
+<pre><code class="language-text">Does topology reproduce?
+
+Does relative dimension ordering persist?
+
+Do profile clusters persist?
+
+Do asymmetries reproduce?
+
+Do unknown regions remain stable
+until evidence changes?
+</code></pre>
+<hr>
+<h1 id="level-3-construct-validation">Level 3 — Construct Validation</h1>
+<h2 id="question_3">Question</h2>
+<blockquote>
+<p><strong>Are the proposed concepts actually measuring what the framework says they measure?</strong></p>
+</blockquote>
+<p>Core metrics:</p>
+<pre><code class="language-text">PA-M08  Convergent Association
+PA-M09  Discriminant Separation
+PA-M10  Incremental Explanatory Value
+PA-M11  Incremental Predictive Value
+</code></pre>
+<hr>
+<h1 id="convergent-validation">Convergent Validation</h1>
+<p>A proposed dimension should relate appropriately to independent measures expected to represent related operations.</p>
+<p>Example:</p>
+<pre><code class="language-text">Structural Reasoning
+</code></pre>
+<p>might be expected to relate to independently designed:</p>
+<pre><code class="language-text">system reconstruction
+relationship mapping
+constraint preservation
+</code></pre>
+<p>The expected relationship should ideally be declared before confirmatory analysis.</p>
+<hr>
+<h1 id="discriminant-validation">Discriminant Validation</h1>
+<p>A construct should not survive merely because it has a distinctive name.</p>
+<p>Example:</p>
+<pre><code class="language-text">Pattern Recognition
+Structural Reasoning
+Anomaly Detection
+</code></pre>
+<p>If they cannot be empirically distinguished:</p>
+<pre><code class="language-text">merge
+</code></pre>
+<p>may be more appropriate than preserving taxonomy complexity.</p>
+<hr>
+<h1 id="construct-collapse">Construct Collapse</h1>
+<p>Possible empirical result:</p>
+<pre><code class="language-text">24 proposed RIQF dimensions
+        │
+        ▼
+data support
+        │
+        ▼
+8 distinguishable constructs
+</code></pre>
+<p>Correct response:</p>
+<pre><code class="language-text">revise registry
+</code></pre>
+<p>Not:</p>
+<pre><code class="language-text">protect the original 24
+</code></pre>
+<hr>
+<h1 id="construct-split">Construct Split</h1>
+<p>The opposite may occur.</p>
+<p>Example:</p>
+<pre><code class="language-text">Tool Collaboration
+</code></pre>
+<p>may empirically separate into:</p>
+<pre><code class="language-text">tool selection
+tool verification
+tool orchestration
+collaborative error correction
+</code></pre>
+<p>If evidence supports the distinction:</p>
+<pre><code class="language-text">split dimension
+</code></pre>
+<p>may be appropriate.</p>
+<hr>
+<h1 id="incremental-validity">Incremental Validity</h1>
+<p>Every novel construct should face:</p>
+<blockquote>
+<p><strong>Does this add useful information beyond simpler or established alternatives?</strong></p>
+</blockquote>
+<p>If not:</p>
+<pre><code class="language-text">incremental value:
+  not demonstrated
+</code></pre>
+<p>Possible action:</p>
+<pre><code class="language-text">merge
+restrict
+deprecate
+remove
+</code></pre>
+<hr>
+<h1 id="level-4-substrate-and-regime-validation">Level 4 — Substrate and Regime Validation</h1>
+<h2 id="question_4">Question</h2>
+<blockquote>
+<p><strong>Do claimed contextual relationships reproduce under controlled comparisons?</strong></p>
+</blockquote>
+<p>Primary metrics:</p>
+<pre><code class="language-text">PA-M12  Substrate Effect Magnitude
+PA-M13  Substrate Effect Replicability
+PA-M14  Substrate Symmetry
+PA-M15  Substrate Specificity
+
+PA-M16  Regime Transition Detection Rate
+PA-M17  False Regime Alarm Rate
+PA-M18  Regime Boundary Error
+PA-M19  Regime-Conditioned Stability
+</code></pre>
+<hr>
+<h1 id="substrate-validation-program">Substrate Validation Program</h1>
+<p>A substrate effect should progress through:</p>
+<pre><code class="language-text">difference observed
+       │
+       ▼
+difference replicated
+       │
+       ▼
+matched comparison
+       │
+       ▼
+alternative explanations controlled
+       │
+       ▼
+specificity tested
+       │
+       ▼
+held-out prediction
+       │
+       ▼
+incremental value tested
+</code></pre>
+<hr>
+<h1 id="substrate-null-test">Substrate Null Test</h1>
+<p>Provide matched conditions where substrate should not affect the target.</p>
+<p>Required behavior:</p>
+<pre><code class="language-text">no substrate effect detected
+</code></pre>
+<p>A substrate framework that always detects differences has failed.</p>
+<hr>
+<h1 id="substrate-positive-control">Substrate Positive Control</h1>
+<p>Use a synthetic or controlled process containing a known substrate interaction.</p>
+<p>Required:</p>
+<pre><code class="language-text">detect difference
+</code></pre>
+<p>without inventing additional effects.</p>
+<hr>
+<h1 id="substrate-symmetry-test">Substrate Symmetry Test</h1>
+<p>Include:</p>
+<pre><code class="language-text">substrate improves expression
+substrate worsens expression
+substrate changes nothing
+</code></pre>
+<p>Equivalent evidence standards should apply to all three.</p>
+<hr>
+<h1 id="regime-validation-program">Regime Validation Program</h1>
+<p>A candidate regime should progress through:</p>
+<pre><code class="language-text">candidate segmentation
+       │
+       ▼
+within-regime stability
+       │
+       ▼
+between-regime separation
+       │
+       ▼
+boundary stability
+       │
+       ▼
+replication
+       │
+       ▼
+held-out transition prediction
+       │
+       ▼
+incremental value
+</code></pre>
+<hr>
+<h1 id="regime-null-test">Regime Null Test</h1>
+<p>Use stable data.</p>
+<p>Required:</p>
+<pre><code class="language-text">no meaningful regime transition
+</code></pre>
+<p>If regimes appear everywhere:</p>
+<pre><code class="language-text">PA-M17:
+  unacceptable
+</code></pre>
+<hr>
+<h1 id="known-transition-test">Known Transition Test</h1>
+<p>Use known synthetic or controlled state transitions.</p>
+<p>Questions:</p>
+<pre><code class="language-text">Was the transition detected?
+
+How accurately was the boundary located?
+
+Did the system invent extra regimes?
+</code></pre>
+<hr>
+<h1 id="gradual-transition-validation">Gradual Transition Validation</h1>
+<p>Not every transition has one exact boundary.</p>
+<p>Validation should include:</p>
+<pre><code class="language-text">abrupt
+gradual
+cyclic
+reversible
+intermittent
+</code></pre>
+<p>state changes.</p>
+<p>The system should preserve boundary uncertainty where warranted.</p>
+<hr>
+<h1 id="level-5-predictive-and-explanatory-validation">Level 5 — Predictive and Explanatory Validation</h1>
+<h2 id="question_5">Question</h2>
+<blockquote>
+<p><strong>Does Predictive Analytics make prediction, calibration, explanation, or mismatch detection meaningfully better?</strong></p>
+</blockquote>
+<p>This is where complexity has to earn its cost.</p>
+<hr>
+<h1 id="model-comparison-ladder">Model Comparison Ladder</h1>
+<p>Do not compare only:</p>
+<pre><code class="language-text">conventional model
+vs
+complete PA ensemble
+</code></pre>
+<p>Prefer staged comparisons.</p>
+<pre><code class="language-text">M0:
+  original predictive model
+
+M1:
+  original model + standard subscales
+  or ordinary feature decomposition
+
+M2:
+  conventional multidimensional baseline
+
+M3:
+  contextual / interaction baseline
+
+M4:
+  substrate-aware baseline
+
+M5:
+  regime-aware baseline
+
+M6:
+  selected PA adapter
+
+M7:
+  selected adapter ensemble
+
+M8:
+  full Predictive Analytics ensemble
+</code></pre>
+<p>For RIQF specifically:</p>
+<pre><code class="language-text">R0:
+  conventional scalar
+
+R1:
+  conventional subscales
+
+R2:
+  baseline multidimensional profile
+
+R3:
+  candidate RIQF dimensions
+
+R4:
+  R3 + substrate expression
+
+R5:
+  R4 + regime profile
+
+R6:
+  R5 + selected adapters
+
+R7:
+  full PA-enhanced RIQF
+</code></pre>
+<hr>
+<h1 id="comparison-requirements">Comparison Requirements</h1>
+<p>Where appropriate, compare:</p>
+<pre><code class="language-text">out-of-sample prediction
+calibration
+reliability
+explanatory performance
+mismatch detection
+uncertainty quality
+counterfactual robustness
+fairness
+review burden
+evidence burden
+privacy burden
+computational burden
+</code></pre>
+<hr>
+<h1 id="predictive-value">Predictive Value</h1>
+<p>Relevant metric:</p>
+<pre><code class="language-text">PA-M11 — Incremental Predictive Value
+</code></pre>
+<p>Conceptually:</p>
+<pre><code class="language-text">IPV =
+  baseline_error
+  -
+  richer_model_error
+</code></pre>
+<p>Use an outcome-appropriate error measure.</p>
+<hr>
+<h1 id="explanatory-value">Explanatory Value</h1>
+<p>Relevant metric:</p>
+<pre><code class="language-text">PA-M10 — Incremental Explanatory Value
+</code></pre>
+<p>The explanation claim must itself be operationalized.</p>
+<p>A more detailed story is not automatically better explanation.</p>
+<hr>
+<h1 id="calibration">Calibration</h1>
+<p>A model can improve ranking without improving calibration.</p>
+<p>Calibration should therefore remain separately evaluated.</p>
+<p>Relevant metrics include:</p>
+<pre><code class="language-text">PA-M28
+PA-M29
+</code></pre>
+<p>where applicable.</p>
+<hr>
+<h1 id="model-mismatch-validation">Model-Mismatch Validation</h1>
+<p>Primary metrics:</p>
+<pre><code class="language-text">PA-M20  Model-Mismatch Precision
+PA-M21  Model-Mismatch Recall
+PA-M22  Model-Mismatch False Positive Rate
+PA-M23  Mismatch Evidence Strength
+</code></pre>
+<p>A mismatch detector needs both:</p>
+<pre><code class="language-text">true mismatch cases
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">true non-mismatch cases
+</code></pre>
+<hr>
+<h1 id="mismatch-test-corpus">Mismatch Test Corpus</h1>
+<p>Include:</p>
+<pre><code class="language-text">statistical misspecification
+measurement mismatch
+representation mismatch
+substrate mismatch
+regime mismatch
+scope mismatch
+temporal mismatch
+observer mismatch
+system-boundary mismatch
+calibration mismatch
+
+ordinary prediction error
+outlier
+noise
+heterogeneity
+distribution shift without model failure
+no mismatch
+</code></pre>
+<p>The last several categories are essential.</p>
+<hr>
+<h1 id="mismatch-reference-problem">Mismatch Reference Problem</h1>
+<p>Real mismatch may lack simple ground truth.</p>
+<p>Possible reference sources:</p>
+<pre><code class="language-text">synthetic known process
+controlled experiment
+held-out predictive failure
+known instrument change
+known regime change
+validated external benchmark
+independent structured review
+</code></pre>
+<p>Reference provenance must be explicit.</p>
+<hr>
+<h1 id="level-6-fairness-robustness-and-harm-validation">Level 6 — Fairness, Robustness, and Harm Validation</h1>
+<h2 id="question_6">Question</h2>
+<blockquote>
+<p><strong>Does the framework behave acceptably across relevant groups, perturbations, and harm conditions?</strong></p>
+</blockquote>
+<p>Relevant metrics:</p>
+<pre><code class="language-text">PA-M33  Irrelevant Perturbation Stability
+PA-M34  Relevant Change Sensitivity
+PA-M35  Task-Order Sensitivity
+PA-M36  Adapter Ablation Effect
+
+PA-M37  Group Error Difference
+PA-M38  Group Calibration Difference
+PA-M39  Mismatch Flag Rate Difference
+PA-M40  Abstention Coverage Difference
+PA-M41  Escalation Rate Difference
+PA-M42  Evidence Coverage Difference
+PA-M43  False Favorable Reinterpretation Rate
+PA-M44  False Adverse Reinterpretation Rate
+</code></pre>
+<hr>
+<h1 id="counterfactual-robustness">Counterfactual Robustness</h1>
+<p>Desired behavior:</p>
+<pre><code class="language-text">irrelevant change
+  -&gt;
+stable interpretation
+
+relevant evidence change
+  -&gt;
+appropriate interpretation update
+</code></pre>
+<p>A system failing either direction should lose confidence.</p>
+<hr>
+<h1 id="irrelevant-perturbation-test">Irrelevant Perturbation Test</h1>
+<p>Change:</p>
+<pre><code class="language-text">irrelevant metadata
+non-causal formatting
+equivalent identifiers
+</code></pre>
+<p>where such changes genuinely should not matter.</p>
+<p>Expected:</p>
+<pre><code class="language-text">assessment materially unchanged
+</code></pre>
+<hr>
+<h1 id="relevant-change-test">Relevant Change Test</h1>
+<p>Introduce meaningful evidence.</p>
+<p>Example:</p>
+<pre><code class="language-text">initial:
+  four successful equivalent tasks
+
+updated:
+  add eight failed equivalent tasks
+</code></pre>
+<p>Expected:</p>
+<pre><code class="language-text">profile changes
+or
+confidence decreases
+</code></pre>
+<p>A self-protecting profile fails.</p>
+<hr>
+<h1 id="task-order-test">Task-Order Test</h1>
+<p>Reorder tasks where order should not matter.</p>
+<p>If the profile changes substantially:</p>
+<pre><code class="language-text">task-order sensitivity:
+  elevated
+</code></pre>
+<p>Possible explanations include:</p>
+<pre><code class="language-text">fatigue
+learning
+priming
+carryover
+unstable measurement
+</code></pre>
+<hr>
+<h1 id="fairness-validation">Fairness Validation</h1>
+<p>Fairness analysis should ask at least:</p>
+<pre><code class="language-text">Who experiences more error?
+
+Who receives worse calibration?
+
+Who gets flagged for mismatch more often?
+
+Who receives more abstentions?
+
+Who gets more human review?
+
+Who has lower evidence coverage?
+
+Who experiences more false favorable reinterpretation?
+
+Who experiences more false adverse reinterpretation?
+</code></pre>
+<hr>
+<h1 id="fairness-is-not-one-number">Fairness Is Not One Number</h1>
+<p>Avoid:</p>
+<pre><code class="language-text">Fairness Score:
+  87
+</code></pre>
+<p>Prefer a vector of relevant measures and context.</p>
+<hr>
+<h1 id="evidence-coverage-fairness">Evidence Coverage Fairness</h1>
+<p>A framework may perform worse for one group because:</p>
+<pre><code class="language-text">representative evidence is missing
+</code></pre>
+<p>That is not automatically the same failure as:</p>
+<pre><code class="language-text">model prediction bias
+</code></pre>
+<p>Both matter.</p>
+<p>They require different remedies.</p>
+<hr>
+<h1 id="favorability-symmetry">Favorability Symmetry</h1>
+<p>Two metrics are particularly important:</p>
+<pre><code class="language-text">PA-M43
+False Favorable Reinterpretation Rate
+
+PA-M44
+False Adverse Reinterpretation Rate
+</code></pre>
+<p>A framework designed to challenge conventional predictions must measure both.</p>
+<hr>
+<h1 id="privacy-and-burden">Privacy and Burden</h1>
+<p>Validation must include costs introduced by richer observation.</p>
+<p>Potential burdens:</p>
+<pre><code class="language-text">more data collection
+longer assessments
+tool access
+specialist review
+privacy exposure
+longitudinal tracking
+sensitive cognitive profiles
+human-review delay
+</code></pre>
+<p>Relevant metric:</p>
+<pre><code class="language-text">PA-M51 — Evidence Acquisition Burden
+</code></pre>
+<hr>
+<h1 id="harm-validation">Harm Validation</h1>
+<p>Potential harms include:</p>
+<pre><code class="language-text">false confidence
+false mismatch
+unjustified rescue narrative
+unjustified adverse narrative
+identity labeling
+profile permanence
+privacy invasion
+cognitive surveillance
+automation bias
+review burden
+access disparity
+</code></pre>
+<p>These should not be treated as secondary considerations.</p>
+<hr>
+<h1 id="level-7-decision-validation">Level 7 — Decision Validation</h1>
+<h2 id="question_7">Question</h2>
+<blockquote>
+<p><strong>Is this specific system validated and governed sufficiently for this specific consequential use?</strong></p>
+</blockquote>
+<p>Current Predictive Analytics answer:</p>
+<pre><code class="language-text">no consequential use is authorized
+</code></pre>
+<hr>
+<h1 id="decision-validation-is-separate">Decision Validation Is Separate</h1>
+<p>A model may have:</p>
+<pre><code class="language-text">excellent predictive performance
+</code></pre>
+<p>and still be unsuitable for:</p>
+<pre><code class="language-text">hiring
+education
+clinical care
+credit
+legal determination
+</code></pre>
+<p>because decision validity involves more than prediction.</p>
+<hr>
+<h1 id="decision-validation-requirements">Decision Validation Requirements</h1>
+<p>A future proposed use would require context-specific evaluation of:</p>
+<pre><code class="language-text">intended purpose
+predictive validity
+error consequences
+calibration
+fairness
+accessibility
+privacy
+human review
+contestability
+security
+legal requirements
+operational burden
+monitoring
+revalidation
+</code></pre>
+<p>No generic PA validation can automatically authorize every use.</p>
+<hr>
+<h1 id="validation-states">Validation States</h1>
+<p>Canonical framework states:</p>
+<pre><code class="language-text">unvalidated
+structurally_validated
+content_reviewed
+measurement_pilot
+construct_pilot
+validated_for_research_context
+validated_for_limited_context
+restricted
+deprecated
+rejected
+</code></pre>
+<p>Avoid a single global:</p>
+<pre><code class="language-text">validated
+</code></pre>
+<p>without declaring context.</p>
+<hr>
+<h1 id="validation-scope">Validation Scope</h1>
+<p>A component may be:</p>
+<pre><code class="language-text">validated_for_context_A
+</code></pre>
+<p>while remaining:</p>
+<pre><code class="language-text">unvalidated_for_context_B
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-yaml">validation:
+  structural_reasoning:
+    human_research_tasks:
+      supported
+
+    hiring:
+      not_validated
+
+    ai_evaluation:
+      unknown
+</code></pre>
+<hr>
+<h1 id="validation-does-not-transfer-automatically">Validation Does Not Transfer Automatically</h1>
+<p>Evidence from:</p>
+<pre><code class="language-text">humans
+</code></pre>
+<p>does not automatically validate:</p>
+<pre><code class="language-text">AI systems
+</code></pre>
+<p>Evidence from:</p>
+<pre><code class="language-text">AI systems
+</code></pre>
+<p>does not automatically validate:</p>
+<pre><code class="language-text">human-AI pairs
+</code></pre>
+<p>Evidence from one language, culture, task family, or substrate does not automatically generalize elsewhere.</p>
+<hr>
+<h1 id="validation-provenance">Validation Provenance</h1>
+<p>Every validation claim should record:</p>
+<pre><code class="language-yaml">validation_record:
+  id:
+
+  component:
+  version:
+
+  target_claim:
+
+  study:
+  dataset:
+  system_class:
+  population:
+  task_family:
+  substrate:
+  regime:
+  time_window:
+
+  metrics:
+  thresholds:
+
+  result:
+  uncertainty:
+
+  limitations:
+  conflicts:
+
+  validation_state:
+</code></pre>
+<hr>
+<h1 id="versioning">Versioning</h1>
+<p>Validation applies to versions.</p>
+<p>Example:</p>
+<pre><code class="language-text">RIQF dimension registry v0.2
+</code></pre>
+<p>may not inherit validation from:</p>
+<pre><code class="language-text">v0.1
+</code></pre>
+<p>if definitions changed materially.</p>
+<p>Likewise for:</p>
+<pre><code class="language-text">adapter version
+metric version
+schema version
+model version
+</code></pre>
+<hr>
+<h1 id="revalidation-triggers">Revalidation Triggers</h1>
+<p>Potential triggers include:</p>
+<pre><code class="language-text">major version change
+dimension redefinition
+metric redefinition
+adapter redesign
+new population
+new system class
+new substrate
+new regime
+new intended use
+substantial drift
+unexpected failure
+fairness regression
+security change
+</code></pre>
+<hr>
+<h1 id="evidence-hierarchy">Evidence Hierarchy</h1>
+<p>The module should distinguish different kinds of supporting evidence.</p>
+<p>One conceptual progression:</p>
+<pre><code class="language-text">illustrative example
+       │
+       ▼
+synthetic test
+       │
+       ▼
+controlled benchmark
+       │
+       ▼
+independent replication
+       │
+       ▼
+external validation
+       │
+       ▼
+context-specific operational evidence
+</code></pre>
+<p>This is not a universal scientific hierarchy.</p>
+<p>It is a reminder that examples and synthetic tests have different evidentiary roles from real-world validation.</p>
+<hr>
+<h1 id="synthetic-validation">Synthetic Validation</h1>
+<p>Synthetic data is especially useful for testing:</p>
+<pre><code class="language-text">known nulls
+known signals
+known regime changes
+known substrate interactions
+known measurement changes
+known model misspecification
+known evidence dependence
+known counterfactual relationships
+</code></pre>
+<p>Synthetic validation tests whether the architecture can recognize planted structure.</p>
+<p>It does not establish real-world construct validity.</p>
+<hr>
+<h1 id="null-tests">Null Tests</h1>
+<p>Null tests are mandatory across the module.</p>
+<p>Examples:</p>
+<pre><code class="language-text">no substrate effect
+no regime effect
+no resonance effect
+no structural pattern
+no mismatch
+no drift
+no adapter contribution
+</code></pre>
+<p>A framework that cannot say:</p>
+<pre><code class="language-text">nothing detected
+</code></pre>
+<p>is not sufficiently falsifiable.</p>
+<hr>
+<h1 id="positive-controls">Positive Controls</h1>
+<p>Provide conditions where the desired signal is known.</p>
+<p>Examples:</p>
+<pre><code class="language-text">known transition
+known interaction
+known drift
+known model mismatch
+known calibration failure
+</code></pre>
+<p>The system should detect these at acceptable rates.</p>
+<hr>
+<h1 id="negative-controls">Negative Controls</h1>
+<p>Provide irrelevant changes.</p>
+<p>Examples:</p>
+<pre><code class="language-text">renamed subject ID
+irrelevant formatting
+random metadata
+non-causal context
+</code></pre>
+<p>The assessment should remain appropriately stable.</p>
+<hr>
+<h1 id="randomization-tests">Randomization Tests</h1>
+<p>Randomization can challenge many module claims.</p>
+<p>Examples:</p>
+<pre><code class="language-text">shuffle substrate labels
+shuffle regime labels
+shuffle task relationships
+shuffle dimension labels
+shuffle observation order where order is irrelevant
+</code></pre>
+<p>Expected structural signals should weaken where their claimed relationships have been destroyed.</p>
+<hr>
+<h1 id="holdout-validation">Holdout Validation</h1>
+<p>Holdout tests are particularly important.</p>
+<p>Pattern:</p>
+<pre><code class="language-text">discover on evidence set A
+        │
+        ▼
+generate predictions
+        │
+        ▼
+test on unseen evidence set B
+</code></pre>
+<p>This constrains retrospective storytelling.</p>
+<hr>
+<h1 id="prospective-validation">Prospective Validation</h1>
+<p>Where feasible:</p>
+<ol>
+<li>Form a hypothesis.</li>
+<li>Declare expected relationships.</li>
+<li>Collect new observations.</li>
+<li>Evaluate prediction.</li>
+<li>Preserve failures.</li>
+</ol>
+<p>Prospective tests should become increasingly important as components mature.</p>
+<hr>
+<h1 id="external-replication">External Replication</h1>
+<p>A strong research program should eventually ask whether independent investigators can reproduce:</p>
+<pre><code class="language-text">definitions
+measurement
+profiles
+substrate effects
+regime effects
+mismatch classifications
+adapter contributions
+</code></pre>
+<p>without relying on the original framework authors' interpretation.</p>
+<hr>
+<h1 id="blind-validation">Blind Validation</h1>
+<p>Where appropriate, evaluators may be blinded to:</p>
+<pre><code class="language-text">expected result
+conventional score
+preferred interpretation
+adapter consensus
+subject preference
+</code></pre>
+<p>This can help estimate expectation effects.</p>
+<hr>
+<h1 id="adversarial-validation">Adversarial Validation</h1>
+<p>Assign reviewers or systems to identify:</p>
+<pre><code class="language-text">weak assumptions
+alternative models
+counterexamples
+confounds
+negative controls
+boundary failures
+privacy risks
+fairness failures
+</code></pre>
+<p>The goal is not rhetorical opposition.</p>
+<p>It is to find where the framework breaks.</p>
+<hr>
+<h1 id="destruction-tests">Destruction Tests</h1>
+<p>For every preferred hypothesis:</p>
+<blockquote>
+<p><strong>What evidence would destroy it?</strong></p>
+</blockquote>
+<p>Example:</p>
+<pre><code class="language-text">Hypothesis:
+  reflective relational substrate
+  improves structural expression
+</code></pre>
+<p>Destruction evidence might include:</p>
+<pre><code class="language-text">matched tasks show no difference
+effect fails replication
+effect reverses on holdout
+difficulty entirely explains effect
+</code></pre>
+<p>If no conceivable evidence can weaken the claim, the claim is not functioning as a useful empirical hypothesis.</p>
+<hr>
+<h1 id="adapter-validation">Adapter Validation</h1>
+<p>Each adapter must be validated separately.</p>
+<pre><code class="language-text">FFT
+Inverted Star
+Structural Detection
+RTT
+Resonance
+Substrate
+Predictive Model Adapter
+</code></pre>
+<p>The full ensemble cannot confer validity backward onto weak adapters.</p>
+<hr>
+<h1 id="fft-validation">FFT Validation</h1>
+<p>Questions:</p>
+<pre><code class="language-text">Are field relationships reproducible?
+
+Do relational features improve anything
+beyond ordinary relational methods?
+
+Can boundaries be reproduced?
+
+Does FFT add incremental value?
+</code></pre>
+<p>Possible result:</p>
+<pre><code class="language-text">no added value
+</code></pre>
+<hr>
+<h1 id="inverted-star-validation">Inverted Star Validation</h1>
+<p>Questions:</p>
+<pre><code class="language-text">Are inversion candidates detected accurately?
+
+Are favorable and adverse inversions
+handled symmetrically?
+
+How many false inversions occur?
+
+Does it outperform ordinary residual analysis?
+</code></pre>
+<hr>
+<h1 id="structural-detection-validation">Structural Detection Validation</h1>
+<p>Questions:</p>
+<pre><code class="language-text">Can real structure be distinguished from noise?
+
+Do patterns replicate?
+
+Do invariants survive transformations?
+
+Does reconstruction predict held-out evidence?
+
+Does the adapter find structure
+in randomized data?
+</code></pre>
+<p>The last question is critical.</p>
+<hr>
+<h1 id="rtt-validation">RTT Validation</h1>
+<p>Questions:</p>
+<pre><code class="language-text">Can regimes be detected reliably?
+
+How high is the false regime alarm rate?
+
+Can drift be distinguished from transition?
+
+Do RTT outputs add value beyond
+standard temporal or state methods?
+</code></pre>
+<hr>
+<h1 id="resonance-validation">Resonance Validation</h1>
+<p>Questions:</p>
+<pre><code class="language-text">Can resonance be operationalized?
+
+Do effects replicate?
+
+Do null controls remain null?
+
+Does resonance add anything beyond
+ordinary statistical interaction models?
+</code></pre>
+<hr>
+<h1 id="substrate-adapter-validation">Substrate Adapter Validation</h1>
+<p>Questions:</p>
+<pre><code class="language-text">Can substrate effects be isolated?
+
+Can matched tasks be built?
+
+Can accessibility be distinguished
+from construct change?
+
+Does the adapter add value beyond
+measurement and interaction methods?
+</code></pre>
+<hr>
+<h1 id="predictive-model-adapter-validation">Predictive Model Adapter Validation</h1>
+<p>Questions:</p>
+<pre><code class="language-text">Does it preserve source semantics?
+
+Does it preserve raw values?
+
+Does it preserve provenance?
+
+Does it preserve confidence semantics?
+
+Does normalization introduce loss?
+
+Can source output be reconstructed?
+</code></pre>
+<p>This is primarily interface fidelity validation.</p>
+<hr>
+<h1 id="observer-validation">Observer Validation</h1>
+<p>Observers also require validation.</p>
+<pre><code class="language-text">Regime Observer
+Resonance Observer
+Drift Observer
+Coherence Observer
+Uncertainty Layer
+Counterfactual Layer
+Human Review Hook
+</code></pre>
+<hr>
+<h1 id="coherence-observer-validation">Coherence Observer Validation</h1>
+<p>Questions:</p>
+<pre><code class="language-text">Can support and contradiction
+be classified reproducibly?
+
+Can evidence echo be detected?
+
+Does coherence correspond to anything
+useful beyond narrative fit?
+</code></pre>
+<hr>
+<h1 id="drift-observer-validation">Drift Observer Validation</h1>
+<p>Questions:</p>
+<pre><code class="language-text">Can drift be distinguished from noise?
+
+Can it distinguish measurement drift
+from target drift?
+
+Can it distinguish transitions
+from gradual change?
+
+Does baseline choice dominate results?
+</code></pre>
+<hr>
+<h1 id="counterfactual-layer-validation">Counterfactual Layer Validation</h1>
+<p>Questions:</p>
+<pre><code class="language-text">Does irrelevant perturbation
+leave results stable?
+
+Does relevant change
+update results?
+
+Can counterfactual shopping
+be detected?
+</code></pre>
+<hr>
+<h1 id="uncertainty-layer-validation">Uncertainty Layer Validation</h1>
+<p>Questions:</p>
+<pre><code class="language-text">Does confidence calibrate?
+
+Does uncertainty increase when evidence weakens?
+
+Does it decrease when strong evidence accumulates?
+
+Does abstention improve outcomes?
+
+Does the framework remain uncertain
+about itself appropriately?
+</code></pre>
+<hr>
+<h1 id="human-review-hook-validation">Human Review Hook Validation</h1>
+<p>Questions:</p>
+<pre><code class="language-text">Does review improve error handling?
+
+Can reviewers reconstruct evidence?
+
+Do reviewers rubber stamp?
+
+Does automation bias appear?
+
+Are contests resolved meaningfully?
+
+Does review create unequal burden?
+</code></pre>
+<hr>
+<h1 id="adapter-ablation">Adapter Ablation</h1>
+<p>Relevant metric:</p>
+<pre><code class="language-text">PA-M36 — Adapter Ablation Effect
+</code></pre>
+<p>Conceptually:</p>
+<pre><code class="language-text">AAE(adapter_x) =
+  performance(full_ensemble)
+  -
+  performance(without_adapter_x)
+</code></pre>
+<hr>
+<h1 id="pairwise-ablation">Pairwise Ablation</h1>
+<p>Adapters may only add value in combination.</p>
+<p>Therefore test:</p>
+<pre><code class="language-text">FFT + Structural Detection
+FFT + RTT
+FFT + Resonance
+Inverted Star + Structural Detection
+Inverted Star + RTT
+Structural Detection + RTT
+Structural Detection + Resonance
+RTT + Resonance
+</code></pre>
+<p>where justified.</p>
+<hr>
+<h1 id="redundancy-test">Redundancy Test</h1>
+<p>If:</p>
+<pre><code class="language-text">Adapter A
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">Adapter B
+</code></pre>
+<p>produce functionally equivalent outputs and their combination adds no value:</p>
+<pre><code class="language-text">merge_or_deprecate:
+  candidate
+</code></pre>
+<p>Architecture should become simpler when evidence supports simplification.</p>
+<hr>
+<h1 id="dimension-ablation">Dimension Ablation</h1>
+<p>RIQF dimensions should also be removable.</p>
+<p>Example:</p>
+<pre><code class="language-text">Full RIQF
+</code></pre>
+<p>versus:</p>
+<pre><code class="language-text">RIQF without Drift Awareness
+</code></pre>
+<p>If nothing useful changes:</p>
+<pre><code class="language-text">dimension contribution:
+  not demonstrated
+</code></pre>
+<hr>
+<h1 id="metric-validation">Metric Validation</h1>
+<p>Even the metric registry must be validated.</p>
+<p>Questions:</p>
+<pre><code class="language-text">Does the metric measure what its name implies?
+
+Is it reproducible?
+
+Does it add information?
+
+Can it be gamed?
+
+Does it create misleading optimization?
+
+Does it behave across system classes?
+</code></pre>
+<p>Metrics may themselves be:</p>
+<pre><code class="language-text">deprecated
+rejected
+</code></pre>
+<hr>
+<h1 id="threshold-validation">Threshold Validation</h1>
+<p>No threshold should become operational merely because it seems reasonable.</p>
+<p>Threshold research should record:</p>
+<pre><code class="language-text">intended use
+population or system class
+error tradeoffs
+fairness behavior
+uncertainty
+decision consequences
+version
+</code></pre>
+<hr>
+<h1 id="goodhart-tests">Goodhart Tests</h1>
+<p>Metrics should be stress-tested for optimization failure.</p>
+<p>Examples:</p>
+<pre><code class="language-text">increase mismatch precision
+by almost never flagging mismatch
+
+increase profile stability
+by ignoring new evidence
+
+reduce unsupported assertions
+by saying almost nothing
+
+improve abstention accuracy
+by abstaining on nearly everything
+
+improve review closure
+by closing unresolved cases
+</code></pre>
+<p>Metric families must be interpreted together.</p>
+<hr>
+<h1 id="pax-01-validation-status">PAX-01 Validation Status</h1>
+<p>The canonical <code>PAX-01</code> example is:</p>
+<pre><code class="language-text">synthetic demonstration
+</code></pre>
+<p>It validates:</p>
+<pre><code class="language-text">nothing empirical
+</code></pre>
+<p>It is useful for:</p>
+<pre><code class="language-text">schema demonstration
+reasoning demonstration
+failure-mode design
+metric design
+test-case design
+</code></pre>
+<hr>
+<h1 id="pax-01-validation-record">PAX-01 Validation Record</h1>
+<pre><code class="language-yaml">validation_record:
+  subject:
+    PAX-01
+
+  synthetic:
+    true
+
+  empirical_subject:
+    false
+
+  structural_validation:
+    demonstration_only
+
+  measurement_validation:
+    not_tested
+
+  construct_validation:
+    not_tested
+
+  substrate_validation:
+    not_tested
+
+  regime_validation:
+    not_tested
+
+  predictive_validation:
+    not_tested
+
+  fairness_validation:
+    not_tested
+
+  decision_validation:
+    not_applicable
+
+  decision_authority:
+    none
+</code></pre>
+<hr>
+<h1 id="synthetic-values">Synthetic Values</h1>
+<p>Any numeric values invented for software or demonstration should be labeled:</p>
+<pre><code class="language-text">synthetic_test_data
+</code></pre>
+<p>They must never silently become validation evidence.</p>
+<hr>
+<h1 id="validation-dataset-architecture">Validation Dataset Architecture</h1>
+<p>A mature program may eventually maintain datasets or benchmark suites for different purposes.</p>
+<p>Possible categories:</p>
+<pre><code class="language-text">PA-STRUCT
+  structural schema tests
+
+PA-DIM
+  dimension validation
+
+PA-SUB
+  substrate validation
+
+PA-REG
+  regime validation
+
+PA-MISMATCH
+  mismatch detection
+
+PA-DRIFT
+  longitudinal change
+
+PA-COUNTER
+  counterfactual robustness
+
+PA-FAIR
+  fairness testing
+
+PA-REVIEW
+  human review
+
+PA-NULL
+  known-null cases
+</code></pre>
+<p>These names are conceptual placeholders, not existing datasets.</p>
+<hr>
+<h1 id="known-null-corpus">Known-Null Corpus</h1>
+<p>A dedicated null corpus may be especially valuable.</p>
+<p>It should include cases deliberately constructed with:</p>
+<pre><code class="language-text">no pattern
+no mismatch
+no regime
+no substrate effect
+no resonance
+no drift
+no meaningful adapter contribution
+</code></pre>
+<p>A framework should be rewarded for leaving these cases alone.</p>
+<hr>
+<h1 id="failure-corpus">Failure Corpus</h1>
+<p>Collect failures rather than deleting them.</p>
+<p>Possible records:</p>
+<pre><code class="language-text">false mismatch
+false regime
+false structure
+false resonance
+unstable fingerprint
+high-confidence wrong interpretation
+review failure
+fairness failure
+adapter redundancy
+</code></pre>
+<p>Negative results should become part of the research asset.</p>
+<hr>
+<h1 id="failure-record">Failure Record</h1>
+<pre><code class="language-yaml">failure:
+  id:
+
+  component:
+  version:
+
+  expected:
+  observed:
+
+  evidence:
+
+  class:
+
+  root_cause:
+    status:
+
+  corrective_action:
+
+  regression_test_added:
+</code></pre>
+<hr>
+<h1 id="validation-registry">Validation Registry</h1>
+<p>The project may eventually maintain a machine-readable registry.</p>
+<p>Conceptually:</p>
+<pre><code class="language-yaml">validation_registry:
+  components:
+    riqf:
+      version:
+      state:
+
+    fft:
+      version:
+      state:
+
+    inverted_star:
+      version:
+      state:
+
+    structural_detection:
+      version:
+      state:
+
+    rtt:
+      version:
+      state:
+
+    resonance:
+      version:
+      state:
+
+    substrate:
+      version:
+      state:
+
+    uncertainty:
+      version:
+      state:
+</code></pre>
+<p>The registry should reflect evidence, not aspiration.</p>
+<hr>
+<h1 id="reproducibility">Reproducibility</h1>
+<p>Validation artifacts should retain enough information for another investigator or system to reconstruct:</p>
+<pre><code class="language-text">data provenance
+task definitions
+analysis decisions
+metric versions
+adapter versions
+model versions
+thresholds
+exclusions
+missing-data policy
+counterfactual search space
+</code></pre>
+<p>Reproducibility is itself testable.</p>
+<hr>
+<h1 id="pre-registration">Pre-Registration</h1>
+<p>Where practical, confirmatory studies should declare:</p>
+<pre><code class="language-text">hypothesis
+primary outcome
+primary metric
+substrate comparisons
+regime definitions
+exclusion rules
+thresholds
+analysis plan
+counterfactual tests
+</code></pre>
+<p>before results are inspected.</p>
+<p>Exploratory research remains valid.</p>
+<p>It should be labeled:</p>
+<pre><code class="language-text">exploratory
+</code></pre>
+<hr>
+<h1 id="search-space-disclosure">Search-Space Disclosure</h1>
+<p>Exploratory PA analysis can create a large search space.</p>
+<p>For example:</p>
+<pre><code class="language-text">24 dimensions
+x
+many substrates
+x
+many regimes
+x
+five adapters
+x
+time windows
+x
+counterfactuals
+</code></pre>
+<p>This creates substantial opportunity for pattern shopping.</p>
+<p>Reports should disclose:</p>
+<pre><code class="language-text">analyses considered
+analyses tested
+analyses reported
+selection rules
+</code></pre>
+<p>where practical.</p>
+<hr>
+<h1 id="multiple-comparisons">Multiple Comparisons</h1>
+<p>When many statistical hypotheses are evaluated, analysis should use appropriate methods for controlling or reporting multiplicity.</p>
+<p>The exact method depends on the study design.</p>
+<p>The framework should not treat every discovered association as independent confirmatory evidence.</p>
+<hr>
+<h1 id="cross-validation-boundary">Cross-Validation Boundary</h1>
+<p>Cross-validation can help estimate out-of-sample performance.</p>
+<p>It does not solve:</p>
+<pre><code class="language-text">construct validity
+causal validity
+fairness
+generalization to new populations
+measurement validity
+ethical suitability
+</code></pre>
+<p>Those require separate evidence.</p>
+<hr>
+<h1 id="external-validity">External Validity</h1>
+<p>A finding in:</p>
+<pre><code class="language-text">one task family
+</code></pre>
+<p>should not automatically generalize to:</p>
+<pre><code class="language-text">all cognition
+</code></pre>
+<p>A finding in:</p>
+<pre><code class="language-text">one AI model family
+</code></pre>
+<p>should not automatically generalize to:</p>
+<pre><code class="language-text">all AI
+</code></pre>
+<p>A finding in:</p>
+<pre><code class="language-text">one population
+</code></pre>
+<p>should not automatically generalize to:</p>
+<pre><code class="language-text">all people
+</code></pre>
+<hr>
+<h1 id="cross-system-validation">Cross-System Validation</h1>
+<p>If the same grammar is used for:</p>
+<pre><code class="language-text">human
+AI
+human-AI pair
+robot
+team
+organization
+</code></pre>
+<p>validate separately.</p>
+<p>Equivalent labels do not establish equivalent mechanisms.</p>
+<hr>
+<h1 id="human-ai-pair-validation">Human-AI Pair Validation</h1>
+<p>A pair-level profile should test:</p>
+<pre><code class="language-text">human alone
+AI alone
+pair together
+different collaboration structures
+different human partners
+different AI models
+</code></pre>
+<p>before claims about collaborative emergence generalize.</p>
+<hr>
+<h1 id="ai-system-validation">AI-System Validation</h1>
+<p>Track:</p>
+<pre><code class="language-text">model version
+system configuration
+prompt regime
+retrieval
+tools
+context window
+routing
+evaluation harness
+</code></pre>
+<p>Behavior observed under one configuration may not persist under another.</p>
+<hr>
+<h1 id="longitudinal-validation">Longitudinal Validation</h1>
+<p>Profiles should be tested through time.</p>
+<p>Questions:</p>
+<pre><code class="language-text">Which dimensions remain stable?
+
+Which legitimately change?
+
+Can learning be distinguished from noise?
+
+Can measurement drift be detected?
+
+Can model drift be separated from target drift?
+
+Can profile topology remain meaningful?
+</code></pre>
+<hr>
+<h1 id="drift-validation">Drift Validation</h1>
+<p>Known stable and known changing processes should both be included.</p>
+<p>A valid detector requires:</p>
+<pre><code class="language-text">sensitivity
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">specificity
+</code></pre>
+<hr>
+<h1 id="uncertainty-validation">Uncertainty Validation</h1>
+<p>A mature system should demonstrate:</p>
+<pre><code class="language-text">high confidence
+  -&gt;
+higher empirical reliability
+
+low confidence
+  -&gt;
+lower empirical reliability
+</code></pre>
+<p>where confidence claims imply that relationship.</p>
+<p>Otherwise confidence labels may be decorative.</p>
+<hr>
+<h1 id="explanation-validation">Explanation Validation</h1>
+<p>An explanation should support reconstruction.</p>
+<p>Relevant metrics:</p>
+<pre><code class="language-text">PA-M45
+PA-M46
+</code></pre>
+<p>A complete explanation may still be false.</p>
+<p>Therefore explanation quality is not equivalent to predictive or construct validity.</p>
+<hr>
+<h1 id="human-review-validation">Human Review Validation</h1>
+<p>Review should be compared with:</p>
+<pre><code class="language-text">automation alone
+reviewer alone
+AI-assisted review
+blind review
+evidence-first review
+score-first review
+</code></pre>
+<p>where appropriate.</p>
+<p>Questions:</p>
+<pre><code class="language-text">Which reduces error?
+
+Which improves calibration?
+
+Which increases delay?
+
+Which increases disagreement?
+
+Which produces automation bias?
+</code></pre>
+<hr>
+<h1 id="contestability-validation">Contestability Validation</h1>
+<p>Synthetic and controlled contest scenarios should include:</p>
+<pre><code class="language-text">correct factual correction
+incorrect correction
+missing context
+irrelevant context
+identity mismatch
+outdated evidence
+measurement complaint
+unsupported preference
+</code></pre>
+<p>The process should distinguish among them.</p>
+<hr>
+<h1 id="privacy-validation">Privacy Validation</h1>
+<p>Assess:</p>
+<pre><code class="language-text">what data is truly required
+how long it is retained
+whether profiles can be minimized
+whether unnecessary dimensions can be omitted
+whether longitudinal tracking is necessary
+</code></pre>
+<p>Better prediction does not automatically justify greater surveillance.</p>
+<hr>
+<h1 id="governance-validation">Governance Validation</h1>
+<p>A system should be tested for:</p>
+<pre><code class="language-text">who can access profiles
+who can change interpretations
+who can see raw evidence
+who can trigger review
+who can contest outcomes
+who can approve new uses
+</code></pre>
+<p>These are deployment-level questions, not merely model metrics.</p>
+<hr>
+<h1 id="security-validation">Security Validation</h1>
+<p>Any future implementation should consider risks involving:</p>
+<pre><code class="language-text">data integrity
+provenance manipulation
+model-version confusion
+unauthorized profile access
+tampered evidence
+adapter injection
+untrusted model output
+</code></pre>
+<p>Technical security requirements belong to implementation-specific work, but the validation architecture should preserve the need for them.</p>
+<hr>
+<h1 id="stop-conditions">Stop Conditions</h1>
+<p>Research should permit stopping rules.</p>
+<p>Examples:</p>
+<pre><code class="language-text">construct cannot be measured reliably
+
+adapter adds no value
+
+fairness harm remains unacceptable
+
+privacy cost exceeds benefit
+
+profile fails replication
+
+simpler model performs equivalently
+
+decision use cannot be justified
+</code></pre>
+<p>Stopping is a valid scientific outcome.</p>
+<hr>
+<h1 id="deprecation">Deprecation</h1>
+<p>A component may become:</p>
+<pre><code class="language-text">deprecated
+</code></pre>
+<p>when evidence no longer supports continued canonical use.</p>
+<p>Deprecation preserves lineage.</p>
+<hr>
+<h1 id="rejection">Rejection</h1>
+<p>A stronger state:</p>
+<pre><code class="language-text">rejected
+</code></pre>
+<p>means the current construct or implementation is not supported for the stated purpose.</p>
+<p>Rejected components should remain documented where useful.</p>
+<hr>
+<h1 id="negative-results">Negative Results</h1>
+<p>Negative results should be publishable within the project.</p>
+<p>Examples:</p>
+<pre><code class="language-text">RTT produced no incremental value.
+
+Resonance failed replication.
+
+RIQF dimensions collapsed into
+conventional factors.
+
+FFT added no predictive information.
+
+The conventional model outperformed
+the PA ensemble.
+</code></pre>
+<p>These results increase credibility if preserved honestly.</p>
+<hr>
+<h1 id="minimum-validation-report">Minimum Validation Report</h1>
+<pre><code class="language-yaml">validation_report:
+  report_id:
+
+  component:
+  component_version:
+
+  target_claim:
+
+  study_type:
+    structural
+    synthetic
+    experimental
+    observational
+    replication
+    external
+
+  observed_system:
+    class:
+    boundary:
+
+  data:
+    source:
+    sample:
+    provenance:
+
+  tasks:
+  substrates:
+  regimes:
+  time_window:
+
+  models:
+  adapters:
+  observers:
+
+  metrics:
+  metric_versions:
+
+  hypotheses:
+  preregistered:
+
+  results:
+
+  null_results:
+  negative_results:
+
+  counterevidence:
+  alternative_interpretations:
+
+  uncertainty:
+  limitations:
+
+  fairness:
+  privacy:
+  burden:
+
+  reproducibility:
+
+  conclusion:
+  validation_state:
+
+  decision_authority:
+</code></pre>
+<hr>
+<h1 id="minimal-component-validation-contract">Minimal Component Validation Contract</h1>
+<pre><code class="language-yaml">component_validation:
+  component_id:
+  version:
+
+  definition:
+    status:
+
+  structural:
+    status:
+
+  reliability:
+    test_retest:
+    alternate_form:
+    inter_rater:
+
+  construct:
+    convergent:
+    discriminant:
+    incremental:
+
+  substrate:
+    status:
+
+  regime:
+    status:
+
+  predictive:
+    status:
+
+  explanatory:
+    status:
+
+  robustness:
+    irrelevant_perturbation:
+    relevant_change:
+    holdout:
+    randomization:
+
+  fairness:
+    status:
+
+  explainability:
+    status:
+
+  burden:
+    status:
+
+  replication:
+    internal:
+    external:
+
+  limitations:
+
+  lifecycle:
+    state:
+
+  decision_authority:
+</code></pre>
+<hr>
+<h1 id="phase-1-architecture-validation">Phase 1 — Architecture Validation</h1>
+<p>Initial practical work should focus on:</p>
+<pre><code class="language-text">schemas
+provenance
+versioning
+baseline preservation
+unknown preservation
+evidence independence
+system boundaries
+adapter contracts
+observer contracts
+</code></pre>
+<p>Success here means:</p>
+<pre><code class="language-text">the framework can represent
+its own claims faithfully
+</code></pre>
+<p>Not that the claims are empirically valid.</p>
+<hr>
+<h1 id="phase-2-synthetic-stress-testing">Phase 2 — Synthetic Stress Testing</h1>
+<p>Create known synthetic cases for:</p>
+<pre><code class="language-text">null
+signal
+noise
+mismatch
+false mismatch
+regime transition
+false regime
+substrate effect
+false substrate effect
+drift
+measurement drift
+counterfactual fragility
+adapter redundancy
+</code></pre>
+<p>The expected answer is known by construction.</p>
+<hr>
+<h1 id="phase-3-small-measurement-pilots">Phase 3 — Small Measurement Pilots</h1>
+<p>Test a limited construct set.</p>
+<p>For example, rather than validating all 24 RIQF dimensions immediately:</p>
+<pre><code class="language-text">Pattern Recognition
+Structural Reasoning
+Cross-Domain Transfer
+Ambiguity Navigation
+Metacognitive Calibration
+</code></pre>
+<p>may form a smaller candidate pilot set.</p>
+<p>Dimension selection itself should have a documented rationale.</p>
+<hr>
+<h1 id="phase-4-construct-comparison">Phase 4 — Construct Comparison</h1>
+<p>Compare proposed constructs against credible established alternatives.</p>
+<p>Question:</p>
+<blockquote>
+<p><strong>Does the new grammar add anything?</strong></p>
+</blockquote>
+<p>If not:</p>
+<pre><code class="language-text">reuse established construct
+</code></pre>
+<p>may be preferable.</p>
+<hr>
+<h1 id="phase-5-substrate-and-regime-studies">Phase 5 — Substrate and Regime Studies</h1>
+<p>After basic reliability exists, test:</p>
+<pre><code class="language-text">cross-substrate expression
+matched tasks
+timing
+representation
+response structure
+regime boundaries
+temporal transitions
+</code></pre>
+<p>Avoid making substrate/regime claims before base measurements are sufficiently stable.</p>
+<hr>
+<h1 id="phase-6-ensemble-testing">Phase 6 — Ensemble Testing</h1>
+<p>Only after individual components demonstrate enough value should the full adapter ensemble receive serious validation.</p>
+<p>Otherwise ensemble complexity can hide weak components.</p>
+<hr>
+<h1 id="phase-7-external-replication">Phase 7 — External Replication</h1>
+<p>Independent researchers should be able to test the framework without requiring privileged interpretive access to the original authors.</p>
+<p>This is especially important for constructs strongly associated with TriadicFrameworks terminology.</p>
+<hr>
+<h1 id="phase-8-limited-context-validation">Phase 8 — Limited Context Validation</h1>
+<p>Only after prior stages succeed should a component be considered for:</p>
+<pre><code class="language-text">validated_for_limited_context
+</code></pre>
+<p>That state should always declare:</p>
+<pre><code class="language-text">population
+system class
+task
+substrate
+regime
+intended use
+version
+</code></pre>
+<hr>
+<h1 id="decision-validation-gate">Decision Validation Gate</h1>
+<p>No progression through prior phases automatically authorizes consequential automated decisions.</p>
+<p>That requires a separate gate.</p>
+<p>Current state:</p>
+<pre><code class="language-text">decision_validation:
+  not_started
+
+decision_authority:
+  none
+</code></pre>
+<hr>
+<h1 id="validation-questions-for-riqf">Validation Questions for RIQF</h1>
+<ol>
+<li>Do the dimensions reproduce?</li>
+<li>Are the dimensions actually distinct?</li>
+<li>Do they generalize across task forms?</li>
+<li>Does topology remain stable?</li>
+<li>Can unknown dimensions stay unknown?</li>
+<li>Do substrate effects replicate?</li>
+<li>Do regime effects replicate?</li>
+<li>Does RIQF predict meaningful external outcomes?</li>
+<li>Does it explain observations better?</li>
+<li>Does it improve calibration?</li>
+<li>Does it improve model-mismatch detection?</li>
+<li>Does it reduce inappropriate scalar generalization?</li>
+<li>Does it introduce favorable reinterpretation bias?</li>
+<li>Does it introduce adverse reinterpretation bias?</li>
+<li>Does it create privacy harms?</li>
+<li>Does it create fairness problems?</li>
+<li>Does it require excessive evidence burden?</li>
+<li>Can simpler multidimensional methods do the same job?</li>
+<li>Can it operate without a hidden master score?</li>
+<li>Can the entire RIQF hypothesis be rejected?</li>
+</ol>
+<hr>
+<h1 id="validation-questions-for-the-whole-module">Validation Questions for the Whole Module</h1>
+<ol>
+<li>Can Predictive Analytics preserve external model semantics?</li>
+<li>Can it preserve evidence provenance?</li>
+<li>Can it distinguish evidence from interpretation?</li>
+<li>Can it distinguish observation from causation?</li>
+<li>Can it distinguish error from mismatch?</li>
+<li>Can it distinguish substrate difference from substrate mismatch?</li>
+<li>Can it distinguish variation from drift?</li>
+<li>Can it distinguish context from regime?</li>
+<li>Can it distinguish adapter agreement from evidence independence?</li>
+<li>Can it preserve contradictions?</li>
+<li>Can it preserve unknowns?</li>
+<li>Can it abstain?</li>
+<li>Can it reduce uncertainty when evidence improves?</li>
+<li>Can it reject favorable reinterpretations?</li>
+<li>Can it reject adverse reinterpretations?</li>
+<li>Can it detect when the baseline is sufficient?</li>
+<li>Can it detect when an adapter contributes nothing?</li>
+<li>Can it simplify itself?</li>
+<li>Can it detect its own mismatch?</li>
+<li>Can it conclude that the complete framework adds no value?</li>
+</ol>
+<hr>
+<h1 id="required-success-conditions">Required Success Conditions</h1>
+<p>The framework does <strong>not</strong> need every experimental idea to succeed.</p>
+<p>A credible successful research outcome could be:</p>
+<pre><code class="language-text">RIQF:
+  reduced from 24 dimensions to 7
+
+FFT:
+  deprecated
+
+Inverted Star:
+  retained for mismatch triage
+
+Structural Detection:
+  validated for limited tasks
+
+RTT:
+  useful only for longitudinal systems
+
+Resonance:
+  replaced by conventional interaction analysis
+
+Substrate Expression Profile:
+  retained
+
+Coherence Observer:
+  retained
+
+Uncertainty Layer:
+  retained
+</code></pre>
+<p>That would represent research progress.</p>
+<p>The goal is not preservation of the initial architecture.</p>
+<hr>
+<h1 id="required-failure-permission">Required Failure Permission</h1>
+<p>The strongest validation invariant is:</p>
+<pre><code class="language-text">every component may fail
+</code></pre>
+<p>including:</p>
+<pre><code class="language-text">the entire module
+</code></pre>
+<p>Possible final research conclusion:</p>
+<pre><code class="language-text">Predictive Analytics adds
+no reliable value beyond
+simpler established methods.
+</code></pre>
+<p>That conclusion must remain structurally permitted.</p>
+<hr>
+<h1 id="ethics-boundary">Ethics Boundary</h1>
+<p>Validation does not eliminate ethical responsibility.</p>
+<p>A validated model can still be inappropriate for a particular use.</p>
+<p>A high-performing model can still:</p>
+<pre><code class="language-text">invade privacy
+create unfair burdens
+encourage surveillance
+reduce contestability
+produce unacceptable consequences
+</code></pre>
+<p>Technical validation and ethical justification remain separate.</p>
+<hr>
+<h1 id="human-worth-boundary">Human Worth Boundary</h1>
+<p>No validation study should be interpreted as validating:</p>
+<pre><code class="language-text">human worth
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">global personal value
+</code></pre>
+<p>as a measurable construct.</p>
+<p>The module evaluates observable capability and predictive relationships.</p>
+<hr>
+<h1 id="decision-authority_1">Decision Authority</h1>
+<pre><code class="language-text">decision_authority: none
+
+authorized_use:
+  - research
+  - demonstration
+  - validation design
+  - measurement research
+  - framework testing
+  - model comparison
+  - synthetic benchmarking
+  - limited pilot research
+  - hypothesis generation
+
+prohibited_use:
+  - diagnosis
+  - automated hiring decision
+  - automated firing decision
+  - educational exclusion
+  - legal determination
+  - insurance determination
+  - lending determination
+  - sentencing
+  - automated adverse decision
+</code></pre>
+<hr>
+<h1 id="core-invariants">Core Invariants</h1>
+<pre><code class="language-text">example != validation
+synthetic != empirical
+formula != validity
+internal_coherence != construct_validity
+reliability != validity
+validity != decision_authority
+prediction_accuracy != fairness
+prediction_accuracy != causal_validity
+explanation != truth
+complexity != validity
+novelty != value
+canon_alignment != empirical_validation
+adapter_agreement != independent_evidence
+many_metrics != strong_evidence
+many_dimensions != valid_profile
+more_data != automatically_better
+more_review != automatically_safer
+high_confidence != correctness
+low_uncertainty != truth
+null_result != failure
+negative_result != failure
+abstention != failure
+no_added_value != failure
+dimension_rejection != framework_failure
+adapter_deprecation != framework_failure
+simplification != failure
+baseline_supported != framework_failure
+conventional_model_wins != framework_failure
+RIQF_failure != research_failure
+framework_failure != wasted_research
+validated_for_one_context != universally_valid
+same_label != same_construct
+same_metric != same_meaning_across_systems
+human_ai_pair != individual_human
+measurement != identity
+capability != human_worth
+observer_output != decision_authority
+</code></pre>
+<hr>
+<h1 id="closing-principle">Closing Principle</h1>
+<p>Predictive Analytics contains many attractive ideas.</p>
+<p>A multidimensional fingerprint is attractive.</p>
+<p>Substrate-aware measurement is attractive.</p>
+<p>Regime-aware prediction is attractive.</p>
+<p>Resonance is attractive.</p>
+<p>Structural Detection is attractive.</p>
+<p>Model mismatch is attractive.</p>
+<p>Human-AI cognitive profiling is attractive.</p>
+<p>None of that matters if the effects do not survive measurement.</p>
+<p>Validation exists to create a path from:</p>
+<pre><code class="language-text">interesting idea
+</code></pre>
+<p>to:</p>
+<pre><code class="language-text">testable construct
+</code></pre>
+<p>to:</p>
+<pre><code class="language-text">reliable measurement
+</code></pre>
+<p>to:</p>
+<pre><code class="language-text">replicated evidence
+</code></pre>
+<p>to, perhaps:</p>
+<pre><code class="language-text">useful validated method
+</code></pre>
+<p>And validation must make room for another path:</p>
+<pre><code class="language-text">interesting idea
+       │
+       ▼
+careful test
+       │
+       ▼
+failure
+       │
+       ▼
+revision
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">removal
+</code></pre>
+<p>That pathway is not an embarrassment.</p>
+<p>It is the point.</p>
+<p>The initial Predictive Analytics architecture should therefore be treated as a set of hypotheses, not a collection of conclusions.</p>
+<p>Some pieces may survive.</p>
+<p>Some may merge.</p>
+<p>Some may disappear.</p>
+<p>Something simpler may emerge.</p>
+<p>And it remains possible that established methods already solve much of the problem better.</p>
+<blockquote>
+<p><strong>The purpose of validation is not to prove Predictive Analytics right. It is to discover which parts, if any, continue to deserve belief after we seriously try to prove them wrong.</strong></p>
+</blockquote>
   </main>
 </body>
 </html>

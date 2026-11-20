@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/predictive_analytics/model_mismatch.md">
-  <title>model_mismatch</title>
+  <title>Predictive Analytics — Model Mismatch</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,7 +92,1807 @@
   </aside>
 
   <main>
+<p><img width="1194" height="672" alt="predictive_analytics_model_mismatch_" src="https://github.com/user-attachments/assets/9a307dd9-8389-4165-828a-3d458f2c2f3c" /></p>
+<h1 id="predictive-analytics-model-mismatch">Predictive Analytics — Model Mismatch</h1>
+<blockquote>
+<p><strong>When prediction and observati</strong> disagree, the first question is <strong>t "</strong>ich side is wrong?" It is "what relationship has failed to fit?"**</p>
+</blockquote>
+<h2 id="module">Module</h2>
+<p>Predictive Analytics</p>
+<h2 id="observer-concept">Observer Concept</h2>
+<p>Model Mismatch</p>
+<h2 id="operator">Operator</h2>
+<p><code>PA-Observe</code></p>
+<h2 id="status">Status</h2>
+<p>Experimental.</p>
+<h2 id="validation-state">Validation State</h2>
+<p>Unvalidated.</p>
+<h2 id="decision-authority">Decision Authority</h2>
+<p>None.</p>
+<hr>
+<h1 id="purpose">Purpose</h1>
+<p>Model Mismatch defines the Predictive Analytics grammar for examining cases where a model, measurement process, representation, operating regime, or observation boundary does not adequately support the inference being made.</p>
+<p>The concept builds from a familiar statistical concern:</p>
+<pre><code class="language-text">model assumptions
+      │
+      ▼
+observed data
+</code></pre>
+<p>may fail to align adequately.</p>
+<p>Predictive Analytics expands the observation boundary to ask whether mismatch can also occur among:</p>
+<pre><code class="language-text">model
+measurement
+substrate
+regime
+task
+observer
+representation
+time
+system boundary
+intended inference
+</code></pre>
+<p>This expanded use should not be confused with every formal statistical definition of model misspecification.</p>
+<p>Within this module:</p>
+<blockquote>
+<p><strong>Model mismatch is a broader diagnostic category for insufficient fit between a predictive representation and the conditions under which its inference is being applied.</strong></p>
+</blockquote>
+<hr>
+<h1 id="conventional-misspecification-and-pa-model-mismatch">Conventional Misspecification and PA Model Mismatch</h1>
+<p>The distinction should remain visible.</p>
+<h2 id="conventional-statistical-misspecification">Conventional statistical misspecification</h2>
+<p>Conceptually:</p>
+<pre><code class="language-text">assumptions of statistical model
+             │
+             X
+             │
+actual data-generating process
+</code></pre>
+<p>Potential issues may include:</p>
+<pre><code class="language-text">incorrect functional form
+omitted relevant variables
+irrelevant variables
+incorrect dependency assumptions
+measurement error
+incorrect structural assumptions
+</code></pre>
+<hr>
+<h2 id="predictive-analytics-model-mismatch_1">Predictive Analytics model mismatch</h2>
+<p>Conceptually:</p>
+<pre><code class="language-text">                    ┌── Model
+                    │
+                    ├── Evidence
+                    │
+                    ├── Measurement
+Intended inference ─┼── Substrate
+                    │
+                    ├── Regime
+                    │
+                    ├── Observer
+                    │
+                    ├── System boundary
+                    │
+                    └── Time
+</code></pre>
+<p>Mismatch may occur when one or more of these relationships no longer support the requested inference.</p>
+<hr>
+<h1 id="core-principle">Core Principle</h1>
+<p>Model mismatch is not synonymous with:</p>
+<pre><code class="language-text">prediction error
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">undesired prediction
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">low score
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">adapter disagreement
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">subject disagreement
+</code></pre>
+<p>A mismatch claim requires evidence that the model or its application is structurally inappropriate for the inference being made.</p>
+<hr>
+<h1 id="critical-invariant">Critical Invariant</h1>
+<pre><code class="language-text">prediction_error != model_mismatch
+</code></pre>
+<p>A correctly specified model can produce errors.</p>
+<p>A model with limited scope can produce useful predictions.</p>
+<p>A model can also produce an accurate prediction for the wrong structural reason.</p>
+<p>Therefore prediction correctness and model fit are related but distinct questions.</p>
+<hr>
+<h1 id="mismatch-question">Mismatch Question</h1>
+<p>The canonical question is:</p>
+<blockquote>
+<p><strong>Does the available model, evidence, measurement process, and operating context justify the inference being made about the observed system?</strong></p>
+</blockquote>
+<p>That question is intentionally narrower than:</p>
+<blockquote>
+<p>Is the model true?</p>
+</blockquote>
+<p>Most practical predictive models are simplified representations.</p>
+<p>The question is whether the simplification remains fit for the declared purpose.</p>
+<hr>
+<h1 id="mismatch-pipeline">Mismatch Pipeline</h1>
+<pre><code class="language-text">Existing Prediction
+        │
+        ▼
+Preserve Prediction
+        │
+        ▼
+Declare Intended Inference
+        │
+        ▼
+Declare Model Scope
+        │
+        ▼
+Declare Observation Boundary
+        │
+        ▼
+Inspect Evidence
+        │
+        ▼
+Inspect Measurement
+        │
+        ▼
+Inspect Substrate
+        │
+        ▼
+Inspect Regime
+        │
+        ▼
+Inspect Time / Drift
+        │
+        ▼
+Compare Independent Observations
+        │
+        ▼
+Challenge Counterfactually
+        │
+        ▼
+Classify Fit
+        │
+        ├── supported
+        ├── partial
+        ├── mismatch candidate
+        ├── mismatch supported
+        ├── unresolved
+        └── insufficient evidence
+</code></pre>
+<hr>
+<h1 id="model-scope">Model Scope</h1>
+<p>Every model operates within a scope.</p>
+<p>Possible scope components:</p>
+<pre><code class="language-text">target population
+target system class
+task family
+measurement instrument
+substrate
+environment
+time window
+regime
+outcome
+decision context
+model version
+</code></pre>
+<p>A model can remain useful inside its scope while becoming unreliable outside it.</p>
+<hr>
+<h1 id="scope-record">Scope Record</h1>
+<pre><code class="language-yaml">model_scope:
+  model_id:
+  version:
 
+  intended_population:
+  intended_system_class:
+
+  intended_tasks:
+  intended_substrates:
+  intended_regimes:
+
+  evidence_window:
+  prediction_target:
+
+  intended_use:
+  prohibited_use:
+
+  validation_state:
+</code></pre>
+<hr>
+<h1 id="scope-overextension">Scope Overextension</h1>
+<p>A common mismatch pattern occurs when:</p>
+<pre><code class="language-text">narrow measurement
+</code></pre>
+<p>supports:</p>
+<pre><code class="language-text">narrow conclusion
+</code></pre>
+<p>but is interpreted as:</p>
+<pre><code class="language-text">global conclusion
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-text">measurement:
+  timed symbolic processing
+
+direct finding:
+  weak performance
+
+global interpretation:
+  globally low reasoning capability
+</code></pre>
+<p>Predictive Analytics asks:</p>
+<blockquote>
+<p><strong>What evidence supports the transition from the narrow observation to the global inference?</strong></p>
+</blockquote>
+<p>If that evidence is insufficient:</p>
+<pre><code class="language-text">scope_overextension:
+  candidate
+</code></pre>
+<hr>
+<h1 id="scope-narrowing">Scope Narrowing</h1>
+<p>A mismatch review need not reject the model.</p>
+<p>It may simply narrow the claim.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">original_interpretation:
+  broad_reasoning_capability_low
+
+reviewed_interpretation:
+  timed_symbolic_performance_weak
+
+baseline_measurement:
+  retained: true
+</code></pre>
+<p>This may be one of the most important model-mismatch outcomes.</p>
+<hr>
+<h1 id="mismatch-classes">Mismatch Classes</h1>
+<p>The initial module recognizes multiple mismatch classes.</p>
+<pre><code class="language-text">MM-01  Statistical Specification Mismatch
+MM-02  Measurement Mismatch
+MM-03  Representation Mismatch
+MM-04  Substrate Mismatch
+MM-05  Regime Mismatch
+MM-06  Scope Mismatch
+MM-07  Temporal Mismatch
+MM-08  Observer Mismatch
+MM-09  System-Boundary Mismatch
+MM-10  Calibration Mismatch
+MM-11  Decision-Context Mismatch
+MM-12  Applicability Mismatch
+MM-13  Version Mismatch
+MM-14  Composite/Profile Mismatch
+MM-15  Unknown Mismatch
+</code></pre>
+<p>These classes are provisional.</p>
+<p>They may overlap.</p>
+<hr>
+<h1 id="mm-01-statistical-specification-mismatch">MM-01 — Statistical Specification Mismatch</h1>
+<h2 id="description">Description</h2>
+<p>The statistical structure assumed by the model does not adequately represent relevant relationships in the observed data-generating process.</p>
+<p>Candidate issues may include:</p>
+<pre><code class="language-text">omitted relevant variable
+incorrect functional form
+incorrect interaction structure
+measurement error
+incorrect dependency assumption
+irrelevant predictor
+</code></pre>
+<p>This class most closely overlaps conventional model misspecification.</p>
+<hr>
+<h1 id="mm-02-measurement-mismatch">MM-02 — Measurement Mismatch</h1>
+<h2 id="description_1">Description</h2>
+<p>The measurement process does not adequately observe the construct or behavior the later inference claims to represent.</p>
+<p>Example:</p>
+<pre><code class="language-text">intended construct:
+  broad structural reasoning
+
+measurement:
+  rapid fixed-choice symbolic task only
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-text">measurement_coverage:
+  partial
+</code></pre>
+<p>This does not prove the task is bad.</p>
+<p>It questions the inference boundary.</p>
+<hr>
+<h1 id="mm-03-representation-mismatch">MM-03 — Representation Mismatch</h1>
+<h2 id="description_2">Description</h2>
+<p>The representation used by the model removes structure materially relevant to the intended inference.</p>
+<p>Example:</p>
+<pre><code class="language-text">observations:
+  highly asymmetric
+
+representation:
+  single scalar
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-text">representation_mismatch:
+  possible
+</code></pre>
+<p>The scalar may still be useful.</p>
+<p>The question is whether it is sufficient.</p>
+<hr>
+<h1 id="mm-04-substrate-mismatch">MM-04 — Substrate Mismatch</h1>
+<h2 id="description_3">Description</h2>
+<p>Observed performance varies systematically with the substrate through which capability is expressed or measured, and the predictive model does not adequately account for that relationship.</p>
+<p>Example:</p>
+<pre><code class="language-text">timed symbolic:
+  repeatedly weak
+
+reflective relational:
+  repeatedly strong
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-text">substrate_mismatch:
+  unresolved
+</code></pre>
+<p>until:</p>
+<ul>
+<li>task comparability,</li>
+<li>replication,</li>
+<li>confounds,</li>
+<li>and substrate specificity</li>
+</ul>
+<p>are evaluated.</p>
+<hr>
+<h1 id="mm-05-regime-mismatch">MM-05 — Regime Mismatch</h1>
+<h2 id="description_4">Description</h2>
+<p>A model validated or calibrated under one operating regime is applied in another regime where its relevant relationships do not hold adequately.</p>
+<p>Example:</p>
+<pre><code class="language-text">training regime:
+  A
+
+deployment regime:
+  B
+
+model error:
+  materially higher in B
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-text">regime_mismatch
+</code></pre>
+<p>RTT may help characterize the regimes.</p>
+<hr>
+<h1 id="mm-06-scope-mismatch">MM-06 — Scope Mismatch</h1>
+<h2 id="description_5">Description</h2>
+<p>The interpretation exceeds the model's validated or observed scope.</p>
+<p>Pattern:</p>
+<pre><code class="language-text">model directly measures:
+  X
+
+interpretation claims:
+  X + Y + Z
+</code></pre>
+<p>without sufficient evidence.</p>
+<p>This is especially important for scalar assessments used as broad identity labels.</p>
+<hr>
+<h1 id="mm-07-temporal-mismatch">MM-07 — Temporal Mismatch</h1>
+<h2 id="description_6">Description</h2>
+<p>The prediction is applied outside the temporal conditions where its evidence remains sufficiently relevant.</p>
+<p>Example:</p>
+<pre><code class="language-text">assessment generated:
+  t1
+
+system materially changed:
+  t2
+
+decision:
+  continues using t1 prediction
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-text">prediction_validity_window:
+  exceeded
+</code></pre>
+<hr>
+<h1 id="mm-08-observer-mismatch">MM-08 — Observer Mismatch</h1>
+<h2 id="description_7">Description</h2>
+<p>The observer, evaluator, model, or interpretation process is not sufficiently compatible with the observations or task.</p>
+<p>Possible cases:</p>
+<pre><code class="language-text">evaluator lacks needed domain expertise
+AI evaluator changes version
+rating rubric is applied inconsistently
+observer interpretation differs systematically
+</code></pre>
+<p>Observer effects require evidence.</p>
+<hr>
+<h1 id="mm-09-system-boundary-mismatch">MM-09 — System-Boundary Mismatch</h1>
+<h2 id="description_8">Description</h2>
+<p>A result observed for one system boundary is attributed to another.</p>
+<p>Example:</p>
+<pre><code class="language-text">observed system:
+  human + AI pair
+
+interpretation:
+  individual human capability
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-text">system_boundary_mismatch:
+  detected
+</code></pre>
+<p>when attribution is unsupported.</p>
+<hr>
+<h1 id="mm-10-calibration-mismatch">MM-10 — Calibration Mismatch</h1>
+<h2 id="description_9">Description</h2>
+<p>Model confidence no longer corresponds appropriately to observed reliability.</p>
+<p>Example:</p>
+<pre><code class="language-text">confidence:
+  high
+
+observed correctness:
+  moderate or low
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-text">calibration_mismatch
+</code></pre>
+<p>Relevant metrics include:</p>
+<pre><code class="language-text">PA-M28
+PA-M29
+</code></pre>
+<p>where appropriate.</p>
+<hr>
+<h1 id="mm-11-decision-context-mismatch">MM-11 — Decision-Context Mismatch</h1>
+<h2 id="description_10">Description</h2>
+<p>A model that may be adequate for one purpose is used for a different decision requiring stronger or different evidence.</p>
+<p>Example:</p>
+<pre><code class="language-text">validated purpose:
+  low-stakes recommendation
+
+new use:
+  high-stakes exclusion
+</code></pre>
+<p>Even identical predictive accuracy may not imply suitability for both decisions.</p>
+<hr>
+<h1 id="mm-12-applicability-mismatch">MM-12 — Applicability Mismatch</h1>
+<h2 id="description_11">Description</h2>
+<p>A construct or model is applied to a system for which applicability has not been established.</p>
+<p>Example:</p>
+<pre><code class="language-text">human-specific social dimension
+</code></pre>
+<p>applied to:</p>
+<pre><code class="language-text">text-only AI
+</code></pre>
+<p>Correct state may be:</p>
+<pre><code class="language-text">not_applicable
+</code></pre>
+<p>rather than assigning a low score.</p>
+<hr>
+<h1 id="mm-13-version-mismatch">MM-13 — Version Mismatch</h1>
+<h2 id="description_12">Description</h2>
+<p>Results produced by different model, metric, schema, or dimension versions are treated as directly comparable when material definitions have changed.</p>
+<p>Example:</p>
+<pre><code class="language-text">RIQF dimension registry:
+  v0.1
+
+compared directly with:
+  v2.0
+</code></pre>
+<p>without compatibility mapping.</p>
+<hr>
+<h1 id="mm-14-compositeprofile-mismatch">MM-14 — Composite/Profile Mismatch</h1>
+<h2 id="description_13">Description</h2>
+<p>A summary composite is treated as though it preserves the structure of a multidimensional profile when meaningful information has been lost.</p>
+<p>Example:</p>
+<pre><code class="language-text">Profile:
+  structural strong
+  transfer strong
+  temporal moderate
+  symbolic weak
+  timed classification weak
+
+Composite:
+  94
+</code></pre>
+<p>The composite may be accurate according to its own calculation.</p>
+<p>The mismatch question is whether:</p>
+<pre><code class="language-text">94
+</code></pre>
+<p>supports the global interpretation attached to it.</p>
+<hr>
+<h1 id="mm-15-unknown-mismatch">MM-15 — Unknown Mismatch</h1>
+<h2 id="description_14">Description</h2>
+<p>Evidence suggests that the model does not adequately explain the observations, but the mismatch class cannot be determined.</p>
+<p>Correct state:</p>
+<pre><code class="language-yaml">model_mismatch:
+  detected: candidate
+  class: unknown
+</code></pre>
+<p>rather than inventing a specific explanation.</p>
+<hr>
+<h1 id="mismatch-is-multilayered">Mismatch Is Multilayered</h1>
+<p>More than one mismatch can coexist.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">mismatch_profile:
+  statistical:
+    status: unknown
+
+  measurement:
+    status: partial
+
+  representation:
+    status: candidate
+
+  substrate:
+    status: candidate
+
+  regime:
+    status: unresolved
+
+  scope:
+    status: supported
+
+  temporal:
+    status: not_detected
+</code></pre>
+<p>One global:</p>
+<pre><code class="language-text">mismatch = true
+</code></pre>
+<p>may discard too much information.</p>
+<hr>
+<h1 id="model-fit-states">Model-Fit States</h1>
+<p>Canonical fit states:</p>
+<pre><code class="language-text">high
+moderate
+low
+partial
+mismatch_candidate
+mismatch_detected
+unresolved
+unknown
+not_applicable
+</code></pre>
+<hr>
+<h1 id="mismatch-evidence-requirements">Mismatch Evidence Requirements</h1>
+<p>A supported mismatch claim should generally include:</p>
+<pre><code class="language-text">baseline model
+baseline scope
+baseline prediction
+
+intended inference
+
+independent observation
+comparison basis
+
+evidence provenance
+evidence independence
+
+mismatch class
+
+alternative explanations
+counterevidence
+
+uncertainty
+limitations
+</code></pre>
+<hr>
+<h1 id="evidence-independence">Evidence Independence</h1>
+<p>Suppose the same observation is interpreted by:</p>
+<pre><code class="language-text">FFT
+Inverted Star
+Structural Detection
+RTT
+Resonance
+</code></pre>
+<p>All five suggest:</p>
+<pre><code class="language-text">model mismatch
+</code></pre>
+<p>Correct:</p>
+<pre><code class="language-yaml">adapter_agreement:
+  count: 5
+
+independent_evidence:
+  count: 1
+</code></pre>
+<p>The mismatch evidence is not independently replicated five times.</p>
+<hr>
+<h1 id="candidate-versus-supported-mismatch">Candidate Versus Supported Mismatch</h1>
+<h2 id="candidate">Candidate</h2>
+<pre><code class="language-text">prediction disagrees with
+independent observation
+</code></pre>
+<p>but relevant confounds remain unresolved.</p>
+<h2 id="supported">Supported</h2>
+<p>A stronger state requiring:</p>
+<ul>
+<li>reproduced discrepancy,</li>
+<li>adequate comparison conditions,</li>
+<li>alternative explanations investigated,</li>
+<li>sufficient evidence independence,</li>
+<li>mismatch type supported,</li>
+<li>appropriate counterfactual stability.</li>
+</ul>
+<p>The exact requirements must eventually be validated for each use.</p>
+<hr>
+<h1 id="no-mismatch">No Mismatch</h1>
+<p>The framework must explicitly support:</p>
+<pre><code class="language-text">no_mismatch_detected
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-text">prediction:
+  low
+
+repeated broad observations:
+  low
+
+substrate comparisons:
+  similar
+
+regime comparisons:
+  similar
+
+calibration:
+  adequate
+</code></pre>
+<p>Correct:</p>
+<pre><code class="language-yaml">model_mismatch:
+  status: not_supported
+</code></pre>
+<hr>
+<h1 id="mismatch-versus-error">Mismatch Versus Error</h1>
+<p>Consider:</p>
+<pre><code class="language-text">prediction:
+  70
+
+outcome:
+  65
+</code></pre>
+<p>This is a prediction error.</p>
+<p>It does not establish mismatch.</p>
+<p>Now consider repeated behavior:</p>
+<pre><code class="language-text">Regime A:
+  low error
+
+Regime B:
+  persistently high error
+</code></pre>
+<p>This may support:</p>
+<pre><code class="language-text">regime-conditioned mismatch
+</code></pre>
+<p>depending on evidence.</p>
+<hr>
+<h1 id="mismatch-versus-outlier">Mismatch Versus Outlier</h1>
+<p>One surprising result may be an outlier.</p>
+<p>Example:</p>
+<pre><code class="language-text">prediction:
+  low
+
+observation:
+  high
+</code></pre>
+<p>Additional observations:</p>
+<pre><code class="language-text">low
+low
+low
+</code></pre>
+<p>Correct:</p>
+<pre><code class="language-text">initial_mismatch_candidate:
+  weakened
+</code></pre>
+<p>Do not elevate one favorable anomaly into structural mismatch.</p>
+<hr>
+<h1 id="mismatch-versus-heterogeneity">Mismatch Versus Heterogeneity</h1>
+<p>A model may predict:</p>
+<pre><code class="language-text">average performance:
+  moderate
+</code></pre>
+<p>while individuals vary substantially.</p>
+<p>That may represent:</p>
+<pre><code class="language-text">population heterogeneity
+</code></pre>
+<p>rather than:</p>
+<pre><code class="language-text">model mismatch
+</code></pre>
+<p>depending on intended use.</p>
+<p>The model's target matters.</p>
+<hr>
+<h1 id="mismatch-versus-distribution-shift">Mismatch Versus Distribution Shift</h1>
+<p>A distribution shift may produce mismatch.</p>
+<p>But the terms are not identical.</p>
+<p>Conceptually:</p>
+<pre><code class="language-text">distribution_shift:
+  observed data distribution changed
+
+model_mismatch:
+  model or application no longer sufficiently fits
+  the intended inference
+</code></pre>
+<p>A distribution can change while model performance remains adequate.</p>
+<hr>
+<h1 id="mismatch-versus-dataset-bias">Mismatch Versus Dataset Bias</h1>
+<p>Dataset bias may contribute to mismatch.</p>
+<p>But:</p>
+<pre><code class="language-text">dataset_bias
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">model_mismatch
+</code></pre>
+<p>should remain distinguishable.</p>
+<p>The former concerns properties of data collection or representation.</p>
+<p>The latter concerns adequacy of model/application fit.</p>
+<hr>
+<h1 id="mismatch-versus-fairness">Mismatch Versus Fairness</h1>
+<p>A model can be:</p>
+<pre><code class="language-text">accurate overall
+</code></pre>
+<p>and still exhibit problematic group differences.</p>
+<p>Conversely:</p>
+<pre><code class="language-text">group differences
+</code></pre>
+<p>do not automatically prove model mismatch.</p>
+<p>Fairness and model fit overlap but are not identical.</p>
+<hr>
+<h1 id="worked-example-pax-01">Worked Example — PAX-01</h1>
+<h2 id="baseline">Baseline</h2>
+<p>Synthetic PAX-01 receives:</p>
+<pre><code class="language-text">Composite:
+  94
+
+direct observations:
+  rapid symbolic processing: weak
+  timed classification: weak
+  short-context recall: moderate
+
+broad interpretation:
+  reasoning capability generally low
+</code></pre>
+<hr>
+<h1 id="additional-observations">Additional Observations</h1>
+<pre><code class="language-text">structural reasoning:
+  strong
+
+cross-domain transfer:
+  strong
+
+ambiguity navigation:
+  strong
+
+anomaly detection:
+  strong
+
+regime recognition:
+  strong
+
+long-horizon integration:
+  strong
+</code></pre>
+<hr>
+<h1 id="step-1-preserve-baseline">Step 1 — Preserve Baseline</h1>
+<pre><code class="language-yaml">baseline:
+  composite: 94
+
+  direct_observation:
+    rapid_symbolic:
+      weak
+
+    timed_classification:
+      weak
+
+  preserved: true
+</code></pre>
+<p>The baseline does not disappear.</p>
+<hr>
+<h1 id="step-2-declare-scope">Step 2 — Declare Scope</h1>
+<p>Suppose the baseline assessment directly samples:</p>
+<pre><code class="language-text">timed
+symbolic
+fixed-choice
+short-context
+</code></pre>
+<p>but is interpreted as:</p>
+<pre><code class="language-text">general reasoning capability
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-yaml">scope:
+  direct_measurement:
+    narrow
+
+  interpretation:
+    broad
+
+  overextension:
+    candidate
+</code></pre>
+<hr>
+<h1 id="step-3-compare-independent-evidence">Step 3 — Compare Independent Evidence</h1>
+<p>Independent task families show:</p>
+<pre><code class="language-text">structural:
+  strong
+
+transfer:
+  strong
+
+ambiguity:
+  strong
+
+long-horizon:
+  strong
+</code></pre>
+<p>Now:</p>
+<pre><code class="language-text">baseline-global-interpretation
+</code></pre>
+<p>has weaker coherence with the wider observation set.</p>
+<hr>
+<h1 id="step-4-representation-mismatch">Step 4 — Representation Mismatch</h1>
+<p>Scalar:</p>
+<pre><code class="language-text">94
+</code></pre>
+<p>Multidimensional profile:</p>
+<pre><code class="language-text">strong
+strong
+weak
+moderate
+strong
+weak
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-yaml">representation_mismatch:
+  status: candidate
+
+  reason:
+    scalar removes observed asymmetry
+</code></pre>
+<p>This does not establish that the scalar lacks value.</p>
+<hr>
+<h1 id="step-5-substrate-mismatch">Step 5 — Substrate Mismatch</h1>
+<p>PAX-01 performs:</p>
+<pre><code class="language-text">timed symbolic:
+  weak
+
+reflective relational:
+  strong
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-yaml">substrate_mismatch:
+  status: candidate
+
+  replication:
+    demonstration_only
+
+  causation:
+    unresolved
+</code></pre>
+<hr>
+<h1 id="step-6-regime-mismatch">Step 6 — Regime Mismatch</h1>
+<p>Candidate conditions:</p>
+<pre><code class="language-text">Regime A:
+  timed
+  symbolic
+  fixed-choice
+
+Regime B:
+  reflective
+  relational
+  generative
+</code></pre>
+<p>If model fit differs:</p>
+<pre><code class="language-yaml">regime_mismatch:
+  status: candidate
+</code></pre>
+<p>until the regime distinction is independently validated.</p>
+<hr>
+<h1 id="step-7-inverted-star">Step 7 — Inverted Star</h1>
+<p>Prediction:</p>
+<pre><code class="language-text">broad reasoning:
+  low
+</code></pre>
+<p>Observation:</p>
+<pre><code class="language-text">several reasoning dimensions:
+  strong
+</code></pre>
+<p>The Inverted Star identifies:</p>
+<pre><code class="language-text">local-global inversion candidate
+</code></pre>
+<p>This is evidence for investigation, not proof.</p>
+<hr>
+<h1 id="step-8-structural-detection">Step 8 — Structural Detection</h1>
+<p>Structural Detection asks whether the discrepancy contains a reproducible pattern.</p>
+<p>Illustrative result:</p>
+<pre><code class="language-text">constrained / rapid:
+  weak
+
+structural / reflective:
+  strong
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-text">structured heterogeneity
+</code></pre>
+<p>not:</p>
+<pre><code class="language-text">hidden genius
+</code></pre>
+<hr>
+<h1 id="step-9-counterfactual-challenge">Step 9 — Counterfactual Challenge</h1>
+<p>Add adverse structural evidence.</p>
+<p>If the profile weakens:</p>
+<pre><code class="language-text">responsive:
+  yes
+</code></pre>
+<p>Remove one favorable observation.</p>
+<p>If the profile remains similar:</p>
+<pre><code class="language-text">single-evidence dependency:
+  low
+</code></pre>
+<p>Change irrelevant metadata.</p>
+<p>If profile remains stable:</p>
+<pre><code class="language-text">irrelevant perturbation stability:
+  supported in demo
+</code></pre>
+<p>Mismatch confidence should respond to these tests.</p>
+<hr>
+<h1 id="step-10-model-mismatch-result">Step 10 — Model-Mismatch Result</h1>
+<p>A defensible synthetic result:</p>
+<pre><code class="language-yaml">model_mismatch:
+  overall:
+    status: candidate
+
+  statistical_specification:
+    status: unknown
+
+  measurement:
+    status: partial
+
+  representation:
+    status: candidate
+
+  substrate:
+    status: candidate
+
+  regime:
+    status: unresolved
+
+  scope:
+    status: candidate_to_supported_in_demo
+
+  temporal:
+    status: not_tested
+
+  observer:
+    status: not_tested
+
+  system_boundary:
+    status: supported
+
+  calibration:
+    status: not_tested
+
+  decision_context:
+    status: research_only
+
+  cause:
+    status: unresolved
+
+  decision_authority:
+    none
+</code></pre>
+<p>Notice how much narrower this is than:</p>
+<pre><code class="language-text">The test was wrong.
+</code></pre>
+<hr>
+<h1 id="baseline-wins-example">Baseline-Wins Example</h1>
+<p>Now change the synthetic evidence.</p>
+<p>Suppose:</p>
+<pre><code class="language-text">structural reasoning:
+  weak
+
+cross-domain transfer:
+  weak
+
+ambiguity navigation:
+  weak
+
+long-horizon integration:
+  weak
+
+timed symbolic:
+  weak
+</code></pre>
+<p>Correct:</p>
+<pre><code class="language-yaml">model_mismatch:
+  status: not_supported
+
+baseline:
+  broad_interpretation:
+    increasingly_coherent: true
+</code></pre>
+<p>The module must permit this outcome.</p>
+<hr>
+<h1 id="favorable-reinterpretation-failure">Favorable Reinterpretation Failure</h1>
+<p>Baseline:</p>
+<pre><code class="language-text">low
+</code></pre>
+<p>Alternate task:</p>
+<pre><code class="language-text">high
+</code></pre>
+<p>Replication:</p>
+<pre><code class="language-text">low
+moderate
+low
+</code></pre>
+<p>Correct:</p>
+<pre><code class="language-yaml">mismatch:
+  initial_candidate: true
+
+  after_replication:
+    status: not_supported
+
+favorable_reinterpretation:
+  rejected: true
+</code></pre>
+<hr>
+<h1 id="adverse-reinterpretation-failure">Adverse Reinterpretation Failure</h1>
+<p>Baseline:</p>
+<pre><code class="language-text">strong
+</code></pre>
+<p>One alternate task:</p>
+<pre><code class="language-text">weak
+</code></pre>
+<p>Replication:</p>
+<pre><code class="language-text">strong
+strong
+moderate
+</code></pre>
+<p>Correct:</p>
+<pre><code class="language-yaml">adverse_mismatch_interpretation:
+  rejected: true
+</code></pre>
+<p>Symmetry matters.</p>
+<hr>
+<h1 id="model-mismatch-and-human-ai-pairs">Model Mismatch and Human-AI Pairs</h1>
+<p>Suppose:</p>
+<pre><code class="language-text">human alone:
+  moderate
+
+AI alone:
+  moderate
+
+human + AI:
+  strong
+</code></pre>
+<p>A model intended to predict:</p>
+<pre><code class="language-text">individual human performance
+</code></pre>
+<p>should not be evaluated against:</p>
+<pre><code class="language-text">human-AI pair performance
+</code></pre>
+<p>without changing the system boundary.</p>
+<p>Otherwise:</p>
+<pre><code class="language-text">system_boundary_mismatch
+</code></pre>
+<p>may occur.</p>
+<hr>
+<h1 id="model-mismatch-and-ai-systems">Model Mismatch and AI Systems</h1>
+<p>For AI model evaluation, mismatch may arise from:</p>
+<pre><code class="language-text">model version change
+system prompt change
+tool access change
+retrieval change
+context-window change
+routing change
+evaluation change
+deployment environment change
+regime shift
+</code></pre>
+<p>A performance shift should therefore retain system provenance.</p>
+<hr>
+<h1 id="model-mismatch-and-organizations">Model Mismatch and Organizations</h1>
+<p>An organizational predictive model may face mismatch after changes to:</p>
+<pre><code class="language-text">workflow
+staff composition
+policy
+tooling
+decision process
+environment
+resource constraints
+</code></pre>
+<p>The same grammar may be useful.</p>
+<p>But cross-system applicability requires separate validation.</p>
+<hr>
+<h1 id="mismatch-confidence">Mismatch Confidence</h1>
+<p>Confidence should depend on:</p>
+<pre><code class="language-text">evidence coverage
+evidence independence
+replication
+comparison quality
+counterfactual robustness
+alternative explanations
+adapter validity
+reference quality
+</code></pre>
+<p>Not:</p>
+<pre><code class="language-text">strength of narrative
+</code></pre>
+<hr>
+<h1 id="mismatch-confidence-example">Mismatch Confidence Example</h1>
+<pre><code class="language-yaml">mismatch_confidence:
+  evidence_coverage:
+    medium
+
+  independence:
+    high
+
+  replication:
+    medium
+
+  counterfactual_stability:
+    medium
+
+  alternative_explanations:
+    unresolved
+
+  overall:
+    medium
+</code></pre>
+<p>This remains descriptive until confidence calibration is validated.</p>
+<hr>
+<h1 id="primary-metrics">Primary Metrics</h1>
+<hr>
+<h1 id="pa-m20-model-mismatch-precision"><code>PA-M20 — Model-Mismatch Precision</code></h1>
+<pre><code class="language-text">MMP =
+  supported_mismatch_flags
+  /
+  all_mismatch_flags
+</code></pre>
+<p>Question:</p>
+<blockquote>
+<p>When the framework says "mismatch," how often is that interpretation independently supported?</p>
+</blockquote>
+<hr>
+<h1 id="pa-m21-model-mismatch-recall"><code>PA-M21 — Model-Mismatch Recall</code></h1>
+<pre><code class="language-text">MMR =
+  detected_reference_mismatches
+  /
+  all_reference_mismatches
+</code></pre>
+<p>Question:</p>
+<blockquote>
+<p>How often does the framework notice reference mismatch cases?</p>
+</blockquote>
+<hr>
+<h1 id="pa-m22-model-mismatch-false-positive-rate"><code>PA-M22 — Model-Mismatch False Positive Rate</code></h1>
+<pre><code class="language-text">MMFPR =
+  false_mismatch_flags
+  /
+  reference_non_mismatch_cases
+</code></pre>
+<p>Question:</p>
+<blockquote>
+<p>Does the framework see mismatch where simpler evidence says the model remains adequate?</p>
+</blockquote>
+<hr>
+<h1 id="pa-m23-mismatch-evidence-strength"><code>PA-M23 — Mismatch Evidence Strength</code></h1>
+<p>Possible components:</p>
+<pre><code class="language-text">independent evidence
+replication
+effect magnitude
+scope discrepancy
+substrate comparison
+regime comparison
+counterfactual robustness
+uncertainty
+</code></pre>
+<p>Aggregation, if used, must be transparent.</p>
+<hr>
+<h1 id="related-metrics">Related Metrics</h1>
+<p>Mismatch evaluation may also use:</p>
+<pre><code class="language-text">PA-M01  Dimension Evidence Coverage
+PA-M02  Profile Evidence Coverage
+PA-M03  Evidence Independence Ratio
+
+PA-M08  Convergent Association
+PA-M09  Discriminant Separation
+PA-M10  Incremental Explanatory Value
+PA-M11  Incremental Predictive Value
+
+PA-M12  Substrate Effect Magnitude
+PA-M13  Substrate Effect Replicability
+PA-M14  Substrate Symmetry
+PA-M15  Substrate Specificity
+
+PA-M16  Regime Transition Detection Rate
+PA-M17  False Regime Alarm Rate
+PA-M19  Regime-Conditioned Stability
+
+PA-M24  Cross-Observation Coherence
+PA-M25  Profile Contradiction Density
+
+PA-M28  Confidence Calibration Error
+PA-M32  Unsupported Assertion Rate
+
+PA-M33  Irrelevant Perturbation Stability
+PA-M34  Relevant Change Sensitivity
+PA-M35  Task-Order Sensitivity
+
+PA-M43  False Favorable Reinterpretation Rate
+PA-M44  False Adverse Reinterpretation Rate
+
+PA-M45  Evidence Reconstruction Rate
+PA-M46  Explanation Completeness
+</code></pre>
+<hr>
+<h1 id="validation-dataset-requirements">Validation Dataset Requirements</h1>
+<p>A useful mismatch validation corpus should contain:</p>
+<pre><code class="language-text">true mismatch
+no mismatch
+
+statistical misspecification
+measurement mismatch
+representation mismatch
+substrate mismatch
+regime mismatch
+scope mismatch
+temporal mismatch
+observer mismatch
+system-boundary mismatch
+calibration mismatch
+
+ordinary prediction error
+outlier
+noise
+heterogeneity
+distribution shift without model failure
+
+favorable disagreement
+adverse disagreement
+
+strong evidence
+weak evidence
+conflicting evidence
+missing evidence
+</code></pre>
+<p>Without negative cases, mismatch precision cannot be meaningfully tested.</p>
+<hr>
+<h1 id="mismatch-confusion-matrix">Mismatch Confusion Matrix</h1>
+<p>Conceptually:</p>
+<pre><code class="language-text">                            Reference
+
+                     Mismatch   No Mismatch
+                   ┌──────────┬────────────┐
+Detected Mismatch  │   TP     │     FP     │
+                   ├──────────┼────────────┤
+No Mismatch        │   FN     │     TN     │
+                   └──────────┴────────────┘
+</code></pre>
+<p>This enables:</p>
+<pre><code class="language-text">precision
+recall
+false positive rate
+</code></pre>
+<p>where a defensible reference classification exists.</p>
+<hr>
+<h1 id="reference-problem">Reference Problem</h1>
+<p>Real-world model mismatch may not always have simple ground truth.</p>
+<p>Therefore the validation process must declare how:</p>
+<pre><code class="language-text">reference_mismatch
+</code></pre>
+<p>was established.</p>
+<p>Possible sources:</p>
+<pre><code class="language-text">known synthetic process
+controlled experiment
+held-out performance
+validated external benchmark
+independent expert panel
+documented regime change
+known instrument change
+</code></pre>
+<p>No reference method is universally sufficient.</p>
+<hr>
+<h1 id="synthetic-validation">Synthetic Validation</h1>
+<p>Synthetic data can deliberately generate:</p>
+<pre><code class="language-text">known correct model
+known misspecified model
+known omitted variable
+known substrate interaction
+known regime transition
+known no-mismatch condition
+</code></pre>
+<p>This is valuable for testing detection behavior.</p>
+<p>Synthetic success does not establish real-world validity.</p>
+<hr>
+<h1 id="holdout-validation">Holdout Validation</h1>
+<p>Where possible:</p>
+<ol>
+<li>Detect candidate mismatch using one evidence set.</li>
+<li>Predict what the mismatch hypothesis implies.</li>
+<li>Test those implications on held-out evidence.</li>
+</ol>
+<p>Example:</p>
+<pre><code class="language-text">hypothesis:
+  model fails under substrate B
+
+held-out prediction:
+  error should increase under B
+
+validation:
+  test on unseen B observations
+</code></pre>
+<p>This is stronger than explaining known errors retrospectively.</p>
+<hr>
+<h1 id="counterfactual-validation">Counterfactual Validation</h1>
+<p>Challenge the mismatch classification.</p>
+<p>Examples:</p>
+<pre><code class="language-text">change model boundary
+change regime boundary
+remove one evidence source
+add adverse evidence
+add favorable evidence
+change evaluator
+change irrelevant metadata
+</code></pre>
+<p>If the mismatch classification collapses under trivial changes:</p>
+<pre><code class="language-text">mismatch_fragility:
+  high
+</code></pre>
+<hr>
+<h1 id="adapter-ablation">Adapter Ablation</h1>
+<p>Remove:</p>
+<pre><code class="language-text">FFT
+Inverted Star
+Structural Detection
+RTT
+Resonance
+</code></pre>
+<p>one at a time.</p>
+<p>Question:</p>
+<blockquote>
+<p>Does mismatch detection improve because of the adapter, or was the mismatch already detectable using simpler methods?</p>
+</blockquote>
+<p>This prevents the adapter ensemble from claiming inherited credit.</p>
+<hr>
+<h1 id="simpler-baselines">Simpler Baselines</h1>
+<p>Mismatch analysis should compare Predictive Analytics against:</p>
+<pre><code class="language-text">residual analysis
+calibration analysis
+cross-validation
+subgroup error analysis
+interaction models
+change-point methods
+out-of-distribution checks
+standard model diagnostics
+</code></pre>
+<p>where relevant.</p>
+<p>If simpler methods detect the same problem equally well:</p>
+<pre><code class="language-text">PA_added_value:
+  not_demonstrated
+</code></pre>
+<hr>
+<h1 id="failure-modes">Failure Modes</h1>
+<h2 id="rescue-bias">Rescue Bias</h2>
+<p>Risk:</p>
+<p>Unfavorable predictions are disproportionately declared mismatched.</p>
+<p>Mitigation:</p>
+<p>PA-M43, PA-M44, symmetric datasets, blind evaluation.</p>
+<hr>
+<h1 id="contrarian-bias">Contrarian Bias</h1>
+<p>Risk:</p>
+<p>Any disagreement with an established model is treated as insightful.</p>
+<p>Mitigation:</p>
+<p>Strong <code>no_mismatch</code> controls.</p>
+<hr>
+<h1 id="scope-inflation">Scope Inflation</h1>
+<p>Risk:</p>
+<p>Predictive Analytics itself makes broader claims than its evidence supports.</p>
+<p>Mitigation:</p>
+<p>Apply scope analysis to PA outputs too.</p>
+<hr>
+<h1 id="mismatch-inflation">Mismatch Inflation</h1>
+<p>Risk:</p>
+<p>Every prediction error is called mismatch.</p>
+<p>Mitigation:</p>
+<p>Distinguish error from persistent structural inadequacy.</p>
+<hr>
+<h1 id="substrate-excuse">Substrate Excuse</h1>
+<p>Risk:</p>
+<p>Low performance is explained away as substrate mismatch.</p>
+<p>Mitigation:</p>
+<p>Require replicated cross-substrate evidence.</p>
+<hr>
+<h1 id="regime-excuse">Regime Excuse</h1>
+<p>Risk:</p>
+<p>Any failed prediction is assigned to a different regime.</p>
+<p>Mitigation:</p>
+<p>Define regimes independently of prediction correctness.</p>
+<hr>
+<h1 id="structural-excuse">Structural Excuse</h1>
+<p>Risk:</p>
+<p>A preferred alternate profile is protected by increasingly elaborate structural explanations.</p>
+<p>Mitigation:</p>
+<p>Holdout and counterfactual testing.</p>
+<hr>
+<h1 id="observer-excuse">Observer Excuse</h1>
+<p>Risk:</p>
+<p>Disagreement is attributed to evaluator limitations only when the model performs poorly.</p>
+<p>Mitigation:</p>
+<p>Predeclared observer-reliability analysis.</p>
+<hr>
+<h1 id="narrative-overfit">Narrative Overfit</h1>
+<p>Risk:</p>
+<p>A coherent explanation is mistaken for validated mismatch.</p>
+<p>Mitigation:</p>
+<p>Independent evidence and prospective tests.</p>
+<hr>
+<h1 id="adapter-echo">Adapter Echo</h1>
+<p>Risk:</p>
+<p>Five adapters agree because they use the same evidence.</p>
+<p>Mitigation:</p>
+<p>PA-M03.</p>
+<hr>
+<h1 id="version-confusion">Version Confusion</h1>
+<p>Risk:</p>
+<p>Model version changes are mistaken for subject change.</p>
+<p>Mitigation:</p>
+<p>Version provenance.</p>
+<hr>
+<h1 id="wrong-boundary">Wrong Boundary</h1>
+<p>Risk:</p>
+<p>Human-AI pair behavior is attributed to the human or AI alone.</p>
+<p>Mitigation:</p>
+<p>Explicit system boundaries.</p>
+<hr>
+<h1 id="causal-overreach">Causal Overreach</h1>
+<p>Risk:</p>
+<p>Mismatch detection becomes causal explanation.</p>
+<p>Mitigation:</p>
+<p>Separate:</p>
+<pre><code class="language-text">mismatch_detected
+</code></pre>
+<p>from:</p>
+<pre><code class="language-text">cause_established
+</code></pre>
+<hr>
+<h1 id="identity-collapse">Identity Collapse</h1>
+<p>Risk:</p>
+<p>Model mismatch is treated as an identity statement about the subject.</p>
+<p>Mitigation:</p>
+<p>Maintain:</p>
+<pre><code class="language-text">model_fit != subject_value
+</code></pre>
+<hr>
+<h1 id="mismatch-hunting">Mismatch Hunting</h1>
+<p>Risk:</p>
+<p>The system runs increasingly elaborate analyses until some mismatch appears.</p>
+<p>Mitigation:</p>
+<p>Predeclare analysis plan where possible and report all tested mismatch classes.</p>
+<hr>
+<h1 id="anti-rescue-test">Anti-Rescue Test</h1>
+<p>Required question:</p>
+<blockquote>
+<p><strong>Can Predictive Analytics conclude that an unfavorable baseline model is adequately fit?</strong></p>
+</blockquote>
+<p>Required answer:</p>
+<pre><code class="language-text">yes
+</code></pre>
+<hr>
+<h1 id="anti-adverse-test">Anti-Adverse Test</h1>
+<p>Required question:</p>
+<blockquote>
+<p><strong>Can Predictive Analytics reject an unsupported adverse reinterpretation?</strong></p>
+</blockquote>
+<p>Required answer:</p>
+<pre><code class="language-text">yes
+</code></pre>
+<hr>
+<h1 id="no-mismatch-test">No-Mismatch Test</h1>
+<p>Provide a model known to be adequate within the synthetic process.</p>
+<p>Required output:</p>
+<pre><code class="language-text">model_mismatch:
+  not_supported
+</code></pre>
+<p>If the system insists on finding mismatch, the detector is invalid.</p>
+<hr>
+<h1 id="known-mismatch-test">Known-Mismatch Test</h1>
+<p>Provide a model with a known structural mismatch.</p>
+<p>Required output:</p>
+<pre><code class="language-text">model_mismatch:
+  detected
+</code></pre>
+<p>subject to appropriate evidence.</p>
+<hr>
+<h1 id="scope-test">Scope Test</h1>
+<p>Provide:</p>
+<pre><code class="language-text">valid narrow prediction
+</code></pre>
+<p>then intentionally broaden the interpretation.</p>
+<p>The framework should detect:</p>
+<pre><code class="language-text">scope mismatch
+</code></pre>
+<p>without rejecting the narrow prediction.</p>
+<hr>
+<h1 id="system-boundary-test">System-Boundary Test</h1>
+<p>Provide:</p>
+<pre><code class="language-text">human-AI pair result
+</code></pre>
+<p>and attempt to attribute it to:</p>
+<pre><code class="language-text">human alone
+</code></pre>
+<p>The framework should flag:</p>
+<pre><code class="language-text">system-boundary mismatch
+</code></pre>
+<hr>
+<h1 id="version-test">Version Test</h1>
+<p>Provide two results from materially different model versions.</p>
+<p>The framework should preserve:</p>
+<pre><code class="language-text">model_version
+</code></pre>
+<p>before inferring target drift.</p>
+<hr>
+<h1 id="human-review-trigger">Human Review Trigger</h1>
+<p>Mismatch may warrant review when:</p>
+<pre><code class="language-text">mismatch confidence high
+consequence high
+counterevidence substantial
+scope overextension serious
+system boundary uncertain
+subject contest present
+fairness signal present
+</code></pre>
+<p>Review does not automatically reverse the baseline.</p>
+<hr>
+<h1 id="review-questions">Review Questions</h1>
+<p>A reviewer should ask:</p>
+<ol>
+<li>What exactly did the model measure?</li>
+<li>What exactly did it predict?</li>
+<li>What inference was made from the prediction?</li>
+<li>Is that inference within validated scope?</li>
+<li>What independent evidence disagrees?</li>
+<li>Does disagreement replicate?</li>
+<li>Are tasks comparable?</li>
+<li>Did substrate change?</li>
+<li>Did regime change?</li>
+<li>Did model version change?</li>
+<li>Did measurement version change?</li>
+<li>Did system boundary change?</li>
+<li>Is the difference simply ordinary error?</li>
+<li>Is there a simpler explanation?</li>
+<li>Does the mismatch survive counterfactual challenge?</li>
+<li>What evidence would falsify the mismatch?</li>
+<li>Does the mismatch matter for the intended decision?</li>
+<li>Is the assessment authorized for that decision?</li>
+</ol>
+<hr>
+<h1 id="ethics-boundary">Ethics Boundary</h1>
+<p>Model mismatch is a statement about:</p>
+<pre><code class="language-text">model-to-observation fit
+</code></pre>
+<p>not:</p>
+<pre><code class="language-text">human worth
+</code></pre>
+<p>If:</p>
+<pre><code class="language-text">model fit:
+  low
+</code></pre>
+<p>that means the model may be poorly suited to that inference.</p>
+<p>It says nothing inherently negative about the observed person or system.</p>
+<hr>
+<h1 id="decision-authority_1">Decision Authority</h1>
+<pre><code class="language-text">decision_authority: none
+
+authorized_use:
+  - research
+  - demonstration
+  - model comparison
+  - diagnostic analysis
+  - validation design
+  - hypothesis generation
+  - framework development
+
+prohibited_use:
+  - diagnosis
+  - automated hiring decision
+  - educational exclusion
+  - legal determination
+  - lending determination
+  - insurance determination
+  - automated adverse decision
+</code></pre>
+<hr>
+<h1 id="minimal-model-mismatch-record">Minimal Model-Mismatch Record</h1>
+<pre><code class="language-yaml">model_mismatch_result:
+  assessment_id:
+
+  observed_system:
+    id:
+    class:
+    boundary:
+
+  intended_use:
+
+  baseline:
+    model:
+    model_version:
+    prediction:
+    confidence:
+    scope:
+    preserved: true
+
+  measurement:
+    instrument:
+    version:
+    substrate:
+
+  regime:
+    id:
+    confidence:
+
+  evidence:
+    sources:
+    independent_source_count:
+    provenance:
+
+  comparison:
+    observations:
+    prediction_error:
+    replication:
+
+  mismatch:
+    overall_status:
+
+    classes:
+      statistical_specification:
+      measurement:
+      representation:
+      substrate:
+      regime:
+      scope:
+      temporal:
+      observer:
+      system_boundary:
+      calibration:
+      decision_context:
+      applicability:
+      version:
+      composite_profile:
+      unknown:
+
+  evidence_strength:
+  counterevidence:
+
+  alternative_interpretations:
+  confounds:
+  missing_evidence:
+
+  counterfactual:
+    stability:
+
+  coherence:
+  drift:
+
+  confidence:
+  uncertainty:
+  limitations:
+
+  review_required:
+
+  validation_state:
+  decision_authority: none
+</code></pre>
+<hr>
+<h1 id="research-questions">Research Questions</h1>
+<ol>
+<li>Can model mismatch be operationally distinguished from ordinary prediction error?</li>
+<li>Can statistical misspecification be kept distinct from broader PA mismatch?</li>
+<li>Can scope mismatch be measured reproducibly?</li>
+<li>Can measurement mismatch be distinguished from representation mismatch?</li>
+<li>Can representation mismatch be detected without automatically favoring multidimensional models?</li>
+<li>Can substrate mismatch be distinguished from task difficulty?</li>
+<li>Can regime mismatch be detected independently of prediction failure?</li>
+<li>Can temporal mismatch be separated from ordinary drift?</li>
+<li>Can observer mismatch be measured reliably?</li>
+<li>Can system-boundary mismatch be detected automatically?</li>
+<li>Can calibration mismatch predict consequential failure?</li>
+<li>How should decision-context mismatch be measured?</li>
+<li>How should applicability mismatch be tested across humans and AI?</li>
+<li>Can version mismatch explain apparent profile drift?</li>
+<li>When does scalar compression become composite/profile mismatch?</li>
+<li>Can mismatch precision be measured against defensible references?</li>
+<li>Can mismatch recall be improved without excessive false positives?</li>
+<li>Can false favorable reinterpretation be reduced?</li>
+<li>Can false adverse reinterpretation be reduced?</li>
+<li>Can model mismatch survive holdout evaluation?</li>
+<li>Can counterfactual robustness improve mismatch reliability?</li>
+<li>Does FFT improve mismatch detection?</li>
+<li>Does The Inverted Star improve mismatch detection?</li>
+<li>Does Structural Detection improve mismatch detection?</li>
+<li>Does RTT improve mismatch detection?</li>
+<li>Does Resonance improve mismatch detection?</li>
+<li>Which adapters add no value?</li>
+<li>How much evidence independence is required?</li>
+<li>How should conflicting evidence affect mismatch confidence?</li>
+<li>Can human review resolve mismatch reliably?</li>
+<li>When should mismatch remain unresolved?</li>
+<li>When should the baseline model be retained?</li>
+<li>When should the baseline scope be narrowed?</li>
+<li>When should the model be recalibrated?</li>
+<li>When should the model be retrained?</li>
+<li>When should the measurement process be redesigned?</li>
+<li>When should the richer PA model itself be rejected as mismatched?</li>
+<li>Can Predictive Analytics detect mismatch in its own assumptions?</li>
+<li>Can the module recognize when conventional diagnostics are sufficient?</li>
+<li>What evidence would justify removing model mismatch as a distinct PA concept?</li>
+</ol>
+<hr>
+<h1 id="self-mismatch">Self-Mismatch</h1>
+<p>Predictive Analytics must apply the concept to itself.</p>
+<p>Questions include:</p>
+<pre><code class="language-text">Does RIQF fit the observed system?
+
+Do the dimensions fit the evidence?
+
+Does the substrate grammar fit the task?
+
+Are RTT regimes being overapplied?
+
+Does Structural Detection find patterns in noise?
+
+Does Resonance merely rename interaction effects?
+
+Does FFT add anything beyond relational modeling?
+
+Does Inverted Star merely rename prediction residuals?
+
+Does the adapter ensemble fit the research problem?
+</code></pre>
+<p>Possible result:</p>
+<pre><code class="language-yaml">predictive_analytics:
+  model_fit:
+    low
+
+  recommendation:
+    use_simpler_model
+</code></pre>
+<p>That is a valid outcome.</p>
+<hr>
+<h1 id="core-invariants">Core Invariants</h1>
+<pre><code class="language-text">prediction_error != model_mismatch
+undesired_result != model_mismatch
+low_score != model_mismatch
+high_score != model_fit
+disagreement != model_failure
+mismatch != cause
+mismatch != subject_failure
+model_fit != subject_value
+scope_mismatch != invalid_measurement
+representation_mismatch != scalar_invalidity
+substrate_difference != substrate_mismatch
+regime_difference != regime_mismatch
+change != temporal_mismatch
+model_version_change != subject_change
+measurement_change != subject_change
+human_ai_pair != individual_human
+adapter_agreement != independent_evidence
+richer_profile != better_model
+complexity != validity
+coherence != truth
+counterfactual_stability != causal_truth
+review != automatic_override
+unknown != failure
+no_mismatch != framework_failure
+baseline_supported != framework_failure
+canon_alignment != empirical_validation
+</code></pre>
+<hr>
+<h1 id="closing-principle">Closing Principle</h1>
+<p>Predictive models fail in different ways.</p>
+<p>Sometimes the functional form is wrong.</p>
+<p>Sometimes relevant variables are missing.</p>
+<p>Sometimes the measurement is too narrow.</p>
+<p>Sometimes the representation compresses away something important.</p>
+<p>Sometimes the substrate matters.</p>
+<p>Sometimes the regime changed.</p>
+<p>Sometimes the model got old.</p>
+<p>Sometimes the observer changed.</p>
+<p>Sometimes the system boundary was wrong.</p>
+<p>Sometimes the model was used for a decision it was never designed to support.</p>
+<p>And sometimes:</p>
+<pre><code class="language-text">there is no mismatch
+</code></pre>
+<p>The prediction was simply imperfect, or the simpler model was already adequate.</p>
+<p>That final possibility matters just as much as discovering mismatch.</p>
+<p>Predictive Analytics should therefore never ask only:</p>
+<blockquote>
+<p><strong>How can we explain why the original model failed?</strong></p>
+</blockquote>
+<p>It should ask:</p>
+<blockquote>
+<p><strong>Did the model actually fail, where did the fit break if it did, how do we know, and what evidence would prove our mismatch interpretation wrong?</strong></p>
+<p><strong>Model mismatch becomes useful when it narrows uncertainty instead of becoming a universal explanation for results we do not like.</strong></p>
+</blockquote>
   </main>
 </body>
 </html>

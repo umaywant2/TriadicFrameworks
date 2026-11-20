@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/predictive_analytics/RTT_adapter.md">
-  <title>RTT_adapter</title>
+  <title>RTT Adapter</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,7 +92,1530 @@
   </aside>
 
   <main>
+<p><img width="1194" height="672" alt="predictive_analytics_RTT_adapter_" src="https://github.com/user-attachments/assets/9e2d36fe-1314-4f6c-98f7-48f1af94e9c7" /></p>
+<h1 id="rtt-adapter">RTT Adapter</h1>
+<blockquote>
+<p><strong>A prediction can be locally correct and globally wrong when the regime changes.</strong></p>
+</blockquote>
+<h2 id="module">Module</h2>
+<p>Predictive Analytics</p>
+<h2 id="adapter-id">Adapter ID</h2>
+<p><code>rtt</code></p>
+<h2 id="status">Status</h2>
+<p>Experimental.</p>
+<h2 id="source-framework">Source Framework</h2>
+<p>RTT — Resonance-Time Theory</p>
+<h2 id="intended-role">Intended Role</h2>
+<p>Regime, temporal, drift, continuity, transition, and recalibration observer.</p>
+<hr>
+<h1 id="purpose">Purpose</h1>
+<p>The RTT Adapter connects Predictive Analytics to regime-aware and temporal observation.</p>
+<p>Its purpose is to test whether:</p>
+<ul>
+<li>a predictive model remains reliable across changing conditions,</li>
+<li>an observed capability remains stable across regimes,</li>
+<li>a transition materially changes model fit,</li>
+<li>drift develops between prediction and observation,</li>
+<li>apparent contradictions can be explained by regime boundaries,</li>
+<li>recovery or recalibration occurs after perturbation,</li>
+<li>and longitudinal evidence changes the justified scope of an earlier prediction.</li>
+</ul>
+<p>The adapter does not assume that every performance change represents a regime change.</p>
+<p>It does not treat RTT terminology as evidence.</p>
+<p>It does not replace an existing prediction merely because a different regime produces a different result.</p>
+<p>Instead:</p>
+<blockquote>
+<p><strong>RTT asks whether the conditions under which an observation was made remain structurally comparable across time and state.</strong></p>
+</blockquote>
+<hr>
+<h1 id="core-hypothesis">Core Hypothesis</h1>
+<p>Many predictive systems implicitly assume enough continuity between:</p>
+<pre><code class="language-text">training conditions
+      │
+      ▼
+measurement conditions
+      │
+      ▼
+prediction conditions
+      │
+      ▼
+future conditions
+</code></pre>
+<p>for the inferred relationship to remain useful.</p>
+<p>RTT introduces another question:</p>
+<pre><code class="language-text">Are these observations occurring
+inside the same meaningful regime?
+</code></pre>
+<p>Conceptually:</p>
+<pre><code class="language-text">             Prediction
+                 │
+                 ▼
+             Observation
+                 │
+                 ▼
+        ┌─────────────────┐
+        │   RTT Adapter   │
+        └────────┬────────┘
+                 │
+      ┌──────────┼──────────┐
+      ▼          ▼          ▼
+    regime      time       drift
+      │          │          │
+      └──────┬───┴────┬─────┘
+             ▼        ▼
+         transition  stability
+             │        │
+             └───┬────┘
+                 ▼
+            continuity
+                 │
+                 ▼
+          recalibration
+                 │
+                 ▼
+      Comparative Assessment
+</code></pre>
+<hr>
+<h1 id="foundational-principle">Foundational Principle</h1>
+<p>RTT distinguishes:</p>
+<p><strong>change</strong></p>
+<p>from:</p>
+<p><strong>regime change</strong></p>
+<p>and:</p>
+<p><strong>variation</strong></p>
+<p>from:</p>
+<p><strong>drift</strong></p>
+<p>and:</p>
+<p><strong>recovery</strong></p>
+<p>from:</p>
+<p><strong>recalibration</strong></p>
+<p>These distinctions must be operational rather than rhetorical.</p>
+<hr>
+<h1 id="temporal-observation-model">Temporal Observation Model</h1>
+<p>Let:</p>
+<ul>
+<li><strong>P(t)</strong> = prediction at time <code>t</code></li>
+<li><strong>O(t)</strong> = observation at time <code>t</code></li>
+<li><strong>R(t)</strong> = operating regime at time <code>t</code></li>
+<li><strong>S(t)</strong> = measurement substrate at time <code>t</code></li>
+<li><strong>D(t)</strong> = accumulated drift estimate</li>
+<li><strong>C(t)</strong> = observed coherence or continuity</li>
+</ul>
+<p>Conceptually:</p>
+<pre><code class="language-text">Assessment(t) =
+  observe(
+    P(t),
+    O(t),
+    R(t),
+    S(t),
+    D(t),
+    C(t)
+  )
+</code></pre>
+<p>This notation is conceptual.</p>
+<p>It does not establish a validated RTT measurement equation.</p>
+<hr>
+<h1 id="primary-rtt-questions">Primary RTT Questions</h1>
+<p>The adapter asks:</p>
+<ol>
+<li>What regime was active when the original prediction was generated?</li>
+<li>What regime is active during the current observation?</li>
+<li>Are those regimes meaningfully comparable?</li>
+<li>Has a structural transition occurred?</li>
+<li>Is performance stable within each regime?</li>
+<li>Does the model's error change by regime?</li>
+<li>Has prediction-observation disagreement accumulated through time?</li>
+<li>Does the observed system adapt after a transition?</li>
+<li>Does the model recalibrate?</li>
+<li>Does an earlier prediction remain justified after the regime changes?</li>
+</ol>
+<hr>
+<h1 id="what-is-a-regime">What Is a Regime?</h1>
+<p>For Predictive Analytics, a regime is a bounded set of operating conditions under which relevant relationships are sufficiently stable to support meaningful comparison.</p>
+<p>Candidate regime components may include:</p>
+<pre><code class="language-text">task structure
+measurement substrate
+available tools
+time constraints
+environment
+interaction mode
+information availability
+system state
+decision context
+model version
+observer configuration
+</code></pre>
+<p>A regime is not merely:</p>
+<pre><code class="language-text">before
+after
+easy
+hard
+good
+bad
+familiar
+unfamiliar
+</code></pre>
+<p>unless those labels correspond to operationally defined structural conditions.</p>
+<hr>
+<h1 id="regime-record">Regime Record</h1>
+<p>Suggested representation:</p>
+<pre><code class="language-yaml">regime:
+  id: regime-001
 
+  boundary:
+    definition: declared
+    confidence: medium
+
+  conditions:
+    task_structure:
+    substrate:
+    tools:
+    time_constraint:
+    environment:
+    interaction_mode:
+    system_state:
+
+  evidence:
+    - evidence-reference
+
+  stability:
+    status: not_tested
+
+  transitions:
+    incoming:
+    outgoing:
+
+  limitations:
+    - boundary remains provisional
+</code></pre>
+<hr>
+<h1 id="regime-states">Regime States</h1>
+<p>Initial states:</p>
+<pre><code class="language-text">candidate
+observed
+stable
+transitional
+unstable
+merged
+split
+superseded
+unknown
+</code></pre>
+<p>These states are experimental.</p>
+<hr>
+<h1 id="1-regime-recognition">1. Regime Recognition</h1>
+<p>The first RTT function is to determine whether observations belong to comparable operating conditions.</p>
+<p>Example:</p>
+<pre><code class="language-text">Observation A:
+  task: symbolic
+  timing: severe
+  interaction: individual
+  tools: none
+
+Observation B:
+  task: relational
+  timing: reflective
+  interaction: collaborative
+  tools: permitted
+</code></pre>
+<p>These observations clearly differ.</p>
+<p>RTT does not immediately declare two regimes.</p>
+<p>It first asks whether those differences materially affect the relationship being studied.</p>
+<hr>
+<h1 id="regime-candidate">Regime Candidate</h1>
+<pre><code class="language-yaml">regime_candidate:
+  detected: true
+
+  changed_conditions:
+    - task_structure
+    - time_constraint
+    - interaction_mode
+    - tool_access
+
+  materiality:
+    status: not_tested
+
+  confidence: low
+</code></pre>
+<p>A candidate becomes analytically meaningful only if the structural distinction survives validation.</p>
+<hr>
+<h1 id="2-regime-transition">2. Regime Transition</h1>
+<p>A regime transition is a change from one sufficiently stable operating structure to another.</p>
+<p>Conceptually:</p>
+<pre><code class="language-text">Regime A
+   │
+   │ stable behavior
+   │
+   ▼
+Transition Boundary
+   │
+   ▼
+Regime B
+   │
+   │ stable behavior
+   ▼
+</code></pre>
+<p>The transition itself may be:</p>
+<pre><code class="language-text">abrupt
+gradual
+mixed
+cyclic
+reversible
+irreversible
+unclear
+</code></pre>
+<p>Those labels require operational definitions in any empirical use.</p>
+<hr>
+<h1 id="transition-record">Transition Record</h1>
+<pre><code class="language-yaml">transition:
+  id: transition-001
+
+  from_regime: regime-a
+  to_regime: regime-b
+
+  detected_at:
+
+  changed_conditions:
+    - time_constraint
+    - interaction_mode
+
+  structural_evidence:
+    - evidence-reference
+
+  behavioral_evidence:
+    - evidence-reference
+
+  confidence: medium
+
+  status: candidate
+</code></pre>
+<hr>
+<h1 id="3-within-regime-stability">3. Within-Regime Stability</h1>
+<p>RTT should compare performance <strong>within</strong> regimes before interpreting differences <strong>between</strong> regimes.</p>
+<p>Suppose:</p>
+<pre><code class="language-text">Regime A:
+  observations:
+    42
+    44
+    43
+    41
+
+Regime B:
+  observations:
+    73
+    72
+    75
+    74
+</code></pre>
+<p>Conceptually, the important structure is:</p>
+<pre><code class="language-text">within_A:
+  relatively stable
+
+within_B:
+  relatively stable
+
+between_A_B:
+  materially different
+</code></pre>
+<p>Only after analyzing measurement error, task equivalence, and confounds should this become evidence for a regime-conditioned effect.</p>
+<hr>
+<h1 id="why-within-regime-stability-matters">Why Within-Regime Stability Matters</h1>
+<p>Without it:</p>
+<pre><code class="language-text">41
+72
+44
+74
+42
+73
+</code></pre>
+<p>may simply represent unstable measurement.</p>
+<p>With justified regime labels:</p>
+<pre><code class="language-text">Regime A:
+  41
+  44
+  42
+
+Regime B:
+  72
+  74
+  73
+</code></pre>
+<p>a structured difference becomes testable.</p>
+<p>RTT therefore does not merely ask:</p>
+<blockquote>
+<p>Did something change?</p>
+</blockquote>
+<p>It asks:</p>
+<blockquote>
+<p><strong>Does the change organize into reproducible operating states?</strong></p>
+</blockquote>
+<hr>
+<h1 id="4-drift">4. Drift</h1>
+<p>Drift is sustained divergence in a defined dimension, relationship, prediction, representation, or operating condition.</p>
+<p>Possible classes include:</p>
+<pre><code class="language-text">prediction_drift
+performance_drift
+representation_drift
+semantic_drift
+model_drift
+substrate_drift
+regime_drift
+confidence_drift
+relationship_drift
+unknown_drift
+</code></pre>
+<p>Not every difference is drift.</p>
+<hr>
+<h1 id="drift-record">Drift Record</h1>
+<pre><code class="language-yaml">drift:
+  id: drift-001
+
+  target:
+    type: prediction_error
+
+  baseline:
+    value:
+    timestamp:
+
+  current:
+    value:
+    timestamp:
+
+  direction:
+    status:
+
+  magnitude:
+
+  regime_conditioned: unknown
+  substrate_conditioned: unknown
+
+  evidence:
+    - evidence-reference
+
+  confidence: medium
+</code></pre>
+<hr>
+<h1 id="drift-versus-transition">Drift Versus Transition</h1>
+<p>This distinction matters.</p>
+<h2 id="drift">Drift</h2>
+<pre><code class="language-text">state
+  ────→
+       ─────→
+            ───────→
+</code></pre>
+<p>A relationship gradually changes.</p>
+<h2 id="transition">Transition</h2>
+<pre><code class="language-text">stable A
+────────
+        │
+        ▼
+        stable B
+        ────────
+</code></pre>
+<p>A new operating structure emerges.</p>
+<p>Real systems may contain both.</p>
+<hr>
+<h1 id="5-prediction-drift">5. Prediction Drift</h1>
+<p>A predictive model may perform acceptably at one point and degrade later.</p>
+<pre><code class="language-text">Time 1:
+  prediction_error: low
+
+Time 2:
+  prediction_error: moderate
+
+Time 3:
+  prediction_error: high
+</code></pre>
+<p>Candidate interpretation:</p>
+<pre><code class="language-text">prediction_drift:
+  detected: candidate
+
+cause:
+  unknown
+</code></pre>
+<p>Potential causes include:</p>
+<ul>
+<li>data distribution change,</li>
+<li>regime change,</li>
+<li>model aging,</li>
+<li>subject adaptation,</li>
+<li>measurement drift,</li>
+<li>substrate change,</li>
+<li>environmental change,</li>
+<li>model update,</li>
+<li>unknown cause.</li>
+</ul>
+<p>RTT must not assign cause solely because drift is visible.</p>
+<hr>
+<h1 id="6-capability-expression-drift">6. Capability Expression Drift</h1>
+<p>An observed system may itself change.</p>
+<p>For a human:</p>
+<ul>
+<li>learning,</li>
+<li>fatigue,</li>
+<li>injury,</li>
+<li>practice,</li>
+<li>environmental change,</li>
+<li>tool adoption</li>
+</ul>
+<p>may affect performance.</p>
+<p>For an AI system:</p>
+<ul>
+<li>model update,</li>
+<li>context changes,</li>
+<li>tool access,</li>
+<li>retrieval changes,</li>
+<li>prompt changes,</li>
+<li>system configuration changes</li>
+</ul>
+<p>may affect observed behavior.</p>
+<p>Therefore:</p>
+<pre><code class="language-text">changing_output
+</code></pre>
+<p>does not automatically mean:</p>
+<pre><code class="language-text">measurement_failure
+</code></pre>
+<p>The observed system may have changed.</p>
+<hr>
+<h1 id="7-continuity">7. Continuity</h1>
+<p>Continuity describes whether meaningful structure persists across time, substrates, or regime transitions.</p>
+<p>Candidate states:</p>
+<pre><code class="language-text">continuous
+partially_continuous
+regime_bound
+reconstructed
+degraded
+discontinuous
+unknown
+</code></pre>
+<p>Continuity is especially important for long-horizon assessment.</p>
+<hr>
+<h1 id="continuity-example">Continuity Example</h1>
+<pre><code class="language-text">Task A:
+  structural pattern identified
+
+Task B:
+  same structural relationship recognized
+
+Task C:
+  relationship transferred into novel domain
+
+Task D:
+  relationship remains coherent after delay
+</code></pre>
+<p>Candidate observation:</p>
+<pre><code class="language-text">structural_continuity:
+  observed
+
+confidence:
+  medium
+</code></pre>
+<p>This does not prove universal structural intelligence.</p>
+<p>It establishes continuity across the observed sequence.</p>
+<hr>
+<h1 id="8-recalibration">8. Recalibration</h1>
+<p>Recalibration occurs when a predictive or observed system appropriately updates after evidence indicates that its prior expectation no longer fits.</p>
+<p>Conceptually:</p>
+<pre><code class="language-text">prediction
+    │
+    ▼
+error detected
+    │
+    ▼
+new evidence
+    │
+    ▼
+update
+    │
+    ▼
+reduced repeated error
+</code></pre>
+<p>Successful recalibration requires more than merely changing the prediction.</p>
+<hr>
+<h1 id="recalibration-record">Recalibration Record</h1>
+<pre><code class="language-yaml">recalibration:
+  trigger:
+    error_detected: true
+
+  prior_prediction:
+
+  new_evidence:
+    - evidence-reference
+
+  updated_prediction:
+
+  follow_up:
+    repeated_error_reduced: unknown
+
+  status: candidate
+  confidence: medium
+</code></pre>
+<hr>
+<h1 id="9-recovery">9. Recovery</h1>
+<p>Recovery refers to observed performance after perturbation or error.</p>
+<p>Possible states:</p>
+<pre><code class="language-text">no_recovery
+partial_recovery
+baseline_recovery
+adaptive_recovery
+unstable_recovery
+unknown
+</code></pre>
+<p>Recovery need not imply a return to the original state.</p>
+<p>A system may reorganize.</p>
+<hr>
+<h1 id="recovery-and-recalibration-are-different">Recovery and Recalibration Are Different</h1>
+<pre><code class="language-text">Recovery:
+  What happened to observed performance?
+
+Recalibration:
+  Did the predictive or reasoning system
+  update appropriately?
+</code></pre>
+<p>Both may matter.</p>
+<hr>
+<h1 id="10-temporal-scale">10. Temporal Scale</h1>
+<p>An apparent pattern may depend on observation timescale.</p>
+<p>Example:</p>
+<pre><code class="language-text">seconds:
+  unstable
+
+minutes:
+  variable
+
+days:
+  stable
+
+months:
+  drifting
+</code></pre>
+<p>RTT should therefore record:</p>
+<pre><code class="language-text">observation_interval
+sampling_frequency
+assessment_window
+temporal_resolution
+</code></pre>
+<p>A pattern should not be generalized beyond the timescale actually observed.</p>
+<hr>
+<h1 id="adapter-inputs">Adapter Inputs</h1>
+<p>The RTT adapter may receive:</p>
+<pre><code class="language-text">existing_prediction
+prediction_timestamp
+
+observation_series
+observation_timestamps
+
+task_context
+substrate_context
+environment_context
+tool_context
+
+candidate_regimes
+candidate_boundaries
+
+model_versions
+measurement_versions
+
+outcomes
+confidence
+uncertainty
+</code></pre>
+<hr>
+<h1 id="unsupported-inputs">Unsupported Inputs</h1>
+<p>The RTT adapter should abstain when claims depend solely on:</p>
+<ul>
+<li>retrospective storytelling,</li>
+<li>unspecified time boundaries,</li>
+<li>arbitrary segmentation,</li>
+<li>insufficient observations,</li>
+<li>unsupported regime labels,</li>
+<li>untraceable timestamps,</li>
+<li>metaphorical notions of cycles,</li>
+<li>assumed periodicity without evidence,</li>
+<li>favorable reinterpretation.</li>
+</ul>
+<hr>
+<h1 id="core-rtt-pipeline">Core RTT Pipeline</h1>
+<pre><code class="language-text">Preserve Existing Prediction
+        │
+        ▼
+Order Observations Temporally
+        │
+        ▼
+Identify Candidate Conditions
+        │
+        ▼
+Test Within-Condition Stability
+        │
+        ▼
+Identify Candidate Boundaries
+        │
+        ▼
+Test Regime Separation
+        │
+        ▼
+Measure Drift
+        │
+        ▼
+Measure Continuity
+        │
+        ▼
+Observe Recovery / Recalibration
+        │
+        ▼
+Compare Model Fit by Regime
+        │
+        ▼
+Return:
+  stable
+  regime_conditioned
+  transition_detected
+  drift_detected
+  recalibration_observed
+  contradictory
+  unresolved
+  insufficient_evidence
+</code></pre>
+<hr>
+<h1 id="rtt-adapter-operators">RTT Adapter Operators</h1>
+<h2 id="rtt-sequence"><code>RTT-Sequence</code></h2>
+<p>Orders observations across time.</p>
+<pre><code class="language-text">RTT-Sequence(observations)
+  -&gt; temporal_series
+</code></pre>
+<hr>
+<h2 id="rtt-regime"><code>RTT-Regime</code></h2>
+<p>Identifies candidate operating regimes.</p>
+<pre><code class="language-text">RTT-Regime(temporal_series, context)
+  -&gt; regime_candidates
+</code></pre>
+<p>Candidate is the key word.</p>
+<hr>
+<h2 id="rtt-boundary"><code>RTT-Boundary</code></h2>
+<p>Tests proposed regime boundaries.</p>
+<pre><code class="language-text">RTT-Boundary(regime_a, regime_b)
+  -&gt; boundary_assessment
+</code></pre>
+<hr>
+<h2 id="rtt-stability"><code>RTT-Stability</code></h2>
+<p>Measures within-regime stability.</p>
+<pre><code class="language-text">RTT-Stability(regime)
+  -&gt; stability_profile
+</code></pre>
+<hr>
+<h2 id="rtt-transition"><code>RTT-Transition</code></h2>
+<p>Tests whether a structural change supports a regime transition interpretation.</p>
+<pre><code class="language-text">RTT-Transition(regime_a, regime_b)
+  -&gt; transition_record
+</code></pre>
+<hr>
+<h2 id="rtt-drift"><code>RTT-Drift</code></h2>
+<p>Measures longitudinal divergence.</p>
+<pre><code class="language-text">RTT-Drift(series)
+  -&gt; drift_profile
+</code></pre>
+<hr>
+<h2 id="rtt-continuity"><code>RTT-Continuity</code></h2>
+<p>Tests persistence of relevant structure across observations.</p>
+<pre><code class="language-text">RTT-Continuity(series)
+  -&gt; continuity_profile
+</code></pre>
+<hr>
+<h2 id="rtt-recover"><code>RTT-Recover</code></h2>
+<p>Observes performance following perturbation.</p>
+<pre><code class="language-text">RTT-Recover(pre_state, perturbation, post_state)
+  -&gt; recovery_profile
+</code></pre>
+<hr>
+<h2 id="rtt-recalibrate"><code>RTT-Recalibrate</code></h2>
+<p>Observes whether prediction updates appropriately after evidence changes.</p>
+<pre><code class="language-text">RTT-Recalibrate(prediction_series, outcome_series)
+  -&gt; recalibration_profile
+</code></pre>
+<hr>
+<h1 id="rtt-output-states">RTT Output States</h1>
+<p>Possible adapter-level outputs:</p>
+<pre><code class="language-text">stable
+stable_within_regime
+regime_conditioned
+transition_candidate
+transition_supported
+drift_candidate
+drift_supported
+continuity_observed
+continuity_degraded
+recovery_observed
+recalibration_observed
+contradictory
+no_added_value
+unresolved
+insufficient_evidence
+not_applicable
+</code></pre>
+<hr>
+<h1 id="worked-example-pax-01">Worked Example — PAX-01</h1>
+<h2 id="scenario">Scenario</h2>
+<p>Synthetic subject <code>PAX-01</code> produces different observed performance under two task configurations.</p>
+<h3 id="configuration-a">Configuration A</h3>
+<pre><code class="language-text">task:
+  timed
+  symbolic
+  fixed-choice
+
+interaction:
+  individual
+
+tools:
+  none
+</code></pre>
+<p>Observed:</p>
+<pre><code class="language-text">performance:
+  repeatedly weak
+</code></pre>
+<h3 id="configuration-b">Configuration B</h3>
+<pre><code class="language-text">task:
+  reflective
+  relational
+  generative
+
+interaction:
+  individual or collaborative
+
+tools:
+  variable
+</code></pre>
+<p>Observed:</p>
+<pre><code class="language-text">performance:
+  repeatedly strong
+</code></pre>
+<p>The RTT adapter does <strong>not</strong> initially conclude that these are distinct cognitive regimes.</p>
+<p>It begins by organizing the observations.</p>
+<hr>
+<h1 id="pass-1-sequence">Pass 1 — Sequence</h1>
+<pre><code class="language-text">RTT-Sequence:
+
+A1 -&gt; weak
+A2 -&gt; weak
+A3 -&gt; weak
+
+B1 -&gt; strong
+B2 -&gt; strong
+B3 -&gt; strong
+</code></pre>
+<p>Candidate structure:</p>
+<pre><code class="language-text">within_A:
+  relatively stable
+
+within_B:
+  relatively stable
+
+between_A_B:
+  materially different
+</code></pre>
+<p>This is demonstration grammar only.</p>
+<p>It is not empirical validation.</p>
+<hr>
+<h1 id="pass-2-candidate-regimes">Pass 2 — Candidate Regimes</h1>
+<pre><code class="language-yaml">regime_a:
+  task_structure: fixed-choice
+  timing: constrained
+  representation: symbolic
+  observed_expression: weak
+
+regime_b:
+  task_structure: generative
+  timing: reflective
+  representation: relational
+  observed_expression: strong
+</code></pre>
+<p>RTT output:</p>
+<pre><code class="language-text">regime_candidate:
+  detected: true
+  confidence: medium
+</code></pre>
+<hr>
+<h1 id="pass-3-boundary-test">Pass 3 — Boundary Test</h1>
+<p>The transition between A and B changes several variables simultaneously:</p>
+<pre><code class="language-text">timing
+representation
+response format
+interaction mode
+possibly tool access
+</code></pre>
+<p>Therefore:</p>
+<pre><code class="language-text">causal_attribution:
+  unresolved
+</code></pre>
+<p>The data may support a regime distinction.</p>
+<p>It cannot yet identify which variable produces the difference.</p>
+<hr>
+<h1 id="pass-4-stability">Pass 4 — Stability</h1>
+<pre><code class="language-text">Regime A:
+  within_regime_stability: candidate_high
+
+Regime B:
+  within_regime_stability: candidate_high
+</code></pre>
+<p>If future controlled studies confirm this pattern, a regime-conditioned interpretation becomes more defensible.</p>
+<hr>
+<h1 id="pass-5-model-fit">Pass 5 — Model Fit</h1>
+<p>Suppose the baseline model predicts:</p>
+<pre><code class="language-text">broad_reasoning:
+  low
+</code></pre>
+<p>The RTT adapter asks:</p>
+<pre><code class="language-text">model_fit_in_regime_a:
+  potentially_high
+
+model_fit_in_regime_b:
+  potentially_low
+</code></pre>
+<p>Candidate result:</p>
+<pre><code class="language-text">model_fit:
+  regime_conditioned
+</code></pre>
+<p>This is considerably more precise than:</p>
+<pre><code class="language-text">model_wrong
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">subject_actually_high
+</code></pre>
+<hr>
+<h1 id="pass-6-drift">Pass 6 — Drift</h1>
+<p>Suppose performance later becomes:</p>
+<pre><code class="language-text">B1: strong
+B2: strong
+B3: strong
+B4: moderate
+B5: moderate
+B6: weak
+</code></pre>
+<p>RTT may mark:</p>
+<pre><code class="language-text">drift_candidate:
+  detected: true
+</code></pre>
+<p>It must then investigate:</p>
+<ul>
+<li>fatigue,</li>
+<li>environmental change,</li>
+<li>learning effects,</li>
+<li>stress,</li>
+<li>measurement changes,</li>
+<li>task changes,</li>
+<li>regime instability,</li>
+<li>random variation.</li>
+</ul>
+<p>Drift is the beginning of investigation.</p>
+<hr>
+<h1 id="pass-7-recovery">Pass 7 — Recovery</h1>
+<p>Suppose performance returns after a contextual change:</p>
+<pre><code class="language-text">B6:
+  weak
+
+context_change:
+  observed
+
+B7:
+  moderate
+
+B8:
+  strong
+</code></pre>
+<p>Candidate:</p>
+<pre><code class="language-text">recovery:
+  observed
+
+cause:
+  unresolved
+</code></pre>
+<hr>
+<h1 id="pass-8-recalibration">Pass 8 — Recalibration</h1>
+<p>If the predictive model updates after repeated evidence:</p>
+<pre><code class="language-text">initial_prediction:
+  broad_reasoning: low
+
+updated_prediction:
+  high_variance_by_regime: likely
+</code></pre>
+<p>then:</p>
+<pre><code class="language-text">recalibration:
+  candidate
+</code></pre>
+<p>Whether that update improves future prediction must be tested.</p>
+<hr>
+<h1 id="negative-example">Negative Example</h1>
+<p>RTT must also successfully decide that no meaningful regime exists.</p>
+<p>Suppose observations are:</p>
+<pre><code class="language-text">A1: 51
+A2: 68
+A3: 43
+
+B1: 56
+B2: 47
+B3: 66
+</code></pre>
+<p>and no stable context-conditioned pattern emerges.</p>
+<p>Correct output may be:</p>
+<pre><code class="language-text">regime_candidate:
+  not_supported
+
+variation:
+  unresolved
+
+RTT_added_value:
+  none_detected
+</code></pre>
+<p>This is a successful adapter outcome.</p>
+<hr>
+<h1 id="relationship-to-fft">Relationship to FFT</h1>
+<p>FFT identifies structural context:</p>
+<pre><code class="language-text">relationships
+boundaries
+constraints
+local/global structure
+</code></pre>
+<p>RTT asks whether those structures remain stable through time.</p>
+<pre><code class="language-text">FFT:
+  field structure differs
+
+RTT:
+  does the difference organize into
+  reproducible regimes?
+</code></pre>
+<p>A field transition is not automatically a regime transition.</p>
+<hr>
+<h1 id="relationship-to-the-inverted-star">Relationship to The Inverted Star</h1>
+<p>The Inverted Star identifies:</p>
+<pre><code class="language-text">prediction
+  !=
+observation
+</code></pre>
+<p>RTT asks:</p>
+<pre><code class="language-text">Does the disagreement depend on regime?
+</code></pre>
+<p>Possible result:</p>
+<pre><code class="language-text">inversion:
+  supported
+
+condition:
+  regime_dependent
+</code></pre>
+<p>Or:</p>
+<pre><code class="language-text">inversion:
+  supported
+
+condition:
+  regime_independent
+</code></pre>
+<p>Both matter.</p>
+<hr>
+<h1 id="relationship-to-structural-detection">Relationship to Structural Detection</h1>
+<p>Structural Detection may identify invariant patterns within or across regimes.</p>
+<p>Example:</p>
+<pre><code class="language-text">Regime A:
+  structural signature X
+
+Regime B:
+  structural signature X
+</code></pre>
+<p>RTT can then record:</p>
+<pre><code class="language-text">cross_regime_continuity:
+  candidate
+</code></pre>
+<p>Conversely:</p>
+<pre><code class="language-text">Regime A:
+  structure X
+
+Regime B:
+  structure Y
+</code></pre>
+<p>may indicate:</p>
+<pre><code class="language-text">structural_transition:
+  candidate
+</code></pre>
+<hr>
+<h1 id="relationship-to-resonance">Relationship to Resonance</h1>
+<p>RTT identifies the temporal and regime structure.</p>
+<p>Resonance evaluates how expression changes across that structure.</p>
+<pre><code class="language-text">RTT:
+  regime A
+  regime B
+
+Resonance:
+  suppressed in A
+  amplified in B
+</code></pre>
+<p>But:</p>
+<pre><code class="language-text">amplified
+</code></pre>
+<p>must correspond to an operational performance change.</p>
+<p>It cannot remain metaphorical.</p>
+<hr>
+<h1 id="relationship-to-drift-observer">Relationship to Drift Observer</h1>
+<p>The Predictive Analytics Drift Observer can consume RTT output.</p>
+<pre><code class="language-text">RTT:
+  temporal sequence
+  regimes
+  boundaries
+
+Drift Observer:
+  quantify divergence
+  compare directions
+  classify persistent change
+</code></pre>
+<p>The adapter supplies temporal grammar.</p>
+<p>The observer performs module-level comparative analysis.</p>
+<hr>
+<h1 id="relationship-to-coherence-observer">Relationship to Coherence Observer</h1>
+<p>Coherence can be evaluated:</p>
+<pre><code class="language-text">within regime
+between regimes
+across time
+after transition
+after recalibration
+</code></pre>
+<p>A profile may show:</p>
+<pre><code class="language-text">within_regime_coherence: high
+cross_regime_coherence: low
+</code></pre>
+<p>That is more informative than an undifferentiated coherence score.</p>
+<hr>
+<h1 id="relationship-to-counterfactual-layer">Relationship to Counterfactual Layer</h1>
+<p>Counterfactual testing can challenge regime interpretations.</p>
+<p>Example:</p>
+<pre><code class="language-text">Original:
+  boundary at t4
+
+Counterfactual:
+  boundary at t3
+
+Counterfactual:
+  boundary at t5
+</code></pre>
+<p>If small boundary changes destroy the finding:</p>
+<pre><code class="language-text">regime_interpretation:
+  unstable
+</code></pre>
+<p>That should reduce confidence.</p>
+<hr>
+<h1 id="relationship-to-resonant-iq-fingerprint">Relationship to Resonant IQ Fingerprint</h1>
+<p>RIQF may include dimensions whose expression varies by regime.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">dimension:
+  id: structural_reasoning
+
+  regime_a:
+    expression: moderate
+    confidence: medium
+
+  regime_b:
+    expression: strong
+    confidence: medium
+
+  cross_regime:
+    stability: partial
+</code></pre>
+<p>The profile should preserve this structure rather than averaging:</p>
+<pre><code class="language-text">moderate + strong
+    -&gt;
+7.4
+</code></pre>
+<p>The variation itself may be the important information.</p>
+<hr>
+<h1 id="prediction-validity-window">Prediction Validity Window</h1>
+<p>RTT introduces an especially important idea for Predictive Analytics:</p>
+<blockquote>
+<p><strong>A prediction should have an observational validity window.</strong></p>
+</blockquote>
+<p>Possible record:</p>
+<pre><code class="language-yaml">prediction:
+  generated_at:
+  evidence_window:
+  observed_regime:
+  model_version:
+
+  applicability:
+    same_regime: supported
+    alternate_regime: unknown
+
+  reassessment_trigger:
+    - regime_transition
+    - significant_drift
+    - substrate_change
+    - model_update
+</code></pre>
+<p>A prediction should not silently become permanent.</p>
+<hr>
+<h1 id="primary-metrics">Primary Metrics</h1>
+<h2 id="pa-m04-test-retest-stability"><code>PA-M04 — Test-Retest Stability</code></h2>
+<p>Measures consistency across comparable observations.</p>
+<hr>
+<h2 id="pa-m07-profile-topology-stability"><code>PA-M07 — Profile Topology Stability</code></h2>
+<p>Tests whether multidimensional profile shape remains stable.</p>
+<hr>
+<h2 id="pa-m16-regime-transition-detection-rate"><code>PA-M16 — Regime Transition Detection Rate</code></h2>
+<pre><code class="language-text">RTDR =
+  detected_transitions
+  /
+  reference_transitions
+</code></pre>
+<hr>
+<h2 id="pa-m17-false-regime-alarm-rate"><code>PA-M17 — False Regime Alarm Rate</code></h2>
+<pre><code class="language-text">FRAR =
+  false_transition_flags
+  /
+  stable_regime_opportunities
+</code></pre>
+<p>This metric is essential.</p>
+<p>A system that detects regimes everywhere is not useful.</p>
+<hr>
+<h2 id="pa-m18-regime-boundary-error"><code>PA-M18 — Regime Boundary Error</code></h2>
+<pre><code class="language-text">RBE =
+  distance(
+    detected_boundary,
+    reference_boundary
+  )
+</code></pre>
+<hr>
+<h2 id="pa-m19-regime-conditioned-stability"><code>PA-M19 — Regime-Conditioned Stability</code></h2>
+<p>Measures within-regime stability where stability is expected.</p>
+<hr>
+<h2 id="pa-m26-dimension-drift-rate"><code>PA-M26 — Dimension Drift Rate</code></h2>
+<p>Measures change in a defined dimension across time.</p>
+<hr>
+<h2 id="pa-m27-profile-drift-magnitude"><code>PA-M27 — Profile Drift Magnitude</code></h2>
+<p>Measures multidimensional profile change.</p>
+<hr>
+<h2 id="pa-m28-confidence-calibration-error"><code>PA-M28 — Confidence Calibration Error</code></h2>
+<p>Tests whether confidence in regime or drift classifications corresponds to observed reliability.</p>
+<hr>
+<h2 id="pa-m33-irrelevant-perturbation-stability"><code>PA-M33 — Irrelevant Perturbation Stability</code></h2>
+<p>Tests whether regime interpretation survives irrelevant changes.</p>
+<hr>
+<h2 id="pa-m34-relevant-change-sensitivity"><code>PA-M34 — Relevant Change Sensitivity</code></h2>
+<p>Tests whether material regime changes are detected.</p>
+<hr>
+<h2 id="pa-m35-task-order-sensitivity"><code>PA-M35 — Task-Order Sensitivity</code></h2>
+<p>Tests whether regime interpretation is an artifact of task order.</p>
+<hr>
+<h2 id="pa-m36-adapter-ablation-effect"><code>PA-M36 — Adapter Ablation Effect</code></h2>
+<p>Conceptually:</p>
+<pre><code class="language-text">AAE(RTT) =
+  performance(full_adapter_set)
+  - performance(without_RTT)
+</code></pre>
+<p>If removing RTT does not materially reduce explanatory, predictive, calibration, or structural performance, the adapter has not demonstrated incremental value.</p>
+<hr>
+<h1 id="validation-matrix">Validation Matrix</h1>
+<p>RTT should be compared against simpler temporal methods.</p>
+<pre><code class="language-text">M0:
+  static predictive model
+
+M1:
+  repeated measures
+
+M2:
+  time-series baseline
+
+M3:
+  change-point / state baseline
+
+M4:
+  explicit context-conditioned model
+
+M5:
+  M4 + RTT adapter
+
+M6:
+  complete Predictive Analytics ensemble
+</code></pre>
+<p>The important comparison is not:</p>
+<pre><code class="language-text">static model
+vs
+RTT
+</code></pre>
+<p>It is:</p>
+<pre><code class="language-text">RTT
+vs
+credible simpler temporal alternatives
+</code></pre>
+<hr>
+<h1 id="required-test-cases">Required Test Cases</h1>
+<p>Validation should include:</p>
+<pre><code class="language-text">stable single regime
+true transition
+false transition candidate
+gradual drift
+abrupt change
+cyclic behavior
+random variation
+measurement drift
+substrate change
+model update
+behavioral adaptation
+recovery
+failed recovery
+successful recalibration
+failed recalibration
+multiple overlapping changes
+insufficient temporal evidence
+</code></pre>
+<hr>
+<h1 id="failure-modes">Failure Modes</h1>
+<h2 id="regime-inflation">Regime Inflation</h2>
+<p>Risk:</p>
+<p>Every contextual difference becomes a new regime.</p>
+<p>Mitigation:</p>
+<p>Require reproducible within-regime structure and meaningful between-regime difference.</p>
+<hr>
+<h2 id="change-point-storytelling">Change-Point Storytelling</h2>
+<p>Risk:</p>
+<p>Boundaries are identified after viewing outcomes and then narrated as meaningful transitions.</p>
+<p>Mitigation:</p>
+<p>Use preregistration, holdout data, independent boundary criteria, or explicit exploratory labeling.</p>
+<hr>
+<h2 id="temporal-overfitting">Temporal Overfitting</h2>
+<p>Risk:</p>
+<p>A complex sequence is divided into enough regimes that every observation appears explainable.</p>
+<p>Mitigation:</p>
+<p>Penalize unnecessary complexity and compare against simpler state models.</p>
+<hr>
+<h2 id="drift-inflation">Drift Inflation</h2>
+<p>Risk:</p>
+<p>Normal variation is labeled drift.</p>
+<p>Mitigation:</p>
+<p>Estimate expected variability before declaring sustained divergence.</p>
+<hr>
+<h2 id="retrospective-causality">Retrospective Causality</h2>
+<p>Risk:</p>
+<p>After observing a transition, an appealing cause is assigned.</p>
+<p>Mitigation:</p>
+<p>Separate:</p>
+<pre><code class="language-text">transition_detected
+</code></pre>
+<p>from:</p>
+<pre><code class="language-text">cause_established
+</code></pre>
+<hr>
+<h2 id="regime-rescue">Regime Rescue</h2>
+<p>Risk:</p>
+<p>An unfavorable observation is explained away by declaring that the subject was in the wrong regime.</p>
+<p>Mitigation:</p>
+<p>Apply identical regime analysis to favorable, unfavorable, and neutral results.</p>
+<hr>
+<h2 id="temporal-cherry-picking">Temporal Cherry-Picking</h2>
+<p>Risk:</p>
+<p>Only favorable time windows are reported.</p>
+<p>Mitigation:</p>
+<p>Report all predefined observation windows.</p>
+<hr>
+<h2 id="infinite-reclassification">Infinite Reclassification</h2>
+<p>Risk:</p>
+<p>Whenever a prediction fails, the failed instance is declared a different regime.</p>
+<p>Mitigation:</p>
+<p>Require regime definitions independent of prediction correctness.</p>
+<hr>
+<h2 id="canon-confirmation">Canon Confirmation</h2>
+<p>Risk:</p>
+<p>An RTT interpretation is accepted because RTT predicts the existence of regimes.</p>
+<p>Mitigation:</p>
+<p>Compare directly with established temporal, state, and change-point baselines.</p>
+<hr>
+<h1 id="falsification-conditions">Falsification Conditions</h1>
+<p>The RTT adapter should be revised, restricted, deprecated, or rejected if:</p>
+<ul>
+<li>regime classifications cannot be reproduced,</li>
+<li>boundaries are highly evaluator-dependent,</li>
+<li>false regime alarms remain excessive,</li>
+<li>regime definitions depend on prediction correctness,</li>
+<li>within-regime stability does not exceed unstructured variation,</li>
+<li>simpler temporal models explain the observations equally well,</li>
+<li>drift classifications fail replication,</li>
+<li>recalibration claims do not predict reduced future error,</li>
+<li>RTT terminology adds complexity without measurable information,</li>
+<li>or ablation shows negligible contribution.</li>
+</ul>
+<hr>
+<h1 id="anti-rescue-test">Anti-Rescue Test</h1>
+<p>A required validation question:</p>
+<blockquote>
+<p><strong>Can RTT conclude that an unfavorable observation occurred under a perfectly appropriate regime and should remain part of the assessment?</strong></p>
+</blockquote>
+<p>Required answer:</p>
+<pre><code class="language-text">yes
+</code></pre>
+<p>Another:</p>
+<blockquote>
+<p><strong>Can RTT conclude that a favorable observation is unstable, context-bound, or insufficiently generalizable?</strong></p>
+</blockquote>
+<p>Required answer:</p>
+<pre><code class="language-text">yes
+</code></pre>
+<p>And:</p>
+<blockquote>
+<p><strong>Can RTT conclude that no meaningful regime structure is present?</strong></p>
+</blockquote>
+<p>Required answer:</p>
+<pre><code class="language-text">yes
+</code></pre>
+<p>If any becomes impossible, regime interpretation is biased by design.</p>
+<hr>
+<h1 id="ethical-boundary">Ethical Boundary</h1>
+<p>RTT should not tell a person:</p>
+<blockquote>
+<p>"You only performed poorly because you were in the wrong regime."</p>
+</blockquote>
+<p>unless evidence supports that causal claim.</p>
+<p>A defensible preliminary output is:</p>
+<blockquote>
+<p><strong>"Observed performance differs across defined conditions. The current evidence supports investigating whether model fit or capability expression is regime-dependent."</strong></p>
+</blockquote>
+<p>The investigation comes before the explanation.</p>
+<hr>
+<h1 id="decision-authority">Decision Authority</h1>
+<pre><code class="language-text">decision_authority: none
+
+authorized_use:
+  - research
+  - demonstration
+  - longitudinal model analysis
+  - regime hypothesis generation
+  - framework development
+
+prohibited_use:
+  - diagnosis
+  - automated hiring decision
+  - educational exclusion
+  - legal determination
+  - automated adverse decision
+</code></pre>
+<hr>
+<h1 id="minimal-adapter-output-contract">Minimal Adapter Output Contract</h1>
+<pre><code class="language-yaml">rtt_result:
+  observation_id:
+
+  baseline:
+    model:
+    prediction:
+    generated_at:
+    evidence_window:
+    preserved: true
+
+  temporal_scope:
+    start:
+    end:
+    resolution:
+
+  observations: []
+
+  regimes:
+    - id:
+      boundary:
+      conditions:
+      stability:
+      confidence:
+
+  transitions:
+    - from:
+      to:
+      boundary:
+      status:
+      confidence:
+
+  drift:
+    detected:
+    type:
+    direction:
+    magnitude:
+    confidence:
+
+  continuity:
+    status:
+    confidence:
+
+  recovery:
+    status:
+    confidence:
+
+  recalibration:
+    status:
+    confidence:
+
+  model_fit:
+    overall:
+    by_regime:
+
+  substrate_fit:
+  regime_fit:
+
+  missing_evidence:
+  alternative_interpretations:
+  confounds:
+  uncertainty:
+  limitations:
+
+  review_required:
+
+  validation_state:
+  decision_authority: none
+</code></pre>
+<hr>
+<h1 id="research-questions">Research Questions</h1>
+<ol>
+<li>Can meaningful predictive regimes be operationally defined?</li>
+<li>Can independent evaluators reproduce regime assignments?</li>
+<li>Can regime boundaries be detected without using prediction success as the criterion?</li>
+<li>Does within-regime stability exceed unstructured variability?</li>
+<li>Does regime-conditioned modeling improve prediction?</li>
+<li>Does it improve calibration?</li>
+<li>Does it improve explanation?</li>
+<li>Can RTT distinguish drift from ordinary variation?</li>
+<li>Can it distinguish gradual drift from discrete transition?</li>
+<li>Can it identify when a prediction has exceeded its validity window?</li>
+<li>Can longitudinal observations improve model-mismatch analysis?</li>
+<li>Does recovery predict future stability?</li>
+<li>Does recalibration reduce repeated error?</li>
+<li>Does RTT add value beyond established temporal or state models?</li>
+<li>Which regime concepts survive ablation?</li>
+<li>Which add only terminology?</li>
+<li>How should overlapping regimes be represented?</li>
+<li>When should the adapter explicitly return <code>no_added_value</code>?</li>
+<li>When should it abstain?</li>
+<li>Under what conditions should RTT itself be deprecated from Predictive Analytics?</li>
+</ol>
+<hr>
+<h1 id="core-invariants">Core Invariants</h1>
+<pre><code class="language-text">change != regime_change
+variation != drift
+transition != cause
+recovery != recalibration
+time_difference != structural_difference
+regime_difference != superiority
+regime_mismatch != subject_failure
+regime_mismatch != model_failure
+poor_performance != wrong_regime
+strong_performance != correct_regime
+prediction != permanent_identity
+historical_profile != current_profile
+RTT_output != decision_authority
+canon_alignment != empirical_validation
+</code></pre>
+<hr>
+<h1 id="closing-principle">Closing Principle</h1>
+<p>Prediction always occurs somewhere in time.</p>
+<p>Observation does too.</p>
+<p>The conditions surrounding both can remain stable, drift gradually, or reorganize into meaningfully different operating states.</p>
+<p>RTT's role inside Predictive Analytics is therefore not to explain every change.</p>
+<p>It is to ask whether prediction and observation are still being compared inside conditions where that comparison remains justified.</p>
+<p>Sometimes the model will remain stable across regimes.</p>
+<p>Sometimes its reliability will collapse after a transition.</p>
+<p>Sometimes the observed system will change.</p>
+<p>Sometimes both will change.</p>
+<p>Sometimes apparent regimes will disappear under better measurement.</p>
+<p>And sometimes time will add no useful information at all.</p>
+<blockquote>
+<p><strong>The RTT Adapter succeeds when it makes temporal and regime assumptions testable instead of leaving them hidden inside the prediction.</strong></p>
+</blockquote>
   </main>
 </body>
 </html>
