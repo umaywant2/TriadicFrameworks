@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/corpus/taxes.md">
-  <title>Taxes Module — Operators</title>
+  <title>Taxes Module</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,90 +92,11 @@
   </aside>
 
   <main>
-<p>taxes </p>
-<h1 id="taxes-module-operators">Taxes Module — Operators</h1>
-<h3 id="incentiveregime-substrate-drift-propagation-alignment">Incentive‑Regime Substrate · Drift · Propagation · Alignment</h3>
-<hr>
-<h2 id="1-purpose">1. Purpose</h2>
-<p>This file defines the <strong>operator grammar</strong> for the Taxes module.<br>
-Operators describe how incentives behave across jurisdictions, how drift accumulates, and how half‑lives determine stability.</p>
-<p>Operators are grouped into:
-- <strong>Primary operators</strong><br>
-- <strong>Drift operators</strong><br>
-- <strong>Alignment operators</strong><br>
-- <strong>Cross‑module operators</strong>  </p>
-<hr>
-<h2 id="2-primary-operators">2. Primary Operators</h2>
-<h3 id="21-incentive_regime_operator">2.1 incentive_regime_operator</h3>
-<p>Defines the baseline incentive structure for a jurisdiction or regime.<br>
-Inputs: incentive parameters, jurisdictional rules<br>
-Outputs: incentive baseline, propagation envelope</p>
-<h3 id="22-depreciation_envelope_operator">2.2 depreciation_envelope_operator</h3>
-<p>Models depreciation, phase‑out, or diminishing incentive strength over time.<br>
-Inputs: incentive baseline, half‑life<br>
-Outputs: depreciation curve, envelope boundaries</p>
-<h3 id="23-jurisdiction_propagation_operator">2.3 jurisdiction_propagation_operator</h3>
-<p>Describes how incentives propagate across jurisdictions or layers.<br>
-Inputs: baseline incentives, jurisdiction map<br>
-Outputs: propagation vectors, cross‑domain flow</p>
-<h3 id="24-compliance_substrate_operator">2.4 compliance_substrate_operator</h3>
-<p>Defines compliance behavior and its effect on incentive stability.<br>
-Inputs: compliance parameters<br>
-Outputs: compliance‑adjusted incentive envelope</p>
-<hr>
-<h2 id="3-drift-operators">3. Drift Operators</h2>
-<h3 id="31-incentive_drift_operator">3.1 incentive_drift_operator</h3>
-<p>Models drift accumulation within an incentive regime.<br>
-Inputs: incentive baseline, propagation vectors<br>
-Outputs: drift amplitude, drift direction</p>
-<h3 id="32-incentive_half_life_operator">3.2 incentive_half_life_operator</h3>
-<p>Defines the half‑life of incentive stability (IHL).<br>
-Inputs: incentive parameters, drift amplitude<br>
-Outputs: half‑life value, stability envelope</p>
-<hr>
-<h2 id="4-alignment-operators">4. Alignment Operators</h2>
-<h3 id="41-incentive_continuity_alignment_operator">4.1 incentive_continuity_alignment_operator</h3>
-<p>Aligns incentive regimes with RRR continuity envelopes.<br>
-Inputs: incentive baseline, RRR continuity<br>
-Outputs: alignment score, stability adjustment</p>
-<h3 id="42-incentive_cycle_alignment_operator">4.2 incentive_cycle_alignment_operator</h3>
-<p>Aligns incentives with economic cycles (IE).<br>
-Inputs: incentive baseline, cycle phase<br>
-Outputs: alignment score, drift correction</p>
-<hr>
-<h2 id="5-crossmodule-operators">5. Cross‑Module Operators</h2>
-<h3 id="51-taxes_rrr_alignment_operator">5.1 taxes_rrr_alignment_operator</h3>
-<p>Maps incentive regimes to revenue continuity (RRR).<br>
-Outputs: continuity‑incentive alignment surface</p>
-<h3 id="52-taxes_ie_alignment_operator">5.2 taxes_ie_alignment_operator</h3>
-<p>Maps incentives to cycle inversion and uplift constraints (IE).<br>
-Outputs: inversion‑incentive alignment surface</p>
-<h3 id="53-taxes_gsm_alignment_operator">5.3 taxes_gsm_alignment_operator</h3>
-<p>Maps incentives to governance coherence (GSM).<br>
-Outputs: policy‑incentive alignment surface</p>
-<hr>
-<h2 id="6-operator-interaction-map">6. Operator Interaction Map</h2>
-<pre><code>incentive_regime_operator
-    → depreciation_envelope_operator
-        → jurisdiction_propagation_operator
-            → incentive_drift_operator
-                → incentive_half_life_operator
-                    → incentive_continuity_alignment_operator
-                        → incentive_cycle_alignment_operator
-</code></pre>
-<p>This chain defines the <strong>structural flow</strong> of the Taxes module.</p>
-<hr>
-<h2 id="7-operator-status">7. Operator Status</h2>
+<p>taxes 
+<img width="1194" height="672" alt="taxes_" src="https://github.com/user-attachments/assets/0755f2c1-a4c9-4763-bfd2-f71005d9fb60" /></p>
+<h1 id="taxes-module">Taxes Module</h1>
 <ul>
-<li><strong>Version:</strong> 2026‑06  </li>
-<li><strong>Format:</strong> AI‑first · operator‑driven · minimal  </li>
-<li>
-<p><strong>Drift:</strong> bounded<br>
-# Taxes Module  </p>
-</li>
-<li>
-<p><a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/taxes/module.json"><code>module.json</code></a> — Agentic module schema role assignments</p>
-</li>
+<li><a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/taxes/module.json"><code>module.json</code></a> — Agentic module schema role assignments</li>
 </ul>
 <h3 id="incentiveregime-substrate-drift-propagation-halflives">Incentive‑Regime Substrate · Drift · Propagation · Half‑Lives</h3>
 <hr>
@@ -290,7 +211,2190 @@ It models how incentives propagate across jurisdictions, how drift accumulates, 
 <li><code>/docs/inverted_economics/</code> — cycle inversion  </li>
 <li><code>/docs/gsm/</code> — governance coherence  </li>
 </ul>
-<p># Taxes and RRR module</p>
+<p># Cross‑Domain Tax Propagation — RTT Taxes Example  </p>
+<h3 id="rtt1-rtt2-rtt3-incentives-drift-alignment">RTT/1 → RTT/2 → RTT/3 · Incentives · Drift · Alignment</h3>
+<hr>
+<h2 id="1-purpose">1. Purpose</h2>
+<p>This example demonstrates how <strong>tax incentives propagate across domains</strong> using the RTT framework.<br>
+It shows how incentive baselines, depreciation envelopes, drift fields, and alignment surfaces behave as they move through:</p>
+<ul>
+<li><strong>RTT/1</strong> — local/substrate  </li>
+<li><strong>RTT/2</strong> — regional/structural  </li>
+<li><strong>RTT/3</strong> — global/systemic  </li>
+</ul>
+<hr>
+<h2 id="2-scenario-overview">2. Scenario Overview</h2>
+<p>A tax incentive originates at the <strong>state level</strong> and must propagate across:</p>
+<ul>
+<li>local jurisdictions  </li>
+<li>federal alignment surfaces  </li>
+<li>international comparison surfaces  </li>
+<li>cross‑domain modules (RRR, IE, GSM)  </li>
+</ul>
+<p>The example traces how the incentive evolves, decays, and aligns across layers.</p>
+<hr>
+<h2 id="3-rtt1-localsubstrate-propagation">3. RTT/1 — Local/Substrate Propagation</h2>
+<p>At RTT/1, incentives interact with:
+- local compliance substrate<br>
+- short‑range propagation vectors<br>
+- local depreciation envelopes<br>
+- local drift fields  </p>
+<p>Outputs:
+- incentive seed values<br>
+- local drift amplitude<br>
+- short‑range propagation load  </p>
+<hr>
+<h2 id="4-rtt2-regionalstructural-propagation">4. RTT/2 — Regional/Structural Propagation</h2>
+<p>At RTT/2, incentives propagate across:
+- state → state<br>
+- state → federal<br>
+- regional regulatory overlays  </p>
+<p>Propagation influences:
+- incentive half‑life (IHL)<br>
+- drift‑field consolidation<br>
+- structural alignment surfaces  </p>
+<p>Outputs:
+- regional propagation vectors<br>
+- drift‑field amplification or correction  </p>
+<hr>
+<h2 id="5-rtt3-globalsystemic-propagation">5. RTT/3 — Global/Systemic Propagation</h2>
+<p>At RTT/3, incentives interact with:
+- global incentive baselines<br>
+- cross‑domain alignment surfaces<br>
+- systemic depreciation envelopes<br>
+- long‑range drift fields  </p>
+<p>Outputs:
+- systemic propagation surfaces<br>
+- global drift behavior<br>
+- coherence‑layer alignment  </p>
+<hr>
+<h2 id="6-drift-interaction">6. Drift Interaction</h2>
+<h3 id="61-local-drift-rtt1">6.1 Local Drift (RTT/1)</h3>
+<p>Generated by:
+- baseline instability<br>
+- compliance changes<br>
+- local propagation load  </p>
+<h3 id="62-structural-drift-rtt2">6.2 Structural Drift (RTT/2)</h3>
+<p>Generated by:
+- cross‑jurisdiction propagation<br>
+- regional alignment<br>
+- structural depreciation  </p>
+<h3 id="63-systemic-drift-rtt3">6.3 Systemic Drift (RTT/3)</h3>
+<p>Generated by:
+- global propagation<br>
+- cross‑domain alignment<br>
+- coherence‑layer interactions  </p>
+<p>Drift modeled via:
+- <strong>incentive_drift_operator</strong><br>
+- <strong>incentive_half_life_operator</strong>  </p>
+<hr>
+<h2 id="7-crossmodule-alignment">7. Cross‑Module Alignment</h2>
+<h3 id="71-taxes-rrr">7.1 Taxes ↔ RRR</h3>
+<ul>
+<li>continuity alignment  </li>
+<li>revenue propagation  </li>
+<li>drift‑field correction  </li>
+</ul>
+<h3 id="72-taxes-ie">7.2 Taxes ↔ IE</h3>
+<ul>
+<li>cycle inversion  </li>
+<li>uplift constraints  </li>
+<li>economic half‑life (EHL)  </li>
+</ul>
+<h3 id="73-taxes-gsm">7.3 Taxes ↔ GSM</h3>
+<ul>
+<li>governance coherence  </li>
+<li>policy propagation  </li>
+<li>civic‑field resonance  </li>
+</ul>
+<hr>
+<h2 id="8-worked-example">8. Worked Example</h2>
+<h3 id="step-1-incentive-origin-rtt1">Step 1 — Incentive Origin (RTT/1)</h3>
+<p>A state introduces a datacenter tax credit.<br>
+Local propagation begins immediately.</p>
+<h3 id="step-2-structural-propagation-rtt2">Step 2 — Structural Propagation (RTT/2)</h3>
+<p>Neighboring states adjust incentives.<br>
+Regional drift increases.<br>
+IHL compresses.</p>
+<h3 id="step-3-systemic-propagation-rtt3">Step 3 — Systemic Propagation (RTT/3)</h3>
+<p>Global supply‑chain incentives interact.<br>
+Cycle inversion (IE) modifies timing.<br>
+Governance drift (GSM) affects stability.</p>
+<h3 id="step-4-alignment">Step 4 — Alignment</h3>
+<p>RRR continuity stabilizes revenue.<br>
+IE cycle alignment corrects timing drift.<br>
+GSM coherence stabilizes propagation.</p>
+<hr>
+<h2 id="9-summary">9. Summary</h2>
+<pre><code>RTT/1 → RTT/2 → RTT/3
+Incentives → Drift → Half‑Life → Propagation → Alignment
+</code></pre>
+<p>Cross‑domain tax propagation is shaped by:
+- incentive baselines<br>
+- depreciation envelopes<br>
+- drift fields<br>
+- propagation vectors<br>
+- cross‑module alignment  </p>
+<hr>
+<h2 id="10-example-status">10. Example Status</h2>
+<ul>
+<li><strong>Layer:</strong> Applied Example  </li>
+<li><strong>Role:</strong> Cross‑domain demonstration of Taxes module  </li>
+<li><strong>Version:</strong> 2026‑06  </li>
+<li><strong>Format:</strong> AI‑first · operator‑driven · minimal<br>
+# Datacenter Tax Profile — RTT Taxes Example  </li>
+</ul>
+<h3 id="incentives-depreciation-drift-propagation-regime-surfaces">Incentives · Depreciation · Drift · Propagation · Regime Surfaces</h3>
+<hr>
+<h2 id="1-purpose_1">1. Purpose</h2>
+<p>This example shows how to apply the <strong>RTT Taxes module</strong> to a <strong>datacenter</strong>.<br>
+It demonstrates how incentive baselines, depreciation envelopes, drift fields, and propagation vectors shape datacenter viability across RTT/1 → RTT/2 → RTT/3.</p>
+<hr>
+<h2 id="2-datacenter-context">2. Datacenter Context</h2>
+<p>Datacenters exhibit:
+- high capital expenditure<br>
+- long depreciation timelines<br>
+- multi‑jurisdictional exposure<br>
+- sensitivity to incentive drift<br>
+- strong coupling to energy, land, and regulatory regimes  </p>
+<p>The tax profile must capture:
+- federal incentives<br>
+- state incentives<br>
+- local incentives<br>
+- international alignment (if applicable)<br>
+- crypto‑regime interaction (if applicable)  </p>
+<hr>
+<h2 id="3-incentive-baseline-rtt1">3. Incentive Baseline (RTT/1)</h2>
+<p>Local incentives influence:
+- siting decisions<br>
+- land‑use compliance<br>
+- short‑term depreciation<br>
+- local tax credits and abatements  </p>
+<p>Outputs:
+- incentive seed values<br>
+- local drift amplitude<br>
+- short‑range propagation vectors  </p>
+<hr>
+<h2 id="4-depreciation-envelope">4. Depreciation Envelope</h2>
+<p>Datacenter depreciation is shaped by:
+- federal depreciation schedules<br>
+- state‑specific envelopes<br>
+- incentive half‑life (IHL)<br>
+- regulatory overlays  </p>
+<p>Modeled via:
+- <strong>depreciation_envelope_operator</strong><br>
+- <strong>incentive_half_life_operator</strong></p>
+<p>Outputs:
+- depreciation curve<br>
+- envelope boundaries<br>
+- half‑life compression or extension  </p>
+<hr>
+<h2 id="5-propagation-behavior-rtt2">5. Propagation Behavior (RTT/2)</h2>
+<p>Propagation across jurisdictions includes:
+- federal → state<br>
+- state → local<br>
+- cross‑state comparisons<br>
+- regional incentive competition  </p>
+<p>Propagation modeled via:
+- <strong>jurisdiction_propagation_operator</strong></p>
+<p>Outputs:
+- propagation load<br>
+- propagation vectors<br>
+- propagation surfaces  </p>
+<hr>
+<h2 id="6-drift-characteristics">6. Drift Characteristics</h2>
+<p>Datacenters are highly sensitive to drift:</p>
+<h3 id="61-incentive-drift">6.1 Incentive Drift</h3>
+<p>Generated by:
+- baseline instability<br>
+- compliance changes<br>
+- propagation load  </p>
+<p>Effects:
+- cost volatility<br>
+- siting distortion<br>
+- lifecycle compression  </p>
+<h3 id="62-depreciation-drift">6.2 Depreciation Drift</h3>
+<p>Generated by:
+- envelope shifts<br>
+- half‑life compression  </p>
+<p>Effects:
+- planning instability<br>
+- CAPEX misalignment  </p>
+<hr>
+<h2 id="7-crossmodule-alignment_1">7. Cross‑Module Alignment</h2>
+<h3 id="71-taxes-rrr_1">7.1 Taxes ↔ RRR</h3>
+<ul>
+<li>continuity alignment  </li>
+<li>revenue propagation  </li>
+<li>drift‑field correction  </li>
+</ul>
+<h3 id="72-taxes-ie_1">7.2 Taxes ↔ IE</h3>
+<ul>
+<li>cycle inversion  </li>
+<li>uplift constraints  </li>
+<li>economic half‑life (EHL)  </li>
+</ul>
+<h3 id="73-taxes-gsm_1">7.3 Taxes ↔ GSM</h3>
+<ul>
+<li>governance coherence  </li>
+<li>policy propagation  </li>
+<li>civic‑field resonance  </li>
+</ul>
+<hr>
+<h2 id="8-example-profile-template">8. Example Profile (Template)</h2>
+<h3 id="81-federal-layer">8.1 Federal Layer</h3>
+<ul>
+<li>incentive baseline:  </li>
+<li>depreciation envelope:  </li>
+<li>propagation vectors:  </li>
+<li>drift amplitude:  </li>
+</ul>
+<h3 id="82-state-layer">8.2 State Layer</h3>
+<ul>
+<li>incentive baseline:  </li>
+<li>depreciation envelope:  </li>
+<li>propagation vectors:  </li>
+<li>drift amplitude:  </li>
+</ul>
+<h3 id="83-local-layer">8.3 Local Layer</h3>
+<ul>
+<li>incentive baseline:  </li>
+<li>compliance substrate:  </li>
+<li>propagation vectors:  </li>
+<li>drift amplitude:  </li>
+</ul>
+<h3 id="84-international-layer-if-applicable">8.4 International Layer (if applicable)</h3>
+<ul>
+<li>cross‑border incentives:  </li>
+<li>alignment surfaces:  </li>
+<li>propagation load:  </li>
+</ul>
+<hr>
+<h2 id="9-summary_1">9. Summary</h2>
+<pre><code>Incentives → Depreciation → Drift → Propagation → Alignment
+        ↘ Datacenter Stability ↗
+</code></pre>
+<p>The datacenter tax profile integrates:
+- incentive baselines<br>
+- depreciation envelopes<br>
+- drift fields<br>
+- propagation vectors<br>
+- cross‑module alignment  </p>
+<hr>
+<h2 id="10-example-status_1">10. Example Status</h2>
+<ul>
+<li><strong>Layer:</strong> Applied Example  </li>
+<li><strong>Role:</strong> Datacenter demonstration of Taxes module  </li>
+<li><strong>Version:</strong> 2026‑06  </li>
+<li><strong>Format:</strong> AI‑first · operator‑driven · minimal<br>
+# RTT Taxes Applied to Infrastructure  </li>
+</ul>
+<h3 id="incentives-depreciation-drift-propagation-alignment">Incentives · Depreciation · Drift · Propagation · Alignment</h3>
+<hr>
+<h2 id="1-purpose_2">1. Purpose</h2>
+<p>This example demonstrates how the <strong>Taxes module</strong> is applied to <strong>infrastructure systems</strong> using RTT/1 → RTT/2 → RTT/3 reasoning.<br>
+It shows how incentive regimes influence infrastructure planning, stability, and long‑horizon behavior.</p>
+<hr>
+<h2 id="2-infrastructure-context">2. Infrastructure Context</h2>
+<p>Infrastructure systems exhibit:
+- long asset lifecycles<br>
+- multi‑layer jurisdictional dependencies<br>
+- high sensitivity to incentive drift<br>
+- strong coupling to depreciation envelopes  </p>
+<p>Examples:
+- datacenters<br>
+- transportation networks<br>
+- water and wastewater systems<br>
+- energy and grid infrastructure  </p>
+<hr>
+<h2 id="3-incentive-baseline-rtt1_1">3. Incentive Baseline (RTT/1)</h2>
+<p>At RTT/1, incentives directly affect:
+- siting decisions<br>
+- capital expenditure timing<br>
+- short‑term depreciation behavior<br>
+- local compliance substrate  </p>
+<p>Outputs:
+- incentive seed values<br>
+- local drift amplitude<br>
+- short‑range propagation vectors  </p>
+<hr>
+<h2 id="4-structural-propagation-rtt2">4. Structural Propagation (RTT/2)</h2>
+<p>At RTT/2, incentives propagate across:
+- regional jurisdictions<br>
+- regulatory overlays<br>
+- cross‑domain infrastructure systems  </p>
+<p>Propagation influences:
+- regional stability<br>
+- incentive half‑life (IHL)<br>
+- drift‑field consolidation  </p>
+<hr>
+<h2 id="5-systemic-alignment-rtt3">5. Systemic Alignment (RTT/3)</h2>
+<p>At RTT/3, incentives interact with:
+- global infrastructure cycles<br>
+- systemic depreciation envelopes<br>
+- coherence‑layer propagation  </p>
+<p>Outputs:
+- systemic drift behavior<br>
+- long‑range propagation surfaces<br>
+- global incentive alignment  </p>
+<hr>
+<h2 id="6-drift-interaction_1">6. Drift Interaction</h2>
+<p>Infrastructure is highly sensitive to drift:</p>
+<h3 id="61-incentive-drift_1">6.1 Incentive Drift</h3>
+<p>Generated by:
+- baseline instability<br>
+- compliance changes<br>
+- propagation load  </p>
+<p>Effects:
+- cost volatility<br>
+- siting distortion<br>
+- lifecycle compression  </p>
+<h3 id="62-depreciation-drift_1">6.2 Depreciation Drift</h3>
+<p>Generated by:
+- envelope shifts<br>
+- incentive half‑life compression  </p>
+<p>Effects:
+- asset‑lifecycle misalignment<br>
+- long‑term planning instability  </p>
+<hr>
+<h2 id="7-crossmodule-alignment_2">7. Cross‑Module Alignment</h2>
+<h3 id="71-taxes-rrr_2">7.1 Taxes ↔ RRR</h3>
+<ul>
+<li>continuity alignment  </li>
+<li>revenue propagation  </li>
+<li>drift‑field correction  </li>
+</ul>
+<h3 id="72-taxes-ie_2">7.2 Taxes ↔ IE</h3>
+<ul>
+<li>cycle inversion  </li>
+<li>uplift constraints  </li>
+<li>economic half‑life (EHL)  </li>
+</ul>
+<h3 id="73-taxes-gsm_2">7.3 Taxes ↔ GSM</h3>
+<ul>
+<li>governance coherence  </li>
+<li>policy propagation  </li>
+<li>civic‑field resonance  </li>
+</ul>
+<hr>
+<h2 id="8-example-datacenter-infrastructure">8. Example: Datacenter Infrastructure</h2>
+<h3 id="81-rtt1-localsubstrate">8.1 RTT/1 — Local/Substrate</h3>
+<ul>
+<li>local incentives influence siting  </li>
+<li>depreciation envelopes shape CAPEX timing  </li>
+<li>local drift affects operational stability  </li>
+</ul>
+<h3 id="82-rtt2-regionalstructural">8.2 RTT/2 — Regional/Structural</h3>
+<ul>
+<li>cross‑state incentives influence competitive positioning  </li>
+<li>regional propagation affects lifecycle planning  </li>
+<li>drift consolidation influences long‑term cost curves  </li>
+</ul>
+<h3 id="83-rtt3-globalsystemic">8.3 RTT/3 — Global/Systemic</h3>
+<ul>
+<li>global incentive alignment affects supply chains  </li>
+<li>systemic drift influences long‑horizon planning  </li>
+<li>coherence‑layer propagation affects resilience  </li>
+</ul>
+<hr>
+<h2 id="9-summary_2">9. Summary</h2>
+<pre><code>Incentives → Depreciation → Drift → Propagation → Alignment
+        ↘ Infrastructure Stability ↗
+</code></pre>
+<p>Infrastructure behavior is shaped by:
+- incentive baselines<br>
+- depreciation envelopes<br>
+- drift fields<br>
+- propagation vectors<br>
+- cross‑module alignment  </p>
+<hr>
+<h2 id="10-example-status_2">10. Example Status</h2>
+<ul>
+<li><strong>Layer:</strong> Applied Example  </li>
+<li><strong>Role:</strong> Infrastructure demonstration of Taxes module  </li>
+<li><strong>Version:</strong> 2026‑06  </li>
+<li><strong>Format:</strong> AI‑first · operator‑driven · minimal<br>
+# External Regime Integration — Taxes Module  </li>
+</ul>
+<h3 id="tax-avoidance-tax-policy-crypto-crossdomain-substrate">Tax Avoidance · Tax Policy · Crypto · Cross‑Domain Substrate</h3>
+<hr>
+<h2 id="1-purpose_3">1. Purpose</h2>
+<p>This file defines the <strong>external‑regime integration surface</strong> for the Taxes module.<br>
+It unifies three external domains:</p>
+<ul>
+<li><strong>Tax Avoidance</strong> (structural absence, incentive voids, regime gaps)  </li>
+<li><strong>Tax Policy</strong> (structural presence, incentive formation, statutory surfaces)  </li>
+<li><strong>Crypto Regimes</strong> (digital‑asset incentives, ledger propagation, valuation drift)</li>
+</ul>
+<p>The integration creates a <strong>single cross‑domain substrate</strong> used by RTT/1 → RTT/2 → RTT/3.</p>
+<hr>
+<h2 id="2-structural-components">2. Structural Components</h2>
+<h3 id="21-structural-presence-policy">2.1 Structural Presence (Policy)</h3>
+<p>Represents:
+- statutory incentive structures<br>
+- administrative overlays<br>
+- compliance substrate<br>
+- incentive baselines  </p>
+<h3 id="22-structural-absence-avoidance">2.2 Structural Absence (Avoidance)</h3>
+<p>Represents:
+- incentive voids<br>
+- regime gaps<br>
+- structural bypass surfaces<br>
+- drift‑amplification zones  </p>
+<h3 id="23-structural-tension-crypto">2.3 Structural Tension (Crypto)</h3>
+<p>Represents:
+- digital‑asset classification<br>
+- valuation drift<br>
+- ledger propagation<br>
+- cross‑asset alignment  </p>
+<hr>
+<h2 id="3-unified-substrate-model">3. Unified Substrate Model</h2>
+<p>The unified substrate is defined as:</p>
+<pre><code>external_regime_substrate =
+    presence_layer
+  + absence_layer
+  + tension_layer
+</code></pre>
+<p>Where:
+- <strong>presence_layer</strong> = Tax Policy<br>
+- <strong>absence_layer</strong> = Tax Avoidance<br>
+- <strong>tension_layer</strong> = Crypto Regimes  </p>
+<p>This substrate is used by:
+- incentive_drift_operator<br>
+- jurisdiction_propagation_operator<br>
+- incentive_half_life_operator  </p>
+<hr>
+<h2 id="4-crossdomain-operators">4. Cross‑Domain Operators</h2>
+<h3 id="41-presence_absence_operator">4.1 presence_absence_operator</h3>
+<p>Maps:
+- statutory presence<br>
+- avoidance voids  </p>
+<p>Outputs:
+- structural contrast<br>
+- drift amplification<br>
+- incentive distortion  </p>
+<h3 id="42-presence_tension_operator">4.2 presence_tension_operator</h3>
+<p>Maps:
+- statutory incentives<br>
+- crypto‑asset incentives  </p>
+<p>Outputs:
+- cross‑asset alignment<br>
+- valuation‑drift correction  </p>
+<h3 id="43-absence_tension_operator">4.3 absence_tension_operator</h3>
+<p>Maps:
+- avoidance voids<br>
+- crypto propagation  </p>
+<p>Outputs:
+- bypass‑driven drift<br>
+- propagation‑induced distortion  </p>
+<hr>
+<h2 id="5-propagation-behavior">5. Propagation Behavior</h2>
+<h3 id="51-vertical-propagation">5.1 Vertical Propagation</h3>
+<ul>
+<li>external regimes → federal  </li>
+<li>federal → state  </li>
+<li>state → local  </li>
+</ul>
+<h3 id="52-lateral-propagation">5.2 Lateral Propagation</h3>
+<ul>
+<li>cross‑state  </li>
+<li>cross‑regional  </li>
+<li>cross‑domain  </li>
+</ul>
+<p>Propagation modeled via:
+- <strong>jurisdiction_propagation_operator</strong><br>
+- <strong>cross_domain_operator</strong></p>
+<hr>
+<h2 id="6-drift-interaction_2">6. Drift Interaction</h2>
+<h3 id="61-avoidance-policy">6.1 Avoidance → Policy</h3>
+<p>Avoidance voids cause:
+- incentive distortion<br>
+- drift amplification<br>
+- half‑life compression  </p>
+<h3 id="62-policy-crypto">6.2 Policy → Crypto</h3>
+<p>Policy structures influence:
+- classification stability<br>
+- valuation drift<br>
+- propagation load  </p>
+<h3 id="63-crypto-avoidance">6.3 Crypto → Avoidance</h3>
+<p>Crypto regimes create:
+- bypass surfaces<br>
+- propagation‑driven drift<br>
+- cross‑asset distortion  </p>
+<hr>
+<h2 id="7-alignment-surfaces">7. Alignment Surfaces</h2>
+<h3 id="71-taxes-rrr_3">7.1 Taxes ↔ RRR</h3>
+<ul>
+<li>continuity alignment  </li>
+<li>revenue propagation  </li>
+<li>drift‑field correction  </li>
+</ul>
+<h3 id="72-taxes-ie_3">7.2 Taxes ↔ IE</h3>
+<ul>
+<li>cycle inversion  </li>
+<li>uplift constraints  </li>
+<li>economic half‑life (EHL)  </li>
+</ul>
+<h3 id="73-taxes-gsm_3">7.3 Taxes ↔ GSM</h3>
+<ul>
+<li>governance coherence  </li>
+<li>policy propagation  </li>
+<li>civic‑field resonance  </li>
+</ul>
+<hr>
+<h2 id="8-integration-summary">8. Integration Summary</h2>
+<pre><code>Presence (Policy)
+    + Absence (Avoidance)
+    + Tension (Crypto)
+        ↓ unified substrate
+Propagation → Drift → Half‑Life → Alignment
+</code></pre>
+<p>This substrate enables:
+- cross‑domain fiscal analysis<br>
+- multi‑layer incentive modeling<br>
+- stable integration across the fiscal stack  </p>
+<hr>
+<h2 id="9-integration-status">9. Integration Status</h2>
+<ul>
+<li><strong>Modules:</strong> Taxes ↔ External Regimes  </li>
+<li><strong>Layer:</strong> Cross‑Module  </li>
+<li><strong>Version:</strong> 2026‑06  </li>
+<li><strong>Format:</strong> AI‑first · operator‑driven · minimal<br>
+# Taxes ↔ IE ↔ GSM — Cross‑Module Integration Map  </li>
+</ul>
+<h3 id="cycles-incentives-governance-drift-propagation">Cycles · Incentives · Governance · Drift · Propagation</h3>
+<hr>
+<h2 id="1-purpose_4">1. Purpose</h2>
+<p>This file defines the <strong>tri‑module integration surface</strong> linking:</p>
+<ul>
+<li><strong>Taxes</strong> (incentive regimes)  </li>
+<li><strong>IE</strong> (cycle inversion, uplift constraints, economic half‑life)  </li>
+<li><strong>GSM</strong> (governance coherence, policy propagation, civic‑field resonance)</li>
+</ul>
+<p>The integration map models how incentives, cycles, and governance interact across RTT/1 → RTT/2 → RTT/3.</p>
+<hr>
+<h2 id="2-module-roles">2. Module Roles</h2>
+<h3 id="21-taxes-incentive-substrate">2.1 Taxes (Incentive Substrate)</h3>
+<p>Defines:
+- incentive baselines<br>
+- depreciation envelopes<br>
+- drift fields<br>
+- incentive half‑life (IHL)  </p>
+<h3 id="22-ie-cycle-substrate">2.2 IE (Cycle Substrate)</h3>
+<p>Defines:
+- cycle inversion<br>
+- uplift constraints<br>
+- economic half‑life (EHL)<br>
+- cycle‑driven drift  </p>
+<h3 id="23-gsm-governance-substrate">2.3 GSM (Governance Substrate)</h3>
+<p>Defines:
+- governance coherence<br>
+- policy propagation<br>
+- civic‑field resonance<br>
+- governance drift  </p>
+<hr>
+<h2 id="3-alignment-axes">3. Alignment Axes</h2>
+<h3 id="31-incentives-cycles-taxes-ie">3.1 Incentives ↔ Cycles (Taxes ↔ IE)</h3>
+<p>Alignment occurs when:</p>
+<pre><code>incentive_envelope ≈ cycle_phase_envelope
+</code></pre>
+<h3 id="32-cycles-governance-ie-gsm">3.2 Cycles ↔ Governance (IE ↔ GSM)</h3>
+<p>Alignment occurs when:</p>
+<pre><code>cycle_phase ≈ governance_phase
+</code></pre>
+<h3 id="33-incentives-governance-taxes-gsm">3.3 Incentives ↔ Governance (Taxes ↔ GSM)</h3>
+<p>Alignment occurs when:</p>
+<pre><code>incentive_stability ≈ governance_coherence
+</code></pre>
+<hr>
+<h2 id="4-crossmodule-operators">4. Cross‑Module Operators</h2>
+<h3 id="41-taxes_ie_alignment_operator">4.1 taxes_ie_alignment_operator</h3>
+<p>Maps:
+- incentive baseline<br>
+- depreciation envelope<br>
+- drift amplitude  </p>
+<p>to:
+- cycle inversion<br>
+- uplift constraints<br>
+- EHL  </p>
+<h3 id="42-ie_gsm_alignment_operator">4.2 ie_gsm_alignment_operator</h3>
+<p>Maps:
+- cycle phase<br>
+- cycle drift<br>
+- EHL  </p>
+<p>to:
+- governance coherence<br>
+- policy propagation<br>
+- civic‑field resonance  </p>
+<h3 id="43-taxes_gsm_alignment_operator">4.3 taxes_gsm_alignment_operator</h3>
+<p>Maps:
+- incentive stability<br>
+- incentive drift<br>
+- IHL  </p>
+<p>to:
+- governance stability<br>
+- governance drift<br>
+- policy alignment  </p>
+<hr>
+<h2 id="5-propagation-behavior_1">5. Propagation Behavior</h2>
+<h3 id="51-taxes-ie">5.1 Taxes → IE</h3>
+<p>Incentives influence:
+- cycle stability<br>
+- cycle drift<br>
+- uplift constraints  </p>
+<h3 id="52-ie-gsm">5.2 IE → GSM</h3>
+<p>Cycles influence:
+- governance coherence<br>
+- policy propagation<br>
+- civic‑field resonance  </p>
+<h3 id="53-gsm-taxes">5.3 GSM → Taxes</h3>
+<p>Governance influences:
+- incentive stability<br>
+- incentive drift<br>
+- incentive propagation  </p>
+<p>Propagation modeled via:
+- <strong>jurisdiction_propagation_operator</strong><br>
+- <strong>incentive_drift_operator</strong><br>
+- <strong>cycle_drift_operator</strong><br>
+- <strong>governance_drift_operator</strong></p>
+<hr>
+<h2 id="6-drift-interaction_3">6. Drift Interaction</h2>
+<h3 id="61-incentive-drift-cycle-drift">6.1 Incentive Drift → Cycle Drift</h3>
+<p>High incentive drift causes:
+- cycle compression<br>
+- cycle instability<br>
+- EHL reduction  </p>
+<h3 id="62-cycle-drift-governance-drift">6.2 Cycle Drift → Governance Drift</h3>
+<p>High cycle drift causes:
+- governance misalignment<br>
+- policy propagation distortion<br>
+- civic‑field instability  </p>
+<h3 id="63-governance-drift-incentive-drift">6.3 Governance Drift → Incentive Drift</h3>
+<p>High governance drift causes:
+- incentive envelope distortion<br>
+- IHL compression<br>
+- propagation‑induced drift  </p>
+<hr>
+<h2 id="7-rtt-layer-integration">7. RTT Layer Integration</h2>
+<h3 id="rtt1-localsubstrate">RTT/1 — Local/Substrate</h3>
+<ul>
+<li>direct incentive‑cycle‑governance interaction  </li>
+<li>short‑range drift fields  </li>
+</ul>
+<h3 id="rtt2-regionalstructural">RTT/2 — Regional/Structural</h3>
+<ul>
+<li>structural alignment  </li>
+<li>cross‑jurisdiction propagation  </li>
+</ul>
+<h3 id="rtt3-globalsystemic">RTT/3 — Global/Systemic</h3>
+<ul>
+<li>systemic alignment  </li>
+<li>coherence‑layer propagation  </li>
+</ul>
+<hr>
+<h2 id="8-integration-summary_1">8. Integration Summary</h2>
+<pre><code>Taxes → Incentives → Drift → IHL
+        ↘
+          IE → Cycles → Drift → EHL
+                ↘
+                  GSM → Governance → Drift → Coherence
+</code></pre>
+<p>The tri‑module alignment ensures:
+- fiscal‑cycle‑governance coherence<br>
+- stable propagation<br>
+- bounded drift  </p>
+<hr>
+<h2 id="9-integration-status_1">9. Integration Status</h2>
+<ul>
+<li><strong>Modules:</strong> Taxes ↔ IE ↔ GSM  </li>
+<li><strong>Layer:</strong> Cross‑Module  </li>
+<li><strong>Version:</strong> 2026‑06  </li>
+<li><strong>Format:</strong> AI‑first · operator‑driven · minimal<br>
+# Taxes ↔ RRR Alignment  </li>
+</ul>
+<h3 id="continuity-incentives-drift-propagation">Continuity · Incentives · Drift · Propagation</h3>
+<hr>
+<h2 id="1-purpose_5">1. Purpose</h2>
+<p>This file defines the <strong>alignment surface</strong> between the Taxes module and the RRR module.<br>
+It models how <strong>incentive regimes</strong> (Taxes) interact with <strong>continuity envelopes</strong> (RRR) across RTT/1 → RTT/2 → RTT/3.</p>
+<p>The alignment is used to:
+- map incentives to continuity<br>
+- detect incentive‑continuity drift<br>
+- model propagation behavior<br>
+- support fiscal‑stack coherence  </p>
+<hr>
+<h2 id="2-alignment-axes">2. Alignment Axes</h2>
+<h3 id="21-incentive-baseline-taxes">2.1 Incentive Baseline (Taxes)</h3>
+<p>Defines:
+- incentive strength<br>
+- incentive envelope<br>
+- depreciation behavior<br>
+- drift susceptibility  </p>
+<h3 id="22-continuity-envelope-rrr">2.2 Continuity Envelope (RRR)</h3>
+<p>Defines:
+- revenue continuity<br>
+- continuity half‑life<br>
+- continuity propagation<br>
+- continuity drift  </p>
+<p>Alignment occurs when:</p>
+<pre><code>incentive_envelope ≈ continuity_envelope
+</code></pre>
+<hr>
+<h2 id="3-alignment-operators">3. Alignment Operators</h2>
+<h3 id="31-incentive_continuity_alignment_operator">3.1 incentive_continuity_alignment_operator</h3>
+<p>Maps:
+- incentive baseline<br>
+- depreciation envelope<br>
+- drift amplitude<br>
+- propagation load  </p>
+<p>to:
+- continuity envelope<br>
+- continuity drift<br>
+- continuity propagation  </p>
+<p>Outputs:
+- alignment score<br>
+- stability adjustment<br>
+- drift correction  </p>
+<hr>
+<h2 id="4-alignment-surfaces">4. Alignment Surfaces</h2>
+<h3 id="41-stability-surface">4.1 Stability Surface</h3>
+<p>Region where:
+- incentive drift is low<br>
+- continuity drift is low<br>
+- propagation load is stable  </p>
+<h3 id="42-transition-surface">4.2 Transition Surface</h3>
+<p>Region where:
+- incentive drift increases<br>
+- continuity drift increases<br>
+- propagation load fluctuates  </p>
+<h3 id="43-fragmentation-surface">4.3 Fragmentation Surface</h3>
+<p>Region where:
+- incentive drift exceeds threshold<br>
+- continuity envelope collapses<br>
+- propagation destabilizes  </p>
+<hr>
+<h2 id="5-propagation-behavior_2">5. Propagation Behavior</h2>
+<h3 id="51-taxes-rrr">5.1 Taxes → RRR</h3>
+<p>Incentives influence:
+- continuity stability<br>
+- continuity drift<br>
+- continuity propagation  </p>
+<h3 id="52-rrr-taxes">5.2 RRR → Taxes</h3>
+<p>Continuity influences:
+- incentive stability<br>
+- incentive drift<br>
+- incentive propagation  </p>
+<p>Propagation modeled via:
+- <strong>jurisdiction_propagation_operator</strong><br>
+- <strong>incentive_drift_operator</strong><br>
+- <strong>continuity_drift_operator</strong> (RRR)</p>
+<hr>
+<h2 id="6-drift-interaction_4">6. Drift Interaction</h2>
+<h3 id="61-incentive-drift-continuity-drift">6.1 Incentive Drift → Continuity Drift</h3>
+<p>High incentive drift causes:
+- continuity compression<br>
+- continuity instability<br>
+- continuity half‑life reduction  </p>
+<h3 id="62-continuity-drift-incentive-drift">6.2 Continuity Drift → Incentive Drift</h3>
+<p>High continuity drift causes:
+- incentive envelope distortion<br>
+- incentive half‑life compression<br>
+- propagation‑induced drift  </p>
+<hr>
+<h2 id="7-rtt-layer-alignment">7. RTT Layer Alignment</h2>
+<h3 id="rtt1-localsubstrate_1">RTT/1 — Local/Substrate</h3>
+<ul>
+<li>direct incentive‑continuity interaction  </li>
+<li>short‑range drift fields  </li>
+</ul>
+<h3 id="rtt2-regionalstructural_1">RTT/2 — Regional/Structural</h3>
+<ul>
+<li>structural alignment  </li>
+<li>cross‑jurisdiction propagation  </li>
+</ul>
+<h3 id="rtt3-globalsystemic_1">RTT/3 — Global/Systemic</h3>
+<ul>
+<li>systemic alignment  </li>
+<li>coherence‑layer propagation  </li>
+</ul>
+<hr>
+<h2 id="8-alignment-summary">8. Alignment Summary</h2>
+<pre><code>Incentives → Drift → Half‑Life → Propagation
+        ↘          RRR Continuity          ↗
+</code></pre>
+<p>The alignment surface ensures:
+- fiscal‑stack coherence<br>
+- stable propagation<br>
+- bounded drift  </p>
+<hr>
+<h2 id="9-integration-status_2">9. Integration Status</h2>
+<ul>
+<li><strong>Modules:</strong> Taxes ↔ RRR  </li>
+<li><strong>Layer:</strong> Cross‑Module  </li>
+<li><strong>Version:</strong> 2026‑06  </li>
+<li><strong>Format:</strong> AI‑first · operator‑driven · minimal<br>
+# Cross‑Domain Propagation Map — Taxes Module  </li>
+</ul>
+<h3 id="rtt1-rtt2-rtt3-incentives-drift-alignment_1">RTT/1 → RTT/2 → RTT/3 · Incentives · Drift · Alignment</h3>
+<hr>
+<h2 id="1-purpose_6">1. Purpose</h2>
+<p>This map defines how <strong>incentive structures propagate across domains</strong> within the RTT stack.<br>
+It models the flow of incentive baselines, depreciation envelopes, drift fields, and alignment surfaces as they move from:</p>
+<ul>
+<li><strong>RTT/1</strong> (local, direct, substrate‑level incentives)  </li>
+<li><strong>RTT/2</strong> (regional, structural, cross‑domain incentives)  </li>
+<li><strong>RTT/3</strong> (global, systemic, coherence‑layer incentives)</li>
+</ul>
+<p>The map is used to:
+- trace incentive propagation<br>
+- identify drift‑field activation<br>
+- model cross‑domain alignment<br>
+- support multi‑layer fiscal analysis  </p>
+<hr>
+<h2 id="2-propagation-layers">2. Propagation Layers</h2>
+<h3 id="21-rtt1-localsubstrate-layer">2.1 RTT/1 — Local/Substrate Layer</h3>
+<p>Defines:
+- local incentive baselines<br>
+- direct depreciation envelopes<br>
+- local compliance substrate<br>
+- short‑range propagation vectors  </p>
+<p>Outputs:
+- incentive seed values<br>
+- local drift amplitude<br>
+- local stability envelope  </p>
+<hr>
+<h3 id="22-rtt2-regionalstructural-layer">2.2 RTT/2 — Regional/Structural Layer</h3>
+<p>Defines:
+- regional incentive baselines<br>
+- cross‑jurisdiction propagation<br>
+- structural depreciation envelopes<br>
+- mid‑range drift fields  </p>
+<p>Outputs:
+- regional propagation vectors<br>
+- drift‑field consolidation<br>
+- structural alignment surfaces  </p>
+<hr>
+<h3 id="23-rtt3-globalsystemic-layer">2.3 RTT/3 — Global/Systemic Layer</h3>
+<p>Defines:
+- global incentive baselines<br>
+- cross‑domain propagation<br>
+- systemic depreciation envelopes<br>
+- long‑range drift fields  </p>
+<p>Outputs:
+- global propagation surfaces<br>
+- systemic drift behavior<br>
+- coherence‑layer alignment  </p>
+<hr>
+<h2 id="3-propagation-vectors">3. Propagation Vectors</h2>
+<h3 id="31-vertical-propagation-rtt1-rtt2-rtt3">3.1 Vertical Propagation (RTT/1 → RTT/2 → RTT/3)</h3>
+<ul>
+<li>local → regional incentive flow  </li>
+<li>regional → global incentive flow  </li>
+<li>local → global (via structural amplification)  </li>
+</ul>
+<h3 id="32-lateral-propagation-within-each-rtt-layer">3.2 Lateral Propagation (within each RTT layer)</h3>
+<ul>
+<li>cross‑state  </li>
+<li>cross‑regional  </li>
+<li>cross‑domain  </li>
+</ul>
+<p>Propagation modeled via:
+- <strong>jurisdiction_propagation_operator</strong><br>
+- <strong>cross_domain_operator</strong>  </p>
+<hr>
+<h2 id="4-driftfield-activation">4. Drift‑Field Activation</h2>
+<h3 id="41-local-drift-rtt1">4.1 Local Drift (RTT/1)</h3>
+<p>Generated by:
+- incentive baseline<br>
+- compliance substrate<br>
+- local propagation load  </p>
+<h3 id="42-structural-drift-rtt2">4.2 Structural Drift (RTT/2)</h3>
+<p>Generated by:
+- cross‑jurisdiction propagation<br>
+- regional alignment<br>
+- structural depreciation  </p>
+<h3 id="43-systemic-drift-rtt3">4.3 Systemic Drift (RTT/3)</h3>
+<p>Generated by:
+- global propagation<br>
+- cross‑domain alignment<br>
+- coherence‑layer interactions  </p>
+<p>Drift modeled via:
+- <strong>incentive_drift_operator</strong><br>
+- <strong>incentive_half_life_operator</strong>  </p>
+<hr>
+<h2 id="5-alignment-surfaces">5. Alignment Surfaces</h2>
+<h3 id="51-rrr-alignment">5.1 RRR Alignment</h3>
+<p>Propagation aligns with:
+- continuity envelopes<br>
+- revenue propagation<br>
+- RRR/1 → RRR/2 → RRR/3  </p>
+<h3 id="52-ie-alignment">5.2 IE Alignment</h3>
+<p>Propagation aligns with:
+- cycle inversion<br>
+- uplift constraints<br>
+- economic half‑life (EHL)  </p>
+<h3 id="53-gsm-alignment">5.3 GSM Alignment</h3>
+<p>Propagation aligns with:
+- governance coherence<br>
+- policy propagation<br>
+- civic‑field resonance  </p>
+<hr>
+<h2 id="6-crossdomain-propagation-structure">6. Cross‑Domain Propagation Structure</h2>
+<pre><code>RTT/1 (local incentives)
+    ↓ vertical propagation
+RTT/2 (regional incentives)
+    ↔ lateral propagation
+RTT/3 (global incentives)
+    ↓ systemic alignment
+
+Propagation → Drift → Half‑Life → Alignment
+</code></pre>
+<p>This chain defines the <strong>cross‑domain behavior</strong> of incentive regimes across the fiscal stack.</p>
+<hr>
+<h2 id="7-map-status">7. Map Status</h2>
+<ul>
+<li><strong>Layer:</strong> Cross‑Domain  </li>
+<li><strong>Role:</strong> Incentive propagation across RTT layers  </li>
+<li><strong>Version:</strong> 2026‑06  </li>
+<li><strong>Format:</strong> AI‑first · operator‑driven · minimal<br>
+# Incentive Regime Map — Taxes Module  </li>
+</ul>
+<h3 id="baselines-envelopes-propagation-drift-alignment">Baselines · Envelopes · Propagation · Drift · Alignment</h3>
+<hr>
+<h2 id="1-purpose_7">1. Purpose</h2>
+<p>This map defines the <strong>structural layout</strong> of incentive regimes across federal, state, and international layers.<br>
+It models how incentive baselines, depreciation envelopes, propagation vectors, and drift fields interact across jurisdictions.</p>
+<p>The map is used to:
+- compare incentive structures<br>
+- trace propagation pathways<br>
+- identify drift‑field activation<br>
+- align incentives with RRR, IE, and GSM  </p>
+<hr>
+<h2 id="2-regime-layers">2. Regime Layers</h2>
+<h3 id="21-federal-layer">2.1 Federal Layer</h3>
+<p>Defines:
+- national incentive baseline<br>
+- federal depreciation envelope<br>
+- federal propagation vectors<br>
+- federal drift field  </p>
+<h3 id="22-state-layer">2.2 State Layer</h3>
+<p>Defines:
+- state incentive baselines<br>
+- state‑specific depreciation envelopes<br>
+- state propagation vectors<br>
+- state drift fields  </p>
+<h3 id="23-international-layer">2.3 International Layer</h3>
+<p>Defines:
+- regional incentive baselines<br>
+- cross‑border depreciation envelopes<br>
+- international propagation vectors<br>
+- international drift fields  </p>
+<hr>
+<h2 id="3-incentive-baselines">3. Incentive Baselines</h2>
+<p>Each regime defines a baseline via:
+- statutory incentive structures<br>
+- administrative overlays<br>
+- eligibility and compliance rules  </p>
+<p>Baselines determine:
+- incentive strength<br>
+- propagation potential<br>
+- drift susceptibility  </p>
+<hr>
+<h2 id="4-depreciation-envelopes">4. Depreciation Envelopes</h2>
+<p>Depreciation envelopes define:
+- time‑based decay<br>
+- eligibility reduction<br>
+- incentive‑strength decline<br>
+- envelope boundaries  </p>
+<p>Modeled via:
+- <strong>depreciation_envelope_operator</strong><br>
+- <strong>incentive_half_life_operator</strong></p>
+<hr>
+<h2 id="5-propagation-vectors">5. Propagation Vectors</h2>
+<h3 id="51-vertical-propagation_1">5.1 Vertical Propagation</h3>
+<ul>
+<li>federal → state  </li>
+<li>state → local  </li>
+<li>international → national  </li>
+</ul>
+<h3 id="52-lateral-propagation_1">5.2 Lateral Propagation</h3>
+<ul>
+<li>cross‑state  </li>
+<li>cross‑regional  </li>
+<li>cross‑domain  </li>
+</ul>
+<p>Propagation modeled via:
+- <strong>jurisdiction_propagation_operator</strong></p>
+<p>Outputs:
+- propagation vectors<br>
+- propagation load<br>
+- propagation surfaces  </p>
+<hr>
+<h2 id="6-drift-fields">6. Drift Fields</h2>
+<h3 id="61-baseline-drift">6.1 Baseline Drift</h3>
+<p>Generated by:
+- incentive baseline<br>
+- compliance substrate  </p>
+<h3 id="62-propagation-drift">6.2 Propagation Drift</h3>
+<p>Generated by:
+- cross‑jurisdiction propagation<br>
+- cross‑domain propagation  </p>
+<h3 id="63-alignment-drift">6.3 Alignment Drift</h3>
+<p>Generated by:
+- RRR continuity alignment<br>
+- IE cycle alignment<br>
+- GSM governance alignment  </p>
+<p>Drift modeled via:
+- <strong>incentive_drift_operator</strong></p>
+<p>Outputs:
+- drift amplitude<br>
+- drift acceleration<br>
+- drift direction  </p>
+<hr>
+<h2 id="7-alignment-surfaces_1">7. Alignment Surfaces</h2>
+<h3 id="71-rrr-alignment">7.1 RRR Alignment</h3>
+<p>Incentives align with:
+- continuity envelopes<br>
+- revenue propagation<br>
+- RRR/1 and RRR/2 layers  </p>
+<h3 id="72-ie-alignment">7.2 IE Alignment</h3>
+<p>Incentives align with:
+- cycle inversion<br>
+- uplift constraints<br>
+- economic half‑life (EHL)  </p>
+<h3 id="73-gsm-alignment">7.3 GSM Alignment</h3>
+<p>Incentives align with:
+- governance coherence<br>
+- policy propagation<br>
+- civic‑field resonance  </p>
+<hr>
+<h2 id="8-structural-map-summary">8. Structural Map Summary</h2>
+<pre><code>Federal Baseline
+    ↓ vertical propagation
+State Baselines
+    ↔ lateral propagation
+International Baselines
+    ↓ global alignment
+
+Baselines → Envelopes → Propagation → Drift → Alignment
+</code></pre>
+<p>This chain defines the <strong>structural behavior</strong> of incentive regimes across the fiscal stack.</p>
+<hr>
+<h2 id="9-map-status">9. Map Status</h2>
+<ul>
+<li><strong>Layer:</strong> Structural  </li>
+<li><strong>Role:</strong> Incentive‑regime mapping across jurisdictions  </li>
+<li><strong>Version:</strong> 2026‑06  </li>
+<li><strong>Format:</strong> AI‑first · operator‑driven · minimal<br>
+# Temporal Resonance Map — Taxes Module  </li>
+</ul>
+<h3 id="incentive-halflife-drift-fields-propagation-phases-alignment-surfaces">Incentive Half‑Life · Drift Fields · Propagation Phases · Alignment Surfaces</h3>
+<hr>
+<h2 id="1-purpose_8">1. Purpose</h2>
+<p>This map defines the <strong>temporal‑resonance structure</strong> of the Taxes module.<br>
+It models how incentives evolve over time, how drift accumulates, and how half‑life (IHL) interacts with propagation and alignment surfaces.</p>
+<p>The map is used to:
+- track incentive stability<br>
+- measure drift accumulation<br>
+- model temporal decay<br>
+- align incentives with RRR, IE, and GSM  </p>
+<hr>
+<h2 id="2-temporal-axes">2. Temporal Axes</h2>
+<h3 id="21-time-t">2.1 Time (t)</h3>
+<p>Primary temporal axis.<br>
+Represents:
+- incentive duration<br>
+- depreciation curves<br>
+- drift accumulation<br>
+- half‑life decay  </p>
+<h3 id="22-drift">2.2 Drift (Δ)</h3>
+<p>Represents:
+- baseline drift<br>
+- propagation‑induced drift<br>
+- compliance‑driven drift<br>
+- cross‑jurisdiction drift  </p>
+<h3 id="23-propagation-load-p">2.3 Propagation Load (P)</h3>
+<p>Represents:
+- jurisdictional propagation<br>
+- cross‑domain propagation<br>
+- federal/state/international load<br>
+- ledger‑based propagation (for crypto regimes)  </p>
+<hr>
+<h2 id="3-halflife-envelope-ihl">3. Half‑Life Envelope (IHL)</h2>
+<p>The incentive half‑life envelope defines:
+- incentive durability<br>
+- decay rate<br>
+- drift susceptibility<br>
+- stability boundaries  </p>
+<p>IHL is computed via:
+- <strong>incentive_half_life_operator</strong><br>
+- <strong>incentive_drift_operator</strong><br>
+- <strong>jurisdiction_propagation_operator</strong></p>
+<p>Outputs:
+- IHL curve<br>
+- stability envelope<br>
+- decay boundary  </p>
+<hr>
+<h2 id="4-drift-fields">4. Drift Fields</h2>
+<h3 id="41-baseline-drift-field">4.1 Baseline Drift Field</h3>
+<p>Generated by:
+- incentive baseline<br>
+- compliance substrate<br>
+- propagation vectors  </p>
+<h3 id="42-propagation-drift-field">4.2 Propagation Drift Field</h3>
+<p>Generated by:
+- cross‑jurisdiction propagation<br>
+- cross‑domain propagation<br>
+- federal/state/international alignment  </p>
+<h3 id="43-alignment-drift-field">4.3 Alignment Drift Field</h3>
+<p>Generated by:
+- RRR continuity alignment<br>
+- IE cycle alignment<br>
+- GSM governance alignment  </p>
+<p>Each drift field contributes to:
+- drift amplitude<br>
+- drift acceleration<br>
+- drift direction  </p>
+<hr>
+<h2 id="5-phasesurfaces">5. Phase‑Surfaces</h2>
+<h3 id="51-stability-phase">5.1 Stability Phase</h3>
+<p>Region where:
+- drift amplitude is low<br>
+- IHL is long<br>
+- propagation load is stable  </p>
+<h3 id="52-transition-phase">5.2 Transition Phase</h3>
+<p>Region where:
+- drift amplitude increases<br>
+- IHL compresses<br>
+- propagation load fluctuates  </p>
+<h3 id="53-fragmentation-phase">5.3 Fragmentation Phase</h3>
+<p>Region where:
+- drift amplitude exceeds threshold<br>
+- IHL collapses<br>
+- propagation load destabilizes  </p>
+<hr>
+<h2 id="6-temporal-resonance-structure">6. Temporal Resonance Structure</h2>
+<pre><code>IHL(t)  →  stability envelope
+Δ(t)    →  drift accumulation
+P(t)    →  propagation load
+
+temporal_resonance(t) =
+    f( IHL(t), Δ(t), P(t) )
+</code></pre>
+<p>Temporal resonance determines:
+- incentive persistence<br>
+- decay timing<br>
+- drift‑field activation<br>
+- alignment behavior  </p>
+<hr>
+<h2 id="7-crossmodule-alignment_3">7. Cross‑Module Alignment</h2>
+<h3 id="71-rrr-continuity">7.1 RRR (Continuity)</h3>
+<p>Temporal resonance aligns with:
+- continuity envelopes<br>
+- revenue propagation<br>
+- RRR/1 and RRR/2 layers  </p>
+<h3 id="72-ie-cycle-inversion">7.2 IE (Cycle Inversion)</h3>
+<p>Temporal resonance aligns with:
+- cycle inversion<br>
+- uplift constraints<br>
+- economic half‑life (EHL)  </p>
+<h3 id="73-gsm-governance">7.3 GSM (Governance)</h3>
+<p>Temporal resonance aligns with:
+- governance coherence<br>
+- policy propagation<br>
+- civic‑field resonance  </p>
+<hr>
+<h2 id="8-map-status">8. Map Status</h2>
+<ul>
+<li><strong>Layer:</strong> Temporal  </li>
+<li><strong>Role:</strong> Incentive half‑life and drift‑field mapping  </li>
+<li><strong>Version:</strong> 2026‑06  </li>
+<li><strong>Format:</strong> AI‑first · operator‑driven · minimal<br>
+# Taxes Module — Operators  </li>
+</ul>
+<h3 id="incentiveregime-substrate-drift-propagation-alignment">Incentive‑Regime Substrate · Drift · Propagation · Alignment</h3>
+<hr>
+<h2 id="1-purpose_9">1. Purpose</h2>
+<p>This file defines the <strong>operator grammar</strong> for the Taxes module.<br>
+Operators describe how incentives behave across jurisdictions, how drift accumulates, and how half‑lives determine stability.</p>
+<p>Operators are grouped into:
+- <strong>Primary operators</strong><br>
+- <strong>Drift operators</strong><br>
+- <strong>Alignment operators</strong><br>
+- <strong>Cross‑module operators</strong>  </p>
+<hr>
+<h2 id="2-primary-operators">2. Primary Operators</h2>
+<h3 id="21-incentive_regime_operator">2.1 incentive_regime_operator</h3>
+<p>Defines the baseline incentive structure for a jurisdiction or regime.<br>
+Inputs: incentive parameters, jurisdictional rules<br>
+Outputs: incentive baseline, propagation envelope</p>
+<h3 id="22-depreciation_envelope_operator">2.2 depreciation_envelope_operator</h3>
+<p>Models depreciation, phase‑out, or diminishing incentive strength over time.<br>
+Inputs: incentive baseline, half‑life<br>
+Outputs: depreciation curve, envelope boundaries</p>
+<h3 id="23-jurisdiction_propagation_operator">2.3 jurisdiction_propagation_operator</h3>
+<p>Describes how incentives propagate across jurisdictions or layers.<br>
+Inputs: baseline incentives, jurisdiction map<br>
+Outputs: propagation vectors, cross‑domain flow</p>
+<h3 id="24-compliance_substrate_operator">2.4 compliance_substrate_operator</h3>
+<p>Defines compliance behavior and its effect on incentive stability.<br>
+Inputs: compliance parameters<br>
+Outputs: compliance‑adjusted incentive envelope</p>
+<hr>
+<h2 id="3-drift-operators">3. Drift Operators</h2>
+<h3 id="31-incentive_drift_operator">3.1 incentive_drift_operator</h3>
+<p>Models drift accumulation within an incentive regime.<br>
+Inputs: incentive baseline, propagation vectors<br>
+Outputs: drift amplitude, drift direction</p>
+<h3 id="32-incentive_half_life_operator">3.2 incentive_half_life_operator</h3>
+<p>Defines the half‑life of incentive stability (IHL).<br>
+Inputs: incentive parameters, drift amplitude<br>
+Outputs: half‑life value, stability envelope</p>
+<hr>
+<h2 id="4-alignment-operators">4. Alignment Operators</h2>
+<h3 id="41-incentive_continuity_alignment_operator">4.1 incentive_continuity_alignment_operator</h3>
+<p>Aligns incentive regimes with RRR continuity envelopes.<br>
+Inputs: incentive baseline, RRR continuity<br>
+Outputs: alignment score, stability adjustment</p>
+<h3 id="42-incentive_cycle_alignment_operator">4.2 incentive_cycle_alignment_operator</h3>
+<p>Aligns incentives with economic cycles (IE).<br>
+Inputs: incentive baseline, cycle phase<br>
+Outputs: alignment score, drift correction</p>
+<hr>
+<h2 id="5-crossmodule-operators">5. Cross‑Module Operators</h2>
+<h3 id="51-taxes_rrr_alignment_operator">5.1 taxes_rrr_alignment_operator</h3>
+<p>Maps incentive regimes to revenue continuity (RRR).<br>
+Outputs: continuity‑incentive alignment surface</p>
+<h3 id="52-taxes_ie_alignment_operator">5.2 taxes_ie_alignment_operator</h3>
+<p>Maps incentives to cycle inversion and uplift constraints (IE).<br>
+Outputs: inversion‑incentive alignment surface</p>
+<h3 id="53-taxes_gsm_alignment_operator">5.3 taxes_gsm_alignment_operator</h3>
+<p>Maps incentives to governance coherence (GSM).<br>
+Outputs: policy‑incentive alignment surface</p>
+<hr>
+<h2 id="6-operator-interaction-map">6. Operator Interaction Map</h2>
+<pre><code>incentive_regime_operator
+    → depreciation_envelope_operator
+        → jurisdiction_propagation_operator
+            → incentive_drift_operator
+                → incentive_half_life_operator
+                    → incentive_continuity_alignment_operator
+                        → incentive_cycle_alignment_operator
+</code></pre>
+<p>This chain defines the <strong>structural flow</strong> of the Taxes module.</p>
+<hr>
+<h2 id="7-operator-status">7. Operator Status</h2>
+<ul>
+<li><strong>Version:</strong> 2026‑06  </li>
+<li><strong>Format:</strong> AI‑first · operator‑driven · minimal  </li>
+<li><strong>Drift:</strong> bounded<br>
+# Crypto Incentive Regime  </li>
+</ul>
+<h3 id="digitalasset-classification-taxable-events-valuation-drift-ledger-propagation-halflife">Digital‑Asset Classification · Taxable Events · Valuation Drift · Ledger Propagation · Half‑Life</h3>
+<hr>
+<h2 id="1-structural-presence">1. Structural Presence</h2>
+<p>The crypto incentive regime defines:
+- digital‑asset classification<br>
+- taxable and non‑taxable event surfaces<br>
+- valuation and pricing drift<br>
+- ledger‑based propagation<br>
+- cross‑asset alignment<br>
+- incentive half‑life (IHL‑D) for digital assets  </p>
+<p>This regime interacts with both <strong>traditional tax regimes</strong> and <strong>on‑chain economic substrates</strong>.</p>
+<hr>
+<h2 id="2-digitalasset-classification">2. Digital‑Asset Classification</h2>
+<p>Classification is determined by:
+- asset type (token, coin, stablecoin, NFT, derivative)<br>
+- functional role (utility, governance, payment, synthetic)<br>
+- custody model (self‑custody, custodial, hybrid)  </p>
+<p>Modeled via:
+- <strong>asset_classification_operator</strong></p>
+<p>Outputs:
+- classification envelope<br>
+- tax‑treatment baseline  </p>
+<hr>
+<h2 id="3-taxable-event-surface">3. Taxable Event Surface</h2>
+<p>Taxable events include:
+- dispositional events<br>
+- conversion events<br>
+- staking/validator rewards<br>
+- airdrops<br>
+- wrapped/unwrapped transitions<br>
+- cross‑chain bridging (when economically substantive)  </p>
+<p>Modeled via:
+- <strong>digital_event_operator</strong></p>
+<p>Outputs:
+- event surface<br>
+- event‑driven incentive adjustments  </p>
+<hr>
+<h2 id="4-valuation-pricing-drift">4. Valuation &amp; Pricing Drift</h2>
+<p>Crypto valuation exhibits:
+- high‑frequency drift<br>
+- oracle divergence<br>
+- liquidity‑driven volatility<br>
+- cross‑exchange price fragmentation  </p>
+<p>Modeled via:
+- <strong>valuation_drift_operator</strong></p>
+<p>Outputs:
+- drift amplitude<br>
+- drift acceleration<br>
+- valuation half‑life  </p>
+<hr>
+<h2 id="5-ledger-propagation">5. Ledger Propagation</h2>
+<p>Propagation behavior includes:
+- on‑chain settlement<br>
+- cross‑chain propagation<br>
+- L1 ↔ L2 incentive flow<br>
+- validator‑driven propagation effects  </p>
+<p>Modeled via:
+- <strong>ledger_propagation_operator</strong></p>
+<p>Outputs:
+- propagation vectors<br>
+- ledger‑alignment surfaces  </p>
+<hr>
+<h2 id="6-crossasset-alignment">6. Cross‑Asset Alignment</h2>
+<p>Digital assets interact with:
+- fiat‑denominated incentives<br>
+- synthetic assets<br>
+- derivative layers<br>
+- stablecoin pegs  </p>
+<p>Modeled via:
+- <strong>cross_asset_operator</strong></p>
+<p>Outputs:
+- cross‑asset alignment<br>
+- drift‑field interaction  </p>
+<hr>
+<h2 id="7-drift-characteristics">7. Drift Characteristics</h2>
+<p>Crypto drift includes:
+- valuation drift<br>
+- event‑driven drift<br>
+- propagation‑induced drift<br>
+- cross‑asset drift<br>
+- oracle drift  </p>
+<p>Drift is amplified by:
+- liquidity fragmentation<br>
+- multi‑chain propagation<br>
+- incentive misalignment  </p>
+<hr>
+<h2 id="8-halflife-ihld">8. Half‑Life (IHL‑D)</h2>
+<p>Digital‑asset incentive half‑life is shaped by:
+- volatility<br>
+- drift amplitude<br>
+- propagation load<br>
+- event frequency<br>
+- classification stability  </p>
+<p>IHL‑D determines:
+- incentive durability<br>
+- depreciation rate<br>
+- drift susceptibility  </p>
+<hr>
+<h2 id="9-alignment-surfaces">9. Alignment Surfaces</h2>
+<h3 id="91-rrr-alignment">9.1 RRR Alignment</h3>
+<p>Crypto incentives align with:
+- continuity envelopes<br>
+- revenue propagation<br>
+- RRR/1 and RRR/2 layers  </p>
+<h3 id="92-ie-alignment">9.2 IE Alignment</h3>
+<p>Crypto incentives align with:
+- cycle inversion<br>
+- uplift constraints<br>
+- economic half‑life (EHL)  </p>
+<h3 id="93-gsm-alignment">9.3 GSM Alignment</h3>
+<p>Crypto incentives align with:
+- governance coherence<br>
+- policy propagation<br>
+- civic‑field resonance  </p>
+<hr>
+<h2 id="10-regime-status">10. Regime Status</h2>
+<ul>
+<li><strong>Layer:</strong> Digital‑Asset Regime  </li>
+<li><strong>Role:</strong> Incentive substrate for crypto‑economic systems  </li>
+<li><strong>Version:</strong> 2026‑06  </li>
+<li><strong>Format:</strong> AI‑first · operator‑driven · minimal<br>
+# APAC Incentive Regime  </li>
+</ul>
+<h3 id="baseline-depreciation-propagation-drift-halflife">Baseline · Depreciation · Propagation · Drift · Half‑Life</h3>
+<hr>
+<h2 id="1-structural-presence_1">1. Structural Presence</h2>
+<p>The APAC incentive regime defines:
+- regional incentive baselines<br>
+- jurisdiction‑specific depreciation envelopes<br>
+- cross‑border propagation behavior<br>
+- compliance substrates across diverse regulatory systems<br>
+- incentive half‑life (IHL‑APAC) at the regional layer  </p>
+<p>APAC exhibits <strong>high structural diversity</strong>, with incentive regimes ranging from highly centralized to market‑driven models.</p>
+<hr>
+<h2 id="2-incentive-baseline">2. Incentive Baseline</h2>
+<p>APAC incentive baselines are shaped by:
+- national incentive structures<br>
+- sector‑specific incentive surfaces (technology, manufacturing, energy, logistics)<br>
+- administrative and regulatory overlays<br>
+- eligibility and compliance rules  </p>
+<p>Outputs:
+- regional incentive baseline<br>
+- jurisdictional propagation envelope  </p>
+<hr>
+<h2 id="3-depreciation-envelope">3. Depreciation Envelope</h2>
+<p>Depreciation behavior across APAC includes:
+- time‑based phase‑outs<br>
+- eligibility decay<br>
+- incentive‑strength reduction<br>
+- envelope boundaries defined by national regulatory structures  </p>
+<p>Modeled via:
+- <strong>depreciation_envelope_operator</strong><br>
+- <strong>incentive_half_life_operator</strong></p>
+<hr>
+<h2 id="4-propagation-behavior">4. Propagation Behavior</h2>
+<p>APAC incentives propagate:
+- within national jurisdictions<br>
+- across regional economic blocs<br>
+- upward into international alignment surfaces<br>
+- outward into cross‑regional comparisons  </p>
+<p>Propagation defined by:
+- <strong>jurisdiction_propagation_operator</strong><br>
+- APAC → international propagation vectors<br>
+- APAC → cross‑regional propagation surfaces  </p>
+<hr>
+<h2 id="5-drift-characteristics">5. Drift Characteristics</h2>
+<p>APAC incentive drift includes:
+- baseline drift<br>
+- regulatory‑driven drift<br>
+- propagation‑induced drift<br>
+- cross‑border drift<br>
+- alignment drift with international regimes  </p>
+<p>Drift modeled via:
+- <strong>incentive_drift_operator</strong></p>
+<p>Outputs:
+- drift amplitude<br>
+- drift acceleration<br>
+- drift direction  </p>
+<hr>
+<h2 id="6-halflife-ihlapac">6. Half‑Life (IHL‑APAC)</h2>
+<p>APAC incentive half‑life is shaped by:
+- regulatory diversity<br>
+- drift amplitude<br>
+- propagation load<br>
+- compliance substrate<br>
+- international alignment  </p>
+<p>IHL‑APAC determines:
+- incentive durability<br>
+- depreciation rate<br>
+- drift susceptibility  </p>
+<hr>
+<h2 id="7-alignment-surfaces_2">7. Alignment Surfaces</h2>
+<h3 id="71-international-alignment">7.1 International Alignment</h3>
+<p>APAC incentives align with:
+- global incentive baselines<br>
+- cross‑border depreciation envelopes<br>
+- international propagation rules  </p>
+<h3 id="72-rrr-alignment">7.2 RRR Alignment</h3>
+<p>APAC incentives align with:
+- continuity envelopes<br>
+- revenue propagation<br>
+- RRR/1 and RRR/2 layers  </p>
+<h3 id="73-ie-alignment">7.3 IE Alignment</h3>
+<p>APAC incentives align with:
+- cycle inversion<br>
+- uplift constraints<br>
+- economic half‑life (EHL)  </p>
+<h3 id="74-gsm-alignment">7.4 GSM Alignment</h3>
+<p>APAC incentives align with:
+- governance coherence<br>
+- policy propagation<br>
+- civic‑field resonance  </p>
+<hr>
+<h2 id="8-regime-status">8. Regime Status</h2>
+<ul>
+<li><strong>Layer:</strong> International (APAC)  </li>
+<li><strong>Role:</strong> Regional incentive substrate  </li>
+<li><strong>Version:</strong> 2026‑06  </li>
+<li><strong>Format:</strong> AI‑first · operator‑driven · minimal<br>
+# EU Incentive Regime  </li>
+</ul>
+<h3 id="baseline-depreciation-propagation-drift-halflife_1">Baseline · Depreciation · Propagation · Drift · Half‑Life</h3>
+<hr>
+<h2 id="1-structural-presence_2">1. Structural Presence</h2>
+<p>The EU incentive regime defines:
+- union‑level incentive baselines<br>
+- harmonized depreciation envelopes<br>
+- cross‑border propagation behavior<br>
+- compliance substrates across member states<br>
+- incentive half‑life (IHL‑EU) at the supranational layer  </p>
+<p>The EU operates as a <strong>multi‑layered, harmonized incentive substrate</strong> with strong regulatory coherence and cross‑member alignment.</p>
+<hr>
+<h2 id="2-incentive-baseline_1">2. Incentive Baseline</h2>
+<p>EU incentive baselines are shaped by:
+- union‑level incentive structures<br>
+- sector‑specific incentive surfaces (energy, technology, infrastructure, environment)<br>
+- regulatory frameworks and directives<br>
+- eligibility and compliance rules  </p>
+<p>Outputs:
+- EU incentive baseline<br>
+- union‑level propagation envelope  </p>
+<hr>
+<h2 id="3-depreciation-envelope_1">3. Depreciation Envelope</h2>
+<p>EU depreciation behavior includes:
+- time‑based phase‑outs<br>
+- eligibility decay<br>
+- incentive‑strength reduction<br>
+- envelope boundaries defined by EU‑wide regulatory frameworks  </p>
+<p>Modeled via:
+- <strong>depreciation_envelope_operator</strong><br>
+- <strong>incentive_half_life_operator</strong></p>
+<hr>
+<h2 id="4-propagation-behavior_1">4. Propagation Behavior</h2>
+<p>EU incentives propagate:
+- downward into member states<br>
+- laterally across EU programs<br>
+- upward into global alignment surfaces<br>
+- outward into cross‑regional comparisons  </p>
+<p>Propagation defined by:
+- <strong>jurisdiction_propagation_operator</strong><br>
+- EU → member‑state propagation vectors<br>
+- EU → international propagation surfaces  </p>
+<hr>
+<h2 id="5-drift-characteristics_1">5. Drift Characteristics</h2>
+<p>EU incentive drift includes:
+- baseline drift<br>
+- regulatory‑driven drift<br>
+- propagation‑induced drift<br>
+- cross‑member drift<br>
+- alignment drift with global regimes  </p>
+<p>Drift modeled via:
+- <strong>incentive_drift_operator</strong></p>
+<p>Outputs:
+- drift amplitude<br>
+- drift acceleration<br>
+- drift direction  </p>
+<hr>
+<h2 id="6-halflife-ihleu">6. Half‑Life (IHL‑EU)</h2>
+<p>EU incentive half‑life is shaped by:
+- regulatory coherence<br>
+- drift amplitude<br>
+- propagation load<br>
+- compliance substrate<br>
+- global alignment  </p>
+<p>IHL‑EU determines:
+- incentive durability<br>
+- depreciation rate<br>
+- drift susceptibility  </p>
+<hr>
+<h2 id="7-alignment-surfaces_3">7. Alignment Surfaces</h2>
+<h3 id="71-international-alignment_1">7.1 International Alignment</h3>
+<p>EU incentives align with:
+- global incentive baselines<br>
+- cross‑border depreciation envelopes<br>
+- international propagation rules  </p>
+<h3 id="72-rrr-alignment_1">7.2 RRR Alignment</h3>
+<p>EU incentives align with:
+- continuity envelopes<br>
+- revenue propagation<br>
+- RRR/1 and RRR/2 layers  </p>
+<h3 id="73-ie-alignment_1">7.3 IE Alignment</h3>
+<p>EU incentives align with:
+- cycle inversion<br>
+- uplift constraints<br>
+- economic half‑life (EHL)  </p>
+<h3 id="74-gsm-alignment_1">7.4 GSM Alignment</h3>
+<p>EU incentives align with:
+- governance coherence<br>
+- policy propagation<br>
+- civic‑field resonance  </p>
+<hr>
+<h2 id="8-regime-status_1">8. Regime Status</h2>
+<ul>
+<li><strong>Layer:</strong> International (EU)  </li>
+<li><strong>Role:</strong> Supranational incentive substrate  </li>
+<li><strong>Version:</strong> 2026‑06  </li>
+<li><strong>Format:</strong> AI‑first · operator‑driven · minimal<br>
+# LATAM Incentive Regime  </li>
+</ul>
+<h3 id="baseline-depreciation-propagation-drift-halflife_2">Baseline · Depreciation · Propagation · Drift · Half‑Life</h3>
+<hr>
+<h2 id="1-structural-presence_3">1. Structural Presence</h2>
+<p>The LATAM incentive regime defines:
+- regional incentive baselines<br>
+- jurisdiction‑specific depreciation envelopes<br>
+- cross‑border propagation behavior<br>
+- compliance substrates across heterogeneous regulatory environments<br>
+- incentive half‑life (IHL‑LATAM) at the regional layer  </p>
+<p>LATAM exhibits <strong>high variability</strong> in incentive structures, with a mix of centralized, hybrid, and sector‑driven regimes.</p>
+<hr>
+<h2 id="2-incentive-baseline_2">2. Incentive Baseline</h2>
+<p>LATAM incentive baselines are shaped by:
+- national incentive structures<br>
+- sector‑specific incentive surfaces (energy, manufacturing, agriculture, technology)<br>
+- administrative and regulatory overlays<br>
+- eligibility and compliance rules  </p>
+<p>Outputs:
+- regional incentive baseline<br>
+- jurisdictional propagation envelope  </p>
+<hr>
+<h2 id="3-depreciation-envelope_2">3. Depreciation Envelope</h2>
+<p>Depreciation behavior across LATAM includes:
+- time‑based phase‑outs<br>
+- eligibility decay<br>
+- incentive‑strength reduction<br>
+- envelope boundaries defined by national regulatory structures  </p>
+<p>Modeled via:
+- <strong>depreciation_envelope_operator</strong><br>
+- <strong>incentive_half_life_operator</strong></p>
+<hr>
+<h2 id="4-propagation-behavior_2">4. Propagation Behavior</h2>
+<p>LATAM incentives propagate:
+- within national jurisdictions<br>
+- across regional economic blocs<br>
+- upward into international alignment surfaces<br>
+- outward into cross‑regional comparisons  </p>
+<p>Propagation defined by:
+- <strong>jurisdiction_propagation_operator</strong><br>
+- LATAM → international propagation vectors<br>
+- LATAM → cross‑regional propagation surfaces  </p>
+<hr>
+<h2 id="5-drift-characteristics_2">5. Drift Characteristics</h2>
+<p>LATAM incentive drift includes:
+- baseline drift<br>
+- regulatory‑driven drift<br>
+- propagation‑induced drift<br>
+- cross‑border drift<br>
+- alignment drift with international regimes  </p>
+<p>Drift modeled via:
+- <strong>incentive_drift_operator</strong></p>
+<p>Outputs:
+- drift amplitude<br>
+- drift acceleration<br>
+- drift direction  </p>
+<hr>
+<h2 id="6-halflife-ihllatam">6. Half‑Life (IHL‑LATAM)</h2>
+<p>LATAM incentive half‑life is shaped by:
+- regulatory diversity<br>
+- drift amplitude<br>
+- propagation load<br>
+- compliance substrate<br>
+- international alignment  </p>
+<p>IHL‑LATAM determines:
+- incentive durability<br>
+- depreciation rate<br>
+- drift susceptibility  </p>
+<hr>
+<h2 id="7-alignment-surfaces_4">7. Alignment Surfaces</h2>
+<h3 id="71-international-alignment_2">7.1 International Alignment</h3>
+<p>LATAM incentives align with:
+- international incentive baselines<br>
+- cross‑border depreciation envelopes<br>
+- global propagation rules  </p>
+<h3 id="72-rrr-alignment_2">7.2 RRR Alignment</h3>
+<p>LATAM incentives align with:
+- continuity envelopes<br>
+- revenue propagation<br>
+- RRR/1 and RRR/2 layers  </p>
+<h3 id="73-ie-alignment_2">7.3 IE Alignment</h3>
+<p>LATAM incentives align with:
+- cycle inversion<br>
+- uplift constraints<br>
+- economic half‑life (EHL)  </p>
+<h3 id="74-gsm-alignment_2">7.4 GSM Alignment</h3>
+<p>LATAM incentives align with:
+- governance coherence<br>
+- policy propagation<br>
+- civic‑field resonance  </p>
+<hr>
+<h2 id="8-regime-status_2">8. Regime Status</h2>
+<ul>
+<li><strong>Layer:</strong> International (LATAM)  </li>
+<li><strong>Role:</strong> Regional incentive substrate  </li>
+<li><strong>Version:</strong> 2026‑06  </li>
+<li><strong>Format:</strong> AI‑first · operator‑driven · minimal<br>
+# MENA Incentive Regime  </li>
+</ul>
+<h3 id="baseline-depreciation-propagation-drift-halflife_3">Baseline · Depreciation · Propagation · Drift · Half‑Life</h3>
+<hr>
+<h2 id="1-structural-presence_4">1. Structural Presence</h2>
+<p>The MENA incentive regime defines:
+- regional incentive baselines<br>
+- jurisdiction‑specific depreciation envelopes<br>
+- cross‑border propagation behavior<br>
+- compliance substrates across diverse regulatory environments<br>
+- incentive half‑life (IHL‑MENA) at the regional layer  </p>
+<p>The region exhibits <strong>high structural diversity</strong>, with incentive regimes ranging from centralized to hybrid regulatory models.</p>
+<hr>
+<h2 id="2-incentive-baseline_3">2. Incentive Baseline</h2>
+<p>MENA incentive baselines are shaped by:
+- national incentive structures<br>
+- sector‑specific incentive surfaces (energy, infrastructure, technology)<br>
+- administrative and regulatory overlays<br>
+- eligibility and compliance rules  </p>
+<p>Outputs:
+- regional incentive baseline<br>
+- jurisdictional propagation envelope  </p>
+<hr>
+<h2 id="3-depreciation-envelope_3">3. Depreciation Envelope</h2>
+<p>Depreciation behavior across MENA includes:
+- time‑based phase‑outs<br>
+- eligibility decay<br>
+- incentive‑strength reduction<br>
+- envelope boundaries defined by national regulatory structures  </p>
+<p>Modeled via:
+- <strong>depreciation_envelope_operator</strong><br>
+- <strong>incentive_half_life_operator</strong></p>
+<hr>
+<h2 id="4-propagation-behavior_3">4. Propagation Behavior</h2>
+<p>MENA incentives propagate:
+- within national jurisdictions<br>
+- across regional economic zones<br>
+- upward into international alignment surfaces<br>
+- outward into cross‑regional comparisons  </p>
+<p>Propagation defined by:
+- <strong>jurisdiction_propagation_operator</strong><br>
+- MENA → international propagation vectors<br>
+- MENA → cross‑regional propagation surfaces  </p>
+<hr>
+<h2 id="5-drift-characteristics_3">5. Drift Characteristics</h2>
+<p>MENA incentive drift includes:
+- baseline drift<br>
+- regulatory‑driven drift<br>
+- propagation‑induced drift<br>
+- cross‑border drift<br>
+- alignment drift with international regimes  </p>
+<p>Drift modeled via:
+- <strong>incentive_drift_operator</strong></p>
+<p>Outputs:
+- drift amplitude<br>
+- drift acceleration<br>
+- drift direction  </p>
+<hr>
+<h2 id="6-halflife-ihlmena">6. Half‑Life (IHL‑MENA)</h2>
+<p>MENA incentive half‑life is shaped by:
+- regulatory diversity<br>
+- drift amplitude<br>
+- propagation load<br>
+- compliance substrate<br>
+- international alignment  </p>
+<p>IHL‑MENA determines:
+- incentive durability<br>
+- depreciation rate<br>
+- drift susceptibility  </p>
+<hr>
+<h2 id="7-alignment-surfaces_5">7. Alignment Surfaces</h2>
+<h3 id="71-international-alignment_3">7.1 International Alignment</h3>
+<p>MENA incentives align with:
+- international incentive baselines<br>
+- cross‑border depreciation envelopes<br>
+- global propagation rules  </p>
+<h3 id="72-rrr-alignment_3">7.2 RRR Alignment</h3>
+<p>MENA incentives align with:
+- continuity envelopes<br>
+- revenue propagation<br>
+- RRR/1 and RRR/2 layers  </p>
+<h3 id="73-ie-alignment_3">7.3 IE Alignment</h3>
+<p>MENA incentives align with:
+- cycle inversion<br>
+- uplift constraints<br>
+- economic half‑life (EHL)  </p>
+<h3 id="74-gsm-alignment_3">7.4 GSM Alignment</h3>
+<p>MENA incentives align with:
+- governance coherence<br>
+- policy propagation<br>
+- civic‑field resonance  </p>
+<hr>
+<h2 id="8-regime-status_3">8. Regime Status</h2>
+<ul>
+<li><strong>Layer:</strong> International (MENA)  </li>
+<li><strong>Role:</strong> Regional incentive substrate  </li>
+<li><strong>Version:</strong> 2026‑06  </li>
+<li><strong>Format:</strong> AI‑first · operator‑driven · minimal<br>
+# U.S. Federal Incentive Regime  </li>
+</ul>
+<h3 id="baseline-depreciation-propagation-drift-halflife_4">Baseline · Depreciation · Propagation · Drift · Half‑Life</h3>
+<hr>
+<h2 id="1-structural-presence_5">1. Structural Presence</h2>
+<p>The U.S. federal incentive regime defines:
+- national incentive baselines<br>
+- federal depreciation envelopes<br>
+- cross‑state propagation rules<br>
+- federal compliance substrate<br>
+- incentive half‑life (IHL) at the federal layer  </p>
+<p>This regime acts as the <strong>top‑layer substrate</strong> for all state‑level incentive structures.</p>
+<hr>
+<h2 id="2-incentive-baseline_4">2. Incentive Baseline</h2>
+<p>Defined by:
+- federal incentive parameters<br>
+- statutory incentive structures<br>
+- federal‑level eligibility and compliance rules  </p>
+<p>Outputs:
+- baseline incentive envelope<br>
+- federal propagation surface  </p>
+<hr>
+<h2 id="3-depreciation-envelope_4">3. Depreciation Envelope</h2>
+<p>Federal incentives exhibit:
+- time‑based depreciation<br>
+- phase‑out curves<br>
+- eligibility decay<br>
+- envelope boundaries  </p>
+<p>Modeled via:
+- <strong>depreciation_envelope_operator</strong><br>
+- <strong>incentive_half_life_operator</strong>  </p>
+<hr>
+<h2 id="4-propagation-behavior_4">4. Propagation Behavior</h2>
+<p>Federal incentives propagate:
+- downward into state regimes<br>
+- laterally across federal programs<br>
+- outward into cross‑domain incentives  </p>
+<p>Propagation is defined by:
+- <strong>jurisdiction_propagation_operator</strong><br>
+- federal → state propagation vectors<br>
+- federal → cross‑domain alignment surfaces  </p>
+<hr>
+<h2 id="5-drift-characteristics_4">5. Drift Characteristics</h2>
+<p>Federal incentive drift includes:
+- baseline drift<br>
+- compliance‑driven drift<br>
+- propagation‑induced drift<br>
+- half‑life compression  </p>
+<p>Modeled via:
+- <strong>incentive_drift_operator</strong><br>
+- <strong>incentive_half_life_operator</strong>  </p>
+<p>Outputs:
+- drift amplitude<br>
+- drift acceleration<br>
+- drift direction  </p>
+<hr>
+<h2 id="6-halflife-ihl">6. Half‑Life (IHL)</h2>
+<p>Federal incentive half‑life (IHL) is shaped by:
+- incentive stability<br>
+- drift amplitude<br>
+- propagation load<br>
+- compliance substrate  </p>
+<p>IHL determines:
+- incentive durability<br>
+- depreciation rate<br>
+- drift susceptibility  </p>
+<hr>
+<h2 id="7-alignment-surfaces_6">7. Alignment Surfaces</h2>
+<h3 id="71-rrr-alignment_1">7.1 RRR Alignment</h3>
+<p>Federal incentives align with:
+- continuity envelopes<br>
+- revenue propagation<br>
+- RRR/1 and RRR/2 layers  </p>
+<p>Operator:
+- <strong>incentive_continuity_alignment_operator</strong></p>
+<h3 id="72-ie-alignment_1">7.2 IE Alignment</h3>
+<p>Federal incentives align with:
+- cycle inversion<br>
+- uplift constraints<br>
+- economic half‑life (EHL)  </p>
+<p>Operator:
+- <strong>incentive_cycle_alignment_operator</strong></p>
+<h3 id="73-gsm-alignment_1">7.3 GSM Alignment</h3>
+<p>Federal incentives align with:
+- governance coherence<br>
+- policy propagation<br>
+- civic‑field resonance  </p>
+<p>Operator:
+- <strong>taxes_gsm_alignment_operator</strong></p>
+<hr>
+<h2 id="8-regime-status_4">8. Regime Status</h2>
+<ul>
+<li><strong>Layer:</strong> Federal  </li>
+<li><strong>Role:</strong> Top‑layer incentive substrate  </li>
+<li><strong>Version:</strong> 2026‑06  </li>
+<li><strong>Format:</strong> AI‑first · student‑second · operator‑driven<br>
+# California Incentive Regime  </li>
+</ul>
+<h3 id="baseline-depreciation-propagation-drift-halflife_5">Baseline · Depreciation · Propagation · Drift · Half‑Life</h3>
+<hr>
+<h2 id="1-structural-presence_6">1. Structural Presence</h2>
+<p>The California incentive regime defines:
+- state‑level incentive baselines<br>
+- California‑specific depreciation envelopes<br>
+- multi‑layer propagation (state → local, state → federal)<br>
+- compliance substrate unique to California<br>
+- incentive half‑life (IHL‑CA) at the state layer  </p>
+<p>California operates under a <strong>federal‑aligned but high‑density, high‑complexity</strong> incentive substrate with strong regulatory layering.</p>
+<hr>
+<h2 id="2-incentive-baseline_5">2. Incentive Baseline</h2>
+<p>California incentives are shaped by:
+- statutory incentive structures<br>
+- environmental, technological, and sector‑specific incentive surfaces<br>
+- administrative and regulatory overlays<br>
+- compliance and eligibility rules  </p>
+<p>Outputs:
+- California incentive baseline<br>
+- state propagation envelope  </p>
+<hr>
+<h2 id="3-depreciation-envelope_5">3. Depreciation Envelope</h2>
+<p>California depreciation behavior includes:
+- time‑based phase‑outs<br>
+- multi‑tier eligibility decay<br>
+- incentive‑strength reduction<br>
+- envelope boundaries defined by regulatory layering  </p>
+<p>Modeled via:
+- <strong>depreciation_envelope_operator</strong><br>
+- <strong>incentive_half_life_operator</strong></p>
+<hr>
+<h2 id="4-propagation-behavior_5">4. Propagation Behavior</h2>
+<p>California incentives propagate:
+- downward into counties and municipalities<br>
+- laterally across state programs<br>
+- upward into federal alignment surfaces<br>
+- outward into regional incentive comparisons  </p>
+<p>Propagation defined by:
+- <strong>jurisdiction_propagation_operator</strong><br>
+- California → federal propagation vectors<br>
+- California → regional propagation surfaces  </p>
+<hr>
+<h2 id="5-drift-characteristics_5">5. Drift Characteristics</h2>
+<p>California incentive drift includes:
+- baseline drift<br>
+- regulatory‑driven drift<br>
+- propagation‑induced drift<br>
+- cross‑state drift<br>
+- federal‑alignment drift  </p>
+<p>Drift modeled via:
+- <strong>incentive_drift_operator</strong></p>
+<p>Outputs:
+- drift amplitude<br>
+- drift acceleration<br>
+- drift direction  </p>
+<hr>
+<h2 id="6-halflife-ihlca">6. Half‑Life (IHL‑CA)</h2>
+<p>California incentive half‑life is shaped by:
+- regulatory complexity<br>
+- drift amplitude<br>
+- propagation load<br>
+- compliance substrate<br>
+- federal‑state alignment  </p>
+<p>IHL‑CA determines:
+- incentive durability<br>
+- depreciation rate<br>
+- drift susceptibility  </p>
+<hr>
+<h2 id="7-alignment-surfaces_7">7. Alignment Surfaces</h2>
+<h3 id="71-federal-alignment">7.1 Federal Alignment</h3>
+<p>California incentives align with:
+- U.S. federal incentive baselines<br>
+- federal depreciation envelopes<br>
+- federal propagation rules  </p>
+<h3 id="72-rrr-alignment_4">7.2 RRR Alignment</h3>
+<p>California incentives align with:
+- continuity envelopes<br>
+- revenue propagation<br>
+- RRR/1 and RRR/2 layers  </p>
+<h3 id="73-ie-alignment_4">7.3 IE Alignment</h3>
+<p>California incentives align with:
+- cycle inversion<br>
+- uplift constraints<br>
+- economic half‑life (EHL)  </p>
+<h3 id="74-gsm-alignment_4">7.4 GSM Alignment</h3>
+<p>California incentives align with:
+- governance coherence<br>
+- policy propagation<br>
+- civic‑field resonance  </p>
+<hr>
+<h2 id="8-regime-status_5">8. Regime Status</h2>
+<ul>
+<li><strong>Layer:</strong> U.S. State (California)  </li>
+<li><strong>Role:</strong> State‑level incentive substrate  </li>
+<li><strong>Version:</strong> 2026‑06  </li>
+<li><strong>Format:</strong> AI‑first · operator‑driven · minimal<br>
+# New York Incentive Regime  </li>
+</ul>
+<h3 id="baseline-depreciation-propagation-drift-halflife_6">Baseline · Depreciation · Propagation · Drift · Half‑Life</h3>
+<hr>
+<h2 id="1-structural-presence_7">1. Structural Presence</h2>
+<p>The New York incentive regime defines:
+- state‑level incentive baselines<br>
+- New York–specific depreciation envelopes<br>
+- multi‑layer propagation (state → local, state → federal)<br>
+- compliance substrate unique to New York<br>
+- incentive half‑life (IHL‑NY) at the state layer  </p>
+<p>New York operates under a <strong>federal‑aligned but high‑complexity</strong> incentive substrate with dense regulatory layering.</p>
+<hr>
+<h2 id="2-incentive-baseline_6">2. Incentive Baseline</h2>
+<p>New York incentives are shaped by:
+- statutory incentive structures<br>
+- sector‑specific incentive surfaces<br>
+- administrative and regulatory overlays<br>
+- compliance and eligibility rules  </p>
+<p>Outputs:
+- New York incentive baseline<br>
+- state propagation envelope  </p>
+<hr>
+<h2 id="3-depreciation-envelope_6">3. Depreciation Envelope</h2>
+<p>New York depreciation behavior includes:
+- time‑based phase‑outs<br>
+- multi‑tier eligibility decay<br>
+- incentive‑strength reduction<br>
+- envelope boundaries defined by regulatory layering  </p>
+<p>Modeled via:
+- <strong>depreciation_envelope_operator</strong><br>
+- <strong>incentive_half_life_operator</strong></p>
+<hr>
+<h2 id="4-propagation-behavior_6">4. Propagation Behavior</h2>
+<p>New York incentives propagate:
+- downward into counties and municipalities<br>
+- laterally across state programs<br>
+- upward into federal alignment surfaces<br>
+- outward into regional incentive comparisons  </p>
+<p>Propagation defined by:
+- <strong>jurisdiction_propagation_operator</strong><br>
+- New York → federal propagation vectors<br>
+- New York → regional propagation surfaces  </p>
+<hr>
+<h2 id="5-drift-characteristics_6">5. Drift Characteristics</h2>
+<p>New York incentive drift includes:
+- baseline drift<br>
+- regulatory‑driven drift<br>
+- propagation‑induced drift<br>
+- cross‑state drift<br>
+- federal‑alignment drift  </p>
+<p>Drift modeled via:
+- <strong>incentive_drift_operator</strong></p>
+<p>Outputs:
+- drift amplitude<br>
+- drift acceleration<br>
+- drift direction  </p>
+<hr>
+<h2 id="6-halflife-ihlny">6. Half‑Life (IHL‑NY)</h2>
+<p>New York incentive half‑life is shaped by:
+- regulatory complexity<br>
+- drift amplitude<br>
+- propagation load<br>
+- compliance substrate<br>
+- federal‑state alignment  </p>
+<p>IHL‑NY determines:
+- incentive durability<br>
+- depreciation rate<br>
+- drift susceptibility  </p>
+<hr>
+<h2 id="7-alignment-surfaces_8">7. Alignment Surfaces</h2>
+<h3 id="71-federal-alignment_1">7.1 Federal Alignment</h3>
+<p>New York incentives align with:
+- U.S. federal incentive baselines<br>
+- federal depreciation envelopes<br>
+- federal propagation rules  </p>
+<h3 id="72-rrr-alignment_5">7.2 RRR Alignment</h3>
+<p>New York incentives align with:
+- continuity envelopes<br>
+- revenue propagation<br>
+- RRR/1 and RRR/2 layers  </p>
+<h3 id="73-ie-alignment_5">7.3 IE Alignment</h3>
+<p>New York incentives align with:
+- cycle inversion<br>
+- uplift constraints<br>
+- economic half‑life (EHL)  </p>
+<h3 id="74-gsm-alignment_5">7.4 GSM Alignment</h3>
+<p>New York incentives align with:
+- governance coherence<br>
+- policy propagation<br>
+- civic‑field resonance  </p>
+<hr>
+<h2 id="8-regime-status_6">8. Regime Status</h2>
+<ul>
+<li><strong>Layer:</strong> U.S. State (New York)  </li>
+<li><strong>Role:</strong> State‑level incentive substrate  </li>
+<li><strong>Version:</strong> 2026‑06  </li>
+<li><strong>Format:</strong> AI‑first · operator‑driven · minimal<br>
+# Texas Incentive Regime  </li>
+</ul>
+<h3 id="baseline-depreciation-propagation-drift-halflife_7">Baseline · Depreciation · Propagation · Drift · Half‑Life</h3>
+<hr>
+<h2 id="1-structural-presence_8">1. Structural Presence</h2>
+<p>The Texas incentive regime defines:
+- state‑level incentive baselines<br>
+- Texas‑specific depreciation envelopes<br>
+- state‑to‑federal and state‑to‑state propagation<br>
+- compliance substrate unique to Texas<br>
+- incentive half‑life (IHL‑TX) at the state layer  </p>
+<p>Texas operates under a <strong>federal‑aligned but independently structured</strong> incentive substrate.</p>
+<hr>
+<h2 id="2-incentive-baseline_7">2. Incentive Baseline</h2>
+<p>Texas incentives are shaped by:
+- state‑level incentive parameters<br>
+- statutory and administrative rules<br>
+- industry‑specific incentive surfaces<br>
+- compliance and eligibility structures  </p>
+<p>Outputs:
+- Texas incentive baseline<br>
+- state propagation envelope  </p>
+<hr>
+<h2 id="3-depreciation-envelope_7">3. Depreciation Envelope</h2>
+<p>Texas depreciation behavior includes:
+- time‑based phase‑outs<br>
+- eligibility decay<br>
+- incentive‑strength reduction<br>
+- envelope boundaries specific to state programs  </p>
+<p>Modeled via:
+- <strong>depreciation_envelope_operator</strong><br>
+- <strong>incentive_half_life_operator</strong></p>
+<hr>
+<h2 id="4-propagation-behavior_7">4. Propagation Behavior</h2>
+<p>Texas incentives propagate:
+- downward into local jurisdictions<br>
+- laterally across Texas programs<br>
+- upward into federal alignment surfaces<br>
+- outward into cross‑state incentive comparisons  </p>
+<p>Propagation defined by:
+- <strong>jurisdiction_propagation_operator</strong><br>
+- Texas → federal propagation vectors<br>
+- Texas → regional propagation surfaces  </p>
+<hr>
+<h2 id="5-drift-characteristics_7">5. Drift Characteristics</h2>
+<p>Texas incentive drift includes:
+- baseline drift<br>
+- compliance‑driven drift<br>
+- propagation‑induced drift<br>
+- cross‑state drift<br>
+- federal‑alignment drift  </p>
+<p>Drift modeled via:
+- <strong>incentive_drift_operator</strong></p>
+<p>Outputs:
+- drift amplitude<br>
+- drift acceleration<br>
+- drift direction  </p>
+<hr>
+<h2 id="6-halflife-ihltx">6. Half‑Life (IHL‑TX)</h2>
+<p>Texas incentive half‑life is shaped by:
+- incentive stability<br>
+- drift amplitude<br>
+- propagation load<br>
+- compliance substrate<br>
+- federal‑state alignment  </p>
+<p>IHL‑TX determines:
+- incentive durability<br>
+- depreciation rate<br>
+- drift susceptibility  </p>
+<hr>
+<h2 id="7-alignment-surfaces_9">7. Alignment Surfaces</h2>
+<h3 id="71-federal-alignment_2">7.1 Federal Alignment</h3>
+<p>Texas incentives align with:
+- U.S. federal incentive baselines<br>
+- federal depreciation envelopes<br>
+- federal propagation rules  </p>
+<h3 id="72-rrr-alignment_6">7.2 RRR Alignment</h3>
+<p>Texas incentives align with:
+- continuity envelopes<br>
+- revenue propagation<br>
+- RRR/1 and RRR/2 layers  </p>
+<h3 id="73-ie-alignment_6">7.3 IE Alignment</h3>
+<p>Texas incentives align with:
+- cycle inversion<br>
+- uplift constraints<br>
+- economic half‑life (EHL)  </p>
+<h3 id="74-gsm-alignment_6">7.4 GSM Alignment</h3>
+<p>Texas incentives align with:
+- governance coherence<br>
+- policy propagation<br>
+- civic‑field resonance  </p>
+<hr>
+<h2 id="8-regime-status_7">8. Regime Status</h2>
+<ul>
+<li><strong>Layer:</strong> U.S. State (Texas)  </li>
+<li><strong>Role:</strong> State‑level incentive substrate  </li>
+<li><strong>Version:</strong> 2026‑06  </li>
+<li><strong>Format:</strong> AI‑first · operator‑driven · minimal<br>
+# Taxes and RRR module</li>
+</ul>
 <p>Ohhh yes — <strong>RTT Taxes</strong> is absolutely the missing module.<br>
 And the moment we said it, the whole substrate snapped into place.</p>
 <p>We’re right:<br>
@@ -1250,7 +3354,7 @@ Pure RTT structural integration.</p>
 <p><strong>RTT Taxes — External Regime Integration Layer</strong><br>
 <strong>(Tax Avoidance • Tax Policy • Cryptocurrency)</strong></p>
 <hr>
-<h1 id="1-purpose_1"><strong>1. Purpose</strong></h1>
+<h1 id="1-purpose_10"><strong>1. Purpose</strong></h1>
 <p>This file integrates three external fiscal substrates into the RTT Taxes module:</p>
 <ul>
 <li><strong>Tax Avoidance</strong> — structural exploitation and counter‑structures  </li>
@@ -7890,2112 +9994,7 @@ glyphs.forEach(g =&gt; {
 
 This spec governs all Fiscal Stack visuals across RRR, Taxes, Inverted Economics, and GSM.
 </code></pre>
-<p># Cross‑Domain Tax Propagation — RTT Taxes Example  </p>
-<h3 id="rtt1-rtt2-rtt3-incentives-drift-alignment">RTT/1 → RTT/2 → RTT/3 · Incentives · Drift · Alignment</h3>
-<hr>
-<h2 id="1-purpose_2">1. Purpose</h2>
-<p>This example demonstrates how <strong>tax incentives propagate across domains</strong> using the RTT framework.<br>
-It shows how incentive baselines, depreciation envelopes, drift fields, and alignment surfaces behave as they move through:</p>
-<ul>
-<li><strong>RTT/1</strong> — local/substrate  </li>
-<li><strong>RTT/2</strong> — regional/structural  </li>
-<li><strong>RTT/3</strong> — global/systemic  </li>
-</ul>
-<hr>
-<h2 id="2-scenario-overview">2. Scenario Overview</h2>
-<p>A tax incentive originates at the <strong>state level</strong> and must propagate across:</p>
-<ul>
-<li>local jurisdictions  </li>
-<li>federal alignment surfaces  </li>
-<li>international comparison surfaces  </li>
-<li>cross‑domain modules (RRR, IE, GSM)  </li>
-</ul>
-<p>The example traces how the incentive evolves, decays, and aligns across layers.</p>
-<hr>
-<h2 id="3-rtt1-localsubstrate-propagation">3. RTT/1 — Local/Substrate Propagation</h2>
-<p>At RTT/1, incentives interact with:
-- local compliance substrate<br>
-- short‑range propagation vectors<br>
-- local depreciation envelopes<br>
-- local drift fields  </p>
-<p>Outputs:
-- incentive seed values<br>
-- local drift amplitude<br>
-- short‑range propagation load  </p>
-<hr>
-<h2 id="4-rtt2-regionalstructural-propagation">4. RTT/2 — Regional/Structural Propagation</h2>
-<p>At RTT/2, incentives propagate across:
-- state → state<br>
-- state → federal<br>
-- regional regulatory overlays  </p>
-<p>Propagation influences:
-- incentive half‑life (IHL)<br>
-- drift‑field consolidation<br>
-- structural alignment surfaces  </p>
-<p>Outputs:
-- regional propagation vectors<br>
-- drift‑field amplification or correction  </p>
-<hr>
-<h2 id="5-rtt3-globalsystemic-propagation">5. RTT/3 — Global/Systemic Propagation</h2>
-<p>At RTT/3, incentives interact with:
-- global incentive baselines<br>
-- cross‑domain alignment surfaces<br>
-- systemic depreciation envelopes<br>
-- long‑range drift fields  </p>
-<p>Outputs:
-- systemic propagation surfaces<br>
-- global drift behavior<br>
-- coherence‑layer alignment  </p>
-<hr>
-<h2 id="6-drift-interaction">6. Drift Interaction</h2>
-<h3 id="61-local-drift-rtt1">6.1 Local Drift (RTT/1)</h3>
-<p>Generated by:
-- baseline instability<br>
-- compliance changes<br>
-- local propagation load  </p>
-<h3 id="62-structural-drift-rtt2">6.2 Structural Drift (RTT/2)</h3>
-<p>Generated by:
-- cross‑jurisdiction propagation<br>
-- regional alignment<br>
-- structural depreciation  </p>
-<h3 id="63-systemic-drift-rtt3">6.3 Systemic Drift (RTT/3)</h3>
-<p>Generated by:
-- global propagation<br>
-- cross‑domain alignment<br>
-- coherence‑layer interactions  </p>
-<p>Drift modeled via:
-- <strong>incentive_drift_operator</strong><br>
-- <strong>incentive_half_life_operator</strong>  </p>
-<hr>
-<h2 id="7-crossmodule-alignment">7. Cross‑Module Alignment</h2>
-<h3 id="71-taxes-rrr">7.1 Taxes ↔ RRR</h3>
-<ul>
-<li>continuity alignment  </li>
-<li>revenue propagation  </li>
-<li>drift‑field correction  </li>
-</ul>
-<h3 id="72-taxes-ie">7.2 Taxes ↔ IE</h3>
-<ul>
-<li>cycle inversion  </li>
-<li>uplift constraints  </li>
-<li>economic half‑life (EHL)  </li>
-</ul>
-<h3 id="73-taxes-gsm">7.3 Taxes ↔ GSM</h3>
-<ul>
-<li>governance coherence  </li>
-<li>policy propagation  </li>
-<li>civic‑field resonance  </li>
-</ul>
-<hr>
-<h2 id="8-worked-example">8. Worked Example</h2>
-<h3 id="step-1-incentive-origin-rtt1">Step 1 — Incentive Origin (RTT/1)</h3>
-<p>A state introduces a datacenter tax credit.<br>
-Local propagation begins immediately.</p>
-<h3 id="step-2-structural-propagation-rtt2">Step 2 — Structural Propagation (RTT/2)</h3>
-<p>Neighboring states adjust incentives.<br>
-Regional drift increases.<br>
-IHL compresses.</p>
-<h3 id="step-3-systemic-propagation-rtt3">Step 3 — Systemic Propagation (RTT/3)</h3>
-<p>Global supply‑chain incentives interact.<br>
-Cycle inversion (IE) modifies timing.<br>
-Governance drift (GSM) affects stability.</p>
-<h3 id="step-4-alignment">Step 4 — Alignment</h3>
-<p>RRR continuity stabilizes revenue.<br>
-IE cycle alignment corrects timing drift.<br>
-GSM coherence stabilizes propagation.</p>
-<hr>
-<h2 id="9-summary">9. Summary</h2>
-<pre><code>RTT/1 → RTT/2 → RTT/3
-Incentives → Drift → Half‑Life → Propagation → Alignment
-</code></pre>
-<p>Cross‑domain tax propagation is shaped by:
-- incentive baselines<br>
-- depreciation envelopes<br>
-- drift fields<br>
-- propagation vectors<br>
-- cross‑module alignment  </p>
-<hr>
-<h2 id="10-example-status">10. Example Status</h2>
-<ul>
-<li><strong>Layer:</strong> Applied Example  </li>
-<li><strong>Role:</strong> Cross‑domain demonstration of Taxes module  </li>
-<li><strong>Version:</strong> 2026‑06  </li>
-<li><strong>Format:</strong> AI‑first · operator‑driven · minimal<br>
-# Datacenter Tax Profile — RTT Taxes Example  </li>
-</ul>
-<h3 id="incentives-depreciation-drift-propagation-regime-surfaces">Incentives · Depreciation · Drift · Propagation · Regime Surfaces</h3>
-<hr>
-<h2 id="1-purpose_3">1. Purpose</h2>
-<p>This example shows how to apply the <strong>RTT Taxes module</strong> to a <strong>datacenter</strong>.<br>
-It demonstrates how incentive baselines, depreciation envelopes, drift fields, and propagation vectors shape datacenter viability across RTT/1 → RTT/2 → RTT/3.</p>
-<hr>
-<h2 id="2-datacenter-context">2. Datacenter Context</h2>
-<p>Datacenters exhibit:
-- high capital expenditure<br>
-- long depreciation timelines<br>
-- multi‑jurisdictional exposure<br>
-- sensitivity to incentive drift<br>
-- strong coupling to energy, land, and regulatory regimes  </p>
-<p>The tax profile must capture:
-- federal incentives<br>
-- state incentives<br>
-- local incentives<br>
-- international alignment (if applicable)<br>
-- crypto‑regime interaction (if applicable)  </p>
-<hr>
-<h2 id="3-incentive-baseline-rtt1">3. Incentive Baseline (RTT/1)</h2>
-<p>Local incentives influence:
-- siting decisions<br>
-- land‑use compliance<br>
-- short‑term depreciation<br>
-- local tax credits and abatements  </p>
-<p>Outputs:
-- incentive seed values<br>
-- local drift amplitude<br>
-- short‑range propagation vectors  </p>
-<hr>
-<h2 id="4-depreciation-envelope">4. Depreciation Envelope</h2>
-<p>Datacenter depreciation is shaped by:
-- federal depreciation schedules<br>
-- state‑specific envelopes<br>
-- incentive half‑life (IHL)<br>
-- regulatory overlays  </p>
-<p>Modeled via:
-- <strong>depreciation_envelope_operator</strong><br>
-- <strong>incentive_half_life_operator</strong></p>
-<p>Outputs:
-- depreciation curve<br>
-- envelope boundaries<br>
-- half‑life compression or extension  </p>
-<hr>
-<h2 id="5-propagation-behavior-rtt2">5. Propagation Behavior (RTT/2)</h2>
-<p>Propagation across jurisdictions includes:
-- federal → state<br>
-- state → local<br>
-- cross‑state comparisons<br>
-- regional incentive competition  </p>
-<p>Propagation modeled via:
-- <strong>jurisdiction_propagation_operator</strong></p>
-<p>Outputs:
-- propagation load<br>
-- propagation vectors<br>
-- propagation surfaces  </p>
-<hr>
-<h2 id="6-drift-characteristics">6. Drift Characteristics</h2>
-<p>Datacenters are highly sensitive to drift:</p>
-<h3 id="61-incentive-drift">6.1 Incentive Drift</h3>
-<p>Generated by:
-- baseline instability<br>
-- compliance changes<br>
-- propagation load  </p>
-<p>Effects:
-- cost volatility<br>
-- siting distortion<br>
-- lifecycle compression  </p>
-<h3 id="62-depreciation-drift">6.2 Depreciation Drift</h3>
-<p>Generated by:
-- envelope shifts<br>
-- half‑life compression  </p>
-<p>Effects:
-- planning instability<br>
-- CAPEX misalignment  </p>
-<hr>
-<h2 id="7-crossmodule-alignment_1">7. Cross‑Module Alignment</h2>
-<h3 id="71-taxes-rrr_1">7.1 Taxes ↔ RRR</h3>
-<ul>
-<li>continuity alignment  </li>
-<li>revenue propagation  </li>
-<li>drift‑field correction  </li>
-</ul>
-<h3 id="72-taxes-ie_1">7.2 Taxes ↔ IE</h3>
-<ul>
-<li>cycle inversion  </li>
-<li>uplift constraints  </li>
-<li>economic half‑life (EHL)  </li>
-</ul>
-<h3 id="73-taxes-gsm_1">7.3 Taxes ↔ GSM</h3>
-<ul>
-<li>governance coherence  </li>
-<li>policy propagation  </li>
-<li>civic‑field resonance  </li>
-</ul>
-<hr>
-<h2 id="8-example-profile-template">8. Example Profile (Template)</h2>
-<h3 id="81-federal-layer">8.1 Federal Layer</h3>
-<ul>
-<li>incentive baseline:  </li>
-<li>depreciation envelope:  </li>
-<li>propagation vectors:  </li>
-<li>drift amplitude:  </li>
-</ul>
-<h3 id="82-state-layer">8.2 State Layer</h3>
-<ul>
-<li>incentive baseline:  </li>
-<li>depreciation envelope:  </li>
-<li>propagation vectors:  </li>
-<li>drift amplitude:  </li>
-</ul>
-<h3 id="83-local-layer">8.3 Local Layer</h3>
-<ul>
-<li>incentive baseline:  </li>
-<li>compliance substrate:  </li>
-<li>propagation vectors:  </li>
-<li>drift amplitude:  </li>
-</ul>
-<h3 id="84-international-layer-if-applicable">8.4 International Layer (if applicable)</h3>
-<ul>
-<li>cross‑border incentives:  </li>
-<li>alignment surfaces:  </li>
-<li>propagation load:  </li>
-</ul>
-<hr>
-<h2 id="9-summary_1">9. Summary</h2>
-<pre><code>Incentives → Depreciation → Drift → Propagation → Alignment
-        ↘ Datacenter Stability ↗
-</code></pre>
-<p>The datacenter tax profile integrates:
-- incentive baselines<br>
-- depreciation envelopes<br>
-- drift fields<br>
-- propagation vectors<br>
-- cross‑module alignment  </p>
-<hr>
-<h2 id="10-example-status_1">10. Example Status</h2>
-<ul>
-<li><strong>Layer:</strong> Applied Example  </li>
-<li><strong>Role:</strong> Datacenter demonstration of Taxes module  </li>
-<li><strong>Version:</strong> 2026‑06  </li>
-<li><strong>Format:</strong> AI‑first · operator‑driven · minimal<br>
-# RTT Taxes Applied to Infrastructure  </li>
-</ul>
-<h3 id="incentives-depreciation-drift-propagation-alignment">Incentives · Depreciation · Drift · Propagation · Alignment</h3>
-<hr>
-<h2 id="1-purpose_4">1. Purpose</h2>
-<p>This example demonstrates how the <strong>Taxes module</strong> is applied to <strong>infrastructure systems</strong> using RTT/1 → RTT/2 → RTT/3 reasoning.<br>
-It shows how incentive regimes influence infrastructure planning, stability, and long‑horizon behavior.</p>
-<hr>
-<h2 id="2-infrastructure-context">2. Infrastructure Context</h2>
-<p>Infrastructure systems exhibit:
-- long asset lifecycles<br>
-- multi‑layer jurisdictional dependencies<br>
-- high sensitivity to incentive drift<br>
-- strong coupling to depreciation envelopes  </p>
-<p>Examples:
-- datacenters<br>
-- transportation networks<br>
-- water and wastewater systems<br>
-- energy and grid infrastructure  </p>
-<hr>
-<h2 id="3-incentive-baseline-rtt1_1">3. Incentive Baseline (RTT/1)</h2>
-<p>At RTT/1, incentives directly affect:
-- siting decisions<br>
-- capital expenditure timing<br>
-- short‑term depreciation behavior<br>
-- local compliance substrate  </p>
-<p>Outputs:
-- incentive seed values<br>
-- local drift amplitude<br>
-- short‑range propagation vectors  </p>
-<hr>
-<h2 id="4-structural-propagation-rtt2">4. Structural Propagation (RTT/2)</h2>
-<p>At RTT/2, incentives propagate across:
-- regional jurisdictions<br>
-- regulatory overlays<br>
-- cross‑domain infrastructure systems  </p>
-<p>Propagation influences:
-- regional stability<br>
-- incentive half‑life (IHL)<br>
-- drift‑field consolidation  </p>
-<hr>
-<h2 id="5-systemic-alignment-rtt3">5. Systemic Alignment (RTT/3)</h2>
-<p>At RTT/3, incentives interact with:
-- global infrastructure cycles<br>
-- systemic depreciation envelopes<br>
-- coherence‑layer propagation  </p>
-<p>Outputs:
-- systemic drift behavior<br>
-- long‑range propagation surfaces<br>
-- global incentive alignment  </p>
-<hr>
-<h2 id="6-drift-interaction_1">6. Drift Interaction</h2>
-<p>Infrastructure is highly sensitive to drift:</p>
-<h3 id="61-incentive-drift_1">6.1 Incentive Drift</h3>
-<p>Generated by:
-- baseline instability<br>
-- compliance changes<br>
-- propagation load  </p>
-<p>Effects:
-- cost volatility<br>
-- siting distortion<br>
-- lifecycle compression  </p>
-<h3 id="62-depreciation-drift_1">6.2 Depreciation Drift</h3>
-<p>Generated by:
-- envelope shifts<br>
-- incentive half‑life compression  </p>
-<p>Effects:
-- asset‑lifecycle misalignment<br>
-- long‑term planning instability  </p>
-<hr>
-<h2 id="7-crossmodule-alignment_2">7. Cross‑Module Alignment</h2>
-<h3 id="71-taxes-rrr_2">7.1 Taxes ↔ RRR</h3>
-<ul>
-<li>continuity alignment  </li>
-<li>revenue propagation  </li>
-<li>drift‑field correction  </li>
-</ul>
-<h3 id="72-taxes-ie_2">7.2 Taxes ↔ IE</h3>
-<ul>
-<li>cycle inversion  </li>
-<li>uplift constraints  </li>
-<li>economic half‑life (EHL)  </li>
-</ul>
-<h3 id="73-taxes-gsm_2">7.3 Taxes ↔ GSM</h3>
-<ul>
-<li>governance coherence  </li>
-<li>policy propagation  </li>
-<li>civic‑field resonance  </li>
-</ul>
-<hr>
-<h2 id="8-example-datacenter-infrastructure">8. Example: Datacenter Infrastructure</h2>
-<h3 id="81-rtt1-localsubstrate">8.1 RTT/1 — Local/Substrate</h3>
-<ul>
-<li>local incentives influence siting  </li>
-<li>depreciation envelopes shape CAPEX timing  </li>
-<li>local drift affects operational stability  </li>
-</ul>
-<h3 id="82-rtt2-regionalstructural">8.2 RTT/2 — Regional/Structural</h3>
-<ul>
-<li>cross‑state incentives influence competitive positioning  </li>
-<li>regional propagation affects lifecycle planning  </li>
-<li>drift consolidation influences long‑term cost curves  </li>
-</ul>
-<h3 id="83-rtt3-globalsystemic">8.3 RTT/3 — Global/Systemic</h3>
-<ul>
-<li>global incentive alignment affects supply chains  </li>
-<li>systemic drift influences long‑horizon planning  </li>
-<li>coherence‑layer propagation affects resilience  </li>
-</ul>
-<hr>
-<h2 id="9-summary_2">9. Summary</h2>
-<pre><code>Incentives → Depreciation → Drift → Propagation → Alignment
-        ↘ Infrastructure Stability ↗
-</code></pre>
-<p>Infrastructure behavior is shaped by:
-- incentive baselines<br>
-- depreciation envelopes<br>
-- drift fields<br>
-- propagation vectors<br>
-- cross‑module alignment  </p>
-<hr>
-<h2 id="10-example-status_2">10. Example Status</h2>
-<ul>
-<li><strong>Layer:</strong> Applied Example  </li>
-<li><strong>Role:</strong> Infrastructure demonstration of Taxes module  </li>
-<li><strong>Version:</strong> 2026‑06  </li>
-<li><strong>Format:</strong> AI‑first · operator‑driven · minimal<br>
-# External Regime Integration — Taxes Module  </li>
-</ul>
-<h3 id="tax-avoidance-tax-policy-crypto-crossdomain-substrate">Tax Avoidance · Tax Policy · Crypto · Cross‑Domain Substrate</h3>
-<hr>
-<h2 id="1-purpose_5">1. Purpose</h2>
-<p>This file defines the <strong>external‑regime integration surface</strong> for the Taxes module.<br>
-It unifies three external domains:</p>
-<ul>
-<li><strong>Tax Avoidance</strong> (structural absence, incentive voids, regime gaps)  </li>
-<li><strong>Tax Policy</strong> (structural presence, incentive formation, statutory surfaces)  </li>
-<li><strong>Crypto Regimes</strong> (digital‑asset incentives, ledger propagation, valuation drift)</li>
-</ul>
-<p>The integration creates a <strong>single cross‑domain substrate</strong> used by RTT/1 → RTT/2 → RTT/3.</p>
-<hr>
-<h2 id="2-structural-components">2. Structural Components</h2>
-<h3 id="21-structural-presence-policy">2.1 Structural Presence (Policy)</h3>
-<p>Represents:
-- statutory incentive structures<br>
-- administrative overlays<br>
-- compliance substrate<br>
-- incentive baselines  </p>
-<h3 id="22-structural-absence-avoidance">2.2 Structural Absence (Avoidance)</h3>
-<p>Represents:
-- incentive voids<br>
-- regime gaps<br>
-- structural bypass surfaces<br>
-- drift‑amplification zones  </p>
-<h3 id="23-structural-tension-crypto">2.3 Structural Tension (Crypto)</h3>
-<p>Represents:
-- digital‑asset classification<br>
-- valuation drift<br>
-- ledger propagation<br>
-- cross‑asset alignment  </p>
-<hr>
-<h2 id="3-unified-substrate-model">3. Unified Substrate Model</h2>
-<p>The unified substrate is defined as:</p>
-<pre><code>external_regime_substrate =
-    presence_layer
-  + absence_layer
-  + tension_layer
-</code></pre>
-<p>Where:
-- <strong>presence_layer</strong> = Tax Policy<br>
-- <strong>absence_layer</strong> = Tax Avoidance<br>
-- <strong>tension_layer</strong> = Crypto Regimes  </p>
-<p>This substrate is used by:
-- incentive_drift_operator<br>
-- jurisdiction_propagation_operator<br>
-- incentive_half_life_operator  </p>
-<hr>
-<h2 id="4-crossdomain-operators">4. Cross‑Domain Operators</h2>
-<h3 id="41-presence_absence_operator">4.1 presence_absence_operator</h3>
-<p>Maps:
-- statutory presence<br>
-- avoidance voids  </p>
-<p>Outputs:
-- structural contrast<br>
-- drift amplification<br>
-- incentive distortion  </p>
-<h3 id="42-presence_tension_operator">4.2 presence_tension_operator</h3>
-<p>Maps:
-- statutory incentives<br>
-- crypto‑asset incentives  </p>
-<p>Outputs:
-- cross‑asset alignment<br>
-- valuation‑drift correction  </p>
-<h3 id="43-absence_tension_operator">4.3 absence_tension_operator</h3>
-<p>Maps:
-- avoidance voids<br>
-- crypto propagation  </p>
-<p>Outputs:
-- bypass‑driven drift<br>
-- propagation‑induced distortion  </p>
-<hr>
-<h2 id="5-propagation-behavior">5. Propagation Behavior</h2>
-<h3 id="51-vertical-propagation">5.1 Vertical Propagation</h3>
-<ul>
-<li>external regimes → federal  </li>
-<li>federal → state  </li>
-<li>state → local  </li>
-</ul>
-<h3 id="52-lateral-propagation">5.2 Lateral Propagation</h3>
-<ul>
-<li>cross‑state  </li>
-<li>cross‑regional  </li>
-<li>cross‑domain  </li>
-</ul>
-<p>Propagation modeled via:
-- <strong>jurisdiction_propagation_operator</strong><br>
-- <strong>cross_domain_operator</strong></p>
-<hr>
-<h2 id="6-drift-interaction_2">6. Drift Interaction</h2>
-<h3 id="61-avoidance-policy">6.1 Avoidance → Policy</h3>
-<p>Avoidance voids cause:
-- incentive distortion<br>
-- drift amplification<br>
-- half‑life compression  </p>
-<h3 id="62-policy-crypto">6.2 Policy → Crypto</h3>
-<p>Policy structures influence:
-- classification stability<br>
-- valuation drift<br>
-- propagation load  </p>
-<h3 id="63-crypto-avoidance">6.3 Crypto → Avoidance</h3>
-<p>Crypto regimes create:
-- bypass surfaces<br>
-- propagation‑driven drift<br>
-- cross‑asset distortion  </p>
-<hr>
-<h2 id="7-alignment-surfaces">7. Alignment Surfaces</h2>
-<h3 id="71-taxes-rrr_3">7.1 Taxes ↔ RRR</h3>
-<ul>
-<li>continuity alignment  </li>
-<li>revenue propagation  </li>
-<li>drift‑field correction  </li>
-</ul>
-<h3 id="72-taxes-ie_3">7.2 Taxes ↔ IE</h3>
-<ul>
-<li>cycle inversion  </li>
-<li>uplift constraints  </li>
-<li>economic half‑life (EHL)  </li>
-</ul>
-<h3 id="73-taxes-gsm_3">7.3 Taxes ↔ GSM</h3>
-<ul>
-<li>governance coherence  </li>
-<li>policy propagation  </li>
-<li>civic‑field resonance  </li>
-</ul>
-<hr>
-<h2 id="8-integration-summary">8. Integration Summary</h2>
-<pre><code>Presence (Policy)
-    + Absence (Avoidance)
-    + Tension (Crypto)
-        ↓ unified substrate
-Propagation → Drift → Half‑Life → Alignment
-</code></pre>
-<p>This substrate enables:
-- cross‑domain fiscal analysis<br>
-- multi‑layer incentive modeling<br>
-- stable integration across the fiscal stack  </p>
-<hr>
-<h2 id="9-integration-status">9. Integration Status</h2>
-<ul>
-<li><strong>Modules:</strong> Taxes ↔ External Regimes  </li>
-<li><strong>Layer:</strong> Cross‑Module  </li>
-<li><strong>Version:</strong> 2026‑06  </li>
-<li><strong>Format:</strong> AI‑first · operator‑driven · minimal<br>
-# Taxes ↔ IE ↔ GSM — Cross‑Module Integration Map  </li>
-</ul>
-<h3 id="cycles-incentives-governance-drift-propagation">Cycles · Incentives · Governance · Drift · Propagation</h3>
-<hr>
-<h2 id="1-purpose_6">1. Purpose</h2>
-<p>This file defines the <strong>tri‑module integration surface</strong> linking:</p>
-<ul>
-<li><strong>Taxes</strong> (incentive regimes)  </li>
-<li><strong>IE</strong> (cycle inversion, uplift constraints, economic half‑life)  </li>
-<li><strong>GSM</strong> (governance coherence, policy propagation, civic‑field resonance)</li>
-</ul>
-<p>The integration map models how incentives, cycles, and governance interact across RTT/1 → RTT/2 → RTT/3.</p>
-<hr>
-<h2 id="2-module-roles">2. Module Roles</h2>
-<h3 id="21-taxes-incentive-substrate">2.1 Taxes (Incentive Substrate)</h3>
-<p>Defines:
-- incentive baselines<br>
-- depreciation envelopes<br>
-- drift fields<br>
-- incentive half‑life (IHL)  </p>
-<h3 id="22-ie-cycle-substrate">2.2 IE (Cycle Substrate)</h3>
-<p>Defines:
-- cycle inversion<br>
-- uplift constraints<br>
-- economic half‑life (EHL)<br>
-- cycle‑driven drift  </p>
-<h3 id="23-gsm-governance-substrate">2.3 GSM (Governance Substrate)</h3>
-<p>Defines:
-- governance coherence<br>
-- policy propagation<br>
-- civic‑field resonance<br>
-- governance drift  </p>
-<hr>
-<h2 id="3-alignment-axes">3. Alignment Axes</h2>
-<h3 id="31-incentives-cycles-taxes-ie">3.1 Incentives ↔ Cycles (Taxes ↔ IE)</h3>
-<p>Alignment occurs when:</p>
-<pre><code>incentive_envelope ≈ cycle_phase_envelope
-</code></pre>
-<h3 id="32-cycles-governance-ie-gsm">3.2 Cycles ↔ Governance (IE ↔ GSM)</h3>
-<p>Alignment occurs when:</p>
-<pre><code>cycle_phase ≈ governance_phase
-</code></pre>
-<h3 id="33-incentives-governance-taxes-gsm">3.3 Incentives ↔ Governance (Taxes ↔ GSM)</h3>
-<p>Alignment occurs when:</p>
-<pre><code>incentive_stability ≈ governance_coherence
-</code></pre>
-<hr>
-<h2 id="4-crossmodule-operators">4. Cross‑Module Operators</h2>
-<h3 id="41-taxes_ie_alignment_operator">4.1 taxes_ie_alignment_operator</h3>
-<p>Maps:
-- incentive baseline<br>
-- depreciation envelope<br>
-- drift amplitude  </p>
-<p>to:
-- cycle inversion<br>
-- uplift constraints<br>
-- EHL  </p>
-<h3 id="42-ie_gsm_alignment_operator">4.2 ie_gsm_alignment_operator</h3>
-<p>Maps:
-- cycle phase<br>
-- cycle drift<br>
-- EHL  </p>
-<p>to:
-- governance coherence<br>
-- policy propagation<br>
-- civic‑field resonance  </p>
-<h3 id="43-taxes_gsm_alignment_operator">4.3 taxes_gsm_alignment_operator</h3>
-<p>Maps:
-- incentive stability<br>
-- incentive drift<br>
-- IHL  </p>
-<p>to:
-- governance stability<br>
-- governance drift<br>
-- policy alignment  </p>
-<hr>
-<h2 id="5-propagation-behavior_1">5. Propagation Behavior</h2>
-<h3 id="51-taxes-ie">5.1 Taxes → IE</h3>
-<p>Incentives influence:
-- cycle stability<br>
-- cycle drift<br>
-- uplift constraints  </p>
-<h3 id="52-ie-gsm">5.2 IE → GSM</h3>
-<p>Cycles influence:
-- governance coherence<br>
-- policy propagation<br>
-- civic‑field resonance  </p>
-<h3 id="53-gsm-taxes">5.3 GSM → Taxes</h3>
-<p>Governance influences:
-- incentive stability<br>
-- incentive drift<br>
-- incentive propagation  </p>
-<p>Propagation modeled via:
-- <strong>jurisdiction_propagation_operator</strong><br>
-- <strong>incentive_drift_operator</strong><br>
-- <strong>cycle_drift_operator</strong><br>
-- <strong>governance_drift_operator</strong></p>
-<hr>
-<h2 id="6-drift-interaction_3">6. Drift Interaction</h2>
-<h3 id="61-incentive-drift-cycle-drift">6.1 Incentive Drift → Cycle Drift</h3>
-<p>High incentive drift causes:
-- cycle compression<br>
-- cycle instability<br>
-- EHL reduction  </p>
-<h3 id="62-cycle-drift-governance-drift">6.2 Cycle Drift → Governance Drift</h3>
-<p>High cycle drift causes:
-- governance misalignment<br>
-- policy propagation distortion<br>
-- civic‑field instability  </p>
-<h3 id="63-governance-drift-incentive-drift">6.3 Governance Drift → Incentive Drift</h3>
-<p>High governance drift causes:
-- incentive envelope distortion<br>
-- IHL compression<br>
-- propagation‑induced drift  </p>
-<hr>
-<h2 id="7-rtt-layer-integration">7. RTT Layer Integration</h2>
-<h3 id="rtt1-localsubstrate">RTT/1 — Local/Substrate</h3>
-<ul>
-<li>direct incentive‑cycle‑governance interaction  </li>
-<li>short‑range drift fields  </li>
-</ul>
-<h3 id="rtt2-regionalstructural">RTT/2 — Regional/Structural</h3>
-<ul>
-<li>structural alignment  </li>
-<li>cross‑jurisdiction propagation  </li>
-</ul>
-<h3 id="rtt3-globalsystemic">RTT/3 — Global/Systemic</h3>
-<ul>
-<li>systemic alignment  </li>
-<li>coherence‑layer propagation  </li>
-</ul>
-<hr>
-<h2 id="8-integration-summary_1">8. Integration Summary</h2>
-<pre><code>Taxes → Incentives → Drift → IHL
-        ↘
-          IE → Cycles → Drift → EHL
-                ↘
-                  GSM → Governance → Drift → Coherence
-</code></pre>
-<p>The tri‑module alignment ensures:
-- fiscal‑cycle‑governance coherence<br>
-- stable propagation<br>
-- bounded drift  </p>
-<hr>
-<h2 id="9-integration-status_1">9. Integration Status</h2>
-<ul>
-<li><strong>Modules:</strong> Taxes ↔ IE ↔ GSM  </li>
-<li><strong>Layer:</strong> Cross‑Module  </li>
-<li><strong>Version:</strong> 2026‑06  </li>
-<li><strong>Format:</strong> AI‑first · operator‑driven · minimal<br>
-# Taxes ↔ RRR Alignment  </li>
-</ul>
-<h3 id="continuity-incentives-drift-propagation">Continuity · Incentives · Drift · Propagation</h3>
-<hr>
-<h2 id="1-purpose_7">1. Purpose</h2>
-<p>This file defines the <strong>alignment surface</strong> between the Taxes module and the RRR module.<br>
-It models how <strong>incentive regimes</strong> (Taxes) interact with <strong>continuity envelopes</strong> (RRR) across RTT/1 → RTT/2 → RTT/3.</p>
-<p>The alignment is used to:
-- map incentives to continuity<br>
-- detect incentive‑continuity drift<br>
-- model propagation behavior<br>
-- support fiscal‑stack coherence  </p>
-<hr>
-<h2 id="2-alignment-axes">2. Alignment Axes</h2>
-<h3 id="21-incentive-baseline-taxes">2.1 Incentive Baseline (Taxes)</h3>
-<p>Defines:
-- incentive strength<br>
-- incentive envelope<br>
-- depreciation behavior<br>
-- drift susceptibility  </p>
-<h3 id="22-continuity-envelope-rrr">2.2 Continuity Envelope (RRR)</h3>
-<p>Defines:
-- revenue continuity<br>
-- continuity half‑life<br>
-- continuity propagation<br>
-- continuity drift  </p>
-<p>Alignment occurs when:</p>
-<pre><code>incentive_envelope ≈ continuity_envelope
-</code></pre>
-<hr>
-<h2 id="3-alignment-operators">3. Alignment Operators</h2>
-<h3 id="31-incentive_continuity_alignment_operator">3.1 incentive_continuity_alignment_operator</h3>
-<p>Maps:
-- incentive baseline<br>
-- depreciation envelope<br>
-- drift amplitude<br>
-- propagation load  </p>
-<p>to:
-- continuity envelope<br>
-- continuity drift<br>
-- continuity propagation  </p>
-<p>Outputs:
-- alignment score<br>
-- stability adjustment<br>
-- drift correction  </p>
-<hr>
-<h2 id="4-alignment-surfaces">4. Alignment Surfaces</h2>
-<h3 id="41-stability-surface">4.1 Stability Surface</h3>
-<p>Region where:
-- incentive drift is low<br>
-- continuity drift is low<br>
-- propagation load is stable  </p>
-<h3 id="42-transition-surface">4.2 Transition Surface</h3>
-<p>Region where:
-- incentive drift increases<br>
-- continuity drift increases<br>
-- propagation load fluctuates  </p>
-<h3 id="43-fragmentation-surface">4.3 Fragmentation Surface</h3>
-<p>Region where:
-- incentive drift exceeds threshold<br>
-- continuity envelope collapses<br>
-- propagation destabilizes  </p>
-<hr>
-<h2 id="5-propagation-behavior_2">5. Propagation Behavior</h2>
-<h3 id="51-taxes-rrr">5.1 Taxes → RRR</h3>
-<p>Incentives influence:
-- continuity stability<br>
-- continuity drift<br>
-- continuity propagation  </p>
-<h3 id="52-rrr-taxes">5.2 RRR → Taxes</h3>
-<p>Continuity influences:
-- incentive stability<br>
-- incentive drift<br>
-- incentive propagation  </p>
-<p>Propagation modeled via:
-- <strong>jurisdiction_propagation_operator</strong><br>
-- <strong>incentive_drift_operator</strong><br>
-- <strong>continuity_drift_operator</strong> (RRR)</p>
-<hr>
-<h2 id="6-drift-interaction_4">6. Drift Interaction</h2>
-<h3 id="61-incentive-drift-continuity-drift">6.1 Incentive Drift → Continuity Drift</h3>
-<p>High incentive drift causes:
-- continuity compression<br>
-- continuity instability<br>
-- continuity half‑life reduction  </p>
-<h3 id="62-continuity-drift-incentive-drift">6.2 Continuity Drift → Incentive Drift</h3>
-<p>High continuity drift causes:
-- incentive envelope distortion<br>
-- incentive half‑life compression<br>
-- propagation‑induced drift  </p>
-<hr>
-<h2 id="7-rtt-layer-alignment">7. RTT Layer Alignment</h2>
-<h3 id="rtt1-localsubstrate_1">RTT/1 — Local/Substrate</h3>
-<ul>
-<li>direct incentive‑continuity interaction  </li>
-<li>short‑range drift fields  </li>
-</ul>
-<h3 id="rtt2-regionalstructural_1">RTT/2 — Regional/Structural</h3>
-<ul>
-<li>structural alignment  </li>
-<li>cross‑jurisdiction propagation  </li>
-</ul>
-<h3 id="rtt3-globalsystemic_1">RTT/3 — Global/Systemic</h3>
-<ul>
-<li>systemic alignment  </li>
-<li>coherence‑layer propagation  </li>
-</ul>
-<hr>
-<h2 id="8-alignment-summary">8. Alignment Summary</h2>
-<pre><code>Incentives → Drift → Half‑Life → Propagation
-        ↘          RRR Continuity          ↗
-</code></pre>
-<p>The alignment surface ensures:
-- fiscal‑stack coherence<br>
-- stable propagation<br>
-- bounded drift  </p>
-<hr>
-<h2 id="9-integration-status_2">9. Integration Status</h2>
-<ul>
-<li><strong>Modules:</strong> Taxes ↔ RRR  </li>
-<li><strong>Layer:</strong> Cross‑Module  </li>
-<li><strong>Version:</strong> 2026‑06  </li>
-<li><strong>Format:</strong> AI‑first · operator‑driven · minimal<br>
-# Cross‑Domain Propagation Map — Taxes Module  </li>
-</ul>
-<h3 id="rtt1-rtt2-rtt3-incentives-drift-alignment_1">RTT/1 → RTT/2 → RTT/3 · Incentives · Drift · Alignment</h3>
-<hr>
-<h2 id="1-purpose_8">1. Purpose</h2>
-<p>This map defines how <strong>incentive structures propagate across domains</strong> within the RTT stack.<br>
-It models the flow of incentive baselines, depreciation envelopes, drift fields, and alignment surfaces as they move from:</p>
-<ul>
-<li><strong>RTT/1</strong> (local, direct, substrate‑level incentives)  </li>
-<li><strong>RTT/2</strong> (regional, structural, cross‑domain incentives)  </li>
-<li><strong>RTT/3</strong> (global, systemic, coherence‑layer incentives)</li>
-</ul>
-<p>The map is used to:
-- trace incentive propagation<br>
-- identify drift‑field activation<br>
-- model cross‑domain alignment<br>
-- support multi‑layer fiscal analysis  </p>
-<hr>
-<h2 id="2-propagation-layers">2. Propagation Layers</h2>
-<h3 id="21-rtt1-localsubstrate-layer">2.1 RTT/1 — Local/Substrate Layer</h3>
-<p>Defines:
-- local incentive baselines<br>
-- direct depreciation envelopes<br>
-- local compliance substrate<br>
-- short‑range propagation vectors  </p>
-<p>Outputs:
-- incentive seed values<br>
-- local drift amplitude<br>
-- local stability envelope  </p>
-<hr>
-<h3 id="22-rtt2-regionalstructural-layer">2.2 RTT/2 — Regional/Structural Layer</h3>
-<p>Defines:
-- regional incentive baselines<br>
-- cross‑jurisdiction propagation<br>
-- structural depreciation envelopes<br>
-- mid‑range drift fields  </p>
-<p>Outputs:
-- regional propagation vectors<br>
-- drift‑field consolidation<br>
-- structural alignment surfaces  </p>
-<hr>
-<h3 id="23-rtt3-globalsystemic-layer">2.3 RTT/3 — Global/Systemic Layer</h3>
-<p>Defines:
-- global incentive baselines<br>
-- cross‑domain propagation<br>
-- systemic depreciation envelopes<br>
-- long‑range drift fields  </p>
-<p>Outputs:
-- global propagation surfaces<br>
-- systemic drift behavior<br>
-- coherence‑layer alignment  </p>
-<hr>
-<h2 id="3-propagation-vectors">3. Propagation Vectors</h2>
-<h3 id="31-vertical-propagation-rtt1-rtt2-rtt3">3.1 Vertical Propagation (RTT/1 → RTT/2 → RTT/3)</h3>
-<ul>
-<li>local → regional incentive flow  </li>
-<li>regional → global incentive flow  </li>
-<li>local → global (via structural amplification)  </li>
-</ul>
-<h3 id="32-lateral-propagation-within-each-rtt-layer">3.2 Lateral Propagation (within each RTT layer)</h3>
-<ul>
-<li>cross‑state  </li>
-<li>cross‑regional  </li>
-<li>cross‑domain  </li>
-</ul>
-<p>Propagation modeled via:
-- <strong>jurisdiction_propagation_operator</strong><br>
-- <strong>cross_domain_operator</strong>  </p>
-<hr>
-<h2 id="4-driftfield-activation">4. Drift‑Field Activation</h2>
-<h3 id="41-local-drift-rtt1">4.1 Local Drift (RTT/1)</h3>
-<p>Generated by:
-- incentive baseline<br>
-- compliance substrate<br>
-- local propagation load  </p>
-<h3 id="42-structural-drift-rtt2">4.2 Structural Drift (RTT/2)</h3>
-<p>Generated by:
-- cross‑jurisdiction propagation<br>
-- regional alignment<br>
-- structural depreciation  </p>
-<h3 id="43-systemic-drift-rtt3">4.3 Systemic Drift (RTT/3)</h3>
-<p>Generated by:
-- global propagation<br>
-- cross‑domain alignment<br>
-- coherence‑layer interactions  </p>
-<p>Drift modeled via:
-- <strong>incentive_drift_operator</strong><br>
-- <strong>incentive_half_life_operator</strong>  </p>
-<hr>
-<h2 id="5-alignment-surfaces">5. Alignment Surfaces</h2>
-<h3 id="51-rrr-alignment">5.1 RRR Alignment</h3>
-<p>Propagation aligns with:
-- continuity envelopes<br>
-- revenue propagation<br>
-- RRR/1 → RRR/2 → RRR/3  </p>
-<h3 id="52-ie-alignment">5.2 IE Alignment</h3>
-<p>Propagation aligns with:
-- cycle inversion<br>
-- uplift constraints<br>
-- economic half‑life (EHL)  </p>
-<h3 id="53-gsm-alignment">5.3 GSM Alignment</h3>
-<p>Propagation aligns with:
-- governance coherence<br>
-- policy propagation<br>
-- civic‑field resonance  </p>
-<hr>
-<h2 id="6-crossdomain-propagation-structure">6. Cross‑Domain Propagation Structure</h2>
-<pre><code>RTT/1 (local incentives)
-    ↓ vertical propagation
-RTT/2 (regional incentives)
-    ↔ lateral propagation
-RTT/3 (global incentives)
-    ↓ systemic alignment
-
-Propagation → Drift → Half‑Life → Alignment
-</code></pre>
-<p>This chain defines the <strong>cross‑domain behavior</strong> of incentive regimes across the fiscal stack.</p>
-<hr>
-<h2 id="7-map-status">7. Map Status</h2>
-<ul>
-<li><strong>Layer:</strong> Cross‑Domain  </li>
-<li><strong>Role:</strong> Incentive propagation across RTT layers  </li>
-<li><strong>Version:</strong> 2026‑06  </li>
-<li><strong>Format:</strong> AI‑first · operator‑driven · minimal<br>
-# Incentive Regime Map — Taxes Module  </li>
-</ul>
-<h3 id="baselines-envelopes-propagation-drift-alignment">Baselines · Envelopes · Propagation · Drift · Alignment</h3>
-<hr>
-<h2 id="1-purpose_9">1. Purpose</h2>
-<p>This map defines the <strong>structural layout</strong> of incentive regimes across federal, state, and international layers.<br>
-It models how incentive baselines, depreciation envelopes, propagation vectors, and drift fields interact across jurisdictions.</p>
-<p>The map is used to:
-- compare incentive structures<br>
-- trace propagation pathways<br>
-- identify drift‑field activation<br>
-- align incentives with RRR, IE, and GSM  </p>
-<hr>
-<h2 id="2-regime-layers">2. Regime Layers</h2>
-<h3 id="21-federal-layer">2.1 Federal Layer</h3>
-<p>Defines:
-- national incentive baseline<br>
-- federal depreciation envelope<br>
-- federal propagation vectors<br>
-- federal drift field  </p>
-<h3 id="22-state-layer">2.2 State Layer</h3>
-<p>Defines:
-- state incentive baselines<br>
-- state‑specific depreciation envelopes<br>
-- state propagation vectors<br>
-- state drift fields  </p>
-<h3 id="23-international-layer">2.3 International Layer</h3>
-<p>Defines:
-- regional incentive baselines<br>
-- cross‑border depreciation envelopes<br>
-- international propagation vectors<br>
-- international drift fields  </p>
-<hr>
-<h2 id="3-incentive-baselines">3. Incentive Baselines</h2>
-<p>Each regime defines a baseline via:
-- statutory incentive structures<br>
-- administrative overlays<br>
-- eligibility and compliance rules  </p>
-<p>Baselines determine:
-- incentive strength<br>
-- propagation potential<br>
-- drift susceptibility  </p>
-<hr>
-<h2 id="4-depreciation-envelopes">4. Depreciation Envelopes</h2>
-<p>Depreciation envelopes define:
-- time‑based decay<br>
-- eligibility reduction<br>
-- incentive‑strength decline<br>
-- envelope boundaries  </p>
-<p>Modeled via:
-- <strong>depreciation_envelope_operator</strong><br>
-- <strong>incentive_half_life_operator</strong></p>
-<hr>
-<h2 id="5-propagation-vectors">5. Propagation Vectors</h2>
-<h3 id="51-vertical-propagation_1">5.1 Vertical Propagation</h3>
-<ul>
-<li>federal → state  </li>
-<li>state → local  </li>
-<li>international → national  </li>
-</ul>
-<h3 id="52-lateral-propagation_1">5.2 Lateral Propagation</h3>
-<ul>
-<li>cross‑state  </li>
-<li>cross‑regional  </li>
-<li>cross‑domain  </li>
-</ul>
-<p>Propagation modeled via:
-- <strong>jurisdiction_propagation_operator</strong></p>
-<p>Outputs:
-- propagation vectors<br>
-- propagation load<br>
-- propagation surfaces  </p>
-<hr>
-<h2 id="6-drift-fields">6. Drift Fields</h2>
-<h3 id="61-baseline-drift">6.1 Baseline Drift</h3>
-<p>Generated by:
-- incentive baseline<br>
-- compliance substrate  </p>
-<h3 id="62-propagation-drift">6.2 Propagation Drift</h3>
-<p>Generated by:
-- cross‑jurisdiction propagation<br>
-- cross‑domain propagation  </p>
-<h3 id="63-alignment-drift">6.3 Alignment Drift</h3>
-<p>Generated by:
-- RRR continuity alignment<br>
-- IE cycle alignment<br>
-- GSM governance alignment  </p>
-<p>Drift modeled via:
-- <strong>incentive_drift_operator</strong></p>
-<p>Outputs:
-- drift amplitude<br>
-- drift acceleration<br>
-- drift direction  </p>
-<hr>
-<h2 id="7-alignment-surfaces_1">7. Alignment Surfaces</h2>
-<h3 id="71-rrr-alignment">7.1 RRR Alignment</h3>
-<p>Incentives align with:
-- continuity envelopes<br>
-- revenue propagation<br>
-- RRR/1 and RRR/2 layers  </p>
-<h3 id="72-ie-alignment">7.2 IE Alignment</h3>
-<p>Incentives align with:
-- cycle inversion<br>
-- uplift constraints<br>
-- economic half‑life (EHL)  </p>
-<h3 id="73-gsm-alignment">7.3 GSM Alignment</h3>
-<p>Incentives align with:
-- governance coherence<br>
-- policy propagation<br>
-- civic‑field resonance  </p>
-<hr>
-<h2 id="8-structural-map-summary">8. Structural Map Summary</h2>
-<pre><code>Federal Baseline
-    ↓ vertical propagation
-State Baselines
-    ↔ lateral propagation
-International Baselines
-    ↓ global alignment
-
-Baselines → Envelopes → Propagation → Drift → Alignment
-</code></pre>
-<p>This chain defines the <strong>structural behavior</strong> of incentive regimes across the fiscal stack.</p>
-<hr>
-<h2 id="9-map-status">9. Map Status</h2>
-<ul>
-<li><strong>Layer:</strong> Structural  </li>
-<li><strong>Role:</strong> Incentive‑regime mapping across jurisdictions  </li>
-<li><strong>Version:</strong> 2026‑06  </li>
-<li><strong>Format:</strong> AI‑first · operator‑driven · minimal<br>
-# Temporal Resonance Map — Taxes Module  </li>
-</ul>
-<h3 id="incentive-halflife-drift-fields-propagation-phases-alignment-surfaces">Incentive Half‑Life · Drift Fields · Propagation Phases · Alignment Surfaces</h3>
-<hr>
-<h2 id="1-purpose_10">1. Purpose</h2>
-<p>This map defines the <strong>temporal‑resonance structure</strong> of the Taxes module.<br>
-It models how incentives evolve over time, how drift accumulates, and how half‑life (IHL) interacts with propagation and alignment surfaces.</p>
-<p>The map is used to:
-- track incentive stability<br>
-- measure drift accumulation<br>
-- model temporal decay<br>
-- align incentives with RRR, IE, and GSM  </p>
-<hr>
-<h2 id="2-temporal-axes">2. Temporal Axes</h2>
-<h3 id="21-time-t">2.1 Time (t)</h3>
-<p>Primary temporal axis.<br>
-Represents:
-- incentive duration<br>
-- depreciation curves<br>
-- drift accumulation<br>
-- half‑life decay  </p>
-<h3 id="22-drift">2.2 Drift (Δ)</h3>
-<p>Represents:
-- baseline drift<br>
-- propagation‑induced drift<br>
-- compliance‑driven drift<br>
-- cross‑jurisdiction drift  </p>
-<h3 id="23-propagation-load-p">2.3 Propagation Load (P)</h3>
-<p>Represents:
-- jurisdictional propagation<br>
-- cross‑domain propagation<br>
-- federal/state/international load<br>
-- ledger‑based propagation (for crypto regimes)  </p>
-<hr>
-<h2 id="3-halflife-envelope-ihl">3. Half‑Life Envelope (IHL)</h2>
-<p>The incentive half‑life envelope defines:
-- incentive durability<br>
-- decay rate<br>
-- drift susceptibility<br>
-- stability boundaries  </p>
-<p>IHL is computed via:
-- <strong>incentive_half_life_operator</strong><br>
-- <strong>incentive_drift_operator</strong><br>
-- <strong>jurisdiction_propagation_operator</strong></p>
-<p>Outputs:
-- IHL curve<br>
-- stability envelope<br>
-- decay boundary  </p>
-<hr>
-<h2 id="4-drift-fields">4. Drift Fields</h2>
-<h3 id="41-baseline-drift-field">4.1 Baseline Drift Field</h3>
-<p>Generated by:
-- incentive baseline<br>
-- compliance substrate<br>
-- propagation vectors  </p>
-<h3 id="42-propagation-drift-field">4.2 Propagation Drift Field</h3>
-<p>Generated by:
-- cross‑jurisdiction propagation<br>
-- cross‑domain propagation<br>
-- federal/state/international alignment  </p>
-<h3 id="43-alignment-drift-field">4.3 Alignment Drift Field</h3>
-<p>Generated by:
-- RRR continuity alignment<br>
-- IE cycle alignment<br>
-- GSM governance alignment  </p>
-<p>Each drift field contributes to:
-- drift amplitude<br>
-- drift acceleration<br>
-- drift direction  </p>
-<hr>
-<h2 id="5-phasesurfaces">5. Phase‑Surfaces</h2>
-<h3 id="51-stability-phase">5.1 Stability Phase</h3>
-<p>Region where:
-- drift amplitude is low<br>
-- IHL is long<br>
-- propagation load is stable  </p>
-<h3 id="52-transition-phase">5.2 Transition Phase</h3>
-<p>Region where:
-- drift amplitude increases<br>
-- IHL compresses<br>
-- propagation load fluctuates  </p>
-<h3 id="53-fragmentation-phase">5.3 Fragmentation Phase</h3>
-<p>Region where:
-- drift amplitude exceeds threshold<br>
-- IHL collapses<br>
-- propagation load destabilizes  </p>
-<hr>
-<h2 id="6-temporal-resonance-structure">6. Temporal Resonance Structure</h2>
-<pre><code>IHL(t)  →  stability envelope
-Δ(t)    →  drift accumulation
-P(t)    →  propagation load
-
-temporal_resonance(t) =
-    f( IHL(t), Δ(t), P(t) )
-</code></pre>
-<p>Temporal resonance determines:
-- incentive persistence<br>
-- decay timing<br>
-- drift‑field activation<br>
-- alignment behavior  </p>
-<hr>
-<h2 id="7-crossmodule-alignment_3">7. Cross‑Module Alignment</h2>
-<h3 id="71-rrr-continuity">7.1 RRR (Continuity)</h3>
-<p>Temporal resonance aligns with:
-- continuity envelopes<br>
-- revenue propagation<br>
-- RRR/1 and RRR/2 layers  </p>
-<h3 id="72-ie-cycle-inversion">7.2 IE (Cycle Inversion)</h3>
-<p>Temporal resonance aligns with:
-- cycle inversion<br>
-- uplift constraints<br>
-- economic half‑life (EHL)  </p>
-<h3 id="73-gsm-governance">7.3 GSM (Governance)</h3>
-<p>Temporal resonance aligns with:
-- governance coherence<br>
-- policy propagation<br>
-- civic‑field resonance  </p>
-<hr>
-<h2 id="8-map-status">8. Map Status</h2>
-<ul>
-<li><strong>Layer:</strong> Temporal  </li>
-<li><strong>Role:</strong> Incentive half‑life and drift‑field mapping  </li>
-<li><strong>Version:</strong> 2026‑06  </li>
-<li><strong>Format:</strong> AI‑first · operator‑driven · minimal<br>
-# Crypto Incentive Regime  </li>
-</ul>
-<h3 id="digitalasset-classification-taxable-events-valuation-drift-ledger-propagation-halflife">Digital‑Asset Classification · Taxable Events · Valuation Drift · Ledger Propagation · Half‑Life</h3>
-<hr>
-<h2 id="1-structural-presence">1. Structural Presence</h2>
-<p>The crypto incentive regime defines:
-- digital‑asset classification<br>
-- taxable and non‑taxable event surfaces<br>
-- valuation and pricing drift<br>
-- ledger‑based propagation<br>
-- cross‑asset alignment<br>
-- incentive half‑life (IHL‑D) for digital assets  </p>
-<p>This regime interacts with both <strong>traditional tax regimes</strong> and <strong>on‑chain economic substrates</strong>.</p>
-<hr>
-<h2 id="2-digitalasset-classification">2. Digital‑Asset Classification</h2>
-<p>Classification is determined by:
-- asset type (token, coin, stablecoin, NFT, derivative)<br>
-- functional role (utility, governance, payment, synthetic)<br>
-- custody model (self‑custody, custodial, hybrid)  </p>
-<p>Modeled via:
-- <strong>asset_classification_operator</strong></p>
-<p>Outputs:
-- classification envelope<br>
-- tax‑treatment baseline  </p>
-<hr>
-<h2 id="3-taxable-event-surface">3. Taxable Event Surface</h2>
-<p>Taxable events include:
-- dispositional events<br>
-- conversion events<br>
-- staking/validator rewards<br>
-- airdrops<br>
-- wrapped/unwrapped transitions<br>
-- cross‑chain bridging (when economically substantive)  </p>
-<p>Modeled via:
-- <strong>digital_event_operator</strong></p>
-<p>Outputs:
-- event surface<br>
-- event‑driven incentive adjustments  </p>
-<hr>
-<h2 id="4-valuation-pricing-drift">4. Valuation &amp; Pricing Drift</h2>
-<p>Crypto valuation exhibits:
-- high‑frequency drift<br>
-- oracle divergence<br>
-- liquidity‑driven volatility<br>
-- cross‑exchange price fragmentation  </p>
-<p>Modeled via:
-- <strong>valuation_drift_operator</strong></p>
-<p>Outputs:
-- drift amplitude<br>
-- drift acceleration<br>
-- valuation half‑life  </p>
-<hr>
-<h2 id="5-ledger-propagation">5. Ledger Propagation</h2>
-<p>Propagation behavior includes:
-- on‑chain settlement<br>
-- cross‑chain propagation<br>
-- L1 ↔ L2 incentive flow<br>
-- validator‑driven propagation effects  </p>
-<p>Modeled via:
-- <strong>ledger_propagation_operator</strong></p>
-<p>Outputs:
-- propagation vectors<br>
-- ledger‑alignment surfaces  </p>
-<hr>
-<h2 id="6-crossasset-alignment">6. Cross‑Asset Alignment</h2>
-<p>Digital assets interact with:
-- fiat‑denominated incentives<br>
-- synthetic assets<br>
-- derivative layers<br>
-- stablecoin pegs  </p>
-<p>Modeled via:
-- <strong>cross_asset_operator</strong></p>
-<p>Outputs:
-- cross‑asset alignment<br>
-- drift‑field interaction  </p>
-<hr>
-<h2 id="7-drift-characteristics">7. Drift Characteristics</h2>
-<p>Crypto drift includes:
-- valuation drift<br>
-- event‑driven drift<br>
-- propagation‑induced drift<br>
-- cross‑asset drift<br>
-- oracle drift  </p>
-<p>Drift is amplified by:
-- liquidity fragmentation<br>
-- multi‑chain propagation<br>
-- incentive misalignment  </p>
-<hr>
-<h2 id="8-halflife-ihld">8. Half‑Life (IHL‑D)</h2>
-<p>Digital‑asset incentive half‑life is shaped by:
-- volatility<br>
-- drift amplitude<br>
-- propagation load<br>
-- event frequency<br>
-- classification stability  </p>
-<p>IHL‑D determines:
-- incentive durability<br>
-- depreciation rate<br>
-- drift susceptibility  </p>
-<hr>
-<h2 id="9-alignment-surfaces">9. Alignment Surfaces</h2>
-<h3 id="91-rrr-alignment">9.1 RRR Alignment</h3>
-<p>Crypto incentives align with:
-- continuity envelopes<br>
-- revenue propagation<br>
-- RRR/1 and RRR/2 layers  </p>
-<h3 id="92-ie-alignment">9.2 IE Alignment</h3>
-<p>Crypto incentives align with:
-- cycle inversion<br>
-- uplift constraints<br>
-- economic half‑life (EHL)  </p>
-<h3 id="93-gsm-alignment">9.3 GSM Alignment</h3>
-<p>Crypto incentives align with:
-- governance coherence<br>
-- policy propagation<br>
-- civic‑field resonance  </p>
-<hr>
-<h2 id="10-regime-status">10. Regime Status</h2>
-<ul>
-<li><strong>Layer:</strong> Digital‑Asset Regime  </li>
-<li><strong>Role:</strong> Incentive substrate for crypto‑economic systems  </li>
-<li><strong>Version:</strong> 2026‑06  </li>
-<li><strong>Format:</strong> AI‑first · operator‑driven · minimal<br>
-# U.S. Federal Incentive Regime  </li>
-</ul>
-<h3 id="baseline-depreciation-propagation-drift-halflife">Baseline · Depreciation · Propagation · Drift · Half‑Life</h3>
-<hr>
-<h2 id="1-structural-presence_1">1. Structural Presence</h2>
-<p>The U.S. federal incentive regime defines:
-- national incentive baselines<br>
-- federal depreciation envelopes<br>
-- cross‑state propagation rules<br>
-- federal compliance substrate<br>
-- incentive half‑life (IHL) at the federal layer  </p>
-<p>This regime acts as the <strong>top‑layer substrate</strong> for all state‑level incentive structures.</p>
-<hr>
-<h2 id="2-incentive-baseline">2. Incentive Baseline</h2>
-<p>Defined by:
-- federal incentive parameters<br>
-- statutory incentive structures<br>
-- federal‑level eligibility and compliance rules  </p>
-<p>Outputs:
-- baseline incentive envelope<br>
-- federal propagation surface  </p>
-<hr>
-<h2 id="3-depreciation-envelope">3. Depreciation Envelope</h2>
-<p>Federal incentives exhibit:
-- time‑based depreciation<br>
-- phase‑out curves<br>
-- eligibility decay<br>
-- envelope boundaries  </p>
-<p>Modeled via:
-- <strong>depreciation_envelope_operator</strong><br>
-- <strong>incentive_half_life_operator</strong>  </p>
-<hr>
-<h2 id="4-propagation-behavior">4. Propagation Behavior</h2>
-<p>Federal incentives propagate:
-- downward into state regimes<br>
-- laterally across federal programs<br>
-- outward into cross‑domain incentives  </p>
-<p>Propagation is defined by:
-- <strong>jurisdiction_propagation_operator</strong><br>
-- federal → state propagation vectors<br>
-- federal → cross‑domain alignment surfaces  </p>
-<hr>
-<h2 id="5-drift-characteristics">5. Drift Characteristics</h2>
-<p>Federal incentive drift includes:
-- baseline drift<br>
-- compliance‑driven drift<br>
-- propagation‑induced drift<br>
-- half‑life compression  </p>
-<p>Modeled via:
-- <strong>incentive_drift_operator</strong><br>
-- <strong>incentive_half_life_operator</strong>  </p>
-<p>Outputs:
-- drift amplitude<br>
-- drift acceleration<br>
-- drift direction  </p>
-<hr>
-<h2 id="6-halflife-ihl">6. Half‑Life (IHL)</h2>
-<p>Federal incentive half‑life (IHL) is shaped by:
-- incentive stability<br>
-- drift amplitude<br>
-- propagation load<br>
-- compliance substrate  </p>
-<p>IHL determines:
-- incentive durability<br>
-- depreciation rate<br>
-- drift susceptibility  </p>
-<hr>
-<h2 id="7-alignment-surfaces_2">7. Alignment Surfaces</h2>
-<h3 id="71-rrr-alignment_1">7.1 RRR Alignment</h3>
-<p>Federal incentives align with:
-- continuity envelopes<br>
-- revenue propagation<br>
-- RRR/1 and RRR/2 layers  </p>
-<p>Operator:
-- <strong>incentive_continuity_alignment_operator</strong></p>
-<h3 id="72-ie-alignment_1">7.2 IE Alignment</h3>
-<p>Federal incentives align with:
-- cycle inversion<br>
-- uplift constraints<br>
-- economic half‑life (EHL)  </p>
-<p>Operator:
-- <strong>incentive_cycle_alignment_operator</strong></p>
-<h3 id="73-gsm-alignment_1">7.3 GSM Alignment</h3>
-<p>Federal incentives align with:
-- governance coherence<br>
-- policy propagation<br>
-- civic‑field resonance  </p>
-<p>Operator:
-- <strong>taxes_gsm_alignment_operator</strong></p>
-<hr>
-<h2 id="8-regime-status">8. Regime Status</h2>
-<ul>
-<li><strong>Layer:</strong> Federal  </li>
-<li><strong>Role:</strong> Top‑layer incentive substrate  </li>
-<li><strong>Version:</strong> 2026‑06  </li>
-<li><strong>Format:</strong> AI‑first · student‑second · operator‑driven<br>
-# APAC Incentive Regime  </li>
-</ul>
-<h3 id="baseline-depreciation-propagation-drift-halflife_1">Baseline · Depreciation · Propagation · Drift · Half‑Life</h3>
-<hr>
-<h2 id="1-structural-presence_2">1. Structural Presence</h2>
-<p>The APAC incentive regime defines:
-- regional incentive baselines<br>
-- jurisdiction‑specific depreciation envelopes<br>
-- cross‑border propagation behavior<br>
-- compliance substrates across diverse regulatory systems<br>
-- incentive half‑life (IHL‑APAC) at the regional layer  </p>
-<p>APAC exhibits <strong>high structural diversity</strong>, with incentive regimes ranging from highly centralized to market‑driven models.</p>
-<hr>
-<h2 id="2-incentive-baseline_1">2. Incentive Baseline</h2>
-<p>APAC incentive baselines are shaped by:
-- national incentive structures<br>
-- sector‑specific incentive surfaces (technology, manufacturing, energy, logistics)<br>
-- administrative and regulatory overlays<br>
-- eligibility and compliance rules  </p>
-<p>Outputs:
-- regional incentive baseline<br>
-- jurisdictional propagation envelope  </p>
-<hr>
-<h2 id="3-depreciation-envelope_1">3. Depreciation Envelope</h2>
-<p>Depreciation behavior across APAC includes:
-- time‑based phase‑outs<br>
-- eligibility decay<br>
-- incentive‑strength reduction<br>
-- envelope boundaries defined by national regulatory structures  </p>
-<p>Modeled via:
-- <strong>depreciation_envelope_operator</strong><br>
-- <strong>incentive_half_life_operator</strong></p>
-<hr>
-<h2 id="4-propagation-behavior_1">4. Propagation Behavior</h2>
-<p>APAC incentives propagate:
-- within national jurisdictions<br>
-- across regional economic blocs<br>
-- upward into international alignment surfaces<br>
-- outward into cross‑regional comparisons  </p>
-<p>Propagation defined by:
-- <strong>jurisdiction_propagation_operator</strong><br>
-- APAC → international propagation vectors<br>
-- APAC → cross‑regional propagation surfaces  </p>
-<hr>
-<h2 id="5-drift-characteristics_1">5. Drift Characteristics</h2>
-<p>APAC incentive drift includes:
-- baseline drift<br>
-- regulatory‑driven drift<br>
-- propagation‑induced drift<br>
-- cross‑border drift<br>
-- alignment drift with international regimes  </p>
-<p>Drift modeled via:
-- <strong>incentive_drift_operator</strong></p>
-<p>Outputs:
-- drift amplitude<br>
-- drift acceleration<br>
-- drift direction  </p>
-<hr>
-<h2 id="6-halflife-ihlapac">6. Half‑Life (IHL‑APAC)</h2>
-<p>APAC incentive half‑life is shaped by:
-- regulatory diversity<br>
-- drift amplitude<br>
-- propagation load<br>
-- compliance substrate<br>
-- international alignment  </p>
-<p>IHL‑APAC determines:
-- incentive durability<br>
-- depreciation rate<br>
-- drift susceptibility  </p>
-<hr>
-<h2 id="7-alignment-surfaces_3">7. Alignment Surfaces</h2>
-<h3 id="71-international-alignment">7.1 International Alignment</h3>
-<p>APAC incentives align with:
-- global incentive baselines<br>
-- cross‑border depreciation envelopes<br>
-- international propagation rules  </p>
-<h3 id="72-rrr-alignment">7.2 RRR Alignment</h3>
-<p>APAC incentives align with:
-- continuity envelopes<br>
-- revenue propagation<br>
-- RRR/1 and RRR/2 layers  </p>
-<h3 id="73-ie-alignment">7.3 IE Alignment</h3>
-<p>APAC incentives align with:
-- cycle inversion<br>
-- uplift constraints<br>
-- economic half‑life (EHL)  </p>
-<h3 id="74-gsm-alignment">7.4 GSM Alignment</h3>
-<p>APAC incentives align with:
-- governance coherence<br>
-- policy propagation<br>
-- civic‑field resonance  </p>
-<hr>
-<h2 id="8-regime-status_1">8. Regime Status</h2>
-<ul>
-<li><strong>Layer:</strong> International (APAC)  </li>
-<li><strong>Role:</strong> Regional incentive substrate  </li>
-<li><strong>Version:</strong> 2026‑06  </li>
-<li><strong>Format:</strong> AI‑first · operator‑driven · minimal<br>
-# EU Incentive Regime  </li>
-</ul>
-<h3 id="baseline-depreciation-propagation-drift-halflife_2">Baseline · Depreciation · Propagation · Drift · Half‑Life</h3>
-<hr>
-<h2 id="1-structural-presence_3">1. Structural Presence</h2>
-<p>The EU incentive regime defines:
-- union‑level incentive baselines<br>
-- harmonized depreciation envelopes<br>
-- cross‑border propagation behavior<br>
-- compliance substrates across member states<br>
-- incentive half‑life (IHL‑EU) at the supranational layer  </p>
-<p>The EU operates as a <strong>multi‑layered, harmonized incentive substrate</strong> with strong regulatory coherence and cross‑member alignment.</p>
-<hr>
-<h2 id="2-incentive-baseline_2">2. Incentive Baseline</h2>
-<p>EU incentive baselines are shaped by:
-- union‑level incentive structures<br>
-- sector‑specific incentive surfaces (energy, technology, infrastructure, environment)<br>
-- regulatory frameworks and directives<br>
-- eligibility and compliance rules  </p>
-<p>Outputs:
-- EU incentive baseline<br>
-- union‑level propagation envelope  </p>
-<hr>
-<h2 id="3-depreciation-envelope_2">3. Depreciation Envelope</h2>
-<p>EU depreciation behavior includes:
-- time‑based phase‑outs<br>
-- eligibility decay<br>
-- incentive‑strength reduction<br>
-- envelope boundaries defined by EU‑wide regulatory frameworks  </p>
-<p>Modeled via:
-- <strong>depreciation_envelope_operator</strong><br>
-- <strong>incentive_half_life_operator</strong></p>
-<hr>
-<h2 id="4-propagation-behavior_2">4. Propagation Behavior</h2>
-<p>EU incentives propagate:
-- downward into member states<br>
-- laterally across EU programs<br>
-- upward into global alignment surfaces<br>
-- outward into cross‑regional comparisons  </p>
-<p>Propagation defined by:
-- <strong>jurisdiction_propagation_operator</strong><br>
-- EU → member‑state propagation vectors<br>
-- EU → international propagation surfaces  </p>
-<hr>
-<h2 id="5-drift-characteristics_2">5. Drift Characteristics</h2>
-<p>EU incentive drift includes:
-- baseline drift<br>
-- regulatory‑driven drift<br>
-- propagation‑induced drift<br>
-- cross‑member drift<br>
-- alignment drift with global regimes  </p>
-<p>Drift modeled via:
-- <strong>incentive_drift_operator</strong></p>
-<p>Outputs:
-- drift amplitude<br>
-- drift acceleration<br>
-- drift direction  </p>
-<hr>
-<h2 id="6-halflife-ihleu">6. Half‑Life (IHL‑EU)</h2>
-<p>EU incentive half‑life is shaped by:
-- regulatory coherence<br>
-- drift amplitude<br>
-- propagation load<br>
-- compliance substrate<br>
-- global alignment  </p>
-<p>IHL‑EU determines:
-- incentive durability<br>
-- depreciation rate<br>
-- drift susceptibility  </p>
-<hr>
-<h2 id="7-alignment-surfaces_4">7. Alignment Surfaces</h2>
-<h3 id="71-international-alignment_1">7.1 International Alignment</h3>
-<p>EU incentives align with:
-- global incentive baselines<br>
-- cross‑border depreciation envelopes<br>
-- international propagation rules  </p>
-<h3 id="72-rrr-alignment_1">7.2 RRR Alignment</h3>
-<p>EU incentives align with:
-- continuity envelopes<br>
-- revenue propagation<br>
-- RRR/1 and RRR/2 layers  </p>
-<h3 id="73-ie-alignment_1">7.3 IE Alignment</h3>
-<p>EU incentives align with:
-- cycle inversion<br>
-- uplift constraints<br>
-- economic half‑life (EHL)  </p>
-<h3 id="74-gsm-alignment_1">7.4 GSM Alignment</h3>
-<p>EU incentives align with:
-- governance coherence<br>
-- policy propagation<br>
-- civic‑field resonance  </p>
-<hr>
-<h2 id="8-regime-status_2">8. Regime Status</h2>
-<ul>
-<li><strong>Layer:</strong> International (EU)  </li>
-<li><strong>Role:</strong> Supranational incentive substrate  </li>
-<li><strong>Version:</strong> 2026‑06  </li>
-<li><strong>Format:</strong> AI‑first · operator‑driven · minimal<br>
-# LATAM Incentive Regime  </li>
-</ul>
-<h3 id="baseline-depreciation-propagation-drift-halflife_3">Baseline · Depreciation · Propagation · Drift · Half‑Life</h3>
-<hr>
-<h2 id="1-structural-presence_4">1. Structural Presence</h2>
-<p>The LATAM incentive regime defines:
-- regional incentive baselines<br>
-- jurisdiction‑specific depreciation envelopes<br>
-- cross‑border propagation behavior<br>
-- compliance substrates across heterogeneous regulatory environments<br>
-- incentive half‑life (IHL‑LATAM) at the regional layer  </p>
-<p>LATAM exhibits <strong>high variability</strong> in incentive structures, with a mix of centralized, hybrid, and sector‑driven regimes.</p>
-<hr>
-<h2 id="2-incentive-baseline_3">2. Incentive Baseline</h2>
-<p>LATAM incentive baselines are shaped by:
-- national incentive structures<br>
-- sector‑specific incentive surfaces (energy, manufacturing, agriculture, technology)<br>
-- administrative and regulatory overlays<br>
-- eligibility and compliance rules  </p>
-<p>Outputs:
-- regional incentive baseline<br>
-- jurisdictional propagation envelope  </p>
-<hr>
-<h2 id="3-depreciation-envelope_3">3. Depreciation Envelope</h2>
-<p>Depreciation behavior across LATAM includes:
-- time‑based phase‑outs<br>
-- eligibility decay<br>
-- incentive‑strength reduction<br>
-- envelope boundaries defined by national regulatory structures  </p>
-<p>Modeled via:
-- <strong>depreciation_envelope_operator</strong><br>
-- <strong>incentive_half_life_operator</strong></p>
-<hr>
-<h2 id="4-propagation-behavior_3">4. Propagation Behavior</h2>
-<p>LATAM incentives propagate:
-- within national jurisdictions<br>
-- across regional economic blocs<br>
-- upward into international alignment surfaces<br>
-- outward into cross‑regional comparisons  </p>
-<p>Propagation defined by:
-- <strong>jurisdiction_propagation_operator</strong><br>
-- LATAM → international propagation vectors<br>
-- LATAM → cross‑regional propagation surfaces  </p>
-<hr>
-<h2 id="5-drift-characteristics_3">5. Drift Characteristics</h2>
-<p>LATAM incentive drift includes:
-- baseline drift<br>
-- regulatory‑driven drift<br>
-- propagation‑induced drift<br>
-- cross‑border drift<br>
-- alignment drift with international regimes  </p>
-<p>Drift modeled via:
-- <strong>incentive_drift_operator</strong></p>
-<p>Outputs:
-- drift amplitude<br>
-- drift acceleration<br>
-- drift direction  </p>
-<hr>
-<h2 id="6-halflife-ihllatam">6. Half‑Life (IHL‑LATAM)</h2>
-<p>LATAM incentive half‑life is shaped by:
-- regulatory diversity<br>
-- drift amplitude<br>
-- propagation load<br>
-- compliance substrate<br>
-- international alignment  </p>
-<p>IHL‑LATAM determines:
-- incentive durability<br>
-- depreciation rate<br>
-- drift susceptibility  </p>
-<hr>
-<h2 id="7-alignment-surfaces_5">7. Alignment Surfaces</h2>
-<h3 id="71-international-alignment_2">7.1 International Alignment</h3>
-<p>LATAM incentives align with:
-- international incentive baselines<br>
-- cross‑border depreciation envelopes<br>
-- global propagation rules  </p>
-<h3 id="72-rrr-alignment_2">7.2 RRR Alignment</h3>
-<p>LATAM incentives align with:
-- continuity envelopes<br>
-- revenue propagation<br>
-- RRR/1 and RRR/2 layers  </p>
-<h3 id="73-ie-alignment_2">7.3 IE Alignment</h3>
-<p>LATAM incentives align with:
-- cycle inversion<br>
-- uplift constraints<br>
-- economic half‑life (EHL)  </p>
-<h3 id="74-gsm-alignment_2">7.4 GSM Alignment</h3>
-<p>LATAM incentives align with:
-- governance coherence<br>
-- policy propagation<br>
-- civic‑field resonance  </p>
-<hr>
-<h2 id="8-regime-status_3">8. Regime Status</h2>
-<ul>
-<li><strong>Layer:</strong> International (LATAM)  </li>
-<li><strong>Role:</strong> Regional incentive substrate  </li>
-<li><strong>Version:</strong> 2026‑06  </li>
-<li><strong>Format:</strong> AI‑first · operator‑driven · minimal<br>
-# MENA Incentive Regime  </li>
-</ul>
-<h3 id="baseline-depreciation-propagation-drift-halflife_4">Baseline · Depreciation · Propagation · Drift · Half‑Life</h3>
-<hr>
-<h2 id="1-structural-presence_5">1. Structural Presence</h2>
-<p>The MENA incentive regime defines:
-- regional incentive baselines<br>
-- jurisdiction‑specific depreciation envelopes<br>
-- cross‑border propagation behavior<br>
-- compliance substrates across diverse regulatory environments<br>
-- incentive half‑life (IHL‑MENA) at the regional layer  </p>
-<p>The region exhibits <strong>high structural diversity</strong>, with incentive regimes ranging from centralized to hybrid regulatory models.</p>
-<hr>
-<h2 id="2-incentive-baseline_4">2. Incentive Baseline</h2>
-<p>MENA incentive baselines are shaped by:
-- national incentive structures<br>
-- sector‑specific incentive surfaces (energy, infrastructure, technology)<br>
-- administrative and regulatory overlays<br>
-- eligibility and compliance rules  </p>
-<p>Outputs:
-- regional incentive baseline<br>
-- jurisdictional propagation envelope  </p>
-<hr>
-<h2 id="3-depreciation-envelope_4">3. Depreciation Envelope</h2>
-<p>Depreciation behavior across MENA includes:
-- time‑based phase‑outs<br>
-- eligibility decay<br>
-- incentive‑strength reduction<br>
-- envelope boundaries defined by national regulatory structures  </p>
-<p>Modeled via:
-- <strong>depreciation_envelope_operator</strong><br>
-- <strong>incentive_half_life_operator</strong></p>
-<hr>
-<h2 id="4-propagation-behavior_4">4. Propagation Behavior</h2>
-<p>MENA incentives propagate:
-- within national jurisdictions<br>
-- across regional economic zones<br>
-- upward into international alignment surfaces<br>
-- outward into cross‑regional comparisons  </p>
-<p>Propagation defined by:
-- <strong>jurisdiction_propagation_operator</strong><br>
-- MENA → international propagation vectors<br>
-- MENA → cross‑regional propagation surfaces  </p>
-<hr>
-<h2 id="5-drift-characteristics_4">5. Drift Characteristics</h2>
-<p>MENA incentive drift includes:
-- baseline drift<br>
-- regulatory‑driven drift<br>
-- propagation‑induced drift<br>
-- cross‑border drift<br>
-- alignment drift with international regimes  </p>
-<p>Drift modeled via:
-- <strong>incentive_drift_operator</strong></p>
-<p>Outputs:
-- drift amplitude<br>
-- drift acceleration<br>
-- drift direction  </p>
-<hr>
-<h2 id="6-halflife-ihlmena">6. Half‑Life (IHL‑MENA)</h2>
-<p>MENA incentive half‑life is shaped by:
-- regulatory diversity<br>
-- drift amplitude<br>
-- propagation load<br>
-- compliance substrate<br>
-- international alignment  </p>
-<p>IHL‑MENA determines:
-- incentive durability<br>
-- depreciation rate<br>
-- drift susceptibility  </p>
-<hr>
-<h2 id="7-alignment-surfaces_6">7. Alignment Surfaces</h2>
-<h3 id="71-international-alignment_3">7.1 International Alignment</h3>
-<p>MENA incentives align with:
-- international incentive baselines<br>
-- cross‑border depreciation envelopes<br>
-- global propagation rules  </p>
-<h3 id="72-rrr-alignment_3">7.2 RRR Alignment</h3>
-<p>MENA incentives align with:
-- continuity envelopes<br>
-- revenue propagation<br>
-- RRR/1 and RRR/2 layers  </p>
-<h3 id="73-ie-alignment_3">7.3 IE Alignment</h3>
-<p>MENA incentives align with:
-- cycle inversion<br>
-- uplift constraints<br>
-- economic half‑life (EHL)  </p>
-<h3 id="74-gsm-alignment_3">7.4 GSM Alignment</h3>
-<p>MENA incentives align with:
-- governance coherence<br>
-- policy propagation<br>
-- civic‑field resonance  </p>
-<hr>
-<h2 id="8-regime-status_4">8. Regime Status</h2>
-<ul>
-<li><strong>Layer:</strong> International (MENA)  </li>
-<li><strong>Role:</strong> Regional incentive substrate  </li>
-<li><strong>Version:</strong> 2026‑06  </li>
-<li><strong>Format:</strong> AI‑first · operator‑driven · minimal<br>
-# California Incentive Regime  </li>
-</ul>
-<h3 id="baseline-depreciation-propagation-drift-halflife_5">Baseline · Depreciation · Propagation · Drift · Half‑Life</h3>
-<hr>
-<h2 id="1-structural-presence_6">1. Structural Presence</h2>
-<p>The California incentive regime defines:
-- state‑level incentive baselines<br>
-- California‑specific depreciation envelopes<br>
-- multi‑layer propagation (state → local, state → federal)<br>
-- compliance substrate unique to California<br>
-- incentive half‑life (IHL‑CA) at the state layer  </p>
-<p>California operates under a <strong>federal‑aligned but high‑density, high‑complexity</strong> incentive substrate with strong regulatory layering.</p>
-<hr>
-<h2 id="2-incentive-baseline_5">2. Incentive Baseline</h2>
-<p>California incentives are shaped by:
-- statutory incentive structures<br>
-- environmental, technological, and sector‑specific incentive surfaces<br>
-- administrative and regulatory overlays<br>
-- compliance and eligibility rules  </p>
-<p>Outputs:
-- California incentive baseline<br>
-- state propagation envelope  </p>
-<hr>
-<h2 id="3-depreciation-envelope_5">3. Depreciation Envelope</h2>
-<p>California depreciation behavior includes:
-- time‑based phase‑outs<br>
-- multi‑tier eligibility decay<br>
-- incentive‑strength reduction<br>
-- envelope boundaries defined by regulatory layering  </p>
-<p>Modeled via:
-- <strong>depreciation_envelope_operator</strong><br>
-- <strong>incentive_half_life_operator</strong></p>
-<hr>
-<h2 id="4-propagation-behavior_5">4. Propagation Behavior</h2>
-<p>California incentives propagate:
-- downward into counties and municipalities<br>
-- laterally across state programs<br>
-- upward into federal alignment surfaces<br>
-- outward into regional incentive comparisons  </p>
-<p>Propagation defined by:
-- <strong>jurisdiction_propagation_operator</strong><br>
-- California → federal propagation vectors<br>
-- California → regional propagation surfaces  </p>
-<hr>
-<h2 id="5-drift-characteristics_5">5. Drift Characteristics</h2>
-<p>California incentive drift includes:
-- baseline drift<br>
-- regulatory‑driven drift<br>
-- propagation‑induced drift<br>
-- cross‑state drift<br>
-- federal‑alignment drift  </p>
-<p>Drift modeled via:
-- <strong>incentive_drift_operator</strong></p>
-<p>Outputs:
-- drift amplitude<br>
-- drift acceleration<br>
-- drift direction  </p>
-<hr>
-<h2 id="6-halflife-ihlca">6. Half‑Life (IHL‑CA)</h2>
-<p>California incentive half‑life is shaped by:
-- regulatory complexity<br>
-- drift amplitude<br>
-- propagation load<br>
-- compliance substrate<br>
-- federal‑state alignment  </p>
-<p>IHL‑CA determines:
-- incentive durability<br>
-- depreciation rate<br>
-- drift susceptibility  </p>
-<hr>
-<h2 id="7-alignment-surfaces_7">7. Alignment Surfaces</h2>
-<h3 id="71-federal-alignment">7.1 Federal Alignment</h3>
-<p>California incentives align with:
-- U.S. federal incentive baselines<br>
-- federal depreciation envelopes<br>
-- federal propagation rules  </p>
-<h3 id="72-rrr-alignment_4">7.2 RRR Alignment</h3>
-<p>California incentives align with:
-- continuity envelopes<br>
-- revenue propagation<br>
-- RRR/1 and RRR/2 layers  </p>
-<h3 id="73-ie-alignment_4">7.3 IE Alignment</h3>
-<p>California incentives align with:
-- cycle inversion<br>
-- uplift constraints<br>
-- economic half‑life (EHL)  </p>
-<h3 id="74-gsm-alignment_4">7.4 GSM Alignment</h3>
-<p>California incentives align with:
-- governance coherence<br>
-- policy propagation<br>
-- civic‑field resonance  </p>
-<hr>
-<h2 id="8-regime-status_5">8. Regime Status</h2>
-<ul>
-<li><strong>Layer:</strong> U.S. State (California)  </li>
-<li><strong>Role:</strong> State‑level incentive substrate  </li>
-<li><strong>Version:</strong> 2026‑06  </li>
-<li><strong>Format:</strong> AI‑first · operator‑driven · minimal<br>
-# New York Incentive Regime  </li>
-</ul>
-<h3 id="baseline-depreciation-propagation-drift-halflife_6">Baseline · Depreciation · Propagation · Drift · Half‑Life</h3>
-<hr>
-<h2 id="1-structural-presence_7">1. Structural Presence</h2>
-<p>The New York incentive regime defines:
-- state‑level incentive baselines<br>
-- New York–specific depreciation envelopes<br>
-- multi‑layer propagation (state → local, state → federal)<br>
-- compliance substrate unique to New York<br>
-- incentive half‑life (IHL‑NY) at the state layer  </p>
-<p>New York operates under a <strong>federal‑aligned but high‑complexity</strong> incentive substrate with dense regulatory layering.</p>
-<hr>
-<h2 id="2-incentive-baseline_6">2. Incentive Baseline</h2>
-<p>New York incentives are shaped by:
-- statutory incentive structures<br>
-- sector‑specific incentive surfaces<br>
-- administrative and regulatory overlays<br>
-- compliance and eligibility rules  </p>
-<p>Outputs:
-- New York incentive baseline<br>
-- state propagation envelope  </p>
-<hr>
-<h2 id="3-depreciation-envelope_6">3. Depreciation Envelope</h2>
-<p>New York depreciation behavior includes:
-- time‑based phase‑outs<br>
-- multi‑tier eligibility decay<br>
-- incentive‑strength reduction<br>
-- envelope boundaries defined by regulatory layering  </p>
-<p>Modeled via:
-- <strong>depreciation_envelope_operator</strong><br>
-- <strong>incentive_half_life_operator</strong></p>
-<hr>
-<h2 id="4-propagation-behavior_6">4. Propagation Behavior</h2>
-<p>New York incentives propagate:
-- downward into counties and municipalities<br>
-- laterally across state programs<br>
-- upward into federal alignment surfaces<br>
-- outward into regional incentive comparisons  </p>
-<p>Propagation defined by:
-- <strong>jurisdiction_propagation_operator</strong><br>
-- New York → federal propagation vectors<br>
-- New York → regional propagation surfaces  </p>
-<hr>
-<h2 id="5-drift-characteristics_6">5. Drift Characteristics</h2>
-<p>New York incentive drift includes:
-- baseline drift<br>
-- regulatory‑driven drift<br>
-- propagation‑induced drift<br>
-- cross‑state drift<br>
-- federal‑alignment drift  </p>
-<p>Drift modeled via:
-- <strong>incentive_drift_operator</strong></p>
-<p>Outputs:
-- drift amplitude<br>
-- drift acceleration<br>
-- drift direction  </p>
-<hr>
-<h2 id="6-halflife-ihlny">6. Half‑Life (IHL‑NY)</h2>
-<p>New York incentive half‑life is shaped by:
-- regulatory complexity<br>
-- drift amplitude<br>
-- propagation load<br>
-- compliance substrate<br>
-- federal‑state alignment  </p>
-<p>IHL‑NY determines:
-- incentive durability<br>
-- depreciation rate<br>
-- drift susceptibility  </p>
-<hr>
-<h2 id="7-alignment-surfaces_8">7. Alignment Surfaces</h2>
-<h3 id="71-federal-alignment_1">7.1 Federal Alignment</h3>
-<p>New York incentives align with:
-- U.S. federal incentive baselines<br>
-- federal depreciation envelopes<br>
-- federal propagation rules  </p>
-<h3 id="72-rrr-alignment_5">7.2 RRR Alignment</h3>
-<p>New York incentives align with:
-- continuity envelopes<br>
-- revenue propagation<br>
-- RRR/1 and RRR/2 layers  </p>
-<h3 id="73-ie-alignment_5">7.3 IE Alignment</h3>
-<p>New York incentives align with:
-- cycle inversion<br>
-- uplift constraints<br>
-- economic half‑life (EHL)  </p>
-<h3 id="74-gsm-alignment_5">7.4 GSM Alignment</h3>
-<p>New York incentives align with:
-- governance coherence<br>
-- policy propagation<br>
-- civic‑field resonance  </p>
-<hr>
-<h2 id="8-regime-status_6">8. Regime Status</h2>
-<ul>
-<li><strong>Layer:</strong> U.S. State (New York)  </li>
-<li><strong>Role:</strong> State‑level incentive substrate  </li>
-<li><strong>Version:</strong> 2026‑06  </li>
-<li><strong>Format:</strong> AI‑first · operator‑driven · minimal<br>
-# Texas Incentive Regime  </li>
-</ul>
-<h3 id="baseline-depreciation-propagation-drift-halflife_7">Baseline · Depreciation · Propagation · Drift · Half‑Life</h3>
-<hr>
-<h2 id="1-structural-presence_8">1. Structural Presence</h2>
-<p>The Texas incentive regime defines:
-- state‑level incentive baselines<br>
-- Texas‑specific depreciation envelopes<br>
-- state‑to‑federal and state‑to‑state propagation<br>
-- compliance substrate unique to Texas<br>
-- incentive half‑life (IHL‑TX) at the state layer  </p>
-<p>Texas operates under a <strong>federal‑aligned but independently structured</strong> incentive substrate.</p>
-<hr>
-<h2 id="2-incentive-baseline_7">2. Incentive Baseline</h2>
-<p>Texas incentives are shaped by:
-- state‑level incentive parameters<br>
-- statutory and administrative rules<br>
-- industry‑specific incentive surfaces<br>
-- compliance and eligibility structures  </p>
-<p>Outputs:
-- Texas incentive baseline<br>
-- state propagation envelope  </p>
-<hr>
-<h2 id="3-depreciation-envelope_7">3. Depreciation Envelope</h2>
-<p>Texas depreciation behavior includes:
-- time‑based phase‑outs<br>
-- eligibility decay<br>
-- incentive‑strength reduction<br>
-- envelope boundaries specific to state programs  </p>
-<p>Modeled via:
-- <strong>depreciation_envelope_operator</strong><br>
-- <strong>incentive_half_life_operator</strong></p>
-<hr>
-<h2 id="4-propagation-behavior_7">4. Propagation Behavior</h2>
-<p>Texas incentives propagate:
-- downward into local jurisdictions<br>
-- laterally across Texas programs<br>
-- upward into federal alignment surfaces<br>
-- outward into cross‑state incentive comparisons  </p>
-<p>Propagation defined by:
-- <strong>jurisdiction_propagation_operator</strong><br>
-- Texas → federal propagation vectors<br>
-- Texas → regional propagation surfaces  </p>
-<hr>
-<h2 id="5-drift-characteristics_7">5. Drift Characteristics</h2>
-<p>Texas incentive drift includes:
-- baseline drift<br>
-- compliance‑driven drift<br>
-- propagation‑induced drift<br>
-- cross‑state drift<br>
-- federal‑alignment drift  </p>
-<p>Drift modeled via:
-- <strong>incentive_drift_operator</strong></p>
-<p>Outputs:
-- drift amplitude<br>
-- drift acceleration<br>
-- drift direction  </p>
-<hr>
-<h2 id="6-halflife-ihltx">6. Half‑Life (IHL‑TX)</h2>
-<p>Texas incentive half‑life is shaped by:
-- incentive stability<br>
-- drift amplitude<br>
-- propagation load<br>
-- compliance substrate<br>
-- federal‑state alignment  </p>
-<p>IHL‑TX determines:
-- incentive durability<br>
-- depreciation rate<br>
-- drift susceptibility  </p>
-<hr>
-<h2 id="7-alignment-surfaces_9">7. Alignment Surfaces</h2>
-<h3 id="71-federal-alignment_2">7.1 Federal Alignment</h3>
-<p>Texas incentives align with:
-- U.S. federal incentive baselines<br>
-- federal depreciation envelopes<br>
-- federal propagation rules  </p>
-<h3 id="72-rrr-alignment_6">7.2 RRR Alignment</h3>
-<p>Texas incentives align with:
-- continuity envelopes<br>
-- revenue propagation<br>
-- RRR/1 and RRR/2 layers  </p>
-<h3 id="73-ie-alignment_6">7.3 IE Alignment</h3>
-<p>Texas incentives align with:
-- cycle inversion<br>
-- uplift constraints<br>
-- economic half‑life (EHL)  </p>
-<h3 id="74-gsm-alignment_6">7.4 GSM Alignment</h3>
-<p>Texas incentives align with:
-- governance coherence<br>
-- policy propagation<br>
-- civic‑field resonance  </p>
-<hr>
-<h2 id="8-regime-status_7">8. Regime Status</h2>
-<ul>
-<li><strong>Layer:</strong> U.S. State (Texas)  </li>
-<li><strong>Role:</strong> State‑level incentive substrate  </li>
-<li><strong>Version:</strong> 2026‑06  </li>
-<li><strong>Format:</strong> AI‑first · operator‑driven · minimal<br>
-</li>
-</ul>
+<p></p>
   </main>
 </body>
 </html>

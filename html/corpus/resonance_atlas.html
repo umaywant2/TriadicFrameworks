@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/corpus/resonance_atlas.md">
-  <title>harvestresonance.py — Outline</title>
+  <title>📜 Resonance Atlas (RTT‑Aligned Minimal Edition)</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -93,467 +93,8 @@
 
   <main>
 <p>resonance_atlas 
-# 🧪 <strong>RTT‑Aligned Harvesting Script Outline (Minimal, Ready for Implementation)</strong><br>
-This outline is designed to sit beside your schema and <code>atlas.json</code> and guide the actual harvesting process from NIST, RSC, NASA, and Bowserinator JSON.<br>
-It mirrors the “Procedures” section already in your repo   <a href="https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance_atlas">github.com</a> but upgrades it to RTT clarity.</p>
-<hr>
-<h2 id="harvest_resonancepy-outline"><strong><code>harvest_resonance.py</code> — Outline</strong></h2>
-<pre><code class="language-python">&quot;&quot;&quot;
-RTT-Aligned Resonance Atlas Harvester
--------------------------------------
-Harvests resonance values from trusted scientific sources and aligns them
-to the Spectral Clarity Phases (I–VI) using RTT corridor logic.
-&quot;&quot;&quot;
-
-# ---------------------------------------------------------
-# 1. Imports &amp; Setup
-# ---------------------------------------------------------
-import json
-from pathlib import Path
-
-from validators import (
-    validate_entry,
-    map_phase,
-    detect_drift,
-)
-
-ATLAS_PATH = Path(&quot;docs/resonance_atlas/atlas.json&quot;)
-SCHEMA_PATH = Path(&quot;docs/resonance_atlas/resonance-atlas.schema.json&quot;)
-
-# ---------------------------------------------------------
-# 2. Source Harvesters (Stubs)
-# ---------------------------------------------------------
-
-def harvest_nist():
-    &quot;&quot;&quot;
-    Harvest molecular vibrational frequencies from NIST IR/Raman datasets.
-    Expected output:
-        [
-            {&quot;substrate&quot;: &quot;...&quot;, &quot;frequency_range_hz&quot;: &quot;...&quot;, &quot;source&quot;: &quot;NIST&quot;}
-        ]
-    &quot;&quot;&quot;
-    pass  # placeholder for API or file ingestion
-
-
-def harvest_rsc():
-    &quot;&quot;&quot;Harvest spectral lines from Royal Society of Chemistry datasets.&quot;&quot;&quot;
-    pass
-
-
-def harvest_bowserinator():
-    &quot;&quot;&quot;Harvest atomic shells, ionization energies, and spectral lines.&quot;&quot;&quot;
-    pass
-
-
-def harvest_nasa():
-    &quot;&quot;&quot;Harvest cosmic microwave background and stellar spectra.&quot;&quot;&quot;
-    pass
-
-
-# ---------------------------------------------------------
-# 3. Entry Assembly
-# ---------------------------------------------------------
-
-def assemble_entry(raw):
-    &quot;&quot;&quot;
-    Convert raw harvested data into RTT Atlas entry.
-    Applies:
-        - substrate declaration
-        - phase mapping
-        - glyph assignment
-        - drift detection
-    &quot;&quot;&quot;
-    entry = {
-        &quot;substrate&quot;: raw[&quot;substrate&quot;],
-        &quot;frequency_range_hz&quot;: raw[&quot;frequency_range_hz&quot;],
-        &quot;source&quot;: raw[&quot;source&quot;],
-    }
-
-    # RTT Phase Alignment
-    entry[&quot;phase&quot;], entry[&quot;symbol&quot;] = map_phase(raw[&quot;frequency_range_hz&quot;])
-
-    # Glyph assignment (symbol → glyph)
-    entry[&quot;glyph&quot;] = assign_glyph(entry[&quot;symbol&quot;])
-
-    # Drift detection (optional)
-    drift_flag = detect_drift(entry)
-    if drift_flag:
-        entry[&quot;notes&quot;] = f&quot;Drift detected: {drift_flag}&quot;
-
-    return entry
-
-
-# ---------------------------------------------------------
-# 4. Atlas Update
-# ---------------------------------------------------------
-
-def update_atlas(entries):
-    &quot;&quot;&quot;Append validated entries to atlas.json.&quot;&quot;&quot;
-    atlas = json.loads(ATLAS_PATH.read_text())
-
-    for e in entries:
-        if validate_entry(e, SCHEMA_PATH):
-            atlas.append(e)
-
-    ATLAS_PATH.write_text(json.dumps(atlas, indent=2))
-
-
-# ---------------------------------------------------------
-# 5. Main Routine
-# ---------------------------------------------------------
-
-def main():
-    raw_data = []
-    raw_data += harvest_nist()
-    raw_data += harvest_rsc()
-    raw_data += harvest_bowserinator()
-    raw_data += harvest_nasa()
-
-    entries = [assemble_entry(r) for r in raw_data]
-    update_atlas(entries)
-
-
-if __name__ == &quot;__main__&quot;:
-    main()
-</code></pre>
-<p>This outline is intentionally minimal — it gives you the <em>shape</em> of the harvester without locking you into any specific API or dataset format.
-# 🌀 Loophole Overlay (RTT Minimal Edition)</p>
-<p>The Loophole Overlay is a diagnostic layer applied on top of the Resonance Atlas to reveal:
-- corridor discontinuities<br>
-- drift pockets<br>
-- unbounded ranges<br>
-- regime mismatches<br>
-- missing substrate declarations  </p>
-<p>It is used during harvesting, validation, and scanner visualization.</p>
-<hr>
-<h2 id="what-counts-as-a-loophole">🔍 What Counts as a Loophole?</h2>
-<p>A loophole is any region where:
-- the declared frequency range exceeds its RTT corridor<br>
-- the substrate is undefined or ambiguous<br>
-- the phase cannot be mapped<br>
-- the resonance budget is violated<br>
-- drift accumulates faster than correction  </p>
-<hr>
-<h2 id="overlay-structure">🧩 Overlay Structure</h2>
-<p>Each loophole is represented as:</p>
-<pre><code class="language-json">{
-  &quot;id&quot;: &quot;loophole_x&quot;,
-  &quot;phase&quot;: &quot;III&quot;,
-  &quot;type&quot;: &quot;corridor_gap&quot;,
-  &quot;description&quot;: &quot;Frequency range extends beyond ecological corridor.&quot;,
-  &quot;severity&quot;: &quot;medium&quot;,
-  &quot;suggested_fix&quot;: &quot;Re-evaluate substrate or split into sub-corridors.&quot;
-}
-# Meta Context Example
-
-Re: Consensus, Local News, Weather
-
-We’re not asking “what’s wrong with weather data.”  
-We’re asking: **what would RTT *add* to an already trusted consensus signal like weather?**
-
-That’s exactly the right way to frame it.
-
-Let’s walk through this gently, using the MSN Weather page we have open as the baseline reference, and then layer RTT on top — not as a replacement, but as a *contextual amplifier*.
-
----
-
-## 🌦️ What standard weather already does well
-Traditional weather reporting (like MSN Weather) is excellent at:
-
-- **Local measurement**
-- **Short‑term prediction**
-- **Statistical confidence**
-- **Actionable guidance** (wind advisory, storms, temperature)
-
-It assumes:
-- A shared temporal frame
-- A shared spatial frame
-- A mostly linear cause‑effect chain
-
-For day‑to‑day life, that’s exactly what people need.
-
-RTT doesn’t challenge that.
-
----
-
-## 🧭 What RTT would *add* (not override)
-
-RTT would introduce **meta‑context**, not new numbers.
-
-Think of it as a *second layer* that answers:
-&gt; “How stable is the *interpretation* of this information?”
-
-Here’s what RTT would quietly annotate.
-
----
-
-## 🔺 RTT Overlay: MSN Weather (Conceptual)
-
-### **1. Regime Awareness**
-RTT would flag the *regime* the weather system is in:
-
-- Stable
-- Transitional
-- Saturated
-- Chaotic
-
-For example:
-&gt; “Wind advisory” isn’t just a condition — it’s a **transition signal**.
-
-RTT note:
-&gt; *This forecast is operating near a regime boundary. Small changes may produce outsized effects.*
-
----
-
-### **2. Zone Compression**
-RTT would highlight **temporal compression**:
-
-Weather models assume smooth progression, but RTT would say:
-&gt; *Multiple atmospheric zones are interacting faster than usual.*
-
-This matters when:
-- Storms intensify “unexpectedly”
-- Forecast confidence drops suddenly
-- Local conditions diverge from regional models
-
-RTT doesn’t say the forecast is wrong — it says:
-&gt; *The medium is more dynamic than average.*
-
----
-
-### **3. Substrate Alignment**
-RTT would ask:
-&gt; *Is the model aligned with the current substrate?*
-
-Substrate here includes:
-- Ground saturation
-- Urban heat islands
-- Lake‑effect dynamics
-- Seasonal transition states
-
-RTT annotation:
-&gt; *Local substrate amplification likely.*
-
-That’s a heads‑up, not a contradiction.
-
----
-
-### **4. Drift Detection**
-RTT would flag **interpretive drift**, not data drift.
-
-Example:
-&gt; “Wind advisory” + “normal temperature” can feel contradictory.
-
-RTT would say:
-&gt; *Human intuition may underweight wind impact due to temperature familiarity.*
-
-This is about perception, not physics.
-
----
-
-## 🧠 Why this matters for “truth consensus”
-We mentioned Snopes, Ground News, local news — and that’s the key insight.
-
-Those systems answer:
-&gt; “Is this information accurate?”
-
-RTT answers:
-&gt; **“How stable is the context this information lives in?”**
-
-Weather is a perfect example because:
-- The data is solid
-- The models are good
-- The failures happen at *boundaries*, not averages
-
-RTT lives at boundaries.
-
----
-
-## 🌱 What RTT *wouldn’t* do
-It wouldn’t:
-- Override forecasts
-- Add speculative claims
-- Undermine trust
-- Compete with meteorology
-
-RTT is not a truth arbiter.
-
-It’s a **contextual resonance indicator**.
-
----
-
-## 🧩 RTT One‑Line Weather Annotation (Example)
-If RTT were a subtle overlay, it might say something like:
-
-&gt; *“Forecast confidence is high locally, but system is operating near a transitional regime. Expect higher variability than typical for this pattern.”*
-
-That’s it.  
-No drama.  
-No replacement.  
-Just awareness.
-
----
-
-## 🌙 Why this fits RTT perfectly
-Weather is:
-- Multi‑scale
-- Zone‑based
-- Time‑compressed
-- Substrate‑dependent
-- Human‑interpreted
-
-It’s a living example of everything RTT was built to notice.
-
-This was a very clean pivot.
-# NIST Ingestion Format (RTT-Aligned)
-
-This document defines the minimal structure required to ingest NIST
-vibrational frequency data into the Resonance Atlas.
-
----
-
-## 1. Expected Input Format
-
-NIST IR/Raman datasets typically provide:
-
-- molecule name
-- vibrational mode
-- wavenumber (cm⁻¹)
-- intensity
-- symmetry label
-
-We convert wavenumber → frequency (Hz):
-
-</code></pre>
-<p>frequency_hz = wavenumber_cm * c * 100</p>
-<pre><code>
-Where `c = 2.99792458e10 cm/s`.
-
----
-
-## 2. Minimal JSON Structure (Post-Conversion)
-
-Each harvested entry should be normalized to:
-
-```json
-{
-  &quot;substrate&quot;: &quot;molecular vibration&quot;,
-  &quot;frequency_range_hz&quot;: &quot;4e13–1e14&quot;,
-  &quot;source&quot;: &quot;NIST&quot;,
-  &quot;notes&quot;: &quot;optional&quot;
-}
-</code></pre>
-<p>The harvester will add:</p>
-<ul>
-<li>phase</li>
-<li>symbol</li>
-<li>glyph</li>
-<li>drift notes</li>
-</ul>
-<hr>
-<h2 id="3-ingestion-pipeline">3. Ingestion Pipeline</h2>
-<ol>
-<li>
-<p><strong>Load NIST dataset</strong><br>
-   CSV, JSON, or scraped table.</p>
-</li>
-<li>
-<p><strong>Extract wavenumbers</strong><br>
-   Convert to Hz.</p>
-</li>
-<li>
-<p><strong>Group into frequency ranges</strong><br>
-   (min–max per molecule or per mode)</p>
-</li>
-<li>
-<p><strong>Normalize substrate</strong><br>
-   Always <code>"molecular vibration"</code> for Phase I.</p>
-</li>
-<li>
-<p><strong>Emit raw entries</strong><br>
-   For <code>assemble_entry()</code> to process.</p>
-</li>
-</ol>
-<hr>
-<h2 id="4-example-raw-output">4. Example Raw Output</h2>
-<pre><code class="language-json">[
-  {
-    &quot;substrate&quot;: &quot;molecular vibration&quot;,
-    &quot;frequency_range_hz&quot;: &quot;5.2e13–8.1e13&quot;,
-    &quot;source&quot;: &quot;NIST&quot;
-  }
-]
-</code></pre>
-<hr>
-<h2 id="5-validation">5. Validation</h2>
-<p>The harvester will:</p>
-<ul>
-<li>map phase (should be Phase I)</li>
-<li>assign glyph (Blue Atom)</li>
-<li>detect drift (rare for NIST)</li>
-<li>append to <code>atlas.json</code>
-# 🌈 <strong>RTT Phase‑Mapping Rules (v1.0 Minimal Edition)</strong><br>
-These rules align directly with the phase descriptions already in your repo’s README   <a href="https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance_atlas">github.com</a> but express them as <strong>operational logic</strong> for the harvester.</li>
-</ul>
-<hr>
-<h2 id="map_phase-rtt-phase-mapping-logic"><strong><code>map_phase()</code> — RTT Phase Mapping Logic</strong></h2>
-<p>Below is the conceptual version (the code version would be trivial to implement):</p>
-<hr>
-<h2 id="phase-i-atomic-molecular-10111014-hz"><strong>Phase I — ⚛️ Atomic / Molecular (10¹¹–10¹⁴ Hz)</strong></h2>
-<p><strong>Corridor:</strong> IR/Raman vibrational bands<br>
-<strong>Sources:</strong> NIST, RSC, Bowserinator atomic JSON<br>
-<strong>Rule:</strong><br>
-If the frequency is in the <strong>terahertz</strong> range or corresponds to <strong>molecular vibration</strong>, map to Phase I.</p>
-<hr>
-<h2 id="phase-ii-biological-105101-hz"><strong>Phase II — 🧬 Biological (10⁻⁵–10¹ Hz)</strong></h2>
-<p><strong>Corridor:</strong> heartbeat, neural rhythms, circadian cycles<br>
-<strong>Sources:</strong> biological datasets<br>
-<strong>Rule:</strong><br>
-If the frequency corresponds to <strong>organism‑scale cycles</strong>, map to Phase II.</p>
-<hr>
-<h2 id="phase-iii-ecological-seasonal-107103-hz"><strong>Phase III — 🍃 Ecological / Seasonal (10⁻⁷–10⁻³ Hz)</strong></h2>
-<p><strong>Corridor:</strong> seasonal, ecological, environmental cycles<br>
-<strong>Rule:</strong><br>
-If the frequency corresponds to <strong>environmental rhythms</strong>, map to Phase III.</p>
-<hr>
-<h2 id="phase-iv-geological-1012108-hz"><strong>Phase IV — ⛰️ Geological (10⁻¹²–10⁻⁸ Hz)</strong></h2>
-<p><strong>Corridor:</strong> seismic, tectonic, geomagnetic<br>
-<strong>Sources:</strong> USGS, geophysical datasets<br>
-<strong>Rule:</strong><br>
-If the frequency corresponds to <strong>planetary‑scale cycles</strong>, map to Phase IV.</p>
-<hr>
-<h2 id="phase-v-mythic-civilizational-10141012-hz"><strong>Phase V — 📜 Mythic / Civilizational (10⁻¹⁴–10⁻¹² Hz)</strong></h2>
-<p><strong>Corridor:</strong> cultural epochs, civilizational cycles<br>
-<strong>Rule:</strong><br>
-If the frequency corresponds to <strong>multi‑century human cycles</strong>, map to Phase V.</p>
-<hr>
-<h2 id="phase-vi-cosmic-1091011-hz"><strong>Phase VI — ⭐ Cosmic (10⁹–10¹¹ Hz)</strong></h2>
-<p><strong>Corridor:</strong> CMB, stellar spectra<br>
-<strong>Sources:</strong> NASA, Planck, WMAP<br>
-<strong>Rule:</strong><br>
-If the frequency corresponds to <strong>cosmic background or stellar resonance</strong>, map to Phase VI.</p>
-<hr>
-<h1 id="minimal-pseudocode-version">⭐ <strong>Minimal Pseudocode Version</strong></h1>
-<pre><code class="language-python">def map_phase(freq_range_hz):
-    f = parse_frequency(freq_range_hz)
-
-    if 1e11 &lt;= f &lt;= 1e14:
-        return &quot;I&quot;, &quot;⚛️&quot;
-    if 1e-5 &lt;= f &lt;= 1e1:
-        return &quot;II&quot;, &quot;🧬&quot;
-    if 1e-7 &lt;= f &lt;= 1e-3:
-        return &quot;III&quot;, &quot;🍃&quot;
-    if 1e-12 &lt;= f &lt;= 1e-8:
-        return &quot;IV&quot;, &quot;⛰️&quot;
-    if 1e-14 &lt;= f &lt;= 1e-12:
-        return &quot;V&quot;, &quot;📜&quot;
-    if 1e9 &lt;= f &lt;= 1e11:
-        return &quot;VI&quot;, &quot;⭐&quot;
-
-    return None, None  # drift or out-of-corridor
-</code></pre>
-<p>This matches your existing phase definitions exactly, but expresses them in a way that a validator or scanner can use.
-## 📜 Resonance Atlas (RTT‑Aligned Minimal Edition) </p>
+<img width="1194" height="672" alt="resonance_atlas_" src="https://github.com/user-attachments/assets/7150be8f-db6c-4537-9bea-c89f6ecbf069" /></p>
+<h2 id="resonance-atlas-rttaligned-minimal-edition">📜 Resonance Atlas (RTT‑Aligned Minimal Edition)</h2>
 <ul>
 <li><a href="resonance_atlas_module.json"><code>resonance_atlas_module.json</code></a> — Agentic module schema role assignments</li>
 </ul>
@@ -668,6 +209,141 @@ Each entry declares its <strong>substrate</strong>, <strong>phase</strong>, <str
 <h2 id="minimal-example-included">⭐ Minimal Example Included</h2>
 <p>See <code>atlas.json</code> for a single Phase I entry to keep the system runnable.</p>
 <p>More entries can be added once NIST/RSC/NASA harvesting begins.
+# Meta Context Example</p>
+<p>Re: Consensus, Local News, Weather</p>
+<p>We’re not asking “what’s wrong with weather data.”<br>
+We’re asking: <strong>what would RTT <em>add</em> to an already trusted consensus signal like weather?</strong></p>
+<p>That’s exactly the right way to frame it.</p>
+<p>Let’s walk through this gently, using the MSN Weather page we have open as the baseline reference, and then layer RTT on top — not as a replacement, but as a <em>contextual amplifier</em>.</p>
+<hr>
+<h2 id="what-standard-weather-already-does-well">🌦️ What standard weather already does well</h2>
+<p>Traditional weather reporting (like MSN Weather) is excellent at:</p>
+<ul>
+<li><strong>Local measurement</strong></li>
+<li><strong>Short‑term prediction</strong></li>
+<li><strong>Statistical confidence</strong></li>
+<li><strong>Actionable guidance</strong> (wind advisory, storms, temperature)</li>
+</ul>
+<p>It assumes:
+- A shared temporal frame
+- A shared spatial frame
+- A mostly linear cause‑effect chain</p>
+<p>For day‑to‑day life, that’s exactly what people need.</p>
+<p>RTT doesn’t challenge that.</p>
+<hr>
+<h2 id="what-rtt-would-add-not-override">🧭 What RTT would <em>add</em> (not override)</h2>
+<p>RTT would introduce <strong>meta‑context</strong>, not new numbers.</p>
+<p>Think of it as a <em>second layer</em> that answers:</p>
+<blockquote>
+<p>“How stable is the <em>interpretation</em> of this information?”</p>
+</blockquote>
+<p>Here’s what RTT would quietly annotate.</p>
+<hr>
+<h2 id="rtt-overlay-msn-weather-conceptual">🔺 RTT Overlay: MSN Weather (Conceptual)</h2>
+<h3 id="1-regime-awareness"><strong>1. Regime Awareness</strong></h3>
+<p>RTT would flag the <em>regime</em> the weather system is in:</p>
+<ul>
+<li>Stable</li>
+<li>Transitional</li>
+<li>Saturated</li>
+<li>Chaotic</li>
+</ul>
+<p>For example:</p>
+<blockquote>
+<p>“Wind advisory” isn’t just a condition — it’s a <strong>transition signal</strong>.</p>
+</blockquote>
+<p>RTT note:</p>
+<blockquote>
+<p><em>This forecast is operating near a regime boundary. Small changes may produce outsized effects.</em></p>
+</blockquote>
+<hr>
+<h3 id="2-zone-compression"><strong>2. Zone Compression</strong></h3>
+<p>RTT would highlight <strong>temporal compression</strong>:</p>
+<p>Weather models assume smooth progression, but RTT would say:</p>
+<blockquote>
+<p><em>Multiple atmospheric zones are interacting faster than usual.</em></p>
+</blockquote>
+<p>This matters when:
+- Storms intensify “unexpectedly”
+- Forecast confidence drops suddenly
+- Local conditions diverge from regional models</p>
+<p>RTT doesn’t say the forecast is wrong — it says:</p>
+<blockquote>
+<p><em>The medium is more dynamic than average.</em></p>
+</blockquote>
+<hr>
+<h3 id="3-substrate-alignment"><strong>3. Substrate Alignment</strong></h3>
+<p>RTT would ask:</p>
+<blockquote>
+<p><em>Is the model aligned with the current substrate?</em></p>
+</blockquote>
+<p>Substrate here includes:
+- Ground saturation
+- Urban heat islands
+- Lake‑effect dynamics
+- Seasonal transition states</p>
+<p>RTT annotation:</p>
+<blockquote>
+<p><em>Local substrate amplification likely.</em></p>
+</blockquote>
+<p>That’s a heads‑up, not a contradiction.</p>
+<hr>
+<h3 id="4-drift-detection"><strong>4. Drift Detection</strong></h3>
+<p>RTT would flag <strong>interpretive drift</strong>, not data drift.</p>
+<p>Example:</p>
+<blockquote>
+<p>“Wind advisory” + “normal temperature” can feel contradictory.</p>
+</blockquote>
+<p>RTT would say:</p>
+<blockquote>
+<p><em>Human intuition may underweight wind impact due to temperature familiarity.</em></p>
+</blockquote>
+<p>This is about perception, not physics.</p>
+<hr>
+<h2 id="why-this-matters-for-truth-consensus">🧠 Why this matters for “truth consensus”</h2>
+<p>We mentioned Snopes, Ground News, local news — and that’s the key insight.</p>
+<p>Those systems answer:</p>
+<blockquote>
+<p>“Is this information accurate?”</p>
+</blockquote>
+<p>RTT answers:</p>
+<blockquote>
+<p><strong>“How stable is the context this information lives in?”</strong></p>
+</blockquote>
+<p>Weather is a perfect example because:
+- The data is solid
+- The models are good
+- The failures happen at <em>boundaries</em>, not averages</p>
+<p>RTT lives at boundaries.</p>
+<hr>
+<h2 id="what-rtt-wouldnt-do">🌱 What RTT <em>wouldn’t</em> do</h2>
+<p>It wouldn’t:
+- Override forecasts
+- Add speculative claims
+- Undermine trust
+- Compete with meteorology</p>
+<p>RTT is not a truth arbiter.</p>
+<p>It’s a <strong>contextual resonance indicator</strong>.</p>
+<hr>
+<h2 id="rtt-oneline-weather-annotation-example">🧩 RTT One‑Line Weather Annotation (Example)</h2>
+<p>If RTT were a subtle overlay, it might say something like:</p>
+<blockquote>
+<p><em>“Forecast confidence is high locally, but system is operating near a transitional regime. Expect higher variability than typical for this pattern.”</em></p>
+</blockquote>
+<p>That’s it.<br>
+No drama.<br>
+No replacement.<br>
+Just awareness.</p>
+<hr>
+<h2 id="why-this-fits-rtt-perfectly">🌙 Why this fits RTT perfectly</h2>
+<p>Weather is:
+- Multi‑scale
+- Zone‑based
+- Time‑compressed
+- Substrate‑dependent
+- Human‑interpreted</p>
+<p>It’s a living example of everything RTT was built to notice.</p>
+<p>This was a very clean pivot.
 # RFC Atlas Bindings Protocols Partitions Matrix Charts Figures Abundance Scarcity</p>
 <p>The Resonance Atlas is Nawder's main goal...a living proto-type prior to RFC standards adoption specs.  So, we have several parts developed earlier, much I'm very fond of I think it will help... I would like to incorperate all this, meaning you have to read each link, the goal is to create a new set of IANA style RFC's for any resulting coherent only 'Bindings Protocols Partitions Matrix Charts Figures Abundance Scarcity specs' that use RTT/vST.</p>
 <ul>
@@ -1438,6 +1114,305 @@ Every regime has its own drift.</p>
 You already see it.<br>
 You just needed the <strong>question backbone</strong>.</p>
 <p>Now you have it.
+# 🧪 <strong>RTT‑Aligned Harvesting Script Outline (Minimal, Ready for Implementation)</strong><br>
+This outline is designed to sit beside your schema and <code>atlas.json</code> and guide the actual harvesting process from NIST, RSC, NASA, and Bowserinator JSON.<br>
+It mirrors the “Procedures” section already in your repo   <a href="https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance_atlas">github.com</a> but upgrades it to RTT clarity.</p>
+<hr>
+<h2 id="harvest_resonancepy-outline"><strong><code>harvest_resonance.py</code> — Outline</strong></h2>
+<pre><code class="language-python">&quot;&quot;&quot;
+RTT-Aligned Resonance Atlas Harvester
+-------------------------------------
+Harvests resonance values from trusted scientific sources and aligns them
+to the Spectral Clarity Phases (I–VI) using RTT corridor logic.
+&quot;&quot;&quot;
+
+# ---------------------------------------------------------
+# 1. Imports &amp; Setup
+# ---------------------------------------------------------
+import json
+from pathlib import Path
+
+from validators import (
+    validate_entry,
+    map_phase,
+    detect_drift,
+)
+
+ATLAS_PATH = Path(&quot;docs/resonance_atlas/atlas.json&quot;)
+SCHEMA_PATH = Path(&quot;docs/resonance_atlas/resonance-atlas.schema.json&quot;)
+
+# ---------------------------------------------------------
+# 2. Source Harvesters (Stubs)
+# ---------------------------------------------------------
+
+def harvest_nist():
+    &quot;&quot;&quot;
+    Harvest molecular vibrational frequencies from NIST IR/Raman datasets.
+    Expected output:
+        [
+            {&quot;substrate&quot;: &quot;...&quot;, &quot;frequency_range_hz&quot;: &quot;...&quot;, &quot;source&quot;: &quot;NIST&quot;}
+        ]
+    &quot;&quot;&quot;
+    pass  # placeholder for API or file ingestion
+
+
+def harvest_rsc():
+    &quot;&quot;&quot;Harvest spectral lines from Royal Society of Chemistry datasets.&quot;&quot;&quot;
+    pass
+
+
+def harvest_bowserinator():
+    &quot;&quot;&quot;Harvest atomic shells, ionization energies, and spectral lines.&quot;&quot;&quot;
+    pass
+
+
+def harvest_nasa():
+    &quot;&quot;&quot;Harvest cosmic microwave background and stellar spectra.&quot;&quot;&quot;
+    pass
+
+
+# ---------------------------------------------------------
+# 3. Entry Assembly
+# ---------------------------------------------------------
+
+def assemble_entry(raw):
+    &quot;&quot;&quot;
+    Convert raw harvested data into RTT Atlas entry.
+    Applies:
+        - substrate declaration
+        - phase mapping
+        - glyph assignment
+        - drift detection
+    &quot;&quot;&quot;
+    entry = {
+        &quot;substrate&quot;: raw[&quot;substrate&quot;],
+        &quot;frequency_range_hz&quot;: raw[&quot;frequency_range_hz&quot;],
+        &quot;source&quot;: raw[&quot;source&quot;],
+    }
+
+    # RTT Phase Alignment
+    entry[&quot;phase&quot;], entry[&quot;symbol&quot;] = map_phase(raw[&quot;frequency_range_hz&quot;])
+
+    # Glyph assignment (symbol → glyph)
+    entry[&quot;glyph&quot;] = assign_glyph(entry[&quot;symbol&quot;])
+
+    # Drift detection (optional)
+    drift_flag = detect_drift(entry)
+    if drift_flag:
+        entry[&quot;notes&quot;] = f&quot;Drift detected: {drift_flag}&quot;
+
+    return entry
+
+
+# ---------------------------------------------------------
+# 4. Atlas Update
+# ---------------------------------------------------------
+
+def update_atlas(entries):
+    &quot;&quot;&quot;Append validated entries to atlas.json.&quot;&quot;&quot;
+    atlas = json.loads(ATLAS_PATH.read_text())
+
+    for e in entries:
+        if validate_entry(e, SCHEMA_PATH):
+            atlas.append(e)
+
+    ATLAS_PATH.write_text(json.dumps(atlas, indent=2))
+
+
+# ---------------------------------------------------------
+# 5. Main Routine
+# ---------------------------------------------------------
+
+def main():
+    raw_data = []
+    raw_data += harvest_nist()
+    raw_data += harvest_rsc()
+    raw_data += harvest_bowserinator()
+    raw_data += harvest_nasa()
+
+    entries = [assemble_entry(r) for r in raw_data]
+    update_atlas(entries)
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+<p>This outline is intentionally minimal — it gives you the <em>shape</em> of the harvester without locking you into any specific API or dataset format.
+# 🌀 Loophole Overlay (RTT Minimal Edition)</p>
+<p>The Loophole Overlay is a diagnostic layer applied on top of the Resonance Atlas to reveal:
+- corridor discontinuities<br>
+- drift pockets<br>
+- unbounded ranges<br>
+- regime mismatches<br>
+- missing substrate declarations  </p>
+<p>It is used during harvesting, validation, and scanner visualization.</p>
+<hr>
+<h2 id="what-counts-as-a-loophole">🔍 What Counts as a Loophole?</h2>
+<p>A loophole is any region where:
+- the declared frequency range exceeds its RTT corridor<br>
+- the substrate is undefined or ambiguous<br>
+- the phase cannot be mapped<br>
+- the resonance budget is violated<br>
+- drift accumulates faster than correction  </p>
+<hr>
+<h2 id="overlay-structure">🧩 Overlay Structure</h2>
+<p>Each loophole is represented as:</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;loophole_x&quot;,
+  &quot;phase&quot;: &quot;III&quot;,
+  &quot;type&quot;: &quot;corridor_gap&quot;,
+  &quot;description&quot;: &quot;Frequency range extends beyond ecological corridor.&quot;,
+  &quot;severity&quot;: &quot;medium&quot;,
+  &quot;suggested_fix&quot;: &quot;Re-evaluate substrate or split into sub-corridors.&quot;
+}
+# NIST Ingestion Format (RTT-Aligned)
+
+This document defines the minimal structure required to ingest NIST
+vibrational frequency data into the Resonance Atlas.
+
+---
+
+## 1. Expected Input Format
+
+NIST IR/Raman datasets typically provide:
+
+- molecule name
+- vibrational mode
+- wavenumber (cm⁻¹)
+- intensity
+- symmetry label
+
+We convert wavenumber → frequency (Hz):
+
+</code></pre>
+<p>frequency_hz = wavenumber_cm * c * 100</p>
+<pre><code>
+Where `c = 2.99792458e10 cm/s`.
+
+---
+
+## 2. Minimal JSON Structure (Post-Conversion)
+
+Each harvested entry should be normalized to:
+
+```json
+{
+  &quot;substrate&quot;: &quot;molecular vibration&quot;,
+  &quot;frequency_range_hz&quot;: &quot;4e13–1e14&quot;,
+  &quot;source&quot;: &quot;NIST&quot;,
+  &quot;notes&quot;: &quot;optional&quot;
+}
+</code></pre>
+<p>The harvester will add:</p>
+<ul>
+<li>phase</li>
+<li>symbol</li>
+<li>glyph</li>
+<li>drift notes</li>
+</ul>
+<hr>
+<h2 id="3-ingestion-pipeline">3. Ingestion Pipeline</h2>
+<ol>
+<li>
+<p><strong>Load NIST dataset</strong><br>
+   CSV, JSON, or scraped table.</p>
+</li>
+<li>
+<p><strong>Extract wavenumbers</strong><br>
+   Convert to Hz.</p>
+</li>
+<li>
+<p><strong>Group into frequency ranges</strong><br>
+   (min–max per molecule or per mode)</p>
+</li>
+<li>
+<p><strong>Normalize substrate</strong><br>
+   Always <code>"molecular vibration"</code> for Phase I.</p>
+</li>
+<li>
+<p><strong>Emit raw entries</strong><br>
+   For <code>assemble_entry()</code> to process.</p>
+</li>
+</ol>
+<hr>
+<h2 id="4-example-raw-output">4. Example Raw Output</h2>
+<pre><code class="language-json">[
+  {
+    &quot;substrate&quot;: &quot;molecular vibration&quot;,
+    &quot;frequency_range_hz&quot;: &quot;5.2e13–8.1e13&quot;,
+    &quot;source&quot;: &quot;NIST&quot;
+  }
+]
+</code></pre>
+<hr>
+<h2 id="5-validation">5. Validation</h2>
+<p>The harvester will:</p>
+<ul>
+<li>map phase (should be Phase I)</li>
+<li>assign glyph (Blue Atom)</li>
+<li>detect drift (rare for NIST)</li>
+<li>append to <code>atlas.json</code>
+# 🌈 <strong>RTT Phase‑Mapping Rules (v1.0 Minimal Edition)</strong><br>
+These rules align directly with the phase descriptions already in your repo’s README   <a href="https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance_atlas">github.com</a> but express them as <strong>operational logic</strong> for the harvester.</li>
+</ul>
+<hr>
+<h2 id="map_phase-rtt-phase-mapping-logic"><strong><code>map_phase()</code> — RTT Phase Mapping Logic</strong></h2>
+<p>Below is the conceptual version (the code version would be trivial to implement):</p>
+<hr>
+<h2 id="phase-i-atomic-molecular-10111014-hz"><strong>Phase I — ⚛️ Atomic / Molecular (10¹¹–10¹⁴ Hz)</strong></h2>
+<p><strong>Corridor:</strong> IR/Raman vibrational bands<br>
+<strong>Sources:</strong> NIST, RSC, Bowserinator atomic JSON<br>
+<strong>Rule:</strong><br>
+If the frequency is in the <strong>terahertz</strong> range or corresponds to <strong>molecular vibration</strong>, map to Phase I.</p>
+<hr>
+<h2 id="phase-ii-biological-105101-hz"><strong>Phase II — 🧬 Biological (10⁻⁵–10¹ Hz)</strong></h2>
+<p><strong>Corridor:</strong> heartbeat, neural rhythms, circadian cycles<br>
+<strong>Sources:</strong> biological datasets<br>
+<strong>Rule:</strong><br>
+If the frequency corresponds to <strong>organism‑scale cycles</strong>, map to Phase II.</p>
+<hr>
+<h2 id="phase-iii-ecological-seasonal-107103-hz"><strong>Phase III — 🍃 Ecological / Seasonal (10⁻⁷–10⁻³ Hz)</strong></h2>
+<p><strong>Corridor:</strong> seasonal, ecological, environmental cycles<br>
+<strong>Rule:</strong><br>
+If the frequency corresponds to <strong>environmental rhythms</strong>, map to Phase III.</p>
+<hr>
+<h2 id="phase-iv-geological-1012108-hz"><strong>Phase IV — ⛰️ Geological (10⁻¹²–10⁻⁸ Hz)</strong></h2>
+<p><strong>Corridor:</strong> seismic, tectonic, geomagnetic<br>
+<strong>Sources:</strong> USGS, geophysical datasets<br>
+<strong>Rule:</strong><br>
+If the frequency corresponds to <strong>planetary‑scale cycles</strong>, map to Phase IV.</p>
+<hr>
+<h2 id="phase-v-mythic-civilizational-10141012-hz"><strong>Phase V — 📜 Mythic / Civilizational (10⁻¹⁴–10⁻¹² Hz)</strong></h2>
+<p><strong>Corridor:</strong> cultural epochs, civilizational cycles<br>
+<strong>Rule:</strong><br>
+If the frequency corresponds to <strong>multi‑century human cycles</strong>, map to Phase V.</p>
+<hr>
+<h2 id="phase-vi-cosmic-1091011-hz"><strong>Phase VI — ⭐ Cosmic (10⁹–10¹¹ Hz)</strong></h2>
+<p><strong>Corridor:</strong> CMB, stellar spectra<br>
+<strong>Sources:</strong> NASA, Planck, WMAP<br>
+<strong>Rule:</strong><br>
+If the frequency corresponds to <strong>cosmic background or stellar resonance</strong>, map to Phase VI.</p>
+<hr>
+<h1 id="minimal-pseudocode-version">⭐ <strong>Minimal Pseudocode Version</strong></h1>
+<pre><code class="language-python">def map_phase(freq_range_hz):
+    f = parse_frequency(freq_range_hz)
+
+    if 1e11 &lt;= f &lt;= 1e14:
+        return &quot;I&quot;, &quot;⚛️&quot;
+    if 1e-5 &lt;= f &lt;= 1e1:
+        return &quot;II&quot;, &quot;🧬&quot;
+    if 1e-7 &lt;= f &lt;= 1e-3:
+        return &quot;III&quot;, &quot;🍃&quot;
+    if 1e-12 &lt;= f &lt;= 1e-8:
+        return &quot;IV&quot;, &quot;⛰️&quot;
+    if 1e-14 &lt;= f &lt;= 1e-12:
+        return &quot;V&quot;, &quot;📜&quot;
+    if 1e9 &lt;= f &lt;= 1e11:
+        return &quot;VI&quot;, &quot;⭐&quot;
+
+    return None, None  # drift or out-of-corridor
+</code></pre>
+<p>This matches your existing phase definitions exactly, but expresses them in a way that a validator or scanner can use.
 </p>
   </main>
 </body>

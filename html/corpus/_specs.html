@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/corpus/_specs.md">
-  <title>RTT Kernel v0.1 — Minimal Substrate Specification</title>
+  <title>📁 specs — Canonical Specifications</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,11 +92,59 @@
   </aside>
 
   <main>
-<p>_specs </p>
-<h1 id="rtt-kernel-v01-minimal-substrate-specification"><strong>RTT Kernel v0.1 — Minimal Substrate Specification</strong></h1>
-<p><em>(Canonical artifact for TriadicFrameworks)</em></p>
-<h2 id="1-resonanceobject-minimal-json-schema"><strong>1. ResonanceObject — Minimal JSON Schema</strong></h2>
-<pre><code class="language-json">{
+<p>_specs 
+<img width="1194" height="672" alt="Specs_" src="https://github.com/user-attachments/assets/ead89e14-c963-46ec-9291-4daf942f737c" /></p>
+<ul>
+<li><a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/_specs/module.json"><code>module.json</code></a>  — Agentic module schema role assignments</li>
+</ul>
+<h1 id="_specs-canonical-specifications">📁 <code>_specs</code> — Canonical Specifications</h1>
+<p>The <code>_specs</code> directory contains formal specification documents for TriadicFrameworks.<br>
+These files define low‑level mechanics, kernel behavior, and structural rules used by RTT and related engines.</p>
+<p>This directory is intentionally small and highly focused.<br>
+Each file inside <code>_specs</code> represents a <strong>canonical specification</strong> — not a tutorial, not a guide, but a structural definition.</p>
+<hr>
+<h2 id="included-specification-files">📄 Included Specification Files</h2>
+<h3 id="rtt_kernel_v01md"><code>RTT_Kernel_v0.1.md</code></h3>
+<p>The foundational specification for the RTT Kernel.<br>
+Defines the initial operator loop, pulse behavior, clarity mechanics, and kernel‑level execution rules.</p>
+<p>This document is referenced by:</p>
+<ul>
+<li>RTT Developer Quick‑Start  </li>
+<li>RTT Engine Implementations  </li>
+<li>RTT Experiment Blocks  </li>
+<li>Module‑level metadata validators  </li>
+</ul>
+<hr>
+<h2 id="how-to-reference-specs-in-docs">🧩 How to Reference Specs in Docs</h2>
+<p>Inside any module:</p>
+<pre><code class="language-md">See: `docs/_specs/RTT_Kernel_v0.1.md`
+</code></pre>
+<p>Or include directly:</p>
+<pre><code class="language-md">{{#include ../_specs/RTT_Kernel_v0.1.md}}
+</code></pre>
+<p>Specs ensure your documentation remains <strong>canonical</strong>, <strong>consistent</strong>, and <strong>drift‑proof</strong>.</p>
+<hr>
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<pre><code># **RTT Kernel v0.1 — Minimal Substrate Specification**  
+*(Canonical artifact for TriadicFrameworks)*
+
+## **1. ResonanceObject — Minimal JSON Schema**
+
+```json
+{
   &quot;$schema&quot;: &quot;https://json-schema.org/draft/2020-12/schema&quot;,
   &quot;$id&quot;: &quot;https://triadicframeworks.org/schemas/ResonanceObject.v0.1.json&quot;,
   &quot;title&quot;: &quot;ResonanceObject v0.1&quot;,

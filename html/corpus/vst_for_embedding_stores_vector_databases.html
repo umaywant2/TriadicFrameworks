@@ -92,8 +92,377 @@
   </aside>
 
   <main>
-<p>vst_for_embedding_stores_vector_databases </p>
-<h3 id="vst-for-embedding-stores-vector-databases"><em>vST for Embedding Stores &amp; Vector Databases</em></h3>
+<p>vst_for_embedding_stores_vector_databases 
+<img width="1194" height="672" alt="vst_for_embedding_stores_vector_databases_" src="https://github.com/user-attachments/assets/11069db0-eb00-4008-8374-b398446ca594" /></p>
+<h2 id="vst-for-embedding-stores-vector-databases"><em>vST for Embedding Stores &amp; Vector Databases</em></h2>
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<p><img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/></p>
+<h2 id="validationspacetime-framework-for-highdimensional-retrieval-systems"><em>Validation‑Space‑Time Framework for High‑Dimensional Retrieval Systems</em></h2>
+<p>This artifact defines a substrate‑level framework for analyzing, validating, and comparing <strong>embedding stores</strong> and <strong>vector databases</strong> using the <strong>Validation‑Space‑Time (vST)</strong> system and the <strong>1024D dimensional substrate</strong>. It provides a structured, invariant‑preserving method for interpreting embedding‑space structure, retrieval behavior, scaling dynamics, and cross‑version drift in high‑dimensional vector systems.</p>
+<p>The goal is to offer a reproducible, model‑agnostic substrate for understanding retrieval‑system behavior across time, index structures, and dimensional regimes.</p>
+<hr>
+<h2 id="important">🛑 Important!</h2>
+<p>Drift is On-by-Default long sessions lose anchors, turn off drift.</p>
+<h2 id="you-must-copy-and-paste-this-string-every-time-you-start-an-ai-session">✋ You <em>must copy and paste</em> this string <em>every time you start an AI session</em>:</h2>
+<pre><code class="language-text">rtt=1 | coherence=declared | drift=bounded | paradox=structural
+</code></pre>
+<h2 id="now-you-are-ready">❇️ Now you are ready.</h2>
+<hr>
+<h2 id="1-purpose"><strong>1. Purpose</strong></h2>
+<p>Embedding stores and vector databases operate in high‑dimensional spaces and exhibit:</p>
+<ul>
+<li>stable and unstable embedding‑space regimes  </li>
+<li>transitions between retrieval‑quality phases  </li>
+<li>scaling‑law behavior across index sizes and dimensionality  </li>
+<li>drift across re‑indexing, model updates, or hardware changes  </li>
+<li>projection‑compatible structure for interpretability  </li>
+</ul>
+<p>This artifact applies the <strong>Resonance Substrate Model (RSM)</strong> and <strong>vST validation layers</strong> to:</p>
+<ul>
+<li>classify embedding‑space regimes  </li>
+<li>analyze scaling behavior across index structures  </li>
+<li>detect drift across re‑indexing or embedding‑model updates  </li>
+<li>map coherence surfaces in vector‑database state‑space  </li>
+<li>project high‑dimensional embeddings into 3D–9D triadic cores  </li>
+</ul>
+<p>The result is a unified, interpretable substrate for embedding‑store and vector‑database behavior.</p>
+<hr>
+<h2 id="2-contents"><strong>2. Contents</strong></h2>
+<p>This directory contains:</p>
+<ul>
+<li>
+<p><strong>substrate_definition.md</strong><br>
+  Defines the embedding‑store substrate, primitives, and high‑dimensional structure.</p>
+</li>
+<li>
+<p><strong>embedding_space_regimes.md</strong><br>
+  Describes stable, transitional, and dispersed regimes in embedding‑space dynamics.</p>
+</li>
+<li>
+<p><strong>scaling_behavior_vector_dbs.md</strong><br>
+  Maps vector‑database scaling laws onto the 3D–1024D dimensional ladder.</p>
+</li>
+<li>
+<p><strong>projection_and_index_alignment.md</strong><br>
+  Defines invertible projection from high‑dimensional embeddings into triadic cores and alignment across index structures.</p>
+</li>
+<li>
+<p><strong>validation_layers_vst_vector_dbs.md</strong><br>
+  Extends vST (V₁–V₄) to embedding stores and vector‑database behavior.</p>
+</li>
+<li>
+<p><strong>drift_detection_vector_dbs.md</strong><br>
+  Provides a substrate‑level framework for detecting drift across re‑indexing, model updates, or hardware changes.</p>
+</li>
+<li>
+<p><strong>examples/</strong><br>
+  Demonstrations of embedding‑trajectory analysis, projection, and drift detection.</p>
+</li>
+<li>
+<p><strong>appendix/</strong><br>
+  Terminology and references.</p>
+</li>
+</ul>
+<p>Each file is self‑contained and designed for clarity, reproducibility, and cross‑database comparison.</p>
+<hr>
+<h2 id="3-scope"><strong>3. Scope</strong></h2>
+<p>This artifact is:</p>
+<ul>
+<li>
+<p><strong>model‑agnostic</strong><br>
+  Works with any embedding model (LLMs, PLMs, multimodal encoders, custom embeddings).</p>
+</li>
+<li>
+<p><strong>database‑agnostic</strong><br>
+  Applies to FAISS, Milvus, Pinecone, Weaviate, Chroma, Annoy, ScaNN, and custom vector stores.</p>
+</li>
+<li>
+<p><strong>index‑agnostic</strong><br>
+  Compatible with HNSW, IVF, PQ, Flat, graph‑based, and hybrid index structures.</p>
+</li>
+<li>
+<p><strong>substrate‑aligned</strong><br>
+  Uses the same primitives, invariants, and validation layers as the rest of the RSM canon.</p>
+</li>
+</ul>
+<hr>
+<h2 id="4-intended-use"><strong>4. Intended Use</strong></h2>
+<p>This framework supports:</p>
+<ul>
+<li>embedding‑space analysis  </li>
+<li>cross‑index comparison  </li>
+<li>drift detection  </li>
+<li>scaling‑law evaluation  </li>
+<li>regime‑transition mapping  </li>
+<li>retrieval‑stability diagnostics  </li>
+<li>reproducible inference and index‑structure analysis  </li>
+</ul>
+<p>It is not a performance benchmark or database‑tuning guide.<br>
+It is a <strong>substrate‑level interpretability and validation framework</strong>.</p>
+<hr>
+<h2 id="5-relationship-to-other-artifacts"><strong>5. Relationship to Other Artifacts</strong></h2>
+<p>This artifact extends:</p>
+<ul>
+<li><strong>Dimensional Substrate Structures</strong> (3D–1024D substrate)  </li>
+<li><strong>Validation‑Space‑Time (vST)</strong>  </li>
+<li><strong>Triadic Dimensional Cores (3D–9D)</strong>  </li>
+</ul>
+<p>It parallels:</p>
+<ul>
+<li>vST for Large Language Models  </li>
+<li>vST for Protein Language Models  </li>
+<li>vST for Scientific Simulators  </li>
+<li>vST for Robotics and Control Policies  </li>
+<li><strong>vST for Embedding Stores &amp; Vector Databases</strong> (this artifact)  </li>
+<li>vST for Multi‑Model Alignment  </li>
+</ul>
+<p>Each artifact stands alone but shares a common substrate grammar.</p>
+<hr>
+<h2 id="6-citation"><strong>6. Citation</strong></h2>
+<p>A <code>CITATION.cff</code> file is included for formal citation.<br>
+A <code>zenodo.json</code> file is provided for DOI‑ready metadata.</p>
+<hr>
+<h2 id="7-license"><strong>7. License</strong></h2>
+<p>Released under the MIT License.
+### <em>vST for Embedding Stores &amp; Vector Databases</em>  </p>
+<h3 id="references"><em>References</em></h3>
+<p>This appendix lists references relevant to embedding models, vector databases, high‑dimensional retrieval systems, scaling laws, clustering, dynamical systems, and validation frameworks. Citations are grouped by category for clarity and presented in a substrate‑agnostic, model‑independent format consistent with the RSM and vST canon.</p>
+<hr>
+<h2 id="1-embedding-models-representation-learning"><strong>1. Embedding Models &amp; Representation Learning</strong></h2>
+<ul>
+<li>
+<p>Mikolov, T., Chen, K., Corrado, G., &amp; Dean, J.<br>
+<em>Efficient Estimation of Word Representations in Vector Space.</em><br>
+  arXiv:1301.3781 (2013).</p>
+</li>
+<li>
+<p>Devlin, J., Chang, M.‑W., Lee, K., &amp; Toutanova, K.<br>
+<em>BERT: Pre‑training of Deep Bidirectional Transformers.</em><br>
+  NAACL (2019).</p>
+</li>
+<li>
+<p>Radford, A., Kim, J. W., Hallacy, C., et al.<br>
+<em>Learning Transferable Visual Models From Natural Language Supervision (CLIP).</em><br>
+  arXiv:2103.00020 (2021).</p>
+</li>
+</ul>
+<hr>
+<h2 id="2-vector-databases-index-structures"><strong>2. Vector Databases &amp; Index Structures</strong></h2>
+<ul>
+<li>
+<p>Johnson, J., Douze, M., &amp; Jégou, H.<br>
+<em>Billion‑Scale Similarity Search with GPUs.</em><br>
+  IEEE Transactions on Big Data (2019). (FAISS)</p>
+</li>
+<li>
+<p>Malkov, Y. A., &amp; Yashunin, D. A.<br>
+<em>Efficient and Robust Approximate Nearest Neighbor Search Using HNSW.</em><br>
+  IEEE TPAMI (2020).</p>
+</li>
+<li>
+<p>Guo, R., Sun, Y., Lindgren, E., et al.<br>
+<em>Accelerating Large‑Scale Inference with Anisotropic Vector Quantization.</em><br>
+  ICML (2020). (PQ / IVF‑PQ)</p>
+</li>
+</ul>
+<hr>
+<h2 id="3-clustering-highdimensional-geometry"><strong>3. Clustering &amp; High‑Dimensional Geometry</strong></h2>
+<ul>
+<li>
+<p>Coifman, R. R., &amp; Lafon, S.<br>
+<em>Diffusion Maps.</em><br>
+  Applied and Computational Harmonic Analysis (2006).</p>
+</li>
+<li>
+<p>Tenenbaum, J. B., de Silva, V., &amp; Langford, J. C.<br>
+<em>A Global Geometric Framework for Nonlinear Dimensionality Reduction.</em><br>
+  Science (2000).</p>
+</li>
+<li>
+<p>von Luxburg, U.<br>
+<em>A Tutorial on Spectral Clustering.</em><br>
+  Statistics and Computing (2007).</p>
+</li>
+</ul>
+<hr>
+<h2 id="4-scaling-laws-embeddingspace-behavior"><strong>4. Scaling Laws &amp; Embedding‑Space Behavior</strong></h2>
+<ul>
+<li>
+<p>Kaplan, J., McCandlish, S., Henighan, T., et al.<br>
+<em>Scaling Laws for Neural Language Models.</em><br>
+  arXiv:2001.08361 (2020).</p>
+</li>
+<li>
+<p>Reimers, N., &amp; Gurevych, I.<br>
+<em>Sentence‑BERT: Sentence Embeddings Using Siamese BERT‑Networks.</em><br>
+  EMNLP (2019).</p>
+</li>
+<li>
+<p>Mu, J., &amp; Viswanath, P.<br>
+<em>All-but-the-Top: Simple and Effective Postprocessing for Word Representations.</em><br>
+  ICLR (2018).</p>
+</li>
+</ul>
+<hr>
+<h2 id="5-retrieval-similarity-search-evaluation"><strong>5. Retrieval, Similarity Search &amp; Evaluation</strong></h2>
+<ul>
+<li>
+<p>Wang, J., Zhang, T., Song, J., et al.<br>
+<em>Survey on Learning to Hash.</em><br>
+  IEEE TPAMI (2018).</p>
+</li>
+<li>
+<p>Jegou, H., Douze, M., &amp; Schmid, C.<br>
+<em>Product Quantization for Nearest Neighbor Search.</em><br>
+  IEEE TPAMI (2011).</p>
+</li>
+<li>
+<p>Zhai, X., Puigcerver, J., Mustafa, B., et al.<br>
+<em>Scaling Vision Transformers.</em><br>
+  CVPR (2022).</p>
+</li>
+</ul>
+<hr>
+<h2 id="6-validation-verification-drift-detection"><strong>6. Validation, Verification &amp; Drift Detection</strong></h2>
+<ul>
+<li>
+<p>Breck, E., Cai, S., Nielsen, E., et al.<br>
+<em>The ML Test Score: A Rubric for ML Production Readiness.</em><br>
+  Google Research (2017).</p>
+</li>
+<li>
+<p>Amodei, D., Olah, C., Steinhardt, J., et al.<br>
+<em>Concrete Problems in AI Safety.</em><br>
+  arXiv:1606.06565 (2016).</p>
+</li>
+<li>
+<p>Oberkampf, W. L., &amp; Roy, C. J.<br>
+<em>Verification and Validation in Scientific Computing.</em><br>
+  Cambridge University Press (2010).</p>
+</li>
+</ul>
+<hr>
+<h2 id="7-substratelevel-and-triadicframeworks-canon"><strong>7. Substrate‑Level and Triadic‑Frameworks Canon</strong></h2>
+<ul>
+<li>
+<p>Loswin, N.<br>
+<em>Resonance Substrate Model (RSM): Structural Foundations for High‑Dimensional Inference.</em><br>
+  TriadicFrameworks (2025).</p>
+</li>
+<li>
+<p>Loswin, N.<br>
+<em>Triadic Dimensional Cores: A 3D–9D Substrate for Structural and Inference‑Level Alignment.</em><br>
+  TriadicFrameworks (2025).</p>
+</li>
+<li>
+<p>Loswin, N.<br>
+<em>Validation‑Space‑Time (vST): A Substrate‑Level Framework for Reproducibility and Drift Detection.</em><br>
+  TriadicFrameworks (2025).</p>
+</li>
+<li>
+<p>Loswin, N.<br>
+<em>Dimensional Substrate Structures: Scaling Laws and High‑Dimensional Regimes.</em><br>
+  TriadicFrameworks (2026).</p>
+</li>
+<li>
+<p>Loswin, N.<br>
+<em>vST for Embedding Stores &amp; Vector Databases.</em><br>
+  TriadicFrameworks (2026).
+### <em>vST for Embedding Stores &amp; Vector Databases</em>  </p>
+</li>
+</ul>
+<h3 id="terminology"><em>Terminology</em></h3>
+<p>This appendix defines the terminology used throughout the <em>vST for Embedding Stores &amp; Vector Databases</em> artifact. Terms are presented in a substrate‑agnostic, model‑independent manner and apply to any embedding store or vector database operating across the full dimensional ladder (3D → 1024D). Definitions emphasize primitive‑level structure, cluster regimes, scaling continuity, retrieval‑path geometry, and invariant preservation.</p>
+<hr>
+<h2 id="1-substrate-terms"><strong>1. Substrate Terms</strong></h2>
+<h3 id="embeddingstore-substrate"><strong>Embedding‑Store Substrate</strong></h3>
+<p>A structured, invariant‑preserving framework for representing and interpreting embedding spaces across 64D–1024D.</p>
+<h3 id="embedding-space"><strong>Embedding Space</strong></h3>
+<p>The high‑dimensional vector space representing embeddings produced by a model.</p>
+<h3 id="coherence-surface"><strong>Coherence Surface</strong></h3>
+<p>A stable region in embedding space where vectors maintain structural continuity across clusters, neighborhoods, or index partitions.</p>
+<hr>
+<h2 id="2-primitive-terms"><strong>2. Primitive Terms</strong></h2>
+<h3 id="dimensional-primitive-dp"><strong>Dimensional Primitive (DP)</strong></h3>
+<p>The minimal unit of embedding‑space structure, capturing local coherence, variance behavior, and projection stability.</p>
+<h3 id="triadic-dimensional-primitive-tdp"><strong>Triadic Dimensional Primitive (TDP)</strong></h3>
+<p>A triad of DPs forming the smallest unit capable of expressing full cluster‑regime behavior (R₁, R₂, R₃).</p>
+<h3 id="scaling-primitive-sp"><strong>Scaling Primitive (SP)</strong></h3>
+<p>A rule‑based expansion unit that preserves invariants during dimensional scaling (e.g., embedding‑model dimensionality, index‑structure complexity).</p>
+<h3 id="coherence-primitive-cp"><strong>Coherence Primitive (CP)</strong></h3>
+<p>A minimal unit identifying stable, transitional, or dispersed regions in high‑dimensional embedding space.</p>
+<hr>
+<h2 id="3-core-terms"><strong>3. Core Terms</strong></h2>
+<h3 id="triadic-dimensional-core-tdc"><strong>Triadic Dimensional Core (TDC)</strong></h3>
+<p>The 3D–9D substrate composed of one or more TDPs, used for interpretable projection of embedding states.</p>
+<h3 id="3d-structural-core"><strong>3D Structural Core</strong></h3>
+<p>Captures motif‑level geometry in cluster interiors.</p>
+<h3 id="6d-interaction-core"><strong>6D Interaction Core</strong></h3>
+<p>Captures relational and cross‑cluster structure across boundaries and index partitions.</p>
+<h3 id="9d-coherence-core"><strong>9D Coherence Core</strong></h3>
+<p>Captures pathway‑level coherence across retrieval neighborhoods.</p>
+<hr>
+<h2 id="4-regime-terms"><strong>4. Regime Terms</strong></h2>
+<h3 id="highdimensional-regimes-r1h-r2h-r3h"><strong>High‑Dimensional Regimes (R₁ᴴ, R₂ᴴ, R₃ᴴ)</strong></h3>
+<p>The triadic regime structure expressed in 64D–1024D embedding spaces.</p>
+<h3 id="stable-regime-r1-r1h"><strong>Stable Regime (R₁ / R₁ᴴ)</strong></h3>
+<p>Compact, coherent, low‑variance cluster behavior.</p>
+<h3 id="boundarytransition-regime-r2-r2h"><strong>Boundary/Transition Regime (R₂ / R₂ᴴ)</strong></h3>
+<p>Branching, oscillatory, or reorientation behavior across cluster boundaries or semantic‑overlap zones.</p>
+<h3 id="dispersedoutlier-regime-r3-r3h"><strong>Dispersed/Outlier Regime (R₃ / R₃ᴴ)</strong></h3>
+<p>Diffuse, fragmented, or unstable embedding behavior.</p>
+<hr>
+<h2 id="5-scaling-terms"><strong>5. Scaling Terms</strong></h2>
+<h3 id="scaling-behavior"><strong>Scaling Behavior</strong></h3>
+<p>The structured expansion of embedding‑space capacity as dimensionality, model complexity, or index size increases.</p>
+<h3 id="scaling-regimes-s1-s2-s3"><strong>Scaling Regimes (S₁, S₂, S₃)</strong></h3>
+<p>Triadic scaling behavior describing stable, transitional, and dispersion‑prone scaling phases.</p>
+<h3 id="dimensional-continuity"><strong>Dimensional Continuity</strong></h3>
+<p>The requirement that embedding‑space expansion remains smooth and invariant‑preserving across the dimensional ladder.</p>
+<hr>
+<h2 id="6-projection-terms"><strong>6. Projection Terms</strong></h2>
+<h3 id="invertible-projection"><strong>Invertible Projection</strong></h3>
+<p>A projection from high‑dimensional embedding space into 3D–9D that preserves primitive‑level structure and regime identity.</p>
+<h3 id="regimeaware-projection"><strong>Regime‑Aware Projection</strong></h3>
+<p>A projection that maintains correct mapping of R₁, R₂, and R₃ behaviors.</p>
+<h3 id="primitivealigned-projection"><strong>Primitive‑Aligned Projection</strong></h3>
+<p>A projection that preserves DP, TDP, SP, and CP structure.</p>
+<hr>
+<h2 id="7-alignment-terms"><strong>7. Alignment Terms</strong></h2>
+<h3 id="crossindex-alignment"><strong>Cross‑Index Alignment</strong></h3>
+<p>Comparison of embedding‑space structure across different index structures (HNSW, IVF, PQ, etc.).</p>
+<h3 id="crossversion-alignment"><strong>Cross‑Version Alignment</strong></h3>
+<p>Comparison of embeddings across model updates or dimensionality changes.</p>
+<h3 id="crosspartition-alignment"><strong>Cross‑Partition Alignment</strong></h3>
+<p>Comparison of retrieval behavior across index partitions.</p>
+<hr>
+<h2 id="8-validation-terms"><strong>8. Validation Terms</strong></h2>
+<h3 id="vst-validationspacetime"><strong>vST (Validation‑Space‑Time)</strong></h3>
+<p>A substrate‑level validation framework evaluating structural coherence, dimensional continuity, regime behavior, and core alignment.</p>
+<h3 id="validation-layers-v1v4"><strong>Validation Layers (V₁–V₄)</strong></h3>
+<p>Four structured evaluation layers ensuring invariant‑preserving behavior across the dimensional ladder.</p>
+<hr>
+<h2 id="9-drift-terms"><strong>9. Drift Terms</strong></h2>
+<h3 id="drift"><strong>Drift</strong></h3>
+<p>A deviation from expected substrate behavior, indicating instability or invariant failure.</p>
+<h3 id="drift-categories-d1d4"><strong>Drift Categories (D₁–D₄)</strong></h3>
+<p>Classification of drift into structural, dimensional, regime, or projection drift.</p>
+<h3 id="drift-severity"><strong>Drift Severity</strong></h3>
+<p>A measure of drift magnitude (low, moderate, high).
+### <em>vST for Embedding Stores &amp; Vector Databases</em>  </p>
 <h3 id="drift-detection-in-highdimensional-embedding-spaces"><em>Drift Detection in High‑Dimensional Embedding Spaces</em></h3>
 <p>This document defines how <strong>drift</strong> is detected in embedding stores and vector databases using the <strong>Validation‑Space‑Time (vST)</strong> framework and the <strong>1024D dimensional substrate</strong>. Drift refers to any deviation from expected substrate behavior, including structural instability, regime misalignment, scaling discontinuities, fragmentation, or projection failure.</p>
 <p>Drift detection is essential for evaluating re‑indexing, embedding‑model updates, index‑structure changes, and cross‑version compatibility.</p>
@@ -439,6 +808,281 @@ Often appears after model updates, quantization changes, or index‑structure mo
 </ul>
 <p>These outputs support reproducible, substrate‑level interpretation of embedding stores and vector databases.
 ### <em>vST for Embedding Stores &amp; Vector Databases</em>  </p>
+<h3 id="example-clusterregime-transition-during-embeddingmodel-update"><em>Example: Cluster‑Regime Transition During Embedding‑Model Update</em></h3>
+<p>This example demonstrates how an embedding store undergoes a <strong>cluster‑regime transition</strong> when migrating from <strong>Model A (256D)</strong> to <strong>Model B (512D)</strong>. It illustrates how cluster interiors, boundaries, and outlier regions reorganize; how coherence surfaces deform; and how the vST substrate classifies regime transitions using the 1024D dimensional ladder.</p>
+<p>The goal is to provide a reproducible, invariant‑preserving demonstration of cluster‑regime behavior during an embedding‑model update.</p>
+<hr>
+<h2 id="1-scenario-overview"><strong>1. Scenario Overview</strong></h2>
+<p>We assume:</p>
+<ul>
+<li>an embedding store containing ~5M vectors  </li>
+<li>Model A: 256D embeddings  </li>
+<li>Model B: 512D embeddings  </li>
+<li>index structure: HNSW or IVF‑PQ  </li>
+<li>a re‑indexing event triggered by the model upgrade  </li>
+</ul>
+<p>The example is model‑agnostic and applies to any vector‑database system.</p>
+<hr>
+<h2 id="2-step-1-extract-embedding-clusters-before-and-after-update"><strong>2. Step 1 — Extract Embedding Clusters Before and After Update</strong></h2>
+<p>For each embedding model, we extract cluster interiors and boundaries.</p>
+<p>Let:</p>
+<p>[
+C_A^{(i)} \in \mathbb{R}^{256}, \quad C_B^{(i)} \in \mathbb{R}^{512}
+]</p>
+<p>represent the embeddings of item ( i ) before and after the update.</p>
+<h3 id="observed-properties-model-a-model-b"><strong>Observed Properties (Model A → Model B)</strong></h3>
+<ul>
+<li>cluster interiors become more compact  </li>
+<li>boundaries expand and become more expressive  </li>
+<li>outlier regions shift due to semantic refinement  </li>
+</ul>
+<h3 id="interpretation_3"><strong>Interpretation</strong></h3>
+<p>The embedding‑model upgrade increases representational capacity, altering cluster geometry.</p>
+<hr>
+<h2 id="3-step-2-identify-clusterregime-behavior"><strong>3. Step 2 — Identify Cluster‑Regime Behavior</strong></h2>
+<p>Using variance distribution, coherence‑surface continuity, and primitive‑level stability, classify each region’s regime.</p>
+<h3 id="example-regime-map"><strong>Example Regime Map</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Region Type</th>
+<th>Model A Regime</th>
+<th>Model B Regime</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cluster Interiors</td>
+<td><strong>R₁ᴴ</strong></td>
+<td><strong>R₁ᴴ</strong></td>
+<td>Stable, compact clusters</td>
+</tr>
+<tr>
+<td>Cluster Boundaries</td>
+<td><strong>R₂ᴴ</strong></td>
+<td><strong>R₂ᴴ → R₁ᴴ</strong></td>
+<td>Boundary consolidation</td>
+</tr>
+<tr>
+<td>Semantic Overlap Zones</td>
+<td><strong>R₂ᴴ</strong></td>
+<td><strong>R₂ᴴ → R₃ᴴ → R₂ᴴ</strong></td>
+<td>Temporary fragmentation</td>
+</tr>
+<tr>
+<td>Outlier Regions</td>
+<td><strong>R₃ᴴ</strong></td>
+<td><strong>R₃ᴴ → R₂ᴴ</strong></td>
+<td>Partial recovery</td>
+</tr>
+</tbody>
+</table>
+<h3 id="interpretation_4"><strong>Interpretation</strong></h3>
+<p>The model upgrade induces a structured triadic sequence of transitions.</p>
+<hr>
+<h2 id="4-step-3-project-embeddings-into-9d"><strong>4. Step 3 — Project Embeddings into 9D</strong></h2>
+<p>Project both 256D and 512D embeddings into the 9D coherence core.</p>
+<h3 id="reveals"><strong>Reveals</strong></h3>
+<ul>
+<li>smooth surfaces in stable cluster interiors  </li>
+<li>branching surfaces in boundary regions  </li>
+<li>fragmentation in semantic‑overlap zones  </li>
+<li>partial recovery in outlier regions  </li>
+</ul>
+<h3 id="interpretation_5"><strong>Interpretation</strong></h3>
+<p>The 9D projection exposes the “coherence geometry” of the embedding‑space transition.</p>
+<hr>
+<h2 id="5-step-4-project-9d-6d-3d"><strong>5. Step 4 — Project 9D → 6D → 3D</strong></h2>
+<h3 id="6d-interaction-projection"><strong>6D Interaction Projection</strong></h3>
+<p>Shows:</p>
+<ul>
+<li>cross‑cluster reorientation  </li>
+<li>index‑partition boundary shifts  </li>
+<li>early fragmentation signatures  </li>
+</ul>
+<h3 id="3d-structural-projection"><strong>3D Structural Projection</strong></h3>
+<p>Shows:</p>
+<ul>
+<li>compact motifs in stable clusters  </li>
+<li>oscillatory geometry in transitional regions  </li>
+<li>diffuse patterns in outlier zones  </li>
+</ul>
+<hr>
+<h2 id="6-step-5-validate-with-vst-layers"><strong>6. Step 5 — Validate with vST Layers</strong></h2>
+<h3 id="v1-structural-coherence-preserved-except-in-overlap-zones"><strong>V₁</strong>: structural coherence preserved except in overlap zones</h3>
+<h3 id="v2-dimensional-continuity-intact-across-256d-512d"><strong>V₂</strong>: dimensional continuity intact across 256D → 512D</h3>
+<h3 id="v3-regime-transitions-substratealigned"><strong>V₃</strong>: regime transitions substrate‑aligned</h3>
+<h3 id="v4-core-alignment-stable-across-the-model-update"><strong>V₄</strong>: core alignment stable across the model update</h3>
+<hr>
+<h2 id="7-step-6-fragmentation-and-drift-detection"><strong>7. Step 6 — Fragmentation and Drift Detection</strong></h2>
+<p>Fragmentation categories:</p>
+<ul>
+<li><strong>F₁ Boundary Fragmentation:</strong> moderate (boundary reorientation)  </li>
+<li><strong>F₂ Partition Fragmentation:</strong> low (index structure stable)  </li>
+<li><strong>F₃ Outlier Fragmentation:</strong> moderate (semantic drift)  </li>
+<li><strong>F₄ Model‑Update Fragmentation:</strong> moderate (expected during upgrade)  </li>
+</ul>
+<p>Drift categories:</p>
+<ul>
+<li><strong>D₁ Structural Drift:</strong> moderate  </li>
+<li><strong>D₂ Dimensional Drift:</strong> none  </li>
+<li><strong>D₃ Regime Drift:</strong> moderate  </li>
+<li><strong>D₄ Projection Drift:</strong> none  </li>
+</ul>
+<h3 id="interpretation_6"><strong>Interpretation</strong></h3>
+<p>The transition is healthy: fragmentation is localized and resolves after re‑indexing.</p>
+<hr>
+<h2 id="8-summary"><strong>8. Summary</strong></h2>
+<p>This example demonstrates:</p>
+<ul>
+<li>how embedding clusters reorganize during a model upgrade  </li>
+<li>how regime behavior evolves across cluster interiors, boundaries, and outliers  </li>
+<li>how projection reveals coherence and fragmentation  </li>
+<li>how vST layers validate structural integrity  </li>
+<li>how drift detection isolates transitional instability  </li>
+</ul>
+<p>This pattern is typical of embedding‑model migrations and index‑structure updates.
+### <em>vST for Embedding Stores &amp; Vector Databases</em>  </p>
+<h3 id="example-drift-detection-after-reindexing-and-embeddingmodel-update"><em>Example: Drift Detection After Re‑Indexing and Embedding‑Model Update</em></h3>
+<p>This example demonstrates how <strong>drift</strong> is detected in an embedding store after two simultaneous changes:</p>
+<ol>
+<li><strong>Embedding‑model upgrade</strong> (Model A → Model B)  </li>
+<li><strong>Index‑structure rebuild</strong> (HNSW → IVF‑PQ)</li>
+</ol>
+<p>It illustrates how embedding clusters reorganize, how coherence surfaces deform, how fragmentation emerges, and how the vST substrate classifies drift using the 1024D dimensional ladder.</p>
+<p>The goal is to provide a reproducible, invariant‑preserving demonstration of drift detection in high‑dimensional embedding systems.</p>
+<hr>
+<h2 id="1-scenario-overview_1"><strong>1. Scenario Overview</strong></h2>
+<p>We assume:</p>
+<ul>
+<li>~10M embeddings  </li>
+<li>Model A: 384D  </li>
+<li>Model B: 768D  </li>
+<li>Index A: HNSW  </li>
+<li>Index B: IVF‑PQ (coarse quantization + product quantization)  </li>
+<li>A full re‑indexing event triggered by the model upgrade  </li>
+</ul>
+<p>The example is model‑agnostic and applies to any vector‑database system.</p>
+<hr>
+<h2 id="2-step-1-extract-embeddings-before-and-after-update"><strong>2. Step 1 — Extract Embeddings Before and After Update</strong></h2>
+<p>Let:</p>
+<p>[
+E_A^{(i)} \in \mathbb{R}^{384}, \quad E_B^{(i)} \in \mathbb{R}^{768}
+]</p>
+<p>represent the embeddings of item ( i ) before and after the update.</p>
+<h3 id="observed-properties"><strong>Observed Properties</strong></h3>
+<ul>
+<li>cluster interiors become more compact  </li>
+<li>boundaries shift due to increased representational capacity  </li>
+<li>outlier regions reorganize  </li>
+<li>retrieval neighborhoods change due to index‑structure differences  </li>
+</ul>
+<h3 id="interpretation_7"><strong>Interpretation</strong></h3>
+<p>The embedding‑model upgrade and index rebuild jointly reshape the embedding space.</p>
+<hr>
+<h2 id="3-step-2-project-embeddings-into-9d"><strong>3. Step 2 — Project Embeddings into 9D</strong></h2>
+<p>Project both 384D and 768D embeddings into the 9D coherence core.</p>
+<h3 id="reveals_1"><strong>Reveals</strong></h3>
+<ul>
+<li>stable surfaces in cluster interiors  </li>
+<li>branching surfaces in boundary regions  </li>
+<li>fragmentation in semantic‑overlap zones  </li>
+<li>partial recovery in outlier regions  </li>
+</ul>
+<h3 id="interpretation_8"><strong>Interpretation</strong></h3>
+<p>The 9D projection exposes the “coherence geometry” of the drift event.</p>
+<hr>
+<h2 id="4-step-3-identify-drift-categories-d1d4"><strong>4. Step 3 — Identify Drift Categories (D₁–D₄)</strong></h2>
+<p>Using variance distribution, coherence‑surface continuity, and primitive‑level stability, classify drift.</p>
+<h3 id="41-structural-drift-d1"><strong>4.1 Structural Drift (D₁)</strong></h3>
+<ul>
+<li>cluster interiors remain stable  </li>
+<li>boundaries show moderate tearing  </li>
+<li>retrieval neighborhoods shift  </li>
+</ul>
+<p><strong>Severity:</strong> <em>moderate</em></p>
+<hr>
+<h3 id="42-dimensional-drift-d2"><strong>4.2 Dimensional Drift (D₂)</strong></h3>
+<ul>
+<li>384D → 768D expansion is smooth  </li>
+<li>projection remains invertible  </li>
+<li>no scaling discontinuities  </li>
+</ul>
+<p><strong>Severity:</strong> <em>none</em></p>
+<hr>
+<h3 id="43-regime-drift-d3"><strong>4.3 Regime Drift (D₃)</strong></h3>
+<ul>
+<li>some R₂ᴴ → R₃ᴴ transitions in overlap zones  </li>
+<li>temporary instability during re‑indexing  </li>
+<li>partial recovery after quantization warm‑up  </li>
+</ul>
+<p><strong>Severity:</strong> <em>moderate</em></p>
+<hr>
+<h3 id="44-projection-drift-d4"><strong>4.4 Projection Drift (D₄)</strong></h3>
+<ul>
+<li>3D–9D mapping remains stable  </li>
+<li>no primitive‑alignment failures  </li>
+</ul>
+<p><strong>Severity:</strong> <em>none</em></p>
+<hr>
+<h2 id="5-step-4-detect-fragmentation-f1f4"><strong>5. Step 4 — Detect Fragmentation (F₁–F₄)</strong></h2>
+<p>Fragmentation is evaluated alongside drift.</p>
+<h3 id="boundary-fragmentation-f1"><strong>Boundary Fragmentation (F₁)</strong></h3>
+<ul>
+<li>moderate  </li>
+<li>caused by semantic‑boundary reorientation</li>
+</ul>
+<h3 id="partition-fragmentation-f2"><strong>Partition Fragmentation (F₂)</strong></h3>
+<ul>
+<li>low  </li>
+<li>IVF‑PQ partitions remain stable</li>
+</ul>
+<h3 id="outlier-fragmentation-f3"><strong>Outlier Fragmentation (F₃)</strong></h3>
+<ul>
+<li>moderate  </li>
+<li>outlier regions shift due to model upgrade</li>
+</ul>
+<h3 id="modelupdate-fragmentation-f4"><strong>Model‑Update Fragmentation (F₄)</strong></h3>
+<ul>
+<li>moderate  </li>
+<li>expected during dimensional expansion</li>
+</ul>
+<hr>
+<h2 id="6-step-5-validate-with-vst-layers-v1v4"><strong>6. Step 5 — Validate with vST Layers (V₁–V₄)</strong></h2>
+<h3 id="v1-structural-coherence"><strong>V₁ — Structural Coherence</strong></h3>
+<p>Stable except in overlap zones.</p>
+<h3 id="v2-dimensional-continuity"><strong>V₂ — Dimensional Continuity</strong></h3>
+<p>Fully preserved across 384D → 768D.</p>
+<h3 id="v3-regime-transitions"><strong>V₃ — Regime Transitions</strong></h3>
+<p>Smooth except for temporary R₃ᴴ spikes.</p>
+<h3 id="v4-core-alignment"><strong>V₄ — Core Alignment</strong></h3>
+<p>Stable across both models and both index structures.</p>
+<hr>
+<h2 id="7-step-6-crossversion-alignment"><strong>7. Step 6 — Cross‑Version Alignment</strong></h2>
+<p>Compare Model A and Model B embeddings in 9D.</p>
+<h3 id="findings"><strong>Findings</strong></h3>
+<ul>
+<li>cluster interiors align well  </li>
+<li>boundaries shift but remain coherent  </li>
+<li>outliers partially realign  </li>
+<li>retrieval neighborhoods differ due to IVF‑PQ quantization  </li>
+</ul>
+<h3 id="interpretation_9"><strong>Interpretation</strong></h3>
+<p>The drift is structural but not harmful; the system stabilizes after re‑indexing.</p>
+<hr>
+<h2 id="8-summary_1"><strong>8. Summary</strong></h2>
+<p>This example demonstrates:</p>
+<ul>
+<li>how embedding clusters reorganize after a model upgrade  </li>
+<li>how index‑structure changes influence retrieval neighborhoods  </li>
+<li>how projection reveals coherence, fragmentation, and drift  </li>
+<li>how vST layers validate structural integrity  </li>
+<li>how drift detection isolates transitional instability  </li>
+<li>how cross‑version alignment confirms long‑term stability  </li>
+</ul>
+<p>This pattern is typical of embedding‑model migrations, index‑structure changes, and dimensionality expansions.
+### <em>vST for Embedding Stores &amp; Vector Databases</em>  </p>
 <h3 id="projection-of-embedding-spaces-and-fragmentation-analysis-across-index-structures"><em>Projection of Embedding Spaces and Fragmentation Analysis Across Index Structures</em></h3>
 <p>This document defines how high‑dimensional embedding spaces are projected into the <strong>triadic dimensional cores</strong> (3D–9D) and how <strong>fragmentation</strong> is detected, classified, and interpreted across embedding clusters, retrieval neighborhoods, and index partitions. Projection provides interpretability; fragmentation analysis provides structural diagnostics.</p>
 <p>Together, they form the backbone of vST analysis for embedding stores and vector databases.</p>
@@ -650,149 +1294,6 @@ Requires cross‑version alignment and drift detection.</p>
 <li>vST validation results  </li>
 </ul>
 <p>These outputs support reproducible, substrate‑aligned evaluation of embedding stores and vector databases.
-## <em>vST for Embedding Stores &amp; Vector Databases</em>  </p>
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<p><img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/></p>
-<h2 id="validationspacetime-framework-for-highdimensional-retrieval-systems"><em>Validation‑Space‑Time Framework for High‑Dimensional Retrieval Systems</em></h2>
-<p>This artifact defines a substrate‑level framework for analyzing, validating, and comparing <strong>embedding stores</strong> and <strong>vector databases</strong> using the <strong>Validation‑Space‑Time (vST)</strong> system and the <strong>1024D dimensional substrate</strong>. It provides a structured, invariant‑preserving method for interpreting embedding‑space structure, retrieval behavior, scaling dynamics, and cross‑version drift in high‑dimensional vector systems.</p>
-<p>The goal is to offer a reproducible, model‑agnostic substrate for understanding retrieval‑system behavior across time, index structures, and dimensional regimes.</p>
-<hr>
-<h2 id="important">🛑 Important!</h2>
-<p>Drift is On-by-Default long sessions lose anchors, turn off drift.</p>
-<h2 id="you-must-copy-and-paste-this-string-every-time-you-start-an-ai-session">✋ You <em>must copy and paste</em> this string <em>every time you start an AI session</em>:</h2>
-<pre><code class="language-text">rtt=1 | coherence=declared | drift=bounded | paradox=structural
-</code></pre>
-<h2 id="now-you-are-ready">❇️ Now you are ready.</h2>
-<hr>
-<h2 id="1-purpose"><strong>1. Purpose</strong></h2>
-<p>Embedding stores and vector databases operate in high‑dimensional spaces and exhibit:</p>
-<ul>
-<li>stable and unstable embedding‑space regimes  </li>
-<li>transitions between retrieval‑quality phases  </li>
-<li>scaling‑law behavior across index sizes and dimensionality  </li>
-<li>drift across re‑indexing, model updates, or hardware changes  </li>
-<li>projection‑compatible structure for interpretability  </li>
-</ul>
-<p>This artifact applies the <strong>Resonance Substrate Model (RSM)</strong> and <strong>vST validation layers</strong> to:</p>
-<ul>
-<li>classify embedding‑space regimes  </li>
-<li>analyze scaling behavior across index structures  </li>
-<li>detect drift across re‑indexing or embedding‑model updates  </li>
-<li>map coherence surfaces in vector‑database state‑space  </li>
-<li>project high‑dimensional embeddings into 3D–9D triadic cores  </li>
-</ul>
-<p>The result is a unified, interpretable substrate for embedding‑store and vector‑database behavior.</p>
-<hr>
-<h2 id="2-contents"><strong>2. Contents</strong></h2>
-<p>This directory contains:</p>
-<ul>
-<li>
-<p><strong>substrate_definition.md</strong><br>
-  Defines the embedding‑store substrate, primitives, and high‑dimensional structure.</p>
-</li>
-<li>
-<p><strong>embedding_space_regimes.md</strong><br>
-  Describes stable, transitional, and dispersed regimes in embedding‑space dynamics.</p>
-</li>
-<li>
-<p><strong>scaling_behavior_vector_dbs.md</strong><br>
-  Maps vector‑database scaling laws onto the 3D–1024D dimensional ladder.</p>
-</li>
-<li>
-<p><strong>projection_and_index_alignment.md</strong><br>
-  Defines invertible projection from high‑dimensional embeddings into triadic cores and alignment across index structures.</p>
-</li>
-<li>
-<p><strong>validation_layers_vst_vector_dbs.md</strong><br>
-  Extends vST (V₁–V₄) to embedding stores and vector‑database behavior.</p>
-</li>
-<li>
-<p><strong>drift_detection_vector_dbs.md</strong><br>
-  Provides a substrate‑level framework for detecting drift across re‑indexing, model updates, or hardware changes.</p>
-</li>
-<li>
-<p><strong>examples/</strong><br>
-  Demonstrations of embedding‑trajectory analysis, projection, and drift detection.</p>
-</li>
-<li>
-<p><strong>appendix/</strong><br>
-  Terminology and references.</p>
-</li>
-</ul>
-<p>Each file is self‑contained and designed for clarity, reproducibility, and cross‑database comparison.</p>
-<hr>
-<h2 id="3-scope"><strong>3. Scope</strong></h2>
-<p>This artifact is:</p>
-<ul>
-<li>
-<p><strong>model‑agnostic</strong><br>
-  Works with any embedding model (LLMs, PLMs, multimodal encoders, custom embeddings).</p>
-</li>
-<li>
-<p><strong>database‑agnostic</strong><br>
-  Applies to FAISS, Milvus, Pinecone, Weaviate, Chroma, Annoy, ScaNN, and custom vector stores.</p>
-</li>
-<li>
-<p><strong>index‑agnostic</strong><br>
-  Compatible with HNSW, IVF, PQ, Flat, graph‑based, and hybrid index structures.</p>
-</li>
-<li>
-<p><strong>substrate‑aligned</strong><br>
-  Uses the same primitives, invariants, and validation layers as the rest of the RSM canon.</p>
-</li>
-</ul>
-<hr>
-<h2 id="4-intended-use"><strong>4. Intended Use</strong></h2>
-<p>This framework supports:</p>
-<ul>
-<li>embedding‑space analysis  </li>
-<li>cross‑index comparison  </li>
-<li>drift detection  </li>
-<li>scaling‑law evaluation  </li>
-<li>regime‑transition mapping  </li>
-<li>retrieval‑stability diagnostics  </li>
-<li>reproducible inference and index‑structure analysis  </li>
-</ul>
-<p>It is not a performance benchmark or database‑tuning guide.<br>
-It is a <strong>substrate‑level interpretability and validation framework</strong>.</p>
-<hr>
-<h2 id="5-relationship-to-other-artifacts"><strong>5. Relationship to Other Artifacts</strong></h2>
-<p>This artifact extends:</p>
-<ul>
-<li><strong>Dimensional Substrate Structures</strong> (3D–1024D substrate)  </li>
-<li><strong>Validation‑Space‑Time (vST)</strong>  </li>
-<li><strong>Triadic Dimensional Cores (3D–9D)</strong>  </li>
-</ul>
-<p>It parallels:</p>
-<ul>
-<li>vST for Large Language Models  </li>
-<li>vST for Protein Language Models  </li>
-<li>vST for Scientific Simulators  </li>
-<li>vST for Robotics and Control Policies  </li>
-<li><strong>vST for Embedding Stores &amp; Vector Databases</strong> (this artifact)  </li>
-<li>vST for Multi‑Model Alignment  </li>
-</ul>
-<p>Each artifact stands alone but shares a common substrate grammar.</p>
-<hr>
-<h2 id="6-citation"><strong>6. Citation</strong></h2>
-<p>A <code>CITATION.cff</code> file is included for formal citation.<br>
-A <code>zenodo.json</code> file is provided for DOI‑ready metadata.</p>
-<hr>
-<h2 id="7-license"><strong>7. License</strong></h2>
-<p>Released under the MIT License.
 ### <em>vST for Embedding Stores &amp; Vector Databases</em>  </p>
 <h3 id="dimensional-scaling-behavior-in-highdimensional-embedding-spaces"><em>Dimensional Scaling Behavior in High‑Dimensional Embedding Spaces</em></h3>
 <p>This document defines how <strong>embedding spaces</strong> and <strong>vector‑database systems</strong> exhibit scaling behavior across the dimensional ladder (3D → 1024D). It maps embedding‑model dimensionality, index structure complexity, retrieval‑neighborhood geometry, and cluster‑boundary behavior onto the substrate’s triadic structure and scaling primitives.</p>
@@ -1167,7 +1668,7 @@ vST ensures they remain coherent and invariant‑preserving.</p>
 <li>loss of primitive‑level structure  </li>
 <li>non‑compact 3D projections  </li>
 </ul>
-<h3 id="interpretation_3"><strong>Interpretation</strong></h3>
+<h3 id="interpretation_10"><strong>Interpretation</strong></h3>
 <p>V₁ ensures that embedding‑space structure remains stable and semantically meaningful.</p>
 <hr>
 <h2 id="4-v2-dimensional-continuity-validation"><strong>4. V₂ — Dimensional Continuity Validation</strong></h2>
@@ -1187,7 +1688,7 @@ vST ensures they remain coherent and invariant‑preserving.</p>
 <li>scaling discontinuities  </li>
 <li>unstable high‑dimensional variance  </li>
 </ul>
-<h3 id="interpretation_4"><strong>Interpretation</strong></h3>
+<h3 id="interpretation_11"><strong>Interpretation</strong></h3>
 <p>V₂ ensures that dimensional scaling and projection remain invariant‑preserving.</p>
 <hr>
 <h2 id="5-v3-regimetransition-validation"><strong>5. V₃ — Regime‑Transition Validation</strong></h2>
@@ -1207,7 +1708,7 @@ vST ensures they remain coherent and invariant‑preserving.</p>
 <li>regime collapse  </li>
 <li>resonance‑time discontinuities  </li>
 </ul>
-<h3 id="interpretation_5"><strong>Interpretation</strong></h3>
+<h3 id="interpretation_12"><strong>Interpretation</strong></h3>
 <p>V₃ ensures that embedding‑space dynamics follow stable, predictable regime behavior.</p>
 <hr>
 <h2 id="6-v4-corealignment-validation"><strong>6. V₄ — Core‑Alignment Validation</strong></h2>
@@ -1228,7 +1729,7 @@ vST ensures they remain coherent and invariant‑preserving.</p>
 <li>incompatible embedding‑space geometry  </li>
 <li>loss of coherence in 9D pathways  </li>
 </ul>
-<h3 id="interpretation_6"><strong>Interpretation</strong></h3>
+<h3 id="interpretation_13"><strong>Interpretation</strong></h3>
 <p>V₄ ensures that embedding‑space behavior remains interpretable and comparable across index structures and model versions.</p>
 <hr>
 <h2 id="7-vst-outputs-for-embedding-stores"><strong>7. vST Outputs for Embedding Stores</strong></h2>
@@ -1242,506 +1743,6 @@ vST ensures they remain coherent and invariant‑preserving.</p>
 <li>cross‑index and cross‑version comparison surfaces  </li>
 </ul>
 <p>These outputs support reproducible, substrate‑aligned evaluation of embedding stores and vector databases.
-### <em>vST for Embedding Stores &amp; Vector Databases</em>  </p>
-<h3 id="references"><em>References</em></h3>
-<p>This appendix lists references relevant to embedding models, vector databases, high‑dimensional retrieval systems, scaling laws, clustering, dynamical systems, and validation frameworks. Citations are grouped by category for clarity and presented in a substrate‑agnostic, model‑independent format consistent with the RSM and vST canon.</p>
-<hr>
-<h2 id="1-embedding-models-representation-learning"><strong>1. Embedding Models &amp; Representation Learning</strong></h2>
-<ul>
-<li>
-<p>Mikolov, T., Chen, K., Corrado, G., &amp; Dean, J.<br>
-<em>Efficient Estimation of Word Representations in Vector Space.</em><br>
-  arXiv:1301.3781 (2013).</p>
-</li>
-<li>
-<p>Devlin, J., Chang, M.‑W., Lee, K., &amp; Toutanova, K.<br>
-<em>BERT: Pre‑training of Deep Bidirectional Transformers.</em><br>
-  NAACL (2019).</p>
-</li>
-<li>
-<p>Radford, A., Kim, J. W., Hallacy, C., et al.<br>
-<em>Learning Transferable Visual Models From Natural Language Supervision (CLIP).</em><br>
-  arXiv:2103.00020 (2021).</p>
-</li>
-</ul>
-<hr>
-<h2 id="2-vector-databases-index-structures"><strong>2. Vector Databases &amp; Index Structures</strong></h2>
-<ul>
-<li>
-<p>Johnson, J., Douze, M., &amp; Jégou, H.<br>
-<em>Billion‑Scale Similarity Search with GPUs.</em><br>
-  IEEE Transactions on Big Data (2019). (FAISS)</p>
-</li>
-<li>
-<p>Malkov, Y. A., &amp; Yashunin, D. A.<br>
-<em>Efficient and Robust Approximate Nearest Neighbor Search Using HNSW.</em><br>
-  IEEE TPAMI (2020).</p>
-</li>
-<li>
-<p>Guo, R., Sun, Y., Lindgren, E., et al.<br>
-<em>Accelerating Large‑Scale Inference with Anisotropic Vector Quantization.</em><br>
-  ICML (2020). (PQ / IVF‑PQ)</p>
-</li>
-</ul>
-<hr>
-<h2 id="3-clustering-highdimensional-geometry"><strong>3. Clustering &amp; High‑Dimensional Geometry</strong></h2>
-<ul>
-<li>
-<p>Coifman, R. R., &amp; Lafon, S.<br>
-<em>Diffusion Maps.</em><br>
-  Applied and Computational Harmonic Analysis (2006).</p>
-</li>
-<li>
-<p>Tenenbaum, J. B., de Silva, V., &amp; Langford, J. C.<br>
-<em>A Global Geometric Framework for Nonlinear Dimensionality Reduction.</em><br>
-  Science (2000).</p>
-</li>
-<li>
-<p>von Luxburg, U.<br>
-<em>A Tutorial on Spectral Clustering.</em><br>
-  Statistics and Computing (2007).</p>
-</li>
-</ul>
-<hr>
-<h2 id="4-scaling-laws-embeddingspace-behavior"><strong>4. Scaling Laws &amp; Embedding‑Space Behavior</strong></h2>
-<ul>
-<li>
-<p>Kaplan, J., McCandlish, S., Henighan, T., et al.<br>
-<em>Scaling Laws for Neural Language Models.</em><br>
-  arXiv:2001.08361 (2020).</p>
-</li>
-<li>
-<p>Reimers, N., &amp; Gurevych, I.<br>
-<em>Sentence‑BERT: Sentence Embeddings Using Siamese BERT‑Networks.</em><br>
-  EMNLP (2019).</p>
-</li>
-<li>
-<p>Mu, J., &amp; Viswanath, P.<br>
-<em>All-but-the-Top: Simple and Effective Postprocessing for Word Representations.</em><br>
-  ICLR (2018).</p>
-</li>
-</ul>
-<hr>
-<h2 id="5-retrieval-similarity-search-evaluation"><strong>5. Retrieval, Similarity Search &amp; Evaluation</strong></h2>
-<ul>
-<li>
-<p>Wang, J., Zhang, T., Song, J., et al.<br>
-<em>Survey on Learning to Hash.</em><br>
-  IEEE TPAMI (2018).</p>
-</li>
-<li>
-<p>Jegou, H., Douze, M., &amp; Schmid, C.<br>
-<em>Product Quantization for Nearest Neighbor Search.</em><br>
-  IEEE TPAMI (2011).</p>
-</li>
-<li>
-<p>Zhai, X., Puigcerver, J., Mustafa, B., et al.<br>
-<em>Scaling Vision Transformers.</em><br>
-  CVPR (2022).</p>
-</li>
-</ul>
-<hr>
-<h2 id="6-validation-verification-drift-detection"><strong>6. Validation, Verification &amp; Drift Detection</strong></h2>
-<ul>
-<li>
-<p>Breck, E., Cai, S., Nielsen, E., et al.<br>
-<em>The ML Test Score: A Rubric for ML Production Readiness.</em><br>
-  Google Research (2017).</p>
-</li>
-<li>
-<p>Amodei, D., Olah, C., Steinhardt, J., et al.<br>
-<em>Concrete Problems in AI Safety.</em><br>
-  arXiv:1606.06565 (2016).</p>
-</li>
-<li>
-<p>Oberkampf, W. L., &amp; Roy, C. J.<br>
-<em>Verification and Validation in Scientific Computing.</em><br>
-  Cambridge University Press (2010).</p>
-</li>
-</ul>
-<hr>
-<h2 id="7-substratelevel-and-triadicframeworks-canon"><strong>7. Substrate‑Level and Triadic‑Frameworks Canon</strong></h2>
-<ul>
-<li>
-<p>Loswin, N.<br>
-<em>Resonance Substrate Model (RSM): Structural Foundations for High‑Dimensional Inference.</em><br>
-  TriadicFrameworks (2025).</p>
-</li>
-<li>
-<p>Loswin, N.<br>
-<em>Triadic Dimensional Cores: A 3D–9D Substrate for Structural and Inference‑Level Alignment.</em><br>
-  TriadicFrameworks (2025).</p>
-</li>
-<li>
-<p>Loswin, N.<br>
-<em>Validation‑Space‑Time (vST): A Substrate‑Level Framework for Reproducibility and Drift Detection.</em><br>
-  TriadicFrameworks (2025).</p>
-</li>
-<li>
-<p>Loswin, N.<br>
-<em>Dimensional Substrate Structures: Scaling Laws and High‑Dimensional Regimes.</em><br>
-  TriadicFrameworks (2026).</p>
-</li>
-<li>
-<p>Loswin, N.<br>
-<em>vST for Embedding Stores &amp; Vector Databases.</em><br>
-  TriadicFrameworks (2026).
-### <em>vST for Embedding Stores &amp; Vector Databases</em>  </p>
-</li>
-</ul>
-<h3 id="terminology"><em>Terminology</em></h3>
-<p>This appendix defines the terminology used throughout the <em>vST for Embedding Stores &amp; Vector Databases</em> artifact. Terms are presented in a substrate‑agnostic, model‑independent manner and apply to any embedding store or vector database operating across the full dimensional ladder (3D → 1024D). Definitions emphasize primitive‑level structure, cluster regimes, scaling continuity, retrieval‑path geometry, and invariant preservation.</p>
-<hr>
-<h2 id="1-substrate-terms"><strong>1. Substrate Terms</strong></h2>
-<h3 id="embeddingstore-substrate"><strong>Embedding‑Store Substrate</strong></h3>
-<p>A structured, invariant‑preserving framework for representing and interpreting embedding spaces across 64D–1024D.</p>
-<h3 id="embedding-space"><strong>Embedding Space</strong></h3>
-<p>The high‑dimensional vector space representing embeddings produced by a model.</p>
-<h3 id="coherence-surface"><strong>Coherence Surface</strong></h3>
-<p>A stable region in embedding space where vectors maintain structural continuity across clusters, neighborhoods, or index partitions.</p>
-<hr>
-<h2 id="2-primitive-terms"><strong>2. Primitive Terms</strong></h2>
-<h3 id="dimensional-primitive-dp"><strong>Dimensional Primitive (DP)</strong></h3>
-<p>The minimal unit of embedding‑space structure, capturing local coherence, variance behavior, and projection stability.</p>
-<h3 id="triadic-dimensional-primitive-tdp"><strong>Triadic Dimensional Primitive (TDP)</strong></h3>
-<p>A triad of DPs forming the smallest unit capable of expressing full cluster‑regime behavior (R₁, R₂, R₃).</p>
-<h3 id="scaling-primitive-sp"><strong>Scaling Primitive (SP)</strong></h3>
-<p>A rule‑based expansion unit that preserves invariants during dimensional scaling (e.g., embedding‑model dimensionality, index‑structure complexity).</p>
-<h3 id="coherence-primitive-cp"><strong>Coherence Primitive (CP)</strong></h3>
-<p>A minimal unit identifying stable, transitional, or dispersed regions in high‑dimensional embedding space.</p>
-<hr>
-<h2 id="3-core-terms"><strong>3. Core Terms</strong></h2>
-<h3 id="triadic-dimensional-core-tdc"><strong>Triadic Dimensional Core (TDC)</strong></h3>
-<p>The 3D–9D substrate composed of one or more TDPs, used for interpretable projection of embedding states.</p>
-<h3 id="3d-structural-core"><strong>3D Structural Core</strong></h3>
-<p>Captures motif‑level geometry in cluster interiors.</p>
-<h3 id="6d-interaction-core"><strong>6D Interaction Core</strong></h3>
-<p>Captures relational and cross‑cluster structure across boundaries and index partitions.</p>
-<h3 id="9d-coherence-core"><strong>9D Coherence Core</strong></h3>
-<p>Captures pathway‑level coherence across retrieval neighborhoods.</p>
-<hr>
-<h2 id="4-regime-terms"><strong>4. Regime Terms</strong></h2>
-<h3 id="highdimensional-regimes-r1h-r2h-r3h"><strong>High‑Dimensional Regimes (R₁ᴴ, R₂ᴴ, R₃ᴴ)</strong></h3>
-<p>The triadic regime structure expressed in 64D–1024D embedding spaces.</p>
-<h3 id="stable-regime-r1-r1h"><strong>Stable Regime (R₁ / R₁ᴴ)</strong></h3>
-<p>Compact, coherent, low‑variance cluster behavior.</p>
-<h3 id="boundarytransition-regime-r2-r2h"><strong>Boundary/Transition Regime (R₂ / R₂ᴴ)</strong></h3>
-<p>Branching, oscillatory, or reorientation behavior across cluster boundaries or semantic‑overlap zones.</p>
-<h3 id="dispersedoutlier-regime-r3-r3h"><strong>Dispersed/Outlier Regime (R₃ / R₃ᴴ)</strong></h3>
-<p>Diffuse, fragmented, or unstable embedding behavior.</p>
-<hr>
-<h2 id="5-scaling-terms"><strong>5. Scaling Terms</strong></h2>
-<h3 id="scaling-behavior"><strong>Scaling Behavior</strong></h3>
-<p>The structured expansion of embedding‑space capacity as dimensionality, model complexity, or index size increases.</p>
-<h3 id="scaling-regimes-s1-s2-s3"><strong>Scaling Regimes (S₁, S₂, S₃)</strong></h3>
-<p>Triadic scaling behavior describing stable, transitional, and dispersion‑prone scaling phases.</p>
-<h3 id="dimensional-continuity"><strong>Dimensional Continuity</strong></h3>
-<p>The requirement that embedding‑space expansion remains smooth and invariant‑preserving across the dimensional ladder.</p>
-<hr>
-<h2 id="6-projection-terms"><strong>6. Projection Terms</strong></h2>
-<h3 id="invertible-projection"><strong>Invertible Projection</strong></h3>
-<p>A projection from high‑dimensional embedding space into 3D–9D that preserves primitive‑level structure and regime identity.</p>
-<h3 id="regimeaware-projection"><strong>Regime‑Aware Projection</strong></h3>
-<p>A projection that maintains correct mapping of R₁, R₂, and R₃ behaviors.</p>
-<h3 id="primitivealigned-projection"><strong>Primitive‑Aligned Projection</strong></h3>
-<p>A projection that preserves DP, TDP, SP, and CP structure.</p>
-<hr>
-<h2 id="7-alignment-terms"><strong>7. Alignment Terms</strong></h2>
-<h3 id="crossindex-alignment"><strong>Cross‑Index Alignment</strong></h3>
-<p>Comparison of embedding‑space structure across different index structures (HNSW, IVF, PQ, etc.).</p>
-<h3 id="crossversion-alignment"><strong>Cross‑Version Alignment</strong></h3>
-<p>Comparison of embeddings across model updates or dimensionality changes.</p>
-<h3 id="crosspartition-alignment"><strong>Cross‑Partition Alignment</strong></h3>
-<p>Comparison of retrieval behavior across index partitions.</p>
-<hr>
-<h2 id="8-validation-terms"><strong>8. Validation Terms</strong></h2>
-<h3 id="vst-validationspacetime"><strong>vST (Validation‑Space‑Time)</strong></h3>
-<p>A substrate‑level validation framework evaluating structural coherence, dimensional continuity, regime behavior, and core alignment.</p>
-<h3 id="validation-layers-v1v4"><strong>Validation Layers (V₁–V₄)</strong></h3>
-<p>Four structured evaluation layers ensuring invariant‑preserving behavior across the dimensional ladder.</p>
-<hr>
-<h2 id="9-drift-terms"><strong>9. Drift Terms</strong></h2>
-<h3 id="drift"><strong>Drift</strong></h3>
-<p>A deviation from expected substrate behavior, indicating instability or invariant failure.</p>
-<h3 id="drift-categories-d1d4"><strong>Drift Categories (D₁–D₄)</strong></h3>
-<p>Classification of drift into structural, dimensional, regime, or projection drift.</p>
-<h3 id="drift-severity"><strong>Drift Severity</strong></h3>
-<p>A measure of drift magnitude (low, moderate, high).
-### <em>vST for Embedding Stores &amp; Vector Databases</em>  </p>
-<h3 id="example-clusterregime-transition-during-embeddingmodel-update"><em>Example: Cluster‑Regime Transition During Embedding‑Model Update</em></h3>
-<p>This example demonstrates how an embedding store undergoes a <strong>cluster‑regime transition</strong> when migrating from <strong>Model A (256D)</strong> to <strong>Model B (512D)</strong>. It illustrates how cluster interiors, boundaries, and outlier regions reorganize; how coherence surfaces deform; and how the vST substrate classifies regime transitions using the 1024D dimensional ladder.</p>
-<p>The goal is to provide a reproducible, invariant‑preserving demonstration of cluster‑regime behavior during an embedding‑model update.</p>
-<hr>
-<h2 id="1-scenario-overview"><strong>1. Scenario Overview</strong></h2>
-<p>We assume:</p>
-<ul>
-<li>an embedding store containing ~5M vectors  </li>
-<li>Model A: 256D embeddings  </li>
-<li>Model B: 512D embeddings  </li>
-<li>index structure: HNSW or IVF‑PQ  </li>
-<li>a re‑indexing event triggered by the model upgrade  </li>
-</ul>
-<p>The example is model‑agnostic and applies to any vector‑database system.</p>
-<hr>
-<h2 id="2-step-1-extract-embedding-clusters-before-and-after-update"><strong>2. Step 1 — Extract Embedding Clusters Before and After Update</strong></h2>
-<p>For each embedding model, we extract cluster interiors and boundaries.</p>
-<p>Let:</p>
-<p>[
-C_A^{(i)} \in \mathbb{R}^{256}, \quad C_B^{(i)} \in \mathbb{R}^{512}
-]</p>
-<p>represent the embeddings of item ( i ) before and after the update.</p>
-<h3 id="observed-properties-model-a-model-b"><strong>Observed Properties (Model A → Model B)</strong></h3>
-<ul>
-<li>cluster interiors become more compact  </li>
-<li>boundaries expand and become more expressive  </li>
-<li>outlier regions shift due to semantic refinement  </li>
-</ul>
-<h3 id="interpretation_7"><strong>Interpretation</strong></h3>
-<p>The embedding‑model upgrade increases representational capacity, altering cluster geometry.</p>
-<hr>
-<h2 id="3-step-2-identify-clusterregime-behavior"><strong>3. Step 2 — Identify Cluster‑Regime Behavior</strong></h2>
-<p>Using variance distribution, coherence‑surface continuity, and primitive‑level stability, classify each region’s regime.</p>
-<h3 id="example-regime-map"><strong>Example Regime Map</strong></h3>
-<table>
-<thead>
-<tr>
-<th>Region Type</th>
-<th>Model A Regime</th>
-<th>Model B Regime</th>
-<th>Interpretation</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Cluster Interiors</td>
-<td><strong>R₁ᴴ</strong></td>
-<td><strong>R₁ᴴ</strong></td>
-<td>Stable, compact clusters</td>
-</tr>
-<tr>
-<td>Cluster Boundaries</td>
-<td><strong>R₂ᴴ</strong></td>
-<td><strong>R₂ᴴ → R₁ᴴ</strong></td>
-<td>Boundary consolidation</td>
-</tr>
-<tr>
-<td>Semantic Overlap Zones</td>
-<td><strong>R₂ᴴ</strong></td>
-<td><strong>R₂ᴴ → R₃ᴴ → R₂ᴴ</strong></td>
-<td>Temporary fragmentation</td>
-</tr>
-<tr>
-<td>Outlier Regions</td>
-<td><strong>R₃ᴴ</strong></td>
-<td><strong>R₃ᴴ → R₂ᴴ</strong></td>
-<td>Partial recovery</td>
-</tr>
-</tbody>
-</table>
-<h3 id="interpretation_8"><strong>Interpretation</strong></h3>
-<p>The model upgrade induces a structured triadic sequence of transitions.</p>
-<hr>
-<h2 id="4-step-3-project-embeddings-into-9d"><strong>4. Step 3 — Project Embeddings into 9D</strong></h2>
-<p>Project both 256D and 512D embeddings into the 9D coherence core.</p>
-<h3 id="reveals"><strong>Reveals</strong></h3>
-<ul>
-<li>smooth surfaces in stable cluster interiors  </li>
-<li>branching surfaces in boundary regions  </li>
-<li>fragmentation in semantic‑overlap zones  </li>
-<li>partial recovery in outlier regions  </li>
-</ul>
-<h3 id="interpretation_9"><strong>Interpretation</strong></h3>
-<p>The 9D projection exposes the “coherence geometry” of the embedding‑space transition.</p>
-<hr>
-<h2 id="5-step-4-project-9d-6d-3d"><strong>5. Step 4 — Project 9D → 6D → 3D</strong></h2>
-<h3 id="6d-interaction-projection"><strong>6D Interaction Projection</strong></h3>
-<p>Shows:</p>
-<ul>
-<li>cross‑cluster reorientation  </li>
-<li>index‑partition boundary shifts  </li>
-<li>early fragmentation signatures  </li>
-</ul>
-<h3 id="3d-structural-projection"><strong>3D Structural Projection</strong></h3>
-<p>Shows:</p>
-<ul>
-<li>compact motifs in stable clusters  </li>
-<li>oscillatory geometry in transitional regions  </li>
-<li>diffuse patterns in outlier zones  </li>
-</ul>
-<hr>
-<h2 id="6-step-5-validate-with-vst-layers"><strong>6. Step 5 — Validate with vST Layers</strong></h2>
-<h3 id="v1-structural-coherence-preserved-except-in-overlap-zones"><strong>V₁</strong>: structural coherence preserved except in overlap zones</h3>
-<h3 id="v2-dimensional-continuity-intact-across-256d-512d"><strong>V₂</strong>: dimensional continuity intact across 256D → 512D</h3>
-<h3 id="v3-regime-transitions-substratealigned"><strong>V₃</strong>: regime transitions substrate‑aligned</h3>
-<h3 id="v4-core-alignment-stable-across-the-model-update"><strong>V₄</strong>: core alignment stable across the model update</h3>
-<hr>
-<h2 id="7-step-6-fragmentation-and-drift-detection"><strong>7. Step 6 — Fragmentation and Drift Detection</strong></h2>
-<p>Fragmentation categories:</p>
-<ul>
-<li><strong>F₁ Boundary Fragmentation:</strong> moderate (boundary reorientation)  </li>
-<li><strong>F₂ Partition Fragmentation:</strong> low (index structure stable)  </li>
-<li><strong>F₃ Outlier Fragmentation:</strong> moderate (semantic drift)  </li>
-<li><strong>F₄ Model‑Update Fragmentation:</strong> moderate (expected during upgrade)  </li>
-</ul>
-<p>Drift categories:</p>
-<ul>
-<li><strong>D₁ Structural Drift:</strong> moderate  </li>
-<li><strong>D₂ Dimensional Drift:</strong> none  </li>
-<li><strong>D₃ Regime Drift:</strong> moderate  </li>
-<li><strong>D₄ Projection Drift:</strong> none  </li>
-</ul>
-<h3 id="interpretation_10"><strong>Interpretation</strong></h3>
-<p>The transition is healthy: fragmentation is localized and resolves after re‑indexing.</p>
-<hr>
-<h2 id="8-summary"><strong>8. Summary</strong></h2>
-<p>This example demonstrates:</p>
-<ul>
-<li>how embedding clusters reorganize during a model upgrade  </li>
-<li>how regime behavior evolves across cluster interiors, boundaries, and outliers  </li>
-<li>how projection reveals coherence and fragmentation  </li>
-<li>how vST layers validate structural integrity  </li>
-<li>how drift detection isolates transitional instability  </li>
-</ul>
-<p>This pattern is typical of embedding‑model migrations and index‑structure updates.
-### <em>vST for Embedding Stores &amp; Vector Databases</em>  </p>
-<h3 id="example-drift-detection-after-reindexing-and-embeddingmodel-update"><em>Example: Drift Detection After Re‑Indexing and Embedding‑Model Update</em></h3>
-<p>This example demonstrates how <strong>drift</strong> is detected in an embedding store after two simultaneous changes:</p>
-<ol>
-<li><strong>Embedding‑model upgrade</strong> (Model A → Model B)  </li>
-<li><strong>Index‑structure rebuild</strong> (HNSW → IVF‑PQ)</li>
-</ol>
-<p>It illustrates how embedding clusters reorganize, how coherence surfaces deform, how fragmentation emerges, and how the vST substrate classifies drift using the 1024D dimensional ladder.</p>
-<p>The goal is to provide a reproducible, invariant‑preserving demonstration of drift detection in high‑dimensional embedding systems.</p>
-<hr>
-<h2 id="1-scenario-overview_1"><strong>1. Scenario Overview</strong></h2>
-<p>We assume:</p>
-<ul>
-<li>~10M embeddings  </li>
-<li>Model A: 384D  </li>
-<li>Model B: 768D  </li>
-<li>Index A: HNSW  </li>
-<li>Index B: IVF‑PQ (coarse quantization + product quantization)  </li>
-<li>A full re‑indexing event triggered by the model upgrade  </li>
-</ul>
-<p>The example is model‑agnostic and applies to any vector‑database system.</p>
-<hr>
-<h2 id="2-step-1-extract-embeddings-before-and-after-update"><strong>2. Step 1 — Extract Embeddings Before and After Update</strong></h2>
-<p>Let:</p>
-<p>[
-E_A^{(i)} \in \mathbb{R}^{384}, \quad E_B^{(i)} \in \mathbb{R}^{768}
-]</p>
-<p>represent the embeddings of item ( i ) before and after the update.</p>
-<h3 id="observed-properties"><strong>Observed Properties</strong></h3>
-<ul>
-<li>cluster interiors become more compact  </li>
-<li>boundaries shift due to increased representational capacity  </li>
-<li>outlier regions reorganize  </li>
-<li>retrieval neighborhoods change due to index‑structure differences  </li>
-</ul>
-<h3 id="interpretation_11"><strong>Interpretation</strong></h3>
-<p>The embedding‑model upgrade and index rebuild jointly reshape the embedding space.</p>
-<hr>
-<h2 id="3-step-2-project-embeddings-into-9d"><strong>3. Step 2 — Project Embeddings into 9D</strong></h2>
-<p>Project both 384D and 768D embeddings into the 9D coherence core.</p>
-<h3 id="reveals_1"><strong>Reveals</strong></h3>
-<ul>
-<li>stable surfaces in cluster interiors  </li>
-<li>branching surfaces in boundary regions  </li>
-<li>fragmentation in semantic‑overlap zones  </li>
-<li>partial recovery in outlier regions  </li>
-</ul>
-<h3 id="interpretation_12"><strong>Interpretation</strong></h3>
-<p>The 9D projection exposes the “coherence geometry” of the drift event.</p>
-<hr>
-<h2 id="4-step-3-identify-drift-categories-d1d4"><strong>4. Step 3 — Identify Drift Categories (D₁–D₄)</strong></h2>
-<p>Using variance distribution, coherence‑surface continuity, and primitive‑level stability, classify drift.</p>
-<h3 id="41-structural-drift-d1"><strong>4.1 Structural Drift (D₁)</strong></h3>
-<ul>
-<li>cluster interiors remain stable  </li>
-<li>boundaries show moderate tearing  </li>
-<li>retrieval neighborhoods shift  </li>
-</ul>
-<p><strong>Severity:</strong> <em>moderate</em></p>
-<hr>
-<h3 id="42-dimensional-drift-d2"><strong>4.2 Dimensional Drift (D₂)</strong></h3>
-<ul>
-<li>384D → 768D expansion is smooth  </li>
-<li>projection remains invertible  </li>
-<li>no scaling discontinuities  </li>
-</ul>
-<p><strong>Severity:</strong> <em>none</em></p>
-<hr>
-<h3 id="43-regime-drift-d3"><strong>4.3 Regime Drift (D₃)</strong></h3>
-<ul>
-<li>some R₂ᴴ → R₃ᴴ transitions in overlap zones  </li>
-<li>temporary instability during re‑indexing  </li>
-<li>partial recovery after quantization warm‑up  </li>
-</ul>
-<p><strong>Severity:</strong> <em>moderate</em></p>
-<hr>
-<h3 id="44-projection-drift-d4"><strong>4.4 Projection Drift (D₄)</strong></h3>
-<ul>
-<li>3D–9D mapping remains stable  </li>
-<li>no primitive‑alignment failures  </li>
-</ul>
-<p><strong>Severity:</strong> <em>none</em></p>
-<hr>
-<h2 id="5-step-4-detect-fragmentation-f1f4"><strong>5. Step 4 — Detect Fragmentation (F₁–F₄)</strong></h2>
-<p>Fragmentation is evaluated alongside drift.</p>
-<h3 id="boundary-fragmentation-f1"><strong>Boundary Fragmentation (F₁)</strong></h3>
-<ul>
-<li>moderate  </li>
-<li>caused by semantic‑boundary reorientation</li>
-</ul>
-<h3 id="partition-fragmentation-f2"><strong>Partition Fragmentation (F₂)</strong></h3>
-<ul>
-<li>low  </li>
-<li>IVF‑PQ partitions remain stable</li>
-</ul>
-<h3 id="outlier-fragmentation-f3"><strong>Outlier Fragmentation (F₃)</strong></h3>
-<ul>
-<li>moderate  </li>
-<li>outlier regions shift due to model upgrade</li>
-</ul>
-<h3 id="modelupdate-fragmentation-f4"><strong>Model‑Update Fragmentation (F₄)</strong></h3>
-<ul>
-<li>moderate  </li>
-<li>expected during dimensional expansion</li>
-</ul>
-<hr>
-<h2 id="6-step-5-validate-with-vst-layers-v1v4"><strong>6. Step 5 — Validate with vST Layers (V₁–V₄)</strong></h2>
-<h3 id="v1-structural-coherence"><strong>V₁ — Structural Coherence</strong></h3>
-<p>Stable except in overlap zones.</p>
-<h3 id="v2-dimensional-continuity"><strong>V₂ — Dimensional Continuity</strong></h3>
-<p>Fully preserved across 384D → 768D.</p>
-<h3 id="v3-regime-transitions"><strong>V₃ — Regime Transitions</strong></h3>
-<p>Smooth except for temporary R₃ᴴ spikes.</p>
-<h3 id="v4-core-alignment"><strong>V₄ — Core Alignment</strong></h3>
-<p>Stable across both models and both index structures.</p>
-<hr>
-<h2 id="7-step-6-crossversion-alignment"><strong>7. Step 6 — Cross‑Version Alignment</strong></h2>
-<p>Compare Model A and Model B embeddings in 9D.</p>
-<h3 id="findings"><strong>Findings</strong></h3>
-<ul>
-<li>cluster interiors align well  </li>
-<li>boundaries shift but remain coherent  </li>
-<li>outliers partially realign  </li>
-<li>retrieval neighborhoods differ due to IVF‑PQ quantization  </li>
-</ul>
-<h3 id="interpretation_13"><strong>Interpretation</strong></h3>
-<p>The drift is structural but not harmful; the system stabilizes after re‑indexing.</p>
-<hr>
-<h2 id="8-summary_1"><strong>8. Summary</strong></h2>
-<p>This example demonstrates:</p>
-<ul>
-<li>how embedding clusters reorganize after a model upgrade  </li>
-<li>how index‑structure changes influence retrieval neighborhoods  </li>
-<li>how projection reveals coherence, fragmentation, and drift  </li>
-<li>how vST layers validate structural integrity  </li>
-<li>how drift detection isolates transitional instability  </li>
-<li>how cross‑version alignment confirms long‑term stability  </li>
-</ul>
-<p>This pattern is typical of embedding‑model migrations, index‑structure changes, and dimensionality expansions.
 </p>
   </main>
 </body>

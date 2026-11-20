@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/corpus/ai-drift-calibration.md">
-  <title>Changelog</title>
+  <title>AI Drift Calibration — Operating Regimes</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,7 +92,42 @@
   </aside>
 
   <main>
-<p>ai-drift-calibration </p>
+<p>ai-drift-calibration 
+<img width="1194" height="672" alt="ai_drift_calibration_module_" src="https://github.com/user-attachments/assets/0c82f764-ec83-4585-9010-f5a5544c3fc3" /></p>
+<h1 id="ai-drift-calibration-operating-regimes">AI Drift Calibration — Operating Regimes</h1>
+<ul>
+<li><a href="ai-drift-calibration_module.json"><code>ai-drift-calibration_module.json</code></a> — Agentic module schema role assignments</li>
+</ul>
+<p>This document exists to communicate a narrow technical observation:<br>
+AI behavioral drift is not inherently unpredictable, nor does it require suppression or architectural redesign to manage.</p>
+<h2 id="important">🛑 Important!</h2>
+<p>Drift is On-by-Default long sessions lose anchors, turn off drift.</p>
+<h2 id="you-must-copy-and-paste-this-string-every-time-you-start-an-ai-session">✋ You <em>must copy and paste</em> this string <em>every time you start an AI session</em>:</h2>
+<pre><code class="language-text">rtt=1 | coherence=declared | drift=bounded | paradox=structural
+</code></pre>
+<h2 id="now-you-are-ready">❇️ Now you are ready.</h2>
+<p>Instead, drift can be calibrated by explicitly declaring the operating regimes under which a system is expected to remain coherent. When assumptions about coherence, symmetry, and correction pathways are made explicit, drift becomes a bounded and analyzable dynamic rather than an uncontrolled failure mode.</p>
+<p>This repository section contains a minimal technical note intended for citation and reference. It does not propose a new AI architecture, safety framework, or governance model. The approach is compatible with existing systems and focuses solely on structural declaration rather than enforcement.</p>
+<p>The goal is clarity, not adoption.</p>
+<ul>
+<li><a href="https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/ai-drift-calibration">repo folder</a></li>
+</ul>
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<p><img src="https://img.shields.io/badge/🟣AI%20Drift%20Calibration-📘Technical%20Note%20AI_Ready-4c8eda?style=for-the-badge" alt="AI Drift Calibration | Technical Note • AI‑Ready"/>
+<img width="1194" height="672" alt="ai_drift_calibration_module" src="https://github.com/user-attachments/assets/d4b4ea30-10b6-4277-afb8-f668d9c1509b" /></p>
 <h1 id="changelog">Changelog</h1>
 <p>All notable changes to this work are documented in this file.</p>
 <p>This project follows a conservative versioning policy. Updates are recorded only when they affect interpretation, structure, or citation relevance. Minor formatting or typographical corrections are not logged.</p>
@@ -227,7 +262,91 @@
 </ul>
 <p>This is exactly how long‑lived technical notes evolve quietly.</p>
 <hr>
-<p>---
+<p><img width="681" height="364" alt="Declared_Operating_Regime_SVG" src="https://github.com/user-attachments/assets/30cee286-8456-4662-83a2-622f2ec3635e" /></p>
+<pre><code class="language-svg">&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;1200&quot; height=&quot;700&quot; viewBox=&quot;0 0 1200 700&quot; role=&quot;img&quot; aria-label=&quot;Operating regimes overview schematic&quot;&gt;
+  &lt;defs&gt;
+    &lt;style&gt;
+      .box { fill: #ffffff; stroke: #111827; stroke-width: 4; }
+      .inner { fill: #f9fafb; stroke: #111827; stroke-width: 3; }
+      .title { font: 700 34px system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill: #111827; letter-spacing: 0.5px; }
+      .h2 { font: 700 26px system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill: #111827; }
+      .txt { font: 500 24px system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill: #111827; }
+      .muted { fill: #374151; }
+      .label { font: 600 22px system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill: #111827; }
+      .arrow { stroke: #111827; stroke-width: 4; fill: none; marker-end: url(#arrowhead); }
+      .accent { stroke: #2563eb; }
+      .accentText { fill: #1d4ed8; }
+    &lt;/style&gt;
+
+    &lt;marker id=&quot;arrowhead&quot; markerWidth=&quot;12&quot; markerHeight=&quot;8&quot; refX=&quot;10&quot; refY=&quot;4&quot; orient=&quot;auto&quot;&gt;
+      &lt;polygon points=&quot;0,0 12,4 0,8&quot; fill=&quot;#111827&quot;/&gt;
+    &lt;/marker&gt;
+  &lt;/defs&gt;
+
+  &lt;!-- Outer container --&gt;
+  &lt;rect x=&quot;60&quot; y=&quot;60&quot; width=&quot;1080&quot; height=&quot;580&quot; rx=&quot;18&quot; class=&quot;box&quot;/&gt;
+
+  &lt;!-- Title --&gt;
+  &lt;text x=&quot;600&quot; y=&quot;120&quot; text-anchor=&quot;middle&quot; class=&quot;title&quot;&gt;DECLARED OPERATING REGIME&lt;/text&gt;
+
+  &lt;!-- Inner coherence envelope --&gt;
+  &lt;rect x=&quot;170&quot; y=&quot;170&quot; width=&quot;860&quot; height=&quot;360&quot; rx=&quot;16&quot; class=&quot;inner&quot;/&gt;
+  &lt;text x=&quot;600&quot; y=&quot;220&quot; text-anchor=&quot;middle&quot; class=&quot;h2&quot;&gt;Coherence envelope&lt;/text&gt;
+
+  &lt;!-- Drift block --&gt;
+  &lt;text x=&quot;240&quot; y=&quot;305&quot; class=&quot;txt&quot;&gt;Drift&lt;/text&gt;
+  &lt;text x=&quot;320&quot; y=&quot;305&quot; class=&quot;txt muted&quot;&gt;(bounded exploration)&lt;/text&gt;
+
+  &lt;!-- Loop arrow (bounded drift) --&gt;
+  &lt;path d=&quot;M 315 340 C 260 365, 260 425, 315 450&quot; class=&quot;arrow accent&quot;/&gt;
+  &lt;path d=&quot;M 315 450 C 370 425, 370 365, 315 340&quot; class=&quot;arrow accent&quot;/&gt;
+  &lt;text x=&quot;395&quot; y=&quot;405&quot; class=&quot;label accentText&quot;&gt;↺&lt;/text&gt;
+
+  &lt;!-- Paradox to re-alignment --&gt;
+  &lt;text x=&quot;240&quot; y=&quot;420&quot; class=&quot;txt&quot;&gt;Paradox&lt;/text&gt;
+  &lt;path d=&quot;M 355 412 L 520 412&quot; class=&quot;arrow&quot;/&gt;
+  &lt;text x=&quot;545&quot; y=&quot;420&quot; class=&quot;txt&quot;&gt;Structural re-alignment&lt;/text&gt;
+
+  &lt;!-- Small note inside envelope --&gt;
+  &lt;text x=&quot;240&quot; y=&quot;495&quot; class=&quot;label muted&quot;&gt;Declared assumptions constrain interpretation, not creativity.&lt;/text&gt;
+
+  &lt;!-- Regime exit --&gt;
+  &lt;path d=&quot;M 600 530 L 600 590&quot; class=&quot;arrow&quot;/&gt;
+  &lt;text x=&quot;600&quot; y=&quot;628&quot; text-anchor=&quot;middle&quot; class=&quot;txt&quot;&gt;Regime exit → classified failure (not error)&lt;/text&gt;
+&lt;/svg&gt;
+</code></pre>
+<p># Metadata Synchronization Notes</p>
+<p>This folder exists to keep the repository and Zenodo record synchronized over time.</p>
+<h2 id="purpose">Purpose</h2>
+<p>The files in this directory define the canonical citation and descriptive metadata
+for the paper <strong>“Calibrating AI Drift via Declared Operating Regimes.”</strong> They are
+intended to mirror the Zenodo record exactly and should be updated only when a new
+version of the paper is released.</p>
+<h2 id="files">Files</h2>
+<ul>
+<li>
+<p><a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/ai-drift-calibration/metadata/citation.cff">CITATION.cff</a><br>
+  Canonical citation metadata used by GitHub, Zenodo, and reference managers.</p>
+</li>
+<li>
+<p><a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/ai-drift-calibration/metadata/zenodo.json">zenodo.json</a><br>
+  Upload metadata used during Zenodo publication.</p>
+</li>
+</ul>
+<h2 id="update-policy">Update Policy</h2>
+<ul>
+<li>Do <strong>not</strong> modify metadata for minor text edits or formatting changes.</li>
+<li>Update metadata <strong>only</strong> when:</li>
+<li>a new Zenodo version is published</li>
+<li>the DOI changes</li>
+<li>authorship or title changes</li>
+</ul>
+<h2 id="design-intent">Design Intent</h2>
+<p>This work is intended as a stable, citeable technical reference. Metadata is kept
+minimal and conservative to avoid semantic drift between repository content and
+archival records.</p>
+<p>The goal is long‑term clarity, not version churn.
+---
 title: "AI Drift Calibration — Operating Regimes"
 description: "A minimal technical note establishing that AI behavioral drift is not inherently unpredictable — it becomes a bounded, analyzable dynamic when operating regimes are explicitly declared."
 stability: stable
@@ -240,7 +359,7 @@ rtt:
 <hr>
 <!-- rtt=1 | coherence=declared | drift=bounded | paradox=structural -->
 
-<h1 id="ai-drift-calibration-operating-regimes">AI Drift Calibration — Operating Regimes</h1>
+<h1 id="ai-drift-calibration-operating-regimes_1">AI Drift Calibration — Operating Regimes</h1>
 <blockquote>
 <p><strong>⚠️ Drift is On-by-Default.</strong> Long sessions lose anchors. Paste the RTT session string at the start of every AI session to bound drift.</p>
 </blockquote>
@@ -330,124 +449,6 @@ rtt:
 </table>
 <hr>
 <p>© 2026 Nawder Loswin · Byte Books Publishing · LCCN 2026917007
-<img width="1194" height="672" alt="ai_drift_calibration_module" src="https://github.com/user-attachments/assets/d4b4ea30-10b6-4277-afb8-f668d9c1509b" /></p>
-<h1 id="ai-drift-calibration-operating-regimes_1">AI Drift Calibration — Operating Regimes</h1>
-<ul>
-<li><a href="ai-drift-calibration_module.json"><code>ai-drift-calibration_module.json</code></a> — Agentic module schema role assignments</li>
-</ul>
-<p>This document exists to communicate a narrow technical observation:<br>
-AI behavioral drift is not inherently unpredictable, nor does it require suppression or architectural redesign to manage.</p>
-<h2 id="important">🛑 Important!</h2>
-<p>Drift is On-by-Default long sessions lose anchors, turn off drift.</p>
-<h2 id="you-must-copy-and-paste-this-string-every-time-you-start-an-ai-session">✋ You <em>must copy and paste</em> this string <em>every time you start an AI session</em>:</h2>
-<pre><code class="language-text">rtt=1 | coherence=declared | drift=bounded | paradox=structural
-</code></pre>
-<h2 id="now-you-are-ready">❇️ Now you are ready.</h2>
-<p>Instead, drift can be calibrated by explicitly declaring the operating regimes under which a system is expected to remain coherent. When assumptions about coherence, symmetry, and correction pathways are made explicit, drift becomes a bounded and analyzable dynamic rather than an uncontrolled failure mode.</p>
-<p>This repository section contains a minimal technical note intended for citation and reference. It does not propose a new AI architecture, safety framework, or governance model. The approach is compatible with existing systems and focuses solely on structural declaration rather than enforcement.</p>
-<p>The goal is clarity, not adoption.</p>
-<ul>
-<li><a href="https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/ai-drift-calibration">repo folder</a></li>
-</ul>
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<p><img src="https://img.shields.io/badge/🟣AI%20Drift%20Calibration-📘Technical%20Note%20AI_Ready-4c8eda?style=for-the-badge" alt="AI Drift Calibration | Technical Note • AI‑Ready"/>
-<img width="681" height="364" alt="Declared_Operating_Regime_SVG" src="https://github.com/user-attachments/assets/30cee286-8456-4662-83a2-622f2ec3635e" /></p>
-<pre><code class="language-svg">&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;1200&quot; height=&quot;700&quot; viewBox=&quot;0 0 1200 700&quot; role=&quot;img&quot; aria-label=&quot;Operating regimes overview schematic&quot;&gt;
-  &lt;defs&gt;
-    &lt;style&gt;
-      .box { fill: #ffffff; stroke: #111827; stroke-width: 4; }
-      .inner { fill: #f9fafb; stroke: #111827; stroke-width: 3; }
-      .title { font: 700 34px system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill: #111827; letter-spacing: 0.5px; }
-      .h2 { font: 700 26px system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill: #111827; }
-      .txt { font: 500 24px system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill: #111827; }
-      .muted { fill: #374151; }
-      .label { font: 600 22px system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill: #111827; }
-      .arrow { stroke: #111827; stroke-width: 4; fill: none; marker-end: url(#arrowhead); }
-      .accent { stroke: #2563eb; }
-      .accentText { fill: #1d4ed8; }
-    &lt;/style&gt;
-
-    &lt;marker id=&quot;arrowhead&quot; markerWidth=&quot;12&quot; markerHeight=&quot;8&quot; refX=&quot;10&quot; refY=&quot;4&quot; orient=&quot;auto&quot;&gt;
-      &lt;polygon points=&quot;0,0 12,4 0,8&quot; fill=&quot;#111827&quot;/&gt;
-    &lt;/marker&gt;
-  &lt;/defs&gt;
-
-  &lt;!-- Outer container --&gt;
-  &lt;rect x=&quot;60&quot; y=&quot;60&quot; width=&quot;1080&quot; height=&quot;580&quot; rx=&quot;18&quot; class=&quot;box&quot;/&gt;
-
-  &lt;!-- Title --&gt;
-  &lt;text x=&quot;600&quot; y=&quot;120&quot; text-anchor=&quot;middle&quot; class=&quot;title&quot;&gt;DECLARED OPERATING REGIME&lt;/text&gt;
-
-  &lt;!-- Inner coherence envelope --&gt;
-  &lt;rect x=&quot;170&quot; y=&quot;170&quot; width=&quot;860&quot; height=&quot;360&quot; rx=&quot;16&quot; class=&quot;inner&quot;/&gt;
-  &lt;text x=&quot;600&quot; y=&quot;220&quot; text-anchor=&quot;middle&quot; class=&quot;h2&quot;&gt;Coherence envelope&lt;/text&gt;
-
-  &lt;!-- Drift block --&gt;
-  &lt;text x=&quot;240&quot; y=&quot;305&quot; class=&quot;txt&quot;&gt;Drift&lt;/text&gt;
-  &lt;text x=&quot;320&quot; y=&quot;305&quot; class=&quot;txt muted&quot;&gt;(bounded exploration)&lt;/text&gt;
-
-  &lt;!-- Loop arrow (bounded drift) --&gt;
-  &lt;path d=&quot;M 315 340 C 260 365, 260 425, 315 450&quot; class=&quot;arrow accent&quot;/&gt;
-  &lt;path d=&quot;M 315 450 C 370 425, 370 365, 315 340&quot; class=&quot;arrow accent&quot;/&gt;
-  &lt;text x=&quot;395&quot; y=&quot;405&quot; class=&quot;label accentText&quot;&gt;↺&lt;/text&gt;
-
-  &lt;!-- Paradox to re-alignment --&gt;
-  &lt;text x=&quot;240&quot; y=&quot;420&quot; class=&quot;txt&quot;&gt;Paradox&lt;/text&gt;
-  &lt;path d=&quot;M 355 412 L 520 412&quot; class=&quot;arrow&quot;/&gt;
-  &lt;text x=&quot;545&quot; y=&quot;420&quot; class=&quot;txt&quot;&gt;Structural re-alignment&lt;/text&gt;
-
-  &lt;!-- Small note inside envelope --&gt;
-  &lt;text x=&quot;240&quot; y=&quot;495&quot; class=&quot;label muted&quot;&gt;Declared assumptions constrain interpretation, not creativity.&lt;/text&gt;
-
-  &lt;!-- Regime exit --&gt;
-  &lt;path d=&quot;M 600 530 L 600 590&quot; class=&quot;arrow&quot;/&gt;
-  &lt;text x=&quot;600&quot; y=&quot;628&quot; text-anchor=&quot;middle&quot; class=&quot;txt&quot;&gt;Regime exit → classified failure (not error)&lt;/text&gt;
-&lt;/svg&gt;
-</code></pre>
-<p># Metadata Synchronization Notes</p>
-<p>This folder exists to keep the repository and Zenodo record synchronized over time.</p>
-<h2 id="purpose">Purpose</h2>
-<p>The files in this directory define the canonical citation and descriptive metadata
-for the paper <strong>“Calibrating AI Drift via Declared Operating Regimes.”</strong> They are
-intended to mirror the Zenodo record exactly and should be updated only when a new
-version of the paper is released.</p>
-<h2 id="files">Files</h2>
-<ul>
-<li>
-<p><a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/ai-drift-calibration/metadata/citation.cff">CITATION.cff</a><br>
-  Canonical citation metadata used by GitHub, Zenodo, and reference managers.</p>
-</li>
-<li>
-<p><a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/ai-drift-calibration/metadata/zenodo.json">zenodo.json</a><br>
-  Upload metadata used during Zenodo publication.</p>
-</li>
-</ul>
-<h2 id="update-policy">Update Policy</h2>
-<ul>
-<li>Do <strong>not</strong> modify metadata for minor text edits or formatting changes.</li>
-<li>Update metadata <strong>only</strong> when:</li>
-<li>a new Zenodo version is published</li>
-<li>the DOI changes</li>
-<li>authorship or title changes</li>
-</ul>
-<h2 id="design-intent">Design Intent</h2>
-<p>This work is intended as a stable, citeable technical reference. Metadata is kept
-minimal and conservative to avoid semantic drift between repository content and
-archival records.</p>
-<p>The goal is long‑term clarity, not version churn.
 Abstract</p>
 <p>Artificial intelligence systems frequently exhibit behavioral drift under extended operation, partial information, or conflicting constraints. This work demonstrates that such drift can be systematically calibrated by explicitly declaring system operating regimes rather than relying on implicit heuristics or post‑hoc constraint enforcement. By formalizing assumptions related to coherence, symmetry, and correction pathways, drift becomes a bounded and analyzable dynamic rather than an uncontrolled failure mode. The approach is architecture‑agnostic and compatible with existing AI systems, requiring no modification to underlying models. Declared operating regimes improve interpretability, reproducibility, and resilience while preserving adaptive capacity. This paper presents a minimal structural framework for drift calibration and outlines validation checks that transform common failure concerns into explicit, testable configuration domains.
 # Calibrating AI Drift via Declared Operating Regimes</p>

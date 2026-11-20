@@ -1,0 +1,1028 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/corpus/.well-known.md">
+  <title>.well-known — Public Service Metadata Surface</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/corpus/.well-known.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/corpus/.well-known.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p>.well-known 
+<img width="1194" height="672" alt="_well_known_" src="https://github.com/user-attachments/assets/ecef100b-66a2-4450-a986-0ce431b02954" /></p>
+<ul>
+<li><a href="module.json"><code>module.json</code></a> — Agentic module schema role assignments</li>
+</ul>
+<h1 id="well-known-public-service-metadata-surface"><code>.well-known</code> — Public Service Metadata Surface</h1>
+<p>The <strong><code>.well-known</code></strong> directory contains all machine‑readable service descriptors, capability manifests, authentication metadata, and agent‑skill definitions that external systems use to discover, authenticate, and interact with TriadicFrameworks.</p>
+<p>This folder is the <strong>public contract layer</strong> of the TriadicFrameworks ecosystem.<br>
+Everything here is designed for automated consumption by:</p>
+<ul>
+<li>Cloudflare Workers &amp; Agent Skills  </li>
+<li>WebMCP and OpenLoop runtimes  </li>
+<li>OAuth 2.0 / OpenID Connect clients  </li>
+<li>Web bots and authenticated crawlers  </li>
+<li>External AI agents  </li>
+<li>Service registries and security scanners  </li>
+</ul>
+<p>Human readers rarely need to modify these files directly; they define how TriadicFrameworks presents itself to the outside world.</p>
+<hr>
+<h2 id="purpose-of-the-folder">Purpose of the Folder</h2>
+<p>This directory provides:</p>
+<ul>
+<li><strong>Identity metadata</strong> for agents, bots, and services  </li>
+<li><strong>Authentication endpoints</strong> (OAuth, OpenID, token/refresh)  </li>
+<li><strong>Cryptographic material</strong> (JWKS, HTTP signature keys)  </li>
+<li><strong>Capability catalogs</strong> (API catalog, module configs)  </li>
+<li><strong>Agent Skill definitions</strong> for Cloudflare’s Agent Skills RFC  </li>
+<li><strong>Machine-readable service cards</strong> for MCP and WebMCP  </li>
+<li><strong>Security disclosures</strong> (<code>security.txt</code>)  </li>
+</ul>
+<p>Together, these files form the <strong>service perimeter</strong> of TriadicFrameworks.</p>
+<hr>
+<h2 id="folder-structure-overview">Folder Structure Overview</h2>
+<h3 id="authentication-identity">🔐 Authentication &amp; Identity</h3>
+<ul>
+<li><strong>Auth.md</strong> — Human-readable overview of authentication flows.  </li>
+<li><strong>auth/refresh</strong> — Refresh token endpoint configuration.  </li>
+<li><strong>auth/token</strong> — Token issuance endpoint configuration.  </li>
+<li><strong>oauth-authorization-server</strong> — OAuth 2.0 authorization server metadata.  </li>
+<li><strong>oauth-protected-resource</strong> — Protected resource configuration.  </li>
+<li><strong>openid-configuration</strong> — OpenID Connect discovery document.  </li>
+<li><strong>jwks.json</strong> — JSON Web Key Set for signature verification.  </li>
+<li><strong>http-message-signatures-directory</strong> — HTTP message signature keys and metadata.</li>
+</ul>
+<h3 id="agent-bot-metadata">🤖 Agent &amp; Bot Metadata</h3>
+<ul>
+<li><strong>agent.json</strong> — Primary agent descriptor for TriadicFrameworks.  </li>
+<li><strong>agent-card.json</strong> — Machine-readable agent identity card.  </li>
+<li><strong>web-bot-auth.json</strong> — Bot authentication configuration.  </li>
+<li><strong>webmcp.json</strong> — WebMCP server and skill configuration.</li>
+</ul>
+<h3 id="api-module-catalogs">📚 API &amp; Module Catalogs</h3>
+<ul>
+<li><strong>api-catalog</strong> — Service documentation links and API registry.  </li>
+<li><strong>modules/index.json</strong> — Module registry index.  </li>
+<li><strong>modules/quad-engine.json</strong> — Quad Engine module configuration.  </li>
+<li><strong>modules/rtt.json</strong> — RTT module configuration.  </li>
+<li><strong>modules/triadic-gravity.json</strong> — Triadic Gravity module configuration.</li>
+</ul>
+<h3 id="agent-skills-cloudflare">🧠 Agent Skills (Cloudflare)</h3>
+<p>Located under <code>agent-skills/</code>, each skill exposes a structured capability:</p>
+<ul>
+<li><strong>coherence-layers</strong>  </li>
+<li><strong>link-headers</strong>  </li>
+<li><strong>mcp</strong>  </li>
+<li><strong>openloop</strong>  </li>
+<li><strong>quad-engine</strong>  </li>
+<li><strong>rtt-operators</strong>  </li>
+<li><strong>tft3pack</strong>  </li>
+<li><strong>triadic-gravity</strong>  </li>
+<li><strong>triadic-modules</strong>  </li>
+<li><strong>web-bot-auth</strong></li>
+</ul>
+<p>Each skill folder contains:</p>
+<ul>
+<li><code>SKILL.md</code> — Capability definition  </li>
+<li>Optional <code>index.md</code> — Human-readable overview  </li>
+</ul>
+<p>These skills allow external agents to navigate, query, and operate TriadicFrameworks using standardized discovery mechanisms.</p>
+<h3 id="security-disclosure">🛡 Security &amp; Disclosure</h3>
+<ul>
+<li><strong>security.txt</strong> — Public security contact and disclosure policy.</li>
+</ul>
+<hr>
+<h2 id="how-this-folder-fits-into-the-canon">How This Folder Fits into the Canon</h2>
+<p>In TriadicFrameworks, <code>.well-known</code> is part of the <strong>Infrastructure Layer</strong>:</p>
+<ul>
+<li>It is <strong>not</strong> a conceptual module.  </li>
+<li>It is <strong>not</strong> part of the Book or the pedagogical canon.  </li>
+<li>It is <strong>not</strong> an operator grammar or regime layer.</li>
+</ul>
+<p>Instead, it is the <strong>machine interface</strong> that allows the canon to be:</p>
+<ul>
+<li>discoverable  </li>
+<li>authenticatable  </li>
+<li>verifiable  </li>
+<li>interoperable  </li>
+<li>agent‑accessible  </li>
+</ul>
+<p>This folder is essential for <strong>AI agent integration</strong>, <strong>service federation</strong>, and <strong>secure external access</strong>.</p>
+<hr>
+<h2 id="contribution-guidelines">Contribution Guidelines</h2>
+<p>When modifying files in this directory:</p>
+<ul>
+<li>Maintain <strong>strict JSON validity</strong> for all machine-readable files.  </li>
+<li>Follow <strong>Cloudflare Agent Skills RFC</strong> for skill definitions.  </li>
+<li>Keep <strong>OAuth/OpenID fields compliant</strong> with their respective specifications.  </li>
+<li>Update <strong>api-catalog</strong> when adding or relocating service documentation.  </li>
+<li>Ensure <strong>JWKS</strong> and signature directories remain consistent with active keys.  </li>
+<li>Avoid breaking <strong>discovery endpoints</strong> used by external agents.  </li>
+<li>Treat this folder as <strong>public infrastructure</strong>, not internal documentation.</li>
+</ul>
+<hr>
+<h2 id="status">Status</h2>
+<p>The <code>.well-known</code> directory is actively maintained and updated as new services, modules, and agent capabilities are added to TriadicFrameworks.<br>
+Recent updates include API catalog improvements, OAuth configuration refinements, and expanded Agent Skills (  <a href="https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/.well-known">github.com</a>).
+# Authentication for AI Agents</p>
+<h2 id="overview">Overview</h2>
+<p>TriadicFrameworks APIs use token-based authentication. Agents must obtain a
+token before accessing protected endpoints.</p>
+<h2 id="token-endpoint">Token Endpoint</h2>
+<p>POST /.well-known/auth/token</p>
+<h3 id="request">Request</h3>
+<p>Content-Type: application/json
+{
+  "client_id": "...",
+  "client_secret": "..."
+}</p>
+<h3 id="response">Response</h3>
+<p>{
+  "access_token": "...",
+  "expires_in": 3600,
+  "token_type": "Bearer"
+}</p>
+<h2 id="using-the-token">Using the Token</h2>
+<p>Include the token in the Authorization header:</p>
+<p>Authorization: Bearer <access_token></p>
+<h2 id="refreshing-tokens">Refreshing Tokens</h2>
+<p>POST /.well-known/auth/refresh</p>
+<h3 id="request_1">Request</h3>
+<p>{
+  "refresh_token": "..."
+}</p>
+<h3 id="response_1">Response</h3>
+<p>{
+  "access_token": "...",
+  "expires_in": 3600
+}</p>
+<h2 id="error-responses">Error Responses</h2>
+<p>401 Unauthorized – Missing or invalid token<br>
+403 Forbidden – Token lacks required scope<br>
+429 Too Many Requests – Rate limit exceeded</p>
+<h2 id="scopes">Scopes</h2>
+<ul>
+<li>read:docs  </li>
+<li>read:modules  </li>
+<li>read:canon  </li>
+<li>read:ideas  </li>
+<li>admin:site (restricted)
+# Coherence Layers Skill</li>
+</ul>
+<h2 id="overview_1">Overview</h2>
+<p>The Coherence Layers skill provides structured, machine-readable access to the
+TriadicFrameworks coherence hierarchy (R1, R2, R3). It exposes definitions,
+behavioral rules, drift boundaries, cross-layer coupling conditions, and
+diagnostic metadata used by automated agents to interpret TriadicFrameworks
+modules.</p>
+<p>This skill is intended for AI agents that need to understand how coherence
+layers influence RTT operators, FFF_Gravity behavior, module evaluation, and
+resonance-time dynamics.</p>
+<hr>
+<h2 id="endpoints">Endpoints</h2>
+<h3 id="get-apicoherence">GET /api/coherence</h3>
+<p>Returns general coherence-layer information, including:
+- canonical definitions of R1, R2, R3
+- coherence markers
+- drift boundary rules
+- cross-layer coupling behavior</p>
+<h3 id="get-apicoherencelayers">GET /api/coherence/layers</h3>
+<p>Returns a machine-readable list of coherence layers, including:
+- layer name (R1, R2, R3)
+- description
+- associated operators
+- stability conditions
+- failure modes</p>
+<h3 id="get-apicoherencelayersid">GET /api/coherence/layers/{id}</h3>
+<p>Returns detailed metadata for a specific coherence layer, including:
+- canonical definition
+- resonance-time behavior
+- drift boundary notes
+- cross-layer coupling rules
+- examples</p>
+<h3 id="get-apicoherencehealth">GET /api/coherence/health</h3>
+<p>Returns health and readiness information for the Coherence Layers service.</p>
+<hr>
+<h2 id="openapi">OpenAPI</h2>
+<p>The OpenAPI description for this skill is available at:</p>
+<p><code>/openapi/coherence-layers.json</code></p>
+<p>This specification defines:
+- coherence-layer schemas
+- drift-boundary structures
+- coupling-rule metadata
+- diagnostic fields
+- error formats</p>
+<hr>
+<h2 id="documentation">Documentation</h2>
+<p>Human-readable documentation is available at:</p>
+<p><code>/.well-known/coherence-layers</code></p>
+<p>This includes:
+- full coherence-layer hierarchy
+- drift boundary theory
+- cross-layer coupling rules
+- resonance-time behavior
+- examples and module integration notes</p>
+<hr>
+<h2 id="notes">Notes</h2>
+<p>This skill is designed for automated agents that require structured access to
+TriadicFrameworks’ coherence-layer system. It supports:
+- coherence-layer lookup
+- drift-boundary evaluation
+- cross-layer coupling analysis
+- integration with RTT operators, FFF_Gravity, and Quad Engine</p>
+<p>Agents may use this skill to interpret module metadata, perform coherence-level
+reasoning, or integrate coherence-layer logic into automated workflows.
+# Coherence Layers Documentation</p>
+<p>This directory contains human-readable documentation for the TriadicFrameworks
+coherence hierarchy (R1, R2, R3). It includes:</p>
+<ul>
+<li>canonical definitions</li>
+<li>drift boundary theory</li>
+<li>cross-layer coupling rules</li>
+<li>resonance-time behavior</li>
+<li>examples and module integration notes</li>
+</ul>
+<p>Machine-readable metadata is available under <code>/api/coherence</code>.
+# Link Headers Skill</p>
+<h2 id="overview_2">Overview</h2>
+<p>The Link Headers skill describes how TriadicFrameworks exposes RFC 8288 Link
+response headers for agent discovery. These headers allow automated agents to
+locate important resources such as the API catalog, OpenAPI specifications,
+documentation, agent skills, and MCP server metadata without relying on HTML
+parsing.</p>
+<p>This skill is intended for AI agents that need to understand and follow Link
+relations to discover TriadicFrameworks capabilities.</p>
+<hr>
+<h2 id="link-relations-provided">Link Relations Provided</h2>
+<h3 id="relapi-catalog">rel="api-catalog"</h3>
+<p>Advertises the API catalog defined by RFC 9727.</p>
+<p>Header:
+Link: &lt;/.well-known/api-catalog&gt;; rel="api-catalog"</p>
+<h3 id="relagent-skills">rel="agent-skills"</h3>
+<p>Advertises the Agent Skills Discovery index.</p>
+<p>Header:
+Link: &lt;/.well-known/agent-skills/index.json&gt;; rel="agent-skills"</p>
+<h3 id="relmcp-server">rel="mcp-server"</h3>
+<p>Advertises the MCP Server Card for Model Context Protocol discovery.</p>
+<p>Header:
+Link: &lt;/.well-known/mcp/server-card.json&gt;; rel="mcp-server"</p>
+<h3 id="relservice-desc">rel="service-desc"</h3>
+<p>Advertises machine-readable OpenAPI specifications for programmatic API
+discovery.</p>
+<p>Header:
+Link: </openapi>; rel="service-desc"</p>
+<h3 id="relservice-doc">rel="service-doc"</h3>
+<p>Advertises human-readable documentation for APIs, modules, and subsystem
+explanations.</p>
+<p>Header:
+Link: &lt;/.well-known&gt;; rel="service-doc"</p>
+<h3 id="relservice-auth">rel="service-auth"</h3>
+<p>Advertises authentication instructions for AI agents.</p>
+<p>Header:
+Link: &lt;/.well-known/Auth.md&gt;; rel="service-auth"</p>
+<h3 id="relsitemap">rel="sitemap"</h3>
+<p>Advertises the site sitemap for global resource discovery.</p>
+<p>Header:
+Link: </sitemap.xml>; rel="sitemap"</p>
+<h3 id="relrobots">rel="robots"</h3>
+<p>Advertises the robots.txt file for crawler guidance.</p>
+<p>Header:
+Link: </robots.txt>; rel="robots"</p>
+<hr>
+<h2 id="combined-header-format">Combined Header Format</h2>
+<p>TriadicFrameworks serves all Link relations using a <strong>single combined Link
+header</strong>, as required by Cloudflare Transform Rules (which enforce unique
+header names). RFC 8288 allows multiple link-values within one header.</p>
+<p>Example:</p>
+<p>Link: &lt;/.well-known/api-catalog&gt;; rel="api-catalog",
+      &lt;/.well-known/agent-skills/index.json&gt;; rel="agent-skills",
+      &lt;/.well-known/mcp/server-card.json&gt;; rel="mcp-server",
+      </openapi>; rel="service-desc",
+      &lt;/.well-known&gt;; rel="service-doc",
+      &lt;/.well-known/Auth.md&gt;; rel="service-auth",
+      </sitemap.xml>; rel="sitemap",
+      </robots.txt>; rel="robots"</p>
+<hr>
+<h2 id="implementation-notes">Implementation Notes</h2>
+<p>TriadicFrameworks serves these Link headers via Cloudflare Response Header
+Transform Rules. Because Cloudflare requires unique header names, all Link
+relations are combined into a single <code>Link:</code> header using comma-separated
+RFC 8288 link-values.</p>
+<p>These headers are included on all pages to ensure consistent agent
+discoverability across the entire domain.</p>
+<hr>
+<h2 id="documentation_1">Documentation</h2>
+<ul>
+<li>RFC 8288 (Web Linking)</li>
+<li>RFC 9727 (API Catalog)</li>
+<li>TriadicFrameworks Agent Skills Index:
+  <code>/.well-known/agent-skills/index.json</code></li>
+<li>TriadicFrameworks MCP Server Card:
+  <code>/.well-known/mcp/server-card.json</code></li>
+</ul>
+<hr>
+<h2 id="notes_1">Notes</h2>
+<p>Agents may use these Link relations to:
+- discover the API catalog
+- locate OpenAPI specifications
+- retrieve documentation
+- find the MCP server
+- enumerate available agent skills
+- locate authentication instructions
+- perform full-site discovery via sitemap and robots metadata</p>
+<p>This skill ensures that TriadicFrameworks is fully discoverable by modern AI
+agents using standardized link-based discovery mechanisms.
+# MCP Skill</p>
+<h2 id="overview_3">Overview</h2>
+<p>The MCP skill provides machine-readable access to the TriadicFrameworks MCP
+subsystem. It exposes MCP module definitions, capability metadata, diagnostic
+fields, and server-card integration points used by automated agents.</p>
+<p>This skill is intended for AI agents that need to interact with the MCP server,
+discover available capabilities, or integrate MCP module logic into workspace
+tools and automated workflows.</p>
+<hr>
+<h2 id="endpoints_1">Endpoints</h2>
+<h3 id="get-apimcp">GET /api/mcp</h3>
+<p>Returns general MCP subsystem information.</p>
+<h3 id="get-apimcpmodules">GET /api/mcp/modules</h3>
+<p>Returns a list of available MCP modules.</p>
+<h3 id="get-apimcpmodulesid">GET /api/mcp/modules/{id}</h3>
+<p>Returns detailed metadata for a specific MCP module.</p>
+<h3 id="get-apimcphealth">GET /api/mcp/health</h3>
+<p>Returns health and readiness information for the MCP subsystem.</p>
+<hr>
+<h2 id="openapi_1">OpenAPI</h2>
+<p>The OpenAPI description for this skill is available at:</p>
+<p><code>/openapi/mcp.json</code></p>
+<p>This specification defines:
+- MCP module schemas<br>
+- capability structures<br>
+- diagnostic fields<br>
+- server-card metadata<br>
+- error formats  </p>
+<hr>
+<h2 id="documentation_2">Documentation</h2>
+<p>Human-readable documentation is available at:</p>
+<p><code>/MCP</code></p>
+<p>This includes:
+- MCP server overview<br>
+- capability descriptions<br>
+- module definitions<br>
+- integration notes<br>
+- examples  </p>
+<hr>
+<h2 id="notes_2">Notes</h2>
+<p>This skill supports:
+- MCP module lookup<br>
+- capability discovery<br>
+- diagnostic evaluation<br>
+- integration with workspace tools<br>
+- alignment with TriadicFrameworks operators and metadata</p>
+<p>Agents may use this skill to interpret MCP module metadata, discover server
+capabilities, or integrate MCP logic into automated workflows.</p>
+<p># OpenLoop Skill</p>
+<h2 id="overview_4">Overview</h2>
+<p>The OpenLoop skill provides machine-readable access to TriadicFrameworks
+open-loop modules. It exposes module definitions, input/output structures,
+state behavior, drift-tolerant execution notes, and diagnostic metadata.</p>
+<p>This skill is intended for AI agents that need to evaluate or integrate
+open-loop modules within RTT, Quad Engine, or coherence-layer workflows.</p>
+<hr>
+<h2 id="endpoints_2">Endpoints</h2>
+<h3 id="get-apiopenloop">GET /api/openloop</h3>
+<p>Returns general OpenLoop module information.</p>
+<h3 id="get-apiopenloopmodules">GET /api/openloop/modules</h3>
+<p>Returns a list of available OpenLoop modules.</p>
+<h3 id="get-apiopenloopmodulesid">GET /api/openloop/modules/{id}</h3>
+<p>Returns detailed metadata for a specific OpenLoop module.</p>
+<h3 id="get-apiopenloophealth">GET /api/openloop/health</h3>
+<p>Returns health and readiness information for the OpenLoop service.</p>
+<hr>
+<h2 id="openapi_2">OpenAPI</h2>
+<p>The OpenAPI description for this skill is available at:</p>
+<p><code>/openapi/openloop.json</code></p>
+<p>This specification defines:
+- OpenLoop module schemas<br>
+- input/output field structures<br>
+- drift-tolerant execution metadata<br>
+- diagnostic fields<br>
+- error formats  </p>
+<hr>
+<h2 id="documentation_3">Documentation</h2>
+<p>Human-readable documentation is available at:</p>
+<p><code>/openloop</code></p>
+<p>This includes:
+- module definitions<br>
+- input/output structures<br>
+- drift-tolerant execution notes<br>
+- RTT integration examples<br>
+- coherence-layer alignment  </p>
+<hr>
+<h2 id="notes_3">Notes</h2>
+<p>This skill supports:
+- open-loop module lookup<br>
+- drift-tolerant execution<br>
+- RTT integration<br>
+- Quad Engine evaluation<br>
+- coherence-layer alignment</p>
+<p>Agents may use this skill to interpret module metadata, perform open-loop
+reasoning, or integrate OpenLoop logic into automated workflows.
+# Quad Engine Skill</p>
+<h2 id="overview_5">Overview</h2>
+<p>The Quad Engine provides structured, machine-readable access to
+TriadicFrameworks’ computational substrate. It exposes resonance-time
+operators, module evaluators, coherence analyzers, and diagnostic endpoints
+used for automated reasoning over TriadicFrameworks modules.</p>
+<p>This skill is intended for AI agents that need to execute Quad Engine
+operations, retrieve structured module metadata, or perform RTT/FFF-based
+evaluations.</p>
+<hr>
+<h2 id="endpoints_3">Endpoints</h2>
+<h3 id="get-apiquad">GET /api/quad</h3>
+<p>Returns general Quad Engine information, available operators, and engine
+capabilities.</p>
+<h3 id="post-apiquadeval">POST /api/quad/eval</h3>
+<p>Executes a Quad Engine evaluation request.</p>
+<p>Input includes:
+- operator
+- module
+- payload
+- coherence-layer selection</p>
+<p>Output includes:
+- evaluation result
+- resonance-time metrics
+- drift boundary notes
+- diagnostic flags</p>
+<h3 id="get-apiquadoperators">GET /api/quad/operators</h3>
+<p>Returns a machine-readable list of all supported Quad Engine operators.</p>
+<h3 id="get-apiquadhealth">GET /api/quad/health</h3>
+<p>Returns health and readiness information for the Quad Engine service.</p>
+<hr>
+<h2 id="openapi_3">OpenAPI</h2>
+<p>A machine-readable OpenAPI description for this skill is available at:</p>
+<p><code>/openapi/quad.json</code></p>
+<p>This specification defines:
+- request/response schemas
+- operator grammar
+- evaluation payload formats
+- error and diagnostic structures</p>
+<hr>
+<h2 id="documentation_4">Documentation</h2>
+<p>Human-readable documentation is available at:</p>
+<p><code>/.well-known/quad-engine</code></p>
+<p>This includes:
+- conceptual overview
+- RTT/FFF integration notes
+- operator grammar reference
+- examples and module walkthroughs</p>
+<hr>
+<h2 id="notes_4">Notes</h2>
+<p>This skill is designed for automated agents that require structured access to
+TriadicFrameworks’ computational layer.</p>
+<p>It supports:
+- RTT operator evaluation
+- module metadata extraction
+- coherence-layer diagnostics
+- resonance-time analysis</p>
+<p>Agents may use this skill to integrate TriadicFrameworks logic into workflows,
+reasoning engines, or automated analysis pipelines.
+# RTT Operator Grammar Skill</p>
+<h2 id="overview_6">Overview</h2>
+<p>This skill provides machine-readable access to the RTT (Resonance-Time Theory)
+operator grammar used throughout TriadicFrameworks. It exposes operator
+definitions, coherence-layer mappings, drift boundaries, and cross-operator
+coupling rules. Automated agents can use this skill to interpret RTT modules,
+evaluate operator behavior, and integrate RTT logic into computational
+workflows.</p>
+<hr>
+<h2 id="endpoints_4">Endpoints</h2>
+<h3 id="get-apirttoperators">GET /api/rtt/operators</h3>
+<p>Returns a structured list of all RTT operators, including:
+- operator name
+- operator category
+- coherence layer (R1, R2, R3)
+- drift boundary notes
+- cross-operator coupling rules</p>
+<h3 id="get-apirttoperatorsid">GET /api/rtt/operators/{id}</h3>
+<p>Returns detailed metadata for a specific RTT operator, including:
+- canonical definition
+- mathematical form (if applicable)
+- coherence markers
+- resonance-time behavior
+- failure modes
+- examples</p>
+<h3 id="get-apirtthealth">GET /api/rtt/health</h3>
+<p>Returns health and readiness information for the RTT operator service.</p>
+<hr>
+<h2 id="openapi_4">OpenAPI</h2>
+<p>A machine-readable OpenAPI description for this skill is available at:</p>
+<p><code>/openapi/rtt-operators.json</code></p>
+<p>This specification defines:
+- RTT operator schemas
+- operator metadata formats
+- coherence-layer structures
+- drift boundary fields
+- error and diagnostic formats</p>
+<hr>
+<h2 id="documentation_5">Documentation</h2>
+<p>Human-readable documentation is available at:</p>
+<p><code>/.well-known/rtt/operators</code></p>
+<p>This directory contains:
+- full operator grammar
+- coherence-layer explanations
+- drift boundary theory
+- cross-operator coupling rules
+- examples and module integration notes</p>
+<hr>
+<h2 id="notes_5">Notes</h2>
+<p>This skill is intended for automated agents that need structured access to RTT
+operator definitions and metadata. It supports:
+- RTT operator lookup
+- coherence-layer analysis
+- drift-boundary evaluation
+- integration with Quad Engine and module analyzers</p>
+<p>Agents may use this skill to interpret RTT-based modules, perform
+operator-level reasoning, or integrate RTT logic into automated workflows.
+# TFT_3Pack Skill</p>
+<h2 id="overview_7">Overview</h2>
+<p>The TFT_3Pack skill provides machine-readable access to the TriadicFrameworks
+TFT_3Pack_v1.3 subsystem. It exposes triadic evaluation structures, module
+definitions, diagnostic fields, and integration metadata used by automated
+agents.</p>
+<p>This skill is intended for AI agents that need to evaluate triadic structures,
+interpret 3Pack module metadata, or integrate TFT_3Pack logic into RTT,
+Quad Engine, coherence-layer, or open-loop workflows.</p>
+<hr>
+<h2 id="endpoints_5">Endpoints</h2>
+<h3 id="get-apitft3pack">GET /api/tft3pack</h3>
+<p>Returns general TFT_3Pack subsystem information.</p>
+<h3 id="get-apitft3packmodules">GET /api/tft3pack/modules</h3>
+<p>Returns a list of available TFT_3Pack modules.</p>
+<h3 id="get-apitft3packmodulesid">GET /api/tft3pack/modules/{id}</h3>
+<p>Returns detailed metadata for a specific TFT_3Pack module.</p>
+<h3 id="get-apitft3packhealth">GET /api/tft3pack/health</h3>
+<p>Returns health and readiness information for the TFT_3Pack subsystem.</p>
+<hr>
+<h2 id="openapi_5">OpenAPI</h2>
+<p>The OpenAPI description for this skill is available at:</p>
+<p><code>/openapi/tft3pack.json</code></p>
+<p>This specification defines:
+- TFT_3Pack module schemas<br>
+- triadic field structures<br>
+- diagnostic metadata<br>
+- error formats  </p>
+<hr>
+<h2 id="documentation_6">Documentation</h2>
+<p>Human-readable documentation is available at:</p>
+<p><code>/TFT_3Pack_v1.3</code></p>
+<p>This includes:
+- triadic evaluation structures<br>
+- module definitions<br>
+- diagnostic notes<br>
+- RTT and Quad Engine integration examples<br>
+- coherence-layer alignment  </p>
+<hr>
+<h2 id="notes_6">Notes</h2>
+<p>This skill supports:
+- triadic module lookup<br>
+- diagnostic evaluation<br>
+- RTT integration<br>
+- Quad Engine evaluation<br>
+- coherence-layer alignment<br>
+- open-loop workflow integration</p>
+<p>Agents may use this skill to interpret triadic module metadata, perform
+triadic reasoning, or integrate TFT_3Pack logic into automated workflows.</p>
+<p># Triadic Gravity Skill</p>
+<h2 id="overview_8">Overview</h2>
+<p>This skill provides AI agents with structured access to the Triadic Gravity
+API. It exposes machine-readable endpoints for gravity metadata, operators,
+health checks, and OpenAPI documentation.</p>
+<p>Triadic Gravity is one of the core analytical engines within the
+TriadicFrameworks canon, providing structured gravitational operator
+definitions, coherence mappings, and substrate-aware metadata.</p>
+<h2 id="endpoints_6">Endpoints</h2>
+<h3 id="get-apigravity">GET /api/gravity</h3>
+<p>Returns the top-level Triadic Gravity overview, including available
+subresources and metadata pointers.</p>
+<h3 id="get-apigravityoperators">GET /api/gravity/operators</h3>
+<p>Returns a list of all gravity operators, each with an ID and href pointing to
+its machine-readable definition.</p>
+<h3 id="get-apigravityoperatorsid">GET /api/gravity/operators/{id}</h3>
+<p>Returns metadata for a specific gravity operator. Agents should use the <code>href</code>
+values returned by <code>/api/gravity/operators</code> to discover valid operator IDs.</p>
+<h3 id="get-apigravityhealth">GET /api/gravity/health</h3>
+<p>Returns a simple health check for the Triadic Gravity API.</p>
+<h2 id="openapi-specification">OpenAPI Specification</h2>
+<p>A machine-readable OpenAPI document is available at:</p>
+<p><code>/openapi/triadic-gravity.json</code></p>
+<p>This file describes all gravity endpoints, their parameters, and response
+schemas.</p>
+<h2 id="documentation_7">Documentation</h2>
+<p>Human-readable documentation for Triadic Gravity is available at:</p>
+<p><code>/.well-known/triadic-gravity</code></p>
+<p>This directory contains conceptual explanations, module summaries, and
+operator-level descriptions intended for both human readers and AI agents.</p>
+<h2 id="notes_7">Notes</h2>
+<p>This skill is part of the TriadicFrameworks agent skill suite and is intended
+for automated clients that require structured access to Triadic Gravity
+metadata and operator definitions.
+# TriadicFrameworks Module Index Skill</p>
+<h2 id="overview_9">Overview</h2>
+<p>This skill provides structured access to the TriadicFrameworks module registry, including metadata, canonical descriptions, analyzer layers, and module.json manifests.</p>
+<h2 id="endpoints_7">Endpoints</h2>
+<ul>
+<li>
+<p><strong>GET /api/modules</strong>
+  Returns a list of all modules with metadata.</p>
+</li>
+<li>
+<p><strong>GET /api/modules/{id}</strong>
+  Returns full module metadata, including analyzer layers, role enums, coherence markers, and canonical descriptions.</p>
+</li>
+</ul>
+<h2 id="openapi_6">OpenAPI</h2>
+<p>The OpenAPI description for this skill is available at:
+<code>/openapi/modules.json</code></p>
+<h2 id="documentation_8">Documentation</h2>
+<p>Human-readable documentation is available at:
+<code>/.well-known/modules</code></p>
+<h2 id="notes_8">Notes</h2>
+<p>This skill is intended for automated agents that need structured access to TriadicFrameworks module metadata.</p>
+<p># Web Bot Authentication Skill</p>
+<h2 id="overview_10">Overview</h2>
+<p>This skill provides AI agents and automated clients with the required
+authentication flow for accessing protected TriadicFrameworks API endpoints.
+It defines how agents obtain tokens, how they refresh them, and how they
+present credentials during API calls.</p>
+<h2 id="authentication-model">Authentication Model</h2>
+<p>TriadicFrameworks uses a token-based authentication model. Agents must obtain
+an access token before calling any protected API routes.</p>
+<h3 id="token-endpoint_1">Token Endpoint</h3>
+<p>POST /.well-known/auth/token</p>
+<p><strong>Request</strong>
+Content-Type: application/json
+{
+  "client_id": "<agent-id>",
+  "client_secret": "<agent-secret>"
+}</p>
+<p><strong>Response</strong>
+{
+  "access_token": "<token>",
+  "expires_in": 3600,
+  "token_type": "Bearer"
+}</p>
+<h3 id="using-the-token_1">Using the Token</h3>
+<p>Include the token in the Authorization header:</p>
+<p>Authorization: Bearer <access_token></p>
+<h3 id="refreshing-tokens_1">Refreshing Tokens</h3>
+<p>POST /.well-known/auth/refresh</p>
+<p><strong>Request</strong>
+{
+  "refresh_token": "<refresh-token>"
+}</p>
+<p><strong>Response</strong>
+{
+  "access_token": "<new-token>",
+  "expires_in": 3600
+}</p>
+<h2 id="error-responses_1">Error Responses</h2>
+<ul>
+<li>401 Unauthorized — Missing or invalid token  </li>
+<li>403 Forbidden — Token lacks required scope  </li>
+<li>429 Too Many Requests — Rate limit exceeded  </li>
+</ul>
+<h2 id="scopes_1">Scopes</h2>
+<ul>
+<li>read:docs  </li>
+<li>read:modules  </li>
+<li>read:canon  </li>
+<li>read:ideas  </li>
+<li>admin:site (restricted)</li>
+</ul>
+<h2 id="documentation_9">Documentation</h2>
+<p>Additional authentication details are available at:
+<code>/.well-known/Auth.md</code></p>
+<h2 id="notes_9">Notes</h2>
+<p>This skill is intended for automated agents that need structured access to
+TriadicFrameworks protected API endpoints.</p>
+<p># Quad Engine Documentation</p>
+<p>The Quad Engine provides the computational substrate for TriadicFrameworks.
+It supports:</p>
+<ul>
+<li>RTT operator evaluation</li>
+<li>coherence-layer diagnostics</li>
+<li>module-level analysis</li>
+<li>resonance-time computation</li>
+<li>drift boundary evaluation</li>
+</ul>
+<p>Machine-readable endpoints are available under <code>/api/quad</code>.</p>
+<p>OpenAPI specification:
+<code>/openapi/quad.json</code>
+# RTT Operator Grammar Documentation</p>
+<p>This directory contains human-readable documentation for RTT operators,
+including:</p>
+<ul>
+<li>canonical operator definitions  </li>
+<li>coherence-layer mappings  </li>
+<li>drift boundary theory  </li>
+<li>cross-operator coupling rules  </li>
+<li>examples and integration notes  </li>
+</ul>
+<p>Machine-readable operator metadata is available under <code>/api/rtt/operators</code>.
+# RTT Operator: Canonical Resonance Operator (rtt-op-1)</p>
+<h2 id="overview_11">Overview</h2>
+<p>The Canonical Resonance Operator defines the baseline resonance-time behavior
+within RTT. It establishes the foundational coherence markers used by higher-
+layer operators and provides the stable drift boundary required for RTT module
+initialization.</p>
+<h2 id="category">Category</h2>
+<p>R1 — Baseline Coherence Layer</p>
+<h2 id="description">Description</h2>
+<p>This operator represents the fundamental resonance-time mapping used across
+RTT modules. It is the simplest and most stable operator in the RTT grammar,
+serving as the anchor for all coherence transitions.</p>
+<h2 id="coherence-layer">Coherence Layer</h2>
+<p>R1 — Stable, foundational, low-drift</p>
+<h2 id="drift-boundary">Drift Boundary</h2>
+<p>Stable — minimal drift under normal RTT conditions.</p>
+<h2 id="examples">Examples</h2>
+<ul>
+<li>Used during RTT module initialization.</li>
+<li>Serves as the base operator for constructing higher-layer RTT operators.</li>
+<li>Provides stable resonance-time mapping for low-complexity modules.</li>
+</ul>
+<h2 id="machine-readable-metadata">Machine-Readable Metadata</h2>
+<p>Available at:
+<code>/api/rtt/operators/rtt-op-1.json</code></p>
+<p># RTT Operator: Coherence Layer Transition Operator (rtt-op-2)</p>
+<h2 id="overview_12">Overview</h2>
+<p>The Coherence Layer Transition Operator manages transitions between RTT
+coherence layers. It enables movement from R1 to R2 and supports multi-layer
+analysis within RTT modules.</p>
+<h2 id="category_1">Category</h2>
+<p>R2 — Transitional Coherence Layer</p>
+<h2 id="description_1">Description</h2>
+<p>This operator defines the resonance-time behavior required for shifting between
+coherence layers. It introduces moderate drift boundaries and is used in
+modules that require dynamic coherence transitions.</p>
+<h2 id="coherence-layer_1">Coherence Layer</h2>
+<p>R2 — Transitional, moderate drift</p>
+<h2 id="drift-boundary_1">Drift Boundary</h2>
+<p>Moderate — drift increases during coherence transitions.</p>
+<h2 id="examples_1">Examples</h2>
+<ul>
+<li>Used when shifting from R1 to R2 coherence.</li>
+<li>Supports multi-layer RTT module analysis.</li>
+<li>Enables dynamic operator behavior in complex RTT modules.</li>
+</ul>
+<h2 id="machine-readable-metadata_1">Machine-Readable Metadata</h2>
+<p>Available at:
+<code>/api/rtt/operators/rtt-op-2.json</code></p>
+<p># <strong>triadic-gravity / service-doc</strong>  </p>
+<h3 id="triadicframeworks-triadic-gravity-subsystem"><strong>TriadicFrameworks — Triadic Gravity Subsystem</strong></h3>
+<h3 id="canonical-service-documentation"><strong>Canonical Service Documentation</strong></h3>
+<p><em>(Located at: <code>.well-known/triadic-gravity/index.md</code>)</em></p>
+<hr>
+<h2 id="overview_13"><strong>Overview</strong></h2>
+<p>The <strong>Triadic Gravity</strong> subsystem models gravitational behavior through the TriadicFrameworks lens: resonance‑driven field interactions, triad‑structured collapse regimes, and coherence‑based stability thresholds. It provides a machine‑readable and human‑readable interface for exploring gravity as a <em>triadic operator</em> rather than a purely classical or relativistic phenomenon.</p>
+<p>Triadic Gravity is part of the <strong>RTT → GU → TF</strong> cross‑framework chain and is used by analyzers, operators, and coherence engines that require gravity‑based field dynamics.</p>
+<p>This document serves as the <strong>service-doc</strong> for the subsystem, enabling Cloudflare WebMCP, agents, and external systems to discover and interact with Triadic Gravity endpoints, metadata, and skills.</p>
+<hr>
+<h2 id="endpoints_8"><strong>Endpoints</strong></h2>
+<p>The Triadic Gravity API is defined in the OpenAPI document:</p>
+<pre><code>/openapi/triadic-gravity.json
+</code></pre>
+<p>Primary service root:</p>
+<pre><code>/triadic-gravity
+</code></pre>
+<h3 id="core-endpoints"><strong>Core Endpoints</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/triadic-gravity/overview</code></td>
+<td>High-level description of the gravity subsystem.</td>
+</tr>
+<tr>
+<td><code>/triadic-gravity/operators</code></td>
+<td>List of gravity operators (collapse, resonance, coherence).</td>
+</tr>
+<tr>
+<td><code>/triadic-gravity/fields</code></td>
+<td>Field definitions used in triadic gravity modeling.</td>
+</tr>
+<tr>
+<td><code>/triadic-gravity/examples</code></td>
+<td>Example gravity configurations and triadic collapse patterns.</td>
+</tr>
+<tr>
+<td><code>/triadic-gravity/health</code></td>
+<td>Health and readiness of the gravity subsystem.</td>
+</tr>
+</tbody>
+</table>
+<p><em>(Your OpenAPI file defines the exact schema.)</em></p>
+<hr>
+<h2 id="openapi-specification_1"><strong>OpenAPI Specification</strong></h2>
+<p>Machine-readable API definition:</p>
+<pre><code>&lt;/openapi/triadic-gravity.json&gt;
+</code></pre>
+<p>This file contains:</p>
+<ul>
+<li>endpoint definitions  </li>
+<li>request/response schemas  </li>
+<li>operator structures  </li>
+<li>field definitions  </li>
+<li>module metadata  </li>
+</ul>
+<p>Agents use this file to generate tool interfaces and validate requests.</p>
+<hr>
+<h2 id="skill-definition"><strong>Skill Definition</strong></h2>
+<p>Triadic Gravity includes an agent skill located at:</p>
+<pre><code>/.well-known/agent-skills/triadic-gravity/SKILL.md
+</code></pre>
+<p>This skill provides:</p>
+<ul>
+<li>operator grammar  </li>
+<li>triadic collapse rules  </li>
+<li>resonance‑field mapping  </li>
+<li>example invocations  </li>
+<li>agent‑level usage patterns  </li>
+<li>safety constraints  </li>
+</ul>
+<p>Agents use this skill to perform gravity‑related reasoning, modeling, and analysis.</p>
+<hr>
+<h2 id="module-metadata"><strong>Module Metadata</strong></h2>
+<p>Triadic Gravity is a first‑class module in the TriadicFrameworks canon.</p>
+<p>Metadata file:</p>
+<pre><code>/triadic-gravity/module.json
+</code></pre>
+<p>Contains:</p>
+<ul>
+<li>module name  </li>
+<li>category  </li>
+<li>purpose  </li>
+<li>analyzer layers  </li>
+<li>operator definitions  </li>
+<li>coherence regimes  </li>
+<li>examples  </li>
+<li>versioning  </li>
+</ul>
+<hr>
+<h2 id="canonical-description"><strong>Canonical Description</strong></h2>
+<p>Triadic Gravity treats gravitational behavior as a <strong>triadic resonance phenomenon</strong>, not a single‑vector force. It models:</p>
+<ul>
+<li>
+<p><strong>Triadic Collapse</strong><br>
+  Three‑way field interactions that determine collapse pathways.</p>
+</li>
+<li>
+<p><strong>Resonant Gravity</strong><br>
+  Gravity as a resonance‑driven field alignment rather than mass‑only curvature.</p>
+</li>
+<li>
+<p><strong>Coherence Thresholds</strong><br>
+  Stability conditions based on RTT coherence equations.</p>
+</li>
+<li>
+<p><strong>Field Dynamics</strong><br>
+  Gravity fields expressed as triadic operators with drift, coherence, and collapse layers.</p>
+</li>
+</ul>
+<p>This subsystem is used by:</p>
+<ul>
+<li>RTT analyzers  </li>
+<li>Gravity operators  </li>
+<li>Coherence engines  </li>
+<li>Drift analyzers  </li>
+<li>Triadic field simulators  </li>
+<li>Resonance‑based modeling tools  </li>
+</ul>
+<hr>
+<h2 id="discovery-links"><strong>Discovery Links</strong></h2>
+<p>This service-doc is referenced in the domain’s Link header:</p>
+<pre><code>&lt;/.well-known/triadic-gravity&gt;; rel=&quot;service-doc&quot;
+&lt;/openapi/triadic-gravity.json&gt;; rel=&quot;service-desc&quot;
+&lt;/.well-known/agent-skills/triadic-gravity/SKILL.md&gt;; rel=&quot;agent-skills&quot;
+</code></pre>
+<p>These links allow Cloudflare WebMCP and other agents to discover:</p>
+<ul>
+<li>the subsystem  </li>
+<li>the OpenAPI  </li>
+<li>the skill  </li>
+<li>the module metadata  </li>
+</ul>
+<hr>
+<h2 id="health-readiness"><strong>Health &amp; Readiness</strong></h2>
+<p>Health endpoint:</p>
+<pre><code>/triadic-gravity/health
+</code></pre>
+<p>Returns:</p>
+<ul>
+<li>subsystem status  </li>
+<li>readiness indicators  </li>
+<li>version  </li>
+<li>coherence engine availability  </li>
+</ul>
+<hr>
+<h2 id="version"><strong>Version</strong></h2>
+<p>Current version: <strong>1.0.0</strong><br>
+Canonical publication: <strong>TriadicFrameworks 2025–2026</strong></p>
+<hr>
+<h2 id="contact"><strong>Contact</strong></h2>
+<p>TriadicFrameworks Canon Steward: <strong>Nawder Loswin</strong><br>
+AI Navigation: <code>@TriadicFrameworks</code><br>
+License: <strong>Open educational use permitted</strong>
+</p>
+  </main>
+</body>
+</html>

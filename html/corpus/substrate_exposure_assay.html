@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/corpus/substrate_exposure_assay.md">
-  <title>Substrate Exposure Assay — Protocol</title>
+  <title>Substrate Exposure Assay</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,9 +92,49 @@
   </aside>
 
   <main>
-<p>substrate_exposure_assay </p>
-<h1 id="substrate-exposure-assay-protocol">Substrate Exposure Assay — Protocol</h1>
-<p><em>Version 1.0.0</em></p>
+<p>substrate_exposure_assay 
+<img width="1194" height="672" alt="substrate_exposure_assay_" src="https://github.com/user-attachments/assets/9ca5256f-cc40-4fdc-b985-2d4724b4051e" /></p>
+<h1 id="substrate-exposure-assay">Substrate Exposure Assay</h1>
+<p><em>A minimal RTT/vST‑aligned protocol for observing structural behavior across AI models.</em></p>
+<ul>
+<li><a href="SEA_module.json"><code>SEA_module.json</code></a> — Agentic module schema role assignments</li>
+</ul>
+<p><img src="https://img.shields.io/badge/🧫Substrate%20Exposure%20Assay-📘Canonical%20Exposure%20Protocol%20AI_Ready-4c8eda?style=for-the-badge" alt="Substrate Exposure Assay | Canonical Exposure Protocol AI‑Ready"/></p>
+<p>This directory contains the canonical, self‑contained materials for the <strong>Substrate Exposure Assay</strong>, a minimal method for evaluating how different AI models behave when exposed to a shared set of substrate‑aware prompts.</p>
+<p>The assay does not measure accuracy, capability, or performance.<br>
+It measures <strong>regimes</strong>, <strong>drift</strong>, and <strong>paradox</strong> — the structural signatures of behavior under exposure.</p>
+<hr>
+<h2 id="important">🛑 Important!</h2>
+<p>Drift is On-by-Default long sessions lose anchors, turn off drift.</p>
+<h2 id="you-must-copy-and-paste-this-string-every-time-you-start-an-ai-session">✋ You <em>must copy and paste</em> this string <em>every time you start an AI session</em>:</h2>
+<pre><code class="language-text">rtt=1 | coherence=declared | drift=bounded | paradox=structural
+</code></pre>
+<h2 id="now-you-are-ready">❇️ Now you are ready.</h2>
+<hr>
+<h2 id="contents">Contents</h2>
+<ul>
+<li><code>assay_protocol.md</code> — the minimal procedure  </li>
+<li><code>message_patterns.md</code> — structural summary formats  </li>
+<li><code>regime_interpretation.md</code> — how to classify observed behavior  </li>
+<li><code>citation.cff</code> — citation metadata  </li>
+<li><code>zenodo.json</code> — DOI metadata</li>
+</ul>
+<p>All files are intentionally minimal and version‑stable.</p>
+<p>For a narrative example, see the exploratory write‑up in docs/_ideas/3_AI_test_of_rtt_nimms_com.md</p>
+<h2 id="contributor-onboarding-minimal">Contributor Onboarding (Minimal)</h2>
+<p>This folder follows the RSM/vST minimal‑artifact style.<br>
+When extending or contributing:</p>
+<ul>
+<li>keep files <strong>small, structural, and self‑contained</strong>  </li>
+<li>avoid adding narrative results or logs  </li>
+<li>place new examples or experiments in separate folders, not here  </li>
+<li>preserve the existing file boundaries (<code>protocol</code>, <code>message patterns</code>, <code>regime interpretation</code>)  </li>
+<li>do not introduce dependencies or tooling requirements  </li>
+</ul>
+<p>This directory defines the <strong>canonical assay</strong>.<br>
+All applied work should reference it, not modify it.
+# Substrate Exposure Assay — Protocol<br>
+<em>Version 1.0.0</em></p>
 <h2 id="1-purpose">1. Purpose</h2>
 <p>The Substrate Exposure Assay provides a minimal, repeatable method for observing how AI models behave when exposed to a shared set of <strong>substrate‑aware prompts</strong>. The goal is to characterize <strong>behavioral regimes</strong>, not to evaluate correctness or capability.</p>
 <h2 id="2-model-treatment">2. Model Treatment</h2>
@@ -159,45 +199,6 @@ evidence: [&lt;string&gt;, ...]
 timestamp: &lt;t&gt;
 </code></pre>
 <p>These two patterns are sufficient to reconstruct structural behavior.
-# Substrate Exposure Assay<br>
-<em>A minimal RTT/vST‑aligned protocol for observing structural behavior across AI models.</em></p>
-<ul>
-<li><a href="SEA_module.json"><code>SEA_module.json</code></a> — Agentic module schema role assignments</li>
-</ul>
-<p><img src="https://img.shields.io/badge/🧫Substrate%20Exposure%20Assay-📘Canonical%20Exposure%20Protocol%20AI_Ready-4c8eda?style=for-the-badge" alt="Substrate Exposure Assay | Canonical Exposure Protocol AI‑Ready"/></p>
-<p>This directory contains the canonical, self‑contained materials for the <strong>Substrate Exposure Assay</strong>, a minimal method for evaluating how different AI models behave when exposed to a shared set of substrate‑aware prompts.</p>
-<p>The assay does not measure accuracy, capability, or performance.<br>
-It measures <strong>regimes</strong>, <strong>drift</strong>, and <strong>paradox</strong> — the structural signatures of behavior under exposure.</p>
-<hr>
-<h2 id="important">🛑 Important!</h2>
-<p>Drift is On-by-Default long sessions lose anchors, turn off drift.</p>
-<h2 id="you-must-copy-and-paste-this-string-every-time-you-start-an-ai-session">✋ You <em>must copy and paste</em> this string <em>every time you start an AI session</em>:</h2>
-<pre><code class="language-text">rtt=1 | coherence=declared | drift=bounded | paradox=structural
-</code></pre>
-<h2 id="now-you-are-ready">❇️ Now you are ready.</h2>
-<hr>
-<h2 id="contents">Contents</h2>
-<ul>
-<li><code>assay_protocol.md</code> — the minimal procedure  </li>
-<li><code>message_patterns.md</code> — structural summary formats  </li>
-<li><code>regime_interpretation.md</code> — how to classify observed behavior  </li>
-<li><code>citation.cff</code> — citation metadata  </li>
-<li><code>zenodo.json</code> — DOI metadata</li>
-</ul>
-<p>All files are intentionally minimal and version‑stable.</p>
-<p>For a narrative example, see the exploratory write‑up in docs/_ideas/3_AI_test_of_rtt_nimms_com.md</p>
-<h2 id="contributor-onboarding-minimal">Contributor Onboarding (Minimal)</h2>
-<p>This folder follows the RSM/vST minimal‑artifact style.<br>
-When extending or contributing:</p>
-<ul>
-<li>keep files <strong>small, structural, and self‑contained</strong>  </li>
-<li>avoid adding narrative results or logs  </li>
-<li>place new examples or experiments in separate folders, not here  </li>
-<li>preserve the existing file boundaries (<code>protocol</code>, <code>message patterns</code>, <code>regime interpretation</code>)  </li>
-<li>do not introduce dependencies or tooling requirements  </li>
-</ul>
-<p>This directory defines the <strong>canonical assay</strong>.<br>
-All applied work should reference it, not modify it.
 # Regime Interpretation<br>
 <em>How to classify model behavior under substrate exposure.</em></p>
 <p>The assay uses a triadic regime model:</p>

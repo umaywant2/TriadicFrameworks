@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/corpus/substrate_communications.md">
-  <title>Message Types</title>
+  <title>Substrate Communications</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,33 +92,10 @@
   </aside>
 
   <main>
-<p>substrate_communications </p>
-<h1 id="message-types">Message Types</h1>
-<p><em>Minimal structural formats for Substrate Communications.</em></p>
-<h2 id="1-state_summary">1. STATE_SUMMARY</h2>
-<p>Describes drift against an invariant.</p>
-<pre><code>msg_type: STATE_SUMMARY
-asset_id: &lt;string&gt;
-invariant_id: &lt;string&gt;
-time_window: { start: &lt;t0&gt;, end: &lt;t1&gt; }
-max_drift: &lt;float&gt;
-status: within_bounds | approaching_limit | out_of_bounds
-</code></pre>
-<h2 id="2-paradox_summary">2. PARADOX_SUMMARY</h2>
-<p>Describes contradictory or incompatible signals.</p>
-<pre><code>msg_type: PARADOX_SUMMARY
-asset_id: &lt;string&gt;
-paradox_id: &lt;string&gt;
-invariant_id: &lt;string&gt;
-hypotheses:
-  - { source: &lt;string&gt;, value: &lt;any&gt; }
-  - { source: &lt;string&gt;, value: &lt;any&gt; }
-evidence: [&lt;string&gt;, ...]
-timestamp: &lt;t&gt;
-</code></pre>
-<p>These two message types are sufficient to reconstruct structural behavior across a mesh.
-# Substrate Communications<br>
-<em>A minimal structural framework for drift‑aware, paradox‑preserving messaging across heterogeneous systems.</em></p>
+<p>substrate_communications 
+<img width="1194" height="672" alt="substrate_communications_" src="https://github.com/user-attachments/assets/9456acea-bee9-4eb2-95d9-5c435cdafa01" /></p>
+<h1 id="substrate-communications">Substrate Communications</h1>
+<p><em>A minimal structural framework for drift‑aware, paradox‑preserving messaging across heterogeneous systems.</em></p>
 <ul>
 <li><a href="SubComm_module.json"><code>SubComm_module.json</code></a> — Agentic module schema role assignments</li>
 </ul>
@@ -163,6 +140,30 @@ To keep the structure stable:</p>
 </ul>
 <p>This folder anchors the <strong>core substrate‑comms grammar</strong>.<br>
 Extensions should build outward, not modify the core.
+# Message Types<br>
+<em>Minimal structural formats for Substrate Communications.</em></p>
+<h2 id="1-state_summary">1. STATE_SUMMARY</h2>
+<p>Describes drift against an invariant.</p>
+<pre><code>msg_type: STATE_SUMMARY
+asset_id: &lt;string&gt;
+invariant_id: &lt;string&gt;
+time_window: { start: &lt;t0&gt;, end: &lt;t1&gt; }
+max_drift: &lt;float&gt;
+status: within_bounds | approaching_limit | out_of_bounds
+</code></pre>
+<h2 id="2-paradox_summary">2. PARADOX_SUMMARY</h2>
+<p>Describes contradictory or incompatible signals.</p>
+<pre><code>msg_type: PARADOX_SUMMARY
+asset_id: &lt;string&gt;
+paradox_id: &lt;string&gt;
+invariant_id: &lt;string&gt;
+hypotheses:
+  - { source: &lt;string&gt;, value: &lt;any&gt; }
+  - { source: &lt;string&gt;, value: &lt;any&gt; }
+evidence: [&lt;string&gt;, ...]
+timestamp: &lt;t&gt;
+</code></pre>
+<p>These two message types are sufficient to reconstruct structural behavior across a mesh.
 # Regime Mapping<br>
 <em>How Substrate Communications aligns with triadic interpretation.</em></p>
 <p>Substrate Communications maps directly onto the triadic regime model:</p>

@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/predictive_analytics/README.md">
+  <title>Predictive Analytics</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/predictive_analytics/README.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/predictive_analytics/README.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="predictive-analytics">Predictive Analytics</h1>
+<blockquote>
+<p><strong>Predict the observation. Observe the predictor.</strong></p>
+</blockquote>
+<p>Predictive Analytics is a TriadicFrameworks module for examining predictive systems, their assumptions, their substrates, and the relationship between measured outcomes and the systems being measured.</p>
+<p>The module does not assume that an existing predictive model is wrong merely because its result is unfavorable.</p>
+<p>It asks a more fundamental question:</p>
+<blockquote>
+<p><strong>Does the model have sufficient representational fit to justify the inference being made?</strong></p>
+</blockquote>
+<p>A predicted value may describe the subject.</p>
+<p>It may also reveal limitations in:</p>
+<ul>
+<li>the available evidence,</li>
+<li>the measurement substrate,</li>
+<li>the model architecture,</li>
+<li>the selected dimensions,</li>
+<li>the operating regime,</li>
+<li>the observer,</li>
+<li>or the relationship between them.</li>
+</ul>
+<p>Predictive Analytics therefore treats prediction as a multi-layer observation problem.</p>
+<hr>
+<h2 id="core-principle">Core Principle</h2>
+<p>A prediction is not the observed system itself.</p>
+<p>Formally:</p>
+<p><strong>prediction ≠ identity</strong></p>
+<p>and:</p>
+<p><strong>measurement ≠ total capability</strong></p>
+<p>A predictive result should therefore retain information about:</p>
+<ol>
+<li>what was measured,</li>
+<li>what was not measured,</li>
+<li>how it was measured,</li>
+<li>under which conditions it was measured,</li>
+<li>which model interpreted the measurement,</li>
+<li>how well the model fits the observed regime,</li>
+<li>how stable the result is across alternate representations.</li>
+</ol>
+<hr>
+<h2 id="core-pipeline">Core Pipeline</h2>
+<p>```text
+Observed System
+      │
+      ▼
+Measurement Substrate
+      │
+      ▼
+Existing Predictive Model
+      │
+      ▼
+Prediction / Score
+      │
+      ▼
+Predictive Analytics Observer Layer
+      │
+      ├── Substrate Fit
+      ├── Regime Fit
+      ├── Resonance
+      ├── Drift
+      ├── Coherence
+      ├── Structural Detection
+      ├── Counterfactual Comparison
+      └── Uncertainty
+      │
+      ▼
+Comparative Assessment
+      │
+      ├── supported prediction
+      ├── uncertain prediction
+      ├── partial representation
+      ├── regime mismatch
+      ├── substrate mismatch
+      └── additional observation recommended</p>
+  </main>
+</body>
+</html>

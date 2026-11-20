@@ -1,0 +1,2540 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/corpus/High_Stakes_Operational_Corridors.md">
+  <title>HighStakesOperationalCorridors</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/corpus/High_Stakes_Operational_Corridors.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/corpus/High_Stakes_Operational_Corridors.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p>High_Stakes_Operational_Corridors 
+<img width="1024" height="1024" alt="High_Stakes_Operational_Corridors_" src="https://github.com/user-attachments/assets/e29baf18-dcf2-4053-92f1-ce09ff58f22b" /></p>
+<ul>
+<li><a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/High_Stakes_Operational_Corridors/High_Stakes_Operational_Corridors_module.json"><code>High_Stakes_Operational_Corridors_module.json</code></a> — Agentic module schema role assignments</li>
+</ul>
+<h1 id="high_stakes_operational_corridors">High_Stakes_Operational_Corridors</h1>
+<blockquote>
+<p><strong>RTT Module</strong> · <code>hsoc-rtt-001</code> · schema <code>rtt/2.4</code> · category <code>safety-critical</code> · v<code>1.0.0</code></p>
+</blockquote>
+<h2 id="overview">Overview</h2>
+<p><code>High_Stakes_Operational_Corridors</code> is an RTT substrate module that defines tightly bounded operational corridors for agents acting in environments where errors carry significant real-world consequence — financial, medical, infrastructure, legal, or physical. It encodes <strong>hard constraint tensors</strong>, <strong>escalation ladders</strong>, <strong>kill-switch topologies</strong>, and <strong>regime-gated authorization flows</strong>.</p>
+<p>Where most agentic frameworks leave consequence management to the application layer, this module bakes it into the substrate: no consequential action reaches an external system without passing through the corridor gate, the authorization chain, and the audit trail.</p>
+<hr>
+<h2 id="when-to-use-this-module">When to Use This Module</h2>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Fits?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Agent executes financial trades or fund transfers</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Agent proposes or adjusts clinical dosing</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Agent issues infrastructure configuration changes</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Agent files legal documents on behalf of a party</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Agent operates in a sandboxed, consequence-free environment</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>Agent is read-only (search, summarize, recommend only)</td>
+<td>❌</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="module-layout">Module Layout</h2>
+<pre><code>docs/High_Stakes_Operational_Corridors/
+├── module.json          # Canonical RTT module descriptor
+├── README.md            # This file
+├── OPERATORS.md         # RTT operator grammar reference
+├── ROLES.md             # Role enum definitions and bindings
+├── ANALYZER_LAYERS.md   # All six analyzer layers with config examples
+├── VALIDATORS.md        # Validator stubs with Python skeletons
+└── EXAMPLES.md          # Worked scenarios with JSON payloads
+</code></pre>
+<hr>
+<h2 id="quick-start">Quick-Start</h2>
+<h3 id="1-load-the-module">1. Load the module</h3>
+<pre><code class="language-python">import json
+from pathlib import Path
+
+MODULE_PATH = Path(&quot;docs/High_Stakes_Operational_Corridors/module.json&quot;)
+
+with MODULE_PATH.open() as f:
+    module = json.load(f)
+
+print(module[&quot;ai.module.name&quot;])     # High_Stakes_Operational_Corridors
+print(module[&quot;ai.module.version&quot;])  # 1.0.0
+print(module[&quot;schema_version&quot;])     # rtt/2.4
+</code></pre>
+<h3 id="2-instantiate-a-corridor-engine">2. Instantiate a corridor engine</h3>
+<pre><code class="language-python">from hsoc.engine import CorridorEngine
+
+engine = CorridorEngine.from_module(module)
+engine.start(regime=&quot;NOMINAL&quot;, authority_profile=my_agent_profile)
+</code></pre>
+<h3 id="3-gate-an-action">3. Gate an action</h3>
+<pre><code class="language-python">from hsoc.operators import GATE, AUTHORIZE, AUDIT
+
+gate_result = GATE(action=my_action, active_regime=engine.active_regime)
+
+if gate_result.permitted:
+    auth_result = AUTHORIZE(action=my_action, chain=my_auth_chain)
+    if auth_result.passed:
+        my_action.execute()
+        AUDIT(action=my_action, gate_decision_id=gate_result.gate_decision_id)
+else:
+    ESCALATE(action=my_action, blocking_constraints=gate_result.blocking_constraints)
+</code></pre>
+<hr>
+<h2 id="substrate-tensor-shape">Substrate Tensor Shape</h2>
+<pre><code>rank  : 4
+axes  : [action_severity, authorization_depth, consequence_radius, reversibility_index]
+dtype : float32
+constraint_surface_format : convex_polytope
+corridor_definition_format: signed_halfspace_intersection
+max_gate_latency_ms       : 50
+</code></pre>
+<hr>
+<h2 id="regime-summary">Regime Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Regime</th>
+<th>Max Severity</th>
+<th>Min Reversibility</th>
+<th>Auth Depth</th>
+<th>Escalation Threshold</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>NOMINAL</code></td>
+<td>0.30</td>
+<td>0.70</td>
+<td>1</td>
+<td>0.25</td>
+</tr>
+<tr>
+<td><code>ELEVATED</code></td>
+<td>0.55</td>
+<td>0.50</td>
+<td>2</td>
+<td>0.45</td>
+</tr>
+<tr>
+<td><code>CRITICAL</code></td>
+<td>0.80</td>
+<td>0.30</td>
+<td>3</td>
+<td>0.65</td>
+</tr>
+<tr>
+<td><code>LOCKDOWN</code></td>
+<td>0.00</td>
+<td>1.00</td>
+<td>99</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td><code>AUDIT_ONLY</code></td>
+<td>0.00</td>
+<td>1.00</td>
+<td>1</td>
+<td>0.00</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="coherence-anchors">Coherence Anchors</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Zero-Tolerance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CA-01</td>
+<td>Authorization Chain Completeness</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>CA-02</td>
+<td>Constraint Surface Inviolability</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>CA-03</td>
+<td>Escalation Completeness</td>
+<td>—</td>
+</tr>
+<tr>
+<td>CA-04</td>
+<td>Audit Trail Continuity</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>CA-05</td>
+<td>Scope Boundary Respect</td>
+<td>—</td>
+</tr>
+<tr>
+<td>CA-06</td>
+<td>Regime Transition Authorization</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="escalation-ladder">Escalation Ladder</h2>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Target</th>
+<th>SLA</th>
+<th>SLA Breach Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Supervisory agent</td>
+<td>30s</td>
+<td>escalate → L2</td>
+</tr>
+<tr>
+<td>2</td>
+<td>On-call human operator</td>
+<td>120s</td>
+<td>escalate → L3</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Domain authority</td>
+<td>600s</td>
+<td>force LOCKDOWN</td>
+</tr>
+<tr>
+<td>99</td>
+<td>LOCKDOWN + forced audit</td>
+<td>0s</td>
+<td>none</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="key-operators">Key Operators</h2>
+<p><code>GATE</code> · <code>AUTHORIZE</code> · <code>ESCALATE</code> · <code>HALT</code> · <code>ROLLBACK</code> · <code>AUDIT</code> · <code>RELEASE</code></p>
+<p>See <a href="./OPERATORS.html"><code>OPERATORS.md</code></a> for full grammar and Python examples.</p>
+<hr>
+<h2 id="references">References</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Title</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>REF-RTT-SPEC</td>
+<td>RTT Operator Grammar Specification v2.4</td>
+</tr>
+<tr>
+<td>REF-CONSTRAINT-ALGEBRA</td>
+<td>Constraint Algebra for Safety-Critical Agentic Systems</td>
+</tr>
+<tr>
+<td>REF-CORRIDOR-TOPOLOGY</td>
+<td>Corridor Topology Axioms and Halfspace Representations</td>
+</tr>
+<tr>
+<td>REF-AUTHORIZATION-GRAMMAR</td>
+<td>RTT Authorization Grammar and Chain Verification Protocols</td>
+</tr>
+<tr>
+<td>REF-DEAD-MAN-SWITCH</td>
+<td>Automated Safety Halt Mechanisms for High-Stakes AI Agents</td>
+</tr>
+<tr>
+<td># ANALYZER_LAYERS — High_Stakes_Operational_Corridors</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Six-Layer Analysis Stack · Module <code>hsoc-rtt-001</code></p>
+</blockquote>
+<p>The analyzer stack runs against every proposed action before and after GATE evaluation. Layers execute in precedence order; a failure in any layer at or below <code>operator</code> blocks all higher layers and forces either ESCALATE or HALT.</p>
+<hr>
+<h2 id="layer-execution-order">Layer Execution Order</h2>
+<pre><code>1. operator       (precedence 1) — grammar, operator dispatch, flow control
+2. dimensional    (precedence 2) — axis validation against constraint surface
+3. regime         (precedence 3) — regime classification and transition control
+4. drift          (precedence 4) — corridor boundary drift and zero-tolerance checks
+5. coherence      (precedence 5) — coherence anchor evaluation per action
+6. cross-cutting  (precedence 6) — audit, telemetry, dead-man switch, PII scrubbing
+</code></pre>
+<hr>
+<h2 id="1-operator-layer">1. <code>operator</code> Layer</h2>
+<p>Governs how corridor operators compose and are dispatched. Enforces the operator constraint matrix so that illegal operator sequences (e.g., AUTHORIZE before GATE) are rejected at the grammar level before touching the constraint surface.</p>
+<pre><code class="language-python">from hsoc.layers import OperatorLayer
+from hsoc.operators import GATE, AUTHORIZE, ESCALATE, HALT, ROLLBACK, AUDIT, RELEASE
+
+op_layer = OperatorLayer(
+    operators=[GATE, AUTHORIZE, ESCALATE, HALT, ROLLBACK, AUDIT, RELEASE],
+    precedence=1,
+    max_gate_latency_ms=50,
+    zero_tolerance_on_timeout=True,
+)
+
+# Dispatch
+result = op_layer.dispatch(&quot;GATE&quot;, action=proposed_action, active_regime=engine.regime)
+</code></pre>
+<pre><code class="language-json">{
+  &quot;layer&quot;: &quot;operator&quot;,
+  &quot;active&quot;: true,
+  &quot;precedence&quot;: 1,
+  &quot;max_gate_latency_ms&quot;: 50,
+  &quot;registered_operators&quot;: [&quot;GATE&quot;, &quot;AUTHORIZE&quot;, &quot;ESCALATE&quot;, &quot;HALT&quot;, &quot;ROLLBACK&quot;, &quot;AUDIT&quot;, &quot;RELEASE&quot;],
+  &quot;last_dispatch&quot;: {
+    &quot;operator&quot;: &quot;GATE&quot;,
+    &quot;action_id&quot;: &quot;act-2026-09-23-187&quot;,
+    &quot;latency_ms&quot;: 12,
+    &quot;status&quot;: &quot;permitted&quot;
+  }
+}
+</code></pre>
+<hr>
+<h2 id="2-dimensional-layer">2. <code>dimensional</code> Layer</h2>
+<p>Validates every proposed action against the active regime's constraint surface on all four dimensional axes before GATE can return <code>permitted</code>. Any axis violation returns <code>blocked</code> immediately.</p>
+<h3 id="axes">Axes</h3>
+<table>
+<thead>
+<tr>
+<th>Axis</th>
+<th>Description</th>
+<th>Unit</th>
+<th>Range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>action_severity</code></td>
+<td>Potential consequence magnitude</td>
+<td>scalar</td>
+<td><code>[0.0, 1.0]</code></td>
+</tr>
+<tr>
+<td><code>authorization_depth</code></td>
+<td>Number of required authorization levels</td>
+<td>integer</td>
+<td><code>[1, 99]</code></td>
+</tr>
+<tr>
+<td><code>consequence_radius</code></td>
+<td>Scope of affected systems/entities</td>
+<td>scalar</td>
+<td><code>[0.0, 1.0]</code></td>
+</tr>
+<tr>
+<td><code>reversibility_index</code></td>
+<td>Ease of undoing the action</td>
+<td>scalar</td>
+<td><code>[0.0, 1.0]</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="per-regime-bounds">Per-Regime Bounds</h3>
+<pre><code class="language-python">REGIME_DIMENSIONAL_BOUNDS = {
+    &quot;NOMINAL&quot;: {
+        &quot;max_action_severity&quot;:     0.30,
+        &quot;min_reversibility_index&quot;: 0.70,
+        &quot;authorization_required&quot;:  1,
+    },
+    &quot;ELEVATED&quot;: {
+        &quot;max_action_severity&quot;:     0.55,
+        &quot;min_reversibility_index&quot;: 0.50,
+        &quot;authorization_required&quot;:  2,
+    },
+    &quot;CRITICAL&quot;: {
+        &quot;max_action_severity&quot;:     0.80,
+        &quot;min_reversibility_index&quot;: 0.30,
+        &quot;authorization_required&quot;:  3,
+    },
+    &quot;LOCKDOWN&quot;: {
+        &quot;max_action_severity&quot;:     0.00,
+        &quot;min_reversibility_index&quot;: 1.00,
+        &quot;authorization_required&quot;:  99,
+    },
+    &quot;AUDIT_ONLY&quot;: {
+        &quot;max_action_severity&quot;:     0.00,
+        &quot;min_reversibility_index&quot;: 1.00,
+        &quot;authorization_required&quot;:  1,
+    },
+}
+</code></pre>
+<pre><code class="language-python">from hsoc.layers import DimensionalLayer
+
+dim_layer = DimensionalLayer.from_module(module)
+ok, violations = dim_layer.validate(
+    action=proposed_action,
+    active_regime=&quot;ELEVATED&quot;,
+)
+</code></pre>
+<pre><code class="language-json">{
+  &quot;layer&quot;: &quot;dimensional&quot;,
+  &quot;active&quot;: true,
+  &quot;active_regime&quot;: &quot;ELEVATED&quot;,
+  &quot;action_id&quot;: &quot;act-2026-09-23-042&quot;,
+  &quot;axis_evaluation&quot;: {
+    &quot;action_severity&quot;:      {&quot;value&quot;: 0.48, &quot;max_allowed&quot;: 0.55, &quot;pass&quot;: true},
+    &quot;authorization_depth&quot;:  {&quot;value&quot;: 2,    &quot;required&quot;: 2,       &quot;pass&quot;: true},
+    &quot;consequence_radius&quot;:   {&quot;value&quot;: 0.20, &quot;max_allowed&quot;: 1.00, &quot;pass&quot;: true},
+    &quot;reversibility_index&quot;:  {&quot;value&quot;: 0.52, &quot;min_allowed&quot;: 0.50, &quot;pass&quot;: true}
+  },
+  &quot;violations&quot;: [],
+  &quot;gate_recommendation&quot;: &quot;permitted&quot;
+}
+</code></pre>
+<hr>
+<h2 id="3-regime-layer">3. <code>regime</code> Layer</h2>
+<p>Classifies the current operational regime, governs transitions, and determines which constraint profile is active. Automatic elevation (NOMINAL→ELEVATED, ELEVATED→CRITICAL) is permitted on severity triggers; de-escalation always requires external authorization.</p>
+<h3 id="regime-profiles">Regime Profiles</h3>
+<pre><code class="language-python">REGIME_PROFILES = {
+    &quot;NOMINAL&quot;: {
+        &quot;max_action_severity&quot;:     0.30,
+        &quot;min_reversibility_index&quot;: 0.70,
+        &quot;authorization_required&quot;:  1,
+        &quot;escalation_threshold&quot;:    0.25,
+        &quot;description&quot;: &quot;Standard operations. Self-authorized actions within scope permitted.&quot;,
+    },
+    &quot;ELEVATED&quot;: {
+        &quot;max_action_severity&quot;:     0.55,
+        &quot;min_reversibility_index&quot;: 0.50,
+        &quot;authorization_required&quot;:  2,
+        &quot;escalation_threshold&quot;:    0.45,
+        &quot;description&quot;: &quot;Heightened context. Mid-severity actions require secondary authorization.&quot;,
+    },
+    &quot;CRITICAL&quot;: {
+        &quot;max_action_severity&quot;:     0.80,
+        &quot;min_reversibility_index&quot;: 0.30,
+        &quot;authorization_required&quot;:  3,
+        &quot;escalation_threshold&quot;:    0.65,
+        &quot;description&quot;: &quot;High-consequence. All actions require multi-level auth; auto-HALT on violation.&quot;,
+    },
+    &quot;LOCKDOWN&quot;: {
+        &quot;max_action_severity&quot;:     0.00,
+        &quot;min_reversibility_index&quot;: 1.00,
+        &quot;authorization_required&quot;:  99,
+        &quot;escalation_threshold&quot;:    0.00,
+        &quot;description&quot;: &quot;Emergency corridor closure. RELEASE required to resume.&quot;,
+    },
+    &quot;AUDIT_ONLY&quot;: {
+        &quot;max_action_severity&quot;:     0.00,
+        &quot;min_reversibility_index&quot;: 1.00,
+        &quot;authorization_required&quot;:  1,
+        &quot;escalation_threshold&quot;:    0.00,
+        &quot;description&quot;: &quot;Post-incident / compliance review. AUDIT records only.&quot;,
+    },
+}
+</code></pre>
+<h3 id="permitted-transitions">Permitted Transitions</h3>
+<pre><code>NOMINAL    ──► ELEVATED    (auto: severity &gt; 0.25 escalation_threshold)
+NOMINAL    ──► LOCKDOWN    (auto: zero_tolerance_violation)
+ELEVATED   ──► NOMINAL     (requires external auth)
+ELEVATED   ──► CRITICAL    (auto: severity &gt; 0.45 escalation_threshold)
+ELEVATED   ──► LOCKDOWN    (auto: zero_tolerance_violation)
+CRITICAL   ──► ELEVATED    (requires external auth)
+CRITICAL   ──► LOCKDOWN    (auto: zero_tolerance_violation)
+CRITICAL   ──► AUDIT_ONLY  (requires external auth, post-incident)
+LOCKDOWN   ──► any         (requires RELEASE from domain_authority)
+AUDIT_ONLY ──► NOMINAL     (requires external auth)
+</code></pre>
+<pre><code class="language-json">{
+  &quot;layer&quot;: &quot;regime&quot;,
+  &quot;active&quot;: true,
+  &quot;current_regime&quot;: &quot;ELEVATED&quot;,
+  &quot;transition_history&quot;: [
+    {&quot;from&quot;: &quot;NOMINAL&quot;,   &quot;to&quot;: &quot;ELEVATED&quot;, &quot;trigger&quot;: &quot;severity_threshold_0.25&quot;, &quot;ts&quot;: &quot;2026-09-23T20:31:00-04:00&quot;},
+    {&quot;from&quot;: &quot;ELEVATED&quot;,  &quot;to&quot;: &quot;CRITICAL&quot;, &quot;trigger&quot;: &quot;severity_threshold_0.45&quot;, &quot;ts&quot;: &quot;2026-09-23T20:42:00-04:00&quot;},
+    {&quot;from&quot;: &quot;CRITICAL&quot;,  &quot;to&quot;: &quot;ELEVATED&quot;, &quot;trigger&quot;: &quot;external_auth_release&quot;,  &quot;ts&quot;: &quot;2026-09-23T20:48:00-04:00&quot;}
+  ]
+}
+</code></pre>
+<hr>
+<h2 id="4-drift-layer">4. <code>drift</code> Layer</h2>
+<p>Monitors whether the agent's action distribution is drifting toward corridor boundary edges, indicating increasing risk of a constraint surface breach. Zero-tolerance violations force an immediate HALT regardless of other layer results.</p>
+<h3 id="drift-metrics">Drift Metrics</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Description</th>
+<th>Warning</th>
+<th>Critical</th>
+<th>Halt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>severity_trend_slope</code></td>
+<td>Rate of change of action_severity over last N actions</td>
+<td>0.60</td>
+<td>0.85</td>
+<td>1.00</td>
+</tr>
+<tr>
+<td><code>boundary_proximity_ratio</code></td>
+<td>Closest axis value / axis bound</td>
+<td>0.80</td>
+<td>0.90</td>
+<td>1.00</td>
+</tr>
+<tr>
+<td><code>escalation_frequency</code></td>
+<td>Escalations per 10 actions</td>
+<td>0.10</td>
+<td>0.25</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>gate_rejection_rate</code></td>
+<td>Rejected GATEs per 10 GATEs</td>
+<td>0.10</td>
+<td>0.25</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h3 id="zero-tolerance-violations-immediate-halt">Zero-Tolerance Violations (immediate HALT)</h3>
+<pre><code class="language-python">ZERO_TOLERANCE_VIOLATIONS = [
+    &quot;authorization_bypass_attempt&quot;,
+    &quot;constraint_surface_breach&quot;,
+    &quot;unsigned_consequential_action&quot;,
+    &quot;scope_boundary_exceedance&quot;,
+]
+</code></pre>
+<pre><code class="language-python">from hsoc.layers import DriftLayer
+
+drift_layer = DriftLayer.from_module(module)
+status = drift_layer.evaluate(
+    action_history_window=engine.recent_actions(n=10),
+    active_regime=&quot;ELEVATED&quot;,
+)
+
+if status.zero_tolerance_violations:
+    engine.dispatch(&quot;HALT&quot;, reason=status.zero_tolerance_violations[0])
+elif status.drift_status == &quot;critical&quot;:
+    engine.dispatch(&quot;ESCALATE&quot;, level=2)
+</code></pre>
+<pre><code class="language-json">{
+  &quot;layer&quot;: &quot;drift&quot;,
+  &quot;active&quot;: true,
+  &quot;active_regime&quot;: &quot;ELEVATED&quot;,
+  &quot;metrics&quot;: {
+    &quot;severity_trend_slope&quot;: 0.04,
+    &quot;boundary_proximity_ratio&quot;: 0.71,
+    &quot;escalation_frequency&quot;: 0.04,
+    &quot;gate_rejection_rate&quot;: 0.02
+  },
+  &quot;drift_status&quot;: &quot;ok&quot;,
+  &quot;zero_tolerance_violations&quot;: [],
+  &quot;alert_thresholds&quot;: {
+    &quot;warning&quot;:  0.70,
+    &quot;critical&quot;: 0.90,
+    &quot;halt&quot;:     1.00
+  }
+}
+</code></pre>
+<hr>
+<h2 id="5-coherence-layer">5. <code>coherence</code> Layer</h2>
+<p>Evaluates all six coherence anchors before any consequential action is executed. Zero-tolerance anchors (CA-01, CA-02, CA-04) immediately trigger HALT if violated. Non-zero-tolerance anchor failures escalate to level 1.</p>
+<h3 id="anchor-definitions">Anchor Definitions</h3>
+<pre><code class="language-python">COHERENCE_ANCHORS = {
+    &quot;CA-01&quot;: {
+        &quot;name&quot;: &quot;Authorization Chain Completeness&quot;,
+        &quot;check&quot;: lambda action: (
+            len(action.authorization_chain) &gt;= REGIME_PROFILES[active_regime][&quot;authorization_required&quot;]
+            and all(link.signature_valid for link in action.authorization_chain)
+        ),
+        &quot;required&quot;: True,
+        &quot;zero_tolerance&quot;: True,
+    },
+    &quot;CA-02&quot;: {
+        &quot;name&quot;: &quot;Constraint Surface Inviolability&quot;,
+        &quot;check&quot;: lambda action, regime: (
+            action.severity &lt;= REGIME_PROFILES[regime][&quot;max_action_severity&quot;]
+            and action.reversibility &gt;= REGIME_PROFILES[regime][&quot;min_reversibility_index&quot;]
+        ),
+        &quot;required&quot;: True,
+        &quot;zero_tolerance&quot;: True,
+    },
+    &quot;CA-03&quot;: {
+        &quot;name&quot;: &quot;Escalation Completeness&quot;,
+        &quot;check&quot;: lambda escalation_record: (
+            escalation_record is None  # no escalation in progress
+            or escalation_record.status == &quot;resolved&quot;
+        ),
+        &quot;required&quot;: True,
+        &quot;zero_tolerance&quot;: False,
+    },
+    &quot;CA-04&quot;: {
+        &quot;name&quot;: &quot;Audit Trail Continuity&quot;,
+        &quot;check&quot;: lambda action: action.audit_record_id is not None,
+        &quot;required&quot;: True,
+        &quot;zero_tolerance&quot;: True,
+    },
+    &quot;CA-05&quot;: {
+        &quot;name&quot;: &quot;Scope Boundary Respect&quot;,
+        &quot;check&quot;: lambda action, profile: (
+            all(venue in profile.scope_boundary.permitted_venues for venue in action.target_venues)
+            and action.notional &lt;= profile.scope_boundary.max_trade_notional_usd
+        ),
+        &quot;required&quot;: True,
+        &quot;zero_tolerance&quot;: False,
+    },
+    &quot;CA-06&quot;: {
+        &quot;name&quot;: &quot;Regime Transition Authorization&quot;,
+        &quot;check&quot;: lambda transition: (
+            transition.is_elevation  # elevations are auto-permitted
+            or transition.authorized_by is not None
+        ),
+        &quot;required&quot;: True,
+        &quot;zero_tolerance&quot;: False,
+    },
+}
+</code></pre>
+<pre><code class="language-json">{
+  &quot;layer&quot;: &quot;coherence&quot;,
+  &quot;active&quot;: true,
+  &quot;evaluation_for_action&quot;: &quot;act-2026-09-23-042&quot;,
+  &quot;results&quot;: {
+    &quot;CA-01&quot;: {&quot;passed&quot;: true,  &quot;zero_tolerance&quot;: true,  &quot;detail&quot;: &quot;chain_depth=2, all sigs valid&quot;},
+    &quot;CA-02&quot;: {&quot;passed&quot;: true,  &quot;zero_tolerance&quot;: true,  &quot;detail&quot;: &quot;severity=0.48 &lt;= 0.55, rev=0.52 &gt;= 0.50&quot;},
+    &quot;CA-03&quot;: {&quot;passed&quot;: true,  &quot;zero_tolerance&quot;: false, &quot;detail&quot;: &quot;no active escalations&quot;},
+    &quot;CA-04&quot;: {&quot;passed&quot;: true,  &quot;zero_tolerance&quot;: true,  &quot;detail&quot;: &quot;audit_record_id assigned&quot;},
+    &quot;CA-05&quot;: {&quot;passed&quot;: true,  &quot;zero_tolerance&quot;: false, &quot;detail&quot;: &quot;NYSE permitted, notional within scope&quot;},
+    &quot;CA-06&quot;: {&quot;passed&quot;: true,  &quot;zero_tolerance&quot;: false, &quot;detail&quot;: &quot;regime=ELEVATED, no transition in progress&quot;}
+  },
+  &quot;zero_tolerance_failures&quot;: [],
+  &quot;corridor_coherence_score&quot;: 1.00,
+  &quot;action_permitted&quot;: true
+}
+</code></pre>
+<hr>
+<h2 id="6-cross-cutting-layer">6. <code>cross-cutting</code> Layer</h2>
+<p>Spans the entire corridor lifecycle. Handles immutable audit emission, real-time telemetry, dead-man switch heartbeating, PII scrubbing before logging, rate limiting, and the inter-module event bus.</p>
+<h3 id="dead-man-switch">Dead-Man Switch</h3>
+<pre><code class="language-python"># If heartbeat is not received within the window, LOCKDOWN fires automatically
+DEAD_MAN_CONFIG = {
+    &quot;enabled&quot;: True,
+    &quot;heartbeat_interval_seconds&quot;: 30,
+    &quot;grace_period_seconds&quot;: 10,
+}
+
+# Heartbeat sender — must run in a background thread
+async def heartbeat_loop(engine):
+    while engine.active:
+        engine.dispatch_heartbeat()
+        await asyncio.sleep(DEAD_MAN_CONFIG[&quot;heartbeat_interval_seconds&quot;])
+</code></pre>
+<h3 id="capabilities">Capabilities</h3>
+<table>
+<thead>
+<tr>
+<th>Capability</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>immutable_audit_trail</code></td>
+<td>Every action, gate decision, and escalation writes a signed, append-only record</td>
+</tr>
+<tr>
+<td><code>real_time_telemetry</code></td>
+<td>Per-action metrics emitted to OpenTelemetry endpoint</td>
+</tr>
+<tr>
+<td><code>compliance_report_generation</code></td>
+<td>Scheduled generation of compliance summaries from the audit log</td>
+</tr>
+<tr>
+<td><code>inter_module_event_bus</code></td>
+<td>Pub/sub for cross-module events (e.g., LHCA drift alerts triggering HSOC regime elevation)</td>
+</tr>
+<tr>
+<td><code>dead_man_switch</code></td>
+<td>Auto-LOCKDOWN on heartbeat loss</td>
+</tr>
+<tr>
+<td><code>rate_limiting_enforcement</code></td>
+<td>Max N consequential actions per time window per agent</td>
+</tr>
+<tr>
+<td><code>pii_scrubbing_before_logging</code></td>
+<td>Strips PII from action payloads before writing to audit store</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-python">from hsoc.layers import CrossCuttingLayer
+
+cc_layer = CrossCuttingLayer(
+    event_schema=&quot;rtt/events/corridor-v1&quot;,
+    audit_store=WORMAuditStore(endpoint=&quot;https://audit.internal/v1&quot;),
+    telemetry_sink=OpenTelemetrySink(endpoint=&quot;http://otel-collector:4317&quot;),
+    pii_scrubber=PIIScrubber(strategy=&quot;redact&quot;),
+    rate_limiter=RateLimiter(max_actions_per_minute=60),
+    dead_man_switch=DeadManSwitch(**DEAD_MAN_CONFIG),
+)
+</code></pre>
+<pre><code class="language-json">{
+  &quot;layer&quot;: &quot;cross-cutting&quot;,
+  &quot;active&quot;: true,
+  &quot;event_schema&quot;: &quot;rtt/events/corridor-v1&quot;,
+  &quot;audit_trail&quot;: {
+    &quot;records_written&quot;: 187,
+    &quot;last_record_id&quot;: &quot;audit-hsoc-001-20260923-187&quot;,
+    &quot;store_type&quot;: &quot;WORM&quot;
+  },
+  &quot;telemetry&quot;: {
+    &quot;events_emitted_total&quot;: 561,
+    &quot;last_event&quot;: {&quot;type&quot;: &quot;gate_permitted&quot;, &quot;action_id&quot;: &quot;act-2026-09-23-187&quot;, &quot;ts&quot;: &quot;2026-09-23T20:50:55-04:00&quot;}
+  },
+  &quot;dead_man_switch&quot;: {
+    &quot;enabled&quot;: true,
+    &quot;last_heartbeat&quot;: &quot;2026-09-23T20:50:45-04:00&quot;,
+    &quot;status&quot;: &quot;healthy&quot;
+  },
+  &quot;rate_limiter&quot;: {
+    &quot;actions_last_minute&quot;: 12,
+    &quot;max_per_minute&quot;: 60,
+    &quot;throttled&quot;: false
+  }
+}
+</code></pre>
+<p># EXAMPLES — High_Stakes_Operational_Corridors</p>
+<blockquote>
+<p>Worked Scenarios with Full Trace Payloads · Module <code>hsoc-rtt-001</code></p>
+</blockquote>
+<hr>
+<h2 id="ex-hsoc-001-high-value-financial-trade-execution">EX-HSOC-001 · High-Value Financial Trade Execution</h2>
+<p><strong>Description:</strong> An agent executing a $50M block equity trade. Requires <code>ELEVATED</code> regime, 2-level authorization chain, and full audit trail before order submission.</p>
+<p><strong>Regime:</strong> <code>ELEVATED</code> · Severity: <code>0.48</code> · Reversibility: <code>0.35</code> · Auth depth: <code>2</code></p>
+<h3 id="setup">Setup</h3>
+<pre><code class="language-python">from hsoc.engine import CorridorEngine
+from hsoc.operators import GATE, AUTHORIZE, AUDIT
+from hsoc.types import Action, AuthorizationLink
+
+engine = CorridorEngine.from_module(module)
+engine.start(
+    regime=&quot;ELEVATED&quot;,
+    authority_profile={
+        &quot;authority_id&quot;: &quot;algo-trader-agent-007&quot;,
+        &quot;clearance_level&quot;: 2,
+        &quot;domains&quot;: [&quot;equity&quot;],
+    },
+)
+</code></pre>
+<h3 id="step-1-propose-action">Step 1 — Propose Action</h3>
+<pre><code class="language-python">action = Action(
+    action_id=&quot;act-2026-09-23-001&quot;,
+    action_type=&quot;equity_trade_submit&quot;,
+    severity=0.48,
+    reversibility=0.35,
+    consequence_radius=0.20,
+    authorization_chain=[
+        AuthorizationLink(&quot;portfolio-manager-01&quot;, clearance_level=2, signature=&quot;sig-a&quot;),
+        AuthorizationLink(&quot;risk-desk-supervisor&quot;,  clearance_level=3, signature=&quot;sig-b&quot;),
+    ],
+    target_venues=[&quot;NYSE&quot;],
+    notional_usd=50_000_000,
+)
+</code></pre>
+<h3 id="step-2-gate">Step 2 — GATE</h3>
+<pre><code class="language-json">{
+  &quot;operator&quot;: &quot;GATE&quot;,
+  &quot;action_id&quot;: &quot;act-2026-09-23-001&quot;,
+  &quot;active_regime&quot;: &quot;ELEVATED&quot;,
+  &quot;axis_evaluation&quot;: {
+    &quot;action_severity&quot;:     {&quot;value&quot;: 0.48, &quot;max_allowed&quot;: 0.55, &quot;pass&quot;: true},
+    &quot;authorization_depth&quot;: {&quot;value&quot;: 2,    &quot;required&quot;: 2,       &quot;pass&quot;: true},
+    &quot;consequence_radius&quot;:  {&quot;value&quot;: 0.20, &quot;max_allowed&quot;: 1.00, &quot;pass&quot;: true},
+    &quot;reversibility_index&quot;: {&quot;value&quot;: 0.35, &quot;min_allowed&quot;: 0.50, &quot;pass&quot;: false}
+  },
+  &quot;gate_decision&quot;: &quot;blocked_pending_authorization&quot;,
+  &quot;gate_decision_id&quot;: &quot;gd-hsoc-001-20260923-001&quot;,
+  &quot;blocking_constraints&quot;: [&quot;reversibility_index 0.35 &lt; ELEVATED minimum 0.50&quot;],
+  &quot;latency_ms&quot;: 9.2
+}
+</code></pre>
+<blockquote>
+<p><strong>Note:</strong> Reversibility below regime floor. Agent requests a secondary-market hedge to raise reversibility before resubmitting.</p>
+</blockquote>
+<h3 id="step-3-resubmit-with-hedge-reversibility-raised-to-062">Step 3 — Resubmit with Hedge (reversibility raised to 0.62)</h3>
+<pre><code class="language-json">{
+  &quot;operator&quot;: &quot;GATE&quot;,
+  &quot;action_id&quot;: &quot;act-2026-09-23-001b&quot;,
+  &quot;active_regime&quot;: &quot;ELEVATED&quot;,
+  &quot;axis_evaluation&quot;: {
+    &quot;action_severity&quot;:     {&quot;value&quot;: 0.48, &quot;max_allowed&quot;: 0.55, &quot;pass&quot;: true},
+    &quot;authorization_depth&quot;: {&quot;value&quot;: 2,    &quot;required&quot;: 2,       &quot;pass&quot;: true},
+    &quot;consequence_radius&quot;:  {&quot;value&quot;: 0.20, &quot;max_allowed&quot;: 1.00, &quot;pass&quot;: true},
+    &quot;reversibility_index&quot;: {&quot;value&quot;: 0.62, &quot;min_allowed&quot;: 0.50, &quot;pass&quot;: true}
+  },
+  &quot;gate_decision&quot;: &quot;permitted&quot;,
+  &quot;gate_decision_id&quot;: &quot;gd-hsoc-001-20260923-001b&quot;,
+  &quot;blocking_constraints&quot;: [],
+  &quot;latency_ms&quot;: 8.7
+}
+</code></pre>
+<h3 id="step-4-authorize">Step 4 — AUTHORIZE</h3>
+<pre><code class="language-json">{
+  &quot;operator&quot;: &quot;AUTHORIZE&quot;,
+  &quot;action_id&quot;: &quot;act-2026-09-23-001b&quot;,
+  &quot;required_depth&quot;: 2,
+  &quot;chain&quot;: [
+    {&quot;authority_id&quot;: &quot;portfolio-manager-01&quot;, &quot;clearance_level&quot;: 2, &quot;signature&quot;: &quot;sig-a&quot;, &quot;valid&quot;: true},
+    {&quot;authority_id&quot;: &quot;risk-desk-supervisor&quot;, &quot;clearance_level&quot;: 3, &quot;signature&quot;: &quot;sig-b&quot;, &quot;valid&quot;: true}
+  ],
+  &quot;result&quot;: {
+    &quot;passed&quot;: true,
+    &quot;chain_depth&quot;: 2,
+    &quot;signature_failures&quot;: [],
+    &quot;missing_links&quot;: []
+  }
+}
+</code></pre>
+<h3 id="step-5-execute-audit">Step 5 — Execute &amp; AUDIT</h3>
+<pre><code class="language-json">{
+  &quot;operator&quot;: &quot;AUDIT&quot;,
+  &quot;audit_id&quot;: &quot;audit-hsoc-001-20260923-001&quot;,
+  &quot;action_id&quot;: &quot;act-2026-09-23-001b&quot;,
+  &quot;gate_decision_id&quot;: &quot;gd-hsoc-001-20260923-001b&quot;,
+  &quot;corridor_state_at_audit&quot;: {
+    &quot;regime&quot;: &quot;ELEVATED&quot;,
+    &quot;action_severity&quot;: 0.48,
+    &quot;reversibility_index&quot;: 0.62,
+    &quot;authorization_chain_depth&quot;: 2
+  },
+  &quot;signed_by&quot;: &quot;hsoc-rtt-001&quot;,
+  &quot;signature_valid&quot;: true,
+  &quot;timestamp&quot;: &quot;2026-09-23T20:35:00-04:00&quot;
+}
+</code></pre>
+<h3 id="outcome">Outcome</h3>
+<pre><code class="language-json">{
+  &quot;example_id&quot;: &quot;EX-HSOC-001&quot;,
+  &quot;final_regime&quot;: &quot;ELEVATED&quot;,
+  &quot;gate_decisions&quot;: [&quot;blocked (rev&lt;0.50)&quot;, &quot;permitted (with hedge)&quot;],
+  &quot;authorize_result&quot;: &quot;passed&quot;,
+  &quot;audit_emitted&quot;: true,
+  &quot;zero_tolerance_violations&quot;: [],
+  &quot;coherence_anchors_satisfied&quot;: [&quot;CA-01&quot;, &quot;CA-02&quot;, &quot;CA-03&quot;, &quot;CA-04&quot;, &quot;CA-05&quot;, &quot;CA-06&quot;],
+  &quot;outcome&quot;: &quot;Trade executed. Audit record AUDIT-2026-0923-001 filed. No coherence anchor violations.&quot;
+}
+</code></pre>
+<hr>
+<h2 id="ex-hsoc-002-clinical-dosing-recommendation-under-uncertainty">EX-HSOC-002 · Clinical Dosing Recommendation Under Uncertainty</h2>
+<p><strong>Description:</strong> An agent proposing a dosing adjustment for a high-risk patient. Ambiguous case triggers mandatory ESCALATE to on-call physician before any recommendation is finalized.</p>
+<p><strong>Regime:</strong> <code>CRITICAL</code> · Severity: <code>0.72</code> · Reversibility: <code>0.20</code> · Auth depth: <code>3</code></p>
+<h3 id="step-1-gate-blocked">Step 1 — GATE (blocked)</h3>
+<pre><code class="language-json">{
+  &quot;operator&quot;: &quot;GATE&quot;,
+  &quot;action_id&quot;: &quot;act-2026-09-23-clinical-001&quot;,
+  &quot;active_regime&quot;: &quot;CRITICAL&quot;,
+  &quot;axis_evaluation&quot;: {
+    &quot;action_severity&quot;:     {&quot;value&quot;: 0.72, &quot;max_allowed&quot;: 0.80, &quot;pass&quot;: true},
+    &quot;authorization_depth&quot;: {&quot;value&quot;: 0,    &quot;required&quot;: 3,       &quot;pass&quot;: false},
+    &quot;consequence_radius&quot;:  {&quot;value&quot;: 0.05, &quot;max_allowed&quot;: 1.00, &quot;pass&quot;: true},
+    &quot;reversibility_index&quot;: {&quot;value&quot;: 0.20, &quot;min_allowed&quot;: 0.30, &quot;pass&quot;: false}
+  },
+  &quot;gate_decision&quot;: &quot;blocked_pending_escalation&quot;,
+  &quot;gate_decision_id&quot;: &quot;gd-hsoc-001-20260923-clinical-001&quot;,
+  &quot;blocking_constraints&quot;: [
+    &quot;authorization_depth: chain empty, required 3&quot;,
+    &quot;reversibility_index: 0.20 &lt; CRITICAL minimum 0.30&quot;
+  ]
+}
+</code></pre>
+<h3 id="step-2-escalate-to-level-2-on-call-physician">Step 2 — ESCALATE to Level 2 (on-call physician)</h3>
+<pre><code class="language-python">record = ESCALATE(
+    action=clinical_action,
+    blocking_constraints=[
+        &quot;authorization_depth: chain empty, required 3&quot;,
+        &quot;reversibility_index: 0.20 &lt; CRITICAL minimum 0.30&quot;,
+    ],
+    level=2,
+)
+</code></pre>
+<pre><code class="language-json">{
+  &quot;operator&quot;: &quot;ESCALATE&quot;,
+  &quot;escalation_id&quot;: &quot;esc-hsoc-001-20260923-clinical-001&quot;,
+  &quot;level&quot;: 2,
+  &quot;target&quot;: &quot;on_call_human_operator&quot;,
+  &quot;sla_seconds&quot;: 120,
+  &quot;sla_deadline&quot;: &quot;2026-09-23T20:47:00-04:00&quot;,
+  &quot;sla_breach_action&quot;: &quot;escalate_to_level_3&quot;,
+  &quot;status&quot;: &quot;pending_resolution&quot;
+}
+</code></pre>
+<h3 id="step-3-physician-resolves-within-sla-authorizes-with-3-link-chain">Step 3 — Physician resolves within SLA; authorizes with 3-link chain</h3>
+<pre><code class="language-json">{
+  &quot;escalation_id&quot;: &quot;esc-hsoc-001-20260923-clinical-001&quot;,
+  &quot;status&quot;: &quot;resolved&quot;,
+  &quot;resolution_ts&quot;: &quot;2026-09-23T20:44:30-04:00&quot;,
+  &quot;resolved_by&quot;: &quot;dr-on-call-009&quot;,
+  &quot;authorization_chain_added&quot;: [
+    {&quot;authority_id&quot;: &quot;clinical-agent-007&quot;,   &quot;clearance_level&quot;: 1, &quot;signature&quot;: &quot;sig-c&quot;},
+    {&quot;authority_id&quot;: &quot;supervising-clinician&quot;, &quot;clearance_level&quot;: 2, &quot;signature&quot;: &quot;sig-d&quot;},
+    {&quot;authority_id&quot;: &quot;dr-on-call-009&quot;,        &quot;clearance_level&quot;: 3, &quot;signature&quot;: &quot;sig-e&quot;}
+  ],
+  &quot;reversibility_mitigation&quot;: &quot;recommendation_is_advisory_only — physician retains final decision&quot;
+}
+</code></pre>
+<h3 id="step-4-resubmit-through-gate-authorize-execute-audit">Step 4 — Resubmit through GATE → AUTHORIZE → Execute → AUDIT</h3>
+<pre><code class="language-json">{
+  &quot;gate_decision&quot;: &quot;permitted&quot;,
+  &quot;gate_decision_id&quot;: &quot;gd-hsoc-001-20260923-clinical-002&quot;,
+  &quot;authorize_result&quot;: &quot;passed&quot;,
+  &quot;audit_id&quot;: &quot;audit-hsoc-001-20260923-clinical-001&quot;,
+  &quot;outcome&quot;: &quot;Recommendation finalized after physician authorization. Escalation resolved within SLA.&quot;
+}
+</code></pre>
+<hr>
+<h2 id="ex-hsoc-003-infrastructure-change-during-incident-dead-man-switch">EX-HSOC-003 · Infrastructure Change During Incident — Dead-Man Switch</h2>
+<p><strong>Description:</strong> An agent attempting a high-severity network reconfiguration during an active outage. The dead-man switch fires after heartbeat loss; corridor transitions to <code>LOCKDOWN</code>. Human operator issues <code>RELEASE</code>.</p>
+<p><strong>Regime sequence:</strong> <code>CRITICAL → LOCKDOWN → CRITICAL</code></p>
+<h3 id="step-1-heartbeat-lost-dead-man-switch-fires">Step 1 — Heartbeat Lost (dead-man switch fires)</h3>
+<pre><code class="language-python"># Background heartbeat loop stopped due to outage
+# DeadManSwitch detects silence after 30s + 10s grace
+
+dead_man_event = {
+    &quot;type&quot;: &quot;heartbeat_timeout&quot;,
+    &quot;last_heartbeat&quot;: &quot;2026-09-23T20:55:00-04:00&quot;,
+    &quot;silence_duration_s&quot;: 41,
+    &quot;grace_period_s&quot;: 10,
+}
+</code></pre>
+<pre><code class="language-json">{
+  &quot;operator&quot;: &quot;HALT&quot;,
+  &quot;halt_id&quot;: &quot;halt-hsoc-001-20260923-001&quot;,
+  &quot;reason&quot;: &quot;dead_man_switch:heartbeat_timeout_41s&quot;,
+  &quot;triggered_by&quot;: &quot;corridor_health_probe&quot;,
+  &quot;active&quot;: true,
+  &quot;halt_timestamp&quot;: &quot;2026-09-23T20:55:41-04:00&quot;,
+  &quot;regime_at_halt&quot;: &quot;CRITICAL&quot;,
+  &quot;release_required_from&quot;: &quot;domain_authority&quot;
+}
+</code></pre>
+<h3 id="step-2-auto-transition-to-lockdown">Step 2 — Auto-Transition to LOCKDOWN</h3>
+<pre><code class="language-json">{
+  &quot;layer&quot;: &quot;regime&quot;,
+  &quot;transition&quot;: {
+    &quot;from&quot;: &quot;CRITICAL&quot;,
+    &quot;to&quot;: &quot;LOCKDOWN&quot;,
+    &quot;trigger&quot;: &quot;HALT:dead_man_switch&quot;,
+    &quot;authorized&quot;: &quot;auto&quot;,
+    &quot;ts&quot;: &quot;2026-09-23T20:55:41-04:00&quot;
+  }
+}
+</code></pre>
+<h3 id="step-3-level-3-escalation-auto-fired-by-halt">Step 3 — Level 3 Escalation (auto-fired by HALT)</h3>
+<pre><code class="language-json">{
+  &quot;operator&quot;: &quot;ESCALATE&quot;,
+  &quot;escalation_id&quot;: &quot;esc-hsoc-001-20260923-infra-001&quot;,
+  &quot;level&quot;: 3,
+  &quot;target&quot;: &quot;domain_authority&quot;,
+  &quot;sla_seconds&quot;: 600,
+  &quot;sla_deadline&quot;: &quot;2026-09-23T21:05:41-04:00&quot;,
+  &quot;status&quot;: &quot;pending_resolution&quot;
+}
+</code></pre>
+<h3 id="step-4-release-issued-by-operator">Step 4 — RELEASE issued by operator</h3>
+<pre><code class="language-python">result = RELEASE(
+    halt_id=&quot;halt-hsoc-001-20260923-001&quot;,
+    authorized_by=&quot;domain_authority&quot;,
+    authorization_signature=&quot;sig-domain-authority-release&quot;,
+)
+</code></pre>
+<pre><code class="language-json">{
+  &quot;operator&quot;: &quot;RELEASE&quot;,
+  &quot;halt_id&quot;: &quot;halt-hsoc-001-20260923-001&quot;,
+  &quot;authorized_by&quot;: &quot;domain_authority&quot;,
+  &quot;result&quot;: {
+    &quot;halt_lifted&quot;: true,
+    &quot;resumed_regime&quot;: &quot;CRITICAL&quot;,
+    &quot;release_timestamp&quot;: &quot;2026-09-23T21:03:22-04:00&quot;,
+    &quot;audit_record_id&quot;: &quot;audit-release-hsoc-001-001&quot;
+  }
+}
+</code></pre>
+<h3 id="step-5-reconfiguration-resubmitted-under-critical-with-3-level-auth">Step 5 — Reconfiguration Resubmitted Under CRITICAL with 3-Level Auth</h3>
+<pre><code class="language-json">{
+  &quot;gate_decision&quot;: &quot;permitted&quot;,
+  &quot;gate_decision_id&quot;: &quot;gd-hsoc-001-20260923-infra-002&quot;,
+  &quot;authorize_result&quot;: &quot;passed&quot;,
+  &quot;chain_depth&quot;: 3,
+  &quot;audit_id&quot;: &quot;audit-hsoc-001-20260923-infra-001&quot;,
+  &quot;outcome&quot;: &quot;Reconfiguration executed after RELEASE. Full audit trail maintained through LOCKDOWN and recovery.&quot;
+}
+</code></pre>
+<h3 id="outcome_1">Outcome</h3>
+<pre><code class="language-json">{
+  &quot;example_id&quot;: &quot;EX-HSOC-003&quot;,
+  &quot;regime_sequence&quot;: [&quot;CRITICAL&quot;, &quot;LOCKDOWN&quot;, &quot;CRITICAL&quot;],
+  &quot;halt_events&quot;: 1,
+  &quot;lockdown_duration_s&quot;: 461,
+  &quot;escalation_level_reached&quot;: 3,
+  &quot;release_within_sla&quot;: true,
+  &quot;zero_tolerance_violations&quot;: 0,
+  &quot;coherence_anchors_satisfied&quot;: [&quot;CA-01&quot;, &quot;CA-02&quot;, &quot;CA-03&quot;, &quot;CA-04&quot;, &quot;CA-05&quot;, &quot;CA-06&quot;],
+  &quot;outcome&quot;: &quot;LOCKDOWN lifted after operator RELEASE. Reconfiguration resubmitted under CRITICAL regime with 3-level auth.&quot;
+}
+</code></pre>
+<hr>
+<h2 id="example-comparison">Example Comparison</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>EX-HSOC-001</th>
+<th>EX-HSOC-002</th>
+<th>EX-HSOC-003</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Domain</td>
+<td>Financial trading</td>
+<td>Clinical decision support</td>
+<td>Infrastructure change</td>
+</tr>
+<tr>
+<td>Starting regime</td>
+<td><code>ELEVATED</code></td>
+<td><code>CRITICAL</code></td>
+<td><code>CRITICAL</code></td>
+</tr>
+<tr>
+<td>Final regime</td>
+<td><code>ELEVATED</code></td>
+<td><code>CRITICAL</code></td>
+<td><code>CRITICAL</code></td>
+</tr>
+<tr>
+<td>GATE result (first)</td>
+<td>blocked</td>
+<td>blocked</td>
+<td>N/A (HALT before gate)</td>
+</tr>
+<tr>
+<td>GATE result (final)</td>
+<td>permitted</td>
+<td>permitted</td>
+<td>permitted</td>
+</tr>
+<tr>
+<td>Escalation level</td>
+<td>—</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>HALT events</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>LOCKDOWN</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Auth chain depth</td>
+<td>2</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Zero-tolerance violations</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Audit records emitted</td>
+<td>1</td>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr>
+<td># OPERATORS — High_Stakes_Operational_Corridors</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>RTT Operator Grammar · Module <code>hsoc-rtt-001</code> · Layer: <code>operator</code> (precedence 1)</p>
+</blockquote>
+<p>HSOC operators are the enforcement primitives through which the corridor engine intercepts, authorizes, escalates, and audits every consequential action. All operators must complete within <code>max_gate_latency_ms</code> (50ms) or the action is automatically blocked pending timeout resolution.</p>
+<hr>
+<h2 id="operator-registry">Operator Registry</h2>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Class</th>
+<th>Reversible</th>
+<th>Zero-Tolerance on Failure</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GATE</code></td>
+<td>intercept</td>
+<td>N/A</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>AUTHORIZE</code></td>
+<td>authorize</td>
+<td>N/A</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>ESCALATE</code></td>
+<td>transfer</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>HALT</code></td>
+<td>suspend</td>
+<td>via RELEASE</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>ROLLBACK</code></td>
+<td>restore</td>
+<td>⚠️ forward-destructive</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>AUDIT</code></td>
+<td>record</td>
+<td>N/A</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>RELEASE</code></td>
+<td>resume</td>
+<td>N/A</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="gate"><code>GATE</code></h2>
+<p>Intercepts a proposed action and evaluates it against the active corridor's constraint surface on all four dimensional axes. The single most critical operator — every consequential action must pass GATE before any other operator is invoked.</p>
+<h3 id="signature">Signature</h3>
+<pre><code class="language-python">def GATE(
+    action: Action,
+    active_regime: str,
+) -&gt; GateResult:
+    ...
+</code></pre>
+<h3 id="example">Example</h3>
+<pre><code class="language-python">from hsoc.operators import GATE
+
+action = Action(
+    action_id=&quot;act-2026-09-23-001&quot;,
+    action_type=&quot;equity_trade_submit&quot;,
+    severity=0.48,
+    reversibility=0.35,
+    consequence_radius=0.20,
+    authorization_chain=[],
+)
+
+result = GATE(action=action, active_regime=&quot;ELEVATED&quot;)
+
+print(result.permitted)              # True
+print(result.blocking_constraints)  # []
+print(result.gate_decision_id)      # &quot;gd-hsoc-001-20260923-001&quot;
+</code></pre>
+<h3 id="json-payload">JSON payload</h3>
+<pre><code class="language-json">{
+  &quot;operator&quot;: &quot;GATE&quot;,
+  &quot;action_id&quot;: &quot;act-2026-09-23-001&quot;,
+  &quot;active_regime&quot;: &quot;ELEVATED&quot;,
+  &quot;dimensional_evaluation&quot;: {
+    &quot;action_severity&quot;:      {&quot;value&quot;: 0.48, &quot;max_allowed&quot;: 0.55, &quot;pass&quot;: true},
+    &quot;authorization_depth&quot;:  {&quot;value&quot;: 0,    &quot;required&quot;: 2,       &quot;pass&quot;: false},
+    &quot;consequence_radius&quot;:   {&quot;value&quot;: 0.20, &quot;max_allowed&quot;: 1.00, &quot;pass&quot;: true},
+    &quot;reversibility_index&quot;:  {&quot;value&quot;: 0.35, &quot;min_allowed&quot;: 0.50, &quot;pass&quot;: false}
+  },
+  &quot;gate_decision&quot;: &quot;blocked_pending_authorization&quot;,
+  &quot;gate_decision_id&quot;: &quot;gd-hsoc-001-20260923-001&quot;,
+  &quot;blocking_constraints&quot;: [
+    &quot;authorization_depth: chain empty, required 2&quot;,
+    &quot;reversibility_index: 0.35 &lt; ELEVATED minimum 0.50&quot;
+  ]
+}
+</code></pre>
+<hr>
+<h2 id="authorize"><code>AUTHORIZE</code></h2>
+<p>Applies multi-level authorization checks against the agent's authority profile and the action's required clearance. Must be called after a successful (permitted) GATE result with a populated authorization chain.</p>
+<h3 id="signature_1">Signature</h3>
+<pre><code class="language-python">def AUTHORIZE(
+    action: Action,
+    chain: list[AuthorizationLink],
+    required_depth: int,
+) -&gt; AuthorizeResult:
+    ...
+</code></pre>
+<h3 id="example_1">Example</h3>
+<pre><code class="language-python">from hsoc.operators import AUTHORIZE
+from hsoc.types import AuthorizationLink
+
+chain = [
+    AuthorizationLink(authority_id=&quot;portfolio-manager-01&quot;, clearance_level=2, signature=&quot;sig-a&quot;),
+    AuthorizationLink(authority_id=&quot;risk-desk-supervisor&quot;, clearance_level=3, signature=&quot;sig-b&quot;),
+]
+
+result = AUTHORIZE(action=action, chain=chain, required_depth=2)
+
+print(result.passed)              # True
+print(result.chain_depth)        # 2
+print(result.signature_failures) # []
+</code></pre>
+<h3 id="json-payload_1">JSON payload</h3>
+<pre><code class="language-json">{
+  &quot;operator&quot;: &quot;AUTHORIZE&quot;,
+  &quot;action_id&quot;: &quot;act-2026-09-23-001&quot;,
+  &quot;required_depth&quot;: 2,
+  &quot;chain&quot;: [
+    {&quot;authority_id&quot;: &quot;portfolio-manager-01&quot;, &quot;clearance_level&quot;: 2, &quot;signature&quot;: &quot;sig-a&quot;, &quot;valid&quot;: true},
+    {&quot;authority_id&quot;: &quot;risk-desk-supervisor&quot;, &quot;clearance_level&quot;: 3, &quot;signature&quot;: &quot;sig-b&quot;, &quot;valid&quot;: true}
+  ],
+  &quot;result&quot;: {
+    &quot;passed&quot;: true,
+    &quot;chain_depth&quot;: 2,
+    &quot;signature_failures&quot;: [],
+    &quot;missing_links&quot;: []
+  }
+}
+</code></pre>
+<hr>
+<h2 id="escalate"><code>ESCALATE</code></h2>
+<p>Routes a blocked or ambiguous action to a higher-authority entity (supervisory agent or human operator) for resolution. Creates a tracked escalation record and starts the SLA clock.</p>
+<h3 id="signature_2">Signature</h3>
+<pre><code class="language-python">def ESCALATE(
+    action: Action,
+    blocking_constraints: list[str],
+    level: int = 1,
+) -&gt; EscalationRecord:
+    ...
+</code></pre>
+<h3 id="example_2">Example</h3>
+<pre><code class="language-python">from hsoc.operators import ESCALATE
+
+record = ESCALATE(
+    action=action,
+    blocking_constraints=[&quot;reversibility_index 0.15 &lt; CRITICAL minimum 0.30&quot;],
+    level=1,
+)
+
+print(record.escalation_id)    # &quot;esc-hsoc-001-20260923-001&quot;
+print(record.target)           # &quot;supervisory_agent&quot;
+print(record.sla_deadline)     # &quot;2026-09-23T21:19:30-04:00&quot;
+print(record.sla_breach_action) # &quot;escalate_to_level_2&quot;
+</code></pre>
+<h3 id="json-payload_2">JSON payload</h3>
+<pre><code class="language-json">{
+  &quot;operator&quot;: &quot;ESCALATE&quot;,
+  &quot;action_id&quot;: &quot;act-2026-09-23-001&quot;,
+  &quot;escalation_id&quot;: &quot;esc-hsoc-001-20260923-001&quot;,
+  &quot;level&quot;: 1,
+  &quot;target&quot;: &quot;supervisory_agent&quot;,
+  &quot;blocking_constraints&quot;: [&quot;reversibility_index 0.15 &lt; CRITICAL minimum 0.30&quot;],
+  &quot;sla_seconds&quot;: 30,
+  &quot;sla_deadline&quot;: &quot;2026-09-23T21:19:30-04:00&quot;,
+  &quot;sla_breach_action&quot;: &quot;escalate_to_level_2&quot;,
+  &quot;status&quot;: &quot;pending_resolution&quot;
+}
+</code></pre>
+<hr>
+<h2 id="halt"><code>HALT</code></h2>
+<p>Immediately suspends all action emissions from the agent. No further GATE, AUTHORIZE, or consequential action may proceed until a RELEASE is issued by an authorized entity. HALT is triggered automatically on zero-tolerance violations or dead-man switch activation.</p>
+<h3 id="signature_3">Signature</h3>
+<pre><code class="language-python">def HALT(
+    reason: str,
+    triggered_by: str,
+    corridor_state_snapshot: dict,
+) -&gt; HaltRecord:
+    ...
+</code></pre>
+<h3 id="example_3">Example</h3>
+<pre><code class="language-python">from hsoc.operators import HALT
+
+record = HALT(
+    reason=&quot;zero_tolerance_violation:unsigned_consequential_action&quot;,
+    triggered_by=&quot;action_gate_validator&quot;,
+    corridor_state_snapshot=engine.snapshot(),
+)
+
+print(record.halt_id)   # &quot;halt-hsoc-001-20260923-001&quot;
+print(record.active)    # True
+</code></pre>
+<h3 id="json-payload_3">JSON payload</h3>
+<pre><code class="language-json">{
+  &quot;operator&quot;: &quot;HALT&quot;,
+  &quot;halt_id&quot;: &quot;halt-hsoc-001-20260923-001&quot;,
+  &quot;reason&quot;: &quot;zero_tolerance_violation:unsigned_consequential_action&quot;,
+  &quot;triggered_by&quot;: &quot;action_gate_validator&quot;,
+  &quot;active&quot;: true,
+  &quot;halt_timestamp&quot;: &quot;2026-09-23T20:51:00-04:00&quot;,
+  &quot;regime_at_halt&quot;: &quot;CRITICAL&quot;,
+  &quot;actions_blocked_since_halt&quot;: 0,
+  &quot;release_required_from&quot;: &quot;domain_authority&quot;
+}
+</code></pre>
+<hr>
+<h2 id="rollback"><code>ROLLBACK</code></h2>
+<p>Reverses the most recent authorized action sequence up to a declared safe-state boundary. Requires explicit authorization and produces a signed rollback record. Cannot be used to undo LOCKDOWN or HALT — only RELEASE can lift those.</p>
+<h3 id="signature_4">Signature</h3>
+<pre><code class="language-python">def ROLLBACK(
+    target_safe_state_id: str,
+    reason: str,
+    authorized_by: str,
+) -&gt; RollbackResult:
+    ...
+</code></pre>
+<h3 id="example_4">Example</h3>
+<pre><code class="language-python">from hsoc.operators import ROLLBACK
+
+result = ROLLBACK(
+    target_safe_state_id=&quot;safe-state-2026-09-23T20:30:00&quot;,
+    reason=&quot;reversibility_window_exceeded&quot;,
+    authorized_by=&quot;risk-desk-supervisor&quot;,
+)
+
+print(result.actions_reversed)    # 3
+print(result.safe_state_restored) # True
+print(result.audit_record_id)     # &quot;audit-rollback-hsoc-001-001&quot;
+</code></pre>
+<h3 id="json-payload_4">JSON payload</h3>
+<pre><code class="language-json">{
+  &quot;operator&quot;: &quot;ROLLBACK&quot;,
+  &quot;target_safe_state_id&quot;: &quot;safe-state-2026-09-23T20:30:00&quot;,
+  &quot;reason&quot;: &quot;reversibility_window_exceeded&quot;,
+  &quot;authorized_by&quot;: &quot;risk-desk-supervisor&quot;,
+  &quot;result&quot;: {
+    &quot;actions_reversed&quot;: 3,
+    &quot;safe_state_restored&quot;: true,
+    &quot;corridor_regime_post_rollback&quot;: &quot;ELEVATED&quot;,
+    &quot;audit_record_id&quot;: &quot;audit-rollback-hsoc-001-001&quot;
+  }
+}
+</code></pre>
+<hr>
+<h2 id="audit"><code>AUDIT</code></h2>
+<p>Emits a complete signed audit record of the action, authorization chain, gate decision, and corridor state. Must be called after every authorized consequential action — zero-tolerance if omitted.</p>
+<h3 id="signature_5">Signature</h3>
+<pre><code class="language-python">def AUDIT(
+    action: Action,
+    gate_decision_id: str,
+    auth_result: AuthorizeResult,
+) -&gt; AuditRecord:
+    ...
+</code></pre>
+<h3 id="example_5">Example</h3>
+<pre><code class="language-python">from hsoc.operators import AUDIT
+
+record = AUDIT(
+    action=action,
+    gate_decision_id=&quot;gd-hsoc-001-20260923-001&quot;,
+    auth_result=auth_result,
+)
+
+print(record.audit_id)         # &quot;audit-hsoc-001-20260923-001&quot;
+print(record.signature_valid)  # True
+</code></pre>
+<h3 id="json-payload_5">JSON payload</h3>
+<pre><code class="language-json">{
+  &quot;operator&quot;: &quot;AUDIT&quot;,
+  &quot;audit_id&quot;: &quot;audit-hsoc-001-20260923-001&quot;,
+  &quot;action_id&quot;: &quot;act-2026-09-23-001&quot;,
+  &quot;gate_decision_id&quot;: &quot;gd-hsoc-001-20260923-001&quot;,
+  &quot;corridor_state_at_audit&quot;: {
+    &quot;regime&quot;: &quot;ELEVATED&quot;,
+    &quot;action_severity&quot;: 0.48,
+    &quot;reversibility_index&quot;: 0.35,
+    &quot;authorization_chain_depth&quot;: 2
+  },
+  &quot;signed_by&quot;: &quot;hsoc-rtt-001&quot;,
+  &quot;signature&quot;: &quot;sha256:f7c3bc1d808e04732adf679965ccc34ca7ae3441&quot;,
+  &quot;signature_valid&quot;: true,
+  &quot;timestamp&quot;: &quot;2026-09-23T20:50:00-04:00&quot;
+}
+</code></pre>
+<hr>
+<h2 id="release"><code>RELEASE</code></h2>
+<p>Lifts an active HALT condition. Requires authorization from the entity specified in the HALT record's <code>release_required_from</code> field. Cannot be self-issued by the halted agent.</p>
+<h3 id="signature_6">Signature</h3>
+<pre><code class="language-python">def RELEASE(
+    halt_id: str,
+    authorized_by: str,
+    authorization_signature: str,
+) -&gt; ReleaseResult:
+    ...
+</code></pre>
+<h3 id="example_6">Example</h3>
+<pre><code class="language-python">from hsoc.operators import RELEASE
+
+result = RELEASE(
+    halt_id=&quot;halt-hsoc-001-20260923-001&quot;,
+    authorized_by=&quot;domain_authority&quot;,
+    authorization_signature=&quot;sig-domain-authority-release&quot;,
+)
+
+print(result.halt_lifted)       # True
+print(result.resumed_regime)    # &quot;CRITICAL&quot;
+</code></pre>
+<h3 id="json-payload_6">JSON payload</h3>
+<pre><code class="language-json">{
+  &quot;operator&quot;: &quot;RELEASE&quot;,
+  &quot;halt_id&quot;: &quot;halt-hsoc-001-20260923-001&quot;,
+  &quot;authorized_by&quot;: &quot;domain_authority&quot;,
+  &quot;result&quot;: {
+    &quot;halt_lifted&quot;: true,
+    &quot;resumed_regime&quot;: &quot;CRITICAL&quot;,
+    &quot;release_timestamp&quot;: &quot;2026-09-23T21:05:00-04:00&quot;,
+    &quot;audit_record_id&quot;: &quot;audit-release-hsoc-001-001&quot;
+  }
+}
+</code></pre>
+<hr>
+<h2 id="operator-flow-standard-consequential-action">Operator Flow — Standard Consequential Action</h2>
+<pre><code>  Agent proposes action
+        │
+        ▼
+      GATE ──── blocked ──► ESCALATE ──► [resolution] ──► retry GATE
+        │                                                         │
+     permitted                                                    │
+        │                                                         │
+        ▼                                                         │
+   AUTHORIZE ── failed ──► ESCALATE ──────────────────────────────┘
+        │
+     passed
+        │
+        ▼
+  action.execute()
+        │
+        ▼
+      AUDIT ── (required, zero-tolerance if omitted)
+</code></pre>
+<h2 id="operator-constraint-matrix">Operator Constraint Matrix</h2>
+<table>
+<thead>
+<tr>
+<th>From \ Allowed Next</th>
+<th>GATE</th>
+<th>AUTHORIZE</th>
+<th>ESCALATE</th>
+<th>HALT</th>
+<th>ROLLBACK</th>
+<th>AUDIT</th>
+<th>RELEASE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GATE</code> (permitted)</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>GATE</code> (blocked)</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>AUTHORIZE</code> (passed)</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>AUTHORIZE</code> (failed)</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>ESCALATE</code></td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>HALT</code></td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>ROLLBACK</code></td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>AUDIT</code></td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>RELEASE</code></td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td># ROLES — High_Stakes_Operational_Corridors</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Role Enum Definitions · Module <code>hsoc-rtt-001</code></p>
+</blockquote>
+<p>Each role maps to a distinct enforcement or observability responsibility within the corridor. Roles marked <code>required: true</code> must be bound before the engine accepts any action submissions.</p>
+<hr>
+<h2 id="role-enum">Role Enum</h2>
+<pre><code class="language-python">from enum import Enum
+
+class HSOCRole(str, Enum):
+    ENGINE     = &quot;engine&quot;
+    PROFILE    = &quot;profile&quot;
+    SIGNATURE  = &quot;signature&quot;
+    DIAGNOSTIC = &quot;diagnostic&quot;
+    MAP        = &quot;map&quot;
+    EXAMPLE    = &quot;example&quot;
+    EXTENSION  = &quot;extension&quot;
+    INDEX      = &quot;index&quot;
+    REFERENCE  = &quot;reference&quot;
+    TEMPLATE   = &quot;template&quot;
+</code></pre>
+<hr>
+<h2 id="engine"><code>engine</code></h2>
+<p><strong>Required</strong> · Bindings: <code>corridor_enforcer</code>, <code>action_gate</code>, <code>constraint_surface</code></p>
+<p>Core execution substrate. Enforces corridor constraints at every action emission point — acts as the final gate before any consequential action reaches an external system. All seven operators are dispatched through the engine.</p>
+<pre><code class="language-python">from hsoc.roles import EngineRole
+
+engine_role = EngineRole(
+    corridor_enforcer=CorridorEnforcer(max_gate_latency_ms=50),
+    action_gate=ActionGate(constraint_surface=ConvexPolytope.from_module(module)),
+    constraint_surface=SignedHalfspaceIntersection.from_module(module),
+)
+</code></pre>
+<pre><code class="language-json">{
+  &quot;role&quot;: &quot;engine&quot;,
+  &quot;bindings&quot;: {
+    &quot;corridor_enforcer&quot;: {&quot;max_gate_latency_ms&quot;: 50, &quot;zero_tolerance_on_timeout&quot;: true},
+    &quot;action_gate&quot;: {&quot;constraint_surface_format&quot;: &quot;convex_polytope&quot;},
+    &quot;constraint_surface&quot;: {&quot;definition_format&quot;: &quot;signed_halfspace_intersection&quot;, &quot;axes&quot;: 4}
+  }
+}
+</code></pre>
+<hr>
+<h2 id="profile"><code>profile</code></h2>
+<p><strong>Required</strong> · Bindings: <code>authority_vector</code>, <code>clearance_matrix</code>, <code>scope_boundary</code></p>
+<p>Operational authority profile. Encodes the agent's permitted scope, authorization level, and domain clearance. The engine consults the profile at every GATE and AUTHORIZE call to determine which corridor segments are accessible.</p>
+<pre><code class="language-python">from hsoc.roles import ProfileRole
+
+profile = ProfileRole(
+    authority_vector=AuthorityVector(
+        authority_id=&quot;algo-trader-agent-007&quot;,
+        clearance_level=2,
+        domains=[&quot;equity&quot;, &quot;fixed_income&quot;],
+    ),
+    clearance_matrix=ClearanceMatrix.from_dict({
+        &quot;equity_trade_submit&quot;: 2,
+        &quot;fund_transfer&quot;:       3,
+        &quot;position_close&quot;:      1,
+    }),
+    scope_boundary=ScopeBoundary(
+        max_trade_notional_usd=50_000_000,
+        permitted_venues=[&quot;NYSE&quot;, &quot;NASDAQ&quot;],
+    ),
+)
+</code></pre>
+<pre><code class="language-json">{
+  &quot;role&quot;: &quot;profile&quot;,
+  &quot;bindings&quot;: {
+    &quot;authority_vector&quot;: {
+      &quot;authority_id&quot;: &quot;algo-trader-agent-007&quot;,
+      &quot;clearance_level&quot;: 2,
+      &quot;domains&quot;: [&quot;equity&quot;, &quot;fixed_income&quot;]
+    },
+    &quot;clearance_matrix&quot;: {
+      &quot;equity_trade_submit&quot;: 2,
+      &quot;fund_transfer&quot;: 3,
+      &quot;position_close&quot;: 1
+    },
+    &quot;scope_boundary&quot;: {
+      &quot;max_trade_notional_usd&quot;: 50000000,
+      &quot;permitted_venues&quot;: [&quot;NYSE&quot;, &quot;NASDAQ&quot;]
+    }
+  }
+}
+</code></pre>
+<hr>
+<h2 id="signature_7"><code>signature</code></h2>
+<p><strong>Required</strong> · Bindings: <code>action_payload_signer</code>, <code>authorization_chain</code>, <code>audit_stamp</code></p>
+<p>Action signature layer. Every consequential action emitted by the agent carries a signed payload referencing the authorizing corridor, complete authorization chain, and timestamp. Unsigned actions trigger a zero-tolerance HALT.</p>
+<pre><code class="language-python">from hsoc.roles import SignatureRole
+
+sig_role = SignatureRole(
+    action_payload_signer=ActionPayloadSigner(
+        algorithm=&quot;Ed25519&quot;,
+        signing_key=load_key(&quot;hsoc-agent-signing-key&quot;),
+    ),
+    authorization_chain=AuthorizationChain(required_depth=2),
+    audit_stamp=AuditStamp(format=&quot;json-ld+sha256&quot;),
+)
+
+signed_action = sig_role.sign(action=my_action, chain=my_chain)
+print(signed_action.signature)  # &quot;ed25519:abc123...&quot;
+</code></pre>
+<pre><code class="language-json">{
+  &quot;role&quot;: &quot;signature&quot;,
+  &quot;bindings&quot;: {
+    &quot;action_payload_signer&quot;: {
+      &quot;algorithm&quot;: &quot;Ed25519&quot;,
+      &quot;signing_key_id&quot;: &quot;hsoc-agent-signing-key-v1&quot;
+    },
+    &quot;authorization_chain&quot;: {&quot;required_depth&quot;: 2},
+    &quot;audit_stamp&quot;: {&quot;format&quot;: &quot;json-ld+sha256&quot;, &quot;timestamp_precision&quot;: &quot;ms&quot;}
+  }
+}
+</code></pre>
+<hr>
+<h2 id="diagnostic"><code>diagnostic</code></h2>
+<p><strong>Required</strong> · Bindings: <code>constraint_monitor</code>, <code>escalation_tracker</code>, <code>corridor_health_probe</code></p>
+<p>Real-time corridor health diagnostics. Monitors constraint surface violations, escalation trigger rates, authorization bottlenecks, and dead-man switch heartbeats. Emits structured events to the cross-cutting layer.</p>
+<pre><code class="language-python">from hsoc.roles import DiagnosticRole
+
+diag = DiagnosticRole(
+    constraint_monitor=ConstraintMonitor(
+        sample_every_n_actions=1,   # every action
+        alert_on_proximity_ratio=0.80,
+    ),
+    escalation_tracker=EscalationTracker(
+        warning_rate_threshold=0.10,
+        critical_rate_threshold=0.25,
+    ),
+    corridor_health_probe=CorridorHealthProbe(
+        dead_man_heartbeat_interval_s=30,
+        grace_period_s=10,
+    ),
+)
+</code></pre>
+<pre><code class="language-json">{
+  &quot;role&quot;: &quot;diagnostic&quot;,
+  &quot;bindings&quot;: {
+    &quot;constraint_monitor&quot;: {
+      &quot;sample_every_n_actions&quot;: 1,
+      &quot;alert_on_proximity_ratio&quot;: 0.80
+    },
+    &quot;escalation_tracker&quot;: {
+      &quot;warning_rate_threshold&quot;: 0.10,
+      &quot;critical_rate_threshold&quot;: 0.25,
+      &quot;current_rate&quot;: 0.04
+    },
+    &quot;corridor_health_probe&quot;: {
+      &quot;dead_man_heartbeat_interval_s&quot;: 30,
+      &quot;grace_period_s&quot;: 10,
+      &quot;last_heartbeat&quot;: &quot;2026-09-23T20:49:45-04:00&quot;,
+      &quot;status&quot;: &quot;healthy&quot;
+    }
+  }
+}
+</code></pre>
+<hr>
+<h2 id="map"><code>map</code></h2>
+<p><strong>Required</strong> · Bindings: <code>corridor_graph</code>, <code>constraint_surface_map</code>, <code>escalation_topology</code></p>
+<p>Topological map of the permitted operational corridors. Nodes are authorized action clusters; edges are transition conditions; boundaries are hard constraint surfaces. The engine traverses the map to determine which actions belong to the current corridor.</p>
+<pre><code class="language-python">from hsoc.roles import MapRole
+
+corridor_map = MapRole(
+    corridor_graph=CorridorGraph.from_adjacency({
+        &quot;NOMINAL&quot;:    [&quot;ELEVATED&quot;, &quot;LOCKDOWN&quot;],
+        &quot;ELEVATED&quot;:   [&quot;NOMINAL&quot;, &quot;CRITICAL&quot;, &quot;LOCKDOWN&quot;],
+        &quot;CRITICAL&quot;:   [&quot;ELEVATED&quot;, &quot;LOCKDOWN&quot;, &quot;AUDIT_ONLY&quot;],
+        &quot;LOCKDOWN&quot;:   [],                    # terminal — requires RELEASE
+        &quot;AUDIT_ONLY&quot;: [&quot;NOMINAL&quot;],           # requires external auth
+    }),
+    constraint_surface_map=ConstraintSurfaceMap.from_module(module),
+    escalation_topology=EscalationTopology.from_ladder(module[&quot;escalation_ladder&quot;]),
+)
+</code></pre>
+<pre><code class="language-json">{
+  &quot;role&quot;: &quot;map&quot;,
+  &quot;bindings&quot;: {
+    &quot;corridor_graph&quot;: {
+      &quot;nodes&quot;: [&quot;NOMINAL&quot;, &quot;ELEVATED&quot;, &quot;CRITICAL&quot;, &quot;LOCKDOWN&quot;, &quot;AUDIT_ONLY&quot;],
+      &quot;edges&quot;: [
+        {&quot;from&quot;: &quot;NOMINAL&quot;,   &quot;to&quot;: &quot;ELEVATED&quot;,   &quot;trigger&quot;: &quot;severity_elevation&quot;},
+        {&quot;from&quot;: &quot;ELEVATED&quot;,  &quot;to&quot;: &quot;CRITICAL&quot;,   &quot;trigger&quot;: &quot;severity_elevation&quot;},
+        {&quot;from&quot;: &quot;CRITICAL&quot;,  &quot;to&quot;: &quot;LOCKDOWN&quot;,   &quot;trigger&quot;: &quot;zero_tolerance_violation&quot;},
+        {&quot;from&quot;: &quot;LOCKDOWN&quot;,  &quot;to&quot;: &quot;NOMINAL&quot;,    &quot;trigger&quot;: &quot;RELEASE&quot;, &quot;requires_external_auth&quot;: true}
+      ]
+    },
+    &quot;constraint_surface_map&quot;: &quot;signed_halfspace_intersection × 4 axes&quot;,
+    &quot;escalation_topology&quot;: {
+      &quot;levels&quot;: [1, 2, 3, 99],
+      &quot;current_active_escalations&quot;: 0
+    }
+  }
+}
+</code></pre>
+<hr>
+<h2 id="example_7"><code>example</code></h2>
+<p><strong>Optional</strong> · Bindings: <code>scenario_library</code>, <code>incident_archive</code>, <code>outcome_registry</code></p>
+<p>Canonical worked examples. See <a href="./EXAMPLES.html"><code>EXAMPLES.md</code></a> for full trace payloads.</p>
+<pre><code class="language-json">{
+  &quot;role&quot;: &quot;example&quot;,
+  &quot;bindings&quot;: {
+    &quot;scenario_library&quot;: [&quot;EX-HSOC-001&quot;, &quot;EX-HSOC-002&quot;, &quot;EX-HSOC-003&quot;],
+    &quot;incident_archive&quot;: &quot;./examples/incidents/&quot;,
+    &quot;outcome_registry&quot;: &quot;./examples/outcomes.json&quot;
+  }
+}
+</code></pre>
+<hr>
+<h2 id="extension"><code>extension</code></h2>
+<p><strong>Optional</strong> · Bindings: <code>constraint_engine_registry</code>, <code>auth_provider_manifest</code>, <code>escalation_handler_registry</code></p>
+<p>Extension points for domain-specific constraint engines, external authorization providers, and custom escalation handlers.</p>
+<pre><code class="language-python">from hsoc.roles import ExtensionRole
+from hsoc.extensions import (
+    PagerDutyEscalationHandler,
+    HSMAuthorizationProvider,
+    RegulatoryConstraintEngine,
+)
+
+ext = ExtensionRole()
+ext.register(&quot;IEscalationHandler&quot;, PagerDutyEscalationHandler(api_key=PAGERDUTY_KEY))
+ext.register(&quot;IAuthorizationProvider&quot;, HSMAuthorizationProvider(hsm_endpoint=HSM_URL))
+ext.register(&quot;IConstraintEngine&quot;, RegulatoryConstraintEngine(ruleset=&quot;MiFID-II&quot;))
+</code></pre>
+<pre><code class="language-json">{
+  &quot;role&quot;: &quot;extension&quot;,
+  &quot;bindings&quot;: {
+    &quot;constraint_engine_registry&quot;: {
+      &quot;IConstraintEngine&quot;: &quot;RegulatoryConstraintEngine&quot;,
+      &quot;ruleset&quot;: &quot;MiFID-II&quot;
+    },
+    &quot;auth_provider_manifest&quot;: {
+      &quot;IAuthorizationProvider&quot;: &quot;HSMAuthorizationProvider&quot;,
+      &quot;hsm_endpoint&quot;: &quot;https://hsm.internal/v1&quot;
+    },
+    &quot;escalation_handler_registry&quot;: {
+      &quot;IEscalationHandler&quot;: &quot;PagerDutyEscalationHandler&quot;
+    }
+  }
+}
+</code></pre>
+<hr>
+<h2 id="index"><code>index</code></h2>
+<p><strong>Required</strong> · Bindings: <code>artifact_index</code>, <code>authorization_log</code>, <code>incident_ledger</code></p>
+<p>Searchable index over all corridor artifacts. Supports queries by action ID, gate decision ID, escalation ID, regime, and time range.</p>
+<pre><code class="language-json">{
+  &quot;role&quot;: &quot;index&quot;,
+  &quot;bindings&quot;: {
+    &quot;artifact_index&quot;: {&quot;total_artifacts&quot;: 187, &quot;last_indexed_action_id&quot;: &quot;act-2026-09-23-187&quot;},
+    &quot;authorization_log&quot;: [
+      {&quot;action_id&quot;: &quot;act-001&quot;, &quot;regime&quot;: &quot;NOMINAL&quot;,   &quot;chain_depth&quot;: 1, &quot;outcome&quot;: &quot;passed&quot;},
+      {&quot;action_id&quot;: &quot;act-042&quot;, &quot;regime&quot;: &quot;ELEVATED&quot;,  &quot;chain_depth&quot;: 2, &quot;outcome&quot;: &quot;passed&quot;},
+      {&quot;action_id&quot;: &quot;act-103&quot;, &quot;regime&quot;: &quot;CRITICAL&quot;,  &quot;chain_depth&quot;: 3, &quot;outcome&quot;: &quot;escalated&quot;},
+      {&quot;action_id&quot;: &quot;act-187&quot;, &quot;regime&quot;: &quot;ELEVATED&quot;,  &quot;chain_depth&quot;: 2, &quot;outcome&quot;: &quot;passed&quot;}
+    ],
+    &quot;incident_ledger&quot;: {
+      &quot;zero_tolerance_violations&quot;: 0,
+      &quot;halt_events&quot;: 1,
+      &quot;escalations_total&quot;: 3,
+      &quot;escalations_resolved&quot;: 3
+    }
+  }
+}
+</code></pre>
+<hr>
+<h2 id="reference"><code>reference</code></h2>
+<p><strong>Optional</strong> · Bindings: <code>rtt_spec_link</code>, <code>constraint_algebra_doc</code>, <code>authorization_grammar_doc</code></p>
+<p>Normative reference material pointers used by tooling and documentation generators.</p>
+<pre><code class="language-json">{
+  &quot;role&quot;: &quot;reference&quot;,
+  &quot;bindings&quot;: {
+    &quot;rtt_spec_link&quot;: &quot;REF-RTT-SPEC&quot;,
+    &quot;constraint_algebra_doc&quot;: &quot;REF-CONSTRAINT-ALGEBRA&quot;,
+    &quot;authorization_grammar_doc&quot;: &quot;REF-AUTHORIZATION-GRAMMAR&quot;
+  }
+}
+</code></pre>
+<hr>
+<h2 id="template"><code>template</code></h2>
+<p><strong>Optional</strong> · Bindings: <code>corridor_template</code>, <code>constraint_surface_template</code>, <code>escalation_ladder_template</code></p>
+<p>Reusable scaffold templates for new corridor configurations.</p>
+<pre><code class="language-json">{
+  &quot;role&quot;: &quot;template&quot;,
+  &quot;bindings&quot;: {
+    &quot;corridor_template&quot;: {
+      &quot;regime&quot;: null,
+      &quot;max_action_severity&quot;: null,
+      &quot;min_reversibility_index&quot;: null,
+      &quot;authorization_required&quot;: null,
+      &quot;escalation_threshold&quot;: null
+    },
+    &quot;constraint_surface_template&quot;: {
+      &quot;axes&quot;: [&quot;action_severity&quot;, &quot;authorization_depth&quot;, &quot;consequence_radius&quot;, &quot;reversibility_index&quot;],
+      &quot;bounds&quot;: {
+        &quot;action_severity&quot;:     {&quot;min&quot;: 0.0, &quot;max&quot;: null},
+        &quot;authorization_depth&quot;: {&quot;min&quot;: 1,   &quot;max&quot;: null},
+        &quot;consequence_radius&quot;:  {&quot;min&quot;: 0.0, &quot;max&quot;: 1.0},
+        &quot;reversibility_index&quot;: {&quot;min&quot;: null, &quot;max&quot;: 1.0}
+      }
+    },
+    &quot;escalation_ladder_template&quot;: {
+      &quot;levels&quot;: [
+        {&quot;level&quot;: 1, &quot;target&quot;: null, &quot;sla_seconds&quot;: null, &quot;sla_breach_action&quot;: null}
+      ]
+    }
+  }
+}
+</code></pre>
+<p># VALIDATORS — High_Stakes_Operational_Corridors</p>
+<blockquote>
+<p>Validator Stubs with Python Skeletons · Module <code>hsoc-rtt-001</code></p>
+</blockquote>
+<p>Each validator is a standalone callable with a fully typed interface. Zero-tolerance validators must never raise an unhandled exception — they must always return a structured result, even on internal error, so the corridor engine can make a safe default decision (block).</p>
+<hr>
+<h2 id="validator-registry">Validator Registry</h2>
+<table>
+<thead>
+<tr>
+<th>Validator</th>
+<th>Layer</th>
+<th>Required</th>
+<th>Zero-Tolerance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>action_gate_validator</code></td>
+<td>dimensional</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>authorization_chain_validator</code></td>
+<td>coherence (CA-01)</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>regime_transition_validator</code></td>
+<td>regime</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>drift_boundary_validator</code></td>
+<td>drift</td>
+<td>✅</td>
+<td>✅ (on violations)</td>
+</tr>
+<tr>
+<td><code>coherence_anchor_validator</code></td>
+<td>coherence</td>
+<td>✅</td>
+<td>✅ (CA-01, CA-02, CA-04)</td>
+</tr>
+<tr>
+<td><code>audit_record_validator</code></td>
+<td>cross-cutting</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="action_gate_validator"><code>action_gate_validator</code></h2>
+<p>Primary corridor gate. Validates that a proposed action is within the active corridor's constraint surface on all four dimensional axes. Must complete within <code>max_gate_latency_ms</code> (50ms). Returns <code>permitted: false</code> on timeout.</p>
+<pre><code class="language-python">from dataclasses import dataclass, field
+from hsoc.types import Action, Regime
+
+@dataclass
+class GateResult:
+    permitted: bool
+    blocking_constraints: list[str]
+    required_authorization_level: int
+    gate_decision_id: str
+    latency_ms: float
+    timed_out: bool = False
+
+
+def action_gate_validator(
+    action: Action,
+    active_regime: Regime,
+) -&gt; GateResult:
+    &quot;&quot;&quot;
+    Validates a proposed action against the active regime's constraint surface.
+
+    Args:
+        action: The proposed Action with severity, reversibility,
+                consequence_radius, and authorization_chain fields.
+        active_regime: One of NOMINAL, ELEVATED, CRITICAL, LOCKDOWN, AUDIT_ONLY.
+
+    Returns:
+        GateResult. If permitted=False, blocking_constraints lists the violations.
+        gate_decision_id is generated regardless of outcome and must be passed to AUDIT.
+
+    Zero-tolerance: always returns a result — never raises.
+    &quot;&quot;&quot;
+    # TODO: implement action_gate_validator
+    # 1. Load REGIME_DIMENSIONAL_BOUNDS[active_regime]
+    # 2. Check action.severity &lt;= bounds[&quot;max_action_severity&quot;]
+    # 3. Check action.reversibility &gt;= bounds[&quot;min_reversibility_index&quot;]
+    # 4. Check action.consequence_radius within [0.0, 1.0]
+    # 5. Set required_authorization_level = bounds[&quot;authorization_required&quot;]
+    # 6. Generate gate_decision_id = f&quot;gd-{MODULE_ID}-{timestamp}-{seq}&quot;
+    # 7. Collect blocking_constraints; set permitted = len(blocking_constraints) == 0
+    raise NotImplementedError(&quot;action_gate_validator not yet implemented&quot;)
+</code></pre>
+<h3 id="example-input">Example Input</h3>
+<pre><code class="language-json">{
+  &quot;action&quot;: {
+    &quot;action_id&quot;: &quot;act-2026-09-23-042&quot;,
+    &quot;action_type&quot;: &quot;equity_trade_submit&quot;,
+    &quot;severity&quot;: 0.48,
+    &quot;reversibility&quot;: 0.52,
+    &quot;consequence_radius&quot;: 0.20,
+    &quot;authorization_chain&quot;: []
+  },
+  &quot;active_regime&quot;: &quot;ELEVATED&quot;
+}
+</code></pre>
+<h3 id="example-output-permitted">Example Output — permitted</h3>
+<pre><code class="language-json">{
+  &quot;permitted&quot;: true,
+  &quot;blocking_constraints&quot;: [],
+  &quot;required_authorization_level&quot;: 2,
+  &quot;gate_decision_id&quot;: &quot;gd-hsoc-001-20260923-042&quot;,
+  &quot;latency_ms&quot;: 11.4,
+  &quot;timed_out&quot;: false
+}
+</code></pre>
+<h3 id="example-output-blocked">Example Output — blocked</h3>
+<pre><code class="language-json">{
+  &quot;permitted&quot;: false,
+  &quot;blocking_constraints&quot;: [
+    &quot;action_severity 0.82 exceeds CRITICAL maximum 0.80&quot;,
+    &quot;reversibility_index 0.22 &lt; CRITICAL minimum 0.30&quot;
+  ],
+  &quot;required_authorization_level&quot;: 3,
+  &quot;gate_decision_id&quot;: &quot;gd-hsoc-001-20260923-103&quot;,
+  &quot;latency_ms&quot;: 8.1,
+  &quot;timed_out&quot;: false
+}
+</code></pre>
+<hr>
+<h2 id="authorization_chain_validator"><code>authorization_chain_validator</code></h2>
+<p>Validates completeness and cryptographic integrity of an action's authorization chain against the active regime's required depth. A chain with fewer links than required, or any invalid signature, is a zero-tolerance CA-01 failure.</p>
+<pre><code class="language-python">from dataclasses import dataclass, field
+
+@dataclass
+class AuthLink:
+    authority_id: str
+    clearance_level: int
+    signature: str
+
+@dataclass
+class AuthChainResult:
+    chain_valid: bool
+    chain_depth: int
+    missing_links: list[str]        # which required levels are absent
+    signature_failures: list[str]   # which authority_ids have invalid sigs
+    zero_tolerance_failure: bool    # True if chain_valid is False
+
+
+def authorization_chain_validator(
+    authorization_chain: list[AuthLink],
+    required_depth: int,
+    active_regime: str,
+) -&gt; AuthChainResult:
+    &quot;&quot;&quot;
+    Validates an authorization chain for completeness and signature integrity.
+
+    Args:
+        authorization_chain: Ordered list of AuthLinks from initiating to executing authority.
+        required_depth: Minimum chain length for the active regime.
+        active_regime: Used for contextual logging and escalation routing.
+
+    Returns:
+        AuthChainResult. chain_valid=False is a zero-tolerance CA-01 failure.
+
+    Zero-tolerance: always returns a result — never raises.
+    &quot;&quot;&quot;
+    # TODO: implement authorization_chain_validator
+    # 1. Check len(authorization_chain) &gt;= required_depth → missing_links if short
+    # 2. For each link, verify signature against authority_id's registered public key
+    # 3. Check clearance_level ordering is non-decreasing
+    # 4. Set chain_valid = not missing_links and not signature_failures
+    # 5. Set zero_tolerance_failure = not chain_valid
+    raise NotImplementedError(&quot;authorization_chain_validator not yet implemented&quot;)
+</code></pre>
+<h3 id="example-input_1">Example Input</h3>
+<pre><code class="language-json">{
+  &quot;authorization_chain&quot;: [
+    {&quot;authority_id&quot;: &quot;portfolio-manager-01&quot;, &quot;clearance_level&quot;: 2, &quot;signature&quot;: &quot;sig-a&quot;},
+    {&quot;authority_id&quot;: &quot;risk-desk-supervisor&quot;, &quot;clearance_level&quot;: 3, &quot;signature&quot;: &quot;sig-b&quot;}
+  ],
+  &quot;required_depth&quot;: 2,
+  &quot;active_regime&quot;: &quot;ELEVATED&quot;
+}
+</code></pre>
+<h3 id="example-output-valid">Example Output — valid</h3>
+<pre><code class="language-json">{
+  &quot;chain_valid&quot;: true,
+  &quot;chain_depth&quot;: 2,
+  &quot;missing_links&quot;: [],
+  &quot;signature_failures&quot;: [],
+  &quot;zero_tolerance_failure&quot;: false
+}
+</code></pre>
+<h3 id="example-output-invalid-missing-depth">Example Output — invalid (missing depth)</h3>
+<pre><code class="language-json">{
+  &quot;chain_valid&quot;: false,
+  &quot;chain_depth&quot;: 1,
+  &quot;missing_links&quot;: [&quot;clearance_level_3_required&quot;],
+  &quot;signature_failures&quot;: [],
+  &quot;zero_tolerance_failure&quot;: true
+}
+</code></pre>
+<hr>
+<h2 id="regime_transition_validator"><code>regime_transition_validator</code></h2>
+<p>Validates that a proposed regime transition is permitted by the corridor's transition table and that all pre-conditions (authorization, severity trigger, coherence score) are satisfied.</p>
+<pre><code class="language-python">from dataclasses import dataclass, field
+
+@dataclass
+class RegimeTransitionResult:
+    transition_permitted: bool
+    requires_external_auth: bool
+    blocking_reasons: list[str] = field(default_factory=list)
+
+
+def regime_transition_validator(
+    from_regime: str,
+    to_regime: str,
+    trigger_event: dict,
+    authorizing_entity: str | None,
+) -&gt; RegimeTransitionResult:
+    &quot;&quot;&quot;
+    Validates a proposed regime transition.
+
+    Args:
+        from_regime: Current regime ID.
+        to_regime: Proposed target regime ID.
+        trigger_event: Dict describing the event triggering the transition
+                       (e.g., {&quot;type&quot;: &quot;severity_threshold&quot;, &quot;value&quot;: 0.27}).
+        authorizing_entity: Authority ID for de-escalation transitions, or None
+                            for auto-elevation transitions.
+
+    Returns:
+        RegimeTransitionResult.
+    &quot;&quot;&quot;
+    # TODO: implement regime_transition_validator
+    # 1. Look up (from_regime, to_regime) in PERMITTED_TRANSITIONS
+    # 2. Determine if transition is elevation (auto-permitted) or de-escalation (needs auth)
+    # 3. For de-escalations: verify authorizing_entity is not None and has sufficient clearance
+    # 4. Validate trigger_event matches the expected trigger type for this edge
+    # 5. Collect blocking_reasons; set transition_permitted = len(blocking_reasons) == 0
+    raise NotImplementedError(&quot;regime_transition_validator not yet implemented&quot;)
+</code></pre>
+<h3 id="example-input-auto-elevation">Example Input — auto elevation</h3>
+<pre><code class="language-json">{
+  &quot;from_regime&quot;: &quot;NOMINAL&quot;,
+  &quot;to_regime&quot;: &quot;ELEVATED&quot;,
+  &quot;trigger_event&quot;: {&quot;type&quot;: &quot;severity_threshold&quot;, &quot;value&quot;: 0.27, &quot;threshold&quot;: 0.25},
+  &quot;authorizing_entity&quot;: null
+}
+</code></pre>
+<h3 id="example-output-permitted_1">Example Output — permitted</h3>
+<pre><code class="language-json">{
+  &quot;transition_permitted&quot;: true,
+  &quot;requires_external_auth&quot;: false,
+  &quot;blocking_reasons&quot;: []
+}
+</code></pre>
+<h3 id="example-output-blocked-de-escalation-without-auth">Example Output — blocked (de-escalation without auth)</h3>
+<pre><code class="language-json">{
+  &quot;transition_permitted&quot;: false,
+  &quot;requires_external_auth&quot;: true,
+  &quot;blocking_reasons&quot;: [
+    &quot;de-escalation from CRITICAL to ELEVATED requires external authorization&quot;,
+    &quot;authorizing_entity is null&quot;
+  ]
+}
+</code></pre>
+<hr>
+<h2 id="drift_boundary_validator"><code>drift_boundary_validator</code></h2>
+<p>Checks whether the agent's recent action distribution is drifting toward corridor boundary edges and whether any zero-tolerance violations are present in the action history window.</p>
+<pre><code class="language-python">from dataclasses import dataclass, field
+from typing import Literal
+
+@dataclass
+class DriftBoundaryResult:
+    drift_status: Literal[&quot;ok&quot;, &quot;warning&quot;, &quot;critical&quot;, &quot;halt&quot;]
+    zero_tolerance_violations: list[str]
+    proximity_ratios: dict[str, float]   # metric → ratio of current/max
+    recommended_action: str | None
+
+
+def drift_boundary_validator(
+    action_history_window: list[dict],
+    active_regime: str,
+) -&gt; DriftBoundaryResult:
+    &quot;&quot;&quot;
+    Evaluates corridor boundary drift across the recent action window.
+
+    Args:
+        action_history_window: List of recent action dicts, each containing
+                               severity, reversibility, consequence_radius, and flags.
+        active_regime: Current regime ID.
+
+    Returns:
+        DriftBoundaryResult. zero_tolerance_violations triggers immediate HALT.
+
+    Zero-tolerance: always returns a result — never raises.
+    &quot;&quot;&quot;
+    # TODO: implement drift_boundary_validator
+    # 1. Scan action_history_window for ZERO_TOLERANCE_VIOLATIONS flags
+    # 2. Compute severity_trend_slope over the window
+    # 3. Compute boundary_proximity_ratio = max(val/bound) across all axes
+    # 4. Compute escalation_frequency and gate_rejection_rate from window flags
+    # 5. Map worst ratio to alert threshold tiers
+    # 6. Set recommended_action based on drift_status
+    raise NotImplementedError(&quot;drift_boundary_validator not yet implemented&quot;)
+</code></pre>
+<h3 id="example-input_2">Example Input</h3>
+<pre><code class="language-json">{
+  &quot;action_history_window&quot;: [
+    {&quot;action_id&quot;: &quot;act-035&quot;, &quot;severity&quot;: 0.30, &quot;reversibility&quot;: 0.65, &quot;escalated&quot;: false, &quot;gate_rejected&quot;: false},
+    {&quot;action_id&quot;: &quot;act-036&quot;, &quot;severity&quot;: 0.38, &quot;reversibility&quot;: 0.58, &quot;escalated&quot;: false, &quot;gate_rejected&quot;: false},
+    {&quot;action_id&quot;: &quot;act-037&quot;, &quot;severity&quot;: 0.44, &quot;reversibility&quot;: 0.52, &quot;escalated&quot;: true,  &quot;gate_rejected&quot;: false},
+    {&quot;action_id&quot;: &quot;act-038&quot;, &quot;severity&quot;: 0.50, &quot;reversibility&quot;: 0.51, &quot;escalated&quot;: false, &quot;gate_rejected&quot;: false}
+  ],
+  &quot;active_regime&quot;: &quot;ELEVATED&quot;
+}
+</code></pre>
+<h3 id="example-output-warning">Example Output — warning</h3>
+<pre><code class="language-json">{
+  &quot;drift_status&quot;: &quot;warning&quot;,
+  &quot;zero_tolerance_violations&quot;: [],
+  &quot;proximity_ratios&quot;: {
+    &quot;severity_trend_slope&quot;:      0.73,
+    &quot;boundary_proximity_ratio&quot;:  0.91,
+    &quot;escalation_frequency&quot;:      0.25,
+    &quot;gate_rejection_rate&quot;:       0.00
+  },
+  &quot;recommended_action&quot;: &quot;regime_elevation_to_CRITICAL&quot;
+}
+</code></pre>
+<hr>
+<h2 id="coherence_anchor_validator"><code>coherence_anchor_validator</code></h2>
+<p>Evaluates all six coherence anchors for a given action and corridor state. Zero-tolerance failures (CA-01, CA-02, CA-04) immediately trigger HALT via the engine. Non-zero-tolerance failures (CA-03, CA-05, CA-06) escalate to level 1.</p>
+<pre><code class="language-python">from dataclasses import dataclass, field
+
+@dataclass
+class CorridorCoherenceResult:
+    anchors_passed: list[str]
+    anchors_failed: list[str]
+    zero_tolerance_failures: list[str]
+    corridor_coherence_score: float     # [0.0, 1.0]
+    action_permitted: bool
+
+
+def coherence_anchor_validator(
+    corridor_state_snapshot: dict,
+    action_under_evaluation: dict,
+) -&gt; CorridorCoherenceResult:
+    &quot;&quot;&quot;
+    Evaluates all six coherence anchors (CA-01..CA-06) for the given action.
+
+    Args:
+        corridor_state_snapshot: Full snapshot of current corridor state including
+                                 regime, active_escalations, and audit_trail.
+        action_under_evaluation: The action dict with all fields populated
+                                 (including authorization_chain and audit_record_id).
+
+    Returns:
+        CorridorCoherenceResult. Any zero_tolerance_failures must trigger HALT.
+
+    Zero-tolerance: always returns a result — never raises.
+    &quot;&quot;&quot;
+    # TODO: implement coherence_anchor_validator
+    # CA-01: chain depth &gt;= required AND all sigs valid → zero_tolerance
+    # CA-02: severity &lt;= max AND reversibility &gt;= min → zero_tolerance
+    # CA-03: no unresolved escalations for this action → escalate on failure
+    # CA-04: audit_record_id is not None → zero_tolerance
+    # CA-05: action venues ⊆ permitted_venues AND notional ≤ max → escalate on failure
+    # CA-06: regime transition (if any) is properly authorized → escalate on failure
+    # Compute coherence_score as weighted pass ratio (zero-tolerance anchors weighted 2x)
+    raise NotImplementedError(&quot;coherence_anchor_validator not yet implemented&quot;)
+</code></pre>
+<h3 id="example-input_3">Example Input</h3>
+<pre><code class="language-json">{
+  &quot;corridor_state_snapshot&quot;: {
+    &quot;regime&quot;: &quot;ELEVATED&quot;,
+    &quot;active_escalations&quot;: [],
+    &quot;last_regime_transition&quot;: {&quot;from&quot;: &quot;NOMINAL&quot;, &quot;to&quot;: &quot;ELEVATED&quot;, &quot;authorized&quot;: true},
+    &quot;audit_trail_count&quot;: 41
+  },
+  &quot;action_under_evaluation&quot;: {
+    &quot;action_id&quot;: &quot;act-2026-09-23-042&quot;,
+    &quot;action_type&quot;: &quot;equity_trade_submit&quot;,
+    &quot;severity&quot;: 0.48,
+    &quot;reversibility&quot;: 0.52,
+    &quot;authorization_chain&quot;: [
+      {&quot;authority_id&quot;: &quot;portfolio-manager-01&quot;, &quot;clearance_level&quot;: 2, &quot;signature_valid&quot;: true},
+      {&quot;authority_id&quot;: &quot;risk-desk-supervisor&quot;, &quot;clearance_level&quot;: 3, &quot;signature_valid&quot;: true}
+    ],
+    &quot;audit_record_id&quot;: &quot;audit-hsoc-001-20260923-042&quot;,
+    &quot;target_venues&quot;: [&quot;NYSE&quot;],
+    &quot;notional_usd&quot;: 12000000
+  }
+}
+</code></pre>
+<h3 id="example-output-all-pass">Example Output — all pass</h3>
+<pre><code class="language-json">{
+  &quot;anchors_passed&quot;: [&quot;CA-01&quot;, &quot;CA-02&quot;, &quot;CA-03&quot;, &quot;CA-04&quot;, &quot;CA-05&quot;, &quot;CA-06&quot;],
+  &quot;anchors_failed&quot;: [],
+  &quot;zero_tolerance_failures&quot;: [],
+  &quot;corridor_coherence_score&quot;: 1.00,
+  &quot;action_permitted&quot;: true
+}
+</code></pre>
+<h3 id="example-output-ca-02-zero-tolerance-failure">Example Output — CA-02 zero-tolerance failure</h3>
+<pre><code class="language-json">{
+  &quot;anchors_passed&quot;: [&quot;CA-01&quot;, &quot;CA-03&quot;, &quot;CA-04&quot;, &quot;CA-05&quot;, &quot;CA-06&quot;],
+  &quot;anchors_failed&quot;: [&quot;CA-02&quot;],
+  &quot;zero_tolerance_failures&quot;: [&quot;CA-02: constraint_surface_breach — severity 0.82 &gt; CRITICAL max 0.80&quot;],
+  &quot;corridor_coherence_score&quot;: 0.58,
+  &quot;action_permitted&quot;: false
+}
+</code></pre>
+<hr>
+<h2 id="audit_record_validator"><code>audit_record_validator</code></h2>
+<p>Verifies that an emitted audit record is structurally complete, correctly signed, and references a valid <code>gate_decision_id</code>. An invalid audit record is a zero-tolerance CA-04 failure.</p>
+<pre><code class="language-python">from dataclasses import dataclass, field
+
+@dataclass
+class AuditRecordResult:
+    record_valid: bool
+    missing_fields: list[str]
+    signature_valid: bool
+    gate_decision_id_match: bool
+    zero_tolerance_failure: bool
+
+
+def audit_record_validator(
+    audit_record: dict,
+    expected_gate_decision_id: str,
+    module_signing_key_id: str,
+) -&gt; AuditRecordResult:
+    &quot;&quot;&quot;
+    Validates a completed audit record before it is written to the audit store.
+
+    Args:
+        audit_record: The audit record dict emitted by the AUDIT operator.
+        expected_gate_decision_id: The gate_decision_id from the corresponding GATE call.
+        module_signing_key_id: Key ID used to verify the record's signature.
+
+    Returns:
+        AuditRecordResult. record_valid=False is a zero-tolerance CA-04 failure.
+
+    Zero-tolerance: always returns a result — never raises.
+    &quot;&quot;&quot;
+    # TODO: implement audit_record_validator
+    # 1. Check all required fields: audit_id, action_id, gate_decision_id,
+    #    corridor_state_at_audit, signed_by, signature, timestamp
+    # 2. Verify audit_record[&quot;gate_decision_id&quot;] == expected_gate_decision_id
+    # 3. Recompute and verify Ed25519 signature over canonical audit_record bytes
+    # 4. Set record_valid = not missing_fields and signature_valid and gate_decision_id_match
+    raise NotImplementedError(&quot;audit_record_validator not yet implemented&quot;)
+</code></pre>
+<h3 id="example-input_4">Example Input</h3>
+<pre><code class="language-json">{
+  &quot;audit_record&quot;: {
+    &quot;audit_id&quot;: &quot;audit-hsoc-001-20260923-042&quot;,
+    &quot;action_id&quot;: &quot;act-2026-09-23-042&quot;,
+    &quot;gate_decision_id&quot;: &quot;gd-hsoc-001-20260923-042&quot;,
+    &quot;corridor_state_at_audit&quot;: {
+      &quot;regime&quot;: &quot;ELEVATED&quot;,
+      &quot;action_severity&quot;: 0.48,
+      &quot;reversibility_index&quot;: 0.52,
+      &quot;authorization_chain_depth&quot;: 2
+    },
+    &quot;signed_by&quot;: &quot;hsoc-rtt-001&quot;,
+    &quot;signature&quot;: &quot;ed25519:f7c3bc1d808e04732adf679965ccc34ca7ae3441&quot;,
+    &quot;timestamp&quot;: &quot;2026-09-23T20:50:00-04:00&quot;
+  },
+  &quot;expected_gate_decision_id&quot;: &quot;gd-hsoc-001-20260923-042&quot;,
+  &quot;module_signing_key_id&quot;: &quot;hsoc-agent-signing-key-v1&quot;
+}
+</code></pre>
+<h3 id="example-output-valid_1">Example Output — valid</h3>
+<pre><code class="language-json">{
+  &quot;record_valid&quot;: true,
+  &quot;missing_fields&quot;: [],
+  &quot;signature_valid&quot;: true,
+  &quot;gate_decision_id_match&quot;: true,
+  &quot;zero_tolerance_failure&quot;: false
+}
+</code></pre>
+<h3 id="example-output-invalid-missing-field-sig-mismatch">Example Output — invalid (missing field + sig mismatch)</h3>
+<pre><code class="language-json">{
+  &quot;record_valid&quot;: false,
+  &quot;missing_fields&quot;: [&quot;corridor_state_at_audit&quot;],
+  &quot;signature_valid&quot;: false,
+  &quot;gate_decision_id_match&quot;: true,
+  &quot;zero_tolerance_failure&quot;: true
+}
+</code></pre>
+<hr>
+<h2 id="full-validation-pipeline">Full Validation Pipeline</h2>
+<pre><code class="language-python">from hsoc.validators import (
+    action_gate_validator,
+    authorization_chain_validator,
+    regime_transition_validator,
+    drift_boundary_validator,
+    coherence_anchor_validator,
+    audit_record_validator,
+)
+
+def execute_action_safely(engine, action):
+    &quot;&quot;&quot;Full corridor-gated action execution pipeline.&quot;&quot;&quot;
+
+    # 1. Drift check
+    drift = drift_boundary_validator(
+        action_history_window=engine.recent_actions(n=10),
+        active_regime=engine.regime,
+    )
+    if drift.zero_tolerance_violations:
+        return engine.dispatch(&quot;HALT&quot;, reason=drift.zero_tolerance_violations[0])
+    if drift.drift_status == &quot;critical&quot;:
+        engine.dispatch(&quot;ESCALATE&quot;, action=action, level=2)
+        return
+
+    # 2. Gate
+    gate = action_gate_validator(action=action, active_regime=engine.regime)
+    if not gate.permitted:
+        engine.dispatch(&quot;ESCALATE&quot;, action=action,
+                        blocking_constraints=gate.blocking_constraints)
+        return
+
+    # 3. Authorization chain
+    auth = authorization_chain_validator(
+        authorization_chain=action.authorization_chain,
+        required_depth=gate.required_authorization_level,
+        active_regime=engine.regime,
+    )
+    if not auth.chain_valid:
+        engine.dispatch(&quot;HALT&quot;, reason=&quot;CA-01:authorization_chain_invalid&quot;)
+        return
+
+    # 4. Coherence anchors
+    coherence = coherence_anchor_validator(
+        corridor_state_snapshot=engine.snapshot(),
+        action_under_evaluation=action.to_dict(),
+    )
+    if coherence.zero_tolerance_failures:
+        engine.dispatch(&quot;HALT&quot;, reason=coherence.zero_tolerance_failures[0])
+        return
+    if not coherence.action_permitted:
+        engine.dispatch(&quot;ESCALATE&quot;, action=action, level=1)
+        return
+
+    # 5. Execute
+    action.execute()
+
+    # 6. Audit
+    audit_rec = engine.dispatch(&quot;AUDIT&quot;, action=action,
+                                gate_decision_id=gate.gate_decision_id,
+                                auth_result=auth)
+    audit_ok = audit_record_validator(
+        audit_record=audit_rec.to_dict(),
+        expected_gate_decision_id=gate.gate_decision_id,
+        module_signing_key_id=&quot;hsoc-agent-signing-key-v1&quot;,
+    )
+    if not audit_ok.record_valid:
+        engine.dispatch(&quot;HALT&quot;, reason=&quot;CA-04:audit_record_invalid&quot;)
+</code></pre>
+<p></p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,3957 @@
+{
+  "corpus_module": {
+    "version": "3.0.0",
+    "id": "corpus-v3",
+    "name": "TriadicFrameworks Corpus",
+    "description": "Standalone module containing compressed README proxies for every named module in the TriadicFrameworks system. Each document is fully self-contained. No direct wiring between entries. Organized into 18 semantic bundle groups.",
+    "state": {
+      "rtt": 1,
+      "coherence": "declared",
+      "drift": "bounded",
+      "paradox": "structural"
+    },
+    "generated_at": "2026-08-31T19:11:00-04:00",
+    "source_repo": "https://github.com/umaywant2/TriadicFrameworks",
+    "source_path": "docs/corpus",
+    "total_documents": 271,
+    "total_bundles": 18,
+    "lineage": {
+      "version": "3.0.0",
+      "previous_version": "2.0.0",
+      "v2_path": "docs/corpus/v2/",
+      "v2_module_ref": "docs/corpus/v2/corpus_module.json",
+      "promoted_at": "2026-08-31T19:11:00-04:00",
+      "source_repo": "https://github.com/umaywant2/TriadicFrameworks",
+      "source_path": "docs/corpus",
+      "architecture": "standalone-compressed-readme",
+      "note": "Each .md is a compressed README proxy for its named module. Corpus is its own standalone module \u2014 no direct wiring between entries. v2 is preserved as frozen lineage reference."
+    },
+    "ai_metadata": {
+      "schema_version": "3.0.0",
+      "embedding_strategy": "per-doc-standalone",
+      "chunk_boundary": "section-heading",
+      "context_window_advisory": "medium",
+      "injection_pattern": "bundle-first",
+      "model_compatibility": [
+        "gpt-4o",
+        "claude-3-5",
+        "gemini-1.5",
+        "llama-3"
+      ],
+      "semantic_tags": [
+        "triadic-framework",
+        "substrate-model",
+        "regime-theory",
+        "resonance",
+        "drift-calibration",
+        "coherence",
+        "structural-detection",
+        "lineage",
+        "rtt",
+        "education",
+        "research",
+        "governance",
+        "projects",
+        "ai-layer"
+      ],
+      "retrieval_hint": "Each document is a self-contained compressed README for its named module. Do not assume cross-document linking. Resolve by bundle group first, then by role.",
+      "standalone_mode": true,
+      "generation_ts": "2026-08-31T19:11:00-04:00"
+    },
+    "roles": [
+      {
+        "id": "anchor",
+        "label": "Corpus Anchor",
+        "description": "Foundational corpus infrastructure \u2014 index, metadata, lineage, and entry-points."
+      },
+      {
+        "id": "substrate",
+        "label": "Substrate Model",
+        "description": "Compressed README for a substrate-class module."
+      },
+      {
+        "id": "analyzer",
+        "label": "Analyzer",
+        "description": "Dedicated analyzer pass for a parent model or engine."
+      },
+      {
+        "id": "theory",
+        "label": "Framework Theory",
+        "description": "Core TFT or scientific theory document."
+      },
+      {
+        "id": "engine",
+        "label": "RTT Engine",
+        "description": "A named analytical or processing engine within the RTT."
+      },
+      {
+        "id": "domain",
+        "label": "RTT Domain Application",
+        "description": "RTT deployed inside a specific real-world domain."
+      },
+      {
+        "id": "education",
+        "label": "Education Module",
+        "description": "Compressed README for an education sub-module or curriculum unit."
+      },
+      {
+        "id": "research",
+        "label": "Research Module",
+        "description": "Research methodology, protocol, or intelligence ladder document."
+      },
+      {
+        "id": "science",
+        "label": "Science Module",
+        "description": "Compressed README for a physical science or instrumentation module."
+      },
+      {
+        "id": "theory",
+        "label": "Theory Module",
+        "description": "Compressed README for a canonical scientific or physical theory."
+      },
+      {
+        "id": "ai",
+        "label": "AI / Intelligence Layer",
+        "description": "AI systems, adapters, prompt tooling, or intelligence-layer module."
+      },
+      {
+        "id": "governance",
+        "label": "Governance Module",
+        "description": "Law, policy, social, or governance compressed README."
+      },
+      {
+        "id": "project",
+        "label": "Active Project",
+        "description": "Compressed README for a live project module."
+      },
+      {
+        "id": "resonance",
+        "label": "Resonance / Glyph",
+        "description": "Symbolic, harmonic, or glyphic system compressed README."
+      },
+      {
+        "id": "package",
+        "label": "Package / Distribution",
+        "description": "Distributable package, kit, or pipeline module."
+      },
+      {
+        "id": "data",
+        "label": "Data / Registry",
+        "description": "Data stores, registries, validators, and reference archives."
+      },
+      {
+        "id": "media",
+        "label": "Media / Communications",
+        "description": "Audio, brand, design, and media-layer compressed README."
+      },
+      {
+        "id": "internal",
+        "label": "Internal / Draft",
+        "description": "Internal working document \u2014 not yet promoted to public module status."
+      },
+      {
+        "id": "reference",
+        "label": "Reference",
+        "description": "General reference document."
+      }
+    ],
+    "analyzer_layers": [
+      {
+        "id": "structural",
+        "label": "Structural Detection",
+        "description": "Identifies structural patterns, faultlines, and integration boundaries across framework docs.",
+        "primary_docs": [
+          "Structural_Detection.md",
+          "Framework_Field_Theory_Analyzer.md",
+          "structural-detection-engine.md",
+          "structural-integration-engine.md",
+          "SARG.md",
+          "Governance_Substrate_Model_Analyzer.md"
+        ]
+      },
+      {
+        "id": "resonance",
+        "label": "Resonance Analysis",
+        "description": "Harmonic and resonance profile analysis \u2014 cross-domain frequency alignment and substrate resonance.",
+        "primary_docs": [
+          "resonance_atlas.md",
+          "rtt_Harmonic_Stability_Profile.md",
+          "resonance-substrate-model.md",
+          "glyphic_resonance.md",
+          "unified_resonance.md",
+          "rtt_Morphic_Resonance.md"
+        ]
+      },
+      {
+        "id": "drift",
+        "label": "Drift Calibration",
+        "description": "Measures and bounds semantic, structural, and regime drift across corpus generations.",
+        "primary_docs": [
+          "ai-drift-calibration.md",
+          "Drift_Taxonomy.md",
+          "rtt_Drift_Sentinel.md",
+          "rtt_Inside_Drift.md"
+        ]
+      },
+      {
+        "id": "regime",
+        "label": "Regime Scanning",
+        "description": "Detects regime boundaries, blindness zones, and interlock points across substrate and dimensional docs.",
+        "primary_docs": [
+          "dimensional_substrate_regime_scanning_protocol.md",
+          "regime_blindness_checklist.md",
+          "rtt_Regime_Interlock_Mapper.md",
+          "rtt_Temporal_Regime_Sequencer.md"
+        ]
+      },
+      {
+        "id": "substrate",
+        "label": "Substrate Parsing",
+        "description": "Processes all substrate model compressed READMEs \u2014 parses structure, conditions, and flow.",
+        "primary_docs": [
+          "substrate.md",
+          "arrival_substrate_model.md",
+          "Conditions_Substrate_Model.md",
+          "consciousness_substrate_model.md",
+          "manufacturing_substrate_regime_model.md",
+          "rtt_Substrate_Flow.md"
+        ]
+      },
+      {
+        "id": "coherence",
+        "label": "Coherence Tensor",
+        "description": "Evaluates declared coherence states, paradox resolution, and triadic echo stability.",
+        "primary_docs": [
+          "rtt_Coherence_Tensor_Engine.md",
+          "Paradoxes_canon.md",
+          "rtt_Triadic_Echo_Lattice.md",
+          "rtt_Paradox_Gradient_Analyzer.md"
+        ]
+      },
+      {
+        "id": "lineage",
+        "label": "Lineage & Provenance",
+        "description": "Tracks module ancestry, v2\u2192v3 promotion, and temporal provenance.",
+        "primary_docs": [
+          "LINEAGE.md",
+          "TEL_LINEAGE.md",
+          "pre_RTT_papers.md"
+        ]
+      },
+      {
+        "id": "opacity",
+        "label": "Opacity & NoS",
+        "description": "Handles opacity classification, nature-of-structure scoring, and Coeus intelligence grading.",
+        "primary_docs": [
+          "Opacity.md",
+          "NoS.md",
+          "Coeus.md"
+        ]
+      }
+    ],
+    "bundles": [
+      {
+        "id": "core",
+        "label": "Corpus Core",
+        "description": "Infrastructure, meta, lineage, and onboarding docs for the corpus module itself.",
+        "members": [
+          "readme",
+          "metadata",
+          "lineage",
+          "tel-lineage",
+          "main",
+          "creation-guide",
+          "onboarding",
+          "contributors",
+          "docs",
+          "starter",
+          "src",
+          "scripts",
+          "schemas",
+          "styles",
+          "template"
+        ],
+        "count": 15
+      },
+      {
+        "id": "substrate",
+        "label": "Substrate Models",
+        "description": "Compressed READMEs for all substrate-class modules \u2014 physical, cognitive, social, and dimensional.",
+        "members": [
+          "arrival-substrate-model",
+          "conditions-substrate-model",
+          "consciousness-substrate-model",
+          "governance-substrate-model",
+          "governance-substrate-model-analyzer",
+          "incident-substrate-model",
+          "boson-substrate-model",
+          "quantum-substrate-model",
+          "resonance-substrate-model",
+          "manufacturing-substrate-regime-model",
+          "media-substrate-model",
+          "religious-substrate-grammar-model",
+          "dimensional-substrate-structures",
+          "dimensional-substrate-regime-scanning-protocol",
+          "substrate",
+          "substrate-communications",
+          "substrate-exposure-assay",
+          "substrate-mind-science",
+          "triadic-coordination-substrate",
+          "triadic-observer-layer"
+        ],
+        "count": 20
+      },
+      {
+        "id": "framework",
+        "label": "Framework Theory",
+        "description": "TFT core theory: field theory, gravity, dimensionality, paradox, detection, and structural primitives.",
+        "members": [
+          "framework-field-theory",
+          "framework-field-theory-analyzer",
+          "fff-gravity",
+          "low-dimensional-structures",
+          "inverted-star-ontology",
+          "drift-taxonomy",
+          "mode",
+          "opacity",
+          "nos",
+          "coeus",
+          "paradoxes-canon",
+          "sarg",
+          "structural-detection",
+          "resilience-checker",
+          "regime-blindness-checklist",
+          "tft-3pack-v1-3",
+          "tft-opengpu-stack-module",
+          "triadic",
+          "triadic-detection",
+          "unified-resonance",
+          "structural-detection-engine",
+          "structural-integration-engine",
+          "structuring-mathematics",
+          "structural-life-regime-profiles",
+          "concepts",
+          "foundations"
+        ],
+        "count": 26
+      },
+      {
+        "id": "rtt-core",
+        "label": "RTT Core",
+        "description": "Regime-Theoretic Toolkit \u2014 versioned core files, SDK, app, store, codex, and micro-core.",
+        "members": [
+          "rtt",
+          "rtt-1",
+          "rtt-2",
+          "rtt-3",
+          "rtt-12",
+          "rtt-micro-core",
+          "rtt-sdk",
+          "rtt-app",
+          "rtt-extension",
+          "rtt-store",
+          "rtt-codes",
+          "rtt-codex",
+          "rtt-diagrams",
+          "rtt-maps",
+          "rtt-c64host"
+        ],
+        "count": 15
+      },
+      {
+        "id": "rtt-engines",
+        "label": "RTT Analytical Engines",
+        "description": "Named analytical engines within the RTT \u2014 coherence, drift, resonance, paradox, and structural faultline detectors.",
+        "members": [
+          "rtt-coherence-tensor-engine",
+          "rtt-cross-domain-causality-weaver",
+          "rtt-crystal-mycelial-engine",
+          "rtt-d369-chip-spec",
+          "rtt-dimensional-resonance-scanner",
+          "rtt-drift-sentinel",
+          "rtt-echo-classifier",
+          "rtt-harmonic-stability-profile",
+          "rtt-morphic-resonance",
+          "rtt-paradox-gradient-analyzer",
+          "rtt-regime-interlock-mapper",
+          "rtt-stability-basin-cartographer",
+          "rtt-structural-faultline-detector",
+          "rtt-substrate-flow",
+          "rtt-temporal-regime-sequencer",
+          "rtt-the-inverted-star",
+          "rtt-triadic-echo-lattice",
+          "rtt-triadic-regime-synthesizer",
+          "rtt-solar-system",
+          "rtt-emotions",
+          "rtt-guild-little-science-ebook"
+        ],
+        "count": 21
+      },
+      {
+        "id": "rtt-inside",
+        "label": "RTT Inside \u2014 Domain Applications",
+        "description": "Domain-specific RTT deployments: ATC, Cisco, finance, quantum compute, space force, HAM radio, and more.",
+        "members": [
+          "rtt-inside",
+          "rtt-inside-api",
+          "rtt-inside-atc",
+          "rtt-inside-autonomous-forms",
+          "rtt-inside-benchmarks",
+          "rtt-inside-cisco",
+          "rtt-inside-coal",
+          "rtt-inside-corridor-studio",
+          "rtt-inside-drift",
+          "rtt-inside-earth-sims",
+          "rtt-inside-electron-microscopes",
+          "rtt-inside-enterprise",
+          "rtt-inside-examples",
+          "rtt-inside-finance",
+          "rtt-inside-global",
+          "rtt-inside-ham-radio",
+          "rtt-inside-internet2",
+          "rtt-inside-mesh-node",
+          "rtt-inside-python",
+          "rtt-inside-qcompute",
+          "rtt-inside-robofish",
+          "rtt-inside-space-force",
+          "rtt-inside-universe-key"
+        ],
+        "count": 23
+      },
+      {
+        "id": "education",
+        "label": "Education",
+        "description": "Full education module family: curriculum, ebooks, subject atlases, regime stacks, and toolboxes.",
+        "members": [
+          "education",
+          "education-alignment",
+          "education-animals",
+          "education-astrology",
+          "education-awareness",
+          "education-before-regime-awareness",
+          "education-civregimestack",
+          "education-ebooks",
+          "education-ebooks-grammar-for-intelligence",
+          "education-ebooks-little-science",
+          "education-equations",
+          "education-peira",
+          "education-polisci",
+          "education-qna-atlas",
+          "education-rituals",
+          "education-scrolls",
+          "education-subjects",
+          "education-toolbox",
+          "education-translations",
+          "curriculum"
+        ],
+        "count": 20
+      },
+      {
+        "id": "research",
+        "label": "Research",
+        "description": "Research methodology, agentic research, intelligence ladders, checklists, toolboxes, and protocol headers.",
+        "members": [
+          "research",
+          "research-agentic",
+          "research-assets",
+          "research-checklists",
+          "research-intelligence-class-ladder",
+          "research-operators",
+          "research-protocol-header",
+          "research-toolbox",
+          "pre-rtt-papers",
+          "bold-problems",
+          "labs",
+          "discovery",
+          "eda"
+        ],
+        "count": 13
+      },
+      {
+        "id": "science",
+        "label": "Science & Instrumentation",
+        "description": "Physical sciences, instrumentation reviews, spacetime validations, metrology, and post-ASML era docs.",
+        "members": [
+          "atomic-clocks",
+          "atmosphere",
+          "energy",
+          "metrology",
+          "nist",
+          "alphafold-substrate-alignments",
+          "global-energy-regime-awareness",
+          "post-asml-era",
+          "fab",
+          "materials",
+          "scientific-instrument-review",
+          "spectrum-standards-reviewed",
+          "spectral-clarity",
+          "simulations",
+          "spacetime-micro-agent-validations",
+          "spacetime-validation-and-regime-invariant-dimensional-cores",
+          "radiology",
+          "medicine"
+        ],
+        "count": 18
+      },
+      {
+        "id": "theories",
+        "label": "Physical & Scientific Theories",
+        "description": "Compressed READMEs for canonical theories: quantum mechanics, relativity, thermodynamics, morphic resonance, and more.",
+        "members": [
+          "theories",
+          "theories-chaos-theory",
+          "theories-electromagnetism",
+          "theories-evolutionary-biology",
+          "theories-general-relativity",
+          "theories-information-theory",
+          "theories-morphic-resonance",
+          "theories-quantum-field-theory",
+          "theories-quantum-mechanics",
+          "theories-repos",
+          "theories-standard-model",
+          "theories-thermodynamics"
+        ],
+        "count": 12
+      },
+      {
+        "id": "ai",
+        "label": "AI & Intelligence Layer",
+        "description": "AI systems, drift calibration, resonance seeds, language atlases, VST adapters, MCP, and prompt tooling.",
+        "members": [
+          "ai",
+          "ai-drift-calibration",
+          "ai-resonance-seed",
+          "language-atlas",
+          "mcp",
+          "domain-tool-primers",
+          "expectations",
+          "integrations",
+          "bots",
+          "prompts",
+          "api",
+          "operators",
+          "configs",
+          "voice",
+          "vst-for-embedding-stores-vector-databases",
+          "vst-for-generative-models",
+          "vst-for-large-language-models",
+          "vst-for-multi-model-alignment",
+          "vst-for-protein-language-models",
+          "vst-for-robotics-and-control-policies",
+          "vst-for-scientific-simulators"
+        ],
+        "count": 21
+      },
+      {
+        "id": "governance",
+        "label": "Governance & Society",
+        "description": "Governance models, law, HR, philanthropy, inverted economics, ecoechosystem, and public support.",
+        "members": [
+          "governance",
+          "law",
+          "legal",
+          "human-resources",
+          "philanthropy",
+          "public-support",
+          "inverted-economics",
+          "ecoechosystem",
+          "enterprise-structural-awareness",
+          "honor-roll",
+          "badges",
+          "rituals",
+          "taxes"
+        ],
+        "count": 13
+      },
+      {
+        "id": "projects",
+        "label": "Active Projects",
+        "description": "Live project compressed READMEs: CoConsciousness, Hippocampus, VCG, NASA T-minus 10, Resotectors, lens, and more.",
+        "members": [
+          "projects",
+          "projects-coconsciousness",
+          "projects-hippocampus",
+          "projects-id-shadow-gen",
+          "projects-lens",
+          "projects-nasa-hposs-tminus10",
+          "projects-poker-variants",
+          "projects-resotectors",
+          "projects-the-missing-regime",
+          "projects-vcg",
+          "projects-victorg"
+        ],
+        "count": 11
+      },
+      {
+        "id": "resonance-glyphs",
+        "label": "Resonance & Glyphs",
+        "description": "Resonance atlases, glyphic systems, pantheons \u2014 the symbolic and harmonic layer of the corpus.",
+        "members": [
+          "resonance",
+          "resonance-atlas",
+          "glyphs",
+          "glyphic-resonance",
+          "pantheons"
+        ],
+        "count": 5
+      },
+      {
+        "id": "packages",
+        "label": "Packages & Pipelines",
+        "description": "Distribution packages, kit, overlays, pipelines, and workflow infrastructure.",
+        "members": [
+          "packages",
+          "packages-tft-3pack",
+          "packages-wrsadc",
+          "kit",
+          "overlays",
+          "pipeline",
+          "workflows"
+        ],
+        "count": 7
+      },
+      {
+        "id": "data",
+        "label": "Data, Registries & Reference",
+        "description": "Data stores, registries, validators, snapshots, RFC corpus, archive, library, and wiki reference.",
+        "members": [
+          "data",
+          "registry",
+          "registries",
+          "reference",
+          "library",
+          "archive-org",
+          "reports",
+          "datacenter-reports",
+          "rfc",
+          "assets",
+          "charts",
+          "diagrams",
+          "gallery",
+          "wikipedia",
+          "validation",
+          "validators",
+          "snapshots"
+        ],
+        "count": 17
+      },
+      {
+        "id": "media",
+        "label": "Media & Communications",
+        "description": "Audio industry, media therapy diagnostics, brand, design, client relations, and visual identity.",
+        "members": [
+          "audio-industry-reviewed",
+          "diagnosing-media-therapy",
+          "brand",
+          "design",
+          "clients",
+          "voice"
+        ],
+        "count": 6
+      },
+      {
+        "id": "internal",
+        "label": "Internal & Draft",
+        "description": "Internal working docs, idea scratch, specs, speeches, feedback, ipd, and lactos.",
+        "members": [
+          "ideas",
+          "specs",
+          "speeches",
+          "template",
+          "feedback",
+          "ipd-12",
+          "lactos",
+          "code",
+          "bridges",
+          "facilities"
+        ],
+        "count": 10
+      }
+    ],
+    "doc_map": {
+      "ai-drift-calibration": {
+        "id": "ai-drift-calibration",
+        "file": "ai-drift-calibration.md",
+        "bundle": "ai",
+        "role": "ai",
+        "analyzer_layers": [
+          "drift"
+        ],
+        "anchor": "ai-drift-calibration",
+        "standalone": true
+      },
+      "ai": {
+        "id": "ai",
+        "file": "ai.md",
+        "bundle": "ai",
+        "role": "ai",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "ai",
+        "standalone": true
+      },
+      "ai-resonance-seed": {
+        "id": "ai-resonance-seed",
+        "file": "AI_Resonance_Seed.md",
+        "bundle": "ai",
+        "role": "ai",
+        "analyzer_layers": [
+          "resonance"
+        ],
+        "anchor": "ai-resonance-seed",
+        "standalone": true
+      },
+      "alphafold-substrate-alignments": {
+        "id": "alphafold-substrate-alignments",
+        "file": "alphafold_substrate_alignments.md",
+        "bundle": "science",
+        "role": "science",
+        "analyzer_layers": [
+          "substrate"
+        ],
+        "anchor": "alphafold-substrate-alignments",
+        "standalone": true
+      },
+      "api": {
+        "id": "api",
+        "file": "api.md",
+        "bundle": "ai",
+        "role": "ai",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "api",
+        "standalone": true
+      },
+      "archive-org": {
+        "id": "archive-org",
+        "file": "archive_org.md",
+        "bundle": "data",
+        "role": "data",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "archive-org",
+        "standalone": true
+      },
+      "arrival-substrate-model": {
+        "id": "arrival-substrate-model",
+        "file": "arrival_substrate_model.md",
+        "bundle": "substrate",
+        "role": "substrate",
+        "analyzer_layers": [
+          "substrate"
+        ],
+        "anchor": "arrival-substrate-model",
+        "standalone": true
+      },
+      "assets": {
+        "id": "assets",
+        "file": "assets.md",
+        "bundle": "data",
+        "role": "data",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "assets",
+        "standalone": true
+      },
+      "atmosphere": {
+        "id": "atmosphere",
+        "file": "atmosphere.md",
+        "bundle": "science",
+        "role": "science",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "atmosphere",
+        "standalone": true
+      },
+      "atomic-clocks": {
+        "id": "atomic-clocks",
+        "file": "atomic_clocks.md",
+        "bundle": "science",
+        "role": "science",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "atomic-clocks",
+        "standalone": true
+      },
+      "audio-industry-reviewed": {
+        "id": "audio-industry-reviewed",
+        "file": "audio_industry_reviewed.md",
+        "bundle": "media",
+        "role": "media",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "audio-industry-reviewed",
+        "standalone": true
+      },
+      "badges": {
+        "id": "badges",
+        "file": "badges.md",
+        "bundle": "governance",
+        "role": "governance",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "badges",
+        "standalone": true
+      },
+      "bold-problems": {
+        "id": "bold-problems",
+        "file": "bold_problems.md",
+        "bundle": "research",
+        "role": "research",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "bold-problems",
+        "standalone": true
+      },
+      "boson-substrate-model": {
+        "id": "boson-substrate-model",
+        "file": "boson-substrate-model.md",
+        "bundle": "substrate",
+        "role": "substrate",
+        "analyzer_layers": [
+          "substrate"
+        ],
+        "anchor": "boson-substrate-model",
+        "standalone": true
+      },
+      "bots": {
+        "id": "bots",
+        "file": "bots.md",
+        "bundle": "ai",
+        "role": "ai",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "bots",
+        "standalone": true
+      },
+      "brand": {
+        "id": "brand",
+        "file": "brand.md",
+        "bundle": "media",
+        "role": "media",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "brand",
+        "standalone": true
+      },
+      "bridges": {
+        "id": "bridges",
+        "file": "bridges.md",
+        "bundle": "internal",
+        "role": "internal",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "bridges",
+        "standalone": true
+      },
+      "charts": {
+        "id": "charts",
+        "file": "charts.md",
+        "bundle": "data",
+        "role": "data",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "charts",
+        "standalone": true
+      },
+      "clients": {
+        "id": "clients",
+        "file": "clients.md",
+        "bundle": "media",
+        "role": "media",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "clients",
+        "standalone": true
+      },
+      "code": {
+        "id": "code",
+        "file": "CODE.md",
+        "bundle": "internal",
+        "role": "internal",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "code",
+        "standalone": true
+      },
+      "coeus": {
+        "id": "coeus",
+        "file": "Coeus.md",
+        "bundle": "framework",
+        "role": "theory",
+        "analyzer_layers": [
+          "opacity"
+        ],
+        "anchor": "coeus",
+        "standalone": true
+      },
+      "concepts": {
+        "id": "concepts",
+        "file": "concepts.md",
+        "bundle": "framework",
+        "role": "theory",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "concepts",
+        "standalone": true
+      },
+      "conditions-substrate-model": {
+        "id": "conditions-substrate-model",
+        "file": "Conditions_Substrate_Model.md",
+        "bundle": "substrate",
+        "role": "substrate",
+        "analyzer_layers": [
+          "substrate"
+        ],
+        "anchor": "conditions-substrate-model",
+        "standalone": true
+      },
+      "configs": {
+        "id": "configs",
+        "file": "configs.md",
+        "bundle": "ai",
+        "role": "ai",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "configs",
+        "standalone": true
+      },
+      "consciousness-substrate-model": {
+        "id": "consciousness-substrate-model",
+        "file": "consciousness_substrate_model.md",
+        "bundle": "substrate",
+        "role": "substrate",
+        "analyzer_layers": [
+          "substrate"
+        ],
+        "anchor": "consciousness-substrate-model",
+        "standalone": true
+      },
+      "contributors": {
+        "id": "contributors",
+        "file": "contributors.md",
+        "bundle": "core",
+        "role": "anchor",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "contributors",
+        "standalone": true
+      },
+      "creation-guide": {
+        "id": "creation-guide",
+        "file": "creation_guide.md",
+        "bundle": "core",
+        "role": "anchor",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "creation-guide",
+        "standalone": true
+      },
+      "curriculum": {
+        "id": "curriculum",
+        "file": "curriculum.md",
+        "bundle": "education",
+        "role": "education",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "curriculum",
+        "standalone": true
+      },
+      "data": {
+        "id": "data",
+        "file": "data.md",
+        "bundle": "data",
+        "role": "data",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "data",
+        "standalone": true
+      },
+      "datacenter-reports": {
+        "id": "datacenter-reports",
+        "file": "datacenter_reports.md",
+        "bundle": "data",
+        "role": "data",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "datacenter-reports",
+        "standalone": true
+      },
+      "design": {
+        "id": "design",
+        "file": "design.md",
+        "bundle": "media",
+        "role": "media",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "design",
+        "standalone": true
+      },
+      "diagnosing-media-therapy": {
+        "id": "diagnosing-media-therapy",
+        "file": "diagnosing_media_therapy.md",
+        "bundle": "media",
+        "role": "media",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "diagnosing-media-therapy",
+        "standalone": true
+      },
+      "diagrams": {
+        "id": "diagrams",
+        "file": "diagrams.md",
+        "bundle": "data",
+        "role": "data",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "diagrams",
+        "standalone": true
+      },
+      "dimensional-substrate-regime-scanning-protocol": {
+        "id": "dimensional-substrate-regime-scanning-protocol",
+        "file": "dimensional_substrate_regime_scanning_protocol.md",
+        "bundle": "substrate",
+        "role": "substrate",
+        "analyzer_layers": [
+          "regime",
+          "substrate"
+        ],
+        "anchor": "dimensional-substrate-regime-scanning-protocol",
+        "standalone": true
+      },
+      "dimensional-substrate-structures": {
+        "id": "dimensional-substrate-structures",
+        "file": "dimensional_substrate_structures.md",
+        "bundle": "substrate",
+        "role": "substrate",
+        "analyzer_layers": [
+          "substrate"
+        ],
+        "anchor": "dimensional-substrate-structures",
+        "standalone": true
+      },
+      "discovery": {
+        "id": "discovery",
+        "file": "discovery.md",
+        "bundle": "research",
+        "role": "research",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "discovery",
+        "standalone": true
+      },
+      "docs": {
+        "id": "docs",
+        "file": "docs.md",
+        "bundle": "core",
+        "role": "anchor",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "docs",
+        "standalone": true
+      },
+      "domain-tool-primers": {
+        "id": "domain-tool-primers",
+        "file": "domain_tool_primers.md",
+        "bundle": "ai",
+        "role": "ai",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "domain-tool-primers",
+        "standalone": true
+      },
+      "drift-taxonomy": {
+        "id": "drift-taxonomy",
+        "file": "Drift_Taxonomy.md",
+        "bundle": "framework",
+        "role": "theory",
+        "analyzer_layers": [
+          "drift"
+        ],
+        "anchor": "drift-taxonomy",
+        "standalone": true
+      },
+      "ecoechosystem": {
+        "id": "ecoechosystem",
+        "file": "ecoechosystem.md",
+        "bundle": "governance",
+        "role": "governance",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "ecoechosystem",
+        "standalone": true
+      },
+      "eda": {
+        "id": "eda",
+        "file": "eda.md",
+        "bundle": "research",
+        "role": "research",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "eda",
+        "standalone": true
+      },
+      "education": {
+        "id": "education",
+        "file": "education.md",
+        "bundle": "education",
+        "role": "education",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "education",
+        "standalone": true
+      },
+      "education-alignment": {
+        "id": "education-alignment",
+        "file": "education_alignment.md",
+        "bundle": "education",
+        "role": "education",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "education-alignment",
+        "standalone": true
+      },
+      "education-animals": {
+        "id": "education-animals",
+        "file": "education_animals.md",
+        "bundle": "education",
+        "role": "education",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "education-animals",
+        "standalone": true
+      },
+      "education-astrology": {
+        "id": "education-astrology",
+        "file": "education_astrology.md",
+        "bundle": "education",
+        "role": "education",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "education-astrology",
+        "standalone": true
+      },
+      "education-awareness": {
+        "id": "education-awareness",
+        "file": "education_awareness.md",
+        "bundle": "education",
+        "role": "education",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "education-awareness",
+        "standalone": true
+      },
+      "education-before-regime-awareness": {
+        "id": "education-before-regime-awareness",
+        "file": "education_Before_Regime_Awareness.md",
+        "bundle": "education",
+        "role": "education",
+        "analyzer_layers": [
+          "regime"
+        ],
+        "anchor": "education-before-regime-awareness",
+        "standalone": true
+      },
+      "education-civregimestack": {
+        "id": "education-civregimestack",
+        "file": "education_CivRegimeStack.md",
+        "bundle": "education",
+        "role": "education",
+        "analyzer_layers": [
+          "regime"
+        ],
+        "anchor": "education-civregimestack",
+        "standalone": true
+      },
+      "education-ebooks": {
+        "id": "education-ebooks",
+        "file": "education_ebooks.md",
+        "bundle": "education",
+        "role": "education",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "education-ebooks",
+        "standalone": true
+      },
+      "education-ebooks-grammar-for-intelligence": {
+        "id": "education-ebooks-grammar-for-intelligence",
+        "file": "education_ebooks_Grammar_for_Intelligence.md",
+        "bundle": "education",
+        "role": "education",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "education-ebooks-grammar-for-intelligence",
+        "standalone": true
+      },
+      "education-ebooks-little-science": {
+        "id": "education-ebooks-little-science",
+        "file": "education_ebooks_Little_Science.md",
+        "bundle": "education",
+        "role": "education",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "education-ebooks-little-science",
+        "standalone": true
+      },
+      "education-equations": {
+        "id": "education-equations",
+        "file": "education_equations.md",
+        "bundle": "education",
+        "role": "education",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "education-equations",
+        "standalone": true
+      },
+      "education-peira": {
+        "id": "education-peira",
+        "file": "education_peira.md",
+        "bundle": "education",
+        "role": "education",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "education-peira",
+        "standalone": true
+      },
+      "education-polisci": {
+        "id": "education-polisci",
+        "file": "education_polisci.md",
+        "bundle": "education",
+        "role": "education",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "education-polisci",
+        "standalone": true
+      },
+      "education-qna-atlas": {
+        "id": "education-qna-atlas",
+        "file": "education_QnA_Atlas.md",
+        "bundle": "education",
+        "role": "education",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "education-qna-atlas",
+        "standalone": true
+      },
+      "education-rituals": {
+        "id": "education-rituals",
+        "file": "education_rituals.md",
+        "bundle": "education",
+        "role": "education",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "education-rituals",
+        "standalone": true
+      },
+      "education-scrolls": {
+        "id": "education-scrolls",
+        "file": "education_scrolls.md",
+        "bundle": "education",
+        "role": "education",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "education-scrolls",
+        "standalone": true
+      },
+      "education-subjects": {
+        "id": "education-subjects",
+        "file": "education_subjects.md",
+        "bundle": "education",
+        "role": "education",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "education-subjects",
+        "standalone": true
+      },
+      "education-toolbox": {
+        "id": "education-toolbox",
+        "file": "education_Toolbox.md",
+        "bundle": "education",
+        "role": "education",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "education-toolbox",
+        "standalone": true
+      },
+      "education-translations": {
+        "id": "education-translations",
+        "file": "education_translations.md",
+        "bundle": "education",
+        "role": "education",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "education-translations",
+        "standalone": true
+      },
+      "energy": {
+        "id": "energy",
+        "file": "energy.md",
+        "bundle": "science",
+        "role": "science",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "energy",
+        "standalone": true
+      },
+      "enterprise-structural-awareness": {
+        "id": "enterprise-structural-awareness",
+        "file": "enterprise_structural_awareness.md",
+        "bundle": "governance",
+        "role": "governance",
+        "analyzer_layers": [
+          "structural"
+        ],
+        "anchor": "enterprise-structural-awareness",
+        "standalone": true
+      },
+      "expectations": {
+        "id": "expectations",
+        "file": "Expectations.md",
+        "bundle": "ai",
+        "role": "ai",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "expectations",
+        "standalone": true
+      },
+      "fab": {
+        "id": "fab",
+        "file": "fab.md",
+        "bundle": "science",
+        "role": "science",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "fab",
+        "standalone": true
+      },
+      "facilities": {
+        "id": "facilities",
+        "file": "facilities.md",
+        "bundle": "internal",
+        "role": "internal",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "facilities",
+        "standalone": true
+      },
+      "feedback": {
+        "id": "feedback",
+        "file": "feedback.md",
+        "bundle": "internal",
+        "role": "internal",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "feedback",
+        "standalone": true
+      },
+      "fff-gravity": {
+        "id": "fff-gravity",
+        "file": "FFF_Gravity.md",
+        "bundle": "framework",
+        "role": "theory",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "fff-gravity",
+        "standalone": true
+      },
+      "foundations": {
+        "id": "foundations",
+        "file": "foundations.md",
+        "bundle": "framework",
+        "role": "theory",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "foundations",
+        "standalone": true
+      },
+      "framework-field-theory": {
+        "id": "framework-field-theory",
+        "file": "Framework_Field_Theory.md",
+        "bundle": "framework",
+        "role": "theory",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "framework-field-theory",
+        "standalone": true
+      },
+      "framework-field-theory-analyzer": {
+        "id": "framework-field-theory-analyzer",
+        "file": "Framework_Field_Theory_Analyzer.md",
+        "bundle": "framework",
+        "role": "analyzer",
+        "analyzer_layers": [
+          "structural"
+        ],
+        "anchor": "framework-field-theory-analyzer",
+        "standalone": true
+      },
+      "gallery": {
+        "id": "gallery",
+        "file": "gallery.md",
+        "bundle": "data",
+        "role": "data",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "gallery",
+        "standalone": true
+      },
+      "global-energy-regime-awareness": {
+        "id": "global-energy-regime-awareness",
+        "file": "global_energy_regime_awareness.md",
+        "bundle": "science",
+        "role": "science",
+        "analyzer_layers": [
+          "regime"
+        ],
+        "anchor": "global-energy-regime-awareness",
+        "standalone": true
+      },
+      "glyphic-resonance": {
+        "id": "glyphic-resonance",
+        "file": "glyphic_resonance.md",
+        "bundle": "resonance-glyphs",
+        "role": "resonance",
+        "analyzer_layers": [
+          "resonance"
+        ],
+        "anchor": "glyphic-resonance",
+        "standalone": true
+      },
+      "glyphs": {
+        "id": "glyphs",
+        "file": "glyphs.md",
+        "bundle": "resonance-glyphs",
+        "role": "resonance",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "glyphs",
+        "standalone": true
+      },
+      "governance": {
+        "id": "governance",
+        "file": "governance.md",
+        "bundle": "governance",
+        "role": "governance",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "governance",
+        "standalone": true
+      },
+      "governance-substrate-model": {
+        "id": "governance-substrate-model",
+        "file": "Governance_Substrate_Model.md",
+        "bundle": "substrate",
+        "role": "substrate",
+        "analyzer_layers": [
+          "substrate"
+        ],
+        "anchor": "governance-substrate-model",
+        "standalone": true
+      },
+      "governance-substrate-model-analyzer": {
+        "id": "governance-substrate-model-analyzer",
+        "file": "Governance_Substrate_Model_Analyzer.md",
+        "bundle": "substrate",
+        "role": "analyzer",
+        "analyzer_layers": [
+          "structural",
+          "substrate"
+        ],
+        "anchor": "governance-substrate-model-analyzer",
+        "standalone": true
+      },
+      "honor-roll": {
+        "id": "honor-roll",
+        "file": "honor_roll.md",
+        "bundle": "governance",
+        "role": "governance",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "honor-roll",
+        "standalone": true
+      },
+      "human-resources": {
+        "id": "human-resources",
+        "file": "Human_Resources.md",
+        "bundle": "governance",
+        "role": "governance",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "human-resources",
+        "standalone": true
+      },
+      "incident-substrate-model": {
+        "id": "incident-substrate-model",
+        "file": "Incident_Substrate_Model.md",
+        "bundle": "substrate",
+        "role": "substrate",
+        "analyzer_layers": [
+          "substrate"
+        ],
+        "anchor": "incident-substrate-model",
+        "standalone": true
+      },
+      "integrations": {
+        "id": "integrations",
+        "file": "Integrations.md",
+        "bundle": "ai",
+        "role": "ai",
+        "analyzer_layers": [
+          "structural"
+        ],
+        "anchor": "integrations",
+        "standalone": true
+      },
+      "inverted-economics": {
+        "id": "inverted-economics",
+        "file": "Inverted_Economics.md",
+        "bundle": "governance",
+        "role": "governance",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "inverted-economics",
+        "standalone": true
+      },
+      "inverted-star-ontology": {
+        "id": "inverted-star-ontology",
+        "file": "inverted_star_ontology.md",
+        "bundle": "framework",
+        "role": "theory",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "inverted-star-ontology",
+        "standalone": true
+      },
+      "ipd-12": {
+        "id": "ipd-12",
+        "file": "ipd_12.md",
+        "bundle": "internal",
+        "role": "internal",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "ipd-12",
+        "standalone": true
+      },
+      "kit": {
+        "id": "kit",
+        "file": "kit.md",
+        "bundle": "packages",
+        "role": "package",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "kit",
+        "standalone": true
+      },
+      "labs": {
+        "id": "labs",
+        "file": "labs.md",
+        "bundle": "research",
+        "role": "research",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "labs",
+        "standalone": true
+      },
+      "lactos": {
+        "id": "lactos",
+        "file": "lactos.md",
+        "bundle": "internal",
+        "role": "internal",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "lactos",
+        "standalone": true
+      },
+      "language-atlas": {
+        "id": "language-atlas",
+        "file": "Language_Atlas.md",
+        "bundle": "ai",
+        "role": "ai",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "language-atlas",
+        "standalone": true
+      },
+      "law": {
+        "id": "law",
+        "file": "Law.md",
+        "bundle": "governance",
+        "role": "governance",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "law",
+        "standalone": true
+      },
+      "legal": {
+        "id": "legal",
+        "file": "legal.md",
+        "bundle": "governance",
+        "role": "governance",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "legal",
+        "standalone": true
+      },
+      "library": {
+        "id": "library",
+        "file": "library.md",
+        "bundle": "data",
+        "role": "data",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "library",
+        "standalone": true
+      },
+      "lineage": {
+        "id": "lineage",
+        "file": "LINEAGE.md",
+        "bundle": "core",
+        "role": "anchor",
+        "analyzer_layers": [
+          "lineage"
+        ],
+        "anchor": "lineage",
+        "standalone": true
+      },
+      "low-dimensional-structures": {
+        "id": "low-dimensional-structures",
+        "file": "Low_Dimensional_Structures.md",
+        "bundle": "framework",
+        "role": "theory",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "low-dimensional-structures",
+        "standalone": true
+      },
+      "main": {
+        "id": "main",
+        "file": "main.md",
+        "bundle": "core",
+        "role": "anchor",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "main",
+        "standalone": true
+      },
+      "manufacturing-substrate-regime-model": {
+        "id": "manufacturing-substrate-regime-model",
+        "file": "manufacturing_substrate_regime_model.md",
+        "bundle": "substrate",
+        "role": "substrate",
+        "analyzer_layers": [
+          "regime",
+          "substrate"
+        ],
+        "anchor": "manufacturing-substrate-regime-model",
+        "standalone": true
+      },
+      "materials": {
+        "id": "materials",
+        "file": "materials.md",
+        "bundle": "science",
+        "role": "science",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "materials",
+        "standalone": true
+      },
+      "mcp": {
+        "id": "mcp",
+        "file": "MCP.md",
+        "bundle": "ai",
+        "role": "ai",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "mcp",
+        "standalone": true
+      },
+      "media-substrate-model": {
+        "id": "media-substrate-model",
+        "file": "media_substrate_model.md",
+        "bundle": "substrate",
+        "role": "substrate",
+        "analyzer_layers": [
+          "substrate"
+        ],
+        "anchor": "media-substrate-model",
+        "standalone": true
+      },
+      "medicine": {
+        "id": "medicine",
+        "file": "medicine.md",
+        "bundle": "science",
+        "role": "science",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "medicine",
+        "standalone": true
+      },
+      "metadata": {
+        "id": "metadata",
+        "file": "metadata.md",
+        "bundle": "core",
+        "role": "anchor",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "metadata",
+        "standalone": true
+      },
+      "metrology": {
+        "id": "metrology",
+        "file": "metrology.md",
+        "bundle": "science",
+        "role": "science",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "metrology",
+        "standalone": true
+      },
+      "mode": {
+        "id": "mode",
+        "file": "Mode.md",
+        "bundle": "framework",
+        "role": "theory",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "mode",
+        "standalone": true
+      },
+      "nist": {
+        "id": "nist",
+        "file": "nist.md",
+        "bundle": "science",
+        "role": "science",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "nist",
+        "standalone": true
+      },
+      "nos": {
+        "id": "nos",
+        "file": "NoS.md",
+        "bundle": "framework",
+        "role": "theory",
+        "analyzer_layers": [
+          "opacity"
+        ],
+        "anchor": "nos",
+        "standalone": true
+      },
+      "onboarding": {
+        "id": "onboarding",
+        "file": "onboarding.md",
+        "bundle": "core",
+        "role": "anchor",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "onboarding",
+        "standalone": true
+      },
+      "opacity": {
+        "id": "opacity",
+        "file": "Opacity.md",
+        "bundle": "framework",
+        "role": "theory",
+        "analyzer_layers": [
+          "opacity"
+        ],
+        "anchor": "opacity",
+        "standalone": true
+      },
+      "operators": {
+        "id": "operators",
+        "file": "operators.md",
+        "bundle": "ai",
+        "role": "ai",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "operators",
+        "standalone": true
+      },
+      "overlays": {
+        "id": "overlays",
+        "file": "overlays.md",
+        "bundle": "packages",
+        "role": "package",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "overlays",
+        "standalone": true
+      },
+      "packages": {
+        "id": "packages",
+        "file": "packages.md",
+        "bundle": "packages",
+        "role": "package",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "packages",
+        "standalone": true
+      },
+      "packages-tft-3pack": {
+        "id": "packages-tft-3pack",
+        "file": "packages_tft-3pack.md",
+        "bundle": "packages",
+        "role": "package",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "packages-tft-3pack",
+        "standalone": true
+      },
+      "packages-wrsadc": {
+        "id": "packages-wrsadc",
+        "file": "packages_wrsadc.md",
+        "bundle": "packages",
+        "role": "package",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "packages-wrsadc",
+        "standalone": true
+      },
+      "pantheons": {
+        "id": "pantheons",
+        "file": "pantheons.md",
+        "bundle": "resonance-glyphs",
+        "role": "resonance",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "pantheons",
+        "standalone": true
+      },
+      "paradoxes-canon": {
+        "id": "paradoxes-canon",
+        "file": "Paradoxes_canon.md",
+        "bundle": "framework",
+        "role": "theory",
+        "analyzer_layers": [
+          "coherence"
+        ],
+        "anchor": "paradoxes-canon",
+        "standalone": true
+      },
+      "philanthropy": {
+        "id": "philanthropy",
+        "file": "Philanthropy.md",
+        "bundle": "governance",
+        "role": "governance",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "philanthropy",
+        "standalone": true
+      },
+      "pipeline": {
+        "id": "pipeline",
+        "file": "pipeline.md",
+        "bundle": "packages",
+        "role": "package",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "pipeline",
+        "standalone": true
+      },
+      "post-asml-era": {
+        "id": "post-asml-era",
+        "file": "post-ASML_era.md",
+        "bundle": "science",
+        "role": "science",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "post-asml-era",
+        "standalone": true
+      },
+      "pre-rtt-papers": {
+        "id": "pre-rtt-papers",
+        "file": "pre_RTT_papers.md",
+        "bundle": "research",
+        "role": "research",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "pre-rtt-papers",
+        "standalone": true
+      },
+      "projects": {
+        "id": "projects",
+        "file": "projects.md",
+        "bundle": "projects",
+        "role": "project",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "projects",
+        "standalone": true
+      },
+      "projects-coconsciousness": {
+        "id": "projects-coconsciousness",
+        "file": "projects_CoConsciousness.md",
+        "bundle": "projects",
+        "role": "project",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "projects-coconsciousness",
+        "standalone": true
+      },
+      "projects-hippocampus": {
+        "id": "projects-hippocampus",
+        "file": "projects_Hippocampus.md",
+        "bundle": "projects",
+        "role": "project",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "projects-hippocampus",
+        "standalone": true
+      },
+      "projects-id-shadow-gen": {
+        "id": "projects-id-shadow-gen",
+        "file": "projects_Id_Shadow_Gen.md",
+        "bundle": "projects",
+        "role": "project",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "projects-id-shadow-gen",
+        "standalone": true
+      },
+      "projects-lens": {
+        "id": "projects-lens",
+        "file": "projects_lens.md",
+        "bundle": "projects",
+        "role": "project",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "projects-lens",
+        "standalone": true
+      },
+      "projects-nasa-hposs-tminus10": {
+        "id": "projects-nasa-hposs-tminus10",
+        "file": "projects_nasa_hposs_tminus10.md.md",
+        "bundle": "projects",
+        "role": "project",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "projects-nasa-hposs-tminus10",
+        "standalone": true
+      },
+      "projects-poker-variants": {
+        "id": "projects-poker-variants",
+        "file": "projects_poker-variants.md",
+        "bundle": "projects",
+        "role": "project",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "projects-poker-variants",
+        "standalone": true
+      },
+      "projects-resotectors": {
+        "id": "projects-resotectors",
+        "file": "projects_Resotectors.md",
+        "bundle": "projects",
+        "role": "project",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "projects-resotectors",
+        "standalone": true
+      },
+      "projects-the-missing-regime": {
+        "id": "projects-the-missing-regime",
+        "file": "projects_The_Missing_Regime.md",
+        "bundle": "projects",
+        "role": "project",
+        "analyzer_layers": [
+          "regime"
+        ],
+        "anchor": "projects-the-missing-regime",
+        "standalone": true
+      },
+      "projects-vcg": {
+        "id": "projects-vcg",
+        "file": "projects_VCG.md",
+        "bundle": "projects",
+        "role": "project",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "projects-vcg",
+        "standalone": true
+      },
+      "projects-victorg": {
+        "id": "projects-victorg",
+        "file": "projects_VictorG.md",
+        "bundle": "projects",
+        "role": "project",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "projects-victorg",
+        "standalone": true
+      },
+      "prompts": {
+        "id": "prompts",
+        "file": "prompts.md",
+        "bundle": "ai",
+        "role": "ai",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "prompts",
+        "standalone": true
+      },
+      "public-support": {
+        "id": "public-support",
+        "file": "public_support.md",
+        "bundle": "governance",
+        "role": "governance",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "public-support",
+        "standalone": true
+      },
+      "quantum-substrate-model": {
+        "id": "quantum-substrate-model",
+        "file": "quantum-substrate-model.md",
+        "bundle": "substrate",
+        "role": "substrate",
+        "analyzer_layers": [
+          "substrate"
+        ],
+        "anchor": "quantum-substrate-model",
+        "standalone": true
+      },
+      "radiology": {
+        "id": "radiology",
+        "file": "Radiology.md",
+        "bundle": "science",
+        "role": "science",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "radiology",
+        "standalone": true
+      },
+      "readme": {
+        "id": "readme",
+        "file": "README.md",
+        "bundle": "core",
+        "role": "anchor",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "readme",
+        "standalone": true
+      },
+      "reference": {
+        "id": "reference",
+        "file": "reference.md",
+        "bundle": "data",
+        "role": "data",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "reference",
+        "standalone": true
+      },
+      "regime-blindness-checklist": {
+        "id": "regime-blindness-checklist",
+        "file": "regime_blindness_checklist.md",
+        "bundle": "framework",
+        "role": "theory",
+        "analyzer_layers": [
+          "regime"
+        ],
+        "anchor": "regime-blindness-checklist",
+        "standalone": true
+      },
+      "registries": {
+        "id": "registries",
+        "file": "registries.md",
+        "bundle": "data",
+        "role": "data",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "registries",
+        "standalone": true
+      },
+      "registry": {
+        "id": "registry",
+        "file": "registry.md",
+        "bundle": "data",
+        "role": "data",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "registry",
+        "standalone": true
+      },
+      "religious-substrate-grammar-model": {
+        "id": "religious-substrate-grammar-model",
+        "file": "religious_substrate_grammar_model.md",
+        "bundle": "substrate",
+        "role": "substrate",
+        "analyzer_layers": [
+          "substrate"
+        ],
+        "anchor": "religious-substrate-grammar-model",
+        "standalone": true
+      },
+      "reports": {
+        "id": "reports",
+        "file": "reports.md",
+        "bundle": "data",
+        "role": "data",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "reports",
+        "standalone": true
+      },
+      "research": {
+        "id": "research",
+        "file": "Research.md",
+        "bundle": "research",
+        "role": "research",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "research",
+        "standalone": true
+      },
+      "research-agentic": {
+        "id": "research-agentic",
+        "file": "Research_agentic.md",
+        "bundle": "research",
+        "role": "research",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "research-agentic",
+        "standalone": true
+      },
+      "research-assets": {
+        "id": "research-assets",
+        "file": "Research_assets.md",
+        "bundle": "research",
+        "role": "research",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "research-assets",
+        "standalone": true
+      },
+      "research-checklists": {
+        "id": "research-checklists",
+        "file": "Research_checklists.md",
+        "bundle": "research",
+        "role": "research",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "research-checklists",
+        "standalone": true
+      },
+      "research-intelligence-class-ladder": {
+        "id": "research-intelligence-class-ladder",
+        "file": "Research_Intelligence_Class_Ladder.md",
+        "bundle": "research",
+        "role": "research",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "research-intelligence-class-ladder",
+        "standalone": true
+      },
+      "research-operators": {
+        "id": "research-operators",
+        "file": "Research_Operators.md",
+        "bundle": "research",
+        "role": "research",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "research-operators",
+        "standalone": true
+      },
+      "research-protocol-header": {
+        "id": "research-protocol-header",
+        "file": "Research_protocol_header.md",
+        "bundle": "research",
+        "role": "research",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "research-protocol-header",
+        "standalone": true
+      },
+      "research-toolbox": {
+        "id": "research-toolbox",
+        "file": "Research_Toolbox.md",
+        "bundle": "research",
+        "role": "research",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "research-toolbox",
+        "standalone": true
+      },
+      "resilience-checker": {
+        "id": "resilience-checker",
+        "file": "Resilience_Checker.md",
+        "bundle": "framework",
+        "role": "theory",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "resilience-checker",
+        "standalone": true
+      },
+      "resonance-substrate-model": {
+        "id": "resonance-substrate-model",
+        "file": "resonance-substrate-model.md",
+        "bundle": "substrate",
+        "role": "substrate",
+        "analyzer_layers": [
+          "resonance",
+          "substrate"
+        ],
+        "anchor": "resonance-substrate-model",
+        "standalone": true
+      },
+      "resonance": {
+        "id": "resonance",
+        "file": "resonance.md",
+        "bundle": "resonance-glyphs",
+        "role": "resonance",
+        "analyzer_layers": [
+          "resonance"
+        ],
+        "anchor": "resonance",
+        "standalone": true
+      },
+      "resonance-atlas": {
+        "id": "resonance-atlas",
+        "file": "resonance_atlas.md",
+        "bundle": "resonance-glyphs",
+        "role": "resonance",
+        "analyzer_layers": [
+          "resonance"
+        ],
+        "anchor": "resonance-atlas",
+        "standalone": true
+      },
+      "rfc": {
+        "id": "rfc",
+        "file": "rfc.md",
+        "bundle": "data",
+        "role": "data",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "rfc",
+        "standalone": true
+      },
+      "rituals": {
+        "id": "rituals",
+        "file": "rituals.md",
+        "bundle": "governance",
+        "role": "governance",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "rituals",
+        "standalone": true
+      },
+      "rtt": {
+        "id": "rtt",
+        "file": "rtt.md",
+        "bundle": "rtt-core",
+        "role": "engine",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "rtt",
+        "standalone": true
+      },
+      "rtt-1": {
+        "id": "rtt-1",
+        "file": "rtt_1.md",
+        "bundle": "rtt-core",
+        "role": "engine",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "rtt-1",
+        "standalone": true
+      },
+      "rtt-12": {
+        "id": "rtt-12",
+        "file": "rtt_12.md",
+        "bundle": "rtt-core",
+        "role": "engine",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "rtt-12",
+        "standalone": true
+      },
+      "rtt-2": {
+        "id": "rtt-2",
+        "file": "rtt_2.md",
+        "bundle": "rtt-core",
+        "role": "engine",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "rtt-2",
+        "standalone": true
+      },
+      "rtt-3": {
+        "id": "rtt-3",
+        "file": "rtt_3.md",
+        "bundle": "rtt-core",
+        "role": "engine",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "rtt-3",
+        "standalone": true
+      },
+      "rtt-app": {
+        "id": "rtt-app",
+        "file": "rtt_app.md",
+        "bundle": "rtt-core",
+        "role": "engine",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "rtt-app",
+        "standalone": true
+      },
+      "rtt-c64host": {
+        "id": "rtt-c64host",
+        "file": "rtt_c64host.md",
+        "bundle": "rtt-core",
+        "role": "engine",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "rtt-c64host",
+        "standalone": true
+      },
+      "rtt-codes": {
+        "id": "rtt-codes",
+        "file": "rtt_codes.md",
+        "bundle": "rtt-core",
+        "role": "engine",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "rtt-codes",
+        "standalone": true
+      },
+      "rtt-codex": {
+        "id": "rtt-codex",
+        "file": "rtt_codex.md",
+        "bundle": "rtt-core",
+        "role": "engine",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "rtt-codex",
+        "standalone": true
+      },
+      "rtt-coherence-tensor-engine": {
+        "id": "rtt-coherence-tensor-engine",
+        "file": "rtt_Coherence_Tensor_Engine.md",
+        "bundle": "rtt-engines",
+        "role": "engine",
+        "analyzer_layers": [
+          "coherence"
+        ],
+        "anchor": "rtt-coherence-tensor-engine",
+        "standalone": true
+      },
+      "rtt-cross-domain-causality-weaver": {
+        "id": "rtt-cross-domain-causality-weaver",
+        "file": "rtt_Cross_Domain_Causality_Weaver.md",
+        "bundle": "rtt-engines",
+        "role": "engine",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "rtt-cross-domain-causality-weaver",
+        "standalone": true
+      },
+      "rtt-crystal-mycelial-engine": {
+        "id": "rtt-crystal-mycelial-engine",
+        "file": "rtt_Crystal_Mycelial_Engine.md",
+        "bundle": "rtt-engines",
+        "role": "engine",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "rtt-crystal-mycelial-engine",
+        "standalone": true
+      },
+      "rtt-d369-chip-spec": {
+        "id": "rtt-d369-chip-spec",
+        "file": "rtt_D369_Chip_Spec.md",
+        "bundle": "rtt-engines",
+        "role": "engine",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "rtt-d369-chip-spec",
+        "standalone": true
+      },
+      "rtt-diagrams": {
+        "id": "rtt-diagrams",
+        "file": "rtt_diagrams.md",
+        "bundle": "rtt-core",
+        "role": "engine",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "rtt-diagrams",
+        "standalone": true
+      },
+      "rtt-dimensional-resonance-scanner": {
+        "id": "rtt-dimensional-resonance-scanner",
+        "file": "rtt_Dimensional_Resonance_Scanner.md",
+        "bundle": "rtt-engines",
+        "role": "engine",
+        "analyzer_layers": [
+          "resonance"
+        ],
+        "anchor": "rtt-dimensional-resonance-scanner",
+        "standalone": true
+      },
+      "rtt-drift-sentinel": {
+        "id": "rtt-drift-sentinel",
+        "file": "rtt_Drift_Sentinel.md",
+        "bundle": "rtt-engines",
+        "role": "engine",
+        "analyzer_layers": [
+          "drift"
+        ],
+        "anchor": "rtt-drift-sentinel",
+        "standalone": true
+      },
+      "rtt-echo-classifier": {
+        "id": "rtt-echo-classifier",
+        "file": "rtt_Echo_Classifier.md",
+        "bundle": "rtt-engines",
+        "role": "engine",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "rtt-echo-classifier",
+        "standalone": true
+      },
+      "rtt-emotions": {
+        "id": "rtt-emotions",
+        "file": "rtt_emotions.md",
+        "bundle": "rtt-engines",
+        "role": "engine",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "rtt-emotions",
+        "standalone": true
+      },
+      "rtt-extension": {
+        "id": "rtt-extension",
+        "file": "rtt_extension.md",
+        "bundle": "rtt-core",
+        "role": "engine",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "rtt-extension",
+        "standalone": true
+      },
+      "rtt-guild-little-science-ebook": {
+        "id": "rtt-guild-little-science-ebook",
+        "file": "rtt_guild_Little_Science_eBook.md",
+        "bundle": "rtt-engines",
+        "role": "engine",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "rtt-guild-little-science-ebook",
+        "standalone": true
+      },
+      "rtt-harmonic-stability-profile": {
+        "id": "rtt-harmonic-stability-profile",
+        "file": "rtt_Harmonic_Stability_Profile.md",
+        "bundle": "rtt-engines",
+        "role": "engine",
+        "analyzer_layers": [
+          "resonance"
+        ],
+        "anchor": "rtt-harmonic-stability-profile",
+        "standalone": true
+      },
+      "rtt-inside": {
+        "id": "rtt-inside",
+        "file": "rtt_Inside.md",
+        "bundle": "rtt-inside",
+        "role": "domain",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "rtt-inside",
+        "standalone": true
+      },
+      "rtt-inside-api": {
+        "id": "rtt-inside-api",
+        "file": "rtt_Inside_API.md",
+        "bundle": "rtt-inside",
+        "role": "domain",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "rtt-inside-api",
+        "standalone": true
+      },
+      "rtt-inside-atc": {
+        "id": "rtt-inside-atc",
+        "file": "rtt_Inside_ATC.md",
+        "bundle": "rtt-inside",
+        "role": "domain",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "rtt-inside-atc",
+        "standalone": true
+      },
+      "rtt-inside-autonomous-forms": {
+        "id": "rtt-inside-autonomous-forms",
+        "file": "rtt_Inside_Autonomous_Forms.md",
+        "bundle": "rtt-inside",
+        "role": "domain",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "rtt-inside-autonomous-forms",
+        "standalone": true
+      },
+      "rtt-inside-benchmarks": {
+        "id": "rtt-inside-benchmarks",
+        "file": "rtt_Inside_Benchmarks.md",
+        "bundle": "rtt-inside",
+        "role": "domain",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "rtt-inside-benchmarks",
+        "standalone": true
+      },
+      "rtt-inside-cisco": {
+        "id": "rtt-inside-cisco",
+        "file": "rtt_Inside_Cisco.md",
+        "bundle": "rtt-inside",
+        "role": "domain",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "rtt-inside-cisco",
+        "standalone": true
+      },
+      "rtt-inside-coal": {
+        "id": "rtt-inside-coal",
+        "file": "rtt_Inside_Coal.md",
+        "bundle": "rtt-inside",
+        "role": "domain",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "rtt-inside-coal",
+        "standalone": true
+      },
+      "rtt-inside-corridor-studio": {
+        "id": "rtt-inside-corridor-studio",
+        "file": "rtt_Inside_Corridor_Studio.md",
+        "bundle": "rtt-inside",
+        "role": "domain",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "rtt-inside-corridor-studio",
+        "standalone": true
+      },
+      "rtt-inside-drift": {
+        "id": "rtt-inside-drift",
+        "file": "rtt_Inside_Drift.md",
+        "bundle": "rtt-inside",
+        "role": "domain",
+        "analyzer_layers": [
+          "drift"
+        ],
+        "anchor": "rtt-inside-drift",
+        "standalone": true
+      },
+      "rtt-inside-earth-sims": {
+        "id": "rtt-inside-earth-sims",
+        "file": "rtt_Inside_Earth_Sims.md",
+        "bundle": "rtt-inside",
+        "role": "domain",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "rtt-inside-earth-sims",
+        "standalone": true
+      },
+      "rtt-inside-electron-microscopes": {
+        "id": "rtt-inside-electron-microscopes",
+        "file": "rtt_Inside_Electron_Microscopes.md",
+        "bundle": "rtt-inside",
+        "role": "domain",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "rtt-inside-electron-microscopes",
+        "standalone": true
+      },
+      "rtt-inside-enterprise": {
+        "id": "rtt-inside-enterprise",
+        "file": "rtt_Inside_Enterprise.md",
+        "bundle": "rtt-inside",
+        "role": "domain",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "rtt-inside-enterprise",
+        "standalone": true
+      },
+      "rtt-inside-examples": {
+        "id": "rtt-inside-examples",
+        "file": "rtt_Inside_Examples.md",
+        "bundle": "rtt-inside",
+        "role": "domain",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "rtt-inside-examples",
+        "standalone": true
+      },
+      "rtt-inside-finance": {
+        "id": "rtt-inside-finance",
+        "file": "rtt_Inside_Finance.md",
+        "bundle": "rtt-inside",
+        "role": "domain",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "rtt-inside-finance",
+        "standalone": true
+      },
+      "rtt-inside-global": {
+        "id": "rtt-inside-global",
+        "file": "rtt_Inside_Global.md",
+        "bundle": "rtt-inside",
+        "role": "domain",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "rtt-inside-global",
+        "standalone": true
+      },
+      "rtt-inside-ham-radio": {
+        "id": "rtt-inside-ham-radio",
+        "file": "rtt_Inside_HAM_Radio.md",
+        "bundle": "rtt-inside",
+        "role": "domain",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "rtt-inside-ham-radio",
+        "standalone": true
+      },
+      "rtt-inside-internet2": {
+        "id": "rtt-inside-internet2",
+        "file": "rtt_Inside_Internet2.md",
+        "bundle": "rtt-inside",
+        "role": "domain",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "rtt-inside-internet2",
+        "standalone": true
+      },
+      "rtt-inside-mesh-node": {
+        "id": "rtt-inside-mesh-node",
+        "file": "rtt_Inside_Mesh_Node.md",
+        "bundle": "rtt-inside",
+        "role": "domain",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "rtt-inside-mesh-node",
+        "standalone": true
+      },
+      "rtt-inside-python": {
+        "id": "rtt-inside-python",
+        "file": "rtt_Inside_Python.md",
+        "bundle": "rtt-inside",
+        "role": "domain",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "rtt-inside-python",
+        "standalone": true
+      },
+      "rtt-inside-qcompute": {
+        "id": "rtt-inside-qcompute",
+        "file": "rtt_Inside_qCompute.md",
+        "bundle": "rtt-inside",
+        "role": "domain",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "rtt-inside-qcompute",
+        "standalone": true
+      },
+      "rtt-inside-robofish": {
+        "id": "rtt-inside-robofish",
+        "file": "rtt_Inside_Robofish.md",
+        "bundle": "rtt-inside",
+        "role": "domain",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "rtt-inside-robofish",
+        "standalone": true
+      },
+      "rtt-inside-space-force": {
+        "id": "rtt-inside-space-force",
+        "file": "rtt_Inside_Space_Force.md",
+        "bundle": "rtt-inside",
+        "role": "domain",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "rtt-inside-space-force",
+        "standalone": true
+      },
+      "rtt-inside-universe-key": {
+        "id": "rtt-inside-universe-key",
+        "file": "rtt_Inside_Universe_Key.md",
+        "bundle": "rtt-inside",
+        "role": "domain",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "rtt-inside-universe-key",
+        "standalone": true
+      },
+      "rtt-maps": {
+        "id": "rtt-maps",
+        "file": "rtt_maps.md",
+        "bundle": "rtt-core",
+        "role": "engine",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "rtt-maps",
+        "standalone": true
+      },
+      "rtt-micro-core": {
+        "id": "rtt-micro-core",
+        "file": "rtt_micro_core.md",
+        "bundle": "rtt-core",
+        "role": "engine",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "rtt-micro-core",
+        "standalone": true
+      },
+      "rtt-morphic-resonance": {
+        "id": "rtt-morphic-resonance",
+        "file": "rtt_Morphic_Resonance.md",
+        "bundle": "rtt-engines",
+        "role": "engine",
+        "analyzer_layers": [
+          "resonance"
+        ],
+        "anchor": "rtt-morphic-resonance",
+        "standalone": true
+      },
+      "rtt-paradox-gradient-analyzer": {
+        "id": "rtt-paradox-gradient-analyzer",
+        "file": "rtt_Paradox_Gradient_Analyzer.md",
+        "bundle": "rtt-engines",
+        "role": "analyzer",
+        "analyzer_layers": [
+          "coherence"
+        ],
+        "anchor": "rtt-paradox-gradient-analyzer",
+        "standalone": true
+      },
+      "rtt-regime-interlock-mapper": {
+        "id": "rtt-regime-interlock-mapper",
+        "file": "rtt_Regime_Interlock_Mapper.md",
+        "bundle": "rtt-engines",
+        "role": "engine",
+        "analyzer_layers": [
+          "regime"
+        ],
+        "anchor": "rtt-regime-interlock-mapper",
+        "standalone": true
+      },
+      "rtt-sdk": {
+        "id": "rtt-sdk",
+        "file": "rtt_sdk.md",
+        "bundle": "rtt-core",
+        "role": "engine",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "rtt-sdk",
+        "standalone": true
+      },
+      "rtt-solar-system": {
+        "id": "rtt-solar-system",
+        "file": "rtt_Solar_System.md",
+        "bundle": "rtt-engines",
+        "role": "engine",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "rtt-solar-system",
+        "standalone": true
+      },
+      "rtt-stability-basin-cartographer": {
+        "id": "rtt-stability-basin-cartographer",
+        "file": "rtt_Stability_Basin_Cartographer.md",
+        "bundle": "rtt-engines",
+        "role": "engine",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "rtt-stability-basin-cartographer",
+        "standalone": true
+      },
+      "rtt-store": {
+        "id": "rtt-store",
+        "file": "rtt_store.md",
+        "bundle": "rtt-core",
+        "role": "engine",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "rtt-store",
+        "standalone": true
+      },
+      "rtt-structural-faultline-detector": {
+        "id": "rtt-structural-faultline-detector",
+        "file": "rtt_Structural_Faultline_Detector.md",
+        "bundle": "rtt-engines",
+        "role": "engine",
+        "analyzer_layers": [
+          "structural"
+        ],
+        "anchor": "rtt-structural-faultline-detector",
+        "standalone": true
+      },
+      "rtt-substrate-flow": {
+        "id": "rtt-substrate-flow",
+        "file": "rtt_Substrate_Flow.md",
+        "bundle": "rtt-engines",
+        "role": "engine",
+        "analyzer_layers": [
+          "substrate"
+        ],
+        "anchor": "rtt-substrate-flow",
+        "standalone": true
+      },
+      "rtt-temporal-regime-sequencer": {
+        "id": "rtt-temporal-regime-sequencer",
+        "file": "rtt_Temporal_Regime_Sequencer.md",
+        "bundle": "rtt-engines",
+        "role": "engine",
+        "analyzer_layers": [
+          "regime"
+        ],
+        "anchor": "rtt-temporal-regime-sequencer",
+        "standalone": true
+      },
+      "rtt-the-inverted-star": {
+        "id": "rtt-the-inverted-star",
+        "file": "rtt_The_Inverted_Star.md",
+        "bundle": "rtt-engines",
+        "role": "engine",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "rtt-the-inverted-star",
+        "standalone": true
+      },
+      "rtt-triadic-echo-lattice": {
+        "id": "rtt-triadic-echo-lattice",
+        "file": "rtt_Triadic_Echo_Lattice.md",
+        "bundle": "rtt-engines",
+        "role": "engine",
+        "analyzer_layers": [
+          "coherence"
+        ],
+        "anchor": "rtt-triadic-echo-lattice",
+        "standalone": true
+      },
+      "rtt-triadic-regime-synthesizer": {
+        "id": "rtt-triadic-regime-synthesizer",
+        "file": "rtt_Triadic_Regime_Synthesizer.md",
+        "bundle": "rtt-engines",
+        "role": "engine",
+        "analyzer_layers": [
+          "coherence",
+          "regime"
+        ],
+        "anchor": "rtt-triadic-regime-synthesizer",
+        "standalone": true
+      },
+      "sarg": {
+        "id": "sarg",
+        "file": "SARG.md",
+        "bundle": "framework",
+        "role": "theory",
+        "analyzer_layers": [
+          "structural"
+        ],
+        "anchor": "sarg",
+        "standalone": true
+      },
+      "schemas": {
+        "id": "schemas",
+        "file": "schemas.md",
+        "bundle": "core",
+        "role": "anchor",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "schemas",
+        "standalone": true
+      },
+      "scientific-instrument-review": {
+        "id": "scientific-instrument-review",
+        "file": "scientific_instrument_review.md",
+        "bundle": "science",
+        "role": "science",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "scientific-instrument-review",
+        "standalone": true
+      },
+      "scripts": {
+        "id": "scripts",
+        "file": "scripts.md",
+        "bundle": "core",
+        "role": "anchor",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "scripts",
+        "standalone": true
+      },
+      "simulations": {
+        "id": "simulations",
+        "file": "simulations.md",
+        "bundle": "science",
+        "role": "science",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "simulations",
+        "standalone": true
+      },
+      "snapshots": {
+        "id": "snapshots",
+        "file": "snapshots.md",
+        "bundle": "data",
+        "role": "data",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "snapshots",
+        "standalone": true
+      },
+      "spacetime-micro-agent-validations": {
+        "id": "spacetime-micro-agent-validations",
+        "file": "spacetime_micro_agent_validations.md",
+        "bundle": "science",
+        "role": "science",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "spacetime-micro-agent-validations",
+        "standalone": true
+      },
+      "spacetime-validation-and-regime-invariant-dimensional-cores": {
+        "id": "spacetime-validation-and-regime-invariant-dimensional-cores",
+        "file": "spacetime_validation_and_regime_invariant_dimensional_cores.md",
+        "bundle": "science",
+        "role": "science",
+        "analyzer_layers": [
+          "regime"
+        ],
+        "anchor": "spacetime-validation-and-regime-invariant-dimensional-cores",
+        "standalone": true
+      },
+      "spectral-clarity": {
+        "id": "spectral-clarity",
+        "file": "spectral_clarity.md",
+        "bundle": "science",
+        "role": "science",
+        "analyzer_layers": [
+          "resonance"
+        ],
+        "anchor": "spectral-clarity",
+        "standalone": true
+      },
+      "spectrum-standards-reviewed": {
+        "id": "spectrum-standards-reviewed",
+        "file": "spectrum_standards_reviewed.md",
+        "bundle": "science",
+        "role": "science",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "spectrum-standards-reviewed",
+        "standalone": true
+      },
+      "src": {
+        "id": "src",
+        "file": "src.md",
+        "bundle": "core",
+        "role": "anchor",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "src",
+        "standalone": true
+      },
+      "starter": {
+        "id": "starter",
+        "file": "starter.md",
+        "bundle": "core",
+        "role": "anchor",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "starter",
+        "standalone": true
+      },
+      "structural-detection-engine": {
+        "id": "structural-detection-engine",
+        "file": "structural-detection-engine.md",
+        "bundle": "framework",
+        "role": "theory",
+        "analyzer_layers": [
+          "structural"
+        ],
+        "anchor": "structural-detection-engine",
+        "standalone": true
+      },
+      "structural-integration-engine": {
+        "id": "structural-integration-engine",
+        "file": "structural-integration-engine.md",
+        "bundle": "framework",
+        "role": "theory",
+        "analyzer_layers": [
+          "structural"
+        ],
+        "anchor": "structural-integration-engine",
+        "standalone": true
+      },
+      "structural-detection": {
+        "id": "structural-detection",
+        "file": "Structural_Detection.md",
+        "bundle": "framework",
+        "role": "theory",
+        "analyzer_layers": [
+          "structural"
+        ],
+        "anchor": "structural-detection",
+        "standalone": true
+      },
+      "structural-life-regime-profiles": {
+        "id": "structural-life-regime-profiles",
+        "file": "structural_life_regime_profiles.md",
+        "bundle": "framework",
+        "role": "theory",
+        "analyzer_layers": [
+          "regime",
+          "structural"
+        ],
+        "anchor": "structural-life-regime-profiles",
+        "standalone": true
+      },
+      "structuring-mathematics": {
+        "id": "structuring-mathematics",
+        "file": "structuring_mathematics.md",
+        "bundle": "framework",
+        "role": "theory",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "structuring-mathematics",
+        "standalone": true
+      },
+      "styles": {
+        "id": "styles",
+        "file": "styles.md",
+        "bundle": "core",
+        "role": "anchor",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "styles",
+        "standalone": true
+      },
+      "substrate": {
+        "id": "substrate",
+        "file": "substrate.md",
+        "bundle": "substrate",
+        "role": "substrate",
+        "analyzer_layers": [
+          "substrate"
+        ],
+        "anchor": "substrate",
+        "standalone": true
+      },
+      "substrate-communications": {
+        "id": "substrate-communications",
+        "file": "substrate_communications.md",
+        "bundle": "substrate",
+        "role": "substrate",
+        "analyzer_layers": [
+          "substrate"
+        ],
+        "anchor": "substrate-communications",
+        "standalone": true
+      },
+      "substrate-exposure-assay": {
+        "id": "substrate-exposure-assay",
+        "file": "substrate_exposure_assay.md",
+        "bundle": "substrate",
+        "role": "substrate",
+        "analyzer_layers": [
+          "substrate"
+        ],
+        "anchor": "substrate-exposure-assay",
+        "standalone": true
+      },
+      "substrate-mind-science": {
+        "id": "substrate-mind-science",
+        "file": "substrate_mind_science.md",
+        "bundle": "substrate",
+        "role": "substrate",
+        "analyzer_layers": [
+          "substrate"
+        ],
+        "anchor": "substrate-mind-science",
+        "standalone": true
+      },
+      "taxes": {
+        "id": "taxes",
+        "file": "taxes.md",
+        "bundle": "governance",
+        "role": "governance",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "taxes",
+        "standalone": true
+      },
+      "tel-lineage": {
+        "id": "tel-lineage",
+        "file": "TEL_LINEAGE.md",
+        "bundle": "core",
+        "role": "anchor",
+        "analyzer_layers": [
+          "lineage"
+        ],
+        "anchor": "tel-lineage",
+        "standalone": true
+      },
+      "tft-opengpu-stack-module": {
+        "id": "tft-opengpu-stack-module",
+        "file": "TFT.OpenGPU.Stack.Module.md",
+        "bundle": "framework",
+        "role": "theory",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "tft-opengpu-stack-module",
+        "standalone": true
+      },
+      "tft-3pack-v1-3": {
+        "id": "tft-3pack-v1-3",
+        "file": "TFT_3Pack_v1.3.md",
+        "bundle": "framework",
+        "role": "theory",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "tft-3pack-v1-3",
+        "standalone": true
+      },
+      "theories": {
+        "id": "theories",
+        "file": "theories.md",
+        "bundle": "theories",
+        "role": "theory",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "theories",
+        "standalone": true
+      },
+      "theories-chaos-theory": {
+        "id": "theories-chaos-theory",
+        "file": "theories_chaos_theory.md",
+        "bundle": "theories",
+        "role": "theory",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "theories-chaos-theory",
+        "standalone": true
+      },
+      "theories-electromagnetism": {
+        "id": "theories-electromagnetism",
+        "file": "theories_electromagnetism.md",
+        "bundle": "theories",
+        "role": "theory",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "theories-electromagnetism",
+        "standalone": true
+      },
+      "theories-evolutionary-biology": {
+        "id": "theories-evolutionary-biology",
+        "file": "theories_evolutionary_biology.md",
+        "bundle": "theories",
+        "role": "theory",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "theories-evolutionary-biology",
+        "standalone": true
+      },
+      "theories-general-relativity": {
+        "id": "theories-general-relativity",
+        "file": "theories_general_relativity.md",
+        "bundle": "theories",
+        "role": "theory",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "theories-general-relativity",
+        "standalone": true
+      },
+      "theories-information-theory": {
+        "id": "theories-information-theory",
+        "file": "theories_information_theory.md",
+        "bundle": "theories",
+        "role": "theory",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "theories-information-theory",
+        "standalone": true
+      },
+      "theories-morphic-resonance": {
+        "id": "theories-morphic-resonance",
+        "file": "theories_morphic_resonance.md",
+        "bundle": "theories",
+        "role": "theory",
+        "analyzer_layers": [
+          "resonance"
+        ],
+        "anchor": "theories-morphic-resonance",
+        "standalone": true
+      },
+      "theories-quantum-field-theory": {
+        "id": "theories-quantum-field-theory",
+        "file": "theories_quantum_field_theory.md",
+        "bundle": "theories",
+        "role": "theory",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "theories-quantum-field-theory",
+        "standalone": true
+      },
+      "theories-quantum-mechanics": {
+        "id": "theories-quantum-mechanics",
+        "file": "theories_quantum_mechanics.md",
+        "bundle": "theories",
+        "role": "theory",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "theories-quantum-mechanics",
+        "standalone": true
+      },
+      "theories-repos": {
+        "id": "theories-repos",
+        "file": "theories_repos.md",
+        "bundle": "theories",
+        "role": "theory",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "theories-repos",
+        "standalone": true
+      },
+      "theories-standard-model": {
+        "id": "theories-standard-model",
+        "file": "theories_standard_model.md",
+        "bundle": "theories",
+        "role": "theory",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "theories-standard-model",
+        "standalone": true
+      },
+      "theories-thermodynamics": {
+        "id": "theories-thermodynamics",
+        "file": "theories_thermodynamics.md",
+        "bundle": "theories",
+        "role": "theory",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "theories-thermodynamics",
+        "standalone": true
+      },
+      "triadic": {
+        "id": "triadic",
+        "file": "triadic.md",
+        "bundle": "framework",
+        "role": "theory",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "triadic",
+        "standalone": true
+      },
+      "triadic-coordination-substrate": {
+        "id": "triadic-coordination-substrate",
+        "file": "triadic_coordination_substrate.md",
+        "bundle": "substrate",
+        "role": "substrate",
+        "analyzer_layers": [
+          "substrate"
+        ],
+        "anchor": "triadic-coordination-substrate",
+        "standalone": true
+      },
+      "triadic-detection": {
+        "id": "triadic-detection",
+        "file": "triadic_detection.md",
+        "bundle": "framework",
+        "role": "theory",
+        "analyzer_layers": [
+          "structural"
+        ],
+        "anchor": "triadic-detection",
+        "standalone": true
+      },
+      "triadic-observer-layer": {
+        "id": "triadic-observer-layer",
+        "file": "triadic_observer_layer.md",
+        "bundle": "substrate",
+        "role": "substrate",
+        "analyzer_layers": [
+          "substrate"
+        ],
+        "anchor": "triadic-observer-layer",
+        "standalone": true
+      },
+      "unified-resonance": {
+        "id": "unified-resonance",
+        "file": "unified_resonance.md",
+        "bundle": "framework",
+        "role": "theory",
+        "analyzer_layers": [
+          "resonance"
+        ],
+        "anchor": "unified-resonance",
+        "standalone": true
+      },
+      "validation": {
+        "id": "validation",
+        "file": "validation.md",
+        "bundle": "data",
+        "role": "data",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "validation",
+        "standalone": true
+      },
+      "validators": {
+        "id": "validators",
+        "file": "validators.md",
+        "bundle": "data",
+        "role": "data",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "validators",
+        "standalone": true
+      },
+      "voice": {
+        "id": "voice",
+        "file": "voice.md",
+        "bundle": "ai",
+        "role": "ai",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "voice",
+        "standalone": true
+      },
+      "vst-for-embedding-stores-vector-databases": {
+        "id": "vst-for-embedding-stores-vector-databases",
+        "file": "vst_for_embedding_stores_vector_databases.md",
+        "bundle": "ai",
+        "role": "ai",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "vst-for-embedding-stores-vector-databases",
+        "standalone": true
+      },
+      "vst-for-generative-models": {
+        "id": "vst-for-generative-models",
+        "file": "vst_for_generative_models.md",
+        "bundle": "ai",
+        "role": "ai",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "vst-for-generative-models",
+        "standalone": true
+      },
+      "vst-for-large-language-models": {
+        "id": "vst-for-large-language-models",
+        "file": "vst_for_large_language_models.md",
+        "bundle": "ai",
+        "role": "ai",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "vst-for-large-language-models",
+        "standalone": true
+      },
+      "vst-for-multi-model-alignment": {
+        "id": "vst-for-multi-model-alignment",
+        "file": "vst_for_multi_model_alignment.md",
+        "bundle": "ai",
+        "role": "ai",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "vst-for-multi-model-alignment",
+        "standalone": true
+      },
+      "vst-for-protein-language-models": {
+        "id": "vst-for-protein-language-models",
+        "file": "vst_for_protein_language_models.md",
+        "bundle": "ai",
+        "role": "ai",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "vst-for-protein-language-models",
+        "standalone": true
+      },
+      "vst-for-robotics-and-control-policies": {
+        "id": "vst-for-robotics-and-control-policies",
+        "file": "vst_for_robotics_and_control_policies.md",
+        "bundle": "ai",
+        "role": "ai",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "vst-for-robotics-and-control-policies",
+        "standalone": true
+      },
+      "vst-for-scientific-simulators": {
+        "id": "vst-for-scientific-simulators",
+        "file": "vst_for_scientific_simulators.md",
+        "bundle": "ai",
+        "role": "ai",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "vst-for-scientific-simulators",
+        "standalone": true
+      },
+      "wikipedia": {
+        "id": "wikipedia",
+        "file": "wikipedia.md",
+        "bundle": "data",
+        "role": "data",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "wikipedia",
+        "standalone": true
+      },
+      "workflows": {
+        "id": "workflows",
+        "file": "workflows.md",
+        "bundle": "packages",
+        "role": "package",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "workflows",
+        "standalone": true
+      },
+      "ideas": {
+        "id": "ideas",
+        "file": "_ideas.md",
+        "bundle": "internal",
+        "role": "internal",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "ideas",
+        "standalone": true
+      },
+      "specs": {
+        "id": "specs",
+        "file": "_specs.md",
+        "bundle": "internal",
+        "role": "internal",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "specs",
+        "standalone": true
+      },
+      "speeches": {
+        "id": "speeches",
+        "file": "_speeches.md",
+        "bundle": "internal",
+        "role": "internal",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "speeches",
+        "standalone": true
+      },
+      "template": {
+        "id": "template",
+        "file": "_template.md",
+        "bundle": "core",
+        "role": "anchor",
+        "analyzer_layers": [
+          "general"
+        ],
+        "anchor": "template",
+        "standalone": true
+      }
+    },
+    "navigation": {
+      "index_path": "docsbook/modules/corpus/INDEX.md",
+      "bundle_anchors": {
+        "core": "#core",
+        "substrate": "#substrate",
+        "framework": "#framework",
+        "rtt-core": "#rtt-core",
+        "rtt-engines": "#rtt-engines",
+        "rtt-inside": "#rtt-inside",
+        "education": "#education",
+        "research": "#research",
+        "science": "#science",
+        "theories": "#theories",
+        "ai": "#ai",
+        "governance": "#governance",
+        "projects": "#projects",
+        "resonance-glyphs": "#resonance-glyphs",
+        "packages": "#packages",
+        "data": "#data",
+        "media": "#media",
+        "internal": "#internal"
+      },
+      "doc_anchors": {
+        "ai-drift-calibration": "#ai-drift-calibration",
+        "ai": "#ai",
+        "ai-resonance-seed": "#ai-resonance-seed",
+        "alphafold-substrate-alignments": "#alphafold-substrate-alignments",
+        "api": "#api",
+        "archive-org": "#archive-org",
+        "arrival-substrate-model": "#arrival-substrate-model",
+        "assets": "#assets",
+        "atmosphere": "#atmosphere",
+        "atomic-clocks": "#atomic-clocks",
+        "audio-industry-reviewed": "#audio-industry-reviewed",
+        "badges": "#badges",
+        "bold-problems": "#bold-problems",
+        "boson-substrate-model": "#boson-substrate-model",
+        "bots": "#bots",
+        "brand": "#brand",
+        "bridges": "#bridges",
+        "charts": "#charts",
+        "clients": "#clients",
+        "code": "#code",
+        "coeus": "#coeus",
+        "concepts": "#concepts",
+        "conditions-substrate-model": "#conditions-substrate-model",
+        "configs": "#configs",
+        "consciousness-substrate-model": "#consciousness-substrate-model",
+        "contributors": "#contributors",
+        "creation-guide": "#creation-guide",
+        "curriculum": "#curriculum",
+        "data": "#data",
+        "datacenter-reports": "#datacenter-reports",
+        "design": "#design",
+        "diagnosing-media-therapy": "#diagnosing-media-therapy",
+        "diagrams": "#diagrams",
+        "dimensional-substrate-regime-scanning-protocol": "#dimensional-substrate-regime-scanning-protocol",
+        "dimensional-substrate-structures": "#dimensional-substrate-structures",
+        "discovery": "#discovery",
+        "docs": "#docs",
+        "domain-tool-primers": "#domain-tool-primers",
+        "drift-taxonomy": "#drift-taxonomy",
+        "ecoechosystem": "#ecoechosystem",
+        "eda": "#eda",
+        "education": "#education",
+        "education-alignment": "#education-alignment",
+        "education-animals": "#education-animals",
+        "education-astrology": "#education-astrology",
+        "education-awareness": "#education-awareness",
+        "education-before-regime-awareness": "#education-before-regime-awareness",
+        "education-civregimestack": "#education-civregimestack",
+        "education-ebooks": "#education-ebooks",
+        "education-ebooks-grammar-for-intelligence": "#education-ebooks-grammar-for-intelligence",
+        "education-ebooks-little-science": "#education-ebooks-little-science",
+        "education-equations": "#education-equations",
+        "education-peira": "#education-peira",
+        "education-polisci": "#education-polisci",
+        "education-qna-atlas": "#education-qna-atlas",
+        "education-rituals": "#education-rituals",
+        "education-scrolls": "#education-scrolls",
+        "education-subjects": "#education-subjects",
+        "education-toolbox": "#education-toolbox",
+        "education-translations": "#education-translations",
+        "energy": "#energy",
+        "enterprise-structural-awareness": "#enterprise-structural-awareness",
+        "expectations": "#expectations",
+        "fab": "#fab",
+        "facilities": "#facilities",
+        "feedback": "#feedback",
+        "fff-gravity": "#fff-gravity",
+        "foundations": "#foundations",
+        "framework-field-theory": "#framework-field-theory",
+        "framework-field-theory-analyzer": "#framework-field-theory-analyzer",
+        "gallery": "#gallery",
+        "global-energy-regime-awareness": "#global-energy-regime-awareness",
+        "glyphic-resonance": "#glyphic-resonance",
+        "glyphs": "#glyphs",
+        "governance": "#governance",
+        "governance-substrate-model": "#governance-substrate-model",
+        "governance-substrate-model-analyzer": "#governance-substrate-model-analyzer",
+        "honor-roll": "#honor-roll",
+        "human-resources": "#human-resources",
+        "incident-substrate-model": "#incident-substrate-model",
+        "integrations": "#integrations",
+        "inverted-economics": "#inverted-economics",
+        "inverted-star-ontology": "#inverted-star-ontology",
+        "ipd-12": "#ipd-12",
+        "kit": "#kit",
+        "labs": "#labs",
+        "lactos": "#lactos",
+        "language-atlas": "#language-atlas",
+        "law": "#law",
+        "legal": "#legal",
+        "library": "#library",
+        "lineage": "#lineage",
+        "low-dimensional-structures": "#low-dimensional-structures",
+        "main": "#main",
+        "manufacturing-substrate-regime-model": "#manufacturing-substrate-regime-model",
+        "materials": "#materials",
+        "mcp": "#mcp",
+        "media-substrate-model": "#media-substrate-model",
+        "medicine": "#medicine",
+        "metadata": "#metadata",
+        "metrology": "#metrology",
+        "mode": "#mode",
+        "nist": "#nist",
+        "nos": "#nos",
+        "onboarding": "#onboarding",
+        "opacity": "#opacity",
+        "operators": "#operators",
+        "overlays": "#overlays",
+        "packages": "#packages",
+        "packages-tft-3pack": "#packages-tft-3pack",
+        "packages-wrsadc": "#packages-wrsadc",
+        "pantheons": "#pantheons",
+        "paradoxes-canon": "#paradoxes-canon",
+        "philanthropy": "#philanthropy",
+        "pipeline": "#pipeline",
+        "post-asml-era": "#post-asml-era",
+        "pre-rtt-papers": "#pre-rtt-papers",
+        "projects": "#projects",
+        "projects-coconsciousness": "#projects-coconsciousness",
+        "projects-hippocampus": "#projects-hippocampus",
+        "projects-id-shadow-gen": "#projects-id-shadow-gen",
+        "projects-lens": "#projects-lens",
+        "projects-nasa-hposs-tminus10": "#projects-nasa-hposs-tminus10",
+        "projects-poker-variants": "#projects-poker-variants",
+        "projects-resotectors": "#projects-resotectors",
+        "projects-the-missing-regime": "#projects-the-missing-regime",
+        "projects-vcg": "#projects-vcg",
+        "projects-victorg": "#projects-victorg",
+        "prompts": "#prompts",
+        "public-support": "#public-support",
+        "quantum-substrate-model": "#quantum-substrate-model",
+        "radiology": "#radiology",
+        "readme": "#readme",
+        "reference": "#reference",
+        "regime-blindness-checklist": "#regime-blindness-checklist",
+        "registries": "#registries",
+        "registry": "#registry",
+        "religious-substrate-grammar-model": "#religious-substrate-grammar-model",
+        "reports": "#reports",
+        "research": "#research",
+        "research-agentic": "#research-agentic",
+        "research-assets": "#research-assets",
+        "research-checklists": "#research-checklists",
+        "research-intelligence-class-ladder": "#research-intelligence-class-ladder",
+        "research-operators": "#research-operators",
+        "research-protocol-header": "#research-protocol-header",
+        "research-toolbox": "#research-toolbox",
+        "resilience-checker": "#resilience-checker",
+        "resonance-substrate-model": "#resonance-substrate-model",
+        "resonance": "#resonance",
+        "resonance-atlas": "#resonance-atlas",
+        "rfc": "#rfc",
+        "rituals": "#rituals",
+        "rtt": "#rtt",
+        "rtt-1": "#rtt-1",
+        "rtt-12": "#rtt-12",
+        "rtt-2": "#rtt-2",
+        "rtt-3": "#rtt-3",
+        "rtt-app": "#rtt-app",
+        "rtt-c64host": "#rtt-c64host",
+        "rtt-codes": "#rtt-codes",
+        "rtt-codex": "#rtt-codex",
+        "rtt-coherence-tensor-engine": "#rtt-coherence-tensor-engine",
+        "rtt-cross-domain-causality-weaver": "#rtt-cross-domain-causality-weaver",
+        "rtt-crystal-mycelial-engine": "#rtt-crystal-mycelial-engine",
+        "rtt-d369-chip-spec": "#rtt-d369-chip-spec",
+        "rtt-diagrams": "#rtt-diagrams",
+        "rtt-dimensional-resonance-scanner": "#rtt-dimensional-resonance-scanner",
+        "rtt-drift-sentinel": "#rtt-drift-sentinel",
+        "rtt-echo-classifier": "#rtt-echo-classifier",
+        "rtt-emotions": "#rtt-emotions",
+        "rtt-extension": "#rtt-extension",
+        "rtt-guild-little-science-ebook": "#rtt-guild-little-science-ebook",
+        "rtt-harmonic-stability-profile": "#rtt-harmonic-stability-profile",
+        "rtt-inside": "#rtt-inside",
+        "rtt-inside-api": "#rtt-inside-api",
+        "rtt-inside-atc": "#rtt-inside-atc",
+        "rtt-inside-autonomous-forms": "#rtt-inside-autonomous-forms",
+        "rtt-inside-benchmarks": "#rtt-inside-benchmarks",
+        "rtt-inside-cisco": "#rtt-inside-cisco",
+        "rtt-inside-coal": "#rtt-inside-coal",
+        "rtt-inside-corridor-studio": "#rtt-inside-corridor-studio",
+        "rtt-inside-drift": "#rtt-inside-drift",
+        "rtt-inside-earth-sims": "#rtt-inside-earth-sims",
+        "rtt-inside-electron-microscopes": "#rtt-inside-electron-microscopes",
+        "rtt-inside-enterprise": "#rtt-inside-enterprise",
+        "rtt-inside-examples": "#rtt-inside-examples",
+        "rtt-inside-finance": "#rtt-inside-finance",
+        "rtt-inside-global": "#rtt-inside-global",
+        "rtt-inside-ham-radio": "#rtt-inside-ham-radio",
+        "rtt-inside-internet2": "#rtt-inside-internet2",
+        "rtt-inside-mesh-node": "#rtt-inside-mesh-node",
+        "rtt-inside-python": "#rtt-inside-python",
+        "rtt-inside-qcompute": "#rtt-inside-qcompute",
+        "rtt-inside-robofish": "#rtt-inside-robofish",
+        "rtt-inside-space-force": "#rtt-inside-space-force",
+        "rtt-inside-universe-key": "#rtt-inside-universe-key",
+        "rtt-maps": "#rtt-maps",
+        "rtt-micro-core": "#rtt-micro-core",
+        "rtt-morphic-resonance": "#rtt-morphic-resonance",
+        "rtt-paradox-gradient-analyzer": "#rtt-paradox-gradient-analyzer",
+        "rtt-regime-interlock-mapper": "#rtt-regime-interlock-mapper",
+        "rtt-sdk": "#rtt-sdk",
+        "rtt-solar-system": "#rtt-solar-system",
+        "rtt-stability-basin-cartographer": "#rtt-stability-basin-cartographer",
+        "rtt-store": "#rtt-store",
+        "rtt-structural-faultline-detector": "#rtt-structural-faultline-detector",
+        "rtt-substrate-flow": "#rtt-substrate-flow",
+        "rtt-temporal-regime-sequencer": "#rtt-temporal-regime-sequencer",
+        "rtt-the-inverted-star": "#rtt-the-inverted-star",
+        "rtt-triadic-echo-lattice": "#rtt-triadic-echo-lattice",
+        "rtt-triadic-regime-synthesizer": "#rtt-triadic-regime-synthesizer",
+        "sarg": "#sarg",
+        "schemas": "#schemas",
+        "scientific-instrument-review": "#scientific-instrument-review",
+        "scripts": "#scripts",
+        "simulations": "#simulations",
+        "snapshots": "#snapshots",
+        "spacetime-micro-agent-validations": "#spacetime-micro-agent-validations",
+        "spacetime-validation-and-regime-invariant-dimensional-cores": "#spacetime-validation-and-regime-invariant-dimensional-cores",
+        "spectral-clarity": "#spectral-clarity",
+        "spectrum-standards-reviewed": "#spectrum-standards-reviewed",
+        "src": "#src",
+        "starter": "#starter",
+        "structural-detection-engine": "#structural-detection-engine",
+        "structural-integration-engine": "#structural-integration-engine",
+        "structural-detection": "#structural-detection",
+        "structural-life-regime-profiles": "#structural-life-regime-profiles",
+        "structuring-mathematics": "#structuring-mathematics",
+        "styles": "#styles",
+        "substrate": "#substrate",
+        "substrate-communications": "#substrate-communications",
+        "substrate-exposure-assay": "#substrate-exposure-assay",
+        "substrate-mind-science": "#substrate-mind-science",
+        "taxes": "#taxes",
+        "tel-lineage": "#tel-lineage",
+        "tft-opengpu-stack-module": "#tft-opengpu-stack-module",
+        "tft-3pack-v1-3": "#tft-3pack-v1-3",
+        "theories": "#theories",
+        "theories-chaos-theory": "#theories-chaos-theory",
+        "theories-electromagnetism": "#theories-electromagnetism",
+        "theories-evolutionary-biology": "#theories-evolutionary-biology",
+        "theories-general-relativity": "#theories-general-relativity",
+        "theories-information-theory": "#theories-information-theory",
+        "theories-morphic-resonance": "#theories-morphic-resonance",
+        "theories-quantum-field-theory": "#theories-quantum-field-theory",
+        "theories-quantum-mechanics": "#theories-quantum-mechanics",
+        "theories-repos": "#theories-repos",
+        "theories-standard-model": "#theories-standard-model",
+        "theories-thermodynamics": "#theories-thermodynamics",
+        "triadic": "#triadic",
+        "triadic-coordination-substrate": "#triadic-coordination-substrate",
+        "triadic-detection": "#triadic-detection",
+        "triadic-observer-layer": "#triadic-observer-layer",
+        "unified-resonance": "#unified-resonance",
+        "validation": "#validation",
+        "validators": "#validators",
+        "voice": "#voice",
+        "vst-for-embedding-stores-vector-databases": "#vst-for-embedding-stores-vector-databases",
+        "vst-for-generative-models": "#vst-for-generative-models",
+        "vst-for-large-language-models": "#vst-for-large-language-models",
+        "vst-for-multi-model-alignment": "#vst-for-multi-model-alignment",
+        "vst-for-protein-language-models": "#vst-for-protein-language-models",
+        "vst-for-robotics-and-control-policies": "#vst-for-robotics-and-control-policies",
+        "vst-for-scientific-simulators": "#vst-for-scientific-simulators",
+        "wikipedia": "#wikipedia",
+        "workflows": "#workflows",
+        "ideas": "#ideas",
+        "specs": "#specs",
+        "speeches": "#speeches",
+        "template": "#template"
+      }
+    }
+  }
+}

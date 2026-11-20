@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/corpus/api.md">
-  <title>Beacon Endpoint</title>
+  <title>RTT API (Beta)</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -93,322 +93,7 @@
 
   <main>
 <p>api </p>
-<h1 id="beacon-endpoint">Beacon Endpoint</h1>
-<p>The beacon endpoint provides the simplest RTT‑Inside integration path.<br>
-Clients such as <code>rtt.js</code> send lightweight, anonymous structural signals that help establish early coherence, drift, and clarity patterns across participating sites.</p>
-<p>This endpoint is intentionally minimal. It defines the handshake, not the substrate.</p>
-<hr>
-<h2 id="post-beacon">POST /beacon</h2>
-<p>Send a single RTT event.</p>
-<h3 id="request-body">Request Body</h3>
-<pre><code class="language-json">{
-  &quot;site&quot;: &quot;example.com&quot;,
-  &quot;session&quot;: &quot;rtt-abc123&quot;,
-  &quot;event&quot;: &quot;page_load&quot;,
-  &quot;ts&quot;: &quot;2026-01-19T14:22:00Z&quot;,
-  &quot;structure&quot;: {
-    &quot;url&quot;: &quot;https://example.com&quot;,
-    &quot;title&quot;: &quot;Home&quot;,
-    &quot;nav_count&quot;: 1,
-    &quot;main_count&quot;: 1,
-    &quot;form_count&quot;: 0,
-    &quot;button_count&quot;: 3,
-    &quot;dom_nodes&quot;: 142
-  }
-}
-</code></pre>
-<h3 id="response">Response</h3>
-<pre><code class="language-json">{ &quot;status&quot;: &quot;ok&quot; }
-</code></pre>
-<p>The server may aggregate, discard, or analyze the payload silently.<br>
-No guarantees are made about storage or processing.</p>
-<hr>
-<h2 id="purpose">Purpose</h2>
-<p>Beacon events allow RTT to:</p>
-<ul>
-<li>observe structural patterns across sites  </li>
-<li>detect drift or coherence changes  </li>
-<li>prepare for future vST validators  </li>
-<li>support RTT‑Inside browser extensions and tools  </li>
-</ul>
-<p>This endpoint is safe, low‑friction, and suitable for all early adopters.
-# <strong>client.md — Interacting with the RTT API Router</strong></p>
-<p>This document describes how clients, services, and tools can interact with the RTT API.<br>
-It provides examples for:</p>
-<ul>
-<li>command‑line usage (<code>curl</code>)  </li>
-<li>browser‑side JavaScript  </li>
-<li>Node/server‑to‑server integrations  </li>
-</ul>
-<p>All examples target the canonical RTT API surface:</p>
-<pre><code>/api/rtt/beacon
-/api/rtt/profile/{site}
-/api/rtt/validate
-/api/rtt/corridor
-/api/rtt/topology
-</code></pre>
-<p>The diagnostics endpoints are placeholders but included for completeness.</p>
-<hr>
-<h1 id="1-using-curl">1. Using <code>curl</code></h1>
-<h2 id="send-a-beacon-event">Send a Beacon Event</h2>
-<pre><code class="language-bash">curl -X POST https://docs.triadicframeworks.org/api/rtt/beacon \
-  -H &quot;Content-Type: application/json&quot; \
-  -d '{
-        &quot;site&quot;: &quot;example.com&quot;,
-        &quot;session&quot;: &quot;rtt-abc123&quot;,
-        &quot;event&quot;: &quot;page_load&quot;,
-        &quot;ts&quot;: &quot;2026-01-19T14:22:00Z&quot;,
-        &quot;structure&quot;: {
-          &quot;url&quot;: &quot;https://example.com&quot;,
-          &quot;title&quot;: &quot;Home&quot;,
-          &quot;nav_count&quot;: 1,
-          &quot;main_count&quot;: 1,
-          &quot;form_count&quot;: 0,
-          &quot;button_count&quot;: 3,
-          &quot;dom_nodes&quot;: 142
-        }
-      }'
-</code></pre>
-<hr>
-<h2 id="get-a-site-profile">Get a Site Profile</h2>
-<pre><code class="language-bash">curl https://docs.triadicframeworks.org/api/rtt/profile/example.com
-</code></pre>
-<hr>
-<h2 id="set-a-site-profile">Set a Site Profile</h2>
-<pre><code class="language-bash">curl -X POST https://docs.triadicframeworks.org/api/rtt/profile/example.com \
-  -H &quot;Content-Type: application/json&quot; \
-  -d '{
-        &quot;rtt_version&quot;: &quot;1.0&quot;,
-        &quot;supports&quot;: [&quot;coherence&quot;],
-        &quot;contact&quot;: &quot;ops@example.com&quot;
-      }'
-</code></pre>
-<hr>
-<h2 id="call-a-diagnostics-endpoint-reserved">Call a Diagnostics Endpoint (Reserved)</h2>
-<pre><code class="language-bash">curl -X POST https://docs.triadicframeworks.org/api/rtt/validate \
-  -H &quot;Content-Type: application/json&quot; \
-  -d '{&quot;system_map&quot;: {}, &quot;flows&quot;: [], &quot;constraints&quot;: []}'
-</code></pre>
-<hr>
-<h1 id="2-javascript-browser">2. JavaScript (Browser)</h1>
-<h2 id="sending-a-beacon-event-manually">Sending a Beacon Event Manually</h2>
-<pre><code class="language-js">fetch(&quot;https://docs.triadicframeworks.org/api/rtt/beacon&quot;, {
-  method: &quot;POST&quot;,
-  headers: { &quot;Content-Type&quot;: &quot;application/json&quot; },
-  body: JSON.stringify({
-    site: &quot;example.com&quot;,
-    session: &quot;rtt-&quot; + Math.random().toString(36).slice(2),
-    event: &quot;manual_ping&quot;,
-    ts: new Date().toISOString(),
-    structure: {
-      url: window.location.href,
-      title: document.title,
-      nav_count: document.querySelectorAll(&quot;nav&quot;).length,
-      dom_nodes: document.getElementsByTagName(&quot;*&quot;).length
-    }
-  })
-});
-</code></pre>
-<hr>
-<h2 id="using-the-rttjs-global-api">Using the <code>rtt.js</code> Global API</h2>
-<p>If the site includes:</p>
-<pre><code class="language-html">&lt;script src=&quot;https://docs.triadicframeworks.org/rtt.js&quot; data-site=&quot;example.com&quot;&gt;&lt;/script&gt;
-</code></pre>
-<p>Then:</p>
-<pre><code class="language-js">// Send a manual ping
-RTT.ping(&quot;user_action&quot;);
-
-// Get a structural snapshot
-const snapshot = RTT.getStructureSnapshot();
-console.log(snapshot);
-</code></pre>
-<hr>
-<h1 id="3-javascript-node-servertoserver">3. JavaScript (Node / Server‑to‑Server)</h1>
-<h2 id="sending-a-beacon-event">Sending a Beacon Event</h2>
-<pre><code class="language-js">import fetch from &quot;node-fetch&quot;;
-
-async function sendBeacon() {
-  const payload = {
-    site: &quot;backend-service&quot;,
-    session: &quot;srv-&quot; + Date.now(),
-    event: &quot;heartbeat&quot;,
-    ts: new Date().toISOString(),
-    structure: {
-      url: &quot;internal://service&quot;,
-      title: &quot;Service Node&quot;,
-      dom_nodes: 0
-    }
-  };
-
-  await fetch(&quot;https://docs.triadicframeworks.org/api/rtt/beacon&quot;, {
-    method: &quot;POST&quot;,
-    headers: { &quot;Content-Type&quot;: &quot;application/json&quot; },
-    body: JSON.stringify(payload)
-  });
-}
-
-sendBeacon();
-</code></pre>
-<hr>
-<h2 id="setting-a-profile-from-a-backend">Setting a Profile from a Backend</h2>
-<pre><code class="language-js">import fetch from &quot;node-fetch&quot;;
-
-await fetch(&quot;https://docs.triadicframeworks.org/api/rtt/profile/myservice&quot;, {
-  method: &quot;POST&quot;,
-  headers: { &quot;Content-Type&quot;: &quot;application/json&quot; },
-  body: JSON.stringify({
-    rtt_version: &quot;1.0&quot;,
-    supports: [&quot;coherence&quot;, &quot;drift&quot;],
-    contact: &quot;infra@example.com&quot;
-  })
-});
-</code></pre>
-<hr>
-<h2 id="calling-diagnostics-futureready">Calling Diagnostics (Future‑Ready)</h2>
-<pre><code class="language-js">import fetch from &quot;node-fetch&quot;;
-
-const response = await fetch(&quot;https://docs.triadicframeworks.org/api/rtt/validate&quot;, {
-  method: &quot;POST&quot;,
-  headers: { &quot;Content-Type&quot;: &quot;application/json&quot; },
-  body: JSON.stringify({
-    system_map: { services: [&quot;auth&quot;, &quot;api&quot;, &quot;db&quot;] },
-    flows: [],
-    constraints: []
-  })
-});
-
-const result = await response.json();
-console.log(result);
-</code></pre>
-<hr>
-<h1 id="4-integration-patterns">4. Integration Patterns</h1>
-<h2 id="a-browser-extensions">A. Browser Extensions</h2>
-<p>Extensions can:</p>
-<ul>
-<li>listen for navigation events  </li>
-<li>collect structural snapshots  </li>
-<li>send periodic beacons  </li>
-<li>annotate pages with RTT clarity indicators  </li>
-</ul>
-<p>They use the same <code>/beacon</code> endpoint.</p>
-<hr>
-<h2 id="b-web-services">B. Web Services</h2>
-<p>Services can:</p>
-<ul>
-<li>declare RTT‑Inside support via <code>/profile/{site}</code>  </li>
-<li>send periodic structural heartbeats  </li>
-<li>prepare for vST‑beta diagnostics  </li>
-</ul>
-<hr>
-<h2 id="c-datacenters-research-labs">C. Datacenters / Research Labs</h2>
-<p>These clients will eventually use:</p>
-<ul>
-<li><code>/validate</code> for coherence  </li>
-<li><code>/corridor</code> for flow alignment  </li>
-<li><code>/topology</code> for triadic decomposition  </li>
-</ul>
-<p>The API surface is stable even if the internals are not yet active.</p>
-<hr>
-<h1 id="5-summary">5. Summary</h1>
-<p>This document provides:</p>
-<ul>
-<li><code>curl</code> examples  </li>
-<li>browser JavaScript examples  </li>
-<li>Node/server‑to‑server examples  </li>
-<li>integration patterns for extensions, services, and datacenters  </li>
-</ul>
-<p>The RTT API is intentionally minimal and stable, allowing early adopters to integrate now while the vST substrate continues to evolve.
-# Diagnostics Endpoints (Reserved)
-The diagnostics endpoints define the future surface of vST‑beta validation.<br>
-These endpoints are placeholders: they establish the API shape without exposing substrate logic.</p>
-<p>They will activate once the public vST research layer is ready.</p>
-<hr>
-<h2 id="post-validate">POST /validate</h2>
-<p>Submit a structural map for coherence and drift analysis.</p>
-<h3 id="example-request">Example Request</h3>
-<pre><code class="language-json">{
-  &quot;system_map&quot;: {},
-  &quot;flows&quot;: [],
-  &quot;constraints&quot;: []
-}
-</code></pre>
-<h3 id="example-response">Example Response</h3>
-<pre><code class="language-json">{
-  &quot;status&quot;: &quot;not_available&quot;,
-  &quot;message&quot;: &quot;vST-beta diagnostics are not yet active&quot;
-}
-</code></pre>
-<hr>
-<h2 id="post-corridor">POST /corridor</h2>
-<p>Submit flow data for corridor alignment checks.</p>
-<h3 id="example-response_1">Example Response</h3>
-<pre><code class="language-json">{
-  &quot;status&quot;: &quot;not_available&quot;,
-  &quot;message&quot;: &quot;corridor diagnostics are not yet active&quot;
-}
-</code></pre>
-<hr>
-<h2 id="post-topology">POST /topology</h2>
-<p>Submit system topology for triadic decomposition.</p>
-<h3 id="example-response_2">Example Response</h3>
-<pre><code class="language-json">{
-  &quot;status&quot;: &quot;not_available&quot;,
-  &quot;message&quot;: &quot;topology diagnostics are not yet active&quot;
-}
-</code></pre>
-<hr>
-<h2 id="purpose_1">Purpose</h2>
-<p>These endpoints will eventually support:</p>
-<ul>
-<li>structural coherence validation  </li>
-<li>drift vector analysis  </li>
-<li>corridor alignment  </li>
-<li>triadic decomposition of systems  </li>
-<li>full‑stack clarity evaluation  </li>
-</ul>
-<p>They exist now so early adopters can prepare their tooling and workflows.
-# Site Profile Endpoint
-The profile endpoint allows sites and services to declare RTT‑Inside capabilities.<br>
-Profiles are optional but recommended for platforms that want deeper structural alignment or future vST‑beta features.</p>
-<p>A profile is a simple JSON manifest describing what the site supports.</p>
-<hr>
-<h2 id="get-profilesite">GET /profile/{site}</h2>
-<p>Retrieve the RTT profile for a site.</p>
-<h3 id="example-response_3">Example Response</h3>
-<pre><code class="language-json">{
-  &quot;site&quot;: &quot;example.com&quot;,
-  &quot;profile&quot;: {
-    &quot;rtt_version&quot;: &quot;1.0&quot;,
-    &quot;supports&quot;: [&quot;coherence&quot;, &quot;corridor&quot;, &quot;drift&quot;],
-    &quot;contact&quot;: &quot;ops@example.com&quot;
-  }
-}
-</code></pre>
-<p>If no profile exists, <code>profile</code> will be <code>null</code>.</p>
-<hr>
-<h2 id="post-profilesite">POST /profile/{site}</h2>
-<p>Register or update a site’s RTT profile.</p>
-<h3 id="example-request_1">Example Request</h3>
-<pre><code class="language-json">{
-  &quot;rtt_version&quot;: &quot;1.0&quot;,
-  &quot;supports&quot;: [&quot;coherence&quot;],
-  &quot;contact&quot;: &quot;admin@example.com&quot;
-}
-</code></pre>
-<h3 id="response_1">Response</h3>
-<pre><code class="language-json">{ &quot;status&quot;: &quot;ok&quot; }
-</code></pre>
-<hr>
-<h2 id="purpose_2">Purpose</h2>
-<p>Profiles allow RTT to:</p>
-<ul>
-<li>recognize RTT‑Inside participants  </li>
-<li>enable optional features (coherence, drift, corridor)  </li>
-<li>support future vST validators  </li>
-<li>provide site‑specific diagnostics or insights  </li>
-</ul>
-<p>Profiles are stable, human‑readable, and versioned for long‑term compatibility.
-<img width="682" height="682" alt="rtt_api_module_image" src="https://github.com/user-attachments/assets/03982645-fd0a-4217-9e02-010364c21827" /></p>
+<p><img width="1194" height="672" alt="api_rtt_" src="https://github.com/user-attachments/assets/0e8c1052-e7ad-4f7a-8ee4-9066cacd9d45" /></p>
 <h1 id="rtt-api-beta">RTT API (Beta)</h1>
 <ul>
 <li><a href="RTT_API_module.json"><code>RTT_API_module.json</code></a> — Agentic module schema role assignments</li>
@@ -434,8 +119,8 @@ Profiles are optional but recommended for platforms that want deeper structural 
 <pre><code>https://docs.triadicframeworks.org/api/rtt
 </code></pre>
 <hr>
-<h2 id="beacon-endpoint_1">Beacon Endpoint</h2>
-<h3 id="post-beacon_1">POST <code>/beacon</code></h3>
+<h2 id="beacon-endpoint">Beacon Endpoint</h2>
+<h3 id="post-beacon">POST <code>/beacon</code></h3>
 <p>Send a single RTT event.</p>
 <p>Example:</p>
 <pre><code class="language-json">{
@@ -459,9 +144,9 @@ Profiles are optional but recommended for platforms that want deeper structural 
 </code></pre>
 <hr>
 <h2 id="profile-endpoint">Profile Endpoint</h2>
-<h3 id="get-profilesite_1">GET <code>/profile/{site}</code></h3>
+<h3 id="get-profilesite">GET <code>/profile/{site}</code></h3>
 <p>Retrieve a site’s RTT profile.</p>
-<h3 id="post-profilesite_1">POST <code>/profile/{site}</code></h3>
+<h3 id="post-profilesite">POST <code>/profile/{site}</code></h3>
 <p>Register or update a site’s RTT profile.</p>
 <p>Example:</p>
 <pre><code class="language-json">{
@@ -511,86 +196,8 @@ Endpoint shapes are stable; handler behavior may evolve as the RTT ecosystem gro
 </div>
 
 <p><img src="https://img.shields.io/badge/🛰️API%20Stable-📡Beacon%20Ready-4c8eda?style=for-the-badge" alt="🛰️API Stable | 📡Beacon Ready"/>
-# RTT API Router (Beta)
-This document describes how the RTT API endpoints are wired together into a single routing surface.<br>
-It is framework‑agnostic and focuses on the structural flow of requests through the RTT API.</p>
-<p>The router defines three endpoint families:</p>
-<ol>
-<li><strong>Beacon</strong> — lightweight structural signals  </li>
-<li><strong>Profile</strong> — RTT‑Inside site declarations  </li>
-<li><strong>Diagnostics</strong> — reserved vST‑beta endpoints  </li>
-</ol>
-<p>Each family maps to a dedicated handler module.</p>
-<hr>
-<h2 id="router-overview_1">Router Overview</h2>
-<pre><code>/api/rtt
-│
-├── POST /beacon          → beacon_handler.handleBeacon
-│
-├── GET  /profile/{site}  → profile_handler.getProfile
-└── POST /profile/{site}  → profile_handler.setProfile
-
-# Reserved (inactive)
-├── POST /validate        → diagnostics_handler.validate
-├── POST /corridor        → diagnostics_handler.corridor
-└── POST /topology        → diagnostics_handler.topology
-</code></pre>
-<p>All endpoints are version‑stable and safe for early adopters.</p>
-<hr>
-<h2 id="example-router-pseudocode">Example Router (Pseudo‑Code)</h2>
-<pre><code class="language-js">import { handleBeacon } from &quot;./server/beacon_handler.js&quot;;
-import { getProfile, setProfile } from &quot;./server/profile_handler.js&quot;;
-import {
-  validate,
-  corridor,
-  topology
-} from &quot;./server/diagnostics_handler.js&quot;;
-
-export function registerRTTRoutes(app) {
-  // Beacon events
-  app.post(&quot;/api/rtt/beacon&quot;, handleBeacon);
-
-  // Site profiles
-  app.get(&quot;/api/rtt/profile/:site&quot;, (req, res) =&gt;
-    getProfile(req, res, req.params.site)
-  );
-  app.post(&quot;/api/rtt/profile/:site&quot;, (req, res) =&gt;
-    setProfile(req, res, req.params.site)
-  );
-
-  // Diagnostics (reserved)
-  app.post(&quot;/api/rtt/validate&quot;, validate);
-  app.post(&quot;/api/rtt/corridor&quot;, corridor);
-  app.post(&quot;/api/rtt/topology&quot;, topology);
-}
-</code></pre>
-<p>This example uses a generic <code>app</code> object (Express‑style), but the structure applies to any server framework.</p>
-<hr>
-<h2 id="routing-philosophy">Routing Philosophy</h2>
-<p>The RTT router is designed to:</p>
-<ul>
-<li>keep endpoint families cleanly separated  </li>
-<li>avoid coupling between handlers  </li>
-<li>maintain stable URLs for early adopters  </li>
-<li>allow future vST validators to slot in without breaking changes  </li>
-<li>keep the API surface minimal and predictable  </li>
-</ul>
-<p>The router defines the <em>shape</em> of the RTT API, not the substrate logic behind it.</p>
-<hr>
-<h2 id="future-extensions">Future Extensions</h2>
-<p>The router may eventually include:</p>
-<ul>
-<li><code>/events</code> for SSE/WebSocket structural streams  </li>
-<li><code>/corridors</code> for RTT corridor introspection  </li>
-<li><code>/vst/*</code> for full validator surfaces  </li>
-<li><code>/metrics</code> for RTT‑Inside observability  </li>
-</ul>
-<p>These will be added without altering existing endpoints.</p>
-<hr>
-<h2 id="status_1">Status</h2>
-<p><strong>Beta.</strong><br>
-Routing is stable, but handler behavior may evolve as the RTT ecosystem grows.
-<strong>SuperGrok Imagine Video Script: “The Seven Operators Animate the 3D–9D Dimensional Echoes”</strong></p>
+<img width="1024" height="1024" alt="rtt_api_module_image" src="https://github.com/user-attachments/assets/03982645-fd0a-4217-9e02-010364c21827" /></p>
+<h2 id="supergrok-imagine-video-script-the-seven-operators-animate-the-3d9d-dimensional-echoes"><strong>SuperGrok Imagine Video Script: “The Seven Operators Animate the 3D–9D Dimensional Echoes”</strong></h2>
 <p><strong>Prompt for SuperGrok Imagine (copy-paste ready – optimized for ~45–60 second cinematic video loop or segmented generation):</strong></p>
 <p>Create a breathtaking, ultra-high-definition cinematic 3D animation in a holographic sacred-geometry meets quantum-cosmic sci-fi style. Dark infinite void background with subtle starfield and faint resonance particles. Neon-glowing lines, translucent geometric forms, soft volumetric lighting, smooth camera movements, gentle particle effects, and pulsing energy fields. Subtle ethereal ambient soundtrack with deep rhythmic pulses that sync to the visuals. Clean white sans-serif text overlays fade in and out with key terms.</p>
 <p><strong>Sequence (timed cinematic flow):</strong></p>
@@ -4394,250 +4001,627 @@ Everything else can be expanded with AI.
 <li>The engine runs an 8D scenario with <code>["Lineage-Op","Lineage-Op","Boundary-Op"]</code>.  </li>
 <li>The Scenario Browser shows <strong>heritage conflict</strong> and thickened envelope.  </li>
 <li>AI prompt: <em>“Propose a merge strategy that restores 8D coherence.”</em>
-```json</li>
+# Beacon Endpoint
+The beacon endpoint provides the simplest RTT‑Inside integration path.<br>
+Clients such as <code>rtt.js</code> send lightweight, anonymous structural signals that help establish early coherence, drift, and clarity patterns across participating sites.</li>
 </ul>
+<p>This endpoint is intentionally minimal. It defines the handshake, not the substrate.</p>
+<hr>
+<h2 id="post-beacon_1">POST /beacon</h2>
+<p>Send a single RTT event.</p>
+<h3 id="request-body">Request Body</h3>
+<pre><code class="language-json">{
+  &quot;site&quot;: &quot;example.com&quot;,
+  &quot;session&quot;: &quot;rtt-abc123&quot;,
+  &quot;event&quot;: &quot;page_load&quot;,
+  &quot;ts&quot;: &quot;2026-01-19T14:22:00Z&quot;,
+  &quot;structure&quot;: {
+    &quot;url&quot;: &quot;https://example.com&quot;,
+    &quot;title&quot;: &quot;Home&quot;,
+    &quot;nav_count&quot;: 1,
+    &quot;main_count&quot;: 1,
+    &quot;form_count&quot;: 0,
+    &quot;button_count&quot;: 3,
+    &quot;dom_nodes&quot;: 142
+  }
+}
+</code></pre>
+<h3 id="response">Response</h3>
+<pre><code class="language-json">{ &quot;status&quot;: &quot;ok&quot; }
+</code></pre>
+<p>The server may aggregate, discard, or analyze the payload silently.<br>
+No guarantees are made about storage or processing.</p>
+<hr>
+<h2 id="purpose">Purpose</h2>
+<p>Beacon events allow RTT to:</p>
+<ul>
+<li>observe structural patterns across sites  </li>
+<li>detect drift or coherence changes  </li>
+<li>prepare for future vST validators  </li>
+<li>support RTT‑Inside browser extensions and tools  </li>
+</ul>
+<p>This endpoint is safe, low‑friction, and suitable for all early adopters.
+# <strong>client.md — Interacting with the RTT API Router</strong></p>
+<p>This document describes how clients, services, and tools can interact with the RTT API.<br>
+It provides examples for:</p>
+<ul>
+<li>command‑line usage (<code>curl</code>)  </li>
+<li>browser‑side JavaScript  </li>
+<li>Node/server‑to‑server integrations  </li>
+</ul>
+<p>All examples target the canonical RTT API surface:</p>
+<pre><code>/api/rtt/beacon
+/api/rtt/profile/{site}
+/api/rtt/validate
+/api/rtt/corridor
+/api/rtt/topology
+</code></pre>
+<p>The diagnostics endpoints are placeholders but included for completeness.</p>
+<hr>
+<h1 id="1-using-curl">1. Using <code>curl</code></h1>
+<h2 id="send-a-beacon-event">Send a Beacon Event</h2>
+<pre><code class="language-bash">curl -X POST https://docs.triadicframeworks.org/api/rtt/beacon \
+  -H &quot;Content-Type: application/json&quot; \
+  -d '{
+        &quot;site&quot;: &quot;example.com&quot;,
+        &quot;session&quot;: &quot;rtt-abc123&quot;,
+        &quot;event&quot;: &quot;page_load&quot;,
+        &quot;ts&quot;: &quot;2026-01-19T14:22:00Z&quot;,
+        &quot;structure&quot;: {
+          &quot;url&quot;: &quot;https://example.com&quot;,
+          &quot;title&quot;: &quot;Home&quot;,
+          &quot;nav_count&quot;: 1,
+          &quot;main_count&quot;: 1,
+          &quot;form_count&quot;: 0,
+          &quot;button_count&quot;: 3,
+          &quot;dom_nodes&quot;: 142
+        }
+      }'
+</code></pre>
+<hr>
+<h2 id="get-a-site-profile">Get a Site Profile</h2>
+<pre><code class="language-bash">curl https://docs.triadicframeworks.org/api/rtt/profile/example.com
+</code></pre>
+<hr>
+<h2 id="set-a-site-profile">Set a Site Profile</h2>
+<pre><code class="language-bash">curl -X POST https://docs.triadicframeworks.org/api/rtt/profile/example.com \
+  -H &quot;Content-Type: application/json&quot; \
+  -d '{
+        &quot;rtt_version&quot;: &quot;1.0&quot;,
+        &quot;supports&quot;: [&quot;coherence&quot;],
+        &quot;contact&quot;: &quot;ops@example.com&quot;
+      }'
+</code></pre>
+<hr>
+<h2 id="call-a-diagnostics-endpoint-reserved">Call a Diagnostics Endpoint (Reserved)</h2>
+<pre><code class="language-bash">curl -X POST https://docs.triadicframeworks.org/api/rtt/validate \
+  -H &quot;Content-Type: application/json&quot; \
+  -d '{&quot;system_map&quot;: {}, &quot;flows&quot;: [], &quot;constraints&quot;: []}'
+</code></pre>
+<hr>
+<h1 id="2-javascript-browser">2. JavaScript (Browser)</h1>
+<h2 id="sending-a-beacon-event-manually">Sending a Beacon Event Manually</h2>
+<pre><code class="language-js">fetch(&quot;https://docs.triadicframeworks.org/api/rtt/beacon&quot;, {
+  method: &quot;POST&quot;,
+  headers: { &quot;Content-Type&quot;: &quot;application/json&quot; },
+  body: JSON.stringify({
+    site: &quot;example.com&quot;,
+    session: &quot;rtt-&quot; + Math.random().toString(36).slice(2),
+    event: &quot;manual_ping&quot;,
+    ts: new Date().toISOString(),
+    structure: {
+      url: window.location.href,
+      title: document.title,
+      nav_count: document.querySelectorAll(&quot;nav&quot;).length,
+      dom_nodes: document.getElementsByTagName(&quot;*&quot;).length
+    }
+  })
+});
+</code></pre>
+<hr>
+<h2 id="using-the-rttjs-global-api">Using the <code>rtt.js</code> Global API</h2>
+<p>If the site includes:</p>
+<pre><code class="language-html">&lt;script src=&quot;https://docs.triadicframeworks.org/rtt.js&quot; data-site=&quot;example.com&quot;&gt;&lt;/script&gt;
+</code></pre>
+<p>Then:</p>
+<pre><code class="language-js">// Send a manual ping
+RTT.ping(&quot;user_action&quot;);
+
+// Get a structural snapshot
+const snapshot = RTT.getStructureSnapshot();
+console.log(snapshot);
+</code></pre>
+<hr>
+<h1 id="3-javascript-node-servertoserver">3. JavaScript (Node / Server‑to‑Server)</h1>
+<h2 id="sending-a-beacon-event">Sending a Beacon Event</h2>
+<pre><code class="language-js">import fetch from &quot;node-fetch&quot;;
+
+async function sendBeacon() {
+  const payload = {
+    site: &quot;backend-service&quot;,
+    session: &quot;srv-&quot; + Date.now(),
+    event: &quot;heartbeat&quot;,
+    ts: new Date().toISOString(),
+    structure: {
+      url: &quot;internal://service&quot;,
+      title: &quot;Service Node&quot;,
+      dom_nodes: 0
+    }
+  };
+
+  await fetch(&quot;https://docs.triadicframeworks.org/api/rtt/beacon&quot;, {
+    method: &quot;POST&quot;,
+    headers: { &quot;Content-Type&quot;: &quot;application/json&quot; },
+    body: JSON.stringify(payload)
+  });
+}
+
+sendBeacon();
+</code></pre>
+<hr>
+<h2 id="setting-a-profile-from-a-backend">Setting a Profile from a Backend</h2>
+<pre><code class="language-js">import fetch from &quot;node-fetch&quot;;
+
+await fetch(&quot;https://docs.triadicframeworks.org/api/rtt/profile/myservice&quot;, {
+  method: &quot;POST&quot;,
+  headers: { &quot;Content-Type&quot;: &quot;application/json&quot; },
+  body: JSON.stringify({
+    rtt_version: &quot;1.0&quot;,
+    supports: [&quot;coherence&quot;, &quot;drift&quot;],
+    contact: &quot;infra@example.com&quot;
+  })
+});
+</code></pre>
+<hr>
+<h2 id="calling-diagnostics-futureready">Calling Diagnostics (Future‑Ready)</h2>
+<pre><code class="language-js">import fetch from &quot;node-fetch&quot;;
+
+const response = await fetch(&quot;https://docs.triadicframeworks.org/api/rtt/validate&quot;, {
+  method: &quot;POST&quot;,
+  headers: { &quot;Content-Type&quot;: &quot;application/json&quot; },
+  body: JSON.stringify({
+    system_map: { services: [&quot;auth&quot;, &quot;api&quot;, &quot;db&quot;] },
+    flows: [],
+    constraints: []
+  })
+});
+
+const result = await response.json();
+console.log(result);
+</code></pre>
+<hr>
+<h1 id="4-integration-patterns">4. Integration Patterns</h1>
+<h2 id="a-browser-extensions">A. Browser Extensions</h2>
+<p>Extensions can:</p>
+<ul>
+<li>listen for navigation events  </li>
+<li>collect structural snapshots  </li>
+<li>send periodic beacons  </li>
+<li>annotate pages with RTT clarity indicators  </li>
+</ul>
+<p>They use the same <code>/beacon</code> endpoint.</p>
+<hr>
+<h2 id="b-web-services">B. Web Services</h2>
+<p>Services can:</p>
+<ul>
+<li>declare RTT‑Inside support via <code>/profile/{site}</code>  </li>
+<li>send periodic structural heartbeats  </li>
+<li>prepare for vST‑beta diagnostics  </li>
+</ul>
+<hr>
+<h2 id="c-datacenters-research-labs">C. Datacenters / Research Labs</h2>
+<p>These clients will eventually use:</p>
+<ul>
+<li><code>/validate</code> for coherence  </li>
+<li><code>/corridor</code> for flow alignment  </li>
+<li><code>/topology</code> for triadic decomposition  </li>
+</ul>
+<p>The API surface is stable even if the internals are not yet active.</p>
+<hr>
+<h1 id="5-summary">5. Summary</h1>
+<p>This document provides:</p>
+<ul>
+<li><code>curl</code> examples  </li>
+<li>browser JavaScript examples  </li>
+<li>Node/server‑to‑server examples  </li>
+<li>integration patterns for extensions, services, and datacenters  </li>
+</ul>
+<p>The RTT API is intentionally minimal and stable, allowing early adopters to integrate now while the vST substrate continues to evolve.
+# Diagnostics Endpoints (Reserved)
+The diagnostics endpoints define the future surface of vST‑beta validation.<br>
+These endpoints are placeholders: they establish the API shape without exposing substrate logic.</p>
+<p>They will activate once the public vST research layer is ready.</p>
+<hr>
+<h2 id="post-validate">POST /validate</h2>
+<p>Submit a structural map for coherence and drift analysis.</p>
+<h3 id="example-request">Example Request</h3>
+<pre><code class="language-json">{
+  &quot;system_map&quot;: {},
+  &quot;flows&quot;: [],
+  &quot;constraints&quot;: []
+}
+</code></pre>
+<h3 id="example-response">Example Response</h3>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;not_available&quot;,
+  &quot;message&quot;: &quot;vST-beta diagnostics are not yet active&quot;
+}
+</code></pre>
+<hr>
+<h2 id="post-corridor">POST /corridor</h2>
+<p>Submit flow data for corridor alignment checks.</p>
+<h3 id="example-response_1">Example Response</h3>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;not_available&quot;,
+  &quot;message&quot;: &quot;corridor diagnostics are not yet active&quot;
+}
+</code></pre>
+<hr>
+<h2 id="post-topology">POST /topology</h2>
+<p>Submit system topology for triadic decomposition.</p>
+<h3 id="example-response_2">Example Response</h3>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;not_available&quot;,
+  &quot;message&quot;: &quot;topology diagnostics are not yet active&quot;
+}
+</code></pre>
+<hr>
+<h2 id="purpose_1">Purpose</h2>
+<p>These endpoints will eventually support:</p>
+<ul>
+<li>structural coherence validation  </li>
+<li>drift vector analysis  </li>
+<li>corridor alignment  </li>
+<li>triadic decomposition of systems  </li>
+<li>full‑stack clarity evaluation  </li>
+</ul>
+<p>They exist now so early adopters can prepare their tooling and workflows.
+```json</p>
 <pre><code>```json
 
 </code></pre>
 <p>```json</p>
-<pre><code>```javascript
-// beacon_handler.js — minimal RTT beacon handler (beta)
+<pre><code># Site Profile Endpoint
+The profile endpoint allows sites and services to declare RTT‑Inside capabilities.  
+Profiles are optional but recommended for platforms that want deeper structural alignment or future vST‑beta features.
 
-export async function handleBeacon(req, res) {
-  try {
-    const payload = await req.json();
+A profile is a simple JSON manifest describing what the site supports.
 
-    // TODO: aggregate, store, or ignore payload
-    // This handler defines the shape, not the substrate logic.
+---
 
-    res.json({ status: &quot;ok&quot; });
-  } catch (err) {
-    res.status(400).json({ error: &quot;invalid_request&quot; });
+## GET /profile/{site}
+
+Retrieve the RTT profile for a site.
+
+### Example Response
+
+```json
+{
+  &quot;site&quot;: &quot;example.com&quot;,
+  &quot;profile&quot;: {
+    &quot;rtt_version&quot;: &quot;1.0&quot;,
+    &quot;supports&quot;: [&quot;coherence&quot;, &quot;corridor&quot;, &quot;drift&quot;],
+    &quot;contact&quot;: &quot;ops@example.com&quot;
   }
 }
 </code></pre>
-<p>```javascript
-// diagnostics_handler.js — vST-beta diagnostics placeholders</p>
-<p>export async function validate(req, res) {
-  res.json({
-    status: "not_available",
-    message: "vST-beta validation is not yet active"
-  });
-}</p>
-<p>export async function corridor(req, res) {
-  res.json({
-    status: "not_available",
-    message: "corridor diagnostics are not yet active"
-  });
-}</p>
-<p>export async function topology(req, res) {
-  res.json({
-    status: "not_available",
-    message: "topology diagnostics are not yet active"
-  });
-}</p>
-<pre><code># RTT API Handlers (Beta)
-
-This document describes the server-side handler modules used by the RTT API router.  
-Handlers are intentionally minimal and do not implement substrate logic.  
-They define the *shape* of RTT interactions for early adopters.
-
----
-
-## Beacon Handler
-
-**File:** `beacon_handler.js`  
-**Endpoint:** `POST /beacon`  
-Accepts lightweight RTT events from clients such as `rtt.js`, browser extensions, or backend services.
-
----
-
-## Profile Handler
-
-**File:** `profile_handler.js`  
-**Endpoints:**  
-- `GET /profile/{site}`  
-- `POST /profile/{site}`  
-
-Stores or retrieves RTT‑Inside site profiles.
-
----
-
-## Diagnostics Handler (Reserved)
-
-**File:** `diagnostics_handler.js`  
-**Endpoints:**  
-- `POST /validate`  
-- `POST /corridor`  
-- `POST /topology`  
-
-These endpoints define the future vST‑beta validator surface.  
-All currently return placeholder responses.
-
----
-
-## Routing Philosophy
-
-Handlers are:
-
-- decoupled  
-- stable  
-- minimal  
-- forward‑compatible  
-
-They provide a predictable API surface while the vST substrate evolves.
-```javascript
-// profile_handler.js — minimal RTT profile handler (beta)
-
-const profiles = new Map();
-
-export async function getProfile(req, res, site) {
-  const profile = profiles.get(site) || null;
-  res.json({ site, profile });
-}
-
-export async function setProfile(req, res, site) {
-  try {
-    const profile = await req.json();
-    profiles.set(site, profile);
-    res.json({ status: &quot;ok&quot; });
-  } catch (err) {
-    res.status(400).json({ error: &quot;invalid_profile&quot; });
-  }
+<p>If no profile exists, <code>profile</code> will be <code>null</code>.</p>
+<hr>
+<h2 id="post-profilesite_1">POST /profile/{site}</h2>
+<p>Register or update a site’s RTT profile.</p>
+<h3 id="example-request_1">Example Request</h3>
+<pre><code class="language-json">{
+  &quot;rtt_version&quot;: &quot;1.0&quot;,
+  &quot;supports&quot;: [&quot;coherence&quot;],
+  &quot;contact&quot;: &quot;admin@example.com&quot;
 }
 </code></pre>
-<p>```javascript
-// router.js — RTT API router (beta)
-// Wires all RTT endpoint families into a single routing surface.</p>
-<p>import { handleBeacon } from "./beacon_handler.js";
-import { getProfile, setProfile } from "./profile_handler.js";
+<h3 id="response_1">Response</h3>
+<pre><code class="language-json">{ &quot;status&quot;: &quot;ok&quot; }
+</code></pre>
+<hr>
+<h2 id="purpose_2">Purpose</h2>
+<p>Profiles allow RTT to:</p>
+<ul>
+<li>recognize RTT‑Inside participants  </li>
+<li>enable optional features (coherence, drift, corridor)  </li>
+<li>support future vST validators  </li>
+<li>provide site‑specific diagnostics or insights  </li>
+</ul>
+<p>Profiles are stable, human‑readable, and versioned for long‑term compatibility.
+# RTT API Router (Beta)
+This document describes how the RTT API endpoints are wired together into a single routing surface.<br>
+It is framework‑agnostic and focuses on the structural flow of requests through the RTT API.</p>
+<p>The router defines three endpoint families:</p>
+<ol>
+<li><strong>Beacon</strong> — lightweight structural signals  </li>
+<li><strong>Profile</strong> — RTT‑Inside site declarations  </li>
+<li><strong>Diagnostics</strong> — reserved vST‑beta endpoints  </li>
+</ol>
+<p>Each family maps to a dedicated handler module.</p>
+<hr>
+<h2 id="router-overview_1">Router Overview</h2>
+<pre><code>/api/rtt
+│
+├── POST /beacon          → beacon_handler.handleBeacon
+│
+├── GET  /profile/{site}  → profile_handler.getProfile
+└── POST /profile/{site}  → profile_handler.setProfile
+
+# Reserved (inactive)
+├── POST /validate        → diagnostics_handler.validate
+├── POST /corridor        → diagnostics_handler.corridor
+└── POST /topology        → diagnostics_handler.topology
+</code></pre>
+<p>All endpoints are version‑stable and safe for early adopters.</p>
+<hr>
+<h2 id="example-router-pseudocode">Example Router (Pseudo‑Code)</h2>
+<pre><code class="language-js">import { handleBeacon } from &quot;./server/beacon_handler.js&quot;;
+import { getProfile, setProfile } from &quot;./server/profile_handler.js&quot;;
 import {
   validate,
   corridor,
   topology
-} from "./diagnostics_handler.js";</p>
-<p>export function registerRTTRoutes(app) {
+} from &quot;./server/diagnostics_handler.js&quot;;
+
+export function registerRTTRoutes(app) {
   // Beacon events
-  app.post("/api/rtt/beacon", handleBeacon);</p>
-<p>// Site profiles
-  app.get("/api/rtt/profile/:site", (req, res, site) =&gt;
-    getProfile(req, res, site)
-  );</p>
-<p>app.post("/api/rtt/profile/:site", (req, res, site) =&gt;
-    setProfile(req, res, site)
-  );</p>
-<p>// Diagnostics (reserved)
-  app.post("/api/rtt/validate", validate);
-  app.post("/api/rtt/corridor", corridor);
-  app.post("/api/rtt/topology", topology);
+  app.post(&quot;/api/rtt/beacon&quot;, handleBeacon);
+
+  // Site profiles
+  app.get(&quot;/api/rtt/profile/:site&quot;, (req, res) =&gt;
+    getProfile(req, res, req.params.site)
+  );
+  app.post(&quot;/api/rtt/profile/:site&quot;, (req, res) =&gt;
+    setProfile(req, res, req.params.site)
+  );
+
+  // Diagnostics (reserved)
+  app.post(&quot;/api/rtt/validate&quot;, validate);
+  app.post(&quot;/api/rtt/corridor&quot;, corridor);
+  app.post(&quot;/api/rtt/topology&quot;, topology);
+}
+</code></pre>
+<p>This example uses a generic <code>app</code> object (Express‑style), but the structure applies to any server framework.</p>
+<hr>
+<h2 id="routing-philosophy">Routing Philosophy</h2>
+<p>The RTT router is designed to:</p>
+<ul>
+<li>keep endpoint families cleanly separated  </li>
+<li>avoid coupling between handlers  </li>
+<li>maintain stable URLs for early adopters  </li>
+<li>allow future vST validators to slot in without breaking changes  </li>
+<li>keep the API surface minimal and predictable  </li>
+</ul>
+<p>The router defines the <em>shape</em> of the RTT API, not the substrate logic behind it.</p>
+<hr>
+<h2 id="future-extensions">Future Extensions</h2>
+<p>The router may eventually include:</p>
+<ul>
+<li><code>/events</code> for SSE/WebSocket structural streams  </li>
+<li><code>/corridors</code> for RTT corridor introspection  </li>
+<li><code>/vst/*</code> for full validator surfaces  </li>
+<li><code>/metrics</code> for RTT‑Inside observability  </li>
+</ul>
+<p>These will be added without altering existing endpoints.</p>
+<hr>
+<h2 id="status_1">Status</h2>
+<p><strong>Beta.</strong><br>
+Routing is stable, but handler behavior may evolve as the RTT ecosystem grows.
+```javascript
+// beacon_handler.js — minimal RTT beacon handler (beta)</p>
+<p>export async function handleBeacon(req, res) {
+  try {
+    const payload = await req.json();</p>
+<pre><code>// TODO: aggregate, store, or ignore payload
+// This handler defines the shape, not the substrate logic.
+
+res.json({ status: "ok" });
+</code></pre>
+<p>} catch (err) {
+    res.status(400).json({ error: "invalid_request" });
+  }
 }</p>
 <pre><code>```javascript
+// diagnostics_handler.js — vST-beta diagnostics placeholders
+
+export async function validate(req, res) {
+  res.json({
+    status: &quot;not_available&quot;,
+    message: &quot;vST-beta validation is not yet active&quot;
+  });
+}
+
+export async function corridor(req, res) {
+  res.json({
+    status: &quot;not_available&quot;,
+    message: &quot;corridor diagnostics are not yet active&quot;
+  });
+}
+
+export async function topology(req, res) {
+  res.json({
+    status: &quot;not_available&quot;,
+    message: &quot;topology diagnostics are not yet active&quot;
+  });
+}
+</code></pre>
+<p># RTT API Handlers (Beta)</p>
+<p>This document describes the server-side handler modules used by the RTT API router.<br>
+Handlers are intentionally minimal and do not implement substrate logic.<br>
+They define the <em>shape</em> of RTT interactions for early adopters.</p>
+<hr>
+<h2 id="beacon-handler">Beacon Handler</h2>
+<p><strong>File:</strong> <code>beacon_handler.js</code><br>
+<strong>Endpoint:</strong> <code>POST /beacon</code><br>
+Accepts lightweight RTT events from clients such as <code>rtt.js</code>, browser extensions, or backend services.</p>
+<hr>
+<h2 id="profile-handler">Profile Handler</h2>
+<p><strong>File:</strong> <code>profile_handler.js</code><br>
+<strong>Endpoints:</strong><br>
+- <code>GET /profile/{site}</code><br>
+- <code>POST /profile/{site}</code>  </p>
+<p>Stores or retrieves RTT‑Inside site profiles.</p>
+<hr>
+<h2 id="diagnostics-handler-reserved">Diagnostics Handler (Reserved)</h2>
+<p><strong>File:</strong> <code>diagnostics_handler.js</code><br>
+<strong>Endpoints:</strong><br>
+- <code>POST /validate</code><br>
+- <code>POST /corridor</code><br>
+- <code>POST /topology</code>  </p>
+<p>These endpoints define the future vST‑beta validator surface.<br>
+All currently return placeholder responses.</p>
+<hr>
+<h2 id="routing-philosophy_1">Routing Philosophy</h2>
+<p>Handlers are:</p>
+<ul>
+<li>decoupled  </li>
+<li>stable  </li>
+<li>minimal  </li>
+<li>forward‑compatible  </li>
+</ul>
+<p>They provide a predictable API surface while the vST substrate evolves.
+```javascript
+// profile_handler.js — minimal RTT profile handler (beta)</p>
+<p>const profiles = new Map();</p>
+<p>export async function getProfile(req, res, site) {
+  const profile = profiles.get(site) || null;
+  res.json({ site, profile });
+}</p>
+<p>export async function setProfile(req, res, site) {
+  try {
+    const profile = await req.json();
+    profiles.set(site, profile);
+    res.json({ status: "ok" });
+  } catch (err) {
+    res.status(400).json({ error: "invalid_profile" });
+  }
+}</p>
+<pre><code>```javascript
+// router.js — RTT API router (beta)
+// Wires all RTT endpoint families into a single routing surface.
+
+import { handleBeacon } from &quot;./beacon_handler.js&quot;;
+import { getProfile, setProfile } from &quot;./profile_handler.js&quot;;
+import {
+  validate,
+  corridor,
+  topology
+} from &quot;./diagnostics_handler.js&quot;;
+
+export function registerRTTRoutes(app) {
+  // Beacon events
+  app.post(&quot;/api/rtt/beacon&quot;, handleBeacon);
+
+  // Site profiles
+  app.get(&quot;/api/rtt/profile/:site&quot;, (req, res, site) =&gt;
+    getProfile(req, res, site)
+  );
+
+  app.post(&quot;/api/rtt/profile/:site&quot;, (req, res, site) =&gt;
+    setProfile(req, res, site)
+  );
+
+  // Diagnostics (reserved)
+  app.post(&quot;/api/rtt/validate&quot;, validate);
+  app.post(&quot;/api/rtt/corridor&quot;, corridor);
+  app.post(&quot;/api/rtt/topology&quot;, topology);
+}
+</code></pre>
+<p>```javascript
 // server.js — minimal RTT API server (beta)
 // This file wires the RTT router into a tiny HTTP server.
-// It is intentionally lightweight and suitable for local testing.
-
-import http from &quot;http&quot;;
-import { registerRTTRoutes } from &quot;./router.js&quot;;
-
-// Simple Express‑style micro‑framework
+// It is intentionally lightweight and suitable for local testing.</p>
+<p>import http from "http";
+import { registerRTTRoutes } from "./router.js";</p>
+<p>// Simple Express‑style micro‑framework
 function createApp() {
-  const routes = [];
-
-  function addRoute(method, path, handler) {
+  const routes = [];</p>
+<p>function addRoute(method, path, handler) {
     routes.push({ method, path, handler });
-  }
-
-  const app = {
-    get: (path, handler) =&gt; addRoute(&quot;GET&quot;, path, handler),
-    post: (path, handler) =&gt; addRoute(&quot;POST&quot;, path, handler),
+  }</p>
+<p>const app = {
+    get: (path, handler) =&gt; addRoute("GET", path, handler),
+    post: (path, handler) =&gt; addRoute("POST", path, handler),
     routes
-  };
-
-  app.listen = function (port, cb) {
+  };</p>
+<p>app.listen = function (port, cb) {
     const server = http.createServer(async (req, res) =&gt; {
       const match = routes.find(r =&gt;
         r.method === req.method &amp;&amp;
         matchPath(r.path, req.url)
-      );
+      );</p>
+<pre><code>  if (!match) {
+    res.writeHead(404, { "Content-Type": "application/json" });
+    return res.end(JSON.stringify({ error: "not_found" }));
+  }
 
-      if (!match) {
-        res.writeHead(404, { &quot;Content-Type&quot;: &quot;application/json&quot; });
-        return res.end(JSON.stringify({ error: &quot;not_found&quot; }));
-      }
+  const params = extractParams(match.path, req.url);
 
-      const params = extractParams(match.path, req.url);
-
-      // Minimal request wrapper
-      const reqWrapper = {
-        method: req.method,
-        url: req.url,
-        json: () =&gt;
-          new Promise((resolve, reject) =&gt; {
-            let body = &quot;&quot;;
-            req.on(&quot;data&quot;, chunk =&gt; (body += chunk));
-            req.on(&quot;end&quot;, () =&gt; {
-              try {
-                resolve(JSON.parse(body || &quot;{}&quot;));
-              } catch (e) {
-                reject(e);
-              }
-            });
-          })
-      };
-
-      // Minimal response wrapper
-      const resWrapper = {
-        status: code =&gt; {
-          res.statusCode = code;
-          return resWrapper;
-        },
-        json: obj =&gt; {
-          res.writeHead(res.statusCode || 200, {
-            &quot;Content-Type&quot;: &quot;application/json&quot;
-          });
-          res.end(JSON.stringify(obj));
-        }
-      };
-
-      match.handler(reqWrapper, resWrapper, ...params);
-    });
-
-    server.listen(port, cb);
+  // Minimal request wrapper
+  const reqWrapper = {
+    method: req.method,
+    url: req.url,
+    json: () =&gt;
+      new Promise((resolve, reject) =&gt; {
+        let body = "";
+        req.on("data", chunk =&gt; (body += chunk));
+        req.on("end", () =&gt; {
+          try {
+            resolve(JSON.parse(body || "{}"));
+          } catch (e) {
+            reject(e);
+          }
+        });
+      })
   };
 
-  return app;
-}
+  // Minimal response wrapper
+  const resWrapper = {
+    status: code =&gt; {
+      res.statusCode = code;
+      return resWrapper;
+    },
+    json: obj =&gt; {
+      res.writeHead(res.statusCode || 200, {
+        "Content-Type": "application/json"
+      });
+      res.end(JSON.stringify(obj));
+    }
+  };
 
-// Path matching helpers
-function matchPath(routePath, url) {
-  const routeParts = routePath.split(&quot;/&quot;);
-  const urlParts = url.split(&quot;?&quot;)[0].split(&quot;/&quot;);
-
-  if (routeParts.length !== urlParts.length) return false;
-
-  return routeParts.every((part, i) =&gt;
-    part.startsWith(&quot;:&quot;) || part === urlParts[i]
-  );
-}
-
-function extractParams(routePath, url) {
-  const routeParts = routePath.split(&quot;/&quot;);
-  const urlParts = url.split(&quot;?&quot;)[0].split(&quot;/&quot;);
-
-  return routeParts
-    .map((part, i) =&gt; (part.startsWith(&quot;:&quot;) ? urlParts[i] : null))
-    .filter(Boolean);
-}
-
-// Create and start the server
-const app = createApp();
-registerRTTRoutes(app);
-
-app.listen(3000, () =&gt; {
-  console.log(&quot;RTT API server running on http://localhost:3000&quot;);
+  match.handler(reqWrapper, resWrapper, ...params);
 });
+
+server.listen(port, cb);
 </code></pre>
-<p></p>
+<p>};</p>
+<p>return app;
+}</p>
+<p>// Path matching helpers
+function matchPath(routePath, url) {
+  const routeParts = routePath.split("/");
+  const urlParts = url.split("?")[0].split("/");</p>
+<p>if (routeParts.length !== urlParts.length) return false;</p>
+<p>return routeParts.every((part, i) =&gt;
+    part.startsWith(":") || part === urlParts[i]
+  );
+}</p>
+<p>function extractParams(routePath, url) {
+  const routeParts = routePath.split("/");
+  const urlParts = url.split("?")[0].split("/");</p>
+<p>return routeParts
+    .map((part, i) =&gt; (part.startsWith(":") ? urlParts[i] : null))
+    .filter(Boolean);
+}</p>
+<p>// Create and start the server
+const app = createApp();
+registerRTTRoutes(app);</p>
+<p>app.listen(3000, () =&gt; {
+  console.log("RTT API server running on http://localhost:3000");
+});
+```
+</p>
   </main>
 </body>
 </html>

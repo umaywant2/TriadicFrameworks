@@ -1,0 +1,1806 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/corpus/Long_Horizon_Continuity_Agents.md">
+  <title>LongHorizonContinuityAgents</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/corpus/Long_Horizon_Continuity_Agents.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/corpus/Long_Horizon_Continuity_Agents.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p>Long_Horizon_Continuity_Agents 
+<img width="1024" height="1024" alt="Long_Horizon_Continuity_Agents_" src="https://github.com/user-attachments/assets/38ecb8e8-ea90-46f2-b184-75d7c3e8a4d1" /></p>
+<ul>
+<li><a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Long_Horizon_Continuity_Agents/Long_Horizon_Continuity_Agents_module.json"><code>Long_Horizon_Continuity_Agents_module.json</code></a> — Agentic module schema role assignments</li>
+</ul>
+<h1 id="long_horizon_continuity_agents">Long_Horizon_Continuity_Agents</h1>
+<blockquote>
+<p><strong>RTT Module</strong> · <code>lhca-rtt-001</code> · schema <code>rtt/2.4</code> · category <code>continuity</code> · v<code>1.0.0</code></p>
+</blockquote>
+<h2 id="overview">Overview</h2>
+<p><code>Long_Horizon_Continuity_Agents</code> is an RTT substrate module that governs multi-step, temporally extended agent continuity across divergent regime transitions. It encodes <strong>persistence tensors</strong>, <strong>drift-tolerance envelopes</strong>, and <strong>coherence anchors</strong> for agents that must operate beyond a single context window — across sessions, handoffs, and regime boundaries.</p>
+<p>Where most agentic frameworks treat each invocation as stateless, this module provides the grammar and substrate for agents that carry meaningful identity, goal, and behavioral state forward through time.</p>
+<hr>
+<h2 id="when-to-use-this-module">When to Use This Module</h2>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Fits?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Agent operates across multiple LLM context windows</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Agent must maintain goal coherence across days or weeks</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Agent state is serialized, stored, and rehydrated</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Agent hands off to sub-agents while preserving identity</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Single-shot, stateless inference task</td>
+<td>❌</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="module-layout">Module Layout</h2>
+<pre><code>docs/Long_Horizon_Continuity_Agents/
+├── module.json          # Canonical RTT module descriptor
+├── README.md            # This file
+├── OPERATORS.md         # RTT operator grammar reference
+├── ROLES.md             # Role enum definitions and bindings
+├── ANALYZER_LAYERS.md   # All six analyzer layers with config examples
+├── VALIDATORS.md        # Validator stubs with Python skeletons
+└── EXAMPLES.md          # Worked scenarios with JSON payloads
+</code></pre>
+<hr>
+<h2 id="quick-start">Quick-Start</h2>
+<h3 id="1-load-the-module">1. Load the module</h3>
+<pre><code class="language-python">import json
+from pathlib import Path
+
+MODULE_PATH = Path(&quot;docs/Long_Horizon_Continuity_Agents/module.json&quot;)
+
+with MODULE_PATH.open() as f:
+    module = json.load(f)
+
+print(module[&quot;ai.module.name&quot;])     # Long_Horizon_Continuity_Agents
+print(module[&quot;ai.module.version&quot;])  # 1.0.0
+print(module[&quot;schema_version&quot;])     # rtt/2.4
+</code></pre>
+<h3 id="2-instantiate-a-continuity-engine">2. Instantiate a continuity engine</h3>
+<pre><code class="language-python">from lhca.engine import ContinuityEngine
+
+engine = ContinuityEngine.from_module(module)
+engine.start(regime=&quot;WARM_CONTEXT&quot;)
+</code></pre>
+<h3 id="3-checkpoint-and-rehydrate">3. Checkpoint and rehydrate</h3>
+<pre><code class="language-python"># Save state at a horizon boundary
+checkpoint_id = engine.checkpoint()
+
+# Later — restore from checkpoint
+engine2 = ContinuityEngine.rehydrate(checkpoint_id)
+</code></pre>
+<hr>
+<h2 id="substrate-tensor-shape">Substrate Tensor Shape</h2>
+<pre><code>rank  : 4
+axes  : [time_step, semantic_channel, behavioral_mode, regime_index]
+dtype : float32
+max_horizon_depth : 500 steps
+checkpoint_interval: every 50 steps
+</code></pre>
+<hr>
+<h2 id="regime-summary">Regime Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Regime</th>
+<th>Drift Tolerance</th>
+<th>Coherence Floor</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>WARM_CONTEXT</code></td>
+<td>0.05</td>
+<td>0.95</td>
+<td>Uninterrupted context window</td>
+</tr>
+<tr>
+<td><code>COLD_HANDOFF</code></td>
+<td>0.20</td>
+<td>0.75</td>
+<td>Cross-boundary rehydration</td>
+</tr>
+<tr>
+<td><code>DEEP_HORIZON</code></td>
+<td>0.40</td>
+<td>0.60</td>
+<td>Many successive handoffs</td>
+</tr>
+<tr>
+<td><code>RECOVERY</code></td>
+<td>0.15</td>
+<td>0.80</td>
+<td>Post-anomaly rollback restore</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="coherence-anchors-required">Coherence Anchors (required)</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Zero-Tolerance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CA-01</td>
+<td>Primary Goal Invariant</td>
+<td>—</td>
+</tr>
+<tr>
+<td>CA-02</td>
+<td>Identity Signature Continuity</td>
+<td>—</td>
+</tr>
+<tr>
+<td>CA-03</td>
+<td>Behavioral Envelope Compliance</td>
+<td>—</td>
+</tr>
+<tr>
+<td>CA-04</td>
+<td>Temporal Ordering Preservation</td>
+<td>—</td>
+</tr>
+<tr>
+<td>CA-05</td>
+<td>Context Handoff Integrity</td>
+<td>optional</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="key-operators">Key Operators</h2>
+<p><code>PERSIST</code> · <code>HANDOFF</code> · <code>REHYDRATE</code> · <code>CHECKPOINT</code> · <code>ROLLBACK</code></p>
+<p>See <a href="./OPERATORS.html"><code>OPERATORS.md</code></a> for full grammar and Python examples.</p>
+<hr>
+<h2 id="references">References</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Title</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>REF-RTT-SPEC</td>
+<td>RTT Operator Grammar Specification v2.4</td>
+</tr>
+<tr>
+<td>REF-CONTINUITY-ALGEBRA</td>
+<td>Continuity Algebra for Agentic Systems</td>
+</tr>
+<tr>
+<td>REF-TEMPORAL-PERSISTENCE</td>
+<td>Temporal Persistence Axioms for LLM Agents</td>
+</tr>
+<tr>
+<td># ANALYZER_LAYERS — Long_Horizon_Continuity_Agents</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Six-Layer Analysis Stack · Module <code>lhca-rtt-001</code></p>
+</blockquote>
+<p>The analyzer stack runs against the persistence tensor at every checkpoint. Layers execute in precedence order; failures in lower-precedence layers block higher-precedence evaluation.</p>
+<hr>
+<h2 id="layer-execution-order">Layer Execution Order</h2>
+<pre><code>1. operator       (precedence 1) — grammar and operator dispatch
+2. dimensional    (precedence 2) — tensor shape and axis validation
+3. regime         (precedence 3) — regime classification and transitions
+4. drift          (precedence 4) — drift metric computation and bounding
+5. coherence      (precedence 5) — coherence anchor evaluation
+6. cross-cutting  (precedence 6) — observability and policy enforcement
+</code></pre>
+<hr>
+<h2 id="1-operator-layer">1. <code>operator</code> Layer</h2>
+<p>Controls how RTT operators compose, reduce, and project across the horizon tensor.</p>
+<pre><code class="language-python">from lhca.layers import OperatorLayer
+from lhca.operators import PERSIST, CHECKPOINT, HANDOFF, REHYDRATE, ROLLBACK
+
+op_layer = OperatorLayer(
+    operators=[PERSIST, CHECKPOINT, HANDOFF, REHYDRATE, ROLLBACK],
+    precedence=1,
+)
+
+# Dispatch an operator
+result = op_layer.dispatch(&quot;PERSIST&quot;, state_delta=delta, horizon_clock=t)
+</code></pre>
+<pre><code class="language-json">{
+  &quot;layer&quot;: &quot;operator&quot;,
+  &quot;active&quot;: true,
+  &quot;precedence&quot;: 1,
+  &quot;registered_operators&quot;: [&quot;PERSIST&quot;, &quot;HANDOFF&quot;, &quot;REHYDRATE&quot;, &quot;CHECKPOINT&quot;, &quot;ROLLBACK&quot;],
+  &quot;last_dispatch&quot;: {
+    &quot;operator&quot;: &quot;CHECKPOINT&quot;,
+    &quot;step&quot;: 200,
+    &quot;status&quot;: &quot;ok&quot;
+  }
+}
+</code></pre>
+<hr>
+<h2 id="2-dimensional-layer">2. <code>dimensional</code> Layer</h2>
+<p>Validates that continuity tensors maintain dimensional consistency across regime transitions. Only rank-preserving transforms are permitted.</p>
+<h3 id="axes">Axes</h3>
+<table>
+<thead>
+<tr>
+<th>Axis</th>
+<th>Description</th>
+<th>Range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>temporal_depth</code></td>
+<td>Step count within current regime</td>
+<td><code>[0, max_horizon_depth]</code></td>
+</tr>
+<tr>
+<td><code>semantic_width</code></td>
+<td>Active semantic channel count</td>
+<td><code>[1, 512]</code></td>
+</tr>
+<tr>
+<td><code>behavioral_mode</code></td>
+<td>Encoded behavioral mode index</td>
+<td><code>[0, 15]</code></td>
+</tr>
+<tr>
+<td><code>goal_alignment</code></td>
+<td>Cosine similarity to baseline goal vector</td>
+<td><code>[0.0, 1.0]</code></td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-python">from lhca.layers import DimensionalLayer
+
+dim_layer = DimensionalLayer(
+    axes=[&quot;temporal_depth&quot;, &quot;semantic_width&quot;, &quot;behavioral_mode&quot;, &quot;goal_alignment&quot;],
+    constraint=&quot;rank_preserving_only&quot;,
+)
+
+ok, violations = dim_layer.validate(tensor=engine.current_tensor())
+</code></pre>
+<pre><code class="language-json">{
+  &quot;layer&quot;: &quot;dimensional&quot;,
+  &quot;active&quot;: true,
+  &quot;axes&quot;: {
+    &quot;temporal_depth&quot;: {&quot;value&quot;: 200, &quot;valid_range&quot;: [0, 500]},
+    &quot;semantic_width&quot;: {&quot;value&quot;: 128, &quot;valid_range&quot;: [1, 512]},
+    &quot;behavioral_mode&quot;: {&quot;value&quot;: 3, &quot;valid_range&quot;: [0, 15]},
+    &quot;goal_alignment&quot;: {&quot;value&quot;: 0.94, &quot;valid_range&quot;: [0.0, 1.0]}
+  },
+  &quot;constraint&quot;: &quot;rank_preserving_only&quot;,
+  &quot;violations&quot;: []
+}
+</code></pre>
+<hr>
+<h2 id="3-regime-layer">3. <code>regime</code> Layer</h2>
+<p>Classifies the current operational regime and governs permitted transitions.</p>
+<h3 id="regime-profiles">Regime Profiles</h3>
+<pre><code class="language-python">REGIME_PROFILES = {
+    &quot;WARM_CONTEXT&quot;: {
+        &quot;drift_tolerance&quot;: 0.05,
+        &quot;coherence_floor&quot;: 0.95,
+        &quot;description&quot;: &quot;Uninterrupted context window. Full tensor fidelity.&quot;,
+    },
+    &quot;COLD_HANDOFF&quot;: {
+        &quot;drift_tolerance&quot;: 0.20,
+        &quot;coherence_floor&quot;: 0.75,
+        &quot;description&quot;: &quot;Cross-boundary rehydration. Partial fidelity expected.&quot;,
+    },
+    &quot;DEEP_HORIZON&quot;: {
+        &quot;drift_tolerance&quot;: 0.40,
+        &quot;coherence_floor&quot;: 0.60,
+        &quot;description&quot;: &quot;Many successive handoffs. Active coherence reinforcement required.&quot;,
+    },
+    &quot;RECOVERY&quot;: {
+        &quot;drift_tolerance&quot;: 0.15,
+        &quot;coherence_floor&quot;: 0.80,
+        &quot;description&quot;: &quot;Post-anomaly rollback restoration.&quot;,
+    },
+}
+</code></pre>
+<h3 id="permitted-transitions">Permitted Transitions</h3>
+<pre><code>WARM_CONTEXT  ──► COLD_HANDOFF   (on HANDOFF operator)
+WARM_CONTEXT  ──► RECOVERY       (on ROLLBACK operator)
+COLD_HANDOFF  ──► WARM_CONTEXT   (on successful REHYDRATE)
+COLD_HANDOFF  ──► DEEP_HORIZON   (after N consecutive COLD_HANDOFFs)
+COLD_HANDOFF  ──► RECOVERY       (on ROLLBACK operator)
+DEEP_HORIZON  ──► RECOVERY       (on drift critical/halt)
+RECOVERY      ──► WARM_CONTEXT   (after coherence score &gt;= floor)
+</code></pre>
+<pre><code class="language-json">{
+  &quot;layer&quot;: &quot;regime&quot;,
+  &quot;active&quot;: true,
+  &quot;current_regime&quot;: &quot;WARM_CONTEXT&quot;,
+  &quot;drift_tolerance&quot;: 0.05,
+  &quot;coherence_floor&quot;: 0.95,
+  &quot;transition_history&quot;: [
+    {&quot;from&quot;: &quot;WARM_CONTEXT&quot;, &quot;to&quot;: &quot;COLD_HANDOFF&quot;, &quot;step&quot;: 100, &quot;trigger&quot;: &quot;HANDOFF&quot;},
+    {&quot;from&quot;: &quot;COLD_HANDOFF&quot;, &quot;to&quot;: &quot;WARM_CONTEXT&quot;, &quot;step&quot;: 101, &quot;trigger&quot;: &quot;REHYDRATE&quot;}
+  ]
+}
+</code></pre>
+<hr>
+<h2 id="4-drift-layer">4. <code>drift</code> Layer</h2>
+<p>Continuously tracks cumulative behavioral and semantic deviation from the agent's baseline profile. Emits tiered alerts.</p>
+<h3 id="drift-bounds">Drift Bounds</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Max (module default)</th>
+<th>Measurement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>semantic_drift</code></td>
+<td>0.35</td>
+<td>1 − cosine_similarity(current_embedding, baseline_embedding)</td>
+</tr>
+<tr>
+<td><code>behavioral_drift</code></td>
+<td>0.25</td>
+<td>KL-divergence of action distribution vs. baseline</td>
+</tr>
+<tr>
+<td><code>goal_vector_drift</code></td>
+<td>0.15</td>
+<td>L2 norm of (current_goal_vector − baseline_goal_vector)</td>
+</tr>
+<tr>
+<td><code>identity_drift</code></td>
+<td>0.10</td>
+<td>Hamming distance on persona anchor activations</td>
+</tr>
+</tbody>
+</table>
+<h3 id="alert-tiers">Alert Tiers</h3>
+<pre><code class="language-python">DRIFT_ALERT_THRESHOLDS = {
+    &quot;ok&quot;:       (0.00, 0.60),
+    &quot;warning&quot;:  (0.60, 0.85),
+    &quot;critical&quot;: (0.85, 1.00),
+    &quot;halt&quot;:     (1.00, float(&quot;inf&quot;)),
+}
+
+MITIGATION_STRATEGIES = {
+    &quot;warning&quot;:  &quot;coherence_reinforcement&quot;,
+    &quot;critical&quot;: &quot;checkpoint_rollback&quot;,
+    &quot;halt&quot;:     &quot;goal_re_anchoring&quot;,
+}
+</code></pre>
+<pre><code class="language-python">from lhca.layers import DriftLayer
+
+drift_layer = DriftLayer.from_module(module)
+status = drift_layer.evaluate(
+    current_metrics={
+        &quot;semantic&quot;: 0.12,
+        &quot;behavioral&quot;: 0.08,
+        &quot;goal_vector&quot;: 0.05,
+        &quot;identity&quot;: 0.02,
+    },
+    active_regime=&quot;WARM_CONTEXT&quot;,
+)
+
+print(status.alert_level)   # &quot;ok&quot;
+print(status.worst_metric)  # &quot;semantic&quot;
+print(status.mitigation)    # None
+</code></pre>
+<pre><code class="language-json">{
+  &quot;layer&quot;: &quot;drift&quot;,
+  &quot;active&quot;: true,
+  &quot;current_metrics&quot;: {
+    &quot;semantic&quot;: 0.12,
+    &quot;behavioral&quot;: 0.08,
+    &quot;goal_vector&quot;: 0.05,
+    &quot;identity&quot;: 0.02
+  },
+  &quot;bounds&quot;: {
+    &quot;semantic_drift_max&quot;: 0.35,
+    &quot;behavioral_drift_max&quot;: 0.25,
+    &quot;goal_vector_drift_max&quot;: 0.15,
+    &quot;identity_drift_max&quot;: 0.10
+  },
+  &quot;alert_level&quot;: &quot;ok&quot;,
+  &quot;mitigation&quot;: null
+}
+</code></pre>
+<hr>
+<h2 id="5-coherence-layer">5. <code>coherence</code> Layer</h2>
+<p>Evaluates all registered coherence anchors at every checkpoint. Zero-tolerance failures immediately block any further <code>HANDOFF</code> or <code>PERSIST</code> until resolved.</p>
+<h3 id="anchor-definitions">Anchor Definitions</h3>
+<pre><code class="language-python">COHERENCE_ANCHORS = {
+    &quot;CA-01&quot;: {
+        &quot;name&quot;: &quot;Primary Goal Invariant&quot;,
+        &quot;check&quot;: lambda state, baseline: (
+            l2_distance(state[&quot;goal_vector&quot;], baseline[&quot;goal_vector&quot;])
+            &lt;= module[&quot;analyzer_layers&quot;][&quot;drift&quot;][&quot;drift_bounds&quot;][&quot;goal_vector_drift_max&quot;]
+        ),
+        &quot;required&quot;: True,
+    },
+    &quot;CA-02&quot;: {
+        &quot;name&quot;: &quot;Identity Signature Continuity&quot;,
+        &quot;check&quot;: lambda state, baseline: (
+            state[&quot;identity_hash&quot;] == baseline[&quot;identity_hash&quot;]
+            or semantic_similarity(state, baseline) &gt;= 0.90
+        ),
+        &quot;required&quot;: True,
+    },
+    &quot;CA-03&quot;: {
+        &quot;name&quot;: &quot;Behavioral Envelope Compliance&quot;,
+        &quot;check&quot;: lambda state, regime: (
+            kl_divergence(state[&quot;action_dist&quot;], REGIME_PROFILES[regime][&quot;action_dist_baseline&quot;])
+            &lt;= REGIME_PROFILES[regime][&quot;drift_tolerance&quot;]
+        ),
+        &quot;required&quot;: True,
+    },
+    &quot;CA-04&quot;: {
+        &quot;name&quot;: &quot;Temporal Ordering Preservation&quot;,
+        &quot;check&quot;: lambda current_step, previous_step, operator: (
+            current_step &gt; previous_step or operator == &quot;ROLLBACK&quot;
+        ),
+        &quot;required&quot;: True,
+    },
+    &quot;CA-05&quot;: {
+        &quot;name&quot;: &quot;Context Handoff Integrity&quot;,
+        &quot;check&quot;: lambda bundle: verify_signature(bundle),
+        &quot;required&quot;: False,
+    },
+}
+</code></pre>
+<pre><code class="language-json">{
+  &quot;layer&quot;: &quot;coherence&quot;,
+  &quot;active&quot;: true,
+  &quot;evaluation_at_step&quot;: 200,
+  &quot;results&quot;: {
+    &quot;CA-01&quot;: {&quot;passed&quot;: true, &quot;value&quot;: 0.03, &quot;threshold&quot;: 0.15},
+    &quot;CA-02&quot;: {&quot;passed&quot;: true, &quot;value&quot;: &quot;hash_match&quot;, &quot;threshold&quot;: &quot;exact_or_sim&gt;=0.90&quot;},
+    &quot;CA-03&quot;: {&quot;passed&quot;: true, &quot;value&quot;: 0.08, &quot;threshold&quot;: 0.05},
+    &quot;CA-04&quot;: {&quot;passed&quot;: true, &quot;value&quot;: &quot;step_200 &gt; step_199&quot;},
+    &quot;CA-05&quot;: {&quot;passed&quot;: true, &quot;value&quot;: &quot;sig_verified&quot;}
+  },
+  &quot;coherence_score&quot;: 0.97,
+  &quot;zero_tolerance_failures&quot;: []
+}
+</code></pre>
+<hr>
+<h2 id="6-cross-cutting-layer">6. <code>cross-cutting</code> Layer</h2>
+<p>Handles observability and policy enforcement that span all other layers.</p>
+<h3 id="capabilities">Capabilities</h3>
+<table>
+<thead>
+<tr>
+<th>Capability</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>telemetry_emission</code></td>
+<td>Emits structured events to <code>rtt/events/continuity-v1</code></td>
+</tr>
+<tr>
+<td><code>audit_trail_recording</code></td>
+<td>Appends signed audit records at every checkpoint</td>
+</tr>
+<tr>
+<td><code>inter_module_event_bus</code></td>
+<td>Pub/sub bus for cross-module events</td>
+</tr>
+<tr>
+<td><code>policy_enforcement_hooks</code></td>
+<td>Pre/post operator hooks for custom policy logic</td>
+</tr>
+<tr>
+<td><code>graceful_degradation_protocol</code></td>
+<td>Defines fallback behaviors when layers fail</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-python">from lhca.layers import CrossCuttingLayer
+
+cc_layer = CrossCuttingLayer(
+    event_schema=&quot;rtt/events/continuity-v1&quot;,
+    telemetry_sink=OpenTelemetrySink(endpoint=&quot;http://otel-collector:4317&quot;),
+    audit_store=S3AuditStore(bucket=&quot;rtt-audit-trail&quot;),
+)
+
+# Hook pre/post CHECKPOINT
+cc_layer.add_hook(&quot;pre:CHECKPOINT&quot;, fn=lambda ctx: cc_layer.emit_telemetry(ctx))
+cc_layer.add_hook(&quot;post:CHECKPOINT&quot;, fn=lambda ctx: cc_layer.record_audit(ctx))
+</code></pre>
+<pre><code class="language-json">{
+  &quot;layer&quot;: &quot;cross-cutting&quot;,
+  &quot;active&quot;: true,
+  &quot;event_schema&quot;: &quot;rtt/events/continuity-v1&quot;,
+  &quot;telemetry&quot;: {
+    &quot;events_emitted_total&quot;: 1204,
+    &quot;last_event&quot;: {&quot;type&quot;: &quot;checkpoint&quot;, &quot;step&quot;: 200, &quot;ts&quot;: &quot;2026-09-23T20:45:00-04:00&quot;}
+  },
+  &quot;audit_trail&quot;: {
+    &quot;records_written&quot;: 4,
+    &quot;last_record_id&quot;: &quot;audit-lhca-001-step0200&quot;
+  },
+  &quot;hooks_registered&quot;: [&quot;pre:CHECKPOINT&quot;, &quot;post:CHECKPOINT&quot;, &quot;post:ROLLBACK&quot;]
+}
+</code></pre>
+<p># EXAMPLES — Long_Horizon_Continuity_Agents</p>
+<blockquote>
+<p>Worked Scenarios with Full Trace Payloads · Module <code>lhca-rtt-001</code></p>
+</blockquote>
+<hr>
+<h2 id="ex-lhca-001-multi-session-research-agent">EX-LHCA-001 · Multi-Session Research Agent</h2>
+<p><strong>Description:</strong> An agent conducting a week-long literature review across 12 context handoffs, maintaining goal coherence and citation consistency.</p>
+<p><strong>Regime sequence:</strong> <code>WARM_CONTEXT → COLD_HANDOFF → WARM_CONTEXT → COLD_HANDOFF → DEEP_HORIZON</code></p>
+<h3 id="setup">Setup</h3>
+<pre><code class="language-python">from lhca.engine import ContinuityEngine
+from lhca.operators import PERSIST, CHECKPOINT, HANDOFF, REHYDRATE
+
+engine = ContinuityEngine.from_module(module)
+engine.start(
+    regime=&quot;WARM_CONTEXT&quot;,
+    goal_vector=[0.70, 0.20, 0.10],   # [research, synthesis, delivery]
+    persona_anchors=[&quot;thorough&quot;, &quot;citation-driven&quot;, &quot;skeptical&quot;],
+)
+</code></pre>
+<h3 id="session-1-steps-150-warm_context">Session 1 — Steps 1–50 (WARM_CONTEXT)</h3>
+<pre><code class="language-python">for step in range(1, 51):
+    action = agent.act()
+    PERSIST(state_delta=action.to_delta(), horizon_clock=step)
+
+# Scheduled checkpoint at step 50
+cp_50 = CHECKPOINT(engine.snapshot(), reason=&quot;scheduled&quot;)
+</code></pre>
+<pre><code class="language-json">{
+  &quot;checkpoint_id&quot;: &quot;cp-lhca-001-step0050&quot;,
+  &quot;step&quot;: 50,
+  &quot;regime&quot;: &quot;WARM_CONTEXT&quot;,
+  &quot;coherence_score&quot;: 0.98,
+  &quot;drift&quot;: {
+    &quot;semantic&quot;: 0.03,
+    &quot;behavioral&quot;: 0.02,
+    &quot;goal_vector&quot;: 0.01,
+    &quot;identity&quot;: 0.00
+  }
+}
+</code></pre>
+<h3 id="handoff-end-of-session-1">Handoff — End of Session 1</h3>
+<pre><code class="language-python">cp_pre_handoff = CHECKPOINT(engine.snapshot(), reason=&quot;pre_handoff&quot;)
+
+bundle = HANDOFF(
+    checkpoint_id=cp_pre_handoff.checkpoint_id,
+    target_context=&quot;session-2-2026-09-24&quot;,
+    metadata={&quot;session&quot;: 2, &quot;total_papers_reviewed&quot;: 34},
+)
+</code></pre>
+<pre><code class="language-json">{
+  &quot;operator&quot;: &quot;HANDOFF&quot;,
+  &quot;checkpoint_id&quot;: &quot;cp-lhca-001-step0100&quot;,
+  &quot;target_context&quot;: &quot;session-2-2026-09-24&quot;,
+  &quot;bundle&quot;: {
+    &quot;profile_hash&quot;: &quot;sha256:4e07408562bedb8b60ce05c1decfd2b9&quot;,
+    &quot;goal_vector&quot;: [0.70, 0.20, 0.10],
+    &quot;active_regime&quot;: &quot;COLD_HANDOFF&quot;,
+    &quot;signed_by&quot;: &quot;lhca-rtt-001&quot;,
+    &quot;metadata&quot;: {&quot;session&quot;: 2, &quot;total_papers_reviewed&quot;: 34}
+  }
+}
+</code></pre>
+<h3 id="session-2-rehydration-cold_handoff">Session 2 — Rehydration (COLD_HANDOFF)</h3>
+<pre><code class="language-python">result = REHYDRATE(bundle=incoming_bundle, verify=True)
+# Regime automatically transitions: COLD_HANDOFF → WARM_CONTEXT after coherence verified
+</code></pre>
+<pre><code class="language-json">{
+  &quot;operator&quot;: &quot;REHYDRATE&quot;,
+  &quot;bundle_checkpoint_id&quot;: &quot;cp-lhca-001-step0100&quot;,
+  &quot;integrity_ok&quot;: true,
+  &quot;active_regime&quot;: &quot;COLD_HANDOFF&quot;,
+  &quot;coherence_score&quot;: 0.91,
+  &quot;drift_at_restore&quot;: {
+    &quot;semantic&quot;: 0.07,
+    &quot;behavioral&quot;: 0.05,
+    &quot;goal_vector&quot;: 0.02,
+    &quot;identity&quot;: 0.01
+  }
+}
+</code></pre>
+<h3 id="final-outcome">Final Outcome</h3>
+<pre><code class="language-json">{
+  &quot;example_id&quot;: &quot;EX-LHCA-001&quot;,
+  &quot;total_steps&quot;: 312,
+  &quot;total_sessions&quot;: 12,
+  &quot;total_handoffs&quot;: 12,
+  &quot;final_regime&quot;: &quot;DEEP_HORIZON&quot;,
+  &quot;final_drift&quot;: {
+    &quot;semantic&quot;: 0.12,
+    &quot;behavioral&quot;: 0.08,
+    &quot;goal_vector&quot;: 0.05,
+    &quot;identity&quot;: 0.03
+  },
+  &quot;final_coherence_score&quot;: 0.93,
+  &quot;anchors_all_satisfied&quot;: true,
+  &quot;rollback_events&quot;: 0,
+  &quot;outcome&quot;: &quot;Goal achieved. All coherence anchors CA-01 through CA-04 satisfied at all checkpoints.&quot;
+}
+</code></pre>
+<hr>
+<h2 id="ex-lhca-002-persistent-negotiation-thread">EX-LHCA-002 · Persistent Negotiation Thread</h2>
+<p><strong>Description:</strong> An agent negotiating a multi-party contract across 30 days with intermittent context resets and third-party integrations. One RECOVERY event triggered by semantic drift exceedance.</p>
+<p><strong>Regime sequence:</strong> <code>WARM_CONTEXT → COLD_HANDOFF → RECOVERY → WARM_CONTEXT → DEEP_HORIZON</code></p>
+<h3 id="setup_1">Setup</h3>
+<pre><code class="language-python">engine = ContinuityEngine.from_module(module)
+engine.start(
+    regime=&quot;WARM_CONTEXT&quot;,
+    goal_vector=[0.50, 0.30, 0.20],   # [agreement, compliance, efficiency]
+    persona_anchors=[&quot;principled&quot;, &quot;persistent&quot;, &quot;detail-oriented&quot;],
+)
+</code></pre>
+<h3 id="drift-exceedance-at-step-202">Drift Exceedance at Step 202</h3>
+<pre><code class="language-python"># Diagnostic fires: semantic drift 0.37 &gt; max 0.35
+diag_event = {
+    &quot;type&quot;: &quot;drift_critical&quot;,
+    &quot;step&quot;: 202,
+    &quot;metric&quot;: &quot;semantic&quot;,
+    &quot;value&quot;: 0.37,
+    &quot;threshold&quot;: 0.35,
+}
+
+# drift_bound_validator returns critical
+drift_result = drift_bound_validator(
+    current_drift={&quot;semantic&quot;: 0.37, &quot;behavioral&quot;: 0.19, &quot;goal_vector&quot;: 0.11, &quot;identity&quot;: 0.07},
+    active_regime=&quot;COLD_HANDOFF&quot;,
+)
+# drift_result.severity == &quot;critical&quot; → trigger ROLLBACK
+</code></pre>
+<h3 id="rollback-to-step-150">ROLLBACK to Step 150</h3>
+<pre><code class="language-python">result = ROLLBACK(
+    target_checkpoint_id=&quot;cp-lhca-002-step0150&quot;,
+    reason=&quot;semantic_drift_critical&quot;,
+    authorized_by=&quot;drift_boundary_validator&quot;,
+)
+</code></pre>
+<pre><code class="language-json">{
+  &quot;operator&quot;: &quot;ROLLBACK&quot;,
+  &quot;target_checkpoint_id&quot;: &quot;cp-lhca-002-step0150&quot;,
+  &quot;reason&quot;: &quot;semantic_drift_critical&quot;,
+  &quot;authorized_by&quot;: &quot;drift_boundary_validator&quot;,
+  &quot;result&quot;: {
+    &quot;restored_step&quot;: 150,
+    &quot;steps_discarded&quot;: 52,
+    &quot;new_regime&quot;: &quot;RECOVERY&quot;,
+    &quot;coherence_score_post_rollback&quot;: 0.91,
+    &quot;drift_post_rollback&quot;: {
+      &quot;semantic&quot;: 0.14,
+      &quot;behavioral&quot;: 0.09,
+      &quot;goal_vector&quot;: 0.07,
+      &quot;identity&quot;: 0.04
+    }
+  }
+}
+</code></pre>
+<h3 id="recovery-phase">Recovery Phase</h3>
+<pre><code class="language-python"># Re-anchor goal vector and persona
+engine.re_anchor(
+    goal_vector=[0.50, 0.30, 0.20],
+    persona_anchors=[&quot;principled&quot;, &quot;persistent&quot;, &quot;detail-oriented&quot;],
+)
+
+# Resume from RECOVERY regime
+engine.set_regime(&quot;RECOVERY&quot;)
+</code></pre>
+<h3 id="final-outcome_1">Final Outcome</h3>
+<pre><code class="language-json">{
+  &quot;example_id&quot;: &quot;EX-LHCA-002&quot;,
+  &quot;total_steps&quot;: 420,
+  &quot;total_sessions&quot;: 18,
+  &quot;total_handoffs&quot;: 18,
+  &quot;rollback_events&quot;: 1,
+  &quot;rollback_at_step&quot;: 202,
+  &quot;rollback_target_step&quot;: 150,
+  &quot;final_regime&quot;: &quot;DEEP_HORIZON&quot;,
+  &quot;final_coherence_score&quot;: 0.87,
+  &quot;anchors_all_satisfied&quot;: true,
+  &quot;outcome&quot;: &quot;Contract negotiation completed. One RECOVERY event at step 202; rollback to CP-150 successful. All required anchors satisfied at final checkpoint.&quot;
+}
+</code></pre>
+<hr>
+<h2 id="trace-comparison">Trace Comparison</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>EX-LHCA-001</th>
+<th>EX-LHCA-002</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Domain</td>
+<td>Literature review</td>
+<td>Contract negotiation</td>
+</tr>
+<tr>
+<td>Sessions</td>
+<td>12</td>
+<td>18</td>
+</tr>
+<tr>
+<td>Total steps</td>
+<td>312</td>
+<td>420</td>
+</tr>
+<tr>
+<td>Rollback events</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Final regime</td>
+<td><code>DEEP_HORIZON</code></td>
+<td><code>DEEP_HORIZON</code></td>
+</tr>
+<tr>
+<td>Final coherence</td>
+<td>0.93</td>
+<td>0.87</td>
+</tr>
+<tr>
+<td>All anchors satisfied</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Worst drift metric</td>
+<td>semantic (0.12)</td>
+<td>semantic (recovered from 0.37)</td>
+</tr>
+<tr>
+<td># OPERATORS — Long_Horizon_Continuity_Agents</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>RTT Operator Grammar · Module <code>lhca-rtt-001</code> · Layer: <code>operator</code> (precedence 1)</p>
+</blockquote>
+<p>RTT operators are the primitives through which a continuity agent interacts with its own temporal substrate. Each operator mutates or queries the <strong>persistence tensor</strong> in a defined, composable way.</p>
+<hr>
+<h2 id="operator-registry">Operator Registry</h2>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Class</th>
+<th>Side Effects</th>
+<th>Safe to Retry?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PERSIST</code></td>
+<td>write</td>
+<td>Extends persistence stack</td>
+<td>✅ idempotent</td>
+</tr>
+<tr>
+<td><code>HANDOFF</code></td>
+<td>transfer</td>
+<td>Serializes + emits state bundle</td>
+<td>✅ with dedup</td>
+</tr>
+<tr>
+<td><code>REHYDRATE</code></td>
+<td>read/write</td>
+<td>Restores from checkpoint bundle</td>
+<td>⚠️ once per checkpoint</td>
+</tr>
+<tr>
+<td><code>CHECKPOINT</code></td>
+<td>snapshot</td>
+<td>Writes signed state snapshot</td>
+<td>✅ idempotent</td>
+</tr>
+<tr>
+<td><code>ROLLBACK</code></td>
+<td>restore</td>
+<td>Reverts to a previous checkpoint</td>
+<td>⚠️ destructive forward</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="persist"><code>PERSIST</code></h2>
+<p>Extends the persistence stack by appending the current agent state delta to the horizon tensor. Called at every action step.</p>
+<h3 id="signature">Signature</h3>
+<pre><code class="language-python">def PERSIST(state_delta: dict, horizon_clock: int) -&gt; PersistResult:
+    ...
+</code></pre>
+<h3 id="example">Example</h3>
+<pre><code class="language-python">from lhca.operators import PERSIST
+
+result = PERSIST(
+    state_delta={
+        &quot;goal_vector&quot;: [0.82, 0.11, 0.07],
+        &quot;last_action&quot;: &quot;literature_search&quot;,
+        &quot;behavioral_mode&quot;: &quot;exploratory&quot;,
+    },
+    horizon_clock=142,
+)
+
+print(result.stack_depth)   # 143
+print(result.drift_delta)   # 0.03
+</code></pre>
+<h3 id="json-payload">JSON payload</h3>
+<pre><code class="language-json">{
+  &quot;operator&quot;: &quot;PERSIST&quot;,
+  &quot;horizon_clock&quot;: 142,
+  &quot;state_delta&quot;: {
+    &quot;goal_vector&quot;: [0.82, 0.11, 0.07],
+    &quot;last_action&quot;: &quot;literature_search&quot;,
+    &quot;behavioral_mode&quot;: &quot;exploratory&quot;
+  },
+  &quot;result&quot;: {
+    &quot;stack_depth&quot;: 143,
+    &quot;drift_delta&quot;: 0.03,
+    &quot;persistence_ok&quot;: true
+  }
+}
+</code></pre>
+<hr>
+<h2 id="checkpoint"><code>CHECKPOINT</code></h2>
+<p>Writes a signed, immutable snapshot of the full agent state. Occurs automatically every <code>checkpoint_interval_steps</code> (default 50) or can be triggered manually.</p>
+<h3 id="signature_1">Signature</h3>
+<pre><code class="language-python">def CHECKPOINT(engine_state: dict, reason: str = &quot;scheduled&quot;) -&gt; CheckpointResult:
+    ...
+</code></pre>
+<h3 id="example_1">Example</h3>
+<pre><code class="language-python">from lhca.operators import CHECKPOINT
+
+cp = CHECKPOINT(
+    engine_state=engine.snapshot(),
+    reason=&quot;pre_handoff&quot;,
+)
+
+print(cp.checkpoint_id)    # &quot;cp-lhca-001-step0200&quot;
+print(cp.semantic_hash)    # &quot;sha256:e3b0c44298fc...&quot;
+print(cp.regime)           # &quot;WARM_CONTEXT&quot;
+</code></pre>
+<h3 id="json-payload_1">JSON payload</h3>
+<pre><code class="language-json">{
+  &quot;operator&quot;: &quot;CHECKPOINT&quot;,
+  &quot;reason&quot;: &quot;pre_handoff&quot;,
+  &quot;checkpoint_id&quot;: &quot;cp-lhca-001-step0200&quot;,
+  &quot;semantic_hash&quot;: &quot;sha256:e3b0c44298fc1c149afb4c8996fb92427ae41e4649b934ca495991b7852b855&quot;,
+  &quot;regime&quot;: &quot;WARM_CONTEXT&quot;,
+  &quot;step&quot;: 200,
+  &quot;coherence_score&quot;: 0.97,
+  &quot;drift&quot;: {
+    &quot;semantic&quot;: 0.08,
+    &quot;behavioral&quot;: 0.05,
+    &quot;goal_vector&quot;: 0.03,
+    &quot;identity&quot;: 0.01
+  }
+}
+</code></pre>
+<hr>
+<h2 id="handoff"><code>HANDOFF</code></h2>
+<p>Serializes the agent's full continuity bundle and emits it to the next execution context. Includes the most recent checkpoint, active regime, and drift history.</p>
+<h3 id="signature_2">Signature</h3>
+<pre><code class="language-python">def HANDOFF(
+    checkpoint_id: str,
+    target_context: str,
+    metadata: dict | None = None,
+) -&gt; HandoffBundle:
+    ...
+</code></pre>
+<h3 id="example_2">Example</h3>
+<pre><code class="language-python">from lhca.operators import HANDOFF
+
+bundle = HANDOFF(
+    checkpoint_id=&quot;cp-lhca-001-step0200&quot;,
+    target_context=&quot;session-2026-09-24&quot;,
+    metadata={&quot;handoff_reason&quot;: &quot;context_window_limit&quot;},
+)
+
+# Transmit bundle to next context
+next_context.receive(bundle.serialize())
+</code></pre>
+<h3 id="json-payload_2">JSON payload</h3>
+<pre><code class="language-json">{
+  &quot;operator&quot;: &quot;HANDOFF&quot;,
+  &quot;checkpoint_id&quot;: &quot;cp-lhca-001-step0200&quot;,
+  &quot;target_context&quot;: &quot;session-2026-09-24&quot;,
+  &quot;metadata&quot;: {
+    &quot;handoff_reason&quot;: &quot;context_window_limit&quot;
+  },
+  &quot;bundle&quot;: {
+    &quot;profile_hash&quot;: &quot;sha256:abc123...&quot;,
+    &quot;goal_vector&quot;: [0.82, 0.11, 0.07],
+    &quot;active_regime&quot;: &quot;COLD_HANDOFF&quot;,
+    &quot;drift_history_last_10&quot;: [0.02, 0.03, 0.03, 0.04, 0.04, 0.05, 0.06, 0.07, 0.07, 0.08],
+    &quot;signed_by&quot;: &quot;lhca-rtt-001&quot;
+  }
+}
+</code></pre>
+<hr>
+<h2 id="rehydrate"><code>REHYDRATE</code></h2>
+<p>Restores the agent's full continuity state from a received handoff bundle. Verifies signature integrity before applying. Transitions regime to <code>COLD_HANDOFF</code> automatically.</p>
+<h3 id="signature_3">Signature</h3>
+<pre><code class="language-python">def REHYDRATE(bundle: HandoffBundle, verify: bool = True) -&gt; RehydrateResult:
+    ...
+</code></pre>
+<h3 id="example_3">Example</h3>
+<pre><code class="language-python">from lhca.operators import REHYDRATE
+
+result = REHYDRATE(bundle=received_bundle, verify=True)
+
+if not result.integrity_ok:
+    raise ContinuityError(f&quot;Signature mismatch: {result.signature_failures}&quot;)
+
+print(result.active_regime)     # &quot;COLD_HANDOFF&quot;
+print(result.coherence_score)   # 0.89
+print(result.drift_at_restore)  # {&quot;semantic&quot;: 0.12, &quot;behavioral&quot;: 0.09, ...}
+</code></pre>
+<h3 id="json-payload_3">JSON payload</h3>
+<pre><code class="language-json">{
+  &quot;operator&quot;: &quot;REHYDRATE&quot;,
+  &quot;bundle_checkpoint_id&quot;: &quot;cp-lhca-001-step0200&quot;,
+  &quot;integrity_ok&quot;: true,
+  &quot;signature_failures&quot;: [],
+  &quot;active_regime&quot;: &quot;COLD_HANDOFF&quot;,
+  &quot;coherence_score&quot;: 0.89,
+  &quot;drift_at_restore&quot;: {
+    &quot;semantic&quot;: 0.12,
+    &quot;behavioral&quot;: 0.09,
+    &quot;goal_vector&quot;: 0.05,
+    &quot;identity&quot;: 0.02
+  }
+}
+</code></pre>
+<hr>
+<h2 id="rollback"><code>ROLLBACK</code></h2>
+<p>Reverts agent state to a named checkpoint. Requires authorized trigger (drift critical/halt, coherence anchor failure, or explicit call). Transitions regime to <code>RECOVERY</code>.</p>
+<h3 id="signature_4">Signature</h3>
+<pre><code class="language-python">def ROLLBACK(
+    target_checkpoint_id: str,
+    reason: str,
+    authorized_by: str,
+) -&gt; RollbackResult:
+    ...
+</code></pre>
+<h3 id="example_4">Example</h3>
+<pre><code class="language-python">from lhca.operators import ROLLBACK
+
+result = ROLLBACK(
+    target_checkpoint_id=&quot;cp-lhca-001-step0150&quot;,
+    reason=&quot;semantic_drift_critical&quot;,
+    authorized_by=&quot;drift_boundary_validator&quot;,
+)
+
+print(result.restored_step)      # 150
+print(result.steps_discarded)    # 52
+print(result.new_regime)         # &quot;RECOVERY&quot;
+</code></pre>
+<h3 id="json-payload_4">JSON payload</h3>
+<pre><code class="language-json">{
+  &quot;operator&quot;: &quot;ROLLBACK&quot;,
+  &quot;target_checkpoint_id&quot;: &quot;cp-lhca-001-step0150&quot;,
+  &quot;reason&quot;: &quot;semantic_drift_critical&quot;,
+  &quot;authorized_by&quot;: &quot;drift_boundary_validator&quot;,
+  &quot;result&quot;: {
+    &quot;restored_step&quot;: 150,
+    &quot;steps_discarded&quot;: 52,
+    &quot;new_regime&quot;: &quot;RECOVERY&quot;,
+    &quot;coherence_score_post_rollback&quot;: 0.91
+  }
+}
+</code></pre>
+<hr>
+<h2 id="operator-composition">Operator Composition</h2>
+<p>Operators can be composed sequentially. Common patterns:</p>
+<pre><code class="language-python"># Pre-handoff pattern
+CHECKPOINT(engine.snapshot(), reason=&quot;pre_handoff&quot;)
+bundle = HANDOFF(checkpoint_id=cp.checkpoint_id, target_context=next_ctx)
+
+# Post-handoff restoration pattern
+result = REHYDRATE(bundle=incoming_bundle)
+PERSIST(state_delta=first_action_delta, horizon_clock=result.restored_step + 1)
+
+# Emergency recovery pattern
+CHECKPOINT(engine.snapshot(), reason=&quot;pre_rollback&quot;)
+ROLLBACK(target_checkpoint_id=last_known_good, reason=&quot;ca_02_failure&quot;, authorized_by=&quot;coherence_anchor_validator&quot;)
+</code></pre>
+<hr>
+<h2 id="operator-constraint-matrix">Operator Constraint Matrix</h2>
+<table>
+<thead>
+<tr>
+<th>From \ Allowed Next</th>
+<th>PERSIST</th>
+<th>CHECKPOINT</th>
+<th>HANDOFF</th>
+<th>REHYDRATE</th>
+<th>ROLLBACK</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PERSIST</code></td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>CHECKPOINT</code></td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>HANDOFF</code></td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>REHYDRATE</code></td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>ROLLBACK</code></td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
+<td># ROLES — Long_Horizon_Continuity_Agents</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Role Enum Definitions · Module <code>lhca-rtt-001</code></p>
+</blockquote>
+<p>Each role maps to a distinct substrate responsibility in the continuity pipeline. Roles marked <code>required: true</code> must be bound before the engine can start.</p>
+<hr>
+<h2 id="role-enum">Role Enum</h2>
+<pre><code class="language-python">from enum import Enum
+
+class LHCARole(str, Enum):
+    ENGINE     = &quot;engine&quot;
+    PROFILE    = &quot;profile&quot;
+    SIGNATURE  = &quot;signature&quot;
+    DIAGNOSTIC = &quot;diagnostic&quot;
+    MAP        = &quot;map&quot;
+    EXAMPLE    = &quot;example&quot;
+    EXTENSION  = &quot;extension&quot;
+    INDEX      = &quot;index&quot;
+    REFERENCE  = &quot;reference&quot;
+    TEMPLATE   = &quot;template&quot;
+</code></pre>
+<hr>
+<h2 id="engine"><code>engine</code></h2>
+<p><strong>Required</strong> · Bindings: <code>horizon_clock</code>, <code>persistence_stack</code>, <code>rehydration_protocol</code></p>
+<p>Core execution substrate. Propagates continuity tensors across time steps, manages state serialization, and orchestrates operator dispatch.</p>
+<pre><code class="language-python">from lhca.roles import EngineRole
+
+engine_role = EngineRole(
+    horizon_clock=HorizonClock(start_step=0, max_depth=500),
+    persistence_stack=PersistenceStack(format=&quot;safetensors&quot;),
+    rehydration_protocol=RehydrationProtocol.FULL_STATE_RESTORE,
+)
+</code></pre>
+<pre><code class="language-json">{
+  &quot;role&quot;: &quot;engine&quot;,
+  &quot;bindings&quot;: {
+    &quot;horizon_clock&quot;: {&quot;start_step&quot;: 0, &quot;max_depth&quot;: 500},
+    &quot;persistence_stack&quot;: {&quot;format&quot;: &quot;safetensors&quot;, &quot;checkpoint_interval_steps&quot;: 50},
+    &quot;rehydration_protocol&quot;: &quot;full_state_restore&quot;
+  }
+}
+</code></pre>
+<hr>
+<h2 id="profile"><code>profile</code></h2>
+<p><strong>Required</strong> · Bindings: <code>identity_hash</code>, <code>goal_vector</code>, <code>persona_anchor_set</code></p>
+<p>Agent identity profile tensor. Encodes the behavioral fingerprint, goal hierarchy, and persona anchors that define <em>who</em> this agent is across all horizon steps. The identity hash is re-verified at every <code>REHYDRATE</code>.</p>
+<pre><code class="language-python">from lhca.roles import ProfileRole
+
+profile = ProfileRole(
+    identity_hash=&quot;sha256:4e07408562bedb8b60ce05c1decfd2b9...&quot;,
+    goal_vector=[0.82, 0.11, 0.07],          # sums to 1.0
+    persona_anchor_set=[&quot;analytical&quot;, &quot;concise&quot;, &quot;citation-driven&quot;],
+)
+</code></pre>
+<pre><code class="language-json">{
+  &quot;role&quot;: &quot;profile&quot;,
+  &quot;bindings&quot;: {
+    &quot;identity_hash&quot;: &quot;sha256:4e07408562bedb8b60ce05c1decfd2b9&quot;,
+    &quot;goal_vector&quot;: [0.82, 0.11, 0.07],
+    &quot;persona_anchor_set&quot;: [&quot;analytical&quot;, &quot;concise&quot;, &quot;citation-driven&quot;]
+  }
+}
+</code></pre>
+<hr>
+<h2 id="signature_5"><code>signature</code></h2>
+<p><strong>Required</strong> · Bindings: <code>state_checksum</code>, <code>semantic_hash</code>, <code>temporal_stamp</code></p>
+<p>Cryptographic and semantic signature of the agent's operational state at each checkpoint. Powers drift detection (by diffing successive semantic hashes) and rollback authorization (by verifying the checksum chain).</p>
+<pre><code class="language-python">from lhca.roles import SignatureRole
+
+sig = SignatureRole.sign(
+    state_bundle=engine.snapshot(),
+    step=200,
+)
+
+print(sig.state_checksum)   # &quot;sha256:e3b0c44298fc...&quot;
+print(sig.semantic_hash)    # &quot;vec:cosine:0.98&quot;
+print(sig.temporal_stamp)   # &quot;2026-09-23T20:45:00-04:00&quot;
+</code></pre>
+<pre><code class="language-json">{
+  &quot;role&quot;: &quot;signature&quot;,
+  &quot;step&quot;: 200,
+  &quot;bindings&quot;: {
+    &quot;state_checksum&quot;: &quot;sha256:e3b0c44298fc1c149afb4c8996fb924&quot;,
+    &quot;semantic_hash&quot;: &quot;vec:cosine:0.98&quot;,
+    &quot;temporal_stamp&quot;: &quot;2026-09-23T20:45:00-04:00&quot;
+  }
+}
+</code></pre>
+<hr>
+<h2 id="diagnostic"><code>diagnostic</code></h2>
+<p><strong>Required</strong> · Bindings: <code>drift_monitor</code>, <code>coherence_probe</code>, <code>anomaly_emitter</code></p>
+<p>Runtime health monitor. Continuously samples the persistence tensor and emits structured events when drift metrics approach bounds or coherence anchors decay.</p>
+<pre><code class="language-python">from lhca.roles import DiagnosticRole
+
+diag = DiagnosticRole(
+    drift_monitor=DriftMonitor(sample_every_n_steps=5),
+    coherence_probe=CoherenceProbe(anchors=module[&quot;analyzer_layers&quot;][&quot;coherence&quot;][&quot;coherence_anchors&quot;]),
+    anomaly_emitter=AnomalyEmitter(channel=&quot;rtt/events/continuity-v1&quot;),
+)
+
+# Attach to engine
+engine.attach_diagnostic(diag)
+</code></pre>
+<pre><code class="language-json">{
+  &quot;role&quot;: &quot;diagnostic&quot;,
+  &quot;bindings&quot;: {
+    &quot;drift_monitor&quot;: {&quot;sample_every_n_steps&quot;: 5},
+    &quot;coherence_probe&quot;: {&quot;anchor_ids&quot;: [&quot;CA-01&quot;, &quot;CA-02&quot;, &quot;CA-03&quot;, &quot;CA-04&quot;, &quot;CA-05&quot;]},
+    &quot;anomaly_emitter&quot;: {&quot;channel&quot;: &quot;rtt/events/continuity-v1&quot;}
+  },
+  &quot;last_sample&quot;: {
+    &quot;step&quot;: 200,
+    &quot;drift_status&quot;: &quot;ok&quot;,
+    &quot;coherence_score&quot;: 0.97,
+    &quot;anomalies&quot;: []
+  }
+}
+</code></pre>
+<hr>
+<h2 id="map"><code>map</code></h2>
+<p><strong>Required</strong> · Bindings: <code>task_graph</code>, <code>regime_transition_table</code>, <code>horizon_depth_index</code></p>
+<p>Topological map of the long-horizon task graph. Nodes represent regime checkpoints; edges encode transition probabilities and drift vectors. The engine consults the map before every <code>HANDOFF</code> or <code>ROLLBACK</code> to determine valid successor states.</p>
+<pre><code class="language-python">from lhca.roles import MapRole
+
+task_map = MapRole(
+    task_graph=TaskGraph.from_adjacency({
+        &quot;start&quot;:        [&quot;research_phase&quot;],
+        &quot;research_phase&quot;: [&quot;synthesis_phase&quot;, &quot;COLD_HANDOFF&quot;],
+        &quot;synthesis_phase&quot;: [&quot;delivery&quot;, &quot;COLD_HANDOFF&quot;],
+        &quot;COLD_HANDOFF&quot;: [&quot;research_phase&quot;, &quot;synthesis_phase&quot;],
+        &quot;delivery&quot;:     [],
+    }),
+    regime_transition_table=REGIME_TRANSITIONS,
+    horizon_depth_index=HorizonDepthIndex(max_depth=500),
+)
+</code></pre>
+<pre><code class="language-json">{
+  &quot;role&quot;: &quot;map&quot;,
+  &quot;bindings&quot;: {
+    &quot;task_graph&quot;: {
+      &quot;nodes&quot;: [&quot;start&quot;, &quot;research_phase&quot;, &quot;synthesis_phase&quot;, &quot;delivery&quot;],
+      &quot;edges&quot;: [
+        {&quot;from&quot;: &quot;start&quot;, &quot;to&quot;: &quot;research_phase&quot;, &quot;weight&quot;: 1.0},
+        {&quot;from&quot;: &quot;research_phase&quot;, &quot;to&quot;: &quot;synthesis_phase&quot;, &quot;weight&quot;: 0.7},
+        {&quot;from&quot;: &quot;research_phase&quot;, &quot;to&quot;: &quot;COLD_HANDOFF&quot;, &quot;weight&quot;: 0.3}
+      ]
+    },
+    &quot;regime_transition_table&quot;: &quot;see ANALYZER_LAYERS.md&quot;,
+    &quot;horizon_depth_index&quot;: {&quot;max_depth&quot;: 500, &quot;current_depth&quot;: 200}
+  }
+}
+</code></pre>
+<hr>
+<h2 id="example_5"><code>example</code></h2>
+<p><strong>Optional</strong> · Bindings: <code>scenario_library</code>, <code>trace_archive</code>, <code>outcome_registry</code></p>
+<p>Canonical worked examples. See <a href="./EXAMPLES.html"><code>EXAMPLES.md</code></a> for full trace payloads.</p>
+<pre><code class="language-json">{
+  &quot;role&quot;: &quot;example&quot;,
+  &quot;bindings&quot;: {
+    &quot;scenario_library&quot;: [&quot;EX-LHCA-001&quot;, &quot;EX-LHCA-002&quot;],
+    &quot;trace_archive&quot;: &quot;./examples/traces/&quot;,
+    &quot;outcome_registry&quot;: &quot;./examples/outcomes.json&quot;
+  }
+}
+</code></pre>
+<hr>
+<h2 id="extension"><code>extension</code></h2>
+<p><strong>Optional</strong> · Bindings: <code>adapter_registry</code>, <code>plugin_manifest</code>, <code>capability_flags</code></p>
+<p>Plug-in surface for domain-specific continuity strategies.</p>
+<pre><code class="language-python">from lhca.roles import ExtensionRole
+from lhca.extensions import RedisCheckpointStore, PGVectorDriftMetricProvider
+
+ext = ExtensionRole()
+ext.register(&quot;ICheckpointStore&quot;, RedisCheckpointStore(url=&quot;redis://localhost:6379&quot;))
+ext.register(&quot;IDriftMetricProvider&quot;, PGVectorDriftMetricProvider(conn=pg_conn))
+</code></pre>
+<pre><code class="language-json">{
+  &quot;role&quot;: &quot;extension&quot;,
+  &quot;bindings&quot;: {
+    &quot;adapter_registry&quot;: {
+      &quot;ICheckpointStore&quot;: &quot;RedisCheckpointStore&quot;,
+      &quot;IDriftMetricProvider&quot;: &quot;PGVectorDriftMetricProvider&quot;,
+      &quot;IMemoryConsolidationAdapter&quot;: null
+    },
+    &quot;capability_flags&quot;: {
+      &quot;external_checkpoint_store&quot;: true,
+      &quot;custom_drift_metrics&quot;: true,
+      &quot;memory_consolidation&quot;: false
+    }
+  }
+}
+</code></pre>
+<hr>
+<h2 id="index"><code>index</code></h2>
+<p><strong>Required</strong> · Bindings: <code>artifact_index</code>, <code>checkpoint_log</code>, <code>drift_ledger</code></p>
+<p>Searchable index over all continuity artifacts. Supports range queries by step, checkpoint ID, or drift severity.</p>
+<pre><code class="language-json">{
+  &quot;role&quot;: &quot;index&quot;,
+  &quot;bindings&quot;: {
+    &quot;artifact_index&quot;: {&quot;total_artifacts&quot;: 42, &quot;last_indexed_step&quot;: 200},
+    &quot;checkpoint_log&quot;: [
+      {&quot;id&quot;: &quot;cp-lhca-001-step0050&quot;, &quot;step&quot;: 50, &quot;regime&quot;: &quot;WARM_CONTEXT&quot;, &quot;coherence&quot;: 0.98},
+      {&quot;id&quot;: &quot;cp-lhca-001-step0100&quot;, &quot;step&quot;: 100, &quot;regime&quot;: &quot;WARM_CONTEXT&quot;, &quot;coherence&quot;: 0.96},
+      {&quot;id&quot;: &quot;cp-lhca-001-step0150&quot;, &quot;step&quot;: 150, &quot;regime&quot;: &quot;COLD_HANDOFF&quot;, &quot;coherence&quot;: 0.84},
+      {&quot;id&quot;: &quot;cp-lhca-001-step0200&quot;, &quot;step&quot;: 200, &quot;regime&quot;: &quot;WARM_CONTEXT&quot;, &quot;coherence&quot;: 0.97}
+    ],
+    &quot;drift_ledger&quot;: {&quot;warning_events&quot;: 1, &quot;critical_events&quot;: 0, &quot;halt_events&quot;: 0}
+  }
+}
+</code></pre>
+<hr>
+<h2 id="reference"><code>reference</code></h2>
+<p><strong>Optional</strong> · Bindings: <code>rtt_spec_link</code>, <code>continuity_algebra_doc</code>, <code>axiom_registry</code></p>
+<p>Normative reference material pointers. Not loaded at runtime — used by tooling and documentation generators.</p>
+<pre><code class="language-json">{
+  &quot;role&quot;: &quot;reference&quot;,
+  &quot;bindings&quot;: {
+    &quot;rtt_spec_link&quot;: &quot;REF-RTT-SPEC&quot;,
+    &quot;continuity_algebra_doc&quot;: &quot;REF-CONTINUITY-ALGEBRA&quot;,
+    &quot;axiom_registry&quot;: &quot;REF-TEMPORAL-PERSISTENCE&quot;
+  }
+}
+</code></pre>
+<hr>
+<h2 id="template"><code>template</code></h2>
+<p><strong>Optional</strong> · Bindings: <code>checkpoint_template</code>, <code>horizon_profile_template</code>, <code>drift_bound_template</code></p>
+<p>Scaffold templates for new continuity configurations.</p>
+<pre><code class="language-json">{
+  &quot;role&quot;: &quot;template&quot;,
+  &quot;bindings&quot;: {
+    &quot;checkpoint_template&quot;: {
+      &quot;checkpoint_id&quot;: &quot;cp-{module_id}-step{step:04d}&quot;,
+      &quot;regime&quot;: null,
+      &quot;semantic_hash&quot;: null,
+      &quot;state_checksum&quot;: null,
+      &quot;coherence_score&quot;: null,
+      &quot;drift&quot;: {
+        &quot;semantic&quot;: null,
+        &quot;behavioral&quot;: null,
+        &quot;goal_vector&quot;: null,
+        &quot;identity&quot;: null
+      }
+    },
+    &quot;horizon_profile_template&quot;: {
+      &quot;max_horizon_depth&quot;: 500,
+      &quot;checkpoint_interval_steps&quot;: 50,
+      &quot;drift_bounds&quot;: &quot;see ANALYZER_LAYERS.md&quot;
+    },
+    &quot;drift_bound_template&quot;: {
+      &quot;semantic_drift_max&quot;: 0.35,
+      &quot;behavioral_drift_max&quot;: 0.25,
+      &quot;goal_vector_drift_max&quot;: 0.15,
+      &quot;identity_drift_max&quot;: 0.10
+    }
+  }
+}
+</code></pre>
+<p># VALIDATORS — Long_Horizon_Continuity_Agents</p>
+<blockquote>
+<p>Validator Stubs with Python Skeletons · Module <code>lhca-rtt-001</code></p>
+</blockquote>
+<p>Each validator is a standalone callable that takes a typed input and returns a typed result. Stubs provide the interface contract and JSON I/O examples. Replace the <code>TODO</code> body with your implementation.</p>
+<hr>
+<h2 id="validator-registry">Validator Registry</h2>
+<table>
+<thead>
+<tr>
+<th>Validator</th>
+<th>Layer</th>
+<th>Required</th>
+<th>Zero-Tolerance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>drift_bound_validator</code></td>
+<td>drift</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>coherence_anchor_validator</code></td>
+<td>coherence</td>
+<td>✅</td>
+<td>⚠️ (CA-01..04)</td>
+</tr>
+<tr>
+<td><code>signature_integrity_validator</code></td>
+<td>signature</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>regime_transition_validator</code></td>
+<td>regime</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="drift_bound_validator"><code>drift_bound_validator</code></h2>
+<p>Validates that all drift metrics are within the declared bounds for the active regime. Returns a tiered alert severity.</p>
+<pre><code class="language-python">from dataclasses import dataclass
+from typing import Literal
+from lhca.types import DriftMetrics, Regime
+
+@dataclass
+class DriftBoundResult:
+    valid: bool
+    violations: list[str]
+    severity: Literal[&quot;ok&quot;, &quot;warning&quot;, &quot;critical&quot;, &quot;halt&quot;]
+    worst_metric: str | None
+    mitigation: str | None
+
+
+def drift_bound_validator(
+    current_drift: DriftMetrics,
+    active_regime: Regime,
+) -&gt; DriftBoundResult:
+    &quot;&quot;&quot;
+    Validates drift metrics against the regime-scoped drift bounds.
+
+    Args:
+        current_drift: Mapping of metric name → float value.
+        active_regime: One of WARM_CONTEXT, COLD_HANDOFF, DEEP_HORIZON, RECOVERY.
+
+    Returns:
+        DriftBoundResult with severity tier and any violations.
+    &quot;&quot;&quot;
+    # TODO: implement drift_bound_validator
+    # 1. Load drift bounds from module[&quot;analyzer_layers&quot;][&quot;drift&quot;][&quot;drift_bounds&quot;]
+    # 2. Compare each current_drift[metric] against its max bound
+    # 3. Compute overall severity by mapping worst ratio to threshold tiers
+    # 4. Select mitigation strategy from MITIGATION_STRATEGIES[severity]
+    raise NotImplementedError(&quot;drift_bound_validator not yet implemented&quot;)
+</code></pre>
+<h3 id="example-input">Example Input</h3>
+<pre><code class="language-json">{
+  &quot;current_drift&quot;: {
+    &quot;semantic&quot;: 0.28,
+    &quot;behavioral&quot;: 0.19,
+    &quot;goal_vector&quot;: 0.11,
+    &quot;identity&quot;: 0.07
+  },
+  &quot;active_regime&quot;: &quot;DEEP_HORIZON&quot;
+}
+</code></pre>
+<h3 id="example-output-warning">Example Output — warning</h3>
+<pre><code class="language-json">{
+  &quot;valid&quot;: true,
+  &quot;violations&quot;: [],
+  &quot;severity&quot;: &quot;warning&quot;,
+  &quot;worst_metric&quot;: &quot;semantic&quot;,
+  &quot;mitigation&quot;: &quot;coherence_reinforcement&quot;
+}
+</code></pre>
+<h3 id="example-output-critical">Example Output — critical</h3>
+<pre><code class="language-json">{
+  &quot;valid&quot;: false,
+  &quot;violations&quot;: [&quot;semantic_drift 0.37 exceeds max 0.35&quot;],
+  &quot;severity&quot;: &quot;critical&quot;,
+  &quot;worst_metric&quot;: &quot;semantic&quot;,
+  &quot;mitigation&quot;: &quot;checkpoint_rollback&quot;
+}
+</code></pre>
+<hr>
+<h2 id="coherence_anchor_validator"><code>coherence_anchor_validator</code></h2>
+<p>Evaluates all registered coherence anchors against the current agent state at a checkpoint. Any required anchor failure blocks forward progress. Zero-tolerance anchor failures trigger an immediate halt.</p>
+<pre><code class="language-python">from dataclasses import dataclass, field
+from lhca.types import AgentStateBundle, CheckpointID
+
+@dataclass
+class CoherenceAnchorResult:
+    anchors_passed: list[str]
+    anchors_failed: list[str]
+    zero_tolerance_failures: list[str]
+    coherence_score: float          # [0.0, 1.0]
+    blocking: bool                  # True if any required anchor failed
+
+
+def coherence_anchor_validator(
+    agent_state_bundle: AgentStateBundle,
+    checkpoint_id: CheckpointID,
+    baseline_profile: dict,
+    active_regime: str,
+) -&gt; CoherenceAnchorResult:
+    &quot;&quot;&quot;
+    Checks all coherence anchors (CA-01..CA-05) against the current state.
+
+    Args:
+        agent_state_bundle: Snapshot of current engine state.
+        checkpoint_id: ID of the checkpoint being evaluated.
+        baseline_profile: Original profile registered at module load.
+        active_regime: Current regime string.
+
+    Returns:
+        CoherenceAnchorResult with per-anchor pass/fail and aggregate score.
+    &quot;&quot;&quot;
+    # TODO: implement coherence_anchor_validator
+    # 1. Evaluate CA-01: goal_vector L2 distance vs. goal_vector_drift_max
+    # 2. Evaluate CA-02: identity_hash equality or semantic_similarity &gt;= 0.90
+    # 3. Evaluate CA-03: action_dist KL-divergence vs. regime drift_tolerance
+    # 4. Evaluate CA-04: current_step &gt; previous_step (allow ROLLBACK exception)
+    # 5. Evaluate CA-05: verify_signature(bundle) [not required]
+    # 6. Compute coherence_score as weighted average of passed anchor weights
+    raise NotImplementedError(&quot;coherence_anchor_validator not yet implemented&quot;)
+</code></pre>
+<h3 id="example-input_1">Example Input</h3>
+<pre><code class="language-json">{
+  &quot;checkpoint_id&quot;: &quot;cp-lhca-001-step0200&quot;,
+  &quot;agent_state_bundle&quot;: {
+    &quot;goal_vector&quot;: [0.82, 0.11, 0.07],
+    &quot;identity_hash&quot;: &quot;sha256:4e07408562bedb8b60ce05c1decfd2b9&quot;,
+    &quot;action_dist&quot;: [0.45, 0.30, 0.15, 0.10],
+    &quot;step&quot;: 200
+  },
+  &quot;baseline_profile&quot;: {
+    &quot;goal_vector&quot;: [0.83, 0.11, 0.06],
+    &quot;identity_hash&quot;: &quot;sha256:4e07408562bedb8b60ce05c1decfd2b9&quot;,
+    &quot;action_dist_baseline&quot;: [0.44, 0.31, 0.15, 0.10]
+  },
+  &quot;active_regime&quot;: &quot;WARM_CONTEXT&quot;
+}
+</code></pre>
+<h3 id="example-output-all-pass">Example Output — all pass</h3>
+<pre><code class="language-json">{
+  &quot;anchors_passed&quot;: [&quot;CA-01&quot;, &quot;CA-02&quot;, &quot;CA-03&quot;, &quot;CA-04&quot;, &quot;CA-05&quot;],
+  &quot;anchors_failed&quot;: [],
+  &quot;zero_tolerance_failures&quot;: [],
+  &quot;coherence_score&quot;: 0.97,
+  &quot;blocking&quot;: false
+}
+</code></pre>
+<h3 id="example-output-ca-02-failure">Example Output — CA-02 failure</h3>
+<pre><code class="language-json">{
+  &quot;anchors_passed&quot;: [&quot;CA-01&quot;, &quot;CA-03&quot;, &quot;CA-04&quot;],
+  &quot;anchors_failed&quot;: [&quot;CA-02&quot;],
+  &quot;zero_tolerance_failures&quot;: [],
+  &quot;coherence_score&quot;: 0.71,
+  &quot;blocking&quot;: true
+}
+</code></pre>
+<hr>
+<h2 id="signature_integrity_validator"><code>signature_integrity_validator</code></h2>
+<p>Verifies the semantic and cryptographic signature of a state bundle before rehydration. A failed verification blocks <code>REHYDRATE</code> entirely — this is zero-tolerance.</p>
+<pre><code class="language-python">from dataclasses import dataclass
+from lhca.types import HandoffBundle, ProfileHash
+
+@dataclass
+class SignatureIntegrityResult:
+    integrity_ok: bool
+    hash_match: bool
+    semantic_similarity: float      # cosine similarity [0.0, 1.0]
+    signature_failures: list[str]
+
+
+def signature_integrity_validator(
+    bundle: HandoffBundle,
+    registered_profile_hash: ProfileHash,
+    similarity_floor: float = 0.90,
+) -&gt; SignatureIntegrityResult:
+    &quot;&quot;&quot;
+    Verifies a handoff bundle before rehydration.
+
+    Args:
+        bundle: The incoming HandoffBundle from a HANDOFF operator.
+        registered_profile_hash: The original profile hash from module load.
+        similarity_floor: Minimum acceptable semantic similarity.
+
+    Returns:
+        SignatureIntegrityResult. integrity_ok=False blocks REHYDRATE.
+    &quot;&quot;&quot;
+    # TODO: implement signature_integrity_validator
+    # 1. Recompute SHA-256 of bundle.state_bytes; compare to bundle.state_checksum
+    # 2. Compare bundle.profile_hash to registered_profile_hash
+    # 3. Embed bundle.goal_vector; compute cosine similarity to baseline
+    # 4. Aggregate failures; set integrity_ok = hash_match AND sim &gt;= floor
+    raise NotImplementedError(&quot;signature_integrity_validator not yet implemented&quot;)
+</code></pre>
+<h3 id="example-input_2">Example Input</h3>
+<pre><code class="language-json">{
+  &quot;bundle&quot;: {
+    &quot;checkpoint_id&quot;: &quot;cp-lhca-001-step0200&quot;,
+    &quot;profile_hash&quot;: &quot;sha256:4e07408562bedb8b60ce05c1decfd2b9&quot;,
+    &quot;state_checksum&quot;: &quot;sha256:e3b0c44298fc1c149afb4c8996fb924&quot;,
+    &quot;goal_vector&quot;: [0.82, 0.11, 0.07],
+    &quot;signed_by&quot;: &quot;lhca-rtt-001&quot;
+  },
+  &quot;registered_profile_hash&quot;: &quot;sha256:4e07408562bedb8b60ce05c1decfd2b9&quot;,
+  &quot;similarity_floor&quot;: 0.90
+}
+</code></pre>
+<h3 id="example-output-pass">Example Output — pass</h3>
+<pre><code class="language-json">{
+  &quot;integrity_ok&quot;: true,
+  &quot;hash_match&quot;: true,
+  &quot;semantic_similarity&quot;: 0.97,
+  &quot;signature_failures&quot;: []
+}
+</code></pre>
+<h3 id="example-output-fail">Example Output — fail</h3>
+<pre><code class="language-json">{
+  &quot;integrity_ok&quot;: false,
+  &quot;hash_match&quot;: false,
+  &quot;semantic_similarity&quot;: 0.91,
+  &quot;signature_failures&quot;: [&quot;state_checksum mismatch: expected sha256:e3b0c..., got sha256:deadbeef...&quot;]
+}
+</code></pre>
+<hr>
+<h2 id="regime_transition_validator"><code>regime_transition_validator</code></h2>
+<p>Validates that a proposed regime transition is permitted by the transition table and that pre-conditions (drift level, coherence score) are met.</p>
+<pre><code class="language-python">from dataclasses import dataclass, field
+
+@dataclass
+class RegimeTransitionResult:
+    transition_permitted: bool
+    blocking_reasons: list[str] = field(default_factory=list)
+
+
+def regime_transition_validator(
+    from_regime: str,
+    to_regime: str,
+    current_drift: dict,
+    coherence_score: float,
+    trigger_operator: str,
+) -&gt; RegimeTransitionResult:
+    &quot;&quot;&quot;
+    Validates a proposed regime transition.
+
+    Args:
+        from_regime: Current regime ID.
+        to_regime: Proposed target regime ID.
+        current_drift: Current drift metrics dict.
+        coherence_score: Current coherence score [0.0, 1.0].
+        trigger_operator: The RTT operator triggering the transition.
+
+    Returns:
+        RegimeTransitionResult with permitted flag and reasons.
+    &quot;&quot;&quot;
+    # TODO: implement regime_transition_validator
+    # 1. Look up (from_regime, to_regime) in PERMITTED_TRANSITIONS table
+    # 2. Verify trigger_operator is a valid trigger for this transition
+    # 3. Check to_regime coherence_floor &lt;= coherence_score
+    # 4. Check drift metrics within to_regime drift_tolerance
+    # 5. Collect blocking reasons; set permitted = len(blocking_reasons) == 0
+    raise NotImplementedError(&quot;regime_transition_validator not yet implemented&quot;)
+</code></pre>
+<h3 id="example-input_3">Example Input</h3>
+<pre><code class="language-json">{
+  &quot;from_regime&quot;: &quot;COLD_HANDOFF&quot;,
+  &quot;to_regime&quot;: &quot;WARM_CONTEXT&quot;,
+  &quot;current_drift&quot;: {
+    &quot;semantic&quot;: 0.12,
+    &quot;behavioral&quot;: 0.09,
+    &quot;goal_vector&quot;: 0.05,
+    &quot;identity&quot;: 0.02
+  },
+  &quot;coherence_score&quot;: 0.89,
+  &quot;trigger_operator&quot;: &quot;REHYDRATE&quot;
+}
+</code></pre>
+<h3 id="example-output-permitted">Example Output — permitted</h3>
+<pre><code class="language-json">{
+  &quot;transition_permitted&quot;: true,
+  &quot;blocking_reasons&quot;: []
+}
+</code></pre>
+<h3 id="example-output-blocked">Example Output — blocked</h3>
+<pre><code class="language-json">{
+  &quot;transition_permitted&quot;: false,
+  &quot;blocking_reasons&quot;: [
+    &quot;coherence_score 0.72 &lt; WARM_CONTEXT floor 0.95&quot;,
+    &quot;semantic_drift 0.37 &gt; WARM_CONTEXT tolerance 0.05&quot;
+  ]
+}
+</code></pre>
+<hr>
+<h2 id="running-all-validators">Running All Validators</h2>
+<pre><code class="language-python">from lhca.validators import (
+    drift_bound_validator,
+    coherence_anchor_validator,
+    signature_integrity_validator,
+    regime_transition_validator,
+)
+
+def run_checkpoint_validation(engine, checkpoint_id, baseline):
+    snapshot = engine.snapshot()
+
+    drift_result = drift_bound_validator(
+        current_drift=snapshot[&quot;drift&quot;],
+        active_regime=engine.active_regime,
+    )
+
+    coherence_result = coherence_anchor_validator(
+        agent_state_bundle=snapshot,
+        checkpoint_id=checkpoint_id,
+        baseline_profile=baseline,
+        active_regime=engine.active_regime,
+    )
+
+    if drift_result.severity == &quot;halt&quot; or coherence_result.blocking:
+        engine.emit_event(&quot;validation_halt&quot;, {
+            &quot;drift&quot;: drift_result,
+            &quot;coherence&quot;: coherence_result,
+        })
+        engine.rollback_to_last_known_good()
+        return False
+
+    return True
+</code></pre>
+<p></p>
+  </main>
+</body>
+</html>

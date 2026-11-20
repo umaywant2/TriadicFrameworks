@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/corpus/fab.md">
-  <title>SCR Zone Configuration Guide</title>
+  <title>🏭 FAB — Fabrication Grammar &amp; Substrate Qualification</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,8 +92,53 @@
   </aside>
 
   <main>
-<p>fab </p>
-<h1 id="scr-zone-configuration-guide">SCR Zone Configuration Guide</h1>
+<p>fab 
+<img width="1194" height="672" alt="Fab_" src="https://github.com/user-attachments/assets/d7f18000-b6f6-49e1-8cbd-4db7857a0d31" /></p>
+<ul>
+<li><a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/fab/module.json"><code>module.json</code></a> — Agentic module schema role assignments</li>
+</ul>
+<h1 id="fab-fabrication-grammar-substrate-qualification">🏭 FAB — Fabrication Grammar &amp; Substrate Qualification</h1>
+<p>The <code>fab</code> directory contains fabrication‑aligned documents that define substrate configuration zones and qualification rules within the TriadicFrameworks post‑ASML fabrication stack.</p>
+<p>These modules sit inside the <strong>Fabrication‑Design‑Automation Substrate (FDAS)</strong> lineage and support:</p>
+<ul>
+<li>substrate zone configuration  </li>
+<li>resonance‑aligned fabrication constraints  </li>
+<li>qualification rules for substrate transitions  </li>
+<li>integration with dimensional substrate structures  </li>
+<li>early‑stage fabrication grammar  </li>
+</ul>
+<hr>
+<h2 id="included-fab-files">📄 Included FAB Files</h2>
+<h3 id="scr_zone_configmd"><code>SCR_Zone_Config.md</code></h3>
+<p>Defines <strong>Substrate Configuration Regions (SCR)</strong>.<br>
+Covers zone boundaries, resonance envelopes, fabrication constraints, and substrate‑level operator rules.</p>
+<h3 id="trs_qualificationmd"><code>TRS_Qualification.md</code></h3>
+<p>Describes <strong>Triadic Resonance Substrate (TRS)</strong> qualification rules.<br>
+Explains how substrates pass or fail resonance alignment, drift thresholds, and fabrication‑ready criteria.</p>
+<hr>
+<h2 id="how-to-reference-fab-modules">🧩 How to Reference FAB Modules</h2>
+<p>Inside any module:</p>
+<pre><code class="language-md">See: `docs/fab/SCR_Zone_Config.md`
+</code></pre>
+<p>Or include directly:</p>
+<pre><code class="language-md">{{#include ../fab/TRS_Qualification.md}}
+</code></pre>
+<p>FAB modules keep your documentation <strong>fabrication‑aware</strong>, <strong>substrate‑aligned</strong>, and <strong>post‑ASML ready</strong>.</p>
+<hr>
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+<p># SCR Zone Configuration Guide</p>
 <p><strong>Status:</strong> STUB
 <strong>Priority:</strong> P1
 <strong>Document ID:</strong> fab-002
