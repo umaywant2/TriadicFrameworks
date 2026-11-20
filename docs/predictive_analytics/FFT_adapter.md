@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="predictive_analytics_FFT_adapter_" src="https://github.com/user-attachments/assets/63ccfc71-3a52-4010-a53c-e3a5c1215224" />
+
 # Framework Field Theory Adapter
 
 > **Observe the field around the prediction, not only the predicted point.**
