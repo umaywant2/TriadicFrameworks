@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="predictive_analytics_foundations_" src="https://github.com/user-attachments/assets/dbc48ea7-2d8c-4e51-bbea-ac12355ce156" />
+
 # Predictive Analytics — Foundations
 
 > **A prediction is an observation produced through a model. It is not the observed system itself.**
