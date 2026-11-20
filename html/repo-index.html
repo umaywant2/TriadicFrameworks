@@ -306,7 +306,31 @@ details[open] {
   from { opacity: 0; }
   to   { opacity: 1; }
 }
-      
+
+#copilot-widget input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid rgba(255,255,255,0.6); /* subtle border */
+  border-radius: 4px;
+  background: transparent;                 /* <-- key line */
+  color: #fff;                             /* text color */
+}
+#copilot-widget input::placeholder {
+  color: rgba(255,255,255,0.7);            /* softer placeholder */
+}
+#copilot-widget img { flex-shrink: 0; }
+#copilot-widget button {
+  padding: 0.5rem 0.8rem;
+  border: 1px solid rgba(255,255,255,0.6);
+  background: transparent;   /* transparent background */
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#copilot-widget button:hover {
+  background: rgba(255,255,255,0.2); /* subtle hover glow */
+}
+   
 </style>
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -314,71 +338,6 @@ details[open] {
 </head>
 
 <body>
-  
-<!-- WebMCP registration
-<script>
-navigator.modelContext.registerTool;
-try {
-
-  navigator.modelContext.registerTool({
-    name: "triadicframeworks.lookupModule",
-    description: "Retrieve TriadicFrameworks module metadata.",
-    inputSchema: {
-      type: "object",
-      properties: {
-        module: { type: "string" }
-      },
-      required: ["module"]
-    },
-    async execute({ module }) {
-      const res = await fetch(`/${module}/ABOUT.md`);
-      if (!res.ok) return { error: "Module not found" };
-      return { about: await res.text() };
-    }
-  });
-
-  navigator.modelContext.registerTool({
-    name: "triadicframeworks.moduleHealth",
-    description: "Retrieve health info for a module.",
-    inputSchema: {
-      type: "object",
-      properties: { module: { type: "string" } },
-      required: ["module"]
-    },
-    async execute({ module }) {
-      const res = await fetch(`/${module}/HEALTH.json`);
-      return await res.json();
-    }
-  });
-
-  navigator.modelContext.registerTool({
-    name: "triadicframeworks.sitemap",
-    description: "Fetch the TriadicFrameworks sitemap.",
-    inputSchema: { type: "object", properties: {} },
-    async execute() {
-      const res = await fetch(`/sitemap_main.xml`);
-      return await res.text();
-    }
-  });
-
-  navigator.modelContext.registerTool({
-    name: "triadicframeworks.moduleOverview",
-    description: "Retrieve module overview metadata.",
-    inputSchema: {
-      type: "object",
-      properties: { module: { type: "string" } },
-      required: ["module"]
-    },
-    async execute({ module }) {
-      const res = await fetch(`/${module}/module.json`);
-      return await res.json();
-    }
-  });
-
-} catch (e) {
-  console.log("WebMCP registration attempted.");
-}
-</script> -->
    
 <nav class="nav-band">
  <p align="center">
@@ -483,6 +442,14 @@ try {
   📘 Docs‑Root<br>🧩 Structural Canon Active
 </div>
 
+<!-- Copilot Search Widget -->
+<div id="copilot-widget">
+  <form action="https://github.com/umaywant2/TriadicFrameworks/search" method="get" target="_blank">
+    <input type="text" name="q" placeholder="Search the repo..." />
+    <button type="submit"><img src="https://docs.triadicframeworks.org/assets/copilot.png" alt="Copilot" width="24" height="24" /></button>
+  </form>
+</div>
+   
 </nav>
 
 <main id="content"></main>
