@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="predictive_analytics_metrics_" src="https://github.com/user-attachments/assets/610e1449-7561-4a86-a895-5ecd3a6333bc" />
+
 # Predictive Analytics — Metrics
 
 > **Measure the framework's failures at least as carefully as its successes.**
