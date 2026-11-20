@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="predictive_analytics_example_resonant_iq_fingerprint_" src="https://github.com/user-attachments/assets/0eaa4968-1721-4d0e-9507-64dad1c5a4d2" />
+
 # Example — Resonant IQ Fingerprint
 
 > **The purpose of the fingerprint is not to find a better number. It is to preserve the shape that a number compresses away.**
