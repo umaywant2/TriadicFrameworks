@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="predictive_analytics_resonant_iq_fingerprint_" src="https://github.com/user-attachments/assets/f2baaebd-23ce-4927-a16b-951607653e3a" />
+
 # Resonant IQ Fingerprint
 
 > **Intelligence may be better represented as a reproducible shape of capability expression than as a single point on a line.**
