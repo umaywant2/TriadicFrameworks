@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="predictive_analytics_RTT_adapter_" src="https://github.com/user-attachments/assets/9e2d36fe-1314-4f6c-98f7-48f1af94e9c7" />
+
 # RTT Adapter
 
 > **A prediction can be locally correct and globally wrong when the regime changes.**
