@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="predictive_analytics_validation_" src="https://github.com/user-attachments/assets/6b1e937e-75ea-4e0f-997f-2b812e70a830" />
+
 # Predictive Analytics — Validation
 
 > **A framework becomes research when its claims can lose.**
