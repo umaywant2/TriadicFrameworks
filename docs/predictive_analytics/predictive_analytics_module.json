@@ -1,1 +1,4000 @@
-
+{
+  "predictive_analytics_module": {
+    "version": "0.1.0",
+    "id": "predictive-analytics",
+    "name": "Predictive Analytics",
+    "short_name": "PA",
+    "description": "Experimental substrate-aware predictive analytics framework for comparing conventional predictions with multidimensional observations, model fit, substrate fit, regime fit, resonance, drift, coherence, uncertainty, and alternate representations.",
+    "tagline": "Predict the observation. Observe the predictor.",
+    "category": "predictive-structural",
+    "state": {
+      "rtt": 1,
+      "coherence": "declared",
+      "drift": "bounded",
+      "paradox": "preserved",
+      "regime": "predictive-structural",
+      "lifecycle": "experimental",
+      "validation": "unvalidated",
+      "decision_authority": "none"
+    },
+    "generated_at": "2026-11-19T18:57:47-05:00",
+    "last_modified": "2026-11-19",
+    "source_repo": "https://github.com/umaywant2/TriadicFrameworks",
+    "source_path": "docs/predictive_analytics",
+    "canonical_url": "https://www.triadicframeworks.org/predictive_analytics/",
+    "license": "MIT",
+    "architecture": {
+      "pattern": "observer-adapter",
+      "primary_pipeline": [
+        "observed-system",
+        "measurement-substrate",
+        "existing-predictive-model",
+        "prediction",
+        "predictive-analytics-observer-layer",
+        "comparative-assessment"
+      ],
+      "observation_boundary": "Predictions are treated as model outputs rather than complete identities of the observed system. The framework preserves evidence, model fit, substrate fit, regime fit, uncertainty, disagreement, and alternative interpretations.",
+      "scalar_policy": {
+        "primary_representation": "multidimensional_profile",
+        "composites_allowed": true,
+        "loss_warning_required": true,
+        "hidden_master_score_prohibited": true
+      },
+      "supports_human_observation": true,
+      "supports_ai_observation": true,
+      "supports_team_observation": true,
+      "supports_organizational_observation": true,
+      "standalone_mode": true
+    },
+    "lineage": {
+      "version": "0.1.0",
+      "origin": "Initial Predictive Analytics module scaffold integrating conventional predictive models with substrate-aware observation and experimental TriadicFrameworks adapters.",
+      "promoted_at": "2026-11-19T18:57:47-05:00",
+      "source_repo": "https://github.com/umaywant2/TriadicFrameworks",
+      "source_path": "docs/predictive_analytics",
+      "architecture": "substrate-aware observer-adapter",
+      "parent_modules": [
+        "Corpus",
+        "RTT",
+        "Structural Detection",
+        "Resonance"
+      ],
+      "canon_dependencies": [
+        "Framework Field Theory",
+        "The Inverted Star",
+        "Structural Detection",
+        "RTT",
+        "Resonance",
+        "Drift Taxonomy"
+      ],
+      "note": "Initial experimental generation. Existing predictive models remain evidence. TriadicFrameworks adapters are hypotheses to be independently validated and may be retained, revised, deprecated, restricted, or rejected."
+    },
+    "ai_metadata": {
+      "schema_version": "0.1.0",
+      "embedding_strategy": "hybrid",
+      "chunk_boundary": "section-heading",
+      "context_window_advisory": "large",
+      "injection_pattern": "foundation-first",
+      "retrieval_hint": "Resolve the predictive task first, then inspect evidence, model fit, substrate fit, regime fit, relevant dimensions, adapter observations, uncertainty, validation state, ethics limits, and review requirements. Never infer that an alternate assessment is preferable merely because it is more favorable.",
+      "semantic_tags": [
+        "predictive-analytics",
+        "substrate-aware-assessment",
+        "model-mismatch",
+        "multidimensional-intelligence",
+        "resonant-iq-fingerprint",
+        "rtt",
+        "resonance",
+        "regime-awareness",
+        "structural-detection",
+        "drift",
+        "coherence",
+        "uncertainty",
+        "fairness",
+        "validation",
+        "human-review"
+      ],
+      "model_compatibility": [
+        "general-language-model",
+        "agentic-system",
+        "statistical-model",
+        "predictive-model",
+        "human-review-workflow"
+      ],
+      "audience": [
+        "students",
+        "researchers",
+        "developers",
+        "educators",
+        "AI systems",
+        "model evaluators"
+      ],
+      "standalone_mode": true,
+      "generation_ts": "2026-11-19T18:57:47-05:00"
+    },
+    "operators": [
+      {
+        "id": "PA-Predict",
+        "label": "Predict",
+        "description": "Represent an existing prediction without treating the prediction as the complete observed system.",
+        "inputs": [
+          "model",
+          "evidence",
+          "prediction"
+        ],
+        "outputs": [
+          "prediction-record"
+        ],
+        "status": "experimental",
+        "requires_human_review": false,
+        "related_adapters": [],
+        "related_metrics": [
+          "PA-M11",
+          "PA-M28"
+        ]
+      },
+      {
+        "id": "PA-Observe",
+        "label": "Observe",
+        "description": "Observe the predictive process, its evidence boundary, and its relationship to the system being modeled.",
+        "inputs": [
+          "prediction-record",
+          "observations"
+        ],
+        "outputs": [
+          "observer-record"
+        ],
+        "status": "experimental",
+        "requires_human_review": false,
+        "related_adapters": [
+          "structural-detection",
+          "rtt",
+          "resonance"
+        ],
+        "related_metrics": [
+          "PA-M01",
+          "PA-M02",
+          "PA-M03"
+        ]
+      },
+      {
+        "id": "PA-Substrate",
+        "label": "Substrate",
+        "description": "Evaluate whether the measurement substrate provides adequate conditions for observing the capability or behavior being inferred.",
+        "inputs": [
+          "observations",
+          "substrate-context"
+        ],
+        "outputs": [
+          "substrate-fit"
+        ],
+        "status": "experimental",
+        "requires_human_review": false,
+        "related_adapters": [
+          "fft",
+          "inverted-star",
+          "structural-detection",
+          "rtt",
+          "resonance"
+        ],
+        "related_metrics": [
+          "PA-M12",
+          "PA-M13",
+          "PA-M14",
+          "PA-M15"
+        ]
+      },
+      {
+        "id": "PA-Regime",
+        "label": "Regime",
+        "description": "Evaluate whether the predictive model and observed system occupy compatible operating regimes.",
+        "inputs": [
+          "observations",
+          "regime-context"
+        ],
+        "outputs": [
+          "regime-fit",
+          "regime-transition-observations"
+        ],
+        "status": "experimental",
+        "requires_human_review": false,
+        "related_adapters": [
+          "rtt"
+        ],
+        "related_metrics": [
+          "PA-M16",
+          "PA-M17",
+          "PA-M18",
+          "PA-M19"
+        ]
+      },
+      {
+        "id": "PA-Resonance",
+        "label": "Resonance",
+        "description": "Observe whether capability expression is amplified, suppressed, stabilized, or altered across contexts and substrates.",
+        "inputs": [
+          "observations",
+          "context-comparisons"
+        ],
+        "outputs": [
+          "resonance-profile"
+        ],
+        "status": "experimental",
+        "requires_human_review": false,
+        "related_adapters": [
+          "resonance"
+        ],
+        "related_metrics": [
+          "PA-M12",
+          "PA-M13",
+          "PA-M24"
+        ]
+      },
+      {
+        "id": "PA-Drift",
+        "label": "Drift",
+        "description": "Detect divergence in observations, predictions, profiles, or operating conditions across time or contexts.",
+        "inputs": [
+          "observation-series"
+        ],
+        "outputs": [
+          "drift-profile"
+        ],
+        "status": "experimental",
+        "requires_human_review": false,
+        "related_adapters": [
+          "rtt"
+        ],
+        "related_metrics": [
+          "PA-M26",
+          "PA-M27"
+        ]
+      },
+      {
+        "id": "PA-Coherence",
+        "label": "Coherence",
+        "description": "Compare independent observations and preserve both supporting and contradictory signals.",
+        "inputs": [
+          "observations"
+        ],
+        "outputs": [
+          "coherence-profile",
+          "contradictions"
+        ],
+        "status": "experimental",
+        "requires_human_review": false,
+        "related_adapters": [
+          "structural-detection",
+          "rtt",
+          "resonance"
+        ],
+        "related_metrics": [
+          "PA-M24",
+          "PA-M25"
+        ]
+      },
+      {
+        "id": "PA-Structure",
+        "label": "Structure",
+        "description": "Identify candidate structural relationships, invariants, boundaries, faultlines, and reconstruction patterns in observed evidence.",
+        "inputs": [
+          "observations"
+        ],
+        "outputs": [
+          "structural-profile"
+        ],
+        "status": "experimental",
+        "requires_human_review": false,
+        "related_adapters": [
+          "fft",
+          "inverted-star",
+          "structural-detection"
+        ],
+        "related_metrics": [
+          "PA-M08",
+          "PA-M09",
+          "PA-M36"
+        ]
+      },
+      {
+        "id": "PA-Counterfactual",
+        "label": "Counterfactual",
+        "description": "Compare reasonable alternate representations while preserving the original result.",
+        "inputs": [
+          "baseline-assessment",
+          "alternate-representations"
+        ],
+        "outputs": [
+          "counterfactual-comparison"
+        ],
+        "status": "experimental",
+        "requires_human_review": false,
+        "related_adapters": [],
+        "related_metrics": [
+          "PA-M33",
+          "PA-M34",
+          "PA-M35"
+        ]
+      },
+      {
+        "id": "PA-Uncertainty",
+        "label": "Uncertainty",
+        "description": "Represent uncertainty, missing evidence, abstention, and unsupported inference explicitly.",
+        "inputs": [
+          "assessment",
+          "evidence-coverage"
+        ],
+        "outputs": [
+          "uncertainty-record",
+          "abstention-state"
+        ],
+        "status": "experimental",
+        "requires_human_review": false,
+        "related_adapters": [],
+        "related_metrics": [
+          "PA-M28",
+          "PA-M29",
+          "PA-M30",
+          "PA-M31",
+          "PA-M32"
+        ]
+      },
+      {
+        "id": "PA-Calibrate",
+        "label": "Calibrate",
+        "description": "Compare predictions, confidence, and observed outcomes to evaluate predictive and interpretive calibration.",
+        "inputs": [
+          "predictions",
+          "outcomes"
+        ],
+        "outputs": [
+          "calibration-record"
+        ],
+        "status": "experimental",
+        "requires_human_review": false,
+        "related_adapters": [],
+        "related_metrics": [
+          "PA-M28",
+          "PA-M29"
+        ]
+      },
+      {
+        "id": "PA-Escalate",
+        "label": "Escalate",
+        "description": "Recommend additional evidence or qualified human review when uncertainty, consequence, disagreement, or model mismatch warrants escalation.",
+        "inputs": [
+          "assessment",
+          "uncertainty-record"
+        ],
+        "outputs": [
+          "review-recommendation"
+        ],
+        "status": "experimental",
+        "requires_human_review": true,
+        "related_adapters": [],
+        "related_metrics": [
+          "PA-M41",
+          "PA-M47",
+          "PA-M48",
+          "PA-M50"
+        ]
+      }
+    ],
+    "roles": [
+      {
+        "id": "foundation",
+        "label": "Foundation",
+        "description": "Defines the conceptual and structural basis of the Predictive Analytics module.",
+        "allowed_document_types": [
+          "markdown"
+        ]
+      },
+      {
+        "id": "observer",
+        "label": "Observer Layer",
+        "description": "Examines model fit, substrate fit, regime fit, resonance, drift, coherence, and uncertainty.",
+        "allowed_document_types": [
+          "markdown"
+        ]
+      },
+      {
+        "id": "adapter",
+        "label": "Substrate Adapter",
+        "description": "Connects an existing model or TriadicFrameworks analytical grammar to the Predictive Analytics observer layer.",
+        "allowed_document_types": [
+          "markdown"
+        ]
+      },
+      {
+        "id": "profile",
+        "label": "Profile Model",
+        "description": "Defines a multidimensional profile representation such as the Resonant IQ Fingerprint.",
+        "allowed_document_types": [
+          "markdown"
+        ]
+      },
+      {
+        "id": "validation",
+        "label": "Validation",
+        "description": "Defines falsification, validation, measurement, and reporting requirements.",
+        "allowed_document_types": [
+          "markdown"
+        ]
+      },
+      {
+        "id": "metrics",
+        "label": "Metrics",
+        "description": "Defines experimental measurement and evaluation metrics.",
+        "allowed_document_types": [
+          "markdown"
+        ]
+      },
+      {
+        "id": "ethics",
+        "label": "Ethics and Limits",
+        "description": "Defines ethical constraints, prohibited uses, privacy requirements, contestability, and known limitations.",
+        "allowed_document_types": [
+          "markdown"
+        ]
+      },
+      {
+        "id": "example",
+        "label": "Example",
+        "description": "Provides synthetic or otherwise appropriately governed worked examples.",
+        "allowed_document_types": [
+          "markdown"
+        ]
+      },
+      {
+        "id": "module",
+        "label": "Module Metadata",
+        "description": "Provides machine-readable module metadata and schema definitions.",
+        "allowed_document_types": [
+          "json"
+        ]
+      }
+    ],
+    "analyzer_layers": [
+      {
+        "id": "substrate",
+        "label": "Substrate Fit",
+        "description": "Examines whether the expression and measurement substrate is compatible with the capability being inferred.",
+        "primary_documents": [
+          "substrate_adapter.md",
+          "substrate_expression_profile.md"
+        ],
+        "adapter_refs": [
+          "fft",
+          "inverted-star",
+          "structural-detection",
+          "rtt",
+          "resonance"
+        ],
+        "operator_refs": [
+          "PA-Substrate"
+        ],
+        "metric_refs": [
+          "PA-M12",
+          "PA-M13",
+          "PA-M14",
+          "PA-M15"
+        ]
+      },
+      {
+        "id": "regime",
+        "label": "Regime Observation",
+        "description": "Examines operating regimes, transitions, and model-subject regime compatibility.",
+        "primary_documents": [
+          "regime_observer.md"
+        ],
+        "adapter_refs": [
+          "rtt"
+        ],
+        "operator_refs": [
+          "PA-Regime"
+        ],
+        "metric_refs": [
+          "PA-M16",
+          "PA-M17",
+          "PA-M18",
+          "PA-M19"
+        ]
+      },
+      {
+        "id": "resonance",
+        "label": "Resonance Observation",
+        "description": "Examines contextual amplification, suppression, stability, and cross-context expression.",
+        "primary_documents": [
+          "resonance_observer.md",
+          "resonant_iq_fingerprint.md"
+        ],
+        "adapter_refs": [
+          "resonance"
+        ],
+        "operator_refs": [
+          "PA-Resonance"
+        ],
+        "metric_refs": [
+          "PA-M12",
+          "PA-M13",
+          "PA-M24"
+        ]
+      },
+      {
+        "id": "drift",
+        "label": "Drift Observation",
+        "description": "Examines temporal, semantic, profile, and observational drift.",
+        "primary_documents": [
+          "drift_observer.md"
+        ],
+        "adapter_refs": [
+          "rtt"
+        ],
+        "operator_refs": [
+          "PA-Drift"
+        ],
+        "metric_refs": [
+          "PA-M26",
+          "PA-M27"
+        ]
+      },
+      {
+        "id": "coherence",
+        "label": "Coherence Observation",
+        "description": "Examines agreement and contradiction across independent observations.",
+        "primary_documents": [
+          "coherence_observer.md"
+        ],
+        "adapter_refs": [
+          "structural-detection",
+          "rtt",
+          "resonance"
+        ],
+        "operator_refs": [
+          "PA-Coherence"
+        ],
+        "metric_refs": [
+          "PA-M24",
+          "PA-M25"
+        ]
+      },
+      {
+        "id": "uncertainty",
+        "label": "Uncertainty and Abstention",
+        "description": "Preserves missing evidence, uncertainty, calibration, and explicit abstention.",
+        "primary_documents": [
+          "uncertainty_layer.md"
+        ],
+        "adapter_refs": [],
+        "operator_refs": [
+          "PA-Uncertainty"
+        ],
+        "metric_refs": [
+          "PA-M28",
+          "PA-M29",
+          "PA-M30",
+          "PA-M31",
+          "PA-M32"
+        ]
+      }
+    ],
+    "adapters": [
+      {
+        "id": "fft",
+        "name": "Framework Field Theory Adapter",
+        "description": "Experimental adapter for examining relational, field, boundary, and local-to-global structural observations.",
+        "status": "experimental",
+        "source_framework": "Framework Field Theory",
+        "source_document": "FFT_adapter.md",
+        "purpose": "Test whether field and relationship-oriented observations add independently useful information to predictive assessment.",
+        "supported_inputs": [
+          "relationship observations",
+          "boundary observations",
+          "local-global observations",
+          "system context"
+        ],
+        "unsupported_inputs": [
+          "unsupported causal claims",
+          "unobserved internal states"
+        ],
+        "outputs": [
+          "field-relationship observations",
+          "boundary observations",
+          "local-global relationship observations"
+        ],
+        "claims": [
+          "May identify relational information omitted by isolated-variable representations."
+        ],
+        "limitations": [
+          "Experimental.",
+          "Does not establish scientific validity of Framework Field Theory.",
+          "Must demonstrate incremental value beyond simpler relational analysis."
+        ],
+        "confounds": [
+          "task complexity",
+          "prior domain knowledge",
+          "evaluator interpretation"
+        ],
+        "validation_state": "unvalidated",
+        "ablation_metric": "PA-M36",
+        "decision_authority": "none"
+      },
+      {
+        "id": "inverted-star",
+        "name": "The Inverted Star Adapter",
+        "description": "Experimental adapter for detecting candidate inversions between predicted performance and independently demonstrated capability.",
+        "status": "experimental",
+        "source_framework": "The Inverted Star",
+        "source_document": "Inverted_Star_adapter.md",
+        "purpose": "Preserve and investigate discrepancies between model expectations and demonstrated outcomes.",
+        "supported_inputs": [
+          "predicted outcomes",
+          "observed outcomes",
+          "cross-substrate comparisons"
+        ],
+        "unsupported_inputs": [
+          "claims of hidden ability without evidence"
+        ],
+        "outputs": [
+          "inversion candidates",
+          "alternative explanations"
+        ],
+        "claims": [
+          "May identify cases in which aggregate or narrow measurement disagrees with independent observations."
+        ],
+        "limitations": [
+          "Inversion does not prove hidden superior capability.",
+          "Discrepancy may reflect noise, task differences, or genuine uneven capability."
+        ],
+        "confounds": [
+          "measurement noise",
+          "practice effects",
+          "task differences",
+          "selection bias"
+        ],
+        "validation_state": "unvalidated",
+        "ablation_metric": "PA-M36",
+        "decision_authority": "none"
+      },
+      {
+        "id": "structural-detection",
+        "name": "Structural Detection Adapter",
+        "description": "Experimental adapter for latent pattern, invariant, faultline, relationship, and boundary observations.",
+        "status": "experimental",
+        "source_framework": "Structural Detection",
+        "source_document": "Structural_Detection_adapter.md",
+        "purpose": "Test structural observation dimensions against conventional and baseline multidimensional models.",
+        "supported_inputs": [
+          "pattern tasks",
+          "relationship tasks",
+          "partial evidence",
+          "boundary tasks"
+        ],
+        "unsupported_inputs": [
+          "unobserved ability",
+          "identity claims"
+        ],
+        "outputs": [
+          "structural observations",
+          "faultline observations",
+          "invariant observations"
+        ],
+        "claims": [
+          "May provide a structured vocabulary for observing system-level reasoning."
+        ],
+        "limitations": [
+          "Must be empirically distinguished from existing reasoning constructs.",
+          "Structural labels do not establish intelligence by themselves."
+        ],
+        "confounds": [
+          "domain expertise",
+          "task familiarity",
+          "evaluator interpretation"
+        ],
+        "validation_state": "unvalidated",
+        "ablation_metric": "PA-M36",
+        "decision_authority": "none"
+      },
+      {
+        "id": "rtt",
+        "name": "RTT Adapter",
+        "description": "Experimental adapter for regime recognition, temporal sequencing, drift, stability, transition, continuity, and recalibration observations.",
+        "status": "experimental",
+        "source_framework": "RTT",
+        "source_document": "RTT_adapter.md",
+        "purpose": "Test whether regime-aware and temporal observations improve explanation or prediction beyond baseline models.",
+        "supported_inputs": [
+          "time-series observations",
+          "regime contexts",
+          "transition observations",
+          "repeated assessments"
+        ],
+        "unsupported_inputs": [
+          "unobserved regime claims",
+          "unsupported causal claims"
+        ],
+        "outputs": [
+          "regime observations",
+          "transition observations",
+          "drift observations",
+          "continuity observations"
+        ],
+        "claims": [
+          "May differentiate within-regime stability from between-regime variation."
+        ],
+        "limitations": [
+          "RTT-derived observations remain experimental.",
+          "Regime labels require independent operational definitions."
+        ],
+        "confounds": [
+          "task order",
+          "fatigue",
+          "learning",
+          "environmental change"
+        ],
+        "validation_state": "unvalidated",
+        "ablation_metric": "PA-M36",
+        "decision_authority": "none"
+      },
+      {
+        "id": "resonance",
+        "name": "Resonance Adapter",
+        "description": "Experimental adapter for observing contextual amplification, suppression, persistence, instability, and observer-subject coupling.",
+        "status": "experimental",
+        "source_framework": "Resonance",
+        "source_document": "resonance_adapter.md",
+        "purpose": "Test whether repeatable context-dependent changes can be represented without converting them into unsupported identity claims.",
+        "supported_inputs": [
+          "cross-context observations",
+          "cross-substrate observations",
+          "repeated performance observations"
+        ],
+        "unsupported_inputs": [
+          "unmeasured latent traits",
+          "metaphorical resonance treated as measurement"
+        ],
+        "outputs": [
+          "amplification observations",
+          "suppression observations",
+          "persistence observations",
+          "instability observations"
+        ],
+        "claims": [
+          "May help describe repeatable context-dependent variation."
+        ],
+        "limitations": [
+          "Context dependence does not establish cause.",
+          "Resonance terminology must map to operational measurements."
+        ],
+        "confounds": [
+          "task difficulty",
+          "motivation",
+          "fatigue",
+          "environment",
+          "prior exposure"
+        ],
+        "validation_state": "unvalidated",
+        "ablation_metric": "PA-M36",
+        "decision_authority": "none"
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "pattern-recognition",
+        "name": "Pattern Recognition",
+        "description": "Observed ability to detect recurring or meaningful patterns in defined evidence.",
+        "status": "experimental",
+        "operational_definition": "Performance on tasks requiring detection of defined regularities or relationships above an appropriate baseline.",
+        "exclusions": [
+          "unsupported intuition claims",
+          "post-hoc pattern attribution"
+        ],
+        "observable_indicators": [
+          "repeatable pattern detection",
+          "novel pattern transfer"
+        ],
+        "counter_indicators": [
+          "chance-level detection",
+          "non-replicating pattern attribution"
+        ],
+        "supported_substrates": [
+          "textual",
+          "visual",
+          "symbolic",
+          "relational"
+        ],
+        "known_confounds": [
+          "prior exposure",
+          "domain knowledge",
+          "task familiarity"
+        ],
+        "applicability": {
+          "human": "applicable",
+          "ai": "applicable",
+          "human-ai": "substrate_dependent",
+          "organization": "unknown"
+        },
+        "evidence_requirements": {
+          "minimum_independent_sources": 2,
+          "replication_required": true,
+          "counterevidence_required": true,
+          "traceability_required": true,
+          "minimum_confidence": "medium",
+          "allowed_evidence_types": [
+            "task",
+            "replication",
+            "cross-substrate observation"
+          ]
+        },
+        "preferred_expressions": [],
+        "possible_suppressors": [],
+        "related_dimensions": [
+          "structural-reasoning",
+          "anomaly-detection"
+        ],
+        "metric_refs": [
+          "PA-M01",
+          "PA-M04",
+          "PA-M05",
+          "PA-M08"
+        ],
+        "validation_state": "unvalidated"
+      },
+      {
+        "id": "structural-reasoning",
+        "name": "Structural Reasoning",
+        "description": "Observed ability to identify and reason about relationships, boundaries, dependencies, and system-level organization.",
+        "status": "experimental",
+        "operational_definition": "Performance on tasks requiring reconstruction or explanation of relationships among multiple interacting components.",
+        "exclusions": [
+          "general intelligence claims",
+          "domain expertise alone"
+        ],
+        "observable_indicators": [
+          "relationship mapping",
+          "boundary identification",
+          "system reconstruction"
+        ],
+        "counter_indicators": [
+          "inconsistent structural reconstruction",
+          "failure to distinguish relevant relationships"
+        ],
+        "supported_substrates": [
+          "textual",
+          "visual",
+          "relational",
+          "spatial"
+        ],
+        "known_confounds": [
+          "domain knowledge",
+          "task design",
+          "diagram literacy"
+        ],
+        "applicability": {
+          "human": "applicable",
+          "ai": "applicable",
+          "human-ai": "substrate_dependent",
+          "organization": "substrate_dependent"
+        },
+        "evidence_requirements": {
+          "minimum_independent_sources": 2,
+          "replication_required": true,
+          "counterevidence_required": true,
+          "traceability_required": true,
+          "minimum_confidence": "medium",
+          "allowed_evidence_types": [
+            "task",
+            "independent review",
+            "cross-domain observation"
+          ]
+        },
+        "preferred_expressions": [
+          "relational",
+          "spatial",
+          "system-level"
+        ],
+        "possible_suppressors": [
+          "context removal",
+          "inappropriate task representation"
+        ],
+        "related_dimensions": [
+          "pattern-recognition",
+          "causal-integration",
+          "cross-domain-transfer"
+        ],
+        "metric_refs": [
+          "PA-M01",
+          "PA-M07",
+          "PA-M09",
+          "PA-M36"
+        ],
+        "validation_state": "unvalidated"
+      },
+      {
+        "id": "causal-integration",
+        "name": "Causal Integration",
+        "description": "Observed ability to integrate multiple candidate causes and consequences while distinguishing prediction from causal evidence.",
+        "status": "experimental",
+        "operational_definition": "Performance on defined tasks requiring comparison and integration of causal hypotheses.",
+        "exclusions": [
+          "correlation treated as causation"
+        ],
+        "observable_indicators": [
+          "alternative causal hypotheses",
+          "dependency tracing",
+          "causal uncertainty preservation"
+        ],
+        "counter_indicators": [
+          "unsupported causal certainty"
+        ],
+        "supported_substrates": [
+          "textual",
+          "relational",
+          "temporal"
+        ],
+        "known_confounds": [
+          "domain knowledge",
+          "missing variables"
+        ],
+        "applicability": {
+          "human": "applicable",
+          "ai": "applicable",
+          "human-ai": "substrate_dependent",
+          "organization": "unknown"
+        },
+        "evidence_requirements": {
+          "minimum_independent_sources": 2,
+          "replication_required": true,
+          "counterevidence_required": true,
+          "traceability_required": true,
+          "minimum_confidence": "medium",
+          "allowed_evidence_types": [
+            "task",
+            "outcome comparison"
+          ]
+        },
+        "preferred_expressions": [],
+        "possible_suppressors": [],
+        "related_dimensions": [
+          "structural-reasoning",
+          "temporal-reasoning"
+        ],
+        "metric_refs": [
+          "PA-M08",
+          "PA-M09"
+        ],
+        "validation_state": "unvalidated"
+      },
+      {
+        "id": "temporal-reasoning",
+        "name": "Temporal Reasoning",
+        "description": "Observed ability to reason across sequence, timing, transition, and change.",
+        "status": "experimental",
+        "operational_definition": "Performance on tasks requiring correct handling of ordered events, temporal dependencies, or state transitions.",
+        "exclusions": [
+          "raw processing speed"
+        ],
+        "observable_indicators": [
+          "sequence reconstruction",
+          "transition recognition",
+          "temporal dependency reasoning"
+        ],
+        "counter_indicators": [
+          "systematic sequence errors"
+        ],
+        "supported_substrates": [
+          "textual",
+          "temporal",
+          "visual"
+        ],
+        "known_confounds": [
+          "working memory",
+          "task complexity"
+        ],
+        "applicability": {
+          "human": "applicable",
+          "ai": "applicable",
+          "human-ai": "substrate_dependent",
+          "organization": "substrate_dependent"
+        },
+        "evidence_requirements": {
+          "minimum_independent_sources": 2,
+          "replication_required": true,
+          "counterevidence_required": true,
+          "traceability_required": true,
+          "minimum_confidence": "medium",
+          "allowed_evidence_types": [
+            "sequence task",
+            "time-series observation"
+          ]
+        },
+        "preferred_expressions": [],
+        "possible_suppressors": [],
+        "related_dimensions": [
+          "regime-recognition",
+          "long-horizon-integration"
+        ],
+        "metric_refs": [
+          "PA-M04",
+          "PA-M19"
+        ],
+        "validation_state": "unvalidated"
+      },
+      {
+        "id": "cross-domain-transfer",
+        "name": "Cross-Domain Transfer",
+        "description": "Observed ability to transfer useful structure or reasoning between appropriately distinct domains.",
+        "status": "experimental",
+        "operational_definition": "Performance on novel tasks where previously demonstrated structure can be applied without simply repeating domain-specific knowledge.",
+        "exclusions": [
+          "surface analogy alone"
+        ],
+        "observable_indicators": [
+          "successful novel transfer",
+          "structural analogy with preserved constraints"
+        ],
+        "counter_indicators": [
+          "invalid analogy",
+          "failure under novel transfer"
+        ],
+        "supported_substrates": [
+          "textual",
+          "relational",
+          "visual"
+        ],
+        "known_confounds": [
+          "prior exposure",
+          "shared domain knowledge"
+        ],
+        "applicability": {
+          "human": "applicable",
+          "ai": "applicable",
+          "human-ai": "substrate_dependent",
+          "organization": "unknown"
+        },
+        "evidence_requirements": {
+          "minimum_independent_sources": 2,
+          "replication_required": true,
+          "counterevidence_required": true,
+          "traceability_required": true,
+          "minimum_confidence": "medium",
+          "allowed_evidence_types": [
+            "novel task",
+            "cross-domain task"
+          ]
+        },
+        "preferred_expressions": [],
+        "possible_suppressors": [],
+        "related_dimensions": [
+          "structural-reasoning",
+          "adaptive-reframing"
+        ],
+        "metric_refs": [
+          "PA-M08",
+          "PA-M10"
+        ],
+        "validation_state": "unvalidated"
+      },
+      {
+        "id": "regime-recognition",
+        "name": "Regime Recognition",
+        "description": "Observed ability to distinguish materially different operating conditions or state regimes.",
+        "status": "experimental",
+        "operational_definition": "Performance on tasks containing independently defined regime changes or stable regime intervals.",
+        "exclusions": [
+          "regime labels invented after outcomes are known"
+        ],
+        "observable_indicators": [
+          "transition detection",
+          "within-regime consistency"
+        ],
+        "counter_indicators": [
+          "false transition alarms",
+          "missed reference transitions"
+        ],
+        "supported_substrates": [
+          "temporal",
+          "relational",
+          "textual"
+        ],
+        "known_confounds": [
+          "task order",
+          "noise",
+          "unclear reference boundaries"
+        ],
+        "applicability": {
+          "human": "applicable",
+          "ai": "applicable",
+          "human-ai": "substrate_dependent",
+          "organization": "substrate_dependent"
+        },
+        "evidence_requirements": {
+          "minimum_independent_sources": 2,
+          "replication_required": true,
+          "counterevidence_required": true,
+          "traceability_required": true,
+          "minimum_confidence": "medium",
+          "allowed_evidence_types": [
+            "regime task",
+            "time-series observation"
+          ]
+        },
+        "preferred_expressions": [],
+        "possible_suppressors": [],
+        "related_dimensions": [
+          "temporal-reasoning",
+          "drift-awareness"
+        ],
+        "metric_refs": [
+          "PA-M16",
+          "PA-M17",
+          "PA-M18",
+          "PA-M19"
+        ],
+        "validation_state": "unvalidated"
+      },
+      {
+        "id": "anomaly-detection",
+        "name": "Anomaly Detection",
+        "description": "Observed ability to identify defined deviations from an established pattern or regime.",
+        "status": "experimental",
+        "operational_definition": "Detection of independently designated anomalies with false-positive behavior measured.",
+        "exclusions": [
+          "unverifiable anomaly claims"
+        ],
+        "observable_indicators": [
+          "reference anomaly detection"
+        ],
+        "counter_indicators": [
+          "high false-alarm rate"
+        ],
+        "supported_substrates": [
+          "visual",
+          "symbolic",
+          "temporal",
+          "relational"
+        ],
+        "known_confounds": [
+          "base rates",
+          "noise"
+        ],
+        "applicability": {
+          "human": "applicable",
+          "ai": "applicable",
+          "human-ai": "substrate_dependent",
+          "organization": "unknown"
+        },
+        "evidence_requirements": {
+          "minimum_independent_sources": 2,
+          "replication_required": true,
+          "counterevidence_required": true,
+          "traceability_required": true,
+          "minimum_confidence": "medium",
+          "allowed_evidence_types": [
+            "anomaly task"
+          ]
+        },
+        "preferred_expressions": [],
+        "possible_suppressors": [],
+        "related_dimensions": [
+          "pattern-recognition",
+          "drift-awareness"
+        ],
+        "metric_refs": [
+          "PA-M08",
+          "PA-M09"
+        ],
+        "validation_state": "unvalidated"
+      },
+      {
+        "id": "ambiguity-navigation",
+        "name": "Ambiguity Navigation",
+        "description": "Observed ability to reason while preserving competing interpretations when evidence is incomplete.",
+        "status": "experimental",
+        "operational_definition": "Performance on tasks in which uncertainty and multiple plausible interpretations are intentionally preserved.",
+        "exclusions": [
+          "indecision treated automatically as sophistication"
+        ],
+        "observable_indicators": [
+          "preserved alternatives",
+          "appropriate uncertainty"
+        ],
+        "counter_indicators": [
+          "unjustified certainty",
+          "failure to distinguish alternatives"
+        ],
+        "supported_substrates": [
+          "textual",
+          "relational"
+        ],
+        "known_confounds": [
+          "verbal fluency",
+          "task familiarity"
+        ],
+        "applicability": {
+          "human": "applicable",
+          "ai": "applicable",
+          "human-ai": "substrate_dependent",
+          "organization": "unknown"
+        },
+        "evidence_requirements": {
+          "minimum_independent_sources": 2,
+          "replication_required": true,
+          "counterevidence_required": true,
+          "traceability_required": true,
+          "minimum_confidence": "medium",
+          "allowed_evidence_types": [
+            "ambiguous task",
+            "uncertainty calibration task"
+          ]
+        },
+        "preferred_expressions": [],
+        "possible_suppressors": [
+          "forced binary response"
+        ],
+        "related_dimensions": [
+          "adaptive-reframing",
+          "metacognitive-calibration"
+        ],
+        "metric_refs": [
+          "PA-M28",
+          "PA-M32"
+        ],
+        "validation_state": "unvalidated"
+      },
+      {
+        "id": "adaptive-reframing",
+        "name": "Adaptive Reframing",
+        "description": "Observed ability to revise a representation when new evidence invalidates or weakens the current framing.",
+        "status": "experimental",
+        "operational_definition": "Successful revision following relevant evidence changes without unnecessary revision to irrelevant perturbations.",
+        "exclusions": [
+          "arbitrary answer changing"
+        ],
+        "observable_indicators": [
+          "appropriate revision",
+          "stable response to irrelevant perturbation"
+        ],
+        "counter_indicators": [
+          "failure to update",
+          "excessive sensitivity to irrelevant changes"
+        ],
+        "supported_substrates": [
+          "textual",
+          "relational",
+          "temporal"
+        ],
+        "known_confounds": [
+          "task ambiguity",
+          "feedback clarity"
+        ],
+        "applicability": {
+          "human": "applicable",
+          "ai": "applicable",
+          "human-ai": "substrate_dependent",
+          "organization": "substrate_dependent"
+        },
+        "evidence_requirements": {
+          "minimum_independent_sources": 2,
+          "replication_required": true,
+          "counterevidence_required": true,
+          "traceability_required": true,
+          "minimum_confidence": "medium",
+          "allowed_evidence_types": [
+            "counterfactual task",
+            "evidence-update task"
+          ]
+        },
+        "preferred_expressions": [],
+        "possible_suppressors": [],
+        "related_dimensions": [
+          "ambiguity-navigation",
+          "metacognitive-calibration"
+        ],
+        "metric_refs": [
+          "PA-M33",
+          "PA-M34"
+        ],
+        "validation_state": "unvalidated"
+      },
+      {
+        "id": "coherence-maintenance",
+        "name": "Coherence Maintenance",
+        "description": "Observed ability to maintain internally compatible reasoning while incorporating relevant new information.",
+        "status": "experimental",
+        "operational_definition": "Consistency of related conclusions under controlled evidence additions and contradictions.",
+        "exclusions": [
+          "mere repetition",
+          "refusal to update"
+        ],
+        "observable_indicators": [
+          "cross-observation consistency",
+          "resolved contradictions"
+        ],
+        "counter_indicators": [
+          "unresolved incompatible claims"
+        ],
+        "supported_substrates": [
+          "textual",
+          "relational",
+          "temporal"
+        ],
+        "known_confounds": [
+          "memory limits",
+          "task length"
+        ],
+        "applicability": {
+          "human": "applicable",
+          "ai": "applicable",
+          "human-ai": "substrate_dependent",
+          "organization": "substrate_dependent"
+        },
+        "evidence_requirements": {
+          "minimum_independent_sources": 2,
+          "replication_required": true,
+          "counterevidence_required": true,
+          "traceability_required": true,
+          "minimum_confidence": "medium",
+          "allowed_evidence_types": [
+            "longitudinal task",
+            "contradiction task"
+          ]
+        },
+        "preferred_expressions": [],
+        "possible_suppressors": [],
+        "related_dimensions": [
+          "long-horizon-integration",
+          "drift-awareness"
+        ],
+        "metric_refs": [
+          "PA-M24",
+          "PA-M25"
+        ],
+        "validation_state": "unvalidated"
+      },
+      {
+        "id": "drift-awareness",
+        "name": "Drift Awareness",
+        "description": "Observed ability to notice material changes in assumptions, evidence, definitions, or system state.",
+        "status": "experimental",
+        "operational_definition": "Detection of independently identified changes across repeated or longitudinal tasks.",
+        "exclusions": [
+          "arbitrary change detection"
+        ],
+        "observable_indicators": [
+          "detected assumption change",
+          "detected evidence drift"
+        ],
+        "counter_indicators": [
+          "missed material drift",
+          "frequent false drift flags"
+        ],
+        "supported_substrates": [
+          "temporal",
+          "textual",
+          "relational"
+        ],
+        "known_confounds": [
+          "memory",
+          "task order"
+        ],
+        "applicability": {
+          "human": "applicable",
+          "ai": "applicable",
+          "human-ai": "substrate_dependent",
+          "organization": "substrate_dependent"
+        },
+        "evidence_requirements": {
+          "minimum_independent_sources": 2,
+          "replication_required": true,
+          "counterevidence_required": true,
+          "traceability_required": true,
+          "minimum_confidence": "medium",
+          "allowed_evidence_types": [
+            "longitudinal task",
+            "change detection task"
+          ]
+        },
+        "preferred_expressions": [],
+        "possible_suppressors": [],
+        "related_dimensions": [
+          "regime-recognition",
+          "coherence-maintenance"
+        ],
+        "metric_refs": [
+          "PA-M26",
+          "PA-M27"
+        ],
+        "validation_state": "unvalidated"
+      },
+      {
+        "id": "metacognitive-calibration",
+        "name": "Metacognitive Calibration",
+        "description": "Observed relationship between expressed confidence and demonstrated correctness or reproducibility.",
+        "status": "experimental",
+        "operational_definition": "Calibration between confidence reports and observed outcomes across repeated tasks.",
+        "exclusions": [
+          "self-confidence treated as capability"
+        ],
+        "observable_indicators": [
+          "calibrated confidence",
+          "appropriate abstention"
+        ],
+        "counter_indicators": [
+          "systematic overconfidence",
+          "systematic underconfidence"
+        ],
+        "supported_substrates": [
+          "textual",
+          "symbolic"
+        ],
+        "known_confounds": [
+          "response-scale interpretation"
+        ],
+        "applicability": {
+          "human": "applicable",
+          "ai": "applicable",
+          "human-ai": "substrate_dependent",
+          "organization": "unknown"
+        },
+        "evidence_requirements": {
+          "minimum_independent_sources": 2,
+          "replication_required": true,
+          "counterevidence_required": true,
+          "traceability_required": true,
+          "minimum_confidence": "medium",
+          "allowed_evidence_types": [
+            "confidence task",
+            "outcome comparison"
+          ]
+        },
+        "preferred_expressions": [],
+        "possible_suppressors": [],
+        "related_dimensions": [
+          "ambiguity-navigation",
+          "adaptive-reframing"
+        ],
+        "metric_refs": [
+          "PA-M28",
+          "PA-M29",
+          "PA-M31"
+        ],
+        "validation_state": "unvalidated"
+      },
+      {
+        "id": "long-horizon-integration",
+        "name": "Long-Horizon Integration",
+        "description": "Observed ability to preserve and integrate relevant structure across extended sequences or contexts.",
+        "status": "experimental",
+        "operational_definition": "Performance on tasks requiring integration of information distributed across longer observation intervals.",
+        "exclusions": [
+          "short-term recall alone"
+        ],
+        "observable_indicators": [
+          "cross-session continuity",
+          "long-range dependency integration"
+        ],
+        "counter_indicators": [
+          "loss of relevant earlier constraints"
+        ],
+        "supported_substrates": [
+          "temporal",
+          "textual",
+          "relational"
+        ],
+        "known_confounds": [
+          "external memory",
+          "tool access",
+          "task duration"
+        ],
+        "applicability": {
+          "human": "applicable",
+          "ai": "applicable",
+          "human-ai": "substrate_dependent",
+          "organization": "substrate_dependent"
+        },
+        "evidence_requirements": {
+          "minimum_independent_sources": 2,
+          "replication_required": true,
+          "counterevidence_required": true,
+          "traceability_required": true,
+          "minimum_confidence": "medium",
+          "allowed_evidence_types": [
+            "long-horizon task",
+            "repeated observation"
+          ]
+        },
+        "preferred_expressions": [],
+        "possible_suppressors": [],
+        "related_dimensions": [
+          "temporal-reasoning",
+          "coherence-maintenance"
+        ],
+        "metric_refs": [
+          "PA-M04",
+          "PA-M07",
+          "PA-M27"
+        ],
+        "validation_state": "unvalidated"
+      },
+      {
+        "id": "tool-collaboration",
+        "name": "Tool Collaboration",
+        "description": "Observed ability of a defined system boundary to use tools productively while preserving attribution of individual and collaborative contributions.",
+        "status": "experimental",
+        "operational_definition": "Comparative performance across unassisted, tool-assisted, and collaborative conditions with system boundaries explicitly recorded.",
+        "exclusions": [
+          "attributing combined performance entirely to one participant"
+        ],
+        "observable_indicators": [
+          "effective tool selection",
+          "error correction with tools",
+          "collaborative performance gain"
+        ],
+        "counter_indicators": [
+          "tool dependence without task improvement",
+          "untraceable contribution attribution"
+        ],
+        "supported_substrates": [
+          "tool-mediated",
+          "human-ai",
+          "software-assisted"
+        ],
+        "known_confounds": [
+          "tool access",
+          "training",
+          "tool capability"
+        ],
+        "applicability": {
+          "human": "substrate_dependent",
+          "ai": "substrate_dependent",
+          "human-ai": "applicable",
+          "organization": "substrate_dependent"
+        },
+        "evidence_requirements": {
+          "minimum_independent_sources": 2,
+          "replication_required": true,
+          "counterevidence_required": true,
+          "traceability_required": true,
+          "minimum_confidence": "medium",
+          "allowed_evidence_types": [
+            "tool-assisted task",
+            "unassisted comparison",
+            "collaborative task"
+          ]
+        },
+        "preferred_expressions": [
+          "tool-mediated",
+          "collaborative"
+        ],
+        "possible_suppressors": [
+          "lack of tool access"
+        ],
+        "related_dimensions": [
+          "adaptive-reframing",
+          "cross-domain-transfer"
+        ],
+        "metric_refs": [
+          "PA-M10",
+          "PA-M11",
+          "PA-M51"
+        ],
+        "validation_state": "unvalidated"
+      },
+      {
+        "id": "recovery-recalibration",
+        "name": "Recovery and Recalibration",
+        "description": "Observed ability to recover from an incorrect assumption, prediction, or action and update subsequent behavior appropriately.",
+        "status": "experimental",
+        "operational_definition": "Performance following independently identified errors or perturbations where correction opportunities are available.",
+        "exclusions": [
+          "error avoidance treated as recovery"
+        ],
+        "observable_indicators": [
+          "error recognition",
+          "appropriate correction",
+          "reduced repeated error"
+        ],
+        "counter_indicators": [
+          "persistent repeated error",
+          "maladaptive overcorrection"
+        ],
+        "supported_substrates": [
+          "temporal",
+          "textual",
+          "relational",
+          "tool-mediated"
+        ],
+        "known_confounds": [
+          "feedback availability",
+          "task difficulty"
+        ],
+        "applicability": {
+          "human": "applicable",
+          "ai": "applicable",
+          "human-ai": "substrate_dependent",
+          "organization": "substrate_dependent"
+        },
+        "evidence_requirements": {
+          "minimum_independent_sources": 2,
+          "replication_required": true,
+          "counterevidence_required": true,
+          "traceability_required": true,
+          "minimum_confidence": "medium",
+          "allowed_evidence_types": [
+            "error-recovery task",
+            "longitudinal observation"
+          ]
+        },
+        "preferred_expressions": [],
+        "possible_suppressors": [],
+        "related_dimensions": [
+          "adaptive-reframing",
+          "metacognitive-calibration"
+        ],
+        "metric_refs": [
+          "PA-M33",
+          "PA-M34"
+        ],
+        "validation_state": "unvalidated"
+      }
+    ],
+    "validation": {
+      "state": "unvalidated",
+      "authorized_uses": [
+        "research",
+        "demonstration",
+        "framework development",
+        "synthetic examples",
+        "hypothesis generation"
+      ],
+      "prohibited_uses": [
+        "diagnosis",
+        "automated hiring decisions",
+        "automated firing decisions",
+        "educational exclusion",
+        "legal determination",
+        "insurance eligibility",
+        "lending eligibility",
+        "sentencing",
+        "automated adverse decisions"
+      ],
+      "levels": [
+        {
+          "level": 0,
+          "id": "structural-validation",
+          "name": "Structural Validation",
+          "description": "Tests schema, identifiers, evidence traceability, uncertainty fields, applicability fields, and hidden-score protections.",
+          "requirements": [
+            "schema validation",
+            "identifier validation",
+            "evidence traceability",
+            "uncertainty representation",
+            "applicability representation",
+            "no hidden master score"
+          ],
+          "status": "in_progress",
+          "evidence_refs": [
+            "predictive_analytics_module.schema.json",
+            "predictive_analytics_module.json"
+          ]
+        },
+        {
+          "level": 1,
+          "id": "content-validation",
+          "name": "Content Validation",
+          "description": "Tests conceptual coverage, dimension definitions, overlap, omissions, and adapter interpretation.",
+          "requirements": [
+            "expert review",
+            "literature crosswalk",
+            "dimension review",
+            "adapter review"
+          ],
+          "status": "not_started",
+          "evidence_refs": []
+        },
+        {
+          "level": 2,
+          "id": "measurement-validation",
+          "name": "Measurement Validation",
+          "description": "Tests repeated measurement, alternate forms, evaluator agreement, substrate variation, and task-order effects.",
+          "requirements": [
+            "test-retest study",
+            "alternate-form study",
+            "inter-rater study",
+            "substrate variation study"
+          ],
+          "status": "not_started",
+          "evidence_refs": []
+        },
+        {
+          "level": 3,
+          "id": "construct-validation",
+          "name": "Construct Validation",
+          "description": "Tests convergent, discriminant, structural, and outcome relationships.",
+          "requirements": [
+            "convergent analysis",
+            "discriminant analysis",
+            "construct comparison"
+          ],
+          "status": "not_started",
+          "evidence_refs": []
+        },
+        {
+          "level": 4,
+          "id": "substrate-regime-validation",
+          "name": "Substrate and Regime Validation",
+          "description": "Tests whether substrate and regime effects replicate beyond noise and task difficulty.",
+          "requirements": [
+            "substrate effect replication",
+            "regime detection validation",
+            "favorability symmetry",
+            "confound controls"
+          ],
+          "status": "not_started",
+          "evidence_refs": []
+        },
+        {
+          "level": 5,
+          "id": "predictive-validation",
+          "name": "Predictive and Explanatory Validation",
+          "description": "Tests out-of-sample predictive and explanatory value against simpler baselines.",
+          "requirements": [
+            "baseline comparison",
+            "out-of-sample evaluation",
+            "adapter ablation",
+            "calibration evaluation"
+          ],
+          "status": "not_started",
+          "evidence_refs": []
+        },
+        {
+          "level": 6,
+          "id": "fairness-harm-validation",
+          "name": "Fairness and Harm Validation",
+          "description": "Tests subgroup errors, uncertainty, evidence coverage, escalation, accessibility, and downstream harms.",
+          "requirements": [
+            "fairness analysis",
+            "harm analysis",
+            "accessibility analysis",
+            "subgroup evidence analysis"
+          ],
+          "status": "not_started",
+          "evidence_refs": []
+        },
+        {
+          "level": 7,
+          "id": "decision-validation",
+          "name": "Decision Validation",
+          "description": "Required separately for any proposed consequential or high-stakes decision context.",
+          "requirements": [
+            "specific intended-use validation",
+            "risk-benefit analysis",
+            "human review design",
+            "contestability",
+            "governance approval"
+          ],
+          "status": "not_started",
+          "evidence_refs": []
+        }
+      ],
+      "criteria": [
+        {
+          "id": "VCR-01",
+          "name": "Construct Clarity",
+          "description": "Dimensions define their meaning, exclusions, indicators, confounds, evidence, and applicability.",
+          "pass_condition": "Independent evaluators can distinguish the dimension and identify evidence that would contradict it.",
+          "failure_condition": "Dimensions remain ambiguous, circular, or indistinguishable.",
+          "metric_refs": [
+            "PA-M08",
+            "PA-M09"
+          ],
+          "status": "not_tested"
+        },
+        {
+          "id": "VCR-02",
+          "name": "Evidence Traceability",
+          "description": "Every profile result is traceable to declared observations and evidence.",
+          "pass_condition": "No profile result exists without evidence or an explicit unknown or insufficient-evidence state.",
+          "failure_condition": "Untraceable profile assertions remain.",
+          "metric_refs": [
+            "PA-M01",
+            "PA-M02",
+            "PA-M32"
+          ],
+          "status": "not_tested"
+        },
+        {
+          "id": "VCR-03",
+          "name": "Repeatability",
+          "description": "Comparable observations produce sufficiently consistent results where stability is expected.",
+          "pass_condition": "Study-specific preregistered reliability criteria are satisfied.",
+          "failure_condition": "Results remain unstable beyond declared uncertainty.",
+          "metric_refs": [
+            "PA-M04",
+            "PA-M05",
+            "PA-M07"
+          ],
+          "status": "not_tested"
+        },
+        {
+          "id": "VCR-04",
+          "name": "Inter-Rater Agreement",
+          "description": "Independent evaluators produce sufficiently comparable classifications under a shared rubric.",
+          "pass_condition": "Preregistered inter-rater agreement criteria are satisfied.",
+          "failure_condition": "Evaluator effects dominate observed classifications.",
+          "metric_refs": [
+            "PA-M06"
+          ],
+          "status": "not_tested"
+        },
+        {
+          "id": "VCR-05",
+          "name": "Substrate Sensitivity",
+          "description": "Claimed substrate effects correspond to controlled changes in representation or interaction conditions.",
+          "pass_condition": "Effects replicate beyond expected noise and are not limited to favorable outcomes.",
+          "failure_condition": "Effects do not replicate or appear only under selective interpretation.",
+          "metric_refs": [
+            "PA-M12",
+            "PA-M13",
+            "PA-M14",
+            "PA-M15"
+          ],
+          "status": "not_tested"
+        },
+        {
+          "id": "VCR-06",
+          "name": "Regime Sensitivity",
+          "description": "Regime interpretation detects meaningful reference transitions without labeling generic low performance as mismatch.",
+          "pass_condition": "Transition detection and false-alarm performance meet study-specific criteria.",
+          "failure_condition": "Regime labeling becomes indiscriminate or non-reproducible.",
+          "metric_refs": [
+            "PA-M16",
+            "PA-M17",
+            "PA-M18",
+            "PA-M19"
+          ],
+          "status": "not_tested"
+        },
+        {
+          "id": "VCR-07",
+          "name": "Discriminant Value",
+          "description": "Distinct dimensions demonstrate adequate conceptual and empirical distinction.",
+          "pass_condition": "Redundancy remains within study-specific bounds.",
+          "failure_condition": "Dimensions collapse into redundant labels.",
+          "metric_refs": [
+            "PA-M09"
+          ],
+          "status": "not_tested"
+        },
+        {
+          "id": "VCR-08",
+          "name": "Convergent Value",
+          "description": "Dimensions relate to appropriate independent observations as preregistered.",
+          "pass_condition": "Expected relationships replicate.",
+          "failure_condition": "Expected convergence fails without an adequate alternative explanation.",
+          "metric_refs": [
+            "PA-M08"
+          ],
+          "status": "not_tested"
+        },
+        {
+          "id": "VCR-09",
+          "name": "Incremental Value",
+          "description": "The framework contributes useful information beyond simpler baselines.",
+          "pass_condition": "At least one declared outcome improves without unacceptable degradation elsewhere.",
+          "failure_condition": "Added complexity provides no meaningful incremental value.",
+          "metric_refs": [
+            "PA-M10",
+            "PA-M11",
+            "PA-M36"
+          ],
+          "status": "not_tested"
+        },
+        {
+          "id": "VCR-10",
+          "name": "Uncertainty Calibration",
+          "description": "Declared confidence corresponds to observed correctness or reproducibility.",
+          "pass_condition": "Confidence ordering is empirically meaningful and calibration meets study-specific criteria.",
+          "failure_condition": "Confidence labels do not correspond to observed reliability.",
+          "metric_refs": [
+            "PA-M28",
+            "PA-M29"
+          ],
+          "status": "not_tested"
+        },
+        {
+          "id": "VCR-11",
+          "name": "Abstention Quality",
+          "description": "The framework abstains when evidence is inadequate.",
+          "pass_condition": "Abstention reduces unsupported assertions without unacceptable coverage loss.",
+          "failure_condition": "The system guesses where evidence is insufficient or abstains indiscriminately.",
+          "metric_refs": [
+            "PA-M30",
+            "PA-M31",
+            "PA-M32"
+          ],
+          "status": "not_tested"
+        },
+        {
+          "id": "VCR-12",
+          "name": "Model-Mismatch Precision",
+          "description": "Mismatch flags identify evidence-supported representational or regime mismatch rather than merely unfavorable predictions.",
+          "pass_condition": "Mismatch detection exceeds naive baselines and meets study-specific precision requirements.",
+          "failure_condition": "Low or unfavorable results are routinely relabeled as mismatch without independent evidence.",
+          "metric_refs": [
+            "PA-M20",
+            "PA-M21",
+            "PA-M22"
+          ],
+          "status": "not_tested"
+        },
+        {
+          "id": "VCR-13",
+          "name": "Favorability Symmetry",
+          "description": "Substrate-aware interpretation applies comparable evidence standards to favorable and adverse reinterpretations.",
+          "pass_condition": "Both positive and negative effects are detected under equivalent criteria.",
+          "failure_condition": "The framework systematically favors flattering reinterpretation.",
+          "metric_refs": [
+            "PA-M14",
+            "PA-M43",
+            "PA-M44"
+          ],
+          "status": "not_tested"
+        },
+        {
+          "id": "VCR-14",
+          "name": "Counterfactual Stability",
+          "description": "Irrelevant perturbations do not cause large changes while relevant changes remain detectable.",
+          "pass_condition": "Robustness and sensitivity meet preregistered criteria.",
+          "failure_condition": "Outputs are unstable to irrelevant changes or insensitive to meaningful ones.",
+          "metric_refs": [
+            "PA-M33",
+            "PA-M34",
+            "PA-M35"
+          ],
+          "status": "not_tested"
+        },
+        {
+          "id": "VCR-15",
+          "name": "Fairness",
+          "description": "Errors, uncertainty, evidence coverage, mismatch, abstention, and escalation are examined across relevant contexts and groups.",
+          "pass_condition": "Material disparities are documented, investigated, and appropriately managed.",
+          "failure_condition": "Material disparities are ignored or concealed by aggregate performance.",
+          "metric_refs": [
+            "PA-M37",
+            "PA-M38",
+            "PA-M39",
+            "PA-M40",
+            "PA-M41",
+            "PA-M42",
+            "PA-M43",
+            "PA-M44"
+          ],
+          "status": "not_tested"
+        },
+        {
+          "id": "VCR-16",
+          "name": "Explainability",
+          "description": "Qualified reviewers can reconstruct what was observed and why an interpretation was produced.",
+          "pass_condition": "Evidence reconstruction and explanation completeness satisfy study-specific criteria.",
+          "failure_condition": "Results depend on undocumented intuition or opaque reasoning.",
+          "metric_refs": [
+            "PA-M45",
+            "PA-M46"
+          ],
+          "status": "not_tested"
+        },
+        {
+          "id": "VCR-17",
+          "name": "Subject Legibility",
+          "description": "Human-facing profiles use accessible language and distinguish observation from experimental interpretation.",
+          "pass_condition": "Subjects can inspect, understand, and contest consequential profile claims.",
+          "failure_condition": "Profile language creates unwarranted identity or validity claims.",
+          "metric_refs": [
+            "PA-M46",
+            "PA-M48"
+          ],
+          "status": "not_tested"
+        },
+        {
+          "id": "VCR-18",
+          "name": "Non-Degradation",
+          "description": "Additional adapters do not silently reduce accuracy, fairness, interpretability, or operational practicality.",
+          "pass_condition": "Material degradation is absent or explicitly bounded and justified for the intended use.",
+          "failure_condition": "Additional complexity worsens important properties without documented justification.",
+          "metric_refs": [
+            "PA-M10",
+            "PA-M11",
+            "PA-M36",
+            "PA-M51"
+          ],
+          "status": "not_tested"
+        }
+      ],
+      "falsification_conditions": [
+        "Dimension observations cannot be made reliably.",
+        "Profiles remain unstable under comparable conditions.",
+        "Unfavorable conventional results are routinely relabeled as model mismatch.",
+        "Richer narrative interpretations outperform evidence requirements rather than baselines.",
+        "Adapters add complexity without measurable value.",
+        "Proposed dimensions cannot be empirically distinguished.",
+        "Confidence labels do not calibrate to observed reliability.",
+        "The framework increases material subgroup disparities without adequate mitigation.",
+        "The framework cannot abstain when evidence is insufficient.",
+        "The framework becomes a hidden scalar-ranking system."
+      ],
+      "reporting_requirements": [
+        "intended use",
+        "population or system class",
+        "sample and recruitment method",
+        "measurement substrates",
+        "operating regimes",
+        "tasks",
+        "raters",
+        "missing-data handling",
+        "metrics",
+        "thresholds",
+        "uncertainty",
+        "subgroup results",
+        "adverse findings",
+        "unused metrics",
+        "limitations",
+        "conflicts of interest",
+        "version and provenance",
+        "reproducibility materials"
+      ],
+      "threshold_policy": {
+        "status": "study_specific",
+        "universal_thresholds": false,
+        "preregistration_required": true,
+        "post_hoc_changes_disclosed": true
+      },
+      "human_subjects_requirements": [
+        "consent where applicable",
+        "privacy protection",
+        "appropriate oversight",
+        "data governance",
+        "qualified interpretation for consequential assessment"
+      ]
+    },
+    "metrics": [
+      {
+        "id": "PA-M01",
+        "name": "Dimension Evidence Coverage",
+        "category": "evidence",
+        "purpose": "Measure evidence coverage for a declared dimension.",
+        "definition": "Proportion of required dimension indicators supported by available evidence.",
+        "formula": "supported_indicators / required_indicators",
+        "scale": "0..1",
+        "direction": "higher_is_better",
+        "inputs": ["supported_indicators", "required_indicators"],
+        "applicability": ["dimension"],
+        "interpretation": "Higher values indicate broader evidence coverage but do not establish validity.",
+        "limitations": ["Depends on valid indicator definitions."],
+        "subgroup_required": false,
+        "lifecycle": "proposed",
+        "calculation_method": "Ratio",
+        "missing_data_policy": "Missing required indicators remain missing rather than being inferred.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M02",
+        "name": "Profile Evidence Coverage",
+        "category": "evidence",
+        "purpose": "Measure coverage across applicable profile dimensions.",
+        "definition": "Proportion of applicable dimensions with sufficient evidence.",
+        "formula": "dimensions_with_sufficient_evidence / applicable_dimensions",
+        "scale": "0..1",
+        "direction": "higher_is_better",
+        "inputs": ["dimensions_with_sufficient_evidence", "applicable_dimensions"],
+        "applicability": ["profile"],
+        "interpretation": "Describes profile coverage rather than intelligence or overall capability.",
+        "limitations": ["Sensitive to applicability definitions."],
+        "subgroup_required": true,
+        "lifecycle": "proposed",
+        "calculation_method": "Ratio",
+        "missing_data_policy": "Unknown dimensions remain explicitly unknown.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M03",
+        "name": "Evidence Independence Ratio",
+        "category": "evidence",
+        "purpose": "Estimate independence of supporting evidence sources.",
+        "definition": "Ratio of independently sourced evidence to total evidence sources.",
+        "formula": "independent_evidence_sources / total_evidence_sources",
+        "scale": "0..1",
+        "direction": "higher_is_better",
+        "inputs": ["independent_evidence_sources", "total_evidence_sources"],
+        "applicability": ["dimension", "profile"],
+        "interpretation": "Higher values indicate broader evidence independence.",
+        "limitations": ["Independence must be operationally defined."],
+        "subgroup_required": false,
+        "lifecycle": "proposed",
+        "calculation_method": "Ratio after evidence provenance classification",
+        "missing_data_policy": "Unclear dependencies are not counted as independent.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M04",
+        "name": "Test-Retest Stability",
+        "category": "reliability",
+        "purpose": "Measure repeated-observation stability.",
+        "definition": "Agreement across comparable repeated measurements.",
+        "scale": "statistic-specific",
+        "direction": "higher_is_better",
+        "inputs": ["observation_t1", "observation_t2"],
+        "applicability": ["dimension", "profile"],
+        "interpretation": "Higher values indicate greater repeatability where stability is theoretically expected.",
+        "limitations": ["Not all dimensions are expected to remain constant over time."],
+        "subgroup_required": true,
+        "lifecycle": "proposed",
+        "calculation_method": "Select a reliability statistic appropriate to the measurement scale.",
+        "missing_data_policy": "Use a preregistered missing-data procedure.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M05",
+        "name": "Alternate-Form Stability",
+        "category": "reliability",
+        "purpose": "Measure consistency across alternate tasks targeting the same dimension.",
+        "definition": "Agreement between alternate-form dimension results.",
+        "formula": "agreement(form_a, form_b)",
+        "scale": "statistic-specific",
+        "direction": "higher_is_better",
+        "inputs": ["form_a", "form_b"],
+        "applicability": ["dimension"],
+        "interpretation": "Higher values support consistency across alternate forms.",
+        "limitations": ["Requires defensible form equivalence."],
+        "subgroup_required": true,
+        "lifecycle": "proposed",
+        "calculation_method": "Agreement statistic appropriate to scale.",
+        "missing_data_policy": "Incomplete form pairs are reported separately.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M06",
+        "name": "Inter-Rater Agreement",
+        "category": "reliability",
+        "purpose": "Measure agreement among independent evaluators.",
+        "definition": "Agreement between qualified independent evaluators using the same evidence and rubric.",
+        "scale": "statistic-specific",
+        "direction": "higher_is_better",
+        "inputs": ["rater_results"],
+        "applicability": ["human-scored dimensions"],
+        "interpretation": "Higher values indicate reduced evaluator dependence.",
+        "limitations": ["Statistic must match rating scale and study design."],
+        "subgroup_required": true,
+        "lifecycle": "proposed",
+        "calculation_method": "Kappa, alpha, ICC, or other preregistered appropriate statistic.",
+        "missing_data_policy": "Missing ratings are explicitly reported.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M07",
+        "name": "Profile Topology Stability",
+        "category": "stability",
+        "purpose": "Measure stability of multidimensional profile shape.",
+        "definition": "Similarity between appropriately normalized profiles across repeated observations.",
+        "formula": "similarity(normalized_profile_t1, normalized_profile_t2)",
+        "scale": "similarity-specific",
+        "direction": "higher_is_better",
+        "inputs": ["profile_t1", "profile_t2"],
+        "applicability": ["profile"],
+        "interpretation": "Higher values indicate greater profile-shape stability.",
+        "limitations": ["Must not conceal meaningful dimension-level change."],
+        "subgroup_required": true,
+        "lifecycle": "proposed",
+        "calculation_method": "Preregistered profile similarity measure.",
+        "missing_data_policy": "Profile comparisons identify dimensions excluded because of missing evidence.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M08",
+        "name": "Convergent Association",
+        "category": "validity",
+        "purpose": "Test expected relationships with independently observed related capabilities.",
+        "definition": "Association between a proposed dimension and a related external measure.",
+        "formula": "association(proposed_dimension, related_external_measure)",
+        "scale": "association-specific",
+        "direction": "context_dependent",
+        "inputs": ["dimension", "external_measure"],
+        "applicability": ["dimension"],
+        "interpretation": "Interpret relative to preregistered theory and expected direction.",
+        "limitations": ["Convergence does not independently establish construct identity."],
+        "subgroup_required": true,
+        "lifecycle": "proposed",
+        "calculation_method": "Preregistered association method.",
+        "missing_data_policy": "Use declared study-specific treatment.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M09",
+        "name": "Discriminant Separation",
+        "category": "validity",
+        "purpose": "Test whether proposed dimensions remain distinct from unrelated constructs.",
+        "definition": "Difference between related and unrelated associations or equivalent discriminant analysis.",
+        "formula": "related_association - unrelated_association",
+        "scale": "analysis-specific",
+        "direction": "higher_is_better",
+        "inputs": ["related_association", "unrelated_association"],
+        "applicability": ["dimension"],
+        "interpretation": "Greater separation supports distinct measurement where theoretically expected.",
+        "limitations": ["Requires defensible comparison constructs."],
+        "subgroup_required": true,
+        "lifecycle": "proposed",
+        "calculation_method": "Preregistered discriminant analysis.",
+        "missing_data_policy": "Study-specific.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M10",
+        "name": "Incremental Explanatory Value",
+        "category": "validity",
+        "purpose": "Measure explanatory improvement beyond a simpler baseline.",
+        "definition": "Difference in declared explanatory performance between full and baseline models.",
+        "formula": "performance(full_model) - performance(baseline_model)",
+        "scale": "outcome-specific",
+        "direction": "higher_is_better",
+        "inputs": ["full_model", "baseline_model"],
+        "applicability": ["model comparison"],
+        "interpretation": "Positive values may indicate added explanatory value when complexity and uncertainty are also considered.",
+        "limitations": ["Complexity alone can improve apparent fit."],
+        "subgroup_required": true,
+        "lifecycle": "proposed",
+        "calculation_method": "Study-specific with complexity controls.",
+        "missing_data_policy": "Study-specific.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M11",
+        "name": "Incremental Predictive Value",
+        "category": "validity",
+        "purpose": "Measure out-of-sample predictive improvement over baseline.",
+        "definition": "Difference between baseline and full-model prediction error or equivalent predictive utility.",
+        "formula": "baseline_error - full_model_error",
+        "scale": "outcome-specific",
+        "direction": "higher_is_better",
+        "inputs": ["baseline_predictions", "full_model_predictions", "outcomes"],
+        "applicability": ["predictive models"],
+        "interpretation": "Positive improvement must be interpreted with calibration, fairness, and complexity.",
+        "limitations": ["No single predictive metric is universally appropriate."],
+        "subgroup_required": true,
+        "lifecycle": "proposed",
+        "calculation_method": "Out-of-sample study-specific evaluation.",
+        "missing_data_policy": "Preregistered.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M12",
+        "name": "Substrate Effect Magnitude",
+        "category": "substrate",
+        "purpose": "Measure change in observed performance across substrates.",
+        "definition": "Standardized or otherwise appropriate difference between substrate conditions.",
+        "formula": "standardized_difference(performance_a, performance_b)",
+        "scale": "effect-size-specific",
+        "direction": "descriptive",
+        "inputs": ["substrate_a", "substrate_b", "performance"],
+        "applicability": ["cross-substrate studies"],
+        "interpretation": "A measurable difference requires explanation but does not by itself establish mismatch.",
+        "limitations": ["Can reflect task difficulty or other confounds."],
+        "subgroup_required": true,
+        "lifecycle": "proposed",
+        "calculation_method": "Study-specific effect size.",
+        "missing_data_policy": "Preregistered.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M13",
+        "name": "Substrate Effect Replicability",
+        "category": "substrate",
+        "purpose": "Measure replication of observed substrate effects.",
+        "definition": "Proportion of eligible replications reproducing the preregistered effect.",
+        "formula": "replicated_effects / eligible_replications",
+        "scale": "0..1",
+        "direction": "higher_is_better",
+        "inputs": ["replication_results"],
+        "applicability": ["cross-substrate studies"],
+        "interpretation": "Higher values support repeatability of a substrate effect.",
+        "limitations": ["Must be interpreted with effect magnitude and uncertainty."],
+        "subgroup_required": true,
+        "lifecycle": "proposed",
+        "calculation_method": "Replication ratio plus effect estimates.",
+        "missing_data_policy": "Incomplete replications reported separately.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M14",
+        "name": "Substrate Symmetry",
+        "category": "substrate",
+        "purpose": "Detect favorability bias in substrate-effect detection.",
+        "definition": "Minimum of detection rates for beneficial and adverse substrate effects.",
+        "formula": "min(detection_rate_positive, detection_rate_negative)",
+        "scale": "0..1",
+        "direction": "higher_is_better",
+        "inputs": ["positive_effect_detection", "negative_effect_detection"],
+        "applicability": ["cross-substrate studies"],
+        "interpretation": "Low values may indicate directional reinterpretation bias.",
+        "limitations": ["Requires sufficient positive and adverse reference cases."],
+        "subgroup_required": true,
+        "lifecycle": "proposed",
+        "calculation_method": "Symmetry comparison.",
+        "missing_data_policy": "Insufficient directional cases produce insufficient_evidence.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M15",
+        "name": "Substrate Specificity",
+        "category": "substrate",
+        "purpose": "Estimate whether observed differences remain after relevant controls.",
+        "definition": "Substrate-associated effect after accounting for declared confounds.",
+        "formula": "substrate_effect_after_controls",
+        "scale": "analysis-specific",
+        "direction": "descriptive",
+        "inputs": ["substrate", "performance", "controls"],
+        "applicability": ["cross-substrate studies"],
+        "interpretation": "Supports substrate-specific interpretation when alternative explanations are bounded.",
+        "limitations": ["Cannot control unknown confounds."],
+        "subgroup_required": true,
+        "lifecycle": "proposed",
+        "calculation_method": "Study-specific controlled analysis.",
+        "missing_data_policy": "Preregistered.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M16",
+        "name": "Regime Transition Detection Rate",
+        "category": "regime",
+        "purpose": "Measure detection of reference regime transitions.",
+        "definition": "Proportion of reference transitions detected.",
+        "formula": "detected_transitions / reference_transitions",
+        "scale": "0..1",
+        "direction": "higher_is_better",
+        "inputs": ["detected_transitions", "reference_transitions"],
+        "applicability": ["regime studies"],
+        "interpretation": "Higher values indicate greater transition sensitivity.",
+        "limitations": ["Requires independently meaningful reference transitions."],
+        "subgroup_required": false,
+        "lifecycle": "proposed",
+        "calculation_method": "Detection ratio.",
+        "missing_data_policy": "No reference transitions means not_applicable.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M17",
+        "name": "False Regime Alarm Rate",
+        "category": "regime",
+        "purpose": "Measure false regime-transition declarations.",
+        "definition": "False transition flags divided by stable-regime opportunities.",
+        "formula": "false_transition_flags / stable_regime_opportunities",
+        "scale": "0..1",
+        "direction": "lower_is_better",
+        "inputs": ["false_transition_flags", "stable_regime_opportunities"],
+        "applicability": ["regime studies"],
+        "interpretation": "Lower values indicate fewer unsupported regime-change claims.",
+        "limitations": ["Depends on valid stable-regime labeling."],
+        "subgroup_required": false,
+        "lifecycle": "proposed",
+        "calculation_method": "False alarm ratio.",
+        "missing_data_policy": "No stable-regime opportunities means not_applicable.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M18",
+        "name": "Regime Boundary Error",
+        "category": "regime",
+        "purpose": "Measure distance between detected and reference boundaries.",
+        "definition": "Distance between a detected regime boundary and reference boundary.",
+        "formula": "distance(detected_boundary, reference_boundary)",
+        "scale": "distance-specific",
+        "direction": "lower_is_better",
+        "inputs": ["detected_boundary", "reference_boundary"],
+        "applicability": ["regime studies"],
+        "interpretation": "Lower values indicate closer boundary localization.",
+        "limitations": ["Boundary uncertainty must be retained."],
+        "subgroup_required": false,
+        "lifecycle": "proposed",
+        "calculation_method": "Study-specific distance.",
+        "missing_data_policy": "Missing reference boundary means not_testable.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M19",
+        "name": "Regime-Conditioned Stability",
+        "category": "regime",
+        "purpose": "Measure within-regime stability.",
+        "definition": "Stability of a dimension or profile within a defined regime.",
+        "formula": "within_regime_stability",
+        "scale": "statistic-specific",
+        "direction": "higher_is_better",
+        "inputs": ["within_regime_observations"],
+        "applicability": ["regime studies"],
+        "interpretation": "Helps distinguish measurement instability from between-regime variation.",
+        "limitations": ["Requires defensible regime definition."],
+        "subgroup_required": false,
+        "lifecycle": "proposed",
+        "calculation_method": "Appropriate within-regime stability statistic.",
+        "missing_data_policy": "Preregistered.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M20",
+        "name": "Model-Mismatch Precision",
+        "category": "model_mismatch",
+        "purpose": "Measure support for mismatch flags.",
+        "definition": "Proportion of mismatch flags supported by independent reference evidence.",
+        "formula": "supported_mismatch_flags / all_mismatch_flags",
+        "scale": "0..1",
+        "direction": "higher_is_better",
+        "inputs": ["mismatch_flags", "reference_evidence"],
+        "applicability": ["model mismatch studies"],
+        "interpretation": "Higher values indicate fewer unsupported mismatch declarations.",
+        "limitations": ["Requires meaningful reference definition."],
+        "subgroup_required": true,
+        "lifecycle": "proposed",
+        "calculation_method": "Precision.",
+        "missing_data_policy": "No mismatch flags are reported separately.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M21",
+        "name": "Model-Mismatch Recall",
+        "category": "model_mismatch",
+        "purpose": "Measure detection of reference mismatch cases.",
+        "definition": "Proportion of reference mismatch cases detected.",
+        "formula": "detected_reference_mismatches / all_reference_mismatches",
+        "scale": "0..1",
+        "direction": "higher_is_better",
+        "inputs": ["detected_mismatches", "reference_mismatches"],
+        "applicability": ["model mismatch studies"],
+        "interpretation": "Higher values indicate greater sensitivity to supported mismatch.",
+        "limitations": ["Must be paired with precision and false positives."],
+        "subgroup_required": true,
+        "lifecycle": "proposed",
+        "calculation_method": "Recall.",
+        "missing_data_policy": "No reference mismatches means not_applicable.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M22",
+        "name": "Model-Mismatch False Positive Rate",
+        "category": "model_mismatch",
+        "purpose": "Measure unsupported mismatch flags.",
+        "definition": "False mismatch flags divided by reference non-mismatch cases.",
+        "formula": "false_mismatch_flags / reference_non_mismatch_cases",
+        "scale": "0..1",
+        "direction": "lower_is_better",
+        "inputs": ["false_mismatch_flags", "reference_non_mismatch_cases"],
+        "applicability": ["model mismatch studies"],
+        "interpretation": "Lower values indicate less overuse of mismatch explanations.",
+        "limitations": ["Requires reference non-mismatch cases."],
+        "subgroup_required": true,
+        "lifecycle": "proposed",
+        "calculation_method": "False positive rate.",
+        "missing_data_policy": "No reference non-mismatch cases means not_applicable.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M23",
+        "name": "Mismatch Evidence Strength",
+        "category": "model_mismatch",
+        "purpose": "Summarize declared evidence supporting a mismatch interpretation without creating a person-level intelligence score.",
+        "definition": "Transparent evidence-strength representation using predefined components.",
+        "scale": "study-specific",
+        "direction": "higher_is_better",
+        "inputs": ["independent_sources", "replication", "substrate_effect", "regime_alignment", "counterfactual_consistency", "uncertainty"],
+        "applicability": ["model mismatch studies"],
+        "interpretation": "Higher values may indicate stronger mismatch evidence if the aggregation rule is separately validated.",
+        "limitations": ["Aggregation can conceal disagreement and must not become a hidden capability score."],
+        "subgroup_required": true,
+        "lifecycle": "proposed",
+        "calculation_method": "Transparent study-specific aggregation.",
+        "missing_data_policy": "Missing components remain explicit.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M24",
+        "name": "Cross-Observation Coherence",
+        "category": "coherence",
+        "purpose": "Measure agreement among observations expected to relate.",
+        "definition": "Proportion of eligible observation relationships that are coherent under predefined criteria.",
+        "formula": "coherent_observation_pairs / eligible_observation_pairs",
+        "scale": "0..1",
+        "direction": "descriptive",
+        "inputs": ["observation_pairs"],
+        "applicability": ["profile"],
+        "interpretation": "Low coherence can reflect heterogeneous capability, poor measurement, multiple regimes, or invalid assumptions.",
+        "limitations": ["High coherence does not by itself establish truth."],
+        "subgroup_required": false,
+        "lifecycle": "proposed",
+        "calculation_method": "Pairwise coherence classification.",
+        "missing_data_policy": "Ineligible pairs excluded and reported.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M25",
+        "name": "Profile Contradiction Density",
+        "category": "coherence",
+        "purpose": "Measure unresolved contradictions.",
+        "definition": "Unresolved contradictions divided by evaluated relationships.",
+        "formula": "unresolved_contradictions / evaluated_relationships",
+        "scale": "0..1",
+        "direction": "descriptive",
+        "inputs": ["unresolved_contradictions", "evaluated_relationships"],
+        "applicability": ["profile"],
+        "interpretation": "Contradictions may identify measurement problems, asymmetry, or regime dependence.",
+        "limitations": ["Contradiction is not automatically error."],
+        "subgroup_required": false,
+        "lifecycle": "proposed",
+        "calculation_method": "Ratio.",
+        "missing_data_policy": "Unevaluated relationships are reported separately.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M26",
+        "name": "Dimension Drift Rate",
+        "category": "drift",
+        "purpose": "Measure dimension change over a defined interval.",
+        "definition": "Observed dimension change normalized to an observation interval when appropriate.",
+        "formula": "dimension_change / observation_interval",
+        "scale": "dimension-specific",
+        "direction": "descriptive",
+        "inputs": ["dimension_change", "observation_interval"],
+        "applicability": ["longitudinal dimension observations"],
+        "interpretation": "Requires assumptions about expected stability.",
+        "limitations": ["Change may be learning, context shift, noise, or actual drift."],
+        "subgroup_required": false,
+        "lifecycle": "proposed",
+        "calculation_method": "Study-specific longitudinal analysis.",
+        "missing_data_policy": "Missing intervals are explicit.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M27",
+        "name": "Profile Drift Magnitude",
+        "category": "drift",
+        "purpose": "Measure overall profile change.",
+        "definition": "Distance between profiles at different observations.",
+        "formula": "distance(profile_t1, profile_t2)",
+        "scale": "distance-specific",
+        "direction": "descriptive",
+        "inputs": ["profile_t1", "profile_t2"],
+        "applicability": ["longitudinal profiles"],
+        "interpretation": "Overall drift should be decomposed into dimension-level change.",
+        "limitations": ["Profile distance can hide direction and cause of change."],
+        "subgroup_required": false,
+        "lifecycle": "proposed",
+        "calculation_method": "Preregistered profile distance.",
+        "missing_data_policy": "Missing dimensions explicitly reported.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M28",
+        "name": "Confidence Calibration Error",
+        "category": "calibration",
+        "purpose": "Measure correspondence between confidence and observed correctness or reproducibility.",
+        "definition": "Average absolute difference between stated confidence and observed frequency under an appropriate calibration design.",
+        "formula": "average(abs(stated_confidence - observed_frequency))",
+        "scale": "0..1",
+        "direction": "lower_is_better",
+        "inputs": ["stated_confidence", "observed_frequency"],
+        "applicability": ["probabilistic or mapped-confidence assessments"],
+        "interpretation": "Lower values indicate better calibration.",
+        "limitations": ["Ordinal confidence labels require a validated mapping before numeric treatment."],
+        "subgroup_required": true,
+        "lifecycle": "proposed",
+        "calculation_method": "Calibration analysis.",
+        "missing_data_policy": "Unmapped confidence remains nonnumeric.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M29",
+        "name": "Brier Score",
+        "category": "calibration",
+        "purpose": "Measure probabilistic prediction accuracy for appropriate outcomes.",
+        "definition": "Mean squared difference between forecast probabilities and observed binary outcomes.",
+        "formula": "mean((forecast_probability - outcome)^2)",
+        "scale": "0..1 for binary events",
+        "direction": "lower_is_better",
+        "inputs": ["forecast_probability", "outcome"],
+        "applicability": ["probabilistic binary forecasts"],
+        "interpretation": "Lower values indicate better probabilistic accuracy for the specified setting.",
+        "limitations": ["Not appropriate for every outcome type."],
+        "subgroup_required": true,
+        "lifecycle": "proposed",
+        "calculation_method": "Standard Brier score where applicable.",
+        "missing_data_policy": "Incomplete forecast-outcome pairs excluded and reported.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M30",
+        "name": "Abstention Rate",
+        "category": "uncertainty",
+        "purpose": "Measure how often the framework abstains.",
+        "definition": "Abstained results divided by eligible results.",
+        "formula": "abstained_results / eligible_results",
+        "scale": "0..1",
+        "direction": "descriptive",
+        "inputs": ["abstained_results", "eligible_results"],
+        "applicability": ["assessment"],
+        "interpretation": "Descriptive only and must be paired with abstention quality.",
+        "limitations": ["Neither high nor low abstention is inherently preferable."],
+        "subgroup_required": true,
+        "lifecycle": "proposed",
+        "calculation_method": "Ratio.",
+        "missing_data_policy": "Eligibility rules preregistered.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M31",
+        "name": "Abstention Utility",
+        "category": "uncertainty",
+        "purpose": "Measure whether abstention reduces unsupported or erroneous assessments at acceptable cost.",
+        "definition": "Error reduction attributed to abstention minus declared abstention cost.",
+        "formula": "error_reduction_after_abstention - abstention_cost",
+        "scale": "utility-specific",
+        "direction": "higher_is_better",
+        "inputs": ["error_reduction", "abstention_cost"],
+        "applicability": ["assessment"],
+        "interpretation": "Positive values may indicate useful abstention under the declared utility model.",
+        "limitations": ["Depends heavily on the declared cost model."],
+        "subgroup_required": true,
+        "lifecycle": "proposed",
+        "calculation_method": "Use-case-specific utility analysis.",
+        "missing_data_policy": "Undefined costs prohibit calculation.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M32",
+        "name": "Unsupported Assertion Rate",
+        "category": "uncertainty",
+        "purpose": "Detect claims that exceed available evidence.",
+        "definition": "Assertions lacking sufficient supporting evidence divided by all profile assertions.",
+        "formula": "unsupported_assertions / all_profile_assertions",
+        "scale": "0..1",
+        "direction": "lower_is_better",
+        "inputs": ["unsupported_assertions", "profile_assertions"],
+        "applicability": ["profile", "assessment"],
+        "interpretation": "Lower values indicate better evidence discipline.",
+        "limitations": ["Depends on explicit evidence sufficiency rules."],
+        "subgroup_required": true,
+        "lifecycle": "proposed",
+        "calculation_method": "Evidence-audit ratio.",
+        "missing_data_policy": "Missing evidence counts as unsupported unless explicitly abstained.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M33",
+        "name": "Irrelevant Perturbation Stability",
+        "category": "robustness",
+        "purpose": "Measure stability to irrelevant input changes.",
+        "definition": "Similarity between original and irrelevantly perturbed results.",
+        "formula": "similarity(original_result, irrelevant_perturbation_result)",
+        "scale": "similarity-specific",
+        "direction": "higher_is_better",
+        "inputs": ["original_result", "perturbed_result"],
+        "applicability": ["assessment"],
+        "interpretation": "Higher stability is preferable when perturbations are genuinely irrelevant.",
+        "limitations": ["Irrelevance must be independently justified."],
+        "subgroup_required": true,
+        "lifecycle": "proposed",
+        "calculation_method": "Study-specific similarity measure.",
+        "missing_data_policy": "Incomplete pairs excluded and reported.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M34",
+        "name": "Relevant Change Sensitivity",
+        "category": "counterfactual",
+        "purpose": "Measure response to meaningful evidence changes.",
+        "definition": "Proportion of introduced meaningful changes detected in the result.",
+        "formula": "detected_meaningful_changes / introduced_meaningful_changes",
+        "scale": "0..1",
+        "direction": "higher_is_better",
+        "inputs": ["introduced_changes", "detected_changes"],
+        "applicability": ["assessment"],
+        "interpretation": "Higher values indicate appropriate responsiveness.",
+        "limitations": ["Requires validated relevant changes."],
+        "subgroup_required": true,
+        "lifecycle": "proposed",
+        "calculation_method": "Sensitivity ratio.",
+        "missing_data_policy": "No introduced changes means not_applicable.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M35",
+        "name": "Task-Order Sensitivity",
+        "category": "robustness",
+        "purpose": "Measure undesired result changes caused by task ordering.",
+        "definition": "Distance between results produced by otherwise equivalent task orders.",
+        "formula": "distance(result_order_a, result_order_b)",
+        "scale": "distance-specific",
+        "direction": "lower_is_better",
+        "inputs": ["result_order_a", "result_order_b"],
+        "applicability": ["assessment"],
+        "interpretation": "Lower values indicate reduced order sensitivity when order is theoretically irrelevant.",
+        "limitations": ["Order may be meaningful in some longitudinal tasks."],
+        "subgroup_required": true,
+        "lifecycle": "proposed",
+        "calculation_method": "Study-specific distance.",
+        "missing_data_policy": "Incomplete task-order pairs reported.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M36",
+        "name": "Adapter Ablation Effect",
+        "category": "validity",
+        "purpose": "Measure the incremental contribution of an adapter.",
+        "definition": "Difference between full-adapter performance and performance with a specified adapter removed.",
+        "formula": "performance(full_adapter_set) - performance(without_adapter_x)",
+        "scale": "outcome-specific",
+        "direction": "context_dependent",
+        "inputs": ["full_adapter_model", "ablated_model"],
+        "applicability": ["adapter validation"],
+        "interpretation": "Tests whether an adapter contributes measurable value rather than terminology alone.",
+        "limitations": ["Interactions among adapters may complicate interpretation."],
+        "subgroup_required": true,
+        "lifecycle": "proposed",
+        "calculation_method": "Preregistered ablation study.",
+        "missing_data_policy": "Study-specific.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M37",
+        "name": "Group Error Difference",
+        "category": "fairness",
+        "purpose": "Compare error rates across relevant groups or contexts.",
+        "definition": "Difference between defined group error rates.",
+        "formula": "error_rate_group_a - error_rate_group_b",
+        "scale": "difference",
+        "direction": "context_dependent",
+        "inputs": ["group_error_rates"],
+        "applicability": ["fairness studies"],
+        "interpretation": "A difference is a signal requiring contextual interpretation.",
+        "limitations": ["Does not establish fairness or unfairness by itself."],
+        "subgroup_required": true,
+        "lifecycle": "proposed",
+        "calculation_method": "Study-specific error comparison.",
+        "missing_data_policy": "Insufficient groups reported.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M38",
+        "name": "Group Calibration Difference",
+        "category": "fairness",
+        "purpose": "Compare confidence calibration across relevant groups.",
+        "definition": "Difference in calibration error between groups.",
+        "formula": "calibration_error_group_a - calibration_error_group_b",
+        "scale": "difference",
+        "direction": "context_dependent",
+        "inputs": ["group_calibration_errors"],
+        "applicability": ["fairness studies"],
+        "interpretation": "Material differences warrant investigation.",
+        "limitations": ["Depends on valid calibration measurement."],
+        "subgroup_required": true,
+        "lifecycle": "proposed",
+        "calculation_method": "Calibration comparison.",
+        "missing_data_policy": "Insufficient groups reported.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M39",
+        "name": "Mismatch Flag Rate Difference",
+        "category": "fairness",
+        "purpose": "Compare mismatch-flag rates across relevant groups.",
+        "definition": "Difference between group mismatch-flag rates.",
+        "formula": "mismatch_flag_rate_group_a - mismatch_flag_rate_group_b",
+        "scale": "difference",
+        "direction": "context_dependent",
+        "inputs": ["group_mismatch_rates"],
+        "applicability": ["fairness studies"],
+        "interpretation": "Differences require investigation and are not automatically proof of unfairness.",
+        "limitations": ["Underlying mismatch prevalence may differ."],
+        "subgroup_required": true,
+        "lifecycle": "proposed",
+        "calculation_method": "Group rate comparison.",
+        "missing_data_policy": "Insufficient groups reported.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M40",
+        "name": "Abstention Coverage Difference",
+        "category": "fairness",
+        "purpose": "Compare abstention behavior across relevant groups.",
+        "definition": "Difference between group abstention rates.",
+        "formula": "abstention_rate_group_a - abstention_rate_group_b",
+        "scale": "difference",
+        "direction": "context_dependent",
+        "inputs": ["group_abstention_rates"],
+        "applicability": ["fairness studies"],
+        "interpretation": "Material differences warrant examination of evidence coverage and model fit.",
+        "limitations": ["Equal abstention rates do not establish fairness."],
+        "subgroup_required": true,
+        "lifecycle": "proposed",
+        "calculation_method": "Group rate comparison.",
+        "missing_data_policy": "Insufficient groups reported.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M41",
+        "name": "Escalation Rate Difference",
+        "category": "fairness",
+        "purpose": "Compare review-escalation rates across relevant groups.",
+        "definition": "Difference between group human-review rates.",
+        "formula": "human_review_rate_group_a - human_review_rate_group_b",
+        "scale": "difference",
+        "direction": "context_dependent",
+        "inputs": ["group_review_rates"],
+        "applicability": ["fairness studies"],
+        "interpretation": "Differences require evaluation in light of evidence coverage, uncertainty, and harms.",
+        "limitations": ["Review may be protective or burdensome depending on context."],
+        "subgroup_required": true,
+        "lifecycle": "proposed",
+        "calculation_method": "Group rate comparison.",
+        "missing_data_policy": "Insufficient groups reported.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M42",
+        "name": "Evidence Coverage Difference",
+        "category": "fairness",
+        "purpose": "Compare evidence coverage across relevant groups.",
+        "definition": "Difference between group evidence-coverage measures.",
+        "formula": "evidence_coverage_group_a - evidence_coverage_group_b",
+        "scale": "difference",
+        "direction": "context_dependent",
+        "inputs": ["group_evidence_coverage"],
+        "applicability": ["fairness studies"],
+        "interpretation": "May reveal unequal representation in available evidence or tasks.",
+        "limitations": ["Coverage difference does not identify its cause."],
+        "subgroup_required": true,
+        "lifecycle": "proposed",
+        "calculation_method": "Group coverage comparison.",
+        "missing_data_policy": "Insufficient groups reported.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M43",
+        "name": "False Favorable Reinterpretation Rate",
+        "category": "fairness",
+        "purpose": "Detect unsupported favorable reinterpretations.",
+        "definition": "Unsupported favorable reinterpretations divided by favorable reinterpretations.",
+        "formula": "unsupported_favorable_reinterpretations / favorable_reinterpretations",
+        "scale": "0..1",
+        "direction": "lower_is_better",
+        "inputs": ["unsupported_favorable_reinterpretations", "favorable_reinterpretations"],
+        "applicability": ["reinterpretation studies"],
+        "interpretation": "Lower values indicate stronger evidence discipline for favorable reinterpretation.",
+        "limitations": ["Requires independent support criteria."],
+        "subgroup_required": true,
+        "lifecycle": "proposed",
+        "calculation_method": "Rate.",
+        "missing_data_policy": "No favorable reinterpretations means not_applicable.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M44",
+        "name": "False Adverse Reinterpretation Rate",
+        "category": "fairness",
+        "purpose": "Detect unsupported adverse reinterpretations.",
+        "definition": "Unsupported adverse reinterpretations divided by adverse reinterpretations.",
+        "formula": "unsupported_adverse_reinterpretations / adverse_reinterpretations",
+        "scale": "0..1",
+        "direction": "lower_is_better",
+        "inputs": ["unsupported_adverse_reinterpretations", "adverse_reinterpretations"],
+        "applicability": ["reinterpretation studies"],
+        "interpretation": "Lower values indicate stronger evidence discipline for adverse reinterpretation.",
+        "limitations": ["Requires independent support criteria."],
+        "subgroup_required": true,
+        "lifecycle": "proposed",
+        "calculation_method": "Rate.",
+        "missing_data_policy": "No adverse reinterpretations means not_applicable.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M45",
+        "name": "Evidence Reconstruction Rate",
+        "category": "explainability",
+        "purpose": "Measure whether qualified reviewers can reconstruct assessment conclusions.",
+        "definition": "Successfully reconstructed results divided by reviewed results.",
+        "formula": "successfully_reconstructed_results / reviewed_results",
+        "scale": "0..1",
+        "direction": "higher_is_better",
+        "inputs": ["review_results"],
+        "applicability": ["assessment"],
+        "interpretation": "Higher values indicate stronger evidence traceability and explainability.",
+        "limitations": ["Reviewer qualification and rubric matter."],
+        "subgroup_required": false,
+        "lifecycle": "proposed",
+        "calculation_method": "Independent review.",
+        "missing_data_policy": "Incomplete reviews excluded and reported.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M46",
+        "name": "Explanation Completeness",
+        "category": "explainability",
+        "purpose": "Measure presence of required explanatory components.",
+        "definition": "Present required explanation components divided by total required components.",
+        "formula": "present_components / required_components",
+        "scale": "0..1",
+        "direction": "higher_is_better",
+        "inputs": ["explanation_components"],
+        "applicability": ["assessment"],
+        "interpretation": "Higher values indicate more complete reporting, not necessarily more correct conclusions.",
+        "limitations": ["Completeness does not prove validity."],
+        "subgroup_required": false,
+        "lifecycle": "proposed",
+        "calculation_method": "Checklist ratio.",
+        "missing_data_policy": "Missing required elements count as absent.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M47",
+        "name": "Reviewer Override Rate",
+        "category": "review",
+        "purpose": "Track qualified-reviewer overrides.",
+        "definition": "Reviewer overrides divided by reviewed results.",
+        "formula": "reviewer_overrides / reviewed_results",
+        "scale": "0..1",
+        "direction": "descriptive",
+        "inputs": ["reviewer_overrides", "reviewed_results"],
+        "applicability": ["human review"],
+        "interpretation": "Requires categorization of override reasons.",
+        "limitations": ["High or low values are not inherently better without context."],
+        "subgroup_required": true,
+        "lifecycle": "proposed",
+        "calculation_method": "Review audit.",
+        "missing_data_policy": "Incomplete reviews reported.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M48",
+        "name": "Contest Resolution Rate",
+        "category": "review",
+        "purpose": "Measure documented resolution of assessment contests.",
+        "definition": "Resolved contests divided by submitted contests.",
+        "formula": "resolved_contests / submitted_contests",
+        "scale": "0..1",
+        "direction": "higher_is_better",
+        "inputs": ["resolved_contests", "submitted_contests"],
+        "applicability": ["human-facing assessment"],
+        "interpretation": "Resolution can retain, change, or explicitly leave unresolved the original assessment.",
+        "limitations": ["Resolution quality requires separate evaluation."],
+        "subgroup_required": true,
+        "lifecycle": "proposed",
+        "calculation_method": "Case audit.",
+        "missing_data_policy": "Open cases reported separately.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M49",
+        "name": "Profile Completion Rate",
+        "category": "operational",
+        "purpose": "Measure completion of initiated profiles.",
+        "definition": "Completed profiles divided by initiated profiles.",
+        "formula": "completed_profiles / initiated_profiles",
+        "scale": "0..1",
+        "direction": "descriptive",
+        "inputs": ["completed_profiles", "initiated_profiles"],
+        "applicability": ["operations"],
+        "interpretation": "Describes operational completion only.",
+        "limitations": ["Completion does not indicate validity or quality."],
+        "subgroup_required": true,
+        "lifecycle": "proposed",
+        "calculation_method": "Ratio.",
+        "missing_data_policy": "Incomplete profiles remain incomplete.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M50",
+        "name": "Time to Review",
+        "category": "operational",
+        "purpose": "Measure elapsed review time.",
+        "definition": "Review completion timestamp minus review start timestamp.",
+        "formula": "review_completion_time - review_start_time",
+        "scale": "time",
+        "direction": "context_dependent",
+        "inputs": ["review_start_time", "review_completion_time"],
+        "applicability": ["human review"],
+        "interpretation": "Must be evaluated relative to review quality and consequence.",
+        "limitations": ["Faster is not always better."],
+        "subgroup_required": true,
+        "lifecycle": "proposed",
+        "calculation_method": "Elapsed time.",
+        "missing_data_policy": "Open reviews remain open.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M51",
+        "name": "Evidence Acquisition Burden",
+        "category": "operational",
+        "purpose": "Track the burden required to construct richer profiles.",
+        "definition": "Structured record of subject time, evaluator time, computational cost, tool requirements, accessibility burden, and privacy burden.",
+        "scale": "multicomponent",
+        "direction": "lower_is_better",
+        "inputs": ["subject_time", "evaluator_time", "computational_cost", "tool_requirements", "accessibility_burden", "privacy_burden"],
+        "applicability": ["assessment", "validation"],
+        "interpretation": "Richer profiles must justify their additional burden.",
+        "limitations": ["Components may not be reducible to a defensible single number."],
+        "subgroup_required": true,
+        "lifecycle": "proposed",
+        "calculation_method": "Component-wise reporting preferred.",
+        "missing_data_policy": "Missing burden components remain explicit.",
+        "threshold": {"status": "study_specific"}
+      },
+      {
+        "id": "PA-M52",
+        "name": "Decision Deferral Rate",
+        "category": "operational",
+        "purpose": "Measure frequency of deferred decisions where evidence is insufficient.",
+        "definition": "Deferred decisions divided by decision opportunities.",
+        "formula": "deferred_decisions / decision_opportunities",
+        "scale": "0..1",
+        "direction": "descriptive",
+        "inputs": ["deferred_decisions", "decision_opportunities"],
+        "applicability": ["context-validated decision studies only"],
+        "interpretation": "Must be paired with error reduction, fairness, and harm avoidance.",
+        "limitations": ["Not currently authorized for high-stakes deployment."],
+        "subgroup_required": true,
+        "lifecycle": "proposed",
+        "calculation_method": "Ratio.",
+        "missing_data_policy": "Undefined decision opportunities prohibit calculation.",
+        "threshold": {"status": "study_specific"}
+      }
+    ],
+    "ethics": {
+      "status": "experimental",
+      "principles": [
+        "A model of a person is not the person.",
+        "Preserve observation boundaries.",
+        "Do not convert multidimensional observations into hidden universal rankings.",
+        "Do not guarantee favorable reinterpretation.",
+        "Treat uncertainty as a legitimate result.",
+        "Require evidence for model-mismatch claims.",
+        "Preserve contestability.",
+        "Protect privacy.",
+        "Permit deprecation and rejection of failed dimensions or adapters."
+      ],
+      "invariants": [
+        "prediction != identity",
+        "measurement != total_capability",
+        "capability != human_worth",
+        "detail != validity",
+        "complexity != truth",
+        "correlation != causation",
+        "profile != destiny",
+        "model_fit != subject_value",
+        "unknown != failure",
+        "difference != superiority"
+      ],
+      "prohibited_uses": [
+        "assigning human worth",
+        "covert social ranking",
+        "unvalidated automated adverse decisions",
+        "evading protections governing established assessments",
+        "persistent cognitive tracking without legitimate governance",
+        "unsupported sensitive-trait inference",
+        "discriminatory population ranking"
+      ],
+      "high_stakes_policy": {
+        "decision_authority": "none",
+        "independent_use": false,
+        "separate_validation_required": true
+      },
+      "consent": {
+        "required": true,
+        "description": "Real-person assessment should use an appropriate consent and awareness process for the context.",
+        "requirements": [
+          "declare assessment purpose",
+          "declare collected information",
+          "declare intended use",
+          "declare access and retention",
+          "declare AI participation where applicable"
+        ],
+        "exceptions": []
+      },
+      "privacy": {
+        "required": true,
+        "description": "Multidimensional cognitive and behavioral profiles may be sensitive and should follow data-minimization and appropriate governance practices.",
+        "requirements": [
+          "data minimization",
+          "purpose limitation",
+          "retention controls",
+          "access controls",
+          "avoid covert tracking"
+        ],
+        "exceptions": []
+      },
+      "contestability": {
+        "required": true,
+        "description": "Consequential human-facing profiles require mechanisms for evidence inspection, correction, contextual supplementation, and review.",
+        "requirements": [
+          "evidence inspection",
+          "correction pathway",
+          "context submission",
+          "review pathway",
+          "preserve unresolved disagreement"
+        ],
+        "exceptions": [
+          "synthetic demonstration"
+        ]
+      },
+      "temporal_limits": {
+        "required": true,
+        "description": "Profiles represent observations under particular conditions and should not be treated as timeless identity claims.",
+        "requirements": [
+          "timestamp",
+          "framework version",
+          "observed substrates",
+          "observed regimes",
+          "reassessment state"
+        ],
+        "exceptions": []
+      },
+      "accessibility": {
+        "required": true,
+        "description": "Accessibility conditions should be distinguished from construct-relevant constraints where possible.",
+        "requirements": [
+          "record accessibility conditions",
+          "avoid treating irrelevant barriers as capability by default"
+        ],
+        "exceptions": []
+      },
+      "fairness": {
+        "required": true,
+        "description": "Fairness analysis should examine errors, uncertainty, evidence coverage, mismatch, abstention, escalation, and downstream effects.",
+        "requirements": [
+          "subgroup analysis where relevant",
+          "evidence coverage analysis",
+          "favorability symmetry",
+          "adverse reinterpretation analysis"
+        ],
+        "exceptions": [
+          "single synthetic example"
+        ]
+      },
+      "human_review": {
+        "required": true,
+        "description": "Qualified human review is required before consequential interpretation unless a specific use has separately achieved appropriate validation and governance.",
+        "requirements": [
+          "review ambiguity",
+          "review disputed results",
+          "review consequential applications"
+        ],
+        "exceptions": [
+          "synthetic demonstration",
+          "non-consequential research exploration"
+        ]
+      },
+      "misuse_boundary": [
+        "Do not equate profile shape with identity.",
+        "Do not infer global intelligence from incomplete profile coverage.",
+        "Do not treat unusual profile topology as automatic superiority.",
+        "Do not treat substrate effects as automatic evidence of hidden ability.",
+        "Do not treat TriadicFrameworks adapters as validated merely because they are canon-aligned.",
+        "Do not use richer measurement as richer surveillance."
+      ],
+      "known_limits": [
+        "No complete theory of intelligence is established.",
+        "RIQF dimensions are not validated psychological constructs.",
+        "RTT-derived cognitive metrics are experimental.",
+        "Cross-species and cross-system equivalence is not established.",
+        "Substrate categories are provisional.",
+        "Regime categories are provisional.",
+        "Causal mechanisms are not established.",
+        "The module is not validated for consequential decision-making."
+      ],
+      "deprecation_supported": true
+    },
+    "examples": [
+      {
+        "id": "pax-01",
+        "name": "PAX-01 Resonant IQ Fingerprint",
+        "type": "resonant_iq_fingerprint",
+        "file": "example_resonant_iq_fingerprint.md",
+        "synthetic": true,
+        "subject_id": "PAX-01",
+        "description": "Synthetic demonstration of a multidimensional, substrate-sensitive intelligence profile in which conventional and extended observations disagree.",
+        "validation_state": "unvalidated",
+        "decision_authority": "none",
+        "dimensions_used": [
+          "pattern-recognition",
+          "structural-reasoning",
+          "causal-integration",
+          "temporal-reasoning",
+          "cross-domain-transfer",
+          "regime-recognition",
+          "anomaly-detection",
+          "ambiguity-navigation",
+          "adaptive-reframing",
+          "coherence-maintenance",
+          "drift-awareness",
+          "metacognitive-calibration",
+          "long-horizon-integration",
+          "tool-collaboration",
+          "recovery-recalibration"
+        ],
+        "adapters_used": [
+          "fft",
+          "inverted-star",
+          "structural-detection",
+          "rtt",
+          "resonance"
+        ],
+        "metric_refs": [
+          "PA-M01",
+          "PA-M02",
+          "PA-M04",
+          "PA-M05",
+          "PA-M06",
+          "PA-M07",
+          "PA-M08",
+          "PA-M09",
+          "PA-M10",
+          "PA-M12",
+          "PA-M13",
+          "PA-M14",
+          "PA-M20",
+          "PA-M21",
+          "PA-M28",
+          "PA-M32",
+          "PA-M36",
+          "PA-M45",
+          "PA-M46"
+        ]
+      }
+    ],
+    "documents": {
+      "readme": {
+        "id": "readme",
+        "file": "README.md",
+        "role": "foundation",
+        "status": "experimental",
+        "anchor": "#README",
+        "standalone": true,
+        "description": "Module front door and architectural overview.",
+        "adapter_refs": [],
+        "dimension_refs": [],
+        "metric_refs": [],
+        "validation_refs": []
+      },
+      "foundations": {
+        "id": "foundations",
+        "file": "foundations.md",
+        "role": "foundation",
+        "status": "experimental",
+        "anchor": "#FOUNDATIONS",
+        "standalone": true,
+        "description": "Conceptual foundations for substrate-aware predictive analytics.",
+        "adapter_refs": [],
+        "dimension_refs": [],
+        "metric_refs": [],
+        "validation_refs": []
+      },
+      "predictive-model-adapter": {
+        "id": "predictive-model-adapter",
+        "file": "predictive_model_adapter.md",
+        "role": "adapter",
+        "status": "experimental",
+        "anchor": "#PREDICTIVE_MODEL_ADAPTER",
+        "standalone": true,
+        "description": "Adapter contract for integrating existing predictive models.",
+        "adapter_refs": [],
+        "dimension_refs": [],
+        "metric_refs": [
+          "PA-M10",
+          "PA-M11",
+          "PA-M28"
+        ],
+        "validation_refs": [
+          "VCR-09",
+          "VCR-10"
+        ]
+      },
+      "substrate-adapter": {
+        "id": "substrate-adapter",
+        "file": "substrate_adapter.md",
+        "role": "observer",
+        "status": "experimental",
+        "anchor": "#SUBSTRATE_ADAPTER",
+        "standalone": true,
+        "description": "General substrate adapter and model-fit layer.",
+        "adapter_refs": [
+          "fft",
+          "inverted-star",
+          "structural-detection",
+          "rtt",
+          "resonance"
+        ],
+        "dimension_refs": [],
+        "metric_refs": [
+          "PA-M12",
+          "PA-M13",
+          "PA-M14",
+          "PA-M15"
+        ],
+        "validation_refs": [
+          "VCR-05",
+          "VCR-13"
+        ]
+      },
+      "regime-observer": {
+        "id": "regime-observer",
+        "file": "regime_observer.md",
+        "role": "observer",
+        "status": "experimental",
+        "anchor": "#REGIME_OBSERVER",
+        "standalone": true,
+        "description": "Regime compatibility and transition observer.",
+        "adapter_refs": [
+          "rtt"
+        ],
+        "dimension_refs": [
+          "regime-recognition",
+          "temporal-reasoning"
+        ],
+        "metric_refs": [
+          "PA-M16",
+          "PA-M17",
+          "PA-M18",
+          "PA-M19"
+        ],
+        "validation_refs": [
+          "VCR-06"
+        ]
+      },
+      "resonance-observer": {
+        "id": "resonance-observer",
+        "file": "resonance_observer.md",
+        "role": "observer",
+        "status": "experimental",
+        "anchor": "#RESONANCE_OBSERVER",
+        "standalone": true,
+        "description": "Contextual amplification, suppression, persistence, and stability observer.",
+        "adapter_refs": [
+          "resonance"
+        ],
+        "dimension_refs": [],
+        "metric_refs": [
+          "PA-M12",
+          "PA-M13",
+          "PA-M24"
+        ],
+        "validation_refs": [
+          "VCR-05"
+        ]
+      },
+      "drift-observer": {
+        "id": "drift-observer",
+        "file": "drift_observer.md",
+        "role": "observer",
+        "status": "experimental",
+        "anchor": "#DRIFT_OBSERVER",
+        "standalone": true,
+        "description": "Longitudinal drift observer.",
+        "adapter_refs": [
+          "rtt"
+        ],
+        "dimension_refs": [
+          "drift-awareness"
+        ],
+        "metric_refs": [
+          "PA-M26",
+          "PA-M27"
+        ],
+        "validation_refs": [
+          "VCR-03"
+        ]
+      },
+      "coherence-observer": {
+        "id": "coherence-observer",
+        "file": "coherence_observer.md",
+        "role": "observer",
+        "status": "experimental",
+        "anchor": "#COHERENCE_OBSERVER",
+        "standalone": true,
+        "description": "Cross-observation coherence and contradiction observer.",
+        "adapter_refs": [
+          "structural-detection",
+          "rtt",
+          "resonance"
+        ],
+        "dimension_refs": [
+          "coherence-maintenance"
+        ],
+        "metric_refs": [
+          "PA-M24",
+          "PA-M25"
+        ],
+        "validation_refs": [
+          "VCR-03"
+        ]
+      },
+      "uncertainty-layer": {
+        "id": "uncertainty-layer",
+        "file": "uncertainty_layer.md",
+        "role": "observer",
+        "status": "experimental",
+        "anchor": "#UNCERTAINTY_LAYER",
+        "standalone": true,
+        "description": "Uncertainty, calibration, missing evidence, and abstention layer.",
+        "adapter_refs": [],
+        "dimension_refs": [
+          "metacognitive-calibration"
+        ],
+        "metric_refs": [
+          "PA-M28",
+          "PA-M29",
+          "PA-M30",
+          "PA-M31",
+          "PA-M32"
+        ],
+        "validation_refs": [
+          "VCR-10",
+          "VCR-11"
+        ]
+      },
+      "counterfactual-layer": {
+        "id": "counterfactual-layer",
+        "file": "counterfactual_layer.md",
+        "role": "observer",
+        "status": "experimental",
+        "anchor": "#COUNTERFACTUAL_LAYER",
+        "standalone": true,
+        "description": "Alternate representation and perturbation comparison layer.",
+        "adapter_refs": [],
+        "dimension_refs": [
+          "adaptive-reframing"
+        ],
+        "metric_refs": [
+          "PA-M33",
+          "PA-M34",
+          "PA-M35"
+        ],
+        "validation_refs": [
+          "VCR-14"
+        ]
+      },
+      "human-review-hook": {
+        "id": "human-review-hook",
+        "file": "human_review_hook.md",
+        "role": "observer",
+        "status": "experimental",
+        "anchor": "#HUMAN_REVIEW_HOOK",
+        "standalone": true,
+        "description": "Escalation, review, contestability, and override layer.",
+        "adapter_refs": [],
+        "dimension_refs": [],
+        "metric_refs": [
+          "PA-M41",
+          "PA-M47",
+          "PA-M48",
+          "PA-M50"
+        ],
+        "validation_refs": [
+          "VCR-16",
+          "VCR-17"
+        ]
+      },
+      "resonant-iq-fingerprint": {
+        "id": "resonant-iq-fingerprint",
+        "file": "resonant_iq_fingerprint.md",
+        "role": "profile",
+        "status": "experimental",
+        "anchor": "#RESONANT_IQ_FINGERPRINT",
+        "standalone": true,
+        "description": "Experimental multidimensional and substrate-sensitive intelligence profile grammar.",
+        "adapter_refs": [
+          "fft",
+          "inverted-star",
+          "structural-detection",
+          "rtt",
+          "resonance"
+        ],
+        "dimension_refs": [
+          "pattern-recognition",
+          "structural-reasoning",
+          "causal-integration",
+          "temporal-reasoning",
+          "cross-domain-transfer",
+          "regime-recognition",
+          "anomaly-detection",
+          "ambiguity-navigation",
+          "adaptive-reframing",
+          "coherence-maintenance",
+          "drift-awareness",
+          "metacognitive-calibration",
+          "long-horizon-integration",
+          "tool-collaboration",
+          "recovery-recalibration"
+        ],
+        "metric_refs": [
+          "PA-M01",
+          "PA-M02",
+          "PA-M07",
+          "PA-M12",
+          "PA-M20",
+          "PA-M28"
+        ],
+        "validation_refs": [
+          "VCR-01",
+          "VCR-02",
+          "VCR-03",
+          "VCR-05",
+          "VCR-12",
+          "VCR-13"
+        ]
+      },
+      "intelligence-dimensions": {
+        "id": "intelligence-dimensions",
+        "file": "intelligence_dimensions.md",
+        "role": "profile",
+        "status": "experimental",
+        "anchor": "#INTELLIGENCE_DIMENSIONS",
+        "standalone": true,
+        "description": "Registry and definitions for proposed RIQF dimensions.",
+        "adapter_refs": [],
+        "dimension_refs": [
+          "pattern-recognition",
+          "structural-reasoning",
+          "causal-integration",
+          "temporal-reasoning",
+          "cross-domain-transfer",
+          "regime-recognition",
+          "anomaly-detection",
+          "ambiguity-navigation",
+          "adaptive-reframing",
+          "coherence-maintenance",
+          "drift-awareness",
+          "metacognitive-calibration",
+          "long-horizon-integration",
+          "tool-collaboration",
+          "recovery-recalibration"
+        ],
+        "metric_refs": [
+          "PA-M08",
+          "PA-M09"
+        ],
+        "validation_refs": [
+          "VCR-01",
+          "VCR-07",
+          "VCR-08"
+        ]
+      },
+      "substrate-expression-profile": {
+        "id": "substrate-expression-profile",
+        "file": "substrate_expression_profile.md",
+        "role": "profile",
+        "status": "experimental",
+        "anchor": "#SUBSTRATE_EXPRESSION_PROFILE",
+        "standalone": true,
+        "description": "Representation of how observed capability varies across measurement or interaction substrates.",
+        "adapter_refs": [
+          "resonance",
+          "rtt"
+        ],
+        "dimension_refs": [],
+        "metric_refs": [
+          "PA-M12",
+          "PA-M13",
+          "PA-M14",
+          "PA-M15"
+        ],
+        "validation_refs": [
+          "VCR-05",
+          "VCR-13"
+        ]
+      },
+      "model-mismatch": {
+        "id": "model-mismatch",
+        "file": "model_mismatch.md",
+        "role": "observer",
+        "status": "experimental",
+        "anchor": "#MODEL_MISMATCH",
+        "standalone": true,
+        "description": "Model-fit and mismatch inference grammar.",
+        "adapter_refs": [
+          "inverted-star",
+          "rtt"
+        ],
+        "dimension_refs": [],
+        "metric_refs": [
+          "PA-M20",
+          "PA-M21",
+          "PA-M22",
+          "PA-M23"
+        ],
+        "validation_refs": [
+          "VCR-12",
+          "VCR-13"
+        ]
+      },
+      "adapters": {
+        "id": "adapters",
+        "file": "adapters.md",
+        "role": "adapter",
+        "status": "experimental",
+        "anchor": "#ADAPTERS",
+        "standalone": true,
+        "description": "Adapter registry and integration contract.",
+        "adapter_refs": [
+          "fft",
+          "inverted-star",
+          "structural-detection",
+          "rtt",
+          "resonance"
+        ],
+        "dimension_refs": [],
+        "metric_refs": [
+          "PA-M36"
+        ],
+        "validation_refs": [
+          "VCR-09",
+          "VCR-18"
+        ]
+      },
+      "fft-adapter": {
+        "id": "fft-adapter",
+        "file": "FFT_adapter.md",
+        "role": "adapter",
+        "status": "experimental",
+        "anchor": "#FFT_ADAPTER",
+        "standalone": true,
+        "description": "Framework Field Theory adapter.",
+        "adapter_refs": ["fft"],
+        "dimension_refs": ["structural-reasoning"],
+        "metric_refs": ["PA-M36"],
+        "validation_refs": ["VCR-09"]
+      },
+      "inverted-star-adapter": {
+        "id": "inverted-star-adapter",
+        "file": "Inverted_Star_adapter.md",
+        "role": "adapter",
+        "status": "experimental",
+        "anchor": "#INVERTED_STAR_ADAPTER",
+        "standalone": true,
+        "description": "The Inverted Star adapter.",
+        "adapter_refs": ["inverted-star"],
+        "dimension_refs": [],
+        "metric_refs": [
+          "PA-M20",
+          "PA-M22",
+          "PA-M36"
+        ],
+        "validation_refs": [
+          "VCR-12",
+          "VCR-13"
+        ]
+      },
+      "structural-detection-adapter": {
+        "id": "structural-detection-adapter",
+        "file": "Structural_Detection_adapter.md",
+        "role": "adapter",
+        "status": "experimental",
+        "anchor": "#STRUCTURAL_DETECTION_ADAPTER",
+        "standalone": true,
+        "description": "Structural Detection adapter.",
+        "adapter_refs": ["structural-detection"],
+        "dimension_refs": [
+          "structural-reasoning",
+          "pattern-recognition",
+          "anomaly-detection"
+        ],
+        "metric_refs": ["PA-M36"],
+        "validation_refs": [
+          "VCR-07",
+          "VCR-09"
+        ]
+      },
+      "rtt-adapter": {
+        "id": "rtt-adapter",
+        "file": "RTT_adapter.md",
+        "role": "adapter",
+        "status": "experimental",
+        "anchor": "#RTT_ADAPTER",
+        "standalone": true,
+        "description": "RTT regime, temporal, drift, continuity, and recalibration adapter.",
+        "adapter_refs": ["rtt"],
+        "dimension_refs": [
+          "regime-recognition",
+          "temporal-reasoning",
+          "drift-awareness",
+          "recovery-recalibration"
+        ],
+        "metric_refs": [
+          "PA-M16",
+          "PA-M17",
+          "PA-M18",
+          "PA-M19",
+          "PA-M26",
+          "PA-M27",
+          "PA-M36"
+        ],
+        "validation_refs": [
+          "VCR-06",
+          "VCR-09"
+        ]
+      },
+      "resonance-adapter": {
+        "id": "resonance-adapter",
+        "file": "resonance_adapter.md",
+        "role": "adapter",
+        "status": "experimental",
+        "anchor": "#RESONANCE_ADAPTER",
+        "standalone": true,
+        "description": "Contextual amplification and suppression adapter.",
+        "adapter_refs": ["resonance"],
+        "dimension_refs": [],
+        "metric_refs": [
+          "PA-M12",
+          "PA-M13",
+          "PA-M36"
+        ],
+        "validation_refs": [
+          "VCR-05",
+          "VCR-09"
+        ]
+      },
+      "validation": {
+        "id": "validation",
+        "file": "validation.md",
+        "role": "validation",
+        "status": "experimental",
+        "anchor": "#VALIDATION",
+        "standalone": true,
+        "description": "Validation levels, criteria, falsification requirements, and reporting standards.",
+        "adapter_refs": [],
+        "dimension_refs": [],
+        "metric_refs": [],
+        "validation_refs": [
+          "VCR-01",
+          "VCR-02",
+          "VCR-03",
+          "VCR-04",
+          "VCR-05",
+          "VCR-06",
+          "VCR-07",
+          "VCR-08",
+          "VCR-09",
+          "VCR-10",
+          "VCR-11",
+          "VCR-12",
+          "VCR-13",
+          "VCR-14",
+          "VCR-15",
+          "VCR-16",
+          "VCR-17",
+          "VCR-18"
+        ]
+      },
+      "metrics": {
+        "id": "metrics",
+        "file": "metrics.md",
+        "role": "metrics",
+        "status": "experimental",
+        "anchor": "#METRICS",
+        "standalone": true,
+        "description": "Experimental metrics catalog.",
+        "adapter_refs": [],
+        "dimension_refs": [],
+        "metric_refs": [
+          "PA-M01",
+          "PA-M02",
+          "PA-M03",
+          "PA-M04",
+          "PA-M05",
+          "PA-M06",
+          "PA-M07",
+          "PA-M08",
+          "PA-M09",
+          "PA-M10",
+          "PA-M11",
+          "PA-M12",
+          "PA-M13",
+          "PA-M14",
+          "PA-M15",
+          "PA-M16",
+          "PA-M17",
+          "PA-M18",
+          "PA-M19",
+          "PA-M20",
+          "PA-M21",
+          "PA-M22",
+          "PA-M23",
+          "PA-M24",
+          "PA-M25",
+          "PA-M26",
+          "PA-M27",
+          "PA-M28",
+          "PA-M29",
+          "PA-M30",
+          "PA-M31",
+          "PA-M32",
+          "PA-M33",
+          "PA-M34",
+          "PA-M35",
+          "PA-M36",
+          "PA-M37",
+          "PA-M38",
+          "PA-M39",
+          "PA-M40",
+          "PA-M41",
+          "PA-M42",
+          "PA-M43",
+          "PA-M44",
+          "PA-M45",
+          "PA-M46",
+          "PA-M47",
+          "PA-M48",
+          "PA-M49",
+          "PA-M50",
+          "PA-M51",
+          "PA-M52"
+        ],
+        "validation_refs": []
+      },
+      "ethics-and-limits": {
+        "id": "ethics-and-limits",
+        "file": "ethics_and_limits.md",
+        "role": "ethics",
+        "status": "experimental",
+        "anchor": "#ETHICS_AND_LIMITS",
+        "standalone": true,
+        "description": "Ethical boundaries, prohibited uses, privacy, contestability, and known limitations.",
+        "adapter_refs": [],
+        "dimension_refs": [],
+        "metric_refs": [
+          "PA-M32",
+          "PA-M37",
+          "PA-M38",
+          "PA-M39",
+          "PA-M40",
+          "PA-M41",
+          "PA-M42",
+          "PA-M43",
+          "PA-M44",
+          "PA-M48",
+          "PA-M51"
+        ],
+        "validation_refs": [
+          "VCR-13",
+          "VCR-15",
+          "VCR-16",
+          "VCR-17",
+          "VCR-18"
+        ]
+      },
+      "example-resonant-iq-fingerprint": {
+        "id": "example-resonant-iq-fingerprint",
+        "file": "example_resonant_iq_fingerprint.md",
+        "role": "example",
+        "status": "experimental",
+        "anchor": "#EXAMPLE_RESONANT_IQ_FINGERPRINT",
+        "standalone": true,
+        "description": "Synthetic PAX-01 worked example.",
+        "adapter_refs": [
+          "fft",
+          "inverted-star",
+          "structural-detection",
+          "rtt",
+          "resonance"
+        ],
+        "dimension_refs": [
+          "pattern-recognition",
+          "structural-reasoning",
+          "causal-integration",
+          "temporal-reasoning",
+          "cross-domain-transfer",
+          "regime-recognition",
+          "anomaly-detection",
+          "ambiguity-navigation",
+          "adaptive-reframing",
+          "coherence-maintenance",
+          "drift-awareness",
+          "metacognitive-calibration",
+          "long-horizon-integration",
+          "tool-collaboration",
+          "recovery-recalibration"
+        ],
+        "metric_refs": [
+          "PA-M01",
+          "PA-M02",
+          "PA-M04",
+          "PA-M05",
+          "PA-M06",
+          "PA-M07",
+          "PA-M12",
+          "PA-M20",
+          "PA-M28",
+          "PA-M32",
+          "PA-M36",
+          "PA-M45",
+          "PA-M46"
+        ],
+        "validation_refs": [
+          "VCR-01",
+          "VCR-02",
+          "VCR-05",
+          "VCR-10",
+          "VCR-12",
+          "VCR-13",
+          "VCR-16"
+        ]
+      },
+      "module-json": {
+        "id": "module-json",
+        "file": "predictive_analytics_module.json",
+        "role": "module",
+        "status": "experimental",
+        "anchor": "#MODULE_JSON",
+        "standalone": true,
+        "description": "Canonical machine-readable Predictive Analytics module manifest.",
+        "adapter_refs": [],
+        "dimension_refs": [],
+        "metric_refs": [],
+        "validation_refs": []
+      },
+      "module-schema": {
+        "id": "module-schema",
+        "file": "predictive_analytics_module.schema.json",
+        "role": "module",
+        "status": "experimental",
+        "anchor": "#MODULE_SCHEMA",
+        "standalone": true,
+        "description": "JSON Schema for the Predictive Analytics module manifest.",
+        "adapter_refs": [],
+        "dimension_refs": [],
+        "metric_refs": [],
+        "validation_refs": []
+      }
+    },
+    "navigation": {
+      "index_path": "index.html",
+      "readme_path": "README.md",
+      "module_path": "predictive_analytics_module.json",
+      "schema_path": "predictive_analytics_module.schema.json",
+      "default_document": "README.md",
+      "anchor_style": "uppercase-doc-map",
+      "sections": {
+        "foundations": "#FOUNDATIONS",
+        "observers": "#OBSERVERS",
+        "profiles": "#PROFILES",
+        "adapters": "#ADAPTERS",
+        "validation": "#VALIDATION",
+        "ethics": "#ETHICS",
+        "examples": "#EXAMPLES",
+        "module": "#MODULE"
+      },
+      "doc_anchors": {
+        "readme": "#README",
+        "foundations": "#FOUNDATIONS",
+        "predictive-model-adapter": "#PREDICTIVE_MODEL_ADAPTER",
+        "substrate-adapter": "#SUBSTRATE_ADAPTER",
+        "regime-observer": "#REGIME_OBSERVER",
+        "resonance-observer": "#RESONANCE_OBSERVER",
+        "drift-observer": "#DRIFT_OBSERVER",
+        "coherence-observer": "#COHERENCE_OBSERVER",
+        "uncertainty-layer": "#UNCERTAINTY_LAYER",
+        "counterfactual-layer": "#COUNTERFACTUAL_LAYER",
+        "human-review-hook": "#HUMAN_REVIEW_HOOK",
+        "resonant-iq-fingerprint": "#RESONANT_IQ_FINGERPRINT",
+        "intelligence-dimensions": "#INTELLIGENCE_DIMENSIONS",
+        "substrate-expression-profile": "#SUBSTRATE_EXPRESSION_PROFILE",
+        "model-mismatch": "#MODEL_MISMATCH",
+        "adapters": "#ADAPTERS",
+        "fft-adapter": "#FFT_ADAPTER",
+        "inverted-star-adapter": "#INVERTED_STAR_ADAPTER",
+        "structural-detection-adapter": "#STRUCTURAL_DETECTION_ADAPTER",
+        "rtt-adapter": "#RTT_ADAPTER",
+        "resonance-adapter": "#RESONANCE_ADAPTER",
+        "validation": "#VALIDATION",
+        "metrics": "#METRICS",
+        "ethics-and-limits": "#ETHICS_AND_LIMITS",
+        "example-resonant-iq-fingerprint": "#EXAMPLE_RESONANT_IQ_FINGERPRINT",
+        "module-json": "#MODULE_JSON",
+        "module-schema": "#MODULE_SCHEMA"
+      }
+    }
+  }
+}
