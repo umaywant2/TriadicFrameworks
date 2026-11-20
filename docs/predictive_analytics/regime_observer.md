@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="predictive_analytics_regime_observer_" src="https://github.com/user-attachments/assets/70bf93af-df68-44bc-babd-7601e67969b5" />
+
 # Predictive Analytics — Regime Observer
 
 > **A prediction is meaningful only within conditions where its relationships remain meaningful.**
