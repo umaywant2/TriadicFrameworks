@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="predictive_analytics_drift_observer_" src="https://github.com/user-attachments/assets/0fccfaeb-27b7-4cf3-8043-60e034b3881e" />
+
 # Predictive Analytics — Drift Observer
 
 > **Change is observable. Drift is a claim about change relative to a reference.**
