@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="predictive_analytics_pa_capture_" src="https://github.com/user-attachments/assets/657bf25e-79bc-45fe-bb97-8ae20ab33a08" />
+
 # pa capture
 
 > Done.  Feels pretty good...  One more module before I call it a night... Ok?
