@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="predictive_analytics_examples_" src="https://github.com/user-attachments/assets/b562233f-1d0d-4e11-98df-219881287266" />
+
 # Predictive Analytics — Examples
 
 > **A useful framework must demonstrate where it helps, where it changes nothing, where it remains uncertain, and where it fails.**
