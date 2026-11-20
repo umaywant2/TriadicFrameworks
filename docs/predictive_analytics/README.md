@@ -1,6 +1,7 @@
 <img width="1194" height="672" alt="predictive_analytics_README_" src="https://github.com/user-attachments/assets/077e255c-cbf9-4950-888a-3651ce80d0fd" />
 
 - [`predictive_analytics_module.json`](predictive_analytics_module.json) — Agentic module schema role assignments
+- [`predictive_analytics/predictive_analytics_module.schema.json`](predictive_analytics/predictive_analytics_module.schema.json) — Agentic module schema role assignments
 
 # Predictive Analytics
 
