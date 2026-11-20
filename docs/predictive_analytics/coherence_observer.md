@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="predictive_analytics_coherence_observer_" src="https://github.com/user-attachments/assets/d0d2d7db-5ff8-4b04-a74e-a245e8f7adaa" />
+
 # Predictive Analytics — Coherence Observer
 
 > **Coherence is not agreement everywhere. It is the ability to preserve what agrees, what disagrees, and why we do not yet know.**
