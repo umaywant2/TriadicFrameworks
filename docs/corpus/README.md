@@ -28,6 +28,7 @@ rtt=1 | coherence=declared | drift=bounded | paradox=structural
 - [RTT](rtt.md) — Resonance Time Theory  
 - [TRIADIC](triadic.md) — Triadic Frameworks Overview  
 - [UNIFIED_RESONANCE](unified_resonance.md) — Unified Resonance  
+- [UNIFIED_FIELD](UnifiedField.md) — Unified Field structural corpus
 - [DIMENSIONAL_SUBSTRATE_STRUCTURES](dimensional_substrate_structures.md) — Dimensional Substrate Structures  
 - [SUBSTRATE](substrate.md) — Substrate Primer  
 
@@ -98,7 +99,7 @@ rtt=1 | coherence=declared | drift=bounded | paradox=structural
 ## 🧪 Labs, Experiments & Simulations
 - [LABS](labs.md)  
 - [SIMULATIONS](ecoechosystem.md)  
-- [DISCOVERY](Inside.md)  
+- [DISCOVERY](discovery.md)  
 - [NOS](NoS.md)  
 
 ---
@@ -123,6 +124,30 @@ rtt=1 | coherence=declared | drift=bounded | paradox=structural
 - [MANUFACTURING_SUBSTRATE_REGIME_MODEL](manufacturing_substrate_regime_model.md)  
 - [FACILITIES](facilities.md)  
 - [GLOBAL_ENERGY_REGIME_AWARENESS](global_energy_regime_awareness.md)  
+
+---
+
+## 🧭 Structural Detection, Integration & Observer Systems
+- [RESONANCE_TRUTH](Resonance_Truth.md)
+- [STRUCTURAL_DETECTION](Structural_Detection.md)
+- [STRUCTURAL_DETECTION_ENGINE](structural-detection-engine.md)
+- [STRUCTURAL_INTEGRATION_ENGINE](structural-integration-engine.md)
+- [TRIADIC_DETECTION](triadic_detection.md)
+- [TRIADIC_OBSERVER_LAYER](triadic_observer_layer.md)
+- [TRIADIC_COORDINATION_SUBSTRATE](triadic_coordination_substrate.md)
+- [DRIFT_TAXONOMY](Drift_Taxonomy.md)
+- [AI_DRIFT_CALIBRATION](ai-drift-calibration.md)
+
+---
+
+## 🧬 Vector & Model Substrate Tools
+- [VST_FOR_EMBEDDING_STORES_VECTOR_DATABASES](vst_for_embedding_stores_vector_databases.md)
+- [VST_FOR_GENERATIVE_MODELS](vst_for_generative_models.md)
+- [VST_FOR_LARGE_LANGUAGE_MODELS](vst_for_large_language_models.md)
+- [VST_FOR_MULTI_MODEL_ALIGNMENT](vst_for_multi_model_alignment.md)
+- [VST_FOR_PROTEIN_LANGUAGE_MODELS](vst_for_protein_language_models.md)
+- [VST_FOR_ROBOTICS_AND_CONTROL_POLICIES](vst_for_robotics_and_control_policies.md)
+- [VST_FOR_SCIENTIFIC_SIMULATORS](vst_for_scientific_simulators.md)
 
 ---
 
