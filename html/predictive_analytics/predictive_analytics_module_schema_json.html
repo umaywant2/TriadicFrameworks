@@ -1,0 +1,1845 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/predictive_analytics/predictive_analytics_module_schema_json.md">
+  <title>predictiveanalyticsmoduleschemajson.md</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/predictive_analytics/predictive_analytics_module_schema_json.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/predictive_analytics/predictive_analytics_module_schema_json.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="predictive_analytics_module_schema_jsonmd">predictive_analytics_module_schema_json.md</h1>
+<pre><code class="language-json">{
+  &quot;$schema&quot;: &quot;https://json-schema.org/draft/2020-12/schema&quot;,
+  &quot;$id&quot;: &quot;https://docs.triadicframeworks.org/schemas/predictive_analytics_module.schema.json&quot;,
+  &quot;title&quot;: &quot;TriadicFrameworks Predictive Analytics Module Schema&quot;,
+  &quot;description&quot;: &quot;Structural schema for the Predictive Analytics module manifest, including substrate-aware observation, model adapters, RTT extensions, Resonant IQ Fingerprint dimensions, validation criteria, metrics, ethical limits, examples, and navigation.&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;additionalProperties&quot;: false,
+  &quot;required&quot;: [
+    &quot;predictive_analytics_module&quot;
+  ],
+  &quot;properties&quot;: {
+    &quot;predictive_analytics_module&quot;: {
+      &quot;$ref&quot;: &quot;#/$defs/module&quot;
+    }
+  },
+  &quot;$defs&quot;: {
+    &quot;nonEmptyString&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;minLength&quot;: 1
+    },
+    &quot;identifier&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;minLength&quot;: 1,
+      &quot;pattern&quot;: &quot;^[a-z0-9]+(?:[a-z0-9._-]*[a-z0-9])?$&quot;
+    },
+    &quot;operatorIdentifier&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;pattern&quot;: &quot;^PA-[A-Z][A-Z0-9-]*$&quot;
+    },
+    &quot;metricIdentifier&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;pattern&quot;: &quot;^PA-M[0-9]{2,3}$&quot;
+    },
+    &quot;criterionIdentifier&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;pattern&quot;: &quot;^VCR-[0-9]{2,3}$&quot;
+    },
+    &quot;semanticVersion&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;pattern&quot;: &quot;^[0-9]+\\.[0-9]+\\.[0-9]+(?:-[0-9A-Za-z.-]+)?(?:\\+[0-9A-Za-z.-]+)?$&quot;
+    },
+    &quot;relativePath&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;minLength&quot;: 1,
+      &quot;pattern&quot;: &quot;^(?![a-zA-Z][a-zA-Z0-9+.-]*:)(?!/).+$&quot;
+    },
+    &quot;markdownPath&quot;: {
+      &quot;allOf&quot;: [
+        {
+          &quot;$ref&quot;: &quot;#/$defs/relativePath&quot;
+        },
+        {
+          &quot;pattern&quot;: &quot;\\.md$&quot;
+        }
+      ]
+    },
+    &quot;jsonPath&quot;: {
+      &quot;allOf&quot;: [
+        {
+          &quot;$ref&quot;: &quot;#/$defs/relativePath&quot;
+        },
+        {
+          &quot;pattern&quot;: &quot;\\.json$&quot;
+        }
+      ]
+    },
+    &quot;htmlPath&quot;: {
+      &quot;allOf&quot;: [
+        {
+          &quot;$ref&quot;: &quot;#/$defs/relativePath&quot;
+        },
+        {
+          &quot;pattern&quot;: &quot;\\.html$&quot;
+        }
+      ]
+    },
+    &quot;stringList&quot;: {
+      &quot;type&quot;: &quot;array&quot;,
+      &quot;items&quot;: {
+        &quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;
+      },
+      &quot;uniqueItems&quot;: true
+    },
+    &quot;identifierList&quot;: {
+      &quot;type&quot;: &quot;array&quot;,
+      &quot;items&quot;: {
+        &quot;$ref&quot;: &quot;#/$defs/identifier&quot;
+      },
+      &quot;uniqueItems&quot;: true
+    },
+    &quot;confidence&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;enum&quot;: [
+        &quot;none&quot;,
+        &quot;very_low&quot;,
+        &quot;low&quot;,
+        &quot;medium&quot;,
+        &quot;high&quot;,
+        &quot;very_high&quot;,
+        &quot;unknown&quot;,
+        &quot;not_applicable&quot;
+      ]
+    },
+    &quot;lifecycleState&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;enum&quot;: [
+        &quot;proposed&quot;,
+        &quot;experimental&quot;,
+        &quot;pilot&quot;,
+        &quot;validated_for_context&quot;,
+        &quot;restricted&quot;,
+        &quot;deprecated&quot;,
+        &quot;rejected&quot;
+      ]
+    },
+    &quot;validationState&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;enum&quot;: [
+        &quot;unvalidated&quot;,
+        &quot;structurally_validated&quot;,
+        &quot;content_reviewed&quot;,
+        &quot;measurement_pilot&quot;,
+        &quot;construct_pilot&quot;,
+        &quot;substrate_validated&quot;,
+        &quot;predictively_validated&quot;,
+        &quot;fairness_reviewed&quot;,
+        &quot;decision_validated&quot;,
+        &quot;deprecated&quot;
+      ]
+    },
+    &quot;applicabilityState&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;enum&quot;: [
+        &quot;applicable&quot;,
+        &quot;substrate_dependent&quot;,
+        &quot;unsupported&quot;,
+        &quot;unknown&quot;,
+        &quot;not_applicable&quot;
+      ]
+    },
+    &quot;observationState&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;enum&quot;: [
+        &quot;observed&quot;,
+        &quot;partially_observed&quot;,
+        &quot;not_observed&quot;,
+        &quot;insufficient_evidence&quot;,
+        &quot;conflicting_evidence&quot;,
+        &quot;unknown&quot;,
+        &quot;not_applicable&quot;
+      ]
+    },
+    &quot;direction&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;enum&quot;: [
+        &quot;higher_is_better&quot;,
+        &quot;lower_is_better&quot;,
+        &quot;target_range&quot;,
+        &quot;descriptive&quot;,
+        &quot;context_dependent&quot;
+      ]
+    },
+    &quot;module&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;additionalProperties&quot;: false,
+      &quot;required&quot;: [
+        &quot;version&quot;,
+        &quot;id&quot;,
+        &quot;name&quot;,
+        &quot;description&quot;,
+        &quot;state&quot;,
+        &quot;generated_at&quot;,
+        &quot;source_repo&quot;,
+        &quot;source_path&quot;,
+        &quot;architecture&quot;,
+        &quot;lineage&quot;,
+        &quot;ai_metadata&quot;,
+        &quot;operators&quot;,
+        &quot;roles&quot;,
+        &quot;analyzer_layers&quot;,
+        &quot;adapters&quot;,
+        &quot;dimensions&quot;,
+        &quot;validation&quot;,
+        &quot;metrics&quot;,
+        &quot;ethics&quot;,
+        &quot;examples&quot;,
+        &quot;documents&quot;,
+        &quot;navigation&quot;
+      ],
+      &quot;properties&quot;: {
+        &quot;version&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/semanticVersion&quot;
+        },
+        &quot;id&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;const&quot;: &quot;predictive-analytics&quot;
+        },
+        &quot;name&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;const&quot;: &quot;Predictive Analytics&quot;
+        },
+        &quot;short_name&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;default&quot;: &quot;PA&quot;
+        },
+        &quot;description&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;
+        },
+        &quot;tagline&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;default&quot;: &quot;Predict the observation. Observe the predictor.&quot;
+        },
+        &quot;category&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;enum&quot;: [
+            &quot;predictive-structural&quot;,
+            &quot;analytics-structural&quot;,
+            &quot;research-experimental&quot;
+          ],
+          &quot;default&quot;: &quot;predictive-structural&quot;
+        },
+        &quot;state&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/state&quot;
+        },
+        &quot;generated_at&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;format&quot;: &quot;date-time&quot;
+        },
+        &quot;last_modified&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;format&quot;: &quot;date&quot;
+        },
+        &quot;source_repo&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;format&quot;: &quot;uri&quot;
+        },
+        &quot;source_path&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;const&quot;: &quot;docs/predictive_analytics&quot;
+        },
+        &quot;canonical_url&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;format&quot;: &quot;uri&quot;
+        },
+        &quot;license&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;default&quot;: &quot;MIT&quot;
+        },
+        &quot;architecture&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/architecture&quot;
+        },
+        &quot;lineage&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/lineage&quot;
+        },
+        &quot;ai_metadata&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/aiMetadata&quot;
+        },
+        &quot;operators&quot;: {
+          &quot;type&quot;: &quot;array&quot;,
+          &quot;minItems&quot;: 1,
+          &quot;items&quot;: {
+            &quot;$ref&quot;: &quot;#/$defs/operator&quot;
+          }
+        },
+        &quot;roles&quot;: {
+          &quot;type&quot;: &quot;array&quot;,
+          &quot;minItems&quot;: 1,
+          &quot;items&quot;: {
+            &quot;$ref&quot;: &quot;#/$defs/role&quot;
+          }
+        },
+        &quot;analyzer_layers&quot;: {
+          &quot;type&quot;: &quot;array&quot;,
+          &quot;minItems&quot;: 1,
+          &quot;items&quot;: {
+            &quot;$ref&quot;: &quot;#/$defs/analyzerLayer&quot;
+          }
+        },
+        &quot;adapters&quot;: {
+          &quot;type&quot;: &quot;array&quot;,
+          &quot;minItems&quot;: 1,
+          &quot;items&quot;: {
+            &quot;$ref&quot;: &quot;#/$defs/adapter&quot;
+          }
+        },
+        &quot;dimensions&quot;: {
+          &quot;type&quot;: &quot;array&quot;,
+          &quot;items&quot;: {
+            &quot;$ref&quot;: &quot;#/$defs/dimension&quot;
+          }
+        },
+        &quot;validation&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/validation&quot;
+        },
+        &quot;metrics&quot;: {
+          &quot;type&quot;: &quot;array&quot;,
+          &quot;items&quot;: {
+            &quot;$ref&quot;: &quot;#/$defs/metric&quot;
+          }
+        },
+        &quot;ethics&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/ethics&quot;
+        },
+        &quot;examples&quot;: {
+          &quot;type&quot;: &quot;array&quot;,
+          &quot;items&quot;: {
+            &quot;$ref&quot;: &quot;#/$defs/example&quot;
+          }
+        },
+        &quot;documents&quot;: {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;minProperties&quot;: 1,
+          &quot;additionalProperties&quot;: {
+            &quot;$ref&quot;: &quot;#/$defs/document&quot;
+          }
+        },
+        &quot;navigation&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/navigation&quot;
+        }
+      }
+    },
+    &quot;state&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;additionalProperties&quot;: false,
+      &quot;required&quot;: [
+        &quot;rtt&quot;,
+        &quot;coherence&quot;,
+        &quot;drift&quot;,
+        &quot;paradox&quot;,
+        &quot;regime&quot;,
+        &quot;lifecycle&quot;,
+        &quot;validation&quot;
+      ],
+      &quot;properties&quot;: {
+        &quot;rtt&quot;: {
+          &quot;type&quot;: &quot;integer&quot;,
+          &quot;minimum&quot;: 0,
+          &quot;maximum&quot;: 1
+        },
+        &quot;coherence&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;enum&quot;: [
+            &quot;unknown&quot;,
+            &quot;declared&quot;,
+            &quot;provisional&quot;,
+            &quot;stable&quot;,
+            &quot;validated&quot;,
+            &quot;degraded&quot;
+          ]
+        },
+        &quot;drift&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;enum&quot;: [
+            &quot;unknown&quot;,
+            &quot;minimal&quot;,
+            &quot;bounded&quot;,
+            &quot;elevated&quot;,
+            &quot;unbounded&quot;
+          ]
+        },
+        &quot;paradox&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;enum&quot;: [
+            &quot;none&quot;,
+            &quot;observed&quot;,
+            &quot;preserved&quot;,
+            &quot;structural&quot;,
+            &quot;unresolved&quot;
+          ]
+        },
+        &quot;regime&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;enum&quot;: [
+            &quot;predictive&quot;,
+            &quot;structural&quot;,
+            &quot;predictive-structural&quot;,
+            &quot;experimental&quot;
+          ]
+        },
+        &quot;lifecycle&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/lifecycleState&quot;
+        },
+        &quot;validation&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/validationState&quot;
+        },
+        &quot;decision_authority&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;enum&quot;: [
+            &quot;none&quot;,
+            &quot;research_only&quot;,
+            &quot;advisory&quot;,
+            &quot;context_validated&quot;,
+            &quot;prohibited&quot;
+          ],
+          &quot;default&quot;: &quot;none&quot;
+        }
+      }
+    },
+    &quot;architecture&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;additionalProperties&quot;: false,
+      &quot;required&quot;: [
+        &quot;pattern&quot;,
+        &quot;primary_pipeline&quot;,
+        &quot;observation_boundary&quot;,
+        &quot;scalar_policy&quot;,
+        &quot;standalone_mode&quot;
+      ],
+      &quot;properties&quot;: {
+        &quot;pattern&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;enum&quot;: [
+            &quot;observer-adapter&quot;,
+            &quot;substrate-aware-predictive&quot;,
+            &quot;comparative-assessment&quot;
+          ]
+        },
+        &quot;primary_pipeline&quot;: {
+          &quot;type&quot;: &quot;array&quot;,
+          &quot;minItems&quot;: 2,
+          &quot;items&quot;: {
+            &quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;
+          }
+        },
+        &quot;observation_boundary&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;
+        },
+        &quot;scalar_policy&quot;: {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;additionalProperties&quot;: false,
+          &quot;required&quot;: [
+            &quot;primary_representation&quot;,
+            &quot;composites_allowed&quot;,
+            &quot;loss_warning_required&quot;,
+            &quot;hidden_master_score_prohibited&quot;
+          ],
+          &quot;properties&quot;: {
+            &quot;primary_representation&quot;: {
+              &quot;type&quot;: &quot;string&quot;,
+              &quot;enum&quot;: [
+                &quot;multidimensional_profile&quot;,
+                &quot;profile_topology&quot;,
+                &quot;comparative_assessment&quot;
+              ]
+            },
+            &quot;composites_allowed&quot;: {
+              &quot;type&quot;: &quot;boolean&quot;
+            },
+            &quot;loss_warning_required&quot;: {
+              &quot;type&quot;: &quot;boolean&quot;,
+              &quot;const&quot;: true
+            },
+            &quot;hidden_master_score_prohibited&quot;: {
+              &quot;type&quot;: &quot;boolean&quot;,
+              &quot;const&quot;: true
+            }
+          }
+        },
+        &quot;supports_human_observation&quot;: {
+          &quot;type&quot;: &quot;boolean&quot;,
+          &quot;default&quot;: true
+        },
+        &quot;supports_ai_observation&quot;: {
+          &quot;type&quot;: &quot;boolean&quot;,
+          &quot;default&quot;: true
+        },
+        &quot;supports_team_observation&quot;: {
+          &quot;type&quot;: &quot;boolean&quot;,
+          &quot;default&quot;: true
+        },
+        &quot;supports_organizational_observation&quot;: {
+          &quot;type&quot;: &quot;boolean&quot;,
+          &quot;default&quot;: true
+        },
+        &quot;standalone_mode&quot;: {
+          &quot;type&quot;: &quot;boolean&quot;
+        }
+      }
+    },
+    &quot;lineage&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;additionalProperties&quot;: false,
+      &quot;required&quot;: [
+        &quot;version&quot;,
+        &quot;origin&quot;,
+        &quot;architecture&quot;,
+        &quot;note&quot;
+      ],
+      &quot;properties&quot;: {
+        &quot;version&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/semanticVersion&quot;
+        },
+        &quot;previous_version&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/semanticVersion&quot;
+        },
+        &quot;origin&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;
+        },
+        &quot;promoted_at&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;format&quot;: &quot;date-time&quot;
+        },
+        &quot;source_repo&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;format&quot;: &quot;uri&quot;
+        },
+        &quot;source_path&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/relativePath&quot;
+        },
+        &quot;architecture&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;
+        },
+        &quot;parent_modules&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/stringList&quot;
+        },
+        &quot;canon_dependencies&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/stringList&quot;
+        },
+        &quot;note&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;
+        }
+      }
+    },
+    &quot;aiMetadata&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;additionalProperties&quot;: false,
+      &quot;required&quot;: [
+        &quot;schema_version&quot;,
+        &quot;embedding_strategy&quot;,
+        &quot;chunk_boundary&quot;,
+        &quot;context_window_advisory&quot;,
+        &quot;retrieval_hint&quot;,
+        &quot;semantic_tags&quot;,
+        &quot;model_compatibility&quot;,
+        &quot;standalone_mode&quot;,
+        &quot;generation_ts&quot;
+      ],
+      &quot;properties&quot;: {
+        &quot;schema_version&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/semanticVersion&quot;
+        },
+        &quot;embedding_strategy&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;enum&quot;: [
+            &quot;per-doc-standalone&quot;,
+            &quot;section-aware&quot;,
+            &quot;profile-aware&quot;,
+            &quot;adapter-aware&quot;,
+            &quot;hybrid&quot;
+          ]
+        },
+        &quot;chunk_boundary&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;enum&quot;: [
+            &quot;document&quot;,
+            &quot;section-heading&quot;,
+            &quot;dimension&quot;,
+            &quot;adapter&quot;,
+            &quot;metric&quot;,
+            &quot;observation-record&quot;
+          ]
+        },
+        &quot;context_window_advisory&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;enum&quot;: [
+            &quot;small&quot;,
+            &quot;medium&quot;,
+            &quot;large&quot;,
+            &quot;extended&quot;
+          ]
+        },
+        &quot;injection_pattern&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;enum&quot;: [
+            &quot;foundation-first&quot;,
+            &quot;adapter-first&quot;,
+            &quot;profile-first&quot;,
+            &quot;validation-first&quot;,
+            &quot;task-specific&quot;
+          ]
+        },
+        &quot;retrieval_hint&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;
+        },
+        &quot;semantic_tags&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/stringList&quot;
+        },
+        &quot;model_compatibility&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/stringList&quot;
+        },
+        &quot;audience&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/stringList&quot;
+        },
+        &quot;standalone_mode&quot;: {
+          &quot;type&quot;: &quot;boolean&quot;
+        },
+        &quot;generation_ts&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;format&quot;: &quot;date-time&quot;
+        }
+      }
+    },
+    &quot;operator&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;additionalProperties&quot;: false,
+      &quot;required&quot;: [
+        &quot;id&quot;,
+        &quot;label&quot;,
+        &quot;description&quot;,
+        &quot;inputs&quot;,
+        &quot;outputs&quot;,
+        &quot;status&quot;
+      ],
+      &quot;properties&quot;: {
+        &quot;id&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/operatorIdentifier&quot;
+        },
+        &quot;label&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;
+        },
+        &quot;description&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;
+        },
+        &quot;inputs&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/stringList&quot;
+        },
+        &quot;outputs&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/stringList&quot;
+        },
+        &quot;status&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/lifecycleState&quot;
+        },
+        &quot;requires_human_review&quot;: {
+          &quot;type&quot;: &quot;boolean&quot;
+        },
+        &quot;related_adapters&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/identifierList&quot;
+        },
+        &quot;related_metrics&quot;: {
+          &quot;type&quot;: &quot;array&quot;,
+          &quot;items&quot;: {
+            &quot;$ref&quot;: &quot;#/$defs/metricIdentifier&quot;
+          },
+          &quot;uniqueItems&quot;: true
+        }
+      }
+    },
+    &quot;role&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;additionalProperties&quot;: false,
+      &quot;required&quot;: [
+        &quot;id&quot;,
+        &quot;label&quot;,
+        &quot;description&quot;
+      ],
+      &quot;properties&quot;: {
+        &quot;id&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/identifier&quot;
+        },
+        &quot;label&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;
+        },
+        &quot;description&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;
+        },
+        &quot;allowed_document_types&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/stringList&quot;
+        }
+      }
+    },
+    &quot;analyzerLayer&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;additionalProperties&quot;: false,
+      &quot;required&quot;: [
+        &quot;id&quot;,
+        &quot;label&quot;,
+        &quot;description&quot;,
+        &quot;primary_documents&quot;
+      ],
+      &quot;properties&quot;: {
+        &quot;id&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/identifier&quot;
+        },
+        &quot;label&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;
+        },
+        &quot;description&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;
+        },
+        &quot;primary_documents&quot;: {
+          &quot;type&quot;: &quot;array&quot;,
+          &quot;items&quot;: {
+            &quot;$ref&quot;: &quot;#/$defs/markdownPath&quot;
+          },
+          &quot;uniqueItems&quot;: true
+        },
+        &quot;adapter_refs&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/identifierList&quot;
+        },
+        &quot;operator_refs&quot;: {
+          &quot;type&quot;: &quot;array&quot;,
+          &quot;items&quot;: {
+            &quot;$ref&quot;: &quot;#/$defs/operatorIdentifier&quot;
+          },
+          &quot;uniqueItems&quot;: true
+        },
+        &quot;metric_refs&quot;: {
+          &quot;type&quot;: &quot;array&quot;,
+          &quot;items&quot;: {
+            &quot;$ref&quot;: &quot;#/$defs/metricIdentifier&quot;
+          },
+          &quot;uniqueItems&quot;: true
+        }
+      }
+    },
+    &quot;adapter&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;additionalProperties&quot;: false,
+      &quot;required&quot;: [
+        &quot;id&quot;,
+        &quot;name&quot;,
+        &quot;description&quot;,
+        &quot;status&quot;,
+        &quot;source_framework&quot;,
+        &quot;purpose&quot;,
+        &quot;supported_inputs&quot;,
+        &quot;outputs&quot;,
+        &quot;claims&quot;,
+        &quot;limitations&quot;,
+        &quot;validation_state&quot;
+      ],
+      &quot;properties&quot;: {
+        &quot;id&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/identifier&quot;
+        },
+        &quot;name&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;
+        },
+        &quot;description&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;
+        },
+        &quot;status&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/lifecycleState&quot;
+        },
+        &quot;source_framework&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;
+        },
+        &quot;source_document&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/markdownPath&quot;
+        },
+        &quot;purpose&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;
+        },
+        &quot;supported_inputs&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/stringList&quot;
+        },
+        &quot;unsupported_inputs&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/stringList&quot;
+        },
+        &quot;outputs&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/stringList&quot;
+        },
+        &quot;claims&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/stringList&quot;
+        },
+        &quot;limitations&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/stringList&quot;
+        },
+        &quot;confounds&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/stringList&quot;
+        },
+        &quot;validation_state&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/validationState&quot;
+        },
+        &quot;ablation_metric&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;const&quot;: &quot;PA-M36&quot;
+        },
+        &quot;decision_authority&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;enum&quot;: [
+            &quot;none&quot;,
+            &quot;advisory&quot;,
+            &quot;context_validated&quot;
+          ],
+          &quot;default&quot;: &quot;none&quot;
+        }
+      }
+    },
+    &quot;dimension&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;additionalProperties&quot;: false,
+      &quot;required&quot;: [
+        &quot;id&quot;,
+        &quot;name&quot;,
+        &quot;description&quot;,
+        &quot;status&quot;,
+        &quot;operational_definition&quot;,
+        &quot;observable_indicators&quot;,
+        &quot;counter_indicators&quot;,
+        &quot;supported_substrates&quot;,
+        &quot;known_confounds&quot;,
+        &quot;applicability&quot;,
+        &quot;evidence_requirements&quot;,
+        &quot;validation_state&quot;
+      ],
+      &quot;properties&quot;: {
+        &quot;id&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/identifier&quot;
+        },
+        &quot;name&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;
+        },
+        &quot;description&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;
+        },
+        &quot;status&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/lifecycleState&quot;
+        },
+        &quot;operational_definition&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;
+        },
+        &quot;exclusions&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/stringList&quot;
+        },
+        &quot;observable_indicators&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/stringList&quot;
+        },
+        &quot;counter_indicators&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/stringList&quot;
+        },
+        &quot;supported_substrates&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/identifierList&quot;
+        },
+        &quot;known_confounds&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/stringList&quot;
+        },
+        &quot;applicability&quot;: {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;minProperties&quot;: 1,
+          &quot;additionalProperties&quot;: {
+            &quot;$ref&quot;: &quot;#/$defs/applicabilityState&quot;
+          }
+        },
+        &quot;evidence_requirements&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/evidenceRequirements&quot;
+        },
+        &quot;preferred_expressions&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/stringList&quot;
+        },
+        &quot;possible_suppressors&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/stringList&quot;
+        },
+        &quot;related_dimensions&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/identifierList&quot;
+        },
+        &quot;metric_refs&quot;: {
+          &quot;type&quot;: &quot;array&quot;,
+          &quot;items&quot;: {
+            &quot;$ref&quot;: &quot;#/$defs/metricIdentifier&quot;
+          },
+          &quot;uniqueItems&quot;: true
+        },
+        &quot;validation_state&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/validationState&quot;
+        }
+      }
+    },
+    &quot;evidenceRequirements&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;additionalProperties&quot;: false,
+      &quot;required&quot;: [
+        &quot;minimum_independent_sources&quot;,
+        &quot;replication_required&quot;,
+        &quot;counterevidence_required&quot;,
+        &quot;traceability_required&quot;
+      ],
+      &quot;properties&quot;: {
+        &quot;minimum_independent_sources&quot;: {
+          &quot;type&quot;: &quot;integer&quot;,
+          &quot;minimum&quot;: 1
+        },
+        &quot;replication_required&quot;: {
+          &quot;type&quot;: &quot;boolean&quot;
+        },
+        &quot;counterevidence_required&quot;: {
+          &quot;type&quot;: &quot;boolean&quot;
+        },
+        &quot;traceability_required&quot;: {
+          &quot;type&quot;: &quot;boolean&quot;,
+          &quot;const&quot;: true
+        },
+        &quot;minimum_confidence&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/confidence&quot;
+        },
+        &quot;allowed_evidence_types&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/stringList&quot;
+        }
+      }
+    },
+    &quot;validation&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;additionalProperties&quot;: false,
+      &quot;required&quot;: [
+        &quot;state&quot;,
+        &quot;authorized_uses&quot;,
+        &quot;prohibited_uses&quot;,
+        &quot;levels&quot;,
+        &quot;criteria&quot;,
+        &quot;falsification_conditions&quot;,
+        &quot;reporting_requirements&quot;
+      ],
+      &quot;properties&quot;: {
+        &quot;state&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/validationState&quot;
+        },
+        &quot;authorized_uses&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/stringList&quot;
+        },
+        &quot;prohibited_uses&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/stringList&quot;
+        },
+        &quot;levels&quot;: {
+          &quot;type&quot;: &quot;array&quot;,
+          &quot;minItems&quot;: 1,
+          &quot;items&quot;: {
+            &quot;$ref&quot;: &quot;#/$defs/validationLevel&quot;
+          }
+        },
+        &quot;criteria&quot;: {
+          &quot;type&quot;: &quot;array&quot;,
+          &quot;minItems&quot;: 1,
+          &quot;items&quot;: {
+            &quot;$ref&quot;: &quot;#/$defs/validationCriterion&quot;
+          }
+        },
+        &quot;falsification_conditions&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/stringList&quot;
+        },
+        &quot;reporting_requirements&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/stringList&quot;
+        },
+        &quot;threshold_policy&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/thresholdPolicy&quot;
+        },
+        &quot;human_subjects_requirements&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/stringList&quot;
+        }
+      }
+    },
+    &quot;validationLevel&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;additionalProperties&quot;: false,
+      &quot;required&quot;: [
+        &quot;level&quot;,
+        &quot;id&quot;,
+        &quot;name&quot;,
+        &quot;description&quot;,
+        &quot;requirements&quot;,
+        &quot;status&quot;
+      ],
+      &quot;properties&quot;: {
+        &quot;level&quot;: {
+          &quot;type&quot;: &quot;integer&quot;,
+          &quot;minimum&quot;: 0,
+          &quot;maximum&quot;: 7
+        },
+        &quot;id&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/identifier&quot;
+        },
+        &quot;name&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;
+        },
+        &quot;description&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;
+        },
+        &quot;requirements&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/stringList&quot;
+        },
+        &quot;status&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;enum&quot;: [
+            &quot;not_started&quot;,
+            &quot;in_progress&quot;,
+            &quot;passed&quot;,
+            &quot;failed&quot;,
+            &quot;not_applicable&quot;
+          ]
+        },
+        &quot;evidence_refs&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/stringList&quot;
+        }
+      }
+    },
+    &quot;validationCriterion&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;additionalProperties&quot;: false,
+      &quot;required&quot;: [
+        &quot;id&quot;,
+        &quot;name&quot;,
+        &quot;description&quot;,
+        &quot;pass_condition&quot;,
+        &quot;status&quot;
+      ],
+      &quot;properties&quot;: {
+        &quot;id&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/criterionIdentifier&quot;
+        },
+        &quot;name&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;
+        },
+        &quot;description&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;
+        },
+        &quot;pass_condition&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;
+        },
+        &quot;failure_condition&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;
+        },
+        &quot;metric_refs&quot;: {
+          &quot;type&quot;: &quot;array&quot;,
+          &quot;items&quot;: {
+            &quot;$ref&quot;: &quot;#/$defs/metricIdentifier&quot;
+          },
+          &quot;uniqueItems&quot;: true
+        },
+        &quot;status&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;enum&quot;: [
+            &quot;proposed&quot;,
+            &quot;not_tested&quot;,
+            &quot;testing&quot;,
+            &quot;passed&quot;,
+            &quot;failed&quot;,
+            &quot;inconclusive&quot;
+          ]
+        }
+      }
+    },
+    &quot;thresholdPolicy&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;additionalProperties&quot;: false,
+      &quot;required&quot;: [
+        &quot;status&quot;,
+        &quot;universal_thresholds&quot;,
+        &quot;preregistration_required&quot;,
+        &quot;post_hoc_changes_disclosed&quot;
+      ],
+      &quot;properties&quot;: {
+        &quot;status&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;enum&quot;: [
+            &quot;study_specific&quot;,
+            &quot;context_validated&quot;,
+            &quot;fixed&quot;
+          ]
+        },
+        &quot;universal_thresholds&quot;: {
+          &quot;type&quot;: &quot;boolean&quot;,
+          &quot;default&quot;: false
+        },
+        &quot;preregistration_required&quot;: {
+          &quot;type&quot;: &quot;boolean&quot;
+        },
+        &quot;post_hoc_changes_disclosed&quot;: {
+          &quot;type&quot;: &quot;boolean&quot;,
+          &quot;const&quot;: true
+        }
+      }
+    },
+    &quot;metric&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;additionalProperties&quot;: false,
+      &quot;required&quot;: [
+        &quot;id&quot;,
+        &quot;name&quot;,
+        &quot;category&quot;,
+        &quot;purpose&quot;,
+        &quot;definition&quot;,
+        &quot;scale&quot;,
+        &quot;direction&quot;,
+        &quot;inputs&quot;,
+        &quot;applicability&quot;,
+        &quot;interpretation&quot;,
+        &quot;limitations&quot;,
+        &quot;subgroup_required&quot;,
+        &quot;lifecycle&quot;,
+        &quot;threshold&quot;
+      ],
+      &quot;properties&quot;: {
+        &quot;id&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/metricIdentifier&quot;
+        },
+        &quot;name&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;
+        },
+        &quot;category&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;enum&quot;: [
+            &quot;evidence&quot;,
+            &quot;reliability&quot;,
+            &quot;stability&quot;,
+            &quot;validity&quot;,
+            &quot;substrate&quot;,
+            &quot;regime&quot;,
+            &quot;model_mismatch&quot;,
+            &quot;coherence&quot;,
+            &quot;drift&quot;,
+            &quot;uncertainty&quot;,
+            &quot;calibration&quot;,
+            &quot;counterfactual&quot;,
+            &quot;robustness&quot;,
+            &quot;fairness&quot;,
+            &quot;explainability&quot;,
+            &quot;review&quot;,
+            &quot;operational&quot;
+          ]
+        },
+        &quot;purpose&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;
+        },
+        &quot;definition&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;
+        },
+        &quot;formula&quot;: {
+          &quot;type&quot;: &quot;string&quot;
+        },
+        &quot;scale&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;
+        },
+        &quot;direction&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/direction&quot;
+        },
+        &quot;inputs&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/stringList&quot;
+        },
+        &quot;applicability&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/stringList&quot;
+        },
+        &quot;interpretation&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;
+        },
+        &quot;limitations&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/stringList&quot;
+        },
+        &quot;subgroup_required&quot;: {
+          &quot;type&quot;: &quot;boolean&quot;
+        },
+        &quot;lifecycle&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;enum&quot;: [
+            &quot;proposed&quot;,
+            &quot;pilot&quot;,
+            &quot;validated&quot;,
+            &quot;restricted&quot;,
+            &quot;deprecated&quot;,
+            &quot;rejected&quot;
+          ]
+        },
+        &quot;calculation_method&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;
+        },
+        &quot;missing_data_policy&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;
+        },
+        &quot;threshold&quot;: {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;additionalProperties&quot;: false,
+          &quot;required&quot;: [
+            &quot;status&quot;
+          ],
+          &quot;properties&quot;: {
+            &quot;status&quot;: {
+              &quot;type&quot;: &quot;string&quot;,
+              &quot;enum&quot;: [
+                &quot;unset&quot;,
+                &quot;study_specific&quot;,
+                &quot;provisional&quot;,
+                &quot;validated&quot;
+              ]
+            },
+            &quot;value&quot;: {},
+            &quot;rationale&quot;: {
+              &quot;type&quot;: &quot;string&quot;
+            },
+            &quot;validation_evidence&quot;: {
+              &quot;$ref&quot;: &quot;#/$defs/stringList&quot;
+            },
+            &quot;review_date&quot;: {
+              &quot;type&quot;: &quot;string&quot;,
+              &quot;format&quot;: &quot;date&quot;
+            }
+          }
+        }
+      }
+    },
+    &quot;ethics&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;additionalProperties&quot;: false,
+      &quot;required&quot;: [
+        &quot;status&quot;,
+        &quot;principles&quot;,
+        &quot;invariants&quot;,
+        &quot;prohibited_uses&quot;,
+        &quot;high_stakes_policy&quot;,
+        &quot;consent&quot;,
+        &quot;privacy&quot;,
+        &quot;contestability&quot;,
+        &quot;temporal_limits&quot;,
+        &quot;human_review&quot;,
+        &quot;misuse_boundary&quot;
+      ],
+      &quot;properties&quot;: {
+        &quot;status&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/lifecycleState&quot;
+        },
+        &quot;principles&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/stringList&quot;
+        },
+        &quot;invariants&quot;: {
+          &quot;type&quot;: &quot;array&quot;,
+          &quot;minItems&quot;: 1,
+          &quot;items&quot;: {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;enum&quot;: [
+              &quot;prediction != identity&quot;,
+              &quot;measurement != total_capability&quot;,
+              &quot;capability != human_worth&quot;,
+              &quot;detail != validity&quot;,
+              &quot;complexity != truth&quot;,
+              &quot;correlation != causation&quot;,
+              &quot;profile != destiny&quot;,
+              &quot;model_fit != subject_value&quot;,
+              &quot;unknown != failure&quot;,
+              &quot;difference != superiority&quot;
+            ]
+          },
+          &quot;uniqueItems&quot;: true
+        },
+        &quot;prohibited_uses&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/stringList&quot;
+        },
+        &quot;high_stakes_policy&quot;: {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;additionalProperties&quot;: false,
+          &quot;required&quot;: [
+            &quot;decision_authority&quot;,
+            &quot;independent_use&quot;,
+            &quot;separate_validation_required&quot;
+          ],
+          &quot;properties&quot;: {
+            &quot;decision_authority&quot;: {
+              &quot;type&quot;: &quot;string&quot;,
+              &quot;enum&quot;: [
+                &quot;none&quot;,
+                &quot;research_only&quot;,
+                &quot;advisory&quot;,
+                &quot;context_validated&quot;
+              ]
+            },
+            &quot;independent_use&quot;: {
+              &quot;type&quot;: &quot;boolean&quot;,
+              &quot;default&quot;: false
+            },
+            &quot;separate_validation_required&quot;: {
+              &quot;type&quot;: &quot;boolean&quot;,
+              &quot;const&quot;: true
+            }
+          }
+        },
+        &quot;consent&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/governanceControl&quot;
+        },
+        &quot;privacy&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/governanceControl&quot;
+        },
+        &quot;contestability&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/governanceControl&quot;
+        },
+        &quot;temporal_limits&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/governanceControl&quot;
+        },
+        &quot;accessibility&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/governanceControl&quot;
+        },
+        &quot;fairness&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/governanceControl&quot;
+        },
+        &quot;human_review&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/governanceControl&quot;
+        },
+        &quot;misuse_boundary&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/stringList&quot;
+        },
+        &quot;known_limits&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/stringList&quot;
+        },
+        &quot;deprecation_supported&quot;: {
+          &quot;type&quot;: &quot;boolean&quot;,
+          &quot;const&quot;: true
+        }
+      }
+    },
+    &quot;governanceControl&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;additionalProperties&quot;: false,
+      &quot;required&quot;: [
+        &quot;required&quot;,
+        &quot;description&quot;
+      ],
+      &quot;properties&quot;: {
+        &quot;required&quot;: {
+          &quot;type&quot;: &quot;boolean&quot;
+        },
+        &quot;description&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;
+        },
+        &quot;requirements&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/stringList&quot;
+        },
+        &quot;exceptions&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/stringList&quot;
+        }
+      }
+    },
+    &quot;example&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;additionalProperties&quot;: false,
+      &quot;required&quot;: [
+        &quot;id&quot;,
+        &quot;name&quot;,
+        &quot;type&quot;,
+        &quot;file&quot;,
+        &quot;synthetic&quot;,
+        &quot;validation_state&quot;,
+        &quot;decision_authority&quot;
+      ],
+      &quot;properties&quot;: {
+        &quot;id&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/identifier&quot;
+        },
+        &quot;name&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;
+        },
+        &quot;type&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;enum&quot;: [
+            &quot;resonant_iq_fingerprint&quot;,
+            &quot;model_mismatch&quot;,
+            &quot;substrate_comparison&quot;,
+            &quot;regime_transition&quot;,
+            &quot;counterfactual&quot;,
+            &quot;general&quot;
+          ]
+        },
+        &quot;file&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/markdownPath&quot;
+        },
+        &quot;synthetic&quot;: {
+          &quot;type&quot;: &quot;boolean&quot;
+        },
+        &quot;subject_id&quot;: {
+          &quot;type&quot;: &quot;string&quot;
+        },
+        &quot;description&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;
+        },
+        &quot;validation_state&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/validationState&quot;
+        },
+        &quot;decision_authority&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;enum&quot;: [
+            &quot;none&quot;,
+            &quot;research_only&quot;,
+            &quot;advisory&quot;,
+            &quot;context_validated&quot;
+          ]
+        },
+        &quot;dimensions_used&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/identifierList&quot;
+        },
+        &quot;adapters_used&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/identifierList&quot;
+        },
+        &quot;metric_refs&quot;: {
+          &quot;type&quot;: &quot;array&quot;,
+          &quot;items&quot;: {
+            &quot;$ref&quot;: &quot;#/$defs/metricIdentifier&quot;
+          },
+          &quot;uniqueItems&quot;: true
+        }
+      }
+    },
+    &quot;document&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;additionalProperties&quot;: false,
+      &quot;required&quot;: [
+        &quot;id&quot;,
+        &quot;file&quot;,
+        &quot;role&quot;,
+        &quot;status&quot;,
+        &quot;anchor&quot;,
+        &quot;standalone&quot;
+      ],
+      &quot;properties&quot;: {
+        &quot;id&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/identifier&quot;
+        },
+        &quot;file&quot;: {
+          &quot;oneOf&quot;: [
+            {
+              &quot;$ref&quot;: &quot;#/$defs/markdownPath&quot;
+            },
+            {
+              &quot;$ref&quot;: &quot;#/$defs/jsonPath&quot;
+            },
+            {
+              &quot;$ref&quot;: &quot;#/$defs/htmlPath&quot;
+            }
+          ]
+        },
+        &quot;role&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/identifier&quot;
+        },
+        &quot;status&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/lifecycleState&quot;
+        },
+        &quot;anchor&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;pattern&quot;: &quot;^#[A-Za-z0-9_-]+$&quot;
+        },
+        &quot;standalone&quot;: {
+          &quot;type&quot;: &quot;boolean&quot;
+        },
+        &quot;description&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;
+        },
+        &quot;adapter_refs&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/identifierList&quot;
+        },
+        &quot;dimension_refs&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/identifierList&quot;
+        },
+        &quot;metric_refs&quot;: {
+          &quot;type&quot;: &quot;array&quot;,
+          &quot;items&quot;: {
+            &quot;$ref&quot;: &quot;#/$defs/metricIdentifier&quot;
+          },
+          &quot;uniqueItems&quot;: true
+        },
+        &quot;validation_refs&quot;: {
+          &quot;type&quot;: &quot;array&quot;,
+          &quot;items&quot;: {
+            &quot;$ref&quot;: &quot;#/$defs/criterionIdentifier&quot;
+          },
+          &quot;uniqueItems&quot;: true
+        }
+      }
+    },
+    &quot;navigation&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;additionalProperties&quot;: false,
+      &quot;required&quot;: [
+        &quot;index_path&quot;,
+        &quot;readme_path&quot;,
+        &quot;module_path&quot;,
+        &quot;schema_path&quot;,
+        &quot;default_document&quot;,
+        &quot;anchor_style&quot;,
+        &quot;sections&quot;,
+        &quot;doc_anchors&quot;
+      ],
+      &quot;properties&quot;: {
+        &quot;index_path&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/htmlPath&quot;
+        },
+        &quot;readme_path&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/markdownPath&quot;
+        },
+        &quot;module_path&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/jsonPath&quot;
+        },
+        &quot;schema_path&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/jsonPath&quot;
+        },
+        &quot;default_document&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/markdownPath&quot;
+        },
+        &quot;anchor_style&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;enum&quot;: [
+            &quot;uppercase-doc-map&quot;,
+            &quot;lowercase-slug&quot;,
+            &quot;mixed&quot;
+          ]
+        },
+        &quot;sections&quot;: {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;minProperties&quot;: 1,
+          &quot;additionalProperties&quot;: {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;pattern&quot;: &quot;^#[A-Za-z0-9_-]+$&quot;
+          }
+        },
+        &quot;doc_anchors&quot;: {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;minProperties&quot;: 1,
+          &quot;additionalProperties&quot;: {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;pattern&quot;: &quot;^#[A-Za-z0-9_-]+$&quot;
+          }
+        }
+      }
+    },
+    &quot;observationRecord&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;additionalProperties&quot;: false,
+      &quot;required&quot;: [
+        &quot;observation_id&quot;,
+        &quot;observed_system&quot;,
+        &quot;task_id&quot;,
+        &quot;substrate_id&quot;,
+        &quot;regime_id&quot;,
+        &quot;timestamp&quot;,
+        &quot;evaluator&quot;,
+        &quot;evidence_reference&quot;,
+        &quot;dimension_id&quot;,
+        &quot;state&quot;,
+        &quot;confidence&quot;,
+        &quot;limitations&quot;
+      ],
+      &quot;properties&quot;: {
+        &quot;observation_id&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/identifier&quot;
+        },
+        &quot;observed_system&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;
+        },
+        &quot;system_boundary&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;enum&quot;: [
+            &quot;individual_human&quot;,
+            &quot;ai_system&quot;,
+            &quot;human_ai_pair&quot;,
+            &quot;team&quot;,
+            &quot;organization&quot;,
+            &quot;robotic_system&quot;,
+            &quot;distributed_agents&quot;,
+            &quot;animal&quot;,
+            &quot;other&quot;
+          ]
+        },
+        &quot;task_id&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/identifier&quot;
+        },
+        &quot;substrate_id&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/identifier&quot;
+        },
+        &quot;regime_id&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/identifier&quot;
+        },
+        &quot;timestamp&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;format&quot;: &quot;date-time&quot;
+        },
+        &quot;evaluator&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;
+        },
+        &quot;evidence_reference&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;
+        },
+        &quot;dimension_id&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/identifier&quot;
+        },
+        &quot;state&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/observationState&quot;
+        },
+        &quot;expression&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;enum&quot;: [
+            &quot;very_weak&quot;,
+            &quot;weak&quot;,
+            &quot;moderate&quot;,
+            &quot;strong&quot;,
+            &quot;very_strong&quot;,
+            &quot;variable&quot;,
+            &quot;unknown&quot;,
+            &quot;not_applicable&quot;
+          ]
+        },
+        &quot;confidence&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/confidence&quot;
+        },
+        &quot;stability&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;enum&quot;: [
+            &quot;unstable&quot;,
+            &quot;low&quot;,
+            &quot;moderate&quot;,
+            &quot;high&quot;,
+            &quot;unknown&quot;,
+            &quot;not_tested&quot;
+          ]
+        },
+        &quot;scoring_rule&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;
+        },
+        &quot;limitations&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/stringList&quot;
+        },
+        &quot;alternative_interpretations&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/stringList&quot;
+        },
+        &quot;recommended_action&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;
+        }
+      }
+    },
+    &quot;assessmentResult&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;additionalProperties&quot;: false,
+      &quot;required&quot;: [
+        &quot;assessment_id&quot;,
+        &quot;observed_system&quot;,
+        &quot;intended_use&quot;,
+        &quot;validation_state&quot;,
+        &quot;decision_authority&quot;,
+        &quot;observations&quot;,
+        &quot;uncertainty&quot;,
+        &quot;missing_evidence&quot;,
+        &quot;alternative_interpretations&quot;,
+        &quot;limitations&quot;,
+        &quot;review_path&quot;
+      ],
+      &quot;properties&quot;: {
+        &quot;assessment_id&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/identifier&quot;
+        },
+        &quot;observed_system&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;
+        },
+        &quot;intended_use&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;
+        },
+        &quot;validation_state&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/validationState&quot;
+        },
+        &quot;decision_authority&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;enum&quot;: [
+            &quot;none&quot;,
+            &quot;research_only&quot;,
+            &quot;advisory&quot;,
+            &quot;context_validated&quot;
+          ]
+        },
+        &quot;observations&quot;: {
+          &quot;type&quot;: &quot;array&quot;,
+          &quot;items&quot;: {
+            &quot;$ref&quot;: &quot;#/$defs/observationRecord&quot;
+          }
+        },
+        &quot;model_fit&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;enum&quot;: [
+            &quot;high&quot;,
+            &quot;moderate&quot;,
+            &quot;low&quot;,
+            &quot;mismatch_detected&quot;,
+            &quot;unresolved&quot;,
+            &quot;unknown&quot;
+          ]
+        },
+        &quot;substrate_fit&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;enum&quot;: [
+            &quot;high&quot;,
+            &quot;moderate&quot;,
+            &quot;low&quot;,
+            &quot;partial&quot;,
+            &quot;mismatch_detected&quot;,
+            &quot;unresolved&quot;,
+            &quot;unknown&quot;
+          ]
+        },
+        &quot;regime_fit&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;enum&quot;: [
+            &quot;high&quot;,
+            &quot;moderate&quot;,
+            &quot;low&quot;,
+            &quot;partial&quot;,
+            &quot;mismatch_detected&quot;,
+            &quot;unresolved&quot;,
+            &quot;unknown&quot;
+          ]
+        },
+        &quot;uncertainty&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;
+        },
+        &quot;missing_evidence&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/stringList&quot;
+        },
+        &quot;alternative_interpretations&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/stringList&quot;
+        },
+        &quot;limitations&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/stringList&quot;
+        },
+        &quot;review_path&quot;: {
+          &quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;
+        },
+        &quot;composite&quot;: {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;additionalProperties&quot;: false,
+          &quot;required&quot;: [
+            &quot;permitted&quot;,
+            &quot;interpretive_status&quot;,
+            &quot;sufficient_alone&quot;,
+            &quot;profile_required&quot;
+          ],
+          &quot;properties&quot;: {
+            &quot;permitted&quot;: {
+              &quot;type&quot;: &quot;boolean&quot;
+            },
+            &quot;value&quot;: {},
+            &quot;interpretive_status&quot;: {
+              &quot;type&quot;: &quot;string&quot;,
+              &quot;const&quot;: &quot;lossy_projection&quot;
+            },
+            &quot;sufficient_alone&quot;: {
+              &quot;type&quot;: &quot;boolean&quot;,
+              &quot;const&quot;: false
+            },
+            &quot;profile_required&quot;: {
+              &quot;type&quot;: &quot;boolean&quot;,
+              &quot;const&quot;: true
+            }
+          }
+        }
+      }
+    }
+  }
+}
+</code></pre>
+  </main>
+</body>
+</html>
