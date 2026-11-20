@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="predictive_analytics_Structural_Detection_adapter_" src="https://github.com/user-attachments/assets/6189c7c7-9d95-4e95-b004-c40d3709eed8" />
+
 # Structural Detection Adapter
 
 > **Do not infer the person from the score. Detect the structure in the evidence.**
