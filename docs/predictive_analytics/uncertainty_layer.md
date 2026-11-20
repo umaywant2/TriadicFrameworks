@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="predictive_analytics_uncertainty_layer_" src="https://github.com/user-attachments/assets/db7bd0c4-19e6-4e38-975a-53dd7d6beff7" />
+
 # Predictive Analytics — Uncertainty Layer
 
 > **Uncertainty is not missing confidence. It is information about the boundary of what the evidence currently supports.**
