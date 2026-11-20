@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="predictive_analytics_resonance_adapter_" src="https://github.com/user-attachments/assets/610d0b0f-6b05-4692-9269-fce8e220ad79" />
+
 # Predictive Analytics — Resonance Adapter
 
 > **Resonance is not similarity. It is a candidate relationship between conditions and the expression that becomes observable within them.**
