@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="predictive_analytics_human_review_hook_" src="https://github.com/user-attachments/assets/3a336466-a70e-4b9d-9887-9da7e83b920f" />
+
 # Predictive Analytics — Human Review Hook
 
 > **Escalation is not failure. Sometimes the correct automated decision is to stop deciding.**
