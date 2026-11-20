@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="predictive_analytics_adapters_" src="https://github.com/user-attachments/assets/86f8ba8d-c986-4b59-9869-f04858263a01" />
+
 # Predictive Analytics — Adapter Registry
 
 > **Adapters widen observation. They do not inherit authority.**
