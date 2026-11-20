@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="predictive_analytics_ethics_and_limits_" src="https://github.com/user-attachments/assets/9ad88f18-71f2-4a75-af07-17fba95ee116" />
+
 # Predictive Analytics — Ethics and Limits
 
 ## Status
