@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="predictive_analytics_substrate_expression_profile_" src="https://github.com/user-attachments/assets/0785b8a3-ece3-49e9-8358-19070153df45" />
+
 # Predictive Analytics — Substrate Expression Profile
 
 > **Capability is not observed in the abstract. It is observed through conditions that shape how expression becomes measurable.**
