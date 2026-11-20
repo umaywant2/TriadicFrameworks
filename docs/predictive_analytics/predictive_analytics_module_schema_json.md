@@ -1,4 +1,4 @@
-# predictive_analytics_module.schema_json.md
+# predictive_analytics_module_schema_json.md
 
 ```json
 {
