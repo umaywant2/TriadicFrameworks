@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="predictive_analytics_Inverted_Star_adapter_" src="https://github.com/user-attachments/assets/cb45f300-954e-46c1-87b6-1d9dc5f125b7" />
+
 # The Inverted Star Adapter
 
 > **When prediction and demonstrated behavior diverge, preserve the inversion before explaining it.**
