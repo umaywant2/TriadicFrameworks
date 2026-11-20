@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="predictive_analytics_counterfactual_layer_" src="https://github.com/user-attachments/assets/56be6dbd-3b05-4cfd-89f8-b54e68aefe65" />
+
 # Predictive Analytics — Counterfactual Layer
 
 > **If the interpretation changes when an irrelevant detail changes, the interpretation is unstable. If it does not change when meaningful evidence changes, it is insensitive.**
