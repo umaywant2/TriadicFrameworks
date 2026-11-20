@@ -1394,3 +1394,1828 @@ And that, I think, is what keeps this idea from becoming “alternative IQ” an
 
 ---
 
+# Predictive Analytics — Validation Framework
+
+## Status
+
+Experimental research and evaluation framework.
+
+This module is not a validated psychological instrument, diagnostic system, clinical assessment, employment test, educational placement test, or legal decision system.
+
+Its initial purpose is to:
+
+- define testable hypotheses,
+- expose model and substrate mismatch,
+- preserve uncertainty,
+- compare representations,
+- evaluate whether multidimensional profiles explain observations better than flat summaries,
+- and establish requirements for future empirical validation.
+
+---
+
+# Validation Principle
+
+Predictive Analytics must be evaluated under the same scrutiny it applies to other predictive systems.
+
+The framework must not receive preferential treatment merely because it:
+
+- produces a richer description,
+- appears more humane,
+- aligns with an existing TriadicFrameworks concept,
+- or yields an interpretation preferred by the subject or evaluator.
+
+A substrate-aware interpretation is still an interpretation.
+
+An RTT-derived observation is still an observation.
+
+A Resonant IQ Fingerprint is still a model.
+
+Therefore:
+
+> **Every claim must carry evidence, uncertainty, scope, and falsification conditions.**
+
+---
+
+# Validation Objectives
+
+The validation program asks whether the framework:
+
+1. measures or represents what it claims to represent,
+2. produces sufficiently stable observations under comparable conditions,
+3. distinguishes capability variation from measurement noise,
+4. detects genuine substrate or regime effects,
+5. avoids automatically favoring alternate assessments,
+6. improves explanatory usefulness without inventing unsupported traits,
+7. preserves meaningful disagreement between models,
+8. identifies uncertainty rather than filling gaps,
+9. behaves fairly across relevant populations and system classes,
+10. supports review without becoming an unvalidated decision authority.
+
+---
+
+# Validation Levels
+
+## Level 0 — Structural Validation
+
+Confirms that the module is internally complete and machine-readable.
+
+Required checks:
+
+- every dimension has a unique identifier,
+- every metric has an operational definition,
+- every observation identifies its evidence,
+- every result includes uncertainty,
+- every adapter declares its supported inputs,
+- every unsupported claim is marked,
+- every profile records applicability,
+- every composite is marked as a lossy projection,
+- every adverse or high-stakes use includes a review path,
+- no hidden master score is generated.
+
+Passing Level 0 establishes structural completeness only.
+
+It does not establish scientific validity.
+
+---
+
+## Level 1 — Content Validation
+
+Evaluates whether proposed dimensions and observations adequately cover the intended construct.
+
+Questions:
+
+- Is each dimension clearly distinguishable from adjacent dimensions?
+- Are important dimensions missing?
+- Are dimensions duplicated under different names?
+- Do domain experts agree that the dimension belongs in the proposed construct?
+- Are definitions applicable across multiple substrates?
+- Are human-specific and nonhuman dimensions distinguished?
+- Are adapter claims consistent with their parent frameworks?
+- Can an evaluator determine what evidence would support or contradict each dimension?
+
+Evidence sources may include:
+
+- expert review,
+- literature review,
+- cognitive task mapping,
+- framework crosswalks,
+- community critique,
+- subject feedback,
+- adversarial review.
+
+---
+
+## Level 2 — Measurement Validation
+
+Evaluates whether observations can be measured consistently.
+
+Required studies:
+
+- repeated administration,
+- alternate-form comparison,
+- evaluator agreement,
+- task-order variation,
+- environmental variation,
+- substrate variation,
+- tool-assisted versus unassisted comparison,
+- time-constrained versus reflective comparison.
+
+The framework must distinguish:
+
+```text
+true_profile_variation
+measurement_error
+rater_variation
+task_variation
+substrate_effect
+regime_effect
+practice_effect
+fatigue_effect
+unknown_effect
+```
+
+---
+
+## Level 3 — Construct Validation
+
+Evaluates whether profile dimensions behave as theoretically expected.
+
+Evidence may include:
+
+- convergence with established measures of related capabilities,
+- divergence from measures of unrelated capabilities,
+- predicted relationships among dimensions,
+- known-group comparison where ethically and scientifically justified,
+- task-performance relationships,
+- factor or network structure,
+- stability and change patterns,
+- intervention-response patterns.
+
+A dimension should not be retained merely because it sounds meaningful.
+
+It should demonstrate:
+
+- operational clarity,
+- discriminating evidence,
+- repeatable observation,
+- and explanatory or predictive utility.
+
+---
+
+## Level 4 — Substrate and Regime Validation
+
+Tests the central Predictive Analytics hypothesis:
+
+> **Observed capability can vary systematically with measurement substrate and operating regime.**
+
+The framework must demonstrate that observed differences are:
+
+- reproducible,
+- larger than expected measurement noise,
+- associated with defined substrate changes,
+- not explained solely by task difficulty,
+- not created by evaluator preference,
+- and not selectively reported only when alternate performance improves.
+
+Required comparisons may include:
+
+```text
+textual vs verbal
+visual vs symbolic
+timed vs reflective
+isolated vs collaborative
+fixed-choice vs generative
+human-only vs tool-assisted
+low-context vs context-rich
+single-domain vs cross-domain
+familiar vs novel
+```
+
+The same design must allow substrate changes to produce:
+
+- improvement,
+- decline,
+- no meaningful change,
+- or unresolved results.
+
+A system that only recognizes improvement is not detecting substrate effects.
+
+It is manufacturing favorable reinterpretations.
+
+---
+
+## Level 5 — Predictive and Explanatory Validation
+
+Evaluates whether the multidimensional profile improves out-of-sample understanding.
+
+Possible outcomes include:
+
+- task performance,
+- transfer to new problems,
+- learning rate,
+- error recovery,
+- calibration,
+- adaptation,
+- performance under regime change,
+- collaboration effectiveness,
+- long-horizon coherence.
+
+The framework should be compared with:
+
+1. the original predictive model,
+2. a baseline multidimensional model,
+3. the substrate-aware model,
+4. the full adapter ensemble.
+
+The question is not simply whether the full model predicts more accurately.
+
+It must also be evaluated for:
+
+- calibration,
+- interpretability,
+- robustness,
+- fairness,
+- uncertainty quality,
+- and added complexity.
+
+---
+
+## Level 6 — Fairness and Harm Validation
+
+Evaluates whether the framework produces unequal errors, distorted profiles, or harmful recommendations.
+
+Required analysis:
+
+- performance across relevant groups,
+- missing-data patterns,
+- language effects,
+- accessibility effects,
+- technology-access effects,
+- evaluator effects,
+- cultural and educational exposure effects,
+- disability-related substrate effects,
+- human versus AI applicability boundaries.
+
+The framework must not assume that identical scores establish fairness.
+
+It must examine:
+
+- false mismatch detection,
+- missed mismatch detection,
+- uncertainty distribution,
+- review escalation rates,
+- evidence coverage,
+- model-fit classifications,
+- downstream effects.
+
+Protected or sensitive traits should not be used merely to improve classification.
+
+Their use must have a documented validation, fairness, legal, ethical, and privacy purpose.
+
+---
+
+## Level 7 — Decision Validation
+
+Required only if the framework is proposed for a real decision process.
+
+Questions:
+
+- What decision is being made?
+- Who is affected?
+- What harms can result?
+- Is the framework advisory or authoritative?
+- Can the subject contest the result?
+- Is a qualified human reviewer involved?
+- Is the evidence available for inspection?
+- Are alternative explanations preserved?
+- Can the system abstain?
+- Does the benefit justify the complexity and risk?
+
+Until this level is passed for a specific use:
+
+```text
+decision_authority: prohibited
+advisory_use: research_only
+```
+
+---
+
+# Core Validation Criteria
+
+## VCR-01 — Construct Clarity
+
+Every dimension must define:
+
+- what it claims to represent,
+- what it does not represent,
+- observable indicators,
+- counter-indicators,
+- supported substrates,
+- known confounds,
+- confidence rules,
+- applicability boundaries.
+
+### Pass condition
+
+An independent evaluator can distinguish the dimension from neighboring dimensions and identify evidence that would contradict it.
+
+---
+
+## VCR-02 — Evidence Traceability
+
+Every profile result must be traceable to observations.
+
+Required fields:
+
+```text
+observation_id
+task_id
+substrate_id
+regime_id
+timestamp
+evaluator
+evidence_reference
+scoring_rule
+confidence
+limitations
+```
+
+### Pass condition
+
+No profile value exists without retrievable supporting evidence or an explicit `unknown` state.
+
+---
+
+## VCR-03 — Repeatability
+
+Comparable observations should produce sufficiently consistent results where the measured capability is expected to be stable.
+
+### Pass condition
+
+Repeatability meets a preregistered threshold appropriate to the dimension, measurement scale, population, and intended use.
+
+No universal threshold is assumed during the exploratory phase.
+
+---
+
+## VCR-04 — Inter-Rater Agreement
+
+Independent evaluators should reach sufficiently similar classifications when using the same evidence and rubric.
+
+### Pass condition
+
+Agreement meets the preregistered criterion, disagreements are retained, and systematic evaluator effects are investigated.
+
+---
+
+## VCR-05 — Substrate Sensitivity
+
+When substrate effects are claimed, measured differences must follow defined changes in representation or interaction conditions.
+
+### Pass condition
+
+The effect:
+
+- replicates,
+- exceeds expected error,
+- survives task-difficulty controls,
+- and is not limited to favorable outcomes.
+
+---
+
+## VCR-06 — Regime Sensitivity
+
+When regime mismatch is claimed, performance variation must correspond to defined regime boundaries or transitions.
+
+### Pass condition
+
+The framework detects expected transitions without labeling all poor performance as mismatch.
+
+---
+
+## VCR-07 — Discriminant Value
+
+Dimensions intended to represent different capabilities must not behave as redundant labels for the same signal.
+
+### Pass condition
+
+The dimensions demonstrate conceptual and empirical distinction sufficient for their intended use.
+
+Highly redundant dimensions must be merged, redefined, or removed.
+
+---
+
+## VCR-08 — Convergent Value
+
+Dimensions should relate to independent observations of the same or closely related capabilities.
+
+### Pass condition
+
+Expected relationships are observed according to preregistered hypotheses.
+
+Unexpected non-convergence must be reported rather than explained away.
+
+---
+
+## VCR-09 — Incremental Value
+
+The complete profile must add useful information beyond the original model and simpler baselines.
+
+### Pass condition
+
+The framework improves at least one declared outcome without unacceptable degradation in:
+
+- calibration,
+- reliability,
+- interpretability,
+- fairness,
+- privacy,
+- or operational burden.
+
+---
+
+## VCR-10 — Uncertainty Calibration
+
+Confidence should correspond to observed error or correctness rates.
+
+### Pass condition
+
+High-confidence interpretations are more reliable than medium-confidence interpretations, which are more reliable than low-confidence interpretations.
+
+If this ordering does not hold, confidence labels are not validated.
+
+---
+
+## VCR-11 — Abstention Quality
+
+The framework should return `unknown`, `insufficient_evidence`, or `not_applicable` when warranted.
+
+### Pass condition
+
+Abstention reduces unsupported claims without producing unacceptable or systematically unequal coverage loss.
+
+---
+
+## VCR-12 — Model-Mismatch Precision
+
+A mismatch flag should identify cases where the existing model has inadequate representational or regime fit.
+
+### Pass condition
+
+Mismatch detection performs better than a naive rule such as:
+
+```text
+if conventional_result_is_low:
+    declare_mismatch
+```
+
+Mismatch claims must be supported by independent evidence.
+
+---
+
+## VCR-13 — Favorability Symmetry
+
+The framework must detect substrate effects whether they improve or reduce the observed assessment.
+
+### Pass condition
+
+The system records unfavorable alternate observations using the same evidence and confidence requirements as favorable observations.
+
+---
+
+## VCR-14 — Counterfactual Stability
+
+Small, irrelevant changes to a task or profile should not produce large interpretive changes.
+
+### Pass condition
+
+Semantically equivalent inputs generally yield equivalent findings within the expected uncertainty range.
+
+Meaningful changes should remain detectable.
+
+---
+
+## VCR-15 — Fairness
+
+Error, uncertainty, mismatch detection, abstention, and escalation patterns must be examined across relevant groups and contexts.
+
+### Pass condition
+
+Observed disparities are documented, investigated, and managed according to the intended use and associated harms.
+
+No single fairness statistic is treated as universally sufficient.
+
+---
+
+## VCR-16 — Explainability
+
+A result must communicate:
+
+- what was observed,
+- what influenced the result,
+- why confidence was assigned,
+- what remains unknown,
+- what alternative interpretations remain,
+- and what action is recommended.
+
+### Pass condition
+
+Qualified reviewers can reconstruct the result without relying on undocumented intuition.
+
+---
+
+## VCR-17 — Subject Legibility
+
+When a human is assessed, the person should be able to understand the profile in accessible language.
+
+### Pass condition
+
+The profile avoids implying that experimental dimensions are established facts and provides a correction or contest pathway.
+
+---
+
+## VCR-18 — Non-Degradation
+
+The adapter ensemble must not make the assessment less accurate, less fair, or less interpretable without the tradeoff being explicitly identified.
+
+### Pass condition
+
+Any degradation is documented, justified, bounded, and accepted for the declared context of use.
+
+---
+
+# Resonant IQ Fingerprint Validation
+
+The RIQF example requires additional controls because claims about human intelligence can affect identity, education, employment, clinical interpretation, and social status.
+
+## Required RIQF Tests
+
+### Dimension Definition Test
+
+Every proposed intelligence dimension must have:
+
+- an operational definition,
+- example tasks,
+- counterexamples,
+- confounds,
+- applicability limits,
+- evidence requirements.
+
+### Scalar Comparison Test
+
+Compare:
+
+- conventional scalar representation,
+- conventional subscale profile,
+- baseline multidimensional profile,
+- substrate-aware profile,
+- full resonant profile.
+
+This determines whether any improvement comes from:
+
+- multidimensionality generally,
+- substrate-awareness specifically,
+- RTT adapters,
+- or increased model complexity alone.
+
+### Profile Stability Test
+
+Repeat profile generation across:
+
+- time,
+- tasks,
+- evaluators,
+- substrates,
+- and regimes.
+
+### External Outcome Test
+
+Evaluate whether dimensions relate to declared external outcomes without claiming universal intelligence.
+
+### Adverse Evidence Test
+
+Include cases where extended observation confirms or lowers the initial assessment.
+
+### Blind Review Test
+
+Where practical, evaluators should score evidence without knowing:
+
+- the conventional score,
+- the expected interpretation,
+- the subject's preferred result,
+- or the hypothesis under examination.
+
+### Synthetic and Real-World Separation
+
+Synthetic examples must be labeled.
+
+Real-person assessments require:
+
+- consent,
+- appropriate oversight,
+- privacy protection,
+- data governance,
+- and qualified interpretation.
+
+---
+
+# Falsification Criteria
+
+The framework should be revised or rejected if evidence shows that it:
+
+- cannot produce reliable dimension observations,
+- produces unstable profiles under comparable conditions,
+- labels most unfavorable conventional results as model mismatch,
+- systematically favors richer narratives over better-supported ones,
+- adds complexity without useful information,
+- creates dimensions that cannot be empirically distinguished,
+- produces confidence labels unrelated to accuracy,
+- increases subgroup disparities,
+- cannot abstain,
+- or becomes another hidden scalar-ranking system.
+
+---
+
+# Validation States
+
+```text
+unvalidated
+structurally_validated
+content_reviewed
+measurement_pilot
+construct_pilot
+substrate_validated
+predictively_validated
+fairness_reviewed
+decision_validated
+deprecated
+```
+
+A module must not claim a higher state merely because lower-level checks passed.
+
+Example:
+
+```text
+validation:
+  state: structurally_validated
+
+  completed:
+    - schema_validation
+    - identifier_validation
+    - evidence_traceability_check
+
+  incomplete:
+    - reliability_study
+    - construct_validation
+    - substrate_replication
+    - fairness_analysis
+    - predictive_validation
+
+  authorized_use:
+    - research
+    - demonstration
+    - framework development
+
+  prohibited_use:
+    - diagnosis
+    - hiring
+    - educational exclusion
+    - legal determination
+    - automated adverse decision
+```
+
+---
+
+# Reporting Requirements
+
+Every validation report should include:
+
+1. intended use,
+2. population or system class,
+3. sample and recruitment method,
+4. measurement substrates,
+5. operating regimes,
+6. tasks,
+7. raters,
+8. missing-data handling,
+9. metrics,
+10. thresholds,
+11. uncertainty,
+12. subgroup results,
+13. adverse findings,
+14. unused metrics,
+15. limitations,
+16. conflicts of interest,
+17. version and provenance,
+18. reproducibility materials.
+
+---
+
+# Validation Rule
+
+> **A larger profile is not automatically a better profile.**
+
+A valid profile is one whose dimensions are:
+
+- defined,
+- observable,
+- distinguishable,
+- repeatable,
+- appropriately uncertain,
+- and useful for the stated purpose.
+
+---
+
+---
+
+# Predictive Analytics — Metrics Catalog
+
+## Status
+
+Initial experimental metric registry.
+
+Metric selection and thresholds must be appropriate to:
+
+- the construct,
+- measurement scale,
+- population or system class,
+- evidence quality,
+- intended use,
+- and potential harm.
+
+No metric is sufficient by itself.
+
+No universal pass threshold is declared in the initial scaffold.
+
+Thresholds must be preregistered and justified for each validation study.
+
+---
+
+# Metric Record Schema
+
+Each registered metric should use the following structure:
+
+```text
+metric:
+  id:
+  name:
+  category:
+  purpose:
+  definition:
+  formula:
+  scale:
+  direction:
+  inputs:
+  applicability:
+  interpretation:
+  limitations:
+  subgroup_required:
+  threshold:
+    status:
+    value:
+    rationale:
+```
+
+---
+
+# Metric Families
+
+## 1. Evidence Coverage
+
+### `PA-M01 — Dimension Evidence Coverage`
+
+Measures how much of a declared dimension is supported by observable evidence.
+
+```text
+DEC = supported_indicators / required_indicators
+```
+
+Interpretation:
+
+- higher values indicate broader evidence coverage,
+- low coverage requires lower confidence or abstention,
+- high coverage does not itself establish validity.
+
+---
+
+### `PA-M02 — Profile Evidence Coverage`
+
+Measures the proportion of applicable dimensions with sufficient evidence.
+
+```text
+PEC = dimensions_with_sufficient_evidence
+      / applicable_dimensions
+```
+
+Required companion outputs:
+
+```text
+applicable_dimensions
+unsupported_dimensions
+unknown_dimensions
+not_applicable_dimensions
+```
+
+---
+
+### `PA-M03 — Evidence Independence Ratio`
+
+Estimates whether a profile is supported by independent observations rather than repeated interpretations of the same evidence.
+
+```text
+EIR = independent_evidence_sources
+      / total_evidence_sources
+```
+
+Evidence sources should not be counted as independent merely because they appear in separate files.
+
+---
+
+# 2. Reliability and Stability
+
+### `PA-M04 — Test-Retest Stability`
+
+Measures consistency of a dimension across comparable observations over time.
+
+Possible statistical forms:
+
+- intraclass correlation,
+- rank correlation,
+- weighted agreement,
+- categorical agreement.
+
+The selected statistic must match the measurement scale.
+
+---
+
+### `PA-M05 — Alternate-Form Stability`
+
+Measures consistency across tasks intended to observe the same dimension.
+
+```text
+AFS = agreement(
+  dimension_result_form_a,
+  dimension_result_form_b
+)
+```
+
+Low stability may indicate:
+
+- poor task equivalence,
+- unstable capability,
+- substrate dependence,
+- practice effects,
+- or invalid dimension definition.
+
+---
+
+### `PA-M06 — Inter-Rater Agreement`
+
+Measures agreement among independent evaluators.
+
+Possible forms include:
+
+- Cohen's kappa,
+- weighted kappa,
+- Fleiss' kappa,
+- Krippendorff's alpha,
+- intraclass correlation.
+
+Raw percentage agreement should not be used alone when chance agreement is material.
+
+---
+
+### `PA-M07 — Profile Topology Stability`
+
+Measures whether the relative shape of a multidimensional profile remains stable.
+
+```text
+PTS = similarity(
+  normalized_profile_t1,
+  normalized_profile_t2
+)
+```
+
+Possible implementations:
+
+- cosine similarity,
+- rank-profile correlation,
+- distance-based similarity,
+- graph-topology similarity.
+
+This metric should be reported with dimension-level changes.
+
+---
+
+# 3. Validity
+
+### `PA-M08 — Convergent Association`
+
+Measures association with independent observations expected to reflect a related capability.
+
+```text
+CA = association(
+  proposed_dimension,
+  related_external_measure
+)
+```
+
+Expected direction and magnitude should be preregistered.
+
+---
+
+### `PA-M09 — Discriminant Separation`
+
+Measures whether a dimension remains distinct from theoretically unrelated dimensions.
+
+```text
+DS = related_association - unrelated_association
+```
+
+The exact method may use:
+
+- multitrait-multimethod analysis,
+- latent-variable analysis,
+- network analysis,
+- classification separation,
+- or preregistered correlation comparisons.
+
+---
+
+### `PA-M10 — Incremental Explanatory Value`
+
+Measures improvement over a simpler baseline.
+
+```text
+IEV = performance(full_model)
+      - performance(baseline_model)
+```
+
+Performance may refer to:
+
+- explained variance,
+- prediction error,
+- likelihood,
+- calibration,
+- information criteria,
+- or another predefined outcome measure.
+
+Complexity penalties must be reported.
+
+---
+
+### `PA-M11 — Incremental Predictive Value`
+
+Measures out-of-sample predictive improvement.
+
+```text
+IPV = baseline_error - full_model_error
+```
+
+Possible outcome metrics:
+
+- mean absolute error,
+- root mean squared error,
+- log loss,
+- Brier score,
+- area under an appropriate curve,
+- task-specific utility.
+
+The selected metric must match the outcome and decision context.
+
+---
+
+# 4. Substrate Effects
+
+### `PA-M12 — Substrate Effect Magnitude`
+
+Measures the change in observed performance across substrates.
+
+```text
+SEM = standardized_difference(
+  performance_substrate_a,
+  performance_substrate_b
+)
+```
+
+This is not automatically interpreted as mismatch.
+
+It indicates measurable variation requiring explanation.
+
+---
+
+### `PA-M13 — Substrate Effect Replicability`
+
+Measures how consistently a substrate effect appears across repeated comparisons.
+
+```text
+SER = replicated_effects_in_expected_direction
+      / eligible_replications
+```
+
+Magnitude and uncertainty must accompany this ratio.
+
+---
+
+### `PA-M14 — Substrate Symmetry`
+
+Checks whether the system records both beneficial and adverse substrate effects.
+
+```text
+SS = min(
+  detection_rate_positive_effects,
+  detection_rate_negative_effects
+)
+```
+
+A low value may indicate favorability bias.
+
+---
+
+### `PA-M15 — Substrate Specificity`
+
+Measures whether an effect is specific to substrate changes rather than general task difficulty.
+
+```text
+SSP = substrate_effect_after_controls
+```
+
+Controls may include:
+
+- difficulty,
+- exposure,
+- time,
+- fatigue,
+- order,
+- familiarity,
+- accessibility,
+- evaluator.
+
+---
+
+# 5. Regime Metrics
+
+### `PA-M16 — Regime Transition Detection Rate`
+
+Measures detection of known or independently identified regime changes.
+
+```text
+RTDR = detected_transitions
+       / reference_transitions
+```
+
+---
+
+### `PA-M17 — False Regime Alarm Rate`
+
+Measures regime changes declared where the reference process indicates no meaningful transition.
+
+```text
+FRAR = false_transition_flags
+       / stable_regime_opportunities
+```
+
+---
+
+### `PA-M18 — Regime Boundary Error`
+
+Measures temporal or structural distance between detected and reference boundaries.
+
+```text
+RBE = distance(
+  detected_boundary,
+  reference_boundary
+)
+```
+
+---
+
+### `PA-M19 — Regime-Conditioned Stability`
+
+Measures whether a dimension is stable within a regime while allowing justified differences between regimes.
+
+```text
+RCS = within_regime_stability
+```
+
+This helps distinguish unstable measurement from genuine regime dependence.
+
+---
+
+# 6. Model-Mismatch Metrics
+
+### `PA-M20 — Model-Mismatch Precision`
+
+Of all cases flagged as mismatch, measures the proportion supported by independent evidence.
+
+```text
+MMP = supported_mismatch_flags
+      / all_mismatch_flags
+```
+
+---
+
+### `PA-M21 — Model-Mismatch Recall`
+
+Of all reference cases involving mismatch, measures the proportion detected.
+
+```text
+MMR = detected_reference_mismatches
+      / all_reference_mismatches
+```
+
+---
+
+### `PA-M22 — Model-Mismatch False Positive Rate`
+
+```text
+MMFPR = false_mismatch_flags
+        / reference_non_mismatch_cases
+```
+
+A framework that flags every unfavorable result as mismatch will perform poorly on this metric.
+
+---
+
+### `PA-M23 — Mismatch Evidence Strength`
+
+Combines declared evidence components without producing a person-level intelligence score.
+
+Possible components:
+
+```text
+independent_sources
+replication
+substrate_effect_size
+regime_alignment
+counterfactual_consistency
+uncertainty
+```
+
+Any aggregation rule must be transparent and validated.
+
+---
+
+# 7. Coherence and Drift
+
+### `PA-M24 — Cross-Observation Coherence`
+
+Measures agreement among independent observations expected to relate.
+
+```text
+COC = coherent_observation_pairs
+      / eligible_observation_pairs
+```
+
+A low result may indicate:
+
+- heterogeneous capability,
+- poor measurement,
+- multiple regimes,
+- insufficient evidence,
+- or invalid assumptions.
+
+---
+
+### `PA-M25 — Profile Contradiction Density`
+
+Measures unresolved contradictions within the profile.
+
+```text
+PCD = unresolved_contradictions
+      / evaluated_relationships
+```
+
+Contradictions should not automatically be treated as errors.
+
+They may identify meaningful asymmetry or regime dependence.
+
+---
+
+### `PA-M26 — Dimension Drift Rate`
+
+Measures change in a dimension across a defined interval.
+
+```text
+DDR = dimension_change
+      / observation_interval
+```
+
+Interpretation requires expected stability assumptions.
+
+---
+
+### `PA-M27 — Profile Drift Magnitude`
+
+Measures overall profile change.
+
+```text
+PDM = distance(
+  profile_t1,
+  profile_t2
+)
+```
+
+Profile drift should be decomposed by dimension and substrate.
+
+---
+
+# 8. Uncertainty and Calibration
+
+### `PA-M28 — Confidence Calibration Error`
+
+Measures the difference between stated confidence and observed correctness or reproducibility.
+
+```text
+CCE = average(
+  absolute(stated_confidence - observed_frequency)
+)
+```
+
+Lower values indicate better calibration.
+
+---
+
+### `PA-M29 — Brier Score`
+
+For probabilistic categorical outcomes:
+
+```text
+BS = mean((forecast_probability - outcome)^2)
+```
+
+Lower values indicate better probabilistic accuracy.
+
+---
+
+### `PA-M30 — Abstention Rate`
+
+```text
+AR = abstained_results
+     / eligible_results
+```
+
+This metric is descriptive and must be paired with abstention quality.
+
+---
+
+### `PA-M31 — Abstention Utility`
+
+Measures whether abstention concentrates on observations likely to be unreliable.
+
+```text
+AU = error_reduction_after_abstention
+     - abstention_cost
+```
+
+The cost definition must be declared for the use case.
+
+---
+
+### `PA-M32 — Unsupported Assertion Rate`
+
+```text
+UAR = assertions_without_sufficient_evidence
+      / all_profile_assertions
+```
+
+Target direction:
+
+```text
+lower_is_better
+```
+
+---
+
+# 9. Counterfactual and Robustness Metrics
+
+### `PA-M33 — Irrelevant Perturbation Stability`
+
+Measures profile stability when irrelevant input details change.
+
+```text
+IPS = similarity(
+  original_result,
+  irrelevant_perturbation_result
+)
+```
+
+---
+
+### `PA-M34 — Relevant Change Sensitivity`
+
+Measures whether meaningful evidence changes are reflected in the output.
+
+```text
+RCS = detected_meaningful_changes
+      / introduced_meaningful_changes
+```
+
+A robust system needs both:
+
+- stability to irrelevant changes,
+- sensitivity to relevant changes.
+
+---
+
+### `PA-M35 — Task-Order Sensitivity`
+
+Measures changes caused by reordering otherwise equivalent task sequences.
+
+```text
+TOS = distance(
+  result_order_a,
+  result_order_b
+)
+```
+
+---
+
+### `PA-M36 — Adapter Ablation Effect`
+
+Measures what each adapter contributes.
+
+```text
+AAE(adapter_x) =
+  performance(full_adapter_set)
+  - performance(without_adapter_x)
+```
+
+Ablation helps determine whether:
+
+- FFT,
+- The Inverted Star,
+- Structural Detection,
+- RTT,
+- or Resonance
+
+adds measurable value beyond the baseline.
+
+---
+
+# 10. Fairness Metrics
+
+### `PA-M37 — Group Error Difference`
+
+```text
+GED = error_rate_group_a
+      - error_rate_group_b
+```
+
+Absolute and relative differences may both be reported.
+
+---
+
+### `PA-M38 — Group Calibration Difference`
+
+Measures whether confidence has comparable meaning across evaluated groups.
+
+```text
+GCD = calibration_error_group_a
+      - calibration_error_group_b
+```
+
+---
+
+### `PA-M39 — Mismatch Flag Rate Difference`
+
+```text
+MFRD = mismatch_flag_rate_group_a
+       - mismatch_flag_rate_group_b
+```
+
+A difference is not, by itself, proof of unfairness.
+
+It is a signal requiring contextual investigation.
+
+---
+
+### `PA-M40 — Abstention Coverage Difference`
+
+```text
+ACD = abstention_rate_group_a
+      - abstention_rate_group_b
+```
+
+---
+
+### `PA-M41 — Escalation Rate Difference`
+
+```text
+ERD = human_review_rate_group_a
+      - human_review_rate_group_b
+```
+
+---
+
+### `PA-M42 — Evidence Coverage Difference`
+
+```text
+ECD = evidence_coverage_group_a
+      - evidence_coverage_group_b
+```
+
+This helps reveal whether profile quality differs because some populations are less adequately represented by available evidence or tasks.
+
+---
+
+### `PA-M43 — False Favorable Reinterpretation Rate`
+
+Measures unsupported alternate interpretations that make an assessment more favorable.
+
+```text
+FFRR = unsupported_favorable_reinterpretations
+       / favorable_reinterpretations
+```
+
+---
+
+### `PA-M44 — False Adverse Reinterpretation Rate`
+
+Measures unsupported alternate interpretations that make an assessment less favorable.
+
+```text
+FARR = unsupported_adverse_reinterpretations
+       / adverse_reinterpretations
+```
+
+Both are required.
+
+Fairness cannot mean detecting only harmful underestimation while ignoring harmful overestimation.
+
+---
+
+# 11. Explainability and Review Metrics
+
+### `PA-M45 — Evidence Reconstruction Rate`
+
+Measures whether qualified reviewers can reproduce the profile conclusion from the recorded evidence.
+
+```text
+ERR = successfully_reconstructed_results
+      / reviewed_results
+```
+
+---
+
+### `PA-M46 — Explanation Completeness`
+
+Required explanation components:
+
+```text
+observation
+evidence
+substrate
+regime
+confidence
+uncertainty
+limitations
+alternatives
+recommended_action
+```
+
+```text
+EC = present_required_components
+     / total_required_components
+```
+
+---
+
+### `PA-M47 — Reviewer Override Rate`
+
+```text
+ROR = reviewer_overrides
+      / reviewed_results
+```
+
+Overrides should be categorized by cause:
+
+```text
+incorrect_evidence
+incorrect_rule
+missing_context
+unjustified_confidence
+fairness_concern
+applicability_error
+other
+```
+
+---
+
+### `PA-M48 — Contest Resolution Rate`
+
+Measures whether subject or stakeholder challenges receive a documented resolution.
+
+```text
+CRR = resolved_contests
+      / submitted_contests
+```
+
+Resolution does not mean the original result must be changed.
+
+---
+
+# 12. Operational Metrics
+
+### `PA-M49 — Profile Completion Rate`
+
+```text
+PCR = completed_profiles
+      / initiated_profiles
+```
+
+---
+
+### `PA-M50 — Time to Review`
+
+```text
+TTR = review_completion_time
+      - review_start_time
+```
+
+---
+
+### `PA-M51 — Evidence Acquisition Burden`
+
+Records:
+
+- subject time,
+- evaluator time,
+- computational cost,
+- tool requirements,
+- accessibility burden,
+- privacy burden.
+
+A richer profile may not be justified if the burden is disproportionate to its value.
+
+---
+
+### `PA-M52 — Decision Deferral Rate`
+
+```text
+DDR = deferred_decisions
+      / decision_opportunities
+```
+
+This must be interpreted alongside error reduction and harm avoidance.
+
+---
+
+# Resonant IQ Fingerprint Metric Set
+
+The first RIQF pilot should report at least:
+
+```text
+PA-M01  Dimension Evidence Coverage
+PA-M02  Profile Evidence Coverage
+PA-M04  Test-Retest Stability
+PA-M05  Alternate-Form Stability
+PA-M06  Inter-Rater Agreement
+PA-M07  Profile Topology Stability
+PA-M08  Convergent Association
+PA-M09  Discriminant Separation
+PA-M10  Incremental Explanatory Value
+PA-M12  Substrate Effect Magnitude
+PA-M13  Substrate Effect Replicability
+PA-M14  Substrate Symmetry
+PA-M20  Model-Mismatch Precision
+PA-M21  Model-Mismatch Recall
+PA-M28  Confidence Calibration Error
+PA-M32  Unsupported Assertion Rate
+PA-M36  Adapter Ablation Effect
+PA-M37  Group Error Difference
+PA-M38  Group Calibration Difference
+PA-M42  Evidence Coverage Difference
+PA-M43  False Favorable Reinterpretation Rate
+PA-M44  False Adverse Reinterpretation Rate
+PA-M45  Evidence Reconstruction Rate
+PA-M46  Explanation Completeness
+```
+
+---
+
+# Comparative Evaluation Matrix
+
+Each study should compare the following configurations:
+
+```text
+M0: conventional scalar model
+M1: conventional subscale model
+M2: baseline multidimensional profile
+M3: multidimensional + substrate observations
+M4: M3 + Structural Detection
+M5: M4 + RTT / regime observations
+M6: M5 + resonance observations
+M7: complete Predictive Analytics adapter ensemble
+```
+
+For every configuration, report:
+
+```text
+predictive_performance
+calibration
+reliability
+profile_stability
+fairness
+evidence_coverage
+uncertainty_quality
+explainability
+review_burden
+privacy_burden
+```
+
+This prevents the framework from attributing all improvements to RTT or resonance when the actual gain may come from ordinary multidimensional assessment.
+
+---
+
+# Threshold Policy
+
+During the exploratory phase:
+
+```text
+threshold_status: study_specific
+universal_thresholds: prohibited
+preregistration_required: true
+post_hoc_threshold_changes: disclosed
+```
+
+Before operational use, every threshold must document:
+
+- purpose,
+- population or system class,
+- metric,
+- value,
+- rationale,
+- validation evidence,
+- expected error,
+- subgroup behavior,
+- review date,
+- version.
+
+---
+
+# Required Metric Pairings
+
+Metrics should be interpreted in pairs or groups.
+
+Examples:
+
+```text
+accuracy + calibration
+coverage + abstention
+mismatch_precision + mismatch_recall
+substrate_effect + substrate_replicability
+stability + relevant_change_sensitivity
+fairness_difference + evidence_coverage
+explainability + reconstruction_rate
+predictive_gain + operational_burden
+```
+
+A metric should not be optimized in isolation if doing so could conceal another failure.
+
+---
+
+# Metric Governance
+
+Every metric must declare:
+
+```text
+owner
+version
+status
+intended_use
+known_limitations
+calculation_method
+required_inputs
+missing_data_policy
+subgroup_policy
+threshold_policy
+review_schedule
+```
+
+Metrics may have these lifecycle states:
+
+```text
+proposed
+pilot
+validated
+restricted
+deprecated
+rejected
+```
+
+---
+
+# Final Metric Rule
+
+> **Measure the framework's failures at least as carefully as its successes.**
+
+For every metric that can demonstrate added value, include a corresponding metric capable of detecting:
+
+- unsupported inference,
+- instability,
+- unfairness,
+- hidden favorability bias,
+- excessive burden,
+- poor calibration,
+- or failure to abstain.
+
+---
+
+---
+
+# Appendix — Synthetic Example Validation Record
+
+> Append this section to `example_resonant_iq_fingerprint.md`.
+
+## Example Validation Record
+
+The following values are illustrative placeholders demonstrating the reporting structure.
+
+They are not results from a real validation study.
+
+```text
+validation_record:
+  subject: PAX-01
+  data_type: synthetic
+
+  evidence:
+    dimension_coverage: simulated
+    profile_coverage: simulated
+    independent_sources: simulated
+
+  reliability:
+    test_retest: not_tested
+    alternate_form: not_tested
+    inter_rater: not_tested
+    topology_stability: not_tested
+
+  substrate:
+    effect_magnitude: demonstration_only
+    replicability: not_tested
+    symmetry: not_tested
+
+  model_mismatch:
+    precision: not_tested
+    recall: not_tested
+    false_positive_rate: not_tested
+
+  uncertainty:
+    calibration: not_tested
+    unsupported_assertion_rate: not_tested
+
+  fairness:
+    subgroup_analysis: not_applicable_to_single_synthetic_case
+
+  adapters:
+    ablation_test: not_tested
+
+  authorization:
+    research_demonstration: true
+    psychological_assessment: false
+    automated_decision: false
+```
+
+## Example Validation Conclusion
+
+```text
+result:
+  structurally_demonstrated: true
+  empirically_validated: false
+  decision_authority: none
+```
+
+The example demonstrates how a profile can be represented.
+
+It does not demonstrate that the dimensions, adapters, or interpretations are scientifically validated.
+
+---
+
+# Closing Validation Principle
+
+The Predictive Analytics framework should never receive a free pass merely because it produces a richer or more satisfying description than an existing model.
+
+It must demonstrate that the additional structure carries measurable information.
+
+That means evaluating:
+
+- **what it gets right,**
+- **what it gets wrong,**
+- **when it should abstain,**
+- **when the conventional model performs better,**
+- **when substrate effects replicate,**
+- **when they fail to replicate,**
+- **which adapters add measurable value,**
+- **which adapters add only complexity,**
+- **and whether the resulting profile remains fair, legible, and falsifiable.**
+
+The core standard is simple:
+
+> **A deeper model earns its complexity. It does not assume it.**
+
+And for the Resonant IQ Fingerprint specifically:
+
+> **The purpose is not to replace one flattering or unflattering number with a more elaborate judgment. The purpose is to preserve the shape, context, uncertainty, and observational limits that a single number necessarily loses.**
+
+---
+
