@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="predictive_analytics_resonance_observer_" src="https://github.com/user-attachments/assets/608c77f0-5b0f-4480-bcb0-0b05e35edc89" />
+
 # Predictive Analytics — Resonance Observer
 
 > **Do not ask only whether expression changed. Ask whether the relationship between system and conditions is reproducible, bounded, and worth preserving.**
