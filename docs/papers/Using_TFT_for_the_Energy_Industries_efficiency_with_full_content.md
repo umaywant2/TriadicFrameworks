@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Using_TFT_for_the_Energy_Industries_efficiency_with_full_content_" src="https://github.com/user-attachments/assets/1343d60f-9fd2-4d52-9845-c9a3304faf48" />
+
 # ⚡ Using TFT for the Energy Industries  
 
 ### 🧠 Efficiency with Full Context
