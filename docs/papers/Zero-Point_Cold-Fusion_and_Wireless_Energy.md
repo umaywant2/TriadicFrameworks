@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Zero_Point_Cold_Fusion_and_Wireless_Energy_" src="https://github.com/user-attachments/assets/d224ce12-427a-4cac-bc7d-c952b2b9254d" />
+
 # ⚡ Zero-Point, Cold Fusion, and Wireless Energy  
 
 ### 🧠 Foundations, Challenges, and the Path to Unified Energy Management
