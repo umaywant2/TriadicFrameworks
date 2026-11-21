@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Spectrum_Technologies_Light_and_Darkness_Revisited_" src="https://github.com/user-attachments/assets/e50e7f77-959c-43eb-a96f-e7cc482f03f4" />
+
 # 🌈 Spectrum Technologies – Light and Darkness Revisited
 
 ## ✨ Abstract  
