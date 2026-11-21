@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Res_Number_Bases_Common_plus_Special_and_Applications_" src="https://github.com/user-attachments/assets/2cc9979a-3902-4687-9711-fb887f7bc494" />
+
 # Res_Number_Bases_Common_plus_Special_and_Applications.md
 
 ## Abstract
