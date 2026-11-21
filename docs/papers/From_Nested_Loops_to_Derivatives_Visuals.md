@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_From_Nested_Loops_to_Derivatives_Visuals_" src="https://github.com/user-attachments/assets/06d39d6d-416a-459e-b212-2708a96d649a" />
+
 # 📊 Visual Expansion Pack — From Nested Loops to Derivatives
 
 _Companion visuals for the white paper: **From Nested Loops to Derivatives — A Resonance-Based Framework for Modeling Synthetic Financial Constructs**_
