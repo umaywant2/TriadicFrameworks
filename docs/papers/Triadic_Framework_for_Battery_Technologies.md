@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Triadic_Framework_for_Battery_Technologies_" src="https://github.com/user-attachments/assets/20237531-adb8-4fcc-b796-c8ffaf622847" />
+
 # 🔋 Triadic Framework for Battery Technologies  
 
 ### 🧠 LFP and Emergent Fringe Innovations
