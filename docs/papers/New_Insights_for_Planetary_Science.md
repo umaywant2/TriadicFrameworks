@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_New_Insights_for_Planetary_Science_" src="https://github.com/user-attachments/assets/afb43ce7-4566-4370-9b24-ff9445f6e6ad" />
+
 # 🌍 New Insights for Planetary Science  
 
 ### 🔁 From Ancient Curiosity to Triadic Framework Technology
