@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Abundance_Scarcity_and_Manifestation_" src="https://github.com/user-attachments/assets/11783e87-ff15-4fdf-870c-65ab46ed2979" />
+
 # 🌌 Abundance, Scarcity, and Manifestation  
 
 ### A Triadic Framework of Forces, Fluids, and Frequencies (FFF)
