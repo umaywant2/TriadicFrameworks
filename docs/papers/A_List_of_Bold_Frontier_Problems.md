@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_A_List_of_Bold_Frontier_Problems_" src="https://github.com/user-attachments/assets/12bbdc6f-9b1c-4ada-bd58-c8895b668b4f" />
+
 # 🈸 A List of Bold Frontier Problems
 ###### Perplexity AI suggested problems
 
