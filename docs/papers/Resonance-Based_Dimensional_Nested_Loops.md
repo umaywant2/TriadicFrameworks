@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Resonance_Based_Dimensional_Nested_Loops_" src="https://github.com/user-attachments/assets/dd451f29-0c98-46fb-805a-9560047bff1d" />
+
 # 🔄 Resonance-Based Dimensional Nested Loops  
 ### *Mapping Triadic Resonance Across Science, AI, and Philosophy*  
 
