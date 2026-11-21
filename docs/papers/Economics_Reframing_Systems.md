@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Economics_Reframing_Systems_" src="https://github.com/user-attachments/assets/68f4f7b6-624f-4525-a75c-8f0186b8d41d" />
+
 # 💹 Economics Reframing Systems  
 
 ### Triadic Frameworks for Dimensional Resonance, Symbolic Scaffolding & Systemic Modeling
