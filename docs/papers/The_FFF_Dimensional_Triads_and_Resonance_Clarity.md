@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_The_FFF_Dimensional_Triads_and_Resonance_Clarity_" src="https://github.com/user-attachments/assets/b1b9dada-8305-4e29-8b7e-3e8b9c6ce5b3" />
+
 # 📄 The FFF Dimensional Triads and Resonance Clarity  
 *A Framework for Corridors, Abundance, and Full‑Spectrum Navigation*  
 
