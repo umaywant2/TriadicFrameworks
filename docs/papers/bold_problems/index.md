@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_bold_problems_index_" src="https://github.com/user-attachments/assets/ce1f6975-6ca5-48b5-b65d-155937c3e893" />
+
 # 🌌 **Bold Frontier Problems — Index**  
 **Coherence‑Declared · Drift‑Bounded · RTT‑Inside**  
 **TriadicFrameworks Papers · v1.0**
