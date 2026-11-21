@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_NIMMS_spec_" src="https://github.com/user-attachments/assets/91d44650-b8fc-4cf8-8984-81408422ffd9" />
+
 # NIMMS – ♫♪.ılılıll|̲̅̅●̲̅̅|̲̅̅=̲̅̅|̲̅̅●̲̅̅|llılılı.♫♪ 
 
 ## Nested Intelligent Modular Memory Systems
