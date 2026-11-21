@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Banking_Revolutionizing_the_Financial_Sector_" src="https://github.com/user-attachments/assets/5254a272-d074-4244-8ac0-6b074c3f6f47" />
+
 # 🏦 Banking: Revolutionizing the Financial Sector  
 
 ### Triadic Framework Technology (TFT) for Security, Innovation & Inclusion
