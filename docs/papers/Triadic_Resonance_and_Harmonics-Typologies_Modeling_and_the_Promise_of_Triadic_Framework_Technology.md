@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Triadic_Resonance_and_Harmonics_Typologies_Modeling_and_the_Promise_of_Triadic_Framework_Technology_" src="https://github.com/user-attachments/assets/8ae3bccc-1a01-43e8-a710-d0753deb8b30" />
+
 # 🎶 Triadic Resonance and Harmonics  
 ### *Typologies, Modeling, and the Promise of Triadic Framework Technology (TFT)*  
 
