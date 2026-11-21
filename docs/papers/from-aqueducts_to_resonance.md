@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_from_aqueducts_to_resonance__" src="https://github.com/user-attachments/assets/b7a747aa-5c47-47a1-931d-b7cb8d92a8e6" />
+
 # From Aqueducts to Resonance
 Bridging the 30‑Year Gap in Water Infrastructure with TFT + FFF Water‑Stations
 
