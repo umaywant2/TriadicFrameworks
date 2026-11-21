@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_bold_problems_Algorithmic_Music_and_Emotional_Physics_" src="https://github.com/user-attachments/assets/2b227a11-9c68-44cb-9626-4bbc04035434" />
+
 # Algorithmic Music and Emotional Physics
 
 Extend your validator compression and scroll methods to generative music—modeling “emotional resonance” scientifically and algorithmically for art-driven datasets or experimental composition.
