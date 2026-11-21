@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Triadic_Battery_Revolution_Summary_of_a_World_Changing_Framework_" src="https://github.com/user-attachments/assets/e62fc8c8-14d9-4526-b768-c1d81d6afe53" />
+
 # 🔋 Triadic Battery Revolution  
 
 ### 🌍 Summary of a World-Changing Framework
