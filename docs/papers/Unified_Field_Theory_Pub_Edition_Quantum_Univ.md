@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Unified_Field_Theory_Pub_Edition_Quantum_Univ_" src="https://github.com/user-attachments/assets/8b935729-2628-4f47-9664-9338ab25ec94" />
+
 # 🍻 Unified Field Theory – Pub Edition (Quantum Univ)
 
 ## 🧪 Introduction: Field 1 on Tap – Why Unification Tastes Like Cosmic Soup
