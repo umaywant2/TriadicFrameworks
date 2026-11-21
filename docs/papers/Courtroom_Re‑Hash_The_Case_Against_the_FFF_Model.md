@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Courtroom_Re_Hash_The_Case_Against_the_FFF_Model_" src="https://github.com/user-attachments/assets/8908b0c8-401b-41ec-8acf-e02f7a74dd58" />
+
 ## Courtroom Re‑Hash: The Case Against the FFF Model
 
 **Prosecution’s Argument:**  
