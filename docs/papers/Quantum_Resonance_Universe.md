@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Quantum_Resonance_Universe_" src="https://github.com/user-attachments/assets/bde0d967-8378-45d1-b859-f3e49e2c7480" />
+
 # Quantum Resonance Universe
 
 ---
