@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Gravity_Can_Become_Variable_Creating_VictorG_Tech_with_Triadic_Frameworks_" src="https://github.com/user-attachments/assets/d080fe63-035b-4bfe-a5de-ef63249837a9" />
+
 # 🌌 Gravity Can Become Variable  
 
 ### Creating VictorG Tech with Triadic Frameworks
