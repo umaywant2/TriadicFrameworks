@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Triadic_Framework_Technology_for_the_Air_and_Space_Industries_" src="https://github.com/user-attachments/assets/1ce503c0-9a20-4589-9b19-af78eef95e60" />
+
 # 🚀 Triadic Framework Technology for the Air & Space Industries  
 
 ### “The Boost We Needed”
