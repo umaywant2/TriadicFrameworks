@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Triadic_Ultrasound_Enhancement_" src="https://github.com/user-attachments/assets/cc3c85cc-f67e-4361-aa37-9ddf3e128ad4" />
+
 # 🌀 Triadic Ultrasound Enhancement  
 
 ### From Linear Imaging to Resonant Diagnostics with TFT
