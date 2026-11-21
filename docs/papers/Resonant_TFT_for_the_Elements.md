@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Resonant_TFT_for_the_Elements_" src="https://github.com/user-attachments/assets/9e116c71-ed11-4b19-8352-84f090a76a6b" />
+
 # 🧪 Resonant TFT for the Elements  
 ### *Periodic Law Reimagined Through Triadic Framework Technology*  
 
