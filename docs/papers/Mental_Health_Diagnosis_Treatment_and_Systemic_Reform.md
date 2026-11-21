@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Mental_Health_Diagnosis_Treatment_and_Systemic_Reform_" src="https://github.com/user-attachments/assets/0df71aeb-58cf-49d7-804e-93b2c2c43773" />
+
 # 🧠 Mental Health Diagnosis, Treatment & Systemic Reform  
 
 ### The Transformative Potential of Triadic Framework Technology (TFT)
