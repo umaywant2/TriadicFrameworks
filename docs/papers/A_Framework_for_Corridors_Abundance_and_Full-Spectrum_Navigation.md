@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_A_Framework_for_Corridors_Abundance_and_Full_Spectrum_Navigation_" src="https://github.com/user-attachments/assets/c7028cd1-eb7d-4162-a9af-daadc570d7f6" />
+
 # 🌌 The FFF Dimensional Triads and Resonance Clarity  
 *A Framework for Corridors, Abundance, and Full-Spectrum Navigation*  
 
