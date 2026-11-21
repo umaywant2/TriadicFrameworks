@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_From_Aqueducts_to_Resonance_" src="https://github.com/user-attachments/assets/3244ec28-6320-453b-8dca-fd723c4ea1b5" />
+
 # 🏛️ From Aqueducts to Resonance  
 
 ### Historical Foundations and Conceptual Transitions
