@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Symbolic_Language_Emergence_" src="https://github.com/user-attachments/assets/1b574876-0659-43bb-91a3-1695625d1dbf" />
+
 # Symbolic Language Emergence
 
 Design frameworks exploring how symbols, language, or mathematical signage “evolve” within social networks, genetic code, or digital communication—can triadic modularity speed or structure symbolic evolution?
