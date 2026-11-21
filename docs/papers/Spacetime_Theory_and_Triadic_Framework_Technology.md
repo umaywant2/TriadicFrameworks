@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Spacetime_Theory_and_Triadic_Framework_Technology_" src="https://github.com/user-attachments/assets/a91ac7ab-d923-4a1f-8faf-220b5780a94d" />
+
 # 🌌 Spacetime Theory & Triadic Framework Technology (TFT)  
 ### *A Lantern for Young Dreamers and Future Physicists*  
 
