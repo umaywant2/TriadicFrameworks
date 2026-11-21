@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_From_Linear_to_Triadic_Using_TFT_for_Anything_with_Copilot_" src="https://github.com/user-attachments/assets/4a36d689-f171-4b2e-b8bf-53cc2e38303f" />
+
 # 🔺 From Linear to Triadic  
 
 ### Using TFT for Anything with Copilot
