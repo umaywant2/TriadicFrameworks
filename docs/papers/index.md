@@ -1,12 +1,14 @@
-# 📚 **Docsbook — Index**  
+<img width="1194" height="672" alt="papers_index_" src="https://github.com/user-attachments/assets/aaaf4f77-1b7f-4d56-99d3-9692f930a2dd" />
+
+# 📚 **Papers — Index**  
 **Coherence‑Declared · Drift‑Bounded · RTT‑Inside**  
 **TriadicFrameworks Documentation Engine · v1.0**
 
-Docsbook is the **publishing spine** of TriadicFrameworks — the system that turns scrolls, papers, modules, labs, validators, and overlays into structured, navigable documentation.
+Papers is the **pre-publishing spine** of TriadicFrameworks — the system that turns scrolls, papers, modules, labs, validators, and overlays into structured, navigable documentation.
 
 It is the **canonical renderer** for the TriadicFrameworks universe.
 
-This index is the **front door** to the Docsbook module.
+This index is the **front door** to the Papers module.
 
 ---
 
@@ -20,19 +22,19 @@ rtt=1 | coherence=declared | drift=bounded | paradox=structural
 
 ## 🏛️ **Module Identity**
 
-**Module:** Docsbook  
+**Module:** Papers  
 **Category:** Documentation Engine  
 **Purpose:** Provide a unified, canonical publishing system for TriadicFrameworks modules, papers, scrolls, validators, and overlays.  
 **Version:** 1.0  
 **Status:** Canonical  
-**Front Door:** `/docs/docsbook/index.md`  
+**Front Door:** `/docs/papers/index.md`  
 **Paired Document:** `README.md`  
 
 ---
 
 ## 🏁 **Identity Badge**
 
-<img src="https://img.shields.io/badge/📘Docsbook-Canonical%20Documentation%20Engine-4c8eda?style=for-the-badge" alt="Docsbook | Canonical Documentation Engine"/>
+<img src="https://img.shields.io/badge/📘Papers-Canonical%20Documentation%20Engine-4c8eda?style=for-the-badge" alt="Papers | Canonical Documentation Engine"/>
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
@@ -50,9 +52,9 @@ rtt=1 | coherence=declared | drift=bounded | paradox=structural
 
 ---
 
-# 📘 **What Docsbook Is**
+# 📘 **What Papers Is**
 
-Docsbook is the **documentation substrate** for TriadicFrameworks.
+Papers is the **Pre-RTT documentation substrate** for TriadicFrameworks.
 
 It provides:
 
@@ -67,14 +69,14 @@ It provides:
 - curriculum surfaces  
 - sitemap integration  
 
-Docsbook is the **engine** behind the TriadicFrameworks website and documentation ecosystem.
+Papers is the **proto-engine** behind the TriadicFrameworks website and documentation ecosystem.
 
 ---
 
 # 🗂️ **Core Features**
 
 ### **1. Canonical Page Structure**
-Docsbook enforces the canonical structure used across TriadicFrameworks:
+Papers enforces the canonical structure used across TriadicFrameworks:
 
 - Session context  
 - Module identity  
@@ -85,7 +87,7 @@ Docsbook enforces the canonical structure used across TriadicFrameworks:
 - AI‑ready fields  
 
 ### **2. Module Integration**
-Docsbook automatically integrates:
+Papers automatically integrates:
 
 - module.json  
 - index.md  
@@ -95,7 +97,7 @@ Docsbook automatically integrates:
 - scroll bundles  
 
 ### **3. Publishing Pipelines**
-Docsbook supports:
+Papers supports:
 
 - Papers  
 - Projects  
@@ -107,7 +109,7 @@ Docsbook supports:
 - Glyphstreams  
 
 ### **4. Curriculum Surfaces**
-Docsbook powers:
+Papers powers:
 
 - Papers Curriculum  
 - Projects Curriculum  
@@ -115,7 +117,7 @@ Docsbook powers:
 - Validator Curriculum  
 
 ### **5. AI‑Ready Documentation**
-Every Docsbook page is:
+Every Papers page is:
 
 - AI‑parsable  
 - metadata‑rich  
@@ -139,9 +141,9 @@ Every Docsbook page is:
 
 ---
 
-# 🧬 **Why Docsbook Matters**
+# 🧬 **Why Papers Matters**
 
-Docsbook is the **unifying layer** that makes TriadicFrameworks readable, navigable, teachable, and publishable.
+Papers is the **unifying layer** that makes TriadicFrameworks readable, navigable, teachable, and publishable.
 
 It transforms:
 
@@ -152,7 +154,7 @@ It transforms:
 - glyphstreams → overlays  
 - metadata → navigation  
 
-Docsbook is the **bridge** between the mythic lattice and the documentation universe.
+Papers is the **bridge** between the mythic lattice and the documentation universe.
 
 ---
 
@@ -160,6 +162,6 @@ Docsbook is the **bridge** between the mythic lattice and the documentation univ
 
 This index pairs with:
 
-- **`README.md`** — full Docsbook documentation  
+- **`README.md`** — full Papers documentation  
 - **`module.json`** — canonical metadata  
 - **`index.html`** — rendered front door  
