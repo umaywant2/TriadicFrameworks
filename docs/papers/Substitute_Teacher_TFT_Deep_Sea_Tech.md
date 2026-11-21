@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Substitute_Teacher_TFT_Deep_Sea_Tech_" src="https://github.com/user-attachments/assets/89824d2e-666f-4ed0-9432-0525147cc5fa" />
+
 🌊 That’s a thrilling premise, Nawder — a visionary leap into the abyssal frontier. Let’s sketch out what this deep sea Provisioning Company might look like, honoring your legacy themes of operational integrity, artifact dignity, and nested harmonic clarity.
 
 ---
