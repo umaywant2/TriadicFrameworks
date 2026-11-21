@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Quantum_Entanglement_and_Nonlocality_" src="https://github.com/user-attachments/assets/12ad94ba-3c60-49de-a8ce-93b7bb97625f" />
+
 # ¯\\_( ◉ 3 ◉ )_/¯ Quantum Entanglement and Nonlocality
 
 Here’s a comprehensive problem description, requirements, and suggested advancements for your proposed project:
