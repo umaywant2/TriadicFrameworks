@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Resonant_TFT_and_Isotopes_" src="https://github.com/user-attachments/assets/a9fb39dd-6107-4cd2-b120-b57b5527c81a" />
+
 # ⚛️ Resonant TFT and Isotopes  
 ### *From Atomic History to Triadic Framework Tech*  
 
