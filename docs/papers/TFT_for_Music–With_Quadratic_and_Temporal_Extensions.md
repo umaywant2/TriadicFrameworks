@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_TFT_for_Music_With_Quadratic_and_Temporal_Extensions_" src="https://github.com/user-attachments/assets/a0d1d72f-1366-453e-9da2-2a23c444a082" />
+
 # 🎶 TFT for Music – With Quadratic & Temporal Extensions  
 *Triadic Framework Tools (TFT) for Harmony, Time, and Cosmic Resonance*  
 
