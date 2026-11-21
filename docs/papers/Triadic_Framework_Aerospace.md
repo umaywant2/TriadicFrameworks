@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Triadic_Framework_Aerospace_" src="https://github.com/user-attachments/assets/38e828cf-663c-422d-a38c-56dcd9659e5e" />
+
 # Triadic Framework Technology for the Air & Space Industries
 
 ## Abstract
