@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_From_A_Wise_Fool_To_A_Nutball_Arc_" src="https://github.com/user-attachments/assets/fccf40ad-a465-476b-9241-60e97d445c70" />
+
 # From_A_Wise_Fool_To_A_Nutball_Arc.md  
 *A Critical Response to the FFF Dimensional Triads and Resonance Clarity*
 
