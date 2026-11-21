@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Health_Care_A_Modern_Miracle_" src="https://github.com/user-attachments/assets/ded6fadf-677d-4908-a4de-f7702d07e842" />
+
 # 🏥 Health Care: A Modern Miracle  
 
 ### Triadic Framework Technology (TFT) for Harmonic Healing
