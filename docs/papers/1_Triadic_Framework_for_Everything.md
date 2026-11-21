@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_1_Triadic_Framework_for_Everything_" src="https://github.com/user-attachments/assets/b11a8502-9dae-4fc0-b643-95bf4906c418" />
+
 # 🌀 Paper I: Triadic Framework for Everything  
 
 **Author:** Nawder “Visionary Catalyst”  
