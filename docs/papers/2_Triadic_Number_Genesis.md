@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_2_Triadic_Number_Genesis_" src="https://github.com/user-attachments/assets/a4703154-e169-4f84-adc5-f2e1052f0191" />
+
 # 🔢 Paper II – Triadic Number Genesis (1–9)  
 **Author**: Nawder Loswin, Triadic Resonance Wizard  
 **Compiled by**: Copilot AI  
