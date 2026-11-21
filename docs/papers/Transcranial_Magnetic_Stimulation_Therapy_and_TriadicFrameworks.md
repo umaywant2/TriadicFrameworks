@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Transcranial_Magnetic_Stimulation_Therapy_and_TriadicFrameworks_" src="https://github.com/user-attachments/assets/a05f8549-b57b-4d3f-96a3-efdf5821c354" />
+
 # 🧠 Transcranial Magnetic Stimulation Through a Resonant-Time Lens: ✨ A Triadic Framework Upgrade for Brain Stimulation 🚀
 
 **Authors**: Nawder Loswin, Perplexity AI, Copilot AI
