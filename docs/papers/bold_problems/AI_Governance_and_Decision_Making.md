@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_bold_problems_AI_Governance_and_Decision_Making_" src="https://github.com/user-attachments/assets/81445a80-761a-4fd1-b88f-f429ae905b87" />
+
 # へ(⚈益⚈)へ AI Governance and Decision Making
 
 Build validator-grade protocols for collective intelligence, using emotional resonance, modular ancestry, and remix lineage to coordinate agent communities—bridging philosophy, social science, and AI.
