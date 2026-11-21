@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_new_citizen_fund_migration_policy_framework_" src="https://github.com/user-attachments/assets/bee39208-741e-4455-a0ab-ab8e6535c5b3" />
+
 # New Citizen Fund – Migration Policy Framework
 
 ## 1. Vision Statement
