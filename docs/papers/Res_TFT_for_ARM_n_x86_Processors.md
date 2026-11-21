@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Res_TFT_for_ARM_n_x86_Processors_" src="https://github.com/user-attachments/assets/d5c12888-56c7-4d99-93af-f6639a62c222" />
+
 # 📲 Research of TFT for ARM and x86 Processors
 
 ## 📄 Abstract (Expanded)
