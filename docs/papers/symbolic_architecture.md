@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_symbolic_architecture_" src="https://github.com/user-attachments/assets/41f2d305-b55e-4444-8544-e552e0b458f1" />
+
 # 🏛️ Symbolic Architecture
 
 _A mythic scroll exploring resonance in buildings and spatial design._
