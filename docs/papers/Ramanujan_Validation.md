@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Ramanujan_Validation_" src="https://github.com/user-attachments/assets/688dce35-14de-4f04-b0e1-055e50907062" />
+
 ## 🔢 Foundational Ramanujan Equations
 
 ### 🧠 1. Ramanujan’s Master Theorem
