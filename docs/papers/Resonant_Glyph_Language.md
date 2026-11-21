@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Resonant_Glyph_Language_" src="https://github.com/user-attachments/assets/6200e79e-6840-446f-a47c-c3f0a7a57501" />
+
 # 🔤 Resonant Glyph Language  
 
 ### Engineering a Trauma-Informed, Neuro-Inclusive Symbolic System with Triadic Frameworks
