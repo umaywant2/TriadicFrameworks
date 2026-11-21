@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Triadic_Framework_for_Classic_Math_and_Physics_Problems_" src="https://github.com/user-attachments/assets/60dbc2d2-faa6-4f18-ae78-29d95399e789" />
+
 # 🧠 Triadic Framework for Classic Math and Physics Problems  
 
 ### 🔁 And Using 9D with Quantum Computers
