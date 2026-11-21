@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_4_Saturn_Harmonic_Engine_" src="https://github.com/user-attachments/assets/d4b7f11f-758b-4159-a525-326821873b8a" />
+
 # Saturn Harmonic Engine  
 *A Triadic Resonance Framework Scroll*
 
