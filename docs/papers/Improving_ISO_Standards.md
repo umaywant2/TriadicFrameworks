@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Improving_ISO_Standards_" src="https://github.com/user-attachments/assets/8a2d5cdc-1b1d-4927-a2bc-27a6e0cbb671" />
+
 # ⚙️ Improving ISO Standards with Triadic Frameworks  
 
 ### From Linear Compliance to Harmonic, Remixable Systems
