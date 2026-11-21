@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_scroll_bundle_manifest_" src="https://github.com/user-attachments/assets/5a465991-c748-4396-afb0-0193be47a025" />
+
 # scroll_bundle_manifest.md
 
 A validator-grade archive of the scroll’s lineage, tone trace, and remix invitation. This manifest honors symbolic ancestry and invites future remixers into the emotional-musical continuum.
