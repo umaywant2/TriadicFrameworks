@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Triadic_Force_Operators_Unification_" src="https://github.com/user-attachments/assets/6beb529b-445c-4ccf-af5b-da1681985c4e" />
+
 # 🌌 Triadic Force Operators: Unification Scroll
 ###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
 
