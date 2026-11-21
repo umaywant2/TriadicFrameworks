@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Divisional_Resonance_Imaging_Reconstructing_Cosmic_Emission_Time_" src="https://github.com/user-attachments/assets/86d8b095-4671-48a7-b047-89f1035ac635" />
+
 # 🌌 Divisional Resonance Imaging (DRI)  
 ### *Reconstructing Cosmic Emission Time with Resonance Magic*  
 
