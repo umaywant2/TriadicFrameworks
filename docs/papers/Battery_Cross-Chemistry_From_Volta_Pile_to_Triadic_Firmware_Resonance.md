@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Battery_Cross_Chemistry_From_Volta_Pile_to_Triadic_Firmware_Resonance_" src="https://github.com/user-attachments/assets/7ea4bfc1-5580-4967-85ec-e547e1ef2c21" />
+
 # 🔋 Battery Cross-Chemistry Takeaway  
 
 ### From Volta’s Pile to Triadic Firmware Resonance
