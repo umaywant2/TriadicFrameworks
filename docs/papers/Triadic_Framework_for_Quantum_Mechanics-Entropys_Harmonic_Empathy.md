@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Triadic_Framework_for_Quantum_Mechanics_Entropys_Harmonic_Empathy_" src="https://github.com/user-attachments/assets/57ac585f-60c2-4c1e-8063-e35862ce777c" />
+
 # 🧠 Triadic Framework for Quantum Mechanics  
 
 ### 🎶 Entropy’s Harmonic Empathy
