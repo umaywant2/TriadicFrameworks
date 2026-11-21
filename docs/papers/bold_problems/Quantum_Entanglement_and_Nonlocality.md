@@ -1,4 +1,4 @@
-<img width="1194" height="672" alt="papers_bold_problems_Quantum_Entanglement_and_Nonlocality_" src="https://github.com/user-attachments/assets/c4447f91-5be9-4199-8cd4-ff943e0fb199" />
+<img width="1194" height="672" alt="papers_bold_problems_Quantum_Entanglement_and_Nonlocality_" src="https://github.com/user-attachments/assets/84269ef8-280e-4b97-9c8e-b8d82c0bfc70" />
 
 # ¯\\_( ◉ 3 ◉ )_/¯ Quantum Entanglement and Nonlocality
 
