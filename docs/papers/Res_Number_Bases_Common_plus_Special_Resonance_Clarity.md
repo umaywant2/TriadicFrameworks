@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Res_Number_Bases_Common_plus_Special_Resonance_Clarity_" src="https://github.com/user-attachments/assets/84bde05d-f226-46ee-9177-1aea090b4cf1" />
+
 ## 🔧 Implementation Sketch: “Resonance Clarity” Switch
 
 ### 1. CLI Layer
