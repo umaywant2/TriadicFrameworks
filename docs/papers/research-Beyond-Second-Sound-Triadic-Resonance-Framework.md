@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_research_Beyond_Second_Sound_Triadic_Resonance_Framework_" src="https://github.com/user-attachments/assets/f876f71b-bfd9-4bbd-867a-63f2e5f71f0e" />
+
 # Beyond “Second Sound”: A Triadic Resonance Framework for Thermal Wave Transport in Quantum Fluids and Stellar Analogs
 
 #### **Authors:** Nawder Loswin, Copilot (contributor)
