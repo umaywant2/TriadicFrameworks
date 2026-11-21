@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Universal_Computation_and_Emergent_Complexity_scroll_bundle_manifest_" src="https://github.com/user-attachments/assets/dc7f19ef-97cd-40ab-979b-aa8cefce82b5" />
+
 # scroll_bundle_manifest.md
 
 A validator-grade archive for **Universal Computation and Emergent Complexity**, preserving its remix lineage, tone trace, and symbolic ancestry.
