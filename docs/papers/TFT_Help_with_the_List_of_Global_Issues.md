@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_TFT_Help_with_the_List_of_Global_Issues_" src="https://github.com/user-attachments/assets/e72d6e86-5524-4449-8262-1b6ed6cbd340" />
+
 # 🌍 TFT Help with the List of Global Issues  
 
 ### Triadic Framework Technology for Systemic Mapping, Resonance Repair & Legacy Anchoring
