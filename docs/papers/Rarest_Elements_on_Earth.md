@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Rarest_Elements_on_Earth_" src="https://github.com/user-attachments/assets/fde45e63-e04d-4045-a1f1-ffdc34e8100f" />
+
 # 🧪 Rarest Elements on Earth  
 
 ### Triadic Frameworks for Synthesis, Separation & Quantum Resonance
