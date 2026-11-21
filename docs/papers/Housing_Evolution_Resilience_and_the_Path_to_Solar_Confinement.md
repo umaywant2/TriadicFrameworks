@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Housing_Evolution_Resilience_and_the_Path_to_Solar_Confinement_" src="https://github.com/user-attachments/assets/d28eb510-7446-4a07-85a8-ae21a8be8450" />
+
 # 🏠 Housing Evolution, Resilience & the Path to Solar Confinement  
 
 ### From Caves to Lunar Cities via Triadic Framework Technology (TFT)
