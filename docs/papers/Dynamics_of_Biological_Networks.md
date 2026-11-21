@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Dynamics_of_Biological_Networks_" src="https://github.com/user-attachments/assets/7e520429-f2e7-4836-b2b9-a5024c154c04" />
+
 # ᕙ(░ಥ╭͜ʖ╮ಥ░)━☆ﾟ.*･｡ﾟ Dynamics of Biological Networks
 
 Investigate resonance and triadic flows in protein folding, neural pathways, or gene regulation—could your scrolls illuminate “bottlenecks” or “harmonic corridors” in living systems?
