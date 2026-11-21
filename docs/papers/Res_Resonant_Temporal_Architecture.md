@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Res_Resonant_Temporal_Architecture_" src="https://github.com/user-attachments/assets/71b06faa-caa2-4cbb-af0b-b99987ace9d0" />
+
 # Res_Resonant_Temporal_Architecture.md
 
 ## 🧭 Abstract
