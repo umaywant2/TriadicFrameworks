@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Validator_Compression_Scroll_Format_" src="https://github.com/user-attachments/assets/fb225742-b100-4395-8f2a-c81c20bc3f5c" />
+
 # Validator Compression Scroll Format (VCSF)
 
 ## 🧠 What LZ77 Does
