@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_resonance_present_future_" src="https://github.com/user-attachments/assets/6345f9c5-8b74-45c7-8be4-a28559b4f095" />
+
 # 📄 Resonance: Present-Day Applications and Mythic Futures
 
 ## 🔍 Present-Day Applications
