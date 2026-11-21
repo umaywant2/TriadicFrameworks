@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Spectral_Flux_and_Divisional_Resonance_" src="https://github.com/user-attachments/assets/412c741d-50e4-44a8-8ca9-d6dc7634ea0e" />
+
 # 🌌 Spectral Flux and Divisional Resonance  
 ### *Advancing Space Imaging, Calibration, and Temporal Reconstruction*  
 
