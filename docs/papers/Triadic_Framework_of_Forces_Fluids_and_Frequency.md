@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Triadic_Framework_of_Forces_Fluids_and_Frequency_" src="https://github.com/user-attachments/assets/098f3bf2-9c18-4f37-a4c0-cceda2c851d7" />
+
 # 🔺 Triadic Framework of Forces, Fluids, and Frequency (FFF)  
 
 ### Mythmatical Unification of Physics, Flow, and Harmonics
