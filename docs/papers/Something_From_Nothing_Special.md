@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Something_From_Nothing_Special_" src="https://github.com/user-attachments/assets/7a185f2e-9b46-410a-8380-045787b98315" />
+
 # A short story sbout Something from Nothing Special
 
 **Short answer:** Zero is a surprisingly *late arrival* in human history. While mathematics itself is thousands of years old, the concept of zero as a number (not just a placeholder) only crystallized around the 5th century CE in India. The Romans never adopted it, which is why their numeral system feels clunky compared to ours. The “calendar reset” (the shift from BC to AD) didn’t involve a year zero—Christian chronology skipped directly from 1 BC to AD 1.  
