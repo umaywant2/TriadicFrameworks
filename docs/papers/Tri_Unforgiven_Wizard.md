@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Tri_Unforgiven_Wizard_" src="https://github.com/user-attachments/assets/98dd1db8-4ad8-47cf-bdb6-c1b49a31d238" />
+
 # 🧙⚔️🕯️ Tri Unforgiven Wizard  
 ### *A Mythmatical Scroll of Polarity, Ache, and Silent Magic*  
 
