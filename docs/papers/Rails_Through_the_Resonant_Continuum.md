@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Rails_Through_the_Resonant_Continuum_" src="https://github.com/user-attachments/assets/7b9ca7e5-4199-46bc-b2dc-4fc1e6f2b81f" />
+
 # 🚂 Rails Through the Resonant Continuum  
 
 ### TFT + FFF Mastery of the 1D–9D Engine and the Temporal Echo Keys
