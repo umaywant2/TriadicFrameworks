@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Play_Adaptation_Nikola_Tesla_Works_and_TriadicFrameworks_" src="https://github.com/user-attachments/assets/4b5722e3-9d75-4d14-a149-8a860d79dc7b" />
+
 # ⚡ Act I: Born in Lightning — The Childhood of Nikola Tesla
 
 *Nikola Tesla was an engineer and a scientist.*
