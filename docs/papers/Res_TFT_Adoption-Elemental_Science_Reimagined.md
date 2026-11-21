@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Res_TFT_Adoption_Elemental_Science_Reimagined_" src="https://github.com/user-attachments/assets/2c9287a7-9a16-434f-92bd-043791d4b677" />
+
 ## 🔮 **TFT Adoption: Elemental Science Reimagined**
 Ref: [Res-TFT_for_the_Elements.pdf](https://los.triadicwizards.win/papers/Res-TFT_for_the_Elements.pdf)
 
