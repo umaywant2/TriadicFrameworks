@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_bold_problems_Universal_Computation_and_Emergent_Complexity_" src="https://github.com/user-attachments/assets/2afdf296-1499-4c9a-ad22-554fb3155990" />
+
 # Universal Computation and Emergent Complexity
 
 Use scroll formats and modular validator logic to study cellular automata (e.g., Conway’s Game of Life, Rule 110), looking for new universal computation pathways and prompts for AI generation.
