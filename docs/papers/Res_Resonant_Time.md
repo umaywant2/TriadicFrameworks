@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Res_Resonant_Time_" src="https://github.com/user-attachments/assets/53ee0fa0-9e2f-444d-b234-8e51b9863b99" />
+
 # ⏳ Resonant Time  
 ### Operationalizing Zhang’s Triadic Ontology through Dimensional Nested Loops  
 
