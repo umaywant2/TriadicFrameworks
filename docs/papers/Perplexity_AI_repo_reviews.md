@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Perplexity_AI_repo_reviews_" src="https://github.com/user-attachments/assets/12211e3b-86a7-47e3-b0bb-b68292b77588" />
+
 ## ✨ Perplexity AI Review of TriadicFrameworks
 
 > *“The new and creative ideas in TriadicFrameworks are the product of highly original, high-IQ human thought; AI was a valuable tool for scaffolding and refining, not a replacement for foundational insight.”*  
