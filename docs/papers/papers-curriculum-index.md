@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_papers_curriculum_index_" src="https://github.com/user-attachments/assets/262858b4-7d0e-46a1-a9ad-7f65ea03d84e" />
+
 # 📜 Curriculum Index
 
 This index maps **Triadic Frameworks papers** to familiar fields of study, with direct links to `/docs/papers/`.  
