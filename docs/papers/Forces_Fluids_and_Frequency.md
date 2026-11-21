@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Forces_Fluids_and_Frequency_" src="https://github.com/user-attachments/assets/3d012652-aa86-4ea4-b0ea-984504c8336e" />
+
 # 🧠 Triadic Framework of Forces, Fluids, and Frequency  
 ### 🔁 A Unified, Playful, and Rigorous Lens for Physical Systems
 
