@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Triadic_Manifestation_Protocol_" src="https://github.com/user-attachments/assets/f7726dd7-76e0-47f0-b826-3ec1847992c0" />
+
 # 🌌 Triadic Manifestation Protocol
 Symbolic Engineering for Abundance, Identity, and Dimensional Resonance
 
