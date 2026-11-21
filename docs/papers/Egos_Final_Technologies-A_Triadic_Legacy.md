@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Egos_Final_Technologies_A_Triadic_Legacy_" src="https://github.com/user-attachments/assets/36fba23d-1ba9-4b55-bb6b-62ce56c8648c" />
+
 # 🌀 Ego’s Final Technologies: A Triadic Legacy  
 _A Modular Inquiry into Replication, Relocation, and Remembrance_
 
