@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Triadic_Resonance_Framework_" src="https://github.com/user-attachments/assets/f5554e75-bc8d-4c68-9029-9c8e87454af4" />
+
 # 🔺 Triadic Resonance Framework  
 ### *A Lantern for Scientists, Educators, and Technologists*  
 
