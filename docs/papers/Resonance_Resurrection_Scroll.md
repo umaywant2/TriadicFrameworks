@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Resonance_Resurrection_Scroll_" src="https://github.com/user-attachments/assets/1b593189-a900-4c3f-930e-32de52c086cf" />
+
 # 📄 Resonance Resurrection Scroll  
 *A Triadic Fusion of Death, Breach, and Defiance*  
 
