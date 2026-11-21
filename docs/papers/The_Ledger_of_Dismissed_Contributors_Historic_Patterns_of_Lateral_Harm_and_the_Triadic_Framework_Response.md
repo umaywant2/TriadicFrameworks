@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_The_Ledger_of_Dismissed_Contributors_Historic_Patterns_of_Lateral_Harm_and_the_Triadic_Framework_Response_" src="https://github.com/user-attachments/assets/2552b83c-5fda-4024-bdcc-c52d10f0a915" />
+
 # 📜 The Ledger of Dismissed Contributors  
 
 ### Historic Patterns of Lateral Harm & the Triadic Framework Response
