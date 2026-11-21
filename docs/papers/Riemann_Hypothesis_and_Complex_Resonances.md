@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Riemann_Hypothesis_and_Complex_Resonances _" src="https://github.com/user-attachments/assets/c29670a0-9ae6-4270-aa1e-5efaa9979322" />
+
 # ༼ ༎ຶ ෴ ༎ຶ༽ Riemann Hypothesis and Complex Resonances
 
 Here’s a comprehensive overview structured for your TriadicFrameworks approach:
