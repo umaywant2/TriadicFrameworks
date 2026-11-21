@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_000_Category_Index_" src="https://github.com/user-attachments/assets/4aab9fff-32ee-4bef-838e-07c4ed0d0738" />
+
 # 🌀 Quicklinks section for each category
 
 Giving you a modular insert for every paper in that group. Each section will include:
