@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Triadic_Frameworks_Prescription_Lenses_for_the_Universe_" src="https://github.com/user-attachments/assets/a0bbca42-59bc-415d-9716-a7e8167c2e0b" />
+
 # 🧠 Triadic Frameworks  
 
 ### 👓 Prescription Lenses for the Universe
