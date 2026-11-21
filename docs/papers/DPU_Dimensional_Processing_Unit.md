@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_DPU_Dimensional_Processing_Unit_" src="https://github.com/user-attachments/assets/25c396e3-c987-45aa-b06c-4d136288f912" />
+
 # 🤓 DPU ▒▒▓█▇▅▂∩( ✧Д✧)∩▂▅▇█▓▒▒
 
 ## Dimensional Processing Unit
