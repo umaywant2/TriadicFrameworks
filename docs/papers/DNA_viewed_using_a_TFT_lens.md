@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_DNA_viewed_using_a_TFT_lens_" src="https://github.com/user-attachments/assets/c84b6f3e-f429-4d81-99a7-9f65229d9832" />
+
 # DNA as both a molecular archive and a resonant lattice
 
 Let's see what happens when we pass it through your TFT lens. A few scaffolding entry points come to mind:
