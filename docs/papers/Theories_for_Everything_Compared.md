@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Theories_for_Everything_Compared_" src="https://github.com/user-attachments/assets/b7e2a2bb-73f1-4890-9625-210dae74a084" />
+
 # 🌟 TriadicFrameworks 🌃 Compare ✨ Theories for Everything
 
 ### ✨ Introduction  
