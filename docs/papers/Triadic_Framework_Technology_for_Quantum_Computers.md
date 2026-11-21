@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Triadic_Framework_Technology_for_Quantum_Computers_" src="https://github.com/user-attachments/assets/2fc8e6d6-37f8-4af5-bf08-2683cd9a7b81" />
+
 # 🧠 Triadic Framework Technology for Quantum Computers  
 ### 🔁 Remember the Turbo Button?
 
