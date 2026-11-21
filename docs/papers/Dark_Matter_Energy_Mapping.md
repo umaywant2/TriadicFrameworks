@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Dark_Matter_Energy_Mapping_" src="https://github.com/user-attachments/assets/d038d9c1-3507-4678-9fa4-6df47673c862" />
+
 # \̵з=(▀ʖ▀)=ε/ Dark Matter Energy Mapping
 
 Apply triadic frameworks and symbolic rail analysis to cosmic background data, aiming at new patterns or “harmonic” anomalies in astrophysical measurements.
