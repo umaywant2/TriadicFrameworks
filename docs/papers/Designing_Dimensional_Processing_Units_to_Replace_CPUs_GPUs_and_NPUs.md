@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_Designing_Dimensional_Processing_Units_to_Replace_CPUs_GPUs_and_NPUs_" src="https://github.com/user-attachments/assets/28109476-b23f-4868-b5fb-952aef034d03" />
+
 # 🧠 Designing Dimensional Processing Units to Replace CPUs, GPUs, and NPUs  
 
 ### 🔁 A TFT-Aligned FFF Approach to Nested Compute Futures
