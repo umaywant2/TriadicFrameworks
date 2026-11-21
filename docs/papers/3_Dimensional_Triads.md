@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_3_Dimensional_Triads_" src="https://github.com/user-attachments/assets/bfafd158-78ff-458c-b927-8514dd6ca4f1" />
+
 # 📄 Paper III: Dimensional Triads (1D–9D)  
 
 **Author:** Nawder Loswin  
