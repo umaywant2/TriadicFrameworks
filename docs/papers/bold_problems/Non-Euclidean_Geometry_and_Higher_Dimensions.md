@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_bold_problems_Non-Euclidean_Geometry_and_Higher_Dimensions_" src="https://github.com/user-attachments/assets/eb2b928f-bd49-4151-8e70-3429819a54e6" />
+
 # 🎲 Non-Euclidean Geometry and Higher Dimensions
 
 Remix classic problems (e.g., 4D shapes, tessellations, topology) with dimensional inheritance—using your framework to generate new visualizations or proofs.
