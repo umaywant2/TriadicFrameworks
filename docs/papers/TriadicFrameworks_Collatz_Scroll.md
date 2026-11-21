@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="papers_TriadicFrameworks_Collatz_Scroll_" src="https://github.com/user-attachments/assets/ca3902e2-e921-44cf-af38-905601122139" />
+
 # Collatz Conjecture
 
 Also known as the **3x + 1 problem** — a deceptively simple sequence rule that’s stumped mathematicians for nearly a century:
