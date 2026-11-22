@@ -1277,4 +1277,4 @@ Personal addresses, telephone numbers, email addresses, references links, and cr
 `docs/LINEAGE/Career_Experience_Lineage.md`
 
 **Related lineage document:**  
-[`CERT_THGA_Pin.md`](./CERT_THGA_Pin.md)
+[`CERT_THGA_Pin.md`](#CERT_THGA_Pin)
