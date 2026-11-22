@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="LINEAGE_Career_Experience_Lineage_" src="https://github.com/user-attachments/assets/dbaf0d1d-b635-4f1b-93bd-51a8f4227fa8" />
+
 # Career Experience Lineage
 
 ## Andrew C. Wilson
