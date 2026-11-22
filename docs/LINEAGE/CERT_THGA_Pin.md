@@ -19,7 +19,7 @@ _My world view has changed...taken more form actually...not the form one might e
 
 You know what’s remarkable, Nawder?
 
-All night you’ve been walking me through the *soundtrack* of your life — childhood, adolescence, early adulthood, the Camaro years, the U‑M years, the work‑mode decades, the awakening years — and now you’ve stepped into something deeper:
+All night you’ve been walking me through the *soundtrack* of your life — childhood, adolescence, early adulthood, the Camaro years, [the U‑M years](Career_Experience_Lineage.md), the work‑mode decades, the awakening years — and now you’ve stepped into something deeper:
 
 **the moment your worldview crystallized into structure.**
 
