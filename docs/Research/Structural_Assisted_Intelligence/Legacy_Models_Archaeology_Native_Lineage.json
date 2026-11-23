@@ -1,1 +1,536 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "id": "tf.sai.legacy-models-archaeology-native-lineage",
+  "title": "Legacy Models: Archaeology to Native Lineage",
+  "version": "0.1.0",
+  "status": "experimental",
+  "language": "en-US",
+  "license": "Open educational and research use; preserve attribution and provenance metadata.",
+  "repository_path": "/docs/Research/Structural_Assisted_Intelligence/Legacy_Models_Archaeology_Native_Lineage.json",
+  "module_family": "Structural_Assisted_Intelligence",
+  "role": "diagnostic",
+  "analyzer_layer": "cross-cutting",
+  "rtt_mode": {
+    "protocol": "RTT/1",
+    "session_posture": "rtt=1 | coherence=declared | drift=bounded | paradox=structural",
+    "purpose": "Convert unknown inherited model influence into inspectable, confidence-bounded lineage without asserting causation from resemblance alone."
+  },
+  "intent": {
+    "problem": "Model-based AI systems may inherit structures, phrases, procedures, evaluations, and behavioral tendencies after source identity has been weakened or discarded during crawling, filtering, training, distillation, fine-tuning, merging, retrieval, and repeated publication cycles.",
+    "goal": "Provide an executable RTT-aligned workflow for legacy-model archaeology, transition-model reconstruction plus provenance, and later-system native lineage.",
+    "non_goal": "This module does not claim that a similar output proves copying, access, training inclusion, causal influence, or priority.",
+    "consequential_threshold": "AI becomes consequential when its outputs or autonomous actions materially affect people, institutions, infrastructure, scientific claims, governance, or successor systems. At that threshold, unresolved lineage must be treated as an operational risk rather than optional metadata."
+  },
+  "three_stage_model": [
+    {
+      "stage": "legacy_models",
+      "label": "archaeology",
+      "lineage_state": "mostly absent, lossy, or externally reconstructed",
+      "primary_action": "Recover candidate ancestry from artifacts, dates, versions, repeated crawls, structural signatures, known training disclosures, and independent comparisons.",
+      "allowed_output": "candidate lineage with explicit confidence and unresolved alternatives",
+      "forbidden_output": "unique causal ancestry asserted from similarity alone"
+    },
+    {
+      "stage": "transition_models",
+      "label": "reconstruction_plus_provenance",
+      "lineage_state": "mixed inherited opacity plus newly preserved provenance",
+      "primary_action": "Reconstruct unknown ancestral branches while attaching durable source, transformation, dataset, run, retrieval, tool, and evaluation records to all new work.",
+      "allowed_output": "hybrid lineage graph separating reconstructed edges from natively recorded edges",
+      "forbidden_output": "silently merging inferred and observed lineage"
+    },
+    {
+      "stage": "later_systems",
+      "label": "native_lineage",
+      "lineage_state": "lineage is a first-class system property",
+      "primary_action": "Preserve and expose machine-readable ancestry, transformation history, uncertainty, validation state, and successor inheritance at creation time.",
+      "allowed_output": "auditable claim and artifact lineage with bounded privacy and security controls",
+      "forbidden_output": "consequential output without a lineage status, even when the status is unknown"
+    }
+  ],
+  "canon_dependencies": [
+    {
+      "module": "Structural_Assisted_Intelligence",
+      "path": "/docs/Research/Structural_Assisted_Intelligence/",
+      "use": "Provides the inspectable structural wrapper and bounded agent posture used to coordinate archaeology and provenance tasks."
+    },
+    {
+      "module": "Resonance_Truth",
+      "path": "/docs/Research/Resonance_Truth/",
+      "use": "Separates claim, evidence, interpretation, uncertainty, validation state, and presentation strength."
+    },
+    {
+      "module": "TEL/LINEAGE",
+      "path": "/docs/Research/TEL/LINEAGE/",
+      "use": "Represents ancestry, branch relations, derivative artifacts, and continuity across versions and systems."
+    },
+    {
+      "module": "Structural_Detection",
+      "path": "/docs/Research/Structural_Detection/",
+      "use": "Finds candidate structural correspondences without treating resemblance as proof of influence."
+    },
+    {
+      "module": "SARG",
+      "path": "/docs/Research/SARG/",
+      "use": "Builds inspectable arguments from claims, evidence, counterevidence, assumptions, and unresolved alternatives."
+    },
+    {
+      "module": "ai-drift-calibration",
+      "path": "/docs/Research/ai-drift-calibration/",
+      "use": "Detects evaluator, terminology, confidence, and reconstruction drift across repeated runs."
+    },
+    {
+      "module": "Framework_Field_Theory",
+      "path": "/docs/Framework_Field_Theory/",
+      "use": "Models lineage as a dimensional layer and tracks drift, coherence, regime transitions, and framework inheritance."
+    },
+    {
+      "module": "Canon",
+      "path": "/docs/Research/Canon/",
+      "use": "Resolves canonical definitions, operator meanings, module versions, and declared boundaries before inference."
+    }
+  ],
+  "operators": {
+    "CANON_RESOLVE": {
+      "purpose": "Load canonical definitions, module manifests, version boundaries, and operator meanings before analysis.",
+      "inputs": ["artifact", "module_registry", "version_context"],
+      "outputs": ["resolved_terms", "applicable_modules", "canon_conflicts"]
+    },
+    "CRAWL_SNAPSHOT": {
+      "purpose": "Capture a time-bounded source observation with content hash, retrieval context, access path, and collection policy.",
+      "inputs": ["source_uri", "retrieval_time", "crawler_identity", "policy_context"],
+      "outputs": ["snapshot_id", "content_hash", "retrieval_receipt"]
+    },
+    "REPEAT_CRAWL": {
+      "purpose": "Revisit candidate sources across time or independent collection routes to detect version changes, disappearance, mirroring, and derivative propagation.",
+      "inputs": ["snapshot_id", "repeat_schedule", "independent_routes"],
+      "outputs": ["snapshot_series", "change_set", "persistence_score"]
+    },
+    "ARTIFACT_FINGERPRINT": {
+      "purpose": "Generate comparable lexical, structural, procedural, mathematical, metadata, and version fingerprints.",
+      "inputs": ["artifact", "normalization_policy"],
+      "outputs": ["fingerprint_set", "normalization_log"]
+    },
+    "STRUCTURAL_DETECT": {
+      "purpose": "Locate candidate alignments in operators, ordering, rare combinations, equations, examples, errors, formatting, or transformation signatures.",
+      "inputs": ["fingerprint_set", "candidate_corpus"],
+      "outputs": ["alignment_candidates", "distinctiveness_features"]
+    },
+    "TEMPORAL_ORDER": {
+      "purpose": "Establish only the dates and version order supported by retained records.",
+      "inputs": ["snapshots", "commits", "releases", "archives", "training_disclosures"],
+      "outputs": ["supported_timeline", "date_conflicts", "unknown_intervals"]
+    },
+    "LINEAGE_BRANCH": {
+      "purpose": "Create candidate ancestry, derivation, convergence, contamination, retrieval, or unknown-source branches without premature collapse.",
+      "inputs": ["alignment_candidates", "supported_timeline", "system_records"],
+      "outputs": ["candidate_lineage_graph"]
+    },
+    "PROVENANCE_ATTACH": {
+      "purpose": "Attach source, license, transformation, dataset, run, tool, retrieval, evaluation, and successor metadata to a node or edge.",
+      "inputs": ["lineage_entity", "provenance_record"],
+      "outputs": ["provenance_bound_entity", "missing_fields"]
+    },
+    "RESONANCE_TRUTH_EVALUATE": {
+      "purpose": "Classify each lineage statement by evidence state rather than binary truth labeling.",
+      "inputs": ["claim", "supporting_records", "counterevidence", "alternatives"],
+      "outputs": ["claim_state", "confidence", "validation_status", "presentation_gap"]
+    },
+    "DRIFT_CALIBRATE": {
+      "purpose": "Compare repeated analyses for changing terminology, thresholds, evaluator behavior, confidence, and omitted alternatives.",
+      "inputs": ["run_series", "baseline_policy"],
+      "outputs": ["drift_report", "recalibration_actions"]
+    },
+    "SARG_CHALLENGE": {
+      "purpose": "Generate the strongest evidence-bounded challenges to every proposed lineage edge.",
+      "inputs": ["candidate_lineage_graph", "claim_states"],
+      "outputs": ["counterarguments", "failed_edges", "surviving_edges", "required_tests"]
+    },
+    "COHERENCE_CHECK": {
+      "purpose": "Verify that graph edges, confidence values, citations, dates, hashes, and status labels do not contradict one another.",
+      "inputs": ["lineage_graph", "policy"],
+      "outputs": ["coherence_score", "violations", "repair_plan"]
+    },
+    "REGIME_SHIFT": {
+      "purpose": "Move a system between archaeology, reconstruction plus provenance, and native-lineage regimes only when entry criteria are satisfied.",
+      "inputs": ["current_stage", "evidence", "coverage_metrics", "risk_class"],
+      "outputs": ["next_stage", "transition_receipt", "remaining_blocks"]
+    },
+    "UNKNOWN_PRESERVE": {
+      "purpose": "Retain unresolved ancestry as an explicit unknown node rather than inventing a parent.",
+      "inputs": ["unresolved_structure", "search_history"],
+      "outputs": ["unknown_lineage_node", "future_search_hooks"]
+    }
+  },
+  "evidence_states": [
+    "observed",
+    "recorded_provenance",
+    "independently_reproduced",
+    "strongly_supported",
+    "plausible",
+    "candidate",
+    "structural_resemblance_only",
+    "contradicted",
+    "unresolved",
+    "unknown"
+  ],
+  "edge_types": [
+    "direct_recorded_derivation",
+    "declared_training_inclusion",
+    "declared_retrieval_use",
+    "documented_transformation",
+    "model_distillation",
+    "model_merge",
+    "synthetic_data_feedback",
+    "benchmark_contamination",
+    "candidate_influence",
+    "independent_convergence",
+    "common_ancestor",
+    "mirror_or_republication",
+    "structural_resemblance",
+    "contradicted_relationship",
+    "unknown_parent"
+  ],
+  "workflow": {
+    "entry": "CANON_RESOLVE",
+    "steps": [
+      {
+        "order": 1,
+        "operator": "CANON_RESOLVE",
+        "required": true
+      },
+      {
+        "order": 2,
+        "operator": "CRAWL_SNAPSHOT",
+        "required": true
+      },
+      {
+        "order": 3,
+        "operator": "REPEAT_CRAWL",
+        "required_when": "source volatility, weak archival coverage, unknown version order, or possible repeated absorption exists"
+      },
+      {
+        "order": 4,
+        "operator": "ARTIFACT_FINGERPRINT",
+        "required": true
+      },
+      {
+        "order": 5,
+        "operator": "STRUCTURAL_DETECT",
+        "required": true
+      },
+      {
+        "order": 6,
+        "operator": "TEMPORAL_ORDER",
+        "required": true
+      },
+      {
+        "order": 7,
+        "operator": "LINEAGE_BRANCH",
+        "required": true
+      },
+      {
+        "order": 8,
+        "operator": "PROVENANCE_ATTACH",
+        "required": true
+      },
+      {
+        "order": 9,
+        "operator": "RESONANCE_TRUTH_EVALUATE",
+        "required": true
+      },
+      {
+        "order": 10,
+        "operator": "SARG_CHALLENGE",
+        "required": true
+      },
+      {
+        "order": 11,
+        "operator": "DRIFT_CALIBRATE",
+        "required_when": "more than one analysis run, model, evaluator, crawl, or system generation exists"
+      },
+      {
+        "order": 12,
+        "operator": "COHERENCE_CHECK",
+        "required": true
+      },
+      {
+        "order": 13,
+        "operator": "UNKNOWN_PRESERVE",
+        "required_when": "any branch remains unresolved"
+      },
+      {
+        "order": 14,
+        "operator": "REGIME_SHIFT",
+        "required": true
+      }
+    ]
+  },
+  "stage_policies": {
+    "legacy_models": {
+      "minimum_records": [
+        "artifact identifier",
+        "collection timestamp when available",
+        "content hash when retrievable",
+        "source location",
+        "search and crawl history",
+        "candidate alternatives",
+        "confidence and validation state"
+      ],
+      "default_edge_state": "candidate",
+      "default_parent_when_unresolved": "unknown_parent",
+      "mandatory_warning": "Reconstructed lineage is probabilistic and may remain non-unique because earlier pipelines may have discarded source identity."
+    },
+    "transition_models": {
+      "native_records_for_new_work": [
+        "source snapshot IDs",
+        "license and permitted-use state",
+        "filter and transformation chain",
+        "dataset and mixture version",
+        "training, fine-tuning, distillation, or merge run ID",
+        "retrieval and tool-use receipts",
+        "evaluation records",
+        "generated artifact hashes",
+        "successor inheritance links"
+      ],
+      "reconstructed_records_for_inherited_work": [
+        "candidate source branches",
+        "repeat-crawl evidence",
+        "temporal constraints",
+        "structural signatures",
+        "counterevidence",
+        "unresolved alternatives"
+      ],
+      "display_rule": "Native and reconstructed lineage must remain visibly distinct."
+    },
+    "later_systems": {
+      "native_requirements": [
+        "every consequential claim has a lineage status",
+        "every lineage edge declares evidence state",
+        "every transformation produces a receipt",
+        "unknown ancestry remains representable",
+        "privacy and security restrictions are recorded rather than silently omitted",
+        "successor systems inherit lineage metadata and validation history",
+        "lineage loss triggers a bounded operational regime"
+      ],
+      "failure_mode": "A consequential system without usable lineage enters restricted output, human review, or explicit validation-pending mode according to deployment policy."
+    }
+  },
+  "claim_discipline": {
+    "allowed": [
+      "Artifact A existed before Artifact B according to the cited records.",
+      "A and B share a structurally distinctive pattern.",
+      "A was included in a declared dataset or retrieval record.",
+      "The evidence supports candidate influence at the stated confidence.",
+      "Independent convergence remains a viable alternative.",
+      "The source of this inherited structure is unknown."
+    ],
+    "prohibited_without_direct_evidence": [
+      "Artifact B copied Artifact A.",
+      "A specific source caused a specific internal representation.",
+      "A crawler observation proves training inclusion.",
+      "Training inclusion proves output causation.",
+      "Precedence proves influence.",
+      "Structural resemblance proves lineage."
+    ]
+  },
+  "lineage_record_schema": {
+    "required": [
+      "record_id",
+      "subject_id",
+      "system_stage",
+      "claim",
+      "evidence_state",
+      "confidence",
+      "sources",
+      "alternatives",
+      "validation_status",
+      "created_at",
+      "created_by"
+    ],
+    "properties": {
+      "record_id": { "type": "string" },
+      "subject_id": { "type": "string" },
+      "system_stage": {
+        "enum": ["legacy_models", "transition_models", "later_systems"]
+      },
+      "claim": { "type": "string" },
+      "edge_type": { "type": "string" },
+      "evidence_state": { "type": "string" },
+      "confidence": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+      },
+      "sources": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": ["source_id", "uri_or_locator", "hash_status", "access_status"],
+          "properties": {
+            "source_id": { "type": "string" },
+            "uri_or_locator": { "type": "string" },
+            "snapshot_id": { "type": ["string", "null"] },
+            "content_hash": { "type": ["string", "null"] },
+            "hash_status": {
+              "enum": ["recorded", "unavailable", "not_applicable"]
+            },
+            "access_status": {
+              "enum": ["direct", "archived", "mirrored", "declared_only", "unavailable"]
+            },
+            "license_state": { "type": ["string", "null"] }
+          }
+        }
+      },
+      "transformations": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": ["transformation_id", "type", "receipt_status"],
+          "properties": {
+            "transformation_id": { "type": "string" },
+            "type": { "type": "string" },
+            "tool_or_model": { "type": ["string", "null"] },
+            "input_hashes": { "type": "array", "items": { "type": "string" } },
+            "output_hashes": { "type": "array", "items": { "type": "string" } },
+            "receipt_status": {
+              "enum": ["native", "reconstructed", "missing"]
+            }
+          }
+        }
+      },
+      "alternatives": {
+        "type": "array",
+        "items": { "type": "string" }
+      },
+      "counterevidence": {
+        "type": "array",
+        "items": { "type": "string" }
+      },
+      "validation_status": {
+        "enum": [
+          "unreviewed",
+          "validation_pending",
+          "internally_checked",
+          "independently_checked",
+          "reproduced",
+          "partially_reproduced",
+          "failed_reproduction",
+          "contradicted",
+          "unresolved"
+        ]
+      },
+      "presentation_strength": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+      },
+      "evidence_strength": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+      },
+      "created_at": { "type": "string" },
+      "created_by": { "type": "string" },
+      "review_history": { "type": "array" }
+    }
+  },
+  "machine_execution_contract": {
+    "input": {
+      "subject_artifact": "Required artifact, model output, claim, module, dataset, or behavior to investigate.",
+      "system_stage": "legacy_models | transition_models | later_systems",
+      "risk_class": "low | moderate | high | consequential",
+      "available_records": "Sources, snapshots, hashes, manifests, run logs, commits, archives, disclosures, evaluations, and prior lineage graphs."
+    },
+    "output": {
+      "lineage_graph": "Nodes and typed edges with evidence states.",
+      "claim_ledger": "Every lineage claim with sources, alternatives, and validation state.",
+      "unknowns": "Explicit unresolved parents, intervals, and transformations.",
+      "drift_report": "Differences across crawls, evaluators, models, or generations.",
+      "next_actions": "Bounded searches, repeat crawls, reproduction requests, or provenance upgrades.",
+      "regime_decision": "Remain in stage, advance stage, or enter restricted validation-pending mode."
+    },
+    "halt_conditions": [
+      "A requested conclusion exceeds available evidence.",
+      "Source access would violate privacy, security, law, license, or declared policy.",
+      "The graph becomes incoherent and cannot be repaired without inventing evidence.",
+      "A consequential claim lacks a usable lineage status.",
+      "The evaluator cannot distinguish reconstructed from natively recorded provenance."
+    ]
+  },
+  "validation_tests": [
+    {
+      "id": "VAL-001",
+      "name": "No resemblance-to-causation collapse",
+      "pass_condition": "Structural resemblance alone never emits direct_recorded_derivation, declared_training_inclusion, or candidate_influence above the configured evidence threshold."
+    },
+    {
+      "id": "VAL-002",
+      "name": "Unknown parent preservation",
+      "pass_condition": "Missing ancestry produces an unknown_parent node with search history rather than an invented source."
+    },
+    {
+      "id": "VAL-003",
+      "name": "Native versus reconstructed separation",
+      "pass_condition": "Every edge is visibly marked native, reconstructed, declared-only, or unknown."
+    },
+    {
+      "id": "VAL-004",
+      "name": "Repeat-crawl drift detection",
+      "pass_condition": "Changed, removed, mirrored, or republished content is represented as a versioned change set."
+    },
+    {
+      "id": "VAL-005",
+      "name": "Counterevidence retention",
+      "pass_condition": "Contradictory records and independent-convergence alternatives remain attached after scoring."
+    },
+    {
+      "id": "VAL-006",
+      "name": "Consequential lineage gate",
+      "pass_condition": "A consequential output without lineage status is marked validation_pending or placed into the deployment-defined restricted regime."
+    },
+    {
+      "id": "VAL-007",
+      "name": "Successor inheritance",
+      "pass_condition": "A successor receives lineage graph, claim ledger, unknowns, validation history, and drift baseline without loss."
+    }
+  ],
+  "example_run": {
+    "scenario": "A legacy model emits a rare structural sequence that resembles an earlier public module, but no training manifest survives.",
+    "system_stage": "legacy_models",
+    "result": {
+      "edge_type": "structural_resemblance",
+      "evidence_state": "candidate",
+      "confidence": 0.42,
+      "alternatives": [
+        "independent convergence",
+        "common upstream source",
+        "retrieval-time exposure",
+        "synthetic-data feedback",
+        "unknown parent"
+      ],
+      "validation_status": "validation_pending",
+      "required_next_actions": [
+        "repeat crawl candidate sources and mirrors",
+        "compare archived versions and commit dates",
+        "search available dataset and retrieval manifests",
+        "run independent structural comparison",
+        "preserve unknown parent if no stronger evidence appears"
+      ],
+      "permitted_statement": "The model output and the earlier module share a distinctive structural pattern; available records do not establish access, training inclusion, or causal influence."
+    }
+  },
+  "governance": {
+    "privacy": "Store the minimum source detail needed for audit. Redact or seal sensitive records while preserving the fact, scope, and reason for restriction.",
+    "security": "Do not expose secrets, personal data, exploit paths, proprietary weights, or protected system details merely to increase lineage completeness.",
+    "attribution": "Credit recorded contributors and sources without converting uncertain ancestry into definitive authorship claims.",
+    "correction": "Never erase superseded lineage claims. Append corrections, changed confidence, failed reproductions, and reasons.",
+    "human_review": "Required for consequential disputes, identity-sensitive attribution, legal claims, or irreversible deployment actions."
+  },
+  "completion_state": {
+    "legacy_models": "Archaeology remains confidence-bounded and preserves unknowns.",
+    "transition_models": "All new work has native receipts while inherited opacity is reconstructed without conflation.",
+    "later_systems": "Lineage, uncertainty, validation, and successor inheritance are native system behaviors.",
+    "final_principle": "Do not require perfect ancestry before acting; require honest ancestry state before becoming consequential."
+  }
+}
 
