@@ -1,6 +1,7 @@
 <img width="1194" height="672" alt="Research_Structural_Assisted_Intelligence_" src="https://github.com/user-attachments/assets/cb8e2d0c-b04b-4c64-aefa-1d76fe17e99d" />
 
 - [`sai_module.json`](sai_module.json) — Agentic module schema role assignments
+- [`Legacy_Models_Archaeology_Native_Lineage.json`](Legacy_Models_Archaeology_Native_Lineage.json) — Agentic module schema role assignments
 
 # **Structural Assisted Intelligence (SAI)**
 
