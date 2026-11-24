@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Canon_Articaf_The_Quiet_Canon_and_the_Loud_Claim_" src="https://github.com/user-attachments/assets/b100d9a3-9ffe-4bf7-a50a-9a0572634886" />
+
 # The Quiet Canon and the Loud Claim
 
 A proof can be formally correct and still leave us with a problem.
