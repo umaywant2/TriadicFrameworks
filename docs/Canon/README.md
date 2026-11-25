@@ -11,6 +11,8 @@ description: "The TriadicFrameworks Canon is the coherence-locked root for RTT f
 # 🔵 TriadicFrameworks Canon
 **Coherence-Locked Root · v1.0**
 
+- 👽**New**: [The Quiet Canon and the Loud Claim](https://www.triadicframeworks.org/Canon/#ARTICAF_QUIET_CANON_LOUD_CLAIM)
+
 The **Canon** is the authoritative foundation of TriadicFrameworks. Every module, operator, equation, and structural grammar inherits from this root.
 
 ## Canon scope
