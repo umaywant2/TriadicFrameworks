@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="arrival_substrate_model_arrival_operator_" src="https://github.com/user-attachments/assets/d64badfd-30ff-493b-a79a-67f691cb4738" />
+
 # 🎛️ **Arrival Operator**  
 *The universal triadic operator governing all regime transitions*
 
