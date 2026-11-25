@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Research/case_studies/SS7_Passive_Structural_Awareness_Observer.md">
+  <title>Student Case Study: Passive Structural Awareness for Legacy Telecom Signaling</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Research/case_studies/SS7_Passive_Structural_Awareness_Observer.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Research/case_studies/SS7_Passive_Structural_Awareness_Observer.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="student-case-study-passive-structural-awareness-for-legacy-telecom-signaling">Student Case Study: Passive Structural Awareness for Legacy Telecom Signaling</h1>
+<p><strong>Suggested filename:</strong> <code>SS7_Passive_Structural_Awareness_Observer.md</code></p>
+<h2 id="case-study-status">Case Study Status</h2>
+<p><strong>Type:</strong> Exploratory student research case study<br>
+<strong>Domain:</strong> Telecommunications · Cybersecurity · Structural awareness<br>
+<strong>Primary systems:</strong> SS7 · Diameter · Inter-network signaling<br>
+<strong>Mode:</strong> Passive observation<br>
+<strong>Objective:</strong> Awareness before alignment<br>
+<strong>Safety boundary:</strong> Observe, classify, explain, and evaluate. Do not interfere with live telecommunications infrastructure.</p>
+<hr>
+<h2 id="1-the-problem">1. The Problem</h2>
+<p>Modern communications still depend upon signaling systems whose architectural assumptions originated in an earlier telecommunications environment.</p>
+<p>SS7 and related signaling infrastructure continue to support important telecommunications functions, including interconnection, calls, text messages, subscriber information, and roaming.</p>
+<p>Existing security systems can monitor and filter signaling traffic. Yet an important research question remains:</p>
+<blockquote>
+<p><strong>Can a passive structural-awareness layer improve recognition of anomalous, incoherent, or potentially malicious signaling behavior without itself becoming part of the control plane?</strong></p>
+</blockquote>
+<p>This case study asks the student to investigate that question.</p>
+<p>The goal is not to redesign SS7.</p>
+<p>The goal is not to attack SS7.</p>
+<p>The goal is not initially to enforce anything.</p>
+<p>The goal is to <strong>observe structure well enough that another authorized system could make a better decision.</strong></p>
+<hr>
+<h1 id="2-core-principle">2. Core Principle</h1>
+<blockquote>
+<p><strong>Awareness before alignment.</strong></p>
+</blockquote>
+<p>Before a system attempts to correct behavior, enforce policy, restore coherence, or attribute responsibility, it must first establish what it can actually observe.</p>
+<p>A passive observer therefore separates two functions that are easily conflated:</p>
+<h3 id="awareness">Awareness</h3>
+<p>What appears to be happening?</p>
+<h3 id="alignment">Alignment</h3>
+<p>What, if anything, should be done about it?</p>
+<p>This case study deliberately investigates the first.</p>
+<hr>
+<h1 id="3-research-question">3. Research Question</h1>
+<p>Can a passive observer construct useful structural awareness from signaling metadata and identify meaningful changes in behavior without making unsupported claims about identity, intent, or legality?</p>
+<p>A successful observer should therefore be able to say:</p>
+<blockquote>
+<p><strong>Something changed, and here is the evidence.</strong></p>
+</blockquote>
+<p>It should be much more cautious about saying:</p>
+<blockquote>
+<p><strong>This actor is malicious.</strong></p>
+</blockquote>
+<p>Those are different claims.</p>
+<hr>
+<h1 id="4-student-challenge">4. Student Challenge</h1>
+<p>Design a passive <strong>Structural Awareness Observer</strong> for legacy and interworking telecommunications signaling.</p>
+<p>The observer should conceptually sit beside existing infrastructure:</p>
+<p><strong>Network activity → telemetry → structural observer → evidence</strong></p>
+<p>rather than:</p>
+<p><strong>Network activity → AI → autonomous enforcement</strong></p>
+<p>The observer receives permitted telemetry or synthetic data and produces observations about structural behavior.</p>
+<p>It must not modify signaling traffic.</p>
+<p>It must not generate signaling messages.</p>
+<p>It must not probe external telecommunications infrastructure.</p>
+<p>It must not attempt to identify private individuals.</p>
+<p>It must not infer criminality merely from anomalous behavior.</p>
+<hr>
+<h1 id="5-observation-model">5. Observation Model</h1>
+<p>For every permitted observation, consider whether the system can characterize dimensions such as:</p>
+<ul>
+<li>source category</li>
+<li>destination category</li>
+<li>protocol</li>
+<li>message or operation class</li>
+<li>route characteristics</li>
+<li>timing</li>
+<li>repetition</li>
+<li>historical pattern</li>
+<li>declared relationship</li>
+<li>observed relationship</li>
+<li>changes from previous behavior</li>
+<li>available provenance</li>
+<li>provenance gaps</li>
+</ul>
+<p>Not every implementation will expose every dimension.</p>
+<p>Missing information is itself part of the observation.</p>
+<p>The system should explicitly distinguish:</p>
+<p><strong>known</strong></p>
+<p><strong>observed</strong></p>
+<p><strong>inferred</strong></p>
+<p><strong>unknown</strong></p>
+<hr>
+<h1 id="6-structural-record">6. Structural Record</h1>
+<p>A student may represent an observation abstractly as:</p>
+<p><strong>O = {source, relation, target, time, context, lineage, confidence}</strong></p>
+<p>where:</p>
+<ul>
+<li><strong>source</strong> identifies the observable origin available to the system;</li>
+<li><strong>relation</strong> describes the operation being observed;</li>
+<li><strong>target</strong> represents its destination or affected class;</li>
+<li><strong>time</strong> establishes temporal context;</li>
+<li><strong>context</strong> represents surrounding network conditions;</li>
+<li><strong>lineage</strong> records the evidence from which the observation was constructed;</li>
+<li><strong>confidence</strong> describes how strongly the available evidence supports the classification.</li>
+</ul>
+<p>This is an analytical model for the case study, not a claim about an existing telecommunications standard.</p>
+<hr>
+<h1 id="7-establishing-a-baseline">7. Establishing a Baseline</h1>
+<p>The observer first requires some concept of ordinary behavior.</p>
+<p>The student should investigate ways to describe an operating regime without assuming that ordinary behavior is automatically legitimate.</p>
+<p>Possible characteristics include:</p>
+<ul>
+<li>recurring communication relationships;</li>
+<li>typical operation classes;</li>
+<li>temporal distributions;</li>
+<li>route consistency;</li>
+<li>historical continuity;</li>
+<li>changes in frequency;</li>
+<li>appearance of previously unseen relationships;</li>
+<li>changes in provenance quality.</li>
+</ul>
+<p>The important distinction is:</p>
+<blockquote>
+<p><strong>Baseline means observed normality, not authorized correctness.</strong></p>
+</blockquote>
+<p>A historically common behavior could still be undesirable.</p>
+<p>A previously unseen behavior could still be legitimate.</p>
+<hr>
+<h1 id="8-detecting-structural-change">8. Detecting Structural Change</h1>
+<p>The observer then looks for changes in relationships rather than simply searching for a list of known bad identifiers.</p>
+<p>Conceptual examples include:</p>
+<p><strong>Expected relationship</strong></p>
+<p>A → B → C</p>
+<p>followed by:</p>
+<p><strong>Observed change</strong></p>
+<p>A → X → C</p>
+<p>or:</p>
+<p><strong>Historical behavior</strong></p>
+<p>A → B</p>
+<p>followed by:</p>
+<p><strong>New behavior</strong></p>
+<p>A → B<br>
+A → B<br>
+X → B<br>
+X → B<br>
+X → B</p>
+<p>The observer does not need to immediately know what <strong>X</strong> represents.</p>
+<p>Its first responsibility is to notice that the structural regime changed.</p>
+<hr>
+<h1 id="9-actor-types-not-verdicts">9. Actor Types, Not Verdicts</h1>
+<p>If classification is attempted, use behavior-oriented categories rather than declarations of guilt.</p>
+<p>Possible research labels might include:</p>
+<ul>
+<li>expected</li>
+<li>novel</li>
+<li>anomalous</li>
+<li>inconsistent</li>
+<li>insufficient evidence</li>
+<li>provenance incomplete</li>
+<li>relationship unexplained</li>
+<li>behavior requiring review</li>
+</ul>
+<p>A more advanced project might explore probabilistic categories.</p>
+<p>For example:</p>
+<p><strong>Observed behavior:</strong> anomalous<br>
+<strong>Identity confidence:</strong> low<br>
+<strong>Intent confidence:</strong> unknown<br>
+<strong>Recommended disposition:</strong> further review</p>
+<p>This is preferable to producing an unsupported statement such as:</p>
+<p><strong>Bad actor detected.</strong></p>
+<hr>
+<h1 id="10-provenance-as-a-first-class-requirement">10. Provenance as a First-Class Requirement</h1>
+<p>Every classification should be traceable.</p>
+<p>The observer should preserve enough information to answer:</p>
+<ul>
+<li>What was observed?</li>
+<li>What source produced the observation?</li>
+<li>When was it observed?</li>
+<li>What baseline was used?</li>
+<li>Which features contributed to the classification?</li>
+<li>What information was unavailable?</li>
+<li>What assumptions were made?</li>
+<li>Which model or rule version produced the result?</li>
+<li>Has the classification subsequently changed?</li>
+</ul>
+<p>A useful design principle is:</p>
+<blockquote>
+<p><strong>No classification without lineage.</strong></p>
+</blockquote>
+<hr>
+<h1 id="11-global-title-transparency-as-a-research-example">11. Global Title Transparency as a Research Example</h1>
+<p>Global Title relationships provide a useful case for studying provenance.</p>
+<p>A visible network identifier does not necessarily provide complete knowledge about the underlying organization or relationship responsible for observed signaling.</p>
+<p>The student should therefore explore the difference between:</p>
+<p><strong>identifier</strong></p>
+<p><strong>route</strong></p>
+<p><strong>operator relationship</strong></p>
+<p><strong>responsible entity</strong></p>
+<p><strong>observed behavior</strong></p>
+<p>These should not automatically be treated as equivalent.</p>
+<p>The research question becomes:</p>
+<blockquote>
+<p>Can structural correlation improve awareness when direct identity information is incomplete?</p>
+</blockquote>
+<hr>
+<h1 id="12-cross-protocol-awareness">12. Cross-Protocol Awareness</h1>
+<p>An advanced version of the experiment may investigate whether a single observation layer can recognize related structural behavior across multiple signaling environments.</p>
+<p>Examples might include permitted or synthetic telemetry representing:</p>
+<ul>
+<li>SS7</li>
+<li>Diameter</li>
+<li>SIGTRAN</li>
+<li>IPX relationships</li>
+<li>SMS signaling</li>
+<li>newer interworking environments</li>
+</ul>
+<p>The objective is not universal decoding.</p>
+<p>The objective is to determine whether different protocols can contribute observations to a common structural model.</p>
+<hr>
+<h1 id="13-coherence">13. Coherence</h1>
+<p>For this case study, coherence should not mean:</p>
+<p><strong>everything looks normal.</strong></p>
+<p>Instead, a coherent observation is one whose relationships can be consistently explained by the available evidence.</p>
+<p>Conceptually:</p>
+<p><strong>Observed operation</strong><br>
+↓<br>
+<strong>Observable source</strong><br>
+↓<br>
+<strong>Known relationship</strong><br>
+↓<br>
+<strong>Expected context</strong><br>
+↓<br>
+<strong>Consistent history</strong></p>
+<p>A break anywhere in that chain may create a <strong>coherence question</strong>.</p>
+<p>It does not automatically establish malicious behavior.</p>
+<hr>
+<h1 id="14-awareness-output">14. Awareness Output</h1>
+<p>A useful observer might produce an abstract result such as:</p>
+<p><strong>Observation:</strong> unusual signaling relationship</p>
+<p><strong>Structural change:</strong> previously unseen source relationship</p>
+<p><strong>Historical consistency:</strong> low</p>
+<p><strong>Lineage completeness:</strong> partial</p>
+<p><strong>Behavioral confidence:</strong> moderate</p>
+<p><strong>Identity confidence:</strong> low</p>
+<p><strong>Intent:</strong> unknown</p>
+<p><strong>Status:</strong> review suggested</p>
+<p>Notice what this result does <strong>not</strong> claim.</p>
+<p>It does not identify a criminal.</p>
+<p>It does not establish motive.</p>
+<p>It does not determine legality.</p>
+<p>It describes the observable structure and the limits of the evidence.</p>
+<hr>
+<h1 id="15-agentic-extension">15. Agentic Extension</h1>
+<p>Only after structural awareness has been demonstrated should the student consider how another system might consume its output.</p>
+<p>Possible consumers could include:</p>
+<ul>
+<li>network-security monitoring;</li>
+<li>analyst dashboards;</li>
+<li>signaling firewalls;</li>
+<li>incident-response systems;</li>
+<li>fraud-detection systems;</li>
+<li>compliance systems;</li>
+<li>policy engines;</li>
+<li>authorized governance agents.</li>
+</ul>
+<p>At this point another research question emerges:</p>
+<blockquote>
+<p><strong>At what confidence and evidentiary threshold should observation become action?</strong></p>
+</blockquote>
+<p>That question belongs to a later phase.</p>
+<p>It should not be silently answered by the observer.</p>
+<hr>
+<h1 id="16-governance-boundary">16. Governance Boundary</h1>
+<p>A future governance agent could theoretically consume observer findings alongside applicable policy and authorization information.</p>
+<p>But the distinction must remain explicit:</p>
+<p><strong>Observer:</strong><br>
+“What appears to be happening?”</p>
+<p><strong>Classifier:</strong><br>
+“What type of behavior might this represent?”</p>
+<p><strong>Policy system:</strong><br>
+“What rules apply?”</p>
+<p><strong>Authorized authority:</strong><br>
+“What actions are permitted?”</p>
+<p><strong>Enforcement mechanism:</strong><br>
+“What action is actually performed?”</p>
+<p>Separating these responsibilities reduces the risk that uncertainty in one layer silently becomes authority in another.</p>
+<hr>
+<h1 id="17-testable-hypotheses">17. Testable Hypotheses</h1>
+<p>Students should formulate hypotheses that can fail.</p>
+<h3 id="h1-structural-novelty">H1: Structural novelty</h3>
+<p>A passive observer can distinguish previously established signaling relationships from structurally novel relationships in a controlled dataset.</p>
+<h3 id="h2-behavioral-classification">H2: Behavioral classification</h3>
+<p>Temporal, relational, and provenance features provide more useful anomaly classification than identifier-only analysis in the test environment.</p>
+<h3 id="h3-provenance-awareness">H3: Provenance awareness</h3>
+<p>Explicitly representing missing or ambiguous lineage reduces unsupported actor attribution.</p>
+<h3 id="h4-cross-source-coherence">H4: Cross-source coherence</h3>
+<p>Correlating multiple permitted observation sources can improve confidence in structural classifications compared with individual-source observations.</p>
+<h3 id="h5-explainability">H5: Explainability</h3>
+<p>A classifier that exposes the observations contributing to its result allows a reviewer to reconstruct why the classification occurred.</p>
+<p>These are hypotheses to test, not assumed properties of the proposed system.</p>
+<hr>
+<h1 id="18-falsification-conditions">18. Falsification Conditions</h1>
+<p>The proposal should be weakened or rejected if experimentation shows that:</p>
+<ul>
+<li>ordinary network variation produces persistent false anomalies;</li>
+<li>available metadata cannot establish useful structural relationships;</li>
+<li>provenance cannot be maintained reliably;</li>
+<li>classification confidence cannot be meaningfully calibrated;</li>
+<li>results cannot be independently reproduced;</li>
+<li>cross-source correlation adds noise rather than information;</li>
+<li>privacy costs outweigh the information gained;</li>
+<li>the observer cannot distinguish missing evidence from anomalous evidence.</li>
+</ul>
+<p>A valuable student result may therefore be:</p>
+<blockquote>
+<p><strong>This approach does not work under these operating conditions.</strong></p>
+</blockquote>
+<p>That is valid research.</p>
+<hr>
+<h1 id="19-safe-experimental-environment">19. Safe Experimental Environment</h1>
+<p>This project should use:</p>
+<ul>
+<li>synthetic signaling records;</li>
+<li>publicly available research datasets where appropriately licensed;</li>
+<li>sanitized historical telemetry where expressly authorized;</li>
+<li>laboratory-generated event streams;</li>
+<li>simulations of normal and anomalous relationships.</li>
+</ul>
+<p>The educational objective does not require access to a production signaling network.</p>
+<p>A synthetic environment also allows the ground truth to be known in advance.</p>
+<hr>
+<h1 id="20-suggested-experiment">20. Suggested Experiment</h1>
+<p>Create several synthetic operating regimes.</p>
+<h3 id="regime-a-stable">Regime A — Stable</h3>
+<p>Known actors exhibit historically consistent relationships.</p>
+<h3 id="regime-b-legitimate-change">Regime B — Legitimate Change</h3>
+<p>A new relationship appears and is subsequently supported by additional context.</p>
+<h3 id="regime-c-anomalous-change">Regime C — Anomalous Change</h3>
+<p>A new relationship produces unusual behavior without sufficient contextual support.</p>
+<h3 id="regime-d-ambiguous">Regime D — Ambiguous</h3>
+<p>The behavior appears anomalous, but provenance is incomplete.</p>
+<h3 id="regime-e-misleading-identity">Regime E — Misleading Identity</h3>
+<p>An apparently familiar identifier participates in behavior inconsistent with its historical regime.</p>
+<p>The observer should determine whether it can distinguish these regimes without being told that novelty equals maliciousness.</p>
+<hr>
+<h1 id="21-evaluation">21. Evaluation</h1>
+<p>Possible measurements include:</p>
+<ul>
+<li>anomaly-detection precision;</li>
+<li>anomaly-detection recall;</li>
+<li>false-positive rate;</li>
+<li>false-negative rate;</li>
+<li>time to structural awareness;</li>
+<li>confidence calibration;</li>
+<li>provenance completeness;</li>
+<li>reproducibility;</li>
+<li>explanation quality;</li>
+<li>stability under normal regime changes.</li>
+</ul>
+<p>Students should declare the measurement method before interpreting the results.</p>
+<hr>
+<h1 id="22-failure-modes">22. Failure Modes</h1>
+<p>The observer itself can create risk.</p>
+<p>Students should investigate:</p>
+<h3 id="false-attribution">False attribution</h3>
+<p>Observed infrastructure is incorrectly treated as the responsible actor.</p>
+<h3 id="baseline-poisoning">Baseline poisoning</h3>
+<p>Malicious or erroneous behavior becomes normalized through repetition.</p>
+<h3 id="data-poisoning">Data poisoning</h3>
+<p>A source intentionally manipulates observations used by the classifier.</p>
+<h3 id="automation-bias">Automation bias</h3>
+<p>Human reviewers accept the observer's classification without examining uncertainty.</p>
+<h3 id="provenance-collapse">Provenance collapse</h3>
+<p>Evidence becomes separated from the conclusion derived from it.</p>
+<h3 id="surveillance-expansion">Surveillance expansion</h3>
+<p>A security-monitoring experiment grows into unnecessary observation of individuals.</p>
+<h3 id="governance-leakage">Governance leakage</h3>
+<p>A passive observer gradually acquires enforcement capability without an explicit redesign and authorization process.</p>
+<hr>
+<h1 id="23-student-deliverables">23. Student Deliverables</h1>
+<p>A complete student project should produce:</p>
+<ol>
+<li><strong>Problem definition</strong></li>
+<li><strong>Architecture diagram</strong></li>
+<li><strong>Threat model</strong></li>
+<li><strong>Observation schema</strong></li>
+<li><strong>Provenance model</strong></li>
+<li><strong>Synthetic dataset or authorized dataset description</strong></li>
+<li><strong>Baseline definition</strong></li>
+<li><strong>Classifier or analytical method</strong></li>
+<li><strong>Confidence model</strong></li>
+<li><strong>Experimental results</strong></li>
+<li><strong>False-positive and false-negative analysis</strong></li>
+<li><strong>Privacy assessment</strong></li>
+<li><strong>Failure analysis</strong></li>
+<li><strong>Limitations</strong></li>
+<li><strong>Reproducibility instructions</strong></li>
+<li><strong>Recommendations for further research</strong></li>
+</ol>
+<p>Code is optional unless required by the instructor or chosen research method.</p>
+<p>A rigorous negative result is acceptable.</p>
+<hr>
+<h1 id="24-advanced-challenge">24. Advanced Challenge</h1>
+<p>If the passive observer succeeds, design a hypothetical interface through which an external governance system could consume its findings.</p>
+<p>Do <strong>not</strong> implement autonomous telecom enforcement.</p>
+<p>Instead specify:</p>
+<ul>
+<li>what evidence would be exported;</li>
+<li>how confidence would be represented;</li>
+<li>how provenance would travel with the observation;</li>
+<li>how policy versions would be identified;</li>
+<li>where human authorization would enter;</li>
+<li>what actions must remain impossible for the observer itself.</li>
+</ul>
+<p>Then ask:</p>
+<blockquote>
+<p><strong>Can awareness remain structurally separate from authority even when both operate at machine speed?</strong></p>
+</blockquote>
+<hr>
+<h1 id="25-broader-question">25. Broader Question</h1>
+<p>Legacy telecommunications provides the concrete case.</p>
+<p>The deeper research problem is broader:</p>
+<blockquote>
+<p><strong>Can a passive structural-awareness layer identify emerging coherence problems in complex legacy systems without controlling those systems?</strong></p>
+</blockquote>
+<p>If the answer is yes, the same architectural principle may merit investigation in other domains where old and new infrastructure must coexist.</p>
+<p>But that transfer should be demonstrated independently.</p>
+<p>A successful SS7 case study does not prove universal applicability.</p>
+<hr>
+<h1 id="26-closing-principle">26. Closing Principle</h1>
+<p>The project begins with an intentionally modest proposition:</p>
+<blockquote>
+<p><strong>Observe before judging.</strong><br>
+<strong>Establish lineage before attribution.</strong><br>
+<strong>Measure before intervention.</strong><br>
+<strong>Awareness before alignment.</strong></p>
+</blockquote>
+<p>The legacy system does not need an artificial intelligence declaring who the enemy is.</p>
+<p>It may first need something considerably simpler and more defensible:</p>
+<p><strong>an observer capable of noticing that the structure has changed, preserving the evidence, and saying exactly how certain it is.</strong></p>
+  </main>
+</body>
+</html>
