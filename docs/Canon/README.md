@@ -34,11 +34,11 @@ canon=1 | coherence=locked | drift=bounded | layer=root
 
 ## Start with the foundations
 
-- [RTT Information Primer](./RTT-Inside/Foundations/RTT_Information_Primer.md)
-- [Arrival Operator](./Arrival_Operator.md)
-- [Seven Operators and Dimensional Echoes](./How_the_Seven_Operators_Animate_the_3D_9D_Dimensional_Echoes.md)
-- [RTT comparisons](./RTT-Inside/Comparisons/RTT_Compared.md)
-- [Dimensional Math Substrate](./Dimensional_Math_Substrate/DMS_the_big_breakthrough.md)
+- [RTT Information Primer](https://www.triadicframeworks.org/education/#RTT_PRIMER)
+- [Arrival Operator](https://www.triadicframeworks.org/arrival_substrate_model/)
+- [Seven Operators and Dimensional Echoes](https://www.triadicframeworks.org/Canon/#SEVEN_OPERATORS_DIMENSIONAL_ECHOES)
+- [RTT comparisons](https://www.triadicframeworks.org/Canon/#RTT_COMPARED)
+- [Dimensional Math Substrate](https://www.triadicframeworks.org/Canon/#DMS_BIG_BREAKTHROUGH)
 
 ## Continue
 
