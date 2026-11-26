@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="book_AI_Edition_5Guides_README_" src="https://github.com/user-attachments/assets/265d84aa-da81-44d5-bd58-a41ad0f30f42" />
+
 # 5Guides — AI Edition
 
 > Machine-oriented structural learning materials for Awareness, Alignment, Coherence, Clarity, and Continuity.
