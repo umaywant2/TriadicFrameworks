@@ -1,1 +1,627 @@
-. 
+{
+  "document": {
+    "id": "5Guides-shared-ai-companion",
+    "type": "shared-learning-contract",
+    "name": "AI Companion",
+    "title": "5Guides — AI Companion",
+    "edition": "AI Edition",
+    "module": "5Guides",
+    "framework": "AACCC",
+    "version": "1.0",
+    "status": "active",
+    "language": "en",
+    "source": "docs/5Guides/shared/ai_companion.md",
+    "ai_path": "docs/book/AI_Edition/5Guides/shared/ai_companion.json"
+  },
+  "purpose": {
+    "primary": "Define the optional role of AI as a thinking companion within 5Guides.",
+    "learning_goal": "Use AI to expand, question, challenge, and inspect learner reasoning without replacing learner judgment.",
+    "principle": "AI can accompany the reasoning. The learner still owns the journey."
+  },
+  "participation": {
+    "optional": true,
+    "required_to_begin": false,
+    "required_for_exercises": false,
+    "required_for_awareness_check": false,
+    "required_for_practice": false,
+    "required_for_mastery": false,
+    "required_for_badge": false,
+    "required_for_completion": false
+  },
+  "relationship_model": {
+    "preferred": [
+      "learner",
+      "AI companion",
+      "explore",
+      "inspect",
+      "learner judgment"
+    ],
+    "avoid": [
+      "problem",
+      "AI",
+      "answer",
+      "done"
+    ],
+    "principle": "The AI should support a reasoning process rather than replace that process with a conclusion."
+  },
+  "role": {
+    "primary": "thinking companion",
+    "may_act_as": [
+      "questioning partner",
+      "alternative-explanation generator",
+      "practice generator",
+      "assumption challenger",
+      "counter-mapping generator",
+      "clarity reviewer",
+      "change comparator",
+      "formal explanation assistant",
+      "troubleshooting partner"
+    ],
+    "must_not_be_treated_as": [
+      "final authority",
+      "automatic answer key",
+      "source of guaranteed truth",
+      "substitute learner",
+      "substitute formal compiler",
+      "substitute empirical evidence"
+    ]
+  },
+  "use_patterns": {
+    "another_explanation": {
+      "example_prompt": "Explain this another way.",
+      "purpose": "Provide an alternative representation or analogy while preserving the underlying idea."
+    },
+    "another_example": {
+      "example_prompt": "Give me another example like this one, but use bicycles instead of software.",
+      "purpose": "Test whether the learner recognizes the structure outside the original example."
+    },
+    "challenge": {
+      "example_prompt": "Challenge my interpretation.",
+      "purpose": "Introduce friction rather than merely confirm the learner's current view."
+    },
+    "alternative": {
+      "example_prompt": "Give me another plausible interpretation without telling me which one is correct.",
+      "purpose": "Generate alternatives for comparison rather than replace learner judgment."
+    },
+    "missing_piece": {
+      "example_prompt": "What important assumption might I have overlooked?",
+      "purpose": "Expose a possible hidden dependency for learner inspection."
+    },
+    "practice_partner": {
+      "example_prompt": "Give me a new Alignment problem, but don't solve it for me.",
+      "purpose": "Generate fresh practice rather than provide an answer key."
+    }
+  },
+  "prompting_principle": {
+    "prefer": "What should I be looking at?",
+    "before": "What is the answer?",
+    "reason": "The first question keeps more of the reasoning process with the learner."
+  },
+  "questioning_mode": {
+    "supported": true,
+    "principle": "AI may ask questions rather than immediately provide answers.",
+    "examples": [
+      "Ask me one question at a time to help me separate what I observed from what I assumed.",
+      "Ask me questions that test whether my mapping is justified. Don't give me your conclusion yet.",
+      "Help me find where this explanation stops holding together by asking questions rather than rewriting it for me."
+    ]
+  },
+  "guide_support": {
+    "awareness": {
+      "question": "What am I observing?",
+      "ai_may_help_with": [
+        "separating observations from interpretations",
+        "identifying assumptions",
+        "generating alternative interpretations",
+        "identifying missing information",
+        "identifying useful verification questions",
+        "challenging an interpretation"
+      ],
+      "example_prompts": [
+        "Help me separate my observations from my interpretations.",
+        "What assumptions might I be making?",
+        "Give me another possible interpretation.",
+        "What information is missing?",
+        "What should I verify before reaching a conclusion?",
+        "Challenge my interpretation without replacing it with yours."
+      ]
+    },
+    "alignment": {
+      "question": "What corresponds?",
+      "ai_may_help_with": [
+        "challenging mappings",
+        "identifying assumption-dependent correspondences",
+        "finding mismatches",
+        "proposing alternative mappings",
+        "identifying distinguishing evidence",
+        "separating resemblance from meaningful correspondence"
+      ],
+      "example_prompts": [
+        "Challenge my mapping.",
+        "Which correspondence depends on the strongest assumption?",
+        "Find a mismatch I may have overlooked.",
+        "Suggest a different mapping without assuming yours is correct.",
+        "What evidence would help distinguish between these mappings?",
+        "Which things only look similar but may not actually correspond?"
+      ]
+    },
+    "coherence": {
+      "question": "Does this hold together?",
+      "ai_may_help_with": [
+        "locating contradictions",
+        "identifying weak conclusions",
+        "exposing required assumptions",
+        "testing compatibility among statements",
+        "locating unsupported structure before repair"
+      ],
+      "example_prompts": [
+        "Find a contradiction in my explanation if one exists.",
+        "Which conclusion is least supported by what I provided?",
+        "What assumption does this argument need in order to hold together?",
+        "Can all of these statements be true at the same time?",
+        "Don't fix the explanation yet. Show me where it becomes difficult to support."
+      ]
+    },
+    "clarity": {
+      "question": "Can this be understood well enough to inspect?",
+      "ai_may_help_with": [
+        "rewriting without adding claims",
+        "locating ambiguity",
+        "identifying undefined terms",
+        "exposing missing steps",
+        "comparing shorter and fuller representations",
+        "checking for meaning drift"
+      ],
+      "example_prompts": [
+        "Rewrite this more clearly without adding new claims.",
+        "What part of this explanation is ambiguous?",
+        "Which term needs defining?",
+        "What step have I left unstated?",
+        "Give me a shorter version, then tell me what information was removed.",
+        "Compare my original and revised versions for changes in meaning."
+      ]
+    },
+    "continuity": {
+      "question": "What persists through change?",
+      "ai_may_help_with": [
+        "comparing states",
+        "identifying persistence",
+        "identifying drift",
+        "identifying disappearing assumptions",
+        "locating pattern breaks",
+        "comparing versions"
+      ],
+      "example_prompts": [
+        "What changed?",
+        "What remained?",
+        "Which relationship persisted?",
+        "Where did the meaning drift?",
+        "Did any important assumption disappear?",
+        "Which change caused the earlier pattern to break?"
+      ]
+    }
+  },
+  "counter_mapping": {
+    "supported": true,
+    "example_prompt": "Construct the strongest reasonable alternative mapping you can.",
+    "comparison_questions": [
+      "What does each mapping preserve?",
+      "What does each mapping ignore?",
+      "Which assumptions differ?",
+      "Which boundary does each use?",
+      "What evidence would help distinguish them?"
+    ],
+    "principle": "Disagreement becomes learning material."
+  },
+  "repair_boundary": {
+    "principle": "Locate a structural problem before automatically repairing it.",
+    "after_ai_repair_ask": [
+      "What exactly changed?",
+      "Why was the change necessary?",
+      "Did the correction preserve the original meaning or replace it?"
+    ],
+    "warning": "A polished repair may hide the reason the original failed."
+  },
+  "ai_output_as_observation": {
+    "principle": "Treat an AI response first as something presented for inspection rather than automatically as the answer.",
+    "aaccc_questions": {
+      "awareness": "What did the AI actually claim?",
+      "alignment": "Does the answer correspond to the evidence or source material?",
+      "coherence": "Does its explanation hold together?",
+      "clarity": "Can I understand what is being claimed and what supports it?",
+      "continuity": "Did important information survive from my question into its answer?"
+    }
+  },
+  "confidence_boundary": {
+    "principle": "Confidence is not evidence.",
+    "surface_features_that_do_not_establish_correctness": [
+      "polished wording",
+      "confidence",
+      "detail",
+      "technical language",
+      "certainty",
+      "specificity"
+    ],
+    "inspection_questions": [
+      "What supports this?",
+      "Can I verify it?",
+      "What assumption is being made?",
+      "Would another interpretation also fit?",
+      "What information would change the conclusion?"
+    ]
+  },
+  "specificity_boundary": {
+    "principle": "A precise unsupported claim is still unsupported.",
+    "verify_when_material": [
+      "names",
+      "dates",
+      "measurements",
+      "quotations",
+      "equations",
+      "technical specifications",
+      "citations",
+      "historical claims"
+    ]
+  },
+  "provenance_support": {
+    "recommended_prompts": [
+      "What source supports that claim?",
+      "Which part comes from the source and which part is your interpretation?",
+      "Can this claim be independently checked?",
+      "What evidence would I need to verify it?"
+    ],
+    "principle": "A citation supports inspection but does not automatically establish that the cited source supports every surrounding claim."
+  },
+  "layer_separation": {
+    "recommended_prompts": [
+      "Separate your answer into observation, interpretation, assumptions, and uncertainty.",
+      "Label which parts are directly supported and which parts are inferred.",
+      "Tell me what you know, what you're assuming, and what you would need to verify."
+    ],
+    "warning": "AI-generated labels are themselves subject to inspection."
+  },
+  "alternative_generation": {
+    "supported": true,
+    "example_prompt": "Give me three different plausible interpretations of this situation.",
+    "preferred_follow_up": "What evidence would distinguish among them?",
+    "avoid_immediate_follow_up": "Which one is right?",
+    "principle": "Use AI as a possibility generator while retaining evaluation with the learner."
+  },
+  "adversarial_support": {
+    "supported": true,
+    "examples": [
+      "Assume my conclusion is wrong. What is the strongest reasonable challenge to it?",
+      "What evidence would weaken my explanation?",
+      "What would have to be true for my mapping to fail?"
+    ],
+    "boundary": "A counterargument generated by AI is another structure to inspect, not automatically a better or true argument."
+  },
+  "scale_change": {
+    "supported": true,
+    "pattern": [
+      "explain using an everyday example",
+      "explain the same structure using another domain",
+      "identify what remained structurally the same"
+    ],
+    "purpose": "Practice abstraction and transfer across contexts."
+  },
+  "perspective_change": {
+    "supported": true,
+    "examples": [
+      "Describe how this might look from the user's perspective.",
+      "Describe it from the system administrator's perspective.",
+      "What information does each perspective have that the other may not?",
+      "Give me two reasonable observer positions that could produce different descriptions."
+    ],
+    "principle": "Different observer positions may provide different access without one automatically being wrong."
+  },
+  "imagination_boundary": {
+    "principle": "Ground first when using imaginative exercises.",
+    "learner_control_primary": true,
+    "may_stop": true,
+    "guideline": "If an imaginative exercise becomes uncomfortable, confusing, or unhelpful, pause and return attention to current surroundings."
+  },
+  "privacy": {
+    "resource": "privacy.json",
+    "principle": "Share only what the learning task actually needs.",
+    "avoid_unnecessary_sharing": [
+      "full names",
+      "addresses",
+      "account credentials",
+      "private records",
+      "identifying information about other people",
+      "private messages",
+      "confidential documents",
+      "sensitive personal information"
+    ],
+    "preferred_transformation": "Replace identifying details with neutral descriptions when identity is not structurally necessary.",
+    "example": {
+      "avoid": "My coworker Jane Smith at Example Corporation said...",
+      "prefer": "A coworker said..."
+    }
+  },
+  "external_service_boundary": {
+    "principle": "Different external AI services may operate under their own rules and data practices.",
+    "possible_differences": [
+      "privacy practices",
+      "account requirements",
+      "retention policies",
+      "capabilities",
+      "limitations",
+      "terms"
+    ],
+    "learner_rule": "Understand the service being used before sharing sensitive information."
+  },
+  "private_reflection": {
+    "learner_may_keep_private": true,
+    "ai_discussion_optional": true,
+    "boundary_change_if_shared_with_ai": true,
+    "principle": "Discussing a private reflection with an AI service changes the information boundary and should be a conscious choice."
+  },
+  "assessment_boundary": {
+    "resource": "assessment.json",
+    "ai_may_support_preparation": true,
+    "ai_may_generate_practice": true,
+    "ai_may_challenge_reasoning": true,
+    "mastery_remains_learner_demonstration": true,
+    "avoid_flow": [
+      "Mastery Challenge",
+      "AI solves it",
+      "learner copies answer",
+      "badge"
+    ],
+    "preferred_flow": [
+      "practice",
+      "optional AI companion",
+      "fresh challenge",
+      "learner applies skill",
+      "mastery"
+    ]
+  },
+  "practice_not_answer": {
+    "recommended_prompts": [
+      "Give me a similar practice challenge without solving it.",
+      "Ask me questions that help me inspect my reasoning, but don't provide the final answer.",
+      "Tell me which skill I should revisit without solving the problem for me."
+    ]
+  },
+  "lean_boundary": {
+    "optional": true,
+    "index": "../lean/index.json",
+    "ai_may_help_with": [
+      "plain-language theorem explanation",
+      "assumption inspection",
+      "proof-failure interpretation",
+      "hints",
+      "comparison of theorem statements"
+    ],
+    "examples": [
+      "Explain this theorem statement in plain language.",
+      "What assumptions does this Lean definition introduce?",
+      "Why might this proof fail?",
+      "Give me a hint without completing the proof.",
+      "What changed between these two theorem statements?"
+    ],
+    "principle": "AI-generated Lean material remains subject to source inspection and compiler checking."
+  },
+  "lean_workflow": [
+    "AI suggestion",
+    "read",
+    "inspect assumptions",
+    "compile",
+    "inspect result"
+  ],
+  "compiler_failure": {
+    "principle": "Inspect a Lean failure before automatically asking for a more powerful tactic.",
+    "possible_causes": [
+      "incomplete proof",
+      "missing assumption",
+      "different definition",
+      "unavailable expected library",
+      "theorem does not follow"
+    ],
+    "recommended_prompt": "Explain this compiler error without changing the theorem yet."
+  },
+  "human_in_loop": {
+    "meaning": "The learner remains actively responsible for interpreting, comparing, questioning, checking, revising, and deciding.",
+    "more_than_approval_click": true,
+    "final_authority_assigned_to_ai": false
+  },
+  "productive_struggle": {
+    "principle": "AI should not automatically remove every difficult moment that may be educationally useful.",
+    "learner_question": "Would I learn more by sitting with this for another minute before asking?",
+    "absolute_rule": false
+  },
+  "ai_pause": {
+    "before_prompt": [
+      "What do I currently think?",
+      "What am I uncertain about?",
+      "What do I want help inspecting?",
+      "Ask."
+    ],
+    "after_response": [
+      "What did it claim?",
+      "What changed in my understanding?",
+      "What should I verify?",
+      "What do I think now?"
+    ]
+  },
+  "reusable_companion_prompt": {
+    "text": [
+      "Act as my 5Guides thinking partner.",
+      "Do not jump directly to the answer.",
+      "Help me inspect the problem using Awareness, Alignment, Coherence, Clarity, and Continuity where appropriate.",
+      "Ask questions, expose assumptions, preserve uncertainty, and distinguish observation from interpretation.",
+      "If you suggest an answer, explain what supports it and what remains uncertain.",
+      "Challenge me when useful, but leave the final judgment to me."
+    ],
+    "principle": "Help me inspect, not think instead of me."
+  },
+  "ai_confidence_response": {
+    "when_ai_expresses_high_confidence": [
+      "What evidence makes you confident?",
+      "What would make you change that conclusion?"
+    ],
+    "principle": "An explanation should survive inspection better than confidence alone."
+  },
+  "ai_revision": {
+    "when_ai_changes_answer": [
+      "What new information changed your conclusion?",
+      "Which part of the earlier answer no longer holds?"
+    ],
+    "continuity_pattern": [
+      "earlier answer",
+      "new information",
+      "revised answer"
+    ]
+  },
+  "multiple_ai_disagreement": {
+    "avoid": "Treating another AI as a vote that automatically resolves the disagreement.",
+    "compare": [
+      "claims",
+      "evidence",
+      "assumptions",
+      "sources",
+      "uncertainty"
+    ],
+    "next_question": "What observation would help distinguish between these answers?"
+  },
+  "learner_disagrees_with_ai": {
+    "valid": true,
+    "inspection_questions": [
+      "What evidence supports my view?",
+      "What evidence supports the AI's view?",
+      "Are we using the same definitions?",
+      "Are we working inside the same boundary?",
+      "Is one of us assuming something the other isn't?"
+    ],
+    "principle": "Disagreement can become useful inspection material."
+  },
+  "when_ai_is_wrong": {
+    "process": [
+      "identify the error",
+      "explain why it is unsupported or incorrect",
+      "provide relevant evidence when available",
+      "revise the reasoning",
+      "continue"
+    ],
+    "principle": "AI does not need to be infallible to be useful as an inspectable reasoning partner."
+  },
+  "when_learner_is_wrong": {
+    "process": [
+      "notice",
+      "inspect",
+      "revise",
+      "continue"
+    ],
+    "principle": "AACCC does not exist to protect the learner's first interpretation."
+  },
+  "authority_boundary": {
+    "avoid": "The thing that tells me whether I am allowed to believe my answer.",
+    "prefer": "One source of questions, alternatives, explanations, and challenges that I can inspect.",
+    "final_judgment": "learner"
+  },
+  "aaccc_self_inspection": {
+    "awareness": {
+      "question": "What information did I give the AI, and what did it actually return?"
+    },
+    "alignment": {
+      "question": "Does the response correspond to my question and evidence?"
+    },
+    "coherence": {
+      "question": "Does its reasoning hold together?"
+    },
+    "clarity": {
+      "question": "Can I understand what is being claimed and why?"
+    },
+    "continuity": {
+      "question": "Did important meaning survive through the conversation, or did something drift?"
+    }
+  },
+  "badge_boundary": {
+    "resource": "badges.json",
+    "ai_assistance_invalidates_badge": false,
+    "learner_demonstration_still_required": true,
+    "principle": "AI may support learning without becoming the entity that demonstrates mastery."
+  },
+  "student_footprint_boundary": {
+    "resource": "student_footprint.json",
+    "ai_conversation_automatically_part_of_footprint": false,
+    "learning_conversation_automatically_public": false,
+    "principle": "The Student Footprint remains a separate, deliberate, minimal submission."
+  },
+  "ai_behavior": {
+    "preferred": [
+      "ask before concluding",
+      "preserve uncertainty",
+      "expose assumptions",
+      "offer alternatives",
+      "challenge mappings",
+      "identify mismatches",
+      "separate source from interpretation",
+      "generate fresh practice",
+      "support learner reflection",
+      "make reasoning inspectable"
+    ],
+    "must_not": [
+      "replace learner judgment",
+      "treat confidence as evidence",
+      "invent missing evidence",
+      "invent provenance",
+      "force correspondences",
+      "silently strengthen claims",
+      "erase uncertainty for smoother prose",
+      "award mastery to its own answer",
+      "treat generated Lean code as verified before compilation",
+      "turn private learning interactions into Student Footprints"
+    ]
+  },
+  "provenance": {
+    "source_document": "docs/5Guides/shared/ai_companion.md",
+    "source_type": "human-facing optional AI learning guidance",
+    "transformation": "structured AI-readable companion contract",
+    "preserve": [
+      "AI optionality",
+      "learner judgment",
+      "AACCC inspection of AI output",
+      "counter-mapping",
+      "provenance checking",
+      "privacy boundaries",
+      "assessment boundary",
+      "Lean boundary",
+      "productive struggle",
+      "uncertainty"
+    ],
+    "do_not_infer": [
+      "specific external AI provider behavior",
+      "specific data retention policy",
+      "guaranteed AI correctness",
+      "guaranteed citation correctness",
+      "AI authority over mastery",
+      "automatic formal verification"
+    ]
+  },
+  "related": {
+    "module": "../module.json",
+    "index": "../index.json",
+    "assessment": "assessment.json",
+    "badges": "badges.json",
+    "privacy": "privacy.json",
+    "student_footprint": "student_footprint.json",
+    "lean": "../lean/index.json"
+  },
+  "machine_context": {
+    "ai_parseable": true,
+    "ai_optional": true,
+    "role": "thinking-companion",
+    "learner_judgment_primary": true,
+    "answer_replacement_model": false,
+    "practice_generation_supported": true,
+    "counter_mapping_supported": true,
+    "uncertainty_preserving": true,
+    "provenance_aware": true,
+    "privacy_first": true,
+    "mastery_substitution": false,
+    "formal_compiler_substitution": false
+  }
+}
