@@ -32,7 +32,8 @@
     "student_artifact": "Continuity Record",
     "badge": "Continuity Badge",
     "previous_guide": "clarity.json",
-    "next": "Independent Application"
+    "next_guide": null,
+    "destination": "Independent Application"
   },
   "purpose": {
     "primary": "Teach learners to inspect change without assuming that continuity means sameness.",
@@ -344,7 +345,7 @@
     "history_same": false,
     "lesson": "If history matters to the problem, storing only the latest state loses useful information."
   },
-  "provenance": {
+  "provenance_as_continuity": {
     "relationship": [
       "Source",
       "Change",
@@ -533,6 +534,7 @@
       "missing history",
       "provenance"
     ],
+    "activities": [],
     "learning_mode": "ordinary examples before formal abstraction",
     "ai_role": "optional questioning or comparison partner"
   },
@@ -651,6 +653,7 @@
       "Current Judgment"
     ],
     "all_fields_required": false,
+    "judgment_states": [],
     "principle": "Use enough structure to make the transition inspectable."
   },
   "assessment": {
@@ -866,6 +869,7 @@
     "module": "../module.json",
     "index": "../index.json",
     "previous_guide": "clarity.json",
+    "next_guide": null,
     "assessment": "../shared/assessment.json",
     "badges": "../shared/badges.json",
     "ai_companion": "../shared/ai_companion.json",

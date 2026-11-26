@@ -467,6 +467,7 @@
   "explore": {
     "phase": "experience",
     "purpose": "Experience the difference between personally understanding something and making it inspectable to another observer.",
+    "topics": [],
     "activities": [
       "terrible directions",
       "drawing instructions",
