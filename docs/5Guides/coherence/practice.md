@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="5Guides_coherence_practice_" src="https://github.com/user-attachments/assets/ea21f853-959c-4ee6-aefe-75c5f3708f6d" />
+
 # Coherence Practice
 
 > Does this hold together?
