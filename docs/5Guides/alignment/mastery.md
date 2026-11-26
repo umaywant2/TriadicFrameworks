@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="5Guides_alignment_mastery_" src="https://github.com/user-attachments/assets/2e4c367f-9a6c-4caa-ae51-c265742d2880" />
 
 # Alignment Mastery
 
