@@ -240,3 +240,44 @@ The mathematical result is intentionally narrower:
 
 That is exactly the boundary we want students to be able to see.
 -/
+
+---
+
+# `09_temperature_engine_theorem.lean` — PASS ✅
+
+Beautiful. **Stop touching it.** 😁
+
+Your local Lean 4.36.0 compiler has now accepted:
+
+`09_temperature_engine_theorem.lean`
+
+with no reported errors.
+
+## Validation Progress
+
+- `01_awareness.lean` — ✅ PASS
+- `02_alignment.lean` — ✅ PASS
+- `03_coherence.lean` — ✅ PASS
+- `04_clarity.lean` — ✅ PASS
+- `05_continuity.lean` — ✅ PASS
+- `06_tft_origin.lean` — ✅ PASS
+- `07_nawderian_theorem.lean` — ✅ PASS
+- `08_nawderian_set_theorem.lean` — ✅ PASS
+- `09_temperature_engine_theorem.lean` — ✅ PASS
+- `10_unified_resonance_theorem.lean` — next
+- `11_rtt_origin.lean` — next
+
+And we learned something worthwhile from `09`: the final proof requires no Mathlib dependency and no `ring` tactic.
+
+The compiler-accepted core proof is simply:
+
+```lean
+theorem reverse_gradient (coupling gradient : Int) :
+    temperatureForce coupling (-gradient) =
+      -(temperatureForce coupling gradient) := by
+  simp only [temperatureForce]
+  rw [Int.mul_neg]
+```
+
+---
+
