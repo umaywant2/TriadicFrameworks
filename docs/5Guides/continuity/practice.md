@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="5Guides_continuity_practice_" src="https://github.com/user-attachments/assets/af371a33-0af1-4cfa-bcf1-c215b17bd8b9" />
+
 # Continuity Practice
 
 > What persists through change?
