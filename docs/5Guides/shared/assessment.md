@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="5Guides_shared_assessment_" src="https://github.com/user-attachments/assets/91be0697-08f8-42b3-9ba9-419dbeb2e605" />
+
 # Assessment
 
 > **Assessment should help the learner see what they understand, what they can use, and what may deserve another look.**
