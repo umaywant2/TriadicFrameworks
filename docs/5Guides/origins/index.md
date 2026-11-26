@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="5Guides_origins_index_" src="https://github.com/user-attachments/assets/864b07a8-45bc-41eb-a72c-827267041052" />
+
 # Origins
 
 > Where did the Five Guides come from?
