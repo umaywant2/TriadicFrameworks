@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="5Guides_shared_student_footprint_" src="https://github.com/user-attachments/assets/66c2d316-9f90-4e56-8903-06039f25cc50" />
+
 # Student Footprint
 
 > **Leave something behind only if you want to.**
