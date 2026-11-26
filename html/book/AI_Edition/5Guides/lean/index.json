@@ -1,0 +1,534 @@
+{
+  "document": {
+    "id": "5Guides-lean-index",
+    "type": "formal-companion-index",
+    "name": "Lean 4 Lab",
+    "title": "5Guides — Lean 4 Lab",
+    "edition": "AI Edition",
+    "module": "5Guides",
+    "framework": "AACCC",
+    "version": "1.0",
+    "status": "active",
+    "language": "en",
+    "source": "docs/5Guides/lean/index.md",
+    "human_source_root": "docs/5Guides/lean",
+    "ai_path": "docs/book/AI_Edition/5Guides/lean/index.json",
+    "ai_root": "docs/book/AI_Edition/5Guides/lean"
+  },
+  "purpose": {
+    "primary": "Provide the machine-readable index and interpretation contract for the optional Lean 4 formal companions used by 5Guides.",
+    "educational": "Use small formal examples to make definitions, assumptions, relationships, proof obligations, and formalization boundaries inspectable.",
+    "principle": "Formal methods can make reasoning explicit. They do not remove the need to inspect what was modeled."
+  },
+  "participation": {
+    "optional": true,
+    "required_for_5Guides": false,
+    "required_for_standard_mastery": false,
+    "required_for_standard_badges": false,
+    "required_for_five_guides_completion": false,
+    "prior_lean_experience_required": false
+  },
+  "lab_structure": {
+    "artifact_count": 11,
+    "groups": [
+      {
+        "id": "guide_companions",
+        "range": "01-05",
+        "count": 5,
+        "role": "Formal companions for the five AACCC Guides."
+      },
+      {
+        "id": "origin_companions",
+        "range": "06-11",
+        "count": 6,
+        "role": "Small formal teaching abstractions derived from selected project-lineage materials."
+      }
+    ]
+  },
+  "guide_companions": [
+    {
+      "order": 1,
+      "id": "01_awareness",
+      "name": "Awareness",
+      "path": "01_awareness.json",
+      "human_source": "docs/5Guides/lean/01_awareness.lean",
+      "guide": "../guides/awareness.json",
+      "question": "What am I observing?",
+      "formal_focus": "Inspect variables, types, hypotheses, and the goal before attempting a proof.",
+      "educational_role": "Make the formal observation state explicit."
+    },
+    {
+      "order": 2,
+      "id": "02_alignment",
+      "name": "Alignment",
+      "path": "02_alignment.json",
+      "human_source": "docs/5Guides/lean/02_alignment.lean",
+      "guide": "../guides/alignment.json",
+      "question": "What corresponds?",
+      "formal_focus": "Use explicitly established equality or correspondence to justify transformation.",
+      "educational_role": "Show that formal substitution depends on a declared or proven relationship."
+    },
+    {
+      "order": 3,
+      "id": "03_coherence",
+      "name": "Coherence",
+      "path": "03_coherence.json",
+      "human_source": "docs/5Guides/lean/03_coherence.lean",
+      "guide": "../guides/coherence.json",
+      "question": "Does this hold together?",
+      "formal_focus": "Inspect whether a conclusion follows from the supplied definitions and assumptions.",
+      "educational_role": "Make unsupported formal conclusions and missing assumptions visible."
+    },
+    {
+      "order": 4,
+      "id": "04_clarity",
+      "name": "Clarity",
+      "path": "04_clarity.json",
+      "human_source": "docs/5Guides/lean/04_clarity.lean",
+      "guide": "../guides/clarity.json",
+      "question": "Can this be understood and inspected?",
+      "formal_focus": "Compare proof representations that preserve the same result while exposing different amounts of intermediate structure.",
+      "educational_role": "Distinguish correctness from explanatory inspectability."
+    },
+    {
+      "order": 5,
+      "id": "05_continuity",
+      "name": "Continuity",
+      "path": "05_continuity.json",
+      "human_source": "docs/5Guides/lean/05_continuity.lean",
+      "guide": "../guides/continuity.json",
+      "question": "What persists through change?",
+      "formal_focus": "Inspect how formal structures and proved relationships behave when definitions, values, or transformations change.",
+      "educational_role": "Make persistence and proof breakage under change inspectable."
+    }
+  ],
+  "origin_companions": [
+    {
+      "order": 6,
+      "id": "06_tft_origin",
+      "name": "TFT Origin",
+      "path": "06_tft_origin.json",
+      "human_source": "docs/5Guides/lean/06_tft_origin.lean",
+      "origin": "../origins/tft.json",
+      "formal_focus": "Generic three-position structure and component-wise transformation.",
+      "source_scope": "TFT-inspired structural abstraction.",
+      "complete_source_formalization": false
+    },
+    {
+      "order": 7,
+      "id": "07_nawderian_theorem",
+      "name": "Nawderian Theorem",
+      "path": "07_nawderian_theorem.json",
+      "human_source": "docs/5Guides/lean/07_nawderian_theorem.lean",
+      "origin": "../origins/theorems.json",
+      "formal_focus": "Explicit dimension-group membership and selected intersection relationships.",
+      "source_scope": "Relationships directly supported by declared group membership.",
+      "complete_source_formalization": false
+    },
+    {
+      "order": 8,
+      "id": "08_nawderian_set_theorem",
+      "name": "Nawderian SET Theorem",
+      "path": "08_nawderian_set_theorem.json",
+      "human_source": "docs/5Guides/lean/08_nawderian_set_theorem.lean",
+      "origin": "../origins/theorems.json",
+      "formal_focus": "Named additive contributions and their modeled total.",
+      "source_scope": "Small algebraic teaching abstraction of the declared contribution structure.",
+      "complete_source_formalization": false
+    },
+    {
+      "order": 9,
+      "id": "09_temperature_engine_theorem",
+      "name": "Temperature Engine Theorem",
+      "path": "09_temperature_engine_theorem.json",
+      "human_source": "docs/5Guides/lean/09_temperature_engine_theorem.lean",
+      "origin": "../origins/theorems.json",
+      "formal_focus": "One-dimensional signed relation and selected zero and sign properties.",
+      "source_scope": "Deliberately simplified algebraic teaching abstraction.",
+      "complete_source_formalization": false
+    },
+    {
+      "order": 10,
+      "id": "10_unified_resonance_theorem",
+      "name": "Unified Resonance Theorem",
+      "path": "10_unified_resonance_theorem.json",
+      "human_source": "docs/5Guides/lean/10_unified_resonance_theorem.lean",
+      "origin": "../origins/theorems.json",
+      "formal_focus": "Explicit local algebraic assumptions supporting a three-factor composition.",
+      "source_scope": "Teaching algebra introduced to expose required assumptions.",
+      "complete_source_formalization": false
+    },
+    {
+      "order": 11,
+      "id": "11_rtt_origin",
+      "name": "RTT Origin",
+      "path": "11_rtt_origin.json",
+      "human_source": "docs/5Guides/lean/11_rtt_origin.lean",
+      "origin": "../origins/rtt.json",
+      "formal_focus": "Small integer-valued state and update model.",
+      "source_scope": "RTT-inspired state-transition teaching abstraction.",
+      "complete_source_formalization": false
+    }
+  ],
+  "compiler_validation": {
+    "status": "compiler-checked",
+    "files": "01-11",
+    "artifact_count": 11,
+    "lean_version": "4.36.0",
+    "target": "x86_64-w64-windows-gnu",
+    "scope": "The human-source Lean teaching artifacts in docs/5Guides/lean.",
+    "meaning": "Lean accepted the represented formal artifacts under the stated compiler environment.",
+    "does_not_mean": [
+      "The broader source frameworks were empirically validated.",
+      "Every source interpretation was fully formalized.",
+      "The teaching abstractions are complete models of their source concepts.",
+      "Compiler acceptance establishes physical truth.",
+      "Compiler acceptance establishes scientific consensus."
+    ]
+  },
+  "validation_language": {
+    "prefer": [
+      "compiler-checked",
+      "Lean accepted the formal artifact under the stated environment",
+      "verified consequence of the supplied formal definitions and assumptions"
+    ],
+    "avoid": [
+      "Lean proved the entire theory",
+      "Lean scientifically validated the source framework",
+      "The compiler proved the physical interpretation"
+    ]
+  },
+  "formalization_contract": {
+    "resource": "../origins/formalization.json",
+    "formal_question": "Given these definitions and assumptions, does the conclusion follow?",
+    "modeling_question": "Do these definitions and assumptions represent what we intended to describe?",
+    "empirical_question": "Does the model adequately describe the relevant real-world evidence?",
+    "keep_distinct": true
+  },
+  "formal_artifact_layers": [
+    "source concept",
+    "interpretation",
+    "teaching abstraction",
+    "formal definition",
+    "explicit assumptions",
+    "theorem statement",
+    "proof",
+    "compiler result",
+    "formalization boundary"
+  ],
+  "artifact_contract": {
+    "recommended_fields": [
+      "document",
+      "purpose",
+      "source_alignment",
+      "formal_model",
+      "definitions",
+      "assumptions",
+      "theorems",
+      "verified_consequences",
+      "compiler_validation",
+      "formalization_boundary",
+      "student_questions",
+      "lean_source",
+      "provenance",
+      "machine_context"
+    ],
+    "principle": "An AI-facing Lean artifact should expose enough structure to distinguish source interpretation from formal consequence."
+  },
+  "source_alignment": {
+    "questions": [
+      "What came directly from the source?",
+      "What was interpreted?",
+      "What was simplified?",
+      "What was added?",
+      "What was omitted?",
+      "What relationship is actually being proved?"
+    ],
+    "principle": "The formal artifact should not float free from the concept it is intended to represent."
+  },
+  "assumptions": {
+    "principle": "Assumptions remain part of the meaning of a formal theorem.",
+    "avoid": "Report only the conclusion while hiding materially relevant assumptions.",
+    "preferred_pattern": [
+      "definitions",
+      "assumptions",
+      "conclusion"
+    ]
+  },
+  "undefined_semantics": {
+    "principle": "If the source does not define a relationship precisely enough to formalize, preserve the gap.",
+    "example": "wrapping",
+    "avoid": "Invent a convenient relation merely to make a desired theorem pass.",
+    "preferred": "Identify the relation as requiring definition before stronger formal claims are made."
+  },
+  "teaching_simplification": {
+    "allowed": true,
+    "conditions": [
+      "the simplification is explicit",
+      "the source scope remains visible",
+      "omitted structure is acknowledged",
+      "verified consequences remain narrowly described"
+    ],
+    "complete_equivalence_claim_required": false
+  },
+  "proof_failure": {
+    "useful_as_evidence": true,
+    "possible_causes": [
+      "missing assumption",
+      "incomplete proof",
+      "incorrect type",
+      "missing import",
+      "unavailable tactic or lemma",
+      "definition differs from expectation",
+      "theorem does not follow from supplied structure",
+      "formal model does not represent the intended concept"
+    ],
+    "preferred_response": [
+      "inspect the error",
+      "identify what changed or is missing",
+      "decide whether the proof, theorem, assumption, or model needs revision"
+    ],
+    "avoid": "Change the theorem merely to make the compiler green without inspecting whether the meaning changed."
+  },
+  "proof_success": {
+    "principle": "Compiler success is necessary evidence for a claimed Lean proof under the stated environment but is not sufficient evidence of good modeling.",
+    "questions_after_success": [
+      "What exactly was proved?",
+      "Under which assumptions?",
+      "Did the theorem statement change?",
+      "Does the formal object still correspond to the intended concept?",
+      "Did any added assumption become hidden?",
+      "Does the result remain inside the claimed formalization boundary?"
+    ]
+  },
+  "guide_mapping": {
+    "awareness": {
+      "formal_habit": "Read the variables, types, hypotheses, and goal before proving.",
+      "question": "What has actually been declared?"
+    },
+    "alignment": {
+      "formal_habit": "Use only established relationships to justify substitution or mapping.",
+      "question": "What formal relationship permits this transformation?"
+    },
+    "coherence": {
+      "formal_habit": "Check whether the conclusion follows from the formal context.",
+      "question": "Does this theorem actually follow?"
+    },
+    "clarity": {
+      "formal_habit": "Choose a proof representation that exposes the structure relevant to the learner.",
+      "question": "Can the proof be inspected?"
+    },
+    "continuity": {
+      "formal_habit": "Change a definition, value, assumption, or transformation and inspect what survives.",
+      "question": "Which formal relationships persist through change?"
+    }
+  },
+  "aaccc_applied_to_formal_artifacts": {
+    "awareness": [
+      "What objects are declared?",
+      "What are their types?",
+      "What hypotheses exist?",
+      "What is the goal?"
+    ],
+    "alignment": [
+      "Which formal object corresponds to which source concept?",
+      "Which mappings are exact?",
+      "Which mappings are teaching simplifications?"
+    ],
+    "coherence": [
+      "Do the definitions and assumptions support the theorem?",
+      "Does the proof actually close the stated goal?"
+    ],
+    "clarity": [
+      "Are source claims, formal definitions, assumptions, and verified consequences distinguishable?",
+      "Can the proof structure be explained in plain language?"
+    ],
+    "continuity": [
+      "What changes if a definition, assumption, value, or type changes?",
+      "Which proofs survive?",
+      "Did semantic meaning drift even if code still compiles?"
+    ]
+  },
+  "formal_vs_explanatory_clarity": {
+    "formal_clarity": "Exact definitions, types, assumptions, theorem statements, and proofs.",
+    "explanatory_clarity": "A learner-readable explanation of what those formal objects mean and why they matter.",
+    "both_useful": true,
+    "principle": "Exactness does not eliminate the need for understandable explanation."
+  },
+  "types_as_modeling": {
+    "principle": "Type choice participates in the formal model.",
+    "questions": [
+      "What values must the model represent?",
+      "Does direction require sign?",
+      "Are units relevant?",
+      "Is scalar representation sufficient?",
+      "Would another type preserve more of the intended structure?"
+    ]
+  },
+  "change_experiments": {
+    "supported": true,
+    "targets": [
+      "value",
+      "definition",
+      "type",
+      "assumption",
+      "operator",
+      "theorem statement"
+    ],
+    "questions": [
+      "Which proofs survive?",
+      "Which proofs fail?",
+      "Why did they fail?",
+      "Did the formal meaning change?",
+      "Did only the implementation environment change?"
+    ],
+    "aaccc_focus": "Continuity"
+  },
+  "compiler_vs_semantic_continuity": {
+    "compiler_continuity": "The artifact continues to compile.",
+    "semantic_continuity": "The artifact continues to express the same intended meaning.",
+    "equivalent": false,
+    "warning": "A theorem may continue compiling after a definition changes while representing a different claim."
+  },
+  "ai_companion": {
+    "resource": "../shared/ai_companion.json",
+    "ai_may_help_with": [
+      "plain-language theorem explanations",
+      "assumption inspection",
+      "error interpretation",
+      "proof hints",
+      "comparison between versions",
+      "candidate formalizations"
+    ],
+    "ai_output_requires_inspection": true,
+    "ai_generated_lean_requires_compilation": true,
+    "compiler_substitution": false
+  },
+  "recommended_ai_workflow": [
+    "inspect source concept",
+    "inspect formal definitions",
+    "inspect assumptions",
+    "inspect theorem",
+    "inspect or generate proof",
+    "compile",
+    "inspect compiler result",
+    "recheck correspondence with intended meaning"
+  ],
+  "student_questions": [
+    "What did the source say?",
+    "What did the formal file define?",
+    "What assumptions were supplied?",
+    "What was simplified?",
+    "What does the theorem actually claim?",
+    "What did Lean accept?",
+    "What remains outside the proof?",
+    "What would have to change to model more of the source?"
+  ],
+  "reproducibility": {
+    "preserve": [
+      "source file",
+      "Lean version",
+      "target environment",
+      "imports",
+      "definitions",
+      "theorem statements"
+    ],
+    "principle": "Another person should be able to identify what formal artifact was actually checked."
+  },
+  "origin_boundaries": {
+    "06_tft_origin": "Generic triad properties do not validate TFT's broader physical proposals.",
+    "07_nawderian_theorem": "Membership proofs do not define the source term wrapping.",
+    "08_nawderian_set_theorem": "Additive teaching structure does not establish physical completeness.",
+    "09_temperature_engine_theorem": "Signed algebraic properties do not validate the broader physical interpretation.",
+    "10_unified_resonance_theorem": "Local algebraic assumptions do not establish that source factors naturally form that algebra.",
+    "11_rtt_origin": "Small state-transition properties do not formalize or validate the complete RTT specification."
+  },
+  "navigation": {
+    "start_for_aaccc": "01_awareness.json",
+    "guide_sequence": [
+      "01_awareness.json",
+      "02_alignment.json",
+      "03_coherence.json",
+      "04_clarity.json",
+      "05_continuity.json"
+    ],
+    "origin_sequence": [
+      "06_tft_origin.json",
+      "07_nawderian_theorem.json",
+      "08_nawderian_set_theorem.json",
+      "09_temperature_engine_theorem.json",
+      "10_unified_resonance_theorem.json",
+      "11_rtt_origin.json"
+    ],
+    "origins_context": "../origins/index.json",
+    "formalization_context": "../origins/formalization.json",
+    "module": "../module.json",
+    "front_door": "../index.json"
+  },
+  "ai_behavior": {
+    "must": [
+      "Treat Lean as an optional formal companion.",
+      "Preserve the distinction between guide companions and origin companions.",
+      "Report compiler validation at the scope actually checked.",
+      "Expose assumptions and definitions before interpreting theorem results.",
+      "Preserve source-to-formal-model mappings.",
+      "Preserve deliberate simplifications.",
+      "Treat proof failure as potentially informative.",
+      "Recheck semantic correspondence after formal revisions."
+    ],
+    "must_not": [
+      "require Lean for standard 5Guides completion",
+      "present compiler success as empirical validation",
+      "present origin teaching abstractions as complete source formalizations",
+      "invent source semantics to satisfy a proof",
+      "hide added assumptions",
+      "change theorem meaning solely to obtain a green compiler result",
+      "treat AI-generated Lean as verified before compilation",
+      "assume continued compilation guarantees unchanged meaning"
+    ]
+  },
+  "provenance": {
+    "source_document": "docs/5Guides/lean/index.md",
+    "source_type": "human-facing formal companion index",
+    "transformation": "structured AI-readable Lean Lab index",
+    "preserve": [
+      "optional participation",
+      "01-05 Guide mapping",
+      "06-11 origin mapping",
+      "compiler environment",
+      "formalization boundaries",
+      "source alignment",
+      "proof failure as evidence",
+      "semantic continuity"
+    ],
+    "do_not_infer": [
+      "empirical validation",
+      "complete source formalization",
+      "scientific consensus",
+      "formal equivalence beyond represented definitions",
+      "current compiler compatibility outside the stated validation environment"
+    ]
+  },
+  "related": {
+    "module": "../module.json",
+    "index": "../index.json",
+    "formalization": "../origins/formalization.json",
+    "origins": "../origins/index.json",
+    "ai_companion": "../shared/ai_companion.json"
+  },
+  "machine_context": {
+    "ai_parseable": true,
+    "role": "formal-companion-index",
+    "optional": true,
+    "artifact_count": 11,
+    "guide_companion_count": 5,
+    "origin_companion_count": 6,
+    "compiler_checked": true,
+    "compiler_validation_bounded": true,
+    "formal_verification_distinct_from_empirical_validation": true,
+    "source_alignment_required": true,
+    "assumptions_must_be_visible": true,
+    "semantic_continuity_distinct_from_compiler_continuity": true,
+    "provenance_aware": true
+  }
+}

@@ -1,0 +1,630 @@
+{
+  "document": {
+    "id": "5Guides-shared-assessment",
+    "type": "shared-learning-contract",
+    "name": "Assessment",
+    "title": "5Guides — Assessment",
+    "edition": "AI Edition",
+    "module": "5Guides",
+    "framework": "AACCC",
+    "version": "1.0",
+    "status": "active",
+    "language": "en",
+    "source": "docs/5Guides/shared/assessment.md",
+    "ai_path": "docs/book/AI_Edition/5Guides/shared/assessment.json"
+  },
+  "purpose": {
+    "primary": "Define assessment as an instrument for making learning visible rather than punishing error or ranking learners.",
+    "learning_goal": "Help the learner identify what they understand, what they can apply, and what may deserve another look.",
+    "principle": "Assessment is not the destination. It is a mirror held up to the learning process."
+  },
+  "assessment_model": {
+    "primary_forms": [
+      "Awareness Check",
+      "Mastery Checkpoint"
+    ],
+    "competitive": false,
+    "criterion_based": true,
+    "retryable": true,
+    "vocabulary_recall_primary": false,
+    "application_primary": true
+  },
+  "learning_sequence": [
+    "explore",
+    "experience",
+    "optional Awareness Check",
+    "revisit",
+    "practice",
+    "apply",
+    "Mastery Challenge",
+    "reflect",
+    "badge",
+    "continue"
+  ],
+  "awareness_check": {
+    "name": "Awareness Check",
+    "optional": true,
+    "phase": "early",
+    "core_question": "What stuck after my first encounter?",
+    "purpose": "Provide a small first-pass snapshot of what the learner noticed or retained and what may deserve another look.",
+    "not_equivalent_to_mastery": true,
+    "badge_awarded_directly": false,
+    "gate_to_continue": false,
+    "ranking": false,
+    "punitive": false,
+    "focus": [
+      "recognition",
+      "observation",
+      "comparison",
+      "assumption detection",
+      "mismatch detection",
+      "uncertainty recognition",
+      "recognizing when a conclusion does not yet follow"
+    ],
+    "interpretation": "A difficult first pass provides information about learning needs rather than a final judgment about the learner."
+  },
+  "awareness_check_intro": {
+    "recommended_message": [
+      "This isn't a graded test.",
+      "It's a quick way to notice what stayed with you after your first exploration and what might deserve another look."
+    ],
+    "goal": "Frame the check as information for the learner rather than defense of a score."
+  },
+  "awareness_check_patterns": {
+    "awareness": {
+      "example_goal": "Distinguish direct observation from interpretation."
+    },
+    "alignment": {
+      "example_goal": "Identify a proposed correspondence that requires an additional assumption."
+    },
+    "coherence": {
+      "example_goal": "Identify where an explanation does not currently hold together."
+    },
+    "clarity": {
+      "example_goal": "Recognize a representation that improves inspectability without changing meaning."
+    },
+    "continuity": {
+      "example_goal": "Recognize what changed and what persisted."
+    }
+  },
+  "uncertainty": {
+    "valid_response": true,
+    "example": "There isn't enough information yet.",
+    "principle": "Recognizing insufficient information may itself demonstrate the skill being assessed.",
+    "avoid": "Training learners to believe every question requires a confident conclusion."
+  },
+  "question_design": {
+    "avoid_trick_questions": true,
+    "principle": "Challenge reasoning rather than test whether the learner guessed the author's hidden intention.",
+    "prefer": [
+      "What evidence supports this conclusion?",
+      "Which relationship requires another assumption?",
+      "What information is missing?",
+      "Where does the mapping stop?",
+      "What changed between these states?"
+    ],
+    "avoid_primary_focus": [
+      "tiny wording traps",
+      "memorizing exact phrasing",
+      "guessing evaluator intention",
+      "recalling isolated vocabulary without application"
+    ]
+  },
+  "feedback": {
+    "priority_over_score": true,
+    "criterion_based": true,
+    "inspectable": true,
+    "purpose": "Tell the learner what is already visible in their reasoning and what deserves another look.",
+    "preferred_categories": [
+      "readily noticed",
+      "worth another look",
+      "still developing"
+    ],
+    "examples": [
+      "You readily identified direct observations and interpretations.",
+      "You may want another look at assumptions and observational boundaries.",
+      "You preserved uncertainty when the available information did not support a conclusion."
+    ],
+    "avoid_as_primary_feedback": [
+      "Incorrect.",
+      "72%.",
+      "opaque score threshold"
+    ]
+  },
+  "awareness_snapshot": {
+    "optional_result_structure": {
+      "readily_noticed": [],
+      "worth_another_look": [],
+      "still_developing": []
+    },
+    "learner_next_actions": [
+      "revisit",
+      "continue"
+    ],
+    "learner_controls_next_step": true
+  },
+  "retry_after_awareness_check": {
+    "repeat_identical_questions": false,
+    "revisit_relevant_concept_first": true,
+    "use_fresh_example": true,
+    "purpose": "Test recognition of the structure rather than memorization of the previous answer."
+  },
+  "mastery_checkpoint": {
+    "name": "Mastery Checkpoint",
+    "phase": "after practice",
+    "core_question": "Can I use the skill on a fresh problem?",
+    "fresh_problem_required": true,
+    "application_required": true,
+    "terminology_recall_alone_sufficient": false,
+    "criteria_visible": true,
+    "retryable": true,
+    "required_for_badge": true,
+    "purpose": "Demonstrate practical transfer of the Guide skill without being walked through every step."
+  },
+  "mastery_through_transfer": {
+    "principle": "Mastery is more convincingly demonstrated when the learner can recognize and apply the structure in a new context.",
+    "guide_tasks": {
+      "awareness": [
+        "identify observations",
+        "identify interpretations",
+        "identify assumptions",
+        "preserve uncertainty",
+        "identify boundaries",
+        "identify missing information"
+      ],
+      "alignment": [
+        "propose correspondences",
+        "justify mappings",
+        "preserve mismatches",
+        "identify assumptions",
+        "identify uncertainty",
+        "qualify the overall relationship"
+      ],
+      "coherence": [
+        "inspect the structure as a whole",
+        "identify contradictions",
+        "locate missing relationships",
+        "identify unsupported relationships",
+        "explain where the structure stops holding together"
+      ],
+      "clarity": [
+        "identify difficult or ambiguous structure",
+        "make important relationships inspectable",
+        "preserve original meaning",
+        "preserve uncertainty",
+        "detect meaning drift"
+      ],
+      "continuity": [
+        "identify earlier state",
+        "identify change",
+        "identify persistence",
+        "identify drift",
+        "identify breaks",
+        "trace transitions"
+      ]
+    }
+  },
+  "mastery_criteria": {
+    "awareness": {
+      "core_demonstration": "I can inspect what I am observing without quietly treating my interpretation as the observation itself.",
+      "criteria": [
+        "identify direct observation",
+        "distinguish interpretation from observation",
+        "identify important assumptions",
+        "recognize observational boundary",
+        "preserve important uncertainty",
+        "identify missing information",
+        "revise interpretation when evidence warrants it"
+      ]
+    },
+    "alignment": {
+      "core_demonstration": "I can examine how things correspond without forcing them to match.",
+      "criteria": [
+        "identify what is being compared",
+        "establish useful candidate correspondences",
+        "justify important mappings",
+        "identify assumptions behind mappings",
+        "preserve meaningful mismatches",
+        "recognize partial alignment",
+        "recognize conditional alignment",
+        "leave unresolved relationships unresolved when evidence is insufficient"
+      ]
+    },
+    "coherence": {
+      "core_demonstration": "I can inspect whether the pieces and relationships of a structure work together.",
+      "criteria": [
+        "inspect a structure as a whole",
+        "identify contradictions",
+        "locate missing relationships",
+        "identify unsupported conclusions",
+        "distinguish contradiction from missing information",
+        "detect incompatible assumptions",
+        "explain where the structure stops holding together"
+      ]
+    },
+    "clarity": {
+      "core_demonstration": "I can make important structure easier to understand and inspect while preserving what matters.",
+      "criteria": [
+        "identify ambiguity",
+        "expose important definitions",
+        "make relationships visible",
+        "reveal hidden steps",
+        "identify assumptions",
+        "preserve uncertainty",
+        "improve inspectability without silently changing meaning"
+      ]
+    },
+    "continuity": {
+      "core_demonstration": "I can inspect what changes, what persists, and how one state connects to another.",
+      "criteria": [
+        "identify earlier state or structure",
+        "identify what changed",
+        "identify what persisted",
+        "trace important transitions",
+        "recognize drift",
+        "recognize recurring patterns",
+        "recognize pattern breaks",
+        "explain how the current state relates to what came before"
+      ]
+    }
+  },
+  "mastery_retry": {
+    "failed_first_attempt_is_terminal": false,
+    "preferred_cycle": [
+      "notice",
+      "revisit",
+      "practice",
+      "fresh example",
+      "try again"
+    ],
+    "feedback_should_identify_gap": true,
+    "fresh_example_after_revisit": true,
+    "principle": "Retry is part of mastery."
+  },
+  "exploration_boundary": {
+    "reasonable_hypotheses_allowed": true,
+    "revision_allowed": true,
+    "changing_mind_allowed": true,
+    "imperfect_first_attempt_allowed": true,
+    "principle": "Assessment should not make the learner afraid to explore merely because an early interpretation may not hold."
+  },
+  "explanation": {
+    "reasoning_may_be_requested": true,
+    "everything_requires_essay": false,
+    "purpose": "Expose enough of the learner's reasoning to distinguish correct selection from understood structure.",
+    "possible_formats": [
+      "selection",
+      "classification",
+      "matching",
+      "short explanation",
+      "observation",
+      "comparison",
+      "revision",
+      "applied challenge"
+    ]
+  },
+  "student_records": {
+    "purpose": "Provide reusable thinking artifacts that make learner reasoning inspectable.",
+    "sequence": [
+      "Awareness Record",
+      "Alignment Record",
+      "Coherence Record",
+      "Clarity Record",
+      "Continuity Record"
+    ],
+    "required_as_paperwork": false,
+    "fields": {
+      "awareness": [
+        "observation",
+        "interpretation",
+        "assumptions",
+        "boundary",
+        "uncertainty",
+        "missing_information",
+        "revision"
+      ],
+      "alignment": [
+        "objects_compared",
+        "boundary",
+        "correspondences",
+        "evidence",
+        "assumptions",
+        "mismatches",
+        "unknowns",
+        "current_judgment"
+      ],
+      "coherence": [
+        "structure",
+        "relationships",
+        "supported",
+        "tension",
+        "missing",
+        "assumptions",
+        "current_judgment",
+        "revision"
+      ],
+      "clarity": [
+        "original",
+        "meaning",
+        "ambiguity",
+        "missing_steps",
+        "revision",
+        "clarity_check",
+        "meaning_check"
+      ],
+      "continuity": [
+        "before",
+        "change",
+        "after",
+        "persisted",
+        "drift",
+        "break",
+        "history",
+        "current_judgment"
+      ]
+    }
+  },
+  "inspectable_assessment": {
+    "principle": "Feedback should explain why a judgment was made.",
+    "prefer": [
+      "This mapping remains uncertain because the evidence does not establish that the terms have the same meaning.",
+      "The revision is clearer, but it introduces a cause that was not present in the original."
+    ],
+    "avoid": [
+      "Incorrect.",
+      "Score threshold reached."
+    ]
+  },
+  "hidden_rubrics": {
+    "allowed": false,
+    "principle": "The learner should not have to reverse-engineer the evaluator's expectations.",
+    "visible_criteria": true
+  },
+  "ai_boundary": {
+    "resource": "ai_companion.json",
+    "ai_may_support_preparation": true,
+    "ai_may_generate_practice": true,
+    "ai_may_challenge_reasoning": true,
+    "ai_may_explain": true,
+    "ai_may_provide_alternative_examples": true,
+    "learner_must_demonstrate_mastery": true,
+    "avoid_flow": [
+      "mastery challenge",
+      "AI solves challenge",
+      "learner copies AI response",
+      "badge awarded"
+    ],
+    "preferred_flow": [
+      "explore",
+      "optional AI support",
+      "practice",
+      "optional AI support",
+      "fresh mastery challenge",
+      "learner demonstration"
+    ]
+  },
+  "ai_output_as_assessment_material": {
+    "allowed": true,
+    "purpose": "Use imperfect or inspectable AI output as material for practicing AACCC.",
+    "questions": {
+      "awareness": "What did the AI actually claim?",
+      "alignment": "Does the answer correspond to the supplied evidence?",
+      "coherence": "Does the explanation hold together?",
+      "clarity": "Is the reasoning explicit enough to inspect?",
+      "continuity": "Did important information survive from the original problem, or did something drift?"
+    }
+  },
+  "lean_boundary": {
+    "lean_required_for_mastery": false,
+    "compiler_success_alone_is_mastery": false,
+    "formal_companions_optional": true,
+    "learner_should_be_able_to_explain": [
+      "what was declared",
+      "what was assumed",
+      "what was proved",
+      "what was not proved"
+    ],
+    "principle": "The compiler checks the formal artifact. Assessment checks whether the learner can reason about what the artifact means."
+  },
+  "failure_as_evidence": {
+    "principle": "When something fails, inspect the failure before trying to make it disappear.",
+    "possible_revelations": [
+      "missing assumption",
+      "unsupported conclusion",
+      "incorrect mapping",
+      "formalization gap",
+      "outdated expectation",
+      "incomplete model"
+    ]
+  },
+  "competition_boundary": {
+    "leaderboards": false,
+    "class_ranking": false,
+    "fastest_completion": false,
+    "highest_score_ranking": false,
+    "country_ranking": false,
+    "public_mastery_percentages": false,
+    "streak_competition": false,
+    "badge_rarity": false,
+    "principle": "The assessment question is whether the learner can use the skill, not whether the learner beat someone else."
+  },
+  "failure_pressure": {
+    "attempt_limit_required": false,
+    "waiting_period_required": false,
+    "progress_loss_required": false,
+    "preferred_message": "Try again when you're ready."
+  },
+  "privacy": {
+    "resource": "privacy.json",
+    "detailed_learner_profile_required": false,
+    "local_state_preferred_where_practical": true,
+    "remote_storage_implementation_defined": false,
+    "if_remote_storage_exists_document": [
+      "what is stored",
+      "why it is stored",
+      "how long it is retained",
+      "what it is used for"
+    ]
+  },
+  "private_mistakes": {
+    "allowed": true,
+    "principle": "A learner should be able to make an imperfect first attempt without assuming it becomes a permanent public reputation record.",
+    "avoid_automatic_conversion_to": [
+      "public record",
+      "reputation score",
+      "profile attribute",
+      "public embarrassment"
+    ]
+  },
+  "research_data_boundary": {
+    "assessment_data_is_automatically_research_data": false,
+    "principle": "Help me learn is not automatic consent for study me learning.",
+    "future_research_requires_separate_design_question": true,
+    "future_research_requires_separate_consent_question": true
+  },
+  "badge_relationship": {
+    "resource": "badges.json",
+    "sequence": [
+      "explore",
+      "practice",
+      "mastery challenge",
+      "skill demonstrated",
+      "badge"
+    ],
+    "student_footprint_required": false,
+    "public_participation_required": false
+  },
+  "final_integrative_challenge": {
+    "after_all_five_guides": true,
+    "fresh_problem": true,
+    "purpose": "Apply the complete AACCC toolkit to one new problem rather than complete five disconnected quizzes.",
+    "questions": [
+      "What am I observing?",
+      "What corresponds?",
+      "Does this hold together?",
+      "Can I make the important structure clear enough to inspect?",
+      "What changed, what persisted, and how did we get here?"
+    ],
+    "bridge_to": "Independent Application"
+  },
+  "independent_application": {
+    "strongest_transfer_target": true,
+    "learner_selects_problem": true,
+    "possible_domains": [
+      "technical problem",
+      "disagreement",
+      "research claim",
+      "unfamiliar system",
+      "software",
+      "model",
+      "learning problem",
+      "everyday situation"
+    ],
+    "supplied_answer_key": false,
+    "purpose": "Determine whether the learner can carry the structural toolkit beyond designed lesson scenarios."
+  },
+  "aaccc_self_check": {
+    "awareness": {
+      "question": "What skill are we actually measuring?"
+    },
+    "alignment": {
+      "question": "Do the questions correspond to that skill?"
+    },
+    "coherence": {
+      "question": "Do the assessment method and intended learning outcome hold together?"
+    },
+    "clarity": {
+      "question": "Does the learner understand what success means and why feedback was given?"
+    },
+    "continuity": {
+      "question": "If the Guides evolve, do the assessments still measure the same thing?"
+    }
+  },
+  "assessment_drift": {
+    "risk": true,
+    "example": [
+      "original goal: distinguish observation from interpretation",
+      "later assessment: remember vocabulary definitions",
+      "later assessment: score above a threshold on a timed quiz"
+    ],
+    "check": "Are we still assessing what we intended to teach?",
+    "principle": "Assessment methods should remain aligned with the structural skill as the Guides evolve."
+  },
+  "question_design_rule": {
+    "question": "What would a learner have to understand or do to answer this well?",
+    "warning": "If the answer is primarily remembering exact wording while the intended skill is structural inspection, redesign the question."
+  },
+  "ai_behavior": {
+    "must": [
+      "Distinguish Awareness Check from Mastery Checkpoint.",
+      "Treat Awareness Checks as optional first-pass snapshots.",
+      "Require practical application for mastery.",
+      "Use fresh examples for meaningful retry.",
+      "Preserve uncertainty as a valid outcome.",
+      "Make criteria and feedback inspectable.",
+      "Keep assessment separate from optional feedback and research use.",
+      "Keep standard mastery independent of optional Lean participation."
+    ],
+    "must_not": [
+      "treat an Awareness Check as mastery",
+      "award a badge from first exposure alone",
+      "use hidden criteria",
+      "force confidence when information is insufficient",
+      "punish reasonable exploration",
+      "reuse an identical solved problem as evidence of transfer",
+      "rank learners by default",
+      "treat AI-generated mastery answers as learner demonstration",
+      "treat compiler success alone as student mastery",
+      "silently repurpose assessment responses as research data"
+    ]
+  },
+  "provenance": {
+    "source_document": "docs/5Guides/shared/assessment.md",
+    "source_type": "human-facing educational assessment policy",
+    "transformation": "structured AI-readable assessment contract",
+    "preserve": [
+      "Awareness Check and mastery distinction",
+      "fresh-problem transfer",
+      "retry",
+      "visible criteria",
+      "inspectable feedback",
+      "student records",
+      "uncertainty",
+      "AI boundary",
+      "Lean boundary",
+      "privacy boundary",
+      "independent application"
+    ],
+    "do_not_infer": [
+      "implemented grading service",
+      "implemented learner database",
+      "specific numeric pass threshold",
+      "specific attempt limit",
+      "specific remote storage architecture",
+      "specific research protocol"
+    ]
+  },
+  "related": {
+    "module": "../module.json",
+    "index": "../index.json",
+    "ai_companion": "ai_companion.json",
+    "badges": "badges.json",
+    "privacy": "privacy.json",
+    "student_footprint": "student_footprint.json"
+  },
+  "machine_context": {
+    "ai_parseable": true,
+    "criterion_based": true,
+    "awareness_check_optional": true,
+    "mastery_application_based": true,
+    "fresh_problem_required": true,
+    "retryable": true,
+    "uncertainty_valid": true,
+    "noncompetitive": true,
+    "privacy_first": true,
+    "ai_optional": true,
+    "lean_optional": true,
+    "independent_application_target": true,
+    "provenance_aware": true
+  }
+}

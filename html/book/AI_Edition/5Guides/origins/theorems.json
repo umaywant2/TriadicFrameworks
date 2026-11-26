@@ -1,0 +1,570 @@
+{
+  "document": {
+    "id": "5Guides-origins-theorems",
+    "type": "origin-lineage-artifact",
+    "name": "Theorems",
+    "title": "5Guides — Theorem Origins",
+    "edition": "AI Edition",
+    "module": "5Guides",
+    "framework": "AACCC",
+    "version": "1.0",
+    "status": "active",
+    "language": "en",
+    "source": "docs/5Guides/origins/theorems.md",
+    "ai_path": "docs/book/AI_Edition/5Guides/origins/theorems.json"
+  },
+  "purpose": {
+    "primary": "Represent the theorem stage in the project lineage between earlier triadic structures and later RTT and AACCC development.",
+    "educational": "Use selected theorem artifacts to expose definitions, mappings, assumptions, formalization choices, proof boundaries, and unresolved relationships.",
+    "principle": "Formalization does not merely ask whether a claim can be proved. It also asks what must be defined before the claim becomes precise enough to prove."
+  },
+  "lineage_position": {
+    "sequence": [
+      "TFT",
+      "Triads",
+      "Theorems",
+      "RTT",
+      "AACCC",
+      "5Guides"
+    ],
+    "previous": "tft.json",
+    "current": "theorems.json",
+    "next": "rtt.json",
+    "lineage_type": "developmental",
+    "strict_derivation": false
+  },
+  "theorem_family": [
+    {
+      "order": 1,
+      "id": "nawderian_theorem",
+      "name": "Nawderian Theorem",
+      "formal_companion": "../lean/07_nawderian_theorem.json",
+      "primary_formalization_problem": "What relationship does wrapping mean?"
+    },
+    {
+      "order": 2,
+      "id": "nawderian_set_theorem",
+      "name": "Nawderian SET Theorem",
+      "formal_companion": "../lean/08_nawderian_set_theorem.json",
+      "primary_formalization_problem": "How are named contributions composed?"
+    },
+    {
+      "order": 3,
+      "id": "temperature_engine_theorem",
+      "name": "Nawderian Temperature Engine Theorem",
+      "formal_companion": "../lean/09_temperature_engine_theorem.json",
+      "primary_formalization_problem": "What follows from a deliberately simplified directional relation?"
+    },
+    {
+      "order": 4,
+      "id": "unified_resonance_theorem",
+      "name": "Unified Resonance Theorem",
+      "formal_companion": "../lean/10_unified_resonance_theorem.json",
+      "primary_formalization_problem": "What algebraic structure must be supplied for the composition to behave as intended?"
+    }
+  ],
+  "nawderian_theorem": {
+    "id": "nawderian_theorem",
+    "name": "Nawderian Theorem",
+    "declared_dimension_groups": {
+      "corridor": [
+        1,
+        2,
+        6
+      ],
+      "wrapping": [
+        3,
+        6,
+        9
+      ],
+      "visible": [
+        4,
+        5,
+        6
+      ],
+      "invisible": [
+        6,
+        7,
+        8
+      ]
+    },
+    "directly_inspectable_relationship": {
+      "dimension": 6,
+      "membership": [
+        "corridor",
+        "wrapping",
+        "visible",
+        "invisible"
+      ],
+      "formalization_status": "directly representable as membership"
+    },
+    "shared_membership_interpretation": "Dimension 6 is a shared member of the declared groups.",
+    "wrapping_claim": {
+      "concept": "wrapping",
+      "source_role": "Proposed relationship connecting the wrapping triad with visible and invisible structures.",
+      "ordinary_set_interpretation": {
+        "wrapping": [
+          3,
+          6,
+          9
+        ],
+        "visible_union_invisible": [
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "ordinary_set_containment_supported": false
+      },
+      "problem": "Ordinary set membership alone does not supply the intended semantics of the term wrapping.",
+      "required_next_step": "Define the wrapping relationship before treating it as a formal containment theorem."
+    },
+    "formal_response": {
+      "prove": [
+        "relationships directly supported by declared membership",
+        "shared membership involving dimension 6"
+      ],
+      "do_not_invent": [
+        "a convenient definition of wrapping merely to make a stronger theorem pass"
+      ],
+      "future_possible_relation": "Wraps A B",
+      "condition": "Only after the intended semantics of Wraps have been defined and justified."
+    },
+    "aaccc": {
+      "awareness": "What sets and memberships were actually declared?",
+      "alignment": "Which dimensions actually correspond or intersect?",
+      "coherence": "Does ordinary set containment support the proposed wrapping relationship?",
+      "clarity": "What must wrapping mean before the relationship becomes formally inspectable?",
+      "continuity": "Can the intended conceptual relationship survive a more precise definition?"
+    },
+    "formal_companion": "../lean/07_nawderian_theorem.json"
+  },
+  "nawderian_set_theorem": {
+    "id": "nawderian_set_theorem",
+    "name": "Nawderian SET Theorem",
+    "declared_structure": {
+      "name": "SET",
+      "components": [
+        "Spin",
+        "Electrolysis / Field-Charge",
+        "Temperature"
+      ],
+      "symbolic_form": "F_SET = (S, E, T)"
+    },
+    "composition_model": {
+      "components": [
+        "gravity",
+        "spin",
+        "field_charge",
+        "temperature"
+      ],
+      "relationship": "additive composition",
+      "conceptual_pattern": [
+        "Gravity",
+        "Spin",
+        "Field / Charge",
+        "Temperature",
+        "Modeled Total"
+      ]
+    },
+    "educational_focus": "Decomposition and recomposition of a modeled total into named contributions.",
+    "inspection_questions": [
+      "Which mathematical term corresponds to which proposed contribution?",
+      "What happens when one contribution becomes zero?",
+      "What assumptions make addition an appropriate composition?",
+      "Does the modeled total contain exactly the contributions intended by the teaching model?"
+    ],
+    "formal_boundary": {
+      "lean_may_verify": "Consequences of the explicitly declared additive teaching structure.",
+      "lean_does_not_establish": "That the SET decomposition is a complete empirical description of a physical system.",
+      "principle": "Formal composition and physical completeness are separate claims."
+    },
+    "aaccc": {
+      "awareness": "What components were actually declared?",
+      "alignment": "Which term corresponds to which proposed contribution?",
+      "coherence": "Does the total follow from the supplied composition rule?",
+      "clarity": "Are the individual contributions visible rather than hidden inside an unexplained result?",
+      "continuity": "What happens to the total when one contribution changes while the others remain fixed?"
+    },
+    "formal_companion": "../lean/08_nawderian_set_theorem.json"
+  },
+  "temperature_engine_theorem": {
+    "id": "temperature_engine_theorem",
+    "name": "Nawderian Temperature Engine Theorem",
+    "declared_structure": {
+      "temperature_field": [
+        "T_hot",
+        "T_cold",
+        "gradient_T"
+      ],
+      "symbolic_form": "T = (T_hot, T_cold, gradient_T)",
+      "proposed_relation": "F_T = -alpha * gradient_T"
+    },
+    "source_interpretation": {
+      "alpha": "medium-dependent coupling constant",
+      "gradient": "driver in the proposed temperature-force relation"
+    },
+    "teaching_simplification": {
+      "dimension": "one-dimensional",
+      "numeric_style": "signed algebraic model",
+      "teaching_definition": "temperatureForce coupling gradient = -(coupling * gradient)",
+      "purpose": "Inspect a small algebraic relation before attempting broader physical formalization."
+    },
+    "deliberately_omitted": [
+      "spatial vector fields",
+      "complete thermodynamics",
+      "astrophysical dynamics",
+      "fluid mechanics",
+      "physical units",
+      "measurement uncertainty",
+      "empirical datasets"
+    ],
+    "formal_consequences": [
+      {
+        "condition": "gradient = 0",
+        "result": "modeled force = 0"
+      },
+      {
+        "condition": "coupling = 0",
+        "result": "modeled force = 0"
+      },
+      {
+        "condition": "gradient changes sign",
+        "result": "modeled force changes sign under the supplied relation"
+      }
+    ],
+    "boundary": "These are algebraic consequences of the teaching definition and are not independent empirical verification of broader Temperature Engine interpretations.",
+    "aaccc": {
+      "awareness": "What quantities and relationships were actually formalized?",
+      "alignment": "How does the gradient sign correspond to the modeled force sign?",
+      "coherence": "Do the zero and sign-reversal properties follow from the declared definition?",
+      "clarity": "Is the simplified algebraic model clearly separated from the broader physical interpretation?",
+      "continuity": "What changes as the gradient changes while the formal relationship remains fixed?"
+    },
+    "formal_companion": "../lean/09_temperature_engine_theorem.json"
+  },
+  "unified_resonance_theorem": {
+    "id": "unified_resonance_theorem",
+    "name": "Unified Resonance Theorem",
+    "source_status": "Canonical Draft",
+    "core_expression": "Resonance_glyph = Q_z * F_theta * S_dim",
+    "declared_factors": {
+      "Q_z": "quadrant constant",
+      "F_theta": "frequency-band modulation",
+      "S_dim": "symbolic overlay from a dimensional layer"
+    },
+    "formalization_problem": "Compact multiplication notation does not by itself define the types, operation, or algebraic laws required by a proof assistant.",
+    "required_questions": [
+      "What type is Q_z?",
+      "What type is F_theta?",
+      "What type is S_dim?",
+      "Do the factors share a carrier type?",
+      "What operation does multiplication represent?",
+      "Is the operation associative?",
+      "Does it have an identity?",
+      "Which algebraic properties are actually required?"
+    ],
+    "teaching_algebra": {
+      "name": "ResonanceAlgebra",
+      "elements": [
+        "multiplication",
+        "identity",
+        "associativity",
+        "left identity",
+        "right identity"
+      ],
+      "status": "local teaching structure",
+      "source_equivalence_claim": false
+    },
+    "boundary": {
+      "lean_may_verify": "Consequences under the explicitly supplied local algebraic laws.",
+      "lean_does_not_establish": "That the broader Unified Resonance interpretation naturally or empirically forms this algebra.",
+      "principle": "Added formal assumptions remain part of the model and must not be retroactively attributed to the source."
+    },
+    "aaccc": {
+      "awareness": "What three factors did the source actually declare?",
+      "alignment": "Which formal object corresponds to each source factor?",
+      "coherence": "What algebraic properties are required before the composition behaves as intended?",
+      "clarity": "Can source declarations be distinguished from assumptions added by the teaching model?",
+      "continuity": "Which consequences survive when factors, carrier types, or composition rules change?"
+    },
+    "formal_companion": "../lean/10_unified_resonance_theorem.json"
+  },
+  "cross_theorem_formalization": {
+    "problems": [
+      {
+        "source": "Nawderian Theorem",
+        "question": "What does wrapping mean?"
+      },
+      {
+        "source": "Nawderian SET Theorem",
+        "question": "How are named contributions composed?"
+      },
+      {
+        "source": "Temperature Engine Theorem",
+        "question": "What follows from the simplified signed directional relation?"
+      },
+      {
+        "source": "Unified Resonance Theorem",
+        "question": "What algebra must be supplied for the composition?"
+      }
+    ],
+    "shared_lesson": "Formalization exposes what must be defined, typed, assumed, or simplified before a theorem can be meaningfully checked."
+  },
+  "missing_definition_boundary": {
+    "principle": "An intuitively meaningful word may still lack sufficient formal semantics.",
+    "example_term": "wraps",
+    "possible_meanings": [
+      "contains",
+      "intersects",
+      "orders",
+      "bounds",
+      "maps",
+      "connects",
+      "encloses under another relation"
+    ],
+    "rule": "Do not select one merely because it makes the desired result provable."
+  },
+  "added_assumptions_boundary": {
+    "principle": "Compact notation can hide algebraic assumptions.",
+    "example": "Q * F * S",
+    "formal_questions": [
+      "What is multiplication?",
+      "On what type?",
+      "What laws does it obey?"
+    ],
+    "rule": "When the formal model adds laws such as associativity or identity, preserve those additions explicitly."
+  },
+  "simplification_boundary": {
+    "principle": "A teaching formalization may intentionally model only a narrow portion of a larger source claim.",
+    "acceptable_if": [
+      "the simplification is explicit",
+      "the verified consequence is described narrowly",
+      "omitted structure remains visible",
+      "the formal result is not upgraded into validation of the broader claim"
+    ]
+  },
+  "formal_refusal": {
+    "principle": "A formal system's inability to establish a stronger claim can be useful information.",
+    "example": {
+      "supported": "Dimension 6 belongs to several declared groups.",
+      "not_automatically_supported": "The wrapping group contains the union of visible and invisible groups under ordinary set containment."
+    },
+    "response": "Expose the additional definition or assumption required rather than hiding the gap."
+  },
+  "source_alignment": {
+    "questions": [
+      "What came directly from the source?",
+      "What was simplified?",
+      "What was added?",
+      "What was left out?"
+    ],
+    "purpose": "Preserve provenance between source language and teaching formalization."
+  },
+  "formalization_record_template": {
+    "source": null,
+    "source_form": null,
+    "teaching_simplification": null,
+    "formal_definition": null,
+    "added_assumptions": [],
+    "lean_proves": [],
+    "lean_does_not_prove": []
+  },
+  "formal_verification_vs_empirical_validation": {
+    "formal_question": "Given these definitions and assumptions, does this conclusion follow?",
+    "empirical_question": "Does the model adequately describe the relevant real-world evidence?",
+    "not_equivalent": true,
+    "empirical_work_may_require": [
+      "observations",
+      "measurements",
+      "experiments",
+      "comparative models",
+      "error analysis",
+      "independent testing"
+    ]
+  },
+  "lean_companions": [
+    {
+      "source": "Nawderian Theorem",
+      "human_file": "docs/5Guides/lean/07_nawderian_theorem.lean",
+      "ai_file": "../lean/07_nawderian_theorem.json"
+    },
+    {
+      "source": "Nawderian SET Theorem",
+      "human_file": "docs/5Guides/lean/08_nawderian_set_theorem.lean",
+      "ai_file": "../lean/08_nawderian_set_theorem.json"
+    },
+    {
+      "source": "Nawderian Temperature Engine Theorem",
+      "human_file": "docs/5Guides/lean/09_temperature_engine_theorem.lean",
+      "ai_file": "../lean/09_temperature_engine_theorem.json"
+    },
+    {
+      "source": "Unified Resonance Theorem",
+      "human_file": "docs/5Guides/lean/10_unified_resonance_theorem.lean",
+      "ai_file": "../lean/10_unified_resonance_theorem.json"
+    }
+  ],
+  "compiler_provenance": {
+    "validation_set": "01-11",
+    "status": "compiler-checked",
+    "lean_version": "4.36.0",
+    "target": "x86_64-w64-windows-gnu",
+    "boundary": "Compiler acceptance applies to the formal teaching artifacts under the stated environment and does not establish the broader empirical claims of their source documents."
+  },
+  "change_experiments": [
+    {
+      "artifact": "Nawderian Theorem",
+      "change": "Change a set member.",
+      "question": "Does the shared intersection or membership relationship still hold?"
+    },
+    {
+      "artifact": "SET",
+      "change": "Remove one contribution.",
+      "question": "What changes in the modeled total?"
+    },
+    {
+      "artifact": "Temperature Engine",
+      "change": "Reverse the gradient or set coupling to zero.",
+      "question": "Which modeled consequences change or persist?"
+    },
+    {
+      "artifact": "Unified Resonance",
+      "change": "Remove an algebraic law.",
+      "question": "Which proof obligations can no longer be discharged?"
+    }
+  ],
+  "strengthening_claims": {
+    "supported_as_exercise": true,
+    "principle": "Ask the formal system for a stronger theorem and inspect what additional definitions or assumptions become necessary.",
+    "warning": "Do not equate addition of convenient assumptions with stronger empirical evidence."
+  },
+  "weakening_claims": {
+    "supported_as_exercise": true,
+    "question": "What is the strongest claim the current structure actually supports?",
+    "principle": "A smaller honest theorem may be preferable to a dramatic theorem supported only by convenient assumptions."
+  },
+  "compiler_green_boundary": {
+    "target": "No errors",
+    "sufficient_for_good_modeling": false,
+    "questions_after_success": [
+      "Did I fix the model?",
+      "Did I change the question?",
+      "Did I add assumptions?",
+      "Does the theorem still represent the original intended claim?"
+    ]
+  },
+  "aaccc_applied_to_formalization": {
+    "awareness": [
+      "What did the source actually state?",
+      "What did the formal model actually define?"
+    ],
+    "alignment": [
+      "Does the formal representation correspond to the source concept?",
+      "Where is the mapping approximate or partial?"
+    ],
+    "coherence": [
+      "Do the conclusions follow from the formal definitions and assumptions?",
+      "Are any assumptions incompatible?"
+    ],
+    "clarity": [
+      "Can source material be distinguished from modeling choices?",
+      "Can assumptions be distinguished from proof results?",
+      "Are limitations visible?"
+    ],
+    "continuity": [
+      "What persisted from informal concept to notation to formal model to theorem?",
+      "What changed?",
+      "What was lost?",
+      "What became more precise?"
+    ]
+  },
+  "origin_self_inspection": {
+    "principle": "AACCC should be able to inspect the project lineage from which it emerged.",
+    "acceptable_findings": [
+      "vague term",
+      "unsupported mapping",
+      "missing definition",
+      "added assumption",
+      "useful abstraction",
+      "formal inconsistency",
+      "claim requiring narrowing"
+    ],
+    "boundary": "An origin artifact is not exempt from criticism because it contributed to the later framework."
+  },
+  "source_artifacts": [
+    "Nawderian_Theorem.md",
+    "Nawderian_SET_Theorem.md",
+    "Nawderian_Temperature_Engine_Theorem.md",
+    "Unified_Resonance_Theorem.md"
+  ],
+  "ai_behavior": {
+    "must": [
+      "Keep the four theorem families structurally distinct.",
+      "Separate source declarations from teaching abstractions.",
+      "Expose undefined terminology rather than silently formalize it.",
+      "Expose algebraic assumptions added during formalization.",
+      "Preserve deliberate simplifications.",
+      "Distinguish formal consequences from empirical claims.",
+      "Preserve failed or unsupported stronger mappings as informative boundaries.",
+      "Treat compiler validation as validation of the formal artifacts under the stated environment."
+    ],
+    "must_not": [
+      "define wrapping merely to make a theorem pass",
+      "claim ordinary set containment supports a relationship when the represented sets do not",
+      "claim the SET additive teaching model establishes physical completeness",
+      "claim the simplified Temperature Engine formalization validates the broader physical interpretation",
+      "claim Unified Resonance source notation itself supplies all required algebraic laws",
+      "retroactively attribute teaching-model assumptions to the source",
+      "upgrade compiler success into empirical validation"
+    ]
+  },
+  "provenance": {
+    "source_document": "docs/5Guides/origins/theorems.md",
+    "source_type": "human-facing project-lineage and formalization guide",
+    "transformation": "structured AI-readable theorem-lineage artifact",
+    "preserve": [
+      "four theorem families",
+      "source structures",
+      "formalization questions",
+      "teaching simplifications",
+      "added assumptions",
+      "Lean boundaries",
+      "AACCC interpretation",
+      "empirical-validation boundary"
+    ],
+    "do_not_infer": [
+      "complete formal equivalence between source and teaching model",
+      "empirical validation from Lean proofs",
+      "undefined relation semantics",
+      "physical completeness of simplified models",
+      "historical influence beyond documented project lineage",
+      "scientific consensus"
+    ]
+  },
+  "related": {
+    "origins_index": "index.json",
+    "tft": "tft.json",
+    "rtt": "rtt.json",
+    "formalization": "formalization.json",
+    "lean_index": "../lean/index.json",
+    "nawderian_lean": "../lean/07_nawderian_theorem.json",
+    "set_lean": "../lean/08_nawderian_set_theorem.json",
+    "temperature_lean": "../lean/09_temperature_engine_theorem.json",
+    "unified_resonance_lean": "../lean/10_unified_resonance_theorem.json"
+  },
+  "machine_context": {
+    "ai_parseable": true,
+    "role": "origin-lineage-artifact",
+    "theorem_family_count": 4,
+    "formalization_boundary_explicit": true,
+    "undefined_relations_preserved": true,
+    "added_assumptions_exposed": true,
+    "simplifications_exposed": true,
+    "formal_verification_distinct_from_empirical_validation": true,
+    "compiler_validation_bounded": true,
+    "aaccc_self_inspection": true,
+    "provenance_aware": true
+  }
+}

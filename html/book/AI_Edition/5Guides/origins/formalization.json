@@ -1,0 +1,676 @@
+{
+  "document": {
+    "id": "5Guides-origins-formalization",
+    "type": "origin-formalization-contract",
+    "name": "Formalization",
+    "title": "5Guides — Formalization",
+    "edition": "AI Edition",
+    "module": "5Guides",
+    "framework": "AACCC",
+    "version": "1.0",
+    "status": "active",
+    "language": "en",
+    "source": "docs/5Guides/origins/formalization.md",
+    "ai_path": "docs/book/AI_Edition/5Guides/origins/formalization.json"
+  },
+  "purpose": {
+    "primary": "Define how 5Guides distinguishes source interpretation, modeling, formal specification, proof, compiler validation, and empirical validation.",
+    "educational": "Help learners inspect exactly what a formal result establishes, what assumptions it depends upon, and what remains outside the proof.",
+    "principle": "Formalization helps us say exactly what we mean, what we assume, and what actually follows."
+  },
+  "core_questions": {
+    "formal": "Given these definitions and assumptions, does the conclusion follow?",
+    "modeling": "Do these definitions and assumptions represent what we intended to describe?",
+    "empirical": "Does the model adequately describe the relevant real-world evidence?"
+  },
+  "core_distinction": {
+    "formal_verification": "Checks consequences within an explicitly defined formal system.",
+    "model_alignment": "Checks whether the formal representation corresponds to the intended source concept or modeled system.",
+    "empirical_validation": "Checks whether the model is adequately supported by observations, measurements, experiments, or other relevant evidence.",
+    "equivalent": false,
+    "principle": "These forms of inspection may support one another but must not be collapsed into one claim."
+  },
+  "formal_proof": {
+    "general_shape": [
+      "definitions",
+      "assumptions",
+      "rules",
+      "conclusion"
+    ],
+    "interpretation": "Given the supplied formal context, the conclusion follows according to the formal system.",
+    "conditional": true,
+    "does_not_automatically_establish": [
+      "the assumptions are empirically correct",
+      "the model corresponds to nature",
+      "the variables correspond to measurable quantities",
+      "the source author's intent was captured correctly",
+      "the model is complete",
+      "the model is unique",
+      "another model would not work better",
+      "the result is scientifically important"
+    ]
+  },
+  "formalization_begins_before_proof": {
+    "important_choices": [
+      "what objects exist",
+      "how objects are represented",
+      "what types objects have",
+      "which relationships are primitive",
+      "which assumptions are permitted",
+      "which distinctions matter",
+      "which distinctions are omitted",
+      "what theorem is being stated"
+    ],
+    "principle": "The theorem statement and proof inherit modeling decisions made before the proof begins."
+  },
+  "mapping_chain": [
+    "original idea",
+    "mathematical description",
+    "formal definition",
+    "formal theorem",
+    "verified proof"
+  ],
+  "mapping_rule": {
+    "principle": "A valid proof at the end of a chain does not automatically validate every mapping that preceded it.",
+    "inspection_target": "Inspect the arrows as well as the final theorem."
+  },
+  "source_alignment": {
+    "questions": [
+      "What did the source actually say?",
+      "What did the formal model say?",
+      "Do those correspond?"
+    ],
+    "possible_transformation_errors": [
+      "narrowing the source without saying so",
+      "strengthening the source without saying so",
+      "changing the source",
+      "introducing new assumptions",
+      "omitting conditions",
+      "assigning a precise meaning to a source term that the source did not define"
+    ],
+    "principle": "Formalization of an existing source is also an act of interpretation."
+  },
+  "undefined_relationships": {
+    "example": "A wraps B.",
+    "problem": "The source term may be understandable informally while lacking a unique formal semantics.",
+    "possible_interpretations": [
+      "contains",
+      "intersects",
+      "surrounds",
+      "orders",
+      "maps onto",
+      "connects",
+      "bounds"
+    ],
+    "rule": "Do not select a semantics merely because it makes a desired theorem provable.",
+    "undefined_does_not_mean_false": true,
+    "interpretation": "An insufficiently defined relationship may require clarification before the intended formal claim can be evaluated."
+  },
+  "gap_preservation": {
+    "principle": "Formalization should expose missing precision rather than hide it.",
+    "avoid_pattern": [
+      "source term undefined",
+      "formalizer invents convenient definition",
+      "desired theorem becomes provable",
+      "proof is presented as though the definition came from the source"
+    ],
+    "preferred_pattern": [
+      "source term",
+      "possible meanings",
+      "choose and justify definition",
+      "formalize",
+      "prove",
+      "preserve the interpretive choice"
+    ]
+  },
+  "added_assumptions": {
+    "recognized": true,
+    "example_expression": "Q * F * S",
+    "formal_questions": [
+      "What type are Q, F, and S?",
+      "Do they share a type?",
+      "What is the multiplication operation?",
+      "Is the operation associative?",
+      "Does it have an identity?",
+      "Which algebraic rules are available?"
+    ],
+    "principle": "Compact notation may conceal structural assumptions that formalization forces into the open."
+  },
+  "assumption_provenance": {
+    "example": {
+      "source": "three-factor notation",
+      "formal_model_adds": "common algebraic structure",
+      "proof_assumes": [
+        "associativity",
+        "identity"
+      ],
+      "result": "formal consequences under those assumptions"
+    },
+    "rule": "Do not retroactively attribute assumptions introduced by the teaching model to the source."
+  },
+  "simplification": {
+    "allowed": true,
+    "principle": "A formal teaching model may intentionally be much smaller than the source concept.",
+    "conditions": [
+      "the simplification is explicit",
+      "the omitted structure is acknowledged",
+      "the verified result is stated narrowly",
+      "the teaching model is not presented as complete formal equivalence"
+    ],
+    "example": "A broader directional temperature relation may be reduced to a one-dimensional signed algebraic model for selected teaching proofs."
+  },
+  "formalization_record_template": {
+    "source": null,
+    "formalization": null,
+    "simplifications": [],
+    "added_assumptions": [],
+    "lean_proves": [],
+    "lean_does_not_prove": []
+  },
+  "verification": {
+    "question": "Does the specified conclusion follow within the defined formal system?",
+    "pattern": [
+      "definitions",
+      "assumptions",
+      "rules",
+      "conclusion"
+    ],
+    "value": "Formal verification can expose skipped reasoning steps and unsupported formal conclusions."
+  },
+  "empirical_validation": {
+    "question": "Does the model adequately describe what it is intended to represent in the world?",
+    "may_require": [
+      "observation",
+      "measurement",
+      "experiments",
+      "datasets",
+      "uncertainty analysis",
+      "comparison against alternatives",
+      "replication",
+      "independent criticism"
+    ],
+    "compiler_substitute": false
+  },
+  "formal_and_empirical_interaction": {
+    "compatible": true,
+    "pattern": [
+      "proposed model",
+      "formal consequences",
+      "testable predictions",
+      "observation",
+      "comparison"
+    ],
+    "principle": "Formalization can sharpen empirical predictions, while evidence can expose where a formal model requires revision."
+  },
+  "compiler_success": {
+    "means": "The formal artifact was accepted by the compiler under the relevant formal environment.",
+    "does_not_mean": "Nature agrees with the theorem.",
+    "scientific_validation": false,
+    "principle": "Compiler success should be reported at the scope at which it occurred."
+  },
+  "compiler_failure": {
+    "automatic_scientific_refutation": false,
+    "possible_causes": [
+      "incomplete proof",
+      "unavailable lemma",
+      "missing import",
+      "type mismatch",
+      "missing assumption",
+      "malformed theorem statement",
+      "formal model does not support the target",
+      "formal representation differs from the intended concept"
+    ],
+    "principle": "Inspect the failure before deciding what it means."
+  },
+  "failure_as_information": {
+    "principle": "A formal failure may expose an assumption, dependency, or modeling choice that was previously hidden.",
+    "example_question": "What assumption did I think I had?",
+    "follow_up": "Should that assumption actually belong in the model?"
+  },
+  "compiler_green_boundary": {
+    "tempting_goal": "No errors",
+    "sufficient_for_good_modeling": false,
+    "possible_ways_to_make_a_theorem_easier": [
+      "change assumptions",
+      "change definitions",
+      "change target",
+      "change types",
+      "change relationships"
+    ],
+    "questions_after_success": [
+      "Did I fix the model?",
+      "Did I change the question?",
+      "Did I preserve the intended meaning?"
+    ]
+  },
+  "claim_strength": {
+    "principle": "Stronger is not automatically better.",
+    "preferred_question": "What is the strongest claim the current structure actually supports?",
+    "avoid_question": "What is the strongest claim I can make the proof checker accept after adding enough assumptions?",
+    "smaller_honest_theorem_valid": true
+  },
+  "assumptions_as_result_context": {
+    "pattern": [
+      "A",
+      "B",
+      "C",
+      "therefore D"
+    ],
+    "principle": "The assumptions remain part of the meaning of the result.",
+    "warning": "Reporting only D may erase the conditions under which D was proved."
+  },
+  "types": {
+    "principle": "Type selection is part of modeling.",
+    "example_concept": "temperature",
+    "possible_representations": [
+      "Nat",
+      "Int",
+      "Float",
+      "Real",
+      "vector field",
+      "unit-bearing physical quantity"
+    ],
+    "consequence": "Different representations support different operations and preserve different information."
+  },
+  "signed_representation_example": {
+    "problem": "A directional value may require negative as well as positive values.",
+    "Nat_limitation": "Natural numbers do not represent negative values.",
+    "possible_teaching_choice": "Int",
+    "principle": "A type may clarify or obscure important structure in the modeled relationship."
+  },
+  "precision_cost": {
+    "principle": "Formal precision may require definitions for structures that informal language leaves implicit.",
+    "possible_requirements": [
+      "units",
+      "coordinate systems",
+      "vectors",
+      "fields",
+      "uncertainty",
+      "measurements",
+      "boundaries",
+      "operators",
+      "compositions",
+      "invariants",
+      "transitions"
+    ],
+    "teaching_model_may_omit_many": true,
+    "requirement": "Important omissions should remain visible."
+  },
+  "formalization_depth": [
+    {
+      "layer": 1,
+      "name": "Named structure"
+    },
+    {
+      "layer": 2,
+      "name": "Typed objects"
+    },
+    {
+      "layer": 3,
+      "name": "Defined relationships"
+    },
+    {
+      "layer": 4,
+      "name": "Explicit assumptions"
+    },
+    {
+      "layer": 5,
+      "name": "Formal propositions"
+    },
+    {
+      "layer": 6,
+      "name": "Verified proofs"
+    },
+    {
+      "layer": 7,
+      "name": "Mapping to measurement"
+    },
+    {
+      "layer": 8,
+      "name": "Empirical comparison"
+    }
+  ],
+  "formalization_depth_rule": {
+    "all_layers_required_for_every_teaching_example": false,
+    "principle": "Know which layer the current artifact has actually reached."
+  },
+  "lean_context": {
+    "example_shape": "theorem result (h1 : A) (h2 : B) : C := by ...",
+    "interpretation": "Lean checks whether C follows under the supplied formal context.",
+    "lean_does_not_independently_check": "Where A and B came from or whether they are empirically true.",
+    "provenance_responsibility": "model author / learner / researcher"
+  },
+  "provenance_chain": [
+    "source concept",
+    "interpretation",
+    "formal definition",
+    "assumptions",
+    "theorem",
+    "proof",
+    "compiler environment"
+  ],
+  "compiler_provenance": {
+    "teaching_set": [
+      "01_awareness.lean",
+      "02_alignment.lean",
+      "03_coherence.lean",
+      "04_clarity.lean",
+      "05_continuity.lean",
+      "06_tft_origin.lean",
+      "07_nawderian_theorem.lean",
+      "08_nawderian_set_theorem.lean",
+      "09_temperature_engine_theorem.lean",
+      "10_unified_resonance_theorem.lean",
+      "11_rtt_origin.lean"
+    ],
+    "lean_version": "4.36.0",
+    "target": "x86_64-w64-windows-gnu",
+    "status": "compiler-checked",
+    "reason_to_record_environment": "Formal tooling, libraries, theorem names, imports, tactics, and dependencies may change over time."
+  },
+  "reproducibility": {
+    "principle": "A useful formal artifact should make it reasonably possible for another person to repeat the formal check.",
+    "preserve": [
+      "source file",
+      "Lean version",
+      "required imports",
+      "dependencies",
+      "theorem statement"
+    ],
+    "question": "Does this still compile under the stated or current environment?"
+  },
+  "lean_verified_language": {
+    "preferred_meaning": "Lean accepted the formal theorem and proof under the stated formal environment.",
+    "avoid_upgrade": "Lean verified the complete real-world interpretation behind the theorem.",
+    "principle": "Use verification language at the scope actually checked."
+  },
+  "origin_formalization_records": {
+    "tft": {
+      "source": "Triadic structural organization",
+      "teaching_abstraction": "Generic Triad alpha",
+      "lean_verifies": [
+        "mapping",
+        "identity",
+        "composition"
+      ],
+      "boundary": "Does not prove TFT's broader physical claims.",
+      "formal_companion": "../lean/06_tft_origin.json"
+    },
+    "nawderian_theorem": {
+      "source": "Declared dimension groups and wrapping language",
+      "teaching_abstraction": "Explicit group membership relationships",
+      "lean_verifies": [
+        "selected membership properties",
+        "selected intersection properties"
+      ],
+      "boundary": "Does not define wrapping unless a separate relation is supplied.",
+      "formal_companion": "../lean/07_nawderian_theorem.json"
+    },
+    "set": {
+      "source": "Spin, field-charge, and temperature contributions",
+      "teaching_abstraction": "Named additive contributions",
+      "lean_verifies": [
+        "consequences of the additive model"
+      ],
+      "boundary": "Does not prove physical completeness.",
+      "formal_companion": "../lean/08_nawderian_set_theorem.json"
+    },
+    "temperature_engine": {
+      "source": "F_T = -alpha * gradient_T",
+      "teaching_abstraction": "One-dimensional signed integer relation",
+      "lean_verifies": [
+        "zero properties",
+        "sign-reversal properties"
+      ],
+      "boundary": "Does not prove the broader physical interpretation.",
+      "formal_companion": "../lean/09_temperature_engine_theorem.json"
+    },
+    "unified_resonance": {
+      "source": "Q * F * S",
+      "teaching_abstraction": "Explicit local multiplicative algebra",
+      "lean_verifies": [
+        "consequences under supplied algebraic laws"
+      ],
+      "boundary": "Does not prove that the source factors naturally form that algebra.",
+      "formal_companion": "../lean/10_unified_resonance_theorem.json"
+    },
+    "rtt": {
+      "source": "State, flow, resonance, operators, updates",
+      "teaching_abstraction": "Small integer-valued state-transition model",
+      "lean_verifies": [
+        "selected transition properties",
+        "selected preservation properties"
+      ],
+      "boundary": "Does not formalize or validate the complete RTT specification.",
+      "formal_companion": "../lean/11_rtt_origin.json"
+    }
+  },
+  "formalization_boundaries": {
+    "principle": "A limitation can define exactly where the current model stops and where future work could begin.",
+    "example": {
+      "current_model": "signed integer gradient",
+      "boundary": "no vector field",
+      "possible_next_step": "formalize spatial gradient"
+    },
+    "warning": "A boundary is not automatically a defect requiring immediate repair."
+  },
+  "complexity_rule": {
+    "principle": "Complexity should earn its place.",
+    "question": "Is the current formal model sufficient for the specific claim it is intended to demonstrate?",
+    "if_yes": "The model may appropriately remain small."
+  },
+  "student_inspection": {
+    "questions": [
+      "Which definitions came from the source?",
+      "Which were introduced by the teaching model?",
+      "Which assumptions are explicit?",
+      "Which assumptions might still be hidden?",
+      "What does the theorem prove?",
+      "What remains unresolved?"
+    ],
+    "purpose": "Make formalization itself into learning material."
+  },
+  "symbols_and_precision": {
+    "principle": "Mathematical-looking notation is not automatically precise.",
+    "example": "A tensor B",
+    "question_sequence": [
+      "What operation is this?",
+      "On what objects?",
+      "Under what rules?",
+      "With what interpretation?"
+    ]
+  },
+  "technical_language": {
+    "potentially_ambiguous_terms": [
+      "resonance",
+      "coherence",
+      "alignment",
+      "continuity",
+      "wrap",
+      "field",
+      "state"
+    ],
+    "principle": "When formalization selects one meaning for a familiar word, record that choice rather than pretending the word always meant exactly that."
+  },
+  "semantic_drift": {
+    "example": [
+      "Alignment v1 = relation A",
+      "Alignment v2 = relation B"
+    ],
+    "risk": "The label remains while theorem meaning changes.",
+    "response": "Preserve definition history when semantic change affects the interpretation of formal results."
+  },
+  "versioning": {
+    "principle": "Version meaning when a definition changes enough to alter theorem semantics.",
+    "pattern": [
+      "definition v1",
+      "semantic change",
+      "definition v2"
+    ],
+    "purpose": "Allow later readers to determine which definition a theorem used."
+  },
+  "explanatory_clarity": {
+    "principle": "Formal correctness and understandable explanation can coexist.",
+    "question": "What is this model trying to say?",
+    "warning": "If the answer disappears entirely beneath formal machinery, an explanatory layer may still be needed."
+  },
+  "continuity_of_formal_models": {
+    "change_targets": [
+      "type",
+      "definition",
+      "assumption",
+      "operator",
+      "theorem",
+      "state"
+    ],
+    "questions": [
+      "Which proofs survive?",
+      "Which proofs fail?",
+      "Which fail for structural reasons?",
+      "Which fail because tooling changed?"
+    ],
+    "purpose": "Distinguish conceptual continuity from implementation continuity."
+  },
+  "ai_and_formalization": {
+    "ai_may_help": true,
+    "risks": [
+      "unavailable libraries",
+      "nonexistent lemmas",
+      "added assumptions",
+      "weaker theorem substituted for requested theorem",
+      "changed theorem statement",
+      "formalization of a different concept"
+    ],
+    "workflow": [
+      "AI suggestion",
+      "inspect",
+      "compile",
+      "inspect again"
+    ],
+    "principle": "The compiler checks the formal artifact; the human still checks the intended meaning."
+  },
+  "aaccc_applied_to_formalization": {
+    "awareness": {
+      "questions": [
+        "What did the source actually state?",
+        "What did the formal model actually define?",
+        "What assumptions are present?"
+      ]
+    },
+    "alignment": {
+      "questions": [
+        "Does the formal representation correspond to the source?",
+        "Do variables, operations, and relationships map appropriately?"
+      ]
+    },
+    "coherence": {
+      "questions": [
+        "Do the conclusions follow from the supplied definitions and assumptions?",
+        "Are those assumptions mutually compatible?"
+      ]
+    },
+    "clarity": {
+      "questions": [
+        "Can source material be distinguished from modeling choices?",
+        "Can assumptions be distinguished from proof results?",
+        "Can limitations be seen?"
+      ]
+    },
+    "continuity": {
+      "questions": [
+        "What changed as the idea moved from source to interpretation to formalization to proof to revision?",
+        "What persisted?"
+      ]
+    }
+  },
+  "formal_claim_check": {
+    "trigger": "This has been formally verified.",
+    "questions": {
+      "awareness": "What exactly was verified?",
+      "alignment": "Does the formal theorem correspond to the original claim?",
+      "coherence": "Does the conclusion follow under the declared assumptions?",
+      "clarity": "Are the assumptions, model, and proof boundary visible?",
+      "continuity": "Did the claim change between the original statement and the verified theorem?"
+    }
+  },
+  "student_formalization_habit": [
+    "The source says...",
+    "I represented it as...",
+    "I added these assumptions...",
+    "I simplified these parts...",
+    "Lean proves...",
+    "Lean does not prove...",
+    "To go further, I would need..."
+  ],
+  "ai_behavior": {
+    "must": [
+      "Distinguish formal verification from modeling and empirical validation.",
+      "Treat formal proofs as conditional on their definitions and assumptions.",
+      "Preserve source-to-formal-model provenance.",
+      "Expose assumptions introduced during formalization.",
+      "Expose deliberate simplifications.",
+      "Treat type selection as a modeling decision.",
+      "Report compiler validation at the scope actually checked.",
+      "Preserve formalization boundaries and unresolved definitions.",
+      "Distinguish semantic change from merely syntactic change."
+    ],
+    "must_not": [
+      "upgrade compiler success into empirical validation",
+      "present a teaching abstraction as a complete formalization without evidence",
+      "invent semantics for an undefined source relationship merely to make a proof work",
+      "attribute model-added assumptions to the source",
+      "hide simplifications",
+      "report a theorem without its materially relevant assumptions",
+      "treat mathematical notation alone as a formal definition",
+      "assume a proof remains semantically equivalent after definitions change"
+    ]
+  },
+  "provenance": {
+    "source_document": "docs/5Guides/origins/formalization.md",
+    "source_type": "human-facing formalization and validation-boundary guide",
+    "transformation": "structured AI-readable formalization contract",
+    "preserve": [
+      "formal versus modeling questions",
+      "empirical-validation boundary",
+      "source alignment",
+      "added assumptions",
+      "simplification",
+      "type choices",
+      "compiler provenance",
+      "reproducibility",
+      "semantic drift",
+      "AACCC self-inspection"
+    ],
+    "do_not_infer": [
+      "complete empirical validation",
+      "complete formal equivalence",
+      "undefined source semantics",
+      "scientific consensus",
+      "specific experimental support not represented in the source",
+      "formal assumptions not explicitly supplied by the model"
+    ]
+  },
+  "related": {
+    "origins_index": "index.json",
+    "tft": "tft.json",
+    "theorems": "theorems.json",
+    "rtt": "rtt.json",
+    "lean_index": "../lean/index.json",
+    "module": "../module.json",
+    "ai_index": "../index.json"
+  },
+  "machine_context": {
+    "ai_parseable": true,
+    "role": "formalization-contract",
+    "formal_verification_distinct_from_modeling": true,
+    "formal_verification_distinct_from_empirical_validation": true,
+    "assumptions_are_part_of_result_context": true,
+    "simplifications_must_be_visible": true,
+    "undefined_semantics_must_be_preserved": true,
+    "compiler_validation_bounded": true,
+    "types_are_modeling_choices": true,
+    "semantic_drift_preserved": true,
+    "provenance_aware": true,
+    "aaccc_self_inspection": true
+  }
+}

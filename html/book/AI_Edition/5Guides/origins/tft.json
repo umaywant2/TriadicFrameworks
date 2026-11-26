@@ -1,0 +1,479 @@
+{
+  "document": {
+    "id": "5Guides-origins-tft",
+    "type": "origin-lineage-artifact",
+    "name": "TFT",
+    "title": "TFT — Triadic Framework for Everything",
+    "edition": "AI Edition",
+    "module": "5Guides",
+    "framework": "AACCC",
+    "version": "1.0",
+    "status": "active",
+    "language": "en",
+    "source": "docs/5Guides/origins/tft.md",
+    "ai_path": "docs/book/AI_Edition/5Guides/origins/tft.json",
+    "formal_companion": "../lean/06_tft_origin.json"
+  },
+  "purpose": {
+    "primary": "Represent TFT as an early project-lineage artifact contributing structural habits that later became relevant to AACCC and 5Guides.",
+    "educational": "Allow learners and AI systems to inspect an earlier project stage without requiring acceptance of its broader proposals.",
+    "principle": "An origin does not need to be protected from inspection. Its value includes showing where later questions came from."
+  },
+  "lineage_position": {
+    "sequence": [
+      "TFT",
+      "Triads",
+      "Theorems",
+      "RTT",
+      "AACCC",
+      "5Guides"
+    ],
+    "stage": "early",
+    "next": "theorems.json",
+    "lineage_type": "developmental",
+    "strict_derivation": false
+  },
+  "source_character": {
+    "description": "The source material combines triadic organization, named operators, mathematical notation, recursion, metaphor, exploratory interpretation, and proposed applications.",
+    "layers_to_keep_distinct": [
+      "symbol",
+      "metaphor",
+      "mathematical notation",
+      "declared operator role",
+      "hypothesis",
+      "proposed interpretation",
+      "experimental proposal"
+    ],
+    "principle": "These layers may interact but should not be treated as automatically equivalent."
+  },
+  "early_structural_habit": {
+    "summary": "Instead of treating a system as one undivided thing, expose distinguishable positions, relationships, operations, and change.",
+    "pattern": [
+      "system",
+      "distinguishable positions",
+      "relationships",
+      "operators",
+      "change"
+    ],
+    "later_relevance": "This habit contributed to the style of structural inspection later simplified into AACCC."
+  },
+  "triadic_lens": {
+    "present": true,
+    "role": "Organize some project concepts using three distinguishable positions or recurring triadic structures.",
+    "educational_boundary": "A triadic model is a representation choice. Its use does not establish that every underlying system is fundamentally triadic.",
+    "inspection_questions": [
+      "Why these three positions?",
+      "What distinguishes them?",
+      "What relationship connects them?",
+      "Is something important missing?",
+      "Could another decomposition work?",
+      "Does the triad help explain the selected problem?",
+      "Does it remain useful in another context?"
+    ]
+  },
+  "operators": {
+    "declared_roles": [
+      {
+        "name": "Light",
+        "structural_role": "expansion / divergence",
+        "notation": "L"
+      },
+      {
+        "name": "Darkness",
+        "structural_role": "inversion / convergence",
+        "notation": "D"
+      }
+    ],
+    "source_level_expression": "dx/dt = L(x) - D(x)",
+    "educational_interpretation": "A changing system can be represented using distinguishable operations acting on state.",
+    "boundary": "The AI Edition does not upgrade the named operator roles into independently established physical laws."
+  },
+  "triadic_and_recursive_structure": {
+    "recurring_numbers": [
+      3,
+      6,
+      9
+    ],
+    "source_role": "Recurring organizational structure within the TFT material.",
+    "educational_use": "Provide an origin example of explicit structural positions and transformations.",
+    "do_not_infer": [
+      "The numbers 3, 6, and 9 have independently established universal physical properties.",
+      "Any occurrence of a three-part structure validates TFT.",
+      "Every later TriadicFrameworks triad has identical semantics."
+    ]
+  },
+  "representation_layers": {
+    "example": [
+      {
+        "layer": "metaphor",
+        "value": "Light"
+      },
+      {
+        "layer": "declared conceptual role",
+        "value": "expansion / divergence"
+      },
+      {
+        "layer": "notation",
+        "value": "L(x)"
+      },
+      {
+        "layer": "formal semantics",
+        "value": "Requires explicit definition in a formal model."
+      },
+      {
+        "layer": "empirical interpretation",
+        "value": "Requires evidence appropriate to the proposed real-world claim."
+      }
+    ],
+    "principle": "Do not let notation or metaphor silently substitute for a formal definition or empirical result."
+  },
+  "aaccc_interpretation": {
+    "status": "later educational interpretation",
+    "not_original_tft_definition": true,
+    "awareness": {
+      "question": "What am I observing?",
+      "tft_application": "Separate operators, equations, recursive structures, metaphors, predictions, proposed interpretations, and experimental proposals before evaluating them."
+    },
+    "alignment": {
+      "question": "What corresponds?",
+      "tft_application": "Inspect correspondences among source labels, declared roles, notation, later formal objects, and proposed physical interpretations."
+    },
+    "coherence": {
+      "question": "Does this hold together?",
+      "tft_application": "Inspect whether definitions, equations, assumptions, interpretations, and proposed predictions support one another."
+    },
+    "clarity": {
+      "question": "Can this be understood and inspected?",
+      "tft_application": "Separate poetic or symbolic framing from conceptual roles, mathematical notation, formal definitions, and testable claims."
+    },
+    "continuity": {
+      "question": "What persists through change?",
+      "tft_application": "Trace which structural habits persisted, changed, were narrowed, were abandoned, or were reinterpreted in later project artifacts."
+    }
+  },
+  "awareness_boundary": {
+    "distinguish": [
+      [
+        "proposed interpretation",
+        "observed result"
+      ],
+      [
+        "equation",
+        "empirical validation"
+      ],
+      [
+        "metaphor",
+        "formal definition"
+      ],
+      [
+        "prediction",
+        "measurement"
+      ]
+    ],
+    "principle": "Begin by identifying what type of statement or representation is actually present."
+  },
+  "alignment_boundary": {
+    "candidate_mapping_examples": [
+      {
+        "source_label": "Light",
+        "declared_role": "expansion / divergence",
+        "notation": "L"
+      },
+      {
+        "source_label": "Darkness",
+        "declared_role": "inversion / convergence",
+        "notation": "D"
+      }
+    ],
+    "rule": "A later formal object should not be described as equivalent to a source concept unless the mapping is explicitly justified.",
+    "preserve_partial_mapping": true
+  },
+  "coherence_questions": [
+    "Do the definitions support the equations?",
+    "Do the equations support the interpretations attributed to them?",
+    "Are the assumptions mutually compatible?",
+    "Does terminology retain the same meaning across the argument?",
+    "Are predictions actually derived from the proposed model?",
+    "Are metaphorical, formal, and empirical layers being mixed?"
+  ],
+  "clarity_strategy": {
+    "preferred_separation": [
+      "poetic or symbolic framing",
+      "conceptual role",
+      "mathematical representation",
+      "formal definition",
+      "testable claim"
+    ],
+    "principle": "Clarification should expose representational layers without requiring removal of the original creative framing."
+  },
+  "continuity_questions": [
+    "Which structural habits persisted into later work?",
+    "Which terms retained their meaning?",
+    "Which terms changed meaning?",
+    "Which ideas were narrowed?",
+    "Which ideas were abandoned?",
+    "Which concepts became formalizable?",
+    "Which structures later became teachable through AACCC?"
+  ],
+  "lineage_not_validation": {
+    "principle": "TFT's role in project ancestry does not establish the correctness of every TFT claim.",
+    "does_not_follow": [
+      "Later work exists, therefore TFT is validated.",
+      "AACCC developed later, therefore TFT predicted AACCC exactly.",
+      "A Lean abstraction inspired by TFT proves TFT's broader proposals.",
+      "Historical importance is equivalent to empirical support."
+    ]
+  },
+  "teaching_abstraction": {
+    "human_formal_source": "docs/5Guides/lean/06_tft_origin.lean",
+    "ai_formal_companion": "../lean/06_tft_origin.json",
+    "object": "Triad α",
+    "structure": [
+      "first",
+      "second",
+      "third"
+    ],
+    "purpose": "Extract a very small generic three-position structure for formal inspection.",
+    "deliberately_not_encoded": [
+      "complete TFT theory",
+      "full Light operator semantics",
+      "full Darkness operator semantics",
+      "complete physical interpretation",
+      "all recursive 3-6-9 structures"
+    ]
+  },
+  "formalization_strategy": {
+    "principle": "Begin with the smallest useful structure rather than encode interpretive claims before they are required.",
+    "generic_first": true,
+    "example_triad": [
+      3,
+      6,
+      9
+    ],
+    "example_role": "Concrete values for demonstrating structural transformation, not empirical proof of special physical properties."
+  },
+  "formal_properties": {
+    "teaching_targets": [
+      {
+        "id": "component_correspondence",
+        "description": "A component-wise transformation preserves correspondence of first-to-first, second-to-second, and third-to-third positions."
+      },
+      {
+        "id": "identity",
+        "description": "Applying the identity transformation leaves the triad unchanged."
+      },
+      {
+        "id": "composition",
+        "description": "Applying one transformation and then another corresponds to applying their composition."
+      },
+      {
+        "id": "structural_persistence",
+        "description": "Values may change while the three-position structure remains distinguishable."
+      }
+    ]
+  },
+  "example_transformation": {
+    "initial": [
+      3,
+      6,
+      9
+    ],
+    "first_update": [
+      4,
+      7,
+      10
+    ],
+    "second_update": [
+      8,
+      14,
+      20
+    ],
+    "continuity_question": "What persisted while the values changed?",
+    "intended_answer_boundary": "The positional three-part structure may persist even though the component values change."
+  },
+  "lean_verified_scope": {
+    "formal_companion": "../lean/06_tft_origin.json",
+    "scope": "Properties of the generic teaching abstraction represented in the Lean source.",
+    "may_include": [
+      "component-wise mapping properties",
+      "identity behavior",
+      "composition behavior",
+      "structural consequences of the supplied definitions"
+    ],
+    "does_not_establish": [
+      "all real systems are fundamentally triadic",
+      "3, 6, and 9 possess special universal physical properties",
+      "TFT Light and Darkness operators describe nature",
+      "TFT time proposals are empirically validated",
+      "TFT gravity proposals are empirically validated",
+      "TFT consciousness proposals are empirically validated",
+      "the generic Triad structure proves the broader TFT framework"
+    ]
+  },
+  "formalization_boundary": {
+    "source_concept": "TFT uses triadic organization and named operators within a broader exploratory framework.",
+    "teaching_abstraction": "A generic three-position structure with component-wise transformation.",
+    "relationship": "inspired-by / structurally abstracted-from",
+    "relationship_not_claimed": "complete formal equivalence",
+    "principle": "The teaching abstraction is intentionally smaller than the source framework."
+  },
+  "provenance_chain": [
+    "TFT source material",
+    "triadic organizational habit",
+    "generic teaching abstraction",
+    "Triad α",
+    "component-wise map",
+    "Lean theorem",
+    "compiler-checked formal consequence"
+  ],
+  "provenance_questions": [
+    "What persisted at this transition?",
+    "What changed?",
+    "What was simplified?",
+    "What was added?",
+    "What was left behind?"
+  ],
+  "experimental_layer": {
+    "present_in_source_lineage": true,
+    "described_as": "A proposed sound-chamber experimental protocol involving acoustic beat patterns and expected 3, 6, and 9 reflection behavior.",
+    "separate_from_lean_teaching_abstraction": true,
+    "formal_question": "Do consequences follow from the formal definitions?",
+    "empirical_question": "Do observations from an appropriate experiment support the proposed model?",
+    "principle": "Formal verification and empirical testing may inform one another but cannot substitute for one another."
+  },
+  "formal_vs_empirical": {
+    "formal_example": "A theorem about the generic Triad mapping may be compiler-verified.",
+    "invalid_upgrade": "Therefore TFT's broader physical claims are correct.",
+    "principle": "No justified inference automatically connects a small generic structural theorem to validation of the full physical interpretation."
+  },
+  "student_exercise_source_inspection": {
+    "instruction": "Choose one specific TFT claim, equation, metaphor, or operator and classify it before evaluating it.",
+    "record": {
+      "source_statement": null,
+      "type": null,
+      "formalizable_part": null,
+      "added_assumptions": [],
+      "evidence_needed": [],
+      "current_status": null
+    },
+    "candidate_types": [
+      "definition",
+      "equation",
+      "hypothesis",
+      "metaphor",
+      "prediction",
+      "interpretation"
+    ],
+    "starting_question": "What exactly am I evaluating?"
+  },
+  "student_exercise_lineage": {
+    "instruction": "Choose one TFT concept and follow it into later project artifacts.",
+    "candidate_concepts": [
+      "operator",
+      "triad",
+      "recursion",
+      "state change",
+      "balance",
+      "feedback"
+    ],
+    "questions": [
+      "What persisted?",
+      "What changed?",
+      "What became more precise?",
+      "What became teachable?"
+    ]
+  },
+  "do_not_force_lineage": {
+    "principle": "Similar names or structures do not guarantee stable semantic correspondence across project stages.",
+    "possible_relationships": [
+      "term reused differently",
+      "earlier idea narrowed",
+      "mechanism replaced",
+      "partial structure preserved",
+      "vocabulary reused without strong conceptual continuity"
+    ],
+    "rule": "A truthful lineage is more useful than a tidy one."
+  },
+  "formal_extension_questions": {
+    "possible_next_structure": [
+      "operator",
+      "state",
+      "transformed state"
+    ],
+    "questions": [
+      "What is a state?",
+      "What type is an operator?",
+      "What does expansion mean formally?",
+      "What does inversion mean formally?",
+      "Are the operators inverses?",
+      "Can they be complementary without being inverses?",
+      "What does recursion mean over the operators?",
+      "What properties should remain invariant?"
+    ],
+    "warning": "Do not invent formal definitions merely to make the source formalizable. First determine whether the source supports the proposed interpretation."
+  },
+  "compiler_provenance": {
+    "source_file": "docs/5Guides/lean/06_tft_origin.lean",
+    "ai_companion": "../lean/06_tft_origin.json",
+    "validation_set": "01-11",
+    "lean_version": "4.36.0",
+    "target": "x86_64-w64-windows-gnu",
+    "status": "compiler-checked",
+    "boundary": "Compiler acceptance applies to the formal artifact under the stated environment and does not independently validate TFT's broader proposals."
+  },
+  "why_preserve_tft": {
+    "reasons": [
+      "project provenance",
+      "terminology history",
+      "structural ancestry",
+      "revision history",
+      "comparison with later work",
+      "formalization practice",
+      "educational archaeology"
+    ],
+    "principle": "The origin remains useful even when later work changes or rejects parts of it."
+  },
+  "ai_behavior": {
+    "must": [
+      "Treat TFT as project-lineage material.",
+      "Separate source concepts from later AACCC interpretation.",
+      "Separate metaphor from formal definition.",
+      "Separate mathematical notation from empirical validation.",
+      "Treat the generic Triad Lean model as a teaching abstraction.",
+      "Preserve gaps where the source does not supply a formal definition.",
+      "Distinguish lineage from validation.",
+      "Permit critical disagreement with the source."
+    ],
+    "must_not": [
+      "claim TFT originally contained AACCC in its current form",
+      "claim the generic Lean Triad proves TFT",
+      "claim recurring 3-6-9 structure establishes universal physical significance",
+      "invent operator semantics absent from the source",
+      "infer empirical validation from compiler success",
+      "force later concepts into one-to-one equivalence with TFT concepts",
+      "rewrite early material retroactively to match later terminology"
+    ]
+  },
+  "related": {
+    "origins_index": "index.json",
+    "theorems": "theorems.json",
+    "rtt": "rtt.json",
+    "formalization": "formalization.json",
+    "lean_companion": "../lean/06_tft_origin.json",
+    "module": "../module.json",
+    "ai_index": "../index.json"
+  },
+  "machine_context": {
+    "ai_parseable": true,
+    "role": "origin-lineage-artifact",
+    "project_origin": true,
+    "empirical_validation_claim": false,
+    "strict_derivation_claim": false,
+    "aaccc_interpretation_is_later": true,
+    "formal_abstraction_is_partial": true,
+    "formal_companion_compiler_checked": true,
+    "provenance_aware": true,
+    "critical_inspection_allowed": true,
+    "semantic_drift_must_be_preserved": true
+  }
+}

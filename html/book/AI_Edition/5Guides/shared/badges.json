@@ -1,0 +1,469 @@
+{
+  "document": {
+    "id": "5Guides-shared-badges",
+    "type": "shared-learning-contract",
+    "name": "Badges",
+    "title": "5Guides — Badges",
+    "edition": "AI Edition",
+    "module": "5Guides",
+    "framework": "AACCC",
+    "version": "1.0",
+    "status": "active",
+    "language": "en",
+    "source": "docs/5Guides/shared/badges.md",
+    "ai_path": "docs/book/AI_Edition/5Guides/shared/badges.json"
+  },
+  "purpose": {
+    "primary": "Define the learning milestones represented by 5Guides badges.",
+    "recognition_goal": "Mark completion of a Guide and demonstration of its defined structural reasoning skill.",
+    "principle": "Badges mark milestones. The real achievement is carrying the skill somewhere new."
+  },
+  "badge_model": {
+    "count": 5,
+    "sequence": [
+      "Awareness Badge",
+      "Alignment Badge",
+      "Coherence Badge",
+      "Clarity Badge",
+      "Continuity Badge"
+    ],
+    "completion_milestone": "Five Guides Completion",
+    "award_basis": [
+      "completed learning journey",
+      "practice",
+      "demonstrated skill"
+    ],
+    "summary": "completed + practiced + demonstrated"
+  },
+  "badges": [
+    {
+      "id": "awareness",
+      "name": "Awareness Badge",
+      "guide": "Awareness",
+      "order": 1,
+      "question": "What am I observing?",
+      "artifact": "Awareness Record",
+      "guide_path": "../guides/awareness.json",
+      "formal_companion": "../lean/01_awareness.json",
+      "meaning": "I can distinguish what I observe from what I interpret, assume, or do not yet know.",
+      "skill": "Separate observation from interpretation, assumption, uncertainty, boundary, and missing information.",
+      "mastery_indicators": [
+        "identifies direct observations",
+        "distinguishes interpretation from observation",
+        "identifies important assumptions",
+        "recognizes observational boundaries",
+        "preserves important uncertainty",
+        "identifies missing information",
+        "revises interpretation when evidence warrants it"
+      ]
+    },
+    {
+      "id": "alignment",
+      "name": "Alignment Badge",
+      "guide": "Alignment",
+      "order": 2,
+      "question": "What corresponds?",
+      "artifact": "Alignment Record",
+      "guide_path": "../guides/alignment.json",
+      "formal_companion": "../lean/02_alignment.json",
+      "meaning": "I can examine how things correspond without forcing them to match.",
+      "skill": "Inspect mappings, evidence, assumptions, mismatches, partial relationships, conditional relationships, and unmapped elements.",
+      "mastery_indicators": [
+        "identifies what is being compared",
+        "defines the comparison boundary",
+        "proposes meaningful correspondences",
+        "explains why important mappings are proposed",
+        "identifies assumptions behind mappings",
+        "preserves meaningful mismatches",
+        "recognizes partial or conditional alignment",
+        "leaves relationships unresolved when evidence is insufficient"
+      ]
+    },
+    {
+      "id": "coherence",
+      "name": "Coherence Badge",
+      "guide": "Coherence",
+      "order": 3,
+      "question": "Does this hold together?",
+      "artifact": "Coherence Record",
+      "guide_path": "../guides/coherence.json",
+      "formal_companion": "../lean/03_coherence.json",
+      "meaning": "I can inspect whether the pieces and relationships of a structure work together.",
+      "skill": "Inspect contradictions, constraints, missing relationships, unsupported conclusions, assumptions, and local versus global structure.",
+      "mastery_indicators": [
+        "identifies important pieces",
+        "inspects relationships as a whole",
+        "identifies contradictions",
+        "locates missing relationships",
+        "identifies unsupported conclusions",
+        "distinguishes contradiction from missing information",
+        "detects incompatible assumptions",
+        "explains where the structure stops holding together"
+      ]
+    },
+    {
+      "id": "clarity",
+      "name": "Clarity Badge",
+      "guide": "Clarity",
+      "order": 4,
+      "question": "Can this be understood and inspected?",
+      "artifact": "Clarity Record",
+      "guide_path": "../guides/clarity.json",
+      "formal_companion": "../lean/04_clarity.json",
+      "meaning": "I can make important structure easier to understand and inspect while preserving what matters.",
+      "skill": "Expose definitions, relationships, assumptions, missing steps, ambiguity, and uncertainty without silently changing meaning.",
+      "mastery_indicators": [
+        "identifies the original meaning",
+        "identifies what must be preserved",
+        "recognizes ambiguity",
+        "exposes important definitions",
+        "makes relationships visible",
+        "reveals hidden steps",
+        "preserves uncertainty",
+        "improves inspectability without silently changing meaning",
+        "detects meaning drift across revisions"
+      ]
+    },
+    {
+      "id": "continuity",
+      "name": "Continuity Badge",
+      "guide": "Continuity",
+      "order": 5,
+      "question": "What persists through change?",
+      "artifact": "Continuity Record",
+      "guide_path": "../guides/continuity.json",
+      "formal_companion": "../lean/05_continuity.json",
+      "meaning": "I can inspect what changes, what persists, and how one state connects to another.",
+      "skill": "Trace state, transitions, persistence, drift, recurrence, pattern breaks, history, and provenance.",
+      "mastery_indicators": [
+        "identifies the earlier state",
+        "identifies meaningful change",
+        "identifies what persisted",
+        "traces important transitions",
+        "recognizes drift",
+        "recognizes recurring patterns",
+        "recognizes pattern breaks",
+        "preserves relevant history",
+        "explains how the current state relates to what came before"
+      ]
+    }
+  ],
+  "completion": {
+    "id": "five-guides-completion",
+    "name": "Five Guides Completion",
+    "requires": [
+      "Awareness Badge",
+      "Alignment Badge",
+      "Coherence Badge",
+      "Clarity Badge",
+      "Continuity Badge"
+    ],
+    "meaning": "The learner completed the Five Guides and demonstrated practical use of all five introductory structural reasoning skills.",
+    "destination": "Independent Application",
+    "terminal_status": false,
+    "principle": "Completion opens independent application rather than declaring the learner finished learning."
+  },
+  "learning_sequence": {
+    "pattern": [
+      "explore",
+      "practice",
+      "optional Awareness Check",
+      "apply",
+      "Mastery Challenge",
+      "badge"
+    ],
+    "badge_trigger": "demonstrated mastery",
+    "awareness_check_alone_awards_badge": false
+  },
+  "mastery_contract": {
+    "fresh_problem": true,
+    "application_required": true,
+    "vocabulary_recall_alone_sufficient": false,
+    "criteria_visible_to_learner": true,
+    "retryable": true,
+    "principle": "The badge follows demonstrated practical use of the skill rather than simple exposure to the material."
+  },
+  "retry": {
+    "allowed": true,
+    "attempt_limit_defined": false,
+    "penalty_required": false,
+    "preferred_cycle": [
+      "attempt",
+      "notice gap",
+      "revisit",
+      "practice",
+      "fresh example",
+      "try again"
+    ],
+    "feedback_goal": "Identify what deserves another look.",
+    "avoid": [
+      "punitive failure language",
+      "artificial attempt scarcity",
+      "unnecessary waiting periods",
+      "progress loss as punishment"
+    ]
+  },
+  "feedback": {
+    "preferred": "criterion-based structural feedback",
+    "examples": [
+      "Identify the observation that was treated as an interpretation.",
+      "Preserve the mismatch rather than forcing the mapping.",
+      "Expose the assumption required for the conclusion.",
+      "Restore uncertainty that disappeared during revision.",
+      "Trace the state transition before evaluating the outcome."
+    ],
+    "avoid_primary_model": [
+      "opaque percentage score",
+      "ranking against other learners",
+      "unexplained threshold"
+    ],
+    "principle": "The learner should understand why the skill was or was not yet demonstrated."
+  },
+  "not_represented": {
+    "professional_certification": false,
+    "academic_credit": false,
+    "accreditation": false,
+    "licensing": false,
+    "scientific_authority": false,
+    "RTT_expertise": false,
+    "Lean_expertise": false,
+    "mathematical_expertise": false,
+    "mastery_of_entire_TriadicFrameworks_corpus": false,
+    "superiority_over_other_learners": false
+  },
+  "language_boundary": {
+    "prefer": [
+      "Completed Awareness",
+      "Demonstrated Awareness",
+      "Awareness Guide Completed",
+      "Five Guides Completion"
+    ],
+    "avoid": [
+      "Certified Awareness Expert",
+      "Master Structural Analyst",
+      "RTT Certified Practitioner",
+      "Professional Coherence Specialist"
+    ],
+    "principle": "Badge language should describe the demonstrated educational milestone without claiming authority the learning experience does not establish."
+  },
+  "noncompetitive_design": {
+    "leaderboards": false,
+    "bronze_silver_gold_ranking": false,
+    "rarity_scores": false,
+    "fastest_completion_awards": false,
+    "country_rankings": false,
+    "public_completion_hierarchy": false,
+    "artificial_scarcity": false,
+    "principle": "The learner's accomplishment comes from the work rather than competition or scarcity."
+  },
+  "scoring": {
+    "default_numeric_score": false,
+    "criterion_based": true,
+    "principle": "A badge primarily answers whether the defined skill was sufficiently demonstrated, not how the learner ranks relative to others."
+  },
+  "privacy": {
+    "resource": "privacy.json",
+    "identity_required": false,
+    "real_name_required": false,
+    "email_required": false,
+    "public_account_required": false,
+    "public_profile_required": false,
+    "school_required": false,
+    "employer_required": false,
+    "location_required": false,
+    "student_footprint_required": false,
+    "principle": "Recognizing an accomplishment does not require building an unnecessary learner identity system."
+  },
+  "student_footprint_separation": {
+    "resource": "student_footprint.json",
+    "badge_means": "The learner completed and demonstrated the defined Guide skill.",
+    "footprint_means": "The learner voluntarily chose to leave a small piece of feedback.",
+    "badge_without_footprint_valid": true,
+    "footprint_adds_academic_status": false,
+    "rule": "Badge and Student Footprint remain independent."
+  },
+  "ai_boundary": {
+    "resource": "ai_companion.json",
+    "ai_may_support_learning": true,
+    "ai_may_support_practice": true,
+    "ai_may_generate_practice": true,
+    "learner_must_demonstrate_skill": true,
+    "ai_answer_alone_awards_badge": false,
+    "principle": "AI may accompany the learning process but does not substitute for learner demonstration."
+  },
+  "lean_boundary": {
+    "lean_required_for_standard_badges": false,
+    "compiler_success_awards_guide_badge": false,
+    "formal_companions_optional": true,
+    "principle": "Compiler acceptance verifies a formal artifact; it does not automatically demonstrate the corresponding student-facing Guide skill."
+  },
+  "badge_state": {
+    "minimal_representation_example": {
+      "Awareness": true,
+      "Alignment": false,
+      "Coherence": false,
+      "Clarity": false,
+      "Continuity": false
+    },
+    "implementation_note": "The technical persistence mechanism is not defined by this document.",
+    "principle": "Badge state should remain as small as the learning experience allows."
+  },
+  "portable_badges": {
+    "implemented_here": false,
+    "future_possible": true,
+    "recommended_provenance_if_implemented": [
+      "badge name",
+      "Guide",
+      "meaning",
+      "Guide version when relevant",
+      "criteria version when relevant"
+    ],
+    "principle": "An inspectable badge should make clear what achievement it represents."
+  },
+  "versioning": {
+    "required_for_every_text_change": false,
+    "consider_when": "The meaning of the achievement or mastery criteria changes materially.",
+    "preserve_history": true,
+    "principle": "Do not silently redefine an earlier badge to represent a substantially different accomplishment."
+  },
+  "inspectability": {
+    "badge_should_answer": "What did the learner have to demonstrate?",
+    "chain": [
+      "badge",
+      "Guide",
+      "mastery criteria",
+      "demonstrated skill"
+    ],
+    "principle": "If the achievement cannot be explained, the badge has become decoration rather than useful recognition."
+  },
+  "accessibility": {
+    "visual_badge_optional": true,
+    "meaning_must_not_depend_only_on_color": true,
+    "meaning_must_not_depend_only_on_icon": true,
+    "text_label_required_if_visual_badge_is_present": true,
+    "example_labels": [
+      "Awareness — Completed",
+      "Alignment — Demonstrated"
+    ]
+  },
+  "visual_semantics": {
+    "implementation_defined": false,
+    "possible_themes": {
+      "awareness": "observation / opening",
+      "alignment": "correspondence / connection",
+      "coherence": "connected structure",
+      "clarity": "focus / visible structure",
+      "continuity": "path / transition / persistent thread"
+    },
+    "boundary": "Visual design should support recognition without implying institutional or professional authority."
+  },
+  "final_integrative_challenge": {
+    "purpose": "Test transfer of all five Guide questions to one fresh problem.",
+    "sequence": [
+      "Awareness",
+      "Alignment",
+      "Coherence",
+      "Clarity",
+      "Continuity"
+    ],
+    "fresh_problem": true,
+    "step_by_step_rehearsal_problem": false,
+    "target": "Independent Application"
+  },
+  "independent_application": {
+    "more_important_than_badge_collection": true,
+    "invitation": "Choose something we did not choose for you.",
+    "questions": [
+      "What am I observing?",
+      "What corresponds?",
+      "Does this hold together?",
+      "Can I make it clear enough to inspect?",
+      "What persists when it changes?"
+    ],
+    "principle": "The recognition system has served its purpose when the learner can carry the skill into unfamiliar territory."
+  },
+  "aaccc_self_check": {
+    "awareness": {
+      "question": "What does the badge actually record?"
+    },
+    "alignment": {
+      "question": "Does the badge correspond to the skill the learner demonstrated?"
+    },
+    "coherence": {
+      "question": "Do the mastery criteria and badge meaning hold together?"
+    },
+    "clarity": {
+      "question": "Can the learner understand what the badge means and does not mean?"
+    },
+    "continuity": {
+      "question": "If the Guide changes, does the badge still represent the same accomplishment?"
+    }
+  },
+  "ai_behavior": {
+    "must": [
+      "Treat badges as educational milestones.",
+      "Tie badge meaning to visible mastery criteria.",
+      "Preserve retry as part of learning.",
+      "Keep badge status separate from optional Student Footprint participation.",
+      "Keep standard Guide badges independent of optional AI and Lean paths.",
+      "Preserve historical badge meaning when criteria materially change."
+    ],
+    "must_not": [
+      "describe a badge as professional certification",
+      "describe a badge as accreditation",
+      "infer professional expertise from a Guide badge",
+      "rank learners from badge completion",
+      "invent badge rarity",
+      "require public identity for recognition",
+      "award mastery solely because AI produced a correct answer",
+      "award mastery solely because Lean code compiled",
+      "silently strengthen the meaning of an earlier badge"
+    ]
+  },
+  "provenance": {
+    "source_document": "docs/5Guides/shared/badges.md",
+    "source_type": "human-facing learning-recognition policy",
+    "transformation": "structured AI-readable badge contract",
+    "preserve": [
+      "skill-based recognition",
+      "mastery before badge",
+      "retry",
+      "noncompetitive design",
+      "privacy separation",
+      "AI boundary",
+      "Lean boundary",
+      "version continuity",
+      "independent application"
+    ],
+    "do_not_infer": [
+      "implemented badge storage mechanism",
+      "implemented badge issuance service",
+      "implemented portable credential format",
+      "institutional accreditation",
+      "professional recognition",
+      "external acceptance of badges"
+    ]
+  },
+  "related": {
+    "module": "../module.json",
+    "index": "../index.json",
+    "ai_companion": "ai_companion.json",
+    "assessment": "assessment.json",
+    "privacy": "privacy.json",
+    "student_footprint": "student_footprint.json"
+  },
+  "machine_context": {
+    "ai_parseable": true,
+    "learning_recognition": true,
+    "criterion_based": true,
+    "retryable": true,
+    "noncompetitive": true,
+    "privacy_first": true,
+    "ai_optional": true,
+    "lean_optional": true,
+    "certification": false,
+    "accreditation": false,
+    "independent_application_target": true,
+    "provenance_aware": true
+  }
+}

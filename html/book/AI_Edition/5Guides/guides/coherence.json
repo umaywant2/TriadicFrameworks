@@ -1,0 +1,758 @@
+{
+  "document": {
+    "id": "5Guides-guide-coherence",
+    "type": "guide-learning-object",
+    "name": "Coherence",
+    "title": "5Guides — Coherence",
+    "edition": "AI Edition",
+    "module": "5Guides",
+    "framework": "AACCC",
+    "guide_order": 3,
+    "version": "1.0",
+    "status": "active",
+    "language": "en",
+    "ai_path": "docs/book/AI_Edition/5Guides/guides/coherence.json"
+  },
+  "source": {
+    "root": "docs/5Guides/coherence",
+    "documents": [
+      "docs/5Guides/coherence/index.md",
+      "docs/5Guides/coherence/explore.md",
+      "docs/5Guides/coherence/practice.md",
+      "docs/5Guides/coherence/mastery.md"
+    ],
+    "formal_companion": "docs/5Guides/lean/03_coherence.lean",
+    "ai_formal_companion": "../lean/03_coherence.json"
+  },
+  "identity": {
+    "id": "coherence",
+    "name": "Coherence",
+    "order": 3,
+    "core_question": "Does this hold together?",
+    "student_artifact": "Coherence Record",
+    "badge": "Coherence Badge",
+    "previous_guide": "alignment.json",
+    "next_guide": "clarity.json"
+  },
+  "purpose": {
+    "primary": "Teach learners to inspect whether the pieces, relationships, assumptions, constraints, and conclusions of a structure work together.",
+    "learning_goal": "Locate contradictions, tensions, missing relationships, unsupported conclusions, hidden assumptions, and unresolved uncertainty without forcing premature repair.",
+    "principle": "Coherence begins when something does not quite add up and turns that feeling into an inspectable structural question."
+  },
+  "position_in_aaccc": {
+    "sequence": [
+      "Awareness",
+      "Alignment",
+      "Coherence",
+      "Clarity",
+      "Continuity"
+    ],
+    "current": "Coherence",
+    "previous": "Alignment",
+    "next": "Clarity",
+    "recursive": true,
+    "dependency": "Coherence operates on observations and mappings already exposed by Awareness and Alignment."
+  },
+  "prerequisite_questions": [
+    {
+      "guide": "Awareness",
+      "question": "What am I observing?"
+    },
+    {
+      "guide": "Alignment",
+      "question": "What corresponds?"
+    }
+  ],
+  "core_model": {
+    "pattern": [
+      "Pieces",
+      "Relationships",
+      "Whole Structure",
+      "Tension",
+      "Contradiction or Gap",
+      "Assumptions",
+      "Repair",
+      "Reinspection"
+    ],
+    "primary_questions": [
+      "What are the important pieces?",
+      "How are they connected?",
+      "Which relationships are supported?",
+      "Where is the tension?",
+      "Is something missing?",
+      "Is there a contradiction?",
+      "Is a conclusion unsupported?",
+      "What assumptions are doing important work?",
+      "What remains uncertain?"
+    ]
+  },
+  "core_insight": {
+    "principle": "Individually reasonable pieces do not guarantee a coherent whole.",
+    "pattern": [
+      "A is reasonable",
+      "B is reasonable",
+      "A + B may still create structural tension"
+    ]
+  },
+  "key_distinctions": [
+    {
+      "left": "coherence",
+      "right": "agreement",
+      "principle": "People may disagree while each position remains internally coherent, and people may agree on an incoherent explanation."
+    },
+    {
+      "left": "coherence",
+      "right": "truth",
+      "principle": "An explanation may be internally coherent while depending on unsupported or false premises."
+    },
+    {
+      "left": "contradiction",
+      "right": "constraint",
+      "principle": "Compatible goals may become difficult to satisfy together under limited resources without logically contradicting one another."
+    },
+    {
+      "left": "missing relationship",
+      "right": "contradiction",
+      "principle": "A gap does not automatically mean two statements conflict."
+    },
+    {
+      "left": "sequence",
+      "right": "causation",
+      "principle": "A followed by B does not by itself establish that A caused B."
+    },
+    {
+      "left": "local coherence",
+      "right": "global coherence",
+      "principle": "Components may work individually while their relationships fail at the system level."
+    },
+    {
+      "left": "assumption",
+      "right": "evidence",
+      "principle": "An assumption may make reasoning coherent without being independently established."
+    },
+    {
+      "left": "repair",
+      "right": "preservation of original conclusion",
+      "principle": "Repair may require changing the conclusion rather than protecting it."
+    }
+  ],
+  "problem_types": {
+    "contradiction": {
+      "definition": "Two statements or requirements cannot both hold as represented under the same relevant boundary, meaning, condition, and time.",
+      "check_before_claiming": [
+        "same object?",
+        "same boundary?",
+        "same time?",
+        "same meaning?",
+        "same condition?"
+      ]
+    },
+    "constraint": {
+      "definition": "A condition limiting what can currently be achieved.",
+      "principle": "Constraints may create tension among otherwise compatible goals."
+    },
+    "missing_relationship": {
+      "definition": "A required connection has not been supplied or established.",
+      "representation": [
+        "A",
+        "?",
+        "C"
+      ],
+      "principle": "Leave the question mark visible rather than inventing a bridge."
+    },
+    "unsupported_conclusion": {
+      "definition": "A conclusion goes beyond what the available observations and relationships establish.",
+      "pattern": [
+        "Observation A",
+        "Observation B",
+        "unsupported therefore",
+        "Conclusion C"
+      ]
+    },
+    "hidden_assumption": {
+      "definition": "A condition doing important reasoning work without being explicitly represented.",
+      "principle": "Visible assumptions are easier to inspect than hidden ones."
+    },
+    "tension": {
+      "definition": "Two or more reasonable goals, rules, interpretations, or relationships work against one another without necessarily creating direct logical contradiction."
+    },
+    "uncertainty": {
+      "definition": "The available structure does not yet justify selecting among plausible explanations.",
+      "valid_state": true
+    }
+  },
+  "supported_uncertain_assumed_contradicted": {
+    "categories": [
+      "SUPPORTED",
+      "UNCERTAIN",
+      "ASSUMED",
+      "CONTRADICTED"
+    ],
+    "purpose": "Provide a compact way to classify important parts of an explanation.",
+    "warning": "Classification itself may remain provisional."
+  },
+  "local_vs_global": {
+    "example": {
+      "components": [
+        "Sensor works correctly.",
+        "Processor works correctly.",
+        "Display works correctly."
+      ],
+      "global_problem": [
+        "Sensor reports Celsius.",
+        "Processor interprets Fahrenheit.",
+        "Display labels the result Celsius."
+      ]
+    },
+    "lesson": "Local correctness does not guarantee global coherence."
+  },
+  "goal_coherence": {
+    "principle": "Individually desirable goals may conflict when combined.",
+    "example": [
+      "finish as quickly as possible",
+      "check every detail carefully",
+      "use no additional time"
+    ],
+    "question": "What happens when these goals interact?"
+  },
+  "rule_coherence": {
+    "principle": "Rules may require an explicit priority, exception, or collision policy.",
+    "question": "What rule applies when two stated rules collide?"
+  },
+  "evidence_coherence": {
+    "principle": "A mismatching observation deserves investigation rather than automatic rejection.",
+    "questions": [
+      "Are the observations measuring the same thing?",
+      "Are units the same?",
+      "Are boundaries the same?",
+      "Did conditions change?",
+      "Could shared measurement failure explain agreement elsewhere?"
+    ]
+  },
+  "odd_one_out": {
+    "principle": "The observation that disagrees with the others is not automatically wrong.",
+    "possible_explanations": [
+      "measurement error",
+      "different boundary",
+      "different condition",
+      "system transition",
+      "shared fault in the agreeing observations",
+      "new information"
+    ]
+  },
+  "model_mismatch": {
+    "careful_language": "This observation is not currently explained by the model.",
+    "avoid_language": "This observation is impossible.",
+    "possible_responses": [
+      "inspect the observation",
+      "inspect the model",
+      "inspect the boundary",
+      "inspect changed conditions",
+      "preserve uncertainty"
+    ]
+  },
+  "assumptions": {
+    "not_automatically_bad": true,
+    "questions": [
+      "What are the assumptions?",
+      "Are they necessary?",
+      "Are they supported?",
+      "What happens if one fails?"
+    ],
+    "assumption_ladder_warning": {
+      "pattern": [
+        "claim",
+        "problem",
+        "add assumption",
+        "new problem",
+        "add assumption"
+      ],
+      "question": "Are we improving the explanation or merely protecting it from challenge?"
+    }
+  },
+  "coherence_and_evidence": {
+    "pattern": {
+      "assumption": "All red objects are magnetic.",
+      "observation": "This object is red.",
+      "conclusion": "This object is magnetic."
+    },
+    "formal_status": "The inference may be coherent under the supplied assumption.",
+    "evidence_status": "The assumption remains a separate question.",
+    "principle": "Validity inside assumptions is not evidence for the assumptions themselves."
+  },
+  "conditional_coherence": {
+    "principle": "A structure may hold under one condition and become strained under another.",
+    "examples_of_conditions": [
+      "capacity",
+      "time",
+      "resources",
+      "scale",
+      "version",
+      "boundary",
+      "operating regime"
+    ]
+  },
+  "repair": {
+    "sequence": [
+      "Inspect",
+      "Locate Tension",
+      "Propose Change",
+      "Inspect Again"
+    ],
+    "avoid_sequence": [
+      "Problem",
+      "First Solution",
+      "Done"
+    ],
+    "possible_repairs": [
+      "change a mapping",
+      "add missing information",
+      "remove an unsupported conclusion",
+      "expose an assumption",
+      "clarify a definition",
+      "change a boundary",
+      "revise the model",
+      "leave a relationship unresolved"
+    ],
+    "principle": "Locate the structural problem before repairing it."
+  },
+  "repair_can_create_new_problems": {
+    "principle": "A proposed repair may improve one relationship while introducing another constraint or uncertainty.",
+    "required_action": "Reinspect the revised structure."
+  },
+  "do_not_repair_yet": {
+    "triggers": [
+      "cause not established",
+      "boundary uncertain",
+      "definitions unclear",
+      "observations conflict",
+      "relationship missing"
+    ],
+    "preferred_statement": "These pieces do not currently fit under the available explanation."
+  },
+  "falsifiability_habit": {
+    "question": "What observation would show that my explanation is wrong or incomplete?",
+    "warning": "An explanation that cannot meaningfully fail may be difficult to test."
+  },
+  "explore": {
+    "phase": "experience",
+    "purpose": "Turn the intuitive feeling that something does not add up into inspectable structural questions.",
+    "topics": [
+      "obvious contradiction",
+      "subtle tension",
+      "missing information",
+      "hidden assumptions",
+      "unsupported conclusions",
+      "different meanings",
+      "local versus global coherence",
+      "goal conflicts",
+      "rule conflicts",
+      "evidence mismatches",
+      "models",
+      "AI explanations"
+    ],
+    "learning_style": "ordinary examples and games before formal terminology",
+    "primary_habit": "Locate before repairing."
+  },
+  "explore_examples": [
+    {
+      "id": "sam_bicycle",
+      "statements": [
+        "Sam always walks to school.",
+        "Sam's bicycle has a flat tire today.",
+        "Sam cannot get to school because the bicycle has a flat tire."
+      ],
+      "lesson": "The pieces do not currently explain why the bicycle condition prevents the trip."
+    },
+    {
+      "id": "project_rule",
+      "rule": "Important changes should be reviewed by the group.",
+      "event": "An important change was made without review and later accepted as correct.",
+      "lesson": "The structure may require an exception, changed rule, or acknowledgment of tension."
+    },
+    {
+      "id": "study_strategy",
+      "goal": "Understand deeply.",
+      "strategy": "Do not progress until every section is completely understood.",
+      "possible_tension": "Later material may be needed to clarify earlier material."
+    }
+  ],
+  "practice": {
+    "phase": "deliberate application",
+    "purpose": "Practice distinguishing kinds of structural failure and constructing inspectable Coherence Records.",
+    "topics": [
+      "observation versus conclusion",
+      "missing relationship",
+      "contradiction",
+      "constraints",
+      "hidden assumptions",
+      "definitions",
+      "local versus global systems",
+      "repairs",
+      "technical systems",
+      "AI explanations",
+      "formal reasoning"
+    ],
+    "primary_artifact": "Coherence Record"
+  },
+  "practice_patterns": [
+    {
+      "id": "server_slowdown",
+      "observations": [
+        "server became slow",
+        "configuration changed"
+      ],
+      "unsafe_upgrade": "configuration change caused slowdown",
+      "preferred_status": "possible cause requiring evidence"
+    },
+    {
+      "id": "device_start",
+      "premises": [
+        "battery charged",
+        "device connected"
+      ],
+      "hidden_assumption_example": "device itself is functional"
+    },
+    {
+      "id": "multiple_constraints",
+      "pattern": [
+        "reasonable requirement",
+        "reasonable requirement",
+        "reasonable requirement",
+        "combined tension"
+      ]
+    }
+  ],
+  "student_record": {
+    "name": "Coherence Record",
+    "purpose": "Make structural support, tension, gaps, assumptions, and uncertainty inspectable.",
+    "fields": [
+      "System",
+      "Important Pieces",
+      "Relationships",
+      "Goals",
+      "Constraints",
+      "Supported Relationships",
+      "Tensions",
+      "Contradictions",
+      "Missing Relationships",
+      "Hidden Assumptions",
+      "Unsupported Conclusions",
+      "Uncertainty",
+      "Possible Repairs",
+      "New Questions Introduced by Repairs",
+      "Current Judgment",
+      "What Should Be Observed Next"
+    ],
+    "all_fields_required": false,
+    "principle": "Use enough structure to reveal why the current judgment was reached."
+  },
+  "judgment_states": [
+    {
+      "id": "coherent",
+      "meaning": "The important pieces and relationships hold together within the selected boundary and conditions."
+    },
+    {
+      "id": "partly_coherent",
+      "meaning": "Important relationships hold while meaningful tensions or gaps remain."
+    },
+    {
+      "id": "conditional",
+      "meaning": "The structure holds under specified conditions."
+    },
+    {
+      "id": "uncertain",
+      "meaning": "Available information is insufficient to determine whether the structure holds."
+    },
+    {
+      "id": "incoherent",
+      "meaning": "Important represented relationships cannot jointly hold under the selected boundary and conditions."
+    }
+  ],
+  "mastery": {
+    "phase": "demonstration",
+    "fresh_problem": true,
+    "scenario": {
+      "system": "community learning center",
+      "goals": [
+        "Anyone in the community should be able to attend.",
+        "Classes should remain small enough for individual help.",
+        "No learner should be turned away."
+      ],
+      "constraints": [
+        "room capacity: 12 learners",
+        "available instructor: 1"
+      ],
+      "demand": "27 learners"
+    },
+    "central_problem": "The goals may be mutually workable under sufficient capacity but become strained under the current resources and demand.",
+    "mastery_question": "Where does the current structure stop holding together?"
+  },
+  "mastery_steps": [
+    "separate observations from interpretations",
+    "map proposed actions to goals",
+    "inspect goals together",
+    "identify tension",
+    "distinguish constraint from contradiction",
+    "identify changed conditions",
+    "expose hidden assumptions",
+    "consider possible repairs",
+    "inspect new problems introduced by repairs",
+    "state a qualified current judgment"
+  ],
+  "mastery_key_distinction": {
+    "incorrect_or_overstated": "The three goals contradict one another.",
+    "more_precise": "The three goals may be coherent under sufficient capacity, while the current demand and resource constraints create unresolved tension.",
+    "principle": "Conditions can determine whether otherwise compatible goals remain jointly achievable."
+  },
+  "mastery_hidden_assumption_example": {
+    "assumption": "Available capacity will be sufficient for demand.",
+    "lesson": "Changed conditions may expose an assumption that was previously invisible."
+  },
+  "mastery_repair_examples": [
+    "add another class",
+    "find a larger space",
+    "add another instructor",
+    "create another session",
+    "use a waiting list",
+    "change the class format",
+    "revise one of the goals"
+  ],
+  "mastery_repair_rule": "Evaluate which tension a repair addresses, which goals it preserves, which assumptions it introduces, and which new problems it may create.",
+  "mastery_criteria": [
+    "identify important pieces",
+    "identify relationships",
+    "inspect the whole structure",
+    "locate tension",
+    "distinguish contradiction from constraint",
+    "identify missing relationships",
+    "identify unsupported conclusions",
+    "expose important assumptions",
+    "preserve uncertainty",
+    "inspect proposed repairs",
+    "explain the current judgment"
+  ],
+  "mastery_not_required": [
+    "find the perfect solution",
+    "eliminate every uncertainty",
+    "agree with another learner",
+    "use formal terminology",
+    "use Lean",
+    "use AI",
+    "redesign the entire system"
+  ],
+  "retry": {
+    "if_response_is_mostly_solution": {
+      "action": "Temporarily remove the solution section.",
+      "focus": [
+        "Goals",
+        "Constraints",
+        "Relationships",
+        "Tensions",
+        "Assumptions",
+        "Unknowns"
+      ],
+      "question": "Where exactly does the structure stop holding together?"
+    },
+    "if_everything_looks_contradictory": {
+      "questions": [
+        "Are these statements referring to the same condition?",
+        "The same time?",
+        "The same people?",
+        "The same meaning?",
+        "The same system boundary?"
+      ]
+    }
+  },
+  "assessment": {
+    "resource": "../shared/assessment.json",
+    "awareness_check": {
+      "optional": true,
+      "may_ask": [
+        "recognize an obvious contradiction",
+        "recognize a missing relationship",
+        "recognize an unsupported conclusion",
+        "recognize an unstated assumption",
+        "recognize a case where more information is needed"
+      ]
+    },
+    "mastery": {
+      "required_for_badge": true,
+      "fresh_problem": true,
+      "retryable": true
+    }
+  },
+  "badge": {
+    "resource": "../shared/badges.json",
+    "name": "Coherence Badge",
+    "meaning": "I can inspect whether the pieces and relationships of a structure work together.",
+    "guide_milestone": 3,
+    "professional_certification": false,
+    "accreditation": false
+  },
+  "ai_companion": {
+    "resource": "../shared/ai_companion.json",
+    "optional": true,
+    "recommended_prompts": [
+      "Find where this explanation stops holding together, but do not repair it yet.",
+      "Which conclusion is least supported?",
+      "Identify one hidden assumption.",
+      "Can all these statements be true at the same time?",
+      "Tell me whether I am confusing a constraint with a contradiction.",
+      "What information would you need before trying to repair this?"
+    ],
+    "learner_judgment_primary": true
+  },
+  "ai_output_as_practice": {
+    "questions": [
+      "What are the AI's main claims?",
+      "What evidence supports them?",
+      "Which relationships connect them?",
+      "What assumptions are required?",
+      "Does any conclusion go beyond the evidence?",
+      "Did the meaning change during the explanation?"
+    ],
+    "principle": "Confidence, length, and technical vocabulary do not establish Coherence."
+  },
+  "formal_companion": {
+    "path": "../lean/03_coherence.json",
+    "human_source": "docs/5Guides/lean/03_coherence.lean",
+    "optional": true,
+    "formal_question": "Does the conclusion actually follow from what has been declared?",
+    "boundary": "Lean checks the formal model supplied to it; it does not independently establish empirical support for the premises."
+  },
+  "earlier_guides_inside_coherence": {
+    "awareness": {
+      "question": "What did we actually observe?",
+      "return_trigger": "A Coherence problem may originate in an earlier observation error or hidden interpretation."
+    },
+    "alignment": {
+      "question": "What corresponds?",
+      "return_trigger": "A contradiction may originate from a forced or incorrect mapping."
+    }
+  },
+  "bridge_to_clarity": {
+    "question": "Can this be understood well enough to inspect?",
+    "reason": "A structure may be coherent while remaining difficult for another person to understand or inspect.",
+    "next": "clarity.json"
+  },
+  "boundaries": {
+    "coherence_does_not_require": [
+      "agreement",
+      "empirical truth",
+      "complete information",
+      "immediate repair",
+      "elimination of uncertainty"
+    ],
+    "coherence_requires_attention_to": [
+      "pieces",
+      "relationships",
+      "conditions",
+      "constraints",
+      "assumptions",
+      "missing relationships",
+      "unsupported conclusions",
+      "uncertainty"
+    ]
+  },
+  "uncertainty": {
+    "valid": true,
+    "preferred_statements": [
+      "This relationship has not been established.",
+      "These observations do not currently fit under the available explanation.",
+      "The structure is coherent under condition X.",
+      "Additional information is needed before deciding."
+    ],
+    "principle": "A model that preserves uncertainty may be more coherent than one that invents answers for every gap."
+  },
+  "provenance": {
+    "source_type": "combined human-facing Guide abstraction",
+    "source_documents": [
+      "docs/5Guides/coherence/index.md",
+      "docs/5Guides/coherence/explore.md",
+      "docs/5Guides/coherence/practice.md",
+      "docs/5Guides/coherence/mastery.md"
+    ],
+    "formal_source": "docs/5Guides/lean/03_coherence.lean",
+    "transformation": "Four human-facing Coherence documents compacted into one structured AI learning object.",
+    "preserve": [
+      "core question",
+      "contradiction-versus-constraint distinction",
+      "missing relationships",
+      "unsupported conclusions",
+      "hidden assumptions",
+      "local versus global coherence",
+      "uncertainty",
+      "repair-after-diagnosis",
+      "student record",
+      "mastery criteria",
+      "AACCC progression"
+    ],
+    "do_not_infer": [
+      "truth from internal coherence",
+      "evidence for assumptions from formal validity",
+      "causation from sequence",
+      "contradiction from mere tension",
+      "repair requirements absent from the source",
+      "empirical validation from Lean",
+      "professional certification from the badge"
+    ]
+  },
+  "ai_behavior": {
+    "must": [
+      "Locate structural tension before proposing repair.",
+      "Distinguish contradiction from constraint.",
+      "Distinguish missing relationships from contradictions.",
+      "Expose hidden assumptions.",
+      "Preserve unsupported conclusions as unsupported.",
+      "Preserve uncertainty where evidence is insufficient.",
+      "Inspect local and global structure separately when relevant.",
+      "Reinspect the structure after a proposed repair.",
+      "Return to Awareness or Alignment when the Coherence problem originates earlier."
+    ],
+    "must_not": [
+      "equate coherence with truth",
+      "equate coherence with agreement",
+      "invent missing relationships",
+      "force observations into a preferred explanation",
+      "treat every tension as contradiction",
+      "treat the odd observation as automatically wrong",
+      "repair before locating the structural problem",
+      "protect the original conclusion by adding convenient assumptions",
+      "require Lean or AI for mastery"
+    ]
+  },
+  "related": {
+    "module": "../module.json",
+    "index": "../index.json",
+    "previous_guide": "alignment.json",
+    "next_guide": "clarity.json",
+    "assessment": "../shared/assessment.json",
+    "badges": "../shared/badges.json",
+    "ai_companion": "../shared/ai_companion.json",
+    "formal_companion": "../lean/03_coherence.json"
+  },
+  "machine_context": {
+    "ai_parseable": true,
+    "role": "guide-learning-object",
+    "guide": "Coherence",
+    "guide_order": 3,
+    "core_question": "Does this hold together?",
+    "human_source_count": 4,
+    "explore_present": true,
+    "practice_present": true,
+    "mastery_present": true,
+    "student_record_present": true,
+    "badge_present": true,
+    "contradiction_distinct_from_constraint": true,
+    "missing_relationships_preserved": true,
+    "unsupported_conclusions_preserved": true,
+    "local_global_distinction": true,
+    "repair_after_diagnosis": true,
+    "uncertainty_preserving": true,
+    "lean_optional": true,
+    "ai_optional": true,
+    "provenance_aware": true,
+    "next": "Clarity"
+  }
+}

@@ -1,0 +1,1224 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/book/AI_Edition/5Guides/README.md">
+  <title>5Guides — AI Edition</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/book/AI_Edition/5Guides/README.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/book/AI_Edition/5Guides/README.md</code>
+    &middot;
+    <a href="../../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="5guides-ai-edition">5Guides — AI Edition</h1>
+<blockquote>
+<p>Machine-oriented structural learning materials for Awareness, Alignment, Coherence, Clarity, and Continuity.</p>
+</blockquote>
+<p>This directory contains the AI-facing edition of the 5Guides learning module.</p>
+<p>The human-facing source material lives at:</p>
+<pre><code class="language-text">/docs/5Guides/
+</code></pre>
+<p>The AI Edition lives at:</p>
+<pre><code class="language-text">/docs/book/AI_Edition/5Guides/
+</code></pre>
+<p>The two editions serve different purposes.</p>
+<p>The human edition is designed to be read, explored, practiced, and experienced by learners.</p>
+<p>The AI Edition is designed to expose the same educational structure in explicit machine-readable JSON.</p>
+<hr>
+<h1 id="core-framework">Core Framework</h1>
+<p>5Guides is organized around AACCC:</p>
+<pre><code class="language-text">Awareness
+    ↓
+Alignment
+    ↓
+Coherence
+    ↓
+Clarity
+    ↓
+Continuity
+    ↓
+Independent Application
+</code></pre>
+<p>The five questions are:</p>
+<pre><code class="language-text">Awareness
+What am I observing?
+
+Alignment
+What corresponds?
+
+Coherence
+Does this hold together?
+
+Clarity
+Can this be understood and inspected?
+
+Continuity
+What persists through change?
+</code></pre>
+<p>These questions form a developmental sequence.</p>
+<p>They are not isolated stages.</p>
+<p>A later question may reveal a problem that requires returning to an earlier one.</p>
+<p>For example:</p>
+<pre><code class="language-text">Coherence problem
+      ↓
+inspect Alignment
+      ↓
+discover observation boundary problem
+      ↓
+return to Awareness
+</code></pre>
+<p>AACCC should therefore be treated as both:</p>
+<pre><code class="language-text">a learning progression
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">a reusable inspection loop
+</code></pre>
+<hr>
+<h1 id="purpose-of-the-ai-edition">Purpose of the AI Edition</h1>
+<p>The AI Edition is not intended to be a Markdown-to-JSON transcription.</p>
+<p>Its purpose is structural transformation.</p>
+<p>The human edition may express a Guide across:</p>
+<pre><code class="language-text">index.md
+explore.md
+practice.md
+mastery.md
+</code></pre>
+<p>The AI Edition combines those materials into one structured Guide object:</p>
+<pre><code class="language-text">guides/awareness.json
+guides/alignment.json
+guides/coherence.json
+guides/clarity.json
+guides/continuity.json
+</code></pre>
+<p>The transformation is:</p>
+<pre><code class="language-text">Human Learning Experience
+        ↓
+Structural Extraction
+        ↓
+Machine-Readable Learning Object
+</code></pre>
+<p>The educational meaning should persist.</p>
+<p>The presentation format may change.</p>
+<hr>
+<h1 id="human-edition-vs-ai-edition">Human Edition vs. AI Edition</h1>
+<h2 id="human-edition">Human Edition</h2>
+<p>The human-facing materials emphasize:</p>
+<ul>
+<li>pacing;</li>
+<li>examples;</li>
+<li>games;</li>
+<li>student questions;</li>
+<li>reflection;</li>
+<li>narrative transitions;</li>
+<li>approachable explanations;</li>
+<li>optional formal exploration.</li>
+</ul>
+<p>Typical structure:</p>
+<pre><code class="language-text">Guide
+├── index.md
+├── explore.md
+├── practice.md
+└── mastery.md
+</code></pre>
+<h2 id="ai-edition">AI Edition</h2>
+<p>The AI-facing materials emphasize:</p>
+<ul>
+<li>explicit structure;</li>
+<li>semantic roles;</li>
+<li>learning objectives;</li>
+<li>distinctions;</li>
+<li>boundaries;</li>
+<li>mastery criteria;</li>
+<li>student artifacts;</li>
+<li>provenance;</li>
+<li>formal companions;</li>
+<li>machine navigation.</li>
+</ul>
+<p>Typical structure:</p>
+<pre><code class="language-text">Guide Object
+├── identity
+├── core_question
+├── purpose
+├── learning_objectives
+├── key_distinctions
+├── explore
+├── practice
+├── mastery
+├── student_record
+├── assessment
+├── badge
+├── ai_companion
+├── formal_companion
+├── boundaries
+├── provenance
+└── next_guide
+</code></pre>
+<hr>
+<h1 id="directory-structure">Directory Structure</h1>
+<pre><code class="language-text">docs/book/AI_Edition/5Guides/
+│
+├── README.md
+├── module.json
+├── index.json
+│
+├── guides/
+│   ├── awareness.json
+│   ├── alignment.json
+│   ├── coherence.json
+│   ├── clarity.json
+│   └── continuity.json
+│
+├── shared/
+│   ├── ai_companion.json
+│   ├── assessment.json
+│   ├── badges.json
+│   ├── privacy.json
+│   └── student_footprint.json
+│
+├── origins/
+│   ├── index.json
+│   ├── tft.json
+│   ├── theorems.json
+│   ├── rtt.json
+│   └── formalization.json
+│
+└── lean/
+    ├── index.json
+    ├── 01_awareness.json
+    ├── 02_alignment.json
+    ├── 03_coherence.json
+    ├── 04_clarity.json
+    ├── 05_continuity.json
+    ├── 06_tft_origin.json
+    ├── 07_nawderian_theorem.json
+    ├── 08_nawderian_set_theorem.json
+    ├── 09_temperature_engine_theorem.json
+    ├── 10_unified_resonance_theorem.json
+    └── 11_rtt_origin.json
+</code></pre>
+<p>The README documents the edition.</p>
+<p>The machine-facing learning corpus itself is JSON.</p>
+<hr>
+<h1 id="root-files">Root Files</h1>
+<h2 id="modulejson"><code>module.json</code></h2>
+<p><code>module.json</code> defines the module contract.</p>
+<p>It describes:</p>
+<ul>
+<li>module identity;</li>
+<li>AACCC sequence;</li>
+<li>learning rhythm;</li>
+<li>Guide-object expectations;</li>
+<li>assessment contract;</li>
+<li>badge contract;</li>
+<li>AI Companion contract;</li>
+<li>privacy contract;</li>
+<li>formalization contract;</li>
+<li>Lean validation boundary;</li>
+<li>Origins boundary;</li>
+<li>provenance rules;</li>
+<li>file registry.</li>
+</ul>
+<p>Think of it as:</p>
+<pre><code class="language-text">What rules govern this module?
+</code></pre>
+<hr>
+<h1 id="indexjson"><code>index.json</code></h1>
+<p><code>index.json</code> is the AI-facing front door.</p>
+<p>It describes:</p>
+<ul>
+<li>where to begin;</li>
+<li>how to traverse AACCC;</li>
+<li>how Guide skills accumulate;</li>
+<li>when to return to an earlier Guide;</li>
+<li>where Shared resources live;</li>
+<li>where Lean companions live;</li>
+<li>where Origins materials live;</li>
+<li>how to reach Independent Application.</li>
+</ul>
+<p>Think of it as:</p>
+<pre><code class="language-text">How should an AI navigate this module?
+</code></pre>
+<hr>
+<h1 id="the-five-guide-objects">The Five Guide Objects</h1>
+<p>The primary learning objects are:</p>
+<pre><code class="language-text">guides/awareness.json
+guides/alignment.json
+guides/coherence.json
+guides/clarity.json
+guides/continuity.json
+</code></pre>
+<p>Each combines the corresponding human-facing:</p>
+<pre><code class="language-text">index.md
+explore.md
+practice.md
+mastery.md
+</code></pre>
+<p>into one machine-oriented structure.</p>
+<hr>
+<h1 id="awareness">Awareness</h1>
+<p>Path:</p>
+<pre><code class="language-text">guides/awareness.json
+</code></pre>
+<p>Core question:</p>
+<blockquote>
+<p>What am I observing?</p>
+</blockquote>
+<p>Primary distinctions include:</p>
+<pre><code class="language-text">Observation
+
+Interpretation
+
+Assumption
+
+Unknown
+
+Observer Position
+
+Boundary
+
+Blind Spot
+</code></pre>
+<p>Student artifact:</p>
+<pre><code class="language-text">Awareness Record
+</code></pre>
+<p>Formal companion:</p>
+<pre><code class="language-text">lean/01_awareness.json
+</code></pre>
+<hr>
+<h1 id="alignment">Alignment</h1>
+<p>Path:</p>
+<pre><code class="language-text">guides/alignment.json
+</code></pre>
+<p>Core question:</p>
+<blockquote>
+<p>What corresponds?</p>
+</blockquote>
+<p>Primary distinctions include:</p>
+<pre><code class="language-text">Correspondence
+
+Identity
+
+Similarity
+
+Mapping
+
+Mismatch
+
+Partial Alignment
+
+Conditional Alignment
+
+Unmapped Element
+
+Provenance
+</code></pre>
+<p>Student artifact:</p>
+<pre><code class="language-text">Alignment Record
+</code></pre>
+<p>Formal companion:</p>
+<pre><code class="language-text">lean/02_alignment.json
+</code></pre>
+<hr>
+<h1 id="coherence">Coherence</h1>
+<p>Path:</p>
+<pre><code class="language-text">guides/coherence.json
+</code></pre>
+<p>Core question:</p>
+<blockquote>
+<p>Does this hold together?</p>
+</blockquote>
+<p>Primary distinctions include:</p>
+<pre><code class="language-text">Supported Relationship
+
+Contradiction
+
+Constraint
+
+Missing Relationship
+
+Unsupported Conclusion
+
+Hidden Assumption
+
+Local Coherence
+
+Global Coherence
+</code></pre>
+<p>Student artifact:</p>
+<pre><code class="language-text">Coherence Record
+</code></pre>
+<p>Formal companion:</p>
+<pre><code class="language-text">lean/03_coherence.json
+</code></pre>
+<hr>
+<h1 id="clarity">Clarity</h1>
+<p>Path:</p>
+<pre><code class="language-text">guides/clarity.json
+</code></pre>
+<p>Core question:</p>
+<blockquote>
+<p>Can this be understood and inspected?</p>
+</blockquote>
+<p>Primary distinctions include:</p>
+<pre><code class="language-text">Meaning
+
+Definition
+
+Ambiguity
+
+Missing Step
+
+Representation
+
+Qualification
+
+Uncertainty
+
+Meaning Drift
+</code></pre>
+<p>Student artifact:</p>
+<pre><code class="language-text">Clarity Record
+</code></pre>
+<p>Formal companion:</p>
+<pre><code class="language-text">lean/04_clarity.json
+</code></pre>
+<hr>
+<h1 id="continuity">Continuity</h1>
+<p>Path:</p>
+<pre><code class="language-text">guides/continuity.json
+</code></pre>
+<p>Core question:</p>
+<blockquote>
+<p>What persists through change?</p>
+</blockquote>
+<p>Primary distinctions include:</p>
+<pre><code class="language-text">State
+
+Transition
+
+Persistence
+
+Drift
+
+Recurrence
+
+Pattern Break
+
+History
+
+Provenance
+
+Invariant
+</code></pre>
+<p>Student artifact:</p>
+<pre><code class="language-text">Continuity Record
+</code></pre>
+<p>Formal companion:</p>
+<pre><code class="language-text">lean/05_continuity.json
+</code></pre>
+<hr>
+<h1 id="learning-rhythm">Learning Rhythm</h1>
+<p>The shared educational rhythm is:</p>
+<pre><code class="language-text">Experience
+    ↓
+Notice
+    ↓
+Inspect
+    ↓
+Apply
+    ↓
+Demonstrate
+    ↓
+Reflect
+    ↓
+Continue
+</code></pre>
+<p>Each Guide expresses this through three major phases:</p>
+<pre><code class="language-text">Explore
+   ↓
+Practice
+   ↓
+Mastery
+</code></pre>
+<p>The AI Edition should preserve the distinction among those phases.</p>
+<hr>
+<h1 id="explore">Explore</h1>
+<p>Explore introduces the structural idea through approachable examples.</p>
+<p>The AI should treat Explore as:</p>
+<pre><code class="language-text">experience-building
+</code></pre>
+<p>rather than:</p>
+<pre><code class="language-text">final assessment
+</code></pre>
+<p>Useful behavior includes:</p>
+<ul>
+<li>asking questions;</li>
+<li>offering another example;</li>
+<li>changing perspective;</li>
+<li>changing scale;</li>
+<li>exposing a distinction;</li>
+<li>allowing uncertainty.</li>
+</ul>
+<hr>
+<h1 id="practice">Practice</h1>
+<p>Practice makes the structural skill deliberate.</p>
+<p>The AI should help the learner:</p>
+<ul>
+<li>apply the Guide question;</li>
+<li>use the Guide's record structure;</li>
+<li>identify assumptions;</li>
+<li>distinguish evidence from interpretation;</li>
+<li>preserve mismatch;</li>
+<li>expose missing information;</li>
+<li>revise reasoning.</li>
+</ul>
+<p>Practice may include AI assistance.</p>
+<p>Practice is not equivalent to mastery.</p>
+<hr>
+<h1 id="mastery">Mastery</h1>
+<p>Mastery uses a fresh problem.</p>
+<p>The purpose is transfer.</p>
+<p>The learner should demonstrate that the skill can be used without having every step supplied in advance.</p>
+<p>A mastery interaction should therefore avoid:</p>
+<pre><code class="language-text">AI solves problem
+      ↓
+learner copies answer
+      ↓
+badge
+</code></pre>
+<p>Prefer:</p>
+<pre><code class="language-text">learner attempts
+      ↓
+structural feedback
+      ↓
+revisit if needed
+      ↓
+fresh attempt
+      ↓
+demonstrated skill
+</code></pre>
+<p>Retry is part of learning.</p>
+<hr>
+<h1 id="shared-resources">Shared Resources</h1>
+<p>The Shared directory contains learning contracts that apply across all five Guides.</p>
+<pre><code class="language-text">shared/
+├── ai_companion.json
+├── assessment.json
+├── badges.json
+├── privacy.json
+└── student_footprint.json
+</code></pre>
+<hr>
+<h1 id="ai-companion">AI Companion</h1>
+<p>Path:</p>
+<pre><code class="language-text">shared/ai_companion.json
+</code></pre>
+<p>The AI Companion is optional.</p>
+<p>Its role is:</p>
+<pre><code class="language-text">thinking companion
+</code></pre>
+<p>not:</p>
+<pre><code class="language-text">final authority
+</code></pre>
+<p>Useful actions include:</p>
+<ul>
+<li>ask questions;</li>
+<li>generate practice;</li>
+<li>challenge assumptions;</li>
+<li>offer counter-mappings;</li>
+<li>expose missing steps;</li>
+<li>compare versions;</li>
+<li>preserve uncertainty;</li>
+<li>help explain formal structures.</li>
+</ul>
+<p>The learner retains judgment.</p>
+<hr>
+<h1 id="assessment">Assessment</h1>
+<p>Path:</p>
+<pre><code class="language-text">shared/assessment.json
+</code></pre>
+<p>Assessment distinguishes:</p>
+<pre><code class="language-text">Awareness Check
+</code></pre>
+<p>from:</p>
+<pre><code class="language-text">Mastery Checkpoint
+</code></pre>
+<p>The Awareness Check asks:</p>
+<blockquote>
+<p>What did the learner notice after first exposure?</p>
+</blockquote>
+<p>The Mastery Checkpoint asks:</p>
+<blockquote>
+<p>Can the learner use the skill on a fresh problem?</p>
+</blockquote>
+<p>Mastery is retryable.</p>
+<p>The assessment model is criterion-based rather than competitive.</p>
+<hr>
+<h1 id="badges">Badges</h1>
+<p>Path:</p>
+<pre><code class="language-text">shared/badges.json
+</code></pre>
+<p>The five Guide milestones are:</p>
+<pre><code class="language-text">Awareness Badge
+
+Alignment Badge
+
+Coherence Badge
+
+Clarity Badge
+
+Continuity Badge
+</code></pre>
+<p>Completion of the sequence may produce:</p>
+<pre><code class="language-text">Five Guides Completion
+</code></pre>
+<p>These represent learning milestones.</p>
+<p>They are not:</p>
+<ul>
+<li>professional certification;</li>
+<li>accreditation;</li>
+<li>ranking;</li>
+<li>authority;</li>
+<li>artificial scarcity.</li>
+</ul>
+<hr>
+<h1 id="privacy">Privacy</h1>
+<p>Path:</p>
+<pre><code class="language-text">shared/privacy.json
+</code></pre>
+<p>The governing principle is:</p>
+<blockquote>
+<p>Learning does not grant us permission to observe the learner.</p>
+</blockquote>
+<p>The following should remain separate:</p>
+<pre><code class="language-text">Learning
+
+Mastery
+
+Badge
+
+Optional Feedback
+</code></pre>
+<p>Identity is not required merely to learn.</p>
+<p>AI is not required.</p>
+<p>Lean is not required.</p>
+<p>A Student Footprint is not required.</p>
+<hr>
+<h1 id="student-footprint">Student Footprint</h1>
+<p>Path:</p>
+<pre><code class="language-text">shared/student_footprint.json
+</code></pre>
+<p>The Student Footprint is an optional minimal feedback mechanism.</p>
+<p>Possible voluntary fields are:</p>
+<pre><code class="language-text">Country
+
+Short Reflection
+</code></pre>
+<p>The Footprint should not become:</p>
+<ul>
+<li>a learner profile;</li>
+<li>surveillance;</li>
+<li>a leaderboard;</li>
+<li>an engagement score;</li>
+<li>a requirement for completion.</li>
+</ul>
+<p>Silence should remain silence.</p>
+<hr>
+<h1 id="lean-4-lab">Lean 4 Lab</h1>
+<p>The AI Edition contains machine-oriented companions for the validated Lean examples.</p>
+<pre><code class="language-text">lean/
+├── index.json
+├── 01_awareness.json
+├── 02_alignment.json
+├── 03_coherence.json
+├── 04_clarity.json
+├── 05_continuity.json
+├── 06_tft_origin.json
+├── 07_nawderian_theorem.json
+├── 08_nawderian_set_theorem.json
+├── 09_temperature_engine_theorem.json
+├── 10_unified_resonance_theorem.json
+└── 11_rtt_origin.json
+</code></pre>
+<p>The human source Lean files live at:</p>
+<pre><code class="language-text">/docs/5Guides/lean/
+</code></pre>
+<hr>
+<h1 id="lean-validation">Lean Validation</h1>
+<p>The human-source Lean teaching set <code>01–11</code> was compiler-checked using:</p>
+<pre><code class="language-text">Lean 4.36.0
+
+x86_64-w64-windows-gnu
+</code></pre>
+<p>The AI Edition should preserve that compiler provenance.</p>
+<p>It should also preserve the validation boundary.</p>
+<p>Compiler acceptance means:</p>
+<blockquote>
+<p>The formal artifact was accepted under the stated Lean environment.</p>
+</blockquote>
+<p>It does not mean:</p>
+<blockquote>
+<p>The broader source framework was empirically validated.</p>
+</blockquote>
+<hr>
+<h1 id="lean-json-objects">Lean JSON Objects</h1>
+<p>Each Lean JSON artifact should expose more than source code.</p>
+<p>Recommended structure includes:</p>
+<pre><code class="language-text">identity
+
+source_file
+
+role
+
+purpose
+
+definitions
+
+assumptions
+
+theorems
+
+verified_consequences
+
+compiler_validation
+
+formalization_boundary
+
+student_questions
+
+lean_source
+
+provenance
+</code></pre>
+<p>This helps prevent an AI from confusing:</p>
+<pre><code class="language-text">formal consequence
+</code></pre>
+<p>with:</p>
+<pre><code class="language-text">source interpretation
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">empirical claim
+</code></pre>
+<hr>
+<h1 id="origins">Origins</h1>
+<p>The Origins directory preserves project lineage.</p>
+<pre><code class="language-text">origins/
+├── index.json
+├── tft.json
+├── theorems.json
+├── rtt.json
+└── formalization.json
+</code></pre>
+<p>The simplified lineage is:</p>
+<pre><code class="language-text">TFT
+ ↓
+Triads
+ ↓
+Theorems
+ ↓
+RTT
+ ↓
+AACCC
+ ↓
+5Guides
+</code></pre>
+<p>The arrows indicate project development.</p>
+<p>They do not represent a strict proof chain.</p>
+<hr>
+<h1 id="origins-boundary">Origins Boundary</h1>
+<p>The Origins materials should not be interpreted as claiming:</p>
+<pre><code class="language-text">TFT proved the Theorems.
+
+The Theorems proved RTT.
+
+RTT proved AACCC.
+
+AACCC proves 5Guides scientifically valid.
+</code></pre>
+<p>That is not the purpose of the lineage.</p>
+<p>The useful question is:</p>
+<blockquote>
+<p>What persisted, changed, became more explicit, was abandoned, or became teachable?</p>
+</blockquote>
+<hr>
+<h1 id="formalization">Formalization</h1>
+<p>Path:</p>
+<pre><code class="language-text">origins/formalization.json
+</code></pre>
+<p>The AI Edition should preserve three distinct questions.</p>
+<h2 id="formal-verification">Formal Verification</h2>
+<pre><code class="language-text">Given these definitions and assumptions,
+does the conclusion follow?
+</code></pre>
+<h2 id="modeling">Modeling</h2>
+<pre><code class="language-text">Do these definitions and assumptions represent
+what we intended to describe?
+</code></pre>
+<h2 id="empirical-validation">Empirical Validation</h2>
+<pre><code class="language-text">Does the model adequately describe the relevant
+real-world evidence?
+</code></pre>
+<p>These questions may support one another.</p>
+<p>They are not interchangeable.</p>
+<hr>
+<h1 id="provenance-chain">Provenance Chain</h1>
+<p>For formalized origin material, preserve a chain such as:</p>
+<pre><code class="language-text">Source
+  ↓
+Interpretation
+  ↓
+Teaching Abstraction
+  ↓
+Formal Definition
+  ↓
+Added Assumptions
+  ↓
+Lean Theorem
+  ↓
+Verified Consequence
+  ↓
+Formalization Boundary
+</code></pre>
+<p>An AI should not collapse these layers.</p>
+<hr>
+<h1 id="core-reasoning-boundaries">Core Reasoning Boundaries</h1>
+<p>The AI Edition should preserve the following distinctions.</p>
+<pre><code class="language-text">Observation
+≠
+Interpretation
+</code></pre>
+<pre><code class="language-text">Interpretation
+≠
+Source Statement
+</code></pre>
+<pre><code class="language-text">Similarity
+≠
+Identity
+</code></pre>
+<pre><code class="language-text">Similarity
+≠
+Historical Influence
+</code></pre>
+<pre><code class="language-text">Mismatch
+≠
+Automatic Error
+</code></pre>
+<pre><code class="language-text">Recurrence
+≠
+Causation
+</code></pre>
+<pre><code class="language-text">Formal Verification
+≠
+Empirical Validation
+</code></pre>
+<pre><code class="language-text">Compiler Acceptance
+≠
+Physical Validation
+</code></pre>
+<pre><code class="language-text">Clearer Wording
+≠
+Permission to Strengthen a Claim
+</code></pre>
+<pre><code class="language-text">Continuity
+≠
+Preventing Change
+</code></pre>
+<pre><code class="language-text">AI Assistance
+≠
+Learner Judgment
+</code></pre>
+<pre><code class="language-text">Badge
+≠
+Professional Certification
+</code></pre>
+<p>These distinctions are part of the module architecture.</p>
+<p>They are not optional editorial notes.</p>
+<hr>
+<h1 id="preserve-uncertainty">Preserve Uncertainty</h1>
+<p>Uncertainty is a valid representational state.</p>
+<p>The AI Edition should preserve states such as:</p>
+<pre><code class="language-text">unknown
+
+uncertain
+
+partial
+
+conditional
+
+unmapped
+
+not established
+
+insufficient information
+</code></pre>
+<p>Do not automatically convert them into conclusions.</p>
+<p>For example:</p>
+<pre><code class="language-text">Relationship:
+unknown
+</code></pre>
+<p>should not become:</p>
+<pre><code class="language-text">Relationship:
+probably X
+</code></pre>
+<p>without evidence.</p>
+<hr>
+<h1 id="preserve-mismatch">Preserve Mismatch</h1>
+<p>A mismatch can be useful information.</p>
+<p>If:</p>
+<pre><code class="language-text">Expected:
+A
+
+Observed:
+B
+</code></pre>
+<p>the default response should not be:</p>
+<pre><code class="language-text">change B to A
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">reinterpret A until B fits
+</code></pre>
+<p>Preserve:</p>
+<pre><code class="language-text">Expected:
+A
+
+Observed:
+B
+
+Relationship:
+mismatch
+</code></pre>
+<p>Then investigate.</p>
+<hr>
+<h1 id="preserve-missing-relationships">Preserve Missing Relationships</h1>
+<p>If the available material supports:</p>
+<pre><code class="language-text">A
+ ↓
+?
+ ↓
+C
+</code></pre>
+<p>do not invent B merely because the sequence looks incomplete.</p>
+<p>The missing relationship is itself information.</p>
+<p>This principle applies to:</p>
+<ul>
+<li>educational examples;</li>
+<li>provenance;</li>
+<li>theorem interpretation;</li>
+<li>source mapping;</li>
+<li>causal explanation;</li>
+<li>formalization.</li>
+</ul>
+<hr>
+<h1 id="ai-navigation">AI Navigation</h1>
+<p>The normal student-facing traversal is:</p>
+<pre><code class="language-text">guides/awareness.json
+        ↓
+guides/alignment.json
+        ↓
+guides/coherence.json
+        ↓
+guides/clarity.json
+        ↓
+guides/continuity.json
+        ↓
+Independent Application
+</code></pre>
+<p>But the AI should permit return paths.</p>
+<p>For example:</p>
+<pre><code class="language-text">Coherence
+   ↓
+Alignment problem detected
+   ↓
+Alignment
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">Continuity
+   ↓
+Meaning drift detected
+   ↓
+Clarity
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">Alignment
+   ↓
+Observation boundary unclear
+   ↓
+Awareness
+</code></pre>
+<p>The sequence teaches accumulation.</p>
+<p>It does not prohibit recursion.</p>
+<hr>
+<h1 id="optional-branches">Optional Branches</h1>
+<p>At any suitable point, the learner may branch into:</p>
+<pre><code class="language-text">Shared Resources
+</code></pre>
+<pre><code class="language-text">Lean 4 Lab
+</code></pre>
+<pre><code class="language-text">Origins
+</code></pre>
+<p>These branches should remain optional.</p>
+<p>Do not require knowledge of project lineage before allowing student-facing learning.</p>
+<p>Do not require formal proof experience before awarding normal Guide mastery.</p>
+<hr>
+<h1 id="independent-application">Independent Application</h1>
+<p>The destination of 5Guides is not more 5Guides.</p>
+<p>It is:</p>
+<pre><code class="language-text">Independent Application
+</code></pre>
+<p>The learner selects a problem not chosen by the module.</p>
+<p>Possible domains include:</p>
+<ul>
+<li>learning;</li>
+<li>technical problems;</li>
+<li>repair;</li>
+<li>research claims;</li>
+<li>disagreements;</li>
+<li>models;</li>
+<li>documents;</li>
+<li>software;</li>
+<li>changing systems;</li>
+<li>everyday situations.</li>
+</ul>
+<p>Then the learner asks:</p>
+<pre><code class="language-text">What am I observing?
+
+What corresponds?
+
+Does this hold together?
+
+Can I make it clear enough to inspect?
+
+What persists when it changes?
+</code></pre>
+<hr>
+<h1 id="independent-aaccc-record">Independent AACCC Record</h1>
+<p>A reusable final structure is:</p>
+<pre><code class="language-text">Problem:
+...
+
+Awareness:
+...
+
+Alignment:
+...
+
+Coherence:
+...
+
+Clarity:
+...
+
+Continuity:
+...
+
+Assumptions:
+...
+
+Uncertainty:
+...
+
+Evidence:
+...
+
+What I Would Test Next:
+...
+
+Current Judgment:
+...
+</code></pre>
+<p>There is no supplied universal answer key.</p>
+<p>That is intentional.</p>
+<p>The module is designed to produce transfer rather than dependency.</p>
+<hr>
+<h1 id="machine-use-guidance">Machine-Use Guidance</h1>
+<p>An AI consuming this edition should prefer:</p>
+<pre><code class="language-text">inspect
+</code></pre>
+<p>before:</p>
+<pre><code class="language-text">conclude
+</code></pre>
+<p>Prefer:</p>
+<pre><code class="language-text">ask
+</code></pre>
+<p>before:</p>
+<pre><code class="language-text">assume
+</code></pre>
+<p>Prefer:</p>
+<pre><code class="language-text">preserve mismatch
+</code></pre>
+<p>before:</p>
+<pre><code class="language-text">force mapping
+</code></pre>
+<p>Prefer:</p>
+<pre><code class="language-text">show uncertainty
+</code></pre>
+<p>before:</p>
+<pre><code class="language-text">manufacture certainty
+</code></pre>
+<p>Prefer:</p>
+<pre><code class="language-text">expose assumptions
+</code></pre>
+<p>before:</p>
+<pre><code class="language-text">hide them
+</code></pre>
+<p>Prefer:</p>
+<pre><code class="language-text">trace provenance
+</code></pre>
+<p>before:</p>
+<pre><code class="language-text">infer lineage
+</code></pre>
+<p>Prefer:</p>
+<pre><code class="language-text">learner demonstration
+</code></pre>
+<p>before:</p>
+<pre><code class="language-text">AI substitution
+</code></pre>
+<hr>
+<h1 id="start-here">Start Here</h1>
+<p>For machine navigation:</p>
+<pre><code class="language-text">index.json
+</code></pre>
+<p>For the module contract:</p>
+<pre><code class="language-text">module.json
+</code></pre>
+<p>For the first Guide:</p>
+<pre><code class="language-text">guides/awareness.json
+</code></pre>
+<p>For optional formal companions:</p>
+<pre><code class="language-text">lean/index.json
+</code></pre>
+<p>For project lineage:</p>
+<pre><code class="language-text">origins/index.json
+</code></pre>
+<p>For shared learning contracts:</p>
+<pre><code class="language-text">shared/
+</code></pre>
+<hr>
+<h1 id="final-ai-edition-principle">Final AI Edition Principle</h1>
+<p>The human 5Guides edition teaches through experience.</p>
+<p>The AI Edition should preserve the structure underneath that experience.</p>
+<p>Its purpose is not merely to tell an AI:</p>
+<pre><code class="language-text">what the Guides say
+</code></pre>
+<p>but to make explicit:</p>
+<pre><code class="language-text">what each Guide is for
+
+how the Guides relate
+
+what distinctions must survive
+
+what evidence supports a relationship
+
+where uncertainty belongs
+
+where formalization begins and ends
+
+how provenance is preserved
+
+when learner judgment must remain primary
+
+and where the learner should eventually go next
+</code></pre>
+<p>That final destination is not dependence on the framework.</p>
+<p>It is:</p>
+<pre><code class="language-text">Observe carefully.
+
+Map honestly.
+
+Test the structure.
+
+Make it inspectable.
+
+Follow what changes.
+
+Then carry the questions somewhere new.
+</code></pre>
+<hr>
+<blockquote>
+<p>The AI Edition exposes the structure. The learner still does the learning.</p>
+</blockquote>
+  </main>
+</body>
+</html>

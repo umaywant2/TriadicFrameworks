@@ -1,0 +1,626 @@
+{
+  "document": {
+    "id": "5Guides-lean-09-temperature-engine-theorem",
+    "type": "formal-origin-companion",
+    "name": "Temperature Engine Theorem",
+    "title": "Lean 4 Companion — Nawderian Temperature Engine Theorem",
+    "edition": "AI Edition",
+    "module": "5Guides",
+    "framework": "AACCC",
+    "origin": "Nawderian Temperature Engine Theorem",
+    "formal_order": 9,
+    "version": "1.0",
+    "status": "active",
+    "language": "en",
+    "source": "docs/5Guides/lean/09_temperature_engine_theorem.lean",
+    "ai_path": "docs/book/AI_Edition/5Guides/lean/09_temperature_engine_theorem.json",
+    "origin_path": "../origins/theorems.json",
+    "lean_index": "index.json"
+  },
+  "purpose": {
+    "primary": "Provide a small formal teaching abstraction for selected algebraic properties associated with the Nawderian Temperature Engine Theorem.",
+    "formal_goal": "Represent a signed one-dimensional temperature-force relation and inspect selected zero and sign-change consequences.",
+    "educational_principle": "A small algebraic formalization can verify consequences of its definition without validating the broader physical interpretation from which the teaching example was abstracted."
+  },
+  "source_alignment": {
+    "source_artifact": "../origins/theorems.json",
+    "source_expression": "F_T = -alpha * gradient_T",
+    "source_components": [
+      "T_hot",
+      "T_cold",
+      "gradient_T",
+      "alpha",
+      "F_T"
+    ],
+    "selected_structure": "Signed relation between coupling, gradient, and modeled force.",
+    "formal_abstraction": "One-dimensional signed integer relation.",
+    "relationship": "partial teaching formalization",
+    "complete_equivalence": false,
+    "complete_source_formalization": false
+  },
+  "source_concepts": {
+    "temperature_structure": {
+      "symbolic_form": "T = (T_hot, T_cold, gradient_T)",
+      "components": [
+        {
+          "name": "T_hot",
+          "role": "hot-side temperature term"
+        },
+        {
+          "name": "T_cold",
+          "role": "cold-side temperature term"
+        },
+        {
+          "name": "gradient_T",
+          "role": "temperature-gradient term"
+        }
+      ]
+    },
+    "force_relation": {
+      "symbolic_form": "F_T = -alpha * gradient_T",
+      "alpha": "coupling term in the source interpretation",
+      "gradient_T": "directional driver in the source relation",
+      "F_T": "modeled force term"
+    }
+  },
+  "teaching_simplification": {
+    "dimension": "one-dimensional",
+    "number_representation": "signed integer",
+    "formal_pattern": "temperatureForce coupling gradient = -(coupling * gradient)",
+    "purpose": "Make selected algebraic consequences directly inspectable.",
+    "deliberately_omitted": [
+      "full spatial temperature field",
+      "vector calculus",
+      "multidimensional gradients",
+      "physical units",
+      "continuous field equations",
+      "material-specific empirical behavior",
+      "fluid dynamics",
+      "thermodynamic completeness",
+      "astrophysical interpretation",
+      "measurement uncertainty",
+      "experimental datasets"
+    ]
+  },
+  "why_signed_values": {
+    "purpose": "Represent positive, zero, and negative directional values in the teaching model.",
+    "teaching_type": "Int",
+    "modeling_reason": "The sign of the represented gradient and force is part of the property being inspected.",
+    "boundary": "Selecting signed integers is a teaching-model choice rather than a claim that the complete physical quantities are naturally integer-valued."
+  },
+  "formal_model": {
+    "function": {
+      "name": "temperatureForce",
+      "inputs": [
+        {
+          "name": "coupling",
+          "teaching_role": "alpha",
+          "type": "Int"
+        },
+        {
+          "name": "gradient",
+          "teaching_role": "gradient_T",
+          "type": "Int"
+        }
+      ],
+      "output": {
+        "name": "modeled force",
+        "teaching_role": "F_T",
+        "type": "Int"
+      },
+      "relationship": "negative product of coupling and gradient"
+    },
+    "scope": "Small algebraic teaching model."
+  },
+  "formal_targets": [
+    {
+      "id": "zero_gradient",
+      "name": "Zero Gradient Property",
+      "condition": "gradient = 0",
+      "consequence": "temperatureForce coupling 0 = 0",
+      "meaning": "Under the supplied teaching definition, a zero gradient produces zero modeled force."
+    },
+    {
+      "id": "zero_coupling",
+      "name": "Zero Coupling Property",
+      "condition": "coupling = 0",
+      "consequence": "temperatureForce 0 gradient = 0",
+      "meaning": "Under the supplied teaching definition, zero coupling produces zero modeled force."
+    },
+    {
+      "id": "gradient_sign_reversal",
+      "name": "Gradient Sign-Reversal Property",
+      "condition": "gradient is replaced by its negation",
+      "consequence": "the modeled force reverses sign under the supplied relation",
+      "meaning": "The algebraic model preserves a directional opposition between gradient sign and modeled-force sign."
+    }
+  ],
+  "zero_gradient": {
+    "before": {
+      "coupling": "arbitrary represented coupling",
+      "gradient": 0
+    },
+    "after": {
+      "modeled_force": 0
+    },
+    "reason": "The represented product contains a zero factor.",
+    "scope": "Algebraic consequence of the teaching definition."
+  },
+  "zero_coupling": {
+    "before": {
+      "coupling": 0,
+      "gradient": "arbitrary represented gradient"
+    },
+    "after": {
+      "modeled_force": 0
+    },
+    "reason": "The represented product contains a zero factor.",
+    "scope": "Algebraic consequence of the teaching definition."
+  },
+  "sign_reversal": {
+    "initial_gradient": "g",
+    "reversed_gradient": "-g",
+    "initial_force": "-(alpha * g)",
+    "reversed_force": "-(alpha * (-g))",
+    "structural_result": "The modeled force changes sign under gradient negation according to the represented algebraic relation.",
+    "boundary": "This is a statement about the teaching definition, not an experimentally established physical law."
+  },
+  "directionality": {
+    "represented": true,
+    "mechanism": "signed values",
+    "relation": "negative sign between product and modeled output",
+    "educational_question": "What changes when the directional input changes sign?"
+  },
+  "aaccc_mapping": {
+    "awareness": {
+      "question": "What quantities and relationship were actually formalized?",
+      "formal_answer": [
+        "signed coupling",
+        "signed gradient",
+        "signed modeled force",
+        "negative-product relation"
+      ]
+    },
+    "alignment": {
+      "question": "What corresponds?",
+      "formal_answer": "The sign and magnitude of the modeled force correspond algebraically to the supplied coupling and gradient under the teaching definition."
+    },
+    "coherence": {
+      "question": "Does this hold together?",
+      "formal_answer": "The selected zero and sign properties can be checked against the explicit negative-product definition."
+    },
+    "clarity": {
+      "question": "Can this be understood and inspected?",
+      "formal_answer": "The one-dimensional signed abstraction exposes the selected algebraic relationship while explicitly separating it from broader physical interpretation."
+    },
+    "continuity": {
+      "question": "What persists through change?",
+      "formal_answer": "The formal relationship remains fixed while coupling or gradient values change, allowing consequence propagation to be inspected."
+    }
+  },
+  "formal_awareness": {
+    "inspect": [
+      "What are the two inputs?",
+      "What is their type?",
+      "What does the function return?",
+      "Where does the negative sign appear?",
+      "Which broader source structures are absent?"
+    ],
+    "principle": "Read the encoded algebra before importing physical meaning."
+  },
+  "formal_alignment": {
+    "mappings": [
+      {
+        "source": "alpha",
+        "formal": "coupling",
+        "status": "teaching correspondence"
+      },
+      {
+        "source": "gradient_T",
+        "formal": "gradient",
+        "status": "teaching correspondence"
+      },
+      {
+        "source": "F_T",
+        "formal": "temperatureForce coupling gradient",
+        "status": "teaching correspondence"
+      }
+    ],
+    "boundary": "These correspondences support the teaching formalization but do not establish complete semantic equivalence with physical quantities."
+  },
+  "formal_coherence": {
+    "questions": [
+      "Does zero gradient imply zero modeled force under the definition?",
+      "Does zero coupling imply zero modeled force under the definition?",
+      "Does gradient negation produce the represented sign reversal?",
+      "Are any additional assumptions required for these algebraic consequences?"
+    ],
+    "scope": "Internal algebraic coherence of the teaching definition."
+  },
+  "formal_clarity": {
+    "benefit": "The narrow model makes the sign and zero relationships unusually explicit.",
+    "risk": "The simplicity of the model may make it appear more physically complete than it is.",
+    "required_boundary": "Call it a one-dimensional signed teaching abstraction."
+  },
+  "formal_continuity": {
+    "fixed_structure": "temperatureForce coupling gradient = -(coupling * gradient)",
+    "changeable_inputs": [
+      "coupling",
+      "gradient"
+    ],
+    "inspect": [
+      "output value",
+      "output sign",
+      "zero conditions",
+      "relationship persistence"
+    ]
+  },
+  "assumptions": {
+    "explicit": [
+      "coupling is represented as an integer",
+      "gradient is represented as an integer",
+      "modeled force is defined as the negative product"
+    ],
+    "environmental": [
+      "Lean's integer arithmetic",
+      "Lean's equality semantics",
+      "definitions in the canonical source artifact"
+    ],
+    "not_assumed": [
+      "the complete physical system is one-dimensional",
+      "real temperature gradients are integer-valued",
+      "physical units can be ignored in a complete model",
+      "alpha is empirically established",
+      "the source equation is empirically validated",
+      "the teaching equation completely describes thermodynamic force"
+    ]
+  },
+  "verified_consequences": {
+    "scope": "Selected algebraic consequences represented in the compiler-checked Lean teaching artifact.",
+    "include": [
+      "zero-gradient property",
+      "zero-coupling property",
+      "represented sign behavior under gradient reversal"
+    ],
+    "conditional_on": [
+      "the supplied temperatureForce definition",
+      "the represented integer type",
+      "the theorem statements in the canonical Lean source",
+      "Lean's arithmetic semantics"
+    ]
+  },
+  "formalization_boundary": {
+    "lean_establishes": [
+      "the represented algebraic theorems about temperatureForce"
+    ],
+    "lean_does_not_establish": [
+      "the broader Temperature Engine interpretation is physically correct",
+      "the source force relation has been empirically validated",
+      "temperature gradients generate the proposed physical effect in nature",
+      "alpha has an empirically verified value or meaning",
+      "the teaching model contains complete thermodynamics",
+      "the represented relation applies to astrophysical systems",
+      "the represented relation applies to fluid systems",
+      "integer arithmetic adequately models the complete physical phenomenon"
+    ],
+    "principle": "The proof boundary ends with the selected consequences of the supplied algebraic definition."
+  },
+  "formal_vs_empirical": {
+    "formal_question": "What follows from F = -(alpha * gradient) in this teaching model?",
+    "empirical_question": "Does an appropriate real-world system exhibit behavior consistent with the proposed physical relation?",
+    "same_question": false,
+    "empirical_work_may_require": [
+      "defined measurable quantities",
+      "units",
+      "instrumentation",
+      "data",
+      "uncertainty analysis",
+      "controls",
+      "alternative models",
+      "independent testing"
+    ]
+  },
+  "algebraic_consequence_vs_physical_claim": {
+    "supported": "Reversing the represented signed gradient reverses the represented force under the supplied definition.",
+    "not_automatically_supported": "A real physical system necessarily behaves according to that relation.",
+    "principle": "Formal implication inside the model should not be rewritten as empirical fact."
+  },
+  "source_vs_formal_model": {
+    "source": "Broader temperature-field and force interpretation.",
+    "formal_model": "Two signed integer inputs and a negative-product output.",
+    "relationship_strength": "partial",
+    "relationship_type": "deliberate teaching simplification",
+    "complete_translation": false
+  },
+  "simplification": {
+    "intentional": true,
+    "preserved": [
+      "coupling term",
+      "gradient term",
+      "negative directional relation",
+      "modeled output"
+    ],
+    "omitted": [
+      "T_hot as a separate formal field",
+      "T_cold as a separate formal field",
+      "derivation of gradient",
+      "spatial geometry",
+      "continuous fields",
+      "units",
+      "measurement",
+      "broader physical mechanisms"
+    ]
+  },
+  "student_questions": [
+    "What exactly does temperatureForce define?",
+    "Why was Int chosen for the teaching example?",
+    "What happens when gradient equals zero?",
+    "What happens when coupling equals zero?",
+    "What happens when the gradient changes sign?",
+    "Which results are consequences of the definition?",
+    "Which broader physical claims remain outside the proof?",
+    "What would need to be modeled before adding spatial gradients?",
+    "What evidence would be required to test the physical interpretation?"
+  ],
+  "student_exercise": {
+    "instruction": "Change one input while keeping the formal definition fixed, predict the result, and then inspect the formal consequence.",
+    "record": {
+      "coupling_before": null,
+      "gradient_before": null,
+      "modeled_force_before": null,
+      "single_change": null,
+      "predicted_force_after": null,
+      "formal_force_after": null,
+      "relationship_preserved": null,
+      "physical_claim_tested": false
+    }
+  },
+  "variation_exercises": [
+    {
+      "change": "Set gradient to zero.",
+      "question": "What must the modeled force become?"
+    },
+    {
+      "change": "Set coupling to zero.",
+      "question": "What must the modeled force become?"
+    },
+    {
+      "change": "Negate the gradient.",
+      "question": "How does the modeled force change?"
+    },
+    {
+      "change": "Negate the coupling.",
+      "question": "How does the modeled force change under the supplied algebraic definition?"
+    },
+    {
+      "change": "Negate both coupling and gradient.",
+      "question": "Which sign relationships persist?"
+    },
+    {
+      "change": "Replace Int with another numeric representation.",
+      "question": "Which proofs survive, and which arithmetic assumptions change?"
+    }
+  ],
+  "zero_case_as_clarity": {
+    "principle": "Boundary and zero cases often make the behavior of a definition especially easy to inspect.",
+    "cases": [
+      "gradient = 0",
+      "coupling = 0"
+    ],
+    "lesson": "Simple formal cases can reveal structural consequences without claiming empirical completeness."
+  },
+  "sign_case_as_alignment": {
+    "principle": "Changing sign gives a controlled way to inspect directional correspondence.",
+    "question": "Does the output transform in the way encoded by the relation?"
+  },
+  "change_one_thing": {
+    "principle": "Vary one formal input at a time when inspecting propagation.",
+    "benefit": "Makes it easier to identify which change produced which formal consequence."
+  },
+  "future_formalization": {
+    "possible_extensions": [
+      "explicit T_hot",
+      "explicit T_cold",
+      "derived gradient",
+      "real-valued quantities",
+      "physical units",
+      "spatial position",
+      "vector-valued gradient",
+      "time dependence",
+      "measurement uncertainty"
+    ],
+    "rule": "Each extension should be justified by the claim being investigated rather than added only to make the model look more physically sophisticated."
+  },
+  "vector_extension_boundary": {
+    "current": "signed scalar gradient",
+    "future_possible": "spatial or vector-valued gradient",
+    "not_currently_modeled": true,
+    "principle": "Do not describe the current theorem as though vector calculus were already represented."
+  },
+  "units_boundary": {
+    "represented": false,
+    "importance_for_physical_modeling": true,
+    "principle": "A dimensionless teaching abstraction may be useful for algebraic reasoning while remaining insufficient for complete physical interpretation."
+  },
+  "measurement_boundary": {
+    "represented": false,
+    "questions_for_empirical_extension": [
+      "How is gradient measured?",
+      "How is force measured?",
+      "What are the units?",
+      "What is the uncertainty?",
+      "How is alpha estimated?",
+      "What alternative relationships are compared?"
+    ]
+  },
+  "compiler_validation": {
+    "source_file": "docs/5Guides/lean/09_temperature_engine_theorem.lean",
+    "status": "compiler-checked",
+    "validation_set": "01-11",
+    "lean_version": "4.36.0",
+    "target": "x86_64-w64-windows-gnu",
+    "meaning": "The human-source formal artifact was accepted under the stated Lean environment.",
+    "boundary": "Compiler acceptance applies to the represented algebraic teaching artifact and does not establish the broader Temperature Engine physical interpretation."
+  },
+  "lean_source_contract": {
+    "source_of_truth": "docs/5Guides/lean/09_temperature_engine_theorem.lean",
+    "embedded_source_optional": true,
+    "if_embedded": "Copy the compiler-checked Lean source exactly rather than reconstructing it from this JSON abstraction.",
+    "reason": "The AI Edition description should not create a competing version of the canonical Lean source."
+  },
+  "origin_connection": {
+    "resource": "../origins/theorems.json",
+    "theorem": "Nawderian Temperature Engine Theorem",
+    "previous_origin_companion": "08_nawderian_set_theorem.json",
+    "next_origin_companion": "10_unified_resonance_theorem.json"
+  },
+  "formalization_connection": {
+    "resource": "../origins/formalization.json",
+    "record": {
+      "source": "F_T = -alpha * gradient_T",
+      "formalization": "one-dimensional signed integer temperatureForce relation",
+      "simplifications": [
+        "scalar gradient",
+        "integer arithmetic",
+        "no units",
+        "no spatial field",
+        "no measurement model"
+      ],
+      "added_assumptions": [
+        "the teaching relation is represented as integer multiplication and negation"
+      ],
+      "lean_proves": [
+        "selected zero properties",
+        "selected sign behavior encoded by the source artifact"
+      ],
+      "lean_does_not_prove": [
+        "physical validity of the broader Temperature Engine interpretation",
+        "empirical value of alpha",
+        "completeness of the physical model",
+        "behavior of unmodeled spatial or thermodynamic systems"
+      ]
+    }
+  },
+  "ai_companion": {
+    "resource": "../shared/ai_companion.json",
+    "preferred_support": [
+      "explain the signed teaching relation",
+      "ask the learner to predict zero cases",
+      "ask the learner to predict sign changes",
+      "distinguish algebraic consequence from physical interpretation",
+      "identify omitted physical structure",
+      "challenge claims that exceed the formal model"
+    ],
+    "avoid": [
+      "presenting the relation as empirically validated",
+      "inventing units",
+      "inventing experimental results",
+      "claiming alpha has a known measured value",
+      "describing scalar integer arithmetic as a complete temperature field model"
+    ]
+  },
+  "aaccc_self_inspection": {
+    "awareness": {
+      "question": "What quantities, types, and relation are actually represented?"
+    },
+    "alignment": {
+      "question": "How do source terms correspond to formal inputs and output?"
+    },
+    "coherence": {
+      "question": "Do the zero and sign properties follow from the definition?"
+    },
+    "clarity": {
+      "question": "Is the teaching abstraction clearly separated from the broader physical claim?"
+    },
+    "continuity": {
+      "question": "What happens to the modeled output when one represented input changes?"
+    }
+  },
+  "ai_behavior": {
+    "must": [
+      "Describe the model as a one-dimensional signed teaching abstraction.",
+      "Preserve the source-to-formal mapping.",
+      "Distinguish algebraic consequences from empirical claims.",
+      "Preserve omitted units, fields, and measurements as outside the model.",
+      "Treat zero and sign cases as consequences of the supplied definition.",
+      "Preserve compiler provenance.",
+      "Describe future extensions as future work."
+    ],
+    "must_not": [
+      "claim this artifact validates the Temperature Engine physically",
+      "invent empirical evidence",
+      "invent measurement units",
+      "invent a measured value for alpha",
+      "claim signed integer arithmetic is a complete physical model",
+      "claim sign reversal in the teaching model proves a real-world force reversal",
+      "upgrade compiler success into scientific validation",
+      "reconstruct Lean source and present it as exact unless verified against the source file"
+    ]
+  },
+  "provenance": {
+    "human_origin_source": "docs/5Guides/origins/theorems.md",
+    "formal_source": "docs/5Guides/lean/09_temperature_engine_theorem.lean",
+    "ai_origin": "../origins/theorems.json",
+    "ai_formal_artifact": "09_temperature_engine_theorem.json",
+    "transformation": "structured AI-readable formal origin companion",
+    "chain": [
+      "source temperature relation",
+      "teaching simplification",
+      "signed integer relation",
+      "selected zero and sign theorems",
+      "compiler-checked artifact"
+    ],
+    "preserve": [
+      "source expression",
+      "teaching simplification",
+      "signed relation",
+      "zero behavior",
+      "sign behavior",
+      "omitted physical structure",
+      "formalization boundary",
+      "compiler provenance"
+    ],
+    "do_not_infer": [
+      "complete Temperature Engine formalization",
+      "empirical validation",
+      "measured coupling value",
+      "real-world force behavior from algebra alone",
+      "unrepresented units",
+      "unrepresented spatial dynamics",
+      "scientific consensus",
+      "source code not verified against the canonical Lean file"
+    ]
+  },
+  "related": {
+    "lean_index": "index.json",
+    "previous_formal_companion": "08_nawderian_set_theorem.json",
+    "origin": "../origins/theorems.json",
+    "next_formal_companion": "10_unified_resonance_theorem.json",
+    "formalization": "../origins/formalization.json",
+    "origins_index": "../origins/index.json",
+    "ai_companion": "../shared/ai_companion.json",
+    "module": "../module.json",
+    "index": "../index.json"
+  },
+  "machine_context": {
+    "ai_parseable": true,
+    "role": "formal-origin-companion",
+    "formal_order": 9,
+    "origin": "Nawderian Temperature Engine Theorem",
+    "optional": true,
+    "signed_scalar_model": true,
+    "teaching_type": "Int",
+    "zero_gradient_property": true,
+    "zero_coupling_property": true,
+    "sign_behavior_inspectable": true,
+    "physical_units_modeled": false,
+    "spatial_gradient_modeled": false,
+    "measurement_model_present": false,
+    "complete_source_formalization": false,
+    "formalization_boundary_explicit": true,
+    "compiler_checked": true,
+    "compiler_validation_bounded": true,
+    "empirical_validation_claim": false,
+    "provenance_aware": true
+  }
+}

@@ -1,0 +1,900 @@
+{
+  "document": {
+    "id": "5Guides-guide-continuity",
+    "type": "guide-learning-object",
+    "name": "Continuity",
+    "title": "5Guides — Continuity",
+    "edition": "AI Edition",
+    "module": "5Guides",
+    "framework": "AACCC",
+    "guide_order": 5,
+    "version": "1.0",
+    "status": "active",
+    "language": "en",
+    "ai_path": "docs/book/AI_Edition/5Guides/guides/continuity.json"
+  },
+  "source": {
+    "root": "docs/5Guides/continuity",
+    "documents": [
+      "docs/5Guides/continuity/index.md",
+      "docs/5Guides/continuity/explore.md",
+      "docs/5Guides/continuity/practice.md",
+      "docs/5Guides/continuity/mastery.md"
+    ],
+    "formal_companion": "docs/5Guides/lean/05_continuity.lean",
+    "ai_formal_companion": "../lean/05_continuity.json"
+  },
+  "identity": {
+    "id": "continuity",
+    "name": "Continuity",
+    "order": 5,
+    "core_question": "What persists through change?",
+    "student_artifact": "Continuity Record",
+    "badge": "Continuity Badge",
+    "previous_guide": "clarity.json",
+    "next": "Independent Application"
+  },
+  "purpose": {
+    "primary": "Teach learners to inspect change without assuming that continuity means sameness.",
+    "learning_goal": "Identify what changed, what persisted, how states are connected, where drift or pattern breaks occur, and what history is needed to make the transition inspectable.",
+    "principle": "Preserve enough structure and history to understand what changed and why the present still relates to the past."
+  },
+  "position_in_aaccc": {
+    "sequence": [
+      "Awareness",
+      "Alignment",
+      "Coherence",
+      "Clarity",
+      "Continuity"
+    ],
+    "current": "Continuity",
+    "completed_before": [
+      "Awareness",
+      "Alignment",
+      "Coherence",
+      "Clarity"
+    ],
+    "destination": "Independent Application",
+    "recursive": true,
+    "loop": [
+      "Awareness",
+      "Alignment",
+      "Coherence",
+      "Clarity",
+      "Continuity",
+      "Awareness"
+    ],
+    "loop_reason": "Continuity may reveal a changed state that requires another observation cycle."
+  },
+  "prerequisite_questions": [
+    {
+      "guide": "Awareness",
+      "question": "What am I observing?"
+    },
+    {
+      "guide": "Alignment",
+      "question": "What corresponds?"
+    },
+    {
+      "guide": "Coherence",
+      "question": "Does this hold together?"
+    },
+    {
+      "guide": "Clarity",
+      "question": "Can this be understood and inspected?"
+    }
+  ],
+  "core_model": {
+    "basic_transition": [
+      "Before",
+      "Change",
+      "After"
+    ],
+    "expanded_transition": [
+      "Earlier State",
+      "Transition",
+      "Current State"
+    ],
+    "history_pattern": [
+      "State_0",
+      "State_1",
+      "State_2",
+      "State_3"
+    ],
+    "primary_questions": [
+      "What changed?",
+      "What stayed the same?",
+      "What relationship connects the earlier state to the later one?"
+    ]
+  },
+  "key_distinctions": [
+    {
+      "left": "continuity",
+      "right": "sameness",
+      "principle": "Continuity does not require nothing to change."
+    },
+    {
+      "left": "persistence",
+      "right": "unchanged component",
+      "principle": "A relationship, function, meaning, role, or identity may persist even when a component changes."
+    },
+    {
+      "left": "recurrence",
+      "right": "causation",
+      "principle": "Repeated sequence is an observation and does not automatically explain why the sequence recurs."
+    },
+    {
+      "left": "unexpected transition",
+      "right": "impossible transition",
+      "principle": "An unexpected result may expose a missing observation, changed system, incomplete model, or incorrect expectation."
+    },
+    {
+      "left": "current state",
+      "right": "history",
+      "principle": "Two systems can have the same current state while having different histories."
+    },
+    {
+      "left": "label persistence",
+      "right": "semantic continuity",
+      "principle": "A name may remain stable while its definition changes."
+    },
+    {
+      "left": "repair",
+      "right": "restoration",
+      "principle": "Repair does not always mean restoring an earlier state."
+    },
+    {
+      "left": "drift",
+      "right": "failure",
+      "principle": "Drift may indicate degradation, adaptation, correction, learning, or changed conditions."
+    }
+  ],
+  "continuity_dimensions": [
+    {
+      "id": "physical",
+      "question": "Is this the same physical object or material component?"
+    },
+    {
+      "id": "functional",
+      "question": "Does it continue to perform the relevant function?"
+    },
+    {
+      "id": "structural",
+      "question": "Do important roles and relationships remain identifiable?"
+    },
+    {
+      "id": "semantic",
+      "question": "Has the meaning remained stable?"
+    },
+    {
+      "id": "historical",
+      "question": "Can the later state be traced to the earlier state?"
+    },
+    {
+      "id": "purpose",
+      "question": "Does the purpose remain?"
+    },
+    {
+      "id": "commitment",
+      "question": "Do earlier promises or constraints still hold?"
+    },
+    {
+      "id": "provenance",
+      "question": "Can source, revisions, and transformation history still be traced?"
+    }
+  ],
+  "continuity_of_what": {
+    "possible_targets": [
+      "physical object",
+      "function",
+      "owner",
+      "name",
+      "history",
+      "structure",
+      "purpose",
+      "meaning",
+      "safety",
+      "privacy",
+      "attribution",
+      "interface",
+      "evidence",
+      "goal",
+      "justified assumption"
+    ],
+    "principle": "A Continuity claim should identify what is expected to persist."
+  },
+  "change": {
+    "possible_characteristics": [
+      "sudden",
+      "gradual",
+      "expected",
+      "unexpected",
+      "intentional",
+      "accidental",
+      "useful",
+      "harmful",
+      "reversible",
+      "irreversible",
+      "not yet understood"
+    ],
+    "awareness_rule": "Observe the change before deciding which category it belongs to."
+  },
+  "transition_record": {
+    "before": "What was true?",
+    "change": "What happened?",
+    "after": "What is now true?",
+    "persisted": "What remained?",
+    "unknown": "What is not yet known?"
+  },
+  "persistence": {
+    "principle": "Continuity may exist through preserved relationships even when particular components change.",
+    "example": {
+      "object": "bicycle",
+      "change": "tire replaced",
+      "possible_persistence": [
+        "location on bicycle",
+        "functional role",
+        "relationship to wheel",
+        "purpose"
+      ]
+    }
+  },
+  "drift": {
+    "pattern": [
+      "A",
+      "A'",
+      "A''",
+      "A'''",
+      "B"
+    ],
+    "definition": "A sequence of smaller changes that produces a later state meaningfully different from an earlier one.",
+    "automatic_failure": false,
+    "questions": [
+      "Why did this change?",
+      "Was the changed part supposed to persist?",
+      "Was the drift intentional?",
+      "Did new evidence justify the revision?"
+    ]
+  },
+  "healthy_drift": {
+    "example": {
+      "earlier": "A always causes B.",
+      "later": "A may contribute to B under condition C."
+    },
+    "interpretation": "Later understanding may be better even though it differs from the earlier claim.",
+    "principle": "Continuity should not preserve an unsupported belief merely because it came first."
+  },
+  "problematic_drift": {
+    "example": [
+      "Preserve uncertainty.",
+      "Resolve uncertainty when possible.",
+      "Prefer a confident conclusion.",
+      "Give a confident answer."
+    ],
+    "lesson": "A sequence of seemingly small changes may remove an earlier principle.",
+    "inspection": "Compare distant states as well as adjacent revisions."
+  },
+  "recurrence": {
+    "pattern": [
+      "A",
+      "B",
+      "C",
+      "A",
+      "B",
+      "C"
+    ],
+    "supported_claim": "The sequence A -> B -> C occurred more than once.",
+    "unsupported_without_more_evidence": [
+      "A causes B",
+      "B causes C",
+      "C causes A",
+      "the sequence will always recur"
+    ]
+  },
+  "pattern_break": {
+    "expected": [
+      "A",
+      "B",
+      "C"
+    ],
+    "observed": [
+      "A",
+      "B",
+      "D"
+    ],
+    "preferred_record": {
+      "expected": "C",
+      "observed": "D"
+    },
+    "principle": "Do not replace the unexpected observation with the expected one merely to preserve the pattern."
+  },
+  "unexpected_transition": {
+    "expected": [
+      "A",
+      "B"
+    ],
+    "observed": [
+      "A",
+      "D"
+    ],
+    "careful_conclusion": "This transition was unexpected under the current model.",
+    "avoid": "This transition is impossible.",
+    "possible_explanations": [
+      "observation error",
+      "incomplete model",
+      "missing intermediate state",
+      "changed system",
+      "changed boundary",
+      "unknown factor"
+    ]
+  },
+  "current_state_vs_history": {
+    "system_a": [
+      "NORMAL",
+      "NORMAL",
+      "NORMAL"
+    ],
+    "system_b": [
+      "NORMAL",
+      "PROBLEM",
+      "RECOVERY",
+      "NORMAL"
+    ],
+    "current_state_same": true,
+    "history_same": false,
+    "lesson": "If history matters to the problem, storing only the latest state loses useful information."
+  },
+  "provenance": {
+    "relationship": [
+      "Source",
+      "Change",
+      "Revision",
+      "Current State"
+    ],
+    "continuity_question": "How did this get from there to here?",
+    "principle": "The path is itself inspectable information."
+  },
+  "document_revision": {
+    "example": [
+      "The result may support the proposed explanation.",
+      "The result supports the proposed explanation.",
+      "The result confirms the explanation."
+    ],
+    "change": "epistemic strength increased",
+    "continuity_question": "Did the evidence change along with the wording?",
+    "risk": "Meaning may drift while the topic and document identity remain unchanged."
+  },
+  "software_continuity": {
+    "may_change": [
+      "interface",
+      "implementation",
+      "performance",
+      "features"
+    ],
+    "may_need_to_persist": [
+      "user data",
+      "security boundaries",
+      "public contracts",
+      "documented behavior",
+      "privacy promises"
+    ],
+    "question": "What was supposed to remain stable?"
+  },
+  "learning_continuity": {
+    "healthy_pattern": [
+      "Initial Understanding",
+      "Observation",
+      "Challenge",
+      "Revision",
+      "Better Question"
+    ],
+    "principle": "Understanding may appropriately change when new evidence appears.",
+    "continuity_role": "Preserve enough history to explain why the revision occurred."
+  },
+  "conversation_continuity": {
+    "checkpoint": {
+      "original_goal": null,
+      "current_goal": null,
+      "what_changed": null,
+      "why": null,
+      "still_relevant": null,
+      "next_step": null
+    },
+    "purpose": "Make conversational drift visible."
+  },
+  "repair": {
+    "questions": [
+      "What should actually persist?",
+      "What should change?"
+    ],
+    "principle": "Restoring an earlier state is appropriate only when the earlier state contains what should be preserved.",
+    "warning": "The earlier state may itself contain the problem."
+  },
+  "failure_as_evidence": {
+    "expected": [
+      "A",
+      "B",
+      "C"
+    ],
+    "observed": [
+      "A",
+      "B",
+      "D"
+    ],
+    "questions": [
+      "What changed?",
+      "What assumptions predicted C?",
+      "What evidence produced D?",
+      "Is something missing?",
+      "Does the model need revision?"
+    ],
+    "principle": "Preserve the failed transition long enough to learn from it."
+  },
+  "semantic_continuity": {
+    "risk": "The same label may persist while the definition changes.",
+    "example": [
+      "Alignment v1",
+      "Alignment v2"
+    ],
+    "question": "Did the underlying definition remain the same?",
+    "term": "semantic drift"
+  },
+  "structural_continuity": {
+    "before": {
+      "A": 3,
+      "B": 6,
+      "C": 9
+    },
+    "after": {
+      "A": 4,
+      "B": 7,
+      "C": 10
+    },
+    "values_changed": true,
+    "structure_preserved": [
+      "A",
+      "B",
+      "C"
+    ],
+    "mapping_preserved": [
+      "A_0 <-> A_1",
+      "B_0 <-> B_1",
+      "C_0 <-> C_1"
+    ]
+  },
+  "functional_continuity": {
+    "pattern": [
+      "old implementation",
+      "replacement",
+      "new implementation"
+    ],
+    "question": "Does the required behavior remain?",
+    "dependency": "The required behavior must first be defined."
+  },
+  "commitment_continuity": {
+    "example": "Learners can explore the Guides without being required to identify themselves.",
+    "question": "Does this commitment still hold after implementation changes?",
+    "related": "../shared/privacy.json",
+    "principle": "An implementation change can create a Continuity problem if it silently breaks an earlier promise."
+  },
+  "what_should_persist": [
+    "meaning",
+    "safety",
+    "privacy",
+    "attribution",
+    "identity when relevant",
+    "function",
+    "important relationships",
+    "interfaces when promised",
+    "evidence",
+    "history",
+    "goals",
+    "assumptions that remain justified"
+  ],
+  "what_should_not_persist": [
+    "errors",
+    "obsolete assumptions",
+    "insecure behavior",
+    "unsupported claims",
+    "accidental complexity",
+    "broken relationships",
+    "misleading terminology"
+  ],
+  "healthy_discontinuity": {
+    "pattern": [
+      "Earlier State contains problem X",
+      "Evidence shows X was wrong",
+      "Revision removes X",
+      "Current State no longer contains X"
+    ],
+    "principle": "Continuity does not require preserving a mistake."
+  },
+  "expanded_core_questions": [
+    "What was expected to persist?",
+    "What actually persisted?",
+    "What changed?",
+    "Why did it change?",
+    "What relationship connects the earlier and later states?",
+    "What evidence supports that history?",
+    "What remains uncertain?"
+  ],
+  "explore": {
+    "phase": "experience",
+    "purpose": "Let learners experience continuity, drift, recurrence, breaks, history, and provenance before formalizing them.",
+    "topics": [
+      "repaired objects",
+      "layered identity",
+      "changing beliefs",
+      "drift",
+      "recurring patterns",
+      "broken patterns",
+      "software changes",
+      "document changes",
+      "missing history",
+      "provenance"
+    ],
+    "learning_mode": "ordinary examples before formal abstraction",
+    "ai_role": "optional questioning or comparison partner"
+  },
+  "practice": {
+    "phase": "deliberate application",
+    "purpose": "Make change inspectable using explicit state, transition, history, persistence, and uncertainty records.",
+    "topics": [
+      "before/change/after records",
+      "state transitions",
+      "transition validation",
+      "system history",
+      "recurring state patterns",
+      "broken patterns",
+      "document revisions",
+      "software versions",
+      "conversation drift",
+      "formal change"
+    ],
+    "primary_artifact": "Continuity Record",
+    "practice_principle": "Record transitions before deciding what they mean."
+  },
+  "practice_patterns": [
+    {
+      "id": "before_change_after",
+      "structure": [
+        "Before",
+        "Change",
+        "After",
+        "Persisted",
+        "Unknown"
+      ]
+    },
+    {
+      "id": "drift_check",
+      "questions": [
+        "What changed incrementally?",
+        "How different is the current state from the reference state?",
+        "Was that movement intended?"
+      ]
+    },
+    {
+      "id": "recurrence_check",
+      "questions": [
+        "What sequence repeated?",
+        "How many repetitions are explicitly represented?",
+        "What does recurrence not yet explain?"
+      ]
+    },
+    {
+      "id": "pattern_break_check",
+      "questions": [
+        "What was expected?",
+        "What was observed?",
+        "Where did the sequence diverge?"
+      ]
+    },
+    {
+      "id": "provenance_check",
+      "questions": [
+        "What was the source?",
+        "What revisions occurred?",
+        "Which assumptions changed?",
+        "Can the present claim be traced?"
+      ]
+    }
+  ],
+  "mastery": {
+    "phase": "demonstration",
+    "purpose": "Use the complete AACCC toolkit on a changing learning system.",
+    "fresh_problem": true,
+    "guide_skill": "Identify what changes, what persists, and how one state connects to another.",
+    "integrates": [
+      "Awareness",
+      "Alignment",
+      "Coherence",
+      "Clarity",
+      "Continuity"
+    ],
+    "not_required": [
+      "perfect vocabulary",
+      "elimination of uncertainty",
+      "Lean",
+      "AI",
+      "preservation of the original state at all costs"
+    ]
+  },
+  "mastery_criteria": [
+    "identify an earlier state",
+    "identify meaningful change",
+    "identify what persisted",
+    "detect drift",
+    "identify recurring patterns",
+    "identify pattern breaks",
+    "preserve important history",
+    "recognize missing history",
+    "identify expected invariants",
+    "preserve uncertainty",
+    "explain how the current state connects to what came before"
+  ],
+  "student_record": {
+    "name": "Continuity Record",
+    "purpose": "Make change, persistence, history, and uncertainty inspectable.",
+    "fields": [
+      "Before",
+      "Change",
+      "After",
+      "Persisted",
+      "Drift",
+      "Breaks",
+      "Recurring Patterns",
+      "History",
+      "Evidence",
+      "Unknown",
+      "What Should Persist",
+      "What Should Change",
+      "Current Judgment"
+    ],
+    "all_fields_required": false,
+    "principle": "Use enough structure to make the transition inspectable."
+  },
+  "assessment": {
+    "resource": "../shared/assessment.json",
+    "awareness_check": {
+      "optional": true,
+      "may_ask": [
+        "what changed",
+        "what persisted",
+        "where a pattern drifted",
+        "where a recurring sequence broke",
+        "what history is missing",
+        "what cannot yet be concluded"
+      ]
+    },
+    "mastery": {
+      "required_for_badge": true,
+      "fresh_problem": true,
+      "retryable": true
+    }
+  },
+  "badge": {
+    "resource": "../shared/badges.json",
+    "name": "Continuity Badge",
+    "meaning": "I can inspect what changes, what persists, and how one state connects to another.",
+    "guide_milestone": 5,
+    "professional_certification": false,
+    "accreditation": false
+  },
+  "ai_companion": {
+    "resource": "../shared/ai_companion.json",
+    "optional": true,
+    "recommended_prompts": [
+      "Compare these two states and separate what changed from what persisted.",
+      "Identify possible drift without deciding whether the drift is good or bad.",
+      "Find a recurring sequence without inferring its cause.",
+      "Show me where this pattern breaks.",
+      "Challenge my proposed invariant.",
+      "What important information may have been lost between these versions?"
+    ],
+    "learner_judgment_primary": true
+  },
+  "formal_companion": {
+    "path": "../lean/05_continuity.json",
+    "human_source": "docs/5Guides/lean/05_continuity.lean",
+    "optional": true,
+    "purpose": "Inspect what happens to formal relationships when definitions, values, assumptions, or transformations change."
+  },
+  "rtt_origin_companion": {
+    "path": "../lean/11_rtt_origin.json",
+    "origin": "../origins/rtt.json",
+    "optional": true,
+    "purpose": "Provide a small state-transition model related to the project lineage behind Continuity.",
+    "boundary": "The RTT companion is not required for understanding or demonstrating Continuity."
+  },
+  "earlier_guides_inside_continuity": {
+    "awareness": {
+      "question": "What did I actually observe in each state?",
+      "warning": "A changed observation method can look like a system change."
+    },
+    "alignment": {
+      "question": "What corresponds across states?",
+      "pattern": [
+        "A_0 <-> A_1",
+        "B_0 <-> B_1",
+        "C_0 <-> ?"
+      ]
+    },
+    "coherence": {
+      "question": "Does the explanation of the transitions hold together?"
+    },
+    "clarity": {
+      "question": "Can another person inspect what changed?",
+      "record": [
+        "Before",
+        "Change",
+        "After",
+        "Persisted",
+        "Broken",
+        "Unknown"
+      ]
+    }
+  },
+  "boundaries": {
+    "continuity_does_not_mean": [
+      "keep everything the same",
+      "restore the oldest state automatically",
+      "treat every drift as damage",
+      "infer causation from recurrence",
+      "erase unexpected observations",
+      "preserve unsupported assumptions",
+      "treat stable labels as proof of stable meaning"
+    ],
+    "continuity_does_mean": [
+      "make change inspectable",
+      "identify what was expected to persist",
+      "identify what actually persisted",
+      "preserve relevant history",
+      "track drift and breaks",
+      "preserve uncertainty",
+      "trace provenance when it matters"
+    ]
+  },
+  "uncertainty": {
+    "valid": true,
+    "possible_statements": [
+      "We do not yet know what happened between these states.",
+      "The transition is not explained by the current model.",
+      "The pattern broke here.",
+      "The relationship may have changed.",
+      "The available history is incomplete."
+    ],
+    "principle": "Missing transition information should remain missing rather than being invented for narrative continuity."
+  },
+  "provenance_contract": {
+    "principle": "Continuity and provenance reinforce one another.",
+    "chain": [
+      "Source",
+      "Change",
+      "Revision",
+      "Current State"
+    ],
+    "preserve": [
+      "source",
+      "important revisions",
+      "assumption changes",
+      "meaning changes",
+      "formalization changes",
+      "known gaps"
+    ]
+  },
+  "independent_application": {
+    "destination": true,
+    "pattern": [
+      "Awareness",
+      "Alignment",
+      "Coherence",
+      "Clarity",
+      "Continuity",
+      "Your Problem"
+    ],
+    "principle": "After Continuity, the learner takes the complete toolkit into a problem not chosen by the module.",
+    "next_file": null
+  },
+  "guide_completion": {
+    "aaccc_sequence_complete": true,
+    "additional_structural_guide_required": false,
+    "next_mode": "Independent Application",
+    "principle": "The endpoint is transfer, not dependency on another supplied Guide."
+  },
+  "ai_behavior": {
+    "must": [
+      "Identify what changed before evaluating the change.",
+      "Ask what was expected to persist.",
+      "Distinguish current state from history.",
+      "Preserve unexpected transitions.",
+      "Distinguish recurrence from causation.",
+      "Distinguish drift from automatic failure.",
+      "Track semantic change when labels remain stable.",
+      "Preserve provenance and missing history.",
+      "Allow intentional correction to break earlier continuity.",
+      "Reconnect to earlier AACCC Guides when a transition exposes an earlier reasoning problem."
+    ],
+    "must_not": [
+      "define Continuity as sameness",
+      "treat all drift as harmful",
+      "infer cause from repeated sequence alone",
+      "replace unexpected observations with expected ones",
+      "invent missing intermediate states",
+      "assume an old state should always be restored",
+      "treat unchanged labels as unchanged meaning",
+      "erase failed transitions from the record",
+      "require RTT or Lean for Continuity mastery"
+    ]
+  },
+  "provenance": {
+    "source_type": "combined human-facing Guide abstraction",
+    "source_documents": [
+      "docs/5Guides/continuity/index.md",
+      "docs/5Guides/continuity/explore.md",
+      "docs/5Guides/continuity/practice.md",
+      "docs/5Guides/continuity/mastery.md"
+    ],
+    "formal_source": "docs/5Guides/lean/05_continuity.lean",
+    "transformation": "Four human-facing Continuity documents compacted into one structured AI learning object.",
+    "preserve": [
+      "core question",
+      "continuity-versus-sameness distinction",
+      "state and transition structure",
+      "persistence",
+      "drift",
+      "recurrence",
+      "pattern breaks",
+      "history",
+      "provenance",
+      "semantic continuity",
+      "student record",
+      "mastery criteria",
+      "AACCC integration",
+      "independent application"
+    ],
+    "do_not_infer": [
+      "causation from recurrence",
+      "missing transition history",
+      "automatic desirability of an earlier state",
+      "RTT adoption",
+      "formal validation from ordinary examples",
+      "empirical validation from Lean",
+      "professional certification from the badge"
+    ]
+  },
+  "related": {
+    "module": "../module.json",
+    "index": "../index.json",
+    "previous_guide": "clarity.json",
+    "assessment": "../shared/assessment.json",
+    "badges": "../shared/badges.json",
+    "ai_companion": "../shared/ai_companion.json",
+    "privacy": "../shared/privacy.json",
+    "formal_companion": "../lean/05_continuity.json",
+    "rtt_origin": "../origins/rtt.json",
+    "rtt_formal_companion": "../lean/11_rtt_origin.json"
+  },
+  "machine_context": {
+    "ai_parseable": true,
+    "role": "guide-learning-object",
+    "guide": "Continuity",
+    "guide_order": 5,
+    "core_question": "What persists through change?",
+    "human_source_count": 4,
+    "explore_present": true,
+    "practice_present": true,
+    "mastery_present": true,
+    "student_record_present": true,
+    "badge_present": true,
+    "drift_not_automatically_failure": true,
+    "recurrence_not_causation": true,
+    "history_distinct_from_current_state": true,
+    "semantic_continuity_explicit": true,
+    "provenance_aware": true,
+    "uncertainty_preserving": true,
+    "lean_optional": true,
+    "ai_optional": true,
+    "aaccc_sequence_complete": true,
+    "destination": "Independent Application"
+  }
+}

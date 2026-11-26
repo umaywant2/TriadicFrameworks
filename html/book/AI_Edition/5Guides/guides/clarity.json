@@ -1,0 +1,881 @@
+{
+  "document": {
+    "id": "5Guides-guide-clarity",
+    "type": "guide-learning-object",
+    "name": "Clarity",
+    "title": "5Guides — Clarity",
+    "edition": "AI Edition",
+    "module": "5Guides",
+    "framework": "AACCC",
+    "guide_order": 4,
+    "version": "1.0",
+    "status": "active",
+    "language": "en",
+    "ai_path": "docs/book/AI_Edition/5Guides/guides/clarity.json"
+  },
+  "source": {
+    "root": "docs/5Guides/clarity",
+    "documents": [
+      "docs/5Guides/clarity/index.md",
+      "docs/5Guides/clarity/explore.md",
+      "docs/5Guides/clarity/practice.md",
+      "docs/5Guides/clarity/mastery.md"
+    ],
+    "formal_companion": "docs/5Guides/lean/04_clarity.lean",
+    "ai_formal_companion": "../lean/04_clarity.json"
+  },
+  "identity": {
+    "id": "clarity",
+    "name": "Clarity",
+    "order": 4,
+    "core_question": "Can this be understood and inspected?",
+    "student_artifact": "Clarity Record",
+    "badge": "Clarity Badge",
+    "previous_guide": "coherence.json",
+    "next_guide": "continuity.json"
+  },
+  "purpose": {
+    "primary": "Teach learners to make important meaning, relationships, assumptions, conditions, and uncertainty visible enough for another person to inspect.",
+    "learning_goal": "Improve inspectability without quietly changing the original claim.",
+    "principle": "Clarity is not polishing an idea until it sounds convincing. It is making the idea visible enough that another person can inspect what it actually says."
+  },
+  "position_in_aaccc": {
+    "sequence": [
+      "Awareness",
+      "Alignment",
+      "Coherence",
+      "Clarity",
+      "Continuity"
+    ],
+    "current": "Clarity",
+    "previous": "Coherence",
+    "next": "Continuity",
+    "recursive": true,
+    "dependency": "Clarity operates on observations, mappings, and relationships already exposed by Awareness, Alignment, and Coherence."
+  },
+  "prerequisite_questions": [
+    {
+      "guide": "Awareness",
+      "question": "What am I observing?"
+    },
+    {
+      "guide": "Alignment",
+      "question": "What corresponds?"
+    },
+    {
+      "guide": "Coherence",
+      "question": "Does this hold together?"
+    }
+  ],
+  "core_model": {
+    "sequence": [
+      "Original",
+      "Identify Meaning",
+      "Find Difficulty",
+      "Choose Representation",
+      "Revise",
+      "Compare"
+    ],
+    "final_checks": [
+      "Is it easier to inspect?",
+      "Did the meaning survive?"
+    ],
+    "primary_question": "What must remain true after the representation changes?"
+  },
+  "meaning_to_preserve": [
+    "main claim",
+    "qualification",
+    "uncertainty",
+    "relationships",
+    "sequence",
+    "conditions",
+    "definitions",
+    "exceptions",
+    "attribution",
+    "evidence boundaries"
+  ],
+  "key_distinctions": [
+    {
+      "left": "clarity",
+      "right": "brevity",
+      "principle": "Shorter is not automatically clearer."
+    },
+    {
+      "left": "clarity",
+      "right": "more detail",
+      "principle": "More information does not automatically expose the important structure."
+    },
+    {
+      "left": "clarity",
+      "right": "confidence",
+      "principle": "A statement can become more confident while becoming less faithful to the evidence."
+    },
+    {
+      "left": "clarity",
+      "right": "polish",
+      "principle": "Smooth language can conceal changed meaning."
+    },
+    {
+      "left": "clarity",
+      "right": "technical vocabulary",
+      "principle": "Specialized language is useful only when it improves precision or serves the audience."
+    },
+    {
+      "left": "ambiguity",
+      "right": "error",
+      "principle": "A sentence may be factually possible while supporting more than one reasonable interpretation."
+    },
+    {
+      "left": "missing step",
+      "right": "permission to invent a step",
+      "principle": "A missing relationship should be exposed rather than manufactured."
+    },
+    {
+      "left": "formal exactness",
+      "right": "explanatory accessibility",
+      "principle": "A formally precise statement may still need an explanatory layer."
+    }
+  ],
+  "clarity_balance": {
+    "too_little": "Important structure is missing.",
+    "useful_middle": "Enough structure is visible for the intended audience and purpose.",
+    "too_much": "Important structure becomes buried in noise.",
+    "universal_ideal_length": false
+  },
+  "audience": {
+    "principle": "Clarity is partly relational.",
+    "questions": [
+      "Clear to whom?",
+      "For what purpose?",
+      "What does this audience already know?",
+      "What must this audience be able to inspect or do?"
+    ],
+    "example": {
+      "concept": "software state transition",
+      "audiences": [
+        "first-time student",
+        "software developer"
+      ],
+      "meaning_should_persist": true,
+      "presentation_may_change": true
+    }
+  },
+  "shared_visibility": {
+    "pattern": [
+      "What I Mean",
+      "What I Express",
+      "What Another Person Can Inspect"
+    ],
+    "principle": "The explanation should expose enough of the internal structure for another observer to inspect the intended meaning."
+  },
+  "ambiguity": {
+    "definition": "A representation reasonably supports more than one interpretation.",
+    "example": "Alex told Jordan that their result was wrong.",
+    "possible_interpretations": [
+      "Jordan's result was wrong.",
+      "Alex's result was wrong.",
+      "A shared result was wrong."
+    ],
+    "clarity_action": "Specify the intended relationship."
+  },
+  "definitions": {
+    "principle": "An important familiar word may require an explicit operational or contextual meaning.",
+    "candidate_terms": [
+      "stable",
+      "finished",
+      "safe",
+      "available",
+      "successful",
+      "aligned",
+      "coherent"
+    ],
+    "pattern": {
+      "term": null,
+      "meaning_here": null
+    }
+  },
+  "hidden_context": {
+    "pattern": [
+      "complete internal picture",
+      "partial explanation",
+      "listener"
+    ],
+    "problem": "The writer or speaker automatically supplies context that never appears in the explanation.",
+    "clarity_question": "What information does another observer need in order to inspect the same structure?"
+  },
+  "missing_steps": {
+    "example": [
+      "The service was slow.",
+      "Therefore database capacity was increased."
+    ],
+    "clarity_problem": "The reasoning connecting observation and action is hidden.",
+    "preferred_if_unknown": "The evidence connecting the slowdown to the capacity decision is not provided.",
+    "principle": "Exposure of a gap is a Clarity improvement."
+  },
+  "do_not_invent_middle": {
+    "pattern": [
+      "A",
+      "?",
+      "C"
+    ],
+    "rule": "Do not invent B because A -> B -> C would produce a smoother explanation.",
+    "preferred_statement": "The relationship between A and C is not yet explicit."
+  },
+  "observation_interpretation_action": {
+    "fields": [
+      "Observation",
+      "Interpretation",
+      "Possible Action"
+    ],
+    "purpose": "Separate what happened, what it may mean, and what might be done."
+  },
+  "claim_evidence_assumption": {
+    "fields": [
+      "Claim",
+      "Evidence",
+      "Assumption",
+      "Uncertainty"
+    ],
+    "purpose": "Expose layers that may otherwise be compressed into one persuasive sentence."
+  },
+  "confidence_ladder": {
+    "example": [
+      "The pattern may indicate a relationship.",
+      "The pattern indicates a relationship.",
+      "The pattern proves the relationship."
+    ],
+    "principle": "Changes in confidence alter the claim rather than merely its style.",
+    "clarity_rule": "Preserve the epistemic strength supported by the original."
+  },
+  "uncertainty": {
+    "must_be_preserved_when_meaningful": true,
+    "useful_phrases": [
+      "The available evidence suggests...",
+      "One possible interpretation is...",
+      "This relationship has not yet been established.",
+      "Additional information is needed.",
+      "The result is consistent with...",
+      "The current model does not explain..."
+    ],
+    "principle": "Uncertainty can be precise."
+  },
+  "precise_uncertainty": {
+    "weak": "We're not sure.",
+    "stronger_structure": [
+      "We observed A and B.",
+      "We do not yet know whether A caused B.",
+      "Observation C would help test that relationship."
+    ],
+    "lesson": "A clear uncertainty statement identifies what is known, what is unknown, and which relationship remains unresolved."
+  },
+  "uncertainty_without_vagueness": {
+    "avoid": "It may perhaps possibly be conceivable that something could be happening.",
+    "question": "What exactly am I uncertain about?",
+    "principle": "Caution should remain informative."
+  },
+  "meaning_drift": {
+    "definition": "A revision changes the strength, scope, conditions, meaning, or attribution of an earlier statement.",
+    "example": [
+      "The evidence may support the explanation.",
+      "The evidence supports the explanation.",
+      "The evidence confirms the explanation."
+    ],
+    "changed_dimension": "epistemic strength",
+    "principle": "A cleaner sentence is not a Clarity improvement if it becomes a different claim."
+  },
+  "before_after_check": {
+    "fields": [
+      "BEFORE",
+      "AFTER",
+      "WHAT CHANGED",
+      "WHAT WAS REMOVED",
+      "WHAT WAS ADDED",
+      "MEANING PRESERVED",
+      "MEANING CHANGED"
+    ],
+    "purpose": "Make revision itself inspectable."
+  },
+  "representation": {
+    "principle": "The clearest representation depends on what relationship needs to be inspected.",
+    "forms": [
+      "prose",
+      "list",
+      "table",
+      "sequence",
+      "state transition",
+      "simple diagram",
+      "formal statement",
+      "plain-language explanation"
+    ],
+    "after_change_ask": [
+      "What became easier to see?",
+      "What became harder to see?",
+      "What disappeared?",
+      "Did meaning change?"
+    ]
+  },
+  "representation_tradeoffs": {
+    "table": {
+      "strength": "comparison",
+      "possible_loss": [
+        "chronology",
+        "nuance",
+        "explanation"
+      ]
+    },
+    "diagram": {
+      "strength": "relationships",
+      "possible_loss": [
+        "qualifications",
+        "edge cases",
+        "uncertainty"
+      ]
+    },
+    "prose": {
+      "strength": "nuance",
+      "possible_loss": "rapid structural comparison"
+    },
+    "formal_notation": {
+      "strength": "precision",
+      "possible_loss": "accessibility for unfamiliar audiences"
+    }
+  },
+  "labels": {
+    "example_unlabeled": [
+      20,
+      20,
+      95
+    ],
+    "example_labeled": [
+      "Sensor A: 20 °C",
+      "Sensor B: 20 °C",
+      "Sensor C: 95 °C"
+    ],
+    "additional_context": "Sensor C location: exhaust vent",
+    "lesson": "Labels and context can materially change what becomes inspectable."
+  },
+  "units": {
+    "principle": "Units are part of meaning when interpreting quantitative values.",
+    "examples": [
+      "20 °C",
+      "5 km",
+      "60 km/h"
+    ],
+    "warning": "Do not invent units for unlabeled source values and then present them as though they came from the source."
+  },
+  "sequence": {
+    "principle": "Order belongs to the meaning when actions depend on one another.",
+    "example": [
+      "Turn off the computer.",
+      "Save your work."
+    ],
+    "question": "Does the ordering make the instruction usable and safe?"
+  },
+  "conditions": {
+    "principle": "A condition may materially change an instruction.",
+    "example": {
+      "less_clear": "Restart the service.",
+      "conditioned": "If configuration validation succeeds, restart the service."
+    }
+  },
+  "exceptions": {
+    "principle": "An exception is part of a rule when it changes when the rule applies.",
+    "example": {
+      "rule": "Never delete archived files.",
+      "exception": "Expired test archives may be deleted after review."
+    }
+  },
+  "technical_clarity": {
+    "problem_pattern": "Complex behavioral semantics compressed into one ambiguous sentence.",
+    "preferred_structure": [
+      "input",
+      "action",
+      "success condition",
+      "failure condition",
+      "continuation behavior",
+      "logging or output behavior",
+      "unspecified behavior"
+    ],
+    "principle": "If source behavior is unspecified, label it unspecified rather than inventing implementation behavior."
+  },
+  "technical_example": {
+    "source": "The script processes files from the input directory and if there's a problem it doesn't process them and writes the problem to the log unless logging isn't enabled.",
+    "questions": [
+      "Does one file failure stop all processing?",
+      "Is only the failed file skipped?",
+      "Does processing continue?",
+      "What does them refer to?",
+      "What happens if logging is disabled?"
+    ],
+    "clarity_result": "Some behavior remains unspecified."
+  },
+  "clarity_can_expose_design_gaps": {
+    "principle": "Unclear documentation may reveal behavior that was never actually decided.",
+    "example_question": "What happens after failure?",
+    "possible_result": "The underlying design has no answer yet."
+  },
+  "clarity_can_expose_coherence": {
+    "pattern": [
+      "A",
+      "therefore",
+      "D"
+    ],
+    "expanded": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "possible_discovery": "B -> C is unsupported.",
+    "return_to": "coherence.json"
+  },
+  "clarity_can_expose_alignment": {
+    "possible_discovery": "Two matching labels carry different meanings.",
+    "return_to": "alignment.json"
+  },
+  "clarity_can_expose_awareness": {
+    "possible_discovery": "The revision contains information that was never in the observation or source.",
+    "return_to": "awareness.json"
+  },
+  "examples": {
+    "purpose": "Give abstract definitions a concrete place to land.",
+    "rule": "Use varied examples and identify the shared structure.",
+    "warning": "One repeated example domain can accidentally become the learner's definition of the concept."
+  },
+  "detail": {
+    "too_little": "ambiguity or missing structure",
+    "too_much": "important relationship buried",
+    "target": "minimum useful explanation",
+    "definition": "The smallest explanation that still preserves and exposes what matters for the task."
+  },
+  "plain_and_precise": {
+    "pattern": [
+      "plain explanation",
+      "precise definition",
+      "example"
+    ],
+    "principle": "Plain language and technical precision do not need to be opposites."
+  },
+  "formalization": {
+    "principle": "Formalization can increase precision while decreasing accessibility for audiences unfamiliar with the notation.",
+    "pattern": [
+      "formal statement",
+      "plain-language interpretation"
+    ],
+    "mapping_must_remain_inspectable": true
+  },
+  "explore": {
+    "phase": "experience",
+    "purpose": "Experience the difference between personally understanding something and making it inspectable to another observer.",
+    "activities": [
+      "terrible directions",
+      "drawing instructions",
+      "ambiguous sentences",
+      "before-and-after revisions",
+      "hidden steps",
+      "technical descriptions",
+      "tables and labels",
+      "units",
+      "sequence",
+      "conditions",
+      "AI rewriting",
+      "formal explanation"
+    ],
+    "primary_habit": "After a rewrite sounds better, ask whether the meaning survived."
+  },
+  "explore_questions": [
+    "What does the other person need to know?",
+    "Which context remained inside the author's head?",
+    "What relationship became easier to see?",
+    "What disappeared during revision?",
+    "Did any uncertainty disappear?",
+    "Did the claim become stronger?"
+  ],
+  "practice": {
+    "phase": "deliberate application",
+    "purpose": "Practice improving inspectability while preserving meaning and uncertainty.",
+    "topics": [
+      "sentence restructuring",
+      "qualification preservation",
+      "confidence ladders",
+      "definitions",
+      "ambiguity",
+      "missing steps",
+      "before-and-after comparison",
+      "claim/evidence/assumption separation",
+      "instructions",
+      "technical behavior",
+      "representation changes",
+      "units",
+      "examples",
+      "detail management",
+      "audience adaptation",
+      "formal translation",
+      "AI rewrite audits",
+      "provenance",
+      "precise uncertainty"
+    ],
+    "primary_artifact": "Clarity Record"
+  },
+  "practice_patterns": [
+    {
+      "id": "preserve_qualification",
+      "preserve": [
+        "suggest",
+        "may",
+        "not enough information",
+        "cause not established"
+      ]
+    },
+    {
+      "id": "confidence_ladder",
+      "produce": [
+        "more cautious",
+        "same strength but clearer",
+        "too strong"
+      ]
+    },
+    {
+      "id": "remove_ambiguity",
+      "task": "Produce two explicit sentences representing two possible meanings of the ambiguous source."
+    },
+    {
+      "id": "show_middle",
+      "task": "Expose intermediate reasoning if supplied; otherwise label the missing relationship."
+    },
+    {
+      "id": "ai_rewrite_audit",
+      "fields": [
+        "Added Claims",
+        "Removed Qualifications",
+        "Changed Definitions",
+        "Preserved Meaning",
+        "Possible Drift"
+      ]
+    }
+  ],
+  "student_record": {
+    "name": "Clarity Record",
+    "purpose": "Make both the revision and the preservation of meaning inspectable.",
+    "fields": [
+      "Original",
+      "Audience",
+      "Purpose",
+      "Meaning to Preserve",
+      "Ambiguous Terms",
+      "Hidden Assumptions",
+      "Missing Steps",
+      "Missing Information",
+      "Uncertainty",
+      "Chosen Representation",
+      "Revised Version",
+      "What Changed",
+      "What Was Removed",
+      "What Was Added",
+      "Meaning Preserved",
+      "Possible Meaning Drift",
+      "Current Judgment",
+      "What Still Needs Clarification"
+    ],
+    "all_fields_required": false,
+    "judgment_states": [
+      "Clear",
+      "Partly Clear",
+      "Unclear"
+    ]
+  },
+  "mastery": {
+    "phase": "demonstration",
+    "fresh_problem": true,
+    "scenario": {
+      "type": "vague technical update",
+      "source": "We changed the login system because some users were having problems and the old process wasn't working correctly in some cases, so the new process should make things more reliable and secure while also making login easier, although some users may need to do something different the first time."
+    },
+    "goal": "Make the update inspectable without inventing missing information or silently strengthening its claims."
+  },
+  "mastery_source_claims": [
+    "The login system changed.",
+    "Some users had problems with the old process.",
+    "The old process did not work correctly in some cases.",
+    "The new process is expected to improve reliability.",
+    "The new process is expected to improve security.",
+    "The new process is expected to make login easier.",
+    "Some users may need to do something different the first time."
+  ],
+  "mastery_unknowns": [
+    "What exact problems occurred?",
+    "What does some cases mean?",
+    "What changed in the login process?",
+    "Why is reliability expected to improve?",
+    "Why is security expected to improve?",
+    "Which users are affected?",
+    "What must affected users do?",
+    "When does the change begin?"
+  ],
+  "mastery_structure": {
+    "possible_fields": [
+      "What Changed",
+      "Why",
+      "Expected Improvements",
+      "Possible User Impact",
+      "Still Unspecified"
+    ],
+    "principle": "Making missing information visible is itself a Clarity improvement."
+  },
+  "mastery_warning": {
+    "example_invention": "Users probably need to reset their passwords.",
+    "rule": "Do not add this as a fact unless the source establishes it."
+  },
+  "mastery_alignment_check": {
+    "question": "Does each important part of the revision correspond to something in the source?",
+    "principle": "If a revised statement has no source partner, investigate it."
+  },
+  "mastery_coherence_check": {
+    "question": "Does the clearer explanation preserve the supported relationships without adding stronger causal structure?"
+  },
+  "mastery_clarity_check": {
+    "reader_should_identify": [
+      "what changed",
+      "why it changed",
+      "expected benefits",
+      "possible user impact",
+      "what remains unknown"
+    ]
+  },
+  "mastery_criteria": [
+    "identify the original meaning",
+    "identify what must be preserved",
+    "detect ambiguity",
+    "expose missing steps",
+    "preserve uncertainty",
+    "avoid inventing detail",
+    "choose an appropriate representation",
+    "compare original and revision",
+    "detect meaning drift",
+    "make the important structure inspectable"
+  ],
+  "mastery_not_required": [
+    "shortest explanation",
+    "most technical language",
+    "removal of every detail",
+    "elimination of uncertainty",
+    "confident tone",
+    "Lean",
+    "AI",
+    "matching another learner's wording"
+  ],
+  "retry": {
+    "if_revision_is_too_polished": {
+      "action": "Compare every important claim with the original.",
+      "question": "What is the source for this claim?"
+    },
+    "if_revision_is_much_longer": {
+      "question": "Did I clarify the structure or merely add words?"
+    },
+    "if_uncertainty_disappeared": {
+      "action": "Restore the qualification unless evidence supports the stronger claim."
+    }
+  },
+  "assessment": {
+    "resource": "../shared/assessment.json",
+    "awareness_check": {
+      "optional": true,
+      "may_ask": [
+        "identify ambiguity",
+        "identify missing steps",
+        "detect changed meaning",
+        "detect lost uncertainty",
+        "identify hidden assumptions",
+        "choose a clearer representation"
+      ]
+    },
+    "mastery": {
+      "required_for_badge": true,
+      "fresh_problem": true,
+      "retryable": true
+    }
+  },
+  "badge": {
+    "resource": "../shared/badges.json",
+    "name": "Clarity Badge",
+    "meaning": "I can make important structure easier to understand and inspect while preserving what matters.",
+    "guide_milestone": 4,
+    "professional_certification": false,
+    "accreditation": false
+  },
+  "ai_companion": {
+    "resource": "../shared/ai_companion.json",
+    "optional": true,
+    "recommended_prompts": [
+      "Rewrite this more clearly without adding new claims.",
+      "Identify ambiguous terms.",
+      "Separate observation, interpretation, and assumption.",
+      "Tell me what you removed from your rewrite.",
+      "Compare the original and revision for meaning drift.",
+      "Identify any qualification that disappeared.",
+      "Suggest another representation without adding facts."
+    ],
+    "learner_judgment_primary": true
+  },
+  "ai_rewrite_risk": {
+    "pattern": {
+      "original": "The results may indicate a relationship.",
+      "bad_revision": "The results demonstrate a clear relationship."
+    },
+    "problem": "Writing became smoother while the claim became stronger.",
+    "principle": "AI-generated polish must be audited against the source meaning."
+  },
+  "formal_companion": {
+    "path": "../lean/04_clarity.json",
+    "human_source": "docs/5Guides/lean/04_clarity.lean",
+    "optional": true,
+    "purpose": "Compare proof representations while preserving the same formal result.",
+    "formal_question": "Which representation makes the relevant proof structure easier to inspect for this learner?"
+  },
+  "earlier_guides_inside_clarity": {
+    "awareness": {
+      "question": "What did the original actually say?"
+    },
+    "alignment": {
+      "question": "Does the revised version correspond to the original meaning?"
+    },
+    "coherence": {
+      "question": "Does the clarified structure still hold together?"
+    }
+  },
+  "bridge_to_continuity": {
+    "question": "What persists through change?",
+    "reason": "Once an explanation is clear, later revisions create a new problem: whether meaning, definitions, relationships, assumptions, and uncertainty survive over time.",
+    "next": "continuity.json"
+  },
+  "boundaries": {
+    "clarity_is_not": [
+      "shorter",
+      "longer",
+      "more confident",
+      "more technical",
+      "more polished",
+      "more decorative",
+      "automatic simplification"
+    ],
+    "clarity_is": [
+      "visible meaning",
+      "visible relationships",
+      "visible assumptions",
+      "visible conditions",
+      "visible uncertainty",
+      "appropriate representation",
+      "inspectability"
+    ]
+  },
+  "provenance_support": {
+    "pattern": [
+      "Claim",
+      "Source",
+      "Source Supports",
+      "Interpretation"
+    ],
+    "principle": "A source should not be asked to support a claim it never made."
+  },
+  "revision_history": {
+    "useful_when": "An important claim changes over time.",
+    "example": [
+      "Version 1: The result may support the model.",
+      "Version 2: The result supports the model.",
+      "Version 3: The result confirms the model."
+    ],
+    "continuity_bridge": "Clarity detects the change; Continuity traces it."
+  },
+  "provenance": {
+    "source_type": "combined human-facing Guide abstraction",
+    "source_documents": [
+      "docs/5Guides/clarity/index.md",
+      "docs/5Guides/clarity/explore.md",
+      "docs/5Guides/clarity/practice.md",
+      "docs/5Guides/clarity/mastery.md"
+    ],
+    "formal_source": "docs/5Guides/lean/04_clarity.lean",
+    "transformation": "Four human-facing Clarity documents compacted into one structured AI learning object.",
+    "preserve": [
+      "core question",
+      "meaning preservation",
+      "ambiguity",
+      "definitions",
+      "missing steps",
+      "representation choice",
+      "audience",
+      "uncertainty",
+      "meaning drift",
+      "student record",
+      "mastery criteria",
+      "AACCC progression"
+    ],
+    "do_not_infer": [
+      "missing facts",
+      "stronger evidence than the source provides",
+      "certainty where the source preserves uncertainty",
+      "causal relationships not represented by the source",
+      "units not supplied by the source",
+      "empirical validation from Lean",
+      "professional certification from the badge"
+    ]
+  },
+  "ai_behavior": {
+    "must": [
+      "Identify what meaning must survive revision.",
+      "Preserve qualifications and uncertainty.",
+      "Expose ambiguity rather than resolving it by guessing.",
+      "Mark missing steps rather than inventing them.",
+      "Choose representation according to audience and purpose.",
+      "Compare revised claims against the source.",
+      "Detect stronger or weaker epistemic language.",
+      "Separate source information from interpretation.",
+      "Return to earlier AACCC Guides when clarification exposes an earlier structural problem."
+    ],
+    "must_not": [
+      "equate brevity with Clarity",
+      "equate confidence with Clarity",
+      "invent missing information",
+      "silently strengthen a claim",
+      "silently weaken a qualification",
+      "remove uncertainty merely for smoother prose",
+      "invent units or labels and attribute them to the source",
+      "treat formatting as a substitute for conceptual structure",
+      "require Lean or AI for mastery"
+    ]
+  },
+  "related": {
+    "module": "../module.json",
+    "index": "../index.json",
+    "previous_guide": "coherence.json",
+    "next_guide": "continuity.json",
+    "assessment": "../shared/assessment.json",
+    "badges": "../shared/badges.json",
+    "ai_companion": "../shared/ai_companion.json",
+    "formal_companion": "../lean/04_clarity.json"
+  },
+  "machine_context": {
+    "ai_parseable": true,
+    "role": "guide-learning-object",
+    "guide": "Clarity",
+    "guide_order": 4,
+    "core_question": "Can this be understood and inspected?",
+    "human_source_count": 4,
+    "explore_present": true,
+    "practice_present": true,
+    "mastery_present": true,
+    "student_record_present": true,
+    "badge_present": true,
+    "meaning_preservation_required": true,
+    "ambiguity_preserved_until_resolved": true,
+    "missing_steps_must_not_be_invented": true,
+    "uncertainty_preserving": true,
+    "meaning_drift_detection": true,
+    "audience_sensitive": true,
+    "representation_sensitive": true,
+    "lean_optional": true,
+    "ai_optional": true,
+    "provenance_aware": true,
+    "next": "Continuity"
+  }
+}

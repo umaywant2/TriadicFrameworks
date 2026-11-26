@@ -1,0 +1,393 @@
+{
+  "module": {
+    "id": "5Guides",
+    "name": "5Guides",
+    "title": "5Guides — Awareness, Alignment, Coherence, Clarity, Continuity",
+    "edition": "AI Edition",
+    "framework": "AACCC",
+    "category": "student-learning",
+    "version": "1.0",
+    "status": "active",
+    "language": "en",
+    "publisher": "TriadicFrameworks",
+    "author": "Nawder Loswin (pen name)",
+    "human_source_root": "docs/5Guides",
+    "ai_edition_root": "docs/book/AI_Edition/5Guides",
+    "description": "Machine-oriented representation of the 5Guides student-learning pathway through Awareness, Alignment, Coherence, Clarity, and Continuity.",
+    "purpose": "Expose the structure, learning sequence, assessment boundaries, provenance, optional AI role, formal companions, and independent-application destination of 5Guides in a compact AI-readable form."
+  },
+  "learning_model": {
+    "framework": "AACCC",
+    "sequence": [
+      {
+        "order": 1,
+        "id": "awareness",
+        "name": "Awareness",
+        "question": "What am I observing?",
+        "artifact": "Awareness Record",
+        "badge": "Awareness Badge"
+      },
+      {
+        "order": 2,
+        "id": "alignment",
+        "name": "Alignment",
+        "question": "What corresponds?",
+        "artifact": "Alignment Record",
+        "badge": "Alignment Badge"
+      },
+      {
+        "order": 3,
+        "id": "coherence",
+        "name": "Coherence",
+        "question": "Does this hold together?",
+        "artifact": "Coherence Record",
+        "badge": "Coherence Badge"
+      },
+      {
+        "order": 4,
+        "id": "clarity",
+        "name": "Clarity",
+        "question": "Can this be understood and inspected?",
+        "artifact": "Clarity Record",
+        "badge": "Clarity Badge"
+      },
+      {
+        "order": 5,
+        "id": "continuity",
+        "name": "Continuity",
+        "question": "What persists through change?",
+        "artifact": "Continuity Record",
+        "badge": "Continuity Badge"
+      }
+    ],
+    "progression": [
+      "Awareness",
+      "Alignment",
+      "Coherence",
+      "Clarity",
+      "Continuity",
+      "Independent Application"
+    ],
+    "learning_rhythm": [
+      "Experience",
+      "Notice",
+      "Inspect",
+      "Apply",
+      "Demonstrate",
+      "Reflect",
+      "Continue"
+    ],
+    "guide_phases": [
+      "explore",
+      "practice",
+      "mastery"
+    ],
+    "completion_destination": "Independent Application"
+  },
+  "ai_edition_model": {
+    "format": "JSON",
+    "json_only": true,
+    "purpose": "Represent human-facing learning materials as explicit structured objects rather than reproduce Markdown formatting.",
+    "transformation_rule": "Preserve educational meaning, uncertainty, provenance, formalization boundaries, and mastery criteria while exposing structure for AI consumption.",
+    "guide_compaction": {
+      "human_source_pattern": [
+        "index.md",
+        "explore.md",
+        "practice.md",
+        "mastery.md"
+      ],
+      "ai_target_pattern": "guides/{guide}.json",
+      "rule": "Combine each four-file human Guide into one structured Guide object."
+    },
+    "preserve": [
+      "core questions",
+      "learning objectives",
+      "exploration sequence",
+      "practice sequence",
+      "mastery criteria",
+      "student records",
+      "uncertainty",
+      "assessment boundaries",
+      "privacy boundaries",
+      "formalization boundaries",
+      "provenance",
+      "independent application"
+    ],
+    "avoid": [
+      "invented evidence",
+      "invented provenance",
+      "forced mappings",
+      "hidden assumptions",
+      "empirical-validation claims derived only from formal verification",
+      "certification claims",
+      "required AI dependency"
+    ]
+  },
+  "guide_object_contract": {
+    "recommended_fields": [
+      "id",
+      "name",
+      "order",
+      "core_question",
+      "purpose",
+      "learning_objectives",
+      "key_distinctions",
+      "explore",
+      "practice",
+      "mastery",
+      "student_record",
+      "assessment",
+      "badge",
+      "ai_companion",
+      "formal_companion",
+      "boundaries",
+      "provenance",
+      "next_guide"
+    ],
+    "student_record_fields_may_vary_by_guide": true,
+    "mastery_must_use_fresh_problem": true,
+    "retry_supported": true,
+    "uncertainty_may_be_valid_outcome": true
+  },
+  "assessment_contract": {
+    "awareness_check": {
+      "optional": true,
+      "purpose": "Identify what the learner noticed after first exposure and what may deserve another look."
+    },
+    "mastery_checkpoint": {
+      "required_for_badge": true,
+      "purpose": "Demonstrate practical use of the Guide skill on a fresh problem.",
+      "retryable": true
+    },
+    "scoring": {
+      "primary_model": "criterion-based",
+      "competitive_ranking": false,
+      "leaderboards": false
+    },
+    "principles": [
+      "Assess the structural skill rather than vocabulary recall.",
+      "Make mastery criteria visible.",
+      "Preserve uncertainty when evidence is insufficient.",
+      "Use retry as part of learning.",
+      "Do not require optional feedback for mastery."
+    ]
+  },
+  "badge_contract": {
+    "badges": [
+      "Awareness Badge",
+      "Alignment Badge",
+      "Coherence Badge",
+      "Clarity Badge",
+      "Continuity Badge"
+    ],
+    "completion_milestone": "Five Guides Completion",
+    "meaning": "Completed the relevant learning journey and demonstrated its defined skill.",
+    "professional_certification": false,
+    "accreditation": false,
+    "competitive_ranking": false,
+    "artificial_scarcity": false
+  },
+  "ai_companion_contract": {
+    "optional": true,
+    "role": "thinking companion",
+    "learner_judgment_primary": true,
+    "may_support": [
+      "alternate explanations",
+      "practice generation",
+      "assumption challenges",
+      "counter-mappings",
+      "coherence challenges",
+      "clarity comparisons",
+      "continuity comparisons",
+      "formal explanations"
+    ],
+    "must_not_replace": [
+      "learner judgment",
+      "learner mastery demonstration",
+      "source verification",
+      "formal compiler verification"
+    ],
+    "principle": "AI can accompany the reasoning. The learner still owns the journey."
+  },
+  "privacy_contract": {
+    "privacy_first": true,
+    "identity_required_for_learning": false,
+    "ai_required": false,
+    "lean_required": false,
+    "student_footprint_required": false,
+    "principle": "Learning does not grant us permission to observe the learner.",
+    "separate_domains": [
+      "learning",
+      "mastery",
+      "badge",
+      "optional feedback"
+    ],
+    "student_footprint": {
+      "voluntary": true,
+      "country": "optional",
+      "reflection": "optional",
+      "name_required": false,
+      "email_required": false,
+      "public_profile_required": false
+    }
+  },
+  "formalization_contract": {
+    "formal_verification_question": "Given these definitions and assumptions, does the conclusion follow?",
+    "modeling_question": "Do these definitions and assumptions represent what we intended to describe?",
+    "empirical_validation_separate": true,
+    "required_distinctions": [
+      "source statement",
+      "interpretation",
+      "formal abstraction",
+      "added assumptions",
+      "verified consequence",
+      "formalization boundary"
+    ],
+    "recommended_prompts": [
+      "What did the source state?",
+      "What did the formal model define?",
+      "What was simplified?",
+      "What assumptions were added?",
+      "What did Lean prove?",
+      "What did Lean not prove?",
+      "What would be required to go further?"
+    ]
+  },
+  "lean_contract": {
+    "optional": true,
+    "source_root": "docs/5Guides/lean",
+    "ai_root": "docs/book/AI_Edition/5Guides/lean",
+    "compiler_validation": {
+      "status": "compiler-checked",
+      "files": "01-11",
+      "lean_version": "4.36.0",
+      "target": "x86_64-w64-windows-gnu"
+    },
+    "validation_boundary": "Compiler acceptance verifies the formal artifacts under the stated Lean environment. It does not establish empirical validity of the broader source frameworks.",
+    "recommended_artifact_fields": [
+      "id",
+      "source_file",
+      "role",
+      "purpose",
+      "definitions",
+      "assumptions",
+      "theorems",
+      "verified_consequences",
+      "compiler_validation",
+      "formalization_boundary",
+      "student_questions",
+      "lean_source",
+      "provenance"
+    ]
+  },
+  "origin_contract": {
+    "optional": true,
+    "lineage": [
+      "TFT",
+      "Triads",
+      "Theorems",
+      "RTT",
+      "AACCC",
+      "5Guides"
+    ],
+    "boundary": "Project lineage represents development and interpretation, not a strict proof chain and not a claim that earlier materials originally contained the Five Guides in their present form.",
+    "principles": [
+      "Preserve source language separately from later interpretation.",
+      "Distinguish provenance from empirical validation.",
+      "Do not infer historical influence from structural similarity alone.",
+      "Preserve revisions, abandoned relationships, and unresolved gaps when relevant.",
+      "Allow AACCC to inspect its own project lineage."
+    ]
+  },
+  "provenance_contract": {
+    "human_source_root": "docs/5Guides",
+    "ai_edition_root": "docs/book/AI_Edition/5Guides",
+    "transformation_type": "structured educational abstraction",
+    "source_priority": "human-source material",
+    "preserve_source_boundaries": true,
+    "preserve_uncertainty": true,
+    "preserve_formalization_boundaries": true,
+    "do_not_upgrade": [
+      "similarity to influence",
+      "formal verification to empirical validation",
+      "interpretation to source statement",
+      "possible relationship to established relationship",
+      "learning badge to professional certification"
+    ]
+  },
+  "files": {
+    "root": [
+      "module.json",
+      "index.json"
+    ],
+    "guides": [
+      "guides/awareness.json",
+      "guides/alignment.json",
+      "guides/coherence.json",
+      "guides/clarity.json",
+      "guides/continuity.json"
+    ],
+    "shared": [
+      "shared/ai_companion.json",
+      "shared/assessment.json",
+      "shared/badges.json",
+      "shared/privacy.json",
+      "shared/student_footprint.json"
+    ],
+    "origins": [
+      "origins/index.json",
+      "origins/tft.json",
+      "origins/theorems.json",
+      "origins/rtt.json",
+      "origins/formalization.json"
+    ],
+    "lean": [
+      "lean/index.json",
+      "lean/01_awareness.json",
+      "lean/02_alignment.json",
+      "lean/03_coherence.json",
+      "lean/04_clarity.json",
+      "lean/05_continuity.json",
+      "lean/06_tft_origin.json",
+      "lean/07_nawderian_theorem.json",
+      "lean/08_nawderian_set_theorem.json",
+      "lean/09_temperature_engine_theorem.json",
+      "lean/10_unified_resonance_theorem.json",
+      "lean/11_rtt_origin.json"
+    ]
+  },
+  "file_count": {
+    "root": 2,
+    "guides": 5,
+    "shared": 5,
+    "origins": 5,
+    "lean": 12,
+    "total": 29
+  },
+  "navigation": {
+    "entry": "index.json",
+    "guide_order": [
+      "guides/awareness.json",
+      "guides/alignment.json",
+      "guides/coherence.json",
+      "guides/clarity.json",
+      "guides/continuity.json"
+    ],
+    "optional_paths": {
+      "shared": "shared/",
+      "origins": "origins/index.json",
+      "lean": "lean/index.json"
+    },
+    "destination": "Independent Application"
+  },
+  "machine_context": {
+    "ai_parseable": true,
+    "json_only": true,
+    "student_facing_source": true,
+    "provenance_aware": true,
+    "uncertainty_preserving": true,
+    "formal_companions": true,
+    "privacy_first": true,
+    "independent_application_target": true
+  }
+}

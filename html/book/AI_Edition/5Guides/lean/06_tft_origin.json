@@ -1,0 +1,581 @@
+{
+  "document": {
+    "id": "5Guides-lean-06-tft-origin",
+    "type": "formal-origin-companion",
+    "name": "TFT Origin",
+    "title": "Lean 4 Companion — TFT Origin",
+    "edition": "AI Edition",
+    "module": "5Guides",
+    "framework": "AACCC",
+    "origin": "TFT",
+    "formal_order": 6,
+    "version": "1.0",
+    "status": "active",
+    "language": "en",
+    "source": "docs/5Guides/lean/06_tft_origin.lean",
+    "ai_path": "docs/book/AI_Edition/5Guides/lean/06_tft_origin.json",
+    "origin_path": "../origins/tft.json",
+    "lean_index": "index.json"
+  },
+  "purpose": {
+    "primary": "Provide a small formal teaching abstraction inspired by the triadic structural organization present in TFT.",
+    "formal_goal": "Represent a generic three-position structure and inspect component-wise mapping, identity, composition, and structural persistence.",
+    "educational_principle": "Formalize the smallest useful structure first, and preserve the boundary between that abstraction and the broader source framework."
+  },
+  "source_alignment": {
+    "source_artifact": "../origins/tft.json",
+    "source_concept": "TFT contains recurring triadic organization, operators, mathematical notation, recursion, and broader exploratory interpretations.",
+    "selected_structure": "Three distinguishable positions treated as a generic triad.",
+    "formal_abstraction": "Triad α",
+    "relationship": "inspired-by / structurally abstracted-from",
+    "complete_equivalence": false,
+    "complete_tft_formalization": false
+  },
+  "abstraction_boundary": {
+    "preserved_from_source": [
+      "three distinguishable positions",
+      "ordered component correspondence",
+      "possibility of transformation",
+      "structural persistence across transformed values"
+    ],
+    "not_formalized_here": [
+      "complete TFT framework",
+      "Light operator semantics",
+      "Darkness operator semantics",
+      "full recursive 3-6-9 interpretation",
+      "TFT time proposals",
+      "TFT gravitational interpretations",
+      "TFT consciousness interpretations",
+      "empirical claims associated with broader TFT material"
+    ],
+    "principle": "The formal artifact is deliberately much smaller than its project-lineage source."
+  },
+  "formal_model": {
+    "primary_structure": {
+      "name": "Triad",
+      "parameter": "α",
+      "conceptual_shape": {
+        "first": "α",
+        "second": "α",
+        "third": "α"
+      }
+    },
+    "interpretation": "A generic ordered three-position container whose components share a carrier type.",
+    "domain_specific_semantics_required": false
+  },
+  "positions": [
+    {
+      "id": "first",
+      "role": "first position",
+      "type": "α"
+    },
+    {
+      "id": "second",
+      "role": "second position",
+      "type": "α"
+    },
+    {
+      "id": "third",
+      "role": "third position",
+      "type": "α"
+    }
+  ],
+  "map_operation": {
+    "concept": "component-wise transformation",
+    "input": "Triad α",
+    "function": "f : α -> β",
+    "output": "Triad β",
+    "correspondence": [
+      "first maps to first",
+      "second maps to second",
+      "third maps to third"
+    ],
+    "structural_property": "The component values and carrier type may change while positional correspondence remains explicit."
+  },
+  "formal_targets": [
+    {
+      "id": "component_correspondence",
+      "name": "Component-wise Mapping",
+      "claim": "Mapping a function over a triad applies that function to each corresponding component.",
+      "aaccc_relevance": [
+        "Alignment",
+        "Clarity"
+      ]
+    },
+    {
+      "id": "identity",
+      "name": "Identity",
+      "claim": "Mapping the identity function over a triad leaves the triad unchanged.",
+      "aaccc_relevance": [
+        "Coherence",
+        "Continuity"
+      ]
+    },
+    {
+      "id": "composition",
+      "name": "Composition",
+      "claim": "Mapping one function and then another corresponds to mapping their composition.",
+      "aaccc_relevance": [
+        "Alignment",
+        "Coherence",
+        "Continuity"
+      ]
+    },
+    {
+      "id": "structural_persistence",
+      "name": "Structural Persistence",
+      "claim": "Component values may change while the three-position structure and positional correspondence remain identifiable.",
+      "aaccc_relevance": [
+        "Continuity"
+      ]
+    }
+  ],
+  "identity_property": {
+    "before": "Triad α",
+    "transformation": "identity",
+    "after": "same Triad α",
+    "continuity_interpretation": "The structure and component values remain unchanged under the identity map.",
+    "broader_claim": false
+  },
+  "composition_property": {
+    "initial": "Triad α",
+    "first_function": "f : α -> β",
+    "second_function": "g : β -> γ",
+    "sequential_form": "map g (map f t)",
+    "composed_form": "map (g composed with f) t",
+    "teaching_goal": "Inspect whether sequential and composed representations preserve the same component-wise transformation.",
+    "principle": "Composition is a formal property of the teaching structure and does not by itself establish broader TFT operator semantics."
+  },
+  "example_triad": {
+    "values": [
+      3,
+      6,
+      9
+    ],
+    "role": "Concrete example values used to make generic triadic transformation easier to inspect.",
+    "special_physical_significance_established": false,
+    "warning": "Use of 3, 6, and 9 as an example does not constitute formal or empirical proof that those values possess universal physical properties."
+  },
+  "example_transition": {
+    "state_0": [
+      3,
+      6,
+      9
+    ],
+    "transformation_1": "increment each component",
+    "state_1": [
+      4,
+      7,
+      10
+    ],
+    "transformation_2": "double each component",
+    "state_2": [
+      8,
+      14,
+      20
+    ],
+    "inspection_questions": [
+      "What changed?",
+      "What remained structurally identifiable?",
+      "Did first still correspond to first?",
+      "Did second still correspond to second?",
+      "Did third still correspond to third?"
+    ]
+  },
+  "structural_continuity": {
+    "before": {
+      "positions": [
+        "first",
+        "second",
+        "third"
+      ]
+    },
+    "after": {
+      "positions": [
+        "first",
+        "second",
+        "third"
+      ]
+    },
+    "values_may_change": true,
+    "positional_structure_persists": true,
+    "lesson": "Continuity may apply to structure even when component values change."
+  },
+  "aaccc_mapping": {
+    "awareness": {
+      "question": "What has actually been formalized?",
+      "answer_scope": [
+        "generic carrier type",
+        "three component positions",
+        "component-wise transformation",
+        "selected structural theorems"
+      ]
+    },
+    "alignment": {
+      "question": "What corresponds?",
+      "formal_answer": [
+        "first -> first",
+        "second -> second",
+        "third -> third"
+      ],
+      "boundary": "Positional correspondence does not imply that all semantic interpretations of the values are identical."
+    },
+    "coherence": {
+      "question": "Does this hold together?",
+      "formal_answer": "Identity and composition properties can be checked against the explicit map definition."
+    },
+    "clarity": {
+      "question": "Can this be understood and inspected?",
+      "formal_answer": "The generic Triad abstraction removes broader TFT interpretation so the selected structural relationships can be inspected directly."
+    },
+    "continuity": {
+      "question": "What persists through change?",
+      "formal_answer": "The ordered three-position structure can persist while mapped component values change."
+    }
+  },
+  "formal_awareness": {
+    "inspect": [
+      "What is α?",
+      "What fields belong to Triad α?",
+      "What does map do?",
+      "What theorem is being proved?",
+      "Which source ideas are absent?"
+    ],
+    "principle": "Do not interpret the generic structure as richer than the formal definitions actually make it."
+  },
+  "formal_alignment": {
+    "strong_mapping": [
+      "first component before transformation <-> first component after transformation",
+      "second component before transformation <-> second component after transformation",
+      "third component before transformation <-> third component after transformation"
+    ],
+    "unmapped_source_material": [
+      "Light",
+      "Darkness",
+      "complete recursive interpretation",
+      "broader physical semantics"
+    ],
+    "principle": "Unmapped source material should remain unmapped rather than being forced into generic fields."
+  },
+  "formal_coherence": {
+    "questions": [
+      "Does the map definition support the component-wise mapping claims?",
+      "Does identity mapping return the original structure?",
+      "Does sequential mapping correspond to composition?"
+    ],
+    "scope": "Internal behavior of the generic Triad teaching abstraction."
+  },
+  "formal_clarity": {
+    "benefit": "The abstraction makes a narrow structural claim easier to inspect by removing unrelated source complexity.",
+    "risk": "The simplified artifact may be mistaken for a complete definition of TFT.",
+    "required_language": "generic TFT-inspired teaching abstraction"
+  },
+  "formal_continuity": {
+    "inspect": [
+      "position preservation",
+      "value change",
+      "carrier-type change under map",
+      "identity preservation",
+      "composition behavior"
+    ],
+    "principle": "Continuity should specify what is expected to persist."
+  },
+  "assumptions": {
+    "structural": [
+      "The teaching object has exactly three named component positions.",
+      "The map operation acts component-wise.",
+      "The same supplied function is applied to each component."
+    ],
+    "environmental": [
+      "Lean's type system",
+      "Lean's equality semantics",
+      "the definitions represented in the source artifact"
+    ],
+    "not_assumed": [
+      "all real systems are fundamentally triadic",
+      "all useful models require three positions",
+      "3, 6, and 9 have special physical properties",
+      "TFT's broader source interpretations are empirically established"
+    ]
+  },
+  "verified_consequences": {
+    "scope": "The compiler-checked generic Triad teaching abstraction.",
+    "include": [
+      "selected component-wise mapping properties",
+      "identity behavior",
+      "composition behavior",
+      "selected structural consequences of the represented definitions"
+    ],
+    "conditional_on": [
+      "the supplied Triad definition",
+      "the supplied map definition",
+      "the represented theorem statements",
+      "Lean's formal environment"
+    ]
+  },
+  "formalization_boundary": {
+    "lean_establishes": [
+      "the represented theorems about the generic Triad abstraction"
+    ],
+    "lean_does_not_establish": [
+      "TFT as a complete framework is formally verified",
+      "TFT is empirically validated",
+      "all systems are triadic",
+      "3, 6, and 9 possess universal physical significance",
+      "Light and Darkness have been formally defined by this artifact",
+      "TFT's physical interpretations follow from the generic Triad structure",
+      "the generic Triad is semantically equivalent to every triadic concept in the project"
+    ],
+    "principle": "The proof boundary ends with the formal teaching abstraction."
+  },
+  "source_vs_formal_model": {
+    "source": "Broad triadic, operator, recursive, mathematical, metaphorical, and exploratory material.",
+    "formal_model": "Generic ordered container with three component positions and component-wise map.",
+    "relationship_strength": "partial",
+    "relationship_type": "structural abstraction",
+    "complete_translation": false
+  },
+  "simplification": {
+    "intentional": true,
+    "purpose": "Make a small structural pattern inspectable.",
+    "removed_complexity": [
+      "source-domain interpretation",
+      "operator semantics",
+      "larger equations",
+      "physical proposals",
+      "experimental proposals"
+    ],
+    "warning": "Removed complexity must not be forgotten when interpreting the formal result."
+  },
+  "student_questions": [
+    "What exactly does Triad α contain?",
+    "What does the map operation preserve?",
+    "What changes when the carrier type changes from α to β?",
+    "Why does identity mapping preserve the original triad?",
+    "Why does composition matter?",
+    "Which TFT concepts are not represented?",
+    "What would need to be formally defined before Light or Darkness could be modeled?",
+    "What does the compiler result establish?",
+    "What does it leave unresolved?"
+  ],
+  "student_exercise": {
+    "instruction": "Modify one component transformation while preserving the generic three-position structure.",
+    "record": {
+      "before": null,
+      "transformation": null,
+      "after": null,
+      "positions_preserved": [],
+      "values_changed": [],
+      "formal_property_tested": null,
+      "source_claim_not_tested": []
+    }
+  },
+  "variation_exercises": [
+    {
+      "change": "Change the example values from 3, 6, 9.",
+      "question": "Do the generic structural theorems still depend on those specific numbers?"
+    },
+    {
+      "change": "Use a transformation from one carrier type to another.",
+      "question": "Which structural correspondences survive?"
+    },
+    {
+      "change": "Apply the identity function.",
+      "question": "What remains unchanged?"
+    },
+    {
+      "change": "Apply two transformations sequentially.",
+      "question": "How does this compare with their composition?"
+    },
+    {
+      "change": "Add a fourth component to the structure.",
+      "question": "Which existing theorems and interpretations would need revision?"
+    }
+  ],
+  "counterfactual_structure": {
+    "exercise": "Replace the triad with a two-position or four-position structure.",
+    "question": "Which teaching properties depend specifically on having three positions, and which are generic container properties?",
+    "purpose": "Prevent the example from silently turning the number of positions into an unsupported universal claim."
+  },
+  "future_formalization": {
+    "possible_targets": [
+      "state",
+      "operator",
+      "transformed state",
+      "explicit Light relation",
+      "explicit Darkness relation",
+      "operator composition",
+      "recursive transformation"
+    ],
+    "required_questions": [
+      "What does expansion mean formally?",
+      "What does inversion mean formally?",
+      "What are the operator domains and codomains?",
+      "Are the operators inverses?",
+      "Can they be complementary without being inverses?",
+      "What invariant should persist?",
+      "Which definitions are actually supported by the source?"
+    ],
+    "rule": "Do not extend the formalization by inventing semantics merely because a richer model would be convenient."
+  },
+  "compiler_validation": {
+    "source_file": "docs/5Guides/lean/06_tft_origin.lean",
+    "status": "compiler-checked",
+    "validation_set": "01-11",
+    "lean_version": "4.36.0",
+    "target": "x86_64-w64-windows-gnu",
+    "meaning": "The human-source formal artifact was accepted under the stated Lean environment.",
+    "boundary": "Compiler acceptance applies to the generic teaching abstraction and does not establish the broader TFT proposals."
+  },
+  "lean_source_contract": {
+    "source_of_truth": "docs/5Guides/lean/06_tft_origin.lean",
+    "embedded_source_optional": true,
+    "if_embedded": "Copy the compiler-checked Lean source exactly rather than reconstructing it from this JSON abstraction.",
+    "reason": "The AI Edition artifact describes the canonical formal source but should not silently replace it."
+  },
+  "ai_companion": {
+    "resource": "../shared/ai_companion.json",
+    "preferred_support": [
+      "explain the generic Triad structure",
+      "identify what map preserves",
+      "compare identity and non-identity transformations",
+      "challenge claims that go beyond the formal model",
+      "identify source concepts absent from the abstraction",
+      "suggest formal questions without inventing source semantics"
+    ],
+    "avoid": [
+      "claiming the abstraction proves TFT",
+      "assigning physical significance to the example numbers",
+      "inventing Light or Darkness operator definitions",
+      "treating generic container properties as uniquely TFT-specific"
+    ]
+  },
+  "origin_connection": {
+    "resource": "../origins/tft.json",
+    "principle": "Interpret the formal artifact together with its source-lineage boundary.",
+    "next_origin_companion": "07_nawderian_theorem.json"
+  },
+  "formalization_connection": {
+    "resource": "../origins/formalization.json",
+    "record": {
+      "source": "TFT triadic structural organization",
+      "formalization": "generic Triad α",
+      "simplifications": [
+        "removed broader operator semantics",
+        "removed physical interpretations",
+        "removed complete recursive structure"
+      ],
+      "added_assumptions": [
+        "generic ordered three-position carrier"
+      ],
+      "lean_proves": [
+        "selected mapping properties",
+        "identity behavior",
+        "composition behavior"
+      ],
+      "lean_does_not_prove": [
+        "broader TFT physical claims",
+        "universal significance of 3, 6, and 9",
+        "complete equivalence between TFT and Triad α"
+      ]
+    }
+  },
+  "aaccc_self_inspection": {
+    "awareness": {
+      "question": "What exactly has been formalized, and what source material remains outside the model?"
+    },
+    "alignment": {
+      "question": "Which source structure corresponds to Triad α, and where does the mapping stop?"
+    },
+    "coherence": {
+      "question": "Do the identity and composition results follow from the supplied map definition?"
+    },
+    "clarity": {
+      "question": "Can the teaching abstraction be explained without presenting it as the whole TFT framework?"
+    },
+    "continuity": {
+      "question": "Which structural relationships persist while component values or carrier types change?"
+    }
+  },
+  "ai_behavior": {
+    "must": [
+      "Describe Triad α as a TFT-inspired teaching abstraction.",
+      "Preserve the distinction between source framework and formal model.",
+      "Treat example values 3, 6, and 9 as examples rather than evidence of universal significance.",
+      "Expose unmapped source concepts.",
+      "Keep formal consequences scoped to the represented definitions.",
+      "Preserve compiler provenance.",
+      "Identify future formalization as future work rather than established semantics."
+    ],
+    "must_not": [
+      "claim this artifact formally verifies TFT in full",
+      "claim compiler success empirically validates TFT",
+      "claim all systems are fundamentally triadic",
+      "claim 3, 6, and 9 have universal physical significance",
+      "invent Light or Darkness semantics",
+      "claim generic map properties are unique evidence for TFT",
+      "retroactively rewrite the TFT source to match the teaching abstraction",
+      "reconstruct Lean source and present it as exact unless verified against the source file"
+    ]
+  },
+  "provenance": {
+    "human_origin_source": "docs/5Guides/origins/tft.md",
+    "formal_source": "docs/5Guides/lean/06_tft_origin.lean",
+    "ai_origin": "../origins/tft.json",
+    "ai_formal_artifact": "06_tft_origin.json",
+    "transformation": "structured AI-readable formal origin companion",
+    "chain": [
+      "TFT source material",
+      "triadic structural interpretation",
+      "generic teaching abstraction",
+      "Triad α",
+      "component-wise map",
+      "formal theorems",
+      "compiler-checked artifact"
+    ],
+    "preserve": [
+      "structural ancestry",
+      "partial mapping",
+      "simplification",
+      "unmapped source concepts",
+      "formalization boundary",
+      "compiler provenance"
+    ],
+    "do_not_infer": [
+      "complete TFT formalization",
+      "empirical validation",
+      "universal triadic ontology",
+      "special physical status of example values",
+      "formal operator semantics absent from the source artifact",
+      "source code not verified against the canonical Lean file"
+    ]
+  },
+  "related": {
+    "lean_index": "index.json",
+    "previous_formal_companion": "05_continuity.json",
+    "origin": "../origins/tft.json",
+    "next_formal_companion": "07_nawderian_theorem.json",
+    "formalization": "../origins/formalization.json",
+    "origins_index": "../origins/index.json",
+    "ai_companion": "../shared/ai_companion.json",
+    "module": "../module.json",
+    "index": "../index.json"
+  },
+  "machine_context": {
+    "ai_parseable": true,
+    "role": "formal-origin-companion",
+    "formal_order": 6,
+    "origin": "TFT",
+    "optional": true,
+    "generic_triad_abstraction": true,
+    "source_mapping_partial": true,
+    "complete_source_formalization": false,
+    "example_numbers_not_empirical_evidence": true,
+    "unmapped_source_semantics_preserved": true,
+    "formalization_boundary_explicit": true,
+    "compiler_checked": true,
+    "compiler_validation_bounded": true,
+    "empirical_validation_claim": false,
+    "provenance_aware": true
+  }
+}

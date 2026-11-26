@@ -1,0 +1,668 @@
+{
+  "document": {
+    "id": "5Guides-lean-05-continuity",
+    "type": "formal-guide-companion",
+    "name": "Continuity",
+    "title": "Lean 4 Companion — Continuity",
+    "edition": "AI Edition",
+    "module": "5Guides",
+    "framework": "AACCC",
+    "guide": "Continuity",
+    "guide_order": 5,
+    "version": "1.0",
+    "status": "active",
+    "language": "en",
+    "source": "docs/5Guides/lean/05_continuity.lean",
+    "ai_path": "docs/book/AI_Edition/5Guides/lean/05_continuity.json",
+    "guide_path": "../guides/continuity.json",
+    "lean_index": "index.json"
+  },
+  "purpose": {
+    "primary": "Provide a small formal companion for the Continuity question: What persists through change?",
+    "formal_goal": "Inspect how formal objects, relationships, definitions, assumptions, and proofs behave when part of a formal model changes.",
+    "educational_principle": "Change something deliberately, then inspect what survives."
+  },
+  "core_question": "What persists through change?",
+  "formal_translation": "When the formal context, state, definition, assumption, or transformation changes, which relationships and proofs remain valid?",
+  "bridge_from_previous_guides": {
+    "awareness": {
+      "companion": "01_awareness.json",
+      "result": "Identify what is actually present in the formal context."
+    },
+    "alignment": {
+      "companion": "02_alignment.json",
+      "result": "Identify which formal relationships permit correspondence."
+    },
+    "coherence": {
+      "companion": "03_coherence.json",
+      "result": "Determine whether the target follows from the supplied formal structure."
+    },
+    "clarity": {
+      "companion": "04_clarity.json",
+      "result": "Represent the reasoning clearly enough to inspect without changing the theorem."
+    },
+    "continuity": {
+      "current_step": "Change something and inspect which formal relationships persist, drift, break, or require reinterpretation."
+    }
+  },
+  "continuity_mapping": {
+    "human_reasoning": [
+      "earlier state",
+      "change",
+      "later state",
+      "persistence",
+      "drift",
+      "break",
+      "history",
+      "recurrence",
+      "invariant",
+      "provenance"
+    ],
+    "formal_reasoning": [
+      "original context",
+      "formal change",
+      "revised context",
+      "preserved theorem",
+      "failed theorem",
+      "changed definition",
+      "changed assumption",
+      "changed type",
+      "proof history"
+    ],
+    "shared_habit": "Do not inspect only the final state. Preserve enough of the transition to understand what changed and which relationships survived."
+  },
+  "formal_change_pattern": [
+    "formal state_0",
+    "change",
+    "formal state_1",
+    "compare",
+    "identify persistence and breakage"
+  ],
+  "continuity_record": {
+    "before": null,
+    "change": null,
+    "after": null,
+    "definitions_preserved": [],
+    "definitions_changed": [],
+    "assumptions_preserved": [],
+    "assumptions_changed": [],
+    "proofs_preserved": [],
+    "proofs_broken": [],
+    "relationships_preserved": [],
+    "relationships_broken": [],
+    "meaning_preserved": [],
+    "meaning_changed": [],
+    "reason_for_change": null,
+    "uncertainty": [],
+    "current_judgment": null
+  },
+  "change_targets": [
+    {
+      "target": "value",
+      "question": "Does the theorem depend on the particular value, or on a more general relationship?"
+    },
+    {
+      "target": "type",
+      "question": "Do the required operations and theorems remain available?"
+    },
+    {
+      "target": "definition",
+      "question": "Do earlier theorems still mean what they meant before?"
+    },
+    {
+      "target": "hypothesis",
+      "question": "Which conclusions depended on this assumption?"
+    },
+    {
+      "target": "operator",
+      "question": "Which transformation properties survive?"
+    },
+    {
+      "target": "theorem statement",
+      "question": "Is the revised theorem stronger, weaker, or simply different?"
+    },
+    {
+      "target": "proof representation",
+      "question": "Did only the presentation change, or did the formal meaning change too?"
+    }
+  ],
+  "continuity_is_not_sameness": {
+    "principle": "A formal model can change while preserving important structure.",
+    "examples": [
+      "values change while types persist",
+      "values change while a relation remains invariant",
+      "proof syntax changes while the theorem remains identical",
+      "implementation changes while the formal interface remains stable"
+    ],
+    "opposite_case": "A label or theorem name may remain unchanged while its underlying definition changes."
+  },
+  "structural_continuity": {
+    "definition": "Important formal positions or relationships remain identifiable across change.",
+    "example_pattern": {
+      "before": [
+        "A_0",
+        "B_0",
+        "C_0"
+      ],
+      "after": [
+        "A_1",
+        "B_1",
+        "C_1"
+      ],
+      "mapping": [
+        "A_0 <-> A_1",
+        "B_0 <-> B_1",
+        "C_0 <-> C_1"
+      ]
+    },
+    "principle": "Changed values do not automatically imply loss of structural continuity."
+  },
+  "proof_continuity": {
+    "definition": "A previously established theorem remains derivable after a formal change.",
+    "questions": [
+      "Did the theorem still compile?",
+      "Did its assumptions remain the same?",
+      "Did its definitions retain the same meaning?",
+      "Did the theorem statement remain identical?"
+    ],
+    "warning": "Continued compilation alone does not guarantee semantic continuity."
+  },
+  "compiler_continuity": {
+    "definition": "The formal artifact continues to be accepted by the compiler.",
+    "useful": true,
+    "semantic_equivalence_guaranteed": false,
+    "principle": "Passing before and after a change tells us something about formal acceptance, but not necessarily that meaning remained unchanged."
+  },
+  "semantic_continuity": {
+    "definition": "The formal object or theorem retains the same intended meaning across revisions.",
+    "requires_inspection_of": [
+      "definitions",
+      "types",
+      "assumptions",
+      "theorem statements",
+      "source-to-model correspondence"
+    ],
+    "principle": "Names and compiler status can remain stable while semantics drift."
+  },
+  "semantic_drift": {
+    "example": [
+      "Definition v1 uses relation A.",
+      "Definition v2 uses relation B.",
+      "The public name remains unchanged."
+    ],
+    "risk": "Earlier and later theorem statements may look identical while referring to different formal meanings.",
+    "response": [
+      "record the definition change",
+      "identify affected theorems",
+      "compare meanings",
+      "version the semantic change when important"
+    ]
+  },
+  "invariant": {
+    "definition": "A property expected to remain true while specified parts of the formal model change.",
+    "questions": [
+      "What is expected to remain true?",
+      "Under which transformations?",
+      "Which assumptions are necessary?",
+      "What observation or proof would show that the invariant failed?"
+    ],
+    "principle": "Continuity becomes more precise when the expected persistence is explicit."
+  },
+  "identity_transformation": {
+    "educational_role": "Provide a simple case where applying a neutral or identity transformation preserves the represented structure.",
+    "continuity_pattern": [
+      "state",
+      "identity or neutral update",
+      "same state"
+    ],
+    "lesson": "An unchanged result can itself be a formally inspectable continuity property."
+  },
+  "changed_transformation": {
+    "educational_role": "Provide a case where values change while a formal relationship remains traceable.",
+    "pattern": [
+      "state_0",
+      "transformation",
+      "state_1"
+    ],
+    "questions": [
+      "Which values changed?",
+      "Which types remained?",
+      "Which relationships remained?",
+      "Which theorem still applies?",
+      "Which conclusion must be revised?"
+    ]
+  },
+  "drift": {
+    "formal_interpretation": "A sequence of individually small formal changes produces a later model that differs materially from the earlier model.",
+    "pattern": [
+      "model_0",
+      "small change",
+      "model_1",
+      "small change",
+      "model_2",
+      "small change",
+      "model_3"
+    ],
+    "inspection": "Compare both adjacent revisions and more distant endpoints.",
+    "automatic_failure": false
+  },
+  "drift_questions": [
+    "Which change first altered the theorem's meaning?",
+    "Which change appeared syntactic but was actually semantic?",
+    "Which assumption gradually disappeared?",
+    "Which invariant stopped holding?",
+    "Was the drift intentional?",
+    "Was the change caused by better modeling?"
+  ],
+  "healthy_revision": {
+    "principle": "Moving away from an earlier formalization can represent correction rather than failure.",
+    "possible_reasons": [
+      "unsupported assumption removed",
+      "type improved",
+      "definition clarified",
+      "source alignment improved",
+      "counterexample discovered",
+      "formal boundary narrowed",
+      "new evidence changed the intended model"
+    ]
+  },
+  "break": {
+    "definition": "A previously expected or proved relationship no longer holds after a formal change.",
+    "preferred_record": {
+      "previously_expected": null,
+      "after_change": null,
+      "break_point": null,
+      "changed_element": null,
+      "reason_known": null
+    },
+    "principle": "Preserve the break before repairing it."
+  },
+  "proof_break": {
+    "possible_causes": [
+      "removed assumption",
+      "changed definition",
+      "changed type",
+      "changed theorem target",
+      "changed imported environment",
+      "changed operator",
+      "previous proof depended on implementation detail"
+    ],
+    "automatic_interpretation": null,
+    "preferred_response": "Identify which dependency changed."
+  },
+  "unexpected_break": {
+    "careful_language": "The proof no longer holds under the current formal context.",
+    "avoid_language": "The underlying real-world claim has been disproved.",
+    "reason": "Formal proof failure and empirical refutation are distinct."
+  },
+  "history": {
+    "principle": "The latest formal artifact may not reveal why its definitions or theorems have their current form.",
+    "useful_history": [
+      "earlier definitions",
+      "earlier theorem statements",
+      "changed assumptions",
+      "failed proofs",
+      "revised proofs",
+      "compiler environment",
+      "reason for revision"
+    ]
+  },
+  "same_current_result_different_history": {
+    "path_a": [
+      "theorem valid",
+      "theorem valid",
+      "theorem valid"
+    ],
+    "path_b": [
+      "theorem valid",
+      "definition changed",
+      "proof failed",
+      "model revised",
+      "theorem valid"
+    ],
+    "current_status_same": true,
+    "development_history_same": false,
+    "lesson": "Current compiler success does not encode the complete history of the formal artifact."
+  },
+  "recurrence": {
+    "formal_use": "Repeated appearance of the same proof failure, dependency pattern, or state sequence may become an observation.",
+    "causation_established_automatically": false,
+    "principle": "Recurring formal behavior is evidence of recurrence, not by itself an explanation of why it recurs."
+  },
+  "pattern_break": {
+    "example": {
+      "expected": [
+        "A",
+        "B",
+        "C"
+      ],
+      "observed": [
+        "A",
+        "B",
+        "D"
+      ]
+    },
+    "formal_response": [
+      "preserve the observed result",
+      "locate the divergence",
+      "inspect changed assumptions or definitions",
+      "do not force D to become C merely because C was expected"
+    ]
+  },
+  "versioning": {
+    "principle": "Version or preserve history when a formal change materially alters meaning.",
+    "possible_version_triggers": [
+      "definition semantics changed",
+      "theorem statement materially changed",
+      "assumption set materially changed",
+      "source mapping changed",
+      "formalization boundary changed"
+    ],
+    "not_every_edit_requires_version": true
+  },
+  "provenance": {
+    "formal_chain": [
+      "source concept",
+      "formalization v1",
+      "revision",
+      "formalization v2",
+      "theorem",
+      "proof",
+      "compiler environment"
+    ],
+    "principle": "A useful formal history preserves enough lineage to explain how the current artifact was produced."
+  },
+  "change_experiment": {
+    "instruction": "Modify one formal element at a time and compile again.",
+    "record": {
+      "before": null,
+      "single_change": null,
+      "prediction": null,
+      "compiler_result": null,
+      "proofs_preserved": [],
+      "proofs_broken": [],
+      "meaning_preserved": [],
+      "meaning_changed": [],
+      "unexpected_effects": []
+    },
+    "principle": "One controlled change makes propagation easier to inspect."
+  },
+  "student_exercise": {
+    "instruction": "Take a compiler-checked theorem, change one element, and explain what persisted and what broke.",
+    "questions": [
+      "What was true before?",
+      "What exactly changed?",
+      "What remains true?",
+      "Which proof broke?",
+      "Why did it break?",
+      "Did the theorem's meaning change?",
+      "Did only the implementation or proof syntax change?",
+      "What would need another look?"
+    ]
+  },
+  "variation_exercises": [
+    {
+      "change": "Change a value while preserving the type and theorem structure.",
+      "question": "Which relationships are value-independent?"
+    },
+    {
+      "change": "Remove a hypothesis.",
+      "question": "Which conclusions depended on it?"
+    },
+    {
+      "change": "Change a definition.",
+      "question": "Which theorems still compile, and do they still mean the same thing?"
+    },
+    {
+      "change": "Change a type.",
+      "question": "Which operations and proof strategies stop being available?"
+    },
+    {
+      "change": "Rewrite the proof without changing the theorem.",
+      "question": "Did only representation change?"
+    },
+    {
+      "change": "Strengthen the theorem statement.",
+      "question": "What additional assumptions or lemmas become necessary?"
+    }
+  ],
+  "compiler_failure_as_evidence": {
+    "principle": "A changed compiler result is evidence about the relationship between the revision and the existing formal structure.",
+    "ask_before_repair": [
+      "What changed?",
+      "Which goal now fails?",
+      "Did a dependency disappear?",
+      "Did the theorem meaning change?",
+      "Did the formal environment change?"
+    ]
+  },
+  "same_proof_different_meaning": {
+    "risk": true,
+    "pattern": [
+      "definition changes",
+      "theorem text remains",
+      "proof still compiles",
+      "semantic interpretation changes"
+    ],
+    "principle": "Compiler acceptance is not sufficient evidence of unchanged meaning."
+  },
+  "continuity_of_alignment": {
+    "question": "Does a relationship established in an earlier version still correspond under the revised model?",
+    "formal_dependency": "02_alignment.json"
+  },
+  "continuity_of_coherence": {
+    "question": "Does the revised structure still support the theorem?",
+    "formal_dependency": "03_coherence.json"
+  },
+  "continuity_of_clarity": {
+    "question": "Can the change be explained without hiding what was revised?",
+    "formal_dependency": "04_clarity.json"
+  },
+  "continuity_of_awareness": {
+    "question": "What exactly is present in the new formal state?",
+    "formal_dependency": "01_awareness.json"
+  },
+  "full_aaccc_formal_loop": [
+    {
+      "guide": "Awareness",
+      "question": "What is actually in this formal state?"
+    },
+    {
+      "guide": "Alignment",
+      "question": "What formal relationships correspond?"
+    },
+    {
+      "guide": "Coherence",
+      "question": "Does the target follow?"
+    },
+    {
+      "guide": "Clarity",
+      "question": "Can the reasoning be inspected?"
+    },
+    {
+      "guide": "Continuity",
+      "question": "What survives if something changes?"
+    },
+    {
+      "return": "Awareness",
+      "question": "What is now in the revised formal state?"
+    }
+  ],
+  "formalization_boundary": {
+    "lean_establishes": [
+      "the represented formal theorems accepted under their supplied context"
+    ],
+    "continuity_companion_adds": [
+      "comparison across formal revisions",
+      "inspection of preserved and broken relationships",
+      "semantic-continuity questions",
+      "provenance questions"
+    ],
+    "lean_does_not_establish": [
+      "that all change should be prevented",
+      "that an earlier formal version was better",
+      "that compiler failure means empirical falsification",
+      "that compiler success guarantees semantic continuity",
+      "that formal history alone determines empirical truth",
+      "that every intended Continuity concept is represented by this teaching example"
+    ]
+  },
+  "source_alignment": {
+    "guide_concept": "Continuity asks what changes, what persists, and how one state relates to another through history.",
+    "formal_abstraction": "Change one part of a formal state or model and inspect which relationships and proofs remain.",
+    "correspondence": "Both preserve transitions rather than evaluating only the latest state.",
+    "complete_equivalence": false,
+    "reason": "Human-facing Continuity includes physical systems, documents, learning, identity, provenance, recurrence, semantic drift, and other changes beyond formal proof artifacts."
+  },
+  "compiler_validation": {
+    "source_file": "docs/5Guides/lean/05_continuity.lean",
+    "status": "compiler-checked",
+    "validation_set": "01-11",
+    "lean_version": "4.36.0",
+    "target": "x86_64-w64-windows-gnu",
+    "meaning": "The human-source formal artifact was accepted under the stated Lean environment.",
+    "boundary": "Compiler acceptance applies to the formal artifact under that environment and does not establish empirical claims about continuity in external systems."
+  },
+  "lean_source_contract": {
+    "source_of_truth": "docs/5Guides/lean/05_continuity.lean",
+    "embedded_source_optional": true,
+    "if_embedded": "Copy the compiler-checked Lean source exactly rather than reconstructing it from this JSON abstraction.",
+    "reason": "The JSON describes the formal artifact and should not silently become a competing Lean source."
+  },
+  "ai_companion": {
+    "resource": "../shared/ai_companion.json",
+    "preferred_support": [
+      "compare two formal versions",
+      "identify what changed",
+      "identify which assumptions persisted",
+      "identify which proofs broke",
+      "distinguish semantic drift from syntactic change",
+      "ask what invariant was intended",
+      "help interpret a new compiler failure without immediately repairing it"
+    ],
+    "avoid": [
+      "restoring the old model automatically",
+      "treating all drift as error",
+      "hiding definition changes",
+      "calling compiler failure empirical refutation",
+      "calling compiler success unchanged meaning"
+    ]
+  },
+  "assessment_connection": {
+    "resource": "../shared/assessment.json",
+    "mastery_question": "Can the learner trace what changed, what persisted, and why a formal result survived or failed?",
+    "not_sufficient": [
+      "noticing only that the compiler result changed",
+      "restoring a previous proof without explaining the dependency",
+      "stating that two versions are equivalent without checking definitions"
+    ]
+  },
+  "independent_application_bridge": {
+    "guide": "../guides/continuity.json",
+    "destination": "Independent Application",
+    "formal_lesson": "The five formal companions now form a reusable inspection loop that can be applied to new formal structures."
+  },
+  "aaccc_self_inspection": {
+    "awareness": {
+      "question": "What exactly changed in the formal state?"
+    },
+    "alignment": {
+      "question": "Which earlier relationships still correspond?"
+    },
+    "coherence": {
+      "question": "Does the revised structure still support the theorem?"
+    },
+    "clarity": {
+      "question": "Can the revision and its consequences be explained without hiding changes?"
+    },
+    "continuity": {
+      "question": "What persisted, drifted, broke, or was intentionally replaced?"
+    }
+  },
+  "ai_behavior": {
+    "must": [
+      "Compare formal states rather than only current compiler status.",
+      "Distinguish compiler continuity from semantic continuity.",
+      "Preserve change history when it affects meaning.",
+      "Identify assumptions and definitions that changed.",
+      "Treat proof breakage as information before repairing it.",
+      "Allow intentional correction to break earlier continuity.",
+      "Identify invariants explicitly when relevant.",
+      "Report compiler validation only at the formal-artifact level."
+    ],
+    "must_not": [
+      "treat all formal change as failure",
+      "restore an earlier version merely because it compiled",
+      "treat compiler failure as empirical refutation",
+      "treat continued compiler success as proof of unchanged semantics",
+      "hide definition or assumption changes",
+      "force an unexpected result into an earlier pattern",
+      "present this artifact as a complete formalization of Continuity",
+      "reconstruct Lean source and present it as exact unless verified against the source file"
+    ]
+  },
+  "provenance": {
+    "human_guide_sources": [
+      "docs/5Guides/continuity/index.md",
+      "docs/5Guides/continuity/explore.md",
+      "docs/5Guides/continuity/practice.md",
+      "docs/5Guides/continuity/mastery.md"
+    ],
+    "formal_source": "docs/5Guides/lean/05_continuity.lean",
+    "ai_guide": "../guides/continuity.json",
+    "ai_formal_artifact": "05_continuity.json",
+    "transformation": "structured AI-readable formal companion",
+    "preserve": [
+      "before/change/after structure",
+      "proof continuity",
+      "semantic continuity",
+      "drift",
+      "breaks",
+      "invariants",
+      "history",
+      "formalization boundary",
+      "compiler provenance"
+    ],
+    "do_not_infer": [
+      "complete formalization of Continuity",
+      "empirical continuity from formal proof",
+      "semantic identity from compiler success",
+      "empirical falsification from compiler failure",
+      "preference for earlier versions merely because they are earlier",
+      "source code not verified against the formal source file"
+    ]
+  },
+  "related": {
+    "lean_index": "index.json",
+    "awareness": "01_awareness.json",
+    "alignment": "02_alignment.json",
+    "coherence": "03_coherence.json",
+    "clarity": "04_clarity.json",
+    "guide": "../guides/continuity.json",
+    "rtt_origin": "11_rtt_origin.json",
+    "formalization": "../origins/formalization.json",
+    "ai_companion": "../shared/ai_companion.json",
+    "assessment": "../shared/assessment.json",
+    "module": "../module.json",
+    "index": "../index.json"
+  },
+  "machine_context": {
+    "ai_parseable": true,
+    "role": "formal-guide-companion",
+    "guide": "Continuity",
+    "guide_order": 5,
+    "optional": true,
+    "formal_change_primary": true,
+    "history_preserved": true,
+    "proof_continuity_distinct_from_semantic_continuity": true,
+    "compiler_continuity_distinct_from_semantic_continuity": true,
+    "drift_not_automatically_failure": true,
+    "breaks_preserved": true,
+    "formalization_partial": true,
+    "compiler_checked": true,
+    "compiler_validation_bounded": true,
+    "empirical_validation_claim": false,
+    "provenance_aware": true,
+    "aaccc_formal_loop_complete": true
+  }
+}

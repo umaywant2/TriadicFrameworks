@@ -1,0 +1,796 @@
+{
+  "document": {
+    "id": "5Guides-lean-11-rtt-origin",
+    "type": "formal-origin-companion",
+    "name": "RTT Origin",
+    "title": "Lean 4 Companion — RTT Origin",
+    "edition": "AI Edition",
+    "module": "5Guides",
+    "framework": "AACCC",
+    "origin": "RTT",
+    "formal_order": 11,
+    "version": "1.0",
+    "status": "active",
+    "language": "en",
+    "source": "docs/5Guides/lean/11_rtt_origin.lean",
+    "ai_path": "docs/book/AI_Edition/5Guides/lean/11_rtt_origin.json",
+    "origin_path": "../origins/rtt.json",
+    "lean_index": "index.json"
+  },
+  "purpose": {
+    "primary": "Provide a small formal teaching abstraction inspired by RTT state, flow, resonance, update, and continuity structures.",
+    "formal_goal": "Represent a state, represent an update, apply the update component-wise, and inspect selected transition and preservation properties.",
+    "educational_principle": "A small formal transition model can make change and persistence inspectable without claiming to formalize the complete source framework."
+  },
+  "source_alignment": {
+    "source_artifact": "../origins/rtt.json",
+    "source_concepts": [
+      "state",
+      "flow",
+      "resonance",
+      "operators",
+      "updates",
+      "coherence",
+      "regimes",
+      "drift",
+      "continuity"
+    ],
+    "selected_structure": [
+      "state",
+      "component-wise update",
+      "next state",
+      "selected continuity relation"
+    ],
+    "formal_abstraction": "Small integer-valued state-transition model.",
+    "relationship": "inspired-by / structurally abstracted-from",
+    "complete_equivalence": false,
+    "complete_rtt_formalization": false
+  },
+  "formal_model": {
+    "state": {
+      "name": "RTTState",
+      "fields": [
+        {
+          "name": "scalar",
+          "type": "Int",
+          "source_correspondence": "scalar-state teaching component"
+        },
+        {
+          "name": "flow",
+          "type": "Int",
+          "source_correspondence": "directed-flow teaching component"
+        },
+        {
+          "name": "resonance",
+          "type": "Int",
+          "source_correspondence": "resonance teaching component"
+        }
+      ]
+    },
+    "update": {
+      "name": "RTTUpdate",
+      "fields": [
+        {
+          "name": "scalarChange",
+          "type": "Int",
+          "target": "RTTState.scalar"
+        },
+        {
+          "name": "flowChange",
+          "type": "Int",
+          "target": "RTTState.flow"
+        },
+        {
+          "name": "resonanceChange",
+          "type": "Int",
+          "target": "RTTState.resonance"
+        }
+      ]
+    },
+    "transition_function": {
+      "name": "applyUpdate",
+      "input": [
+        "RTTState",
+        "RTTUpdate"
+      ],
+      "output": "RTTState",
+      "behavior": [
+        "new scalar = old scalar + scalarChange",
+        "new flow = old flow + flowChange",
+        "new resonance = old resonance + resonanceChange"
+      ]
+    }
+  },
+  "state_update_alignment": [
+    {
+      "update_component": "scalarChange",
+      "state_component": "scalar",
+      "relationship": "component-wise update correspondence"
+    },
+    {
+      "update_component": "flowChange",
+      "state_component": "flow",
+      "relationship": "component-wise update correspondence"
+    },
+    {
+      "update_component": "resonanceChange",
+      "state_component": "resonance",
+      "relationship": "component-wise update correspondence"
+    }
+  ],
+  "transition_pattern": [
+    "before state",
+    "update",
+    "applyUpdate",
+    "after state"
+  ],
+  "transition_record": {
+    "before": null,
+    "update": null,
+    "after": null,
+    "components_changed": [],
+    "components_unchanged": [],
+    "relationships_preserved": [],
+    "formal_property_checked": null
+  },
+  "zero_update": {
+    "name": "zeroUpdate",
+    "fields": {
+      "scalarChange": 0,
+      "flowChange": 0,
+      "resonanceChange": 0
+    },
+    "expected_property": "Applying zeroUpdate preserves the original state.",
+    "continuity_pattern": [
+      "state",
+      "zero update",
+      "same state"
+    ],
+    "educational_role": "Provide a simple formal example of complete preservation under a neutral update."
+  },
+  "zero_update_property": {
+    "claim": "applyUpdate state zeroUpdate = state",
+    "meaning": "Under the supplied component-wise update definition, adding zero to every represented state component leaves the state unchanged.",
+    "scope": "Teaching abstraction only."
+  },
+  "continuous_from": {
+    "name": "ContinuousFrom",
+    "type": "local teaching predicate",
+    "conceptual_definition": "The supplied update applied to the before-state produces the declared after-state.",
+    "pattern": "ContinuousFrom before update after",
+    "canonical_rtt_definition": false,
+    "complete_definition_of_continuity": false,
+    "purpose": "Provide a small explicit formal relationship for tracing a declared state transition."
+  },
+  "continuous_from_boundary": {
+    "means_inside_teaching_model": "The after-state is obtained by applying the represented update to the before-state.",
+    "does_not_mean": [
+      "complete philosophical identity across change",
+      "complete RTT continuity semantics",
+      "empirical continuity of a physical system",
+      "preservation of every possible invariant",
+      "absence of drift",
+      "absence of regime change"
+    ]
+  },
+  "example_transition": {
+    "before": {
+      "scalar": 10,
+      "flow": 4,
+      "resonance": 7
+    },
+    "update": {
+      "scalarChange": 2,
+      "flowChange": -1,
+      "resonanceChange": 3
+    },
+    "after": {
+      "scalar": 12,
+      "flow": 3,
+      "resonance": 10
+    },
+    "interpretation": "Each represented update component changes its corresponding represented state component.",
+    "questions": [
+      "What changed?",
+      "What remained structurally identifiable?",
+      "Which update component corresponds to which state field?",
+      "Can the after-state be traced directly to the before-state and update?"
+    ]
+  },
+  "formal_targets": [
+    {
+      "id": "scalar_update",
+      "name": "Scalar Update Correspondence",
+      "claim": "The scalar component changes according to scalarChange."
+    },
+    {
+      "id": "flow_update",
+      "name": "Flow Update Correspondence",
+      "claim": "The flow component changes according to flowChange."
+    },
+    {
+      "id": "resonance_update",
+      "name": "Resonance Update Correspondence",
+      "claim": "The resonance component changes according to resonanceChange."
+    },
+    {
+      "id": "zero_update_preservation",
+      "name": "Zero Update Preservation",
+      "claim": "Applying the represented zero update preserves the state."
+    },
+    {
+      "id": "declared_transition",
+      "name": "Declared Transition",
+      "claim": "An after-state satisfying the represented update relation is ContinuousFrom the before-state under the local teaching predicate."
+    }
+  ],
+  "structural_continuity": {
+    "state_shape_before": [
+      "scalar",
+      "flow",
+      "resonance"
+    ],
+    "state_shape_after": [
+      "scalar",
+      "flow",
+      "resonance"
+    ],
+    "values_may_change": true,
+    "component_roles_persist": true,
+    "lesson": "Structural continuity can remain even when every represented component value changes."
+  },
+  "value_continuity_vs_structural_continuity": {
+    "value_continuity": "A particular component retains the same value.",
+    "structural_continuity": "The component remains identifiable in the state model and retains its update correspondence.",
+    "same": false,
+    "principle": "A state can change numerically while preserving formal structure."
+  },
+  "aaccc_mapping": {
+    "awareness": {
+      "question": "What state fields, update fields, and transition rules are actually represented?",
+      "formal_answer": [
+        "scalar",
+        "flow",
+        "resonance",
+        "three corresponding changes",
+        "component-wise update"
+      ]
+    },
+    "alignment": {
+      "question": "What corresponds?",
+      "formal_answer": [
+        "scalarChange -> scalar",
+        "flowChange -> flow",
+        "resonanceChange -> resonance"
+      ]
+    },
+    "coherence": {
+      "question": "Does this hold together?",
+      "formal_answer": "The declared after-state can be checked against the explicit component-wise update definition."
+    },
+    "clarity": {
+      "question": "Can this be understood and inspected?",
+      "formal_answer": "The reduced state/update structure exposes exactly how each represented component changes."
+    },
+    "continuity": {
+      "question": "What persists through change?",
+      "formal_answer": "The component structure and update correspondences may persist while component values change."
+    }
+  },
+  "formal_awareness": {
+    "inspect": [
+      "state fields",
+      "update fields",
+      "field types",
+      "applyUpdate definition",
+      "zeroUpdate definition",
+      "ContinuousFrom definition",
+      "theorem targets",
+      "source concepts omitted from the model"
+    ],
+    "principle": "Do not read more RTT semantics into the teaching model than the encoded structure provides."
+  },
+  "formal_alignment": {
+    "strong_inside_model": [
+      "scalarChange <-> scalar",
+      "flowChange <-> flow",
+      "resonanceChange <-> resonance"
+    ],
+    "unmapped_or_unformalized_source_concepts": [
+      "full operator families",
+      "regime semantics",
+      "drift semantics",
+      "complete coherence semantics",
+      "resonant time triad",
+      "Silence-Noise-Resonance",
+      "FFF",
+      "SET",
+      "physical field interpretation"
+    ],
+    "principle": "Leave source concepts unmapped when the formal artifact does not represent them."
+  },
+  "formal_coherence": {
+    "questions": [
+      "Does each output component equal its corresponding previous value plus its update?",
+      "Does zeroUpdate preserve every represented component?",
+      "Does the declared after-state actually equal applyUpdate before update?",
+      "Are any additional assumptions required?"
+    ],
+    "scope": "Internal behavior of the small state-transition model."
+  },
+  "formal_clarity": {
+    "benefit": "A broad source vocabulary is reduced to explicit state fields, updates, and a transition relation.",
+    "risk": "The clarity of the small model may make it appear to represent more of RTT than it actually does.",
+    "required_language": "RTT-inspired state-transition teaching abstraction"
+  },
+  "formal_continuity": {
+    "questions": [
+      "Which values changed?",
+      "Which component roles persisted?",
+      "Which update-to-state correspondences persisted?",
+      "Did the state structure remain stable?",
+      "Did the formal continuity predicate hold?"
+    ]
+  },
+  "assumptions": {
+    "added_by_teaching_model": [
+      "state is represented using exactly three integer-valued fields",
+      "updates are represented using exactly three corresponding integer changes",
+      "updates act through component-wise addition",
+      "ContinuousFrom is defined locally through applyUpdate equality"
+    ],
+    "environmental": [
+      "Lean's integer arithmetic",
+      "Lean's structure semantics",
+      "Lean's equality semantics",
+      "definitions in the canonical source artifact"
+    ],
+    "not_assumed": [
+      "three integer fields completely represent RTT",
+      "all RTT operators reduce to additive updates",
+      "all real state transitions are discrete",
+      "ContinuousFrom is the complete canonical RTT notion of continuity",
+      "the represented fields are empirically measurable exactly as encoded",
+      "RTT is empirically validated"
+    ]
+  },
+  "verified_consequences": {
+    "scope": "Selected state-transition properties represented in the compiler-checked Lean teaching artifact.",
+    "include": [
+      "component-wise update behavior encoded by the formal source",
+      "zero-update preservation encoded by the formal source",
+      "selected declared transition properties encoded by the formal source"
+    ],
+    "conditional_on": [
+      "RTTState definition",
+      "RTTUpdate definition",
+      "applyUpdate definition",
+      "zeroUpdate definition",
+      "ContinuousFrom definition",
+      "the theorem statements in the canonical Lean source"
+    ]
+  },
+  "formalization_boundary": {
+    "lean_establishes": [
+      "selected properties of the represented RTT-inspired state-transition model"
+    ],
+    "lean_does_not_establish": [
+      "the complete RTT specification has been formalized",
+      "RTT is empirically validated",
+      "RTT's physical field interpretation is correct",
+      "the selected three integer fields are sufficient for real RTT systems",
+      "RTT operator families reduce to these updates",
+      "the local ContinuousFrom predicate is the complete RTT definition of continuity",
+      "all regime changes or drift are represented",
+      "all real-world state changes are additive"
+    ],
+    "principle": "Formal verification ends at the explicit teaching model."
+  },
+  "source_vs_formal_model": {
+    "source": "State, flow, resonance, operators, coherence, regimes, drift, transitions, and broader RTT interpretation.",
+    "formal_model": "Three integer-valued state fields, three corresponding integer changes, component-wise addition, and a local continuity predicate.",
+    "relationship_strength": "partial",
+    "relationship_type": "structural teaching abstraction",
+    "complete_translation": false
+  },
+  "simplification": {
+    "intentional": true,
+    "preserved": [
+      "state",
+      "component distinctions",
+      "change",
+      "state-update correspondence",
+      "transition",
+      "neutral update",
+      "traceable before/update/after structure"
+    ],
+    "omitted": [
+      "continuous fields",
+      "spatial dimensions",
+      "operator families",
+      "nonlinear dynamics",
+      "regimes",
+      "formal drift model",
+      "measurement",
+      "uncertainty",
+      "physical units",
+      "empirical data"
+    ]
+  },
+  "zero_update_as_invariant": {
+    "before": "state s",
+    "transformation": "zeroUpdate",
+    "after": "state s",
+    "property": "all represented components preserved",
+    "lesson": "A neutral update provides a simple invariant case."
+  },
+  "change_one_component": {
+    "exercise": "Modify only one update component.",
+    "example_target": "flowChange",
+    "prediction": "Only the corresponding represented state field should change under the component-wise teaching model.",
+    "questions": [
+      "Did scalar remain unchanged?",
+      "Did resonance remain unchanged?",
+      "Did flow change as predicted?",
+      "Which theorem or simplification establishes this behavior?"
+    ]
+  },
+  "change_model_boundary": {
+    "exercise": "Add a fourth field to RTTState.",
+    "questions": [
+      "Does RTTUpdate need a fourth change field?",
+      "Does applyUpdate still cover the complete state?",
+      "Does zeroUpdate remain complete?",
+      "Does ContinuousFrom still express the intended transition relation?",
+      "Which older theorems survive unchanged?"
+    ],
+    "principle": "Changing the state boundary can invalidate assumptions that were previously invisible."
+  },
+  "semantic_drift": {
+    "example": "Keep the field name resonance but redefine what the field represents.",
+    "compiler_may_still_accept_old_theorems": true,
+    "meaning_may_change": true,
+    "principle": "Semantic continuity must be inspected separately from compiler continuity."
+  },
+  "regime_boundary": {
+    "represented": false,
+    "source_relevance": true,
+    "future_question": "How would a state transition model indicate that the rules governing updates themselves changed?",
+    "principle": "Do not describe ordinary updates in this artifact as though regime transitions had already been formalized."
+  },
+  "drift_boundary": {
+    "represented_as_named_source_concept": false,
+    "possible_future_formalization": [
+      "distance from reference state",
+      "change in relationship",
+      "sequence divergence",
+      "invariant violation"
+    ],
+    "rule": "A future drift definition should be explicit about what is drifting relative to what."
+  },
+  "history_boundary": {
+    "current_artifact": "single-step transition structure",
+    "possible_extension": [
+      "state_0",
+      "update_0",
+      "state_1",
+      "update_1",
+      "state_2"
+    ],
+    "purpose": "Allow recurrence, drift, and pattern breaks to be inspected over multiple transitions."
+  },
+  "recurrence_boundary": {
+    "current_artifact_proves_causation": false,
+    "future_history_may_record_recurrence": true,
+    "principle": "Repeated state sequences would establish recurrence in the model, not automatically explain its cause."
+  },
+  "student_questions": [
+    "What fields exist in RTTState?",
+    "What fields exist in RTTUpdate?",
+    "Which update field corresponds to each state field?",
+    "What does applyUpdate do?",
+    "What makes zeroUpdate neutral?",
+    "What does ContinuousFrom mean here?",
+    "Which broader RTT concepts are absent?",
+    "What did Lean verify?",
+    "What remains outside the formalization?",
+    "What changes if the state structure acquires another field?"
+  ],
+  "student_exercise": {
+    "instruction": "Predict and inspect a one-step state transition.",
+    "record": {
+      "before": {
+        "scalar": null,
+        "flow": null,
+        "resonance": null
+      },
+      "update": {
+        "scalarChange": null,
+        "flowChange": null,
+        "resonanceChange": null
+      },
+      "predicted_after": {
+        "scalar": null,
+        "flow": null,
+        "resonance": null
+      },
+      "formal_after": {
+        "scalar": null,
+        "flow": null,
+        "resonance": null
+      },
+      "prediction_matched": null,
+      "relationships_preserved": [],
+      "unexpected_result": null
+    }
+  },
+  "variation_exercises": [
+    {
+      "change": "Use zeroUpdate.",
+      "question": "Does every represented state component remain unchanged?"
+    },
+    {
+      "change": "Modify only scalarChange.",
+      "question": "Which state field changes?"
+    },
+    {
+      "change": "Modify only flowChange.",
+      "question": "Which state field changes?"
+    },
+    {
+      "change": "Modify only resonanceChange.",
+      "question": "Which state field changes?"
+    },
+    {
+      "change": "Use negative update values.",
+      "question": "How does signed integer representation affect the next state?"
+    },
+    {
+      "change": "Add another state field but leave RTTUpdate unchanged.",
+      "question": "Has the update structure become incomplete relative to the new state boundary?"
+    }
+  ],
+  "state_history_extension": {
+    "future_structure": [
+      "RTTState",
+      "RTTUpdate",
+      "RTTState",
+      "RTTUpdate",
+      "RTTState"
+    ],
+    "future_questions": [
+      "What recurs?",
+      "What drifts?",
+      "Which invariants persist?",
+      "Where does a pattern break?",
+      "How should regime changes be represented?"
+    ],
+    "implemented_here": false
+  },
+  "formal_vs_empirical": {
+    "formal_question": "Does this declared update produce this declared next state under the teaching definitions?",
+    "empirical_question": "Does an appropriate real system exhibit transitions adequately represented by this model?",
+    "same_question": false,
+    "empirical_extension_may_require": [
+      "operational definitions",
+      "measurement procedures",
+      "units",
+      "time sampling",
+      "uncertainty",
+      "data",
+      "alternative models",
+      "independent testing"
+    ]
+  },
+  "compiler_validation": {
+    "source_file": "docs/5Guides/lean/11_rtt_origin.lean",
+    "status": "compiler-checked",
+    "validation_set": "01-11",
+    "lean_version": "4.36.0",
+    "target": "x86_64-w64-windows-gnu",
+    "meaning": "The human-source formal artifact was accepted under the stated Lean environment.",
+    "boundary": "Compiler acceptance applies to the represented RTT-inspired teaching abstraction and does not establish empirical validity of RTT."
+  },
+  "lean_source_contract": {
+    "source_of_truth": "docs/5Guides/lean/11_rtt_origin.lean",
+    "embedded_source_optional": true,
+    "if_embedded": "Copy the compiler-checked Lean source exactly rather than reconstructing it from this JSON abstraction.",
+    "reason": "The AI Edition description should not create a competing version of the canonical Lean source."
+  },
+  "origin_connection": {
+    "resource": "../origins/rtt.json",
+    "previous_origin_companion": "10_unified_resonance_theorem.json",
+    "formal_origin_sequence_complete": true
+  },
+  "formalization_connection": {
+    "resource": "../origins/formalization.json",
+    "record": {
+      "source": "RTT state, flow, resonance, operators, updates, coherence, regimes, and drift",
+      "formalization": "small integer-valued state-transition teaching model",
+      "simplifications": [
+        "three state fields",
+        "three corresponding update fields",
+        "integer arithmetic",
+        "component-wise addition",
+        "local continuity predicate",
+        "single-step transition emphasis"
+      ],
+      "added_assumptions": [
+        "represented state uses three Int fields",
+        "represented update uses corresponding Int changes",
+        "update acts by component-wise addition",
+        "ContinuousFrom is defined using applyUpdate equality"
+      ],
+      "lean_proves": [
+        "selected state-update properties represented in the canonical formal source",
+        "selected zero-update preservation properties represented in the canonical formal source",
+        "selected transition relationships represented in the canonical formal source"
+      ],
+      "lean_does_not_prove": [
+        "complete RTT formalization",
+        "empirical validity of RTT",
+        "physical correctness of its field interpretation",
+        "complete continuity semantics",
+        "regime-change semantics",
+        "drift semantics",
+        "measurement validity"
+      ]
+    }
+  },
+  "ai_companion": {
+    "resource": "../shared/ai_companion.json",
+    "preferred_support": [
+      "trace a represented state transition",
+      "identify which update component affects which state component",
+      "predict a zero-update outcome",
+      "identify structure absent from the teaching model",
+      "challenge claims that exceed the formalization boundary",
+      "compare two state versions for semantic drift"
+    ],
+    "avoid": [
+      "claiming the three fields are complete RTT",
+      "claiming ContinuousFrom is canonical RTT continuity",
+      "inventing regime or drift semantics",
+      "presenting compiler success as RTT empirical validation"
+    ]
+  },
+  "aaccc_self_inspection": {
+    "awareness": {
+      "question": "What state, update, and transition structures are actually represented?"
+    },
+    "alignment": {
+      "question": "Which update components correspond to which state components?"
+    },
+    "coherence": {
+      "question": "Does the declared after-state follow from the update definition?"
+    },
+    "clarity": {
+      "question": "Can the teaching state-transition model be distinguished clearly from the broader RTT source?"
+    },
+    "continuity": {
+      "question": "Which state relationships persist while represented component values change?"
+    }
+  },
+  "formal_origin_sequence_summary": [
+    {
+      "file": "06_tft_origin.json",
+      "lesson": "Extract a generic structure without claiming complete source equivalence."
+    },
+    {
+      "file": "07_nawderian_theorem.json",
+      "lesson": "Preserve an undefined source relationship instead of inventing convenient semantics."
+    },
+    {
+      "file": "08_nawderian_set_theorem.json",
+      "lesson": "Make named contributions and their composition explicit."
+    },
+    {
+      "file": "09_temperature_engine_theorem.json",
+      "lesson": "Verify selected consequences of a deliberately simplified signed relation."
+    },
+    {
+      "file": "10_unified_resonance_theorem.json",
+      "lesson": "Expose algebraic structure added by formalization."
+    },
+    {
+      "file": "11_rtt_origin.json",
+      "lesson": "Represent change as an inspectable state-transition relation while preserving the boundary of the teaching model."
+    }
+  ],
+  "ai_behavior": {
+    "must": [
+      "Describe RTTState and RTTUpdate as teaching abstractions.",
+      "Preserve component-wise state-update correspondence.",
+      "Treat ContinuousFrom as a local teaching predicate.",
+      "Distinguish structural continuity from unchanged values.",
+      "Expose source concepts omitted from the formal model.",
+      "Keep regime and drift semantics outside the artifact unless explicitly formalized.",
+      "Separate formal transition verification from empirical RTT validation.",
+      "Preserve compiler provenance."
+    ],
+    "must_not": [
+      "claim this artifact completely formalizes RTT",
+      "claim three integer fields fully represent RTT",
+      "claim all RTT updates are additive",
+      "claim ContinuousFrom is the complete canonical RTT definition",
+      "invent regime-change semantics",
+      "invent drift semantics",
+      "claim compiler success empirically validates RTT",
+      "erase the distinction between source RTT and the teaching abstraction",
+      "reconstruct Lean source and present it as exact unless verified against the source file"
+    ]
+  },
+  "provenance": {
+    "human_origin_source": "docs/5Guides/origins/rtt.md",
+    "formal_source": "docs/5Guides/lean/11_rtt_origin.lean",
+    "ai_origin": "../origins/rtt.json",
+    "ai_formal_artifact": "11_rtt_origin.json",
+    "transformation": "structured AI-readable formal origin companion",
+    "chain": [
+      "RTT source structures",
+      "state-transition interpretation",
+      "three-field teaching state",
+      "three-field teaching update",
+      "applyUpdate",
+      "local ContinuousFrom predicate",
+      "selected theorems",
+      "compiler-checked artifact"
+    ],
+    "preserve": [
+      "source lineage",
+      "state",
+      "update",
+      "component correspondence",
+      "zero-update preservation",
+      "transition",
+      "deliberate simplification",
+      "formalization boundary",
+      "compiler provenance"
+    ],
+    "do_not_infer": [
+      "complete RTT formalization",
+      "empirical validation",
+      "canonical completeness of ContinuousFrom",
+      "complete drift model",
+      "complete regime model",
+      "physical field validation",
+      "scientific consensus",
+      "source code not verified against the canonical Lean file"
+    ]
+  },
+  "related": {
+    "lean_index": "index.json",
+    "previous_formal_companion": "10_unified_resonance_theorem.json",
+    "origin": "../origins/rtt.json",
+    "formalization": "../origins/formalization.json",
+    "origins_index": "../origins/index.json",
+    "continuity_guide": "../guides/continuity.json",
+    "continuity_formal_companion": "05_continuity.json",
+    "ai_companion": "../shared/ai_companion.json",
+    "module": "../module.json",
+    "index": "../index.json"
+  },
+  "machine_context": {
+    "ai_parseable": true,
+    "role": "formal-origin-companion",
+    "formal_order": 11,
+    "origin": "RTT",
+    "optional": true,
+    "state_transition_model": true,
+    "state_field_count": 3,
+    "update_field_count": 3,
+    "teaching_type": "Int",
+    "component_wise_update": true,
+    "zero_update_preservation": true,
+    "continuous_from_is_local_teaching_predicate": true,
+    "regime_semantics_modeled": false,
+    "drift_semantics_modeled": false,
+    "complete_source_formalization": false,
+    "formalization_boundary_explicit": true,
+    "compiler_checked": true,
+    "compiler_validation_bounded": true,
+    "empirical_validation_claim": false,
+    "provenance_aware": true,
+    "formal_origin_sequence_complete": true
+  }
+}

@@ -1,0 +1,722 @@
+{
+  "document": {
+    "id": "5Guides-origins-rtt",
+    "type": "origin-lineage-artifact",
+    "name": "RTT",
+    "title": "RTT — Resonance-Time Theory",
+    "edition": "AI Edition",
+    "module": "5Guides",
+    "framework": "AACCC",
+    "version": "1.0",
+    "status": "active",
+    "language": "en",
+    "source": "docs/5Guides/origins/rtt.md",
+    "ai_path": "docs/book/AI_Edition/5Guides/origins/rtt.json",
+    "formal_companion": "../lean/11_rtt_origin.json"
+  },
+  "purpose": {
+    "primary": "Represent RTT as a later project-lineage stage in which state, flow, resonance, operators, coherence, regimes, drift, and change across time became more explicit.",
+    "educational": "Expose structural ideas that contributed to later AACCC and 5Guides reasoning without requiring learners to adopt RTT.",
+    "principle": "RTT is especially useful here as structural ancestry for inspecting state, relationship, change, persistence, drift, transition, and history."
+  },
+  "lineage_position": {
+    "sequence": [
+      "TFT",
+      "Triads",
+      "Theorems",
+      "RTT",
+      "AACCC",
+      "5Guides"
+    ],
+    "previous": "theorems.json",
+    "current": "rtt.json",
+    "next": "../index.json",
+    "lineage_type": "developmental",
+    "strict_derivation": false
+  },
+  "project_status": {
+    "source_status": "frozen",
+    "role": "historical / reference-only",
+    "version": "0.9 archival",
+    "format": "specification-oriented",
+    "educational_interpretation": "Preserved project-lineage material for inspection rather than a requirement for student adoption.",
+    "important_boundary": "Frozen means preserved, not empirically proven."
+  },
+  "structural_vocabulary": [
+    "state",
+    "flow",
+    "resonance",
+    "operator",
+    "coherence",
+    "update",
+    "regime",
+    "drift",
+    "transition",
+    "persistence",
+    "history"
+  ],
+  "field_structure": {
+    "components": [
+      {
+        "symbol": "phi",
+        "name": "scalar field",
+        "source_role": "baseline state"
+      },
+      {
+        "symbol": "V",
+        "name": "vector field",
+        "source_role": "directed flows and actions"
+      },
+      {
+        "symbol": "R",
+        "name": "resonance envelope",
+        "source_role": "summary of coherence and alignment"
+      }
+    ],
+    "educational_abstraction": "A system may be inspected in terms of state, directed change, and relationships describing coherence.",
+    "boundary": "This educational abstraction does not establish that these fields form a complete empirical description of arbitrary real systems."
+  },
+  "operators": {
+    "families": [
+      {
+        "name": "Diffusion",
+        "declared_role": "Spread state and smooth gradients."
+      },
+      {
+        "name": "Alignment",
+        "declared_role": "Pull fields toward preferred patterns or targets."
+      },
+      {
+        "name": "Coupling",
+        "declared_role": "Link fields so changes affect one another."
+      },
+      {
+        "name": "Activation",
+        "declared_role": "Introduce nonlinear responses, thresholds, or amplification."
+      },
+      {
+        "name": "Stabilization",
+        "declared_role": "Damp or control runaway behavior."
+      }
+    ],
+    "general_pattern": [
+      "state",
+      "operator",
+      "updated state"
+    ],
+    "educational_use": "Provide an explicit structure for asking how one state becomes another."
+  },
+  "time_as_updates": {
+    "pattern": [
+      "State_0",
+      "Update",
+      "State_1",
+      "Update",
+      "State_2"
+    ],
+    "structural_interpretation": "Time-related reasoning can include a sequence of updates under an operating regime rather than only a current-state snapshot.",
+    "continuity_questions": [
+      "What changed?",
+      "What remained?",
+      "Was the change expected?",
+      "Did important relationships survive?",
+      "Did the operating regime change?"
+    ],
+    "boundary": "The AI Edition preserves this as project-lineage structure and does not upgrade it into a universally established physical definition of time."
+  },
+  "coherence": {
+    "role": "Central relational quantity in the preserved RTT material.",
+    "structural_use": "Inspect whether important relationships among flows, structures, or layers remain stable enough to describe a coherent state or evolution.",
+    "distinction": {
+      "state_now": "What is true or represented at the current state?",
+      "coherence_over_change": "Do important relationships remain stable or meaningfully connected across updates?"
+    },
+    "aaccc_bridge": [
+      "Coherence",
+      "Continuity"
+    ]
+  },
+  "alignment": {
+    "source_role": "Structural rather than inherently moral or evaluative.",
+    "dimensions": [
+      "structural alignment",
+      "temporal alignment",
+      "resonance alignment"
+    ],
+    "associated_concerns": [
+      "boundaries",
+      "operators",
+      "dimensional access",
+      "stability",
+      "drift",
+      "regimes",
+      "frequency",
+      "pattern",
+      "noise"
+    ],
+    "educational_bridge": "Alignment in 5Guides asks which relationships correspond and under what boundaries and conditions rather than merely whether things look similar.",
+    "regime_dependent": true
+  },
+  "alignment_over_time": {
+    "principle": "Aligned now does not automatically imply aligned later.",
+    "possible_changes": [
+      "regime transition",
+      "drift",
+      "relationship loss",
+      "recovery",
+      "reorganization"
+    ],
+    "aaccc_bridge": [
+      "Alignment",
+      "Continuity"
+    ]
+  },
+  "drift": {
+    "structural_definition_for_5guides": "Gradual movement away from an earlier state, relationship, expectation, or intentionally preserved structure.",
+    "automatic_failure": false,
+    "possible_interpretations": [
+      "degradation",
+      "adaptation",
+      "learning",
+      "correction",
+      "new evidence",
+      "changed conditions",
+      "regime transition"
+    ],
+    "inspection_sequence": [
+      "What changed?",
+      "Why?",
+      "What was supposed to persist?",
+      "Does realignment make sense?"
+    ],
+    "principle": "Detect and inspect drift before deciding whether it should be repaired."
+  },
+  "regime_change": {
+    "pattern": [
+      "before regime change",
+      "transition",
+      "after regime change"
+    ],
+    "inspection_questions": [
+      "Which relationships survived?",
+      "Which became invalid?",
+      "Which need reinterpretation?",
+      "Did the observational boundary change?",
+      "Does the previous explanation still apply?"
+    ],
+    "principle": "Relationships useful under one operating condition may not remain valid after a regime change."
+  },
+  "continuity": {
+    "central_question": "What persists through change?",
+    "history_pattern": [
+      "State_0",
+      "Update_0",
+      "State_1",
+      "Update_1",
+      "State_2"
+    ],
+    "inspect": [
+      "values",
+      "relationships",
+      "transitions",
+      "history",
+      "drift",
+      "recurring patterns",
+      "breaks",
+      "recovery"
+    ],
+    "principle": "The latest state alone may not retain enough information to explain how the current state developed."
+  },
+  "same_state_different_history": {
+    "system_a": [
+      "Stable",
+      "Stable",
+      "Stable"
+    ],
+    "system_b": [
+      "Stable",
+      "Drift",
+      "Break",
+      "Recovery",
+      "Stable"
+    ],
+    "current_state_equal": true,
+    "history_equal": false,
+    "lesson": "Current-state equality does not imply historical equivalence."
+  },
+  "recurrence": {
+    "example": [
+      "A",
+      "B",
+      "C",
+      "A",
+      "B",
+      "C"
+    ],
+    "supported_observation": "The sequence appears to recur.",
+    "unsupported_upgrade": "The recurrence alone establishes why the sequence occurs.",
+    "principle": "Recurring history provides an observation for further inspection; it does not automatically establish causation."
+  },
+  "pattern_break": {
+    "expected": [
+      "A",
+      "B",
+      "C"
+    ],
+    "observed": [
+      "A",
+      "B",
+      "D"
+    ],
+    "preferred_response": "Preserve the divergence and investigate it.",
+    "avoid": "Force D into C merely to preserve the expected pattern.",
+    "lesson": "A pattern break is information."
+  },
+  "continuity_principle": {
+    "not": "Nothing changes.",
+    "is": "Preserve enough structure and history to understand how change relates one state to another.",
+    "may_include": [
+      "persistence",
+      "drift",
+      "recurrence",
+      "breakage",
+      "transition",
+      "recovery",
+      "transformation"
+    ]
+  },
+  "resonant_time_triad": {
+    "symbol": "T_R",
+    "components": [
+      {
+        "symbol": "f_R",
+        "source_role": "resonant frequency"
+      },
+      {
+        "symbol": "tau_R",
+        "source_role": "relaxation or memory time"
+      },
+      {
+        "symbol": "Q_R",
+        "source_role": "quality, coherence, or sharpness"
+      }
+    ],
+    "source_interpretation": "A local temporal signature.",
+    "educational_observation": "Time-related behavior is represented using several related quantities rather than one undivided scalar.",
+    "boundary": "The 5Guides interpretation does not establish this triad as a universal physical clock."
+  },
+  "silence_noise_resonance": {
+    "components": [
+      {
+        "name": "Silence",
+        "source_role": "available but unexcited capacity"
+      },
+      {
+        "name": "Noise",
+        "source_role": "incoherent or random excitation"
+      },
+      {
+        "name": "Resonance",
+        "source_role": "coherent or phase-locked excitation"
+      }
+    ],
+    "educational_question": "Can these distinctions be defined or operationalized clearly enough to inspect?",
+    "adoption_required": false
+  },
+  "fff_and_set": {
+    "fff": [
+      "Frequency",
+      "Fluids",
+      "Forces"
+    ],
+    "set": [
+      "Spin",
+      "Electro-field",
+      "Temperature"
+    ],
+    "lineage_role": "Connect later RTT vocabulary with earlier theorem-stage structures.",
+    "theorem_origin": "theorems.json",
+    "principle": "Ideas inherit, change, and acquire new context as they move through project stages."
+  },
+  "lineage_preservation": {
+    "avoid_flattening": "TFT = Theorems = RTT = AACCC",
+    "preferred": [
+      {
+        "stage": "TFT",
+        "role": "early structural ideas"
+      },
+      {
+        "stage": "Theorems",
+        "role": "more explicit relationships"
+      },
+      {
+        "stage": "RTT",
+        "role": "state, operators, coherence, updates, transitions"
+      },
+      {
+        "stage": "AACCC",
+        "role": "student-facing inspection questions"
+      }
+    ],
+    "principle": "Lineage arrows indicate development, not semantic identity."
+  },
+  "rtt_vs_aaccc": {
+    "identical": false,
+    "aaccc_is_simpler": true,
+    "rtt_adoption_required": false,
+    "aaccc_questions": [
+      "What am I observing?",
+      "What corresponds?",
+      "Does this hold together?",
+      "Can this be understood and inspected?",
+      "What persists through change?"
+    ],
+    "principle": "The student tool should remain useful even when the learner does not adopt the framework that helped inspire it."
+  },
+  "aaccc_interpretation": {
+    "status": "later educational interpretation",
+    "awareness": {
+      "question": "What am I observing?",
+      "rtt_application": "Separate state, flow, resonance, operator, update, regime, and interpretation before explaining the system."
+    },
+    "alignment": {
+      "question": "What corresponds?",
+      "rtt_application": "Compare components and relationships across states while checking whether boundaries and regimes remain comparable."
+    },
+    "coherence": {
+      "question": "Does this hold together?",
+      "rtt_application": "Inspect whether state, flow, operator, boundary, and regime assumptions form a compatible structure."
+    },
+    "clarity": {
+      "question": "Can this be understood and inspected?",
+      "rtt_application": "Reduce an immediate problem to explicit state, update, resulting state, and relationships expected to persist."
+    },
+    "continuity": {
+      "question": "What persists through change?",
+      "rtt_application": "Inspect transitions, persistence, drift, recurrence, breaks, and recovery across state history."
+    }
+  },
+  "lean_teaching_abstraction": {
+    "human_source": "docs/5Guides/lean/11_rtt_origin.lean",
+    "ai_companion": "../lean/11_rtt_origin.json",
+    "purpose": "Extract a small state-transition scaffold rather than formalize the entire RTT source.",
+    "state": {
+      "name": "RTTState",
+      "fields": [
+        "scalar",
+        "flow",
+        "resonance"
+      ],
+      "teaching_type": "integer-valued fields"
+    },
+    "update": {
+      "name": "RTTUpdate",
+      "fields": [
+        "scalarChange",
+        "flowChange",
+        "resonanceChange"
+      ]
+    },
+    "transition": [
+      "state",
+      "update",
+      "next state"
+    ]
+  },
+  "lean_alignment": {
+    "component_correspondence": [
+      {
+        "update": "scalarChange",
+        "state": "scalar"
+      },
+      {
+        "update": "flowChange",
+        "state": "flow"
+      },
+      {
+        "update": "resonanceChange",
+        "state": "resonance"
+      }
+    ],
+    "purpose": "Make state/update correspondence explicit in a small formal environment."
+  },
+  "zero_update": {
+    "values": {
+      "scalarChange": 0,
+      "flowChange": 0,
+      "resonanceChange": 0
+    },
+    "expected_property": "Applying the zero update preserves the state.",
+    "continuity_pattern": [
+      "state",
+      "zero update",
+      "same state"
+    ]
+  },
+  "continuous_from": {
+    "name": "ContinuousFrom",
+    "scope": "local teaching predicate",
+    "meaning": "The supplied update applied to the before-state produces the declared after-state.",
+    "canonical_rtt_definition_claim": false,
+    "principle": "Local teaching terminology must not be silently promoted into a complete canonical definition for the source theory."
+  },
+  "source_vs_teaching_abstraction": {
+    "source": "The preserved RTT material uses scalar state, directed flow, resonance, operator families, coherence, regimes, and evolution.",
+    "teaching_model": [
+      "RTTState",
+      "RTTUpdate",
+      "applyUpdate",
+      "ContinuousFrom"
+    ],
+    "relationship": "inspired-by / structurally abstracted-from",
+    "complete_formalization": false
+  },
+  "lean_verified_scope": {
+    "may_verify": [
+      "update components act on their corresponding state components",
+      "a zero update preserves state",
+      "a declared update produces the expected next state",
+      "a transition satisfies the locally defined continuity predicate when the formal condition holds"
+    ],
+    "does_not_establish": [
+      "three integer fields completely represent RTT",
+      "RTT physical interpretations are empirically valid",
+      "RTT operator families accurately model nature",
+      "ContinuousFrom is the complete RTT definition of continuity",
+      "integer arithmetic represents complete field dynamics",
+      "the archived RTT specification is empirically validated"
+    ]
+  },
+  "transition_example": {
+    "before": {
+      "scalar": 10,
+      "flow": 4,
+      "resonance": 7
+    },
+    "update": {
+      "scalarChange": 2,
+      "flowChange": -1,
+      "resonanceChange": 3
+    },
+    "after": {
+      "scalar": 12,
+      "flow": 3,
+      "resonance": 10
+    },
+    "questions": [
+      "What changed?",
+      "What persisted?",
+      "Which correspondences remained intact?",
+      "Is the transition traceable?",
+      "What changes if one update component changes?"
+    ]
+  },
+  "change_one_thing": {
+    "exercise": "Change only flowChange.",
+    "before_compilation": "Predict which result fields should remain unchanged.",
+    "after_compilation": "Compare the formal result with the prediction.",
+    "principle": "Change one thing and inspect where consequences propagate."
+  },
+  "change_boundary": {
+    "exercise": "Add another field to RTTState.",
+    "questions": [
+      "Does the existing update still describe the complete state?",
+      "Does ContinuousFrom still express the intended relationship?",
+      "Does the old zero update remain neutral?",
+      "Which proofs survive?",
+      "Which proofs require revision?"
+    ]
+  },
+  "semantic_change": {
+    "example": "The field remains named resonance while its definition changes.",
+    "risk": "Structural labels may appear continuous while meaning has drifted.",
+    "principle": "Continuity must track semantics rather than labels alone."
+  },
+  "versioning": {
+    "source_example": "RTT is explicitly preserved as a frozen archival artifact.",
+    "pattern": [
+      "old artifact",
+      "preserve",
+      "new work continues elsewhere"
+    ],
+    "principle": "Later work need not rewrite an ancestor in place for project continuity to exist."
+  },
+  "frozen_boundary": {
+    "frozen_means": "This version is preserved.",
+    "frozen_does_not_mean": "Every claim is empirically validated.",
+    "archival_not_useless": true,
+    "archival_value": [
+      "historical vocabulary",
+      "abandoned approaches",
+      "emerging structures",
+      "useful abstractions",
+      "unresolved assumptions",
+      "later refinements",
+      "conceptual ancestry"
+    ]
+  },
+  "transition_to_aaccc": {
+    "from_complexity": [
+      "fields",
+      "operators",
+      "regimes",
+      "resonance",
+      "dimensional structures",
+      "SET",
+      "FFF",
+      "Silence-Noise-Resonance",
+      "measurement models"
+    ],
+    "to_questions": [
+      "What am I observing?",
+      "What corresponds?",
+      "Does this hold together?",
+      "Can I make it clear enough to inspect?",
+      "What persists when it changes?"
+    ],
+    "educational_move": "compress domain-specific structural vocabulary into portable inspection questions"
+  },
+  "framework_to_habit": {
+    "principle": "A framework contains structures; a habit can travel.",
+    "portable_domains": [
+      "software history",
+      "scientific model",
+      "disagreement",
+      "bicycle repair",
+      "research claim",
+      "learning process",
+      "evolving document"
+    ],
+    "rtt_vocabulary_required": false
+  },
+  "aaccc_self_inspection": {
+    "awareness": {
+      "inspect": [
+        "definitions",
+        "equations",
+        "metaphors",
+        "proposed mechanisms",
+        "empirical claims",
+        "extrapolations"
+      ]
+    },
+    "alignment": {
+      "question": "Do formal representations correspond to the concepts they are intended to represent?"
+    },
+    "coherence": {
+      "question": "Do RTT relationships hold together internally, and which require additional assumptions?"
+    },
+    "clarity": {
+      "question": "Can structural ideas be distinguished from larger speculative or domain-specific extensions?"
+    },
+    "continuity": {
+      "question": "What persisted from TFT and theorem material into RTT, and from RTT into AACCC?"
+    }
+  },
+  "learner_disagreement": {
+    "allowed": true,
+    "valid_conclusions": [
+      "This part is useful.",
+      "This part needs a better definition.",
+      "I do not think this conclusion follows.",
+      "There is not enough evidence here.",
+      "I would model this differently."
+    ],
+    "principle": "Critical disagreement is compatible with successful use of the Guides."
+  },
+  "why_rtt_matters_here": {
+    "structural_contributions": [
+      "state",
+      "relationship",
+      "coherence",
+      "operator",
+      "change",
+      "drift",
+      "transition",
+      "persistence",
+      "history"
+    ],
+    "educational_result": "These concerns can be translated into simpler portable questions.",
+    "adoption_required": false
+  },
+  "compiler_provenance": {
+    "source_file": "docs/5Guides/lean/11_rtt_origin.lean",
+    "ai_companion": "../lean/11_rtt_origin.json",
+    "validation_set": "01-11",
+    "status": "compiler-checked",
+    "lean_version": "4.36.0",
+    "target": "x86_64-w64-windows-gnu",
+    "boundary": "Compiler acceptance applies to the formal teaching artifact under the stated environment and does not establish broader empirical RTT claims."
+  },
+  "ai_behavior": {
+    "must": [
+      "Treat RTT as project-lineage material rather than required student doctrine.",
+      "Preserve its archived or frozen status separately from empirical validation.",
+      "Distinguish source RTT structures from later AACCC educational interpretation.",
+      "Treat the Lean RTTState model as a small teaching abstraction.",
+      "Preserve state, update, regime, drift, and history distinctions.",
+      "Treat recurrence as observation rather than automatic causation.",
+      "Preserve semantic drift when definitions change.",
+      "Allow critical disagreement with source claims."
+    ],
+    "must_not": [
+      "present RTT as established scientific consensus",
+      "claim frozen means proven",
+      "claim AACCC is identical to RTT",
+      "claim the RTTState Lean abstraction is a complete RTT formalization",
+      "claim ContinuousFrom is the complete canonical RTT definition of continuity",
+      "infer empirical validation from compiler success",
+      "erase differences between current state and state history",
+      "force unexpected observations into expected patterns"
+    ]
+  },
+  "provenance": {
+    "source_document": "docs/5Guides/origins/rtt.md",
+    "source_type": "human-facing project-lineage guide",
+    "transformation": "structured AI-readable RTT lineage artifact",
+    "preserve": [
+      "archival status",
+      "state and flow structure",
+      "operator structure",
+      "coherence",
+      "alignment",
+      "drift",
+      "regime change",
+      "continuity",
+      "teaching abstraction boundary",
+      "formal validation boundary",
+      "AACCC educational transformation"
+    ],
+    "do_not_infer": [
+      "scientific consensus",
+      "complete formalization",
+      "empirical validation",
+      "universal physical interpretation",
+      "unchanged semantics across project versions",
+      "strict derivation of AACCC from RTT"
+    ]
+  },
+  "related": {
+    "origins_index": "index.json",
+    "tft": "tft.json",
+    "theorems": "theorems.json",
+    "formalization": "formalization.json",
+    "lean_companion": "../lean/11_rtt_origin.json",
+    "module": "../module.json",
+    "ai_index": "../index.json"
+  },
+  "machine_context": {
+    "ai_parseable": true,
+    "role": "origin-lineage-artifact",
+    "source_status": "frozen",
+    "reference_role": "historical",
+    "empirical_validation_claim": false,
+    "rtt_adoption_required": false,
+    "aaccc_interpretation_is_later": true,
+    "teaching_abstraction_is_partial": true,
+    "formal_companion_compiler_checked": true,
+    "state_history_distinction": true,
+    "semantic_drift_preserved": true,
+    "provenance_aware": true
+  }
+}

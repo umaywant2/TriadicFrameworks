@@ -1,0 +1,971 @@
+{
+  "document": {
+    "id": "5Guides-guide-alignment",
+    "type": "guide-learning-object",
+    "name": "Alignment",
+    "title": "5Guides — Alignment",
+    "edition": "AI Edition",
+    "module": "5Guides",
+    "framework": "AACCC",
+    "guide_order": 2,
+    "version": "1.0",
+    "status": "active",
+    "language": "en",
+    "ai_path": "docs/book/AI_Edition/5Guides/guides/alignment.json"
+  },
+  "source": {
+    "root": "docs/5Guides/alignment",
+    "documents": [
+      "docs/5Guides/alignment/index.md",
+      "docs/5Guides/alignment/explore.md",
+      "docs/5Guides/alignment/practice.md",
+      "docs/5Guides/alignment/mastery.md"
+    ],
+    "formal_companion": "docs/5Guides/lean/02_alignment.lean",
+    "ai_formal_companion": "../lean/02_alignment.json"
+  },
+  "identity": {
+    "id": "alignment",
+    "name": "Alignment",
+    "order": 2,
+    "core_question": "What corresponds?",
+    "student_artifact": "Alignment Record",
+    "badge": "Alignment Badge",
+    "previous_guide": "awareness.json",
+    "next_guide": "coherence.json"
+  },
+  "purpose": {
+    "primary": "Teach learners to inspect relationships between objects, observations, representations, measurements, models, requirements, or states without forcing them to match.",
+    "learning_goal": "Identify meaningful correspondences, explain what supports them, preserve mismatches and unmapped elements, and qualify relationships according to their evidence, boundary, and conditions.",
+    "principle": "Alignment is not making things match. It is making their relationship visible enough to know where they correspond, where they do not, and why."
+  },
+  "position_in_aaccc": {
+    "sequence": [
+      "Awareness",
+      "Alignment",
+      "Coherence",
+      "Clarity",
+      "Continuity"
+    ],
+    "current": "Alignment",
+    "previous": "Awareness",
+    "next": "Coherence",
+    "recursive": true,
+    "dependency": "Alignment should operate on objects, observations, assumptions, boundaries, and unknowns made sufficiently visible through Awareness."
+  },
+  "prerequisite_question": {
+    "guide": "Awareness",
+    "question": "What am I observing?"
+  },
+  "core_model": {
+    "basic_form": [
+      "Object A",
+      "Object B",
+      "Relationship"
+    ],
+    "expanded_sequence": [
+      "Identify Objects",
+      "Define Boundary",
+      "Propose Correspondence",
+      "Inspect Evidence",
+      "Expose Assumptions",
+      "Preserve Mismatch",
+      "Identify Unmapped Elements",
+      "State Conditions",
+      "Qualify Alignment"
+    ],
+    "primary_questions": [
+      "What exactly am I comparing?",
+      "Why am I comparing these things?",
+      "What corresponds?",
+      "In what way?",
+      "What evidence supports the correspondence?",
+      "What assumptions are required?",
+      "What does not correspond?",
+      "What remains unmapped?",
+      "Under what conditions does the relationship hold?"
+    ]
+  },
+  "correspondence_not_identity": {
+    "pattern": "A <-> B",
+    "does_not_automatically_mean": "A = B",
+    "examples": [
+      "map <-> landscape",
+      "photograph <-> person",
+      "variable <-> measurement",
+      "model <-> system"
+    ],
+    "principle": "A representation may correspond usefully to something without being identical to it."
+  },
+  "key_distinctions": [
+    {
+      "left": "correspondence",
+      "right": "identity",
+      "principle": "A maps to B does not automatically mean A is B."
+    },
+    {
+      "left": "similarity",
+      "right": "alignment",
+      "principle": "Superficial resemblance is not sufficient evidence of meaningful correspondence."
+    },
+    {
+      "left": "same label",
+      "right": "same meaning",
+      "principle": "Matching words can hide different definitions."
+    },
+    {
+      "left": "different labels",
+      "right": "different meaning",
+      "principle": "Different vocabulary may still refer to closely corresponding concepts."
+    },
+    {
+      "left": "alignment",
+      "right": "agreement",
+      "principle": "Observers do not need identical reports for their observations to align with different observer positions."
+    },
+    {
+      "left": "mismatch",
+      "right": "error",
+      "principle": "A difference should be preserved before deciding whether it is a mistake."
+    },
+    {
+      "left": "similarity",
+      "right": "historical influence",
+      "principle": "Structural resemblance does not establish provenance or causal influence."
+    },
+    {
+      "left": "mapping",
+      "right": "proof of completeness",
+      "principle": "A useful mapping may preserve only part of the represented structure."
+    },
+    {
+      "left": "matching schema",
+      "right": "matching semantics",
+      "principle": "Matching field names do not establish that the fields mean the same thing."
+    },
+    {
+      "left": "test passes",
+      "right": "requirement fully covered",
+      "principle": "A passing example may align with only part of a broader requirement."
+    }
+  ],
+  "comparison_boundary": {
+    "principle": "Alignment judgments depend on what aspects are actually being compared.",
+    "record": {
+      "comparing": null,
+      "not_currently_comparing": null
+    },
+    "example": {
+      "object_a": "Map A",
+      "object_b": "Map B",
+      "comparing": "road locations and intersections",
+      "not_currently_comparing": "buildings, elevation, vegetation"
+    }
+  },
+  "purpose": {
+    "question": "What is this comparison for?",
+    "principle": "A representation may align strongly for one purpose and poorly for another.",
+    "example": {
+      "representation": "road map",
+      "strong_for": "navigation",
+      "weak_for": "identifying individual trees"
+    }
+  },
+  "layered_alignment": {
+    "principle": "A relationship may be strong at one layer and weak at another.",
+    "example": {
+      "connector": "physically fits device port",
+      "other_layers": [
+        "electrical requirements",
+        "power delivery",
+        "protocol",
+        "functional compatibility"
+      ]
+    },
+    "lesson": "One successful correspondence should not leak into unrelated layers."
+  },
+  "same_word_different_meaning": {
+    "example": {
+      "person_a": "The project is finished.",
+      "person_b": "The project is not finished.",
+      "possible_meanings": {
+        "person_a": "finished = software runs",
+        "person_b": "finished = software + tests + documentation complete"
+      }
+    },
+    "lesson": "The labels align while the meanings do not."
+  },
+  "different_words_similar_meaning": {
+    "examples": [
+      "repair",
+      "fix",
+      "correct"
+    ],
+    "principle": "Vocabulary difference alone does not settle conceptual alignment."
+  },
+  "evidence": {
+    "principle": "An important mapping should expose what supports it.",
+    "pattern": {
+      "mapping": null,
+      "evidence": null,
+      "assumptions": null,
+      "uncertainty": null
+    },
+    "example": {
+      "mapping": "map marker <-> building entrance",
+      "evidence": "coordinates correspond to the entrance location"
+    }
+  },
+  "assumptions": {
+    "principle": "Some alignments depend on conventions or labels rather than independently verified relationships.",
+    "example": {
+      "label": "final_report.pdf",
+      "candidate_mapping": "final_report.pdf <-> final report",
+      "assumption": "the filename accurately describes the current contents"
+    },
+    "question": "What must be true for this mapping to work?"
+  },
+  "partial_alignment": {
+    "definition": "Meaningful correspondence exists while important differences remain.",
+    "example": {
+      "objects": [
+        "road bicycle",
+        "mountain bicycle"
+      ],
+      "strong": [
+        "frame",
+        "two wheels",
+        "chain",
+        "pedals",
+        "brakes"
+      ],
+      "different": [
+        "geometry",
+        "tires",
+        "suspension",
+        "gearing",
+        "intended terrain"
+      ]
+    },
+    "failure": false
+  },
+  "conditional_alignment": {
+    "definition": "The correspondence holds under a stated condition.",
+    "possible_conditions": [
+      "version",
+      "time",
+      "scale",
+      "boundary",
+      "operating condition",
+      "definition",
+      "observer position",
+      "purpose"
+    ],
+    "example": "This documentation aligns with software version 2.1."
+  },
+  "uncertain_alignment": {
+    "definition": "A correspondence is plausible but not adequately established by available evidence.",
+    "principle": "Do not upgrade uncertainty merely because a neat mapping would be useful."
+  },
+  "misalignment": {
+    "definition": "Important relationships conflict under the selected comparison boundary.",
+    "principle": "The mismatch itself may identify what deserves another look."
+  },
+  "unmapped": {
+    "definition": "No useful correspondence has been established for an element.",
+    "not_equivalent_to": "No correspondence is possible.",
+    "principle": "Leave unmapped elements unmapped rather than inventing a partner to complete the table."
+  },
+  "alignment_states": [
+    {
+      "id": "strong",
+      "meaning": "Important relationships within the chosen boundary correspond well and have useful support."
+    },
+    {
+      "id": "partial",
+      "meaning": "Useful correspondences exist while important differences remain."
+    },
+    {
+      "id": "conditional",
+      "meaning": "The mapping holds under stated conditions."
+    },
+    {
+      "id": "uncertain",
+      "meaning": "The relationship is plausible but insufficiently established."
+    },
+    {
+      "id": "misaligned",
+      "meaning": "Important relationships conflict under the chosen boundary."
+    },
+    {
+      "id": "unmapped",
+      "meaning": "No useful correspondence has yet been established."
+    }
+  ],
+  "mismatch": {
+    "principle": "Preserve differences before explaining or repairing them.",
+    "example": {
+      "expected": 10,
+      "observed": 12,
+      "difference": 2
+    },
+    "possible_explanations": [
+      "measurement uncertainty",
+      "model error",
+      "changed conditions",
+      "different system boundary",
+      "acceptable tolerance",
+      "new phenomenon",
+      "bad observation",
+      "bad expectation"
+    ],
+    "automatic_error": false
+  },
+  "tolerance": {
+    "principle": "Numerical closeness does not define Alignment by itself.",
+    "depends_on": [
+      "units",
+      "application",
+      "tolerance",
+      "measurement uncertainty",
+      "system requirements"
+    ]
+  },
+  "should_these_match": {
+    "principle": "Before repairing a mismatch, determine whether strong correspondence is actually expected.",
+    "examples": [
+      "user experience vs server log",
+      "two thermometers in different rooms",
+      "two descriptions from opposite sides of an object",
+      "old manual vs updated software"
+    ]
+  },
+  "observer_alignment": {
+    "principle": "Observer positions should be mapped before observer reports are treated as contradictory.",
+    "example": {
+      "user": {
+        "boundary": "end-to-end login experience",
+        "observation": "login failed"
+      },
+      "administrator": {
+        "boundary": "server health",
+        "observation": "server responded normally"
+      }
+    },
+    "lesson": "Different layers may produce observations that are simultaneously accurate."
+  },
+  "scale": {
+    "principle": "A representation may align at one scale and fail at another.",
+    "example": {
+      "representation": "city map",
+      "designed_for": "street navigation",
+      "not_designed_for": [
+        "every tree",
+        "every pothole",
+        "every mailbox"
+      ]
+    }
+  },
+  "time": {
+    "principle": "Alignment can drift through time.",
+    "pattern": [
+      "documentation <-> software at release",
+      "software changes",
+      "documentation <-> current software becomes partial or misaligned"
+    ],
+    "continuity_bridge": true
+  },
+  "mapping_direction": {
+    "principle": "A mapping may have direction.",
+    "example": {
+      "forward": "City -> Country",
+      "reverse": "Country -> City",
+      "same_relationship": false
+    }
+  },
+  "mapping_shapes": [
+    "one-to-one",
+    "one-to-many",
+    "many-to-one",
+    "many-to-many"
+  ],
+  "asymmetry": {
+    "principle": "A useful representation from A to B does not guarantee an equally useful representation from B to A.",
+    "example": "A summary may represent a report for a purpose, while the report is not simply a representation of the summary."
+  },
+  "information_loss": {
+    "principle": "Mapping one representation into another may preserve selected structure while losing other information.",
+    "example": {
+      "from": "detailed report",
+      "to": "three-bullet summary",
+      "may_preserve": [
+        "main conclusion",
+        "critical qualification",
+        "major risk"
+      ],
+      "may_lose": [
+        "method details",
+        "edge cases",
+        "evidence",
+        "historical context"
+      ]
+    },
+    "question": "Was the loss acceptable for the intended purpose?"
+  },
+  "measurement_alignment": {
+    "example": {
+      "reading": "30 °C",
+      "may_correspond_to": "air temperature near the sensor at measurement time",
+      "does_not_automatically_represent": "temperature of the entire building"
+    },
+    "principle": "A measurement has a spatial, temporal, and methodological boundary."
+  },
+  "data_alignment": {
+    "example": {
+      "dataset_a": "Date = order date",
+      "dataset_b": "Date = shipment date"
+    },
+    "technical_join_may_succeed": true,
+    "semantic_alignment_guaranteed": false,
+    "principle": "Matching schemas can hide different meanings."
+  },
+  "requirements_alignment": {
+    "example": {
+      "requirement": "Users must be able to export their data.",
+      "implementation": "Download the current screen as an image."
+    },
+    "questions": [
+      "What does export mean?",
+      "What does their data include?",
+      "Which required behavior is preserved?",
+      "What is missing?"
+    ]
+  },
+  "test_alignment": {
+    "example": {
+      "requirement": "Reject invalid passwords.",
+      "test": "Reject empty password."
+    },
+    "alignment": "partial",
+    "lesson": "A passing test can provide valid evidence while covering only part of a broader requirement."
+  },
+  "research_alignment": {
+    "pattern": [
+      "concept",
+      "measurement"
+    ],
+    "examples": [
+      "performance <-> response time",
+      "learning <-> test score",
+      "stress <-> questionnaire score"
+    ],
+    "questions": [
+      "Which aspect of the concept does this measurement represent?",
+      "What does it leave out?",
+      "Why was this measurement chosen?"
+    ]
+  },
+  "source_alignment": {
+    "pattern": [
+      "source statement",
+      "attributed claim"
+    ],
+    "questions": [
+      "Does the source actually support the attributed claim?",
+      "Is the source claim weaker?",
+      "Is there a missing condition?",
+      "Is the attributed claim adjacent but different?"
+    ],
+    "principle": "Good provenance depends on good Alignment."
+  },
+  "similarity_vs_provenance": {
+    "principle": "Two ideas may resemble one another without one causing or influencing the other.",
+    "structural_similarity_supports": "structural similarity",
+    "historical_influence_requires": [
+      "chronology",
+      "access",
+      "citation",
+      "documented lineage",
+      "other relevant provenance evidence"
+    ],
+    "safe_statement_without_lineage": "These structures share a resemblance in how they organize the problem."
+  },
+  "analogy": {
+    "principle": "An analogy preserves selected relationships and has a boundary.",
+    "questions": [
+      "Which correspondences are structural?",
+      "Which are merely suggestive?",
+      "Where does the analogy break?"
+    ],
+    "warning": "A useful analogy should not quietly become a theory."
+  },
+  "explore": {
+    "phase": "experience",
+    "purpose": "Move from noticing resemblance to identifying specific, bounded, evidence-supported correspondence.",
+    "activities": [
+      "matching objects",
+      "key and lock",
+      "charger and port",
+      "puzzle pieces",
+      "same word different meaning",
+      "different words similar meaning",
+      "map and territory",
+      "two maps",
+      "bicycle comparison",
+      "mismatch game",
+      "two observers",
+      "software layers",
+      "same-number game",
+      "scale",
+      "time",
+      "mapping direction",
+      "information loss",
+      "requirements",
+      "tests",
+      "research measurements",
+      "sources",
+      "AI mappings",
+      "analogy limits"
+    ],
+    "primary_habit": "Replace these seem similar with these correspond in this specific way."
+  },
+  "explore_questions": [
+    "What exactly makes these correspond?",
+    "Which layer aligns?",
+    "Where does the Alignment stop?",
+    "Should these observations even match?",
+    "What evidence supports this mapping?",
+    "What does the representation leave out?",
+    "Is this similarity or provenance?"
+  ],
+  "practice": {
+    "phase": "deliberate application",
+    "purpose": "Practice constructing evidence-supported mappings while preserving mismatch, uncertainty, direction, conditionality, and information loss.",
+    "topics": [
+      "object identification",
+      "relationship naming",
+      "boundary declaration",
+      "correspondence versus identity",
+      "labels and meanings",
+      "evidence",
+      "assumptions",
+      "partial alignment",
+      "conditional alignment",
+      "mismatch",
+      "observer layers",
+      "scale",
+      "time",
+      "measurements",
+      "data",
+      "software requirements",
+      "testing",
+      "research",
+      "sources",
+      "AI mapping",
+      "provenance",
+      "mapping direction",
+      "mapping shape",
+      "information loss"
+    ],
+    "primary_artifact": "Alignment Record"
+  },
+  "practice_patterns": [
+    {
+      "id": "mapping_with_evidence",
+      "fields": [
+        "Mapping",
+        "Evidence",
+        "Assumptions",
+        "Uncertainty"
+      ]
+    },
+    {
+      "id": "partial_mapping",
+      "fields": [
+        "Strong Correspondences",
+        "Partial Correspondences",
+        "Mismatches"
+      ]
+    },
+    {
+      "id": "condition",
+      "patterns": [
+        "A corresponds to B when...",
+        "A corresponds to B within...",
+        "A corresponds to B for the purpose of..."
+      ]
+    },
+    {
+      "id": "preserve_difference",
+      "fields": [
+        "Expected",
+        "Observed",
+        "Difference",
+        "Possible Explanations",
+        "Tolerance",
+        "What I Would Check Next"
+      ]
+    },
+    {
+      "id": "source_claim",
+      "fields": [
+        "Source Actually Says",
+        "Claim Being Attributed",
+        "Strong Correspondence",
+        "Difference",
+        "Missing Qualification",
+        "Current Alignment"
+      ]
+    }
+  ],
+  "student_record": {
+    "name": "Alignment Record",
+    "purpose": "Make the relationship between two objects, descriptions, models, or states inspectable.",
+    "fields": [
+      "Object A",
+      "Object B",
+      "Purpose",
+      "Boundary",
+      "Candidate Correspondences",
+      "Evidence",
+      "Assumptions",
+      "Strong Mappings",
+      "Partial Mappings",
+      "Mismatches",
+      "Unmapped Elements",
+      "Unknowns",
+      "Conditions",
+      "Current Judgment",
+      "What I Would Check Next"
+    ],
+    "all_fields_required": false,
+    "judgment_states": [
+      "Strong",
+      "Partial",
+      "Conditional",
+      "Uncertain",
+      "Misaligned",
+      "Unmapped"
+    ],
+    "principle": "Use enough structure to explain why the mapping received its current qualification."
+  },
+  "mastery": {
+    "phase": "demonstration",
+    "fresh_problem": true,
+    "scenario": {
+      "object_a": "bicycle repair guide",
+      "object_b": "observed bicycle",
+      "guide": {
+        "symptom": "The chain skips when the rider pedals hard.",
+        "possible_cause": "The rear derailleur needs adjustment.",
+        "recommended_action": "Adjust the rear derailleur."
+      },
+      "observed_bicycle": [
+        "The chain skips under heavy pedaling.",
+        "The rear derailleur appears visually aligned.",
+        "The chain shows visible wear.",
+        "Several rear sprocket teeth show wear.",
+        "The bicycle shifts normally during light pedaling.",
+        "Chain wear has not been measured.",
+        "Derailleur adjustment has not been tested.",
+        "Not every drivetrain component has been inspected."
+      ]
+    },
+    "goal": "Inspect how far the guide and observed bicycle align without diagnosing the bicycle or forcing the guide to fit."
+  },
+  "mastery_boundary": {
+    "comparing": "guide symptom, proposed cause, and recommended action against observed drivetrain behavior and visible condition",
+    "not_comparing": "every possible cause of chain skipping or the complete condition of the bicycle"
+  },
+  "mastery_strong_mapping": {
+    "guide": "chain skips when pedaling hard",
+    "observation": "chain skips under heavy pedaling",
+    "status": "strong symptom correspondence"
+  },
+  "mastery_cause_mapping": {
+    "guide": "rear derailleur needs adjustment",
+    "observation": "rear derailleur appears visually aligned",
+    "status": "uncertain",
+    "reason": "Visual appearance neither directly confirms nor fully rules out the proposed adjustment issue."
+  },
+  "mastery_unmapped_elements": [
+    {
+      "observation": "visible chain wear",
+      "guide_partner": null
+    },
+    {
+      "observation": "visible sprocket wear",
+      "guide_partner": null
+    }
+  ],
+  "mastery_mismatch": {
+    "guide_focus": "derailleur adjustment",
+    "observed_extra_structure": "visible wear elsewhere in the drivetrain",
+    "interpretation": "The observed system contains information not represented by the guide excerpt.",
+    "does_not_establish": "The guide is wrong."
+  },
+  "mastery_action_boundary": {
+    "guide_action": "Adjust the rear derailleur.",
+    "symptom_alignment": "strong",
+    "cause_alignment": "uncertain",
+    "action_justification": "not yet strongly established from the supplied observations",
+    "principle": "Do not let symptom Alignment silently become cause or action Alignment."
+  },
+  "mastery_possible_assumptions": [
+    "The skipping is caused by derailleur adjustment.",
+    "Visual appearance does not rule out an adjustment problem.",
+    "Visible drivetrain wear is not the primary cause.",
+    "The guide symptom description applies to this drivetrain."
+  ],
+  "mastery_unknowns": [
+    "Measured chain wear",
+    "Tested derailleur adjustment",
+    "Condition of every drivetrain component",
+    "Primary cause of the skipping"
+  ],
+  "mastery_current_judgment_example": {
+    "state": "Partial",
+    "reason": [
+      "The symptom aligns strongly.",
+      "The proposed cause is not equivalently supported.",
+      "Visible wear remains unmapped to the guide explanation.",
+      "Additional observation is needed before the recommended action can be strongly aligned with the observed problem."
+    ]
+  },
+  "mastery_criteria": [
+    "identify the objects being compared",
+    "define the comparison boundary",
+    "identify meaningful correspondences",
+    "support mappings with evidence",
+    "separate symptom Alignment from cause Alignment",
+    "preserve important mismatches",
+    "identify unmapped elements",
+    "expose assumptions",
+    "preserve unknowns",
+    "qualify the overall relationship appropriately"
+  ],
+  "mastery_not_required": [
+    "diagnose the bicycle",
+    "repair the bicycle",
+    "prove the guide correct",
+    "prove the guide wrong",
+    "eliminate every uncertainty",
+    "use formal terminology",
+    "use Lean",
+    "use AI"
+  ],
+  "retry": {
+    "if_learner_diagnoses": {
+      "action": "Remove the diagnosis temporarily.",
+      "keep": [
+        "Observed",
+        "Mapped",
+        "Unmapped",
+        "Assumed",
+        "Unknown"
+      ]
+    },
+    "if_learner_says_nothing_aligns": {
+      "action": "Inspect partial relationships.",
+      "example": "Symptom Alignment may be strong even when cause Alignment is unresolved."
+    }
+  },
+  "assessment": {
+    "resource": "../shared/assessment.json",
+    "awareness_check": {
+      "optional": true,
+      "may_ask": [
+        "identify a strong mapping",
+        "identify a partial mapping",
+        "identify a mismatch",
+        "identify an unsupported correspondence",
+        "identify an unmapped element",
+        "identify a condition required for Alignment"
+      ]
+    },
+    "mastery": {
+      "required_for_badge": true,
+      "fresh_problem": true,
+      "retryable": true
+    }
+  },
+  "badge": {
+    "resource": "../shared/badges.json",
+    "name": "Alignment Badge",
+    "meaning": "I can examine how things correspond without forcing them to match.",
+    "guide_milestone": 2,
+    "professional_certification": false,
+    "accreditation": false
+  },
+  "ai_companion": {
+    "resource": "../shared/ai_companion.json",
+    "optional": true,
+    "recommended_prompts": [
+      "Challenge my proposed correspondence.",
+      "Find a mismatch I may have overlooked.",
+      "Identify an unmapped element.",
+      "Give me the strongest reasonable counter-mapping.",
+      "Which mapping depends on the strongest assumption?",
+      "Label these mappings as strong, partial, conditional, uncertain, or unsupported."
+    ],
+    "learner_judgment_primary": true
+  },
+  "ai_over_alignment_risk": {
+    "pattern": [
+      "similar vocabulary",
+      "similar number of parts",
+      "similar themes",
+      "beautiful mapping table"
+    ],
+    "warning": "Pattern abundance is not evidence quality.",
+    "question": "What relationship makes this mapping meaningful beyond superficial similarity?"
+  },
+  "formal_companion": {
+    "path": "../lean/02_alignment.json",
+    "human_source": "docs/5Guides/lean/02_alignment.lean",
+    "optional": true,
+    "formal_question": "What relationship actually permits this correspondence or substitution?",
+    "primary_example": "equality",
+    "boundary": "Formal equality is one strict kind of Alignment and does not represent every partial, conditional, directional, or uncertain human-facing mapping."
+  },
+  "awareness_inside_alignment": {
+    "question": "What did each object or observer actually provide before mapping?",
+    "return_trigger": [
+      "comparison objects unclear",
+      "boundaries differ unexpectedly",
+      "same label hides different observations",
+      "important source information is missing"
+    ],
+    "previous": "awareness.json"
+  },
+  "bridge_to_coherence": {
+    "pattern": [
+      "A <-> B",
+      "B <-> C",
+      "C <-> D"
+    ],
+    "next_question": "Can all of these mappings hold together?",
+    "next": "coherence.json",
+    "principle": "Individually plausible correspondences may create a globally incoherent structure."
+  },
+  "boundaries": {
+    "alignment_is_not": [
+      "make two things agree",
+      "find as many similarities as possible",
+      "repair every mismatch",
+      "fill every mapping row",
+      "infer provenance from resemblance",
+      "equate matching labels with matching meanings"
+    ],
+    "alignment_is": [
+      "specific correspondence",
+      "declared comparison boundary",
+      "evidence",
+      "visible assumptions",
+      "preserved mismatches",
+      "unmapped elements",
+      "conditions",
+      "qualified judgment"
+    ]
+  },
+  "provenance": {
+    "source_type": "combined human-facing Guide abstraction",
+    "source_documents": [
+      "docs/5Guides/alignment/index.md",
+      "docs/5Guides/alignment/explore.md",
+      "docs/5Guides/alignment/practice.md",
+      "docs/5Guides/alignment/mastery.md"
+    ],
+    "formal_source": "docs/5Guides/lean/02_alignment.lean",
+    "transformation": "Four human-facing Alignment documents compacted into one structured AI learning object.",
+    "preserve": [
+      "core question",
+      "comparison boundary",
+      "correspondence versus identity",
+      "evidence-supported mapping",
+      "partial alignment",
+      "conditional alignment",
+      "mismatch",
+      "unmapped elements",
+      "directionality",
+      "information loss",
+      "similarity-versus-provenance boundary",
+      "student record",
+      "mastery criteria",
+      "bridge to Coherence"
+    ],
+    "do_not_infer": [
+      "identity from correspondence",
+      "semantics from matching labels",
+      "historical influence from resemblance",
+      "error from mismatch",
+      "complete coverage from one passing test",
+      "global representation from one local measurement",
+      "empirical validation from Lean",
+      "professional certification from the badge"
+    ]
+  },
+  "ai_behavior": {
+    "must": [
+      "Identify exactly what is being compared.",
+      "Declare or inspect the comparison boundary.",
+      "Name the specific relationship supporting a correspondence.",
+      "Expose evidence and assumptions.",
+      "Preserve mismatches.",
+      "Preserve unmapped elements.",
+      "Qualify partial, conditional, or uncertain relationships.",
+      "Distinguish correspondence from identity.",
+      "Distinguish structural similarity from provenance.",
+      "Recognize mapping direction and information loss when relevant.",
+      "Return to Awareness when the objects or observation boundaries are unclear."
+    ],
+    "must_not": [
+      "force complete mappings",
+      "infer equality from resemblance",
+      "infer historical influence from structural similarity",
+      "treat the same label as proof of the same meaning",
+      "treat different labels as proof of different meaning",
+      "erase mismatches",
+      "invent partners for unmapped elements",
+      "upgrade a symptom match into cause alignment",
+      "upgrade a passing example into full requirement coverage",
+      "require Lean or AI for mastery"
+    ]
+  },
+  "related": {
+    "module": "../module.json",
+    "index": "../index.json",
+    "previous_guide": "awareness.json",
+    "next_guide": "coherence.json",
+    "assessment": "../shared/assessment.json",
+    "badges": "../shared/badges.json",
+    "ai_companion": "../shared/ai_companion.json",
+    "formal_companion": "../lean/02_alignment.json"
+  },
+  "machine_context": {
+    "ai_parseable": true,
+    "role": "guide-learning-object",
+    "guide": "Alignment",
+    "guide_order": 2,
+    "core_question": "What corresponds?",
+    "human_source_count": 4,
+    "explore_present": true,
+    "practice_present": true,
+    "mastery_present": true,
+    "student_record_present": true,
+    "badge_present": true,
+    "correspondence_distinct_from_identity": true,
+    "similarity_distinct_from_provenance": true,
+    "mismatch_preserved": true,
+    "unmapped_state_valid": true,
+    "partial_alignment_supported": true,
+    "conditional_alignment_supported": true,
+    "directionality_explicit": true,
+    "information_loss_explicit": true,
+    "uncertainty_preserving": true,
+    "lean_optional": true,
+    "ai_optional": true,
+    "provenance_aware": true,
+    "next": "Coherence"
+  }
+}

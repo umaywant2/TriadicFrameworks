@@ -1,0 +1,540 @@
+{
+  "document": {
+    "id": "5Guides-lean-07-nawderian-theorem",
+    "type": "formal-origin-companion",
+    "name": "Nawderian Theorem",
+    "title": "Lean 4 Companion — Nawderian Theorem",
+    "edition": "AI Edition",
+    "module": "5Guides",
+    "framework": "AACCC",
+    "origin": "Nawderian Theorem",
+    "formal_order": 7,
+    "version": "1.0",
+    "status": "active",
+    "language": "en",
+    "source": "docs/5Guides/lean/07_nawderian_theorem.lean",
+    "ai_path": "docs/book/AI_Edition/5Guides/lean/07_nawderian_theorem.json",
+    "origin_path": "../origins/theorems.json",
+    "lean_index": "index.json"
+  },
+  "purpose": {
+    "primary": "Provide a small formal teaching abstraction for selected dimension-group relationships associated with the Nawderian Theorem.",
+    "formal_goal": "Represent explicit group membership and prove only those relationships supported by the supplied definitions.",
+    "educational_principle": "Formalization should expose when an informal relationship requires a definition rather than inventing one merely to obtain the desired theorem."
+  },
+  "source_alignment": {
+    "source_artifact": "../origins/theorems.json",
+    "source_concept": "The Nawderian Theorem uses several named dimension groups and proposes a broader wrapping relationship.",
+    "selected_structure": "Explicit membership of numbered dimensions in named groups.",
+    "formal_abstraction": "Finite explicitly defined dimension sets and selected membership or intersection properties.",
+    "relationship": "partial formalization",
+    "complete_equivalence": false,
+    "complete_source_formalization": false
+  },
+  "dimension_groups": {
+    "corridor": [
+      1,
+      2,
+      6
+    ],
+    "wrapping": [
+      3,
+      6,
+      9
+    ],
+    "visible": [
+      4,
+      5,
+      6
+    ],
+    "invisible": [
+      6,
+      7,
+      8
+    ]
+  },
+  "central_dimension": {
+    "dimension": 6,
+    "declared_membership": [
+      "corridor",
+      "wrapping",
+      "visible",
+      "invisible"
+    ],
+    "formal_role": "Shared member across the represented dimension groups.",
+    "teaching_value": "Provides a directly inspectable common relationship without requiring stronger containment semantics."
+  },
+  "directly_supported_structure": [
+    {
+      "group": "corridor",
+      "member": 6,
+      "relationship": "membership"
+    },
+    {
+      "group": "wrapping",
+      "member": 6,
+      "relationship": "membership"
+    },
+    {
+      "group": "visible",
+      "member": 6,
+      "relationship": "membership"
+    },
+    {
+      "group": "invisible",
+      "member": 6,
+      "relationship": "membership"
+    }
+  ],
+  "shared_membership": {
+    "claim": "Dimension 6 is represented as a member shared by the declared groups.",
+    "strength": "directly supported by the encoded group definitions",
+    "does_not_imply": [
+      "all groups are equal",
+      "one group contains all the others",
+      "the groups have identical semantics",
+      "the source term wrapping has been formally defined"
+    ]
+  },
+  "intersection_structure": {
+    "visible_and_invisible": {
+      "shared_member": 6,
+      "formal_observation": "The represented visible and invisible groups share dimension 6."
+    },
+    "wrapping_and_visible": {
+      "shared_member": 6,
+      "formal_observation": "The represented wrapping and visible groups share dimension 6."
+    },
+    "wrapping_and_invisible": {
+      "shared_member": 6,
+      "formal_observation": "The represented wrapping and invisible groups share dimension 6."
+    },
+    "corridor_and_wrapping": {
+      "shared_member": 6,
+      "formal_observation": "The represented corridor and wrapping groups share dimension 6."
+    }
+  },
+  "ordinary_set_check": {
+    "wrapping": [
+      3,
+      6,
+      9
+    ],
+    "visible_union_invisible": [
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "ordinary_subset_relation_supported": false,
+    "reason": "The members represented in the visible and invisible groups are not all members of the represented wrapping group.",
+    "lesson": "Shared membership is weaker than ordinary set containment."
+  },
+  "wrapping_problem": {
+    "source_term": "wrapping",
+    "formal_status": "insufficiently defined for stronger formal use in this teaching abstraction",
+    "problem": "The intuitive source term does not yet determine one unique formal relation.",
+    "possible_semantics": [
+      "containment",
+      "intersection",
+      "ordering",
+      "bounding",
+      "mapping",
+      "connection",
+      "enclosure under another relation"
+    ],
+    "selected_semantics": null,
+    "principle": "Do not choose a semantics solely because it makes the desired theorem provable."
+  },
+  "undefined_relation_is_information": {
+    "principle": "The absence of a formal definition for wrapping is itself an important formalization result.",
+    "means": "The model currently supports membership and selected intersection claims more strongly than the broader wrapping interpretation.",
+    "does_not_mean": "The informal wrapping concept is automatically false."
+  },
+  "candidate_future_relation": {
+    "name": "Wraps",
+    "example_signature": "Wraps A B",
+    "status": "future formalization possibility",
+    "implemented_by_this_artifact": false,
+    "requirements_before_use": [
+      "define what Wraps means",
+      "identify its domain and codomain",
+      "state which properties it should satisfy",
+      "justify correspondence with the source concept",
+      "distinguish it from ordinary set containment if necessary"
+    ]
+  },
+  "formal_targets": [
+    {
+      "id": "membership_corridor",
+      "claim": "6 belongs to the represented corridor group.",
+      "relationship_type": "membership"
+    },
+    {
+      "id": "membership_wrapping",
+      "claim": "6 belongs to the represented wrapping group.",
+      "relationship_type": "membership"
+    },
+    {
+      "id": "membership_visible",
+      "claim": "6 belongs to the represented visible group.",
+      "relationship_type": "membership"
+    },
+    {
+      "id": "membership_invisible",
+      "claim": "6 belongs to the represented invisible group.",
+      "relationship_type": "membership"
+    },
+    {
+      "id": "selected_shared_membership",
+      "claim": "The represented groups have selected intersections witnessed by dimension 6.",
+      "relationship_type": "shared membership"
+    }
+  ],
+  "non_target_claims": [
+    "wrapping contains visible union invisible",
+    "wrapping is equivalent to visible plus invisible",
+    "dimension 6 has independently established physical significance",
+    "the represented groups are empirically validated dimensional structures",
+    "the source theorem has been formalized completely"
+  ],
+  "aaccc_mapping": {
+    "awareness": {
+      "question": "What groups and memberships were actually represented?",
+      "formal_answer": "Four explicit groups and their represented dimension members."
+    },
+    "alignment": {
+      "question": "Which dimensions correspond across groups?",
+      "formal_answer": "Dimension 6 is a directly represented shared member."
+    },
+    "coherence": {
+      "question": "Does the stronger wrapping interpretation follow from ordinary set structure?",
+      "formal_answer": "Not from the represented membership definitions alone."
+    },
+    "clarity": {
+      "question": "What must become clearer before the wrapping claim can be formalized?",
+      "formal_answer": "The semantics of the wrapping relation."
+    },
+    "continuity": {
+      "question": "What source relationship survives formalization?",
+      "formal_answer": "Shared membership survives directly; the broader wrapping semantics remain unresolved."
+    }
+  },
+  "formal_awareness": {
+    "inspect": [
+      "which sets exist",
+      "which dimensions belong to each",
+      "which relations are actually defined",
+      "which source words are not formally defined",
+      "what the theorem targets actually state"
+    ],
+    "principle": "Do not confuse a suggestive source label with an encoded formal relationship."
+  },
+  "formal_alignment": {
+    "strong": [
+      "dimension 6 <-> corridor membership",
+      "dimension 6 <-> wrapping membership",
+      "dimension 6 <-> visible membership",
+      "dimension 6 <-> invisible membership"
+    ],
+    "partial_or_unresolved": [
+      "source wrapping concept <-> ordinary set containment"
+    ],
+    "principle": "Preserve the difference between explicit membership and interpretive mapping."
+  },
+  "formal_coherence": {
+    "supported": [
+      "selected membership claims",
+      "selected shared-membership claims"
+    ],
+    "unsupported_without_more_structure": [
+      "strong containment-style wrapping claims"
+    ],
+    "lesson": "The strongest coherent theorem may be smaller than the strongest informal claim."
+  },
+  "formal_clarity": {
+    "benefit": "Explicit sets reveal exactly which relationships ordinary membership semantics support.",
+    "revealed_gap": "The term wrapping needs additional semantics.",
+    "principle": "Formal clarity can expose conceptual ambiguity without resolving it automatically."
+  },
+  "formal_continuity": {
+    "question": "If the group definitions change, which membership and intersection theorems survive?",
+    "possible_change": "Remove or move dimension 6.",
+    "expected_effect": "Previously established shared-membership relationships may break.",
+    "principle": "Formal continuity tracks which relationships depend on which definitions."
+  },
+  "assumptions": {
+    "explicit": [
+      "the represented group definitions",
+      "the represented element type and membership semantics"
+    ],
+    "environmental": [
+      "Lean's formal equality and membership behavior",
+      "the definitions contained in the canonical Lean file"
+    ],
+    "not_assumed": [
+      "wrapping means ordinary subset containment",
+      "wrapping means union",
+      "the groups describe empirically established physical dimensions",
+      "dimension 6 has independently validated physical properties"
+    ]
+  },
+  "verified_consequences": {
+    "scope": "Selected membership and group-relationship properties represented in the compiler-checked Lean artifact.",
+    "include": [
+      "the explicitly proved membership statements encoded by the source artifact",
+      "selected consequences of the represented group definitions"
+    ],
+    "conditional_on": [
+      "the supplied definitions",
+      "the supplied theorem statements",
+      "Lean's formal environment"
+    ]
+  },
+  "formalization_boundary": {
+    "lean_establishes": [
+      "the represented membership and selected group-relationship theorems"
+    ],
+    "lean_does_not_establish": [
+      "a complete formal definition of wrapping",
+      "the broader source theorem in every intended sense",
+      "ordinary containment between wrapping and the visible/invisible union when the represented sets do not support it",
+      "empirical validity of the dimension groups",
+      "physical significance of dimension 6",
+      "scientific consensus around the source theory"
+    ],
+    "principle": "The formal artifact proves what its explicit definitions support and preserves the stronger undefined relationship as a boundary."
+  },
+  "failed_stronger_claim_as_result": {
+    "concept": "A stronger intended relation may fail under the first obvious formal interpretation.",
+    "example_interpretation": "wrapping as ordinary set containment",
+    "lesson": "The failure tells us that either the source relation needs another definition, the formal mapping is wrong, the source claim requires revision, or additional structure is needed.",
+    "automatic_response": null
+  },
+  "do_not_repair_by_definition": {
+    "avoid_pattern": [
+      "desired claim fails",
+      "invent convenient definition",
+      "claim now proves",
+      "attribute invented definition to source"
+    ],
+    "preferred_pattern": [
+      "record failed interpretation",
+      "return to source",
+      "clarify intended relationship",
+      "define new relation explicitly",
+      "state added assumptions",
+      "formalize again"
+    ]
+  },
+  "student_exercise": {
+    "instruction": "Classify each proposed relationship according to what the represented sets actually support.",
+    "record": {
+      "candidate_claim": null,
+      "relationship_type": null,
+      "supported_by_definitions": null,
+      "evidence": null,
+      "additional_definition_required": null,
+      "current_status": null
+    },
+    "possible_statuses": [
+      "supported",
+      "partially supported",
+      "requires definition",
+      "not supported under current interpretation"
+    ]
+  },
+  "variation_exercises": [
+    {
+      "change": "Remove dimension 6 from one group.",
+      "question": "Which shared-membership theorem stops holding?"
+    },
+    {
+      "change": "Add a new common dimension.",
+      "question": "Which new intersection relationships become available?"
+    },
+    {
+      "change": "Redefine wrapping as an explicit custom relation.",
+      "question": "Which properties must be stated before stronger theorems can be checked?"
+    },
+    {
+      "change": "Treat wrapping as ordinary subset containment.",
+      "question": "Does the represented group data support the intended relation?"
+    },
+    {
+      "change": "Use only the directly represented membership claims.",
+      "question": "What is the strongest theorem that can be stated without additional source interpretation?"
+    }
+  ],
+  "claim_strength": {
+    "preferred": "The strongest claim actually supported by the represented definitions.",
+    "avoid": "The strongest desired claim that can be made provable by silently changing semantics.",
+    "principle": "A smaller honest theorem is a valid formalization result."
+  },
+  "source_vs_formal_model": {
+    "source": "Dimension groups plus broader conceptual wrapping language.",
+    "formal_model": "Explicit finite group membership and selected membership/intersection properties.",
+    "relationship_strength": "partial",
+    "unresolved_source_semantics": [
+      "wrapping"
+    ]
+  },
+  "compiler_validation": {
+    "source_file": "docs/5Guides/lean/07_nawderian_theorem.lean",
+    "status": "compiler-checked",
+    "validation_set": "01-11",
+    "lean_version": "4.36.0",
+    "target": "x86_64-w64-windows-gnu",
+    "meaning": "The human-source formal artifact was accepted under the stated Lean environment.",
+    "boundary": "Compiler acceptance applies to the represented formal artifact and does not establish empirical validity or a complete semantics for the source theorem."
+  },
+  "lean_source_contract": {
+    "source_of_truth": "docs/5Guides/lean/07_nawderian_theorem.lean",
+    "embedded_source_optional": true,
+    "if_embedded": "Copy the compiler-checked Lean source exactly rather than reconstructing it from this JSON abstraction.",
+    "reason": "The JSON describes the canonical formal artifact but should not silently replace it."
+  },
+  "origin_connection": {
+    "resource": "../origins/theorems.json",
+    "theorem": "Nawderian Theorem",
+    "previous_origin_companion": "06_tft_origin.json",
+    "next_origin_companion": "08_nawderian_set_theorem.json"
+  },
+  "formalization_connection": {
+    "resource": "../origins/formalization.json",
+    "record": {
+      "source": "Declared dimension groups and wrapping language",
+      "formalization": "Explicit group membership",
+      "simplifications": [
+        "focus on membership",
+        "focus on selected intersections",
+        "leave wrapping semantics unresolved"
+      ],
+      "added_assumptions": [],
+      "lean_proves": [
+        "selected membership properties",
+        "selected group relationships explicitly represented by the source artifact"
+      ],
+      "lean_does_not_prove": [
+        "undefined wrapping semantics",
+        "complete source theorem",
+        "empirical dimensional interpretation"
+      ]
+    }
+  },
+  "ai_companion": {
+    "resource": "../shared/ai_companion.json",
+    "preferred_support": [
+      "compare the represented groups",
+      "identify shared members",
+      "distinguish membership from containment",
+      "explain why wrapping needs a definition",
+      "challenge a forced set interpretation",
+      "help formulate questions for a future Wraps relation"
+    ],
+    "avoid": [
+      "inventing wrapping semantics",
+      "forcing containment",
+      "claiming intersection establishes full equivalence",
+      "assigning empirical significance to dimension 6"
+    ]
+  },
+  "aaccc_self_inspection": {
+    "awareness": {
+      "question": "What sets, members, and relations are actually present?"
+    },
+    "alignment": {
+      "question": "Which memberships correspond across groups?"
+    },
+    "coherence": {
+      "question": "Does the proposed stronger relationship follow under the current formal semantics?"
+    },
+    "clarity": {
+      "question": "Which source term remains insufficiently defined?"
+    },
+    "continuity": {
+      "question": "Which relationships survive if group membership changes?"
+    }
+  },
+  "ai_behavior": {
+    "must": [
+      "Preserve the explicit dimension-group definitions.",
+      "Distinguish shared membership from containment.",
+      "Treat wrapping as unresolved unless explicitly defined.",
+      "Preserve failed stronger interpretations as useful formalization results.",
+      "Keep theorem claims scoped to represented definitions.",
+      "Distinguish formal proof from empirical interpretation.",
+      "Preserve compiler provenance."
+    ],
+    "must_not": [
+      "invent a definition of wrapping",
+      "claim wrapping ordinary containment is established when represented membership does not support it",
+      "claim shared dimension 6 makes all groups equivalent",
+      "assign independent physical significance to dimension 6",
+      "claim the artifact formally verifies the entire Nawderian Theorem",
+      "upgrade compiler success into empirical validation",
+      "retroactively attribute a teaching-model relation to the source",
+      "reconstruct Lean source and present it as exact unless verified against the source file"
+    ]
+  },
+  "provenance": {
+    "human_origin_source": "docs/5Guides/origins/theorems.md",
+    "formal_source": "docs/5Guides/lean/07_nawderian_theorem.lean",
+    "ai_origin": "../origins/theorems.json",
+    "ai_formal_artifact": "07_nawderian_theorem.json",
+    "transformation": "structured AI-readable formal origin companion",
+    "chain": [
+      "source dimension groups",
+      "interpretation of membership",
+      "formal set representation",
+      "selected membership theorems",
+      "compiler-checked artifact"
+    ],
+    "preserve": [
+      "source group structure",
+      "shared membership",
+      "undefined wrapping relation",
+      "failed containment interpretation",
+      "formalization boundary",
+      "compiler provenance"
+    ],
+    "do_not_infer": [
+      "complete theorem formalization",
+      "defined wrapping semantics",
+      "physical dimensional validation",
+      "scientific consensus",
+      "empirical significance of dimension 6",
+      "source code not verified against the canonical Lean file"
+    ]
+  },
+  "related": {
+    "lean_index": "index.json",
+    "previous_formal_companion": "06_tft_origin.json",
+    "origin": "../origins/theorems.json",
+    "next_formal_companion": "08_nawderian_set_theorem.json",
+    "formalization": "../origins/formalization.json",
+    "origins_index": "../origins/index.json",
+    "ai_companion": "../shared/ai_companion.json",
+    "module": "../module.json",
+    "index": "../index.json"
+  },
+  "machine_context": {
+    "ai_parseable": true,
+    "role": "formal-origin-companion",
+    "formal_order": 7,
+    "origin": "Nawderian Theorem",
+    "optional": true,
+    "membership_primary": true,
+    "shared_dimension": 6,
+    "wrapping_semantics_defined": false,
+    "ordinary_containment_supported": false,
+    "undefined_relation_preserved": true,
+    "complete_source_formalization": false,
+    "formalization_boundary_explicit": true,
+    "compiler_checked": true,
+    "compiler_validation_bounded": true,
+    "empirical_validation_claim": false,
+    "provenance_aware": true
+  }
+}
