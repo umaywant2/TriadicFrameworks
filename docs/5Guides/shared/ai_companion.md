@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="5Guides_shared_ai_companion_" src="https://github.com/user-attachments/assets/9b66acb1-e59c-41cc-a7b1-69b7721066be" />
+
 # AI Companion
 
 > Use AI to help you think, not to replace the thinking.
