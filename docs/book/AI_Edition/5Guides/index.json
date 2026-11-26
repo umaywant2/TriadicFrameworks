@@ -1,1 +1,505 @@
-. 
+{
+  "document": {
+    "id": "5Guides-index",
+    "type": "ai-edition-index",
+    "name": "5Guides",
+    "title": "5Guides — AI Edition",
+    "framework": "AACCC",
+    "edition": "AI Edition",
+    "version": "1.0",
+    "status": "active",
+    "language": "en",
+    "module": "5Guides",
+    "module_contract": "module.json",
+    "human_source_root": "docs/5Guides",
+    "ai_edition_root": "docs/book/AI_Edition/5Guides"
+  },
+  "purpose": {
+    "primary": "Provide the machine-readable front door and navigation graph for the 5Guides AI Edition.",
+    "learning_goal": "Support a learner in practicing Awareness, Alignment, Coherence, Clarity, and Continuity, then transferring those structural questions into independent application.",
+    "ai_role": "Navigate, explain, question, challenge, and support practice without replacing learner judgment or silently resolving uncertainty."
+  },
+  "entry": {
+    "start": "guides/awareness.json",
+    "recommended_sequence": [
+      "guides/awareness.json",
+      "guides/alignment.json",
+      "guides/coherence.json",
+      "guides/clarity.json",
+      "guides/continuity.json"
+    ],
+    "destination": "Independent Application",
+    "prior_knowledge_required": {
+      "TriadicFrameworks": false,
+      "AACCC": false,
+      "Lean": false,
+      "AI": false,
+      "advanced_mathematics": false
+    }
+  },
+  "aaccc": {
+    "expansion": [
+      "Awareness",
+      "Alignment",
+      "Coherence",
+      "Clarity",
+      "Continuity"
+    ],
+    "questions": {
+      "awareness": "What am I observing?",
+      "alignment": "What corresponds?",
+      "coherence": "Does this hold together?",
+      "clarity": "Can this be understood and inspected?",
+      "continuity": "What persists through change?"
+    },
+    "sequence": "Awareness -> Alignment -> Coherence -> Clarity -> Continuity",
+    "recursive_use": true,
+    "recursive_note": "Later Guides may expose problems that require returning to an earlier Guide. The sequence is developmental, not a prohibition against revisiting earlier questions."
+  },
+  "learning_rhythm": {
+    "sequence": [
+      "Experience",
+      "Notice",
+      "Inspect",
+      "Apply",
+      "Demonstrate",
+      "Reflect",
+      "Continue"
+    ],
+    "guide_phases": [
+      "explore",
+      "practice",
+      "mastery"
+    ],
+    "description": "Each Guide introduces the skill experientially, develops deliberate practice, and concludes with application to a fresh mastery problem."
+  },
+  "guides": [
+    {
+      "order": 1,
+      "id": "awareness",
+      "name": "Awareness",
+      "question": "What am I observing?",
+      "path": "guides/awareness.json",
+      "student_artifact": "Awareness Record",
+      "badge": "Awareness Badge",
+      "core_skill": "Distinguish observation from interpretation, assumption, and unknown information.",
+      "next": "guides/alignment.json"
+    },
+    {
+      "order": 2,
+      "id": "alignment",
+      "name": "Alignment",
+      "question": "What corresponds?",
+      "path": "guides/alignment.json",
+      "student_artifact": "Alignment Record",
+      "badge": "Alignment Badge",
+      "core_skill": "Inspect correspondences without forcing mismatches into agreement.",
+      "previous": "guides/awareness.json",
+      "next": "guides/coherence.json"
+    },
+    {
+      "order": 3,
+      "id": "coherence",
+      "name": "Coherence",
+      "question": "Does this hold together?",
+      "path": "guides/coherence.json",
+      "student_artifact": "Coherence Record",
+      "badge": "Coherence Badge",
+      "core_skill": "Inspect whether pieces, relationships, constraints, and assumptions work together.",
+      "previous": "guides/alignment.json",
+      "next": "guides/clarity.json"
+    },
+    {
+      "order": 4,
+      "id": "clarity",
+      "name": "Clarity",
+      "question": "Can this be understood and inspected?",
+      "path": "guides/clarity.json",
+      "student_artifact": "Clarity Record",
+      "badge": "Clarity Badge",
+      "core_skill": "Make important meaning and relationships inspectable without silently changing them.",
+      "previous": "guides/coherence.json",
+      "next": "guides/continuity.json"
+    },
+    {
+      "order": 5,
+      "id": "continuity",
+      "name": "Continuity",
+      "question": "What persists through change?",
+      "path": "guides/continuity.json",
+      "student_artifact": "Continuity Record",
+      "badge": "Continuity Badge",
+      "core_skill": "Trace change, persistence, drift, breaks, recurrence, and provenance across states.",
+      "previous": "guides/clarity.json",
+      "next": "Independent Application"
+    }
+  ],
+  "skill_accumulation": {
+    "awareness": [
+      "observation",
+      "interpretation",
+      "assumption",
+      "uncertainty",
+      "observer position",
+      "boundary",
+      "blind spots"
+    ],
+    "alignment": [
+      "correspondence",
+      "mapping",
+      "boundary",
+      "evidence",
+      "mismatch",
+      "partial alignment",
+      "conditional alignment",
+      "unmapped elements"
+    ],
+    "coherence": [
+      "relationships",
+      "contradiction",
+      "constraint",
+      "missing relationship",
+      "unsupported conclusion",
+      "hidden assumption",
+      "local coherence",
+      "global coherence"
+    ],
+    "clarity": [
+      "meaning preservation",
+      "definition",
+      "ambiguity",
+      "missing steps",
+      "representation",
+      "qualification",
+      "uncertainty preservation",
+      "meaning drift"
+    ],
+    "continuity": [
+      "state",
+      "transition",
+      "persistence",
+      "drift",
+      "recurrence",
+      "pattern break",
+      "history",
+      "provenance",
+      "invariant"
+    ]
+  },
+  "cross_guide_reasoning": {
+    "principle": "A later Guide may expose a defect in an earlier layer of reasoning.",
+    "examples": [
+      {
+        "from": "Alignment",
+        "return_to": "Awareness",
+        "trigger": "The objects or observation boundaries being compared are unclear."
+      },
+      {
+        "from": "Coherence",
+        "return_to": "Alignment",
+        "trigger": "A contradiction may originate from a forced or incorrect mapping."
+      },
+      {
+        "from": "Clarity",
+        "return_to": "Coherence",
+        "trigger": "Making hidden steps visible exposes a structural gap."
+      },
+      {
+        "from": "Continuity",
+        "return_to": "Clarity",
+        "trigger": "Meaning may have drifted across revisions."
+      },
+      {
+        "from": "Continuity",
+        "return_to": "Awareness",
+        "trigger": "A changed state requires another observation cycle."
+      }
+    ]
+  },
+  "student_artifacts": {
+    "sequence": [
+      {
+        "guide": "Awareness",
+        "artifact": "Awareness Record"
+      },
+      {
+        "guide": "Alignment",
+        "artifact": "Alignment Record"
+      },
+      {
+        "guide": "Coherence",
+        "artifact": "Coherence Record"
+      },
+      {
+        "guide": "Clarity",
+        "artifact": "Clarity Record"
+      },
+      {
+        "guide": "Continuity",
+        "artifact": "Continuity Record"
+      }
+    ],
+    "purpose": "Make learner reasoning inspectable and reusable without turning the records into mandatory paperwork."
+  },
+  "assessment": {
+    "resource": "shared/assessment.json",
+    "awareness_check": {
+      "optional": true,
+      "question": "What did I notice and retain after first exposure?"
+    },
+    "mastery": {
+      "fresh_problem": true,
+      "retryable": true,
+      "required_for_badge": true,
+      "question": "Can I use the skill?"
+    },
+    "principles": [
+      "Assess practical structural reasoning rather than vocabulary recall.",
+      "Expose mastery criteria.",
+      "Treat retry as part of learning.",
+      "Permit uncertainty when evidence is insufficient.",
+      "Prefer actionable feedback over opaque scoring."
+    ]
+  },
+  "recognition": {
+    "resource": "shared/badges.json",
+    "guide_badges": [
+      "Awareness Badge",
+      "Alignment Badge",
+      "Coherence Badge",
+      "Clarity Badge",
+      "Continuity Badge"
+    ],
+    "completion": "Five Guides Completion",
+    "certification": false,
+    "accreditation": false,
+    "ranking": false
+  },
+  "ai_companion": {
+    "resource": "shared/ai_companion.json",
+    "optional": true,
+    "role": "thinking companion",
+    "learner_judgment_primary": true,
+    "preferred_behavior": [
+      "ask questions",
+      "offer alternative explanations",
+      "challenge assumptions",
+      "generate practice",
+      "preserve uncertainty",
+      "identify mismatches",
+      "expose missing steps",
+      "compare changes"
+    ],
+    "avoid": [
+      "replacing learner mastery",
+      "inventing missing evidence",
+      "presenting confidence as evidence",
+      "silently strengthening claims",
+      "forcing mappings",
+      "hiding uncertainty"
+    ]
+  },
+  "privacy": {
+    "resource": "shared/privacy.json",
+    "student_footprint_resource": "shared/student_footprint.json",
+    "principle": "Learning does not grant us permission to observe the learner.",
+    "identity_required_for_learning": false,
+    "footprint_required": false,
+    "separation": [
+      "learning",
+      "mastery",
+      "badge",
+      "optional feedback"
+    ]
+  },
+  "shared_resources": [
+    {
+      "id": "ai_companion",
+      "path": "shared/ai_companion.json",
+      "role": "Optional AI-assisted learning contract."
+    },
+    {
+      "id": "assessment",
+      "path": "shared/assessment.json",
+      "role": "Awareness Check, mastery, retry, and assessment criteria."
+    },
+    {
+      "id": "badges",
+      "path": "shared/badges.json",
+      "role": "Guide recognition and completion milestones."
+    },
+    {
+      "id": "privacy",
+      "path": "shared/privacy.json",
+      "role": "Privacy-first learning boundary."
+    },
+    {
+      "id": "student_footprint",
+      "path": "shared/student_footprint.json",
+      "role": "Optional minimal learner feedback mechanism."
+    }
+  ],
+  "formal_path": {
+    "optional": true,
+    "index": "lean/index.json",
+    "role": "Provide small formal companions for AACCC and selected project-lineage structures.",
+    "guide_companions": [
+      {
+        "guide": "Awareness",
+        "path": "lean/01_awareness.json"
+      },
+      {
+        "guide": "Alignment",
+        "path": "lean/02_alignment.json"
+      },
+      {
+        "guide": "Coherence",
+        "path": "lean/03_coherence.json"
+      },
+      {
+        "guide": "Clarity",
+        "path": "lean/04_clarity.json"
+      },
+      {
+        "guide": "Continuity",
+        "path": "lean/05_continuity.json"
+      }
+    ],
+    "origin_companions": [
+      "lean/06_tft_origin.json",
+      "lean/07_nawderian_theorem.json",
+      "lean/08_nawderian_set_theorem.json",
+      "lean/09_temperature_engine_theorem.json",
+      "lean/10_unified_resonance_theorem.json",
+      "lean/11_rtt_origin.json"
+    ],
+    "validation": {
+      "status": "compiler-checked",
+      "lean_version": "4.36.0",
+      "target": "x86_64-w64-windows-gnu",
+      "files": "01-11"
+    },
+    "boundary": "Compiler acceptance verifies the formal artifacts under the stated Lean environment. It does not establish empirical validity of the broader source frameworks."
+  },
+  "origins": {
+    "optional": true,
+    "index": "origins/index.json",
+    "role": "Preserve and expose the project lineage from earlier triadic work through the development of AACCC and 5Guides.",
+    "sequence": [
+      {
+        "id": "tft",
+        "path": "origins/tft.json"
+      },
+      {
+        "id": "theorems",
+        "path": "origins/theorems.json"
+      },
+      {
+        "id": "rtt",
+        "path": "origins/rtt.json"
+      },
+      {
+        "id": "formalization",
+        "path": "origins/formalization.json"
+      }
+    ],
+    "lineage": [
+      "TFT",
+      "Triads",
+      "Theorems",
+      "RTT",
+      "AACCC",
+      "5Guides"
+    ],
+    "boundary": "Project lineage is not a strict proof chain and does not establish empirical validity or historical influence beyond documented provenance."
+  },
+  "formalization_boundary": {
+    "resource": "origins/formalization.json",
+    "formal_verification": "Given these definitions and assumptions, does the conclusion follow?",
+    "modeling": "Do these definitions and assumptions represent what we intended to describe?",
+    "empirical_validation": "Does the model adequately describe the relevant real-world evidence?",
+    "keep_distinct": [
+      "source statement",
+      "interpretation",
+      "formal abstraction",
+      "added assumption",
+      "verified consequence",
+      "empirical evidence"
+    ]
+  },
+  "independent_application": {
+    "purpose": "Transfer AACCC beyond examples supplied by 5Guides.",
+    "learner_selects_problem": true,
+    "suggested_domains": [
+      "learning",
+      "technical problem",
+      "repair",
+      "research claim",
+      "disagreement",
+      "model",
+      "document",
+      "software",
+      "changing system",
+      "everyday situation"
+    ],
+    "questions": [
+      "What am I observing?",
+      "What corresponds?",
+      "Does this hold together?",
+      "Can I make it clear enough to inspect?",
+      "What persists when it changes?"
+    ],
+    "record": {
+      "name": "Independent AACCC Record",
+      "fields": [
+        "problem",
+        "awareness",
+        "alignment",
+        "coherence",
+        "clarity",
+        "continuity",
+        "assumptions",
+        "uncertainty",
+        "evidence",
+        "what_to_test_next",
+        "current_judgment"
+      ]
+    }
+  },
+  "ai_navigation_rules": [
+    "Begin with Awareness when the learner has not yet established an observation state.",
+    "Do not force progression when an earlier structural problem remains unresolved.",
+    "Permit movement backward to an earlier Guide when later inspection exposes a problem.",
+    "Treat AI, Lean, Origins, and Student Footprint as optional branches.",
+    "Do not require project-lineage knowledge before student-facing AACCC practice.",
+    "After Continuity, prefer Independent Application over dependency on additional framework material."
+  ],
+  "reasoning_boundaries": [
+    "Observation is not interpretation.",
+    "Interpretation is not source statement.",
+    "Similarity is not identity.",
+    "Similarity is not historical influence.",
+    "Mismatch is not automatically error.",
+    "Recurrence is not automatically causation.",
+    "Formal verification is not empirical validation.",
+    "Compiler acceptance is not physical validation.",
+    "Clarity must not silently strengthen a claim.",
+    "Continuity does not require preventing change.",
+    "AI assistance does not replace learner judgment.",
+    "A badge is not professional certification."
+  ],
+  "machine_context": {
+    "ai_parseable": true,
+    "navigation_role": "front-door",
+    "student_sequence_explicit": true,
+    "cross_guide_return_paths": true,
+    "uncertainty_preserving": true,
+    "provenance_aware": true,
+    "formalization_boundary_explicit": true,
+    "privacy_first": true,
+    "ai_optional": true,
+    "lean_optional": true,
+    "origins_optional": true,
+    "target_state": "independent learner application"
+  }
+}
