@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="5Guides_shared_privacy_" src="https://github.com/user-attachments/assets/55b02ea8-f209-4a92-bc65-019202ac1681" />
+
 # Privacy
 
 > **Learning does not grant us permission to observe the learner***
