@@ -8124,3 +8124,371 @@ That's another useful side of **Continuity**:
 ---
 
 <img width="1194" height="672" alt="5Guides_System_State__Patterns_Over_Time_" src="https://github.com/user-attachments/assets/b6c77403-7a1e-4738-b832-e207383524da" />
+
+---
+
+# Lean Examples for the AACCC Guides
+
+**Yes, this is possible**, and I think it could become one of the strongest mathematical threads running through the five guides.
+
+Lean is especially suitable because it separates:
+
+- definitions,
+- observations and hypotheses,
+- claims,
+- proof steps,
+- and verified conclusions.
+
+A theorem that compiles but expresses the wrong claim is still the wrong theorem. That fits our emphasis on inspectable reasoning rather nicely. 【1-bb9694】【2-5a4109】
+
+## Recommended Approach
+
+Use **one small mathematical system across all five guides** rather than five unrelated examples.
+
+A simple choice would be:
+
+> **Natural numbers, equality, and a small transformation such as doubling.**
+
+For example:
+
+`double n = n + n`
+
+Each guide would examine a different part of the same proof environment.
+
+---
+
+## 1. Awareness
+
+### Question
+
+> **What is actually given, and what must be proved?**
+
+The student identifies:
+
+- the variables;
+- their types;
+- the hypothesis;
+- the target theorem;
+- and anything they may be assuming without evidence.
+
+### Lean idea
+
+Given natural numbers `a` and `b`, and a hypothesis that `a = b`, observe the goal:
+
+`double a = b + b`
+
+The student does not prove it immediately.
+
+First, they inspect the proof state:
+
+- `a b : Nat`
+- `h : a = b`
+- target: `double a = b + b`
+
+### Lesson
+
+> **The proof state is the observation. The proof strategy is an interpretation of that observation.**
+
+---
+
+## 2. Alignment
+
+### Question
+
+> **What corresponds?**
+
+The student maps:
+
+- `a` to `b` through the hypothesis `h`;
+- `double a` to `a + a`;
+- and, after substitution, `a + a` to `b + b`.
+
+### Lean idea
+
+The equality hypothesis provides the alignment:
+
+`h : a = b`
+
+Rewriting with `h` establishes the correspondence between expressions containing `a` and expressions containing `b`.
+
+### Lesson
+
+> **Alignment does not mean that two expressions merely look similar. It means that a declared or proven relationship permits one to correspond with the other.**
+
+---
+
+## 3. Coherence
+
+### Question
+
+> **Do the definitions, hypotheses, and conclusion hold together?**
+
+The student checks whether the proposed proof actually follows from:
+
+- the definition of `double`;
+- the equality hypothesis;
+- and the rules of equality.
+
+A deliberately broken theorem could also be introduced:
+
+`double a = b + b + 1`
+
+The student asks whether the extra `+ 1` is supported by anything in the proof state.
+
+### Lesson
+
+> **Every part of the conclusion must be supported by the declared structure.**
+
+Lean's refusal to close the goal becomes useful evidence that something does not yet hold together.
+
+---
+
+## 4. Clarity
+
+### Question
+
+> **Can the theorem and proof be expressed so another person can inspect them?**
+
+The student compares:
+
+- a compressed proof;
+- a step-by-step proof;
+- and a poorly named or ambiguous theorem.
+
+The theorem statement should clearly expose:
+
+- inputs;
+- hypotheses;
+- transformation;
+- and conclusion.
+
+Lean's standard theorem shape introduces inputs and hypotheses before the colon and places the claim after it. 【1-bb9694】
+
+### Lesson
+
+> **A proof can be correct without being easy to understand. Clarity makes the verified structure visible without changing what was proved.**
+
+---
+
+## 5. Continuity
+
+### Question
+
+> **What remains valid when the expression or system changes?**
+
+The student extends the original theorem.
+
+For example:
+
+- replace `double` with `triple`;
+- move from one natural number to a list of numbers;
+- or prove that equality remains preserved through another transformation.
+
+The learner then traces:
+
+- what stayed the same;
+- what definition changed;
+- which proof steps still work;
+- and where the earlier proof breaks.
+
+### Lesson
+
+> **Continuity does not require the proof to remain unchanged. It asks which relationships survive the transition and which must be rebuilt.**
+
+---
+
+# The Five-Guide Lean Thread
+
+| Guide | Lean Focus | Student Question |
+|---|---|---|
+| **Awareness** | Read the context and goal | What is actually given? |
+| **Alignment** | Rewrite through equality | What corresponds? |
+| **Coherence** | Verify that the conclusion follows | Does the proof hold together? |
+| **Clarity** | Refactor theorem statements and proofs | Can someone inspect the reasoning? |
+| **Continuity** | Generalize or modify the theorem | What survives when the system changes? |
+
+## Why This Works
+
+The mathematical difficulty can remain modest.
+
+The real lesson is not advanced arithmetic. It is learning to inspect a formal reasoning environment:
+
+**Context → Correspondence → Proof → Explanation → Generalization**
+
+Lean already encourages students to read the goal, introduce assumptions, simplify expressions, and close the remaining proof obligation. 【2-5a4109】【3-bf009a】
+
+AACCC gives that workflow a broader structural interpretation:
+
+**Awareness → Alignment → Coherence → Clarity → Continuity**
+
+## Recommendation
+
+We should create a small **AACCC Lean Lab** using one evolving theorem.
+
+Each guide would contain:
+
+1. a student-friendly explanation;
+2. a tiny Lean example;
+3. a deliberately incomplete or broken variation;
+4. questions to inspect before proving;
+5. a working proof;
+6. an optional challenge;
+7. and a short reflection connecting the Lean activity to the guide.
+
+The examples should be **valid Lean 4 files**, not illustrative pseudocode.
+
+That gives students something unusually valuable:
+
+> **They won't merely be told that the reasoning holds together. Lean will check it, and they will still be responsible for deciding whether the theorem says what they intended.**
+
+I recommend using the same `double` theorem across the five guides first. It is small enough for beginners, but structurally rich enough to demonstrate all five AACCC operations.
+
+---
+
+## GitHub MCP Follow-up — Lean Examples
+
+I pulled additional GitHub MCP results, and they strengthen the idea of using a **small evolving Lean example** for AACCC.
+
+### A Very Clean Alignment Example
+
+One Lean study repository contains almost exactly the tiny example we want:
+
+`example (a b : Nat) (h : a = b) : a + 1 = b + 1 := by`
+
+followed by:
+
+`rw [h]`
+
+It also gives the analogous multiplication example:
+
+`x * x = y * y`
+
+under the hypothesis:
+
+`h : x = y`
+
+using the same rewrite technique. 【1-7319ee】
+
+That's excellent for **Alignment** because the correspondence isn't merely visual similarity. The declared equality provides the relationship that permits rewriting.
+
+### A Good Student Exercise Pattern
+
+Another repository contains an unfinished student exercise of the form:
+
+`theorem doubleEq (n : Nat) : n + n = 2 * n := by`
+
+with the proof intentionally left for the learner. 【2-87dff4】
+
+That gives us a nice model for the **Awareness** exercise:
+
+> Don't prove it yet.
+>
+> First identify the variable, its type, the expression on each side, and exactly what Lean is asking you to establish.
+
+### We Can Make the Mathematics Progressively Richer
+
+Other GitHub examples use a recursively defined `double` and then ask students to establish injectivity:
+
+`double n = double m → n = m` 【3-bf5eb7】【4-22a6e3】
+
+That's more interesting later because the student isn't merely computing. They're reasoning **backward through a transformation**:
+
+> If the transformed values correspond, what may we conclude about the originals?
+
+That could make a very nice optional challenge once the basic AACCC Lean Lab is working.
+
+### Provenance / Specification Is Another Interesting Direction
+
+I also found benchmark examples structured explicitly around specifications and theorems. One array example defines a postcondition requiring the result to retain the original array size while every resulting element equals twice its corresponding input element, followed by a theorem asserting that the implementation satisfies that specification. 【5-f4f935】
+
+That suggests an excellent later AACCC exercise:
+
+**Input specification**  
+↓  
+**Implementation**  
+↓  
+**Output specification**  
+↓  
+**Proof that they correspond**
+
+That's almost begging for Awareness → Alignment → Coherence.
+
+---
+
+# My Recommendation
+
+Keep our **first AACCC Lean Lab tiny**.
+
+Use one evolving mathematical object:
+
+**Awareness**
+
+`n + n = 2 * n`
+
+> What exactly has Lean given us, and what is the goal?
+
+↓
+
+**Alignment**
+
+`h : a = b`
+
+then establish a corresponding transformed relationship using rewriting, matching the simple GitHub example. 【1-7319ee】
+
+↓
+
+**Coherence**
+
+Introduce a deliberately unsupported target and ask:
+
+> Where did this extra claim come from?
+
+Let Lean refuse the proof.
+
+↓
+
+**Clarity**
+
+Compare a compressed proof with one whose intermediate reasoning is visible.
+
+↓
+
+**Continuity**
+
+Change the transformation or generalize the theorem and inspect:
+
+> What remains valid?  
+> What proof structure survives?  
+> What has to change?
+
+That gives us exactly the educational property we've been trying to preserve throughout the Five Guides:
+
+> **Lean verifies the formal proof.**
+>
+> **The student still has to determine whether the formal statement expresses what they actually intended to prove.**
+
+Those are two different kinds of checking.
+
+And **that distinction is very AACCC.** 😉
+
+---
+
+## AACCC Lean Lab Files
+
+Created the five standalone Lean 4 files:
+[01_awareness.lean](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/5Guides/01_awareness.lean)
+[02_alignment.lean](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/5Guides/02_alignment.lean)
+[03_coherence.lean](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/5Guides/03_coherence.lean)
+[04_clarity.lean](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/5Guides/04_clarity.lean)
+[05_continuity.lean](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/5Guides/05_continuity.lean)
+
+## Progression
+- **Awareness**: Reads the variables, types, definition, and proof goal.
+- **Alignment**: Uses an equality hypothesis to establish correspondence through rewriting.
+- **Coherence**: Distinguishes a supported conclusion from an unsupported extra claim.
+- **Clarity**: Compares an inspectable calc proof with a compact proof.
+- **Continuity**: Changes double to triple, then generalizes equality preservation to any transformation.
+
+The examples use standard Lean 4 equality rewriting behavior, where rw [h](lean4.dev) replaces terms using an equality hypothesis.
+
+The files were inspected for internal consistency. Lean itself is not installed in the available execution environment, so I could not perform a local compiler run.
