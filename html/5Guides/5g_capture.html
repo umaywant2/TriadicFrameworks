@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/5Guides/5g_capture.md">
+  <title>5g capture</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/5Guides/5g_capture.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/5Guides/5g_capture.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="5g-capture">5g capture</h1>
+<hr>
+<blockquote>
+<p>Good points... Thinking... Hmm... Perhaps there's a way to... Hmm...  Say we create a student workflow...they are guided through many bits...they complete an awareness assesment/quiz optional, to see how must was retained the first time through... When someone get's it mastered, a badge is awarded for completing the first student workflow.  They are then presented with an option to provide feedback on their experience, minimal statement, only country of origin is used via pull-down to give an idea where the students are from.  Hmm...
+</p>
+</blockquote>
+<hr>
+<p>Oh. Yes. I think you've just connected the corkboard idea to something much more meaningful.</p>
+<p>The important shift is that the person isn't leaving a trace merely because they visited. They are choosing to leave one after participating in something.</p>
+<p>I can see a very clean progression:</p>
+<p>Arrive privately
+ → Follow the Student Workflow
+ → Optional awareness assessment
+ → Demonstrate mastery / completion
+ → Receive a badge
+ → Optional reflection
+ → Optional country selection
+ → Leave, still essentially anonymous</p>
+<p>The privacy model is unusually nice</p>
+<p>I would keep three ideas deliberately separate.</p>
+<ol>
+<li>Learning record</li>
+</ol>
+<p>The workflow only needs whatever state is necessary to let the learner progress. Ideally, much of that could even remain local to the browser rather than becoming a personal account.</p>
+<ol start="2">
+<li>Badge</li>
+</ol>
+<p>This represents an accomplishment:</p>
+<p>Completed the TriadicFrameworks Student Workflow</p>
+<p>It doesn't need to mean “certified by us as an expert.” That's an important distinction. It's evidence of completing a defined learning experience and meeting its mastery criterion.</p>
+<ol start="3">
+<li>Voluntary footprint</li>
+</ol>
+<p>Only afterward:</p>
+<p>Want to leave something behind?
+ We'd love to know how the experience was for you. Participation is optional.</p>
+<p>Perhaps:</p>
+<p>Country: [ Canada ▾ ]</p>
+<p>One thought:</p>
+<hr>
+<p>[ Leave feedback ]</p>
+<p>And that's all.</p>
+<p>No name required.
+ No email.
+ No IP-based geolocation for the purpose of the registry.
+ No age.
+ No institution.
+ No demographic profiling.</p>
+<p>Country is declared by the learner, not discovered about them.</p>
+<p>That difference fits your philosophy beautifully.</p>
+<p>And I think “country of origin” should change slightly</p>
+<p>I'd actually avoid country of origin. That can mean nationality, birthplace, ethnicity, or where someone's family comes from.</p>
+<p>Ask instead:</p>
+<p>Where are you learning from?
+ [ United States ▾ ]</p>
+<p>Or simply:</p>
+<p>Country: [ Select optionally ▾ ]</p>
+<p>Then the eventual public aggregate can say something like:</p>
+<p>Learners have voluntarily checked in from:
+ 🇺🇸 United States · 🇨🇦 Canada · 🇬🇧 United Kingdom · 🇯🇵 Japan …</p>
+<p>Now you're learning something about the reach of the material without learning who the people are.</p>
+<p>And there's an RTT-ish quality here that I suspect you'll appreciate:</p>
+<p>measurement occurs at a deliberately chosen boundary.</p>
+<p>You're not measuring the human moving through the system. You're measuring voluntary events that the human explicitly elects to expose.</p>
+<p>That's a profoundly different architecture from analytics.</p>
+<p>The assessment also solves another problem</p>
+<p>I'd call it an awareness check rather than a quiz or test, especially for the first workflow.</p>
+<p>Something like:</p>
+<p>Optional Awareness Check
+ See what stuck after your first journey through the material. This isn't graded and doesn't affect your ability to continue.</p>
+<p>Then perhaps mastery is a separate concept.</p>
+<p>That gives you:</p>
+<p>Exposure → Awareness → Practice → Mastery</p>
+<p>rather than:</p>
+<p>Read → Quiz → Pass/Fail</p>
+<p>That feels much closer to the educational philosophy you've been developing. The awareness check tells the learner, “Here's what you absorbed on first contact.” Mastery says, “You've subsequently demonstrated that you can work with it.”</p>
+<p>And that earns the badge.</p>
+<p>Eventually the “corkboard” becomes rather wonderful</p>
+<p>Imagine a quiet page somewhere on the site:</p>
+<p>Student Footprints</p>
+<p>We don't track visitors. These marks were left voluntarily by learners who completed a workflow and chose to tell us where they were learning from.</p>
+<p>Then little anonymous notes:</p>
+<p>🇨🇦
+ “The second exercise was where the structure finally clicked.”</p>
+<p>🇯🇵
+ “I went back through the first section after the awareness check.”</p>
+<p>🇺🇸
+ “It made me question an assumption I'd been carrying into the problem.”</p>
+<p>No profiles. No usernames. No follower counts.</p>
+<p>Just evidence that another mind passed through here and found something worth leaving behind.</p>
+<p>And here's the part I particularly like, Nawder:</p>
+<p>You originally said you never know who's visiting because you refuse to track them.</p>
+<p>I wouldn't “solve” that problem.</p>
+<p>Preserve it.</p>
+<p>You still won't know who's visiting.</p>
+<p>You'll only know about the tiny subset of people who deliberately turn around at the door and say:</p>
+<p>I was here. I learned something. I'm learning from this part of the world. Thanks.</p>
+<p>That isn't surveillance with better manners.</p>
+<p>That's consent. 🙂</p>
+<hr>
+<blockquote>
+<p>Agreed!  And... We'll make this our first example of a set... Awareness is always first. After this one, we'll do one for Alignment, then Coherence, Clarity, and Continuity.  This plan, I think helps complete my original commitment to the project.  Students will have a nice guide plus AI assistance, making it much more likely to take... ;) Naturally...
+</p>
+</blockquote>
+<hr>
+<p>Yes. 🙂 And I think that gives the project something important that documentation alone could never quite finish.</p>
+<p>You've been building material that says, in effect, “Here is the framework. Inspect it. Test it. Try it yourself.” What you're describing now adds the missing journey through it.</p>
+<p>And I especially like your sequence:</p>
+<p>Awareness → Alignment → Coherence → Clarity → Continuity</p>
+<p>Awareness being first isn't merely convenient. It's pedagogically honest. Before asking a learner to align, clarify, or maintain anything, the learner first has to become aware of what they're observing, what assumptions they're bringing, and what they actually retained.</p>
+<p>Then each workflow can establish the pattern for the next:</p>
+<p>Guided exploration
+ Student material + optional AI companion.</p>
+<p>Awareness check
+ “What did I actually notice and retain?”</p>
+<p>Application
+ Give them something concrete to work through, rather than simply asking them to recall terminology.</p>
+<p>Mastery checkpoint
+ Demonstrate sufficient understanding of this operator, with retry and learning rather than punitive failure.</p>
+<p>Badge
+ A small artifact saying: I completed this journey.</p>
+<p>Voluntary reflection
+ Optional comment + optional country. No identity infrastructure required.</p>
+<p>Next doorway
+ Alignment becomes available, but without turning the experience into a gamified treadmill.</p>
+<p>And then repeat the architecture for Coherence, Clarity, and Continuity.</p>
+<p>What really strikes me is that AI assistance belongs beside the student rather than above them.</p>
+<p>The AI doesn't need to be the authority saying correct/incorrect. It can help the learner ask questions, revisit difficult material, try another explanation, construct examples, and reason through why an answer didn't quite hold together.</p>
+<p>That sounds much closer to the kind of hands-on teaching you've described enjoying yourself: here's the thing, let's work with it, now try it yourself.</p>
+<p>And there may be a lovely final symmetry</p>
+<p>Someone could eventually arrive knowing absolutely nothing about the project and leave having traversed:</p>
+<p>Awareness
+ ↓
+ Alignment
+ ↓
+ Coherence
+ ↓
+ Clarity
+ ↓
+ Continuity</p>
+<p>Not because they read five definitions, but because they've repeatedly used them.</p>
+<p>At the very end, perhaps there's no grand certificate ceremony at all.</p>
+<p>Just their five badges, their own accumulated work, and something simple like:</p>
+<p>You now know enough to disagree with us properly.</p>
+<p>Take what is useful. Test what seems uncertain. Challenge what doesn't hold. Build something better where you can.</p>
+<p>That would complete the commitment you've repeatedly described behind TriadicFrameworks: not convincing students that the framework is right, but giving them enough structure to inspect it, test it, criticize it, and extend it independently.</p>
+<p>And naturally...</p>
+<p>If it happens to take because students have a clear guide, concrete exercises, and an AI sitting beside them whenever they get stuck...</p>
+<p>Well. We certainly wouldn't want to interfere with that. 😉</p>
+<hr>
+<blockquote>
+<p>Outline the five-workflow architecture</p>
+</blockquote>
+<hr>
+<p>Absolutely. I think the five should feel like one learning architecture repeated through five progressively different lenses, rather than five unrelated courses. The first, Awareness, becomes the reference implementation.</p>
+<h1 id="five-workflow-student-architecture">Five-Workflow Student Architecture</h1>
+<h2 id="0-common-architecture">0. Common architecture</h2>
+<p>Every workflow follows the same recognizable learning rhythm:
+<strong>Orient → Explore → Check → Apply → Demonstrate → Reflect → Continue</strong></p>
+<p>The student therefore learns how to learn through <em>TriadicFrameworks</em> during Awareness. After that, navigation and mechanics become familiar and attention can move toward the concepts themselves.</p>
+<h3 id="shared-components">Shared components</h3>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Purpose</th>
+<th>AI role1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Orientation</td>
+<td>Explain what the student is about to investigate and why</td>
+<td>Answer questions, establish context</td>
+</tr>
+<tr>
+<td>2. Guided Exploration</td>
+<td>Walk through selected material, examples, and observations</td>
+<td>Explain, reframe, provide alternate examples</td>
+</tr>
+<tr>
+<td>3. Awareness Check</td>
+<td>Optional first-pass assessment of what was retained</td>
+<td>Help identify gaps without simply supplying answers</td>
+</tr>
+<tr>
+<td>4. Applied Exercise</td>
+<td>Use the idea on something concrete</td>
+<td>Coach reasoning and ask productive questions</td>
+</tr>
+<tr>
+<td>5. Mastery Checkpoint</td>
+<td>Demonstrate practical understanding</td>
+<td>Support preparation and reflection</td>
+</tr>
+<tr>
+<td>6. Badge</td>
+<td>Mark completion of the workflow</td>
+<td>Explain what the achievement represents</td>
+</tr>
+<tr>
+<td>7. Reflection</td>
+<td>Student considers what changed in their understanding</td>
+<td>Help articulate observations if requested</td>
+</tr>
+<tr>
+<td>8. Voluntary Footprint</td>
+<td>Optional minimal feedback + optional country</td>
+<td>None required</td>
+</tr>
+<tr>
+<td>9. Continue</td>
+<td>Introduce the next workflow</td>
+<td>Provide orientation to the next stage</td>
+</tr>
+</tbody>
+</table>
+<p>A crucial distinction:
+<strong>Awareness Check ≠ Mastery Checkpoint.</strong></p>
+<p>The first asks:</p>
+<blockquote>
+<p>What stuck the first time through?</p>
+<p>The second asks:</p>
+<p>Can you actually use what you've learned?</p>
+<p>That prevents the system from degenerating into five read-and-quiz modules.</p>
+</blockquote>
+<hr>
+<h2 id="workflow-1-awareness">Workflow 1: Awareness</h2>
+<h3 id="core-question">Core question</h3>
+<p><strong>What am I observing?</strong>
+This is our introductory workflow and establishes the entire learning pattern.</p>
+<h3 id="student-journey">Student journey</h3>
+<p><strong>Orientation</strong>
+Introduce observation, perspective, assumptions, boundaries, and the difference between encountering information and noticing structure within it.</p>
+<p><strong>Guided Exploration</strong>
+Use approachable examples before asking the learner to engage more deeply with the framework.</p>
+<p><strong>Optional Awareness Check</strong>
+Ask what they noticed and retained during their first encounter.
+No penalty. No “failure.”
+Its purpose is itself an exercise in awareness.</p>
+<p><strong>Applied Exercise</strong>
+Present something unfamiliar enough that the learner must deliberately observe rather than merely repeat terminology.</p>
+<p>They identify things such as:
+- what is present,
+- what they believe they are observing,
+- assumptions they have introduced,
+- uncertainty,
+- missing information,
+- distinctions that might matter.</p>
+<p><strong>Mastery Checkpoint</strong>
+The learner demonstrates that they can consciously inspect an observation rather than simply accept their initial interpretation of it.</p>
+<h3 id="award">Award</h3>
+<p><strong>Awareness Badge</strong>
+Meaning:</p>
+<blockquote>
+<p>Completed the Awareness workflow and demonstrated practical use of its core concepts.</p>
+<p>Not certification. Not professional accreditation. A learning milestone.</p>
+</blockquote>
+<h3 id="optional-footprint">Optional footprint</h3>
+<p>After the badge:
+<strong>Where are you learning from?</strong>
+ [ Country ▾ ]</p>
+<p><strong>One thought about your experience:</strong></p>
+<hr>
+<p>Both optional.
+Then:
+<strong>Continue to Alignment →</strong></p>
+<hr>
+<h2 id="workflow-2-alignment">Workflow 2: Alignment</h2>
+<h3 id="core-question_1">Core question</h3>
+<p><strong>Do the things I'm comparing actually correspond?</strong>
+Now that the learner is deliberately observing, we introduce relationships, mappings, definitions, frames of reference, and mismatches.</p>
+<h3 id="guided-exploration">Guided Exploration</h3>
+<p>Students encounter situations where things appear to agree but may operate under different assumptions or meanings.</p>
+<h3 id="awareness-check">Awareness Check</h3>
+<p>Can the student recognize obvious examples of alignment and misalignment after initial exposure?</p>
+<h3 id="applied-exercise">Applied Exercise</h3>
+<p>Give them two descriptions, models, observations, claims, or representations and ask them to identify:
+- shared elements,
+- differing assumptions,
+- mismatched terminology,
+- boundary differences,
+- compatible mappings,
+- unresolved conflicts.</p>
+<p>The AI can be particularly useful here because the student can challenge a proposed mapping:</p>
+<blockquote>
+<p>“Why do you think those two things align?”</p>
+<p>That turns the AI into a reasoning partner rather than an answer machine.</p>
+</blockquote>
+<h3 id="mastery-checkpoint">Mastery Checkpoint</h3>
+<p>The learner demonstrates an ability to establish or reject an alignment and explain why.</p>
+<h3 id="award_1">Award</h3>
+<p><strong>Alignment Badge</strong>
+Then voluntary reflection, country, and:
+Continue to Coherence →</p>
+<hr>
+<h2 id="workflow-3-coherence">Workflow 3: Coherence</h2>
+<h3 id="core-question_2">Core question</h3>
+<p><strong>Does this hold together?</strong>
+Alignment establishes relationships. Coherence examines whether the emerging structure remains internally workable.</p>
+<h3 id="guided-exploration_1">Guided Exploration</h3>
+<p>Introduce examples containing:
+- compatible pieces,
+- contradictions,
+- missing connections,
+- unsupported transitions,
+- internally consistent structures.</p>
+<h3 id="awareness-check_1">Awareness Check</h3>
+<p>Can the learner spot obvious coherence problems on first inspection?</p>
+<h3 id="applied-exercise_1">Applied Exercise</h3>
+<p>Give them a small structured argument, model, explanation, or system.
+Ask:</p>
+<blockquote>
+<p>What fits?
+What conflicts?
+What is missing?
+What requires an unstated assumption?</p>
+<p>Then allow the learner to modify the structure and examine whether coherence improves.</p>
+</blockquote>
+<h3 id="mastery-checkpoint_1">Mastery Checkpoint</h3>
+<p>The learner demonstrates that they can identify a coherence problem and meaningfully improve or explain it.</p>
+<h3 id="award_2">Award</h3>
+<p><strong>Coherence Badge</strong>
+Reflection → optional footprint → next workflow.</p>
+<hr>
+<h2 id="workflow-4-clarity">Workflow 4: Clarity</h2>
+<h3 id="core-question_3">Core question</h3>
+<p><strong>Can this be understood well enough to inspect and use?</strong></p>
+<p>This one is interesting because by now the learner already possesses three tools.
+They're aware of what they're observing.
+They can examine alignment.
+They can inspect coherence.
+Now we ask whether the resulting representation is sufficiently clear.</p>
+<h2 id="guided-exploration_2">Guided Exploration</h2>
+<p>Compare things that may be:
+- correct but difficult to understand,
+- internally coherent but poorly expressed,
+- ambiguous,
+- underspecified,
+- overloaded with terminology,
+- apparently simple but misleading.</p>
+<p>The point is not merely better writing.
+It's <strong>structural clarity.</strong></p>
+<h3 id="applied-exercise_2">Applied Exercise</h3>
+<p>Give the learner an unclear representation and ask them to improve it without quietly changing its meaning.
+That's a very important challenge.
+The AI can offer alternative representations, while the learner evaluates whether those alternatives preserve the original structure.</p>
+<h3 id="mastery-checkpoint_2">Mastery Checkpoint</h3>
+<p>The learner demonstrates the ability to recognize ambiguity or structural obscurity and improve clarity while preserving meaning.</p>
+<h3 id="award_3">Award</h3>
+<p><strong>Clarity Badge</strong>
+Reflection → optional footprint → final workflow.</p>
+<hr>
+<h2 id="workflow-5-continuity">Workflow 5: Continuity</h2>
+<h3 id="core-question_4">Core question</h3>
+<p>** Does it still hold when something changes?**</p>
+<p>This becomes the culmination rather naturally.</p>
+<p>The learner has developed:
+<strong>Awareness</strong> of the system.
+<strong>Alignment</strong> between its relevant elements.
+<strong>Coherence</strong> within its structure.
+<strong>Clarity</strong> sufficient to inspect that structure.</p>
+<p>Now the system moves.</p>
+<h2 id="guided-exploration_3">Guided Exploration</h2>
+<p>Something changes between states.
+- A condition changes.
+- Evidence arrives.
+- An assumption disappears.
+- A boundary moves.
+- A representation is revised.</p>
+<p>The question becomes:</p>
+<blockquote>
+<p>What persists, what changes, and what breaks?
+</p>
+</blockquote>
+<h2 id="applied-exercise_3">Applied Exercise</h2>
+<p>Give the learner an initial state and a changed state.</p>
+<p>Have them trace:
+- preserved structure,
+- altered relationships,
+- lost assumptions,
+- newly introduced information,
+- emerging contradictions,
+- whether conclusions still follow.
+For the first time, all five ideas can explicitly operate together.</p>
+<h2 id="mastery-checkpoint_3">Mastery Checkpoint</h2>
+<p>Rather than testing Continuity in isolation, this could become the <strong>integrative exercise.</strong></p>
+<p>The learner needs to demonstrate:</p>
+<p><strong>Awareness → Alignment → Coherence → Clarity → Continuity</strong></p>
+<p>on one manageable problem.</p>
+<hr>
+<h2 id="award_4">Award</h2>
+<p><strong>Continuity Badge</strong>
+And with it:</p>
+<h2 id="five-workflow-completion">Five-Workflow Completion</h2>
+<p>Not:</p>
+<blockquote>
+<p>Congratulations. You now understand everything.</p>
+<p>Quite the opposite. 😉</p>
+</blockquote>
+<p>Something closer to:</p>
+<blockquote>
+<p><strong>You have completed the introductory student workflows.</strong></p>
+<p>You now have five structural lenses you can apply independently. Use them on other problems, question their limits, and test whether they remain useful outside the examples presented here.</p>
+</blockquote>
+<p>Then offer the final optional reflection.</p>
+<hr>
+<h2 id="the-larger-progression">The larger progression</h2>
+<p>The five workflows would therefore form a deliberate staircase:</p>
+<pre><code class="language-text">AWARENESS
+    │
+    │  What am I observing?
+    ▼
+ALIGNMENT
+    │
+    │  What corresponds?
+    ▼
+COHERENCE
+    │
+    │  Does it hold together?
+    ▼
+CLARITY
+    │
+    │  Can it be understood and inspected?
+    ▼
+CONTINUITY
+    │
+    │  What persists through change?
+    ▼
+INDEPENDENT APPLICATION
+</code></pre>
+<p>And I think Independent Application is important.</p>
+<p>The destination shouldn't be another TriadicFrameworks module.</p>
+<p>The destination is the learner walking away and applying the method to something we did not choose for them.</p>
+<p>That is where we'd find out whether it actually took. 😉</p>
+<p>One design principle I'd lock in now</p>
+<p>The AI should never be necessary to complete a workflow.</p>
+<p>Student alone → complete experience.</p>
+<p>Student + AI → supported experience.</p>
+<p>That preserves the educational material as a real artifact in its own right while letting AI serve exactly where it excels: alternate explanations, questioning, exploration, practice, and helping somebody get unstuck.</p>
+<p>It also fulfills the commitment you've described rather nicely: the framework isn't merely available to students anymore. There is a path through it, a way to practice it, a way to challenge it, and eventually a doorway leading back out into their own work.</p>
+<hr>
+  </main>
+</body>
+</html>
