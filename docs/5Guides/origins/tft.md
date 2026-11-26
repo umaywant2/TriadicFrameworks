@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="5Guides_origins_tft_" src="https://github.com/user-attachments/assets/77fbc2b9-0779-4e14-b9e5-0b1a9312a384" />
+
 # TFT — Triadic Framework for Everything
 
 > An early project artifact that introduced the triadic lens from which later TriadicFrameworks work developed.
