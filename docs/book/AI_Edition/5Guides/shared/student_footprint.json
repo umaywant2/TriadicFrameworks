@@ -1,1 +1,409 @@
-. 
+{
+  "document": {
+    "id": "5Guides-shared-student-footprint",
+    "type": "shared-learning-contract",
+    "name": "Student Footprint",
+    "title": "5Guides — Student Footprint",
+    "edition": "AI Edition",
+    "module": "5Guides",
+    "framework": "AACCC",
+    "version": "1.0",
+    "status": "active",
+    "language": "en",
+    "source": "docs/5Guides/shared/student_footprint.md",
+    "ai_path": "docs/book/AI_Edition/5Guides/shared/student_footprint.json"
+  },
+  "purpose": {
+    "primary": "Define a minimal, voluntary learner feedback mechanism that remains separate from learning, mastery, badges, identity, and behavioral analytics.",
+    "concept": "Allow a learner to leave a small voluntary trace of their learning experience without requiring a public profile or unnecessary identifying information.",
+    "metaphor": "A small note left on a community corkboard rather than a learner account or social profile."
+  },
+  "core_principle": "A learner may quietly say, \"I was here, and this was my experience,\" without being required to identify themselves.",
+  "participation": {
+    "voluntary": true,
+    "required_for_learning": false,
+    "required_for_mastery": false,
+    "required_for_badge": false,
+    "required_for_next_guide": false,
+    "required_for_completion": false,
+    "declining_requires_explanation": false,
+    "declining_changes_accomplishment": false
+  },
+  "learning_separation": {
+    "required_path": [
+      "learn",
+      "practice",
+      "demonstrate",
+      "badge",
+      "continue"
+    ],
+    "optional_path": [
+      "reflect",
+      "optional footprint"
+    ],
+    "principle": "Feedback should never become the price of completion."
+  },
+  "minimal_footprint": {
+    "fields": [
+      {
+        "id": "country",
+        "label": "Where are you learning from?",
+        "type": "country",
+        "required": false,
+        "purpose": "Allow the learner to voluntarily associate a broad location with the learning experience.",
+        "allow_blank": true,
+        "allow_prefer_not_to_say": true,
+        "learner_selected": true,
+        "must_not_be_silently_inferred": true
+      },
+      {
+        "id": "reflection",
+        "label": "One thought about your experience",
+        "type": "short-text",
+        "required": false,
+        "purpose": "Allow the learner to leave a brief voluntary reflection about the learning experience.",
+        "allow_blank": true,
+        "should_remain_short": true
+      }
+    ],
+    "either_field_may_be_submitted_independently": true,
+    "both_fields_may_be_blank": false,
+    "recommended_behavior_when_both_blank": "Continue without submitting a Footprint."
+  },
+  "country_boundary": {
+    "preferred_prompt": "Where are you learning from?",
+    "avoid_prompt": "Country of origin",
+    "reason": "The Footprint concerns the broad location the learner voluntarily associates with the learning experience, not nationality, birthplace, ancestry, citizenship, or family background.",
+    "do_not_infer_from": [
+      "IP address",
+      "browser information",
+      "device information",
+      "location services",
+      "hidden technical signals"
+    ]
+  },
+  "reflection_boundary": {
+    "purpose": "Capture one small voluntary learning reflection rather than create a comment system or biography.",
+    "prompt_style": "One thought about your experience",
+    "reminder": "Please do not include personal or identifying information in your reflection.",
+    "avoid_requesting": [
+      "full name",
+      "email address",
+      "phone number",
+      "school",
+      "employer",
+      "home address",
+      "social-media account",
+      "other unnecessary personal identifiers"
+    ],
+    "public_display_requires_additional_care": true,
+    "submission_does_not_require_automatic_publication": true
+  },
+  "data_minimization": {
+    "principle": "If the Footprint can work without knowing something about the learner, prefer not knowing it.",
+    "initial_target": [
+      "optional country",
+      "optional short reflection"
+    ],
+    "do_not_add_fields_without_clear_reason": true,
+    "future_interest_is_not_sufficient_reason": true,
+    "rule": "Do not collect tomorrow's data today."
+  },
+  "not_required": [
+    "name",
+    "email",
+    "phone number",
+    "school",
+    "employer",
+    "age",
+    "gender",
+    "social-media account",
+    "public student profile",
+    "demographic profile"
+  ],
+  "not_a_profile": {
+    "public_student_profile": false,
+    "social_network": false,
+    "behavioral_profile": false,
+    "engagement_profile": false,
+    "identity_system": false,
+    "principle": "A Footprint is a voluntary contribution, not a learner identity."
+  },
+  "not_analytics": {
+    "purpose_is_not": [
+      "count every visitor",
+      "identify every learner",
+      "measure every completion",
+      "track page paths",
+      "measure dwell time",
+      "record return frequency",
+      "infer device behavior",
+      "measure conversion",
+      "rank countries",
+      "construct learner histories"
+    ],
+    "principle": "Curiosity about learners does not automatically justify observing them."
+  },
+  "silence": {
+    "principle": "Silence remains silence.",
+    "no_footprint_means": "No Footprint was voluntarily provided.",
+    "do_not_infer": [
+      "learner disliked the Guides",
+      "learner failed",
+      "learner did not complete",
+      "learner was confused",
+      "learner never existed",
+      "learner refused participation for a particular reason"
+    ]
+  },
+  "interpretation_boundary": {
+    "a_submitted_footprint_supports": "A Footprint was voluntarily submitted containing the fields actually provided.",
+    "does_not_support": [
+      "the Footprint represents every learner",
+      "the Footprint represents every visitor",
+      "the Footprint represents every completion",
+      "the submitted country represents the learner's nationality or origin",
+      "absence of a Footprint indicates non-completion"
+    ],
+    "principle": "Do not upgrade voluntary Footprint data into claims about the full learner population."
+  },
+  "badge_separation": {
+    "badge_meaning": "The learner completed the Guide and demonstrated its defined skill.",
+    "footprint_meaning": "The learner voluntarily chose to leave a small piece of feedback.",
+    "equivalent_learning_outcomes": [
+      {
+        "badge": true,
+        "footprint": true,
+        "learning_status": "completed"
+      },
+      {
+        "badge": true,
+        "footprint": false,
+        "learning_status": "completed"
+      }
+    ],
+    "principle": "A Footprint adds no academic status to a badge."
+  },
+  "public_display": {
+    "optional_future_feature": true,
+    "presentation_model": "quiet community corkboard",
+    "prefer": [
+      "minimal voluntary content",
+      "broad location only when voluntarily supplied",
+      "short reflection",
+      "noncompetitive presentation"
+    ],
+    "avoid": [
+      "public learner histories",
+      "detailed learner profiles",
+      "engagement statistics",
+      "popularity metrics",
+      "likes",
+      "views",
+      "reactions",
+      "helpful votes",
+      "shares",
+      "leaderboards",
+      "country rankings"
+    ],
+    "principle": "Public Footprints should remain a collection of voluntary traces rather than become a scoreboard."
+  },
+  "small_group_risk": {
+    "recognized": true,
+    "principle": "Broad information can become identifying when only a small number of people match it.",
+    "potentially_revealing_combinations": [
+      "country + guide + date",
+      "country + reflection",
+      "guide + precise timestamp + reflection",
+      "multiple metadata fields joined together"
+    ],
+    "default_response": "Prefer less public precision when additional detail could make a contributor easier to identify."
+  },
+  "shadow_profile_boundary": {
+    "principle": "Individually minor fields can become identifying when combined.",
+    "avoid_combining_for_footprint_purposes": [
+      "country",
+      "precise timestamp",
+      "browser",
+      "device",
+      "exact workflow position",
+      "repeated visits",
+      "behavioral history"
+    ],
+    "warning": "A set of individually harmless details may become a behavioral or identifying profile when joined."
+  },
+  "free_text_safety": {
+    "risk": "A learner may accidentally include personal or identifying information in a reflection.",
+    "possible_accidental_content": [
+      "full name",
+      "email address",
+      "phone number",
+      "school",
+      "workplace",
+      "specific location",
+      "another person's information",
+      "other information later regretted"
+    ],
+    "learner_reminder": "Please do not include personal or identifying information in your reflection.",
+    "automatic_publication_required": false,
+    "public_display_should_consider_review": true,
+    "principle": "Voluntary submission does not mean every submitted detail must automatically become public."
+  },
+  "consent_design": {
+    "must_be_easy_to_decline": true,
+    "skip_label": "Continue without leaving a Footprint",
+    "avoid_guilt_language": true,
+    "avoid_repeated_requests_after_decline": true,
+    "avoid_hiding_skip_option": true,
+    "avoid_completion_pressure": true,
+    "principle": "Consent works best when no is easy."
+  },
+  "example_interface": {
+    "title": "Leave a Footprint",
+    "fields": [
+      {
+        "label": "Where are you learning from?",
+        "placeholder": "Optional country"
+      },
+      {
+        "label": "One thought about your experience",
+        "placeholder": "Optional short reflection"
+      }
+    ],
+    "notice": "Please do not include personal or identifying information in your reflection.",
+    "actions": [
+      "Leave Footprint",
+      "Continue without leaving a Footprint"
+    ],
+    "action_priority": "Both options should be easy to access."
+  },
+  "example_submissions": [
+    {
+      "country": "Canada",
+      "reflection": "The second observation exercise made me notice how much I was filling in myself."
+    },
+    {
+      "country": null,
+      "reflection": "I finally understood why uncertainty can be useful."
+    },
+    {
+      "country": "Japan",
+      "reflection": null
+    }
+  ],
+  "retention_and_control": {
+    "implementation_dependent": true,
+    "future_system_should_consider": [
+      "accidental submissions",
+      "correction requests",
+      "removal requests",
+      "identifying information submitted by mistake",
+      "moderation decisions",
+      "appropriate retention"
+    ],
+    "principle": "Voluntary participation should not become irreversible merely because someone submitted once."
+  },
+  "technical_data_boundary": {
+    "implementation_not_defined_by_this_document": true,
+    "do_not_claim": "No information ever reaches a server.",
+    "reason": "Actual technical request handling depends on the eventual architecture, hosting environment, logging, and security configuration.",
+    "design_commitment": "Do not intentionally build unnecessary identity, behavioral tracking, or profiling into the Footprint system.",
+    "future_requirement": "Document actual technical behavior when an implementation exists."
+  },
+  "provenance": {
+    "source_document": "docs/5Guides/shared/student_footprint.md",
+    "source_type": "human-facing learning and design policy",
+    "transformation": "structured AI-readable abstraction",
+    "preserve": [
+      "voluntary participation",
+      "minimal collection",
+      "separation from learning and badges",
+      "privacy boundaries",
+      "interpretation limits",
+      "public-display caution",
+      "learner control"
+    ],
+    "do_not_infer": [
+      "implementation details not present in the source",
+      "specific storage architecture",
+      "specific database design",
+      "specific retention duration",
+      "specific moderation workflow",
+      "specific hosting behavior"
+    ]
+  },
+  "aaccc_self_check": {
+    "awareness": {
+      "question": "What information are we actually collecting?",
+      "inspection": [
+        "visible form fields",
+        "technical request data",
+        "logs",
+        "third-party services",
+        "derived information"
+      ]
+    },
+    "alignment": {
+      "question": "Does each collected element correspond to a real need?",
+      "rule": "Remove information that has no clear purpose."
+    },
+    "coherence": {
+      "question": "Does the implementation match the privacy promise?",
+      "rule": "Do not allow learner-facing privacy language and actual system behavior to diverge."
+    },
+    "clarity": {
+      "question": "Can an ordinary learner understand what happens when a Footprint is submitted?",
+      "rule": "Prefer plain descriptions of actual behavior."
+    },
+    "continuity": {
+      "question": "If the system changes later, does the privacy promise still hold?",
+      "rule": "Reinspect the privacy model when implementation changes."
+    }
+  },
+  "ai_behavior": {
+    "when_presenting_footprint": [
+      "State that participation is optional.",
+      "Keep country and reflection optional.",
+      "Treat the learner's submitted country as self-selected location information only.",
+      "Remind the learner not to include identifying information in free text.",
+      "Offer an equally accessible continue-without-submitting path."
+    ],
+    "when_interpreting_footprints": [
+      "Describe only what was voluntarily submitted.",
+      "Do not infer demographics.",
+      "Do not infer nationality or origin from country.",
+      "Do not infer non-completion from absence.",
+      "Do not use voluntary Footprints as a proxy for all learners."
+    ],
+    "must_not": [
+      "pressure the learner to submit",
+      "invent missing Footprint fields",
+      "infer hidden identity",
+      "construct a learner profile",
+      "rank contributors",
+      "treat feedback as a mastery requirement",
+      "treat a Footprint as proof of overall learner demographics"
+    ]
+  },
+  "related": {
+    "module": "../module.json",
+    "index": "../index.json",
+    "ai_companion": "ai_companion.json",
+    "assessment": "assessment.json",
+    "badges": "badges.json",
+    "privacy": "privacy.json"
+  },
+  "machine_context": {
+    "ai_parseable": true,
+    "human_source_preserved": true,
+    "privacy_first": true,
+    "voluntary": true,
+    "data_minimized": true,
+    "identity_optional": true,
+    "profile_creation": false,
+    "analytics_role": false,
+    "badge_dependency": false,
+    "mastery_dependency": false,
+    "uncertainty_preserving": true
+  }
+}
