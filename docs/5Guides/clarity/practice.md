@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="5Guides_clarity_practice_" src="https://github.com/user-attachments/assets/cb9622cc-1159-4053-987c-27c0aa5380d7" />
+
 # Clarity Practice
 
 > Can this be understood well enough to inspect?
