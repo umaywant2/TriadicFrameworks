@@ -10774,3 +10774,90 @@ I would **not change the source merely to make it appear verified**. The next us
 
 ---
 
+# Staff Recap: Elan Installation on Windows
+
+Yes. Based on what happened on your machine, that is the accurate incident summary:
+
+1. You ran:
+
+   `winget install Lean.Elan`
+
+2. WinGet reported **Elan 4.4.0 installed**.
+
+3. The command did not produce a usable Elan environment:
+
+   - `elan` was unavailable;
+   - `lean` was unavailable;
+   - `lake` was unavailable;
+   - `C:\Users\acwil\.elan\bin\elan.exe` did not exist.
+
+4. Inspection showed that WinGet had placed:
+
+   - `elan-init.exe`;
+   - WinGet package metadata.
+
+5. You manually ran `elan-init.exe` from its AppData package location.
+
+6. That bootstrap step created the actual Elan environment and command proxies.
+
+7. After opening a fresh PowerShell session:
+
+   - `elan --version` succeeded;
+   - `lean --version` downloaded and installed Lean 4.36.0;
+   - `lake --version` succeeded.
+
+## Current Verified Toolchain
+
+```text
+Elan: 4.4.0
+Lean: 4.36.0
+Target: x86_64-w64-windows-gnu
+Lake: 5.0.0
+```
+So the practical installation sequence on this machine was:
+```text
+winget install Lean.Elan
+        ↓
+WinGet stages and registers elan-init.exe
+        ↓
+manually execute elan-init.exe
+        ↓
+Elan creates the user installation
+        ↓
+run lean --version
+        ↓
+Elan downloads the selected Lean toolchain
+        ↓
+Lean and Lake become usable
+```
+### Assessment
+The single WinGet command was insufficient in this case.
+The package was recorded as installed before the Elan bootstrap process had created a usable installation. Nothing in the successful WinGet result told you that elan-init.exe still needed to be run manually.
+
+In staff-review language:
+> 
+> **The installation procedure exposed an undocumented manual dependency between package deployment and product initialization. Package registration completed successfully, but the application remained unavailable until the staged bootstrap executable was manually invoked.**
+> 
+Or, in normal human language:
+> 
+> **WinGet said it installed Elan. It had actually left the installer sitting in AppData waiting for Andrew to find and run it.** 😁
+> 
+### Next Command
+Now the fun part:
+```powershell
+Set-Location "C:\path\to\TriadicFrameworks"
+lean ".\docs\5Guides\06_tft_origin.lean"
+```
+If Lean returns silently to the PowerShell prompt, the file passed the actual Lean 4.36.0 checker.
+
+You successfully moved us from:
+> 
+> **source-reviewed**
+> 
+to:
+> 
+> **toolchain available and ready for compiler verification.**
+> 
+
+---
+
