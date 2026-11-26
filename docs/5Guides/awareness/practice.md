@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="5Guides_awareness_practice_" src="https://github.com/user-attachments/assets/2f2548b5-119c-4996-b613-4e335d81991b" />
+
 # Awareness Practice
 
 > What am I actually observing?
