@@ -8466,3 +8466,2311 @@ Created the five standalone Lean 4 files:
 The examples use standard Lean 4 equality rewriting behavior, where rw [h](lean4.dev) replaces terms using an equality hypothesis.
 
 The files were inspected for internal consistency. Lean itself is not installed in the available execution environment, so I could not perform a local compiler run.
+
+---
+
+# 5Guides Lean 4 — Anything Else?
+
+I think the **five-file sequence is complete enough for the capture stage**.
+
+You now have the important architectural idea:
+
+**Awareness → inspect the formal state**  
+**Alignment → establish justified correspondence**  
+**Coherence → determine whether the claim follows**  
+**Clarity → make the reasoning inspectable**  
+**Continuity → determine what survives transformation**
+
+I searched for `5g_capture.md` in the available Microsoft 365 files but didn't find a copy there, so I'm taking your update that the Lean files are saved and linked in `/docs/5Guides/5g_capture.md` as the current repository state.
+
+## A Few Things Worth Capturing for Later
+
+I would **not add more Lean files yet**.
+
+Instead, I'd leave ourselves four notes for the eventual scaffolding pass.
+
+### 1. Every Lean Exercise Should Have Two Success Conditions
+
+A student should learn that these are different questions:
+
+> **Did Lean verify the theorem?**
+
+and:
+
+> **Did I formalize the theorem I actually intended?**
+
+That distinction is probably the most valuable reason to include Lean in these guides.
+
+---
+
+### 2. Include Deliberately Broken Examples
+
+Each guide could eventually have one small failure case:
+
+- **Awareness:** unnoticed or missing hypothesis;
+- **Alignment:** invalid rewrite/correspondence;
+- **Coherence:** conclusion unsupported by the premises;
+- **Clarity:** valid but unnecessarily opaque proof;
+- **Continuity:** earlier proof no longer survives a changed definition.
+
+The failure itself becomes part of the lesson.
+
+---
+
+### 3. Preserve the Student Progression
+
+Avoid turning the Lean portions into a separate mathematics course.
+
+They should remain:
+
+> **AACCC lessons demonstrated through formal mathematics**
+
+rather than:
+
+> **Lean lessons with AACCC terminology added afterward.**
+
+The mathematics can stay intentionally small.
+
+---
+
+### 4. End With One Integrative Challenge
+
+After Continuity, we could eventually present one fresh theorem and ask the student to work through all five lenses:
+
+1. **Awareness** — What is given and what is being claimed?
+2. **Alignment** — What definitions, variables, and equalities correspond?
+3. **Coherence** — Does the conclusion actually follow?
+4. **Clarity** — Can the proof be made inspectable?
+5. **Continuity** — What happens if one definition or assumption changes?
+
+That would make an excellent **Five Guides Lean mastery exercise**.
+
+## Capture Recommendation
+
+For `5g_capture.md`, I'd simply note:
+
+> **Lean 4 strand captured:** Five linked examples provide a formal mathematical companion to Awareness, Alignment, Coherence, Clarity, and Continuity. During scaffolding, add student prompts, intentional failure cases, and a final AACCC integrative proof challenge. Keep Lean subordinate to the guide concepts rather than developing a separate Lean curriculum.
+
+Then I'd stop.
+
+We have enough.
+
+**Next comes the scaffolding plan**, where we can finally turn this wonderfully unruly capture pile into an actual student journey. 😁
+
+---
+
+# AACCC Origins — TFT, Theorems, and RTT
+
+Yes, this lineage can become a compact section inside the 5Guides module, followed by one small Lean 4 example for each source artifact.
+
+The essential discipline is:
+
+> **Lean can verify a formal model of a claim, but it does not automatically verify that the claim accurately describes nature.**
+
+The examples therefore formalize the **declared structures, compositions, mappings, and transitions**. They do not present the source frameworks as independently validated physics.
+
+---
+
+## Suggested Module Section
+
+# Where AACCC Came From
+
+AACCC did not begin as an isolated educational checklist.
+
+It emerged through a longer sequence of work:
+
+> **TFT → Triads → Theorems → RTT → AACCC**
+
+Each stage contributed something different.
+
+## 1. Triadic Framework for Everything
+
+The early Triadic Framework for Everything introduced a triadic lens for examining systems through recurring structures, complementary operators, and feedback. Its source paper uses Light and Darkness as expansion and inversion operators and employs triadic and recursive organization as a broad modeling language. 【1-74ec22】
+
+For 5Guides students, its lasting contribution is smaller and more practical:
+
+> **A system can be inspected through a small set of related positions rather than treated as one undivided thing.**
+
+### Lean focus
+
+The Lean example formalizes:
+
+- a generic three-part structure;
+- two declared operator labels;
+- component-wise transformation;
+- preservation of triadic shape under identity and composition.
+
+It intentionally does **not** formalize the paper's broader physical proposals.
+
+【Download 06_tft_origin.lean-2ee718】
+
+---
+
+## 2. Nawderian Theorem
+
+The Nawderian Theorem presents a triadic corridor model using shared rails, a wrapping triad, ordered visible and invisible triads, and dimension 6 as a shared location. Its declared sets include corridor dimensions `(1, 2, 6)`, wrapping dimensions `(3, 6, 9)`, visible dimensions `(4, 5, 6)`, and invisible dimensions `(6, 7, 8)`. 【2-65ea2b】
+
+Its educational contribution is:
+
+> **Declared structures should expose their members, intersections, shared anchors, and containment claims.**
+
+### Lean focus
+
+The Lean example formalizes the dimension groups as finite sets and proves that:
+
+- dimension 6 belongs to each declared group;
+- the visible and invisible sets share dimension 6.
+
+It does not attempt to prove that these dimensional assignments describe physical reality.
+
+[Download `07_nawderian_theorem.lean`656e9】
+
+---
+
+## 3. Nawderian SET Theorem
+
+The SET document defines a triad of **Spin, Electrolysis or field-charge behavior, and Temperature** inside a supplied gravitational frame. It represents the SET field as:
+
+`F_SET = (S, E, T)`
+
+and expresses total acceleration as a gravitational contribution plus spin, electric-field, and temperature contributions. 【3-46c7a1】
+
+Its structural contribution is:
+
+> **Complex behavior can be decomposed into named contributions and then recomposed into an inspectable whole.**
+
+### Lean focus
+
+The Lean example formalizes:
+
+- a typed SET contribution;
+- three named components;
+- their additive composition;
+- the addition of that composite to a supplied gravitational contribution.
+
+The theorem proves that the implementation unfolds to the declared additive specification. It does not prove that the SET decomposition is sufficient for a physical system.
+
+[Download `08_nawderian_set_theorem.ean-4fa64a】
+
+---
+
+## 4. Nawderian Temperature Engine Theorem
+
+The Temperature Engine document defines a triadic temperature field using hot regions, cold regions, and a temperature gradient. It then proposes a temperature-force relation of the form:
+
+`F_T = -α ∇T` 【4-ad8ea0】
+
+Its educational contribution is:
+
+> **A gradient is not merely a pair of values. It includes a directional relationship between them.**
+
+### Lean focus
+
+The initial Lean example uses a one-dimensional integer model:
+
+`temperatureForce coupling gradient = -(coupling * gradient)`
+
+Lean then verifies three consequences of that definition:
+
+- zero gradient produces zero modeled force;
+- zero coupling produces zero modeled force;
+- reversing the gradient reverses the modeled force.
+
+These are algebraic consequences of the supplied definition, not empirical verification of every physical interpretation attached to it.
+
+[Download `09_temperature_engine_theorem.lean`5746f】
+
+---
+
+## 5. Unified Resonance Theorem
+
+The Unified Resonance document declares a three-factor composition:
+
+`Resonance_glyph = Q_z · F_θ · S_dim`
+
+where the factors represent a quadrant constant, frequency modulation, and symbolic dimensional overlay. 【5-3a7b3a】
+
+Its structural contribution is:
+
+> **A result may depend on several distinguishable factors whose composition should remain visible.**
+
+### Lean focus
+
+The Lean example treats the three factors abstractly inside any multiplicative monoid.
+
+It verifies that:
+
+- the factors can be composed in their declared order;
+- associativity permits safe regrouping;
+- three neutral factors produce a neutral result.
+
+Lean verifies the algebraic structure. It does not verify the document's interpretations of emotional, glyphic, or behavioral resonance.
+
+[Download `10_unified_resonance_theorem.ean-b2167d】
+
+---
+
+## 6. Resonance-Time Theory
+
+RTT describes systems through scalar state, directed flow, and a resonance envelope, with operator families for diffusion, alignment, coupling, activation, and stabilization. It treats time as a sequence of updates under an operator regime and coherence as alignment among flows, structures, and their stability over time. 【6-7f42ea】
+
+Its contribution to AACCC is especially direct:
+
+> **Structures must be observed not only as static arrangements, but as states that update, preserve relationships, lose coherence, and transition over time.**
+
+### Lean focus
+
+The initial RTT example formalizes:
+
+- a small triadic state;
+- a declared update;
+- evolution from one state to another;
+- a continuity predicate for a recorded transition;
+- preservation under a zero update.
+
+This is a transition-system scaffold inspired by RTT's field and operator language. It does not formalize the complete RTT specification or verify its physical interpretation.
+
+[Download `11_rtt_origin.leane6e12f】
+
+---
+
+# From the Origin Chain to AACCC
+
+The origin chain can be summarized as follows:
+
+| Origin stage | Structural contribution | AACCC inheritance |
+|---|---|---|
+| **TFT** | Observe systems through related positions and operators | Awareness |
+| **Nawderian Theorem** | Declare sets, intersections, pivots, and mappings | Alignment |
+| **SET Theorem** | Compose named contributions into a larger system | Coherence |
+| **Temperature Engine** | Expose gradients and directional relationships | Alignment and Coherence |
+| **Unified Resonance Theorem** | Preserve distinguishable factors inside a composition | Coherence and Clarity |
+| **RTT** | Track state, operators, transitions, and persistence | Continuity |
+| **AACCC** | Turn the accumulated structure into a student workflow | Awareness → Alignment → Coherence → Clarity → Continuity |
+
+This table should be presented as a **project-lineage interpretation**, not as a claim that each earlier artifact mapped perfectly or exclusively to one later guide.
+
+The lineage is cumulative.
+
+AACCC compresses the recurring habits into five student-facing questions:
+
+1. **Awareness:** What am I observing?
+2. **Alignment:** What corresponds?
+3. **Coherence:** Does it hold together?
+4. **Clarity:** Can it be understood and inspected?
+5. **Continuity:** What persists through change?
+
+---
+
+# Lean 4 File Set
+
+The new sequence continues naturally after the five AACCC guide examples:
+
+```text
+01_awareness.lean
+02_alignment.lean
+03_coherence.lean
+04_clarity.lean
+05_continuity.lean
+
+06_tft_origin.lean
+07_nawderian_theorem.lean
+08_nawderian_set_theorem.lean
+09_temperature_engine_theorem.lean
+10_unified_resonance_theorem.lean
+11_rtt_origin.lean
+```
+
+## What These Files Establish
+
+Each example has a deliberately bounded proof target.
+
+### `06_tft_origin.lean`
+
+Proves properties of a generic `Triad.map`:
+
+- identity preservation;
+- composition preservation.
+
+### `07_nawderian_theorem.lean`
+
+Proves finite-set membership and the shared dimension-6 intersection.
+
+### `08_nawderian_set_theorem.lean`
+
+Proves that the implemented total unfolds to the declared additive SET specification.
+
+### `09_temperature_engine_theorem.lean`
+
+Proves elementary consequences of the modeled temperature-force definition.
+
+### `10_unified_resonance_theorem.lean`
+
+Proves associative regrouping and neutral-factor behavior for the three-part composition.
+
+### `11_rtt_origin.lean`
+
+Proves that a declared update is a valid continuous step and that a zero update preserves the state.
+
+---
+
+# Formalization Boundary
+
+I recommend placing this notice immediately before the Lean links:
+
+> ## What the Lean Examples Verify
+>
+> These examples formalize selected structures declared in the source documents.
+>
+> Lean can verify that:
+>
+> - definitions are well-formed;
+> - stated relationships follow from supplied assumptions;
+> - transformations preserve declared properties;
+> - and proofs are internally valid.
+>
+> Lean does **not** independently establish that:
+>
+> - a proposed model accurately describes nature;
+> - its assumptions are empirically justified;
+> - its variables correspond to measurable quantities;
+> - or its broader scientific interpretation has been validated.
+>
+> Formal consistency and empirical validity are related but different questions.
+>
+> The examples are therefore best understood as **inspectable formal companions** to the source material.
+
+That boundary is not a weakness.
+
+It demonstrates the AACCC process itself:
+
+- **Awareness:** What has actually been formalized?
+- **Alignment:** Does the Lean model correspond to the source statement?
+- **Coherence:** Do the conclusions follow from the definitions?
+- **Clarity:** Can a student inspect the model and its limits?
+- **Continuity:** Which structures survive as the project develops?
+
+---
+
+# Validation Status
+
+The six files were created and inspected for consistency. Lean is not installed in the current execution environment, so they have **not yet received a compiler validation pass**.
+
+Before treating them as repository-ready verified examples, they should be checked with the project's selected Lean 4 toolchain. The most likely dependency question is whether the project uses only Lean's bundled environment or imports Mathlib, particularly for the finite-set example.
+
+For the capture stage, however, the source section, formalization boundaries, file sequence, and six initial Lean models are now in place.
+
+---
+
+## Origin Notes Status
+
+The origin section is already present in the currently open `docs/5Guides/5g_capture.md` editor, including:
+
+- TFT / theorem lineage material
+- the Lean formalization boundary
+- AACCC interpretation
+- validation-status notes
+
+I also checked the repository copy on `main`. It does **not yet contain those latest editor changes**, so the browser currently has newer, unsaved content than the repository version. 【1-c6efd7】【2-91e3fc】
+
+I have **not overwritten the GitHub copy**, because doing so from the older repository version could destroy or duplicate the substantial edits currently sitting in your open editor.
+
+So the safe state is:
+
+**Current editor → origin notes present**
+
+**GitHub `main` → older capture version**
+
+Once the current editor changes are committed, the origin material will be preserved along with the rest of today's capture.
+
+That was a worthwhile catch before touching a nearly 9,000-line capture file. 😁
+
+---
+
+# Origin Notes Accuracy Review
+
+## Overall Assessment
+
+The origin section is **conceptually sound and appropriately cautious**, especially the formalization boundary distinguishing:
+
+- what the source documents declare;
+- what the Lean examples model;
+- what Lean can prove internally;
+- and what would still require empirical validation.
+
+However, I recommend several corrections before treating the notes as final.
+
+---
+
+## 1. TFT Description
+
+### Current idea
+
+The notes describe TFT as introducing:
+
+- a triadic lens;
+- complementary Light and Darkness operators;
+- recursive organization around 3, 6, and 9;
+- and a general method for examining systems through related positions.
+
+This accurately reflects the source paper, which explicitly presents Light as expansion, Darkness as inversion, and recursive 3–6–9 loops as its modeling structure. 【1-12d56a】
+
+### Recommended qualification
+
+The proposed Lean `Triad.map` example is **not a direct formalization of the equations in the paper**. It is a clean mathematical abstraction inspired by TFT's triadic organization.
+
+Use wording such as:
+
+> The Lean example does not formalize TFT's physical or cosmological claims. It introduces a generic three-part structure and demonstrates how that structure behaves under mapping and composition.
+
+That is more exact than suggesting the paper itself defines a component-wise `Triad.map`.
+
+---
+
+## 2. Nawderian Theorem Description
+
+The origin notes correctly identify the declared groups:
+
+- corridor rails: 1, 2, 6;
+- wrapping triad: 3, 6, 9;
+- visible triad: 4, 5, 6;
+- invisible triad: 6, 7, 8;
+- shared dimension: 6. 【2-376fd2】
+
+### Important inconsistency in the source
+
+The theorem also declares:
+
+`W ⊇ (V ∪ I)`
+
+But using the supplied sets:
+
+- `W = {3, 6, 9}`
+- `V ∪ I = {4, 5, 6, 7, 8}`
+
+the stated containment does **not** hold under ordinary set membership.
+
+The wrapping triad shares `6` with the visible and invisible triads, but it does not contain their union.
+
+### Recommended correction
+
+The origin note should explicitly preserve this distinction:
+
+> The source declares a wrapping-containment relationship between the 3–6–9 triad and the visible and invisible triads. Under ordinary finite-set semantics, however, the declared wrapping set does not contain the union of those triads. The initial Lean example therefore proves only the directly supported membership and intersection properties. A fuller formalization would require a separately defined meaning of “wraps.”
+
+This is an excellent AACCC example in its own right:
+
+- **Awareness:** What sets were actually declared?
+- **Alignment:** Does “wraps” mean ordinary containment?
+- **Coherence:** Does the stated containment follow?
+- **Clarity:** What relation was intended?
+- **Continuity:** Can the intended relation survive formalization?
+
+---
+
+## 3. Nawderian SET Theorem Description
+
+The notes accurately describe the source as declaring:
+
+`F_SET = (S, E, T)`
+
+and:
+
+`a_total = a_gravity + a_S + a_E + a_T`
+
+The document defines Spin, Electrolysis or field-charge behavior, and Temperature as three components operating inside a gravitational frame. 【3-6a1423】
+
+### Recommended terminology correction
+
+Avoid shortening this to a generic “three-force model.”
+
+The source calls the components:
+
+- fields;
+- engines;
+- contributions;
+- and “demi-forces.”
+
+A safer description is:
+
+> The Lean example formalizes the SET triad as three named contributions and verifies their declared additive composition with a supplied gravitational contribution.
+
+### Scientific boundary
+
+The origin notes already handle this properly, but retain the statement that Lean verifies only the algebraic decomposition. It does not establish that SET is physically sufficient, empirically complete, or superior to established physical models.
+
+---
+
+## 4. Temperature Engine Description
+
+The notes correctly identify the declared temperature triad:
+
+`T = (T_hot, T_cold, ∇T)`
+
+and the proposed relation:
+
+`F_T = -α∇T` 【4-e41957】
+
+The proposed Lean consequences are reasonable consequences of that simplified definition:
+
+- zero gradient gives zero modeled force;
+- zero coupling gives zero modeled force;
+- reversing the gradient reverses the modeled force.
+
+### Recommended qualification
+
+The source uses vectors and a spatial gradient, while the proposed Lean example apparently uses one-dimensional integers.
+
+State that explicitly:
+
+> The first Lean model intentionally reduces the vector relation to a one-dimensional signed algebraic example. It verifies properties of that simplified model, not the full spatial field equation.
+
+Also avoid repeating source claims such as “gravity is isotropic” or “temperature is the primary source of anisotropic motion” as established scientific facts. Present them as claims made by the source document.
+
+---
+
+## 5. Unified Resonance Theorem Description
+
+The notes accurately reproduce the declared composition:
+
+`Resonance_glyph = Q_z · F_θ · S_dim`
+
+The source describes these as a quadrant constant, frequency modulation, and symbolic dimensional overlay. It is marked **Canonical Draft**. 【5-3cb8c4】
+
+### Important type issue
+
+The three factors are conceptually different kinds of things. The source does not formally define:
+
+- a shared carrier type;
+- the multiplication operation;
+- algebraic laws for that multiplication;
+- or how values such as `∅` participate in the product.
+
+Therefore, modeling all three inside a multiplicative monoid is a **formal abstraction added by the Lean example**, not something already established in the source.
+
+### Recommended wording
+
+> The Lean example places the three declared factors in a common abstract multiplicative structure so that their composition can be inspected algebraically. This is a modeling choice introduced for the example. A source-faithful formalization would first need typed definitions for quadrant constants, frequency modulation, dimensional overlays, and the operation that combines them.
+
+The associativity theorem would then prove regrouping **under the supplied monoid assumption**, not an unconditional property of the original Unified Resonance equation.
+
+---
+
+## 6. RTT Description
+
+The origin notes accurately describe RTT as organizing:
+
+- scalar state `φ`;
+- directed flow `V`;
+- resonance envelope `R`;
+- operator families;
+- coherence;
+- and updates across operator regimes.
+
+The frozen RTT page explicitly states that coherence concerns alignment between flows and structures and the stability of that alignment over time. It also defines time as a sequence of updates under an operator regime. 【6-18c4a5】
+
+### Recommended status wording
+
+RTT is marked:
+
+- frozen;
+- historical;
+- reference-only;
+- version 0.9;
+- spec-only;
+- and declared-coherent rather than independently validated. 【6-18c4a5】
+
+The origin note should preserve that status:
+
+> RTT is included here as a frozen historical source in the project lineage. The Lean example formalizes a small transition-system interpretation inspired by RTT's state-and-update language; it is not a formalization of the complete frozen RTT specification.
+
+Calling the example an RTT “continuity predicate” is acceptable only if the predicate is clearly identified as newly defined for the Lean scaffold.
+
+---
+
+## 7. The Origin Chain
+
+The proposed sequence:
+
+> **TFT → Triads → Theorems → RTT → AACCC**
+
+is appropriate as the project's declared lineage.
+
+The more detailed table mapping individual documents to specific AACCC guides is useful, but it should remain explicitly interpretive.
+
+For example, saying:
+
+> TFT contributed Awareness.
+
+would be too strong unless a source explicitly establishes that derivation.
+
+Prefer:
+
+> In the 5Guides interpretation, TFT's triadic lens contributes to Awareness by encouraging the learner to expose multiple related positions.
+
+Likewise:
+
+- Nawderian sets can illustrate Alignment;
+- SET composition can illustrate Coherence;
+- Unified Resonance composition can illustrate Clarity;
+- RTT updates can illustrate Continuity.
+
+These are valuable **educational mappings**, not one-to-one historical derivations.
+
+---
+
+## 8. Lean Validation Status
+
+The current repository directory contains the first five AACCC Lean files and the capture file, but the six proposed origin files are not visible on the `main` branch at the time of this review. 【7-7e978e】【8-b405c8】【9-40c0de】【10-d491a5】【11-a9d5c0】【12-b713c0】
+
+Therefore, revise:
+
+> The six files were created and inspected for consistency.
+
+to:
+
+> Six origin Lean examples have been proposed for the capture. Their final repository presence and compiler status must be verified before they are described as completed examples.
+
+If the files exist only in the current uncommitted editing session or locally, that should be stated separately.
+
+The compiler disclaimer remains correct:
+
+> The examples should not be described as Lean-verified until they have successfully compiled under the selected Lean 4 toolchain and dependency configuration.
+
+---
+
+## 9. Markdown Cleanup
+
+The current editor view shows spacing inside bold markers, including forms such as:
+
+`** not **`
+
+and:
+
+`** Awareness: **`
+
+These should be normalized to:
+
+`**not**`
+
+and:
+
+`**Awareness:**`
+
+Otherwise, some Markdown renderers may display the asterisks rather than applying emphasis. 【13-645c2d】
+
+The capture also includes the previous conversational “Origin Notes Status” response. That status note is useful during capture, but it should not become part of the final student-facing origin section.
+
+---
+
+# Recommended Verdict
+
+The origin notes are **mostly accurate as a project-lineage summary**, but they need four important refinements:
+
+1. Label the AACCC mappings as **educational interpretations**, not exact historical derivations.
+2. Expose the Nawderian wrapping-containment inconsistency rather than silently reducing it to shared membership.
+3. Identify the Lean algebraic structures as **modeling choices introduced by the examples**.
+4. Change the six origin files from “created” to “proposed” until their repository presence and successful Lean compilation are verified.
+
+With those corrections, the section will do exactly what it should:
+
+> It will preserve the project's lineage without confusing source declarations, interpretive mappings, formal consequences, and empirical validation.
+
+---
+
+## Origin Notes — Accuracy Corrections Applied
+
+I reviewed the currently open 5g_capture.md. The editor shows that the accuracy-review material has been captured, but it is still sitting alongside the earlier origin text rather than replacing it. 【1-f30dea】
+
+I would apply the corrections to the origin section itself as follows.
+
+# Where AACCC Came From
+
+AACCC did not begin as an isolated educational checklist.
+
+Within the TriadicFrameworks project, it emerged from a longer sequence of exploratory frameworks and formalizations:
+
+> **TFT → Triads → Theorems → RTT → AACCC**
+
+This is a **project-lineage interpretation**. The earlier works were not originally written as five AACCC stages, and the relationships below should not be read as exact one-to-one historical derivations.
+
+Instead, AACCC gathers recurring structural habits from that lineage into five student-facing questions:
+
+1. **Awareness:** What am I observing?
+2. **Alignment:** What corresponds?
+3. **Coherence:** Does it hold together?
+4. **Clarity:** Can it be understood and inspected?
+5. **Continuity:** What persists through change?
+
+---
+
+## 1. Triadic Framework for Everything — TFT
+
+TFT introduced an early triadic way of organizing and examining systems, including complementary operators and recurring three-part structures.
+
+For the Five Guides, its useful inheritance is:
+
+> **A system can be inspected through several related positions rather than treated as one undivided thing.**
+
+### Lean Interpretation
+
+The accompanying Lean example introduces a **generic three-part structure** and explores how that structure behaves under mapping and composition.
+
+This is an abstraction inspired by TFT's triadic organization.
+
+It is **not** a direct formalization or verification of TFT's broader physical or cosmological proposals.
+
+---
+
+## 2. Nawderian Theorem
+
+The Nawderian Theorem declares several dimension groupings centered around a shared dimension:
+
+- corridor dimensions: `{1, 2, 6}`;
+- wrapping dimensions: `{3, 6, 9}`;
+- visible dimensions: `{4, 5, 6}`;
+- invisible dimensions: `{6, 7, 8}`.
+
+A useful educational contribution is:
+
+> **Declared structures should make their members, intersections, mappings, and relationships inspectable.**
+
+### An Important Formalization Question
+
+The source also describes a wrapping relationship in which the `{3, 6, 9}` structure contains or wraps the visible and invisible structures.
+
+Under ordinary finite-set membership, however:
+
+`{3, 6, 9}`
+
+does **not** contain:
+
+`{4, 5, 6, 7, 8}`.
+
+What the declared sets demonstrably share is dimension `6`.
+
+This does not require us to discard the proposed wrapping idea.
+
+It tells us that **"wraps" needs its own defined relationship** if it means something other than ordinary set containment.
+
+That makes this an unusually useful AACCC teaching example:
+
+**Awareness:** What sets were actually declared?
+
+**Alignment:** Does "wraps" mean ordinary containment?
+
+**Coherence:** Does the containment claim follow under that definition?
+
+**Clarity:** What relationship was actually intended?
+
+**Continuity:** Can the intended relationship survive a more precise formalization?
+
+### Lean Interpretation
+
+The initial Lean model should therefore prove only the relationships supported directly by ordinary set semantics, such as membership and shared intersection.
+
+A later exercise may define a distinct `Wraps` relation and investigate what properties that relation requires.
+
+---
+
+## 3. Nawderian SET Theorem
+
+The SET framework organizes:
+
+> **Spin → Electrolysis / field-charge behavior → Temperature**
+
+within a supplied gravitational frame.
+
+Its useful structural contribution is:
+
+> **A larger behavior can be decomposed into named contributions and recomposed into an inspectable whole.**
+
+### Lean Interpretation
+
+The Lean example models the SET triad as three named contributions and verifies their declared additive composition with a supplied gravitational contribution.
+
+The model proves the consequences of **that algebraic specification**.
+
+It does not establish that SET is a complete physical description or that its components are empirically sufficient to explain a physical system.
+
+---
+
+## 4. Nawderian Temperature Engine Theorem
+
+The Temperature Engine introduces a temperature triad:
+
+`T = (T_hot, T_cold, ∇T)`
+
+and proposes a directional relationship of the general form:
+
+`F_T = -α∇T`
+
+Its useful structural contribution is:
+
+> **A gradient is more than two values. It expresses a relationship and direction between them.**
+
+### Lean Interpretation
+
+The first Lean model deliberately simplifies the proposed vector relation into a **one-dimensional signed algebraic example**.
+
+Within that simplified model, Lean can test consequences such as:
+
+- zero gradient produces zero modeled force;
+- zero coupling produces zero modeled force;
+- reversing the gradient reverses the modeled force.
+
+Those are consequences of the supplied mathematical definition.
+
+They are not empirical validation of the full Temperature Engine interpretation.
+
+---
+
+## 5. Unified Resonance Theorem
+
+The Unified Resonance work proposes a three-factor composition:
+
+`Resonance_glyph = Q_z · F_θ · S_dim`
+
+The structural lesson useful to Five Guides is:
+
+> **A result may depend on several distinguishable factors whose composition should remain visible and inspectable.**
+
+### Lean Interpretation
+
+The initial Lean example places these factors inside a common abstract multiplicative structure.
+
+That is a **modeling choice introduced by the Lean exercise**.
+
+The source does not by itself establish that the factors share a mathematical type, nor does the notation alone define all algebraic properties of their composition.
+
+Therefore, a theorem such as associativity means:
+
+> **Regrouping is valid under the algebraic assumptions supplied to the Lean model.**
+
+It does not establish associativity as an independent property of the original Unified Resonance proposal.
+
+A more source-faithful future formalization would first define explicit types for the factors and the operation connecting them.
+
+---
+
+## 6. Resonance-Time Theory — RTT
+
+RTT expands the lineage toward systems described through state, flow, resonance, operators, transitions, and behavior across updates.
+
+For AACCC, its particularly useful contribution is:
+
+> **A structure can be inspected not only as a present state, but through how its relationships persist, drift, break, or change over time.**
+
+RTT should remain identified according to its project status as a **frozen historical/reference specification**, rather than being presented here as independently validated theory.
+
+### Lean Interpretation
+
+The initial Lean example creates a small transition-system model inspired by RTT's state-and-update language.
+
+It can formalize ideas such as:
+
+- a declared state;
+- an update;
+- a transition;
+- preservation under a neutral update;
+- and explicitly defined continuity conditions.
+
+Any `Continuity` predicate introduced in the Lean file belongs to the **formal scaffold** unless that exact definition can be traced directly to the frozen RTT specification.
+
+The example therefore does not claim to formalize all of RTT.
+
+---
+
+# From the Origin Chain to AACCC
+
+The relationship is best understood cumulatively rather than as a strict one-to-one mapping.
+
+| Origin | Structural Idea Available to the Guides |
+|---|---|
+| **TFT** | Triadic observation and related structural positions |
+| **Nawderian Theorem** | Sets, intersections, shared anchors, and explicit relationships |
+| **SET Theorem** | Named contributions and composition |
+| **Temperature Engine** | Gradients, direction, and relational change |
+| **Unified Resonance Theorem** | Multi-factor composition and exposed structure |
+| **RTT** | State, operators, transitions, drift, and persistence |
+| **AACCC** | Student-facing structural inspection workflow |
+
+The AACCC relationship to these earlier works is therefore an **educational interpretation of the project lineage**.
+
+It should not imply that TFT originally defined Awareness, that a particular theorem originally defined Alignment, or that RTT originally specified the Five Guides curriculum.
+
+Instead, AACCC asks:
+
+> **What recurring habits of inspection can we extract from this body of work and teach directly?**
+
+---
+
+# What the Lean Examples Verify
+
+The Lean examples formalize **selected structures** drawn from or inspired by the source documents.
+
+Lean can verify that, within the supplied formal model:
+
+- definitions are well-formed;
+- stated conclusions follow from declared assumptions;
+- transformations preserve specified properties;
+- and proofs satisfy Lean's formal requirements.
+
+Lean does **not**, merely by proving those statements, establish that:
+
+- the proposed model accurately describes nature;
+- its assumptions are empirically justified;
+- its variables correspond to measurable physical quantities;
+- its interpretation is unique;
+- or its broader scientific claims have been independently validated.
+
+> **Formal consistency and empirical validity are different questions.**
+
+That distinction is not a limitation to hide.
+
+It is part of the lesson.
+
+---
+
+# AACCC Can Inspect Its Own Origins
+
+These origin examples ultimately give the student an opportunity to turn the Five Guides back onto the framework itself.
+
+### Awareness
+
+> **What did the original source actually claim?**
+
+### Alignment
+
+> **Does our formal model correspond to that claim?**
+
+### Coherence
+
+> **Does the conclusion follow from the definitions and assumptions?**
+
+### Clarity
+
+> **Have we made the model precise enough for another person to inspect?**
+
+### Continuity
+
+> **What survived as the idea moved from the original framework through later theorems, RTT, and finally AACCC?**
+
+This is important.
+
+The Five Guides should not teach students merely to apply AACCC to somebody else's ideas.
+
+> **AACCC should be able to inspect its own lineage too.**
+
+---
+
+# Lean Origin Examples — Status
+
+The proposed origin sequence is:
+
+`06_tft_origin.lean`
+
+`07_nawderian_theorem.lean`
+
+`08_nawderian_set_theorem.lean`
+
+`09_temperature_engine_theorem.lean`
+
+`10_unified_resonance_theorem.lean`
+
+`11_rtt_origin.lean`
+
+Until repository presence and compilation have both been verified, these should be described as **proposed origin Lean examples**, not Lean-verified examples.
+
+A source file becomes a verified example only after it successfully compiles using the selected Lean 4 toolchain and its declared dependencies.
+
+---
+
+## Capture Cleanup
+
+For the eventual scaffolding pass, remove the temporary **Origin Notes Accuracy Review** and **Origin Notes Status** material after these corrections have been incorporated.
+
+Those sections document how we reached the corrected version.
+
+The text above is the material that should survive into the student-facing origin section.
+
+---
+
+# Proposed Lean 4 Origin File Outlines
+
+These six files extend the AACCC Lean sequence backward into the project lineage.
+
+They should remain **small formal companions**, not attempts to encode each source document completely.
+
+The common pattern is:
+
+> **Declare → Inspect → Prove → Challenge**
+
+Each file should make very clear which structures come from the source material and which definitions are introduced specifically for the Lean exercise.
+
+---
+
+## `06_tft_origin.lean`
+
+### Purpose
+
+Introduce TFT's triadic organization through a minimal, domain-neutral three-part structure.
+
+### Proposed Structure
+
+```text
+Triad α
+├── first
+├── second
+└── third
+```
+
+### Lean Elements
+Define:
+- a generic Triad α;
+- a map operation applying a transformation to all three positions;
+- identity transformation;
+- composed transformations.
+
+### Proof Targets
+**Identity**
+> 
+> Mapping the identity function across a triad leaves the triad unchanged.
+> 
+**Composition**
+> 
+> Mapping f and then g produces the same result as mapping their composition.
+> 
+### Student Challenge
+Given a transformation:
+```text
+x ↦ x + 1
+```
+predict the result before asking Lean to evaluate it.
+Then compare:
+```text
+map f (map g t)
+```
+with:
+```text
+map (f ∘ g) t
+```
+### AACCC Connection
+Awareness: What are the three declared positions?
+Alignment: Which output corresponds to each input?
+Coherence: Does the mapping preserve the triadic structure?
+Clarity: Can the transformation be inspected component by component?
+Continuity: What persists after repeated transformations?
+
+### Boundary
+This file formalizes a generic triadic data structure inspired by TFT.
+It does not formalize TFT's broader physical or cosmological claims.
+
+---
+
+## 07_nawderian_theorem.lean
+### Purpose
+Formalize the explicitly declared dimension groups and expose the difference between **shared membership and wrapping/containment.**
+
+### Proposed Structures
+```text
+Corridor  = {1, 2, 6}
+Wrapping  = {3, 6, 9}
+Visible   = {4, 5, 6}
+Invisible = {6, 7, 8}
+```
+### Lean Elements
+Represent each group as a finite set.
+Define or prove ordinary:
+- membership;
+- intersection;
+- non-containment.
+
+### Proof Targets
+**Shared Anchor**
+> 
+> 6 belongs to each declared group.
+> 
+**Visible/Invisible Intersection**
+> 
+> 6 belongs to both the visible and invisible groups.
+> 
+**Containment Check**
+
+Test whether ordinary set semantics support:
+```text
+Visible ∪ Invisible ⊆ Wrapping
+```
+They should not.
+The failed proposition is educationally important and should not be repaired by changing the sets.
+
+### Student Challenge
+Ask:
+> 
+> If "wraps" does not mean ordinary set containment, what kind of relationship would need to be defined?
+> 
+An optional later extension could introduce:
+```text
+Wraps A B
+```
+but only after its intended semantics are explicitly stated.
+
+### AACCC Connection
+Awareness: What sets were actually declared?
+Alignment: Which dimensions correspond or intersect?
+Coherence: Does the stated containment interpretation follow?
+Clarity: What exactly does "wraps" mean?
+Continuity: Can the intended relationship survive a more precise definition?
+
+### Boundary
+Lean should expose the mismatch rather than silently invent semantics that make it disappear.
+
+---
+
+## 08_nawderian_set_theorem.lean
+### Purpose
+Represent SET as three explicitly named contributions that participate in a larger composition.
+
+### Proposed Structure
+```text
+SET
+├── spin
+├── electrolysis / field-charge
+└── temperature
+```
+plus:
+```text
+gravity
+```
+### Lean Elements
+Define a typed structure such as:
+```text
+SETContribution
+```
+containing:
+- spin;
+- electrolysis;
+- temperature.
+Define a supplied gravitational contribution separately.
+
+Then define:
+```text
+total =
+    gravity
+    + spin
+    + electrolysis
+    + temperature
+```
+### Proof Targets
+**Expansion**
+> 
+> The implemented total unfolds to the declared additive specification.
+> 
+**Neutral Component**
+> 
+> If one contribution is zero, the remaining contributions are preserved.
+> 
+**All Neutral**
+> 
+> If every SET contribution is zero, the modeled total reduces to the supplied gravitational contribution.
+> 
+### Student Challenge
+Remove or change one contribution and ask:
+> 
+> What changed in the resulting expression?
+> 
+Then distinguish:
+> 
+> **The algebra changed**
+> 
+from:
+> 
+> **The physical interpretation changed.**
+> 
+Lean directly establishes only the first.
+
+### AACCC Connection
+Awareness: What contributions have been declared?
+Alignment: Which term corresponds to which contribution?
+Coherence: Does the total contain exactly the declared terms?
+Clarity: Can each contribution remain visible in the expression?
+Continuity: What remains when one contribution changes?
+
+### Boundary
+The exercise verifies properties of the supplied algebraic decomposition.
+It does not establish empirical sufficiency of the SET model.
+
+---
+
+## 09_temperature_engine_theorem.lean
+### Purpose
+Introduce a small directional model based on temperature gradient.
+### Proposed Source Relationship
+```text
+F_T = -α∇T
+```
+### Lean Simplification
+Begin with a one-dimensional signed model:
+```text
+temperatureForce α gradient =
+    -(α * gradient)
+```
+This deliberately replaces the fuller spatial/vector interpretation with something beginners can inspect.
+
+### Proof Targets
+**Zero Gradient**
+```text
+temperatureForce α 0 = 0
+```
+**Zero Coupling**
+```text
+temperatureForce 0 gradient = 0
+```
+
+**Gradient Reversal**
+```text
+temperatureForce α (-gradient)
+    = -(temperatureForce α gradient)
+```
+under an appropriate numeric type and assumptions.
+
+### Student Challenge
+Calculate the modeled result for:
+```text
+gradient = 5
+
+```
+then:
+```text
+gradient = -5
+```
+Ask:
+> 
+> What changed?
+> 
+> What remained unchanged?
+> 
+### AACCC Connection
+Awareness: What values are actually supplied?
+Alignment: How does gradient direction correspond to modeled force direction?
+Coherence: Do the consequences follow from the definition?
+Clarity: Are sign and direction explicit?
+Continuity: What happens when the gradient changes through zero?
+
+### Boundary
+The Lean model verifies consequences of the simplified one-dimensional equation.
+It does not establish the proposed physical interpretation of the Temperature Engine.
+
+---
+
+## 10_unified_resonance_theorem.lean
+### Purpose
+Explore a declared three-factor composition while making the additional algebraic assumptions explicit.
+
+### Proposed Source Form
+```text
+Resonance_glyph =
+    Q_z · F_θ · S_dim
+```
+### Lean Elements
+Introduce the factors abstractly under a declared multiplicative structure.
+The file should state clearly:
+> 
+> **The common carrier type and multiplication laws are assumptions of this Lean model.**
+> 
+### Proof Targets
+Composition
+> 
+> The three factors can be combined under the supplied operation.
+> 
+**Regrouping**
+Under associativity:
+```text
+(Q · F) · S = Q · (F · S)
+
+```
+**Neutral Factors**
+Under a multiplicative identity:
+```text
+1 · 1 · 1 = 1
+```
+### Student Challenge
+
+Ask:
+> 
+> Which parts were supplied by the source expression?
+> 
+and:
+> 
+> Which properties did we have to add before Lean could prove the regrouping theorem?
+> 
+This distinction is the heart of the exercise.
+
+### AACCC Connection
+Awareness: What three factors were declared?
+Alignment: What role is assigned to each factor?
+Coherence: What algebraic assumptions are required for their composition?
+Clarity: Are source declarations separated from formal-model assumptions?
+Continuity: Which results remain true if the carrier type or operation changes?
+
+### Boundary
+The Lean structure is an abstract mathematical interpretation introduced for formal inspection.
+It does not establish that the source factors naturally form a multiplicative monoid.
+
+---
+
+## 11_rtt_origin.lean
+### Purpose
+Introduce state transition and preservation using a deliberately small system inspired by RTT's state-and-update language.
+
+### Proposed Structure
+Use a minimal three-part state such as:
+```text
+State
+├── scalar
+├── flow
+└── resonance
+```
+and an update:
+```text
+Update
+├── scalarChange
+├── flowChange
+└── resonanceChange
+```
+### Lean Elements
+Define:
+```text
+applyUpdate : State → Update → State
+```
+Then introduce a small, explicitly local continuity predicate.
+For example:
+```text
+ContinuousFrom before update after
+```
+could initially mean simply:
+```text
+applyUpdate before update = after
+
+```
+The file must state that this predicate belongs to the **Lean teaching scaffold** unless an equivalent definition is traced directly to RTT.
+
+### Proof Targets
+**Declared Transition**
+> 
+> Applying a known update produces the expected next state.
+> 
+**Neutral Update**
+> 
+> Applying a zero update leaves the state unchanged.
+> 
+**Transition Witness**
+> 
+> A recorded before/update/after sequence satisfies the local transition predicate exactly when the update produces the declared result.
+> 
+### Student Challenge
+Change one component of the update.
+
+Ask:
+> 
+> What changed?
+> 
+> What persisted?
+> 
+> Does the previously proved transition still hold?
+> 
+Then try a neutral update.
+
+### AACCC Connection
+
+**Awareness**: What state is currently observed?  
+**Alignment**: Which update component acts on which state component?  
+**Coherence**: Does the resulting state follow from the declared update?  
+**Clarity**: Can the transition be inspected directly?  
+**Continuity**: What persists, changes, or breaks across the transition?  
+
+### Boundary
+This is a small transition-system scaffold inspired by RTT.
+It is not a formalization of the complete frozen RTT specification.
+
+---
+
+## Proposed Origin Lean Sequence
+The full learning strand would now read:
+```text
+AACCC GUIDE EXAMPLES
+
+01_awareness.lean
+02_alignment.lean
+03_coherence.lean
+04_clarity.lean
+05_continuity.lean
+
+
+ORIGIN EXAMPLES
+
+06_tft_origin.lean
+07_nawderian_theorem.lean
+08_nawderian_set_theorem.lean
+09_temperature_engine_theorem.lean
+10_unified_resonance_theorem.lean
+11_rtt_origin.lean
+```
+The first five teach:
+> 
+> **How to use AACCC.**
+> 
+The next six ask:
+> 
+> **Can we use the same discipline to inspect some of the structures from which AACCC emerged?**
+> 
+That distinction is worth preserving.
+
+---
+
+### Recommended Common Header
+
+Each origin Lean file should eventually begin with a short comment following the same pattern:
+```text
+AACCC / 5Guides Lean Origin Example
+
+Purpose:
+Formalize one small, inspectable structure associated with
+the source artifact.
+
+Important:
+This file proves consequences inside the declared Lean model.
+It does not establish the empirical validity of the broader
+source framework.
+
+Student questions:
+1. What came directly from the source?
+2. What did this Lean model add?
+3. What has actually been proved?
+4. What has not been proved?
+```
+That gives all six files the same educational contract.
+
+And it makes the most important lesson wonderfully difficult to miss:
+> 
+> **Formalization doesn't merely help us prove our ideas.**
+> **It also helps us discover exactly what our ideas require us to assume.**
+> 
+
+---
+
+# AACCC Origin Lean Files Created
+
+All six proposed origin examples have now been created:
+
+- 【06_tft_origin.lean-1dd63d】
+- [07_nawderian_theorem.lean-013344】
+- [08_nawderian_set_theorem.lean-32d9b1】
+- [09_temperature_engine_theorem.lean-d7e469】
+- [10_unified_resonance_theorem.lean-3d7e85】
+- [11_rtt_origin.lean-377734】
+
+## What Made It Into Them
+
+**06 — TFT**
+
+Generic `Triad α` with:
+
+- component-wise `map`;
+- identity preservation;
+- composition preservation;
+- simple numeric transformation example.
+
+**07 — Nawderian Theorem**
+
+The four declared dimension groups are modeled explicitly.
+
+It proves the shared `6` relationships and, importantly, also proves that **Visible is not an ordinary subset of Wrapping**.
+
+So we preserved the interesting formalization issue instead of defining it away.
+
+**08 — SET**
+
+Introduces named:
+
+- Spin;
+- Electrolysis / field-charge;
+- Temperature;
+- gravitational contribution.
+
+It proves the additive specification, zero-temperature case, and reduction to gravity when all SET components are zero.
+
+**09 — Temperature Engine**
+
+Uses the deliberately bounded one-dimensional model:
+
+`F_T = -(α × gradient)`
+
+with proofs for:
+
+- zero gradient;
+- zero coupling;
+- gradient reversal;
+- positive and negative numeric examples.
+
+**10 — Unified Resonance**
+
+Uses a declared abstract `Monoid` assumption and models the three-factor composition.
+
+It tests:
+
+- composition;
+- associative regrouping;
+- neutral factors.
+
+The source/formalization distinction is stated directly in the file comments.
+
+**11 — RTT**
+
+Introduces the small:
+
+`RTTState → RTTUpdate → RTTState`
+
+transition scaffold.
+
+It includes:
+
+- component-wise updates;
+- zero update;
+- state preservation;
+- a locally defined `ContinuousFrom`;
+- declared-transition proof;
+- concrete transition example.
+
+## Validation Note
+
+I checked the files structurally, but the environment does **not** have a Lean toolchain installed, so I have deliberately not labeled them compiler-verified.
+
+One implementation choice worth noting: for `07_nawderian_theorem.lean`, I used predicates over `Nat` rather than `Finset`. That keeps this first example small and avoids making Mathlib a dependency merely to express four tiny dimension groups. Mathlib does provide `Finset` and its ordinary membership/intersection machinery if we later decide the full repository should use finite sets explicitly. 【1-f4151e】
+
+So our AACCC Lean collection is now conceptually:
+
+**01–05:** *Use AACCC*
+
+**06–11:** *Turn AACCC back onto some of its own project lineage*
+
+That second half is becoming particularly interesting. 🙂
+
+---
+
+# `06_tft_origin.lean`
+
+This keeps the TFT example deliberately small: a generic triad, component-wise transformation, identity preservation, composition, and a concrete example students can inspect.
+
+```lean
+/-
+AACCC / 5Guides Lean Origin Example
+06_tft_origin.lean
+
+Purpose:
+  Formalize one small, inspectable structure inspired by the
+  triadic organization used in the Triadic Framework for Everything.
+
+Important:
+  This file does not formalize TFT's broader physical or
+  cosmological proposals.
+
+  It introduces a generic three-part structure and proves
+  properties of transformations applied to that structure.
+
+Student questions:
+  1. What structure has actually been declared?
+  2. Which outputs correspond to which inputs?
+  3. What survives when a transformation is applied?
+  4. What has Lean proved?
+  5. What has NOT been proved?
+-/
+
+
+/-!
+## A Generic Triad
+
+The three positions are intentionally generic.
+
+They do not yet mean "Light", "Darkness", dimensions,
+physical quantities, or anything else.
+
+That keeps the formal claim small and inspectable.
+-/
+
+structure Triad (α : Type) where
+  first  : α
+  second : α
+  third  : α
+  deriving Repr, DecidableEq
+
+
+/-!
+## Transform a Triad
+
+`map` applies the same transformation to each position.
+-/
+
+def Triad.map {α β : Type} (f : α → β) (t : Triad α) : Triad β :=
+  {
+    first  := f t.first
+    second := f t.second
+    third  := f t.third
+  }
+
+
+/-!
+## Awareness
+
+Before proving anything, inspect what has been declared:
+
+* `Triad α` contains exactly three values of type `α`.
+* `map` does not add or remove positions.
+* `map` applies `f` independently to each position.
+
+The structure is the observation.
+
+Any meaning assigned to those positions would be an
+additional interpretation.
+-/
+
+
+/-!
+## Alignment
+
+Each input position corresponds directly to one output position:
+
+    first  -> first
+    second -> second
+    third  -> third
+
+We can make those relationships explicit.
+-/
+
+theorem map_first
+    {α β : Type}
+    (f : α → β)
+    (t : Triad α) :
+    (Triad.map f t).first = f t.first := by
+  rfl
+
+
+theorem map_second
+    {α β : Type}
+    (f : α → β)
+    (t : Triad α) :
+    (Triad.map f t).second = f t.second := by
+  rfl
+
+
+theorem map_third
+    {α β : Type}
+    (f : α → β)
+    (t : Triad α) :
+    (Triad.map f t).third = f t.third := by
+  rfl
+
+
+/-!
+## Coherence
+
+If we map the identity function across a triad,
+nothing should change.
+
+This checks that our transformation behaves coherently
+with the structure we declared.
+-/
+
+theorem map_identity
+    {α : Type}
+    (t : Triad α) :
+    Triad.map (fun x => x) t = t := by
+  cases t
+  rfl
+
+
+/-!
+## Composition
+
+Suppose we apply transformation `f` and then transformation `g`.
+
+That should produce the same triad as applying the composed
+transformation directly.
+-/
+
+theorem map_composition
+    {α β γ : Type}
+    (f : α → β)
+    (g : β → γ)
+    (t : Triad α) :
+    Triad.map g (Triad.map f t) =
+      Triad.map (fun x => g (f x)) t := by
+  cases t
+  rfl
+
+
+/-!
+## A Concrete Example
+
+Now give the abstract structure some simple values.
+-/
+
+def exampleTriad : Triad Nat :=
+  {
+    first  := 3
+    second := 6
+    third  := 9
+  }
+
+
+def increment (x : Nat) : Nat :=
+  x + 1
+
+
+def doubled (x : Nat) : Nat :=
+  x * 2
+
+
+/-!
+Before asking Lean, predict:
+
+    Triad.map increment exampleTriad
+
+What should each position contain?
+-/
+
+example :
+    Triad.map increment exampleTriad =
+      {
+        first  := 4
+        second := 7
+        third  := 10
+      } := by
+  rfl
+
+
+/-!
+Now apply two transformations.
+
+First increment:
+
+    3, 6, 9
+       ↓
+    4, 7, 10
+
+Then double:
+
+    4, 7, 10
+       ↓
+    8, 14, 20
+-/
+
+example :
+    Triad.map doubled (Triad.map increment exampleTriad) =
+      {
+        first  := 8
+        second := 14
+        third  := 20
+      } := by
+  rfl
+
+
+/-!
+## Continuity Question
+
+Something changed:
+
+    3, 6, 9
+
+became:
+
+    4, 7, 10
+
+and later:
+
+    8, 14, 20
+
+But something also remained stable:
+
+* there are still three positions;
+* first still corresponds to first;
+* second still corresponds to second;
+* third still corresponds to third.
+
+The values changed.
+
+The declared triadic structure persisted.
+-/
+
+
+/-!
+## Student Challenge
+
+Define your own transformation:
+
+    def myTransform (x : Nat) : Nat := ...
+
+Then compare:
+
+    Triad.map myTransform exampleTriad
+
+with the original `exampleTriad`.
+
+Ask:
+
+* What changed?
+* What remained?
+* Which correspondences were preserved?
+* What assumptions did you introduce?
+
+
+## Formalization Boundary
+
+Lean has established properties of the `Triad` and `Triad.map`
+definitions written in THIS file.
+
+It has NOT established that:
+
+* every real system is triadic;
+* these positions correspond to particular physical quantities;
+* the values 3, 6, and 9 possess special physical properties;
+* or TFT's broader claims follow from this example.
+
+This distinction is part of the exercise:
+
+    Formal validity != empirical validation
+
+The little model is useful precisely because we can see
+what we declared, what followed from it, and where our claims stop.
+-/
+```
+
+## Why This Is a Good `06`
+
+The interesting thing here is that the first origin example quietly exercises **all five AACCC questions** without pretending that Lean has formalized TFT itself:
+
+**Awareness** → inspect `Triad α`.
+
+**Alignment** → `first ↔ first`, `second ↔ second`, `third ↔ third`.
+
+**Coherence** → identity behaves as expected.
+
+**Clarity** → the structure and transformation are explicit.
+
+**Continuity** → values change while the three-position structure and correspondence persist.
+
+Most importantly, the final boundary forces the student to distinguish:
+
+> **Lean proved something about our model**
+
+from:
+
+> **therefore the original framework is proven.**
+
+That distinction is worth carrying through every origin file.
+
+---
+
+# Update Status
+
+I attempted
+
+---
+
+# `06_tft_origin.lean`
+
+```lean
+/-
+AACCC / 5Guides Lean Origin Example
+06_tft_origin.lean
+
+Purpose:
+  Formalize one small, inspectable structure inspired by the
+  triadic organization used in the Triadic Framework for Everything.
+
+Important:
+  This file does not formalize TFT's broader physical or
+  cosmological proposals.
+
+  It introduces a generic three-part structure and proves
+  properties of transformations applied to that structure.
+
+Student questions:
+  1. What structure has actually been declared?
+  2. Which outputs correspond to which inputs?
+  3. What survives when a transformation is applied?
+  4. What has Lean proved?
+  5. What has NOT been proved?
+-/
+
+
+/-!
+## A Generic Triad
+
+The three positions are intentionally generic.
+
+They do not yet mean "Light", "Darkness", dimensions,
+physical quantities, or anything else.
+
+That keeps the formal claim small and inspectable.
+-/
+
+structure Triad (α : Type) where
+  first  : α
+  second : α
+  third  : α
+  deriving Repr, DecidableEq
+
+
+/-!
+## Transform a Triad
+
+`map` applies the same transformation to each position.
+-/
+
+def Triad.map {α β : Type} (f : α → β) (t : Triad α) : Triad β :=
+  {
+    first  := f t.first
+    second := f t.second
+    third  := f t.third
+  }
+
+
+/-!
+## Awareness
+
+Before proving anything, inspect what has been declared:
+
+* `Triad α` contains exactly three values of type `α`.
+* `map` does not add or remove positions.
+* `map` applies `f` independently to each position.
+
+The structure is the observation.
+
+Any meaning assigned to those positions would be an
+additional interpretation.
+-/
+
+
+/-!
+## Alignment
+
+Each input position corresponds directly to one output position:
+
+    first  -> first
+    second -> second
+    third  -> third
+
+We can make those relationships explicit.
+-/
+
+theorem map_first
+    {α β : Type}
+    (f : α → β)
+    (t : Triad α) :
+    (Triad.map f t).first = f t.first := by
+  rfl
+
+
+theorem map_second
+    {α β : Type}
+    (f : α → β)
+    (t : Triad α) :
+    (Triad.map f t).second = f t.second := by
+  rfl
+
+
+theorem map_third
+    {α β : Type}
+    (f : α → β)
+    (t : Triad α) :
+    (Triad.map f t).third = f t.third := by
+  rfl
+
+
+/-!
+## Coherence
+
+If we map the identity function across a triad,
+nothing should change.
+
+This checks that our transformation behaves coherently
+with the structure we declared.
+-/
+
+theorem map_identity
+    {α : Type}
+    (t : Triad α) :
+    Triad.map (fun x => x) t = t := by
+  cases t
+  rfl
+
+
+/-!
+## Composition
+
+Suppose we apply transformation `f` and then transformation `g`.
+
+That should produce the same triad as applying the composed
+transformation directly.
+-/
+
+theorem map_composition
+    {α β γ : Type}
+    (f : α → β)
+    (g : β → γ)
+    (t : Triad α) :
+    Triad.map g (Triad.map f t) =
+      Triad.map (fun x => g (f x)) t := by
+  cases t
+  rfl
+
+
+/-!
+## A Concrete Example
+
+Now give the abstract structure some simple values.
+-/
+
+def exampleTriad : Triad Nat :=
+  {
+    first  := 3
+    second := 6
+    third  := 9
+  }
+
+
+def increment (x : Nat) : Nat :=
+  x + 1
+
+
+def doubled (x : Nat) : Nat :=
+  x * 2
+
+
+/-!
+Before asking Lean, predict:
+
+    Triad.map increment exampleTriad
+
+What should each position contain?
+-/
+
+example :
+    Triad.map increment exampleTriad =
+      {
+        first  := 4
+        second := 7
+        third  := 10
+      } := by
+  rfl
+
+
+/-!
+Now apply two transformations.
+
+First increment:
+
+    3, 6, 9
+       ↓
+    4, 7, 10
+
+Then double:
+
+    4, 7, 10
+       ↓
+    8, 14, 20
+-/
+
+example :
+    Triad.map doubled (Triad.map increment exampleTriad) =
+      {
+        first  := 8
+        second := 14
+        third  := 20
+      } := by
+  rfl
+
+
+/-!
+## Continuity Question
+
+Something changed:
+
+    3, 6, 9
+
+became:
+
+    4, 7, 10
+
+and later:
+
+    8, 14, 20
+
+But something also remained stable:
+
+* there are still three positions;
+* first still corresponds to first;
+* second still corresponds to second;
+* third still corresponds to third.
+
+The values changed.
+
+The declared triadic structure persisted.
+-/
+
+
+/-!
+## Student Challenge
+
+Define your own transformation:
+
+    def myTransform (x : Nat) : Nat := ...
+
+Then compare:
+
+    Triad.map myTransform exampleTriad
+
+with the original `exampleTriad`.
+
+Ask:
+
+* What changed?
+* What remained?
+* Which correspondences were preserved?
+* What assumptions did you introduce?
+
+
+## Formalization Boundary
+
+Lean has established properties of the `Triad` and `Triad.map`
+definitions written in THIS file.
+
+It has NOT established that:
+
+* every real system is triadic;
+* these positions correspond to particular physical quantities;
+* the values 3, 6, and 9 possess special physical properties;
+* or TFT's broader claims follow from this example.
+
+This distinction is part of the exercise:
+
+    Formal validity != empirical validation
+
+The little model is useful precisely because we can see
+what we declared, what followed from it, and where our claims stop.
+-/
+```
+
+---
+
+## Lean Syntax Verification — `06_tft_origin.lean`
+
+I reviewed the actual downloadable file and checked its constructs against current Lean 4 documentation.
+
+### Result
+
+**The file is syntactically plausible Lean 4 and I found no syntax error in the source.**
+
+In particular:
+
+- `structure Triad (α : Type) where ...` is standard Lean 4 structure syntax. 【1-90bcb0】
+- `deriving Repr, DecidableEq` is supported for structures. 【1-90bcb0】
+- The named structure literals `{ first := ..., second := ..., third := ... }` are valid. 【1-90bcb0】
+- The `rfl` proofs are being used for definitional equalities, which is an appropriate Lean pattern. 【2-3247ee】
+- The `cases t; rfl` approach used for the structural identity/composition proofs follows ordinary Lean structure elimination and reflexivity reasoning. Lean's own examples use `cases` followed by `rfl` for constructor-based equality proofs. 【3-da04ee】
+- The documentation comments `/-! ... -/` and ordinary comments `/- ... -/` are properly balanced in the file.
+
+### The Two Most Important Proofs
+
+These both look correct:
+
+```lean
+theorem map_identity
+    {α : Type}
+    (t : Triad α) :
+    Triad.map (fun x => x) t = t := by
+  cases t
+  rfl
+```
+and:
+```lean
+theorem map_composition
+    {α β γ : Type}
+    (f : α → β)
+    (g : β → γ)
+    (t : Triad α) :
+    Triad.map g (Triad.map f t) =
+      Triad.map (fun x => g (f x)) t := by
+  cases t
+  rfl
+```
+After destructuring t, both sides reduce component-by-component to the same structure.
+
+### Concrete Arithmetic Examples
+These also appear suitable for rfl:
+```lean
+Triad.map increment exampleTriad =
+  {
+    first  := 4
+    second := 7
+    third  := 10
+  }
+```
+and:
+```lean
+Triad.map doubled (Triad.map increment exampleTriad) =
+  {
+    first  := 8
+    second := 14
+    third  := 20
+  }
+```
+Lean can close equalities of computable expressions with rfl when both sides reduce definitionally to the same value.[lean4+1](https://lean4.dev/tactics/automation/decide)
+
+### One Remaining Qualification
+I checked the environment again and neither lean nor lake is installed here.
+Therefore my verdict is:
+> 
+> **Source inspection: PASS**
+> **Lean 4 syntax/construction review: PASS**
+> **Actual Lean elaboration/compiler test: NOT YET PERFORMED**
+> 
+I would keep that distinction in the capture until the file has been run through the repository's actual Lean 4 toolchain.
+
+[Download the reviewed [06_tft_origin.lean](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/5Guides/06_tft_origin.lean)
+
+---
+
+# Lean Checker Attempt
+
+I tried to install Lean using the **official recommended `elan` installer**. The Lean installation documentation specifies `elan` as the Lean version manager and gives the installer at `https://elan.lean-lang.org/elan-init.sh`. 【1-dc4fd9】【2-9071f8】
+
+The sandbox blocked that download with:
+
+`HTTP 403`
+
+Because installation did not complete, neither `lean` nor the `~/.elan` environment was available, so I could not honestly claim a compiler check.
+
+## Current Verification Status
+
+**Manual Lean 4 source review:** PASS
+
+**Official installation attempted:** YES
+
+**Installation result:** BLOCKED by sandbox network policy (`HTTP 403`)
+
+**Actual `lean 06_tft_origin.lean` run:** NOT PERFORMED
+
+So the file should still be labeled:
+
+> **Lean 4 source-reviewed, compiler verification pending.**
+
+The official documentation confirms that once Lean is available, `lean`/`lake` are supplied through the Lean toolchain and `lake build` is the normal project build/typecheck route. 【3-8083f5】【2-9071f8】
+
+【Download 06_tft_origin.lean-a61e22】
+
+I would **not change the source merely to make it appear verified**. The next useful check should be against the actual repository Lean toolchain, especially once we know its `lean-toolchain` setting.
+
+---
+
