@@ -6290,3 +6290,1837 @@ It's being given a structure for deciding:
 
 ---
 
+## Code Example — A Tiny Structural Monitor 💻
+
+Let's turn the login-service example into code.
+
+The goal is **not** to make the software magically diagnose the problem.
+
+Instead, we'll give it a simple sequence:
+
+**Awareness → Alignment → Coherence → Clarity**
+
+```python
+from dataclasses import dataclass
+
+
+@dataclass
+class Signals:
+    login_requests: str
+    response_time: str
+    failed_logins: str
+
+
+def awareness(signals: Signals):
+    """Record what was actually observed."""
+    return {
+        "requests": signals.login_requests,
+        "response_time": signals.response_time,
+        "failures": signals.failed_logins,
+    }
+
+
+def alignment(observed):
+    """Look for relationships among observations."""
+    return {
+        "response_and_failures":
+            observed["response_time"] == "increasing"
+            and observed["failures"] == "increasing",
+
+        "traffic_explanation":
+            observed["requests"] == "increasing",
+    }
+
+
+def coherence(observed, aligned):
+    """Test whether a possible explanation fits the observations."""
+
+    if (
+        aligned["response_and_failures"]
+        and observed["requests"] == "normal"
+    ):
+        return {
+            "state": "plausible",
+            "explanation":
+                "Login performance may be degrading independently of request volume.",
+        }
+
+    return {
+        "state": "uncertain",
+        "explanation":
+            "The current observations do not yet support a clear explanation.",
+    }
+
+
+def clarity(observed, coherent):
+    """Turn the structural result into something inspectable."""
+
+    return {
+        "status": coherent["state"],
+        "observed": observed,
+        "explanation": coherent["explanation"],
+        "next_step":
+            "Gather another observation before identifying a cause.",
+    }
+
+
+signals = Signals(
+    login_requests="normal",
+    response_time="increasing",
+    failed_logins="increasing",
+)
+
+observed = awareness(signals)
+aligned = alignment(observed)
+coherent = coherence(observed, aligned)
+report = clarity(observed, coherent)
+
+print(report)
+```
+
+## Follow the Reasoning
+The interesting part isn't really the Python.
+It's the separation of responsibilities.
+
+### 1. Awareness
+The system records:
+> 
+> What did I observe?
+> 
+It doesn't diagnose anything yet.
+
+### 2. Alignment
+The system notices:
+> 
+> **Response time and failures are both increasing.**
+> 
+But it also preserves:
+> 
+> **Request volume is normal.**
+> 
+That third observation helps challenge an easy explanation.
+
+### 3. Coherence
+Now the software tests a tentative explanation against the observations.
+
+It can say:
+> 
+> **This explanation is plausible.**
+> 
+without pretending:
+> 
+> **This is definitely the cause.**
+> 
+
+### 4. Clarity
+
+Finally, the system exposes:
+- what it observed;
+- what it currently thinks;
+- how certain that reasoning is;
+- and what should be observed next.
+
+That's much more inspectable than:
+```text
+ERROR: LOGIN SERVICE BAD
+```
+
+😉
+
+---
+
+### The Bigger Idea
+Notice what we did not write:
+```python
+if failures_are_high:
+    cause = "login_service"
+```
+That would jump almost directly from:
+
+**Observation → Conclusion**
+Instead, we created intermediate places where reasoning can be inspected:
+**Observe → Compare → Test → Explain**
+> 
+> Or in our Five Guides language:
+> 
+Awareness → Alignment → Coherence → Clarity
+
+And because each stage produces something we can inspect, another person, another program, or even an AI assistant can ask:
+> 
+> Where did this conclusion come from?
+> 
+That's when a small example starts becoming something more interesting than an alert.
+It becomes an **inspectable reasoning process.**
+
+---
+
+## What Happens When the Tests Fail? 🧪
+
+Our little monitor works nicely when the signals behave as expected.
+
+But the interesting part begins when they **don't**.
+
+Let's deliberately give it situations that challenge its reasoning.
+
+### Some Failing Tests
+
+```python
+def test_expected_degradation():
+    signals = Signals(
+        login_requests="normal",
+        response_time="increasing",
+        failed_logins="increasing",
+    )
+
+    observed = awareness(signals)
+    aligned = alignment(observed)
+    result = coherence(observed, aligned)
+
+    assert result["state"] == "plausible"
+
+
+def test_high_traffic_needs_another_explanation():
+    signals = Signals(
+        login_requests="increasing",
+        response_time="increasing",
+        failed_logins="increasing",
+    )
+
+    observed = awareness(signals)
+    aligned = alignment(observed)
+    result = coherence(observed, aligned)
+
+    assert result["state"] == "uncertain"
+
+
+def test_failures_without_slowdown():
+    signals = Signals(
+        login_requests="normal",
+        response_time="normal",
+        failed_logins="increasing",
+    )
+
+    observed = awareness(signals)
+    aligned = alignment(observed)
+    result = coherence(observed, aligned)
+
+    assert result["state"] == "uncertain"
+
+
+def test_missing_observation():
+    signals = Signals(
+        login_requests="normal",
+        response_time="unknown",
+        failed_logins="increasing",
+    )
+
+    observed = awareness(signals)
+    aligned = alignment(observed)
+    result = coherence(observed, aligned)
+
+    assert result["state"] == "insufficient_data"
+```
+
+## Why Deliberately Test the Awkward Cases?
+
+Consider this triad:
+```text
+requests      = increasing
+response_time = increasing
+failures      = increasing
+```
+
+Earlier, we suspected login degradation that was **independent of request volume.**
+That explanation no longer fits as neatly.
+The new observation doesn't automatically tell us the answer.
+
+It tells us:
+> 
+> **Our current explanation needs another look.**
+> 
+That's Coherence doing useful work.
+
+### Missing Information Is Information Too
+
+Now consider:
+```text
+requests      = normal
+response_time = unknown
+failures      = increasing
+```
+
+We no longer have three usable observations.
+A careless system might quietly treat unknown as though it meant normal.
+But that would turn missing information into an observation we never actually made.
+
+Our Awareness rule says:
+> 
+> **Keep the unknown visible.**
+> 
+So insufficient_data may be a better result than pretending the system understands the situation.
+
+---
+
+## Read the Failure Structurally
+
+When a test fails, don't immediately change something until the test turns green.
+Ask where the reasoning broke.
+
+### Awareness
+> 
+> Did we correctly represent what was actually observed?
+> 
+### Alignment
+> 
+> Did we connect signals that really belong together?
+> 
+### Coherence
+> 
+> Does our explanation still fit all the observations?
+> 
+### Clarity
+> 
+> Does the result clearly show what is known, inferred, and still unknown?
+> 
+Now the failed test becomes more than a software error.
+**It becomes evidence.**
+
+---
+
+## Don't "Fix" the Test Just to Make It Pass 😉
+Suppose the test expects:
+```python
+assert result["state"] == "insufficient_data"
+```
+but our program returns:
+```text
+uncertain
+```
+Easy fix!
+
+Just change the test:
+```python
+assert result["state"] == "uncertain"
+```
+Green! 🎉
+Except...
+**What did we actually fix?**
+Maybe nothing.
+We may have changed the expectation simply to agree with the existing behavior.
+That's a software version of **forcing Alignment.**
+
+Instead, stop and ask:
+> 
+> **What should unknown actually mean in this system?**
+> 
+Now we can inspect whether the problem belongs in:
+- the code;
+- the test;
+- the assumptions;
+- or the model itself.
+
+Then we repair the right thing.
+
+## The Bigger Lesson
+A failing test doesn't always mean:
+> 
+> **Make the code match the test.**
+> 
+Sometimes it means:
+> 
+> **Reconsider the test.**
+> 
+Sometimes:
+> 
+> **Reconsider the model.**
+> 
+And sometimes:
+> 
+> **We don't have enough information yet.**
+> 
+That's the pattern we've been building:
+**Awareness → What did we observe?**
+**Alignment → What corresponds?**
+**Coherence → Does the explanation hold together?**
+**Clarity → Can we show exactly what happened?**
+
+A good system shouldn't merely produce answers.
+> 
+> **It should leave enough structure behind for us to inspect how it got there.**
+>
+
+---
+
+## Implementing the Missing States 🧪
+
+Our first version treated anything outside the expected pattern as simply:
+
+`uncertain`
+
+Let's make the reasoning more explicit.
+
+We want the system to distinguish between:
+
+- **plausible** — the observations support our current explanation;
+- **high_traffic_possible** — rising traffic provides another plausible explanation;
+- **different_pattern** — failures are rising without the expected slowdown;
+- **insufficient_data** — one or more observations are unknown;
+- **uncertain** — we have observations, but the current model doesn't explain them.
+
+### Updated Coherence Function
+
+```python
+def coherence(observed, aligned):
+    """Test whether our explanations fit the available observations."""
+
+    # Awareness first:
+    # Don't reason past information we don't actually have.
+    if "unknown" in observed.values():
+        return {
+            "state": "insufficient_data",
+            "explanation":
+                "One or more observations are unknown.",
+        }
+
+    # Response time and failures are increasing,
+    # while request volume remains normal.
+    if (
+        aligned["response_and_failures"]
+        and observed["requests"] == "normal"
+    ):
+        return {
+            "state": "plausible",
+            "explanation":
+                "Login performance may be degrading independently "
+                "of request volume.",
+        }
+
+    # All three signals are increasing.
+    # Increased traffic now becomes another possible explanation.
+    if (
+        aligned["response_and_failures"]
+        and aligned["traffic_explanation"]
+    ):
+        return {
+            "state": "high_traffic_possible",
+            "explanation":
+                "Response time, failures, and request volume are all "
+                "increasing. Increased traffic may be contributing.",
+        }
+
+    # Failures are increasing without the expected response-time change.
+    if (
+        observed["failures"] == "increasing"
+        and observed["response_time"] == "normal"
+    ):
+        return {
+            "state": "different_pattern",
+            "explanation":
+                "Failures are increasing without a matching increase "
+                "in response time.",
+        }
+
+    # We have observations, but they don't currently fit
+    # one of our modeled patterns.
+    return {
+        "state": "uncertain",
+        "explanation":
+            "The observations do not yet support one of the current "
+            "explanations.",
+    }
+```
+### Now Update the Tests
+```python
+def test_expected_degradation():
+    signals = Signals(
+        login_requests="normal",
+        response_time="increasing",
+        failed_logins="increasing",
+    )
+
+    observed = awareness(signals)
+    aligned = alignment(observed)
+    result = coherence(observed, aligned)
+
+    assert result["state"] == "plausible"
+
+
+def test_high_traffic_changes_the_explanation():
+    signals = Signals(
+        login_requests="increasing",
+        response_time="increasing",
+        failed_logins="increasing",
+    )
+
+    observed = awareness(signals)
+    aligned = alignment(observed)
+    result = coherence(observed, aligned)
+
+    assert result["state"] == "high_traffic_possible"
+
+
+def test_failures_without_slowdown():
+    signals = Signals(
+        login_requests="normal",
+        response_time="normal",
+        failed_logins="increasing",
+    )
+
+    observed = awareness(signals)
+    aligned = alignment(observed)
+    result = coherence(observed, aligned)
+
+    assert result["state"] == "different_pattern"
+
+
+def test_missing_observation():
+    signals = Signals(
+        login_requests="normal",
+        response_time="unknown",
+        failed_logins="increasing",
+    )
+
+    observed = awareness(signals)
+    aligned = alignment(observed)
+    result = coherence(observed, aligned)
+
+    assert result["state"] == "insufficient_data"
+```
+## What Changed?
+Notice that we didn't teach the system to magically discover the cause.
+We taught it to preserve distinctions.
+
+### Before
+```text
+Expected pattern  → plausible
+Anything else     → uncertain
+```
+### After
+```text
+Normal traffic + slowdown + failures
+        ↓
+     plausible
+
+High traffic + slowdown + failures
+        ↓
+ high_traffic_possible
+
+Normal response + rising failures
+        ↓
+   different_pattern
+
+Missing observation
+        ↓
+  insufficient_data
+
+Anything not yet modeled
+        ↓
+      uncertain
+```
+That's a much more useful result.
+
+## The Structural Lesson
+Notice how our four guides are now working together.
+
+### Awareness
+We refuse to turn:
+unknown
+into:
+normal
+The missing observation stays visible.
+
+### Alignment
+We examine which signals move together:
+response_time ↔ failures
+and:
+requests ↔ response_time ↔ failures
+
+### Coherence
+Different combinations produce different candidate explanations.
+We don't force every observation into the first explanation that worked.
+
+### Clarity
+Instead of returning only:
+```text
+False
+```
+or:
+```text
+Error
+```
+we preserve both a **state** and an **explanation**.
+That lets another developer inspect what the program decided.
+
+### One Important Detail
+These states are our model, not facts about the real login service.
+
+For example:
+high_traffic_possible
+does not mean:
+> 
+> High traffic caused the failures.
+> 
+It means:
+> 
+> **The observed pattern makes increased traffic one possibility worth investigating.**
+> 
+That distinction matters.
+We're representing the system's current reasoning without pretending the reasoning is the thing being observed.
+And that brings us remarkably close to the final guide.
+Because now our monitor can repeatedly observe the system:
+```text
+t1 → normal
+t2 → plausible
+t3 → high_traffic_possible
+t4 → plausible
+t5 → normal
+```
+Suddenly we have another question:
+> 
+> What happened across those changes?
+> 
+That's no longer just Awareness, Alignment, Coherence, or Clarity.
+We're beginning to examine **Continuity**.
+
+---
+
+## Make the States Explicit — Use an Enum 🧭
+
+Right now our states are plain strings:
+
+```python
+"plausible"
+"high_traffic_possible"
+"different_pattern"
+"insufficient_data"
+"uncertain"
+```
+
+That works, but strings are easy to mistype and harder to manage as the system grows.
+
+Let's make the possible states part of the model itself.
+
+```python
+from enum import Enum
+
+
+class SystemState(Enum):
+    PLAUSIBLE = "plausible"
+    HIGH_TRAFFIC_POSSIBLE = "high_traffic_possible"
+    DIFFERENT_PATTERN = "different_pattern"
+    INSUFFICIENT_DATA = "insufficient_data"
+    UNCERTAIN = "uncertain"
+```
+
+Now our Coherence function can return explicit states:
+
+```python
+def coherence(observed, aligned):
+    """Test whether our explanations fit the available observations."""
+
+    if "unknown" in observed.values():
+        return {
+            "state": SystemState.INSUFFICIENT_DATA,
+            "explanation":
+                "One or more observations are unknown.",
+        }
+
+    if (
+        aligned["response_and_failures"]
+        and observed["requests"] == "normal"
+    ):
+        return {
+            "state": SystemState.PLAUSIBLE,
+            "explanation":
+                "Login performance may be degrading independently "
+                "of request volume.",
+        }
+
+    if (
+        aligned["response_and_failures"]
+        and aligned["traffic_explanation"]
+    ):
+        return {
+            "state": SystemState.HIGH_TRAFFIC_POSSIBLE,
+            "explanation":
+                "Response time, failures, and request volume are all "
+                "increasing. Increased traffic may be contributing.",
+        }
+
+    if (
+        observed["failures"] == "increasing"
+        and observed["response_time"] == "normal"
+    ):
+        return {
+            "state": SystemState.DIFFERENT_PATTERN,
+            "explanation":
+                "Failures are increasing without a matching increase "
+                "in response time.",
+        }
+
+    return {
+        "state": SystemState.UNCERTAIN,
+        "explanation":
+            "The observations do not yet support one of the current "
+            "explanations.",
+    }
+```
+
+## The Tests Become Clearer Too
+
+Instead of testing against another free-form string:
+
+```python
+assert result["state"] == "insufficient_data"
+```
+
+we can test the actual state:
+
+```python
+assert result["state"] == SystemState.INSUFFICIENT_DATA
+```
+
+And similarly:
+
+```python
+assert result["state"] == SystemState.PLAUSIBLE
+assert result["state"] == SystemState.HIGH_TRAFFIC_POSSIBLE
+assert result["state"] == SystemState.DIFFERENT_PATTERN
+assert result["state"] == SystemState.UNCERTAIN
+```
+
+## Why This Matters
+
+The enum gives the system a declared vocabulary:
+
+```text
+SystemState
+├── PLAUSIBLE
+├── HIGH_TRAFFIC_POSSIBLE
+├── DIFFERENT_PATTERN
+├── INSUFFICIENT_DATA
+└── UNCERTAIN
+```
+
+That makes an important distinction visible:
+
+> **The observation is not the state.**
+
+The signals are what the system observed.
+
+The state is the system's **current interpretation of those observations**.
+
+So we now have:
+
+```text
+Observations
+     ↓
+ Awareness
+     ↓
+ Alignment
+     ↓
+ Coherence
+     ↓
+ SystemState
+     ↓
+ Clarity
+```
+
+And importantly, `SystemState` is allowed to change when the next observation arrives.
+
+That gives us a clean doorway into **Continuity**:
+
+> **If the interpreted state changes over time, what changed, what remained stable, and can we trace the transition?**
+
+---
+
+## Add State Transition Validation 🔄
+
+Now our monitor has explicit states.
+
+The next question is:
+
+> **Can the system move from any state to any other state?**
+
+Maybe.
+
+But instead of silently accepting every transition, let's make those changes **inspectable** too.
+
+### Declare the Allowed Transitions
+
+```python
+from enum import Enum
+
+
+class SystemState(Enum):
+    PLAUSIBLE = "plausible"
+    HIGH_TRAFFIC_POSSIBLE = "high_traffic_possible"
+    DIFFERENT_PATTERN = "different_pattern"
+    INSUFFICIENT_DATA = "insufficient_data"
+    UNCERTAIN = "uncertain"
+
+
+ALLOWED_TRANSITIONS = {
+    SystemState.PLAUSIBLE: {
+        SystemState.PLAUSIBLE,
+        SystemState.HIGH_TRAFFIC_POSSIBLE,
+        SystemState.DIFFERENT_PATTERN,
+        SystemState.INSUFFICIENT_DATA,
+        SystemState.UNCERTAIN,
+    },
+
+    SystemState.HIGH_TRAFFIC_POSSIBLE: {
+        SystemState.HIGH_TRAFFIC_POSSIBLE,
+        SystemState.PLAUSIBLE,
+        SystemState.INSUFFICIENT_DATA,
+        SystemState.UNCERTAIN,
+    },
+
+    SystemState.DIFFERENT_PATTERN: {
+        SystemState.DIFFERENT_PATTERN,
+        SystemState.PLAUSIBLE,
+        SystemState.INSUFFICIENT_DATA,
+        SystemState.UNCERTAIN,
+    },
+
+    SystemState.INSUFFICIENT_DATA: {
+        SystemState.INSUFFICIENT_DATA,
+        SystemState.PLAUSIBLE,
+        SystemState.HIGH_TRAFFIC_POSSIBLE,
+        SystemState.DIFFERENT_PATTERN,
+        SystemState.UNCERTAIN,
+    },
+
+    SystemState.UNCERTAIN: {
+        SystemState.UNCERTAIN,
+        SystemState.PLAUSIBLE,
+        SystemState.HIGH_TRAFFIC_POSSIBLE,
+        SystemState.DIFFERENT_PATTERN,
+        SystemState.INSUFFICIENT_DATA,
+    },
+}
+```
+
+These transitions are **our model**, not universal rules.
+
+We're deliberately declaring what the example system currently considers reasonable.
+
+---
+
+## Validate the Transition
+
+```python
+def validate_transition(previous_state, new_state):
+    """Check whether a state transition is allowed by the model."""
+
+    allowed = ALLOWED_TRANSITIONS.get(previous_state, set())
+
+    if new_state in allowed:
+        return {
+            "valid": True,
+            "from": previous_state,
+            "to": new_state,
+            "reason": "Transition is allowed by the current model.",
+        }
+
+    return {
+        "valid": False,
+        "from": previous_state,
+        "to": new_state,
+        "reason":
+            "Transition is not currently allowed and should be inspected.",
+    }
+```
+
+Now a change isn't just accepted.
+
+It leaves behind something we can examine.
+
+---
+
+## Test the Transitions
+
+```python
+def test_plausible_to_high_traffic():
+    result = validate_transition(
+        SystemState.PLAUSIBLE,
+        SystemState.HIGH_TRAFFIC_POSSIBLE,
+    )
+
+    assert result["valid"] is True
+
+
+def test_missing_data_can_recover():
+    result = validate_transition(
+        SystemState.INSUFFICIENT_DATA,
+        SystemState.PLAUSIBLE,
+    )
+
+    assert result["valid"] is True
+
+
+def test_unmodeled_transition_is_flagged():
+    result = validate_transition(
+        SystemState.DIFFERENT_PATTERN,
+        SystemState.HIGH_TRAFFIC_POSSIBLE,
+    )
+
+    assert result["valid"] is False
+```
+
+Notice the last test.
+
+The validator doesn't say:
+
+> **That transition is impossible.**
+
+It says:
+
+> **Our current model doesn't allow that transition. Take another look.**
+
+That's a much safer distinction.
+
+---
+
+## Don't Hide an Unexpected Transition
+
+Suppose the system moves from:
+
+```text
+DIFFERENT_PATTERN
+        ↓
+HIGH_TRAFFIC_POSSIBLE
+```
+
+We could automatically force it through an intermediate state until the transition fits our table.
+
+But then we'd be changing the history to protect the model.
+
+Instead:
+
+> **Preserve the unexpected transition and inspect it.**
+
+Maybe:
+
+- the observations changed quickly;
+- our transition map is incomplete;
+- an intermediate observation is missing;
+- the earlier state was wrong;
+- or we've discovered a transition we didn't anticipate.
+
+An invalid transition can therefore become **evidence about the model itself**.
+
+---
+
+## Now We Have a History
+
+Instead of isolated states:
+
+```text
+PLAUSIBLE
+
+HIGH_TRAFFIC_POSSIBLE
+
+UNCERTAIN
+```
+
+we can inspect transitions:
+
+```text
+PLAUSIBLE
+    ↓
+HIGH_TRAFFIC_POSSIBLE
+    ↓
+UNCERTAIN
+    ↓
+PLAUSIBLE
+```
+
+That changes the question.
+
+We're no longer asking only:
+
+> **What state is the system in?**
+
+We're beginning to ask:
+
+> **How did it get here?**
+
+> **What persisted?**
+
+> **What changed?**
+
+> **Was the transition expected?**
+
+And that gives us our final structural step:
+
+# Continuity
+
+> **What persists through change?**
+
+Awareness gave us observations.
+
+Alignment gave us relationships.
+
+Coherence tested whether those relationships held together.
+
+Clarity made the reasoning inspectable.
+
+Now Continuity lets us examine **what happens to that structure over time.** 🔄
+
+---
+
+## Track the Transition History 📜
+
+Validating a transition tells us whether a change fits our current model.
+
+But if we only keep the **latest** state, we lose an important part of the story:
+
+> **How did the system get here?**
+
+Let's preserve each transition in a small history.
+
+### Create a Transition Record
+
+```python
+from dataclasses import dataclass
+from datetime import datetime, timezone
+
+
+@dataclass
+class StateTransition:
+    timestamp: datetime
+    previous_state: SystemState
+    new_state: SystemState
+    valid: bool
+    reason: str
+```
+
+Each record answers:
+
+- **When did the transition occur?**
+- **Where did we start?**
+- **Where did we go?**
+- **Did the transition fit our model?**
+- **Why was it accepted or flagged?**
+
+---
+
+## Add a History Tracker
+
+```python
+class StateHistory:
+    def __init__(self, initial_state):
+        self.current_state = initial_state
+        self.transitions = []
+
+    def transition_to(self, new_state):
+        result = validate_transition(
+            self.current_state,
+            new_state,
+        )
+
+        transition = StateTransition(
+            timestamp=datetime.now(timezone.utc),
+            previous_state=self.current_state,
+            new_state=new_state,
+            valid=result["valid"],
+            reason=result["reason"],
+        )
+
+        self.transitions.append(transition)
+
+        if result["valid"]:
+            self.current_state = new_state
+
+        return transition
+```
+
+Notice an important design decision:
+
+> **An unexpected transition is recorded even when it isn't accepted as the new current state.**
+
+We don't erase the observation simply because it doesn't fit our model.
+
+---
+
+## Try It
+
+```python
+history = StateHistory(SystemState.UNCERTAIN)
+
+history.transition_to(SystemState.PLAUSIBLE)
+history.transition_to(SystemState.HIGH_TRAFFIC_POSSIBLE)
+history.transition_to(SystemState.UNCERTAIN)
+history.transition_to(SystemState.PLAUSIBLE)
+```
+
+Our history now represents a path:
+
+```text
+UNCERTAIN
+    ↓
+PLAUSIBLE
+    ↓
+HIGH_TRAFFIC_POSSIBLE
+    ↓
+UNCERTAIN
+    ↓
+PLAUSIBLE
+```
+
+Instead of seeing only:
+
+```text
+Current state: PLAUSIBLE
+```
+
+we can inspect **how the system arrived there**.
+
+---
+
+## Show the History Clearly
+
+```python
+def print_history(history):
+    for transition in history.transitions:
+        status = "accepted" if transition.valid else "flagged"
+
+        print(
+            f"{transition.previous_state.value} "
+            f"-> {transition.new_state.value} "
+            f"[{status}]"
+        )
+```
+
+That might produce:
+
+```text
+uncertain -> plausible [accepted]
+plausible -> high_traffic_possible [accepted]
+high_traffic_possible -> uncertain [accepted]
+uncertain -> plausible [accepted]
+```
+
+Now the system has something it didn't have before:
+
+**memory of structural change.**
+
+---
+
+## Test the History
+
+```python
+def test_transition_history():
+    history = StateHistory(SystemState.UNCERTAIN)
+
+    history.transition_to(SystemState.PLAUSIBLE)
+    history.transition_to(SystemState.HIGH_TRAFFIC_POSSIBLE)
+
+    assert len(history.transitions) == 2
+    assert history.current_state == SystemState.HIGH_TRAFFIC_POSSIBLE
+
+    first = history.transitions[0]
+
+    assert first.previous_state == SystemState.UNCERTAIN
+    assert first.new_state == SystemState.PLAUSIBLE
+    assert first.valid is True
+```
+
+And let's make sure unexpected transitions don't disappear:
+
+```python
+def test_flagged_transition_is_preserved():
+    history = StateHistory(SystemState.DIFFERENT_PATTERN)
+
+    transition = history.transition_to(
+        SystemState.HIGH_TRAFFIC_POSSIBLE
+    )
+
+    assert transition.valid is False
+
+    # The attempted transition is preserved.
+    assert len(history.transitions) == 1
+
+    # But the accepted current state has not changed.
+    assert history.current_state == SystemState.DIFFERENT_PATTERN
+```
+
+That's an important distinction:
+
+> **Observed transition attempt ≠ accepted state transition**
+
+---
+
+## Why Keep the History?
+
+Consider two systems that are both currently:
+
+```text
+PLAUSIBLE
+```
+
+System A arrived there like this:
+
+```text
+UNCERTAIN
+    ↓
+PLAUSIBLE
+```
+
+System B arrived there like this:
+
+```text
+PLAUSIBLE
+    ↓
+HIGH_TRAFFIC_POSSIBLE
+    ↓
+DIFFERENT_PATTERN   [flagged]
+    ↓
+UNCERTAIN
+    ↓
+PLAUSIBLE
+```
+
+Same current state.
+
+**Very different history.**
+
+If we only store the present state, that difference disappears.
+
+---
+
+## Now the Full Pattern Is Emerging
+
+Our little software example has gradually gained structure:
+
+```text
+Signals
+   ↓
+Awareness
+   ↓
+Alignment
+   ↓
+Coherence
+   ↓
+SystemState
+   ↓
+Clarity
+   ↓
+Transition Validation
+   ↓
+Transition History
+```
+
+And history gives us something genuinely new to inspect.
+
+We can ask:
+
+> **What changed?**
+
+> **What stayed the same?**
+
+> **Which transitions were expected?**
+
+> **Which transitions surprised us?**
+
+> **Did the system return to a previous state?**
+
+> **Was important structure preserved while the state changed?**
+
+Those aren't simply questions about the current state anymore.
+
+They are questions about the relationship between **past and present**.
+
+# That's Continuity 🔄
+
+> **Continuity asks what persists, what changes, and whether we can trace the path between them.**
+
+The system doesn't merely know **where it is**.
+
+It has begun preserving enough structure to ask:
+
+> **How did I get here?**
+
+---
+
+## Track Recurring State Patterns 🔁
+
+A transition history tells us **how the system moved**.
+
+Once the history gets longer, we can ask another question:
+
+> **Have we seen this pattern before?**
+
+Suppose the monitor records:
+
+```text
+PLAUSIBLE
+    ↓
+HIGH_TRAFFIC_POSSIBLE
+    ↓
+UNCERTAIN
+    ↓
+PLAUSIBLE
+    ↓
+HIGH_TRAFFIC_POSSIBLE
+    ↓
+UNCERTAIN
+```
+
+That's no longer just a collection of transitions.
+
+Something may be **recurring**.
+
+---
+
+## Find Repeated Sequences
+
+Let's give the history tracker a simple pattern detector.
+
+```python
+from collections import Counter
+
+
+def find_recurring_patterns(history, pattern_length=3):
+    """Find repeated sequences of accepted states."""
+
+    states = []
+
+    if history.transitions:
+        states.append(history.transitions[0].previous_state)
+
+    for transition in history.transitions:
+        if transition.valid:
+            states.append(transition.new_state)
+
+    patterns = [
+        tuple(states[i:i + pattern_length])
+        for i in range(len(states) - pattern_length + 1)
+    ]
+
+    counts = Counter(patterns)
+
+    return {
+        pattern: count
+        for pattern, count in counts.items()
+        if count > 1
+    }
+```
+
+Now we can ask:
+
+```python
+patterns = find_recurring_patterns(
+    history,
+    pattern_length=3,
+)
+```
+
+A result might identify:
+
+```text
+PLAUSIBLE
+    ↓
+HIGH_TRAFFIC_POSSIBLE
+    ↓
+UNCERTAIN
+```
+
+as having occurred more than once.
+
+---
+
+## Make the Pattern Inspectable
+
+```python
+def print_patterns(patterns):
+    if not patterns:
+        print("No recurring patterns detected.")
+        return
+
+    for pattern, count in patterns.items():
+        path = " -> ".join(
+            state.value for state in pattern
+        )
+
+        print(f"{path} [observed {count} times]")
+```
+
+The system can now report:
+
+```text
+plausible -> high_traffic_possible -> uncertain
+[observed 2 times]
+```
+
+That's useful.
+
+But there's an important rule:
+
+> **Recurring does not automatically mean meaningful.**
+
+We've discovered repetition.
+
+We haven't discovered its cause.
+
+---
+
+## Don't Turn a Pattern Into a Conclusion
+
+If the system repeatedly observes:
+
+```text
+PLAUSIBLE
+    ↓
+HIGH_TRAFFIC_POSSIBLE
+    ↓
+UNCERTAIN
+```
+
+it might be tempting to say:
+
+> **High traffic causes the system to become uncertain.**
+
+Whoa there. 😉
+
+Our history doesn't establish that.
+
+What it actually supports is:
+
+> **This sequence has occurred repeatedly in the recorded history.**
+
+Now we have something worth investigating.
+
+---
+
+## Patterns Become New Observations
+
+This creates a neat loop.
+
+Originally our observations were things like:
+
+```text
+request volume
+response time
+failed logins
+```
+
+But after tracking the system for a while, we gain another kind of observation:
+
+```text
+recurring state sequence
+```
+
+So the system can apply the same questions again.
+
+### Awareness
+
+> **What pattern did we actually observe?**
+
+### Alignment
+
+> **Does the pattern correspond with anything else happening in the system?**
+
+### Coherence
+
+> **Does our explanation fit each occurrence, or only some of them?**
+
+### Clarity
+
+> **Can we show the pattern without claiming more than the history supports?**
+
+And soon:
+
+### Continuity
+
+> **What persists across each recurrence?**
+
+---
+
+## Test the Pattern Detector
+
+```python
+def test_recurring_pattern_detection():
+    history = StateHistory(SystemState.PLAUSIBLE)
+
+    history.transition_to(
+        SystemState.HIGH_TRAFFIC_POSSIBLE
+    )
+    history.transition_to(SystemState.UNCERTAIN)
+    history.transition_to(SystemState.PLAUSIBLE)
+    history.transition_to(
+        SystemState.HIGH_TRAFFIC_POSSIBLE
+    )
+    history.transition_to(SystemState.UNCERTAIN)
+
+    patterns = find_recurring_patterns(
+        history,
+        pattern_length=3,
+    )
+
+    target = (
+        SystemState.PLAUSIBLE,
+        SystemState.HIGH_TRAFFIC_POSSIBLE,
+        SystemState.UNCERTAIN,
+    )
+
+    assert target in patterns
+    assert patterns[target] == 2
+```
+
+Now let's make sure a single occurrence isn't called recurring:
+
+```python
+def test_single_sequence_is_not_recurring():
+    history = StateHistory(SystemState.PLAUSIBLE)
+
+    history.transition_to(
+        SystemState.HIGH_TRAFFIC_POSSIBLE
+    )
+    history.transition_to(SystemState.UNCERTAIN)
+
+    patterns = find_recurring_patterns(
+        history,
+        pattern_length=3,
+    )
+
+    assert patterns == {}
+```
+
+---
+
+## A New Structural Question
+
+We've moved from:
+
+```text
+STATE
+```
+
+to:
+
+```text
+STATE → STATE
+```
+
+to:
+
+```text
+STATE → STATE → STATE → ...
+```
+
+and now to:
+
+```text
+        ┌────────────────────────────┐
+        │                            │
+        ▼                            │
+PLAUSIBLE → HIGH_TRAFFIC → UNCERTAIN
+        │                            ▲
+        └──── recurring pattern ─────┘
+```
+
+The history is beginning to reveal **shape**.
+
+And that gives us a much more interesting question than:
+
+> **What state are we in right now?**
+
+We can ask:
+
+> **What keeps happening?**
+
+> **What remains present each time it happens?**
+
+> **What changes between occurrences?**
+
+> **Where does the pattern begin to drift?**
+
+> **What causes the pattern to break?**
+
+That takes us directly toward **Continuity**.
+
+Because Continuity isn't simply remembering previous states.
+
+> **It's examining what persists, changes, returns, drifts, or disappears as the system moves through time.** 🔄
+
+---
+
+## Detect Broken Patterns 💔🔁
+
+Finding a recurring pattern is useful.
+
+But another question may be even more interesting:
+
+> **What happens when a familiar pattern suddenly doesn't happen?**
+
+Suppose the system usually follows:
+
+```text
+PLAUSIBLE
+    ↓
+HIGH_TRAFFIC_POSSIBLE
+    ↓
+UNCERTAIN
+```
+
+Then one day we observe:
+
+```text
+PLAUSIBLE
+    ↓
+HIGH_TRAFFIC_POSSIBLE
+    ↓
+DIFFERENT_PATTERN
+```
+
+Something changed.
+
+Don't immediately call it an error.
+
+First, **preserve the break**.
+
+---
+
+## Represent the Result
+
+Let's explicitly describe what the detector found.
+
+```python
+from dataclasses import dataclass
+
+
+@dataclass
+class PatternBreak:
+    expected: tuple
+    observed: tuple
+    break_position: int
+    expected_state: SystemState
+    observed_state: SystemState
+```
+
+Now we can compare an expected pattern with a newly observed sequence.
+
+```python
+def detect_pattern_break(expected, observed):
+    """Find where an observed sequence diverges from a known pattern."""
+
+    for position, (expected_state, observed_state) in enumerate(
+        zip(expected, observed)
+    ):
+        if expected_state != observed_state:
+            return PatternBreak(
+                expected=expected,
+                observed=observed,
+                break_position=position,
+                expected_state=expected_state,
+                observed_state=observed_state,
+            )
+
+    return None
+```
+
+---
+
+## Try It
+
+Our recurring pattern is:
+
+```python
+expected = (
+    SystemState.PLAUSIBLE,
+    SystemState.HIGH_TRAFFIC_POSSIBLE,
+    SystemState.UNCERTAIN,
+)
+```
+
+But the latest sequence is:
+
+```python
+observed = (
+    SystemState.PLAUSIBLE,
+    SystemState.HIGH_TRAFFIC_POSSIBLE,
+    SystemState.DIFFERENT_PATTERN,
+)
+```
+
+Now inspect it:
+
+```python
+broken = detect_pattern_break(expected, observed)
+
+if broken:
+    print(
+        f"Pattern diverged at position "
+        f"{broken.break_position}: "
+        f"expected {broken.expected_state.value}, "
+        f"observed {broken.observed_state.value}"
+    )
+```
+
+Result:
+
+```text
+Pattern diverged at position 2:
+expected uncertain,
+observed different_pattern
+```
+
+Notice the wording:
+
+> **Pattern diverged**
+
+Not:
+
+> **System failed**
+
+That's deliberate.
+
+---
+
+## Test It
+
+```python
+def test_detects_broken_pattern():
+    expected = (
+        SystemState.PLAUSIBLE,
+        SystemState.HIGH_TRAFFIC_POSSIBLE,
+        SystemState.UNCERTAIN,
+    )
+
+    observed = (
+        SystemState.PLAUSIBLE,
+        SystemState.HIGH_TRAFFIC_POSSIBLE,
+        SystemState.DIFFERENT_PATTERN,
+    )
+
+    result = detect_pattern_break(expected, observed)
+
+    assert result is not None
+    assert result.break_position == 2
+    assert result.expected_state == SystemState.UNCERTAIN
+    assert result.observed_state == SystemState.DIFFERENT_PATTERN
+```
+
+And if the familiar pattern still holds:
+
+```python
+def test_matching_pattern_has_no_break():
+    expected = (
+        SystemState.PLAUSIBLE,
+        SystemState.HIGH_TRAFFIC_POSSIBLE,
+        SystemState.UNCERTAIN,
+    )
+
+    observed = (
+        SystemState.PLAUSIBLE,
+        SystemState.HIGH_TRAFFIC_POSSIBLE,
+        SystemState.UNCERTAIN,
+    )
+
+    assert detect_pattern_break(expected, observed) is None
+```
+
+---
+
+## Why the Break Matters
+
+A broken pattern might mean:
+
+- the system changed;
+- the surrounding conditions changed;
+- an observation is missing;
+- the recurring pattern was weaker than we thought;
+- our model needs revision;
+- or something genuinely new happened.
+
+We don't know which one yet.
+
+And that's exactly the point.
+
+> **Detect first. Explain second.**
+
+---
+
+## Run the Five Questions Again
+
+A broken pattern gives us a new observation to investigate.
+
+### Awareness
+
+> **What actually changed?**
+
+### Alignment
+
+> **Which parts still correspond to the familiar pattern?**
+
+### Coherence
+
+> **Does our old explanation still hold together?**
+
+### Clarity
+
+> **Can we show exactly where the pattern diverged?**
+
+### Continuity
+
+> **What survived the break, and what didn't?**
+
+Now the break itself becomes useful structural information.
+
+---
+
+## Don't Automatically Repair the Pattern 🔧
+
+A system could be programmed to see:
+
+```text
+PLAUSIBLE
+    ↓
+HIGH_TRAFFIC_POSSIBLE
+    ↓
+DIFFERENT_PATTERN
+```
+
+and automatically force it back into:
+
+```text
+PLAUSIBLE
+    ↓
+HIGH_TRAFFIC_POSSIBLE
+    ↓
+UNCERTAIN
+```
+
+That would preserve the pattern...
+
+**by throwing away the evidence that the pattern broke.**
+
+Instead:
+
+> **Keep the unexpected state.**
+>
+> **Record where the break occurred.**
+>
+> **Then investigate why.**
+
+A recurring pattern tells us:
+
+> **This has happened before.**
+
+A broken pattern tells us:
+
+> **Something happened differently this time.**
+
+And sometimes that difference is the most valuable observation in the entire history.
+
+That's another useful side of **Continuity**:
+
+> **Continuity isn't pretending nothing changes.**
+>
+> **It's keeping enough history to notice when the way things change has itself changed.** 🔄
+
+---
+
+<img width="1194" height="672" alt="5Guides_System_State__Patterns_Over_Time_" src="https://github.com/user-attachments/assets/b6c77403-7a1e-4738-b832-e207383524da" />
