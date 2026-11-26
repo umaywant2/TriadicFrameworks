@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="5Guides_awareness_index_" src="https://github.com/user-attachments/assets/45dc7585-d6bf-46f1-a069-80841553b9ea" />
+
 # Awareness
 
 > What am I actually observing?
