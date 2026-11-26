@@ -1,1 +1,581 @@
-. 
+{
+  "document": {
+    "id": "5Guides-origins-index",
+    "type": "origin-lineage-index",
+    "name": "Origins",
+    "title": "5Guides — Origins",
+    "edition": "AI Edition",
+    "module": "5Guides",
+    "framework": "AACCC",
+    "version": "1.0",
+    "status": "active",
+    "language": "en",
+    "source": "docs/5Guides/origins/index.md",
+    "ai_path": "docs/book/AI_Edition/5Guides/origins/index.json"
+  },
+  "purpose": {
+    "primary": "Expose the project lineage that preceded and contributed to the development of AACCC and 5Guides.",
+    "secondary": "Provide provenance-aware material for inspecting how structural concepts persisted, changed, were formalized, were abandoned, or became teachable.",
+    "student_requirement": false,
+    "principle": "Origins are an invitation to inspect the path, not a prerequisite for using the Five Guides."
+  },
+  "lineage": {
+    "simplified_sequence": [
+      "TFT",
+      "Triads",
+      "Theorems",
+      "RTT",
+      "AACCC",
+      "5Guides"
+    ],
+    "representation": "developmental lineage",
+    "strict_proof_chain": false,
+    "identity_chain": false,
+    "empirical_validation_chain": false,
+    "historical_influence_claim_by_sequence_alone": false,
+    "interpretation": "The arrows represent project development, reuse, reinterpretation, refinement, formalization, and educational transformation."
+  },
+  "lineage_boundary": {
+    "do_not_infer": [
+      "Each stage logically proves the next.",
+      "Each stage is equivalent to the next.",
+      "AACCC existed in its current form inside TFT.",
+      "5Guides was predetermined by the earliest project materials.",
+      "Later formal verification validates every earlier source claim.",
+      "Project ancestry establishes scientific validity."
+    ],
+    "preserve": [
+      "development",
+      "revision",
+      "reinterpretation",
+      "conceptual continuity",
+      "semantic drift",
+      "formalization changes",
+      "abandoned relationships",
+      "open questions"
+    ]
+  },
+  "student_entry": {
+    "origins_required_before_awareness": false,
+    "recommended_learning_entry": "../guides/awareness.json",
+    "reason": "A learner should be able to practice AACCC without first adopting or understanding the project frameworks that preceded it.",
+    "return_when_useful": true
+  },
+  "why_preserve_origins": {
+    "purposes": [
+      "trace terminology",
+      "inspect structural ancestry",
+      "identify what persisted",
+      "identify what changed",
+      "identify narrowed claims",
+      "identify abandoned concepts",
+      "locate assumptions",
+      "inspect semantic drift",
+      "preserve revision history",
+      "support project archaeology"
+    ],
+    "principle": "Preserving lineage makes development inspectable without requiring earlier work to remain unchanged."
+  },
+  "origin_authority_boundary": {
+    "principle": "Origins establish project provenance, not automatic authority.",
+    "does_not_follow": [
+      "earlier appearance implies truth",
+      "later reuse validates an earlier claim",
+      "project lineage establishes empirical support",
+      "historical importance establishes correctness"
+    ]
+  },
+  "revision_boundary": {
+    "principle": "An earlier artifact may remain historically useful even when later work revises, narrows, replaces, or rejects part of it.",
+    "acceptable_changes": [
+      "renaming",
+      "narrowing",
+      "formalizing",
+      "reinterpreting",
+      "abandoning",
+      "correcting",
+      "splitting concepts",
+      "changing definitions"
+    ],
+    "requirement": "Important changes should remain traceable when they affect meaning or lineage."
+  },
+  "stages": [
+    {
+      "order": 1,
+      "id": "tft",
+      "name": "TFT",
+      "title": "Triadic Framework for Everything",
+      "path": "tft.json",
+      "role": "Early project artifact and triadic structural lens.",
+      "structural_contributions": [
+        "distinguishable positions",
+        "relationships",
+        "operators",
+        "triadic organization",
+        "recursion",
+        "change"
+      ],
+      "ai_boundary": "TFT should be inspected as a project-origin artifact rather than treated as established scientific consensus."
+    },
+    {
+      "order": 2,
+      "id": "triads",
+      "name": "Triads",
+      "path": null,
+      "role": "Recurring structural habit across project materials rather than a separate AI Edition file in this scaffold.",
+      "structural_contribution": "Represent some problems using three distinguishable related positions.",
+      "boundary": "A triadic representation is a model choice and does not establish that every underlying system is fundamentally triadic."
+    },
+    {
+      "order": 3,
+      "id": "theorems",
+      "name": "Theorems",
+      "path": "theorems.json",
+      "role": "Stage where several proposed structural relationships became more explicit and therefore easier to formalize and challenge.",
+      "artifacts": [
+        "Nawderian Theorem",
+        "Nawderian SET Theorem",
+        "Nawderian Temperature Engine Theorem",
+        "Unified Resonance Theorem"
+      ],
+      "formalization_questions": [
+        "What does a proposed relationship mean?",
+        "Which relationships follow from ordinary set semantics?",
+        "How are named contributions composed?",
+        "What follows from a simplified signed relation?",
+        "What algebraic assumptions are required?"
+      ]
+    },
+    {
+      "order": 4,
+      "id": "rtt",
+      "name": "RTT",
+      "title": "Resonance-Time Theory",
+      "path": "rtt.json",
+      "role": "Later project stage emphasizing state, operators, coherence, regimes, updates, drift, and transitions.",
+      "structural_contributions": [
+        "state",
+        "flow",
+        "resonance",
+        "operators",
+        "coherence",
+        "updates",
+        "regimes",
+        "drift",
+        "transition",
+        "persistence",
+        "history"
+      ],
+      "ai_boundary": "RTT is especially relevant as project lineage and structural inspiration; 5Guides does not require learners to adopt RTT."
+    },
+    {
+      "order": 5,
+      "id": "aaccc",
+      "name": "AACCC",
+      "path": "../index.json",
+      "role": "Later synthesis of recurring structural habits into five compact inspection questions.",
+      "questions": [
+        "What am I observing?",
+        "What corresponds?",
+        "Does this hold together?",
+        "Can this be understood and inspected?",
+        "What persists through change?"
+      ]
+    },
+    {
+      "order": 6,
+      "id": "5Guides",
+      "name": "5Guides",
+      "path": "../index.json",
+      "role": "Student-facing educational transformation of AACCC.",
+      "learning_structure": [
+        "explore",
+        "practice",
+        "mastery",
+        "independent application"
+      ]
+    }
+  ],
+  "educational_transformation": {
+    "description": "5Guides reduces domain-specific project machinery into portable student-facing structural questions.",
+    "compression": {
+      "from": [
+        "triadic structures",
+        "operators",
+        "fields",
+        "theorem relationships",
+        "resonance",
+        "regimes",
+        "formalization questions"
+      ],
+      "to": [
+        "Awareness",
+        "Alignment",
+        "Coherence",
+        "Clarity",
+        "Continuity"
+      ]
+    },
+    "principle": "A learner should be able to use AACCC without adopting the frameworks that contributed to its development."
+  },
+  "framework_to_habit": {
+    "framework_characteristic": "May depend on specialized vocabulary, definitions, or domain structure.",
+    "habit_characteristic": "Can travel into unfamiliar domains with minimal specialized vocabulary.",
+    "portable_examples": [
+      "bicycle repair",
+      "software debugging",
+      "research claim inspection",
+      "document revision",
+      "formal proof",
+      "learning problem",
+      "disagreement",
+      "system change"
+    ]
+  },
+  "persistent_habits": [
+    {
+      "id": "explicit_structure",
+      "principle": "Make important structure explicit rather than treating the whole as undivided."
+    },
+    {
+      "id": "inspect_relationships",
+      "principle": "Inspect how components relate rather than merely listing components."
+    },
+    {
+      "id": "preserve_mismatch",
+      "principle": "Do not force every difference into agreement."
+    },
+    {
+      "id": "expose_assumptions",
+      "principle": "Make relationship-dependent assumptions visible."
+    },
+    {
+      "id": "track_change",
+      "principle": "Preserve enough history to understand how the current state developed."
+    },
+    {
+      "id": "preserve_provenance",
+      "principle": "Retain enough lineage to inspect how claims, models, and definitions developed."
+    }
+  ],
+  "what_changed": {
+    "description": "The student-facing AACCC form deliberately removes much of the project-specific machinery.",
+    "examples": [
+      "Awareness does not require RTT field concepts.",
+      "Alignment does not require the Nawderian dimension model.",
+      "Coherence does not require SET.",
+      "Clarity does not require Unified Resonance.",
+      "Continuity does not require adoption of RTT."
+    ],
+    "principle": "The educational tool should remain independently usable."
+  },
+  "layer_separation": {
+    "important_distinctions": [
+      [
+        "observation",
+        "interpretation"
+      ],
+      [
+        "metaphor",
+        "formal definition"
+      ],
+      [
+        "mathematical notation",
+        "formal specification"
+      ],
+      [
+        "formal proof",
+        "empirical validation"
+      ],
+      [
+        "structural resemblance",
+        "historical influence"
+      ],
+      [
+        "lineage",
+        "validation"
+      ]
+    ]
+  },
+  "formalization": {
+    "path": "formalization.json",
+    "role": "Define the boundary among source interpretation, formal model, proof, and empirical validation.",
+    "formal_companions": [
+      "../lean/06_tft_origin.json",
+      "../lean/07_nawderian_theorem.json",
+      "../lean/08_nawderian_set_theorem.json",
+      "../lean/09_temperature_engine_theorem.json",
+      "../lean/10_unified_resonance_theorem.json",
+      "../lean/11_rtt_origin.json"
+    ],
+    "inspection_questions": [
+      "What came from the source?",
+      "What was defined?",
+      "What was simplified?",
+      "What assumptions were added?",
+      "What did Lean verify?",
+      "What remains outside the proof?"
+    ]
+  },
+  "formal_verification_boundary": {
+    "principle": "Formal proof validates a theorem inside its formal model; it does not automatically validate the broader origin interpretation.",
+    "provenance_chain": [
+      "origin concept",
+      "interpretation",
+      "teaching abstraction",
+      "formal definition",
+      "Lean theorem",
+      "compiler-verified proof"
+    ],
+    "warning": "A valid proof at the end of the chain does not automatically travel backward and validate every preceding interpretation."
+  },
+  "empirical_evidence_boundary": {
+    "principle": "Historical importance and formal consistency are separate from empirical support.",
+    "possible_origin_roles": [
+      "introduced terminology",
+      "suggested structure",
+      "inspired later model",
+      "exposed a problem",
+      "led to an experiment",
+      "contributed to an educational method"
+    ],
+    "rule": "Empirical claims require evidence appropriate to those claims."
+  },
+  "semantic_drift": {
+    "recognized": true,
+    "pattern": [
+      "concept v1",
+      "revision",
+      "concept v2",
+      "revision",
+      "concept v3"
+    ],
+    "risk": "A label may persist while its underlying meaning changes.",
+    "response": "Preserve version history or explicit semantic transition when the change matters."
+  },
+  "lineage_not_one_to_one": {
+    "principle": "Do not force each origin stage into exactly one AACCC Guide.",
+    "avoid_mapping": {
+      "TFT": "Awareness only",
+      "Nawderian Theorem": "Alignment only",
+      "SET": "Coherence only",
+      "Unified Resonance": "Clarity only",
+      "RTT": "Continuity only"
+    },
+    "reason": "The source stages contain overlapping structural concerns and AACCC is better treated as a later synthesis."
+  },
+  "conceptual_map": {
+    "sources": [
+      "TFT",
+      "Triadic work",
+      "Theorem work",
+      "RTT",
+      "Formalization",
+      "Case studies"
+    ],
+    "converge_to": "recurring structural habits",
+    "then": "AACCC",
+    "then_to": "5Guides",
+    "boundary": "This conceptual map expresses educational interpretation rather than a formally proven derivation."
+  },
+  "aaccc_applied_to_origins": {
+    "awareness": {
+      "question": "What did each source actually state?",
+      "inspect": [
+        "definitions",
+        "hypotheses",
+        "metaphors",
+        "equations",
+        "interpretations",
+        "testable claims"
+      ]
+    },
+    "alignment": {
+      "question": "Do later concepts actually correspond to earlier ones?",
+      "inspect": [
+        "meaning changes",
+        "partial correspondences",
+        "unmapped concepts",
+        "forced lineage"
+      ]
+    },
+    "coherence": {
+      "question": "Do the stated relationships hold together?",
+      "inspect": [
+        "assumptions",
+        "contradictions",
+        "missing definitions",
+        "unsupported transitions"
+      ]
+    },
+    "clarity": {
+      "question": "Can source language, later interpretation, formal model, and empirical claim be distinguished?"
+    },
+    "continuity": {
+      "question": "What persisted, changed, drifted, disappeared, or became teachable across the lineage?"
+    }
+  },
+  "project_archaeology": {
+    "supported": true,
+    "recommended_record": {
+      "concept": null,
+      "early_appearance": null,
+      "original_meaning": null,
+      "later_appearance": null,
+      "change": null,
+      "current_educational_form": null,
+      "open_questions": []
+    },
+    "candidate_concepts": [
+      "triad",
+      "operator",
+      "alignment",
+      "coherence",
+      "resonance",
+      "state",
+      "drift",
+      "continuity"
+    ]
+  },
+  "break_detection": {
+    "principle": "Do not immediately repair a discontinuity in project lineage.",
+    "possible_interpretations": [
+      "contradiction",
+      "revision",
+      "semantic drift",
+      "clarification",
+      "boundary change",
+      "abandoned idea"
+    ],
+    "rule": "Record the break before interpreting it."
+  },
+  "formalization_exercise": {
+    "record": {
+      "original_statement": null,
+      "formalizable_portion": null,
+      "definitions_required": [],
+      "assumptions_required": [],
+      "what_a_proof_could_establish": null,
+      "evidence_still_required": []
+    },
+    "purpose": "Connect project archaeology to explicit formalization boundaries."
+  },
+  "disagreement": {
+    "allowed": true,
+    "valid_responses": [
+      "This correspondence does not appear to hold.",
+      "This term needs a better definition.",
+      "The formal model adds assumptions not supplied by the source.",
+      "This appears useful as metaphor but is not yet a testable claim.",
+      "This structural component is useful even if another claim is rejected."
+    ],
+    "principle": "Origins are material for inspection, not doctrine that the learner must defend."
+  },
+  "project_self_revision": {
+    "allowed": true,
+    "examples": [
+      "We modeled this poorly.",
+      "We use this term differently now.",
+      "This concept was exploratory and is no longer part of the current structure.",
+      "This claim remains speculative."
+    ],
+    "principle": "Preserving earlier artifacts allows revision to remain visible."
+  },
+  "files": [
+    {
+      "id": "tft",
+      "path": "tft.json",
+      "role": "Early triadic structures and operator-oriented origin material."
+    },
+    {
+      "id": "theorems",
+      "path": "theorems.json",
+      "role": "Theorem-stage structures and formalization problems."
+    },
+    {
+      "id": "rtt",
+      "path": "rtt.json",
+      "role": "State, operators, coherence, regimes, drift, and transition."
+    },
+    {
+      "id": "formalization",
+      "path": "formalization.json",
+      "role": "Formal verification, modeling, provenance, and empirical-validation boundaries."
+    }
+  ],
+  "navigation": {
+    "human_learning_entry": "../guides/awareness.json",
+    "origin_sequence": [
+      "tft.json",
+      "theorems.json",
+      "rtt.json",
+      "formalization.json"
+    ],
+    "formal_companions": "../lean/index.json",
+    "module_front_door": "../index.json"
+  },
+  "ai_behavior": {
+    "must": [
+      "Treat Origins as optional project-lineage material.",
+      "Distinguish project ancestry from empirical validation.",
+      "Preserve source language separately from later interpretation.",
+      "Preserve semantic changes and unresolved gaps.",
+      "Distinguish structural resemblance from historical influence.",
+      "Permit later project stages to revise earlier material.",
+      "Apply AACCC critically to the project's own ancestry."
+    ],
+    "must_not": [
+      "present the lineage as a strict proof chain",
+      "claim that TFT originally defined AACCC",
+      "claim that later formal proofs validate all earlier source claims",
+      "infer historical influence from resemblance alone",
+      "force one-to-one mappings between origin artifacts and AACCC Guides",
+      "erase abandoned or conflicting material to create a cleaner history",
+      "require Origins knowledge before allowing a learner to use 5Guides"
+    ]
+  },
+  "provenance": {
+    "source_document": "docs/5Guides/origins/index.md",
+    "source_type": "human-facing project-lineage guide",
+    "transformation": "structured AI-readable lineage index",
+    "preserve": [
+      "developmental sequence",
+      "optional student role",
+      "provenance boundary",
+      "revision",
+      "semantic drift",
+      "formalization boundary",
+      "critical self-inspection",
+      "independent usability of AACCC"
+    ],
+    "do_not_infer": [
+      "undocumented historical dates",
+      "undocumented causal influence",
+      "empirical validation",
+      "formal derivation between stages",
+      "scientific consensus",
+      "unchanged semantic identity across stages"
+    ]
+  },
+  "related": {
+    "module": "../module.json",
+    "index": "../index.json",
+    "tft": "tft.json",
+    "theorems": "theorems.json",
+    "rtt": "rtt.json",
+    "formalization": "formalization.json",
+    "lean": "../lean/index.json"
+  },
+  "machine_context": {
+    "ai_parseable": true,
+    "role": "lineage-index",
+    "optional_for_students": true,
+    "provenance_aware": true,
+    "strict_proof_chain": false,
+    "empirical_validation_claim": false,
+    "historical_influence_requires_evidence": true,
+    "semantic_drift_preserved": true,
+    "revision_preserved": true,
+    "aaccc_self_inspection": true
+  }
+}
