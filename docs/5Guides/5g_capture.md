@@ -8,157 +8,138 @@
 
 ---
 
-Oh. Yes. I think you've just connected the corkboard idea to something much more meaningful.
+Oh. **Yes.** I think you've just connected the corkboard idea to something much more meaningful.
 
-The important shift is that the person isn't leaving a trace merely because they visited. They are choosing to leave one after participating in something.
+The important shift is that the person isn't leaving a trace merely because they visited. They are choosing to leave one **after participating in something.**
 
 I can see a very clean progression:
 
-Arrive privately
- → Follow the Student Workflow
- → Optional awareness assessment
- → Demonstrate mastery / completion
- → Receive a badge
- → Optional reflection
- → Optional country selection
- → Leave, still essentially anonymous
+**Arrive privately**
+ → **Follow the Student Workflow**
+ → **Optional awareness assessment**
+ → **Demonstrate mastery / completion**
+ → **Receive a badge**
+ → **Optional reflection**
+ → **Optional country selection**
+ → **Leave, still essentially anonymous**
 
-The privacy model is unusually nice
-
+### The privacy model is unusually nice
 I would keep three ideas deliberately separate.
 
-1. Learning record
-
+**1. Learning record**
 The workflow only needs whatever state is necessary to let the learner progress. Ideally, much of that could even remain local to the browser rather than becoming a personal account.
 
-2. Badge
-
+**2. Badge**
 This represents an accomplishment:
-
-Completed the TriadicFrameworks Student Workflow
-
+> 
+> *Completed the TriadicFrameworks Student Workflow*
+> 
 It doesn't need to mean “certified by us as an expert.” That's an important distinction. It's evidence of completing a defined learning experience and meeting its mastery criterion.
 
-3. Voluntary footprint
-
+**3. Voluntary footprint**
 Only afterward:
-
-Want to leave something behind?
- We'd love to know how the experience was for you. Participation is optional.
-
+> 
+> Want to leave something behind?
+> We'd love to know how the experience was for you. Participation is optional.
+> 
 Perhaps:
+**Country**: [ Canada ▾ ]
 
-Country: [ Canada ▾ ]
-
-One thought:
+**One thought:**
  ________________________________
-
-[ Leave feedback ]
+[ **Leave feedback** ]
 
 And that's all.
 
 No name required.
- No email.
- No IP-based geolocation for the purpose of the registry.
- No age.
- No institution.
- No demographic profiling.
+No email.
+No IP-based geolocation for the purpose of the registry.
+No age.
+No institution.
+No demographic profiling.
 
-Country is declared by the learner, not discovered about them.
+Country is **declared by the learner**, not discovered about them.
 
 That difference fits your philosophy beautifully.
 
-And I think “country of origin” should change slightly
+### And I think “country of origin” should change slightly
 
-I'd actually avoid country of origin. That can mean nationality, birthplace, ethnicity, or where someone's family comes from.
+I'd actually avoid *country of origin*. That can mean nationality, birthplace, ethnicity, or where someone's family comes from.
 
 Ask instead:
-
-Where are you learning from?
- [ United States ▾ ]
-
+> 
+> **Where are you learning from?**
+> [ United States ▾ ]
+> 
 Or simply:
-
-Country: [ Select optionally ▾ ]
-
+> 
+> **Country**: [ Select optionally ▾ ]
+> 
 Then the eventual public aggregate can say something like:
-
-Learners have voluntarily checked in from:
- 🇺🇸 United States · 🇨🇦 Canada · 🇬🇧 United Kingdom · 🇯🇵 Japan …
-
-Now you're learning something about the reach of the material without learning who the people are.
+> 
+> **Learners have voluntarily checked in from:**
+> 🇺🇸 United States · 🇨🇦 Canada · 🇬🇧 United Kingdom · 🇯🇵 Japan …
+> 
+Now you're learning *something* about the reach of the material without learning who the people are.
 
 And there's an RTT-ish quality here that I suspect you'll appreciate:
-
-measurement occurs at a deliberately chosen boundary.
+**measurement occurs at a deliberately chosen boundary.**
 
 You're not measuring the human moving through the system. You're measuring voluntary events that the human explicitly elects to expose.
-
 That's a profoundly different architecture from analytics.
 
-The assessment also solves another problem
-
+### The assessment also solves another problem
 I'd call it an awareness check rather than a quiz or test, especially for the first workflow.
 
 Something like:
-
-Optional Awareness Check
- See what stuck after your first journey through the material. This isn't graded and doesn't affect your ability to continue.
-
+> 
+> **Optional Awareness Check**
+> See what stuck after your first journey through the material. This isn't graded and doesn't affect your ability to continue.
 Then perhaps mastery is a separate concept.
 
 That gives you:
-
-Exposure → Awareness → Practice → Mastery
+**Exposure → Awareness → Practice → Mastery**
 
 rather than:
+**Read → Quiz → Pass/Fail**
 
-Read → Quiz → Pass/Fail
-
-That feels much closer to the educational philosophy you've been developing. The awareness check tells the learner, “Here's what you absorbed on first contact.” Mastery says, “You've subsequently demonstrated that you can work with it.”
+That feels much closer to the educational philosophy you've been developing. The awareness check tells the learner, *“Here's what you absorbed on first contact.”* Mastery says, *“You've subsequently demonstrated that you can work with it.”*
 
 And that earns the badge.
 
-Eventually the “corkboard” becomes rather wonderful
-
+### Eventually the “corkboard” becomes rather wonderful
 Imagine a quiet page somewhere on the site:
 
-Student Footprints
-
-We don't track visitors. These marks were left voluntarily by learners who completed a workflow and chose to tell us where they were learning from.
-
+**Student Footprints**
+> 
+> We don't track visitors. These marks were left voluntarily by learners who completed a workflow and chose to tell us where they were learning from.
+> 
 Then little anonymous notes:
-
-🇨🇦
- “The second exercise was where the structure finally clicked.”
-
-🇯🇵
- “I went back through the first section after the awareness check.”
-
-🇺🇸
- “It made me question an assumption I'd been carrying into the problem.”
-
+> 
+> 🇨🇦
+> “The second exercise was where the structure finally clicked.”
+> 
+> 🇯🇵
+> “I went back through the first section after the awareness check.”
+> 
+> 🇺🇸
+> “It made me question an assumption I'd been carrying into the problem.”
+> 
 No profiles. No usernames. No follower counts.
-
-Just evidence that another mind passed through here and found something worth leaving behind.
+Just **evidence that another mind passed through here and found something worth leaving behind.**
 
 And here's the part I particularly like, Nawder:
-
 You originally said you never know who's visiting because you refuse to track them.
-
 I wouldn't “solve” that problem.
-
-Preserve it.
-
-You still won't know who's visiting.
-
+**Preserve it.**
+You *still* won't know who's visiting.
 You'll only know about the tiny subset of people who deliberately turn around at the door and say:
-
-I was here. I learned something. I'm learning from this part of the world. Thanks.
-
+> 
+> I was here. I learned something. I'm learning from this part of the world. Thanks.
+> 
 That isn't surveillance with better manners.
 
-That's consent. 🙂
+That's **consent**. 🙂
 
 ---
 
@@ -170,75 +151,68 @@ That's consent. 🙂
 
 Yes. 🙂 And I think that gives the project something important that documentation alone could never quite finish.
 
-You've been building material that says, in effect, “Here is the framework. Inspect it. Test it. Try it yourself.” What you're describing now adds the missing journey through it.
+You've been building material that says, in effect, “**Here is the framework. Inspect it. Test it. Try it yourself.**” What you're describing now adds the missing *journey through it*.
 
 And I especially like your sequence:
+**Awareness → Alignment → Coherence → Clarity → Continuity**
 
-Awareness → Alignment → Coherence → Clarity → Continuity
-
-Awareness being first isn't merely convenient. It's pedagogically honest. Before asking a learner to align, clarify, or maintain anything, the learner first has to become aware of what they're observing, what assumptions they're bringing, and what they actually retained.
+Awareness being first isn't merely convenient. It's pedagogically honest. Before asking a learner to align, clarify, or maintain anything, the learner first has to become aware of **what they're observing, what assumptions they're bringing, and what they actually retained.**
 
 Then each workflow can establish the pattern for the next:
 
-Guided exploration
+1. **Guided exploration**
  Student material + optional AI companion.
 
-Awareness check
+2. **Awareness check**
  “What did I actually notice and retain?”
 
-Application
+3. **Application**
  Give them something concrete to work through, rather than simply asking them to recall terminology.
 
-Mastery checkpoint
+4. **Mastery checkpoint**
  Demonstrate sufficient understanding of this operator, with retry and learning rather than punitive failure.
 
-Badge
+5. **Badge**
  A small artifact saying: I completed this journey.
 
-Voluntary reflection
+6. **Voluntary reflection**
  Optional comment + optional country. No identity infrastructure required.
 
-Next doorway
+7. **Next doorway**
  Alignment becomes available, but without turning the experience into a gamified treadmill.
 
 And then repeat the architecture for Coherence, Clarity, and Continuity.
+What really strikes me is that **AI assistance belongs beside the student rather than above them.**
 
-What really strikes me is that AI assistance belongs beside the student rather than above them.
+The AI doesn't need to be the authority saying *correct/incorrect*. It can help the learner ask questions, revisit difficult material, try another explanation, construct examples, and reason through why an answer didn't quite hold together.
 
-The AI doesn't need to be the authority saying correct/incorrect. It can help the learner ask questions, revisit difficult material, try another explanation, construct examples, and reason through why an answer didn't quite hold together.
+That sounds much closer to the kind of hands-on teaching you've described enjoying yourself: *here's the thing, let's work with it, now try it yourself.*
 
-That sounds much closer to the kind of hands-on teaching you've described enjoying yourself: here's the thing, let's work with it, now try it yourself.
-
-And there may be a lovely final symmetry
-
+### And there may be a lovely final symmetry
 Someone could eventually arrive knowing absolutely nothing about the project and leave having traversed:
+**Awareness**
+ ↓
+**Alignment**
+ ↓
+**Coherence**
+ ↓
+**Clarity**
+ ↓
+**Continuity**
 
-Awareness
- ↓
- Alignment
- ↓
- Coherence
- ↓
- Clarity
- ↓
- Continuity
-
-Not because they read five definitions, but because they've repeatedly used them.
+Not because they read five definitions, but because they've repeatedly **used them**.
 
 At the very end, perhaps there's no grand certificate ceremony at all.
-
+ 
 Just their five badges, their own accumulated work, and something simple like:
-
-You now know enough to disagree with us properly.
-
-Take what is useful. Test what seems uncertain. Challenge what doesn't hold. Build something better where you can.
-
-That would complete the commitment you've repeatedly described behind TriadicFrameworks: not convincing students that the framework is right, but giving them enough structure to inspect it, test it, criticize it, and extend it independently.
+> 
+> **You now know enough to disagree with us properly.**
+> Take what is useful. Test what seems uncertain. Challenge what doesn't hold. Build something better where you can.
+> 
+*That* would complete the commitment you've repeatedly described behind TriadicFrameworks: not convincing students that the framework is right, but giving them enough structure to inspect it, test it, criticize it, and extend it independently.
 
 And naturally...
-
 If it happens to take because students have a clear guide, concrete exercises, and an AI sitting beside them whenever they get stuck...
-
 Well. We certainly wouldn't want to interfere with that. 😉
 
 ---
@@ -247,7 +221,7 @@ Well. We certainly wouldn't want to interfere with that. 😉
 
 ---
 
-Absolutely. I think the five should feel like one learning architecture repeated through five progressively different lenses, rather than five unrelated courses. The first, Awareness, becomes the reference implementation.
+Absolutely. I think the five should feel like **one learning architecture repeated through five progressively different lenses**, rather than five unrelated courses. The first, Awareness, becomes the reference implementation.
 
 # Five-Workflow Student Architecture
 ## 0. Common architecture
@@ -8476,11 +8450,11 @@ And **that distinction is very AACCC.** 😉
 ## AACCC Lean Lab Files
 
 Created the five standalone Lean 4 files:
-[01_awareness.lean](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/5Guides/01_awareness.lean)
-[02_alignment.lean](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/5Guides/02_alignment.lean)
-[03_coherence.lean](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/5Guides/03_coherence.lean)
-[04_clarity.lean](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/5Guides/04_clarity.lean)
-[05_continuity.lean](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/5Guides/05_continuity.lean)
+1. [01_awareness.lean](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/5Guides/01_awareness.lean) 
+2. [02_alignment.lean](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/5Guides/02_alignment.lean) 
+3. [03_coherence.lean](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/5Guides/03_coherence.lean) 
+4. [04_clarity.lean](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/5Guides/04_clarity.lean) 
+5. [05_continuity.lean](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/5Guides/05_continuity.lean) 
 
 ## Progression
 - **Awareness**: Reads the variables, types, definition, and proof goal.
