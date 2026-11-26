@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="5Guides_lean_index_" src="https://github.com/user-attachments/assets/87ce92aa-1612-47a6-b963-a39dc0e1d010" />
+
 # Lean 4 Lab
 
 > **Optional formal companions for the Five Guides**
