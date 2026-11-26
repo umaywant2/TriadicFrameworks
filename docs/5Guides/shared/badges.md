@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="5Guides_shared_badges_" src="https://github.com/user-attachments/assets/13062555-f831-4cc6-b86f-1a8fdf3f759d" />
+
 # Badges
 
 > **A small marker for a skill you prac**ced and demonstrated***
