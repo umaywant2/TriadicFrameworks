@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="5Guides_origins_theorems_" src="https://github.com/user-attachments/assets/0034596c-8c2c-4352-afc5-b90c2ce69582" />
+
 # Theorems
 
 > Project-lineage notes for the theorem stage between early triadic structures and the later AACCC learning model.
