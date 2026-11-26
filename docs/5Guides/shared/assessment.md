@@ -1,16 +1,16 @@
 # Assessment
 
-> **Assessment should help the learne**see what they understand, what th** can use, and what may deserve**nother look.**
+> **Assessment should help the learner see what they understand, what they can use, and what may deserve another look.**
 
 5Guides uses assessment as part of the learning process.
 
 It is not designed around:
 
-> **Catch the student being**rong.**
+> **Catch the student being wrong.**
 
 It is designed around:
 
-> **Help the student notice where**hey are.**
+> **Help the student notice where they are.**
 
 That distinction shapes everything that follows.
 
@@ -18,13 +18,11 @@ That distinction shapes everything that follows.
 
 # Two Different Questions
 
-5Guides separates assessment into two main forms:
+5Guides separates assessment into two main forms.
 
 ## Awareness Check
 
 > **What stuck after my first encounter?**
-
-and:
 
 ## Mastery Checkpoint
 
@@ -90,7 +88,7 @@ This can include:
 - identifying an assumption;
 - spotting a mismatch;
 - noticing uncertainty;
-- or recognizing that something does not yet follow.
+- recognizing that something does not yet follow.
 
 The Awareness Check should remain small.
 
@@ -107,13 +105,13 @@ It is not:
 - a certification;
 - a punishment;
 - a gate blocking the rest of the Guide;
-- or proof that the learner has mastered the skill.
+- proof that the learner has mastered the skill.
 
-A low first-pass result can be useful.
+A difficult first pass can still be useful.
 
 It may simply mean:
 
-> **This part didn't stick yet***
+> **This part didn't stick yet.**
 
 That's information.
 
@@ -127,21 +125,17 @@ For example:
 
 > **This isn't a graded test.**
 >
-> **It's a quick way to notice what s**yed with you after your first exploration and what might deserve another look.**
-
-That changes the relationship between the learner and the questions.
+> **It's a quick way to notice what stayed with you after your first exploration and what might deserve another look.**
 
 The learner is not trying to defend a score.
 
-They're gathering information about their own learning.
+They are gathering information about their own learning.
 
 ---
 
 # Useful Awareness Questions
 
 An Awareness Check should focus on recognizing the structure introduced by the Guide.
-
-For example:
 
 ## Awareness
 
@@ -163,7 +157,7 @@ For example:
 
 > Which part of the system changed, and which part persisted?
 
-The exact questions can vary.
+The examples can change.
 
 The structural purpose should remain visible.
 
@@ -175,7 +169,7 @@ Some assessment questions should allow:
 
 > **There isn't enough information yet.**
 
-A learner should not be trained to believe that every question must have a confident answer.
+A learner should not be trained to believe that every question demands a confident answer.
 
 Sometimes recognizing insufficient information is exactly the skill being assessed.
 
@@ -201,7 +195,7 @@ Assessment should not become a collection of traps.
 
 A useful question challenges the learner's reasoning.
 
-A bad question mostly tests whether the learner guessed what the author had in mind.
+A poor question mostly tests whether the learner guessed what the author had in mind.
 
 Prefer:
 
@@ -231,27 +225,27 @@ prefer feedback such as:
 
 This tells the learner something useful.
 
-A number by itself often doesn't.
+A number by itself often does not.
 
 ---
 
-# Awareness Snapshot
+# The Awareness Snapshot
 
-A simple result might look like:
+A simple result might look like this:
 
 ## Your Awareness Snapshot
 
-**You readily noticed:**
+### You readily noticed
 
 - direct observation;
 - obvious interpretation.
 
-**Worth another look:**
+### Worth another look
 
 - unstated assumptions;
 - boundary choices.
 
-**Still developing:**
+### Still developing
 
 - preserving uncertainty before reaching a conclusion.
 
@@ -269,9 +263,9 @@ The learner controls the next step.
 
 # Revisit Before Retry
 
-After an Awareness Check, don't simply ask the same questions again.
+After an Awareness Check, do not simply ask the same questions again.
 
-Let the learner revisit the relevant concept.
+Let the learner revisit the relevant idea.
 
 Then, if another check is useful, change the example.
 
@@ -303,8 +297,6 @@ The challenge should require application rather than terminology recall.
 
 A learner demonstrates mastery more convincingly when they can apply the idea somewhere new.
 
-For example:
-
 ## Awareness
 
 Give a fresh scenario and ask the learner to identify:
@@ -324,7 +316,7 @@ Give two unfamiliar representations and ask the learner to:
 - justify them;
 - preserve mismatches;
 - identify uncertainty;
-- and qualify the overall relationship.
+- qualify the overall relationship.
 
 ## Coherence
 
@@ -333,7 +325,7 @@ Give a structure containing:
 - plausible pieces;
 - a subtle gap;
 - an unsupported relationship;
-- or incompatible assumptions.
+- incompatible assumptions.
 
 Ask the learner to locate where the structure stops holding together.
 
@@ -341,7 +333,7 @@ Ask the learner to locate where the structure stops holding together.
 
 Give a difficult or ambiguous explanation.
 
-Ask the learner to make the important structure easier to inspect without silently changing the meaning.
+Ask the learner to make the important structure easier to inspect without silently changing its meaning.
 
 ## Continuity
 
@@ -353,7 +345,7 @@ Ask the learner to identify:
 - what persisted;
 - what drifted;
 - what broke;
-- and how one state connects to another.
+- how one state connects to another.
 
 ---
 
@@ -379,7 +371,7 @@ A learner should substantially be able to:
 - recognize the observational boundary;
 - preserve important uncertainty;
 - identify missing information;
-- and revise an interpretation when evidence warrants it.
+- revise an interpretation when evidence warrants it.
 
 ### Core Demonstration
 
@@ -397,7 +389,7 @@ A learner should substantially be able to:
 - identify assumptions behind those mappings;
 - preserve meaningful mismatches;
 - recognize partial or conditional alignment;
-- and leave unresolved relationships unresolved when evidence is insufficient.
+- leave unresolved relationships unresolved when evidence is insufficient.
 
 ### Core Demonstration
 
@@ -415,7 +407,7 @@ A learner should substantially be able to:
 - identify unsupported conclusions;
 - distinguish contradiction from missing information;
 - detect incompatible assumptions;
-- and explain where the structure stops holding together.
+- explain where the structure stops holding together.
 
 ### Core Demonstration
 
@@ -433,7 +425,7 @@ A learner should substantially be able to:
 - reveal hidden steps;
 - identify assumptions;
 - preserve uncertainty;
-- and improve inspectability without silently changing the original meaning.
+- improve inspectability without silently changing the original meaning.
 
 ### Core Demonstration
 
@@ -452,7 +444,7 @@ A learner should substantially be able to:
 - recognize drift;
 - recognize recurring patterns;
 - recognize pattern breaks;
-- and explain how the present state relates to what came before.
+- explain how the present state relates to what came before.
 
 ### Core Demonstration
 
@@ -524,11 +516,11 @@ Assessment should leave room for:
 - revision;
 - comparison;
 - uncertainty;
-- and changing one's mind.
+- changing one's mind.
 
 A learner should not become afraid to explore because every imperfect idea is immediately marked wrong.
 
-The important distinction is:
+The important question is:
 
 > **Can the learner inspect and revise the reasoning?**
 
@@ -565,7 +557,7 @@ Use a mix of:
 - observation;
 - comparison;
 - revision;
-- and applied challenge.
+- applied challenge.
 
 Assessment should remain proportional to the skill.
 
@@ -857,23 +849,23 @@ There is also a useful twist.
 
 Give the learner an AI-generated answer and ask them to inspect it.
 
-### Awareness
+## Awareness
 
 > What did the AI actually claim?
 
-### Alignment
+## Alignment
 
 > Does its answer correspond to the supplied evidence?
 
-### Coherence
+## Coherence
 
 > Does the explanation hold together?
 
-### Clarity
+## Clarity
 
 > Is the reasoning explicit enough to inspect?
 
-### Continuity
+## Continuity
 
 > Did the AI preserve important information from the original problem, or did something drift?
 
@@ -937,15 +929,13 @@ That is where the formal exercise reconnects to AACCC.
 
 # Failure Can Be Evidence
 
-The Lean Lab gave us a nice example during development.
+During development of the Lean examples, failed compilation exposed assumptions that had previously been easy to overlook.
 
-A proof failed because an algebraic structure had been assumed without being explicitly supplied in the standalone environment.
+The compiler error told us, in effect:
 
-The compiler error revealed something useful:
+> **The formalization depends on something that has not yet been made explicit.**
 
-> **The formalization depended on an assumption we had not made visible.**
-
-That failure improved the example.
+That failure improved the model.
 
 Assessment should cultivate the same habit:
 
@@ -965,9 +955,9 @@ Avoid:
 - country rankings;
 - public mastery percentages;
 - streak competition;
-- or badge rarity.
+- badge rarity.
 
-Those would change the learning incentive.
+Those features would change the learning incentive.
 
 The question is:
 
@@ -989,7 +979,7 @@ Avoid unnecessary mechanics such as:
 
 > **You lost your progress.**
 
-unless some future educational design has a very specific reason for them.
+unless a future educational design has a specific reason for them.
 
 For these Guides:
 
@@ -1012,7 +1002,7 @@ If assessment results are ever stored remotely, the implementation should clearl
 - what is stored;
 - why;
 - how long;
-- and what it is used for.
+- what it is used for.
 
 Assessment should not quietly become analytics.
 
@@ -1027,7 +1017,7 @@ A learner should be able to make an imperfect first attempt without assuming it 
 - a permanent public record;
 - a reputation score;
 - a profile attribute;
-- or an embarrassment attached to their identity.
+- an embarrassment attached to their identity.
 
 A safe learning environment gives people room to be wrong, inspect why, and improve.
 
@@ -1091,8 +1081,6 @@ The goal is not five separate quizzes.
 
 It is using the complete toolkit.
 
-Ask:
-
 ## Awareness
 
 > **What am I observing?**
@@ -1136,7 +1124,7 @@ Ask the learner to choose something of their own:
 - a piece of software;
 - a model;
 - a learning problem;
-- or an everyday situation.
+- an everyday situation.
 
 Then apply all five questions.
 
@@ -1158,7 +1146,7 @@ Assessment itself should remain inspectable.
 
 ## Awareness
 
-> **What skill are we actually measuring?**
+> **What skill are we actually assessing?**
 
 ## Alignment
 
@@ -1203,7 +1191,7 @@ Can the learner score 80% on a timed quiz?
 
 At that point, the assessment may no longer align with the original skill.
 
-So periodically ask:
+Periodically ask:
 
 > **Are we still assessing what we intended to teach?**
 
