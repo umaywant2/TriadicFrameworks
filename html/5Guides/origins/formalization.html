@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/5Guides/origins/formalization.md">
-  <title>formalization</title>
+  <title>Formalization</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,7 +92,1045 @@
   </aside>
 
   <main>
-<p>. </p>
+<p><img width="1194" height="672" alt="5Guides_origins_formalization_" src="https://github.com/user-attachments/assets/c91d2d82-7c19-4a90-802f-20a79b3f601f" /></p>
+<h1 id="formalization">Formalization</h1>
+<blockquote>
+<p>Formalization helps us say exactly what we mean, what we assume, and what actually follows.</p>
+</blockquote>
+<p>Formal methods can be powerful.</p>
+<p>They can turn an idea into explicit:</p>
+<ul>
+<li>definitions;</li>
+<li>types;</li>
+<li>relationships;</li>
+<li>assumptions;</li>
+<li>propositions;</li>
+<li>transformations;</li>
+<li>and proofs.</li>
+</ul>
+<p>But formalization also has a boundary.</p>
+<p>A proof checker can verify a formal statement without determining whether the statement is the right model of the thing we intended to describe.</p>
+<p>That distinction is central to this section.</p>
+<hr>
+<h1 id="the-two-questions">The Two Questions</h1>
+<p>When we formalize something, keep two questions separate.</p>
+<h2 id="formal-question">Formal Question</h2>
+<blockquote>
+<p>Given these definitions and assumptions, does the conclusion follow?</p>
+</blockquote>
+<h2 id="modeling-question">Modeling Question</h2>
+<blockquote>
+<p>Do these definitions and assumptions represent what we intended to describe?</p>
+</blockquote>
+<p>A formal proof can answer the first question.</p>
+<p>It does not automatically answer the second.</p>
+<p>Both matter.</p>
+<hr>
+<h1 id="a-simple-example">A Simple Example</h1>
+<p>Suppose we declare:</p>
+<pre><code class="language-text">All zorps are blue.
+
+Mira is a zorp.
+</code></pre>
+<p>Then conclude:</p>
+<pre><code class="language-text">Mira is blue.
+</code></pre>
+<p>A formal system can verify that the conclusion follows from the premises.</p>
+<p>But the proof does not establish that:</p>
+<pre><code class="language-text">zorps exist
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">all zorps really are blue
+</code></pre>
+<p>Those were supplied as assumptions.</p>
+<p>The proof tells us:</p>
+<blockquote>
+<p>If the premises hold, the conclusion follows.</p>
+</blockquote>
+<p>That is useful.</p>
+<p>It is also narrower than:</p>
+<blockquote>
+<p>The conclusion is empirically true.</p>
+</blockquote>
+<hr>
+<h1 id="what-formalization-gives-us">What Formalization Gives Us</h1>
+<p>Formalization can make several important things easier to inspect.</p>
+<h2 id="definitions">Definitions</h2>
+<p>What exactly does a term mean inside the model?</p>
+<h2 id="types">Types</h2>
+<p>What kind of thing is each object?</p>
+<h2 id="assumptions">Assumptions</h2>
+<p>What are we taking as given?</p>
+<h2 id="relationships">Relationships</h2>
+<p>How are the objects connected?</p>
+<h2 id="claims">Claims</h2>
+<p>What exactly are we trying to establish?</p>
+<h2 id="proofs">Proofs</h2>
+<p>Does the claimed conclusion follow from the formal structure?</p>
+<p>These are valuable improvements in inspectability.</p>
+<hr>
+<h1 id="what-formalization-does-not-automatically-give-us">What Formalization Does Not Automatically Give Us</h1>
+<p>A successful formal proof does not automatically establish:</p>
+<ul>
+<li>that the assumptions are empirically correct;</li>
+<li>that the model corresponds to nature;</li>
+<li>that the variables correspond to measurable quantities;</li>
+<li>that the source author's intent was captured correctly;</li>
+<li>that the model is complete;</li>
+<li>that the model is unique;</li>
+<li>that another model would not work better;</li>
+<li>or that the theorem is scientifically important.</li>
+</ul>
+<p>Those questions require additional work.</p>
+<hr>
+<h1 id="a-formal-proof-is-conditional">A Formal Proof Is Conditional</h1>
+<p>A useful way to read many proofs is:</p>
+<pre><code class="language-text">Given:
+these definitions
++
+these assumptions
++
+these rules
+
+Then:
+this conclusion follows
+</code></pre>
+<p>The proof establishes the relationship between the premises and conclusion.</p>
+<p>That is different from establishing each premise independently.</p>
+<hr>
+<h1 id="formalization-begins-before-the-proof">Formalization Begins Before the Proof</h1>
+<p>It can be tempting to think formalization begins when we write:</p>
+<pre><code class="language-text">theorem ...
+</code></pre>
+<p>But much of the important work happened earlier.</p>
+<p>We already chose:</p>
+<ul>
+<li>what objects exist;</li>
+<li>how they are represented;</li>
+<li>what types they have;</li>
+<li>which relationships are primitive;</li>
+<li>which assumptions are allowed;</li>
+<li>what distinctions matter;</li>
+<li>what distinctions are ignored;</li>
+<li>and what the theorem is supposed to say.</li>
+</ul>
+<p>Those choices shape everything that follows.</p>
+<hr>
+<h1 id="the-mapping-problem">The Mapping Problem</h1>
+<p>Suppose we begin with an informal idea:</p>
+<pre><code class="language-text">Original Idea
+</code></pre>
+<p>Then create:</p>
+<pre><code class="language-text">Mathematical Description
+</code></pre>
+<p>Then:</p>
+<pre><code class="language-text">Formal Definition
+</code></pre>
+<p>Then:</p>
+<pre><code class="language-text">Formal Theorem
+</code></pre>
+<p>Then:</p>
+<pre><code class="language-text">Verified Proof
+</code></pre>
+<p>The path looks like:</p>
+<pre><code class="language-text">Original Idea
+      ↓
+Mathematical Description
+      ↓
+Formal Definition
+      ↓
+Formal Theorem
+      ↓
+Verified Proof
+</code></pre>
+<p>A valid proof at the bottom does not automatically validate every mapping above it.</p>
+<p>We need to inspect the arrows too.</p>
+<hr>
+<h1 id="source-alignment">Source Alignment</h1>
+<p>When formalizing an existing source, ask:</p>
+<blockquote>
+<p>What did the source actually say?</p>
+</blockquote>
+<p>Then:</p>
+<blockquote>
+<p>What did our formal model say?</p>
+</blockquote>
+<p>Then:</p>
+<blockquote>
+<p>Do those correspond?</p>
+</blockquote>
+<p>A formalization may accidentally:</p>
+<ul>
+<li>narrow the source;</li>
+<li>strengthen the source;</li>
+<li>change the source;</li>
+<li>introduce new assumptions;</li>
+<li>omit conditions;</li>
+<li>or give an informal term a precise meaning the source never supplied.</li>
+</ul>
+<p>None of those changes should be hidden.</p>
+<hr>
+<h1 id="formalization-is-also-interpretation">Formalization Is Also Interpretation</h1>
+<p>Turning prose into mathematics requires choices.</p>
+<p>Turning mathematics into a proof assistant may require additional choices.</p>
+<p>For example, a source might say:</p>
+<pre><code class="language-text">A wraps B.
+</code></pre>
+<p>A formalizer must ask:</p>
+<blockquote>
+<p>What does wraps mean?</p>
+</blockquote>
+<p>Possible interpretations could include:</p>
+<pre><code class="language-text">contains
+intersects
+surrounds
+orders
+maps onto
+connects
+bounds
+</code></pre>
+<p>Those are not automatically equivalent.</p>
+<p>Until the intended relation is defined, there may be no single theorem to prove.</p>
+<p>Formalization exposes the question.</p>
+<hr>
+<h1 id="the-nawderian-example">The Nawderian Example</h1>
+<p>The Nawderian theorem material gives us a useful example.</p>
+<p>Several groups share dimension 6.</p>
+<p>That shared membership can be represented directly.</p>
+<p>But the source also uses a wrapping relationship.</p>
+<p>If wrapping is interpreted as ordinary set containment, the declared sets do not support the stronger containment relationship.</p>
+<p>The right formal response is not:</p>
+<blockquote>
+<p>Change the sets until the theorem works.</p>
+</blockquote>
+<p>It is:</p>
+<blockquote>
+<p>What does wrapping mean here?</p>
+</blockquote>
+<p>That is a formalization question.</p>
+<hr>
+<h1 id="undefined-does-not-mean-wrong">Undefined Does Not Mean Wrong</h1>
+<p>If a relationship cannot yet be formalized because its meaning is unclear, that does not immediately prove the original idea wrong.</p>
+<p>It means:</p>
+<blockquote>
+<p>The relationship needs a clearer definition before this particular formal claim can be evaluated.</p>
+</blockquote>
+<p>That distinction matters.</p>
+<p>Formalization can reveal missing precision without pretending missing precision is itself a complete refutation.</p>
+<hr>
+<h1 id="but-dont-hide-the-gap">But Don't Hide the Gap</h1>
+<p>The opposite mistake is also possible.</p>
+<p>We could invent a convenient formal definition:</p>
+<pre><code class="language-text">Wraps A B := whatever makes the theorem true
+</code></pre>
+<p>and then prove the result.</p>
+<p>The proof would be valid inside that model.</p>
+<p>But we would have quietly changed the problem.</p>
+<p>A better process is:</p>
+<pre><code class="language-text">Source term
+    ↓
+Possible meanings
+    ↓
+Choose and justify a definition
+    ↓
+Formalize
+    ↓
+Prove
+</code></pre>
+<p>Now the interpretive choice remains visible.</p>
+<hr>
+<h1 id="added-assumptions">Added Assumptions</h1>
+<p>Formalization sometimes reveals assumptions that were previously implicit.</p>
+<p>The Unified Resonance example gives us a useful case.</p>
+<p>A three-factor expression may look like:</p>
+<pre><code class="language-text">Q · F · S
+</code></pre>
+<p>But a proof assistant may force us to ask:</p>
+<ul>
+<li>What type are Q, F, and S?</li>
+<li>Do they share a type?</li>
+<li>What is the multiplication operation?</li>
+<li>Is it associative?</li>
+<li>Does it have an identity?</li>
+<li>Which algebraic rules are available?</li>
+</ul>
+<p>Those questions were easy to overlook when reading the compact notation.</p>
+<p>Formalization makes them harder to ignore.</p>
+<hr>
+<h1 id="added-assumptions-should-be-visible">Added Assumptions Should Be Visible</h1>
+<p>Suppose our teaching model adds:</p>
+<pre><code class="language-text">Associativity
+Identity
+Common carrier type
+</code></pre>
+<p>Then say so.</p>
+<p>Do not present:</p>
+<pre><code class="language-text">The source says Q · F · S
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">Our algebra is associative
+</code></pre>
+<p>as though the second automatically came from the first.</p>
+<p>Instead preserve the provenance:</p>
+<pre><code class="language-text">Source:
+three-factor notation
+
+Formal model adds:
+common algebraic structure
+
+Proof assumes:
+associativity and identity
+
+Result:
+formal consequences follow under those assumptions
+</code></pre>
+<p>That is much more informative.</p>
+<hr>
+<h1 id="simplification">Simplification</h1>
+<p>Formalization may also deliberately simplify an idea.</p>
+<p>The Temperature Engine Lean example does this.</p>
+<p>The broader source relation includes a temperature gradient and a proposed physical interpretation.</p>
+<p>The teaching formalization reduces the immediate problem to a one-dimensional signed algebraic model.</p>
+<p>That gives us something small enough to inspect.</p>
+<hr>
+<h1 id="a-simplified-model-can-still-be-useful">A Simplified Model Can Still Be Useful</h1>
+<p>A smaller model is not automatically misleading.</p>
+<p>It becomes misleading when the simplification is hidden.</p>
+<p>A useful description is:</p>
+<blockquote>
+<p>This example formalizes a one-dimensional algebraic version of the relationship so that selected consequences can be inspected.</p>
+</blockquote>
+<p>A poor description is:</p>
+<blockquote>
+<p>Lean proved the complete physical theory.</p>
+</blockquote>
+<p>The difference is the boundary.</p>
+<hr>
+<h1 id="keep-the-boundary-visible">Keep the Boundary Visible</h1>
+<p>For every formal example, try completing:</p>
+<pre><code class="language-text">Source:
+...
+
+Formalization:
+...
+
+Simplifications:
+...
+
+Added assumptions:
+...
+
+Lean proves:
+...
+
+Lean does not prove:
+...
+</code></pre>
+<p>If those six lines are clear, the formalization is much easier to inspect responsibly.</p>
+<hr>
+<h1 id="formal-verification">Formal Verification</h1>
+<p>Formal verification asks whether the specified conclusion follows within the defined formal system.</p>
+<p>Conceptually:</p>
+<pre><code class="language-text">Definitions
+     +
+Assumptions
+     +
+Rules
+     ↓
+Conclusion
+</code></pre>
+<p>A proof checker verifies the path.</p>
+<p>That is powerful because informal reasoning can accidentally skip steps.</p>
+<p>Formal systems are less forgiving.</p>
+<hr>
+<h1 id="empirical-validation">Empirical Validation</h1>
+<p>Empirical validation asks a different kind of question:</p>
+<blockquote>
+<p>Does the model adequately describe the thing in the world that we intend it to describe?</p>
+</blockquote>
+<p>That may require:</p>
+<ul>
+<li>observation;</li>
+<li>measurement;</li>
+<li>experiments;</li>
+<li>datasets;</li>
+<li>uncertainty analysis;</li>
+<li>comparison against alternatives;</li>
+<li>replication;</li>
+<li>independent criticism.</li>
+</ul>
+<p>A proof checker does not replace those processes.</p>
+<hr>
+<h1 id="formal-verification-and-empirical-validation-can-work-together">Formal Verification and Empirical Validation Can Work Together</h1>
+<p>The distinction does not mean they are unrelated.</p>
+<p>A formal model can help make empirical claims sharper.</p>
+<p>For example:</p>
+<pre><code class="language-text">Proposed model
+     ↓
+Formal consequences
+     ↓
+Testable predictions
+     ↓
+Observation
+     ↓
+Comparison
+</code></pre>
+<p>Now formalization may improve testing because we know more precisely what the model predicts.</p>
+<p>Likewise, evidence may expose where the formal model needs revision.</p>
+<p>The processes can inform one another.</p>
+<p>They simply answer different questions.</p>
+<hr>
+<h1 id="compiler-success-is-not-scientific-validation">Compiler Success Is Not Scientific Validation</h1>
+<p>This deserves to be stated plainly.</p>
+<p>Suppose:</p>
+<pre><code class="language-text">lean example.lean
+</code></pre>
+<p>returns successfully.</p>
+<p>That means the formal artifact was accepted by Lean under the relevant environment.</p>
+<p>It does not mean:</p>
+<blockquote>
+<p>Nature agrees with the theorem.</p>
+</blockquote>
+<p>The compiler does not have access to nature simply because the theorem compiled.</p>
+<hr>
+<h1 id="compiler-failure-is-not-scientific-refutation-either">Compiler Failure Is Not Scientific Refutation Either</h1>
+<p>The reverse is also important.</p>
+<p>If Lean rejects a proof, that does not automatically mean:</p>
+<blockquote>
+<p>The real-world claim is false.</p>
+</blockquote>
+<p>The failure might mean:</p>
+<ul>
+<li>the proof is incomplete;</li>
+<li>a lemma is unavailable;</li>
+<li>an import is missing;</li>
+<li>a type is wrong;</li>
+<li>an assumption is missing;</li>
+<li>the theorem statement is malformed;</li>
+<li>the model does not support the claim;</li>
+<li>or the formal representation differs from what was intended.</li>
+</ul>
+<p>Inspect the failure before deciding what it means.</p>
+<hr>
+<h1 id="our-lean-development-gave-us-examples">Our Lean Development Gave Us Examples</h1>
+<p>While building the 5Guides Lean examples, compiler failures helped expose useful issues.</p>
+<p>In one example, a proof method relied on tooling that was not actually available in the standalone environment.</p>
+<p>The final proof became smaller and made its dependency clearer.</p>
+<p>In another example, the formalization assumed an algebraic structure that had not been explicitly supplied.</p>
+<p>Instead of hiding the issue behind another import, the model was revised to expose the needed algebraic assumptions directly.</p>
+<p>Those failures improved the teaching examples.</p>
+<hr>
+<h1 id="failure-can-improve-clarity">Failure Can Improve Clarity</h1>
+<p>A compiler error may effectively tell us:</p>
+<blockquote>
+<p>You assumed something that isn't here.</p>
+</blockquote>
+<p>That can be valuable.</p>
+<p>Instead of immediately trying to silence the error, ask:</p>
+<blockquote>
+<p>What assumption did I think I had?</p>
+</blockquote>
+<p>Then:</p>
+<blockquote>
+<p>Should that assumption actually belong in the model?</p>
+</blockquote>
+<p>This is where formal tooling becomes useful for more than obtaining a green result.</p>
+<hr>
+<h1 id="dont-make-the-checker-happy-at-any-cost">Don't Make the Checker Happy at Any Cost</h1>
+<p>A proof checker creates a tempting objective:</p>
+<pre><code class="language-text">No errors
+</code></pre>
+<p>But we can often achieve that by changing the theorem.</p>
+<p>For example:</p>
+<pre><code class="language-text">Original claim
+     ↓
+Hard to prove
+     ↓
+Weaken claim
+     ↓
+Proof succeeds
+</code></pre>
+<p>That may be correct.</p>
+<p>Or it may simply avoid the original question.</p>
+<p>So after fixing a proof, ask:</p>
+<blockquote>
+<p>Did I fix the formalization?</p>
+</blockquote>
+<p>or:</p>
+<blockquote>
+<p>Did I change what was being claimed?</p>
+</blockquote>
+<p>Both may be legitimate.</p>
+<p>They should not be confused.</p>
+<hr>
+<h1 id="stronger-is-not-always-better">Stronger Is Not Always Better</h1>
+<p>There can be pressure to prove the strongest possible theorem.</p>
+<p>But a narrower theorem that clearly follows from justified assumptions may be more useful than a dramatic theorem supported by speculative assumptions.</p>
+<p>Ask:</p>
+<blockquote>
+<p>What is the strongest claim the current structure actually supports?</p>
+</blockquote>
+<p>Not:</p>
+<blockquote>
+<p>What is the strongest claim I can make Lean accept after adding enough assumptions?</p>
+</blockquote>
+<p>The difference matters.</p>
+<hr>
+<h1 id="assumptions-are-part-of-the-result">Assumptions Are Part of the Result</h1>
+<p>Suppose we prove:</p>
+<pre><code class="language-text">Given A, B, and C,
+D follows.
+</code></pre>
+<p>Then the result is not merely:</p>
+<pre><code class="language-text">D
+</code></pre>
+<p>The complete result includes:</p>
+<pre><code class="language-text">A
+B
+C
+    ↓
+D
+</code></pre>
+<p>Removing the assumptions from the explanation removes part of the theorem's meaning.</p>
+<hr>
+<h1 id="types-matter">Types Matter</h1>
+<p>Formalization also forces us to decide what kind of thing something is.</p>
+<p>For example:</p>
+<pre><code class="language-text">temperature
+</code></pre>
+<p>could be represented as:</p>
+<pre><code class="language-text">Nat
+Int
+Float
+Real
+Vector field
+Unit-bearing physical quantity
+</code></pre>
+<p>Those choices matter.</p>
+<p>Different types allow different operations and preserve different information.</p>
+<p>Choosing a type is part of modeling.</p>
+<hr>
+<h1 id="representation-matters">Representation Matters</h1>
+<p>Imagine representing a directional quantity using:</p>
+<pre><code class="language-text">Nat
+</code></pre>
+<p>Natural numbers do not represent negative values.</p>
+<p>If direction requires sign, that representation may be insufficient.</p>
+<p>Using:</p>
+<pre><code class="language-text">Int
+</code></pre>
+<p>might expose direction more naturally for a small teaching model.</p>
+<p>That is why the Temperature Engine example uses signed integers.</p>
+<p>The type itself participates in the formalization.</p>
+<hr>
+<h1 id="precision-has-a-cost">Precision Has a Cost</h1>
+<p>Formal systems demand precision.</p>
+<p>That is useful.</p>
+<p>It can also require substantial work.</p>
+<p>A complete formalization may need definitions for:</p>
+<ul>
+<li>units;</li>
+<li>coordinate systems;</li>
+<li>vectors;</li>
+<li>fields;</li>
+<li>uncertainty;</li>
+<li>measurements;</li>
+<li>boundaries;</li>
+<li>operators;</li>
+<li>compositions;</li>
+<li>invariants;</li>
+<li>transitions.</li>
+</ul>
+<p>A tiny teaching model may intentionally leave most of that out.</p>
+<p>The important thing is to say what has been left out.</p>
+<hr>
+<h1 id="formalization-depth">Formalization Depth</h1>
+<p>We can think of formalization in layers.</p>
+<pre><code class="language-text">Layer 1
+Named structure
+
+Layer 2
+Typed objects
+
+Layer 3
+Defined relationships
+
+Layer 4
+Explicit assumptions
+
+Layer 5
+Formal propositions
+
+Layer 6
+Verified proofs
+
+Layer 7
+Mapping to measurement
+
+Layer 8
+Empirical comparison
+</code></pre>
+<p>Not every teaching example needs all eight layers.</p>
+<p>But we should know which layer we have reached.</p>
+<hr>
+<h1 id="a-lean-proof-lives-inside-a-model">A Lean Proof Lives Inside a Model</h1>
+<p>Consider a generic Lean theorem:</p>
+<pre><code class="language-text">theorem result
+    (h₁ : A)
+    (h₂ : B) :
+    C := by
+  ...
+</code></pre>
+<p>Lean is checking whether C follows under the formal context that includes A and B.</p>
+<p>It is not independently checking where A and B came from.</p>
+<p>That provenance belongs to us.</p>
+<hr>
+<h1 id="provenance-matters">Provenance Matters</h1>
+<p>For a formal theorem, useful provenance might include:</p>
+<pre><code class="language-text">Source concept
+     ↓
+Interpretation
+     ↓
+Formal definition
+     ↓
+Assumptions
+     ↓
+Theorem
+     ↓
+Proof
+     ↓
+Compiler environment
+</code></pre>
+<p>If any link matters to the claim, preserve it.</p>
+<p>That is especially important when formalization is used to evaluate pre-existing work.</p>
+<hr>
+<h1 id="compiler-provenance">Compiler Provenance</h1>
+<p>The current 5Guides Lean teaching set contains:</p>
+<pre><code class="language-text">01_awareness.lean
+02_alignment.lean
+03_coherence.lean
+04_clarity.lean
+05_continuity.lean
+06_tft_origin.lean
+07_nawderian_theorem.lean
+08_nawderian_set_theorem.lean
+09_temperature_engine_theorem.lean
+10_unified_resonance_theorem.lean
+11_rtt_origin.lean
+</code></pre>
+<p>The set was compiler-checked using:</p>
+<pre><code class="language-text">Lean 4.36.0
+x86_64-w64-windows-gnu
+</code></pre>
+<p>That environment is part of the validation record.</p>
+<hr>
+<h1 id="why-record-the-environment">Why Record the Environment?</h1>
+<p>Formal tooling evolves.</p>
+<p>A file that compiles under one environment may behave differently after:</p>
+<ul>
+<li>language changes;</li>
+<li>library changes;</li>
+<li>theorem renaming;</li>
+<li>import changes;</li>
+<li>tactic changes;</li>
+<li>dependency changes.</li>
+</ul>
+<p>Recording the environment helps future readers understand what was actually checked.</p>
+<p>This is Continuity applied to formal verification.</p>
+<hr>
+<h1 id="reproducibility">Reproducibility</h1>
+<p>A useful formal artifact should make it reasonably possible for another person to repeat the check.</p>
+<p>At minimum, preserve:</p>
+<ul>
+<li>the source file;</li>
+<li>the relevant Lean version;</li>
+<li>required imports;</li>
+<li>dependencies;</li>
+<li>and the theorem itself.</li>
+</ul>
+<p>Then another learner can ask:</p>
+<blockquote>
+<p>Does this still compile?</p>
+</blockquote>
+<p>That is better than:</p>
+<blockquote>
+<p>Someone once said Lean verified it.</p>
+</blockquote>
+<hr>
+<h1 id="what-does-lean-verified-mean">What Does "Lean Verified" Mean?</h1>
+<p>Use the phrase carefully.</p>
+<p>A useful interpretation is:</p>
+<blockquote>
+<p>Lean accepted the formal theorem and proof under the stated formal environment.</p>
+</blockquote>
+<p>Avoid allowing it to drift into:</p>
+<blockquote>
+<p>Lean verified the entire real-world interpretation behind the theorem.</p>
+</blockquote>
+<p>Those statements are not equivalent.</p>
+<hr>
+<h1 id="the-formalization-record">The Formalization Record</h1>
+<p>For each origin example, we can preserve a short record.</p>
+<h2 id="tft">TFT</h2>
+<pre><code class="language-text">Source:
+Triadic structural organization
+
+Teaching abstraction:
+Generic Triad α
+
+Lean verifies:
+Mapping, identity, composition
+
+Boundary:
+Does not prove TFT's broader physical claims
+</code></pre>
+<h2 id="nawderian-theorem">Nawderian Theorem</h2>
+<pre><code class="language-text">Source:
+Declared dimension groups and wrapping language
+
+Teaching abstraction:
+Explicit group membership relationships
+
+Lean verifies:
+Selected membership and intersection properties
+
+Boundary:
+Does not define &quot;wraps&quot; unless a separate relation is supplied
+</code></pre>
+<h2 id="set">SET</h2>
+<pre><code class="language-text">Source:
+Spin, field-charge, and temperature contributions
+
+Teaching abstraction:
+Named additive contributions
+
+Lean verifies:
+Consequences of the additive model
+
+Boundary:
+Does not prove physical completeness
+</code></pre>
+<h2 id="temperature-engine">Temperature Engine</h2>
+<pre><code class="language-text">Source:
+F_T = -α∇T
+
+Teaching abstraction:
+One-dimensional signed integer relation
+
+Lean verifies:
+Zero and sign-reversal properties
+
+Boundary:
+Does not prove the broader physical interpretation
+</code></pre>
+<h2 id="unified-resonance">Unified Resonance</h2>
+<pre><code class="language-text">Source:
+Q · F · S
+
+Teaching abstraction:
+Explicit local multiplicative algebra
+
+Lean verifies:
+Consequences under supplied algebraic laws
+
+Boundary:
+Does not prove that the source factors naturally form that algebra
+</code></pre>
+<h2 id="rtt">RTT</h2>
+<pre><code class="language-text">Source:
+State, flow, resonance, operators, updates
+
+Teaching abstraction:
+Small integer-valued state-transition model
+
+Lean verifies:
+Selected transition and preservation properties
+
+Boundary:
+Does not formalize or validate the complete RTT specification
+</code></pre>
+<hr>
+<h1 id="formalization-boundaries-are-useful">Formalization Boundaries Are Useful</h1>
+<p>It can feel tempting to treat boundaries as disclaimers.</p>
+<p>They are more useful than that.</p>
+<p>A boundary tells us:</p>
+<blockquote>
+<p>Here is exactly where the current model stops.</p>
+</blockquote>
+<p>That gives future work somewhere to begin.</p>
+<p>For example:</p>
+<pre><code class="language-text">Current model:
+signed integer gradient
+
+Boundary:
+no vector field
+
+Possible next step:
+formalize spatial gradient
+</code></pre>
+<p>Now the limitation becomes a roadmap.</p>
+<hr>
+<h1 id="dont-fill-every-boundary-immediately">Don't Fill Every Boundary Immediately</h1>
+<p>Not every limitation needs immediate repair.</p>
+<p>A model may be intentionally small because it is a teaching example.</p>
+<p>The question is:</p>
+<blockquote>
+<p>Is the model sufficient for what we currently claim it demonstrates?</p>
+</blockquote>
+<p>If yes, keep it small.</p>
+<p>Complexity should earn its place.</p>
+<hr>
+<h1 id="students-can-inspect-the-formalization">Students Can Inspect the Formalization</h1>
+<p>The formal examples are not only artifacts to compile.</p>
+<p>They can become exercises.</p>
+<p>Ask the learner:</p>
+<blockquote>
+<p>Which definitions came from the source?</p>
+<p>Which were introduced by the teaching model?</p>
+<p>Which assumptions are explicit?</p>
+<p>Which assumptions might still be hidden?</p>
+<p>What does the theorem prove?</p>
+<p>What does it leave unresolved?</p>
+</blockquote>
+<p>Now the formalization itself becomes practice material.</p>
+<hr>
+<h1 id="formalization-is-not-automatically-better-reasoning">Formalization Is Not Automatically Better Reasoning</h1>
+<p>A statement written in symbols can still be:</p>
+<ul>
+<li>poorly defined;</li>
+<li>unsupported;</li>
+<li>irrelevant;</li>
+<li>based on bad assumptions;</li>
+<li>disconnected from evidence;</li>
+<li>or formalizing the wrong question.</li>
+</ul>
+<p>Mathematical appearance is not a substitute for structural inspection.</p>
+<p>Neither is successful compilation.</p>
+<hr>
+<h1 id="symbols-can-hide-ambiguity-too">Symbols Can Hide Ambiguity Too</h1>
+<p>Formal notation often improves precision.</p>
+<p>But symbols can also create an illusion of precision when their meaning is not defined.</p>
+<p>For example:</p>
+<pre><code class="language-text">A ⊗ B
+</code></pre>
+<p>looks mathematical.</p>
+<p>But until we know what <code>⊗</code> means, the symbol alone tells us very little.</p>
+<p>Ask:</p>
+<blockquote>
+<p>What operation is this?</p>
+<p>On what objects?</p>
+<p>Under what rules?</p>
+<p>With what interpretation?</p>
+</blockquote>
+<p>That is Clarity.</p>
+<hr>
+<h1 id="formalization-and-language">Formalization and Language</h1>
+<p>The same principle applies to ordinary words used technically.</p>
+<p>Examples:</p>
+<pre><code class="language-text">resonance
+coherence
+alignment
+continuity
+wrap
+field
+state
+</code></pre>
+<p>A familiar word can carry several meanings.</p>
+<p>Formalization may require choosing one.</p>
+<p>When that happens, record the choice.</p>
+<p>Do not pretend the word always meant exactly the new formal definition.</p>
+<hr>
+<h1 id="formalization-and-drift">Formalization and Drift</h1>
+<p>Definitions can change over time.</p>
+<p>Suppose version 1 defines:</p>
+<pre><code class="language-text">Alignment := relation A
+</code></pre>
+<p>and version 2 defines:</p>
+<pre><code class="language-text">Alignment := relation B
+</code></pre>
+<p>The label stayed the same.</p>
+<p>The meaning changed.</p>
+<p>A later theorem using Alignment may therefore not be directly comparable to an earlier one.</p>
+<p>That is semantic drift.</p>
+<p>Continuity asks us to notice it.</p>
+<hr>
+<h1 id="version-the-meaning-when-necessary">Version the Meaning When Necessary</h1>
+<p>Not every wording change needs a version number.</p>
+<p>But if a formal definition changes enough to alter what theorems mean, preserve that history.</p>
+<p>For example:</p>
+<pre><code class="language-text">Alignment v1
+    ↓
+definition changed
+    ↓
+Alignment v2
+</code></pre>
+<p>Now later readers can determine which meaning a theorem used.</p>
+<p>That strengthens provenance.</p>
+<hr>
+<h1 id="formalization-and-clarity">Formalization and Clarity</h1>
+<p>Formalization can improve Clarity by forcing decisions.</p>
+<p>But clarity does not mean making the mathematics unnecessarily complicated.</p>
+<p>A student should still be able to ask:</p>
+<blockquote>
+<p>What is this model trying to say?</p>
+</blockquote>
+<p>If that answer disappears beneath machinery, the formalization may need a clearer explanatory layer.</p>
+<p>Formal proof and understandable explanation can coexist.</p>
+<hr>
+<h1 id="formalization-and-continuity">Formalization and Continuity</h1>
+<p>Formal systems are especially good places to study Continuity.</p>
+<p>Change:</p>
+<ul>
+<li>a type;</li>
+<li>a definition;</li>
+<li>an assumption;</li>
+<li>an operator;</li>
+<li>a theorem;</li>
+<li>a state.</li>
+</ul>
+<p>Then ask:</p>
+<blockquote>
+<p>Which proofs survive?</p>
+<p>Which fail?</p>
+<p>Which fail for structural reasons?</p>
+<p>Which fail only because tooling changed?</p>
+</blockquote>
+<p>That distinguishes conceptual continuity from implementation continuity.</p>
+<hr>
+<h1 id="formalization-and-ai">Formalization and AI</h1>
+<p>AI can help produce formal code.</p>
+<p>That does not remove the need for inspection.</p>
+<p>An AI-generated proof may:</p>
+<ul>
+<li>use unavailable libraries;</li>
+<li>invoke nonexistent lemmas;</li>
+<li>add assumptions;</li>
+<li>prove a weaker theorem;</li>
+<li>change the theorem statement;</li>
+<li>or formalize something different from what was requested.</li>
+</ul>
+<p>The correct workflow is:</p>
+<pre><code class="language-text">AI Suggestion
+     ↓
+Inspect
+     ↓
+Compile
+     ↓
+Inspect Again
+</code></pre>
+<p>The compiler checks the formal artifact.</p>
+<p>The human still checks the intended meaning.</p>
+<hr>
+<h1 id="formalization-and-aaccc">Formalization and AACCC</h1>
+<p>The entire formalization process can be inspected through the Five Guides.</p>
+<h2 id="awareness">Awareness</h2>
+<p>What did the source actually state?</p>
+<p>What did the formal model actually define?</p>
+<p>What assumptions are present?</p>
+<h2 id="alignment">Alignment</h2>
+<p>Does the formal representation correspond to the source?</p>
+<p>Do variables, operations, and relationships map appropriately?</p>
+<h2 id="coherence">Coherence</h2>
+<p>Do the conclusions follow from the supplied definitions and assumptions?</p>
+<p>Are those assumptions mutually compatible?</p>
+<h2 id="clarity">Clarity</h2>
+<p>Can another person distinguish:</p>
+<ul>
+<li>source material;</li>
+<li>modeling choices;</li>
+<li>assumptions;</li>
+<li>proof results;</li>
+<li>limitations?</li>
+</ul>
+<h2 id="continuity">Continuity</h2>
+<p>What changed as the idea moved through:</p>
+<pre><code class="language-text">Source
+  ↓
+Interpretation
+  ↓
+Formalization
+  ↓
+Proof
+  ↓
+Revision
+</code></pre>
+<p>What persisted?</p>
+<hr>
+<h1 id="use-aaccc-on-a-formal-claim">Use AACCC on a Formal Claim</h1>
+<p>When someone says:</p>
+<blockquote>
+<p>This has been formally verified.</p>
+</blockquote>
+<p>Try five questions.</p>
+<h2 id="awareness_1">Awareness</h2>
+<blockquote>
+<p>What exactly was verified?</p>
+</blockquote>
+<h2 id="alignment_1">Alignment</h2>
+<blockquote>
+<p>Does the formal theorem correspond to the original claim?</p>
+</blockquote>
+<h2 id="coherence_1">Coherence</h2>
+<blockquote>
+<p>Does the conclusion actually follow under the declared assumptions?</p>
+</blockquote>
+<h2 id="clarity_1">Clarity</h2>
+<blockquote>
+<p>Are the assumptions, model, and proof boundary visible?</p>
+</blockquote>
+<h2 id="continuity_1">Continuity</h2>
+<blockquote>
+<p>Has the claim changed between the original statement and the verified theorem?</p>
+</blockquote>
+<p>Those questions can prevent a large amount of confusion.</p>
+<hr>
+<h1 id="formal-verification-is-powerful-enough-without-exaggeration">Formal Verification Is Powerful Enough Without Exaggeration</h1>
+<p>We do not need to inflate what formal methods accomplish.</p>
+<p>This is already remarkable:</p>
+<blockquote>
+<p>A machine can check whether an explicitly represented proof follows according to a formal system.</p>
+</blockquote>
+<p>That is tremendously useful.</p>
+<p>It does not become less impressive because empirical validation remains a different problem.</p>
+<p>Keeping the boundary intact makes the result more trustworthy, not less.</p>
+<hr>
+<h1 id="the-students-formalization-habit">The Student's Formalization Habit</h1>
+<p>For every formal example, practice completing these statements:</p>
+<blockquote>
+<p>The source says...</p>
+<p>I represented it as...</p>
+<p>I added these assumptions...</p>
+<p>I simplified these parts...</p>
+<p>Lean proves...</p>
+<p>Lean does not prove...</p>
+<p>To go further, I would need...</p>
+</blockquote>
+<p>If a learner can do that consistently, they understand something more valuable than how to make a proof checker produce a green result.</p>
+<p>They understand the boundary of the proof.</p>
+<hr>
+<h1 id="continue">Continue</h1>
+<p>For the earlier project stages, see:</p>
+<ul>
+<li><code>tft.md</code></li>
+<li><code>theorems.md</code></li>
+<li><code>rtt.md</code></li>
+</ul>
+<p>For the complete origin sequence:</p>
+<ul>
+<li><code>index.md</code></li>
+</ul>
+<p>For the compiler-checked Lean examples:</p>
+<ul>
+<li><code>../lean/index.md</code></li>
+</ul>
+<p>For the broader Five Guides:</p>
+<ul>
+<li><code>../index.md</code></li>
+</ul>
+<hr>
+<blockquote>
+<p>Formalization does not merely help us prove ideas. It helps us discover exactly what those ideas require us to define, assume, preserve, and test.</p>
+</blockquote>
   </main>
 </body>
 </html>

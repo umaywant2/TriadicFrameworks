@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/5Guides/origins/theorems.md">
-  <title>theorems</title>
+  <title>Theorems</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,7 +92,740 @@
   </aside>
 
   <main>
-<p>. </p>
+<p><img width="1194" height="672" alt="5Guides_origins_theorems_" src="https://github.com/user-attachments/assets/0034596c-8c2c-4352-afc5-b90c2ce69582" /></p>
+<h1 id="theorems">Theorems</h1>
+<blockquote>
+<p>Project-lineage notes for the theorem stage between early triadic structures and the later AACCC learning model.</p>
+</blockquote>
+<p>The theorem material in TriadicFrameworks is part of the path that eventually contributed to 5Guides.</p>
+<p>This page does not ask students to accept those theorems as established science.</p>
+<p>Instead, it asks something much more useful:</p>
+<blockquote>
+<p>What happens when an exploratory idea becomes explicit enough to inspect, compare, formalize, challenge, and revise?</p>
+</blockquote>
+<p>That question leads naturally toward AACCC.</p>
+<hr>
+<h1 id="where-the-theorems-fit">Where the Theorems Fit</h1>
+<p>A simplified project-lineage view is:</p>
+<pre><code class="language-text">TFT
+ ↓
+Triads
+ ↓
+Theorems
+ ↓
+RTT
+ ↓
+AACCC
+ ↓
+5Guides
+</code></pre>
+<p>This should not be interpreted as a strict historical proof chain.</p>
+<p>The earlier materials did not originally contain the Five Guides exactly as they appear today.</p>
+<p>5Guides is a later educational interpretation of recurring structural habits that developed across the project.</p>
+<hr>
+<h1 id="the-theorem-family">The Theorem Family</h1>
+<p>Four theorem artifacts are particularly useful for this part of the lineage:</p>
+<ol>
+<li>Nawderian Theorem</li>
+<li>Nawderian SET Theorem</li>
+<li>Nawderian Temperature Engine Theorem</li>
+<li>Unified Resonance Theorem</li>
+</ol>
+<p>Each provides a different opportunity for structural inspection.</p>
+<p>The interesting part for 5Guides is not whether a student agrees with every claim.</p>
+<p>The interesting part is learning to ask:</p>
+<blockquote>
+<p>What was declared?</p>
+<p>What relationships were proposed?</p>
+<p>What assumptions are required?</p>
+<p>What follows formally?</p>
+<p>What remains interpretive or empirical?</p>
+</blockquote>
+<hr>
+<h1 id="1-nawderian-theorem">1. Nawderian Theorem</h1>
+<p>The Nawderian Theorem describes a triadic corridor model using several groups of dimensions.</p>
+<p>Among its declared structures are:</p>
+<pre><code class="language-text">Corridor:
+1, 2, 6
+
+Wrapping:
+3, 6, 9
+
+Visible:
+4, 5, 6
+
+Invisible:
+6, 7, 8
+</code></pre>
+<p>The source emphasizes that the visible and invisible ordered triads pass through dimension 6 and describes the 3-6-9 triad as wrapping the visible and invisible triads. 【1-4fafea】</p>
+<p>This gives us a useful formalization problem.</p>
+<hr>
+<h1 id="shared-membership">Shared Membership</h1>
+<p>The first thing we can inspect is simple.</p>
+<p>Dimension 6 appears in:</p>
+<pre><code class="language-text">Corridor
+Wrapping
+Visible
+Invisible
+</code></pre>
+<p>That is a direct membership relationship.</p>
+<p>We can represent it formally.</p>
+<p>We can prove it.</p>
+<p>No additional interpretation is necessary.</p>
+<hr>
+<h1 id="but-what-does-wraps-mean">But What Does "Wraps" Mean?</h1>
+<p>The source also declares a wrapping-containment relationship:</p>
+<pre><code class="language-text">W ⊇ (V ∪ I)
+</code></pre>
+<p>where:</p>
+<pre><code class="language-text">W = {3, 6, 9}
+
+V = {4, 5, 6}
+
+I = {6, 7, 8}
+</code></pre>
+<p>Under ordinary set membership:</p>
+<pre><code class="language-text">V ∪ I = {4, 5, 6, 7, 8}
+</code></pre>
+<p>and therefore:</p>
+<pre><code class="language-text">{3, 6, 9}
+</code></pre>
+<p>does not ordinarily contain:</p>
+<pre><code class="language-text">{4, 5, 6, 7, 8}
+</code></pre>
+<p>The source states the wrapping relationship, but ordinary set semantics do not by themselves supply the intended meaning of "wraps." 【1-4fafea】</p>
+<p>This is not something formalization should quietly hide.</p>
+<p>It is something formalization should expose.</p>
+<hr>
+<h1 id="aaccc-view">AACCC View</h1>
+<h2 id="awareness">Awareness</h2>
+<p>What sets were actually declared?</p>
+<h2 id="alignment">Alignment</h2>
+<p>Which dimensions actually correspond or intersect?</p>
+<h2 id="coherence">Coherence</h2>
+<p>Does ordinary set containment support the proposed wrapping relationship?</p>
+<h2 id="clarity">Clarity</h2>
+<p>What does "wraps" need to mean for the intended relationship to become inspectable?</p>
+<h2 id="continuity">Continuity</h2>
+<p>Can the intended idea survive a more precise definition?</p>
+<p>That is exactly the kind of problem AACCC is designed to help inspect.</p>
+<hr>
+<h1 id="lean-companion">Lean Companion</h1>
+<p>The formal companion is:</p>
+<pre><code class="language-text">07_nawderian_theorem.lean
+</code></pre>
+<p>The example deliberately proves relationships supported by its formal representation rather than inventing a meaning for "wraps."</p>
+<p>That makes an important point:</p>
+<blockquote>
+<p>Formalization should expose an undefined relationship, not quietly define it in whatever way makes the theorem pass.</p>
+</blockquote>
+<p>A future formalization could introduce something like:</p>
+<pre><code class="language-text">Wraps A B
+</code></pre>
+<p>But only after deciding what that relation actually means.</p>
+<hr>
+<h1 id="2-nawderian-set-theorem">2. Nawderian SET Theorem</h1>
+<p>The SET theorem proposes a three-part field:</p>
+<pre><code class="language-text">SET
+├── Spin
+├── Electrolysis / Field-Charge
+└── Temperature
+</code></pre>
+<p>The source defines:</p>
+<pre><code class="language-text">F_SET = (S, E, T)
+</code></pre>
+<p>and gives a total effective acceleration as the sum of gravitational, spin, field/charge, and temperature contributions. 【2-9f8ee8】</p>
+<p>The source also gives internal triadic descriptions for Spin, Electrolysis/field-charge, and Temperature. 【2-9f8ee8】</p>
+<p>For 5Guides, the useful structural idea is decomposition and recomposition.</p>
+<hr>
+<h1 id="break-the-whole-into-named-contributions">Break the Whole Into Named Contributions</h1>
+<p>Instead of treating system behavior as one undivided result, the SET structure names separate contributions.</p>
+<p>Conceptually:</p>
+<pre><code class="language-text">Gravity
+   +
+Spin
+   +
+Field / Charge
+   +
+Temperature
+   ↓
+Modeled Total
+</code></pre>
+<p>That gives us something inspectable.</p>
+<p>We can ask:</p>
+<ul>
+<li>Which term corresponds to which contribution?</li>
+<li>What happens when one contribution becomes zero?</li>
+<li>What assumptions make addition an appropriate composition?</li>
+<li>Does the modeled total contain exactly the components we intended?</li>
+</ul>
+<p>Those are useful questions regardless of whether the broader physical interpretation is accepted.</p>
+<hr>
+<h1 id="aaccc-view_1">AACCC View</h1>
+<h2 id="awareness_1">Awareness</h2>
+<p>What components were actually declared?</p>
+<h2 id="alignment_1">Alignment</h2>
+<p>Which mathematical term corresponds to which proposed contribution?</p>
+<h2 id="coherence_1">Coherence</h2>
+<p>Does the total follow from the composition rule we supplied?</p>
+<h2 id="clarity_1">Clarity</h2>
+<p>Can we see the separate contributions rather than hiding them inside one unexplained result?</p>
+<h2 id="continuity_1">Continuity</h2>
+<p>What happens to the total when one contribution changes while the others remain fixed?</p>
+<hr>
+<h1 id="lean-companion_1">Lean Companion</h1>
+<p>The formal companion is:</p>
+<pre><code class="language-text">08_nawderian_set_theorem.lean
+</code></pre>
+<p>The teaching example models named contributions and their additive composition.</p>
+<p>Lean can verify consequences of that declared algebraic structure.</p>
+<p>It does not establish that the SET decomposition is a complete empirical description of a physical system.</p>
+<p>That boundary matters.</p>
+<hr>
+<h1 id="formal-result-vs-physical-claim">Formal Result vs. Physical Claim</h1>
+<p>Suppose Lean verifies something equivalent to:</p>
+<pre><code class="language-text">total =
+    gravity
+    + spin
+    + fieldCharge
+    + temperature
+</code></pre>
+<p>That establishes:</p>
+<blockquote>
+<p>Given this definition of total, the expression has the declared algebraic structure.</p>
+</blockquote>
+<p>It does not establish:</p>
+<blockquote>
+<p>Nature is completely described by these particular contributions.</p>
+</blockquote>
+<p>The first is formal.</p>
+<p>The second requires evidence outside the proof checker.</p>
+<hr>
+<h1 id="3-nawderian-temperature-engine-theorem">3. Nawderian Temperature Engine Theorem</h1>
+<p>The Temperature Engine theorem defines a triadic temperature field:</p>
+<pre><code class="language-text">T =
+(
+  T_hot,
+  T_cold,
+  ∇T
+)
+</code></pre>
+<p>and gives a proposed temperature-force relation:</p>
+<pre><code class="language-text">F_T = -α ∇T
+</code></pre>
+<p>where the source describes alpha as a medium-dependent coupling constant and the gradient as the driver in the proposed relation. 【3-a43fa0】</p>
+<p>The broader source interprets this relation physically across multiple systems. 【3-a43fa0】</p>
+<p>The Lean teaching example intentionally does something much smaller.</p>
+<hr>
+<h1 id="simplify-before-formalizing">Simplify Before Formalizing</h1>
+<p>The first Lean model does not attempt to represent:</p>
+<ul>
+<li>spatial vector fields;</li>
+<li>complete thermodynamics;</li>
+<li>astrophysical dynamics;</li>
+<li>fluid mechanics;</li>
+<li>units;</li>
+<li>measurement uncertainty;</li>
+<li>or empirical data.</li>
+</ul>
+<p>Instead, it asks:</p>
+<blockquote>
+<p>What does the proposed sign relationship do in a tiny one-dimensional algebraic model?</p>
+</blockquote>
+<p>That becomes:</p>
+<pre><code class="language-text">temperatureForce coupling gradient
+    =
+-(coupling * gradient)
+</code></pre>
+<p>This is deliberately bounded.</p>
+<hr>
+<h1 id="what-can-we-prove-inside-that-small-model">What Can We Prove Inside That Small Model?</h1>
+<p>The Lean example checks consequences such as:</p>
+<pre><code class="language-text">gradient = 0
+    ↓
+modeled force = 0
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">coupling = 0
+    ↓
+modeled force = 0
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">gradient changes sign
+    ↓
+modeled force changes sign
+</code></pre>
+<p>These are algebraic consequences of the supplied teaching definition.</p>
+<p>They are not independent empirical verification of the broader Temperature Engine claims.</p>
+<hr>
+<h1 id="aaccc-view_2">AACCC View</h1>
+<h2 id="awareness_2">Awareness</h2>
+<p>What values and relationships did we actually formalize?</p>
+<h2 id="alignment_2">Alignment</h2>
+<p>How does the sign of the gradient correspond to the sign of the modeled result?</p>
+<h2 id="coherence_2">Coherence</h2>
+<p>Do the zero and sign-reversal properties follow from the definition?</p>
+<h2 id="clarity_2">Clarity</h2>
+<p>Have we clearly separated the tiny algebraic model from the larger source interpretation?</p>
+<h2 id="continuity_2">Continuity</h2>
+<p>What happens as the gradient changes while the relationship itself remains fixed?</p>
+<hr>
+<h1 id="lean-companion_2">Lean Companion</h1>
+<p>The formal companion is:</p>
+<pre><code class="language-text">09_temperature_engine_theorem.lean
+</code></pre>
+<p>During development, this example also provided a nice lesson in formalization.</p>
+<p>A proof initially relied on tooling that was not actually available in the standalone Lean environment.</p>
+<p>The final version used a smaller core proof instead.</p>
+<p>That is useful in itself:</p>
+<blockquote>
+<p>The formal environment is part of what must be made explicit.</p>
+</blockquote>
+<hr>
+<h1 id="4-unified-resonance-theorem">4. Unified Resonance Theorem</h1>
+<p>The Unified Resonance Theorem is marked in its source as a Canonical Draft.</p>
+<p>Its core expression is:</p>
+<pre><code class="language-text">Resonance_glyph =
+    Q_z · F_theta · S_dim
+</code></pre>
+<p>The source identifies the factors as:</p>
+<pre><code class="language-text">Q_z
+Quadrant constant
+
+F_theta
+Frequency-band modulation
+
+S_dim
+Symbolic overlay from a dimensional layer
+</code></pre>
+<p>【4-1ee7a7】</p>
+<p>This creates an especially interesting formalization question.</p>
+<hr>
+<h1 id="what-does-the-multiplication-mean">What Does the Multiplication Mean?</h1>
+<p>The expression visually combines three factors:</p>
+<pre><code class="language-text">Q · F · S
+</code></pre>
+<p>But notation alone does not tell a formal system everything it needs to know.</p>
+<p>We still need to ask:</p>
+<ul>
+<li>What type is Q?</li>
+<li>What type is F?</li>
+<li>What type is S?</li>
+<li>Do they share a common carrier type?</li>
+<li>What operation does the multiplication symbol represent?</li>
+<li>Is that operation associative?</li>
+<li>Does it have an identity?</li>
+<li>Which algebraic properties are actually required?</li>
+</ul>
+<p>The source provides the three-factor expression and descriptions of the three factors, but those descriptions do not by themselves provide a complete Lean algebraic specification. 【4-1ee7a7】</p>
+<p>This is exactly the kind of gap formalization can make visible.</p>
+<hr>
+<h1 id="dont-hide-the-added-assumptions">Don't Hide the Added Assumptions</h1>
+<p>The first version of the Lean example attempted to use a familiar algebraic abstraction.</p>
+<p>Compiler inspection helped us make the teaching model more explicit.</p>
+<p>The final example introduces a small local algebraic structure containing exactly what the example needs:</p>
+<pre><code class="language-text">ResonanceAlgebra
+├── multiplication
+├── identity
+├── associativity
+├── left identity
+└── right identity
+</code></pre>
+<p>Now the assumptions are visible.</p>
+<p>That is better than hiding them behind notation.</p>
+<hr>
+<h1 id="aaccc-view_3">AACCC View</h1>
+<h2 id="awareness_3">Awareness</h2>
+<p>What three factors did the source actually declare?</p>
+<h2 id="alignment_3">Alignment</h2>
+<p>Which Lean object corresponds to each source factor?</p>
+<h2 id="coherence_3">Coherence</h2>
+<p>What algebraic properties must be supplied before the formal composition behaves as intended?</p>
+<h2 id="clarity_3">Clarity</h2>
+<p>Can we distinguish source declarations from assumptions added by the teaching model?</p>
+<h2 id="continuity_3">Continuity</h2>
+<p>Which results survive if we change the factors, carrier type, or composition rule?</p>
+<hr>
+<h1 id="lean-companion_3">Lean Companion</h1>
+<p>The formal companion is:</p>
+<pre><code class="language-text">10_unified_resonance_theorem.lean
+</code></pre>
+<p>The example proves consequences under the local algebraic structure explicitly supplied in the file.</p>
+<p>It does not prove that the broader Unified Resonance interpretation naturally forms that algebra.</p>
+<p>That distinction is one of the main lessons of the example.</p>
+<hr>
+<h1 id="four-theorems-four-useful-formalization-problems">Four Theorems, Four Useful Formalization Problems</h1>
+<p>The theorem family gives us four different structural challenges:</p>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Formalization Question</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nawderian Theorem</td>
+<td>What relationship does "wraps" actually mean?</td>
+</tr>
+<tr>
+<td>SET Theorem</td>
+<td>How are named contributions composed?</td>
+</tr>
+<tr>
+<td>Temperature Engine</td>
+<td>What follows from the simplified directional relation?</td>
+</tr>
+<tr>
+<td>Unified Resonance</td>
+<td>What algebra must exist for the composition to work?</td>
+</tr>
+</tbody>
+</table>
+<p>Notice the pattern.</p>
+<p>Formalization does not merely ask:</p>
+<blockquote>
+<p>Can I prove this?</p>
+</blockquote>
+<p>It also asks:</p>
+<blockquote>
+<p>What would I have to define before this claim even becomes precise enough to prove?</p>
+</blockquote>
+<p>That can be the more valuable question.</p>
+<hr>
+<h1 id="formalization-can-reveal-missing-definitions">Formalization Can Reveal Missing Definitions</h1>
+<p>An informal statement may seem perfectly understandable to a human reader.</p>
+<p>Then a proof checker asks:</p>
+<blockquote>
+<p>What exactly does that word mean?</p>
+</blockquote>
+<p>For example:</p>
+<pre><code class="language-text">wraps
+</code></pre>
+<p>may be intuitive.</p>
+<p>But does it mean:</p>
+<pre><code class="language-text">contains?
+intersects?
+orders?
+bounds?
+maps?
+connects?
+encloses under another relation?
+</code></pre>
+<p>Until we decide, there is no single formal claim.</p>
+<p>Formalization exposes that uncertainty.</p>
+<p>It does not need to hide it.</p>
+<hr>
+<h1 id="formalization-can-reveal-added-assumptions">Formalization Can Reveal Added Assumptions</h1>
+<p>Similarly:</p>
+<pre><code class="language-text">Q · F · S
+</code></pre>
+<p>looks compact and understandable.</p>
+<p>But formalization asks:</p>
+<blockquote>
+<p>What is · ?</p>
+</blockquote>
+<p>Then:</p>
+<blockquote>
+<p>What rules does · obey?</p>
+</blockquote>
+<p>If we answer:</p>
+<pre><code class="language-text">It is associative.
+It has an identity.
+</code></pre>
+<p>those are now part of the formal model.</p>
+<p>They should be visible.</p>
+<p>That is Clarity.</p>
+<hr>
+<h1 id="formalization-can-narrow-a-claim">Formalization Can Narrow a Claim</h1>
+<p>The Temperature Engine source presents a broader physical interpretation of its gradient relation. 【3-a43fa0】</p>
+<p>Our first Lean example intentionally narrows the task to a signed integer relation.</p>
+<p>That is not necessarily a defect.</p>
+<p>A small formal model can be useful if its boundary is clear.</p>
+<p>The important thing is not to say:</p>
+<blockquote>
+<p>Lean proved the Temperature Engine.</p>
+</blockquote>
+<p>Instead say:</p>
+<blockquote>
+<p>Lean proved these consequences of this simplified formal definition.</p>
+</blockquote>
+<p>That sentence preserves the boundary.</p>
+<hr>
+<h1 id="formalization-can-refuse-a-stronger-claim">Formalization Can Refuse a Stronger Claim</h1>
+<p>The Nawderian dimension example provides another useful case.</p>
+<p>We can prove:</p>
+<blockquote>
+<p>6 belongs to several declared groups.</p>
+</blockquote>
+<p>We cannot automatically upgrade that to:</p>
+<blockquote>
+<p>Therefore the wrapping group contains the union of the visible and invisible groups under ordinary set containment.</p>
+</blockquote>
+<p>The stronger statement requires more.</p>
+<p>Formalization refusing the stronger claim is useful information.</p>
+<hr>
+<h1 id="this-is-why-we-keep-the-source-nearby">This Is Why We Keep the Source Nearby</h1>
+<p>A formal model should not float free from the thing it is intended to represent.</p>
+<p>Keep asking:</p>
+<pre><code class="language-text">Source statement
+      ↓
+Formal interpretation
+      ↓
+Lean definition
+      ↓
+Lean theorem
+      ↓
+Verified consequence
+</code></pre>
+<p>Then inspect every arrow.</p>
+<p>A proof at the bottom does not repair a poor mapping at the top.</p>
+<hr>
+<h1 id="source-alignment">Source Alignment</h1>
+<p>For every theorem formalization, ask:</p>
+<blockquote>
+<p>What came directly from the source?</p>
+</blockquote>
+<p>Then:</p>
+<blockquote>
+<p>What did we simplify?</p>
+</blockquote>
+<p>Then:</p>
+<blockquote>
+<p>What did we add?</p>
+</blockquote>
+<p>Then:</p>
+<blockquote>
+<p>What did we leave out?</p>
+</blockquote>
+<p>That gives the student a small provenance chain.</p>
+<hr>
+<h1 id="example-provenance-record">Example Provenance Record</h1>
+<p>A learner might write:</p>
+<pre><code class="language-text">Source:
+Temperature Engine relation
+
+Source form:
+F_T = -α ∇T
+
+Teaching simplification:
+One-dimensional signed integer model
+
+Formal definition:
+temperatureForce coupling gradient =
+    -(coupling * gradient)
+
+Lean proves:
+Zero and sign-reversal properties
+
+Lean does not prove:
+The broader physical interpretation
+</code></pre>
+<p>That's an excellent formalization record.</p>
+<p>It tells us what happened.</p>
+<hr>
+<h1 id="formal-verification-is-not-empirical-validation">Formal Verification Is Not Empirical Validation</h1>
+<p>This distinction applies to every theorem on this page.</p>
+<p>Lean can help answer:</p>
+<blockquote>
+<p>Given these definitions and assumptions, does this conclusion follow?</p>
+</blockquote>
+<p>Lean does not automatically answer:</p>
+<blockquote>
+<p>Does this model accurately describe nature?</p>
+</blockquote>
+<p>Empirical questions require:</p>
+<ul>
+<li>observations;</li>
+<li>measurements;</li>
+<li>experiments;</li>
+<li>comparative models;</li>
+<li>error analysis;</li>
+<li>and independent testing appropriate to the claim.</li>
+</ul>
+<p>The two forms of validation can support each other.</p>
+<p>They should not be confused.</p>
+<hr>
+<h1 id="compiling-the-formal-companions">Compiling the Formal Companions</h1>
+<p>The relevant Lean files are:</p>
+<pre><code class="language-text">07_nawderian_theorem.lean
+08_nawderian_set_theorem.lean
+09_temperature_engine_theorem.lean
+10_unified_resonance_theorem.lean
+</code></pre>
+<p>They are part of the compiler-checked 5Guides Lean set.</p>
+<p>The teaching set was checked using:</p>
+<pre><code class="language-text">Lean 4.36.0
+x86_64-w64-windows-gnu
+</code></pre>
+<p>Compiler acceptance establishes that Lean accepted the formal artifacts under that environment.</p>
+<p>It does not establish the broader empirical claims of the source documents.</p>
+<hr>
+<h1 id="try-breaking-the-models">Try Breaking the Models</h1>
+<p>Once a theorem compiles, try changing something.</p>
+<p>For example:</p>
+<h2 id="nawderian-theorem">Nawderian Theorem</h2>
+<p>Change a set member.</p>
+<p>Does the shared intersection still hold?</p>
+<h2 id="set">SET</h2>
+<p>Remove one contribution.</p>
+<p>What changes in the total?</p>
+<h2 id="temperature-engine">Temperature Engine</h2>
+<p>Reverse the gradient.</p>
+<p>What changes?</p>
+<p>Set the coupling to zero.</p>
+<p>What remains?</p>
+<h2 id="unified-resonance">Unified Resonance</h2>
+<p>Remove one algebraic law.</p>
+<p>Which proof fails?</p>
+<p>These are useful Continuity exercises.</p>
+<p>You are asking:</p>
+<blockquote>
+<p>Which structures survive the change?</p>
+</blockquote>
+<hr>
+<h1 id="try-strengthening-a-claim">Try Strengthening a Claim</h1>
+<p>You can also deliberately ask Lean for more than the current model establishes.</p>
+<p>Then inspect the failure.</p>
+<p>For example:</p>
+<blockquote>
+<p>Can ordinary set membership prove the wrapping relation?</p>
+</blockquote>
+<p>Or:</p>
+<blockquote>
+<p>Can the Unified Resonance example prove associativity without supplying associativity?</p>
+</blockquote>
+<p>The failed proof attempt may reveal exactly what additional structure the stronger claim requires.</p>
+<p>That is not wasted effort.</p>
+<p>That is formal Awareness.</p>
+<hr>
+<h1 id="try-weakening-a-claim">Try Weakening a Claim</h1>
+<p>Sometimes a theorem fails because it asks for too much.</p>
+<p>Instead of immediately adding assumptions, ask:</p>
+<blockquote>
+<p>What is the strongest claim the current evidence actually supports?</p>
+</blockquote>
+<p>This is just as important.</p>
+<p>A smaller honest theorem is often better than a larger theorem supported only by convenient assumptions.</p>
+<hr>
+<h1 id="dont-make-lean-happy-at-any-cost">Don't Make Lean Happy at Any Cost</h1>
+<p>A proof checker gives us a very tempting target:</p>
+<pre><code class="language-text">No errors
+</code></pre>
+<p>But that should not become the only goal.</p>
+<p>You can often make a theorem easier to prove by changing:</p>
+<ul>
+<li>the assumptions;</li>
+<li>the definitions;</li>
+<li>the target;</li>
+<li>the types;</li>
+<li>the relationships.</li>
+</ul>
+<p>Sometimes that is exactly the right correction.</p>
+<p>Sometimes it merely makes the formalization stop representing the original idea.</p>
+<p>So when a proof begins working, ask:</p>
+<blockquote>
+<p>Did I fix the model?</p>
+</blockquote>
+<p>or:</p>
+<blockquote>
+<p>Did I change the question?</p>
+</blockquote>
+<p>Both can be legitimate.</p>
+<p>They are not the same.</p>
+<hr>
+<h1 id="aaccc-applied-to-formalization">AACCC Applied to Formalization</h1>
+<p>The theorem examples can be inspected using all five Guides.</p>
+<h2 id="awareness_4">Awareness</h2>
+<p>What did the source actually state?</p>
+<p>What did the formal model actually define?</p>
+<h2 id="alignment_4">Alignment</h2>
+<p>Does the formal representation correspond to the source concept?</p>
+<p>Where does the mapping become approximate?</p>
+<h2 id="coherence_4">Coherence</h2>
+<p>Do the conclusions follow from the formal definitions and assumptions?</p>
+<p>Are any assumptions incompatible?</p>
+<h2 id="clarity_4">Clarity</h2>
+<p>Can another person tell:</p>
+<ul>
+<li>what came from the source;</li>
+<li>what was added;</li>
+<li>what was proved;</li>
+<li>what remains outside the proof?</li>
+</ul>
+<h2 id="continuity_4">Continuity</h2>
+<p>What happened to the idea as it moved through:</p>
+<pre><code class="language-text">Informal concept
+      ↓
+Mathematical notation
+      ↓
+Formal model
+      ↓
+Lean theorem
+      ↓
+Verified artifact
+</code></pre>
+<p>What persisted?</p>
+<p>What changed?</p>
+<p>What was lost?</p>
+<p>What became clearer?</p>
+<hr>
+<h1 id="why-this-matters-for-5guides">Why This Matters for 5Guides</h1>
+<p>AACCC is not intended only for inspecting other people's ideas.</p>
+<p>It should also be able to inspect the project lineage from which it emerged.</p>
+<p>That means we should be comfortable discovering:</p>
+<ul>
+<li>vague terms;</li>
+<li>unsupported mappings;</li>
+<li>missing definitions;</li>
+<li>assumptions;</li>
+<li>useful abstractions;</li>
+<li>formal inconsistencies;</li>
+<li>or places where a claim should be narrowed.</li>
+</ul>
+<p>If AACCC only confirms its own ancestry, it isn't doing enough work.</p>
+<p>The better result is:</p>
+<blockquote>
+<p>We can turn the same questions back onto our own material.</p>
+</blockquote>
+<p>That makes the lineage inspectable rather than protected.</p>
+<hr>
+<h1 id="source-documents">Source Documents</h1>
+<p>The theorem source files used for this lineage section are:</p>
+<ul>
+<li><code>Nawderian_Theorem.md</code></li>
+<li><code>Nawderian_SET_Theorem.md</code></li>
+<li><code>Nawderian_Temperature_Engine_Theorem.md</code></li>
+<li><code>Unified_Resonance_Theorem.md</code></li>
+</ul>
+<p>The current Nawderian Theorem source declares the corridor, wrapping, visible, and invisible structures discussed above. 【1-4fafea】</p>
+<p>The SET source defines its Spin, Electrolysis/field-charge, and Temperature grouping and its additive total-effective-acceleration form. 【2-9f8ee8】</p>
+<p>The Temperature Engine source defines its hot/cold/gradient triad and the relation <code>F_T = -α∇T</code>. 【3-a43fa0】</p>
+<p>The Unified Resonance source is marked Canonical Draft and defines the three-factor expression using a quadrant constant, frequency-band modulation, and dimensional symbolic overlay. 【4-1ee7a7】</p>
+<hr>
+<h1 id="continue-through-the-origins">Continue Through the Origins</h1>
+<p>The theorem stage sits between the earlier triadic framework material and the later RTT material.</p>
+<p>A useful path is:</p>
+<pre><code class="language-text">TFT
+ ↓
+Theorems
+ ↓
+RTT
+ ↓
+AACCC
+</code></pre>
+<p>Continue with:</p>
+<p><code>rtt.md</code></p>
+<p>Or step back to:</p>
+<p><code>tft.md</code></p>
+<p>For the formalization boundary itself, see:</p>
+<p><code>formalization.md</code></p>
+<p>For the Lean examples, see:</p>
+<p><code>../lean/index.md</code></p>
+<hr>
+<blockquote>
+<p>The theorem stage is useful not because every exploratory claim must survive unchanged, but because making claims explicit gives us something we can finally inspect.</p>
+</blockquote>
   </main>
 </body>
 </html>

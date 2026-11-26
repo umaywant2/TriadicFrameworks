@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/5Guides/clarity/mastery.md">
-  <title>mastery</title>
+  <title>Clarity Mastery</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,7 +92,749 @@
   </aside>
 
   <main>
-<p>. </p>
+<h1 id="clarity-mastery">Clarity Mastery</h1>
+<blockquote>
+<p>Can this be understood well enough to inspect?</p>
+</blockquote>
+<p>You have explored Clarity.</p>
+<p>You have practiced:</p>
+<ul>
+<li>exposing important structure;</li>
+<li>defining ambiguous terms;</li>
+<li>separating claims from evidence;</li>
+<li>making assumptions visible;</li>
+<li>showing missing steps;</li>
+<li>preserving uncertainty;</li>
+<li>changing representations;</li>
+<li>and comparing revisions for meaning drift.</li>
+</ul>
+<p>Now it is time to use the skill on a fresh problem.</p>
+<p>The goal is not to make something sound better.</p>
+<p>The goal is:</p>
+<blockquote>
+<p>Make the important meaning and relationships visible without quietly changing what they say.</p>
+</blockquote>
+<hr>
+<h1 id="before-you-begin">Before You Begin</h1>
+<p>Bring the earlier Guides with you.</p>
+<pre><code class="language-text">Awareness
+What am I observing?
+
+Alignment
+What corresponds?
+
+Coherence
+Does this hold together?
+
+Clarity
+Can this be understood and inspected?
+</code></pre>
+<p>You will need all four.</p>
+<p>Awareness helps you identify what was actually stated.</p>
+<p>Alignment helps you compare the original and revised versions.</p>
+<p>Coherence helps you check whether the explanation still holds together.</p>
+<p>Clarity asks whether another person can now inspect the structure.</p>
+<hr>
+<h1 id="the-mastery-challenge">The Mastery Challenge</h1>
+<p>Imagine a small software team sends this update to its users:</p>
+<pre><code class="language-text">We changed the login system because some users
+were having problems and the old process wasn't
+working correctly in some cases, so the new process
+should make things more reliable and secure while
+also making login easier, although some users may
+need to do something different the first time.
+</code></pre>
+<p>Read it once.</p>
+<p>What do you actually know?</p>
+<p>Now imagine you are one of the users.</p>
+<p>You probably have questions.</p>
+<hr>
+<h1 id="dont-rewrite-it-yet">Don't Rewrite It Yet</h1>
+<p>The first temptation is:</p>
+<blockquote>
+<p>I can make that much shorter.</p>
+</blockquote>
+<p>Maybe.</p>
+<p>But before touching the words, inspect the meaning.</p>
+<p>Ask:</p>
+<blockquote>
+<p>What is actually being claimed?</p>
+<p>What remains vague?</p>
+<p>Which terms need definition?</p>
+<p>What important information is missing?</p>
+<p>Which claims are stronger than the evidence provided?</p>
+</blockquote>
+<p>The rewrite comes later.</p>
+<hr>
+<h1 id="step-1-awareness">Step 1 — Awareness</h1>
+<p>Separate what the update actually says from what you may be filling in.</p>
+<p>The update says:</p>
+<pre><code class="language-text">The login system changed.
+
+Some users had problems with the old process.
+
+The old process did not work correctly in some cases.
+
+The new process is expected to improve reliability.
+
+The new process is expected to improve security.
+
+The new process is expected to make login easier.
+
+Some users may need to do something different
+the first time.
+</code></pre>
+<p>Now list what it does not tell you.</p>
+<p>For example:</p>
+<pre><code class="language-text">What problems occurred?
+
+What does &quot;some cases&quot; mean?
+
+What changed in the login process?
+
+Why is the new process expected to be more reliable?
+
+Why is it expected to be more secure?
+
+What will be easier?
+
+Which users are affected?
+
+What must affected users do?
+
+When does the change begin?
+</code></pre>
+<p>Do not invent the answers.</p>
+<p>Missing information should remain missing until it is supplied.</p>
+<hr>
+<h1 id="step-2-find-the-ambiguity">Step 2 — Find the Ambiguity</h1>
+<p>Several phrases carry a lot of meaning:</p>
+<pre><code class="language-text">some users
+
+problems
+
+wasn't working correctly
+
+some cases
+
+more reliable
+
+more secure
+
+easier
+
+something different
+</code></pre>
+<p>Ask:</p>
+<blockquote>
+<p>Could two readers reasonably interpret this differently?</p>
+</blockquote>
+<p>If yes, the phrase may need clarification.</p>
+<hr>
+<h1 id="step-3-separate-observation-from-promise">Step 3 — Separate Observation From Promise</h1>
+<p>The update mixes several kinds of statements.</p>
+<p>Try sorting them.</p>
+<pre><code class="language-text">Observed / Reported Problem:
+...
+
+Change:
+...
+
+Expected Benefit:
+...
+
+User Impact:
+...
+
+Unknown:
+...
+</code></pre>
+<p>For example:</p>
+<pre><code class="language-text">Change:
+The login system was modified.
+
+Expected Benefit:
+Improved reliability and security.
+
+User Impact:
+Some users may need a different first-login step.
+
+Unknown:
+The exact first-login step is not provided.
+</code></pre>
+<p>Already, the structure is easier to inspect.</p>
+<p>You have not even rewritten the announcement yet.</p>
+<hr>
+<h1 id="step-4-identify-meaning-that-must-be-preserved">Step 4 — Identify Meaning That Must Be Preserved</h1>
+<p>Before revising, write down what the new version must not silently lose.</p>
+<p>Possible items include:</p>
+<pre><code class="language-text">The login system changed.
+
+The change responds to problems with the earlier process.
+
+Reliability improvement is an expectation.
+
+Security improvement is an expectation.
+
+The new process is intended to make login easier.
+
+Some users may encounter a different first-login process.
+
+Several implementation details are not provided.
+</code></pre>
+<p>These become your preservation targets.</p>
+<hr>
+<h1 id="step-5-be-careful-with-stronger-language">Step 5 — Be Careful With Stronger Language</h1>
+<p>Compare:</p>
+<pre><code class="language-text">The new process should make login more reliable.
+</code></pre>
+<p>with:</p>
+<pre><code class="language-text">The new process makes login more reliable.
+</code></pre>
+<p>Then:</p>
+<pre><code class="language-text">The new process guarantees reliable login.
+</code></pre>
+<p>Those are not equivalent.</p>
+<p>If the original says:</p>
+<pre><code class="language-text">should
+</code></pre>
+<p>do not quietly rewrite it as:</p>
+<pre><code class="language-text">guarantees
+</code></pre>
+<p>unless additional evidence supports the stronger claim.</p>
+<p>Clarity should not manufacture certainty.</p>
+<hr>
+<h1 id="step-6-make-the-structure-visible">Step 6 — Make the Structure Visible</h1>
+<p>Instead of one long paragraph, you might organize the information like this:</p>
+<pre><code class="language-text">What changed:
+The login process was updated.
+
+Why:
+Some users experienced problems with the previous process.
+
+Expected improvements:
+- reliability;
+- security;
+- ease of login.
+
+Possible user impact:
+Some users may encounter a different step during
+their first login after the change.
+
+Still unspecified:
+The exact first-login change is not described.
+</code></pre>
+<p>Notice what happened.</p>
+<p>We did not solve the missing information.</p>
+<p>We made the missing information visible.</p>
+<p>That is a Clarity improvement.</p>
+<hr>
+<h1 id="step-7-decide-what-the-reader-needs">Step 7 — Decide What the Reader Needs</h1>
+<p>Now ask:</p>
+<blockquote>
+<p>What does the user need in order to act?</p>
+</blockquote>
+<p>Perhaps:</p>
+<pre><code class="language-text">What should I expect?
+
+Do I need to do anything?
+
+When will I encounter the change?
+
+What should I do if login fails?
+</code></pre>
+<p>The original update does not answer all of those questions.</p>
+<p>That is useful to know.</p>
+<p>Clarity can expose where additional information is needed.</p>
+<hr>
+<h1 id="dont-invent-the-missing-instructions">Don't Invent the Missing Instructions</h1>
+<p>Suppose you think:</p>
+<blockquote>
+<p>Users probably need to reset their passwords.</p>
+</blockquote>
+<p>Do not add:</p>
+<pre><code class="language-text">You will need to reset your password.
+</code></pre>
+<p>unless the source information actually supports it.</p>
+<p>That would make the notice more specific by making it less trustworthy.</p>
+<p>A better placeholder in the analysis is:</p>
+<pre><code class="language-text">Missing:
+Exact action required from affected users.
+</code></pre>
+<hr>
+<h1 id="a-possible-revision">A Possible Revision</h1>
+<p>Using only information currently available, you might write:</p>
+<pre><code class="language-text">The login process has been updated after some users
+experienced problems with the previous process.
+
+The new process is intended to improve login reliability,
+security, and ease of use.
+
+Some users may encounter a different step the first time
+they log in after the change.
+
+The exact first-login change is not described in the
+information currently available.
+</code></pre>
+<p>This version may be easier to inspect.</p>
+<p>But the work is not finished.</p>
+<p>Now compare it with the original.</p>
+<hr>
+<h1 id="step-8-alignment-check">Step 8 — Alignment Check</h1>
+<p>Ask:</p>
+<blockquote>
+<p>Does every important part of the revision correspond to something in the original?</p>
+</blockquote>
+<p>Create a quick mapping:</p>
+<pre><code class="language-text">Original:
+login system changed
+
+Revision:
+login process updated
+
+Status:
+aligned
+</code></pre>
+<p>Then:</p>
+<pre><code class="language-text">Original:
+some users were having problems
+
+Revision:
+some users experienced problems
+
+Status:
+aligned
+</code></pre>
+<p>Then:</p>
+<pre><code class="language-text">Original:
+more reliable and secure
+
+Revision:
+intended to improve reliability and security
+
+Status:
+aligned
+</code></pre>
+<p>Continue through the important claims.</p>
+<p>If a revised statement has no source partner, investigate it.</p>
+<hr>
+<h1 id="step-9-coherence-check">Step 9 — Coherence Check</h1>
+<p>Now ask:</p>
+<blockquote>
+<p>Does the clearer explanation still hold together?</p>
+</blockquote>
+<p>For example:</p>
+<pre><code class="language-text">Problem
+   ↓
+System Change
+   ↓
+Expected Improvements
+   ↓
+Possible User Impact
+</code></pre>
+<p>Is that what the source supports?</p>
+<p>Do not add a causal relationship stronger than what was supplied.</p>
+<p>The structure should become easier to inspect without becoming more ambitious.</p>
+<hr>
+<h1 id="step-10-clarity-check">Step 10 — Clarity Check</h1>
+<p>Now test the revision.</p>
+<p>Can a reader identify:</p>
+<pre><code class="language-text">What changed?
+
+Why it changed?
+
+What benefits are expected?
+
+Who may notice a difference?
+
+What remains unknown?
+</code></pre>
+<p>If yes, the structure is more visible.</p>
+<p>That is progress.</p>
+<hr>
+<h1 id="build-your-clarity-record">Build Your Clarity Record</h1>
+<p>Use this structure:</p>
+<pre><code class="language-text">CLARITY RECORD
+
+Original:
+...
+
+Audience:
+...
+
+Purpose:
+...
+
+Main Claim:
+...
+
+Meaning to Preserve:
+...
+
+Ambiguous Terms:
+...
+
+Hidden Assumptions:
+...
+
+Missing Steps:
+...
+
+Missing Information:
+...
+
+Uncertainty:
+...
+
+Chosen Representation:
+...
+
+Revised Version:
+...
+
+What Changed:
+...
+
+What Was Removed:
+...
+
+What Was Added:
+...
+
+Meaning Preserved:
+...
+
+Possible Meaning Drift:
+...
+
+Current Judgment:
+Clear / Partly Clear / Unclear
+
+What Still Needs Clarification:
+...
+</code></pre>
+<p>You do not need every field for every problem.</p>
+<p>Use enough structure to make your revision inspectable.</p>
+<hr>
+<h1 id="clarity-is-not-copyediting">Clarity Is Not Copyediting</h1>
+<p>This challenge is not primarily about:</p>
+<pre><code class="language-text">grammar
+
+punctuation
+
+spelling
+
+style
+</code></pre>
+<p>Those matter.</p>
+<p>But they are not the core mastery target.</p>
+<p>You are practicing structural questions:</p>
+<blockquote>
+<p>Can I tell what is being claimed?</p>
+<p>Can I tell what supports it?</p>
+<p>Can I identify what is missing?</p>
+<p>Can I preserve uncertainty?</p>
+<p>Can another person follow the important relationships?</p>
+</blockquote>
+<p>That is deeper than polishing sentences.</p>
+<hr>
+<h1 id="representation-is-part-of-the-solution">Representation Is Part of the Solution</h1>
+<p>Your clearest result may not be another paragraph.</p>
+<p>You might use:</p>
+<pre><code class="language-text">Heading
++
+Short explanation
++
+List of expected changes
++
+List of unknowns
+</code></pre>
+<p>Or:</p>
+<pre><code class="language-text">Before / After table
+</code></pre>
+<p>Or:</p>
+<pre><code class="language-text">Simple process flow
+</code></pre>
+<p>Or:</p>
+<pre><code class="language-text">Claim / Evidence / Uncertainty
+</code></pre>
+<p>Choose the representation that makes the important structure easiest to inspect.</p>
+<hr>
+<h1 id="but-representation-can-change-emphasis">But Representation Can Change Emphasis</h1>
+<p>A table may make comparison easier.</p>
+<p>A sequence may make order clearer.</p>
+<p>A diagram may make relationships easier to see.</p>
+<p>A paragraph may preserve nuance better.</p>
+<p>There is no universally clearest format.</p>
+<p>Ask:</p>
+<blockquote>
+<p>Clear for which purpose?</p>
+</blockquote>
+<p>Then choose.</p>
+<hr>
+<h1 id="mastery-criteria">Mastery Criteria</h1>
+<p>You are demonstrating Clarity when you can substantially do the following.</p>
+<h2 id="identify-meaning">Identify Meaning</h2>
+<p>Can you identify what the original actually says?</p>
+<h2 id="preserve-meaning">Preserve Meaning</h2>
+<p>Can you improve inspectability without quietly changing the claim?</p>
+<h2 id="detect-ambiguity">Detect Ambiguity</h2>
+<p>Can you identify terms or structures that reasonably support multiple interpretations?</p>
+<h2 id="expose-missing-steps">Expose Missing Steps</h2>
+<p>Can you identify where important reasoning or process is hidden?</p>
+<h2 id="preserve-uncertainty">Preserve Uncertainty</h2>
+<p>Can you keep qualifications and unknowns visible?</p>
+<h2 id="avoid-inventing-detail">Avoid Inventing Detail</h2>
+<p>Can you resist filling missing information merely to make the explanation smoother?</p>
+<h2 id="choose-representation">Choose Representation</h2>
+<p>Can you choose a format that makes the important structure easier to inspect?</p>
+<h2 id="compare-versions">Compare Versions</h2>
+<p>Can you explain what changed between the original and revision?</p>
+<h2 id="detect-meaning-drift">Detect Meaning Drift</h2>
+<p>Can you identify when a clearer version has become a different claim?</p>
+<hr>
+<h1 id="what-mastery-does-not-require">What Mastery Does Not Require</h1>
+<p>You do not need to:</p>
+<ul>
+<li>produce the shortest explanation;</li>
+<li>use the most technical language;</li>
+<li>remove every detail;</li>
+<li>eliminate uncertainty;</li>
+<li>make the writing sound confident;</li>
+<li>use Lean;</li>
+<li>use AI;</li>
+<li>choose the same wording as another learner.</li>
+</ul>
+<p>The mastery target is:</p>
+<blockquote>
+<p>Can another person inspect the important meaning and relationships without the revision quietly changing what was there?</p>
+</blockquote>
+<hr>
+<h1 id="if-you-get-stuck">If You Get Stuck</h1>
+<p>Return to:</p>
+<pre><code class="language-text">What does the original say?
+
+What is difficult to inspect?
+
+What must be preserved?
+
+What is ambiguous?
+
+What is missing?
+
+What is uncertain?
+
+What representation would help?
+
+What changed after revision?
+</code></pre>
+<p>That is enough to restart the process.</p>
+<hr>
+<h1 id="a-useful-retry">A Useful Retry</h1>
+<p>If your revision sounds wonderfully polished, compare every important claim with the original.</p>
+<p>Ask:</p>
+<pre><code class="language-text">Source for this claim:
+...
+</code></pre>
+<p>If you cannot find one, you may have added something.</p>
+<p>Remove it or label it as an interpretation.</p>
+<p>Then try again.</p>
+<hr>
+<h1 id="another-retry">Another Retry</h1>
+<p>If your revision becomes much longer than the original, ask:</p>
+<blockquote>
+<p>Did I clarify the structure?</p>
+</blockquote>
+<p>or:</p>
+<blockquote>
+<p>Did I simply add more words?</p>
+</blockquote>
+<p>Remove anything that does not help the reader inspect:</p>
+<ul>
+<li>meaning;</li>
+<li>relationship;</li>
+<li>condition;</li>
+<li>uncertainty;</li>
+<li>action.</li>
+</ul>
+<p>Length is not Clarity.</p>
+<hr>
+<h1 id="optional-ai-practice">Optional AI Practice</h1>
+<p>If you want an AI thinking partner, try:</p>
+<blockquote>
+<p>Ask me questions that help identify what the original meaning requires me to preserve.</p>
+</blockquote>
+<p>Or:</p>
+<blockquote>
+<p>Compare my revision with the original and identify possible meaning drift.</p>
+</blockquote>
+<p>Or:</p>
+<blockquote>
+<p>Find one ambiguous phrase without rewriting the passage for me.</p>
+</blockquote>
+<p>Or:</p>
+<blockquote>
+<p>Tell me what claim became stronger or weaker.</p>
+</blockquote>
+<p>Or:</p>
+<blockquote>
+<p>Suggest a different representation without adding new facts.</p>
+</blockquote>
+<p>Then inspect the response yourself.</p>
+<p>See:</p>
+<p><code>../shared/ai_companion.md</code></p>
+<hr>
+<h1 id="optional-formal-practice">Optional Formal Practice</h1>
+<p>The formal Clarity companion is:</p>
+<pre><code class="language-text">04_clarity.lean
+</code></pre>
+<p>The Lean example explores multiple ways to express a proof while preserving the same formal result.</p>
+<p>The question becomes:</p>
+<blockquote>
+<p>Which representation makes the proof structure easier to inspect?</p>
+</blockquote>
+<p>The formal path is optional.</p>
+<p>See:</p>
+<p><code>../lean/index.md</code></p>
+<hr>
+<h1 id="mastery-self-check">Mastery Self-Check</h1>
+<p>Before completing the Guide, ask:</p>
+<pre><code class="language-text">Can I identify the original meaning?
+
+Can I identify what must be preserved?
+
+Can I find ambiguity?
+
+Can I expose missing steps?
+
+Can I preserve uncertainty?
+
+Can I distinguish source information from interpretation?
+
+Can I choose an appropriate representation?
+
+Can I compare before and after?
+
+Can I detect meaning drift?
+
+Can another person inspect my revision?
+</code></pre>
+<p>If most of those answers are yes, you are using Clarity.</p>
+<hr>
+<h1 id="clarity-badge">Clarity Badge</h1>
+<p>When you can demonstrate the process on a fresh problem:</p>
+<blockquote>
+<p>Clarity</p>
+<p>I can make important structure easier to understand and inspect while preserving what matters.</p>
+</blockquote>
+<p>This is the fourth Five Guides milestone.</p>
+<p>It is not professional certification.</p>
+<p>It is not accreditation.</p>
+<p>It means you completed the Clarity learning journey and demonstrated the skill defined by the Guide.</p>
+<p>See:</p>
+<p><code>../shared/badges.md</code></p>
+<hr>
+<h1 id="private-reflection">Private Reflection</h1>
+<p>Before continuing, ask yourself:</p>
+<blockquote>
+<p>What do I usually do when something is difficult to explain?</p>
+</blockquote>
+<p>Then:</p>
+<blockquote>
+<p>Do I add detail, remove detail, or change the representation?</p>
+</blockquote>
+<p>Then:</p>
+<blockquote>
+<p>Have I ever made something sound clearer by accidentally making the claim stronger?</p>
+</blockquote>
+<p>You do not need to submit the answers.</p>
+<p>They belong to you.</p>
+<hr>
+<h1 id="optional-student-footprint">Optional Student Footprint</h1>
+<p>After completing the Guide, you may eventually choose to leave a small voluntary Footprint.</p>
+<p>For example:</p>
+<pre><code class="language-text">Where are you learning from?
+[ Optional country ]
+
+One thought about your experience:
+[ Optional short reflection ]
+</code></pre>
+<p>No name is required.</p>
+<p>No email is required.</p>
+<p>No Footprint is required.</p>
+<p>Choosing not to leave one changes nothing about what you accomplished.</p>
+<p>See:</p>
+<p><code>../shared/student_footprint.md</code></p>
+<hr>
+<h1 id="privacy">Privacy</h1>
+<p>Learning, mastery, badges, and voluntary feedback remain separate.</p>
+<p>The intended learning path is:</p>
+<pre><code class="language-text">Learn
+ ↓
+Practice
+ ↓
+Mastery
+ ↓
+Badge
+ ↓
+Continue
+</code></pre>
+<p>The optional Footprint is outside the mastery requirement.</p>
+<p>See:</p>
+<p><code>../shared/privacy.md</code></p>
+<hr>
+<h1 id="bridge-to-continuity">Bridge to Continuity</h1>
+<p>You can now ask:</p>
+<blockquote>
+<p>What am I observing?</p>
+</blockquote>
+<p>Then:</p>
+<blockquote>
+<p>What corresponds?</p>
+</blockquote>
+<p>Then:</p>
+<blockquote>
+<p>Does this hold together?</p>
+</blockquote>
+<p>Then:</p>
+<blockquote>
+<p>Can this be understood well enough to inspect?</p>
+</blockquote>
+<p>Now imagine you have done all of that.</p>
+<p>The structure is visible.</p>
+<p>The meaning is clear.</p>
+<p>Then something changes.</p>
+<p>A new version appears.</p>
+<p>A component is replaced.</p>
+<p>A belief is revised.</p>
+<p>A system enters another state.</p>
+<p>A pattern begins to drift.</p>
+<p>Now we have one final question:</p>
+<blockquote>
+<p>What persists through change?</p>
+</blockquote>
+<p>Welcome to Continuity.</p>
+<hr>
+<h1 id="continue">Continue</h1>
+<p>Next Guide:</p>
+<p><code>../continuity/</code></p>
+<p>Or revisit:</p>
+<p><code>explore.md</code></p>
+<p><code>practice.md</code></p>
+<p>Formal companion:</p>
+<p><code>../lean/04_clarity.lean</code></p>
+<hr>
+<h2 id="current-position">Current Position</h2>
+<pre><code class="language-text">Awareness       ✓
+Alignment       ✓
+Coherence       ✓
+Clarity         ✓
+Continuity      ← Next
+</code></pre>
+<hr>
+<blockquote>
+<p>Clarity mastery is not making an idea sound better. It is making its important structure visible without quietly turning it into a different idea.</p>
+</blockquote>
   </main>
 </body>
 </html>
