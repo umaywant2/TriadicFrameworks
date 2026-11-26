@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="5Guides_origins_formalization_" src="https://github.com/user-attachments/assets/c91d2d82-7c19-4a90-802f-20a79b3f601f" />
+
 # Formalization
 
 > Formalization helps us say exactly what we mean, what we assume, and what actually follows.
