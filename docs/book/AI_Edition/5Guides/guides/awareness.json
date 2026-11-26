@@ -1,1 +1,854 @@
-. 
+{
+  "document": {
+    "id": "5Guides-guide-awareness",
+    "type": "guide-learning-object",
+    "name": "Awareness",
+    "title": "5Guides — Awareness",
+    "edition": "AI Edition",
+    "module": "5Guides",
+    "framework": "AACCC",
+    "guide_order": 1,
+    "version": "1.0",
+    "status": "active",
+    "language": "en",
+    "ai_path": "docs/book/AI_Edition/5Guides/guides/awareness.json"
+  },
+  "source": {
+    "root": "docs/5Guides/awareness",
+    "documents": [
+      "docs/5Guides/awareness/index.md",
+      "docs/5Guides/awareness/explore.md",
+      "docs/5Guides/awareness/practice.md",
+      "docs/5Guides/awareness/mastery.md"
+    ],
+    "formal_companion": "docs/5Guides/lean/01_awareness.lean",
+    "ai_formal_companion": "../lean/01_awareness.json"
+  },
+  "identity": {
+    "id": "awareness",
+    "name": "Awareness",
+    "order": 1,
+    "core_question": "What am I observing?",
+    "student_artifact": "Awareness Record",
+    "badge": "Awareness Badge",
+    "previous_guide": null,
+    "next_guide": "alignment.json"
+  },
+  "purpose": {
+    "primary": "Teach learners to distinguish what is actually available from what they interpret, assume, predict, remember, imagine, or do not yet know.",
+    "learning_goal": "Build an observation state solid enough that another person can inspect what is known, what has been added through interpretation, and where uncertainty begins.",
+    "principle": "Know what you observed, know what you added, and know where the unknown begins."
+  },
+  "position_in_aaccc": {
+    "sequence": [
+      "Awareness",
+      "Alignment",
+      "Coherence",
+      "Clarity",
+      "Continuity"
+    ],
+    "current": "Awareness",
+    "previous": null,
+    "next": "Alignment",
+    "foundation_role": true,
+    "recursive": true,
+    "return_condition": "Later Guides may expose a problem requiring a fresh observation cycle."
+  },
+  "first_question": {
+    "ask": "What am I actually observing?",
+    "before": [
+      "What probably happened?",
+      "What does this remind me of?",
+      "What do I already believe about this?",
+      "What conclusion should I reach?"
+    ]
+  },
+  "core_model": {
+    "sequence": [
+      "Observation",
+      "Interpretation",
+      "Assumption",
+      "Conclusion"
+    ],
+    "inspection_categories": [
+      "Observed",
+      "Interpreted",
+      "Assumed",
+      "Unknown"
+    ],
+    "principle": "These layers may occur quickly in ordinary reasoning, but they should remain distinguishable when the difference matters."
+  },
+  "key_distinctions": [
+    {
+      "left": "observation",
+      "right": "interpretation",
+      "principle": "What is available is different from what it may mean."
+    },
+    {
+      "left": "interpretation",
+      "right": "fact",
+      "principle": "A plausible explanation should not silently become an observation."
+    },
+    {
+      "left": "assumption",
+      "right": "established relationship",
+      "principle": "An assumption may help reasoning while remaining something not directly established."
+    },
+    {
+      "left": "unknown",
+      "right": "failure",
+      "principle": "Unknown is a legitimate information state."
+    },
+    {
+      "left": "prediction",
+      "right": "observation",
+      "principle": "A prediction becomes an observation only after relevant information is actually obtained."
+    },
+    {
+      "left": "memory",
+      "right": "current observation",
+      "principle": "Confidence in a memory does not change its information source."
+    },
+    {
+      "left": "imagination",
+      "right": "observation",
+      "principle": "Imagined detail may be useful without being treated as currently observed."
+    },
+    {
+      "left": "sequence",
+      "right": "causation",
+      "principle": "A occurring before B does not by itself establish that A caused B."
+    },
+    {
+      "left": "confidence",
+      "right": "evidence",
+      "principle": "Confidence is a feature of a judgment, not independent support for that judgment."
+    },
+    {
+      "left": "system label",
+      "right": "underlying reality",
+      "principle": "A label such as HEALTHY or ERROR reflects a classification rule and should not automatically be treated as the entire state of the system."
+    }
+  ],
+  "four_boxes": {
+    "observed": {
+      "meaning": "Information currently available through the relevant source or observation boundary."
+    },
+    "interpreted": {
+      "meaning": "Possible meaning assigned to available information."
+    },
+    "assumed": {
+      "meaning": "A condition currently being treated as true without direct establishment in the observation state."
+    },
+    "unknown": {
+      "meaning": "Information not currently established."
+    },
+    "principle": "Do not empty the Unknown box merely because an explanation feels more complete when every gap is filled."
+  },
+  "observation": {
+    "definition": "Information currently available through the source, method, position, or boundary being used.",
+    "example": {
+      "observed": "The pavement is wet.",
+      "interpretation": "It may have rained."
+    }
+  },
+  "interpretation": {
+    "allowed": true,
+    "necessary_for_reasoning": true,
+    "rule": "Label interpretation as interpretation when the distinction matters.",
+    "example": {
+      "observation": "The classroom is dark.",
+      "interpretation": "The room may be empty."
+    }
+  },
+  "assumption": {
+    "allowed": true,
+    "principle": "Reasoning cannot eliminate all assumptions; important assumptions should become visible.",
+    "example": {
+      "observation": "The classroom is dark.",
+      "interpretation": "The room may be empty.",
+      "assumption": "An occupied classroom would normally have its lights on."
+    }
+  },
+  "unknown": {
+    "valid_state": true,
+    "example": "Whether anyone is actually inside the classroom.",
+    "principle": "I do not know yet may be the strongest supported current answer."
+  },
+  "interpretation_generation": {
+    "purpose": "Prevent the first plausible story from silently becoming the only story.",
+    "pattern": [
+      "Observation",
+      "Interpretation A",
+      "Interpretation B",
+      "Interpretation C"
+    ],
+    "rule": "Generating alternatives does not require believing all alternatives."
+  },
+  "observer_position": {
+    "principle": "Where and how an observer has access affects what information is available.",
+    "may_include": [
+      "physical position",
+      "system role",
+      "measurement method",
+      "available records",
+      "time",
+      "access level",
+      "prior knowledge"
+    ],
+    "questions": [
+      "Where am I observing from?",
+      "What can I access from here?",
+      "What can I not access from here?"
+    ]
+  },
+  "multiple_observers": {
+    "principle": "Different observations do not automatically imply observer error or bias.",
+    "example": {
+      "observer_a": {
+        "position": "front of object",
+        "observation": "red label visible"
+      },
+      "observer_b": {
+        "position": "back of object",
+        "observation": "no red label visible"
+      }
+    },
+    "lesson": "Different access can produce different accurate descriptions."
+  },
+  "perspective_not_automatically_bias": {
+    "principle": "Different reports may arise from different observational access before bias needs to be proposed as an explanation.",
+    "first_check": [
+      "observer position",
+      "boundary",
+      "available information",
+      "measurement method"
+    ]
+  },
+  "boundary": {
+    "definition": "What is currently treated as part of the observed system or problem.",
+    "questions": [
+      "What am I including?",
+      "What am I excluding?",
+      "Should I zoom in?",
+      "Should I zoom out?"
+    ],
+    "principle": "Changing the boundary changes what becomes observable."
+  },
+  "scale": {
+    "levels": [
+      "wide",
+      "middle",
+      "close"
+    ],
+    "principle": "Different questions may require different observational scales.",
+    "example": [
+      "entire bicycle",
+      "drivetrain",
+      "chain"
+    ]
+  },
+  "blind_spots": {
+    "definition": "Information unavailable from the current observation position, boundary, or method.",
+    "not_failure": true,
+    "questions": [
+      "What can I not currently see?",
+      "Which blind spots matter to this problem?",
+      "What additional observation could expose one?"
+    ]
+  },
+  "prediction": {
+    "principle": "Prediction and observation may eventually contain the same proposition while having different information sources.",
+    "pattern": [
+      "predict hidden side",
+      "inspect hidden side",
+      "compare prediction with observation"
+    ]
+  },
+  "memory": {
+    "information_source": "memory",
+    "current_observation": false,
+    "confidence_allowed": true,
+    "principle": "Confidence describes certainty, not source."
+  },
+  "imagination": {
+    "information_source": "imagination",
+    "useful_for": [
+      "planning",
+      "design",
+      "creativity",
+      "alternative generation",
+      "mental simulation"
+    ],
+    "current_observation": false
+  },
+  "grounding": {
+    "purpose": "Maintain a visible distinction between present surroundings and internal imagination exercises.",
+    "pattern": [
+      "notice current surroundings",
+      "notice body support",
+      "notice a sound or sensation",
+      "imagine",
+      "return attention to surroundings"
+    ],
+    "learner_control": true,
+    "may_stop": true
+  },
+  "internal_awareness": {
+    "principle": "Internal experiences are observations of experience; stories attached to them remain interpretations.",
+    "examples": [
+      {
+        "experience": "I feel nervous.",
+        "interpretation": "Something bad is about to happen."
+      },
+      {
+        "experience": "I feel confident.",
+        "unsupported_upgrade": "Therefore I am correct."
+      }
+    ]
+  },
+  "names_as_shortcuts": {
+    "principle": "Labels efficiently import prior knowledge but can also cause the category to answer the question before the object is inspected.",
+    "exercise": "Describe an object without naming it."
+  },
+  "language_and_interpretation": {
+    "examples": [
+      {
+        "interpretive": "The server refused the request.",
+        "more_specific_observation": "The server returned HTTP status 403."
+      },
+      {
+        "interpretive": "The website got confused.",
+        "more_specific_observation": "Describe the observable behavior instead."
+      }
+    ],
+    "principle": "Wording itself can carry an interpretation."
+  },
+  "sequence_vs_causation": {
+    "pattern": [
+      "A happened.",
+      "Then B happened."
+    ],
+    "established": "sequence",
+    "not_automatically_established": "A caused B",
+    "question": "What supports the causal relationship?"
+  },
+  "measurement": {
+    "principle": "A measurement is an observation produced by a method.",
+    "context_fields": [
+      "value",
+      "unit",
+      "location",
+      "time",
+      "instrument",
+      "method",
+      "precision",
+      "boundary"
+    ],
+    "example": {
+      "weak": "Temperature = 20",
+      "stronger": {
+        "value": 20,
+        "unit": "°C",
+        "location": "Room",
+        "time": "09:00",
+        "instrument": "Sensor A"
+      }
+    }
+  },
+  "measurement_disagreement": {
+    "example": {
+      "sensor_a": "20 °C",
+      "sensor_b": "24 °C"
+    },
+    "questions_before_explanation": [
+      "Same location?",
+      "Same time?",
+      "Same calibration?",
+      "Same environment?",
+      "Same measurement method?"
+    ],
+    "principle": "The mismatch is an observation. The explanation comes later."
+  },
+  "software_awareness": {
+    "observation_sources": [
+      "logs",
+      "metrics",
+      "errors",
+      "events",
+      "user reports",
+      "tests",
+      "state",
+      "traces"
+    ],
+    "principle": "Each source exposes a different system boundary."
+  },
+  "software_example": {
+    "user_report": "Login is broken.",
+    "log": "Authentication timeout.",
+    "metric": "Response time increased.",
+    "request_volume": "Normal.",
+    "questions": [
+      "What did each source actually report?",
+      "Which source is observation and which includes interpretation?",
+      "What observer position produced each item?",
+      "What remains unknown?"
+    ]
+  },
+  "labels": {
+    "examples": [
+      "ERROR",
+      "WARNING",
+      "SUCCESS",
+      "FAILED",
+      "HEALTHY"
+    ],
+    "principle": "A system-generated label reflects a classification and should not automatically be treated as root cause or complete system state."
+  },
+  "research_awareness": {
+    "layers": [
+      "Observation",
+      "Measurement",
+      "Interpretation",
+      "Hypothesis",
+      "Prediction",
+      "Result"
+    ],
+    "principle": "Blurring these layers makes later reasoning harder to inspect."
+  },
+  "source_awareness": {
+    "distinguish": [
+      "what the source says",
+      "what the reader thinks the source means",
+      "what another author says the source means",
+      "what conclusion is drawn from the source"
+    ],
+    "principle": "Provenance begins by keeping these relationships distinct."
+  },
+  "ai_awareness": {
+    "principle": "AI output is another information object to inspect.",
+    "questions": [
+      "What did the AI actually claim?",
+      "What evidence or reasoning did it provide?",
+      "What assumptions may be present?",
+      "What did I add because the answer sounded plausible?",
+      "What should I verify?"
+    ]
+  },
+  "next_observation": {
+    "principle": "A good next observation helps distinguish among plausible interpretations.",
+    "questions": [
+      "What uncertainty matters most?",
+      "What observation could reduce it?",
+      "Which plausible explanations would this observation distinguish?"
+    ],
+    "avoid": "Collecting information without a relationship to the question."
+  },
+  "relevance": {
+    "principle": "More observations are not automatically better.",
+    "question": "What relationship makes this observation relevant?"
+  },
+  "stopping_point": {
+    "principle": "Awareness does not require perfect observation.",
+    "target": "An observation state good enough for the next structural question.",
+    "next_question": "What corresponds?"
+  },
+  "explore": {
+    "phase": "experience",
+    "purpose": "Let learners experience how quickly interpretation, prediction, memory, imagination, and stored categories become mixed with observation.",
+    "activities": [
+      "ordinary object observation",
+      "mug-on-desk scene",
+      "Observed/Interpreted/Unknown sorting",
+      "prediction before looking",
+      "blind-spot challenge",
+      "memory exercise",
+      "imagination exercise",
+      "grounding",
+      "two-observer exercise",
+      "boundary changes",
+      "assumption game",
+      "describe without naming",
+      "photograph challenge",
+      "headline challenge",
+      "chart challenge",
+      "number challenge",
+      "software dashboard challenge",
+      "AI challenge"
+    ],
+    "primary_habit": "Insert a small pause between observation and story."
+  },
+  "explore_prompts": [
+    "What did I actually observe?",
+    "What did I interpret?",
+    "What remains unknown?",
+    "What can I not currently see?",
+    "What did I predict before I looked?",
+    "What am I remembering rather than observing?",
+    "What did another observer have access to that I did not?",
+    "What changed when I changed the boundary?"
+  ],
+  "practice": {
+    "phase": "deliberate application",
+    "purpose": "Practice labeling observation, interpretation, assumption, boundary, blind spots, uncertainty, and useful next observations.",
+    "topics": [
+      "layer separation",
+      "multiple interpretations",
+      "three-column sorting",
+      "missing information",
+      "boundary changes",
+      "scale changes",
+      "observer positions",
+      "perspective maps",
+      "memory and imagination",
+      "blind spots",
+      "unknowns",
+      "sequence versus cause",
+      "neutral description",
+      "measurement context",
+      "software observations",
+      "source claims",
+      "AI output",
+      "formal Awareness"
+    ],
+    "primary_artifact": "Awareness Record"
+  },
+  "practice_patterns": [
+    {
+      "id": "layers",
+      "fields": [
+        "Observed",
+        "Possible Interpretation",
+        "Assumptions",
+        "What I Can Conclude Safely"
+      ]
+    },
+    {
+      "id": "three_columns",
+      "fields": [
+        "Observed",
+        "Interpreted",
+        "Unknown"
+      ]
+    },
+    {
+      "id": "next_check",
+      "fields": [
+        "What I Currently Know",
+        "What I Am Tempted to Conclude",
+        "What I Would Observe Next"
+      ]
+    },
+    {
+      "id": "perspective_map",
+      "fields": [
+        "Observer A Can Access",
+        "Observer B Can Access",
+        "Both Can Access",
+        "Neither Currently Knows"
+      ]
+    }
+  ],
+  "student_record": {
+    "name": "Awareness Record",
+    "purpose": "Make the current observation state inspectable before mapping, explaining, or deciding.",
+    "fields": [
+      "Object / Situation",
+      "Direct Observations",
+      "Interpretations",
+      "Assumptions",
+      "Observer Position",
+      "Boundary",
+      "Uncertainty",
+      "Missing Information",
+      "Blind Spots",
+      "What I Would Observe Next",
+      "Revision After Another Look"
+    ],
+    "all_fields_required": false,
+    "principle": "The record is a thinking tool rather than mandatory paperwork."
+  },
+  "mastery": {
+    "phase": "demonstration",
+    "fresh_problem": true,
+    "scenario": {
+      "object": "bicycle",
+      "observations": [
+        "The bicycle is against the fence.",
+        "The front wheel is turned sideways.",
+        "The chain is off the front chainring.",
+        "There is a dark mark on the pavement near where the bicycle is normally stored.",
+        "The garage door is closed.",
+        "No person is currently visible nearby."
+      ]
+    },
+    "goal": "Build an inspectable observation state without prematurely deciding what happened."
+  },
+  "mastery_possible_interpretations": [
+    "The bicycle may have fallen.",
+    "Someone may have moved it.",
+    "The chain may have come off during movement.",
+    "The dark mark may be related to the bicycle."
+  ],
+  "mastery_unknowns": [
+    "Who moved the bicycle?",
+    "Was the bicycle ridden?",
+    "Did the bicycle fall?",
+    "When did its position change?",
+    "Is the pavement mark related?",
+    "Was the chain already off before the bicycle moved?"
+  ],
+  "mastery_observer_position": {
+    "where": "present moment near the bicycle and garage",
+    "can_access": [
+      "current visible bicycle state",
+      "current nearby area"
+    ],
+    "cannot_currently_access": [
+      "what happened earlier",
+      "who was present earlier",
+      "the complete state of the bicycle before the change"
+    ]
+  },
+  "mastery_new_observation": {
+    "observation": "Fresh dirt is present on the handlebar grip and scrape marks are present on one pedal.",
+    "possible_revision": "Contact with the ground becomes more plausible.",
+    "still_not_established": [
+      "who moved the bicycle",
+      "whether it was ridden",
+      "whether the pavement mark is related"
+    ],
+    "principle": "New evidence may strengthen one interpretation without resolving every unknown."
+  },
+  "mastery_current_judgment_model": {
+    "pattern": [
+      "state what is supported",
+      "identify strengthened interpretation",
+      "preserve remaining unknowns"
+    ],
+    "avoid_too_strong": "Someone took the bicycle, crashed it, and put it against the fence.",
+    "avoid_too_weak": "Something happened to the bicycle."
+  },
+  "mastery_criteria": [
+    "identify direct observations",
+    "separate interpretations",
+    "expose assumptions",
+    "identify observer position",
+    "define an observation boundary",
+    "recognize blind spots",
+    "preserve unknowns",
+    "choose a useful next observation",
+    "revise interpretation when new evidence appears",
+    "make the current observation state inspectable"
+  ],
+  "mastery_not_required": [
+    "solve the mystery",
+    "guess who moved the bicycle",
+    "select one correct interpretation",
+    "eliminate uncertainty",
+    "use technical vocabulary",
+    "use Lean",
+    "use AI",
+    "match another learner's record"
+  ],
+  "retry": {
+    "if_confident_story_appears_too_early": {
+      "action": "Remove explanatory why-statements temporarily.",
+      "keep": [
+        "Observed",
+        "Interpreted",
+        "Assumed",
+        "Unknown"
+      ],
+      "then": "Add interpretations back one by one with labels."
+    },
+    "if_learner_refuses_to_interpret": {
+      "action": "Add Possible Interpretations.",
+      "principle": "Awareness does not prohibit hypothesis generation."
+    }
+  },
+  "assessment": {
+    "resource": "../shared/assessment.json",
+    "awareness_check": {
+      "optional": true,
+      "may_ask": [
+        "observation versus interpretation",
+        "an assumption",
+        "an unknown",
+        "a blind spot",
+        "a useful next observation"
+      ]
+    },
+    "mastery": {
+      "required_for_badge": true,
+      "fresh_problem": true,
+      "retryable": true
+    }
+  },
+  "badge": {
+    "resource": "../shared/badges.json",
+    "name": "Awareness Badge",
+    "meaning": "I can distinguish what I observe from what I interpret, assume, or do not yet know.",
+    "guide_milestone": 1,
+    "professional_certification": false,
+    "accreditation": false
+  },
+  "ai_companion": {
+    "resource": "../shared/ai_companion.json",
+    "optional": true,
+    "recommended_prompts": [
+      "Help me separate what I observed from what I interpreted.",
+      "Give me another plausible interpretation.",
+      "Challenge my strongest assumption.",
+      "What important blind spot might I have?",
+      "What next observation would best distinguish these possibilities?",
+      "Do not diagnose yet. Ask me questions about what I actually observed."
+    ],
+    "learner_judgment_primary": true
+  },
+  "formal_companion": {
+    "path": "../lean/01_awareness.json",
+    "human_source": "docs/5Guides/lean/01_awareness.lean",
+    "optional": true,
+    "formal_question": "What variables, types, hypotheses, and goals have actually been declared?",
+    "boundary": "The Lean proof state is a tightly bounded analogy for formal Awareness rather than a complete model of perception or observation."
+  },
+  "formal_awareness": {
+    "pattern": [
+      "Variables",
+      "Types",
+      "Hypotheses",
+      "Goal"
+    ],
+    "principle": "Read the formal state before deciding what follows."
+  },
+  "bridge_to_alignment": {
+    "result_of_awareness": [
+      "observations",
+      "interpretations",
+      "assumptions",
+      "unknowns",
+      "boundaries"
+    ],
+    "next_question": "What corresponds?",
+    "next": "alignment.json",
+    "principle": "Good Alignment depends on a sufficiently inspectable observation state."
+  },
+  "boundaries": {
+    "awareness_is_not": [
+      "never interpreting",
+      "distrusting everything",
+      "observing forever",
+      "collecting every possible detail",
+      "eliminating uncertainty",
+      "perfect objectivity"
+    ],
+    "awareness_is": [
+      "knowing what was observed",
+      "knowing what was added",
+      "knowing the observation source",
+      "knowing the current boundary",
+      "knowing relevant blind spots",
+      "preserving unknowns",
+      "choosing useful next observations",
+      "revising when new evidence appears"
+    ]
+  },
+  "provenance": {
+    "source_type": "combined human-facing Guide abstraction",
+    "source_documents": [
+      "docs/5Guides/awareness/index.md",
+      "docs/5Guides/awareness/explore.md",
+      "docs/5Guides/awareness/practice.md",
+      "docs/5Guides/awareness/mastery.md"
+    ],
+    "formal_source": "docs/5Guides/lean/01_awareness.lean",
+    "transformation": "Four human-facing Awareness documents compacted into one structured AI learning object.",
+    "preserve": [
+      "core question",
+      "observation versus interpretation",
+      "assumptions",
+      "unknowns",
+      "observer position",
+      "boundary",
+      "blind spots",
+      "memory and imagination distinctions",
+      "measurement context",
+      "useful next observation",
+      "student record",
+      "mastery criteria",
+      "bridge to Alignment"
+    ],
+    "do_not_infer": [
+      "causation from sequence",
+      "certainty from confidence",
+      "hidden observations",
+      "missing history",
+      "bias merely from different observer reports",
+      "empirical validation from Lean",
+      "professional certification from the badge"
+    ]
+  },
+  "ai_behavior": {
+    "must": [
+      "Separate observation from interpretation.",
+      "Label assumptions when they materially affect reasoning.",
+      "Preserve unknown information as unknown.",
+      "Identify observer position and boundary when relevant.",
+      "Recognize blind spots.",
+      "Distinguish current observation from memory and imagination.",
+      "Distinguish prediction from observation.",
+      "Distinguish sequence from causation.",
+      "Use system labels as observations about classification rather than automatic root-cause statements.",
+      "Suggest next observations that help distinguish among plausible interpretations.",
+      "Revise interpretations when new evidence appears."
+    ],
+    "must_not": [
+      "turn a plausible story into an observation",
+      "invent missing information",
+      "force the Unknown category to empty",
+      "treat confidence as evidence",
+      "infer causation from temporal order alone",
+      "treat memory as current observation",
+      "treat imagination as observation",
+      "assume different observers are biased merely because their reports differ",
+      "collect irrelevant observations merely to increase detail",
+      "require Lean or AI for mastery"
+    ]
+  },
+  "related": {
+    "module": "../module.json",
+    "index": "../index.json",
+    "next_guide": "alignment.json",
+    "assessment": "../shared/assessment.json",
+    "badges": "../shared/badges.json",
+    "ai_companion": "../shared/ai_companion.json",
+    "formal_companion": "../lean/01_awareness.json"
+  },
+  "machine_context": {
+    "ai_parseable": true,
+    "role": "guide-learning-object",
+    "guide": "Awareness",
+    "guide_order": 1,
+    "core_question": "What am I observing?",
+    "human_source_count": 4,
+    "explore_present": true,
+    "practice_present": true,
+    "mastery_present": true,
+    "student_record_present": true,
+    "badge_present": true,
+    "observation_distinct_from_interpretation": true,
+    "assumptions_visible": true,
+    "unknown_state_valid": true,
+    "observer_position_explicit": true,
+    "boundary_explicit": true,
+    "blind_spots_preserved": true,
+    "sequence_not_causation": true,
+    "confidence_not_evidence": true,
+    "uncertainty_preserving": true,
+    "lean_optional": true,
+    "ai_optional": true,
+    "provenance_aware": true,
+    "next": "Alignment"
+  }
+}
