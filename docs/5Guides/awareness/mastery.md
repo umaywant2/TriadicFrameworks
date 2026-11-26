@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="5Guides_awareness_mastery_" src="https://github.com/user-attachments/assets/c696ee3b-f76f-4c5c-a77b-72e1467df0db" />
+
 # Awareness Mastery
 
 > What am I actually observing?
