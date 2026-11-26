@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="5Guides_alignment_practice_" src="https://github.com/user-attachments/assets/68fef6c3-17ae-4d02-b59f-d013b51d2414" />
+
 # Alignment Practice
 
 > What corresponds?
