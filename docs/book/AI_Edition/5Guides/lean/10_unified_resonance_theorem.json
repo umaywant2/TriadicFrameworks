@@ -1,1 +1,631 @@
-. 
+{
+  "document": {
+    "id": "5Guides-lean-10-unified-resonance-theorem",
+    "type": "formal-origin-companion",
+    "name": "Unified Resonance Theorem",
+    "title": "Lean 4 Companion — Unified Resonance Theorem",
+    "edition": "AI Edition",
+    "module": "5Guides",
+    "framework": "AACCC",
+    "origin": "Unified Resonance Theorem",
+    "formal_order": 10,
+    "version": "1.0",
+    "status": "active",
+    "language": "en",
+    "source": "docs/5Guides/lean/10_unified_resonance_theorem.lean",
+    "ai_path": "docs/book/AI_Edition/5Guides/lean/10_unified_resonance_theorem.json",
+    "origin_path": "../origins/theorems.json",
+    "lean_index": "index.json"
+  },
+  "purpose": {
+    "primary": "Provide a small formal teaching abstraction for selected structural properties associated with the Unified Resonance Theorem.",
+    "formal_goal": "Expose the algebraic structure and assumptions required to reason formally about a three-factor composition.",
+    "educational_principle": "Compact mathematical notation can hide type, operation, identity, and associativity assumptions that formalization must make explicit."
+  },
+  "source_alignment": {
+    "source_artifact": "../origins/theorems.json",
+    "source_status": "Canonical Draft",
+    "source_expression": "Resonance_glyph = Q_z * F_theta * S_dim",
+    "source_factors": [
+      {
+        "symbol": "Q_z",
+        "role": "quadrant constant"
+      },
+      {
+        "symbol": "F_theta",
+        "role": "frequency-band modulation"
+      },
+      {
+        "symbol": "S_dim",
+        "role": "symbolic overlay from a dimensional layer"
+      }
+    ],
+    "selected_structure": "Three-factor composition.",
+    "formal_abstraction": "Local multiplicative teaching algebra with explicit identity and associativity laws.",
+    "relationship": "partial teaching formalization",
+    "complete_equivalence": false,
+    "complete_source_formalization": false
+  },
+  "formalization_problem": {
+    "compact_source_form": "Q * F * S",
+    "hidden_questions": [
+      "What type is Q?",
+      "What type is F?",
+      "What type is S?",
+      "Do all three factors inhabit the same carrier type?",
+      "What operation does * represent?",
+      "Is the operation associative?",
+      "Does the operation have an identity?",
+      "Is the operation commutative?",
+      "Which algebraic properties are actually needed by the intended theorem?"
+    ],
+    "principle": "Familiar notation should not be allowed to silently answer these questions."
+  },
+  "formal_model": {
+    "name": "ResonanceAlgebra",
+    "role": "local teaching structure",
+    "carrier": "generic formal type",
+    "operations": [
+      {
+        "name": "multiplication",
+        "notation": "*",
+        "role": "compose represented factors"
+      },
+      {
+        "name": "identity",
+        "role": "neutral composition element"
+      }
+    ],
+    "laws": [
+      {
+        "name": "associativity",
+        "conceptual_form": "(a * b) * c = a * (b * c)"
+      },
+      {
+        "name": "left_identity",
+        "conceptual_form": "1 * a = a"
+      },
+      {
+        "name": "right_identity",
+        "conceptual_form": "a * 1 = a"
+      }
+    ],
+    "commutativity_assumed": false,
+    "source_equivalence_claim": false
+  },
+  "why_local_algebra": {
+    "purpose": "Make the assumptions needed for selected composition proofs explicit without claiming a complete canonical algebra for the source theorem.",
+    "benefit": [
+      "types become explicit",
+      "composition becomes explicit",
+      "identity becomes explicit",
+      "associativity becomes inspectable",
+      "unneeded laws can remain absent"
+    ],
+    "boundary": "The local teaching algebra is introduced by the formalization and must not be retroactively attributed to the source unless the source independently supplies those laws."
+  },
+  "factor_mapping": [
+    {
+      "source": "Q_z",
+      "formal_role": "first factor",
+      "mapping_strength": "teaching correspondence"
+    },
+    {
+      "source": "F_theta",
+      "formal_role": "second factor",
+      "mapping_strength": "teaching correspondence"
+    },
+    {
+      "source": "S_dim",
+      "formal_role": "third factor",
+      "mapping_strength": "teaching correspondence"
+    }
+  ],
+  "composition": {
+    "source_pattern": "Q_z * F_theta * S_dim",
+    "formal_question": "How is an unparenthesized three-factor composition interpreted?",
+    "possible_parenthesizations": [
+      "(Q * F) * S",
+      "Q * (F * S)"
+    ],
+    "required_property_for_equivalence": "associativity",
+    "lesson": "Parenthesization becomes formally irrelevant only when an appropriate associativity law is available."
+  },
+  "associativity": {
+    "formal_role": "Permit regrouping of a three-factor composition without changing the represented result.",
+    "supported_transformation": {
+      "from": "(Q * F) * S",
+      "to": "Q * (F * S)"
+    },
+    "does_not_support": [
+      "reordering Q, F, and S",
+      "commuting arbitrary factors",
+      "removing factors",
+      "changing factor meaning"
+    ],
+    "principle": "Associativity changes grouping, not order."
+  },
+  "commutativity_boundary": {
+    "assumed": false,
+    "important_distinction": {
+      "associativity": "changes grouping",
+      "commutativity": "permits reordering"
+    },
+    "example_invalid_upgrade": {
+      "given": "associativity",
+      "unsupported_conclusion": "Q * F * S = F * Q * S"
+    },
+    "principle": "Do not use an algebraic law that the formal model has not supplied."
+  },
+  "identity": {
+    "formal_role": "Represent a neutral factor for composition.",
+    "properties": [
+      "1 * a = a",
+      "a * 1 = a"
+    ],
+    "teaching_question": "What happens if one represented factor is replaced by the identity?",
+    "interpretation_boundary": "The formal identity is an algebraic element. Its meaning for any source-domain factor requires a separate interpretation."
+  },
+  "three_factor_result": {
+    "conceptual_definition": "compose Q, F, and S using the supplied multiplication operation",
+    "possible_form": "(Q * F) * S",
+    "equivalent_associative_form": "Q * (F * S)",
+    "dependency": [
+      "common formal carrier",
+      "multiplication operation",
+      "associativity"
+    ]
+  },
+  "formal_targets": [
+    {
+      "id": "reassociation",
+      "name": "Three-Factor Reassociation",
+      "claim": "The represented three-factor composition may be regrouped under the supplied associativity law."
+    },
+    {
+      "id": "left_identity",
+      "name": "Left Identity",
+      "claim": "The supplied identity acts neutrally on the left."
+    },
+    {
+      "id": "right_identity",
+      "name": "Right Identity",
+      "claim": "The supplied identity acts neutrally on the right."
+    },
+    {
+      "id": "identity_factor_reduction",
+      "name": "Identity Factor Reduction",
+      "claim": "A represented identity factor can be removed according to the supplied identity laws."
+    }
+  ],
+  "non_targets": [
+    "empirical validity of Unified Resonance",
+    "physical meaning of the local multiplication operation",
+    "proof that Q_z, F_theta, and S_dim naturally share one carrier type",
+    "proof that source-domain composition is associative",
+    "proof that source-domain composition has an identity",
+    "proof of commutativity",
+    "proof that factor order is irrelevant",
+    "complete formalization of the Unified Resonance source"
+  ],
+  "aaccc_mapping": {
+    "awareness": {
+      "question": "What factors, types, operations, and laws are actually present?",
+      "formal_answer": "Three represented factors plus an explicitly supplied local composition structure."
+    },
+    "alignment": {
+      "question": "What corresponds?",
+      "formal_answer": "Q_z, F_theta, and S_dim are mapped to three factors in the local teaching algebra."
+    },
+    "coherence": {
+      "question": "Does this hold together?",
+      "formal_answer": "Selected composition properties follow only under the explicitly supplied algebraic laws."
+    },
+    "clarity": {
+      "question": "Can this be understood and inspected?",
+      "formal_answer": "The teaching algebra makes previously implicit type and algebraic assumptions visible."
+    },
+    "continuity": {
+      "question": "What persists through change?",
+      "formal_answer": "Selected composition relationships persist under reassociation and identity insertion or removal when the corresponding laws hold."
+    }
+  },
+  "formal_awareness": {
+    "inspect": [
+      "carrier type",
+      "factor types",
+      "multiplication operation",
+      "identity element",
+      "associativity law",
+      "left identity law",
+      "right identity law",
+      "laws not supplied"
+    ],
+    "principle": "Read the algebra before manipulating the expression."
+  },
+  "formal_alignment": {
+    "strong_inside_model": [
+      "source first factor <-> formal first factor",
+      "source second factor <-> formal second factor",
+      "source third factor <-> formal third factor"
+    ],
+    "unresolved_source_relationships": [
+      "whether the factors naturally inhabit one empirical carrier",
+      "whether multiplication is the correct source-domain composition",
+      "whether the supplied identity has source-domain meaning"
+    ],
+    "principle": "The formal mapping is useful but partial."
+  },
+  "formal_coherence": {
+    "questions": [
+      "Does reassociation follow from associativity?",
+      "Does identity removal follow from the supplied identity laws?",
+      "Is any proof silently using commutativity?",
+      "Are all required operations defined on the represented carrier?"
+    ],
+    "scope": "Internal behavior of the local teaching algebra."
+  },
+  "formal_clarity": {
+    "benefit": "Makes hidden algebraic assumptions explicit.",
+    "reveals": [
+      "type requirements",
+      "operation requirements",
+      "grouping rules",
+      "identity rules",
+      "absence of commutativity"
+    ],
+    "principle": "Formalization clarifies precisely which rules permit each transformation."
+  },
+  "formal_continuity": {
+    "preserved_under_reassociation": [
+      "factor order",
+      "factor identity",
+      "modeled composition result under associativity"
+    ],
+    "changed": [
+      "parenthesization"
+    ],
+    "preserved_under_identity": [
+      "represented result under the supplied identity law"
+    ],
+    "principle": "Continuity can concern invariance under permitted structural transformations."
+  },
+  "assumptions": {
+    "added_by_teaching_model": [
+      "a common formal carrier",
+      "a binary multiplication operation",
+      "an identity element",
+      "associativity",
+      "left identity",
+      "right identity"
+    ],
+    "not_assumed": [
+      "commutativity",
+      "idempotence",
+      "inverse elements",
+      "distributivity",
+      "source-domain physical validity",
+      "empirical meaning for the identity",
+      "complete equivalence between source notation and local algebra"
+    ],
+    "principle": "The assumptions introduced for the teaching formalization remain part of the theorem context."
+  },
+  "minimal_assumption_strategy": {
+    "principle": "Add only the algebraic laws required for the teaching results being investigated.",
+    "avoid": "Import a much stronger algebraic structure merely because it makes theorem proving more convenient.",
+    "benefit": "Makes the dependency of each theorem easier to inspect."
+  },
+  "stronger_structure_warning": {
+    "example": "Replacing the local teaching algebra with a commutative group or ring.",
+    "risk": "The stronger structure may silently permit transformations never justified by the source.",
+    "question": "Which theorem actually requires this stronger assumption?"
+  },
+  "verified_consequences": {
+    "scope": "Selected algebraic consequences represented in the compiler-checked Lean teaching artifact.",
+    "include": [
+      "represented reassociation under associativity",
+      "represented identity behavior",
+      "selected consequences of the local ResonanceAlgebra structure"
+    ],
+    "conditional_on": [
+      "the local algebraic definitions",
+      "the supplied laws",
+      "the theorem statements in the canonical Lean source",
+      "Lean's formal environment"
+    ]
+  },
+  "formalization_boundary": {
+    "lean_establishes": [
+      "selected theorems under the explicitly supplied local algebraic structure"
+    ],
+    "lean_does_not_establish": [
+      "the Unified Resonance source is empirically correct",
+      "Q_z, F_theta, and S_dim naturally inhabit the same real-world algebra",
+      "the source multiplication symbol necessarily denotes the formal multiplication used here",
+      "the source-domain composition is associative",
+      "the source-domain composition has an identity",
+      "the factors commute",
+      "factor ordering is physically irrelevant",
+      "the teaching algebra is the unique correct formalization",
+      "the complete Unified Resonance source has been formally verified"
+    ],
+    "principle": "The proof verifies consequences of the supplied algebra, not the independent correctness of choosing that algebra."
+  },
+  "model_choice_boundary": {
+    "question": "Why this algebra?",
+    "formal_proof_can_answer": false,
+    "requires": [
+      "source interpretation",
+      "modeling justification",
+      "possibly empirical or domain-specific evidence"
+    ],
+    "principle": "Formal proof checks consequences after the modeling choice. It does not automatically validate the modeling choice."
+  },
+  "source_vs_formal_model": {
+    "source": "Three named factors combined using compact multiplication notation.",
+    "formal_model": "Generic carrier with explicit multiplication, identity, and associativity laws.",
+    "relationship_strength": "partial",
+    "relationship_type": "teaching algebra introduced to expose required structure",
+    "complete_translation": false
+  },
+  "student_questions": [
+    "What type are the three factors in this formalization?",
+    "What does multiplication mean inside the local teaching algebra?",
+    "Why is associativity required?",
+    "What does associativity permit?",
+    "What does associativity not permit?",
+    "Is commutativity assumed?",
+    "What does the identity element do?",
+    "Which algebraic laws came from the teaching model rather than directly from the source?",
+    "What did Lean verify?",
+    "What remains a modeling question?"
+  ],
+  "student_exercise": {
+    "instruction": "Identify the minimum algebraic property required for each transformation.",
+    "record": {
+      "original_expression": null,
+      "proposed_transformation": null,
+      "required_law": null,
+      "law_present": null,
+      "transformation_supported": null,
+      "additional_assumption_needed": null
+    }
+  },
+  "variation_exercises": [
+    {
+      "change": "Remove associativity.",
+      "question": "Can the three factors still be freely regrouped?"
+    },
+    {
+      "change": "Remove left identity.",
+      "question": "Which identity theorem stops following?"
+    },
+    {
+      "change": "Remove right identity.",
+      "question": "Which identity theorem stops following?"
+    },
+    {
+      "change": "Add commutativity.",
+      "question": "Which new reorderings become provable, and did the source justify that stronger assumption?"
+    },
+    {
+      "change": "Change the factor order.",
+      "question": "Can the new expression be shown equal using only associativity?"
+    },
+    {
+      "change": "Replace one factor with identity.",
+      "question": "What remains after simplification under the supplied identity laws?"
+    }
+  ],
+  "associativity_vs_commutativity_exercise": {
+    "expressions": [
+      "(Q * F) * S",
+      "Q * (F * S)",
+      "(F * Q) * S"
+    ],
+    "questions": [
+      "Which two differ only by grouping?",
+      "Which expression changes factor order?",
+      "Which law would be required for each equality?"
+    ],
+    "purpose": "Prevent accidental use of a law that was never supplied."
+  },
+  "claim_strength": {
+    "supported": "Selected structural consequences under an explicit local algebra.",
+    "unsupported_upgrade": "Therefore the Unified Resonance source factors empirically form this algebra.",
+    "principle": "The theorem should remain no stronger than the supplied formal structure supports."
+  },
+  "future_formalization": {
+    "possible_questions": [
+      "Should Q_z, F_theta, and S_dim have distinct types?",
+      "If their types differ, what composition maps connect them?",
+      "Does the source imply order sensitivity?",
+      "Does an identity factor have a meaningful domain interpretation?",
+      "Is associativity appropriate to the intended semantics?",
+      "Are units or dimensions required?",
+      "Should the composition produce another factor type rather than the original carrier?",
+      "What empirical observations could constrain the algebraic model?"
+    ],
+    "rule": "Do not strengthen the algebra before identifying which source or modeling requirement justifies the additional structure."
+  },
+  "typed_factor_extension": {
+    "current_teaching_model": "common carrier",
+    "future_possible_model": "heterogeneous factor types with explicit composition maps",
+    "reason_to_consider": "The source factors have distinct conceptual roles.",
+    "current_artifact_claim": "No heterogeneous formalization is represented here."
+  },
+  "compiler_validation": {
+    "source_file": "docs/5Guides/lean/10_unified_resonance_theorem.lean",
+    "status": "compiler-checked",
+    "validation_set": "01-11",
+    "lean_version": "4.36.0",
+    "target": "x86_64-w64-windows-gnu",
+    "meaning": "The human-source formal artifact was accepted under the stated Lean environment.",
+    "boundary": "Compiler acceptance applies to the represented local algebraic teaching artifact and does not establish the broader Unified Resonance interpretation."
+  },
+  "lean_source_contract": {
+    "source_of_truth": "docs/5Guides/lean/10_unified_resonance_theorem.lean",
+    "embedded_source_optional": true,
+    "if_embedded": "Copy the compiler-checked Lean source exactly rather than reconstructing it from this JSON abstraction.",
+    "reason": "The AI Edition description should not create a competing version of the canonical Lean source."
+  },
+  "origin_connection": {
+    "resource": "../origins/theorems.json",
+    "theorem": "Unified Resonance Theorem",
+    "previous_origin_companion": "09_temperature_engine_theorem.json",
+    "next_origin_companion": "11_rtt_origin.json"
+  },
+  "formalization_connection": {
+    "resource": "../origins/formalization.json",
+    "record": {
+      "source": "Resonance_glyph = Q_z * F_theta * S_dim",
+      "formalization": "explicit local multiplicative teaching algebra",
+      "simplifications": [
+        "shared carrier type",
+        "single binary composition operation",
+        "selected identity and associativity laws",
+        "no empirical interpretation of the operation"
+      ],
+      "added_assumptions": [
+        "common carrier",
+        "multiplication operation",
+        "identity",
+        "associativity",
+        "left identity",
+        "right identity"
+      ],
+      "lean_proves": [
+        "selected consequences under the supplied algebraic laws"
+      ],
+      "lean_does_not_prove": [
+        "the source factors naturally form this algebra",
+        "empirical validity of Unified Resonance",
+        "commutativity",
+        "physical interpretation of the identity",
+        "complete equivalence between source notation and teaching algebra"
+      ]
+    }
+  },
+  "ai_companion": {
+    "resource": "../shared/ai_companion.json",
+    "preferred_support": [
+      "identify hidden algebraic assumptions",
+      "distinguish associativity from commutativity",
+      "ask which law permits a transformation",
+      "identify assumptions introduced by the teaching model",
+      "challenge unnecessary strengthening of the algebra",
+      "separate formal consequence from modeling justification"
+    ],
+    "avoid": [
+      "assuming commutativity",
+      "assuming factor order does not matter",
+      "claiming multiplication has an obvious source-domain meaning",
+      "claiming the local algebra validates the Unified Resonance interpretation",
+      "retroactively attributing the teaching algebra to the source"
+    ]
+  },
+  "aaccc_self_inspection": {
+    "awareness": {
+      "question": "What factors, types, operations, and algebraic laws are actually present?"
+    },
+    "alignment": {
+      "question": "How do the three source factors correspond to formal objects?"
+    },
+    "coherence": {
+      "question": "Which transformations follow from the supplied algebra and which require additional laws?"
+    },
+    "clarity": {
+      "question": "Are source notation and model-added assumptions visibly separated?"
+    },
+    "continuity": {
+      "question": "Which composition properties survive if an algebraic law is removed or changed?"
+    }
+  },
+  "ai_behavior": {
+    "must": [
+      "Describe ResonanceAlgebra as a local teaching structure.",
+      "Expose every materially relevant algebraic assumption.",
+      "Distinguish associativity from commutativity.",
+      "Preserve factor order unless a law explicitly permits reordering.",
+      "Separate formal consequences from modeling justification.",
+      "Keep source declarations distinct from model-added algebraic laws.",
+      "Preserve compiler provenance.",
+      "Treat stronger algebraic structures as additional assumptions."
+    ],
+    "must_not": [
+      "claim the source itself supplied every teaching-algebra law unless documented",
+      "assume commutativity",
+      "reorder factors using associativity alone",
+      "claim the formal identity has established physical meaning",
+      "claim this artifact completely formalizes Unified Resonance",
+      "upgrade compiler success into empirical validation",
+      "describe a convenient stronger algebra as source-derived without evidence",
+      "reconstruct Lean source and present it as exact unless verified against the source file"
+    ]
+  },
+  "provenance": {
+    "human_origin_source": "docs/5Guides/origins/theorems.md",
+    "formal_source": "docs/5Guides/lean/10_unified_resonance_theorem.lean",
+    "ai_origin": "../origins/theorems.json",
+    "ai_formal_artifact": "10_unified_resonance_theorem.json",
+    "transformation": "structured AI-readable formal origin companion",
+    "chain": [
+      "source three-factor expression",
+      "formalization questions",
+      "local teaching algebra",
+      "explicit algebraic assumptions",
+      "selected theorems",
+      "compiler-checked artifact"
+    ],
+    "preserve": [
+      "source factor structure",
+      "model-added assumptions",
+      "associativity",
+      "identity",
+      "absence of assumed commutativity",
+      "formalization boundary",
+      "compiler provenance"
+    ],
+    "do_not_infer": [
+      "complete Unified Resonance formalization",
+      "empirical validation",
+      "natural common carrier for source factors",
+      "commutativity",
+      "physical meaning of identity",
+      "unique correctness of the local algebra",
+      "scientific consensus",
+      "source code not verified against the canonical Lean file"
+    ]
+  },
+  "related": {
+    "lean_index": "index.json",
+    "previous_formal_companion": "09_temperature_engine_theorem.json",
+    "origin": "../origins/theorems.json",
+    "next_formal_companion": "11_rtt_origin.json",
+    "formalization": "../origins/formalization.json",
+    "origins_index": "../origins/index.json",
+    "ai_companion": "../shared/ai_companion.json",
+    "module": "../module.json",
+    "index": "../index.json"
+  },
+  "machine_context": {
+    "ai_parseable": true,
+    "role": "formal-origin-companion",
+    "formal_order": 10,
+    "origin": "Unified Resonance Theorem",
+    "optional": true,
+    "local_teaching_algebra": true,
+    "common_carrier_assumed_by_model": true,
+    "associativity_explicit": true,
+    "identity_explicit": true,
+    "commutativity_assumed": false,
+    "factor_order_preserved": true,
+    "model_added_assumptions_exposed": true,
+    "complete_source_formalization": false,
+    "formalization_boundary_explicit": true,
+    "compiler_checked": true,
+    "compiler_validation_bounded": true,
+    "empirical_validation_claim": false,
+    "provenance_aware": true
+  }
+}
