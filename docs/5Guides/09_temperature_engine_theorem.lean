@@ -95,8 +95,7 @@ sign of the resulting modeled force.
 theorem reverse_gradient (coupling gradient : Int) :
     temperatureForce coupling (-gradient) =
       -(temperatureForce coupling gradient) := by
-  simp [temperatureForce]
-  ring
+  simp [temperatureForce, mul_neg]
 
 
 /-!
