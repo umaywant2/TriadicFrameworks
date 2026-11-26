@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="5Guides_alignment_explore_" src="https://github.com/user-attachments/assets/cfaa4cc4-3c81-49bd-8fd5-d4e5b4c27ed6" />
+
 # Alignment Explore
 
 > What corresponds?
