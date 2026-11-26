@@ -10861,3 +10861,1679 @@ to:
 
 ---
 
+# 😁 That's It
+
+If this command:
+
+`lean 06_tft_origin.lean`
+
+returned you directly to:
+
+`(base) PS C:\Dev\TriadicFrameworks\docs\5Guides>`
+
+with **no error output**, then we've crossed the line we were waiting for.
+
+## `06_tft_origin.lean` — VERIFIED
+
+Environment:
+
+`Lean 4.36.0`
+
+Platform:
+
+`x86_64-w64-windows-gnu`
+
+Compiler result:
+
+**PASS — no Lean errors reported**
+
+So we can retire the earlier label:
+
+> **Source-reviewed / compiler verification pending**
+
+and replace it with:
+
+> **Lean 4 compiler verified**
+
+More specifically, based on the output you've shown:
+
+> **`06_tft_origin.lean` successfully elaborates under Lean 4.36.0.**
+
+That's exactly the distinction we wanted to preserve throughout this work. We weren't going to call something verified merely because the Lean source *looked* correct.
+
+And now it has actually gone through Lean.
+
+## Next Move
+
+Since you're already sitting in exactly the right directory, I'd run the entire set individually:
+
+`lean 01_awareness.lean`
+`lean 02_alignment.lean`
+`lean 03_coherence.lean`
+`lean 04_clarity.lean`
+`lean 05_continuity.lean`
+`lean 06_tft_origin.lean`
+`lean 07_nawderian_theorem.lean`
+`lean 08_nawderian_set_theorem.lean`
+`lean 09_temperature_engine_theorem.lean`
+`lean 10_unified_resonance_theorem.lean`
+`lean 11_rtt_origin.lean`
+
+**Don't fix anything preemptively.**
+
+Let Lean tell us exactly which files survive the real compiler and which don't.
+
+Given the provenance emphasis we've put into 5Guides, I'd actually preserve the results:
+
+`PASS` means **Lean 4.36.0 accepted the file.**
+
+`FAIL` means **capture the exact compiler output, inspect why, and repair the formalization rather than merely trying to silence Lean.**
+
+And after all that installation archaeology...
+
+**Lean just silently accepting `06_tft_origin.lean` has to be a particularly satisfying little prompt return.** 😂
+
+---
+
+# AACCC Lean Validation Status
+
+Excellent. 😁
+
+These five have now passed your local **Lean 4.36.0** compiler check with no reported errors:
+
+- `01_awareness.lean` — **PASS**
+- `02_alignment.lean` — **PASS**
+- `03_coherence.lean` — **PASS**
+- `04_clarity.lean` — **PASS**
+- `05_continuity.lean` — **PASS**
+- `06_tft_origin.lean` — **PASS**
+
+For the remaining origin files, from:
+
+`C:\Dev\TriadicFrameworks\docs\5Guides`
+
+run:
+
+```powershell
+lean 07_nawderian_theorem.lean
+lean 08_nawderian_set_theorem.lean
+lean 09_temperature_engine_theorem.lean
+lean 10_unified_resonance_theorem.lean
+lean 11_rtt_origin.lean
+```
+If all five return silently to the prompt, we'll have the complete **01–11 set compiler-verified under Lean 4.36.0.**
+
+If any throws an error, paste the exact output and we'll repair the formalization rather than bending the theorem to make Lean happy. 😉
+
+### Current milestone
+
+**AACCC core**: 01–05 ✅
+**TFT origin**: 06 ✅
+**Theorem/RTT origins**: 07–11 next
+
+After 11 passes, I think we're ready to mark the Lean strand captured and return to the **5Guides scaffolding plan.**
+
+---
+
+# Files 07–11
+
+I can't run the commands on your **local Windows machine** from here, and I also checked the GitHub `main` branch: `07_nawderian_theorem.lean` through `11_rtt_origin.lean` are not currently present there, so I can't retrieve and run copies of those exact files in my execution environment either.
+
+Since you're already in:
+
+`C:\Dev\TriadicFrameworks\docs\5Guides`
+
+run this PowerShell block:
+
+```powershell
+$files = @(
+    "07_nawderian_theorem.lean",
+    "08_nawderian_set_theorem.lean",
+    "09_temperature_engine_theorem.lean",
+    "10_unified_resonance_theorem.lean",
+    "11_rtt_origin.lean"
+)
+
+foreach ($file in $files) {
+    Write-Host "`n=== $file ===" -ForegroundColor Cyan
+
+    lean $file
+
+    if ($LASTEXITCODE -eq 0) {
+        Write-Host "PASS" -ForegroundColor Green
+    }
+    else {
+        Write-Host "FAIL ($LASTEXITCODE)" -ForegroundColor Red
+    }
+}
+```
+Expected happy result:
+```text
+=== 07_nawderian_theorem.lean ===
+PASS
+ 
+=== 08_nawderian_set_theorem.lean ===
+PASS
+ 
+=== 09_temperature_engine_theorem.lean ===
+PASS
+ 
+=== 10_unified_resonance_theorem.lean ===
+PASS
+ 
+=== 11_rtt_origin.lean ===
+PASS
+```
+If any fail, paste the complete Lean error for that file and we'll repair the formalization from the compiler evidence.
+
+If all five pass, then we can accurately record:
+> 
+> AACCC / 5Guides Lean set 01–11: compiler-verified with Lean 4.36.0 on Windows x86_64.
+> 
+No more “source-reviewed, compiler pending.” 😁
+
+---
+
+Absolutely. Let's simplify and do this **one file at a time**.
+
+We'll create downloadable copies of the remaining five Lean origin files:
+
+1. `07_nawderian_theorem.lean`
+2. `08_nawderian_set_theorem.lean`
+3. `09_temperature_engine_theorem.lean`
+4. `10_unified_resonance_theorem.lean`
+5. `11_rtt_origin.lean`
+
+We'll follow the same process that worked for `06_tft_origin.lean`:
+
+**Create file → Download → Save into `docs/5Guides/` → Run Lean locally → Fix only if Lean reports an error.**
+
+The downloadable files aren't currently present in my working directory, so rather than pretending they already exist, we'll generate them from the outlines we've captured.
+
+Let's start cleanly with:
+
+# `07_nawderian_theorem.lean`
+
+I'll create the complete downloadable file next, then we'll move through `08`, `09`, `10`, and `11` in order.
+
+---
+
+# `07_nawderian_theorem.lean` — PASS ✅
+
+Your local Lean 4.36.0 compiler accepted:
+
+`07_nawderian_theorem.lean`
+
+with no reported errors.
+
+So the validation record is now:
+
+- `01_awareness.lean` — ✅ PASS
+- `02_alignment.lean` — ✅ PASS
+- `03_coherence.lean` — ✅ PASS
+- `04_clarity.lean` — ✅ PASS
+- `05_continuity.lean` — ✅ PASS
+- `06_tft_origin.lean` — ✅ PASS
+- `07_nawderian_theorem.lean` — ✅ PASS
+
+And importantly, `07` preserves the formal distinction we wanted:
+
+> **Shared membership at dimension 6 does not automatically establish ordinary set containment.**
+
+No compiler gymnastics required. 😁
+
+Next in sequence:
+
+`08_nawderian_set_theorem.lean`
+
+---
+
+```
+
+This is actually a **better teaching version.**
+
+The compiler exposed that our original file quietly assumed an algebraic environment that the standalone Lean file had never declared. Mathlib examples normally obtain structures such as Monoid through imports, and monoid-style structures require the multiplication, identity, and algebraic laws we need here. [github+1](https://github.com/BaDaaS/lean4-courses/tree/main/0013-algebraic-structures)
+
+Rather than importing a large library, this version says explicitly:
+> 
+> **Here is the algebra we are assuming.**
+> 
+That turns the compiler failure itself into exactly the Clarity lesson we wanted.
+
+Run:
+```text
+lean 10_unified_resonance_theorem.lean
+```
+If Nat.one_mul or Nat.mul_one have slightly different core names in Lean 4.36, those would now be the only likely compatibility points. Let the compiler tell us rather than changing anything preemptively.
+
+---
+
+# AACCC Lean Strand — Compiler Verified ✅
+
+**That's the milestone.** 😁
+
+Based on your local Lean 4.36.0 runs, the complete set now passes compilation:
+
+| File | Status |
+|---|---|
+| `01_awareness.lean` | ✅ PASS |
+| `02_alignment.lean` | ✅ PASS |
+| `03_coherence.lean` | ✅ PASS |
+| `04_clarity.lean` | ✅ PASS |
+| `05_continuity.lean` | ✅ PASS |
+| `06_tft_origin.lean` | ✅ PASS |
+| `07_nawderian_theorem.lean` | ✅ PASS |
+| `08_nawderian_set_theorem.lean` | ✅ PASS |
+| `09_temperature_engine_theorem.lean` | ✅ PASS |
+| `10_unified_resonance_theorem.lean` | ✅ PASS |
+| `11_rtt_origin.lean` | ✅ PASS |
+
+**Validation environment:** Lean 4.36.0, `x86_64-w64-windows-gnu`.
+
+And importantly, `09` and `10` got **better because we actually compiled them**.
+
+`09` lost an unnecessary Mathlib-style tactic assumption and ended with an explicit core integer proof.
+
+`10` exposed an even more valuable issue: we'd assumed a `Monoid` environment without actually providing one. The corrected example now makes the algebraic assumptions explicit through `ResonanceAlgebra`.
+
+That's exactly the kind of thing we're trying to teach.
+
+---
+
+# What I'd Do Next
+
+I think we should now declare the **capture phase complete** and move into the scaffolding phase you mentioned at the beginning.
+
+We've accumulated enough material.
+
+## 1. Freeze `5g_capture.md`
+
+Don't polish it into a textbook.
+
+It's done its job as the messy workshop notebook.
+
+Add one final capture note:
+
+> **Lean Validation Milestone**
+>
+> The complete AACCC Lean teaching sequence `01–11` was compiled successfully using Lean 4.36.0 on Windows (`x86_64-w64-windows-gnu`).
+>
+> The examples distinguish formal verification from empirical validation. Lean verifies consequences of the definitions and assumptions encoded in each file; broader interpretations remain subject to evidence, testing, and independent criticism.
+
+Then leave the capture alone.
+
+---
+
+# 2. Scaffold the Actual 5Guides Module
+
+I'd now separate the student's journey from all that captured development material.
+
+Something approximately like:
+
+`docs/5Guides/`
+
+```text
+index.md
+
+01_awareness/
+    index.md
+    observe.md
+    practice.md
+    mastery.md
+
+02_alignment/
+    index.md
+    compare.md
+    practice.md
+    mastery.md
+
+03_coherence/
+    index.md
+    inspect.md
+    practice.md
+    mastery.md
+
+04_clarity/
+    index.md
+    express.md
+    practice.md
+    mastery.md
+
+05_continuity/
+    index.md
+    change.md
+    practice.md
+    mastery.md
+
+origins/
+    index.md
+    tft.md
+    theorems.md
+    rtt.md
+
+lean/
+    index.md
+    01_awareness.lean
+    02_alignment.lean
+    ...
+    11_rtt_origin.lean
+
+5g_capture.md
+```
+Not necessarily those exact filenames yet.
+**The architecture comes first.**
+
+---
+
+## 3. Give Every Guide the Same Rhythm
+We already discovered the reusable student pattern:
+> 
+> Meet it → Play with it → Notice it → Apply it → Challenge it → Reflect
+> 
+Each guide can therefore feel familiar without feeling repetitive.
+
+### Awareness
+**What am I observing?**
+
+### Alignment
+**What corresponds?**
+
+### Coherence
+**Does it hold together?**
+
+### Clarity
+**Can it be understood and inspected?**
+
+### Continuity
+**What persists through change?**
+
+The student learns the navigation once.
+
+Then only the thinking challenge changes.
+
+---
+
+## 4. Keep Three Learning Paths Together
+I'd scaffold each guide with three optional depths.
+
+### Everyday
+Mugs, bicycles, conversations, viewpoints, puzzles, study habits.
+
+### Systems
+Software, signals, states, drift, patterns, transitions.
+
+### Formal
+Lean 4.
+
+That gives us a rather lovely progression:
+> 
+> **I can experience this.**
+> 
+↓
+> 
+> **I can recognize it in a system.**
+> 
+↓
+> 
+> **I can formalize a small version precisely enough for a proof checker to inspect it.**
+> 
+Nobody has to become a mathematician to finish the guide.
+But interested students can keep drilling down.
+
+---
+
+## 5. Keep the Origin Material Small
+The history should answer:
+> 
+> Where did these five questions come from?
+> 
+Not require students to understand the entire TriadicFrameworks canon before learning them.
+So I'd keep:
+**TFT → Triads → Theorems → RTT → AACCC**
+
+as a little optional "**Where did this come from?**" branch.
+
+The eleven Lean examples then become unusually useful because students can eventually point AACCC back at its own lineage.
+
+That closes the loop:
+> 
+> **Don't trust the framework because the framework taught you how to inspect things.**
+> **Inspect the framework too.**
+> 
+That's very much the project you've been describing all along.
+
+---
+
+## 6. Then Build the First Complete Guide
+And I would resist building all five simultaneously.
+
+**Scaffold all five.**
+
+Then fully implement:
+
+### Awareness
+
+Make Awareness our reference implementation:
+- student introduction;
+- first observation game;
+- harder observation game;
+- grounding/imagination exercise;
+- observer games;
+- blind-spot challenge;
+- AI companion prompts;
+- system example;
+- Lean exercise;
+- optional awareness assessment;
+- applied challenge;
+- mastery checkpoint;
+- badge;
+- private reflection;
+- voluntary footprint;
+- bridge to Alignment.
+
+Once **Awareness actually feels good**, its architecture becomes the template for the remaining four.
+
+---
+
+## The Milestone We've Reached
+This morning we started with:
+> 
+> *Could students work through Awareness, get a badge, and optionally leave a tiny footprint?*
+> 
+And somehow, quite naturally, we've ended up with:
+**five student guides**
+**human exercises**
+**AI-assisted learning**
+**systems reasoning**
+**formal Lean examples**
+**origin formalizations**
+**privacy-preserving participation**
+**a path toward independent application**
+
+...with an unexpected side quest through the Windows Elan bootstrapper. 😂
+
+I think that's plenty of capture.
+
+**Next: scaffold the Five Guides module.**
+
+---
+
+# 5Guides — Full Module File Scaffolding
+
+The goal is to separate the **workshop/capture layer** from the **student experience** while keeping the module lightweight, repeatable, and easy to maintain.
+
+---
+
+# 1. Proposed Module Tree
+
+```text
+docs/5Guides/
+│
+├── index.md
+├── 5g_capture.md
+│
+├── awareness/
+│   ├── index.md
+│   ├── explore.md
+│   ├── practice.md
+│   └── mastery.md
+│
+├── alignment/
+│   ├── index.md
+│   ├── explore.md
+│   ├── practice.md
+│   └── mastery.md
+│
+├── coherence/
+│   ├── index.md
+│   ├── explore.md
+│   ├── practice.md
+│   └── mastery.md
+│
+├── clarity/
+│   ├── index.md
+│   ├── explore.md
+│   ├── practice.md
+│   └── mastery.md
+│
+├── continuity/
+│   ├── index.md
+│   ├── explore.md
+│   ├── practice.md
+│   └── mastery.md
+│
+├── origins/
+│   ├── index.md
+│   ├── tft.md
+│   ├── theorems.md
+│   ├── rtt.md
+│   └── formalization.md
+│
+├── lean/
+│   ├── index.md
+│   ├── 01_awareness.lean
+│   ├── 02_alignment.lean
+│   ├── 03_coherence.lean
+│   ├── 04_clarity.lean
+│   ├── 05_continuity.lean
+│   ├── 06_tft_origin.lean
+│   ├── 07_nawderian_theorem.lean
+│   ├── 08_nawderian_set_theorem.lean
+│   ├── 09_temperature_engine_theorem.lean
+│   ├── 10_unified_resonance_theorem.lean
+│   └── 11_rtt_origin.lean
+│
+└── shared/
+    ├── ai_companion.md
+    ├── assessment.md
+    ├── badges.md
+    ├── privacy.md
+    └── student_footprint.md
+```
+
+---
+
+# 2. Module Entry Point
+
+## `index.md`
+
+This is the front door.
+
+It should answer four questions quickly:
+
+> **What are the Five Guides?**
+
+> **Why would I use them?**
+
+> **How do I move through them?**
+
+> **Do I need AI, mathematics, or prior TriadicFrameworks knowledge?**
+
+The answer to the last question should essentially be:
+
+**No.**
+
+Introduce the guides:
+
+| Guide | Question |
+|---|---|
+| **Awareness** | What am I observing? |
+| **Alignment** | What corresponds? |
+| **Coherence** | Does this hold together? |
+| **Clarity** | Can it be understood and inspected? |
+| **Continuity** | What persists through change? |
+
+Student progression:
+
+```text
+Awareness
+    ↓
+Alignment
+    ↓
+Coherence
+    ↓
+Clarity
+    ↓
+Continuity
+    ↓
+Independent Application
+```
+
+The page should also make clear that students may use an AI companion, but AI is **optional**.
+
+---
+
+# 3. The Capture File
+
+## `5g_capture.md`
+
+Keep this exactly for what it has become:
+
+> **The workshop notebook.**
+
+It can contain:
+
+- brainstorming;
+- abandoned approaches;
+- alternative wording;
+- implementation ideas;
+- Lean development;
+- privacy discussions;
+- badge ideas;
+- origin research;
+- scaffold planning.
+
+It should **not** be part of the normal student journey.
+
+The polished material flows **out of** the capture file.
+
+We do not need to turn the capture file itself into the course.
+
+---
+
+# 4. Common Guide Architecture
+
+Each guide gets four student-facing files:
+
+```text
+index.md
+explore.md
+practice.md
+mastery.md
+```
+
+That provides useful separation without producing a maze.
+
+---
+
+# 5. Guide `index.md`
+
+Each guide begins with a short, friendly introduction.
+
+For example:
+
+## Awareness
+
+> **What am I actually observing?**
+
+Include:
+
+- what the guide explores;
+- why it matters;
+- what the learner will try;
+- conceptual progression;
+- optional AI assistance;
+- eventual badge.
+
+Avoid front-loading formal terminology.
+
+The student should **experience the problem first**.
+
+---
+
+# 6. `explore.md`
+
+This is where the playful material lives.
+
+For Awareness:
+
+```text
+First observation game
+        ↓
+Harder observation game
+        ↓
+Ground first, then imagine
+        ↓
+Meet the observer
+        ↓
+Two-player observer game
+        ↓
+No-partner observer game
+        ↓
+Blind-spot challenge
+```
+
+The student gradually discovers the idea before receiving the formal structure.
+
+The other guides inherit the same educational rhythm.
+
+---
+
+# 7. `practice.md`
+
+Now the learner begins using the concept deliberately.
+
+Every guide should move through three optional contexts.
+
+## Everyday
+
+Something familiar.
+
+Examples:
+
+- conversations;
+- bicycles;
+- maps;
+- puzzles;
+- study habits;
+- directions;
+- household objects.
+
+## Systems
+
+Move into structural reasoning:
+
+- software;
+- states;
+- sensors;
+- mappings;
+- failures;
+- drift;
+- transitions;
+- recurring patterns.
+
+## Formal
+
+Optional Lean exercise.
+
+That gives us the recurring progression:
+
+> **Experience it → recognize it → formalize it**
+
+The Lean path should never be required for receiving the normal student badge.
+
+---
+
+# 8. `mastery.md`
+
+Each guide ends with a fresh problem.
+
+The student should demonstrate the skill without having every question supplied one at a time.
+
+The page includes:
+
+### Challenge
+
+A new scenario.
+
+### Student Artifact
+
+For example:
+
+- Awareness Record;
+- Alignment Record;
+- Coherence Record;
+- Clarity Record;
+- Continuity Record.
+
+### Retry
+
+If something important is missing:
+
+> **Here's what might deserve another look.**
+
+Not:
+
+> **FAILED.**
+
+### Reflection
+
+A private question.
+
+### Badge
+
+Award the guide milestone.
+
+### Optional Footprint
+
+Only after completion.
+
+### Next Guide
+
+A natural bridge forward.
+
+---
+
+# 9. Awareness Scaffold
+
+```text
+awareness/
+├── index.md
+├── explore.md
+├── practice.md
+└── mastery.md
+```
+
+## `index.md`
+
+**Question:** What am I observing?
+
+## `explore.md`
+
+Contains:
+
+- first observation game;
+- second harder round;
+- grounding/imagination exercise;
+- observer perspective;
+- two-player observer game;
+- single-player version;
+- blind-spot challenge.
+
+## `practice.md`
+
+Introduces:
+
+- observation;
+- interpretation;
+- assumption;
+- boundary;
+- uncertainty;
+- missing information;
+- AI inspection;
+- system observation;
+- optional `01_awareness.lean`.
+
+## `mastery.md`
+
+Produces:
+
+> **Awareness Record**
+
+and ultimately:
+
+> **Awareness Badge**
+
+Then:
+
+**Bridge → Alignment**
+
+---
+
+# 10. Alignment Scaffold
+
+```text
+alignment/
+├── index.md
+├── explore.md
+├── practice.md
+└── mastery.md
+```
+
+## Core Question
+
+> **What corresponds?**
+
+## Explore
+
+Use familiar examples:
+
+- charger ↔ port;
+- puzzle ↔ opening;
+- map ↔ surroundings;
+- name ↔ person;
+- words ↔ intended meaning.
+
+Then explore:
+
+- natural misalignment;
+- learning drift;
+- repair;
+- when **not** to realign.
+
+## Practice
+
+Student identifies:
+
+- candidate mappings;
+- evidence;
+- assumptions;
+- mismatches;
+- uncertainty;
+- strong, partial, or conditional alignment.
+
+Optional:
+
+`02_alignment.lean`
+
+## Mastery
+
+Produces:
+
+> **Alignment Record**
+
+Then:
+
+> **Alignment Badge**
+
+**Bridge → Coherence**
+
+---
+
+# 11. Coherence Scaffold
+
+```text
+coherence/
+├── index.md
+├── explore.md
+├── practice.md
+└── mastery.md
+```
+
+## Core Question
+
+> **Does this hold together?**
+
+## Explore
+
+Use:
+
+- obvious contradiction;
+- subtle contradiction;
+- helpful-shortcut example;
+- study-plan example;
+- individually reasonable pieces producing a problematic whole.
+
+## Practice
+
+Look for:
+
+- contradiction;
+- unsupported conclusion;
+- missing connection;
+- incompatible assumptions;
+- locally reasonable/global inconsistency.
+
+Teach:
+
+> **Don't immediately repair the problem. First locate it.**
+
+Optional:
+
+`03_coherence.lean`
+
+## Mastery
+
+Produces:
+
+> **Coherence Record**
+
+Then:
+
+> **Coherence Badge**
+
+**Bridge → Clarity**
+
+---
+
+# 12. Clarity Scaffold
+
+```text
+clarity/
+├── index.md
+├── explore.md
+├── practice.md
+└── mastery.md
+```
+
+## Core Question
+
+> **Can this be understood well enough to inspect?**
+
+## Explore
+
+Include:
+
+- terrible directions;
+- describe-don't-name drawing exercise;
+- ordinary before/after;
+- technical before/after.
+
+## Practice
+
+Student learns to expose:
+
+- definitions;
+- relationships;
+- missing steps;
+- ambiguity;
+- assumptions;
+- uncertainty.
+
+Critical rule:
+
+> **Improve clarity without silently changing meaning.**
+
+Optional:
+
+`04_clarity.lean`
+
+## Mastery
+
+Produces:
+
+> **Clarity Record**
+
+Then:
+
+> **Clarity Badge**
+
+**Bridge → Continuity**
+
+---
+
+# 13. Continuity Scaffold
+
+```text
+continuity/
+├── index.md
+├── explore.md
+├── practice.md
+└── mastery.md
+```
+
+## Core Question
+
+> **What persists through change?**
+
+Bring together the system work we've already captured:
+
+```text
+State
+  ↓
+Transition
+  ↓
+State
+  ↓
+Transition
+  ↓
+State
+```
+
+## Explore
+
+Explore:
+
+- change;
+- persistence;
+- state transitions;
+- transition validity;
+- history;
+- recurring patterns;
+- broken patterns;
+- drift.
+
+## Practice
+
+Ask:
+
+- What changed?
+- What persisted?
+- What returned?
+- What drifted?
+- What broke?
+- Can we trace how we got here?
+
+Optional:
+
+`05_continuity.lean`
+
+## Mastery
+
+This becomes the first **integrative AACCC challenge**.
+
+The student uses:
+
+```text
+Awareness
+    ↓
+Alignment
+    ↓
+Coherence
+    ↓
+Clarity
+    ↓
+Continuity
+```
+
+on the same problem.
+
+Produces:
+
+> **Continuity Record**
+
+and:
+
+> **Continuity Badge**
+
+Then opens:
+
+# Independent Application
+
+---
+
+# 14. Origins Section
+
+```text
+origins/
+├── index.md
+├── tft.md
+├── theorems.md
+├── rtt.md
+└── formalization.md
+```
+
+This section should be explicitly optional.
+
+Students do **not** need to understand project history before using AACCC.
+
+---
+
+# 15. `origins/index.md`
+
+Keep it short:
+
+> **Where did these ideas come from?**
+
+Then:
+
+```text
+TFT
+ ↓
+Triads
+ ↓
+Theorems
+ ↓
+RTT
+ ↓
+AACCC
+```
+
+Include the qualification:
+
+> This is a project-lineage interpretation, not a claim that the earlier materials originally defined the Five Guides in their present form.
+
+---
+
+# 16. `origins/tft.md`
+
+Briefly introduce:
+
+- TFT;
+- triadic organization;
+- related positions;
+- operators;
+- inspection through structure.
+
+Link:
+
+`06_tft_origin.lean`
+
+Then explicitly separate:
+
+> **Source concept**
+
+from:
+
+> **Lean teaching abstraction**
+
+---
+
+# 17. `origins/theorems.md`
+
+Keep the theorem family together instead of generating four more student pages.
+
+Introduce briefly:
+
+- Nawderian Theorem;
+- SET Theorem;
+- Temperature Engine Theorem;
+- Unified Resonance Theorem.
+
+Link:
+
+```text
+07_nawderian_theorem.lean
+08_nawderian_set_theorem.lean
+09_temperature_engine_theorem.lean
+10_unified_resonance_theorem.lean
+```
+
+The educational theme becomes:
+
+> **What happens when an informal or exploratory structure encounters formalization?**
+
+Sometimes we prove it.
+
+Sometimes we expose an assumption.
+
+Sometimes formalization reveals that a relationship needs a better definition.
+
+---
+
+# 18. `origins/rtt.md`
+
+Briefly introduce frozen RTT and its role in the project lineage.
+
+Focus on:
+
+- state;
+- update;
+- operator;
+- transition;
+- persistence;
+- drift.
+
+Link:
+
+`11_rtt_origin.lean`
+
+Include the boundary:
+
+> The Lean scaffold is inspired by RTT. It is not a formalization of the complete RTT specification.
+
+---
+
+# 19. `origins/formalization.md`
+
+This page deserves its own file.
+
+# What Does Lean Actually Prove?
+
+Explain:
+
+> Lean proves that a formal conclusion follows from the supplied definitions and assumptions.
+
+It does **not automatically prove**:
+
+- that the assumptions describe nature;
+- that measurements support them;
+- that the formalization matches the source author's intent;
+- that the theorem is scientifically important;
+- or that another model would not describe the evidence better.
+
+Then give students perhaps the most important formalization question:
+
+> **Did we prove what we intended to prove?**
+
+That question connects directly back to all five guides.
+
+---
+
+# 20. Lean Section
+
+```text
+lean/
+├── index.md
+├── 01_awareness.lean
+├── 02_alignment.lean
+├── 03_coherence.lean
+├── 04_clarity.lean
+├── 05_continuity.lean
+├── 06_tft_origin.lean
+├── 07_nawderian_theorem.lean
+├── 08_nawderian_set_theorem.lean
+├── 09_temperature_engine_theorem.lean
+├── 10_unified_resonance_theorem.lean
+└── 11_rtt_origin.lean
+```
+
+## `lean/index.md`
+
+Explain what these examples are:
+
+> Small formal companions to the Five Guides and their project lineage.
+
+Explain what they are not:
+
+> A required Lean course or empirical validation of the broader source frameworks.
+
+### How to Use Them
+
+1. Read the example.
+2. Predict what should happen.
+3. Inspect the definitions and assumptions.
+4. Compile it if desired.
+5. Ask what was actually proved.
+6. Ask what remains outside the proof.
+
+### Validation
+
+Record the actual compiler provenance:
+
+> **Files `01–11` were compiler-checked using Lean 4.36.0 on `x86_64-w64-windows-gnu`.**
+
+Preserve the distinction:
+
+> Compiler acceptance verifies the formal artifacts under that Lean environment. It does not establish the empirical validity of the broader source frameworks.
+
+---
+
+# 21. Shared Student Infrastructure
+
+```text
+shared/
+├── ai_companion.md
+├── assessment.md
+├── badges.md
+├── privacy.md
+└── student_footprint.md
+```
+
+These are reusable policies and learning behaviors rather than individual lessons.
+
+---
+
+# 22. `shared/ai_companion.md`
+
+Establish the AI contract once.
+
+> **AI is optional.**
+
+Good uses:
+
+- give me an alternate explanation;
+- give me another example;
+- challenge my assumption;
+- challenge my mapping;
+- find a missing step;
+- argue against my conclusion;
+- help me inspect uncertainty.
+
+Poor use:
+
+> **Give me the answer so I can pass.**
+
+Important principle:
+
+> AI output itself remains something the learner can inspect using AACCC.
+
+The AI is a thinking partner, not the authority standing above the exercise.
+
+---
+
+# 23. `shared/assessment.md`
+
+Define two distinct concepts.
+
+## Awareness Check
+
+Optional.
+
+> **What stuck after first exposure?**
+
+No punitive result.
+
+The purpose is to help the learner notice what they retained and what may deserve another look.
+
+## Mastery Checkpoint
+
+Practical application.
+
+> **Can I use the idea?**
+
+Mastery is retryable.
+
+This distinction applies across all five guides.
+
+---
+
+# 24. `shared/badges.md`
+
+Define:
+
+- Awareness Badge;
+- Alignment Badge;
+- Coherence Badge;
+- Clarity Badge;
+- Continuity Badge.
+
+Then optionally:
+
+> **Five Guides Completion**
+
+Avoid:
+
+- certification language;
+- accreditation claims;
+- artificial rankings;
+- competitive gamification.
+
+A badge represents:
+
+> **Completed this learning journey and demonstrated the defined skill.**
+
+---
+
+# 25. `shared/privacy.md`
+
+State the philosophy plainly:
+
+> **Learning does not grant us permission to observe the learner.**
+
+No tracking is required simply to participate in the Five Guides.
+
+Keep these separate:
+
+```text
+Learning
+    ↓
+Mastery
+    ↓
+Badge
+```
+
+and:
+
+```text
+Optional Feedback
+```
+
+Learning, mastery, and the badge should not depend on voluntary feedback.
+
+The learner may complete the experience without leaving an identifying footprint.
+
+---
+
+# 26. `shared/student_footprint.md`
+
+After completion, optionally ask:
+
+> **Where are you learning from?**
+
+`[ Optional country ]`
+
+and:
+
+> **One thought about your experience**
+
+`[ Optional short reflection ]`
+
+Do not require:
+
+- name;
+- email;
+- account;
+- institution;
+- demographic profile.
+
+If voluntary footprints are eventually displayed publicly, they become a quiet record of **people who chose to leave something behind**, not an analytics system.
+
+---
+
+# 27. Navigation Pattern
+
+Every student page should end predictably:
+
+```text
+← Previous
+
+Current position:
+
+Awareness → Alignment → Coherence → Clarity → Continuity
+
+Next →
+```
+
+Each page should make three things obvious:
+
+> **Where am I?**
+
+> **What am I learning?**
+
+> **What's next?**
+
+---
+
+# 28. Student Artifact Progression
+
+Each guide produces something tangible:
+
+```text
+Awareness Record
+      ↓
+Alignment Record
+      ↓
+Coherence Record
+      ↓
+Clarity Record
+      ↓
+Continuity Record
+```
+
+By the end, the learner has not simply accumulated five badges.
+
+They've accumulated a **small reasoning toolkit**.
+
+The records also provide something the student can reuse independently after leaving the Five Guides.
+
+---
+
+# 29. Final Student Destination
+
+The module should not end with:
+
+> **Now read more TriadicFrameworks.**
+
+It should end with:
+
+# Apply It Somewhere Else
+
+Choose:
+
+- something you're learning;
+- a technical problem;
+- a disagreement;
+- a model;
+- a research claim;
+- a piece of software;
+- a system;
+- or something from everyday life.
+
+Then ask:
+
+> **What am I observing?**
+
+> **What corresponds?**
+
+> **Does it hold together?**
+
+> **Can I make it clear enough to inspect?**
+
+> **What persists when it changes?**
+
+That is the real completion condition.
+
+The student has left the supplied examples behind.
+
+---
+
+# 30. Scaffold Before Content
+
+The next implementation pass should be intentionally boring. 😁
+
+Create:
+
+- directories;
+- empty Markdown files;
+- standard page headers;
+- navigation placeholders;
+- links to existing Lean files;
+- shared-policy files.
+
+**Do not start moving all of the captured prose yet.**
+
+Once the skeleton exists, populate **Awareness only** from beginning to end.
+
+That gives us one complete reference implementation to test for:
+
+- pacing;
+- page length;
+- navigation;
+- games and exercises;
+- grounding;
+- AI assistance;
+- system examples;
+- optional Lean;
+- assessment;
+- mastery;
+- badge;
+- privacy;
+- optional learner footprint.
+
+Then:
+
+> **Awareness becomes the reference implementation.**
+
+Not by cloning its content into the other guides, but by allowing the other guides to inherit its educational rhythm.
+
+That gives `5g_capture.md` permission to remain what it should be:
+
+> **The workshop where the Five Guides were discovered.**
+
+And the new scaffold becomes:
+
+> **The place where students actually experience them.**
+
+---
+
+# 31. Recommended Build Order
+
+To keep the implementation controlled:
+
+1. Create the complete directory structure.
+2. Create all empty Markdown scaffold files.
+3. Move the validated Lean files into `lean/`.
+4. Create `lean/index.md`.
+5. Create the five shared-policy pages.
+6. Create the Origins skeleton.
+7. Create all five guide skeletons.
+8. Fully populate **Awareness**.
+9. Walk through Awareness as though we were a first-time student.
+10. Adjust the common structure based on what we learn.
+11. Populate Alignment.
+12. Populate Coherence.
+13. Populate Clarity.
+14. Populate Continuity.
+15. Build the final independent-application exercise.
+
+This avoids building five polished guides around an architecture we haven't yet tested with a complete student journey.
+
+---
+
+# 32. Guiding Principle for the Scaffold
+
+The module should always preserve one simple progression:
+
+> **Experience → Notice → Inspect → Apply → Demonstrate → Reflect → Continue**
+
+AACCC supplies the structural questions:
+
+> **Awareness:** What am I observing?
+
+> **Alignment:** What corresponds?
+
+> **Coherence:** Does it hold together?
+
+> **Clarity:** Can it be understood and inspected?
+
+> **Continuity:** What persists through change?
+
+The exercises make those questions tangible.
+
+The systems examples make them transferable.
+
+The Lean examples make selected structures formally inspectable.
+
+AI can help the learner think.
+
+The mastery exercises require the learner to do the thinking.
+
+And the final destination is not dependence on TriadicFrameworks, AACCC, Lean, or an AI assistant.
+
+It is:
+
+> **A learner who can take these questions somewhere we didn't choose for them and use them independently.**
+
+---
+
