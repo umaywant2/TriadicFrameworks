@@ -1,0 +1,708 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/5Guides/lean/index.md">
+  <title>Lean 4 Lab</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/5Guides/lean/index.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/5Guides/lean/index.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="lean-4-lab">Lean 4 Lab</h1>
+<blockquote>
+<p><strong>Optional formal companions for the Five Guides</strong></p>
+</blockquote>
+<p>The Lean 4 Lab provides a small collection of formal examples for learners who want to take the ideas in <strong>5Guides</strong> one step further.</p>
+<p>You do <strong>not</strong> need Lean to complete the Five Guides.</p>
+<p>You do <strong>not</strong> need to understand every line of code.</p>
+<p>And you definitely do not need to become a mathematician before asking:</p>
+<blockquote>
+<p><strong>What exactly did we prove?</strong></p>
+</blockquote>
+<p>That question is the reason these examples are here.</p>
+<hr>
+<h1 id="why-lean">Why Lean?</h1>
+<p>Throughout 5Guides, we ask questions like:</p>
+<blockquote>
+<p><strong>What am I observing?</strong></p>
+<p><strong>What corresponds?</strong></p>
+<p><strong>Does this hold together?</strong></p>
+<p><strong>Can I make it clear enough to inspect?</strong></p>
+<p><strong>What persists when it changes?</strong></p>
+</blockquote>
+<p>Lean gives us an interesting environment in which to practice those questions.</p>
+<p>A Lean file forces us to declare things explicitly enough for a proof checker to inspect them.</p>
+<p>That makes it harder to quietly hide:</p>
+<ul>
+<li>an unstated assumption;</li>
+<li>an unsupported conclusion;</li>
+<li>an ambiguous relationship;</li>
+<li>a missing definition;</li>
+<li>or a convenient step that doesn't actually follow.</li>
+</ul>
+<p>Sometimes Lean accepts the proof.</p>
+<p>Sometimes Lean refuses.</p>
+<p><strong>Both can teach us something.</strong></p>
+<hr>
+<h1 id="an-important-distinction">An Important Distinction</h1>
+<p>Lean checks the <strong>formal model we give it</strong>.</p>
+<p>That means we must keep two questions separate:</p>
+<blockquote>
+<h2 id="did-lean-verify-the-formal-proof"><strong>Did Lean verify the formal proof?</strong></h2>
+</blockquote>
+<p>and:</p>
+<blockquote>
+<h2 id="did-we-formalize-the-claim-we-actually-intended-to-make"><strong>Did we formalize the claim we actually intended to make?</strong></h2>
+</blockquote>
+<p>Those are not the same question.</p>
+<p>A proof can be formally valid while modeling something different from what its author intended.</p>
+<p>Likewise, a formally verified theorem does not automatically establish that its assumptions accurately describe a physical or empirical system.</p>
+<p>So throughout this Lab, keep asking:</p>
+<blockquote>
+<p><strong>What was declared?</strong></p>
+<p><strong>What was assumed?</strong></p>
+<p><strong>What followed?</strong></p>
+<p><strong>What remains outside the proof?</strong></p>
+</blockquote>
+<hr>
+<h1 id="the-lean-collection">The Lean Collection</h1>
+<p>The Lab currently contains <strong>11 Lean 4 examples</strong>.</p>
+<p>They form two small groups.</p>
+<hr>
+<h1 id="part-i-the-five-guides">Part I — The Five Guides</h1>
+<p>These files provide formal companions to AACCC itself.</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Guide</th>
+<th>Formal Question</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>01_awareness.lean</code></td>
+<td><strong>Awareness</strong></td>
+<td>What has actually been declared?</td>
+</tr>
+<tr>
+<td><code>02_alignment.lean</code></td>
+<td><strong>Alignment</strong></td>
+<td>What correspondence is justified?</td>
+</tr>
+<tr>
+<td><code>03_coherence.lean</code></td>
+<td><strong>Coherence</strong></td>
+<td>Does the conclusion follow?</td>
+</tr>
+<tr>
+<td><code>04_clarity.lean</code></td>
+<td><strong>Clarity</strong></td>
+<td>Can the reasoning be made inspectable?</td>
+</tr>
+<tr>
+<td><code>05_continuity.lean</code></td>
+<td><strong>Continuity</strong></td>
+<td>What survives transformation?</td>
+</tr>
+</tbody>
+</table>
+<p>These examples are intentionally small.</p>
+<p>The goal is not advanced mathematics.</p>
+<p>The goal is to make reasoning visible.</p>
+<hr>
+<h1 id="01_awarenesslean"><code>01_awareness.lean</code></h1>
+<h2 id="awareness">Awareness</h2>
+<blockquote>
+<p><strong>What am I observing?</strong></p>
+</blockquote>
+<p>Before proving anything, look at the formal state.</p>
+<p>Ask:</p>
+<ul>
+<li>What variables exist?</li>
+<li>What types do they have?</li>
+<li>What hypotheses were supplied?</li>
+<li>What is the goal?</li>
+<li>What have I assumed that Lean has not actually been given?</li>
+</ul>
+<p>The proof state becomes something you can inspect.</p>
+<h3 id="student-habit">Student Habit</h3>
+<p>Before changing the proof, describe the problem in plain language.</p>
+<blockquote>
+<p><strong>What do I actually have?</strong></p>
+</blockquote>
+<p>Then:</p>
+<blockquote>
+<p><strong>What am I being asked to establish?</strong></p>
+</blockquote>
+<p>Only then begin proving.</p>
+<hr>
+<h1 id="02_alignmentlean"><code>02_alignment.lean</code></h1>
+<h2 id="alignment">Alignment</h2>
+<blockquote>
+<p><strong>What corresponds?</strong></p>
+</blockquote>
+<p>Lean's equality reasoning gives us a very direct way to explore correspondence.</p>
+<p>If we know that two values are equal, we can investigate what happens when they appear inside larger expressions.</p>
+<p>The important lesson isn't merely:</p>
+<blockquote>
+<p><strong>Use rewrite.</strong></p>
+</blockquote>
+<p>It is:</p>
+<blockquote>
+<p><strong>A transformation needs a justified relationship before one expression can replace another.</strong></p>
+</blockquote>
+<h3 id="student-habit_1">Student Habit</h3>
+<p>Before rewriting, ask:</p>
+<blockquote>
+<p><strong>What permits this substitution?</strong></p>
+</blockquote>
+<hr>
+<h1 id="03_coherencelean"><code>03_coherence.lean</code></h1>
+<h2 id="coherence">Coherence</h2>
+<blockquote>
+<p><strong>Does this hold together?</strong></p>
+</blockquote>
+<p>A theorem may contain familiar symbols and still make a claim that doesn't follow from its assumptions.</p>
+<p>Lean is particularly useful here because it doesn't care whether the conclusion <em>sounds reasonable</em>.</p>
+<p>The proof obligation remains until it is justified.</p>
+<h3 id="student-habit_2">Student Habit</h3>
+<p>When the proof doesn't close, don't immediately hunt for a more powerful tactic.</p>
+<p>Ask:</p>
+<blockquote>
+<p><strong>Should this conclusion actually follow from what I've declared?</strong></p>
+</blockquote>
+<p>Sometimes the theorem needs another proof.</p>
+<p>Sometimes it needs another assumption.</p>
+<p>Sometimes the statement itself is wrong.</p>
+<p>Those are different problems.</p>
+<hr>
+<h1 id="04_claritylean"><code>04_clarity.lean</code></h1>
+<h2 id="clarity">Clarity</h2>
+<blockquote>
+<p><strong>Can this be understood well enough to inspect?</strong></p>
+</blockquote>
+<p>Two proofs may establish the same theorem while communicating their reasoning very differently.</p>
+<p>A compact proof can be correct.</p>
+<p>A longer proof can also be correct.</p>
+<p>The useful question becomes:</p>
+<blockquote>
+<p><strong>Which version makes the important structure easier to inspect?</strong></p>
+</blockquote>
+<p>Clarity does not require maximum verbosity.</p>
+<p>It requires enough visible structure for someone to follow what matters.</p>
+<h3 id="student-habit_3">Student Habit</h3>
+<p>Ask:</p>
+<blockquote>
+<p><strong>Can another learner see why this step follows?</strong></p>
+</blockquote>
+<hr>
+<h1 id="05_continuitylean"><code>05_continuity.lean</code></h1>
+<h2 id="continuity">Continuity</h2>
+<blockquote>
+<p><strong>What persists through change?</strong></p>
+</blockquote>
+<p>Now change something.</p>
+<p>Perhaps:</p>
+<ul>
+<li>a definition;</li>
+<li>a transformation;</li>
+<li>a variable;</li>
+<li>a hypothesis;</li>
+<li>or the structure being examined.</li>
+</ul>
+<p>Then ask:</p>
+<ul>
+<li>Which earlier proofs still work?</li>
+<li>Which fail?</li>
+<li>Why?</li>
+<li>What structural relationship survived?</li>
+<li>What must be rebuilt?</li>
+</ul>
+<h3 id="student-habit_4">Student Habit</h3>
+<p>Don't merely notice that something broke.</p>
+<p>Ask:</p>
+<blockquote>
+<p><strong>What changed between the version <strong>at worked and the version that di</strong>'t?</strong></p>
+</blockquote>
+<hr>
+<h1 id="part-ii-turn-aaccc-back-on-its-origins">Part II — Turn AACCC Back on Its Origins</h1>
+<p>The remaining Lean files examine selected structures from the project lineage that contributed to the development of AACCC and 5Guides.</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Origin</th>
+<th>Formal Focus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>06_tft_origin.lean</code></td>
+<td>TFT</td>
+<td>Generic triadic structure and transformation</td>
+</tr>
+<tr>
+<td><code>07_nawderian_theorem.lean</code></td>
+<td>Nawderian Theorem</td>
+<td>Membership, intersection, and containment</td>
+</tr>
+<tr>
+<td><code>08_nawderian_set_theorem.lean</code></td>
+<td>SET Theorem</td>
+<td>Named contributions and composition</td>
+</tr>
+<tr>
+<td><code>09_temperature_engine_theorem.lean</code></td>
+<td>Temperature Engine</td>
+<td>Gradient and directional algebra</td>
+</tr>
+<tr>
+<td><code>10_unified_resonance_theorem.lean</code></td>
+<td>Unified Resonance</td>
+<td>Three-factor composition and explicit algebraic assumptions</td>
+</tr>
+<tr>
+<td><code>11_rtt_origin.lean</code></td>
+<td>RTT</td>
+<td>State, update, transition, and continuity</td>
+</tr>
+</tbody>
+</table>
+<p>This section has an additional purpose.</p>
+<p>We are not only using Lean to illustrate AACCC.</p>
+<p>We are using AACCC to inspect some of the structures from which the Five Guides emerged.</p>
+<hr>
+<h1 id="06_tft_originlean"><code>06_tft_origin.lean</code></h1>
+<h2 id="generic-triads">Generic Triads</h2>
+<p>This example introduces a deliberately small structure:</p>
+<pre><code class="language-text">Triad
+├── first
+├── second
+└── third
+</code></pre>
+<p>A transformation can then be applied to each position.</p>
+<p>The example explores:</p>
+<ul>
+<li>component correspondence;</li>
+<li>identity;</li>
+<li>composition;</li>
+<li>transformation;</li>
+<li>and structural persistence.</li>
+</ul>
+<p>The values may change while the three-position structure remains available for inspection.</p>
+<h3 id="ask">Ask</h3>
+<blockquote>
+<p><strong>What came from TFT's triadic inspiration?</strong></p>
+</blockquote>
+<p>and separately:</p>
+<blockquote>
+<p><strong>What structure did this teaching example introduce?</strong></p>
+</blockquote>
+<p>Do not quietly merge those two answers.</p>
+<hr>
+<h1 id="07_nawderian_theoremlean"><code>07_nawderian_theorem.lean</code></h1>
+<h2 id="shared-membership-is-not-automatically-containment">Shared Membership Is Not Automatically Containment</h2>
+<p>This example examines several declared dimension groups.</p>
+<p>The useful formal question is not merely whether they share an element.</p>
+<p>It is whether a stronger relationship such as ordinary set containment actually follows.</p>
+<p>Formalization gives us permission to say:</p>
+<blockquote>
+<p><strong>These structures share something.</strong></p>
+</blockquote>
+<p>while refusing to silently upgrade that statement into:</p>
+<blockquote>
+<p><strong>Therefore one contains the other.</strong></p>
+</blockquote>
+<h3 id="ask_1">Ask</h3>
+<blockquote>
+<p><strong>What relationship did we prove?</strong></p>
+<p><strong>What stronger relationship would require another definition?</strong></p>
+</blockquote>
+<p>This is Alignment and Coherence working together.</p>
+<hr>
+<h1 id="08_nawderian_set_theoremlean"><code>08_nawderian_set_theorem.lean</code></h1>
+<h2 id="named-contributions">Named Contributions</h2>
+<p>This example models three named SET contributions together with a supplied gravitational contribution.</p>
+<p>The formal exercise asks whether the implemented total contains exactly the contributions declared by the model.</p>
+<h3 id="ask_2">Ask</h3>
+<blockquote>
+<p><strong>Which term corresponds to which contribution?</strong></p>
+</blockquote>
+<p>Then:</p>
+<blockquote>
+<p><strong>What happens when one contribution becomes zero?</strong></p>
+</blockquote>
+<p>And finally:</p>
+<blockquote>
+<p><strong>What did Lean verify about the algebra, versus what would require empirical evidence?</strong></p>
+</blockquote>
+<hr>
+<h1 id="09_temperature_engine_theoremlean"><code>09_temperature_engine_theorem.lean</code></h1>
+<h2 id="direction-and-gradient">Direction and Gradient</h2>
+<p>This example uses a deliberately simplified one-dimensional signed model.</p>
+<p>It explores consequences such as:</p>
+<ul>
+<li>zero gradient;</li>
+<li>zero coupling;</li>
+<li>gradient reversal;</li>
+<li>positive and negative values.</li>
+</ul>
+<p>The model is intentionally smaller than the broader source interpretation.</p>
+<p>That limitation is visible rather than hidden.</p>
+<h3 id="ask_3">Ask</h3>
+<blockquote>
+<p><strong>What changed when the gradient changed sign?</strong></p>
+<p><strong>What remained fixed?</strong></p>
+<p><strong>Which conclusion came from algebra?</strong></p>
+<p><strong>Which interpretation came from outside the algebra?</strong></p>
+</blockquote>
+<hr>
+<h1 id="10_unified_resonance_theoremlean"><code>10_unified_resonance_theorem.lean</code></h1>
+<h2 id="what-did-the-formal-model-have-to-add">What Did the Formal Model Have to Add?</h2>
+<p>This example is especially useful because formalization exposed a question that source notation alone did not answer.</p>
+<p>A three-factor expression needs some defined way to combine its factors.</p>
+<p>The Lean example therefore makes its algebraic assumptions explicit.</p>
+<p>Instead of hiding them, it asks:</p>
+<blockquote>
+<p><strong>What operation are we using?</strong></p>
+<p><strong>Does it have an identity?</strong></p>
+<p><strong>Is it associative?</strong></p>
+<p><strong>Where did those assumptions come from?</strong></p>
+</blockquote>
+<p>This is one of the most useful things formalization can do.</p>
+<p>It can expose the structure an informal expression needs before a proof can proceed.</p>
+<hr>
+<h1 id="11_rtt_originlean"><code>11_rtt_origin.lean</code></h1>
+<h2 id="state-and-transition">State and Transition</h2>
+<p>The final origin example introduces a small RTT-inspired state:</p>
+<pre><code class="language-text">State
+├── scalar
+├── flow
+└── resonance
+</code></pre>
+<p>and a corresponding update:</p>
+<pre><code class="language-text">Update
+├── scalar change
+├── flow change
+└── resonance change
+</code></pre>
+<p>The example then explores:</p>
+<pre><code class="language-text">Before
+   ↓
+Update
+   ↓
+After
+</code></pre>
+<p>The individual values may change while the transition remains traceable.</p>
+<h3 id="ask_4">Ask</h3>
+<blockquote>
+<p><strong>What changed?</strong></p>
+<p><strong>What persisted?</strong></p>
+<p><strong>Can we show how the system got from one state to the next?</strong></p>
+</blockquote>
+<p>That brings us directly back to Continuity.</p>
+<hr>
+<h1 id="how-to-use-these-files">How to Use These Files</h1>
+<p>Don't begin by asking Lean for the answer.</p>
+<p>Try this instead.</p>
+<h2 id="1-read">1. Read</h2>
+<p>Look at:</p>
+<ul>
+<li>definitions;</li>
+<li>variables;</li>
+<li>assumptions;</li>
+<li>hypotheses;</li>
+<li>theorem statement.</li>
+</ul>
+<h2 id="2-predict">2. Predict</h2>
+<p>Before reading the proof, ask:</p>
+<blockquote>
+<p><strong>Do I think this should be true?</strong></p>
+</blockquote>
+<p>Then:</p>
+<blockquote>
+<p><strong>Why?</strong></p>
+</blockquote>
+<h2 id="3-inspect">3. Inspect</h2>
+<p>Separate:</p>
+<ul>
+<li>what was declared;</li>
+<li>what was assumed;</li>
+<li>what must be proved.</li>
+</ul>
+<h2 id="4-run">4. Run</h2>
+<p>If you have Lean installed, compile the file.</p>
+<p>For example:</p>
+<pre><code class="language-text">lean 01_awareness.lean
+</code></pre>
+<p>A successful compiler run verifies that Lean accepts the formal declarations and proofs in that file under the selected toolchain.</p>
+<h2 id="5-question-the-result">5. Question the Result</h2>
+<p>Even after Lean accepts the proof, ask:</p>
+<blockquote>
+<p><strong>What exactly did Lean prove?</strong></p>
+</blockquote>
+<p>Then:</p>
+<blockquote>
+<p><strong>What did it not prove?</strong></p>
+</blockquote>
+<p>That last question matters.</p>
+<hr>
+<h1 id="compiler-validation">Compiler Validation</h1>
+<p>The current <code>01–11</code> teaching set was checked using:</p>
+<pre><code class="language-text">Lean 4.36.0
+x86_64-w64-windows-gnu
+</code></pre>
+<p>Each file was compiled individually.</p>
+<p>The set completed the compiler check without remaining Lean errors.</p>
+<p>This gives us useful provenance for the formal artifacts.</p>
+<p>It does <strong>not</strong> convert the broader source frameworks into empirically validated theories.</p>
+<hr>
+<h1 id="formal-verification-vs-empirical-validation">Formal Verification vs. Empirical Validation</h1>
+<p>Keep this distinction nearby throughout the Lab.</p>
+<h2 id="formal-verification">Formal Verification</h2>
+<p>Lean can help establish:</p>
+<blockquote>
+<p>Given these definitions and assumptions, does this conclusion follow?</p>
+</blockquote>
+<h2 id="empirical-validation">Empirical Validation</h2>
+<p>Evidence must address a different question:</p>
+<blockquote>
+<p>Does this model adequately describe the thing in the world that we intend it to describe?</p>
+</blockquote>
+<p>These questions can support each other.</p>
+<p>They cannot replace each other.</p>
+<p>A formally valid model can still have poor assumptions.</p>
+<p>An empirically interesting observation can still be formalized badly.</p>
+<p>AACCC helps us inspect both boundaries.</p>
+<hr>
+<h1 id="when-lean-rejects-a-proof">When Lean Rejects a Proof</h1>
+<p>Don't panic.</p>
+<p>And don't immediately throw a bigger tactic at it. 😉</p>
+<p>First ask:</p>
+<h2 id="awareness_1">Awareness</h2>
+<blockquote>
+<p><strong>What goal is Lean actually showing me?</strong></p>
+</blockquote>
+<h2 id="alignment_1">Alignment</h2>
+<blockquote>
+<p><strong>Do my expressions correspond the way I thought they did?</strong></p>
+</blockquote>
+<h2 id="coherence_1">Coherence</h2>
+<blockquote>
+<p><strong>Should this conclusion follow from these assumptions?</strong></p>
+</blockquote>
+<h2 id="clarity_1">Clarity</h2>
+<blockquote>
+<p><strong>Is some required definition or assumption still hidden?</strong></p>
+</blockquote>
+<h2 id="continuity_1">Continuity</h2>
+<blockquote>
+<p><strong>What changed between the proof that worked and the proof that broke?</strong></p>
+</blockquote>
+<p>A compiler error can become part of the exercise.</p>
+<p>We experienced exactly that while developing some of these examples.</p>
+<p>Formalization exposed assumptions that had previously been easy to overlook.</p>
+<p>The result was a better model.</p>
+<hr>
+<h1 id="dont-fix-the-theorem-just-to-make-lean-happy">Don't "Fix" the Theorem Just to Make Lean Happy</h1>
+<p>Suppose Lean refuses a proof.</p>
+<p>One tempting solution is to weaken or alter the theorem until the compiler accepts it.</p>
+<p>Sometimes changing the theorem is correct.</p>
+<p>Sometimes it merely hides the original problem.</p>
+<p>Ask first:</p>
+<blockquote>
+<p><strong>Is the proof wrong?</strong></p>
+<p><strong>Is an assumption missing?</strong></p>
+<p><strong>Is the theorem wrong?</strong></p>
+<p><strong>Is the formal model incomplete?</strong></p>
+<p><strong>Did we formalize the wrong claim?</strong></p>
+</blockquote>
+<p>Those are very different diagnoses.</p>
+<p>A green compiler result is useful.</p>
+<p>It is not permission to stop thinking.</p>
+<hr>
+<h1 id="the-formalization-boundary">The Formalization Boundary</h1>
+<p>Every origin example should be read with the same boundary:</p>
+<blockquote>
+<p><strong>Lean proves consequences inside the model we supplied.</strong></p>
+</blockquote>
+<p>It does not automatically establish:</p>
+<ul>
+<li>that a model describes nature;</li>
+<li>that its variables correspond to measurable quantities;</li>
+<li>that its assumptions are empirically justified;</li>
+<li>that its interpretation is unique;</li>
+<li>that the source author's intent was represented perfectly;</li>
+<li>or that another model could not describe the evidence better.</li>
+</ul>
+<p>That's not a weakness in formal verification.</p>
+<p>It's simply knowing what question formal verification answers.</p>
+<hr>
+<h1 id="try-changing-something">Try Changing Something</h1>
+<p>Once a file compiles, that's a great time to break it.</p>
+<p>Change:</p>
+<ul>
+<li>a value;</li>
+<li>a definition;</li>
+<li>a hypothesis;</li>
+<li>a mapping;</li>
+<li>an update;</li>
+<li>or a theorem statement.</li>
+</ul>
+<p>Then compile again.</p>
+<p>Ask:</p>
+<blockquote>
+<p><strong>What broke?</strong></p>
+</blockquote>
+<p>More importantly:</p>
+<blockquote>
+<p><strong>Why?</strong></p>
+</blockquote>
+<p>Then try to determine whether the break occurred in:</p>
+<pre><code class="language-text">Observation
+    ↓
+Mapping
+    ↓
+Relationship
+    ↓
+Proof
+    ↓
+Interpretation
+</code></pre>
+<p>Now Lean becomes more than a checker.</p>
+<p>It becomes a place to experiment with structure.</p>
+<hr>
+<h1 id="a-good-lean-lab-habit">A Good Lean Lab Habit</h1>
+<p>For every example, complete these four sentences:</p>
+<blockquote>
+<p><strong>The model declares...</strong></p>
+<p><strong>The model assumes...</strong></p>
+<p><strong>Lean proves...</strong></p>
+<p><strong>Lean does not prove...</strong></p>
+</blockquote>
+<p>If you can answer all four clearly, you've probably learned more from the example than someone who merely copied the proof and got a green result.</p>
+<hr>
+<h1 id="where-to-go-next">Where to Go Next</h1>
+<p>If you're following the Five Guides as a student, return to the Guide you were exploring.</p>
+<p>The Lean examples are companions.</p>
+<p>They are not the destination.</p>
+<p>The real test is whether you can take the same structural questions into something new:</p>
+<blockquote>
+<p><strong>What am I observing?</strong></p>
+<p><strong>What corresponds?</strong></p>
+<p><strong>Does this hold together?</strong></p>
+<p><strong>Can I make it clear enough to inspect?</strong></p>
+<p><strong>What persists when it changes?</strong></p>
+</blockquote>
+<p>Then go find something interesting enough to ask them about.</p>
+<hr>
+<h2 id="lean-files">Lean Files</h2>
+<h3 id="five-guides">Five Guides</h3>
+<ul>
+<li><code>01_awareness.lean</code></li>
+<li><code>02_alignment.lean</code></li>
+<li><code>03_coherence.lean</code></li>
+<li><code>04_clarity.lean</code></li>
+<li><code>05_continuity.lean</code></li>
+</ul>
+<h3 id="project-origins">Project Origins</h3>
+<ul>
+<li><code>06_tft_origin.lean</code></li>
+<li><code>07_nawderian_theorem.lean</code></li>
+<li><code>08_nawderian_set_theorem.lean</code></li>
+<li><code>09_temperature_engine_theorem.lean</code></li>
+<li><code>10_unified_resonance_theorem.lean</code></li>
+<li><code>11_rtt_origin.lean</code></li>
+</ul>
+<hr>
+<blockquote>
+<p><strong>Read → Predict → Inspect → Compile → Question → Modify → Learn</strong></p>
+</blockquote>
+  </main>
+</body>
+</html>

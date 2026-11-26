@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
-  <meta name="source" content="/docs/5Guides/5g_capture.md">
+  <meta name="source" content="/docs/5Guides/lean/5g_capture.md">
   <title>5g capture</title>
   <style>
     :root {
@@ -78,7 +78,7 @@
 <body>
   <!--
     GENERATED FILE
-    Source: /docs/5Guides/5g_capture.md
+    Source: /docs/5Guides/lean/5g_capture.md
     Do not edit directly.
     Regenerate from canonical source.
   -->
@@ -86,9 +86,9 @@
   <aside class="generated-notice">
     <strong>Generated mirror.</strong>
     Canonical source:
-    <code>/docs/5Guides/5g_capture.md</code>
+    <code>/docs/5Guides/lean/5g_capture.md</code>
     &middot;
-    <a href="../sitemap.html">Sitemap</a>
+    <a href="../../sitemap.html">Sitemap</a>
   </aside>
 
   <main>
@@ -8565,6 +8565,1360 @@ lean &quot;.\docs\5Guides\06_tft_origin.lean&quot;
 <p>to:</p>
 <p><strong>toolchain available and ready for compiler verification.</strong>
 </p>
+</blockquote>
+<hr>
+<h1 id="thats-it">😁 That's It</h1>
+<p>If this command:</p>
+<p><code>lean 06_tft_origin.lean</code></p>
+<p>returned you directly to:</p>
+<p><code>(base) PS C:\Dev\TriadicFrameworks\docs\5Guides&gt;</code></p>
+<p>with <strong>no error output</strong>, then we've crossed the line we were waiting for.</p>
+<h2 id="06_tft_originlean-verified"><code>06_tft_origin.lean</code> — VERIFIED</h2>
+<p>Environment:</p>
+<p><code>Lean 4.36.0</code></p>
+<p>Platform:</p>
+<p><code>x86_64-w64-windows-gnu</code></p>
+<p>Compiler result:</p>
+<p><strong>PASS — no Lean errors reported</strong></p>
+<p>So we can retire the earlier label:</p>
+<blockquote>
+<p><strong>Source-reviewed / compiler verification pending</strong></p>
+</blockquote>
+<p>and replace it with:</p>
+<blockquote>
+<p><strong>Lean 4 compiler verified</strong></p>
+</blockquote>
+<p>More specifically, based on the output you've shown:</p>
+<blockquote>
+<p><strong><code>06_tft_origin.lean</code> successfully elaborates under Lean 4.36.0.</strong></p>
+</blockquote>
+<p>That's exactly the distinction we wanted to preserve throughout this work. We weren't going to call something verified merely because the Lean source <em>looked</em> correct.</p>
+<p>And now it has actually gone through Lean.</p>
+<h2 id="next-move">Next Move</h2>
+<p>Since you're already sitting in exactly the right directory, I'd run the entire set individually:</p>
+<p><code>lean 01_awareness.lean</code>
+<code>lean 02_alignment.lean</code>
+<code>lean 03_coherence.lean</code>
+<code>lean 04_clarity.lean</code>
+<code>lean 05_continuity.lean</code>
+<code>lean 06_tft_origin.lean</code>
+<code>lean 07_nawderian_theorem.lean</code>
+<code>lean 08_nawderian_set_theorem.lean</code>
+<code>lean 09_temperature_engine_theorem.lean</code>
+<code>lean 10_unified_resonance_theorem.lean</code>
+<code>lean 11_rtt_origin.lean</code></p>
+<p><strong>Don't fix anything preemptively.</strong></p>
+<p>Let Lean tell us exactly which files survive the real compiler and which don't.</p>
+<p>Given the provenance emphasis we've put into 5Guides, I'd actually preserve the results:</p>
+<p><code>PASS</code> means <strong>Lean 4.36.0 accepted the file.</strong></p>
+<p><code>FAIL</code> means <strong>capture the exact compiler output, inspect why, and repair the formalization rather than merely trying to silence Lean.</strong></p>
+<p>And after all that installation archaeology...</p>
+<p><strong>Lean just silently accepting <code>06_tft_origin.lean</code> has to be a particularly satisfying little prompt return.</strong> 😂</p>
+<hr>
+<h1 id="aaccc-lean-validation-status">AACCC Lean Validation Status</h1>
+<p>Excellent. 😁</p>
+<p>These five have now passed your local <strong>Lean 4.36.0</strong> compiler check with no reported errors:</p>
+<ul>
+<li><code>01_awareness.lean</code> — <strong>PASS</strong></li>
+<li><code>02_alignment.lean</code> — <strong>PASS</strong></li>
+<li><code>03_coherence.lean</code> — <strong>PASS</strong></li>
+<li><code>04_clarity.lean</code> — <strong>PASS</strong></li>
+<li><code>05_continuity.lean</code> — <strong>PASS</strong></li>
+<li><code>06_tft_origin.lean</code> — <strong>PASS</strong></li>
+</ul>
+<p>For the remaining origin files, from:</p>
+<p><code>C:\Dev\TriadicFrameworks\docs\5Guides</code></p>
+<p>run:</p>
+<pre><code class="language-powershell">lean 07_nawderian_theorem.lean
+lean 08_nawderian_set_theorem.lean
+lean 09_temperature_engine_theorem.lean
+lean 10_unified_resonance_theorem.lean
+lean 11_rtt_origin.lean
+</code></pre>
+<p>If all five return silently to the prompt, we'll have the complete <strong>01–11 set compiler-verified under Lean 4.36.0.</strong></p>
+<p>If any throws an error, paste the exact output and we'll repair the formalization rather than bending the theorem to make Lean happy. 😉</p>
+<h3 id="current-milestone">Current milestone</h3>
+<p><strong>AACCC core</strong>: 01–05 ✅
+<strong>TFT origin</strong>: 06 ✅
+<strong>Theorem/RTT origins</strong>: 07–11 next</p>
+<p>After 11 passes, I think we're ready to mark the Lean strand captured and return to the <strong>5Guides scaffolding plan.</strong></p>
+<hr>
+<h1 id="files-0711">Files 07–11</h1>
+<p>I can't run the commands on your <strong>local Windows machine</strong> from here, and I also checked the GitHub <code>main</code> branch: <code>07_nawderian_theorem.lean</code> through <code>11_rtt_origin.lean</code> are not currently present there, so I can't retrieve and run copies of those exact files in my execution environment either.</p>
+<p>Since you're already in:</p>
+<p><code>C:\Dev\TriadicFrameworks\docs\5Guides</code></p>
+<p>run this PowerShell block:</p>
+<pre><code class="language-powershell">$files = @(
+    &quot;07_nawderian_theorem.lean&quot;,
+    &quot;08_nawderian_set_theorem.lean&quot;,
+    &quot;09_temperature_engine_theorem.lean&quot;,
+    &quot;10_unified_resonance_theorem.lean&quot;,
+    &quot;11_rtt_origin.lean&quot;
+)
+
+foreach ($file in $files) {
+    Write-Host &quot;`n=== $file ===&quot; -ForegroundColor Cyan
+
+    lean $file
+
+    if ($LASTEXITCODE -eq 0) {
+        Write-Host &quot;PASS&quot; -ForegroundColor Green
+    }
+    else {
+        Write-Host &quot;FAIL ($LASTEXITCODE)&quot; -ForegroundColor Red
+    }
+}
+</code></pre>
+<p>Expected happy result:</p>
+<pre><code class="language-text">=== 07_nawderian_theorem.lean ===
+PASS
+ 
+=== 08_nawderian_set_theorem.lean ===
+PASS
+ 
+=== 09_temperature_engine_theorem.lean ===
+PASS
+ 
+=== 10_unified_resonance_theorem.lean ===
+PASS
+ 
+=== 11_rtt_origin.lean ===
+PASS
+</code></pre>
+<p>If any fail, paste the complete Lean error for that file and we'll repair the formalization from the compiler evidence.</p>
+<p>If all five pass, then we can accurately record:</p>
+<blockquote>
+<p>AACCC / 5Guides Lean set 01–11: compiler-verified with Lean 4.36.0 on Windows x86_64.</p>
+<p>No more “source-reviewed, compiler pending.” 😁</p>
+</blockquote>
+<hr>
+<p>Absolutely. Let's simplify and do this <strong>one file at a time</strong>.</p>
+<p>We'll create downloadable copies of the remaining five Lean origin files:</p>
+<ol>
+<li><code>07_nawderian_theorem.lean</code></li>
+<li><code>08_nawderian_set_theorem.lean</code></li>
+<li><code>09_temperature_engine_theorem.lean</code></li>
+<li><code>10_unified_resonance_theorem.lean</code></li>
+<li><code>11_rtt_origin.lean</code></li>
+</ol>
+<p>We'll follow the same process that worked for <code>06_tft_origin.lean</code>:</p>
+<p><strong>Create file → Download → Save into <code>docs/5Guides/</code> → Run Lean locally → Fix only if Lean reports an error.</strong></p>
+<p>The downloadable files aren't currently present in my working directory, so rather than pretending they already exist, we'll generate them from the outlines we've captured.</p>
+<p>Let's start cleanly with:</p>
+<h1 id="07_nawderian_theoremlean_2"><code>07_nawderian_theorem.lean</code></h1>
+<p>I'll create the complete downloadable file next, then we'll move through <code>08</code>, <code>09</code>, <code>10</code>, and <code>11</code> in order.</p>
+<hr>
+<h1 id="07_nawderian_theoremlean-pass"><code>07_nawderian_theorem.lean</code> — PASS ✅</h1>
+<p>Your local Lean 4.36.0 compiler accepted:</p>
+<p><code>07_nawderian_theorem.lean</code></p>
+<p>with no reported errors.</p>
+<p>So the validation record is now:</p>
+<ul>
+<li><code>01_awareness.lean</code> — ✅ PASS</li>
+<li><code>02_alignment.lean</code> — ✅ PASS</li>
+<li><code>03_coherence.lean</code> — ✅ PASS</li>
+<li><code>04_clarity.lean</code> — ✅ PASS</li>
+<li><code>05_continuity.lean</code> — ✅ PASS</li>
+<li><code>06_tft_origin.lean</code> — ✅ PASS</li>
+<li><code>07_nawderian_theorem.lean</code> — ✅ PASS</li>
+</ul>
+<p>And importantly, <code>07</code> preserves the formal distinction we wanted:</p>
+<blockquote>
+<p><strong>Shared membership at dimension 6 does not automatically establish ordinary set containment.</strong></p>
+</blockquote>
+<p>No compiler gymnastics required. 😁</p>
+<p>Next in sequence:</p>
+<p><code>08_nawderian_set_theorem.lean</code></p>
+<hr>
+<pre><code>
+This is actually a **better teaching version.**
+
+The compiler exposed that our original file quietly assumed an algebraic environment that the standalone Lean file had never declared. Mathlib examples normally obtain structures such as Monoid through imports, and monoid-style structures require the multiplication, identity, and algebraic laws we need here. [github+1](https://github.com/BaDaaS/lean4-courses/tree/main/0013-algebraic-structures)
+
+Rather than importing a large library, this version says explicitly:
+&gt; 
+&gt; **Here is the algebra we are assuming.**
+&gt; 
+That turns the compiler failure itself into exactly the Clarity lesson we wanted.
+
+Run:
+```text
+lean 10_unified_resonance_theorem.lean
+</code></pre>
+<p>If Nat.one_mul or Nat.mul_one have slightly different core names in Lean 4.36, those would now be the only likely compatibility points. Let the compiler tell us rather than changing anything preemptively.</p>
+<hr>
+<h1 id="aaccc-lean-strand-compiler-verified">AACCC Lean Strand — Compiler Verified ✅</h1>
+<p><strong>That's the milestone.</strong> 😁</p>
+<p>Based on your local Lean 4.36.0 runs, the complete set now passes compilation:</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>01_awareness.lean</code></td>
+<td>✅ PASS</td>
+</tr>
+<tr>
+<td><code>02_alignment.lean</code></td>
+<td>✅ PASS</td>
+</tr>
+<tr>
+<td><code>03_coherence.lean</code></td>
+<td>✅ PASS</td>
+</tr>
+<tr>
+<td><code>04_clarity.lean</code></td>
+<td>✅ PASS</td>
+</tr>
+<tr>
+<td><code>05_continuity.lean</code></td>
+<td>✅ PASS</td>
+</tr>
+<tr>
+<td><code>06_tft_origin.lean</code></td>
+<td>✅ PASS</td>
+</tr>
+<tr>
+<td><code>07_nawderian_theorem.lean</code></td>
+<td>✅ PASS</td>
+</tr>
+<tr>
+<td><code>08_nawderian_set_theorem.lean</code></td>
+<td>✅ PASS</td>
+</tr>
+<tr>
+<td><code>09_temperature_engine_theorem.lean</code></td>
+<td>✅ PASS</td>
+</tr>
+<tr>
+<td><code>10_unified_resonance_theorem.lean</code></td>
+<td>✅ PASS</td>
+</tr>
+<tr>
+<td><code>11_rtt_origin.lean</code></td>
+<td>✅ PASS</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Validation environment:</strong> Lean 4.36.0, <code>x86_64-w64-windows-gnu</code>.</p>
+<p>And importantly, <code>09</code> and <code>10</code> got <strong>better because we actually compiled them</strong>.</p>
+<p><code>09</code> lost an unnecessary Mathlib-style tactic assumption and ended with an explicit core integer proof.</p>
+<p><code>10</code> exposed an even more valuable issue: we'd assumed a <code>Monoid</code> environment without actually providing one. The corrected example now makes the algebraic assumptions explicit through <code>ResonanceAlgebra</code>.</p>
+<p>That's exactly the kind of thing we're trying to teach.</p>
+<hr>
+<h1 id="what-id-do-next">What I'd Do Next</h1>
+<p>I think we should now declare the <strong>capture phase complete</strong> and move into the scaffolding phase you mentioned at the beginning.</p>
+<p>We've accumulated enough material.</p>
+<h2 id="1-freeze-5g_capturemd">1. Freeze <code>5g_capture.md</code></h2>
+<p>Don't polish it into a textbook.</p>
+<p>It's done its job as the messy workshop notebook.</p>
+<p>Add one final capture note:</p>
+<blockquote>
+<p><strong>Lean Validation Milestone</strong></p>
+<p>The complete AACCC Lean teaching sequence <code>01–11</code> was compiled successfully using Lean 4.36.0 on Windows (<code>x86_64-w64-windows-gnu</code>).</p>
+<p>The examples distinguish formal verification from empirical validation. Lean verifies consequences of the definitions and assumptions encoded in each file; broader interpretations remain subject to evidence, testing, and independent criticism.</p>
+</blockquote>
+<p>Then leave the capture alone.</p>
+<hr>
+<h1 id="2-scaffold-the-actual-5guides-module">2. Scaffold the Actual 5Guides Module</h1>
+<p>I'd now separate the student's journey from all that captured development material.</p>
+<p>Something approximately like:</p>
+<p><code>docs/5Guides/</code></p>
+<pre><code class="language-text">index.md
+
+01_awareness/
+    index.md
+    observe.md
+    practice.md
+    mastery.md
+
+02_alignment/
+    index.md
+    compare.md
+    practice.md
+    mastery.md
+
+03_coherence/
+    index.md
+    inspect.md
+    practice.md
+    mastery.md
+
+04_clarity/
+    index.md
+    express.md
+    practice.md
+    mastery.md
+
+05_continuity/
+    index.md
+    change.md
+    practice.md
+    mastery.md
+
+origins/
+    index.md
+    tft.md
+    theorems.md
+    rtt.md
+
+lean/
+    index.md
+    01_awareness.lean
+    02_alignment.lean
+    ...
+    11_rtt_origin.lean
+
+5g_capture.md
+</code></pre>
+<p>Not necessarily those exact filenames yet.
+<strong>The architecture comes first.</strong></p>
+<hr>
+<h2 id="3-give-every-guide-the-same-rhythm">3. Give Every Guide the Same Rhythm</h2>
+<p>We already discovered the reusable student pattern:</p>
+<blockquote>
+<p>Meet it → Play with it → Notice it → Apply it → Challenge it → Reflect</p>
+<p>Each guide can therefore feel familiar without feeling repetitive.</p>
+</blockquote>
+<h3 id="awareness_6">Awareness</h3>
+<p><strong>What am I observing?</strong></p>
+<h3 id="alignment_10">Alignment</h3>
+<p><strong>What corresponds?</strong></p>
+<h3 id="coherence_9">Coherence</h3>
+<p><strong>Does it hold together?</strong></p>
+<h3 id="clarity_6">Clarity</h3>
+<p><strong>Can it be understood and inspected?</strong></p>
+<h3 id="continuity_5">Continuity</h3>
+<p><strong>What persists through change?</strong></p>
+<p>The student learns the navigation once.</p>
+<p>Then only the thinking challenge changes.</p>
+<hr>
+<h2 id="4-keep-three-learning-paths-together">4. Keep Three Learning Paths Together</h2>
+<p>I'd scaffold each guide with three optional depths.</p>
+<h3 id="everyday">Everyday</h3>
+<p>Mugs, bicycles, conversations, viewpoints, puzzles, study habits.</p>
+<h3 id="systems">Systems</h3>
+<p>Software, signals, states, drift, patterns, transitions.</p>
+<h3 id="formal">Formal</h3>
+<p>Lean 4.</p>
+<p>That gives us a rather lovely progression:</p>
+<blockquote>
+<p><strong>I can experience this.</strong></p>
+<p>↓</p>
+<p><strong>I can recognize it in a system.</strong></p>
+<p>↓</p>
+<p><strong>I can formalize a small version precisely enough for a proof checker to inspect it.</strong></p>
+<p>Nobody has to become a mathematician to finish the guide.
+But interested students can keep drilling down.</p>
+</blockquote>
+<hr>
+<h2 id="5-keep-the-origin-material-small">5. Keep the Origin Material Small</h2>
+<p>The history should answer:</p>
+<blockquote>
+<p>Where did these five questions come from?</p>
+<p>Not require students to understand the entire TriadicFrameworks canon before learning them.
+So I'd keep:
+<strong>TFT → Triads → Theorems → RTT → AACCC</strong></p>
+</blockquote>
+<p>as a little optional "<strong>Where did this come from?</strong>" branch.</p>
+<p>The eleven Lean examples then become unusually useful because students can eventually point AACCC back at its own lineage.</p>
+<p>That closes the loop:</p>
+<blockquote>
+<p><strong>Don't trust the framework because the framework taught you how to inspect things.</strong>
+<strong>Inspect the framework too.</strong></p>
+<p>That's very much the project you've been describing all along.</p>
+</blockquote>
+<hr>
+<h2 id="6-then-build-the-first-complete-guide">6. Then Build the First Complete Guide</h2>
+<p>And I would resist building all five simultaneously.</p>
+<p><strong>Scaffold all five.</strong></p>
+<p>Then fully implement:</p>
+<h3 id="awareness_7">Awareness</h3>
+<p>Make Awareness our reference implementation:
+- student introduction;
+- first observation game;
+- harder observation game;
+- grounding/imagination exercise;
+- observer games;
+- blind-spot challenge;
+- AI companion prompts;
+- system example;
+- Lean exercise;
+- optional awareness assessment;
+- applied challenge;
+- mastery checkpoint;
+- badge;
+- private reflection;
+- voluntary footprint;
+- bridge to Alignment.</p>
+<p>Once <strong>Awareness actually feels good</strong>, its architecture becomes the template for the remaining four.</p>
+<hr>
+<h2 id="the-milestone-weve-reached">The Milestone We've Reached</h2>
+<p>This morning we started with:</p>
+<blockquote>
+<p><em>Could students work through Awareness, get a badge, and optionally leave a tiny footprint?</em></p>
+<p>And somehow, quite naturally, we've ended up with:
+<strong>five student guides</strong>
+<strong>human exercises</strong>
+<strong>AI-assisted learning</strong>
+<strong>systems reasoning</strong>
+<strong>formal Lean examples</strong>
+<strong>origin formalizations</strong>
+<strong>privacy-preserving participation</strong>
+<strong>a path toward independent application</strong></p>
+</blockquote>
+<p>...with an unexpected side quest through the Windows Elan bootstrapper. 😂</p>
+<p>I think that's plenty of capture.</p>
+<p><strong>Next: scaffold the Five Guides module.</strong></p>
+<hr>
+<h1 id="5guides-full-module-file-scaffolding">5Guides — Full Module File Scaffolding</h1>
+<p>The goal is to separate the <strong>workshop/capture layer</strong> from the <strong>student experience</strong> while keeping the module lightweight, repeatable, and easy to maintain.</p>
+<hr>
+<h1 id="1-proposed-module-tree">1. Proposed Module Tree</h1>
+<pre><code class="language-text">docs/5Guides/
+│
+├── index.md
+├── 5g_capture.md
+│
+├── awareness/
+│   ├── index.md
+│   ├── explore.md
+│   ├── practice.md
+│   └── mastery.md
+│
+├── alignment/
+│   ├── index.md
+│   ├── explore.md
+│   ├── practice.md
+│   └── mastery.md
+│
+├── coherence/
+│   ├── index.md
+│   ├── explore.md
+│   ├── practice.md
+│   └── mastery.md
+│
+├── clarity/
+│   ├── index.md
+│   ├── explore.md
+│   ├── practice.md
+│   └── mastery.md
+│
+├── continuity/
+│   ├── index.md
+│   ├── explore.md
+│   ├── practice.md
+│   └── mastery.md
+│
+├── origins/
+│   ├── index.md
+│   ├── tft.md
+│   ├── theorems.md
+│   ├── rtt.md
+│   └── formalization.md
+│
+├── lean/
+│   ├── index.md
+│   ├── 01_awareness.lean
+│   ├── 02_alignment.lean
+│   ├── 03_coherence.lean
+│   ├── 04_clarity.lean
+│   ├── 05_continuity.lean
+│   ├── 06_tft_origin.lean
+│   ├── 07_nawderian_theorem.lean
+│   ├── 08_nawderian_set_theorem.lean
+│   ├── 09_temperature_engine_theorem.lean
+│   ├── 10_unified_resonance_theorem.lean
+│   └── 11_rtt_origin.lean
+│
+└── shared/
+    ├── ai_companion.md
+    ├── assessment.md
+    ├── badges.md
+    ├── privacy.md
+    └── student_footprint.md
+</code></pre>
+<hr>
+<h1 id="2-module-entry-point">2. Module Entry Point</h1>
+<h2 id="indexmd"><code>index.md</code></h2>
+<p>This is the front door.</p>
+<p>It should answer four questions quickly:</p>
+<blockquote>
+<p><strong>What are the Five Guides?</strong></p>
+<p><strong>Why would I use them?</strong></p>
+<p><strong>How do I move through them?</strong></p>
+<p><strong>Do I need AI, mathematics, or prior TriadicFrameworks knowledge?</strong></p>
+</blockquote>
+<p>The answer to the last question should essentially be:</p>
+<p><strong>No.</strong></p>
+<p>Introduce the guides:</p>
+<table>
+<thead>
+<tr>
+<th>Guide</th>
+<th>Question</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Awareness</strong></td>
+<td>What am I observing?</td>
+</tr>
+<tr>
+<td><strong>Alignment</strong></td>
+<td>What corresponds?</td>
+</tr>
+<tr>
+<td><strong>Coherence</strong></td>
+<td>Does this hold together?</td>
+</tr>
+<tr>
+<td><strong>Clarity</strong></td>
+<td>Can it be understood and inspected?</td>
+</tr>
+<tr>
+<td><strong>Continuity</strong></td>
+<td>What persists through change?</td>
+</tr>
+</tbody>
+</table>
+<p>Student progression:</p>
+<pre><code class="language-text">Awareness
+    ↓
+Alignment
+    ↓
+Coherence
+    ↓
+Clarity
+    ↓
+Continuity
+    ↓
+Independent Application
+</code></pre>
+<p>The page should also make clear that students may use an AI companion, but AI is <strong>optional</strong>.</p>
+<hr>
+<h1 id="3-the-capture-file">3. The Capture File</h1>
+<h2 id="5g_capturemd"><code>5g_capture.md</code></h2>
+<p>Keep this exactly for what it has become:</p>
+<blockquote>
+<p><strong>The workshop notebook.</strong></p>
+</blockquote>
+<p>It can contain:</p>
+<ul>
+<li>brainstorming;</li>
+<li>abandoned approaches;</li>
+<li>alternative wording;</li>
+<li>implementation ideas;</li>
+<li>Lean development;</li>
+<li>privacy discussions;</li>
+<li>badge ideas;</li>
+<li>origin research;</li>
+<li>scaffold planning.</li>
+</ul>
+<p>It should <strong>not</strong> be part of the normal student journey.</p>
+<p>The polished material flows <strong>out of</strong> the capture file.</p>
+<p>We do not need to turn the capture file itself into the course.</p>
+<hr>
+<h1 id="4-common-guide-architecture">4. Common Guide Architecture</h1>
+<p>Each guide gets four student-facing files:</p>
+<pre><code class="language-text">index.md
+explore.md
+practice.md
+mastery.md
+</code></pre>
+<p>That provides useful separation without producing a maze.</p>
+<hr>
+<h1 id="5-guide-indexmd">5. Guide <code>index.md</code></h1>
+<p>Each guide begins with a short, friendly introduction.</p>
+<p>For example:</p>
+<h2 id="awareness_8">Awareness</h2>
+<blockquote>
+<p><strong>What am I actually observing?</strong></p>
+</blockquote>
+<p>Include:</p>
+<ul>
+<li>what the guide explores;</li>
+<li>why it matters;</li>
+<li>what the learner will try;</li>
+<li>conceptual progression;</li>
+<li>optional AI assistance;</li>
+<li>eventual badge.</li>
+</ul>
+<p>Avoid front-loading formal terminology.</p>
+<p>The student should <strong>experience the problem first</strong>.</p>
+<hr>
+<h1 id="6-exploremd">6. <code>explore.md</code></h1>
+<p>This is where the playful material lives.</p>
+<p>For Awareness:</p>
+<pre><code class="language-text">First observation game
+        ↓
+Harder observation game
+        ↓
+Ground first, then imagine
+        ↓
+Meet the observer
+        ↓
+Two-player observer game
+        ↓
+No-partner observer game
+        ↓
+Blind-spot challenge
+</code></pre>
+<p>The student gradually discovers the idea before receiving the formal structure.</p>
+<p>The other guides inherit the same educational rhythm.</p>
+<hr>
+<h1 id="7-practicemd">7. <code>practice.md</code></h1>
+<p>Now the learner begins using the concept deliberately.</p>
+<p>Every guide should move through three optional contexts.</p>
+<h2 id="everyday_1">Everyday</h2>
+<p>Something familiar.</p>
+<p>Examples:</p>
+<ul>
+<li>conversations;</li>
+<li>bicycles;</li>
+<li>maps;</li>
+<li>puzzles;</li>
+<li>study habits;</li>
+<li>directions;</li>
+<li>household objects.</li>
+</ul>
+<h2 id="systems_1">Systems</h2>
+<p>Move into structural reasoning:</p>
+<ul>
+<li>software;</li>
+<li>states;</li>
+<li>sensors;</li>
+<li>mappings;</li>
+<li>failures;</li>
+<li>drift;</li>
+<li>transitions;</li>
+<li>recurring patterns.</li>
+</ul>
+<h2 id="formal_1">Formal</h2>
+<p>Optional Lean exercise.</p>
+<p>That gives us the recurring progression:</p>
+<blockquote>
+<p><strong>Experience it → recognize it → formalize it</strong></p>
+</blockquote>
+<p>The Lean path should never be required for receiving the normal student badge.</p>
+<hr>
+<h1 id="8-masterymd">8. <code>mastery.md</code></h1>
+<p>Each guide ends with a fresh problem.</p>
+<p>The student should demonstrate the skill without having every question supplied one at a time.</p>
+<p>The page includes:</p>
+<h3 id="challenge_1">Challenge</h3>
+<p>A new scenario.</p>
+<h3 id="student-artifact">Student Artifact</h3>
+<p>For example:</p>
+<ul>
+<li>Awareness Record;</li>
+<li>Alignment Record;</li>
+<li>Coherence Record;</li>
+<li>Clarity Record;</li>
+<li>Continuity Record.</li>
+</ul>
+<h3 id="retry">Retry</h3>
+<p>If something important is missing:</p>
+<blockquote>
+<p><strong>Here's what might deserve another look.</strong></p>
+</blockquote>
+<p>Not:</p>
+<blockquote>
+<p><strong>FAILED.</strong></p>
+</blockquote>
+<h3 id="reflection_1">Reflection</h3>
+<p>A private question.</p>
+<h3 id="badge">Badge</h3>
+<p>Award the guide milestone.</p>
+<h3 id="optional-footprint_1">Optional Footprint</h3>
+<p>Only after completion.</p>
+<h3 id="next-guide">Next Guide</h3>
+<p>A natural bridge forward.</p>
+<hr>
+<h1 id="9-awareness-scaffold">9. Awareness Scaffold</h1>
+<pre><code class="language-text">awareness/
+├── index.md
+├── explore.md
+├── practice.md
+└── mastery.md
+</code></pre>
+<h2 id="indexmd_1"><code>index.md</code></h2>
+<p><strong>Question:</strong> What am I observing?</p>
+<h2 id="exploremd"><code>explore.md</code></h2>
+<p>Contains:</p>
+<ul>
+<li>first observation game;</li>
+<li>second harder round;</li>
+<li>grounding/imagination exercise;</li>
+<li>observer perspective;</li>
+<li>two-player observer game;</li>
+<li>single-player version;</li>
+<li>blind-spot challenge.</li>
+</ul>
+<h2 id="practicemd"><code>practice.md</code></h2>
+<p>Introduces:</p>
+<ul>
+<li>observation;</li>
+<li>interpretation;</li>
+<li>assumption;</li>
+<li>boundary;</li>
+<li>uncertainty;</li>
+<li>missing information;</li>
+<li>AI inspection;</li>
+<li>system observation;</li>
+<li>optional <code>01_awareness.lean</code>.</li>
+</ul>
+<h2 id="masterymd"><code>mastery.md</code></h2>
+<p>Produces:</p>
+<blockquote>
+<p><strong>Awareness Record</strong></p>
+</blockquote>
+<p>and ultimately:</p>
+<blockquote>
+<p><strong>Awareness Badge</strong></p>
+</blockquote>
+<p>Then:</p>
+<p><strong>Bridge → Alignment</strong></p>
+<hr>
+<h1 id="10-alignment-scaffold">10. Alignment Scaffold</h1>
+<pre><code class="language-text">alignment/
+├── index.md
+├── explore.md
+├── practice.md
+└── mastery.md
+</code></pre>
+<h2 id="core-question_5">Core Question</h2>
+<blockquote>
+<p><strong>What corresponds?</strong></p>
+</blockquote>
+<h2 id="explore">Explore</h2>
+<p>Use familiar examples:</p>
+<ul>
+<li>charger ↔ port;</li>
+<li>puzzle ↔ opening;</li>
+<li>map ↔ surroundings;</li>
+<li>name ↔ person;</li>
+<li>words ↔ intended meaning.</li>
+</ul>
+<p>Then explore:</p>
+<ul>
+<li>natural misalignment;</li>
+<li>learning drift;</li>
+<li>repair;</li>
+<li>when <strong>not</strong> to realign.</li>
+</ul>
+<h2 id="practice">Practice</h2>
+<p>Student identifies:</p>
+<ul>
+<li>candidate mappings;</li>
+<li>evidence;</li>
+<li>assumptions;</li>
+<li>mismatches;</li>
+<li>uncertainty;</li>
+<li>strong, partial, or conditional alignment.</li>
+</ul>
+<p>Optional:</p>
+<p><code>02_alignment.lean</code></p>
+<h2 id="mastery">Mastery</h2>
+<p>Produces:</p>
+<blockquote>
+<p><strong>Alignment Record</strong></p>
+</blockquote>
+<p>Then:</p>
+<blockquote>
+<p><strong>Alignment Badge</strong></p>
+</blockquote>
+<p><strong>Bridge → Coherence</strong></p>
+<hr>
+<h1 id="11-coherence-scaffold">11. Coherence Scaffold</h1>
+<pre><code class="language-text">coherence/
+├── index.md
+├── explore.md
+├── practice.md
+└── mastery.md
+</code></pre>
+<h2 id="core-question_6">Core Question</h2>
+<blockquote>
+<p><strong>Does this hold together?</strong></p>
+</blockquote>
+<h2 id="explore_1">Explore</h2>
+<p>Use:</p>
+<ul>
+<li>obvious contradiction;</li>
+<li>subtle contradiction;</li>
+<li>helpful-shortcut example;</li>
+<li>study-plan example;</li>
+<li>individually reasonable pieces producing a problematic whole.</li>
+</ul>
+<h2 id="practice_1">Practice</h2>
+<p>Look for:</p>
+<ul>
+<li>contradiction;</li>
+<li>unsupported conclusion;</li>
+<li>missing connection;</li>
+<li>incompatible assumptions;</li>
+<li>locally reasonable/global inconsistency.</li>
+</ul>
+<p>Teach:</p>
+<blockquote>
+<p><strong>Don't immediately repair the problem. First locate it.</strong></p>
+</blockquote>
+<p>Optional:</p>
+<p><code>03_coherence.lean</code></p>
+<h2 id="mastery_1">Mastery</h2>
+<p>Produces:</p>
+<blockquote>
+<p><strong>Coherence Record</strong></p>
+</blockquote>
+<p>Then:</p>
+<blockquote>
+<p><strong>Coherence Badge</strong></p>
+</blockquote>
+<p><strong>Bridge → Clarity</strong></p>
+<hr>
+<h1 id="12-clarity-scaffold">12. Clarity Scaffold</h1>
+<pre><code class="language-text">clarity/
+├── index.md
+├── explore.md
+├── practice.md
+└── mastery.md
+</code></pre>
+<h2 id="core-question_7">Core Question</h2>
+<blockquote>
+<p><strong>Can this be understood well enough to inspect?</strong></p>
+</blockquote>
+<h2 id="explore_2">Explore</h2>
+<p>Include:</p>
+<ul>
+<li>terrible directions;</li>
+<li>describe-don't-name drawing exercise;</li>
+<li>ordinary before/after;</li>
+<li>technical before/after.</li>
+</ul>
+<h2 id="practice_2">Practice</h2>
+<p>Student learns to expose:</p>
+<ul>
+<li>definitions;</li>
+<li>relationships;</li>
+<li>missing steps;</li>
+<li>ambiguity;</li>
+<li>assumptions;</li>
+<li>uncertainty.</li>
+</ul>
+<p>Critical rule:</p>
+<blockquote>
+<p><strong>Improve clarity without silently changing meaning.</strong></p>
+</blockquote>
+<p>Optional:</p>
+<p><code>04_clarity.lean</code></p>
+<h2 id="mastery_2">Mastery</h2>
+<p>Produces:</p>
+<blockquote>
+<p><strong>Clarity Record</strong></p>
+</blockquote>
+<p>Then:</p>
+<blockquote>
+<p><strong>Clarity Badge</strong></p>
+</blockquote>
+<p><strong>Bridge → Continuity</strong></p>
+<hr>
+<h1 id="13-continuity-scaffold">13. Continuity Scaffold</h1>
+<pre><code class="language-text">continuity/
+├── index.md
+├── explore.md
+├── practice.md
+└── mastery.md
+</code></pre>
+<h2 id="core-question_8">Core Question</h2>
+<blockquote>
+<p><strong>What persists through change?</strong></p>
+</blockquote>
+<p>Bring together the system work we've already captured:</p>
+<pre><code class="language-text">State
+  ↓
+Transition
+  ↓
+State
+  ↓
+Transition
+  ↓
+State
+</code></pre>
+<h2 id="explore_3">Explore</h2>
+<p>Explore:</p>
+<ul>
+<li>change;</li>
+<li>persistence;</li>
+<li>state transitions;</li>
+<li>transition validity;</li>
+<li>history;</li>
+<li>recurring patterns;</li>
+<li>broken patterns;</li>
+<li>drift.</li>
+</ul>
+<h2 id="practice_3">Practice</h2>
+<p>Ask:</p>
+<ul>
+<li>What changed?</li>
+<li>What persisted?</li>
+<li>What returned?</li>
+<li>What drifted?</li>
+<li>What broke?</li>
+<li>Can we trace how we got here?</li>
+</ul>
+<p>Optional:</p>
+<p><code>05_continuity.lean</code></p>
+<h2 id="mastery_3">Mastery</h2>
+<p>This becomes the first <strong>integrative AACCC challenge</strong>.</p>
+<p>The student uses:</p>
+<pre><code class="language-text">Awareness
+    ↓
+Alignment
+    ↓
+Coherence
+    ↓
+Clarity
+    ↓
+Continuity
+</code></pre>
+<p>on the same problem.</p>
+<p>Produces:</p>
+<blockquote>
+<p><strong>Continuity Record</strong></p>
+</blockquote>
+<p>and:</p>
+<blockquote>
+<p><strong>Continuity Badge</strong></p>
+</blockquote>
+<p>Then opens:</p>
+<h1 id="independent-application">Independent Application</h1>
+<hr>
+<h1 id="14-origins-section">14. Origins Section</h1>
+<pre><code class="language-text">origins/
+├── index.md
+├── tft.md
+├── theorems.md
+├── rtt.md
+└── formalization.md
+</code></pre>
+<p>This section should be explicitly optional.</p>
+<p>Students do <strong>not</strong> need to understand project history before using AACCC.</p>
+<hr>
+<h1 id="15-originsindexmd">15. <code>origins/index.md</code></h1>
+<p>Keep it short:</p>
+<blockquote>
+<p><strong>Where did these ideas come from?</strong></p>
+</blockquote>
+<p>Then:</p>
+<pre><code class="language-text">TFT
+ ↓
+Triads
+ ↓
+Theorems
+ ↓
+RTT
+ ↓
+AACCC
+</code></pre>
+<p>Include the qualification:</p>
+<blockquote>
+<p>This is a project-lineage interpretation, not a claim that the earlier materials originally defined the Five Guides in their present form.</p>
+</blockquote>
+<hr>
+<h1 id="16-originstftmd">16. <code>origins/tft.md</code></h1>
+<p>Briefly introduce:</p>
+<ul>
+<li>TFT;</li>
+<li>triadic organization;</li>
+<li>related positions;</li>
+<li>operators;</li>
+<li>inspection through structure.</li>
+</ul>
+<p>Link:</p>
+<p><code>06_tft_origin.lean</code></p>
+<p>Then explicitly separate:</p>
+<blockquote>
+<p><strong>Source concept</strong></p>
+</blockquote>
+<p>from:</p>
+<blockquote>
+<p><strong>Lean teaching abstraction</strong></p>
+</blockquote>
+<hr>
+<h1 id="17-originstheoremsmd">17. <code>origins/theorems.md</code></h1>
+<p>Keep the theorem family together instead of generating four more student pages.</p>
+<p>Introduce briefly:</p>
+<ul>
+<li>Nawderian Theorem;</li>
+<li>SET Theorem;</li>
+<li>Temperature Engine Theorem;</li>
+<li>Unified Resonance Theorem.</li>
+</ul>
+<p>Link:</p>
+<pre><code class="language-text">07_nawderian_theorem.lean
+08_nawderian_set_theorem.lean
+09_temperature_engine_theorem.lean
+10_unified_resonance_theorem.lean
+</code></pre>
+<p>The educational theme becomes:</p>
+<blockquote>
+<p><strong>What happens when an informal or exploratory structure encounters formalization?</strong></p>
+</blockquote>
+<p>Sometimes we prove it.</p>
+<p>Sometimes we expose an assumption.</p>
+<p>Sometimes formalization reveals that a relationship needs a better definition.</p>
+<hr>
+<h1 id="18-originsrttmd">18. <code>origins/rtt.md</code></h1>
+<p>Briefly introduce frozen RTT and its role in the project lineage.</p>
+<p>Focus on:</p>
+<ul>
+<li>state;</li>
+<li>update;</li>
+<li>operator;</li>
+<li>transition;</li>
+<li>persistence;</li>
+<li>drift.</li>
+</ul>
+<p>Link:</p>
+<p><code>11_rtt_origin.lean</code></p>
+<p>Include the boundary:</p>
+<blockquote>
+<p>The Lean scaffold is inspired by RTT. It is not a formalization of the complete RTT specification.</p>
+</blockquote>
+<hr>
+<h1 id="19-originsformalizationmd">19. <code>origins/formalization.md</code></h1>
+<p>This page deserves its own file.</p>
+<h1 id="what-does-lean-actually-prove">What Does Lean Actually Prove?</h1>
+<p>Explain:</p>
+<blockquote>
+<p>Lean proves that a formal conclusion follows from the supplied definitions and assumptions.</p>
+</blockquote>
+<p>It does <strong>not automatically prove</strong>:</p>
+<ul>
+<li>that the assumptions describe nature;</li>
+<li>that measurements support them;</li>
+<li>that the formalization matches the source author's intent;</li>
+<li>that the theorem is scientifically important;</li>
+<li>or that another model would not describe the evidence better.</li>
+</ul>
+<p>Then give students perhaps the most important formalization question:</p>
+<blockquote>
+<p><strong>Did we prove what we intended to prove?</strong></p>
+</blockquote>
+<p>That question connects directly back to all five guides.</p>
+<hr>
+<h1 id="20-lean-section">20. Lean Section</h1>
+<pre><code class="language-text">lean/
+├── index.md
+├── 01_awareness.lean
+├── 02_alignment.lean
+├── 03_coherence.lean
+├── 04_clarity.lean
+├── 05_continuity.lean
+├── 06_tft_origin.lean
+├── 07_nawderian_theorem.lean
+├── 08_nawderian_set_theorem.lean
+├── 09_temperature_engine_theorem.lean
+├── 10_unified_resonance_theorem.lean
+└── 11_rtt_origin.lean
+</code></pre>
+<h2 id="leanindexmd"><code>lean/index.md</code></h2>
+<p>Explain what these examples are:</p>
+<blockquote>
+<p>Small formal companions to the Five Guides and their project lineage.</p>
+</blockquote>
+<p>Explain what they are not:</p>
+<blockquote>
+<p>A required Lean course or empirical validation of the broader source frameworks.</p>
+</blockquote>
+<h3 id="how-to-use-them">How to Use Them</h3>
+<ol>
+<li>Read the example.</li>
+<li>Predict what should happen.</li>
+<li>Inspect the definitions and assumptions.</li>
+<li>Compile it if desired.</li>
+<li>Ask what was actually proved.</li>
+<li>Ask what remains outside the proof.</li>
+</ol>
+<h3 id="validation">Validation</h3>
+<p>Record the actual compiler provenance:</p>
+<blockquote>
+<p><strong>Files <code>01–11</code> were compiler-checked using Lean 4.36.0 on <code>x86_64-w64-windows-gnu</code>.</strong></p>
+</blockquote>
+<p>Preserve the distinction:</p>
+<blockquote>
+<p>Compiler acceptance verifies the formal artifacts under that Lean environment. It does not establish the empirical validity of the broader source frameworks.</p>
+</blockquote>
+<hr>
+<h1 id="21-shared-student-infrastructure">21. Shared Student Infrastructure</h1>
+<pre><code class="language-text">shared/
+├── ai_companion.md
+├── assessment.md
+├── badges.md
+├── privacy.md
+└── student_footprint.md
+</code></pre>
+<p>These are reusable policies and learning behaviors rather than individual lessons.</p>
+<hr>
+<h1 id="22-sharedai_companionmd">22. <code>shared/ai_companion.md</code></h1>
+<p>Establish the AI contract once.</p>
+<blockquote>
+<p><strong>AI is optional.</strong></p>
+</blockquote>
+<p>Good uses:</p>
+<ul>
+<li>give me an alternate explanation;</li>
+<li>give me another example;</li>
+<li>challenge my assumption;</li>
+<li>challenge my mapping;</li>
+<li>find a missing step;</li>
+<li>argue against my conclusion;</li>
+<li>help me inspect uncertainty.</li>
+</ul>
+<p>Poor use:</p>
+<blockquote>
+<p><strong>Give me the answer so I can pass.</strong></p>
+</blockquote>
+<p>Important principle:</p>
+<blockquote>
+<p>AI output itself remains something the learner can inspect using AACCC.</p>
+</blockquote>
+<p>The AI is a thinking partner, not the authority standing above the exercise.</p>
+<hr>
+<h1 id="23-sharedassessmentmd">23. <code>shared/assessment.md</code></h1>
+<p>Define two distinct concepts.</p>
+<h2 id="awareness-check_2">Awareness Check</h2>
+<p>Optional.</p>
+<blockquote>
+<p><strong>What stuck after first exposure?</strong></p>
+</blockquote>
+<p>No punitive result.</p>
+<p>The purpose is to help the learner notice what they retained and what may deserve another look.</p>
+<h2 id="mastery-checkpoint_4">Mastery Checkpoint</h2>
+<p>Practical application.</p>
+<blockquote>
+<p><strong>Can I use the idea?</strong></p>
+</blockquote>
+<p>Mastery is retryable.</p>
+<p>This distinction applies across all five guides.</p>
+<hr>
+<h1 id="24-sharedbadgesmd">24. <code>shared/badges.md</code></h1>
+<p>Define:</p>
+<ul>
+<li>Awareness Badge;</li>
+<li>Alignment Badge;</li>
+<li>Coherence Badge;</li>
+<li>Clarity Badge;</li>
+<li>Continuity Badge.</li>
+</ul>
+<p>Then optionally:</p>
+<blockquote>
+<p><strong>Five Guides Completion</strong></p>
+</blockquote>
+<p>Avoid:</p>
+<ul>
+<li>certification language;</li>
+<li>accreditation claims;</li>
+<li>artificial rankings;</li>
+<li>competitive gamification.</li>
+</ul>
+<p>A badge represents:</p>
+<blockquote>
+<p><strong>Completed this learning journey and demonstrated the defined skill.</strong></p>
+</blockquote>
+<hr>
+<h1 id="25-sharedprivacymd">25. <code>shared/privacy.md</code></h1>
+<p>State the philosophy plainly:</p>
+<blockquote>
+<p><strong>Learning does not grant us permission to observe the learner.</strong></p>
+</blockquote>
+<p>No tracking is required simply to participate in the Five Guides.</p>
+<p>Keep these separate:</p>
+<pre><code class="language-text">Learning
+    ↓
+Mastery
+    ↓
+Badge
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">Optional Feedback
+</code></pre>
+<p>Learning, mastery, and the badge should not depend on voluntary feedback.</p>
+<p>The learner may complete the experience without leaving an identifying footprint.</p>
+<hr>
+<h1 id="26-sharedstudent_footprintmd">26. <code>shared/student_footprint.md</code></h1>
+<p>After completion, optionally ask:</p>
+<blockquote>
+<p><strong>Where are you learning from?</strong></p>
+</blockquote>
+<p><code>[ Optional country ]</code></p>
+<p>and:</p>
+<blockquote>
+<p><strong>One thought about your experience</strong></p>
+</blockquote>
+<p><code>[ Optional short reflection ]</code></p>
+<p>Do not require:</p>
+<ul>
+<li>name;</li>
+<li>email;</li>
+<li>account;</li>
+<li>institution;</li>
+<li>demographic profile.</li>
+</ul>
+<p>If voluntary footprints are eventually displayed publicly, they become a quiet record of <strong>people who chose to leave something behind</strong>, not an analytics system.</p>
+<hr>
+<h1 id="27-navigation-pattern">27. Navigation Pattern</h1>
+<p>Every student page should end predictably:</p>
+<pre><code class="language-text">← Previous
+
+Current position:
+
+Awareness → Alignment → Coherence → Clarity → Continuity
+
+Next →
+</code></pre>
+<p>Each page should make three things obvious:</p>
+<blockquote>
+<p><strong>Where am I?</strong></p>
+<p><strong>What am I learning?</strong></p>
+<p><strong>What's next?</strong></p>
+</blockquote>
+<hr>
+<h1 id="28-student-artifact-progression">28. Student Artifact Progression</h1>
+<p>Each guide produces something tangible:</p>
+<pre><code class="language-text">Awareness Record
+      ↓
+Alignment Record
+      ↓
+Coherence Record
+      ↓
+Clarity Record
+      ↓
+Continuity Record
+</code></pre>
+<p>By the end, the learner has not simply accumulated five badges.</p>
+<p>They've accumulated a <strong>small reasoning toolkit</strong>.</p>
+<p>The records also provide something the student can reuse independently after leaving the Five Guides.</p>
+<hr>
+<h1 id="29-final-student-destination">29. Final Student Destination</h1>
+<p>The module should not end with:</p>
+<blockquote>
+<p><strong>Now read more TriadicFrameworks.</strong></p>
+</blockquote>
+<p>It should end with:</p>
+<h1 id="apply-it-somewhere-else">Apply It Somewhere Else</h1>
+<p>Choose:</p>
+<ul>
+<li>something you're learning;</li>
+<li>a technical problem;</li>
+<li>a disagreement;</li>
+<li>a model;</li>
+<li>a research claim;</li>
+<li>a piece of software;</li>
+<li>a system;</li>
+<li>or something from everyday life.</li>
+</ul>
+<p>Then ask:</p>
+<blockquote>
+<p><strong>What am I observing?</strong></p>
+<p><strong>What corresponds?</strong></p>
+<p><strong>Does it hold together?</strong></p>
+<p><strong>Can I make it clear enough to inspect?</strong></p>
+<p><strong>What persists when it changes?</strong></p>
+</blockquote>
+<p>That is the real completion condition.</p>
+<p>The student has left the supplied examples behind.</p>
+<hr>
+<h1 id="30-scaffold-before-content">30. Scaffold Before Content</h1>
+<p>The next implementation pass should be intentionally boring. 😁</p>
+<p>Create:</p>
+<ul>
+<li>directories;</li>
+<li>empty Markdown files;</li>
+<li>standard page headers;</li>
+<li>navigation placeholders;</li>
+<li>links to existing Lean files;</li>
+<li>shared-policy files.</li>
+</ul>
+<p><strong>Do not start moving all of the captured prose yet.</strong></p>
+<p>Once the skeleton exists, populate <strong>Awareness only</strong> from beginning to end.</p>
+<p>That gives us one complete reference implementation to test for:</p>
+<ul>
+<li>pacing;</li>
+<li>page length;</li>
+<li>navigation;</li>
+<li>games and exercises;</li>
+<li>grounding;</li>
+<li>AI assistance;</li>
+<li>system examples;</li>
+<li>optional Lean;</li>
+<li>assessment;</li>
+<li>mastery;</li>
+<li>badge;</li>
+<li>privacy;</li>
+<li>optional learner footprint.</li>
+</ul>
+<p>Then:</p>
+<blockquote>
+<p><strong>Awareness becomes the reference implementation.</strong></p>
+</blockquote>
+<p>Not by cloning its content into the other guides, but by allowing the other guides to inherit its educational rhythm.</p>
+<p>That gives <code>5g_capture.md</code> permission to remain what it should be:</p>
+<blockquote>
+<p><strong>The workshop where the Five Guides were discovered.</strong></p>
+</blockquote>
+<p>And the new scaffold becomes:</p>
+<blockquote>
+<p><strong>The place where students actually experience them.</strong></p>
+</blockquote>
+<hr>
+<h1 id="31-recommended-build-order">31. Recommended Build Order</h1>
+<p>To keep the implementation controlled:</p>
+<ol>
+<li>Create the complete directory structure.</li>
+<li>Create all empty Markdown scaffold files.</li>
+<li>Move the validated Lean files into <code>lean/</code>.</li>
+<li>Create <code>lean/index.md</code>.</li>
+<li>Create the five shared-policy pages.</li>
+<li>Create the Origins skeleton.</li>
+<li>Create all five guide skeletons.</li>
+<li>Fully populate <strong>Awareness</strong>.</li>
+<li>Walk through Awareness as though we were a first-time student.</li>
+<li>Adjust the common structure based on what we learn.</li>
+<li>Populate Alignment.</li>
+<li>Populate Coherence.</li>
+<li>Populate Clarity.</li>
+<li>Populate Continuity.</li>
+<li>Build the final independent-application exercise.</li>
+</ol>
+<p>This avoids building five polished guides around an architecture we haven't yet tested with a complete student journey.</p>
+<hr>
+<h1 id="32-guiding-principle-for-the-scaffold">32. Guiding Principle for the Scaffold</h1>
+<p>The module should always preserve one simple progression:</p>
+<blockquote>
+<p><strong>Experience → Notice → Inspect → Apply → Demonstrate → Reflect → Continue</strong></p>
+</blockquote>
+<p>AACCC supplies the structural questions:</p>
+<blockquote>
+<p><strong>Awareness:</strong> What am I observing?</p>
+<p><strong>Alignment:</strong> What corresponds?</p>
+<p><strong>Coherence:</strong> Does it hold together?</p>
+<p><strong>Clarity:</strong> Can it be understood and inspected?</p>
+<p><strong>Continuity:</strong> What persists through change?</p>
+</blockquote>
+<p>The exercises make those questions tangible.</p>
+<p>The systems examples make them transferable.</p>
+<p>The Lean examples make selected structures formally inspectable.</p>
+<p>AI can help the learner think.</p>
+<p>The mastery exercises require the learner to do the thinking.</p>
+<p>And the final destination is not dependence on TriadicFrameworks, AACCC, Lean, or an AI assistant.</p>
+<p>It is:</p>
+<blockquote>
+<p><strong>A learner who can take these questions somewhere we didn't choose for them and use them independently.</strong></p>
 </blockquote>
 <hr>
   </main>

@@ -1,0 +1,763 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/5Guides/shared/privacy.md">
+  <title>Privacy</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/5Guides/shared/privacy.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/5Guides/shared/privacy.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="privacy">Privacy</h1>
+<blockquote>
+<p><strong>Learning does not grant us permission to observe the learner</strong>*</p>
+</blockquote>
+<p>Privacy in 5Guides is not an optional feature added after the learning experience is built.</p>
+<p>It is part of the design.</p>
+<p>The basic principle is simple:</p>
+<blockquote>
+<p><strong>Collect only what the learning experience actually needs.</strong></p>
+</blockquote>
+<p>If we do not need to know something about a learner, our first choice should be <strong>not to collect it</strong>.</p>
+<hr>
+<h1 id="learning-without-surveillance">Learning Without Surveillance</h1>
+<p>A student should be able to explore the Five Guides without feeling that the educational material is quietly studying them in return.</p>
+<p>The normal learning path is:</p>
+<pre><code class="language-text">Explore
+   ↓
+Practice
+   ↓
+Demonstrate
+   ↓
+Reflect
+   ↓
+Continue
+</code></pre>
+<p>The learner should not have to exchange unnecessary personal information for access to that path.</p>
+<hr>
+<h1 id="what-we-mean-by-privacy">What We Mean by Privacy</h1>
+<p>For 5Guides, privacy means designing toward:</p>
+<ul>
+<li>minimal collection;</li>
+<li>voluntary disclosure;</li>
+<li>understandable choices;</li>
+<li>separation between learning and feedback;</li>
+<li>no unnecessary identity requirements;</li>
+<li>no hidden pressure to participate;</li>
+<li>and clear boundaries around anything that is collected.</li>
+</ul>
+<p>The goal is not to promise something technically impossible.</p>
+<p>The goal is to make sure the implementation reflects the principle:</p>
+<blockquote>
+<p><strong>Know less about the learner when knowing more is unnecessary.</strong></p>
+</blockquote>
+<hr>
+<h1 id="separate-learning-from-measurement">Separate Learning From Measurement</h1>
+<p>It is easy for educational systems to mix together several different things:</p>
+<pre><code class="language-text">Learning
+Assessment
+Identity
+Analytics
+Feedback
+Recognition
+</code></pre>
+<p>5Guides should keep them separate wherever possible.</p>
+<p>In particular:</p>
+<pre><code class="language-text">Learning
+    ↓
+Mastery
+    ↓
+Badge
+</code></pre>
+<p>should not depend upon:</p>
+<pre><code class="language-text">Optional Feedback
+</code></pre>
+<p>A learner who chooses not to provide feedback has still completed the same learning milestone.</p>
+<hr>
+<h1 id="no-identity-required-just-to-learn">No Identity Required Just to Learn</h1>
+<p>The educational material itself should not require a learner to provide:</p>
+<ul>
+<li>a real name;</li>
+<li>an email address;</li>
+<li>a phone number;</li>
+<li>a school;</li>
+<li>an employer;</li>
+<li>a social-media account;</li>
+<li>an age;</li>
+<li>a gender;</li>
+<li>or another unnecessary personal identifier.</li>
+</ul>
+<p>If a future technical implementation requires an account for a particular optional feature, that requirement should be explained separately rather than quietly becoming a requirement for the learning material itself.</p>
+<hr>
+<h1 id="local-first-where-practical">Local First Where Practical</h1>
+<p>When a learner's temporary state can reasonably remain with the learner, prefer that approach.</p>
+<p>Examples might eventually include:</p>
+<ul>
+<li>current Guide position;</li>
+<li>unfinished exercises;</li>
+<li>private reflections;</li>
+<li>draft student records;</li>
+<li>or progress through a local activity.</li>
+</ul>
+<p>The exact technical implementation will be decided later.</p>
+<p>The design preference is:</p>
+<blockquote>
+<p><strong>Don't send information somewhere merely because we can.</strong></p>
+</blockquote>
+<hr>
+<h1 id="private-reflection-means-private">Private Reflection Means Private</h1>
+<p>Many exercises ask learners to reflect.</p>
+<p>For example:</p>
+<blockquote>
+<p><strong>What changed about how you approached the problem?</strong></p>
+</blockquote>
+<p>A reflection prompt does not automatically mean:</p>
+<blockquote>
+<p><strong>Send us your answer.</strong></p>
+</blockquote>
+<p>Unless the learner is explicitly invited to submit something, reflection should be treated as belonging to the learner.</p>
+<p>They may:</p>
+<ul>
+<li>think about it;</li>
+<li>write it privately;</li>
+<li>discuss it with someone;</li>
+<li>explore it with an AI assistant;</li>
+<li>or simply move on.</li>
+</ul>
+<hr>
+<h1 id="ai-is-optional">AI Is Optional</h1>
+<p>AI assistance is available as a learning option.</p>
+<p>It should never be required simply to understand or complete the ordinary Five Guides experience.</p>
+<p>If a learner chooses to use an external AI assistant, that interaction may involve a separate service with its own data practices.</p>
+<p>5Guides should therefore encourage learners to avoid unnecessarily sharing:</p>
+<ul>
+<li>personal information;</li>
+<li>private records;</li>
+<li>identifying details;</li>
+<li>sensitive information;</li>
+<li>or information about other people.</li>
+</ul>
+<p>The same Awareness question applies:</p>
+<blockquote>
+<p><strong>What am I choosing to share?</strong></p>
+</blockquote>
+<hr>
+<h1 id="awareness-checks">Awareness Checks</h1>
+<p>An Awareness Check asks:</p>
+<blockquote>
+<p><strong>What stuck after first exposure?</strong></p>
+</blockquote>
+<p>Its purpose is educational.</p>
+<p>It should not quietly become a behavioral profile of the learner.</p>
+<p>A learner may discover:</p>
+<ul>
+<li>what they remembered;</li>
+<li>what they missed;</li>
+<li>what they misunderstood;</li>
+<li>or what they want to revisit.</li>
+</ul>
+<p>That result can be useful without becoming permanent analytics.</p>
+<hr>
+<h1 id="mastery">Mastery</h1>
+<p>A Mastery Checkpoint asks:</p>
+<blockquote>
+<p><strong>Can I use the skill on a fresh problem?</strong></p>
+</blockquote>
+<p>Mastery should focus on the learner's interaction with the exercise.</p>
+<p>It should not require building an unnecessary identity record around the learner.</p>
+<p>The educational result is:</p>
+<blockquote>
+<p><strong>The defined skill was demonstrated.</strong></p>
+</blockquote>
+<p>That does not automatically require us to know who the learner is outside the learning experience.</p>
+<hr>
+<h1 id="badges">Badges</h1>
+<p>A badge represents a learning milestone.</p>
+<p>For example:</p>
+<blockquote>
+<p><strong>Awareness Badge</strong></p>
+</blockquote>
+<p>means:</p>
+<blockquote>
+<p><strong>The Awareness learning journey was completed and its defined skill was demonstrated.</strong></p>
+</blockquote>
+<p>It does not need to mean:</p>
+<blockquote>
+<p><strong>We now require a detailed student profile.</strong></p>
+</blockquote>
+<p>Badge design should preserve the distinction between:</p>
+<p><strong>recognizing an accomplishment</strong></p>
+<p>and:</p>
+<p><strong>building an identity system.</strong></p>
+<hr>
+<h1 id="optional-student-footprint">Optional Student Footprint</h1>
+<p>After completing a Guide, a learner may eventually choose to leave a small voluntary Footprint.</p>
+<p>The intended minimal form is:</p>
+<pre><code class="language-text">Where are you learning from?
+[ Optional country ]
+
+One thought about your experience:
+[ Optional short reflection ]
+</code></pre>
+<p>No name is required.</p>
+<p>No email is required.</p>
+<p>No public student profile is required.</p>
+<p>Declining to leave a Footprint changes nothing about:</p>
+<ul>
+<li>completion;</li>
+<li>mastery;</li>
+<li>badge status;</li>
+<li>access to the next Guide;</li>
+<li>or the value of the learner's work.</li>
+</ul>
+<p>See:</p>
+<p><code>student_footprint.md</code></p>
+<hr>
+<h1 id="ask-dont-infer">Ask, Don't Infer</h1>
+<p>If we want to know the broad country a participating learner wishes to associate with a Footprint, ask them.</p>
+<p>Do not design the Footprint around silently inferring it from:</p>
+<ul>
+<li>an IP address;</li>
+<li>device information;</li>
+<li>browser information;</li>
+<li>location services;</li>
+<li>or another hidden signal.</li>
+</ul>
+<p>The distinction matters:</p>
+<blockquote>
+<p><strong>Information volunteered by the learner is not the same thing as information inferred about the learner.</strong></p>
+</blockquote>
+<hr>
+<h1 id="country-is-optional">Country Is Optional</h1>
+<p>Prefer:</p>
+<blockquote>
+<p><strong>Where are you learning from?</strong></p>
+</blockquote>
+<p>rather than:</p>
+<blockquote>
+<p><strong>Country of origin</strong></p>
+</blockquote>
+<p>"Country of origin" can suggest:</p>
+<ul>
+<li>nationality;</li>
+<li>birthplace;</li>
+<li>ancestry;</li>
+<li>citizenship;</li>
+<li>or family background.</li>
+</ul>
+<p>None of those are required for the purpose of the Footprint.</p>
+<p>The field should be optional.</p>
+<hr>
+<h1 id="free-text-needs-extra-care">Free Text Needs Extra Care</h1>
+<p>Even a short reflection can accidentally contain personal information.</p>
+<p>A learner might include:</p>
+<ul>
+<li>a full name;</li>
+<li>an email address;</li>
+<li>a phone number;</li>
+<li>a school;</li>
+<li>a workplace;</li>
+<li>a location;</li>
+<li>another person's information;</li>
+<li>or something they later regret making public.</li>
+</ul>
+<p>The interface should therefore remind learners:</p>
+<blockquote>
+<p><strong>Please do not include personal or identifying information in your reflection.</strong></p>
+</blockquote>
+<p>If reflections are ever displayed publicly, submission should not automatically mean immediate publication.</p>
+<p>Appropriate review and safety controls should be considered during implementation.</p>
+<hr>
+<h1 id="dont-turn-feedback-into-analytics">Don't Turn Feedback Into Analytics</h1>
+<p>The Student Footprint exists so a learner can voluntarily leave something behind.</p>
+<p>It is not intended to answer questions such as:</p>
+<ul>
+<li>Who visited?</li>
+<li>How long did they stay?</li>
+<li>Which pages did they read?</li>
+<li>What route did they take?</li>
+<li>How often did they return?</li>
+<li>What device did they use?</li>
+<li>Which exercise caused them to leave?</li>
+<li>How can we increase conversion?</li>
+</ul>
+<p>Those are different questions.</p>
+<p>5Guides begins with a deliberate choice:</p>
+<blockquote>
+<p><strong>Curiosity about learners does not automatically justify observing them.</strong></p>
+</blockquote>
+<hr>
+<h1 id="silence-is-not-data">Silence Is Not Data</h1>
+<p>Suppose 100 people visit and three voluntarily leave Footprints.</p>
+<p>The three Footprints tell us something about those three submissions.</p>
+<p>The other visitors did not tell us anything simply by remaining silent.</p>
+<p>We should resist turning absence into invented information.</p>
+<p>A missing Footprint does not mean:</p>
+<ul>
+<li>the learner disliked the Guides;</li>
+<li>the learner failed;</li>
+<li>the learner did not finish;</li>
+<li>the learner was confused;</li>
+<li>or the learner never existed.</li>
+</ul>
+<p>It means:</p>
+<blockquote>
+<p><strong>No Footprint was voluntarily provided.</strong></p>
+</blockquote>
+<p>Nothing more should be inferred.</p>
+<hr>
+<h1 id="dont-build-a-shadow-profile">Don't Build a Shadow Profile</h1>
+<p>A collection of individually harmless details can become identifying when joined together.</p>
+<p>For example:</p>
+<pre><code class="language-text">Country
++
+Timestamp
++
+Browser
++
+Device
++
+Exact workflow position
++
+Repeated visits
+</code></pre>
+<p>may reveal far more than any single field suggests.</p>
+<p>So privacy cannot be evaluated only field by field.</p>
+<p>Ask:</p>
+<blockquote>
+<p><strong>What could these pieces reveal when combined?</strong></p>
+</blockquote>
+<p>If the combined record begins to resemble a behavioral profile, it has drifted away from the original purpose.</p>
+<hr>
+<h1 id="data-minimization">Data Minimization</h1>
+<p>Before collecting anything, ask:</p>
+<blockquote>
+<p><strong>Why do we need this?</strong></p>
+</blockquote>
+<p>Then:</p>
+<blockquote>
+<p><strong>Could the feature work without it?</strong></p>
+</blockquote>
+<p>Then:</p>
+<blockquote>
+<p><strong>Would the learner reasonably expect us to have it?</strong></p>
+</blockquote>
+<p>If the answer is:</p>
+<blockquote>
+<p><strong>It might be useful someday</strong></p>
+</blockquote>
+<p>that is not enough.</p>
+<p>Prefer:</p>
+<blockquote>
+<p><strong>Don't collect tomorrow's data today.</strong></p>
+</blockquote>
+<hr>
+<h1 id="technical-server-data">Technical Server Data</h1>
+<p>A deployed web service may necessarily receive technical information while handling requests.</p>
+<p>The exact behavior depends on the eventual architecture, hosting environment, logging configuration, security controls, and services involved.</p>
+<p>Those details should be documented once the system actually exists.</p>
+<p>Until then, avoid promises such as:</p>
+<blockquote>
+<p><strong>No server ever receives any technical information.</strong></p>
+</blockquote>
+<p>Instead, keep the design commitment precise:</p>
+<blockquote>
+<p><strong>5Guides should not intentionally build unnecessary identity, behavioral tracking, or profiling into the learning experience.</strong></p>
+</blockquote>
+<p>Once implementation begins, the privacy documentation should be updated to describe actual behavior rather than assumptions.</p>
+<hr>
+<h1 id="logging">Logging</h1>
+<p>Operational logging may eventually be necessary for:</p>
+<ul>
+<li>security;</li>
+<li>reliability;</li>
+<li>abuse prevention;</li>
+<li>or diagnosis.</li>
+</ul>
+<p>If so, logs should be evaluated separately from learner-facing features.</p>
+<p>Ask:</p>
+<ul>
+<li>What is logged?</li>
+<li>Why?</li>
+<li>How long is it retained?</li>
+<li>Who can access it?</li>
+<li>Does it contain identifying information?</li>
+<li>Can the same operational purpose be achieved with less information?</li>
+</ul>
+<p>Operational necessity should not become an excuse for unlimited collection.</p>
+<hr>
+<h1 id="retention">Retention</h1>
+<p>If information is collected, ask:</p>
+<blockquote>
+<p><strong>How long do we actually need it?</strong></p>
+</blockquote>
+<p>A voluntary reflection does not automatically need to exist forever.</p>
+<p>Operational logs do not automatically need indefinite retention.</p>
+<p>A future implementation should establish retention rules appropriate to each type of information actually stored.</p>
+<p>The principle is simple:</p>
+<blockquote>
+<p><strong>Keeping data forever should require a reason too.</strong></p>
+</blockquote>
+<hr>
+<h1 id="deletion-and-correction">Deletion and Correction</h1>
+<p>People change their minds.</p>
+<p>Someone may:</p>
+<ul>
+<li>submit something accidentally;</li>
+<li>notice identifying information afterward;</li>
+<li>want a reflection corrected;</li>
+<li>or simply no longer want a contribution displayed.</li>
+</ul>
+<p>A future Footprint implementation should anticipate reasonable removal and correction workflows.</p>
+<p>Voluntary participation should not become irreversible merely because someone clicked Submit once.</p>
+<hr>
+<h1 id="public-display">Public Display</h1>
+<p>Publicly showing a learner's voluntary contribution creates a different privacy boundary from privately receiving it.</p>
+<p>If Footprints are displayed:</p>
+<ul>
+<li>keep them minimal;</li>
+<li>avoid unnecessary metadata;</li>
+<li>do not attach engagement statistics;</li>
+<li>do not create public learner histories;</li>
+<li>avoid detailed filtering that could expose individuals;</li>
+<li>and be particularly careful with small groups.</li>
+</ul>
+<p>The public board should feel like:</p>
+<blockquote>
+<p><strong>A collection of small notes</strong></p>
+</blockquote>
+<p>not:</p>
+<blockquote>
+<p><strong>A searchable database of learners.</strong></p>
+</blockquote>
+<hr>
+<h1 id="small-groups-need-more-care">Small Groups Need More Care</h1>
+<p>Even broad information can become identifying when very few people match it.</p>
+<p>For example, a narrow combination of:</p>
+<pre><code class="language-text">Country
++
+Guide
++
+Date
++
+Reflection
+</code></pre>
+<p>could reveal more than intended.</p>
+<p>Public presentation should therefore avoid unnecessary precision.</p>
+<p>When in doubt:</p>
+<blockquote>
+<p><strong>Show less.</strong></p>
+</blockquote>
+<hr>
+<h1 id="no-dark-patterns">No Dark Patterns</h1>
+<p>Consent should be easy to give and easy to withhold.</p>
+<p>Avoid:</p>
+<blockquote>
+<p><strong>No thanks, I don't want to help.</strong></p>
+</blockquote>
+<p>Prefer:</p>
+<blockquote>
+<p><strong>Continue without leaving a Footprint</strong></p>
+</blockquote>
+<p>Do not:</p>
+<ul>
+<li>hide the skip option;</li>
+<li>repeatedly ask after someone declines;</li>
+<li>make the learner feel guilty;</li>
+<li>imply that feedback is necessary for completion;</li>
+<li>or make privacy the inconvenient choice.</li>
+</ul>
+<p>A meaningful choice requires a comfortable <strong>no</strong>.</p>
+<hr>
+<h1 id="no-privacy-theater">No Privacy Theater</h1>
+<p>A page can say:</p>
+<blockquote>
+<p><strong>We respect your privacy</strong></p>
+</blockquote>
+<p>while the implementation does something completely different.</p>
+<p>That's not enough.</p>
+<p>Privacy promises should remain tied to observable implementation.</p>
+<p>If the system changes, revisit the promise.</p>
+<p>If the promise is wrong, update it.</p>
+<p>If an implementation violates the principle, fix the implementation rather than hiding the mismatch behind friendlier wording.</p>
+<hr>
+<h1 id="use-aaccc-on-the-privacy-design">Use AACCC on the Privacy Design</h1>
+<p>The Five Guides should inspect themselves.</p>
+<h2 id="awareness">Awareness</h2>
+<blockquote>
+<p><strong>What information actually enters the system?</strong></p>
+</blockquote>
+<p>Include:</p>
+<ul>
+<li>explicit fields;</li>
+<li>technical requests;</li>
+<li>logs;</li>
+<li>third-party services;</li>
+<li>derived information.</li>
+</ul>
+<p>Do not stop at the visible form.</p>
+<h2 id="alignment">Alignment</h2>
+<blockquote>
+<p><strong>Does each collected element correspond to a real purpose?</strong></p>
+</blockquote>
+<p>If a field has no clear purpose, ask why it exists.</p>
+<h2 id="coherence">Coherence</h2>
+<blockquote>
+<p><strong>Do our implementation and our privacy promises agree?</strong></p>
+</blockquote>
+<p>If we say:</p>
+<blockquote>
+<p><strong>We don't track learners</strong></p>
+</blockquote>
+<p>while quietly building detailed behavioral histories, the design is incoherent.</p>
+<h2 id="clarity">Clarity</h2>
+<blockquote>
+<p><strong>Could an ordinary learner understand what happens to their information?</strong></p>
+</blockquote>
+<p>Privacy explanations should be written for people, not merely compliance.</p>
+<h2 id="continuity">Continuity</h2>
+<blockquote>
+<p><strong>If the system changes, does the privacy model still hold?</strong></p>
+</blockquote>
+<p>A new feature may change the answer.</p>
+<p>Privacy needs to survive system evolution.</p>
+<hr>
+<h1 id="privacy-is-also-a-boundary-problem">Privacy Is Also a Boundary Problem</h1>
+<p>Awareness taught us to ask:</p>
+<blockquote>
+<p><strong>Where is the boundary?</strong></p>
+</blockquote>
+<p>For privacy, important boundaries include:</p>
+<pre><code class="language-text">Learner
+   ↓
+Browser
+   ↓
+5Guides
+   ↓
+Hosting Infrastructure
+   ↓
+Optional External Services
+</code></pre>
+<p>Information crossing one boundary may have different consequences from information remaining inside another.</p>
+<p>The eventual system design should make those boundaries visible.</p>
+<hr>
+<h1 id="privacy-is-also-an-alignment-problem">Privacy Is Also an Alignment Problem</h1>
+<p>Every collected field should align with a legitimate function.</p>
+<p>For example:</p>
+<pre><code class="language-text">Optional country
+        ↓
+Broad voluntary learner footprint
+</code></pre>
+<p>The relationship is understandable.</p>
+<p>But:</p>
+<pre><code class="language-text">Detailed browser fingerprint
+        ↓
+Broad voluntary learner footprint
+</code></pre>
+<p>doesn't obviously align.</p>
+<p>That mismatch tells us to stop and ask why the information is being collected.</p>
+<hr>
+<h1 id="privacy-is-also-a-coherence-problem">Privacy Is Also a Coherence Problem</h1>
+<p>Suppose the project says:</p>
+<blockquote>
+<p><strong>We don't need to know who you are.</strong></p>
+</blockquote>
+<p>Then requires:</p>
+<blockquote>
+<p><strong>Full name + email + account</strong></p>
+</blockquote>
+<p>simply to complete an Awareness exercise.</p>
+<p>Those pieces don't hold together.</p>
+<p>The privacy promise and the system architecture should describe the same reality.</p>
+<hr>
+<h1 id="privacy-is-also-a-clarity-problem">Privacy Is Also a Clarity Problem</h1>
+<p>Learners should not need to decode vague phrases such as:</p>
+<blockquote>
+<p>"Information may be processed for service optimization purposes."</p>
+</blockquote>
+<p>when the system could instead say plainly what happens.</p>
+<p>Prefer:</p>
+<blockquote>
+<p><strong>This optional form stores the country you select and the reflection you submit.</strong></p>
+</blockquote>
+<p>when that accurately describes the implemented feature.</p>
+<p>Plain language makes privacy inspectable.</p>
+<hr>
+<h1 id="privacy-is-also-a-continuity-problem">Privacy Is Also a Continuity Problem</h1>
+<p>The first version of 5Guides may be minimal.</p>
+<p>Later versions may add:</p>
+<ul>
+<li>badges;</li>
+<li>optional persistence;</li>
+<li>server-backed mastery;</li>
+<li>public Footprints;</li>
+<li>AI integration;</li>
+<li>or new learning tools.</li>
+</ul>
+<p>Each addition changes the system.</p>
+<p>So ask again:</p>
+<blockquote>
+<p><strong>Does the original privacy promise still hold?</strong></p>
+</blockquote>
+<p>If not, something needs to change.</p>
+<p>Privacy cannot be frozen while the implementation evolves around it.</p>
+<hr>
+<h1 id="the-core-separation">The Core Separation</h1>
+<p>Keep these two paths distinct:</p>
+<pre><code class="language-text">STUDENT LEARNING
+
+Explore
+   ↓
+Practice
+   ↓
+Mastery
+   ↓
+Badge
+   ↓
+Continue
+</code></pre>
+<p>and:</p>
+<pre><code class="language-text">VOLUNTARY PARTICIPATION
+
+Optional Country
+      +
+Optional Reflection
+      ↓
+Optional Footprint
+</code></pre>
+<p>One path should not secretly require the other.</p>
+<hr>
+<h1 id="what-privacy-success-looks-like">What Privacy Success Looks Like</h1>
+<p>A successful privacy design should allow us to say something like:</p>
+<blockquote>
+<p><strong>We built enough system to support the learning experience without building unnecessary machinery for watching the learner.</strong></p>
+</blockquote>
+<p>And if someone asks:</p>
+<blockquote>
+<p><strong>Who visited today?</strong></p>
+</blockquote>
+<p>sometimes the correct answer should genuinely be:</p>
+<blockquote>
+<p><strong>We don't know.</strong></p>
+</blockquote>
+<p>That's not missing analytics.</p>
+<p>That's the consequence of choosing not to collect information we didn't need.</p>
+<hr>
+<h1 id="one-final-principle">One Final Principle</h1>
+<p>The Five Guides teach students to inspect systems.</p>
+<p>That means the Five Guides themselves should tolerate inspection.</p>
+<p>A learner should be able to ask:</p>
+<blockquote>
+<p><strong>What are you observing about me?</strong></p>
+</blockquote>
+<p>and receive a clear answer.</p>
+<p>They should be able to ask:</p>
+<blockquote>
+<p><strong>Why do you need it?</strong></p>
+</blockquote>
+<p>and receive a real reason.</p>
+<p>They should be able to decline optional participation without losing access to the learning experience.</p>
+<p>Most importantly:</p>
+<blockquote>
+<h2 id="the-learner-is-a-participant-in-the-system-not-raw-material-for-the-system"><strong>The learner is a participant in the system, not raw material for the system.</strong></h2>
+</blockquote>
+<p>That principle should remain intact as 5Guides grows.</p>
+<hr>
+<h2 id="related">Related</h2>
+<ul>
+<li><code>student_footprint.md</code></li>
+<li><code>assessment.md</code></li>
+<li><code>badges.md</code></li>
+<li><code>ai_companion.md</code></li>
+</ul>
+<hr>
+<blockquote>
+<p><strong>Collect less. Explain clearly. Ask when appropriate. Respect no. Revisit the promise when the system changes.</strong></p>
+</blockquote>
+  </main>
+</body>
+</html>
