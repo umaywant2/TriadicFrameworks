@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- /docs/5Guides/index.html — <head> metadata                -->
+<!-- Module: 5Guides (five-guides)                             -->
+<!-- Last updated: 2026-11-26                                  -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="language" content="en">
+<meta name="last-modified" content="2026-11-26">
+<meta name="generator" content="TriadicFrameworks Static Canon Engine">
+
+<meta name="creator" content="TriadicFrameworks">
+<meta name="author" content="Nawder Loswin (pen name)">
+<meta name="publisher" content="TriadicFrameworks">
+
+<meta name="description"
+      content="5Guides — a student-facing structural reasoning pathway through Awareness, Alignment, Coherence, Clarity, and Continuity, with exploration, practice, mastery, optional AI assistance, Lean 4 formal companions, and project-lineage materials.">
+<meta name="keywords"
+      content="5Guides, AACCC, Awareness, Alignment, Coherence, Clarity, Continuity, structural reasoning, student guides, mastery, AI companion, Lean 4, formalization, provenance, TriadicFrameworks">
+
+<script type="module" async fetchpriority="low"
+        src="https://www.triadicframeworks.org/.webmcp/bridge.js"
+        data-packs="c2pa,mcp-server-client"></script>
+
+<link rel="canonical" href="https://www.triadicframeworks.org/5Guides/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0ff">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TriadicFrameworks">
+<meta property="og:title" content="5Guides — Awareness, Alignment, Coherence, Clarity, Continuity">
+<meta property="og:url" content="https://www.triadicframeworks.org/5Guides/">
+<meta property="og:description"
+      content="A student-facing learning pathway through five structural questions: Awareness, Alignment, Coherence, Clarity, and Continuity, with practice, mastery, optional AI assistance, Lean 4 companions, and project origins.">
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="1080">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="5Guides — Awareness, Alignment, Coherence, Clarity, Continuity">
+<meta name="twitter:description"
+      content="Explore, practice, and demonstrate five structural reasoning habits, with optional AI and Lean 4 learning paths.">
+<meta name="twitter:image" content="https://www.triadicframeworks.org/assets/og-image.png">
+
+<meta name="citation_title" content="5Guides — Awareness, Alignment, Coherence, Clarity, Continuity">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2026">
+<meta name="DC.subject"
+      content="Awareness, Alignment, Coherence, Clarity, Continuity, AACCC, structural reasoning, student learning, formalization, Lean 4, provenance, AI-assisted learning">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<meta name="ai.module" content="5Guides">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose"
+      content="Provide a student-facing learning pathway for practicing Awareness, Alignment, Coherence, Clarity, and Continuity through exploration, practice, mastery, reflection, optional AI assistance, formal Lean 4 examples, and independent application.">
+<meta name="ai.keywords"
+      content="5Guides, AACCC, Awareness, Alignment, Coherence, Clarity, Continuity, structural reasoning, student learning, mastery, AI companion, Lean 4, formalization, provenance">
+<meta name="ai.audience" content="students, educators, developers, researchers, independent learners, AI systems">
+<meta name="ai.navigation" content="https://www.triadicframeworks.org/sitemap_main.xml">
+<meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.contact.youtube" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted.">
+
+<meta name="ai.module.name" content="5Guides">
+<meta name="ai.module.summary"
+      content="Student-facing AACCC learning module: Awareness, Alignment, Coherence, Clarity, and Continuity, each organized around explore, practice, and mastery paths, with shared assessment, badge, privacy, Student Footprint, AI Companion, Lean 4 Lab, and project-lineage resources.">
+<meta name="ai.module.category" content="five-guides">
+
+<meta name="ai.learning.sequence"
+      content="Awareness -> Alignment -> Coherence -> Clarity -> Continuity -> Independent Application">
+<meta name="ai.learning.rhythm"
+      content="Experience -> Notice -> Inspect -> Apply -> Demonstrate -> Reflect -> Continue">
+<meta name="ai.formalization" content="Lean 4 optional companion path">
+<meta name="ai.lean.version" content="4.36.0">
+<meta name="ai.lean.target" content="x86_64-w64-windows-gnu">
+<meta name="ai.privacy"
+      content="Privacy-first learning design; learning, mastery, badges, and optional Student Footprint remain separate.">
+
+<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png"
+      sizes="16x16" type="image/png">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png"
+      sizes="32x32" type="image/png">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png"
+      sizes="192x192" type="image/png">
+
+<title>5Guides | TriadicFrameworks</title>
+  
+<style>
+/* ============================================================
+   NAWDERIAN NEON ARCADE THEME — RTT/1 SYNTHWAVE EDITION
+   ============================================================ */
+
+:root {
+  --bg-main: #05060a;                 /* deep CRT black */
+  --bg-nav: #0a0c12;                  /* darker sidebar */
+  --bg-panel: #0f1118;
+
+  --text-main: #e8f7ff;               /* neon ice */
+  --text-muted: #7a8ca0;              /* CRT fade */
+
+  --neon-cyan: #3df5ff;
+  --neon-magenta: #ff3dfc;
+  --neon-yellow: #ffe66d;
+
+  --triadic-neon: linear-gradient(135deg,
+                      #3df5ff,
+                      #ff3dfc,
+                      #ffe66d);
+
+  --scanline: repeating-linear-gradient(
+                to bottom,
+                rgba(255,255,255,0.03) 0px,
+                rgba(255,255,255,0.03) 1px,
+                rgba(0,0,0,0.05) 2px
+              );
+
+  --radius: 10px;
+  --glow: 0 0 12px rgba(255, 0, 180, 0.45),
+          0 0 24px rgba(0, 255, 255, 0.25);
+}
+
+/* Base layout */
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  background-image: var(--scanline);
+  color: var(--text-main);
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Neon headings */
+h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic-neon);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: var(--glow);
+}
+
+/* Paragraphs and lists */
+p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: var(--text-main);
+}
+
+/* Neon links */
+a {
+  color: var(--neon-cyan);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(255,255,255,0.25);
+  transition: color 0.2s ease, border-color 0.2s ease, text-shadow 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--neon-magenta);
+  border-bottom-color: var(--neon-magenta);
+  text-shadow: 0 0 8px var(--neon-magenta);
+}
+
+a:visited {
+  color: var(--neon-yellow);
+}
+
+/* Code blocks */
+pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono";
+  background: rgba(255,255,255,0.04);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #dffaff;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: inset 0 0 12px rgba(0,255,255,0.15);
+}
+
+/* Context block */
+.context-block {
+  font-family: monospace;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 0.5rem 0 1rem 0;
+  padding: 1rem;
+  background: var(--bg-panel);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  box-shadow: var(--glow);
+}
+
+.context-label {
+  color: var(--neon-yellow);
+  font-weight: bold;
+  margin-right: 0.25rem;
+}
+
+.context-value {
+  color: var(--text-main);
+}
+
+/* Navigation panel */
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 4px 0 12px rgba(0,0,0,0.4);
+}
+
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--neon-cyan);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+  text-shadow: var(--glow);
+}
+
+nav a {
+  display: block;
+  color: var(--text-muted);
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--neon-magenta);
+  text-shadow: 0 0 6px var(--neon-magenta);
+}
+
+/* Main content */
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--neon-cyan);
+  font-weight: 500;
+  text-shadow: var(--glow);
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--neon-magenta);
+}
+
+code {
+  color: var(--neon-cyan);
+}
+
+/* Hide the default arrow */
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+/* Custom arrow icons */
+details > summary::before {
+  content: "⏵"; /* collapsed */
+  padding-right: 6px;
+  font-size: 0.9em;
+}
+details[open] > summary::before {
+  content: "⏷"; /* expanded */
+}
+
+/* Make the h2/h3 feel like the toggle */
+details > summary h2,
+details > summary h3 {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hover effect */
+details > summary:hover h2,
+details > summary:hover h3 {
+  text-decoration: underline;
+}
+
+/* Optional: fade-in animation for opened blocks */
+details[open] {
+  animation: fadeIn 0.15s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+      
+</style>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+   
+<nav class="nav-band">
+ <p align="center">
+  <!-- TriadicFrameworks Static Glyph (FFF‑Inspired) -->
+  <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="120" rx="12" fill="none"/>
+    <path d="M30 25 L55 25 L40 60 L65 60 L50 95" stroke="#6A5ACD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M60 25 L85 25 L70 60 L95 60 L80 95" stroke="#20B2AA" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M45 25 L70 25 L55 60 L80 60 L65 95" stroke="#DA70D6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+ </p> 
+  
+   <details>
+     <summary><h2>🔱 5Guides | TriadicFrameworks</h2></summary>
+      <a href="#README">🔰 README</a>
+      <a href="#ABOUT">🔗 About | TriadicFrameworks</a>
+      <a href="#CONTRIBUTING">🤝 Contributing</a>
+      <a href="https://www.triadicframeworks.org/education/">💯 Education | RTT</a>
+      <a href="#GLOSSARY">🎯 Glossary</a>
+      <a href="#LINEAGE">📜 Lineage</a>
+      <a href="#LICENSE">📎 License</a>
+      <a href="#SITEMAP">🌐 Sitemap</a>
+      <a href="#QUICKSTART">⚡ Quickstart</a>
+      <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
+      <a href="#SECURITY">🔐 Security</a>
+      <a href="#PRINCIPLES">🧘 Principles</a>
+   </details>
+<details>
+  <summary><h3>🧭 5Guides</h3></summary>
+  <a href="#index">🏠 Home</a><br>
+  <a href="#5g_capture">📝 Capture</a>
+</details>
+<details>
+  <summary><h3>👀 Awareness</h3></summary>
+  <a href="#awareness_index">🧭 Awareness</a><br>
+  <a href="#awareness_explore">🔎 Explore</a><br>
+  <a href="#awareness_practice">🛠️ Practice</a><br>
+  <a href="#awareness_mastery">🏅 Mastery</a>
+</details>
+<details>
+  <summary><h3>🔗 Alignment</h3></summary>
+  <a href="#alignment_index">🧭 Alignment</a><br>
+  <a href="#alignment_explore">🔎 Explore</a><br>
+  <a href="#alignment_practice">🛠️ Practice</a><br>
+  <a href="#alignment_mastery">🏅 Mastery</a>
+</details>
+<details>
+  <summary><h3>🧩 Coherence</h3></summary>
+  <a href="#coherence_index">🧭 Coherence</a><br>
+  <a href="#coherence_explore">🔎 Explore</a><br>
+  <a href="#coherence_practice">🛠️ Practice</a><br>
+  <a href="#coherence_mastery">🏅 Mastery</a>
+</details>
+<details>
+  <summary><h3>🔎 Clarity</h3></summary>
+  <a href="#clarity_index">🧭 Clarity</a><br>
+  <a href="#clarity_explore">🔍 Explore</a><br>
+  <a href="#clarity_practice">🛠️ Practice</a><br>
+  <a href="#clarity_mastery">🏅 Mastery</a>
+</details>
+<details>
+  <summary><h3>🔄 Continuity</h3></summary>
+  <a href="#continuity_index">🧭 Continuity</a><br>
+  <a href="#continuity_explore">🔎 Explore</a><br>
+  <a href="#continuity_practice">🛠️ Practice</a><br>
+  <a href="#continuity_mastery">🏅 Mastery</a>
+</details>
+<details>
+  <summary><h3>🎓 Shared Learning Resources</h3></summary>
+  <a href="#shared_ai_companion">🤖 AI Companion</a><br>
+  <a href="#shared_assessment">📋 Assessment</a><br>
+  <a href="#shared_badges">🏅 Badges</a><br>
+  <a href="#shared_privacy">🔐 Privacy</a><br>
+  <a href="#shared_student_footprint">👣 Student Footprint</a>
+</details>
+<details>
+  <summary><h3>🧠 Lean 4 Lab</h3></summary>
+  <a href="#lean_index">📘 Lean 4 Lab</a><br>
+  <a href="#lean_01_awareness">👀 01 — Awareness</a><br>
+  <a href="#lean_02_alignment">🔗 02 — Alignment</a><br>
+  <a href="#lean_03_coherence">🧩 03 — Coherence</a><br>
+  <a href="#lean_04_clarity">🔎 04 — Clarity</a><br>
+  <a href="#lean_05_continuity">🔄 05 — Continuity</a><br>
+  <a href="#lean_06_tft_origin">🔺 06 — TFT Origin</a><br>
+  <a href="#lean_07_nawderian_theorem">📐 07 — Nawderian Theorem</a><br>
+  <a href="#lean_08_nawderian_set_theorem">🧮 08 — Nawderian SET Theorem</a><br>
+  <a href="#lean_09_temperature_engine_theorem">🌡️ 09 — Temperature Engine Theorem</a><br>
+  <a href="#lean_10_unified_resonance_theorem">〰️ 10 — Unified Resonance Theorem</a><br>
+  <a href="#lean_11_rtt_origin">⏱️ 11 — RTT Origin</a>
+</details>
+<details>
+  <summary><h3>🌱 Origins & Lineage</h3></summary>
+  <a href="#origins_index">🗺️ Origins</a><br>
+  <a href="#origins_tft">🔺 TFT</a><br>
+  <a href="#origins_theorems">📐 Theorems</a><br>
+  <a href="#origins_rtt">⏱️ RTT</a><br>
+  <a href="#origins_formalization">✅ Formalization</a>
+</details>
+   <details>
+     <summary><h2>🏗️ Triadic Tools</h2></summary> 
+      <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
+      <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
+      <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
+      <a href="https://www.triadicframeworks.org/domain_tool_primers/">🏗️ Domain Primer Tools</a>
+      <a href="https://www.triadicframeworks.org/packages/">📦 Packages and Cores</a>
+      <a href="https://www.triadicframeworks.org/TFT_3Pack_v1.3/">♨️ TFT 3Pack CLI Tools</a>
+      <a href="https://www.triadicframeworks.org/schemas/">🕸️ Schemas</a>
+      <a href="https://www.triadicframeworks.org/ecoechosystem/">🛄 EcoEchoSystem</a>    
+      <a href="https://www.triadicframeworks.org/lactos/">🎨 LACTOS</a>
+      <a href="https://www.triadicframeworks.org/_ideas/">🤔 Ideas</a>
+      <a href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">🔛(RTT frozen)</a>
+      <a href="https://www.triadicframeworks.org/Framework_Field_Theory/">🔜FFT</a> 
+      <a href="https://www.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
+      <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
+      <a href="../">🔙TFT</a>
+   </details>
+   <!-- RTT Session Header (canonical stub) -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- /docs/5Guides — Session Context block                     -->
+<!-- 5Guides / AACCC student-learning context                  -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+<section id="five-guides-session-header"
+         data-rtt="five-guides"
+         data-coherence="stable"
+         data-drift="minimal"
+         data-regime="educational">
+
+  <details>
+    <summary><h2>Session Context</h2></summary>
+
+    <div class="context-block">
+
+      <span class="context-label"><strong>Canon:</strong></span>
+      <span class="context-value">active (5Guides / AACCC learning module)</span><br>
+
+      <span class="context-label"><strong>Guides:</strong></span>
+      <span class="context-value">
+        Awareness → Alignment → Coherence → Clarity → Continuity
+      </span><br>
+
+      <span class="context-label"><strong>Learning rhythm:</strong></span>
+      <span class="context-value">
+        Experience → Notice → Inspect → Apply → Demonstrate → Reflect → Continue
+      </span><br>
+
+      <span class="context-label"><strong>Guide structure:</strong></span>
+      <span class="context-value">
+        explore → practice → mastery
+      </span><br>
+
+      <span class="context-label"><strong>Shared resources:</strong></span>
+      <span class="context-value">
+        AI Companion → assessment → badges → privacy → Student Footprint
+      </span><br>
+
+      <span class="context-label"><strong>Formal path:</strong></span>
+      <span class="context-value">
+        optional Lean 4 Lab (01–11)
+      </span><br>
+
+      <span class="context-label"><strong>Origins:</strong></span>
+      <span class="context-value">
+        TFT → theorem lineage → RTT → formalization → AACCC / 5Guides
+      </span><br>
+
+      <span class="context-label"><strong>Drift:</strong></span>
+      <span class="context-value">
+        minimal (five-question learning sequence preserved)
+      </span><br>
+
+      <span class="context-label"><strong>Coherence:</strong></span>
+      <span class="context-value">
+        stable (AACCC student-learning architecture)
+      </span><br>
+
+      <span class="context-label"><strong>Version:</strong></span>
+      <span class="context-value">
+        1.0 (student-learning scaffold)
+      </span><br>
+
+      <span class="context-label"><strong>Format:</strong></span>
+      <span class="context-value">
+        html + markdown + Lean 4
+      </span><br>
+
+      <span class="context-label"><strong>Lean validation:</strong></span>
+      <span class="context-value">
+        01–11 compiler-checked with Lean 4.36.0 on x86_64-w64-windows-gnu
+      </span><br>
+
+      <span class="context-label"><strong>Front door:</strong></span>
+      <span class="context-value">
+        exists (5Guides module root)
+      </span><br>
+
+      <span class="context-label"><strong>Every guide:</strong></span>
+      <span class="context-value">
+        stands alone + participates in AACCC progression + AI-parsable
+      </span><br>
+
+      <span class="context-label"><strong>AI:</strong></span>
+      <span class="context-value">
+        optional thinking companion; learner judgment remains primary
+      </span><br>
+
+      <span class="context-label"><strong>Privacy:</strong></span>
+      <span class="context-value">
+        privacy-first; learning and mastery separated from optional feedback
+      </span><br>
+
+      <span class="context-label"><strong>Assessment:</strong></span>
+      <span class="context-value">
+        Awareness Check → practice → Mastery Challenge → retry when useful
+      </span><br>
+
+      <span class="context-label"><strong>Recognition:</strong></span>
+      <span class="context-value">
+        five Guide badges + Five Guides Completion milestone
+      </span><br>
+
+      <span class="context-label"><strong>Destination:</strong></span>
+      <span class="context-value">
+        independent application beyond supplied examples
+      </span><br>
+
+      <span class="context-label"><strong>Audience:</strong></span>
+      <span class="context-value">
+        students + educators + independent learners + developers + researchers + AIs
+      </span>
+
+    </div>
+  </details>
+</section>
+
+<div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;
+            border-radius:6px;font-family:Arial, sans-serif;font-size:13px;">
+  🔱 5Guides<br>
+  👀 Awareness • 🔗 Alignment • 🧩 Coherence • 🔎 Clarity • 🔄 Continuity<br>
+  📘 Student Learning • 🤖 AI-Optional • 🧠 Lean 4 Lab
+</div>
+
+</nav>
+
+<main id="content"></main>
+
+<script>
+
+const DOC_MAP = {
+      README: 'README.md',
+      ABOUT: '../ABOUT.md',
+      CONTRIBUTING: '../CONTRIBUTING.md',
+      GLOSSARY: '../GLOSSARY.md',
+      LINEAGE: '../LINEAGE.md',
+      LICENSE: '../LICENSE.md',
+      SITEMAP: '../sitemap.md',
+      QUICKSTART: '../QUICKSTART.md',
+      CODE_OF_CONDUCT: '../CODE_OF_CONDUCT.md',
+      SECURITY: '../SECURITY.md',
+      PRINCIPLES: '../PRINCIPLES.md',
+      index: 'index.md',
+      _5g_capture: '5g_capture.md',
+      alignment_explore: 'alignment/explore.md',
+      alignment_index: 'alignment/index.md',
+      alignment_mastery: 'alignment/mastery.md',
+      alignment_practice: 'alignment/practice.md',
+      awareness_explore: 'awareness/explore.md',
+      awareness_index: 'awareness/index.md',
+      awareness_mastery: 'awareness/mastery.md',
+      awareness_practice: 'awareness/practice.md',
+      clarity_explore: 'clarity/explore.md',
+      clarity_index: 'clarity/index.md',
+      clarity_mastery: 'clarity/mastery.md',
+      clarity_practice: 'clarity/practice.md',
+      coherence_explore: 'coherence/explore.md',
+      coherence_index: 'coherence/index.md',
+      coherence_mastery: 'coherence/mastery.md',
+      coherence_practice: 'coherence/practice.md',
+      continuity_explore: 'continuity/explore.md',
+      continuity_index: 'continuity/index.md',
+      continuity_mastery: 'continuity/mastery.md',
+      continuity_practice: 'continuity/practice.md',
+      lean_01_awareness: 'lean/01_awareness.lean',
+      lean_02_alignment: 'lean/02_alignment.lean',
+      lean_03_coherence: 'lean/03_coherence.lean',
+      lean_04_clarity: 'lean/04_clarity.lean',
+      lean_05_continuity: 'lean/05_continuity.lean',
+      lean_06_tft_origin: 'lean/06_tft_origin.lean',
+      lean_07_nawderian_theorem: 'lean/07_nawderian_theorem.lean',
+      lean_08_nawderian_set_theorem: 'lean/08_nawderian_set_theorem.lean',
+      lean_09_temperature_engine_theorem: 'lean/09_temperature_engine_theorem.lean',
+      lean_10_unified_resonance_theorem: 'lean/10_unified_resonance_theorem.lean',
+      lean_11_rtt_origin: 'lean/11_rtt_origin.lean',
+      lean_index: 'lean/index.md',
+      origins_formalization: 'origins/formalization.md',
+      origins_index: 'origins/index.md',
+      origins_rtt: 'origins/rtt.md',
+      origins_tft: 'origins/tft.md',
+      origins_theorems: 'origins/theorems.md',
+      shared_ai_companion: 'shared/ai_companion.md',
+      shared_assessment: 'shared/assessment.md',
+      shared_badges: 'shared/badges.md',
+      shared_privacy: 'shared/privacy.md',
+      shared_student_footprint: 'shared/student_footprint.md',
+};
+  
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
+
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"1465e375ff064f19a4f37c196d2b0f84","spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>
