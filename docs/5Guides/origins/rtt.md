@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="5Guides_origins_rtt_" src="https://github.com/user-attachments/assets/75f2aa92-a349-46a5-b976-f178ff59ace6" />
+
 # RTT — Resonance-Time Theory
 
 > A later project stage where state, flow, resonance, operators, coherence, and change across time became more explicit.
