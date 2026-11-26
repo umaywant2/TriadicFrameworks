@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="5Guides_clarity_explore_" src="https://github.com/user-attachments/assets/0d89e510-943d-45e1-a9a2-091e1bb14c73" />
+
 # Clarity Explore
 
 > Can someone else see what you mean?
