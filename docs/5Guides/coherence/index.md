@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="5Guides_coherence_index_" src="https://github.com/user-attachments/assets/20535eac-ab55-4001-9b92-4bdbe090a8d2" />
+
 # Coherence
 
 > Does this hold together?
