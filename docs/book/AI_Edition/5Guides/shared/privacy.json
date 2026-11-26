@@ -1,1 +1,465 @@
-. 
+{
+  "document": {
+    "id": "5Guides-shared-privacy",
+    "type": "shared-learning-contract",
+    "name": "Privacy",
+    "title": "5Guides — Privacy",
+    "edition": "AI Edition",
+    "module": "5Guides",
+    "framework": "AACCC",
+    "version": "1.0",
+    "status": "active",
+    "language": "en",
+    "source": "docs/5Guides/shared/privacy.md",
+    "ai_path": "docs/book/AI_Edition/5Guides/shared/privacy.json"
+  },
+  "purpose": {
+    "primary": "Define the privacy-first boundaries of the 5Guides learning experience.",
+    "design_goal": "Support learning without building unnecessary identity, behavioral tracking, profiling, or feedback requirements around the learner.",
+    "scope": [
+      "learning",
+      "assessment",
+      "mastery",
+      "badges",
+      "private reflection",
+      "optional AI assistance",
+      "optional Student Footprint",
+      "future technical implementation"
+    ]
+  },
+  "core_principle": "Learning does not grant us permission to observe the learner.",
+  "design_preference": "Know less about the learner when knowing more is unnecessary.",
+  "privacy_model": {
+    "privacy_first": true,
+    "data_minimization": true,
+    "voluntary_disclosure": true,
+    "understandable_choices": true,
+    "unnecessary_identity_requirements": false,
+    "hidden_participation_pressure": false,
+    "implementation_should_match_promises": true
+  },
+  "learning_without_surveillance": {
+    "normal_learning_path": [
+      "explore",
+      "practice",
+      "demonstrate",
+      "reflect",
+      "continue"
+    ],
+    "principle": "The learner should not have to exchange unnecessary personal information for access to the normal learning path.",
+    "learning_should_not_imply_permission_for": [
+      "identity collection",
+      "behavioral profiling",
+      "unrelated analytics",
+      "public learner profiles",
+      "mandatory feedback"
+    ]
+  },
+  "domain_separation": {
+    "principle": "Learning, assessment, identity, analytics, feedback, and recognition should remain separate wherever practical.",
+    "learning_path": [
+      "learning",
+      "mastery",
+      "badge"
+    ],
+    "optional_domain": [
+      "feedback",
+      "Student Footprint"
+    ],
+    "rule": "A learner who declines optional feedback has completed the same learning milestone as a learner who provides it."
+  },
+  "identity": {
+    "required_for_basic_learning": false,
+    "unnecessary_identity_should_not_be_required": true,
+    "do_not_require_merely_to_learn": [
+      "real name",
+      "email address",
+      "phone number",
+      "school",
+      "employer",
+      "social-media account",
+      "age",
+      "gender",
+      "other unnecessary personal identifiers"
+    ],
+    "future_feature_boundary": "If a future optional feature requires an account, that requirement should be explained separately rather than silently becoming a requirement for the learning material."
+  },
+  "local_first": {
+    "preference": true,
+    "condition": "where practical",
+    "principle": "Do not send information somewhere merely because it can be sent.",
+    "possible_local_state": [
+      "current Guide position",
+      "unfinished exercises",
+      "private reflections",
+      "draft student records",
+      "local activity progress"
+    ],
+    "implementation_defined": false,
+    "warning": "These are design preferences, not claims about an implemented storage architecture."
+  },
+  "private_reflection": {
+    "default_owner": "learner",
+    "automatic_submission": false,
+    "principle": "A reflection prompt does not automatically mean that the learner's response should be transmitted or stored.",
+    "learner_options": [
+      "think privately",
+      "write privately",
+      "discuss with another person",
+      "explore with an optional AI assistant",
+      "move on"
+    ]
+  },
+  "ai_boundary": {
+    "ai_required": false,
+    "external_service_possible": true,
+    "principle": "Choosing to use an external AI assistant changes the information boundary.",
+    "avoid_unnecessary_sharing": [
+      "personal information",
+      "private records",
+      "identifying details",
+      "sensitive information",
+      "information about other people",
+      "confidential documents"
+    ],
+    "learner_prompt": "What am I choosing to share?",
+    "service_policy_boundary": "External AI services may operate under their own data practices, account requirements, retention policies, and terms."
+  },
+  "awareness_checks": {
+    "purpose": "Help the learner notice what remained after first exposure and what may deserve another look.",
+    "behavioral_profile_required": false,
+    "permanent_analytics_required": false,
+    "principle": "An educational check does not automatically justify building a permanent behavioral record."
+  },
+  "mastery": {
+    "purpose": "Determine whether the learner can use the defined skill on a fresh problem.",
+    "identity_profile_required": false,
+    "principle": "The educational result is demonstration of the skill; that does not automatically require knowing who the learner is outside the learning interaction."
+  },
+  "badges": {
+    "purpose": "Recognize a defined learning milestone.",
+    "identity_system_required": false,
+    "public_profile_required": false,
+    "rule": "Receiving a badge should not automatically require a real name, email address, public account, location, school, employer, or Student Footprint.",
+    "separation": [
+      "mastery",
+      "badge",
+      "optional footprint"
+    ]
+  },
+  "student_footprint": {
+    "resource": "student_footprint.json",
+    "optional": true,
+    "purpose": "Allow a learner to voluntarily leave a small feedback trace after a learning milestone.",
+    "minimal_fields": [
+      {
+        "id": "country",
+        "required": false,
+        "learner_selected": true
+      },
+      {
+        "id": "reflection",
+        "required": false,
+        "short_text": true
+      }
+    ],
+    "name_required": false,
+    "email_required": false,
+    "public_profile_required": false,
+    "declining_changes_completion": false
+  },
+  "ask_do_not_infer": {
+    "principle": "Volunteered information is not equivalent to silently inferred information.",
+    "country_example": {
+      "preferred": "Ask the learner which broad country they wish to associate with the Footprint.",
+      "avoid_inferring_from": [
+        "IP address",
+        "browser information",
+        "device information",
+        "location services",
+        "hidden signals"
+      ]
+    }
+  },
+  "country_language": {
+    "preferred_prompt": "Where are you learning from?",
+    "avoid_prompt": "Country of origin",
+    "reason": "The intended field is a voluntarily selected broad learning location, not nationality, birthplace, ancestry, citizenship, or family background.",
+    "optional": true
+  },
+  "free_text": {
+    "risk": "A learner may accidentally submit identifying or sensitive information.",
+    "learner_notice": "Please do not include personal or identifying information in your reflection.",
+    "possible_accidental_content": [
+      "full name",
+      "email address",
+      "phone number",
+      "school",
+      "workplace",
+      "specific location",
+      "another person's information"
+    ],
+    "automatic_publication_required": false,
+    "public_display_should_consider_review": true
+  },
+  "analytics_boundary": {
+    "principle": "Curiosity about learners does not automatically justify observing them.",
+    "student_footprint_is_not_intended_to_answer": [
+      "Who visited?",
+      "How long did they stay?",
+      "Which pages did they read?",
+      "What route did they take?",
+      "How often did they return?",
+      "What device did they use?",
+      "Which exercise caused them to leave?",
+      "How can conversion be increased?"
+    ],
+    "assessment_should_not_quietly_become_analytics": true
+  },
+  "silence": {
+    "principle": "Silence is not inferred data.",
+    "no_footprint_means": "No Footprint was voluntarily provided.",
+    "must_not_infer": [
+      "learner disliked the Guides",
+      "learner failed",
+      "learner did not finish",
+      "learner was confused",
+      "learner never existed"
+    ]
+  },
+  "shadow_profile": {
+    "risk": "Individually minor details may become identifying or behavioral when joined.",
+    "example_combination": [
+      "country",
+      "timestamp",
+      "browser",
+      "device",
+      "exact workflow position",
+      "repeated visits"
+    ],
+    "principle": "Privacy must be evaluated across combined records, not only one field at a time.",
+    "avoid_unnecessary_behavioral_profiles": true
+  },
+  "data_minimization": {
+    "questions_before_collection": [
+      "Why do we need this?",
+      "Could the feature work without it?",
+      "Would the learner reasonably expect us to have it?"
+    ],
+    "insufficient_reason": "It might be useful someday.",
+    "rule": "Do not collect tomorrow's data today."
+  },
+  "technical_server_data": {
+    "implementation_dependent": true,
+    "architecture_defined_here": false,
+    "do_not_promise": "No server ever receives any technical information.",
+    "reason": "Actual request handling depends on the eventual architecture, hosting environment, logging configuration, security controls, and services involved.",
+    "design_commitment": "Do not intentionally build unnecessary identity, behavioral tracking, or profiling into the learning experience.",
+    "future_documentation_required": "Document actual technical behavior when the implementation exists."
+  },
+  "logging": {
+    "possible_future_operational_need": true,
+    "possible_purposes": [
+      "security",
+      "reliability",
+      "abuse prevention",
+      "diagnosis"
+    ],
+    "implementation_defined": false,
+    "questions_if_implemented": [
+      "What is logged?",
+      "Why is it logged?",
+      "How long is it retained?",
+      "Who can access it?",
+      "Does it contain identifying information?",
+      "Can the same purpose be achieved with less information?"
+    ],
+    "principle": "Operational necessity should not become an excuse for unlimited collection."
+  },
+  "retention": {
+    "specific_duration_defined": false,
+    "principle": "Keeping data indefinitely requires a reason.",
+    "if_data_is_collected_ask": [
+      "How long is it actually needed?",
+      "Why is that duration necessary?",
+      "Can it be removed earlier?"
+    ]
+  },
+  "deletion_and_correction": {
+    "future_implementation_should_consider": true,
+    "situations": [
+      "accidental submission",
+      "identifying information submitted by mistake",
+      "correction request",
+      "removal request",
+      "moderation decision"
+    ],
+    "principle": "Voluntary participation should not become irreversible merely because someone submitted once."
+  },
+  "public_display": {
+    "different_privacy_boundary": true,
+    "if_implemented": [
+      "keep contributions minimal",
+      "avoid unnecessary metadata",
+      "avoid engagement statistics",
+      "avoid public learner histories",
+      "avoid detailed filters that expose individuals",
+      "use additional caution with small groups"
+    ],
+    "preferred_model": "collection of small voluntary notes",
+    "avoid_model": "searchable database of learners"
+  },
+  "small_groups": {
+    "risk": "Even broad information may become identifying when very few people match it.",
+    "example_combination": [
+      "country",
+      "guide",
+      "date",
+      "reflection"
+    ],
+    "default": "Prefer less public precision when additional detail is unnecessary."
+  },
+  "consent_design": {
+    "principle": "A meaningful choice requires a comfortable no.",
+    "preferred_skip_language": "Continue without leaving a Footprint",
+    "avoid": [
+      "guilt-oriented decline language",
+      "hidden skip options",
+      "repeated requests after decline",
+      "feedback requirements for completion",
+      "making the privacy-preserving option unnecessarily difficult"
+    ]
+  },
+  "privacy_theater": {
+    "avoid": true,
+    "principle": "Privacy language and observable implementation should describe the same reality.",
+    "if_mismatch_detected": [
+      "inspect the implementation",
+      "inspect the promise",
+      "correct the mismatch",
+      "do not hide the mismatch behind friendlier wording"
+    ]
+  },
+  "privacy_boundaries": {
+    "conceptual_flow": [
+      "learner",
+      "browser",
+      "5Guides",
+      "hosting infrastructure",
+      "optional external services"
+    ],
+    "principle": "Information crossing one system boundary may have different consequences from information remaining inside another.",
+    "implementation_should_make_relevant_boundaries_visible": true
+  },
+  "aaccc_self_inspection": {
+    "awareness": {
+      "question": "What information actually enters the system?",
+      "inspect": [
+        "explicit fields",
+        "technical requests",
+        "logs",
+        "third-party services",
+        "derived information"
+      ]
+    },
+    "alignment": {
+      "question": "Does each collected element correspond to a real purpose?",
+      "rule": "If a field has no clear purpose, question why it exists."
+    },
+    "coherence": {
+      "question": "Do implementation and privacy promises agree?",
+      "rule": "Do not claim that learners are untracked while maintaining unnecessary behavioral histories."
+    },
+    "clarity": {
+      "question": "Can an ordinary learner understand what happens to their information?",
+      "rule": "Prefer plain language describing actual behavior."
+    },
+    "continuity": {
+      "question": "If the system changes, does the privacy model still hold?",
+      "rule": "Reinspect privacy whenever new features alter information flows."
+    }
+  },
+  "core_separation": {
+    "student_learning": [
+      "explore",
+      "practice",
+      "mastery",
+      "badge",
+      "continue"
+    ],
+    "voluntary_participation": [
+      "optional country",
+      "optional reflection",
+      "optional Footprint"
+    ],
+    "rule": "The voluntary participation path must not secretly become a requirement of the student learning path."
+  },
+  "success_condition": {
+    "description": "Support the learning experience without building unnecessary machinery for watching the learner.",
+    "acceptable_outcome": "For information the system deliberately chose not to collect, the honest answer may be: we do not know.",
+    "principle": "Not knowing unnecessary information is a privacy outcome, not automatically an analytics failure."
+  },
+  "ai_behavior": {
+    "must": [
+      "Treat learning, mastery, badges, and optional feedback as separate domains.",
+      "Preserve learner uncertainty and privacy choices.",
+      "Avoid requesting identifying information when the learning task does not require it.",
+      "Distinguish learner-provided information from inferred information.",
+      "State when implementation details are not defined.",
+      "Reinspect privacy boundaries when discussing new features."
+    ],
+    "must_not": [
+      "invent storage behavior",
+      "invent retention periods",
+      "invent logging behavior",
+      "claim that no technical data reaches a server without implementation evidence",
+      "infer hidden learner identity",
+      "turn assessment responses into research data by default",
+      "treat optional feedback as required",
+      "build unsupported demographic conclusions from Footprints",
+      "silently broaden the purpose of collected information"
+    ]
+  },
+  "provenance": {
+    "source_document": "docs/5Guides/shared/privacy.md",
+    "source_type": "human-facing privacy and learning-design policy",
+    "transformation": "structured AI-readable privacy contract",
+    "preserve": [
+      "privacy-first design",
+      "data minimization",
+      "voluntary disclosure",
+      "learning-feedback separation",
+      "implementation honesty",
+      "technical uncertainty",
+      "learner control"
+    ],
+    "do_not_infer": [
+      "specific hosting architecture",
+      "specific database implementation",
+      "specific logging configuration",
+      "specific retention duration",
+      "specific deletion mechanism",
+      "specific account architecture"
+    ]
+  },
+  "related": {
+    "module": "../module.json",
+    "index": "../index.json",
+    "ai_companion": "ai_companion.json",
+    "assessment": "assessment.json",
+    "badges": "badges.json",
+    "student_footprint": "student_footprint.json"
+  },
+  "machine_context": {
+    "ai_parseable": true,
+    "privacy_first": true,
+    "data_minimization": true,
+    "identity_required_for_learning": false,
+    "ai_required": false,
+    "footprint_required": false,
+    "analytics_required": false,
+    "implementation_claims_bounded": true,
+    "learner_control_primary": true,
+    "provenance_aware": true
+  }
+}
