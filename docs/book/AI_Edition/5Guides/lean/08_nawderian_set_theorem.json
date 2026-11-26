@@ -1,518 +1,677 @@
 {
   "document": {
-    "id": "5Guides-lean-07-nawderian-theorem",
+    "id": "5Guides-lean-08-nawderian-set-theorem",
     "type": "formal-origin-companion",
-    "name": "Nawderian Theorem",
-    "title": "Lean 4 Companion — Nawderian Theorem",
+    "name": "Nawderian SET Theorem",
+    "title": "Lean 4 Companion — Nawderian SET Theorem",
     "edition": "AI Edition",
     "module": "5Guides",
     "framework": "AACCC",
-    "origin": "Nawderian Theorem",
-    "formal_order": 7,
+    "origin": "Nawderian SET Theorem",
+    "formal_order": 8,
     "version": "1.0",
     "status": "active",
     "language": "en",
-    "source": "docs/5Guides/lean/07_nawderian_theorem.lean",
-    "ai_path": "docs/book/AI_Edition/5Guides/lean/07_nawderian_theorem.json",
+    "source": "docs/5Guides/lean/08_nawderian_set_theorem.lean",
+    "ai_path": "docs/book/AI_Edition/5Guides/lean/08_nawderian_set_theorem.json",
     "origin_path": "../origins/theorems.json",
     "lean_index": "index.json"
   },
   "purpose": {
-    "primary": "Provide a small formal teaching abstraction for selected dimension-group relationships associated with the Nawderian Theorem.",
-    "formal_goal": "Represent explicit group membership and prove only those relationships supported by the supplied definitions.",
-    "educational_principle": "Formalization should expose when an informal relationship requires a definition rather than inventing one merely to obtain the desired theorem."
+    "primary": "Provide a small formal teaching abstraction for selected algebraic properties associated with the Nawderian SET Theorem.",
+    "formal_goal": "Represent three named SET contributions, keep gravity separately supplied, and inspect their additive composition and selected zero-component consequences.",
+    "educational_principle": "A formal model can verify consequences of a declared additive decomposition without establishing that the decomposition is a complete empirical description of a physical system."
   },
   "source_alignment": {
     "source_artifact": "../origins/theorems.json",
-    "source_concept": "The Nawderian Theorem uses several named dimension groups and proposes a broader wrapping relationship.",
-    "selected_structure": "Explicit membership of numbered dimensions in named groups.",
-    "formal_abstraction": "Finite explicitly defined dimension sets and selected membership or intersection properties.",
-    "relationship": "partial formalization",
+    "source_structure": "SET = Spin, Electrolysis / Field-Charge, Temperature",
+    "source_symbolic_form": "F_SET = (S, E, T)",
+    "selected_structure": "Named contributions combined into a modeled total with a separately supplied gravitational contribution.",
+    "formal_abstraction": "Signed integer SETContribution structure plus additive totalContribution.",
+    "relationship": "partial teaching formalization",
     "complete_equivalence": false,
     "complete_source_formalization": false
   },
-  "dimension_groups": {
-    "corridor": [
-      1,
-      2,
-      6
-    ],
-    "wrapping": [
-      3,
-      6,
-      9
-    ],
-    "visible": [
-      4,
-      5,
-      6
-    ],
-    "invisible": [
-      6,
-      7,
-      8
+  "source_concepts": {
+    "set": {
+      "components": [
+        {
+          "name": "Spin",
+          "formal_correspondence": "spin"
+        },
+        {
+          "name": "Electrolysis / Field-Charge",
+          "formal_correspondence": "electrolysis"
+        },
+        {
+          "name": "Temperature",
+          "formal_correspondence": "temperature"
+        }
+      ]
+    },
+    "total": {
+      "components": [
+        "Gravity",
+        "Spin",
+        "Electrolysis / Field-Charge",
+        "Temperature"
+      ],
+      "conceptual_form": "Gravity + Spin + Field / Charge + Temperature -> Modeled Total"
+    }
+  },
+  "teaching_simplification": {
+    "number_representation": "signed integer",
+    "formal_pattern": "gravity + spin + electrolysis + temperature",
+    "purpose": "Make named contributions, decomposition, recomposition, zero cases, and single-component changes directly inspectable.",
+    "gravity_kept_separate": true,
+    "deliberately_not_established": [
+      "physical completeness of the decomposition",
+      "independence of the four contributions",
+      "sufficiency of simple addition for every intended application",
+      "experimental meaning of the represented numeric values",
+      "empirical validity of the broader Nawderian SET interpretation"
     ]
   },
-  "central_dimension": {
-    "dimension": 6,
-    "declared_membership": [
-      "corridor",
-      "wrapping",
-      "visible",
-      "invisible"
-    ],
-    "formal_role": "Shared member across the represented dimension groups.",
-    "teaching_value": "Provides a directly inspectable common relationship without requiring stronger containment semantics."
+  "why_signed_values": {
+    "purpose": "Allow positive, zero, and negative contribution values without introducing additional libraries or physical assumptions.",
+    "teaching_type": "Int",
+    "boundary": "Signed integers are a teaching representation and do not establish that complete physical SET contributions are naturally integer-valued."
   },
-  "directly_supported_structure": [
+  "formal_model": {
+    "set_contribution": {
+      "name": "SETContribution",
+      "fields": [
+        {
+          "name": "spin",
+          "type": "Int"
+        },
+        {
+          "name": "electrolysis",
+          "type": "Int",
+          "source_role": "Electrolysis / Field-Charge teaching component"
+        },
+        {
+          "name": "temperature",
+          "type": "Int"
+        }
+      ]
+    },
+    "subtotal": {
+      "name": "SETContribution.subtotal",
+      "definition": "spin + electrolysis + temperature",
+      "purpose": "Keep the three named SET contributions explicit before gravity is added."
+    },
+    "total": {
+      "name": "totalContribution",
+      "inputs": [
+        {
+          "name": "gravity",
+          "type": "Int",
+          "inside_SETContribution": false
+        },
+        {
+          "name": "s",
+          "type": "SETContribution"
+        }
+      ],
+      "definition": "gravity + s.spin + s.electrolysis + s.temperature"
+    }
+  },
+  "decomposition": {
+    "set_positions": [
+      "spin",
+      "electrolysis",
+      "temperature"
+    ],
+    "external_position": "gravity",
+    "expanded_total": [
+      "gravity",
+      "spin",
+      "electrolysis",
+      "temperature"
+    ],
+    "principle": "The named positions remain visible rather than being hidden inside one unexplained total."
+  },
+  "alignment_of_terms": [
     {
-      "group": "corridor",
-      "member": 6,
-      "relationship": "membership"
+      "source": "Gravity",
+      "formal": "gravity",
+      "status": "separately supplied contribution"
     },
     {
-      "group": "wrapping",
-      "member": 6,
-      "relationship": "membership"
+      "source": "Spin",
+      "formal": "SETContribution.spin",
+      "status": "named SET contribution"
     },
     {
-      "group": "visible",
-      "member": 6,
-      "relationship": "membership"
+      "source": "Electrolysis / Field-Charge",
+      "formal": "SETContribution.electrolysis",
+      "status": "named SET contribution"
     },
     {
-      "group": "invisible",
-      "member": 6,
-      "relationship": "membership"
+      "source": "Temperature",
+      "formal": "SETContribution.temperature",
+      "status": "named SET contribution"
     }
   ],
-  "shared_membership": {
-    "claim": "Dimension 6 is represented as a member shared by the declared groups.",
-    "strength": "directly supported by the encoded group definitions",
-    "does_not_imply": [
-      "all groups are equal",
-      "one group contains all the others",
-      "the groups have identical semantics",
-      "the source term wrapping has been formally defined"
-    ]
-  },
-  "intersection_structure": {
-    "visible_and_invisible": {
-      "shared_member": 6,
-      "formal_observation": "The represented visible and invisible groups share dimension 6."
-    },
-    "wrapping_and_visible": {
-      "shared_member": 6,
-      "formal_observation": "The represented wrapping and visible groups share dimension 6."
-    },
-    "wrapping_and_invisible": {
-      "shared_member": 6,
-      "formal_observation": "The represented wrapping and invisible groups share dimension 6."
-    },
-    "corridor_and_wrapping": {
-      "shared_member": 6,
-      "formal_observation": "The represented corridor and wrapping groups share dimension 6."
-    }
-  },
-  "ordinary_set_check": {
-    "wrapping": [
-      3,
-      6,
-      9
-    ],
-    "visible_union_invisible": [
-      4,
-      5,
-      6,
-      7,
-      8
-    ],
-    "ordinary_subset_relation_supported": false,
-    "reason": "The members represented in the visible and invisible groups are not all members of the represented wrapping group.",
-    "lesson": "Shared membership is weaker than ordinary set containment."
-  },
-  "wrapping_problem": {
-    "source_term": "wrapping",
-    "formal_status": "insufficiently defined for stronger formal use in this teaching abstraction",
-    "problem": "The intuitive source term does not yet determine one unique formal relation.",
-    "possible_semantics": [
-      "containment",
-      "intersection",
-      "ordering",
-      "bounding",
-      "mapping",
-      "connection",
-      "enclosure under another relation"
-    ],
-    "selected_semantics": null,
-    "principle": "Do not choose a semantics solely because it makes the desired theorem provable."
-  },
-  "undefined_relation_is_information": {
-    "principle": "The absence of a formal definition for wrapping is itself an important formalization result.",
-    "means": "The model currently supports membership and selected intersection claims more strongly than the broader wrapping interpretation.",
-    "does_not_mean": "The informal wrapping concept is automatically false."
-  },
-  "candidate_future_relation": {
-    "name": "Wraps",
-    "example_signature": "Wraps A B",
-    "status": "future formalization possibility",
-    "implemented_by_this_artifact": false,
-    "requirements_before_use": [
-      "define what Wraps means",
-      "identify its domain and codomain",
-      "state which properties it should satisfy",
-      "justify correspondence with the source concept",
-      "distinguish it from ordinary set containment if necessary"
-    ]
-  },
   "formal_targets": [
     {
-      "id": "membership_corridor",
-      "claim": "6 belongs to the represented corridor group.",
-      "relationship_type": "membership"
+      "id": "total_expands",
+      "name": "Expanded Total",
+      "claim": "totalContribution gravity s = gravity + s.spin + s.electrolysis + s.temperature",
+      "meaning": "The modeled total directly exposes all four represented contributions."
     },
     {
-      "id": "membership_wrapping",
-      "claim": "6 belongs to the represented wrapping group.",
-      "relationship_type": "membership"
+      "id": "total_matches_subtotal",
+      "name": "Total Matches SET Subtotal",
+      "claim": "totalContribution gravity s = gravity + s.subtotal",
+      "meaning": "The expanded total agrees with adding gravity to the separately defined SET subtotal."
     },
     {
-      "id": "membership_visible",
-      "claim": "6 belongs to the represented visible group.",
-      "relationship_type": "membership"
+      "id": "zero_temperature",
+      "name": "Zero Temperature Contribution",
+      "claim": "When temperature is zero, the modeled total reduces to gravity + spin + electrolysis.",
+      "meaning": "A neutral temperature contribution disappears algebraically while the remaining positions remain visible."
     },
     {
-      "id": "membership_invisible",
-      "claim": "6 belongs to the represented invisible group.",
-      "relationship_type": "membership"
-    },
-    {
-      "id": "selected_shared_membership",
-      "claim": "The represented groups have selected intersections witnessed by dimension 6.",
-      "relationship_type": "shared membership"
+      "id": "zero_set_reduces_to_gravity",
+      "name": "All SET Contributions Neutral",
+      "claim": "When spin, electrolysis, and temperature are all zero, the modeled total reduces to gravity.",
+      "meaning": "With all three SET contributions neutral, only the separately supplied gravitational contribution remains."
     }
   ],
-  "non_target_claims": [
-    "wrapping contains visible union invisible",
-    "wrapping is equivalent to visible plus invisible",
-    "dimension 6 has independently established physical significance",
-    "the represented groups are empirically validated dimensional structures",
-    "the source theorem has been formalized completely"
-  ],
+  "total_expands": {
+    "formal_expression": "totalContribution gravity s = gravity + s.spin + s.electrolysis + s.temperature",
+    "proof_character": "definitional",
+    "teaching_role": "Alignment",
+    "lesson": "Each named formal field corresponds to one visible term in the represented total."
+  },
+  "total_matches_subtotal": {
+    "set_subtotal": "s.spin + s.electrolysis + s.temperature",
+    "total": "gravity + s.subtotal",
+    "teaching_role": "Coherence",
+    "lesson": "The separately defined subtotal and expanded total agree under the supplied additive definitions."
+  },
+  "zero_temperature": {
+    "condition": "temperature = 0",
+    "remaining_terms": [
+      "gravity",
+      "spin",
+      "electrolysis"
+    ],
+    "result": "gravity + spin + electrolysis",
+    "lesson": "Setting one contribution to zero changes the total without removing the remaining structural positions."
+  },
+  "zero_set_reduces_to_gravity": {
+    "conditions": {
+      "spin": 0,
+      "electrolysis": 0,
+      "temperature": 0
+    },
+    "result": "gravity",
+    "lesson": "When every represented SET contribution is neutral, the separately supplied gravity contribution remains."
+  },
+  "concrete_example": {
+    "gravity": 10,
+    "set": {
+      "spin": 2,
+      "electrolysis": -1,
+      "temperature": 4
+    },
+    "modeled_total": 15,
+    "purpose": "Give the learner a concrete decomposition whose result can be predicted before formal reduction."
+  },
+  "continuity_example": {
+    "before": {
+      "gravity": 10,
+      "spin": 2,
+      "electrolysis": -1,
+      "temperature": 4,
+      "modeled_total": 15
+    },
+    "change": {
+      "component": "temperature",
+      "from": 4,
+      "to": 7
+    },
+    "after": {
+      "gravity": 10,
+      "spin": 2,
+      "electrolysis": -1,
+      "temperature": 7,
+      "modeled_total": 18
+    },
+    "persisted": [
+      "the same four contribution positions",
+      "gravity remains separately supplied",
+      "spin still corresponds to spin",
+      "electrolysis still corresponds to electrolysis",
+      "the additive composition rule"
+    ],
+    "changed": [
+      "temperature value",
+      "modeled total"
+    ]
+  },
+  "change_propagation": {
+    "single_changed_component": "temperature",
+    "total_change": 3,
+    "formal_relationship": "Under the supplied additive model, increasing the represented temperature contribution from 4 to 7 changes the represented total from 15 to 18 while the other represented contributions remain fixed.",
+    "physical_cause_established": false
+  },
   "aaccc_mapping": {
     "awareness": {
-      "question": "What groups and memberships were actually represented?",
-      "formal_answer": "Four explicit groups and their represented dimension members."
+      "question": "What contributions have actually been declared?",
+      "formal_answer": [
+        "gravity",
+        "spin",
+        "electrolysis",
+        "temperature"
+      ]
     },
     "alignment": {
-      "question": "Which dimensions correspond across groups?",
-      "formal_answer": "Dimension 6 is a directly represented shared member."
+      "question": "Which mathematical term corresponds to which proposed contribution?",
+      "formal_answer": "Each named contribution occupies an explicit term in the represented additive total."
     },
     "coherence": {
-      "question": "Does the stronger wrapping interpretation follow from ordinary set structure?",
-      "formal_answer": "Not from the represented membership definitions alone."
+      "question": "Does the total follow from the supplied composition rule?",
+      "formal_answer": "The expanded total agrees with gravity plus the declared SET subtotal under the supplied definitions."
     },
     "clarity": {
-      "question": "What must become clearer before the wrapping claim can be formalized?",
-      "formal_answer": "The semantics of the wrapping relation."
+      "question": "Can the contributions be inspected separately?",
+      "formal_answer": "Yes. Gravity, spin, electrolysis, and temperature remain explicit named positions."
     },
     "continuity": {
-      "question": "What source relationship survives formalization?",
-      "formal_answer": "Shared membership survives directly; the broader wrapping semantics remain unresolved."
+      "question": "What happens when one contribution changes while the others remain fixed?",
+      "formal_answer": "The corresponding represented value and total change while the other named contribution positions and additive relation remain stable."
     }
   },
   "formal_awareness": {
     "inspect": [
-      "which sets exist",
-      "which dimensions belong to each",
-      "which relations are actually defined",
-      "which source words are not formally defined",
-      "what the theorem targets actually state"
+      "Which contributions exist?",
+      "Which contributions belong inside SETContribution?",
+      "Which contribution remains separate?",
+      "What type represents each contribution?",
+      "What does subtotal define?",
+      "What does totalContribution define?",
+      "Which physical interpretations are not encoded by the type?"
     ],
-    "principle": "Do not confuse a suggestive source label with an encoded formal relationship."
+    "principle": "Nothing in the SETContribution type itself establishes that the represented integers describe nature."
   },
   "formal_alignment": {
-    "strong": [
-      "dimension 6 <-> corridor membership",
-      "dimension 6 <-> wrapping membership",
-      "dimension 6 <-> visible membership",
-      "dimension 6 <-> invisible membership"
+    "mappings": [
+      "Spin <-> spin",
+      "Electrolysis / Field-Charge <-> electrolysis",
+      "Temperature <-> temperature",
+      "Gravity <-> separately supplied gravity"
     ],
-    "partial_or_unresolved": [
-      "source wrapping concept <-> ordinary set containment"
-    ],
-    "principle": "Preserve the difference between explicit membership and interpretive mapping."
+    "principle": "Each source contribution selected for the teaching abstraction has a visible formal partner."
   },
   "formal_coherence": {
-    "supported": [
-      "selected membership claims",
-      "selected shared-membership claims"
+    "questions": [
+      "Does totalContribution expand to exactly the four intended terms?",
+      "Does totalContribution agree with gravity plus SETContribution.subtotal?",
+      "What remains when temperature is zero?",
+      "What remains when all SET contributions are zero?"
     ],
-    "unsupported_without_more_structure": [
-      "strong containment-style wrapping claims"
-    ],
-    "lesson": "The strongest coherent theorem may be smaller than the strongest informal claim."
+    "scope": "Internal algebraic coherence of the declared additive teaching model."
   },
   "formal_clarity": {
-    "benefit": "Explicit sets reveal exactly which relationships ordinary membership semantics support.",
-    "revealed_gap": "The term wrapping needs additional semantics.",
-    "principle": "Formal clarity can expose conceptual ambiguity without resolving it automatically."
+    "benefit": "The named contribution structure exposes decomposition and recomposition explicitly.",
+    "risk": "A transparent additive expression can appear physically complete merely because it is mathematically simple.",
+    "required_boundary": "Call it a named additive teaching model rather than a complete physical decomposition."
   },
   "formal_continuity": {
-    "question": "If the group definitions change, which membership and intersection theorems survive?",
-    "possible_change": "Remove or move dimension 6.",
-    "expected_effect": "Previously established shared-membership relationships may break.",
-    "principle": "Formal continuity tracks which relationships depend on which definitions."
-  },
-  "assumptions": {
-    "explicit": [
-      "the represented group definitions",
-      "the represented element type and membership semantics"
+    "fixed_structure": [
+      "gravity",
+      "spin",
+      "electrolysis",
+      "temperature",
+      "addition"
     ],
-    "environmental": [
-      "Lean's formal equality and membership behavior",
-      "the definitions contained in the canonical Lean file"
+    "changeable_values": [
+      "gravity",
+      "spin",
+      "electrolysis",
+      "temperature"
     ],
-    "not_assumed": [
-      "wrapping means ordinary subset containment",
-      "wrapping means union",
-      "the groups describe empirically established physical dimensions",
-      "dimension 6 has independently validated physical properties"
+    "inspect": [
+      "which contribution changed",
+      "how the modeled total changed",
+      "which contribution positions remained stable",
+      "whether the additive rule remained fixed"
     ]
   },
+  "assumptions": {
+    "added_by_teaching_model": [
+      "the represented contributions are signed integers",
+      "the SET subtotal is represented by ordinary integer addition",
+      "gravity is supplied separately from SETContribution",
+      "the modeled total is represented by ordinary integer addition of the four terms"
+    ],
+    "environmental": [
+      "Lean's integer arithmetic",
+      "Lean's equality semantics",
+      "the definitions in the canonical 08 Lean source"
+    ],
+    "not_assumed": [
+      "the four represented contributions are physically independent",
+      "the four represented contributions are empirically complete",
+      "simple addition is sufficient for every intended physical application",
+      "the represented integers correspond to experimentally measured forces",
+      "the broader Nawderian SET interpretation is empirically validated"
+    ]
+  },
+  "additive_model_boundary": {
+    "formal_question": "What follows if the modeled total is defined as gravity + spin + electrolysis + temperature?",
+    "modeling_question": "Is simple addition an appropriate composition for the intended source interpretation?",
+    "empirical_question": "Do measured systems support the proposed physical decomposition?",
+    "same_question": false
+  },
+  "independence_boundary": {
+    "independence_proved": false,
+    "reason": "The formal source defines named additive terms but does not establish that the represented physical contributions are independent.",
+    "principle": "Separate additive syntax from empirical or causal independence."
+  },
+  "completeness_boundary": {
+    "complete_physical_decomposition_proved": false,
+    "principle": "A defined total can be complete relative to the teaching model without being a complete description of nature."
+  },
   "verified_consequences": {
-    "scope": "Selected membership and group-relationship properties represented in the compiler-checked Lean artifact.",
+    "scope": "Selected algebraic consequences represented in the compiler-checked 08 Lean teaching artifact.",
     "include": [
-      "the explicitly proved membership statements encoded by the source artifact",
-      "selected consequences of the represented group definitions"
+      "the total expands to gravity + spin + electrolysis + temperature",
+      "the total agrees with gravity plus the declared SET subtotal",
+      "zero temperature removes the temperature term from the modeled total",
+      "zero spin, electrolysis, and temperature reduce the modeled total to gravity",
+      "the concrete example with gravity 10 and SET values 2, -1, 4 produces 15",
+      "changing only temperature from 4 to 7 in the concrete example produces 18"
     ],
     "conditional_on": [
-      "the supplied definitions",
-      "the supplied theorem statements",
-      "Lean's formal environment"
+      "SETContribution",
+      "SETContribution.subtotal",
+      "totalContribution",
+      "the theorem statements in the canonical 08 Lean source",
+      "Lean's integer arithmetic"
     ]
   },
   "formalization_boundary": {
     "lean_establishes": [
-      "the represented membership and selected group-relationship theorems"
+      "properties of the declared additive definitions in the 08 teaching artifact"
     ],
     "lean_does_not_establish": [
-      "a complete formal definition of wrapping",
-      "the broader source theorem in every intended sense",
-      "ordinary containment between wrapping and the visible/invisible union when the represented sets do not support it",
-      "empirical validity of the dimension groups",
-      "physical significance of dimension 6",
-      "scientific consensus around the source theory"
+      "Spin, Electrolysis / Field-Charge behavior, and Temperature form a complete physical decomposition",
+      "the four contributions are independent",
+      "simple addition is sufficient for every intended application",
+      "the numeric values correspond to experimentally measured forces",
+      "the broader Nawderian SET interpretation is empirically valid"
     ],
-    "principle": "The formal artifact proves what its explicit definitions support and preserves the stronger undefined relationship as a boundary."
+    "narrow_claim": "Given this declared additive model, these algebraic consequences follow.",
+    "principle": "The proof boundary ends with the declared algebraic teaching model."
   },
-  "failed_stronger_claim_as_result": {
-    "concept": "A stronger intended relation may fail under the first obvious formal interpretation.",
-    "example_interpretation": "wrapping as ordinary set containment",
-    "lesson": "The failure tells us that either the source relation needs another definition, the formal mapping is wrong, the source claim requires revision, or additional structure is needed.",
-    "automatic_response": null
+  "formal_vs_empirical": {
+    "formal_result": "The represented total has the declared additive structure and the encoded zero and example cases follow.",
+    "physical_claim_not_established": "Nature is completely described by these particular contributions.",
+    "principle": "Formal composition and physical completeness are separate claims."
   },
-  "do_not_repair_by_definition": {
-    "avoid_pattern": [
-      "desired claim fails",
-      "invent convenient definition",
-      "claim now proves",
-      "attribute invented definition to source"
+  "source_vs_formal_model": {
+    "source": "SET theorem material describing Spin, Electrolysis / Field-Charge, Temperature, and an additive total-effective-acceleration form with gravity.",
+    "formal_model": "Three signed integer SET fields plus separately supplied signed integer gravity under ordinary addition.",
+    "relationship_strength": "partial",
+    "relationship_type": "named additive teaching abstraction",
+    "complete_translation": false
+  },
+  "simplification": {
+    "intentional": true,
+    "preserved": [
+      "three named SET contributions",
+      "separate gravity contribution",
+      "additive recomposition",
+      "zero contribution behavior",
+      "single-component change"
     ],
-    "preferred_pattern": [
-      "record failed interpretation",
-      "return to source",
-      "clarify intended relationship",
-      "define new relation explicitly",
-      "state added assumptions",
-      "formalize again"
+    "omitted_or_unestablished": [
+      "complete internal source triads for each SET component",
+      "physical units",
+      "measurement procedures",
+      "interaction terms",
+      "nonlinear composition",
+      "empirical dependencies among contributions",
+      "complete physical dynamics"
     ]
   },
+  "student_questions": [
+    "What contributions have actually been declared?",
+    "Which formal field corresponds to which source contribution?",
+    "Why is gravity kept outside SETContribution in this teaching model?",
+    "Does totalContribution contain exactly the represented terms?",
+    "What remains if temperature is zero?",
+    "What remains if all SET contributions are zero?",
+    "What changes if only temperature changes?",
+    "Does the additive algebra explain why a physical contribution changed?",
+    "What did Lean verify?",
+    "What remains outside the proof?"
+  ],
   "student_exercise": {
-    "instruction": "Classify each proposed relationship according to what the represented sets actually support.",
+    "instruction": "Create or inspect SETContribution values, predict the total before reduction, then change one contribution and trace the effect.",
     "record": {
-      "candidate_claim": null,
-      "relationship_type": null,
-      "supported_by_definitions": null,
-      "evidence": null,
-      "additional_definition_required": null,
-      "current_status": null
-    },
-    "possible_statuses": [
-      "supported",
-      "partially supported",
-      "requires definition",
-      "not supported under current interpretation"
-    ]
+      "gravity": null,
+      "spin": null,
+      "electrolysis": null,
+      "temperature": null,
+      "predicted_total": null,
+      "formal_total": null,
+      "single_change": null,
+      "predicted_total_after": null,
+      "formal_total_after": null,
+      "positions_preserved": [],
+      "physical_explanation_established": false
+    }
   },
   "variation_exercises": [
     {
-      "change": "Remove dimension 6 from one group.",
-      "question": "Which shared-membership theorem stops holding?"
+      "change": "Set temperature to zero.",
+      "question": "Which terms remain in the represented total?"
     },
     {
-      "change": "Add a new common dimension.",
-      "question": "Which new intersection relationships become available?"
+      "change": "Set spin to zero.",
+      "question": "How does the modeled total simplify under the additive definition?"
     },
     {
-      "change": "Redefine wrapping as an explicit custom relation.",
-      "question": "Which properties must be stated before stronger theorems can be checked?"
+      "change": "Set electrolysis to zero.",
+      "question": "Which named positions remain visible?"
     },
     {
-      "change": "Treat wrapping as ordinary subset containment.",
-      "question": "Does the represented group data support the intended relation?"
+      "change": "Set all three SET fields to zero.",
+      "question": "What remains?"
     },
     {
-      "change": "Use only the directly represented membership claims.",
-      "question": "What is the strongest theorem that can be stated without additional source interpretation?"
+      "change": "Change only temperature while holding gravity, spin, and electrolysis fixed.",
+      "question": "How does the total change, and which structures persist?"
+    },
+    {
+      "change": "Replace ordinary addition with another composition rule.",
+      "question": "Which existing theorems would need revision, and what new assumptions would have to become explicit?"
     }
   ],
-  "claim_strength": {
-    "preferred": "The strongest claim actually supported by the represented definitions.",
-    "avoid": "The strongest desired claim that can be made provable by silently changing semantics.",
-    "principle": "A smaller honest theorem is a valid formalization result."
-  },
-  "source_vs_formal_model": {
-    "source": "Dimension groups plus broader conceptual wrapping language.",
-    "formal_model": "Explicit finite group membership and selected membership/intersection properties.",
-    "relationship_strength": "partial",
-    "unresolved_source_semantics": [
-      "wrapping"
+  "zero_case_as_clarity": {
+    "principle": "Zero cases expose which contributions remain when another named term becomes neutral.",
+    "cases": [
+      "temperature = 0",
+      "spin = electrolysis = temperature = 0"
     ]
   },
+  "change_one_thing": {
+    "principle": "Change a single contribution while holding the others fixed.",
+    "benefit": "Makes propagation through the declared additive total easy to inspect.",
+    "boundary": "Observed algebraic propagation does not itself explain a physical cause."
+  },
+  "future_formalization": {
+    "possible_extensions": [
+      "represent additional internal SET triadic structure",
+      "introduce physical units",
+      "represent non-integer quantities",
+      "model interaction terms",
+      "model dependencies among contributions",
+      "compare additive and non-additive composition rules",
+      "connect represented terms to measurement procedures"
+    ],
+    "rule": "Each extension should be justified by the claim being investigated rather than added only to make the model appear more physically complete."
+  },
   "compiler_validation": {
-    "source_file": "docs/5Guides/lean/07_nawderian_theorem.lean",
+    "source_file": "docs/5Guides/lean/08_nawderian_set_theorem.lean",
     "status": "compiler-checked",
     "validation_set": "01-11",
     "lean_version": "4.36.0",
     "target": "x86_64-w64-windows-gnu",
-    "meaning": "The human-source formal artifact was accepted under the stated Lean environment.",
-    "boundary": "Compiler acceptance applies to the represented formal artifact and does not establish empirical validity or a complete semantics for the source theorem."
+    "meaning": "The human-source 08 formal artifact was accepted under the stated Lean environment.",
+    "boundary": "Compiler acceptance applies to the declared additive teaching model and does not establish the broader Nawderian SET interpretation empirically."
   },
   "lean_source_contract": {
-    "source_of_truth": "docs/5Guides/lean/07_nawderian_theorem.lean",
+    "source_of_truth": "docs/5Guides/lean/08_nawderian_set_theorem.lean",
     "embedded_source_optional": true,
     "if_embedded": "Copy the compiler-checked Lean source exactly rather than reconstructing it from this JSON abstraction.",
-    "reason": "The JSON describes the canonical formal artifact but should not silently replace it."
+    "reason": "The AI Edition description should not create a competing version of the canonical 08 Lean source."
   },
   "origin_connection": {
     "resource": "../origins/theorems.json",
-    "theorem": "Nawderian Theorem",
-    "previous_origin_companion": "06_tft_origin.json",
-    "next_origin_companion": "08_nawderian_set_theorem.json"
+    "theorem": "Nawderian SET Theorem",
+    "previous_origin_companion": "07_nawderian_theorem.json",
+    "next_origin_companion": "09_temperature_engine_theorem.json"
   },
   "formalization_connection": {
     "resource": "../origins/formalization.json",
     "record": {
-      "source": "Declared dimension groups and wrapping language",
-      "formalization": "Explicit group membership",
+      "source": "Spin, Electrolysis / Field-Charge, Temperature, with a total containing gravity plus the named SET contributions",
+      "formalization": "signed integer SETContribution with separately supplied gravity and ordinary additive totalContribution",
       "simplifications": [
-        "focus on membership",
-        "focus on selected intersections",
-        "leave wrapping semantics unresolved"
+        "three SET fields represented as Int",
+        "gravity represented separately as Int",
+        "ordinary addition used for subtotal and total",
+        "no physical units",
+        "no measurement model",
+        "no interaction terms"
       ],
-      "added_assumptions": [],
+      "added_assumptions": [
+        "the teaching composition is ordinary integer addition",
+        "the three named SET terms are represented as fields of one structure",
+        "gravity is supplied separately"
+      ],
       "lean_proves": [
-        "selected membership properties",
-        "selected group relationships explicitly represented by the source artifact"
+        "expanded total structure",
+        "agreement between total and SET subtotal",
+        "zero-temperature reduction",
+        "all-SET-zero reduction to gravity",
+        "the represented concrete arithmetic examples"
       ],
       "lean_does_not_prove": [
-        "undefined wrapping semantics",
-        "complete source theorem",
-        "empirical dimensional interpretation"
+        "physical completeness of the SET decomposition",
+        "independence of contributions",
+        "universal sufficiency of additive composition",
+        "experimental meaning of represented numeric values",
+        "empirical validity of the broader SET interpretation"
       ]
     }
   },
   "ai_companion": {
     "resource": "../shared/ai_companion.json",
     "preferred_support": [
-      "compare the represented groups",
-      "identify shared members",
-      "distinguish membership from containment",
-      "explain why wrapping needs a definition",
-      "challenge a forced set interpretation",
-      "help formulate questions for a future Wraps relation"
+      "identify the four represented contributions",
+      "distinguish SET fields from separately supplied gravity",
+      "ask the learner to predict zero cases",
+      "trace the effect of changing one contribution",
+      "distinguish additive formal consequence from physical explanation",
+      "identify assumptions absent from the teaching model"
     ],
     "avoid": [
-      "inventing wrapping semantics",
-      "forcing containment",
-      "claiming intersection establishes full equivalence",
-      "assigning empirical significance to dimension 6"
+      "claiming the additive model is physically complete",
+      "claiming contributions are independent",
+      "inventing measurement units",
+      "inventing empirical values",
+      "claiming arithmetic change explains physical cause"
     ]
   },
   "aaccc_self_inspection": {
     "awareness": {
-      "question": "What sets, members, and relations are actually present?"
+      "question": "What contributions, types, and composition rules are actually represented?"
     },
     "alignment": {
-      "question": "Which memberships correspond across groups?"
+      "question": "Which formal field corresponds to each selected source contribution?"
     },
     "coherence": {
-      "question": "Does the proposed stronger relationship follow under the current formal semantics?"
+      "question": "Does the modeled total agree with the supplied additive definitions?"
     },
     "clarity": {
-      "question": "Which source term remains insufficiently defined?"
+      "question": "Are the individual contributions and gravity visible rather than hidden inside one unexplained total?"
     },
     "continuity": {
-      "question": "Which relationships survive if group membership changes?"
+      "question": "What happens to the total and the contribution structure when one represented value changes?"
     }
   },
   "ai_behavior": {
     "must": [
-      "Preserve the explicit dimension-group definitions.",
-      "Distinguish shared membership from containment.",
-      "Treat wrapping as unresolved unless explicitly defined.",
-      "Preserve failed stronger interpretations as useful formalization results.",
-      "Keep theorem claims scoped to represented definitions.",
-      "Distinguish formal proof from empirical interpretation.",
-      "Preserve compiler provenance."
+      "Describe SETContribution as a signed integer teaching structure.",
+      "Keep gravity visibly separate from the three SET fields.",
+      "Preserve the source-to-formal mapping for Spin, Electrolysis / Field-Charge, and Temperature.",
+      "Treat additive behavior as part of the supplied teaching definition.",
+      "Distinguish algebraic composition from physical completeness.",
+      "Distinguish a changed modeled total from a physical explanation of why a system changed.",
+      "Preserve compiler provenance.",
+      "Describe omitted physical structure as outside the model."
     ],
     "must_not": [
-      "invent a definition of wrapping",
-      "claim wrapping ordinary containment is established when represented membership does not support it",
-      "claim shared dimension 6 makes all groups equivalent",
-      "assign independent physical significance to dimension 6",
-      "claim the artifact formally verifies the entire Nawderian Theorem",
-      "upgrade compiler success into empirical validation",
-      "retroactively attribute a teaching-model relation to the source",
-      "reconstruct Lean source and present it as exact unless verified against the source file"
+      "claim this artifact completely formalizes the Nawderian SET Theorem",
+      "claim the four contributions are physically independent",
+      "claim simple addition is empirically sufficient",
+      "claim the represented integers are measured physical forces",
+      "invent units or empirical data",
+      "claim a zero contribution proves physical absence of a mechanism",
+      "upgrade compiler success into scientific validation",
+      "reconstruct Lean source and present it as exact unless verified against the canonical source file"
     ]
   },
   "provenance": {
     "human_origin_source": "docs/5Guides/origins/theorems.md",
-    "formal_source": "docs/5Guides/lean/07_nawderian_theorem.lean",
+    "formal_source": "docs/5Guides/lean/08_nawderian_set_theorem.lean",
     "ai_origin": "../origins/theorems.json",
-    "ai_formal_artifact": "07_nawderian_theorem.json",
+    "ai_formal_artifact": "08_nawderian_set_theorem.json",
     "transformation": "structured AI-readable formal origin companion",
     "chain": [
-      "source dimension groups",
-      "interpretation of membership",
-      "formal set representation",
-      "selected membership theorems",
+      "source SET decomposition",
+      "named contribution interpretation",
+      "SETContribution teaching structure",
+      "additive subtotal",
+      "gravity plus SET total",
+      "selected zero and concrete-value theorems",
       "compiler-checked artifact"
     ],
     "preserve": [
-      "source group structure",
-      "shared membership",
-      "undefined wrapping relation",
-      "failed containment interpretation",
+      "three named SET contributions",
+      "separate gravity input",
+      "signed integer teaching representation",
+      "additive composition",
+      "zero cases",
+      "single-component Continuity example",
       "formalization boundary",
       "compiler provenance"
     ],
     "do_not_infer": [
-      "complete theorem formalization",
-      "defined wrapping semantics",
-      "physical dimensional validation",
+      "complete SET formalization",
+      "empirical validation",
+      "physical independence of contributions",
+      "physical completeness",
+      "measured force values",
+      "unrepresented units",
+      "unrepresented interaction terms",
       "scientific consensus",
-      "empirical significance of dimension 6",
       "source code not verified against the canonical Lean file"
     ]
   },
   "related": {
     "lean_index": "index.json",
-    "previous_formal_companion": "06_tft_origin.json",
+    "previous_formal_companion": "07_nawderian_theorem.json",
     "origin": "../origins/theorems.json",
-    "next_formal_companion": "08_nawderian_set_theorem.json",
+    "next_formal_companion": "09_temperature_engine_theorem.json",
     "formalization": "../origins/formalization.json",
     "origins_index": "../origins/index.json",
     "ai_companion": "../shared/ai_companion.json",
@@ -522,14 +681,19 @@
   "machine_context": {
     "ai_parseable": true,
     "role": "formal-origin-companion",
-    "formal_order": 7,
-    "origin": "Nawderian Theorem",
+    "formal_order": 8,
+    "origin": "Nawderian SET Theorem",
     "optional": true,
-    "membership_primary": true,
-    "shared_dimension": 6,
-    "wrapping_semantics_defined": false,
-    "ordinary_containment_supported": false,
-    "undefined_relation_preserved": true,
+    "set_field_count": 3,
+    "gravity_separately_supplied": true,
+    "teaching_type": "Int",
+    "composition": "additive",
+    "subtotal_explicit": true,
+    "zero_temperature_property": true,
+    "zero_set_reduces_to_gravity": true,
+    "single_component_change_inspectable": true,
+    "physical_independence_proved": false,
+    "physical_completeness_proved": false,
     "complete_source_formalization": false,
     "formalization_boundary_explicit": true,
     "compiler_checked": true,
