@@ -1,1 +1,536 @@
-. 
+{
+  "document": {
+    "id": "5Guides-lean-04-clarity",
+    "type": "formal-guide-companion",
+    "name": "Clarity",
+    "title": "Lean 4 Companion — Clarity",
+    "edition": "AI Edition",
+    "module": "5Guides",
+    "framework": "AACCC",
+    "guide": "Clarity",
+    "guide_order": 4,
+    "version": "1.0",
+    "status": "active",
+    "language": "en",
+    "source": "docs/5Guides/lean/04_clarity.lean",
+    "ai_path": "docs/book/AI_Edition/5Guides/lean/04_clarity.json",
+    "guide_path": "../guides/clarity.json",
+    "lean_index": "index.json"
+  },
+  "purpose": {
+    "primary": "Provide a small formal companion for the Clarity question: Can this be understood and inspected?",
+    "formal_goal": "Compare representations of formal reasoning while preserving the theorem's meaning and result.",
+    "educational_principle": "A proof may be correct without exposing the structure a learner needs to inspect."
+  },
+  "core_question": "Can this be understood and inspected?",
+  "formal_translation": "Can the relevant theorem, assumptions, relationships, and proof steps be represented clearly enough to inspect without changing what is being proved?",
+  "bridge_from_previous_guides": {
+    "awareness": {
+      "companion": "01_awareness.json",
+      "result": "Identify the formal objects, types, hypotheses, and goal."
+    },
+    "alignment": {
+      "companion": "02_alignment.json",
+      "result": "Identify the relationships that justify correspondences and transformations."
+    },
+    "coherence": {
+      "companion": "03_coherence.json",
+      "result": "Establish that the target follows from the supplied formal context."
+    },
+    "clarity": {
+      "current_step": "Represent the valid reasoning so its important structure can be inspected."
+    }
+  },
+  "clarity_mapping": {
+    "human_reasoning": [
+      "meaning",
+      "definition",
+      "ambiguity",
+      "assumptions",
+      "missing steps",
+      "representation",
+      "uncertainty",
+      "meaning preservation"
+    ],
+    "formal_reasoning": [
+      "theorem statement",
+      "types",
+      "hypotheses",
+      "intermediate equalities",
+      "proof steps",
+      "proof style",
+      "formal result",
+      "plain-language explanation"
+    ],
+    "shared_habit": "Expose enough structure for inspection while preserving the original claim."
+  },
+  "formal_teaching_pattern": {
+    "starting_relationship": "a = b",
+    "transformed_relationship": "the same represented transformation applied to a and b preserves the relevant equality",
+    "proof_styles": [
+      "compact proof",
+      "explicit proof"
+    ],
+    "central_question": "Which representation best exposes the relationship relevant to the current learner and purpose?"
+  },
+  "representation_invariance": {
+    "principle": "Different proof representations may establish the same theorem.",
+    "required_preservation": [
+      "theorem statement",
+      "relevant assumptions",
+      "formal meaning",
+      "verified result"
+    ],
+    "may_change": [
+      "number of visible intermediate steps",
+      "proof syntax",
+      "local naming",
+      "explanatory comments",
+      "degree of explicitness"
+    ]
+  },
+  "compact_proof": {
+    "possible_strengths": [
+      "short",
+      "direct",
+      "low syntactic noise",
+      "useful after the underlying relationship is understood"
+    ],
+    "possible_weaknesses": [
+      "may hide intermediate reasoning",
+      "may obscure which relationship did the work",
+      "may be difficult for a learner unfamiliar with the tactic or theorem used"
+    ],
+    "automatically_clearer": false,
+    "automatically_better": false
+  },
+  "explicit_proof": {
+    "possible_strengths": [
+      "shows intermediate relationships",
+      "makes transformation steps inspectable",
+      "may reveal which hypothesis or theorem is used",
+      "may be easier to teach from"
+    ],
+    "possible_weaknesses": [
+      "may add unnecessary noise",
+      "may obscure the main structure through excess detail",
+      "may repeat relationships that an experienced reader no longer needs expanded"
+    ],
+    "automatically_clearer": false,
+    "automatically_better": false
+  },
+  "proof_style_rule": {
+    "question": "What should be visible here?",
+    "not": [
+      "Which proof is shortest?",
+      "Which proof looks most sophisticated?"
+    ],
+    "principle": "Proof style should serve the current explanatory purpose while preserving correctness."
+  },
+  "meaning_preservation": {
+    "principle": "A clearer formal representation should not silently become a different theorem.",
+    "check": [
+      "Did the theorem statement change?",
+      "Did any hypothesis disappear?",
+      "Was an assumption added?",
+      "Did the conclusion become stronger?",
+      "Did the conclusion become weaker?",
+      "Did the relevant definitions change?"
+    ]
+  },
+  "clarity_record": {
+    "original_theorem": null,
+    "original_proof_style": null,
+    "important_relationships": [],
+    "assumptions_to_preserve": [],
+    "difficult_or_hidden_steps": [],
+    "revised_proof_style": null,
+    "what_became_visible": [],
+    "what_was_removed": [],
+    "what_was_added": [],
+    "theorem_meaning_preserved": null,
+    "possible_meaning_drift": []
+  },
+  "key_distinctions": [
+    {
+      "left": "correct",
+      "right": "clear",
+      "rule": "A formally correct proof may still be difficult for its intended audience to inspect."
+    },
+    {
+      "left": "shorter",
+      "right": "clearer",
+      "rule": "Reduced length does not automatically improve inspectability."
+    },
+    {
+      "left": "more explicit",
+      "right": "clearer",
+      "rule": "Additional proof steps help only when they expose structure relevant to the task."
+    },
+    {
+      "left": "formal precision",
+      "right": "explanatory accessibility",
+      "rule": "A theorem may be exact while still requiring a plain-language explanatory layer."
+    },
+    {
+      "left": "rewrite",
+      "right": "meaning-preserving rewrite",
+      "rule": "Any revision should be checked against the original theorem and assumptions."
+    }
+  ],
+  "formal_clarity": {
+    "includes": [
+      "explicit types",
+      "visible hypotheses",
+      "precise definitions",
+      "exact theorem statement",
+      "checkable proof"
+    ],
+    "purpose": "Reduce ambiguity inside the formal system."
+  },
+  "explanatory_clarity": {
+    "includes": [
+      "plain-language interpretation",
+      "visible intermediate relationship",
+      "appropriate examples",
+      "comments when useful",
+      "audience-sensitive explanation"
+    ],
+    "purpose": "Help another person understand what the formal statement is doing."
+  },
+  "formal_and_explanatory_clarity": {
+    "same": false,
+    "compatible": true,
+    "preferred_pattern": [
+      "formal statement",
+      "plain-language interpretation",
+      "concrete example when useful"
+    ],
+    "principle": "Precision and accessibility can reinforce one another."
+  },
+  "audience": {
+    "principle": "Clarity is partly relational.",
+    "possible_audiences": [
+      "first-time Lean learner",
+      "student familiar with the Guide",
+      "experienced Lean user",
+      "formal methods researcher",
+      "AI system"
+    ],
+    "question": "Which structure does this audience need to see in order to inspect the theorem responsibly?"
+  },
+  "missing_steps": {
+    "principle": "A valid compact proof can hide the intermediate relationship a learner needs to understand.",
+    "clarity_action": "Expose the relevant step when doing so improves inspection.",
+    "warning": "Do not invent an intermediate statement that the formal proof does not support."
+  },
+  "hidden_assumptions": {
+    "principle": "Proof presentation should not make materially relevant assumptions disappear from the explanation.",
+    "inspect": [
+      "types",
+      "hypotheses",
+      "definitions",
+      "imported structures materially relevant to the argument"
+    ]
+  },
+  "definition_clarity": {
+    "principle": "A familiar term or symbol should not be treated as self-explanatory when its formal meaning matters.",
+    "questions": [
+      "What is this object?",
+      "What is its type?",
+      "What does this operation mean?",
+      "Which definition is being used?"
+    ]
+  },
+  "ambiguity": {
+    "formal_system_advantage": "Formal syntax and types can remove some forms of ordinary-language ambiguity.",
+    "formal_system_limit": "A formally exact definition may still correspond ambiguously to an informal source concept.",
+    "principle": "Formal exactness does not automatically settle source-level interpretation."
+  },
+  "representation_change": {
+    "possible_forms": [
+      "compact Lean proof",
+      "explicit Lean proof",
+      "theorem statement",
+      "plain-language explanation",
+      "step sequence",
+      "worked example"
+    ],
+    "after_change_ask": [
+      "What became easier to inspect?",
+      "What became harder to inspect?",
+      "What disappeared?",
+      "Did the formal meaning remain?"
+    ]
+  },
+  "plain_language_translation": {
+    "purpose": "Connect formal structure with the student-facing concept.",
+    "translation_rule": "Explain only what the formal theorem and supplied context support.",
+    "avoid": [
+      "adding empirical claims",
+      "adding causal interpretation",
+      "claiming broader generality than the theorem has",
+      "removing qualifications"
+    ]
+  },
+  "example_translation_pattern": {
+    "formal_relationship": "a = b",
+    "transformation": "the same represented transformation is applied to both",
+    "plain_language": "If the two starting values are equal, the represented transformation preserves the corresponding equality under the formal rules used by the theorem.",
+    "boundary": "This explanation should remain scoped to the represented formal example."
+  },
+  "clarity_can_expose_coherence": {
+    "principle": "Making hidden proof structure visible may reveal a missing or unsupported relationship.",
+    "pattern": [
+      "compact argument appears acceptable",
+      "intermediate steps exposed",
+      "unsupported step becomes visible",
+      "return to Coherence"
+    ],
+    "previous_companion": "03_coherence.json"
+  },
+  "clarity_can_expose_alignment": {
+    "principle": "Making a proof relationship explicit may reveal that two terms were being treated as corresponding without sufficient support.",
+    "return_to": "02_alignment.json"
+  },
+  "clarity_can_expose_awareness": {
+    "principle": "Attempting to explain a theorem may reveal that a hypothesis, type, or definition was never actually inspected.",
+    "return_to": "01_awareness.json"
+  },
+  "student_exercise": {
+    "instruction": "Compare two representations of the same formal result.",
+    "questions": [
+      "Which is shorter?",
+      "Which exposes more intermediate structure?",
+      "Which is easier for a new learner to inspect?",
+      "Which relationship becomes visible in the longer version?",
+      "Did either version change the theorem?",
+      "Which would you use while teaching?",
+      "Which would you use after understanding the result?"
+    ]
+  },
+  "revision_exercise": {
+    "instruction": "Rewrite a proof for explanatory clarity while preserving the theorem.",
+    "record": {
+      "before": null,
+      "after": null,
+      "theorem_statement_changed": false,
+      "assumptions_changed": false,
+      "intermediate_structure_added": [],
+      "information_removed": [],
+      "meaning_preserved": null
+    }
+  },
+  "variation_exercises": [
+    {
+      "change": "Compress an explicit proof.",
+      "question": "Which reasoning steps stop being visible?"
+    },
+    {
+      "change": "Expand a compact proof.",
+      "question": "Do the added steps expose meaningful structure or only add noise?"
+    },
+    {
+      "change": "Rewrite the theorem explanation in plain language.",
+      "question": "Did the explanation add any claim not present in the formal theorem?"
+    },
+    {
+      "change": "Remove a hypothesis from the explanation but not the theorem.",
+      "question": "Did the explanation become misleading even though the Lean source did not change?"
+    },
+    {
+      "change": "Strengthen a word in the plain-language explanation.",
+      "question": "Did the explanatory claim become stronger than the theorem?"
+    }
+  ],
+  "meaning_drift": {
+    "risk": true,
+    "formal_examples": [
+      "theorem statement changes during simplification",
+      "a hypothesis disappears from explanation",
+      "a conditional result is described as unconditional",
+      "a local theorem is described as universal"
+    ],
+    "principle": "A cleaner explanation is not a Clarity improvement if it changes what the formal artifact establishes."
+  },
+  "uncertainty": {
+    "principle": "Formal Clarity should preserve what remains outside the theorem.",
+    "valid_language": [
+      "not represented",
+      "not proved",
+      "not specified",
+      "outside the formalization boundary"
+    ],
+    "avoid": "Use smooth explanatory prose to fill gaps that the formal artifact does not resolve."
+  },
+  "formalization_boundary": {
+    "lean_establishes": [
+      "the represented theorem and proof are accepted under the supplied formal context"
+    ],
+    "clarity_companion_adds": [
+      "comparison of proof representations",
+      "inspection of explanatory visibility",
+      "meaning-preservation questions"
+    ],
+    "lean_does_not_establish": [
+      "which proof style is universally clearest",
+      "that a plain-language interpretation is automatically faithful",
+      "that the theorem models an empirical system",
+      "that every intended concept has been formalized",
+      "that a shorter proof is pedagogically superior"
+    ]
+  },
+  "source_alignment": {
+    "guide_concept": "Clarity asks whether important meaning and relationships are visible enough to inspect without being silently changed.",
+    "formal_abstraction": "Compare different representations of formal reasoning while preserving the same theorem.",
+    "correspondence": "Both focus on exposing structure while maintaining meaning.",
+    "complete_equivalence": false,
+    "reason": "Human-facing Clarity includes ordinary language, diagrams, tables, audience adaptation, source interpretation, units, and other representational forms beyond Lean proofs."
+  },
+  "compiler_validation": {
+    "source_file": "docs/5Guides/lean/04_clarity.lean",
+    "status": "compiler-checked",
+    "validation_set": "01-11",
+    "lean_version": "4.36.0",
+    "target": "x86_64-w64-windows-gnu",
+    "meaning": "The human-source formal artifact was accepted under the stated Lean environment.",
+    "boundary": "Compiler acceptance verifies formal correctness under the represented environment. It does not determine which proof representation is clearest for every audience."
+  },
+  "lean_source_contract": {
+    "source_of_truth": "docs/5Guides/lean/04_clarity.lean",
+    "embedded_source_optional": true,
+    "if_embedded": "Copy the compiler-checked Lean source exactly rather than reconstructing it from this JSON abstraction.",
+    "reason": "The structured description should not create a competing Lean source."
+  },
+  "ai_companion": {
+    "resource": "../shared/ai_companion.json",
+    "preferred_support": [
+      "compare proof representations",
+      "explain a theorem in plain language",
+      "identify hidden intermediate steps",
+      "identify assumptions missing from an explanation",
+      "check whether a rewritten explanation strengthened the claim",
+      "suggest a more explicit proof without changing the theorem"
+    ],
+    "avoid": [
+      "silently changing the theorem",
+      "adding assumptions for explanatory convenience",
+      "describing a local result as universal",
+      "removing qualifications",
+      "claiming shorter means clearer"
+    ]
+  },
+  "assessment_connection": {
+    "resource": "../shared/assessment.json",
+    "mastery_question": "Can the learner improve inspectability while preserving formal meaning?",
+    "not_sufficient": [
+      "merely shortening a proof",
+      "merely adding comments",
+      "merely producing more formal notation"
+    ]
+  },
+  "continuity_bridge": {
+    "next_guide": "../guides/continuity.json",
+    "next_formal_companion": "05_continuity.json",
+    "bridge": "Once the formal structure is clearly represented, the next question is what happens to that meaning and proof when definitions, assumptions, or states change."
+  },
+  "aaccc_self_inspection": {
+    "awareness": {
+      "question": "What theorem, hypotheses, and definitions are actually present?"
+    },
+    "alignment": {
+      "question": "Which relationships justify the visible proof steps?"
+    },
+    "coherence": {
+      "question": "Does the represented proof actually establish the theorem?"
+    },
+    "clarity": {
+      "question": "Can the important proof structure be inspected without changing the result?"
+    },
+    "continuity": {
+      "question": "If the proof representation changes, what meaning remains the same?"
+    }
+  },
+  "ai_behavior": {
+    "must": [
+      "Distinguish formal correctness from explanatory Clarity.",
+      "Preserve theorem statements and materially relevant assumptions during explanatory revision.",
+      "Compare proof styles by what structure they expose.",
+      "Treat audience and purpose as relevant to explanatory Clarity.",
+      "Expose missing steps without inventing unsupported ones.",
+      "Check plain-language explanations for meaning drift.",
+      "Preserve formalization boundaries.",
+      "Report compiler validation only at the formal-artifact level."
+    ],
+    "must_not": [
+      "claim shorter proofs are always clearer",
+      "claim longer proofs are always more educational",
+      "silently change a theorem while simplifying it",
+      "silently remove hypotheses from an explanation",
+      "strengthen a formal claim in plain-language translation",
+      "invent intermediate formal relationships",
+      "present this artifact as a complete formalization of Clarity",
+      "claim compiler success determines pedagogical quality",
+      "reconstruct Lean source and present it as exact unless verified against the source file"
+    ]
+  },
+  "provenance": {
+    "human_guide_sources": [
+      "docs/5Guides/clarity/index.md",
+      "docs/5Guides/clarity/explore.md",
+      "docs/5Guides/clarity/practice.md",
+      "docs/5Guides/clarity/mastery.md"
+    ],
+    "formal_source": "docs/5Guides/lean/04_clarity.lean",
+    "ai_guide": "../guides/clarity.json",
+    "ai_formal_artifact": "04_clarity.json",
+    "transformation": "structured AI-readable formal companion",
+    "preserve": [
+      "formal theorem",
+      "proof representation distinction",
+      "meaning preservation",
+      "audience sensitivity",
+      "formalization boundary",
+      "compiler provenance",
+      "Clarity mapping"
+    ],
+    "do_not_infer": [
+      "complete formalization of Clarity",
+      "universal best proof style",
+      "empirical validity",
+      "source semantics absent from the formal artifact",
+      "pedagogical superiority from compiler success",
+      "source code not verified against the formal source file"
+    ]
+  },
+  "related": {
+    "lean_index": "index.json",
+    "awareness": "01_awareness.json",
+    "alignment": "02_alignment.json",
+    "coherence": "03_coherence.json",
+    "guide": "../guides/clarity.json",
+    "next_formal_companion": "05_continuity.json",
+    "formalization": "../origins/formalization.json",
+    "ai_companion": "../shared/ai_companion.json",
+    "assessment": "../shared/assessment.json",
+    "module": "../module.json",
+    "index": "../index.json"
+  },
+  "machine_context": {
+    "ai_parseable": true,
+    "role": "formal-guide-companion",
+    "guide": "Clarity",
+    "guide_order": 4,
+    "optional": true,
+    "proof_representation_primary": true,
+    "formal_correctness_distinct_from_explanatory_clarity": true,
+    "meaning_preservation_required": true,
+    "audience_sensitive": true,
+    "meaning_drift_must_be_checked": true,
+    "formalization_partial": true,
+    "compiler_checked": true,
+    "compiler_validation_bounded": true,
+    "pedagogical_quality_claim_from_compiler": false,
+    "provenance_aware": true
+  }
+}
