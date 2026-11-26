@@ -1,1 +1,415 @@
-. 
+{
+  "document": {
+    "id": "5Guides-lean-01-awareness",
+    "type": "formal-guide-companion",
+    "name": "Awareness",
+    "title": "Lean 4 Companion — Awareness",
+    "edition": "AI Edition",
+    "module": "5Guides",
+    "framework": "AACCC",
+    "guide": "Awareness",
+    "guide_order": 1,
+    "version": "1.0",
+    "status": "active",
+    "language": "en",
+    "source": "docs/5Guides/lean/01_awareness.lean",
+    "ai_path": "docs/book/AI_Edition/5Guides/lean/01_awareness.json",
+    "guide_path": "../guides/awareness.json",
+    "lean_index": "index.json"
+  },
+  "purpose": {
+    "primary": "Provide a small formal companion for the Awareness question: What am I observing?",
+    "formal_goal": "Teach the learner to inspect the variables, types, hypotheses, and proof goal that are actually present before deciding what follows.",
+    "educational_principle": "Read the formal state before interpreting it."
+  },
+  "core_question": "What am I observing?",
+  "formal_translation": "What has actually been declared in the current formal context?",
+  "awareness_mapping": {
+    "human_reasoning": [
+      "direct observations",
+      "interpretations",
+      "assumptions",
+      "unknowns"
+    ],
+    "formal_reasoning": [
+      "variables",
+      "types",
+      "hypotheses",
+      "goal"
+    ],
+    "shared_habit": "Separate what is actually present from what you may be tempted to add."
+  },
+  "formal_observation_state": {
+    "inspect_before_proving": [
+      {
+        "element": "variables",
+        "question": "What objects currently exist in the formal context?"
+      },
+      {
+        "element": "types",
+        "question": "What kind of objects are they?"
+      },
+      {
+        "element": "hypotheses",
+        "question": "What relationships or assumptions have actually been supplied?"
+      },
+      {
+        "element": "goal",
+        "question": "What exactly must be established?"
+      }
+    ],
+    "principle": "The proof state provides an explicit boundary around the currently supplied formal information."
+  },
+  "teaching_problem": {
+    "objects": [
+      "a",
+      "b"
+    ],
+    "object_type": "natural numbers",
+    "given_relationship": "a = b",
+    "target_relationship": "doubling a equals doubling b",
+    "conceptual_form": {
+      "given": [
+        "a and b are natural numbers",
+        "a = b"
+      ],
+      "goal": "2 * a = 2 * b"
+    }
+  },
+  "awareness_record": {
+    "objects": [
+      {
+        "name": "a",
+        "type": "Nat"
+      },
+      {
+        "name": "b",
+        "type": "Nat"
+      }
+    ],
+    "hypothesis": {
+      "relationship": "a = b",
+      "role": "declared equality"
+    },
+    "goal": "2 * a = 2 * b",
+    "unstated_information": "Anything not represented by the declared variables, types, hypotheses, definitions, or imported formal environment."
+  },
+  "formal_model": {
+    "domain": "natural numbers",
+    "relationship": "equality",
+    "transformation": "apply the same doubling expression to equal values",
+    "expected_property": "equality is preserved under the represented transformation"
+  },
+  "proof_structure": [
+    "inspect a",
+    "inspect b",
+    "inspect their types",
+    "inspect the equality hypothesis",
+    "inspect the target equality",
+    "use the supplied relationship",
+    "complete the proof"
+  ],
+  "key_distinctions": [
+    {
+      "left": "declared hypothesis",
+      "right": "learner assumption",
+      "rule": "A relationship present in the proof state may be used formally; an unstated relationship should not be treated as though it were supplied."
+    },
+    {
+      "left": "goal",
+      "right": "interpretation of the goal",
+      "rule": "Read the exact theorem target before replacing it with a broader or more convenient claim."
+    },
+    {
+      "left": "type",
+      "right": "informal category",
+      "rule": "The formal type controls which operations and theorems are available."
+    },
+    {
+      "left": "formal context",
+      "right": "world knowledge",
+      "rule": "Do not silently import informal assumptions merely because they seem obvious."
+    }
+  ],
+  "formal_awareness_principles": [
+    "Inspect before manipulating.",
+    "Identify the objects before interpreting relationships among them.",
+    "Identify types before assuming operations are available.",
+    "Identify hypotheses before using a relationship.",
+    "Read the exact goal before choosing a proof strategy.",
+    "Preserve what has not been supplied as absent from the current formal context."
+  ],
+  "assumptions": {
+    "explicit": [
+      "a is a natural number",
+      "b is a natural number",
+      "a = b"
+    ],
+    "environmental": [
+      "Lean's definitions and rules for the represented natural-number expressions and equality"
+    ],
+    "must_not_be_added_silently": [
+      "additional relationships between a and b",
+      "empirical interpretations of a and b",
+      "physical meaning for the values",
+      "claims broader than the stated theorem"
+    ]
+  },
+  "verified_consequence": {
+    "claim": "Under the supplied formal context, the represented doubling expressions preserve the declared equality between a and b.",
+    "scope": "The theorem represented by the Lean source.",
+    "conditional_on": [
+      "the declared types",
+      "the equality hypothesis",
+      "the supplied formal definitions and rules"
+    ]
+  },
+  "formalization_boundary": {
+    "lean_establishes": [
+      "the represented theorem follows within its formal context"
+    ],
+    "lean_does_not_establish": [
+      "that a and b correspond to any physical quantities",
+      "that the theorem models an empirical system",
+      "that equality was experimentally observed",
+      "that every informal meaning associated with Awareness has been formalized",
+      "that a successful proof eliminates the need to inspect assumptions in other problems"
+    ],
+    "principle": "The Awareness companion is a teaching example about inspecting formal context, not a complete formalization of human observation."
+  },
+  "source_alignment": {
+    "guide_concept": "Awareness asks the learner to distinguish what is actually available from what is interpreted, assumed, or unknown.",
+    "formal_abstraction": "The Lean proof context explicitly exposes variables, types, hypotheses, and a goal.",
+    "correspondence": "Both encourage inspecting available information before extending it.",
+    "complete_equivalence": false,
+    "reason": "A Lean proof state is a tightly bounded formal environment and does not represent the full complexity of ordinary observation, perception, memory, uncertainty, or observer position."
+  },
+  "observation_vs_assumption": {
+    "formal_version": {
+      "available": [
+        "declared variables",
+        "declared types",
+        "declared hypotheses",
+        "declared target"
+      ],
+      "not_available_unless_defined": [
+        "additional premises",
+        "extra semantic meaning",
+        "unstated domain facts"
+      ]
+    },
+    "lesson": "An unstated premise should not become part of the proof merely because it would be useful."
+  },
+  "boundary": {
+    "formal_boundary": "The theorem's declared context.",
+    "inside": [
+      "a",
+      "b",
+      "their types",
+      "the equality hypothesis",
+      "the target"
+    ],
+    "outside_unless_explicitly_introduced": [
+      "physical interpretation",
+      "measurement",
+      "causal relationship",
+      "additional properties",
+      "external empirical evidence"
+    ]
+  },
+  "unknowns": {
+    "principle": "Formal absence is meaningful.",
+    "examples": [
+      "No additional relationship between a and b should be assumed unless supplied.",
+      "No physical interpretation should be inferred from the natural-number type alone.",
+      "No empirical history for the values exists inside this theorem."
+    ]
+  },
+  "proof_reading_questions": [
+    "What objects exist?",
+    "What are their types?",
+    "What relationship has been supplied?",
+    "What exactly is the goal?",
+    "Which facts am I tempted to assume that are not present?",
+    "What transformation is the theorem asking me to inspect?",
+    "Which formal relationship justifies the proof?"
+  ],
+  "student_exercise": {
+    "instruction": "Read the formal context before attempting to prove the theorem.",
+    "record": {
+      "objects": [],
+      "types": [],
+      "hypotheses": [],
+      "goal": null,
+      "unstated_assumptions_noticed": [],
+      "proof_relationship_to_use": null
+    },
+    "purpose": "Practice formal Awareness rather than immediately searching for syntax or tactics."
+  },
+  "variation_exercises": [
+    {
+      "change": "Remove the equality hypothesis.",
+      "question": "Does the target still follow from the remaining context?"
+    },
+    {
+      "change": "Change the type of the represented values.",
+      "question": "Which operations or proof strategies remain available?"
+    },
+    {
+      "change": "Change the goal.",
+      "question": "Does the existing hypothesis still support the new target?"
+    },
+    {
+      "change": "Add another hypothesis.",
+      "question": "Is the new hypothesis actually necessary for the original theorem?"
+    }
+  ],
+  "failure_as_awareness": {
+    "principle": "If the proof fails, inspect the formal state before adding assumptions or changing the theorem.",
+    "questions": [
+      "Did I misread the goal?",
+      "Did I assume a relationship that was never supplied?",
+      "Is the required operation available for this type?",
+      "Did the context change?",
+      "Does the target actually follow?"
+    ]
+  },
+  "clarity_boundary": {
+    "short_proof_may_be_correct": true,
+    "short_proof_automatically_best_for_learning": false,
+    "principle": "For a teaching artifact, explanatory value may justify exposing the relationship used by the proof."
+  },
+  "continuity_connection": {
+    "pattern": [
+      "original context",
+      "change hypothesis, type, or goal",
+      "new context",
+      "inspect which proof relationships survive"
+    ],
+    "lesson": "Formal Awareness can be revisited whenever the context changes."
+  },
+  "alignment_connection": {
+    "next_guide": "../guides/alignment.json",
+    "next_formal_companion": "02_alignment.json",
+    "bridge": "Once the formal state is known, the next question is which declared relationship permits objects or expressions to correspond."
+  },
+  "compiler_validation": {
+    "source_file": "docs/5Guides/lean/01_awareness.lean",
+    "status": "compiler-checked",
+    "validation_set": "01-11",
+    "lean_version": "4.36.0",
+    "target": "x86_64-w64-windows-gnu",
+    "meaning": "The human-source formal artifact was accepted under the stated Lean environment.",
+    "boundary": "Compiler acceptance verifies that formal artifact under the stated environment. It does not establish empirical claims about observation or cognition."
+  },
+  "lean_source_contract": {
+    "source_of_truth": "docs/5Guides/lean/01_awareness.lean",
+    "embedded_source_optional": true,
+    "if_embedded": "Copy the compiler-checked Lean source exactly rather than reconstructing it from this JSON summary.",
+    "reason": "The JSON describes the formal artifact; it should not silently become a competing source version."
+  },
+  "ai_companion": {
+    "resource": "../shared/ai_companion.json",
+    "preferred_support": [
+      "ask the learner to identify variables",
+      "ask the learner to identify types",
+      "ask which hypotheses are actually present",
+      "ask the learner to state the exact goal",
+      "identify an unstated assumption",
+      "explain a proof state in plain language"
+    ],
+    "avoid": [
+      "jump directly to proof syntax",
+      "silently add a premise",
+      "change the theorem to make it easier",
+      "pretend an informal interpretation is encoded when it is not"
+    ]
+  },
+  "aaccc_self_inspection": {
+    "awareness": {
+      "question": "What exactly is in the proof state?"
+    },
+    "alignment": {
+      "question": "Which declared relationship connects the objects or expressions?"
+    },
+    "coherence": {
+      "question": "Does the target follow from the supplied formal context?"
+    },
+    "clarity": {
+      "question": "Can the proof relationship be explained without hiding assumptions?"
+    },
+    "continuity": {
+      "question": "If the context changes, which parts of the proof remain valid?"
+    }
+  },
+  "ai_behavior": {
+    "must": [
+      "Treat the proof state as the formal observation boundary.",
+      "Distinguish declared hypotheses from unstated assumptions.",
+      "Preserve the exact theorem scope.",
+      "Treat type information as part of the formal context.",
+      "Explain that the example is a teaching abstraction for Awareness.",
+      "Report compiler validation only at the formal-artifact level."
+    ],
+    "must_not": [
+      "invent additional hypotheses",
+      "infer physical meaning for the variables",
+      "claim the theorem formalizes human Awareness completely",
+      "upgrade formal equality into empirical observation",
+      "change the theorem merely to produce an easier proof",
+      "claim compiler success validates a psychological or physical theory",
+      "reconstruct Lean source and present it as exact unless verified against the source file"
+    ]
+  },
+  "provenance": {
+    "human_guide_sources": [
+      "docs/5Guides/awareness/index.md",
+      "docs/5Guides/awareness/explore.md",
+      "docs/5Guides/awareness/practice.md",
+      "docs/5Guides/awareness/mastery.md"
+    ],
+    "formal_source": "docs/5Guides/lean/01_awareness.lean",
+    "ai_guide": "../guides/awareness.json",
+    "ai_formal_artifact": "01_awareness.json",
+    "transformation": "structured AI-readable formal companion",
+    "preserve": [
+      "formal context",
+      "types",
+      "hypotheses",
+      "goal",
+      "formalization boundary",
+      "compiler provenance",
+      "Awareness mapping"
+    ],
+    "do_not_infer": [
+      "complete formalization of Awareness",
+      "empirical validation",
+      "physical meaning",
+      "additional source assumptions",
+      "source code not verified against the formal source file"
+    ]
+  },
+  "related": {
+    "lean_index": "index.json",
+    "guide": "../guides/awareness.json",
+    "next_formal_companion": "02_alignment.json",
+    "formalization": "../origins/formalization.json",
+    "ai_companion": "../shared/ai_companion.json",
+    "module": "../module.json",
+    "index": "../index.json"
+  },
+  "machine_context": {
+    "ai_parseable": true,
+    "role": "formal-guide-companion",
+    "guide": "Awareness",
+    "guide_order": 1,
+    "optional": true,
+    "formal_context_primary": true,
+    "unstated_assumptions_forbidden": true,
+    "formalization_partial": true,
+    "compiler_checked": true,
+    "compiler_validation_bounded": true,
+    "empirical_validation_claim": false,
+    "provenance_aware": true
+  }
+}
