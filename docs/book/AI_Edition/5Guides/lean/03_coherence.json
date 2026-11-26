@@ -1,1 +1,475 @@
-. 
+{
+  "document": {
+    "id": "5Guides-lean-03-coherence",
+    "type": "formal-guide-companion",
+    "name": "Coherence",
+    "title": "Lean 4 Companion — Coherence",
+    "edition": "AI Edition",
+    "module": "5Guides",
+    "framework": "AACCC",
+    "guide": "Coherence",
+    "guide_order": 3,
+    "version": "1.0",
+    "status": "active",
+    "language": "en",
+    "source": "docs/5Guides/lean/03_coherence.lean",
+    "ai_path": "docs/book/AI_Edition/5Guides/lean/03_coherence.json",
+    "guide_path": "../guides/coherence.json",
+    "lean_index": "index.json"
+  },
+  "purpose": {
+    "primary": "Provide a small formal companion for the Coherence question: Does this hold together?",
+    "formal_goal": "Inspect whether a desired conclusion actually follows from the definitions, hypotheses, and relationships supplied in the formal context.",
+    "educational_principle": "A plausible conclusion is not enough. The formal structure must support it."
+  },
+  "core_question": "Does this hold together?",
+  "formal_translation": "Does the target theorem follow from the formal context actually supplied?",
+  "bridge_from_awareness_and_alignment": {
+    "awareness": {
+      "companion": "01_awareness.json",
+      "result": "Identify the formal objects, types, hypotheses, and goal."
+    },
+    "alignment": {
+      "companion": "02_alignment.json",
+      "result": "Identify which declared or proved relationships permit formal correspondence or transformation."
+    },
+    "coherence": {
+      "current_step": "Determine whether those pieces and relationships collectively support the target."
+    }
+  },
+  "coherence_mapping": {
+    "human_reasoning": [
+      "important pieces",
+      "relationships",
+      "supported relationships",
+      "contradictions",
+      "missing relationships",
+      "unsupported conclusions",
+      "assumptions",
+      "uncertainty"
+    ],
+    "formal_reasoning": [
+      "variables",
+      "types",
+      "definitions",
+      "hypotheses",
+      "intermediate relationships",
+      "goal",
+      "proof obligations"
+    ],
+    "shared_habit": "Inspect whether the pieces work together rather than assuming a conclusion from individually plausible parts."
+  },
+  "formal_structure": {
+    "pattern": [
+      "definitions",
+      "hypotheses",
+      "relationships",
+      "goal"
+    ],
+    "central_question": "Is there a valid formal path from the supplied context to the target?",
+    "successful_result": "The target is derivable under the represented formal assumptions.",
+    "unsuccessful_result": "The current proof state remains unresolved and should be inspected before changing the model."
+  },
+  "formal_coherence_record": {
+    "objects": [],
+    "types": [],
+    "definitions": [],
+    "hypotheses": [],
+    "supported_relationships": [],
+    "missing_relationships": [],
+    "possible_contradictions": [],
+    "goal": null,
+    "proof_status": null,
+    "assumptions_required": [],
+    "current_judgment": null
+  },
+  "key_distinctions": [
+    {
+      "left": "conclusion follows",
+      "right": "conclusion sounds plausible",
+      "rule": "Formal plausibility does not discharge a proof obligation."
+    },
+    {
+      "left": "missing proof step",
+      "right": "false theorem",
+      "rule": "An incomplete proof does not automatically establish that the theorem is false."
+    },
+    {
+      "left": "missing assumption",
+      "right": "permission to add an assumption",
+      "rule": "Discovering that a theorem requires another assumption does not automatically justify adding that assumption."
+    },
+    {
+      "left": "internal coherence",
+      "right": "empirical truth",
+      "rule": "A theorem may follow coherently from formal assumptions even when those assumptions have not been empirically validated."
+    },
+    {
+      "left": "local theorem success",
+      "right": "global model validity",
+      "rule": "One successful theorem does not establish that every part of the surrounding model is correct."
+    }
+  ],
+  "supported_relationship": {
+    "definition": "A relationship available through definitions, hypotheses, or previously established formal results.",
+    "formal_use": "May contribute to deriving the target when the formal rules permit it.",
+    "principle": "Make explicit which relationship is doing the work."
+  },
+  "missing_relationship": {
+    "definition": "A link required by the desired conclusion but not currently supplied or derivable from the represented formal context.",
+    "valid_state": true,
+    "preferred_response": [
+      "identify the gap",
+      "inspect whether a legitimate theorem can establish it",
+      "inspect whether the model omitted something",
+      "inspect whether the target is too strong",
+      "leave the theorem unproved if the support is absent"
+    ],
+    "avoid": "Invent a premise merely to close the goal."
+  },
+  "unsupported_conclusion": {
+    "pattern": [
+      "formal context",
+      "missing relation",
+      "desired target"
+    ],
+    "principle": "A conclusion should not be promoted to a theorem merely because it is desirable or intuitive.",
+    "coherence_question": "What exact formal relationship is missing?"
+  },
+  "contradiction": {
+    "formal_meaning": "The represented assumptions or statements cannot all be maintained consistently under the relevant formal interpretation.",
+    "inspection_before_claiming": [
+      "same objects?",
+      "same types?",
+      "same definitions?",
+      "same conditions?",
+      "same theorem scope?"
+    ],
+    "principle": "Some apparent contradictions arise from mismatched definitions or boundaries rather than genuine logical conflict."
+  },
+  "constraint_vs_contradiction": {
+    "principle": "A difficult or unsatisfied proof condition is not automatically a contradiction.",
+    "possible_states": [
+      "contradiction",
+      "missing relationship",
+      "missing assumption",
+      "stronger-than-supported goal",
+      "type mismatch",
+      "insufficient formal context",
+      "incomplete proof"
+    ]
+  },
+  "assumptions": {
+    "principle": "Every assumption used to establish the theorem remains part of the result context.",
+    "inspection_questions": [
+      "Which assumptions were explicitly supplied?",
+      "Which were introduced later?",
+      "Is each added assumption justified by the intended model?",
+      "Would the theorem still hold without it?"
+    ],
+    "warning": "A proof can often be made easier by strengthening assumptions, but stronger assumptions may weaken the relationship to the intended source problem."
+  },
+  "assumption_ladder": {
+    "risk_pattern": [
+      "desired conclusion",
+      "proof difficulty",
+      "add assumption",
+      "new difficulty",
+      "add assumption",
+      "eventually close theorem"
+    ],
+    "question": "Did the formal model improve, or was the target protected by increasingly convenient assumptions?",
+    "automatic_failure": false,
+    "inspection_required": true
+  },
+  "local_vs_global_coherence": {
+    "local": "An individual definition, theorem, or relationship is formally well-formed or successfully proved.",
+    "global": "The larger collection of definitions, assumptions, relationships, and interpretations works together without hidden incompatibility.",
+    "equivalent": false,
+    "principle": "Local proof success does not automatically establish global model coherence."
+  },
+  "coherent_but_unsupported": {
+    "example_pattern": [
+      "Assume all P objects have property Q.",
+      "Object x is P.",
+      "Therefore x has Q."
+    ],
+    "formal_status": "The inference may be coherent under the supplied assumptions.",
+    "empirical_status": "The assumptions may still require independent support.",
+    "principle": "Internal validity and empirical support are separate dimensions."
+  },
+  "do_not_force_coherence": {
+    "principle": "A formal gap should remain visible when the available structure does not establish the desired relationship.",
+    "valid_record": {
+      "statement_a": "supported",
+      "statement_b": "supported",
+      "relationship_between_them": "not currently established"
+    },
+    "avoid": "Insert a relationship only because the theorem looks incomplete without it."
+  },
+  "repair": {
+    "allowed_after_inspection": true,
+    "possible_actions": [
+      "correct a definition",
+      "add legitimately missing information",
+      "prove an intermediate lemma",
+      "remove an unsupported target",
+      "expose an assumption",
+      "change a type",
+      "clarify a boundary",
+      "leave the relationship unresolved"
+    ],
+    "principle": "Repair should address the identified structural problem rather than merely preserve the original conclusion."
+  },
+  "when_not_to_repair": {
+    "condition": "The available formal information is insufficient to determine whether the theorem, model, or missing relationship should change.",
+    "preferred_state": "unresolved",
+    "principle": "An unresolved formal state can be more informative than an unjustified repair."
+  },
+  "proof_obligation": {
+    "role": "Make the unresolved formal target visible.",
+    "educational_value": "A remaining goal shows exactly what has not yet been established.",
+    "principle": "Do not treat an open goal as though it had already been proved."
+  },
+  "formal_failure": {
+    "automatic_meaning": null,
+    "possible_causes": [
+      "missing proof step",
+      "missing assumption",
+      "incorrect definition",
+      "incorrect theorem statement",
+      "type mismatch",
+      "unavailable theorem or tactic",
+      "formal context changed",
+      "target does not follow"
+    ],
+    "preferred_process": [
+      "read the formal state",
+      "locate the failure",
+      "identify the required relationship",
+      "decide whether the proof, assumption, definition, or target is at fault"
+    ]
+  },
+  "formal_success": {
+    "means": "The represented conclusion follows under the supplied formal context and accepted proof.",
+    "does_not_mean": [
+      "all premises are empirically true",
+      "the model is complete",
+      "the theorem captures the full source interpretation",
+      "the theorem is scientifically validated",
+      "every surrounding claim is coherent"
+    ]
+  },
+  "student_exercise": {
+    "instruction": "Before changing a failed theorem, identify the exact point at which the formal support stops.",
+    "record": {
+      "definitions": [],
+      "hypotheses": [],
+      "goal": null,
+      "relationships_available": [],
+      "relationship_needed": null,
+      "missing_or_conflicting_structure": null,
+      "proposed_revision": null,
+      "meaning_changed_by_revision": null
+    },
+    "purpose": "Practice Coherence as diagnosis before repair."
+  },
+  "four_questions": [
+    "What was declared?",
+    "What was assumed?",
+    "What was proved?",
+    "What was not proved?"
+  ],
+  "variation_exercises": [
+    {
+      "change": "Remove one hypothesis.",
+      "question": "Which theorem or proof step no longer follows?"
+    },
+    {
+      "change": "Strengthen the goal.",
+      "question": "What additional relationship becomes necessary?"
+    },
+    {
+      "change": "Weaken the goal.",
+      "question": "Does the existing context now support the theorem without additional assumptions?"
+    },
+    {
+      "change": "Add a convenient hypothesis.",
+      "question": "Did the proof improve, or did the model change?"
+    },
+    {
+      "change": "Alter one definition.",
+      "question": "Which previously coherent theorems survive?"
+    }
+  ],
+  "strengthening_and_weakening": {
+    "strengthening_question": "What new assumptions or lemmas does the stronger claim require?",
+    "weakening_question": "What is the strongest claim the current context actually supports?",
+    "principle": "A narrower supported theorem may be more informative than a stronger theorem obtained only through convenient assumptions."
+  },
+  "formalization_boundary": {
+    "lean_establishes": [
+      "whether the represented theorem is accepted under the supplied formal context"
+    ],
+    "lean_does_not_establish": [
+      "the empirical truth of the assumptions",
+      "the completeness of the model",
+      "the relevance of the theorem to every intended real-world case",
+      "the coherence of all surrounding informal claims",
+      "the correctness of source-to-model mappings not encoded in the theorem"
+    ],
+    "principle": "Formal Coherence applies first to the explicit model."
+  },
+  "source_alignment": {
+    "guide_concept": "Coherence asks whether pieces and relationships work together as a structure.",
+    "formal_abstraction": "A Lean theorem asks whether a target follows from an explicit formal context.",
+    "correspondence": "Both expose unsupported relationships, missing assumptions, and structural failure points.",
+    "complete_equivalence": false,
+    "reason": "Human-facing Coherence includes informal systems, conflicting goals, evidence, definitions, and empirical relationships broader than theorem proving."
+  },
+  "awareness_dependency": {
+    "formal_companion": "01_awareness.json",
+    "principle": "A Coherence judgment depends on correctly reading what the formal context actually contains."
+  },
+  "alignment_dependency": {
+    "formal_companion": "02_alignment.json",
+    "principle": "Coherence depends on mappings and transformations being justified by actual formal relationships."
+  },
+  "clarity_bridge": {
+    "next_guide": "../guides/clarity.json",
+    "next_formal_companion": "04_clarity.json",
+    "bridge": "Once a theorem holds together, the next question is whether its formal structure can be represented clearly enough for another person to inspect."
+  },
+  "continuity_connection": {
+    "question": "If assumptions, definitions, or theorem statements change, which coherent proofs survive?",
+    "principle": "Coherence can be re-evaluated across formal revisions."
+  },
+  "compiler_validation": {
+    "source_file": "docs/5Guides/lean/03_coherence.lean",
+    "status": "compiler-checked",
+    "validation_set": "01-11",
+    "lean_version": "4.36.0",
+    "target": "x86_64-w64-windows-gnu",
+    "meaning": "The human-source formal artifact was accepted under the stated Lean environment.",
+    "boundary": "Compiler acceptance verifies the represented formal artifact under that environment; it does not establish empirical truth or global validity of a source framework."
+  },
+  "lean_source_contract": {
+    "source_of_truth": "docs/5Guides/lean/03_coherence.lean",
+    "embedded_source_optional": true,
+    "if_embedded": "Copy the compiler-checked Lean source exactly rather than reconstructing it from this JSON description.",
+    "reason": "The structured abstraction and the canonical Lean source should not silently diverge."
+  },
+  "ai_companion": {
+    "resource": "../shared/ai_companion.json",
+    "preferred_support": [
+      "identify the weakest formal connection",
+      "ask what assumption a theorem requires",
+      "identify where the proof state remains unresolved",
+      "distinguish a contradiction from a missing relation",
+      "explain why a target does not yet follow",
+      "suggest a hint without silently changing the theorem"
+    ],
+    "avoid": [
+      "automatically adding assumptions",
+      "weakening the target without saying so",
+      "changing definitions solely to close the proof",
+      "presenting an unresolved theorem as proved"
+    ]
+  },
+  "aaccc_self_inspection": {
+    "awareness": {
+      "question": "What definitions, hypotheses, and goals are actually present?"
+    },
+    "alignment": {
+      "question": "Which relationships connect the relevant formal objects?"
+    },
+    "coherence": {
+      "question": "Do those pieces actually support the target theorem?"
+    },
+    "clarity": {
+      "question": "Can the proof structure and its assumptions be made visible enough to inspect?"
+    },
+    "continuity": {
+      "question": "Which parts of the proof survive when the formal model changes?"
+    }
+  },
+  "ai_behavior": {
+    "must": [
+      "Inspect the supplied formal context before evaluating the target.",
+      "Distinguish contradiction from missing support.",
+      "Expose materially relevant assumptions.",
+      "Preserve unresolved proof obligations as unresolved.",
+      "Identify when a stronger claim requires additional structure.",
+      "Distinguish internal formal coherence from empirical validation.",
+      "Report compiler validation only at the formal-artifact level."
+    ],
+    "must_not": [
+      "invent a missing premise merely to close the theorem",
+      "treat proof difficulty as proof of falsity",
+      "treat compiler success as empirical validation",
+      "hide added assumptions",
+      "silently weaken or change the theorem",
+      "claim one proved theorem establishes global model validity",
+      "present this artifact as a complete formalization of Coherence",
+      "reconstruct Lean source and present it as exact unless verified against the source file"
+    ]
+  },
+  "provenance": {
+    "human_guide_sources": [
+      "docs/5Guides/coherence/index.md",
+      "docs/5Guides/coherence/explore.md",
+      "docs/5Guides/coherence/practice.md",
+      "docs/5Guides/coherence/mastery.md"
+    ],
+    "formal_source": "docs/5Guides/lean/03_coherence.lean",
+    "ai_guide": "../guides/coherence.json",
+    "ai_formal_artifact": "03_coherence.json",
+    "transformation": "structured AI-readable formal companion",
+    "preserve": [
+      "formal context",
+      "assumptions",
+      "proof obligation",
+      "missing relationships",
+      "repair boundary",
+      "formalization boundary",
+      "compiler provenance",
+      "Coherence mapping"
+    ],
+    "do_not_infer": [
+      "complete formalization of Coherence",
+      "empirical truth",
+      "global model validity",
+      "scientific consensus",
+      "additional unstated assumptions",
+      "source code not verified against the formal source file"
+    ]
+  },
+  "related": {
+    "lean_index": "index.json",
+    "awareness": "01_awareness.json",
+    "alignment": "02_alignment.json",
+    "guide": "../guides/coherence.json",
+    "next_formal_companion": "04_clarity.json",
+    "formalization": "../origins/formalization.json",
+    "ai_companion": "../shared/ai_companion.json",
+    "module": "../module.json",
+    "index": "../index.json"
+  },
+  "machine_context": {
+    "ai_parseable": true,
+    "role": "formal-guide-companion",
+    "guide": "Coherence",
+    "guide_order": 3,
+    "optional": true,
+    "proof_obligation_primary": true,
+    "missing_relationships_preserved": true,
+    "contradiction_distinct_from_missing_support": true,
+    "assumptions_must_be_visible": true,
+    "formalization_partial": true,
+    "compiler_checked": true,
+    "compiler_validation_bounded": true,
+    "empirical_validation_claim": false,
+    "global_model_validation_claim": false,
+    "provenance_aware": true
+  }
+}
