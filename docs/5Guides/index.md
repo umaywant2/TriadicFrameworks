@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="5Guides_index_" src="https://github.com/user-attachments/assets/b37f1fc2-8adf-442d-9097-725c1bbd8c0f" />
+
 # 5Guides
 
 > **Five questions for learning how**o inspect what you see, how thing**connect**whether they hold together, how**learly they can be understood, an**what happens when they change.**
