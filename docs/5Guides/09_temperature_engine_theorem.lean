@@ -98,7 +98,6 @@ theorem reverse_gradient (coupling gradient : Int) :
   simp only [temperatureForce]
   rw [Int.mul_neg]
   rw [Int.neg_neg]
-  rw [Int.neg_neg]
 
 
 /-!
