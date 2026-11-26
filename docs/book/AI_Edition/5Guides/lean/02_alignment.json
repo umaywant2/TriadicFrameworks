@@ -1,1 +1,445 @@
-. 
+{
+  "document": {
+    "id": "5Guides-lean-02-alignment",
+    "type": "formal-guide-companion",
+    "name": "Alignment",
+    "title": "Lean 4 Companion — Alignment",
+    "edition": "AI Edition",
+    "module": "5Guides",
+    "framework": "AACCC",
+    "guide": "Alignment",
+    "guide_order": 2,
+    "version": "1.0",
+    "status": "active",
+    "language": "en",
+    "source": "docs/5Guides/lean/02_alignment.lean",
+    "ai_path": "docs/book/AI_Edition/5Guides/lean/02_alignment.json",
+    "guide_path": "../guides/alignment.json",
+    "lean_index": "index.json"
+  },
+  "purpose": {
+    "primary": "Provide a small formal companion for the Alignment question: What corresponds?",
+    "formal_goal": "Show that transformation or substitution inside a formal system depends on an explicitly established relationship.",
+    "educational_principle": "A correspondence should be justified by the relationship that permits it."
+  },
+  "core_question": "What corresponds?",
+  "formal_translation": "What declared or proved relationship permits these formal objects or expressions to be treated as corresponding?",
+  "bridge_from_awareness": {
+    "previous_companion": "01_awareness.json",
+    "awareness_result": [
+      "objects identified",
+      "types identified",
+      "hypotheses identified",
+      "goal identified"
+    ],
+    "alignment_next_step": "Inspect which supplied relationships justify transformations among the represented objects or expressions."
+  },
+  "alignment_mapping": {
+    "human_reasoning": [
+      "objects being compared",
+      "candidate correspondence",
+      "evidence",
+      "assumptions",
+      "mismatch",
+      "boundary",
+      "conditions"
+    ],
+    "formal_reasoning": [
+      "terms",
+      "types",
+      "equality or other declared relation",
+      "permitted substitution",
+      "transformed expression",
+      "proof obligation"
+    ],
+    "shared_habit": "Do not treat two things as interchangeable merely because they look related."
+  },
+  "formal_relationship": {
+    "primary_example": "a = b",
+    "relationship_type": "equality",
+    "role": "Explicitly established formal correspondence.",
+    "interpretation": "Within the represented formal context, equality provides a precise justification for replacing or transporting equal terms where the relevant formal rules permit it."
+  },
+  "important_boundary": {
+    "equality": "A precise formal relation.",
+    "similarity": "A weaker informal or formally separate concept unless explicitly defined.",
+    "identity": "Should not be inferred merely from resemblance.",
+    "principle": "Formal equality is stronger and more specific than saying that two things are similar."
+  },
+  "teaching_pattern": {
+    "given": "a = b",
+    "transformation": "Apply the same represented operation or context to both sides.",
+    "target": "Show that the transformed expressions retain the corresponding equality.",
+    "conceptual_flow": [
+      "a",
+      "declared equality",
+      "b",
+      "same transformation",
+      "corresponding transformed expressions"
+    ]
+  },
+  "formal_model": {
+    "objects": [
+      "a",
+      "b"
+    ],
+    "relationship": "equality",
+    "mapping_basis": "declared or proved equality",
+    "transformation_basis": "formal substitution or compatibility of the represented operation with equality",
+    "teaching_scope": "Small equality-based example rather than a complete formal theory of all kinds of Alignment."
+  },
+  "candidate_correspondence": {
+    "left": "a",
+    "right": "b",
+    "support": "formal equality hypothesis",
+    "status": "established within the represented formal context"
+  },
+  "transformed_correspondence": {
+    "principle": "If the formal system establishes that two terms are equal, applying the represented compatible transformation allows corresponding transformed expressions to remain equal.",
+    "dependency": "The equality relationship and the formal rules governing the transformation.",
+    "not_based_on": [
+      "visual similarity",
+      "similar names",
+      "shared vocabulary",
+      "numerical closeness",
+      "informal analogy"
+    ]
+  },
+  "key_distinctions": [
+    {
+      "left": "equality",
+      "right": "similarity",
+      "rule": "Do not replace a term merely because another term appears similar."
+    },
+    {
+      "left": "declared relation",
+      "right": "assumed relation",
+      "rule": "A transformation should depend on a relationship available in the formal context."
+    },
+    {
+      "left": "correspondence",
+      "right": "identity of meaning",
+      "rule": "A useful relation between formal objects does not automatically imply that every informal interpretation of them is identical."
+    },
+    {
+      "left": "formal substitution",
+      "right": "source-level mapping",
+      "rule": "A formally justified rewrite does not by itself establish that the formal terms correctly represent two source concepts."
+    },
+    {
+      "left": "mapping inside a model",
+      "right": "empirical correspondence",
+      "rule": "Formal equality does not automatically establish real-world empirical equivalence."
+    }
+  ],
+  "alignment_states": {
+    "formal_example_primary_state": "strong",
+    "reason": "The represented equality explicitly supplies the correspondence required by the teaching theorem.",
+    "general_guide_states": [
+      "strong",
+      "partial",
+      "conditional",
+      "uncertain",
+      "misaligned",
+      "unmapped"
+    ],
+    "boundary": "The broader Alignment vocabulary is richer than equality and is not fully formalized by this teaching artifact."
+  },
+  "assumptions": {
+    "explicit": [
+      "the represented objects have the declared types",
+      "the equality relationship is available in the formal context"
+    ],
+    "environmental": [
+      "Lean's formal semantics of equality",
+      "the definitions and rules for the represented transformed expressions"
+    ],
+    "must_not_be_silently_added": [
+      "empirical equivalence",
+      "causal correspondence",
+      "historical influence",
+      "semantic identity beyond what the model represents",
+      "additional mapping relationships"
+    ]
+  },
+  "verified_consequence": {
+    "scope": "The theorem represented by the compiler-checked Lean source.",
+    "general_teaching_meaning": "A formally established equality can justify a corresponding transformation within the represented theorem.",
+    "conditional_on": [
+      "declared types",
+      "declared equality",
+      "formal definitions",
+      "Lean's equality rules"
+    ]
+  },
+  "formalization_boundary": {
+    "lean_establishes": [
+      "the formal theorem represented in the source follows under its supplied context"
+    ],
+    "lean_does_not_establish": [
+      "that all useful Alignment relationships are equalities",
+      "that similarity implies equality",
+      "that informal analogies are formal identities",
+      "that two source concepts corresponding structurally are semantically identical",
+      "that a formal mapping establishes historical influence",
+      "that a formal equality necessarily represents an empirical relationship in the world"
+    ],
+    "principle": "The companion demonstrates one especially strict kind of correspondence rather than formalizing the entire Alignment Guide."
+  },
+  "source_alignment": {
+    "guide_concept": "Alignment asks what corresponds, why the correspondence is proposed, where it holds, and where it stops.",
+    "formal_abstraction": "Equality provides a precise formal relationship that justifies a narrowly defined transformation.",
+    "correspondence": "Both require a relationship to justify treating two structures as connected.",
+    "complete_equivalence": false,
+    "reason": "Human-facing Alignment includes partial, conditional, uncertain, asymmetric, and unmapped relationships that are broader than equality."
+  },
+  "mapping_evidence": {
+    "formal_example": {
+      "mapping": "a corresponds to b under equality",
+      "evidence": "a = b is supplied or proved in the formal context"
+    },
+    "lesson": "A mapping should expose the relationship that supports it."
+  },
+  "forced_alignment_boundary": {
+    "principle": "Do not manufacture equality merely because a transformation would be convenient.",
+    "avoid": [
+      "assuming a = b because the proof needs it",
+      "changing the theorem so unrelated terms appear equal",
+      "using resemblance as though it were equality",
+      "adding a hypothesis solely to preserve a desired mapping without acknowledging it"
+    ]
+  },
+  "mismatch": {
+    "formal_lesson": "If the relationship required for a rewrite is absent, preserve that absence rather than pretending the mapping exists.",
+    "possible_responses": [
+      "find a legitimate proof of the required relation",
+      "use another relationship actually present",
+      "revise the theorem if the target was wrong",
+      "preserve the goal as currently unproved",
+      "inspect whether the formal model represents the intended relationship"
+    ],
+    "automatic_repair": false
+  },
+  "unmapped": {
+    "principle": "No established relationship is a meaningful formal state.",
+    "interpretation": "The absence of a mapping does not automatically prove that no relation could ever be established.",
+    "preferred_language": "No required correspondence has been established in the current formal context."
+  },
+  "directionality": {
+    "equality_is_symmetric": true,
+    "general_alignment_need_not_be_symmetric": true,
+    "lesson": "Do not generalize properties of equality to every Alignment relation.",
+    "examples_of_broader_possible_shapes": [
+      "one-to-one",
+      "one-to-many",
+      "many-to-one",
+      "many-to-many",
+      "directional mapping"
+    ]
+  },
+  "conditional_alignment": {
+    "formal_example_is_conditioned_on": [
+      "the equality hypothesis",
+      "the represented types",
+      "the relevant formal definitions"
+    ],
+    "lesson": "Even a strong formal correspondence exists inside a declared context."
+  },
+  "similarity_vs_provenance": {
+    "similarity": "Two structures may resemble one another.",
+    "formal_equality": "Two formal terms may be established equal in a specific model.",
+    "historical_influence": "A claim about lineage requiring independent provenance evidence.",
+    "principle": "None should be silently substituted for another."
+  },
+  "student_exercise": {
+    "instruction": "Identify the exact relationship that justifies each formal transformation.",
+    "record": {
+      "object_a": null,
+      "object_b": null,
+      "relationship": null,
+      "evidence_for_relationship": null,
+      "transformation": null,
+      "what_the_relationship_allows": null,
+      "what_it_does_not_establish": []
+    },
+    "purpose": "Practice formal Alignment rather than pattern matching."
+  },
+  "variation_exercises": [
+    {
+      "change": "Remove the equality hypothesis.",
+      "question": "What transformation is no longer justified?"
+    },
+    {
+      "change": "Replace equality with an informal similarity statement that is not formally defined.",
+      "question": "Can the same rewrite still be justified?"
+    },
+    {
+      "change": "Change the target expression.",
+      "question": "Does the existing equality still provide the relationship required by the new goal?"
+    },
+    {
+      "change": "Add a second candidate mapping.",
+      "question": "Which mapping is actually supported by the formal context?"
+    }
+  ],
+  "counter_mapping_exercise": {
+    "instruction": "Attempt to justify the transformation without using the supplied equality.",
+    "question": "What additional relationship would be required?",
+    "purpose": "Reveal how much work the explicit correspondence is doing."
+  },
+  "proof_failure": {
+    "principle": "When a rewrite or substitution fails, inspect the required relationship before changing the goal.",
+    "questions": [
+      "Is the equality actually present?",
+      "Does the equality involve the terms I am trying to transform?",
+      "Did I reverse or misread the mapping?",
+      "Is the target using the same structure?",
+      "Am I assuming similarity where equality is required?",
+      "Does the theorem need a different relationship?"
+    ]
+  },
+  "coherence_bridge": {
+    "next_guide": "../guides/coherence.json",
+    "next_formal_companion": "03_coherence.json",
+    "bridge": "Once mappings are established, the next question is whether the resulting formal relationships work together to support the target."
+  },
+  "awareness_dependency": {
+    "previous_guide": "../guides/awareness.json",
+    "previous_formal_companion": "01_awareness.json",
+    "principle": "Good Alignment depends on correctly identifying the formal objects, types, hypotheses, and goal first."
+  },
+  "clarity_connection": {
+    "principle": "The relationship supporting a transformation should remain visible enough to explain.",
+    "question": "Can another learner see why this rewrite is justified?"
+  },
+  "continuity_connection": {
+    "principle": "Mappings can be rechecked after definitions, types, or hypotheses change.",
+    "question": "Does the previously valid correspondence survive the changed formal context?"
+  },
+  "compiler_validation": {
+    "source_file": "docs/5Guides/lean/02_alignment.lean",
+    "status": "compiler-checked",
+    "validation_set": "01-11",
+    "lean_version": "4.36.0",
+    "target": "x86_64-w64-windows-gnu",
+    "meaning": "The human-source formal artifact was accepted under the stated Lean environment.",
+    "boundary": "Compiler acceptance applies to the formal theorem under the represented context and does not establish empirical or historical correspondence outside that model."
+  },
+  "lean_source_contract": {
+    "source_of_truth": "docs/5Guides/lean/02_alignment.lean",
+    "embedded_source_optional": true,
+    "if_embedded": "Copy the compiler-checked Lean source exactly rather than reconstructing it from this JSON abstraction.",
+    "reason": "This JSON describes the source artifact but should not silently become a competing Lean source."
+  },
+  "ai_companion": {
+    "resource": "../shared/ai_companion.json",
+    "preferred_support": [
+      "ask what two formal objects are being related",
+      "ask what hypothesis establishes their relationship",
+      "identify when a proposed rewrite lacks support",
+      "distinguish equality from similarity",
+      "challenge a forced mapping",
+      "explain why a substitution is formally justified"
+    ],
+    "avoid": [
+      "inventing equality",
+      "silently adding hypotheses",
+      "equating resemblance with formal correspondence",
+      "changing the theorem simply to preserve a preferred mapping"
+    ]
+  },
+  "aaccc_self_inspection": {
+    "awareness": {
+      "question": "What objects, types, hypotheses, and goals are actually present?"
+    },
+    "alignment": {
+      "question": "Which declared relationship justifies the correspondence?"
+    },
+    "coherence": {
+      "question": "Do the mapped relationships support the complete theorem?"
+    },
+    "clarity": {
+      "question": "Can the justification for the mapping be made explicit?"
+    },
+    "continuity": {
+      "question": "If the formal context changes, does the correspondence still hold?"
+    }
+  },
+  "ai_behavior": {
+    "must": [
+      "Identify the relationship that justifies a formal mapping.",
+      "Distinguish equality from resemblance or analogy.",
+      "Preserve absent mappings as absent.",
+      "Treat hypotheses as part of the mapping context.",
+      "Expose when a correspondence is conditional on the formal context.",
+      "Preserve the distinction between formal mapping and source-level interpretation.",
+      "Report compiler validation only at the formal-artifact level."
+    ],
+    "must_not": [
+      "invent equality",
+      "treat similarity as equality",
+      "claim formal equality establishes historical influence",
+      "claim formal equality establishes empirical equivalence",
+      "force an unmapped relationship",
+      "silently add a hypothesis to make a rewrite possible",
+      "present this artifact as a complete formalization of Alignment",
+      "reconstruct Lean source and present it as exact unless verified against the source file"
+    ]
+  },
+  "provenance": {
+    "human_guide_sources": [
+      "docs/5Guides/alignment/index.md",
+      "docs/5Guides/alignment/explore.md",
+      "docs/5Guides/alignment/practice.md",
+      "docs/5Guides/alignment/mastery.md"
+    ],
+    "formal_source": "docs/5Guides/lean/02_alignment.lean",
+    "ai_guide": "../guides/alignment.json",
+    "ai_formal_artifact": "02_alignment.json",
+    "transformation": "structured AI-readable formal companion",
+    "preserve": [
+      "formal relationship",
+      "mapping evidence",
+      "assumptions",
+      "mismatch boundary",
+      "formalization boundary",
+      "compiler provenance",
+      "Alignment mapping"
+    ],
+    "do_not_infer": [
+      "complete formalization of Alignment",
+      "empirical equivalence",
+      "historical influence",
+      "semantic identity beyond the model",
+      "additional unstated equalities",
+      "source code not verified against the formal source file"
+    ]
+  },
+  "related": {
+    "lean_index": "index.json",
+    "previous_formal_companion": "01_awareness.json",
+    "guide": "../guides/alignment.json",
+    "next_formal_companion": "03_coherence.json",
+    "formalization": "../origins/formalization.json",
+    "ai_companion": "../shared/ai_companion.json",
+    "module": "../module.json",
+    "index": "../index.json"
+  },
+  "machine_context": {
+    "ai_parseable": true,
+    "role": "formal-guide-companion",
+    "guide": "Alignment",
+    "guide_order": 2,
+    "optional": true,
+    "formal_equality_primary_example": true,
+    "similarity_distinct_from_equality": true,
+    "mapping_requires_support": true,
+    "unmapped_state_preserved": true,
+    "formalization_partial": true,
+    "compiler_checked": true,
+    "compiler_validation_bounded": true,
+    "empirical_equivalence_claim": false,
+    "historical_influence_claim": false,
+    "provenance_aware": true
+  }
+}
