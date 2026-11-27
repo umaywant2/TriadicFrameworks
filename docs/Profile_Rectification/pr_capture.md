@@ -1851,3 +1851,65 @@ It gives us the beginnings of a **shared structural event grammar** usable by hu
 
 ---
 
+> Please review the capture file and create file scaffolding next. If you have questions prior, let me know. Ref: TriadicFrameworks/docs/Profile_Rectification/pr_capture.md at main · umaywant2/TriadicFrameworks
+
+---
+
+I reviewed pr_capture.md. The existing directory already has README.md and pr_module.json beside the capture.
+
+Before I scaffold, I have one architectural question because the capture has grown beyond the original Profile Rectification concept.
+
+The material now defines three related but separable layers:
+
+Profile Rectification as the user-facing orchestration module: consent, observation, detection, evaluation, rectification, verification, plus Human and AI editions.
+Shared Structural Event Grammar, centered on tf.resource-transition/v0.1 and the event → pattern → decision → outcome → verification lineage.
+Ransomware Structural Pattern Detector, as the first system-security analyzer/application of that generic event grammar, including platform adapters and bounded containment.
+
+My recommendation is not to bake the ransomware detector directly into Profile Rectification. The capture itself reaches the stronger abstraction: ResourceTransitionEvent is domain-neutral, with ransomware becoming one analyzer alongside profile exploitation, identity drift, governance, media manipulation, and AI-context rectification.
+
+So for the next step, should I scaffold:
+
+A. Profile Rectification only, leaving the shared-event and ransomware material documented but pending,
+
+or
+
+B. The emerging architecture, with Profile Rectification plus separate scaffolding for the shared structural event schemas and ransomware analyzer?
+
+I recommend B. It preserves the architectural discovery in the capture instead of forcing the new structural primitive back inside the module that happened to uncover it.
+
+---
+
+Excellent. B is the right split. I reread pr_capture.md, including the shared event family, platform mappings, invariants, and the separation of the generic ResourceTransitionEvent from the ransomware-specific analyzer.
+
+I attempted to scaffold the architecture directly in TriadicFrameworks, but the GitHub write operation failed. I also tried creating a dedicated profile-rectification-scaffold branch as a fallback, and that operation failed too. I therefore have not modified the repository and don't want to pretend otherwise.
+
+The scaffold I prepared is organized as:
+
+docs/Profile_Rectification/
+README.md
+pr_module.json
+existing pr_capture.md remains the design/provenance record.
+docs/Shared_Structural_Event_Grammar/
+README.md
+resource-transition.schema.json
+structural-pattern.schema.json
+containment-decision.schema.json
+response-outcome.schema.json
+verification.schema.json
+platform-capabilities.schema.json
+docs/Ransomware_Structural_Pattern_Detector/
+README.md
+detector.json
+adapters/README.md
+adapters/windows.md
+adapters/macos.md
+adapters/linux.md
+adapters/android.md
+adapters/ios-ipados.md
+adapters/cloud-sync.md
+
+The important architectural choice is preserved: Profile Rectification stays the orchestration layer, the Shared Structural Event Grammar becomes reusable infrastructure, and Ransomware Structural Pattern Detection becomes its first system-security consumer. That directly follows the architecture developed in the capture.
+
+I also kept the JSON Schemas deliberately skeletal at this stage rather than prematurely hardening fields and enums that we have not yet validated. That should make the next refinement much cleaner.
+
+No question from me before continuing. The design boundary is clear.
