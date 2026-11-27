@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Ransomware_Structural_Pattern_Detector_adapters_cloud_sync_" src="https://github.com/user-attachments/assets/0c33db21-0ea5-45d1-8b63-36272efa1983" />
+
 # Cloud / Synchronization Adapter
 
 > **Cross-environment adapter specification for representing synchronized resource transitions without confusing origin, transport, replication, observation, or propagation.**
