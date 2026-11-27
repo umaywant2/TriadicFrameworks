@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Ransomware_Structural_Pattern_Detector_adapters_windows_" src="https://github.com/user-attachments/assets/49142836-4fd1-44a2-8d92-8ac0283710be" />
+
 # Windows Adapter
 
 > **Platform adapter specification for mapping authorized Windows resource and system observations into the Ransomware Structural Pattern Detector while preserving observation scope, actor lineage, filesystem, recovery, privilege, synchronization, and capability boundaries.**
