@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Ransomware_Structural_Pattern_Detector_" src="https://github.com/user-attachments/assets/32009e0c-cd0d-45e8-b871-e0f91f96f90f" />
+
 # Ransomware Structural Pattern Detector
 
 > **A platform-neutral structural analyzer for detecting accelerating destructive resource-transition patterns and producing bounded, evidence-preserving containment decisions.**
