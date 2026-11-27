@@ -1,1 +1,373 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://triadicframeworks.org/schemas/shared-structural-event-grammar/containment-decision.schema.json",
+  "title": "Containment Decision",
+  "description": "A bounded structural decision describing a recommended or authorized response to an assessed structural pattern. A containment decision records what should be done and under what constraints; it does not assert that the response was executed or successful.",
+  "type": "object",
+  "additionalProperties": false,
 
+  "required": [
+    "schema",
+    "decision_id",
+    "pattern_ref",
+    "decision",
+    "requested_response",
+    "authority",
+    "reversibility",
+    "provenance"
+  ],
+
+  "properties": {
+    "schema": {
+      "const": "tf.containment-decision/v0.1",
+      "description": "Canonical schema-family identifier and version."
+    },
+
+    "decision_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Unique identifier for this containment decision."
+    },
+
+    "pattern_ref": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Reference to the structural pattern that gave rise to this decision."
+    },
+
+    "decision": {
+      "type": "string",
+      "enum": [
+        "no_action",
+        "observe",
+        "inform",
+        "contain",
+        "isolate",
+        "quarantine",
+        "restrict",
+        "disable",
+        "recover",
+        "escalate",
+        "defer"
+      ],
+      "description": "High-level bounded decision selected in response to the referenced pattern."
+    },
+
+    "requested_response": {
+      "$ref": "#/$defs/requestedResponse"
+    },
+
+    "reason_codes": {
+      "type": "array",
+      "description": "Machine-readable reasons supporting the decision. These codes identify justification without replacing the underlying evidence or assessment.",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true,
+      "default": []
+    },
+
+    "rationale": {
+      "type": "string",
+      "description": "Optional human-readable explanation of why the decision was selected."
+    },
+
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Confidence in the appropriateness of this decision, expressed from 0 to 1. Confidence does not establish malicious intent or attribution."
+    },
+
+    "authority": {
+      "$ref": "#/$defs/authority"
+    },
+
+    "reversibility": {
+      "$ref": "#/$defs/reversibility"
+    },
+
+    "platform_context": {
+      "$ref": "#/$defs/platformContext"
+    },
+
+    "constraints": {
+      "type": "array",
+      "description": "Boundaries that must be respected if the requested response is executed.",
+      "items": {
+        "$ref": "#/$defs/constraint"
+      },
+      "default": []
+    },
+
+    "alternatives": {
+      "type": "array",
+      "description": "Alternative responses considered but not selected.",
+      "items": {
+        "$ref": "#/$defs/alternative"
+      },
+      "default": []
+    },
+
+    "expires_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Optional time after which this decision should no longer be treated as current without reassessment."
+    },
+
+    "provenance": {
+      "$ref": "#/$defs/provenance"
+    },
+
+    "extensions": {
+      "type": "object",
+      "description": "Domain-specific extension data. Extensions must not redefine the semantics of canonical fields.",
+      "additionalProperties": true
+    }
+  },
+
+  "$defs": {
+    "requestedResponse": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "action"
+      ],
+      "properties": {
+        "action": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Requested response operation. Domain analyzers may use a controlled vocabulary appropriate to their environment."
+        },
+
+        "target_ref": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Reference to the actor, resource, scope, or other structural target of the requested response."
+        },
+
+        "scope": {
+          "type": "string",
+          "enum": [
+            "single_resource",
+            "resource_set",
+            "actor",
+            "process_tree",
+            "session",
+            "account",
+            "device",
+            "network",
+            "environment",
+            "context",
+            "domain_defined"
+          ],
+          "description": "Structural scope over which the response is requested."
+        },
+
+        "priority": {
+          "type": "string",
+          "enum": [
+            "informational",
+            "low",
+            "moderate",
+            "high",
+            "critical"
+          ],
+          "description": "Relative priority assigned to the requested response."
+        }
+      }
+    },
+
+    "authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mode",
+        "authorization_required"
+      ],
+      "properties": {
+        "mode": {
+          "type": "string",
+          "enum": [
+            "recommend_only",
+            "human_approved",
+            "policy_authorized",
+            "preauthorized_bounded",
+            "automatic_bounded"
+          ],
+          "description": "Authority under which the response may proceed."
+        },
+
+        "authorization_required": {
+          "type": "boolean",
+          "description": "Whether additional authorization is required before execution."
+        },
+
+        "authorization_ref": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional reference to the policy, consent record, approval, or other authority governing execution."
+        }
+      }
+    },
+
+    "reversibility": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "class"
+      ],
+      "properties": {
+        "class": {
+          "type": "string",
+          "enum": [
+            "fully_reversible",
+            "partially_reversible",
+            "irreversible",
+            "unknown"
+          ],
+          "description": "Expected reversibility of the requested intervention."
+        },
+
+        "rollback_available": {
+          "type": "boolean",
+          "description": "Whether a known rollback mechanism is available."
+        },
+
+        "rollback_ref": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional reference to a rollback procedure, recovery object, snapshot, or equivalent mechanism."
+        }
+      }
+    },
+
+    "platformContext": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "platform": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Platform or execution environment relevant to the requested response."
+        },
+
+        "capabilities_ref": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Reference to the applicable tf.platform-capabilities declaration."
+        },
+
+        "capability_required": {
+          "type": "array",
+          "description": "Capabilities required to execute the requested response as intended.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+
+        "fallback_allowed": {
+          "type": "boolean",
+          "description": "Whether an adapter may execute a weaker supported response when the requested capability is unavailable."
+        }
+      }
+    },
+
+    "constraint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "value"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Constraint category."
+        },
+
+        "value": {
+          "description": "Constraint value. Interpretation is defined by the consuming domain or adapter."
+        },
+
+        "reason": {
+          "type": "string",
+          "description": "Optional explanation for the constraint."
+        }
+      }
+    },
+
+    "alternative": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "action",
+        "disposition"
+      ],
+      "properties": {
+        "action": {
+          "type": "string",
+          "minLength": 1
+        },
+
+        "disposition": {
+          "type": "string",
+          "enum": [
+            "not_selected",
+            "unsupported",
+            "disproportionate",
+            "insufficient_evidence",
+            "requires_authorization",
+            "deferred"
+          ]
+        },
+
+        "reason": {
+          "type": "string"
+        }
+      }
+    },
+
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "producer",
+        "created_at"
+      ],
+      "properties": {
+        "producer": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Analyzer, policy engine, human operator, or orchestration component that produced the decision."
+        },
+
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+
+        "assessment_ref": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional reference to the assessment or analytical state from which the decision was derived."
+        },
+
+        "source_refs": {
+          "type": "array",
+          "description": "References to supporting lineage objects used in producing the decision.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        }
+      }
+    }
+  }
+}
