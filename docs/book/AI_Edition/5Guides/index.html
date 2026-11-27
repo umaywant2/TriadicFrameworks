@@ -683,12 +683,193 @@
       font-style: italic;
     }
 
-    .array-list {
-      display: grid;
-      gap: 5px;
-      margin: 0;
-      padding-left: 18px;
-    }
+.json-content {
+  min-width: 0;
+}
+
+.empty-value {
+  color: var(--faint);
+  font-style: italic;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Arrays
+   ───────────────────────────────────────────────────────────── */
+
+.json-array {
+  display: grid;
+  gap: 7px;
+  min-width: 0;
+}
+
+/*
+ * Primitive arrays remain lightweight, but each value gets a
+ * visible position. This is much easier to scan than a normal
+ * browser <ol> once arrays become deeply nested.
+ */
+.json-array-primitive {
+  padding: 4px 0;
+}
+
+.array-primitive-item {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  gap: 8px;
+  align-items: start;
+  min-width: 0;
+}
+
+.array-index {
+  display: inline-grid;
+  place-items: center;
+  min-width: 23px;
+  height: 23px;
+  padding: 0 5px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: rgba(87, 227, 255, 0.055);
+  color: var(--faint);
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Consolas,
+    monospace;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.array-value {
+  min-width: 0;
+  padding-top: 2px;
+}
+
+/*
+ * Arrays containing objects or other arrays become a set of
+ * independently expandable cards.
+ */
+.json-array-complex {
+  gap: 9px;
+}
+
+.array-item {
+  overflow: hidden;
+  min-width: 0;
+  border: 1px solid rgba(125, 211, 252, 0.11);
+  border-radius: 10px;
+  background: rgba(9, 23, 33, 0.54);
+}
+
+.array-item > summary {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 39px;
+  padding: 7px 10px;
+  list-style: none;
+  cursor: pointer;
+}
+
+.array-item > summary::-webkit-details-marker {
+  display: none;
+}
+
+.array-item > summary::after {
+  content: "›";
+  margin-left: auto;
+  color: var(--faint);
+  font-size: 16px;
+  transform: rotate(0deg);
+  transition: transform 120ms ease;
+}
+
+.array-item[open] > summary::after {
+  transform: rotate(90deg);
+}
+
+.array-item > summary:hover {
+  background: rgba(87, 227, 255, 0.035);
+}
+
+.array-item-type {
+  flex: 0 0 auto;
+  color: var(--violet);
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Consolas,
+    monospace;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.array-item-preview {
+  min-width: 0;
+  overflow: hidden;
+  color: #bad0d9;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.array-item-content {
+  min-width: 0;
+  padding: 4px 11px 11px 41px;
+  border-top: 1px solid rgba(125, 211, 252, 0.07);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Objects
+   ───────────────────────────────────────────────────────────── */
+
+.object-block {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+  padding-left: 12px;
+  border-left: 2px solid rgba(87, 227, 255, 0.13);
+}
+
+.complex-row {
+  align-items: start;
+}
+
+.complex-row > .json-key {
+  padding-top: 5px;
+}
+
+/*
+ * Deeper structures get subtly different guide colors so the
+ * nesting remains visible without turning into a rainbow.
+ */
+.object-block .object-block {
+  border-left-color: rgba(184, 156, 255, 0.17);
+}
+
+.object-block .object-block .object-block {
+  border-left-color: rgba(110, 231, 183, 0.17);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Small screens
+   ───────────────────────────────────────────────────────────── */
+
+@media (max-width: 820px) {
+  .array-item-content {
+    padding-left: 13px;
+  }
+
+  .array-item-preview {
+    white-space: normal;
+  }
+
+  .object-block {
+    padding-left: 8px;
+  }
+}
 
     .object-block {
       display: grid;
@@ -1254,74 +1435,189 @@
       return id;
     }
 
-    function valueToHTML(value, depth = 0) {
-      if (value === null) {
-        return `<span class="json-value null">null</span>`;
-      }
+function valueToHTML(value, depth = 0) {
+  if (value === null) {
+    return `<span class="json-value null">null</span>`;
+  }
 
-      if (typeof value === "string") {
-        return `<span class="json-value string">${escapeHTML(value)}</span>`;
-      }
+  if (typeof value === "string") {
+    return `<span class="json-value string">${escapeHTML(value)}</span>`;
+  }
 
-      if (typeof value === "number") {
-        return `<span class="json-value number">${escapeHTML(value)}</span>`;
-      }
+  if (typeof value === "number") {
+    return `<span class="json-value number">${escapeHTML(value)}</span>`;
+  }
 
-      if (typeof value === "boolean") {
-        return `<span class="json-value boolean">${value}</span>`;
-      }
+  if (typeof value === "boolean") {
+    return `<span class="json-value boolean">${value}</span>`;
+  }
 
-      if (Array.isArray(value)) {
-        if (value.length === 0) {
-          return `<span class="json-value">[]</span>`;
-        }
+  if (Array.isArray(value)) {
+    return renderArray(value, depth);
+  }
+
+  if (typeof value === "object") {
+    return renderObject(value, depth);
+  }
+
+  return `<span class="json-value">${escapeHTML(String(value))}</span>`;
+}
+
+function isPrimitive(value) {
+  return (
+    value === null ||
+    typeof value === "string" ||
+    typeof value === "number" ||
+    typeof value === "boolean"
+  );
+}
+
+function renderArray(array, depth = 0) {
+  if (array.length === 0) {
+    return `<span class="json-value empty-value">[]</span>`;
+  }
+
+  const primitivesOnly = array.every(isPrimitive);
+
+  /*
+   * Keep short primitive arrays compact.
+   * These occur frequently in the corpus for things such as:
+   *
+   *   "preserve": ["meaning", "history", "evidence"]
+   */
+  if (primitivesOnly) {
+    return `
+      <div class="json-array json-array-primitive">
+        ${array.map((item, index) => `
+          <div class="array-primitive-item">
+            <span class="array-index">${index + 1}</span>
+            <div class="array-value">
+              ${valueToHTML(item, depth + 1)}
+            </div>
+          </div>
+        `).join("")}
+      </div>
+    `;
+  }
+
+  /*
+   * Complex arrays get independently inspectable entries.
+   *
+   * This works especially well for corpus structures such as:
+   *
+   *   "sequence": [
+   *     { ... },
+   *     { ... },
+   *     { ... }
+   *   ]
+   */
+  return `
+    <div class="json-array json-array-complex">
+      ${array.map((item, index) => {
+        const itemType = Array.isArray(item)
+          ? "Array"
+          : item === null
+            ? "Null"
+            : typeof item === "object"
+              ? "Object"
+              : titleCase(typeof item);
 
         return `
-          <ol class="array-list">
-            ${value.map(item => `<li>${valueToHTML(item, depth + 1)}</li>`).join("")}
-          </ol>
+          <details class="array-item" ${depth < 2 ? "open" : ""}>
+            <summary>
+              <span class="array-index">${index + 1}</span>
+              <span class="array-item-type">${itemType}</span>
+              ${arrayItemPreview(item)}
+            </summary>
+
+            <div class="array-item-content">
+              ${valueToHTML(item, depth + 1)}
+            </div>
+          </details>
         `;
-      }
+      }).join("")}
+    </div>
+  `;
+}
 
-      if (typeof value === "object") {
+function renderObject(object, depth = 0) {
+  const entries = Object.entries(object);
+
+  if (entries.length === 0) {
+    return `<span class="json-value empty-value">{}</span>`;
+  }
+
+  return `
+    <div class="object-block">
+      ${entries.map(([key, child]) => {
+        const complex =
+          child !== null &&
+          typeof child === "object";
+
         return `
-          <div class="object-block">
-            ${Object.entries(value)
-              .map(([key, child]) => `
-                <div class="json-row">
-                  <div class="json-key">${escapeHTML(key)}</div>
-                  <div>${valueToHTML(child, depth + 1)}</div>
-                </div>
-              `)
-              .join("")}
+          <div class="json-row ${complex ? "complex-row" : ""}">
+            <div class="json-key">
+              ${escapeHTML(key)}
+            </div>
+
+            <div class="json-content">
+              ${valueToHTML(child, depth + 1)}
+            </div>
           </div>
         `;
-      }
+      }).join("")}
+    </div>
+  `;
+}
 
-      return `<span class="json-value">${escapeHTML(String(value))}</span>`;
-    }
+/*
+ * Give complex array items a useful human-readable hint.
+ *
+ * Many AI Edition objects expose fields such as:
+ *
+ *   name
+ *   title
+ *   id
+ *   question
+ *   claim
+ *
+ * We can surface one of those without changing the JSON itself.
+ */
+function arrayItemPreview(item) {
+  if (
+    item === null ||
+    Array.isArray(item) ||
+    typeof item !== "object"
+  ) {
+    return "";
+  }
 
-    function renderJSON(data) {
-      if (!data || typeof data !== "object") {
-        documentBody.innerHTML = valueToHTML(data);
-        return;
-      }
+  const previewKeys = [
+    "name",
+    "title",
+    "id",
+    "question",
+    "claim",
+    "guide",
+    "role"
+  ];
 
-      const entries = Object.entries(data);
-
-      documentBody.innerHTML = `
-        <div class="json-tree">
-          ${entries.map(([key, value], index) => `
-            <details class="json-section" ${index < 4 ? "open" : ""}>
-              <summary>${escapeHTML(titleCase(key))}</summary>
-              <div class="json-section-content">
-                ${valueToHTML(value)}
-              </div>
-            </details>
-          `).join("")}
-        </div>
+  for (const key of previewKeys) {
+    if (
+      Object.prototype.hasOwnProperty.call(item, key) &&
+      isPrimitive(item[key]) &&
+      item[key] !== null
+    ) {
+      return `
+        <span class="array-item-preview">
+          ${escapeHTML(item[key])}
+        </span>
       `;
     }
+  }
+
+  return "";
+}
 
     function inlineMarkdown(text) {
       return escapeHTML(text)
