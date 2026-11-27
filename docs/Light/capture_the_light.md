@@ -1,4 +1,5 @@
-# ⭐ Why **Light** Is the Final Module
+
+# ⭐ Why Light ~Is~ Was the Final Module
 
 Every major module you’ve created so far points toward Light:
 
