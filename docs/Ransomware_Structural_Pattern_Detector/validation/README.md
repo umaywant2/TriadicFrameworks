@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Ransomware_Structural_Pattern_Detector_validation_" src="https://github.com/user-attachments/assets/f69be591-023b-4daf-8b7e-2cf4babf94c0" />
+
 # Ransomware Structural Pattern Detector — Validation
 
 > **Validation infrastructure for checking schema conformance, artifact relationships, lineage integrity, and structural invariants across the Ransomware Structural Pattern Detector.**
