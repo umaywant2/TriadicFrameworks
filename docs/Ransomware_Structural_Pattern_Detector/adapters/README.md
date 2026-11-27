@@ -911,39 +911,1147 @@ An adapter may explicitly state that an observation, action, or verification res
 
 ## Windows
 
-`windows.md`
+Windows adapter artifacts:
 
-Defines the Windows-specific observation, normalization, capability, containment, recovery, and verification boundary.
+- `windows.md` — human-readable platform specification defining the Windows observation, normalization, capability, containment, recovery, privacy, and verification boundaries.
+- `windows.schema.json` — machine-readable JSON Schema for validating concrete Windows adapter configurations.
+- `windows.example.json` — synthetic example configuration demonstrating a conservative Windows endpoint-observation profile.
+
+The Windows adapter follows the same separation used throughout the adapter architecture:
+
+**`windows.md` → semantic specification**
+
+**`windows.schema.json` → adapter configuration contract**
+
+**`windows.example.json` → synthetic conforming instance**
+
+**Shared Structural Event Grammar → runtime interchange contracts**
+
+The example configuration is intentionally illustrative rather than a declaration of Windows platform capability.
+
+A concrete implementation must replace example and `unknown` capability states with evidence-backed declarations appropriate to its actual deployment, observation sources, authorization, and scope.
+
+In particular:
+
+- platform capability does not automatically establish adapter capability;
+- adapter capability does not establish authority to act;
+- observation does not establish ransomware;
+- a requested containment response does not establish execution;
+- successful execution does not establish resolution;
+- recovery capability does not establish successful restoration;
+- bounded endpoint observation must not be promoted into claims about unobserved local, remote, or synchronized state.
+
+The Windows configuration layer therefore describes **what a particular adapter deployment claims it can observe, normalize, enforce, recover, and verify**, while the Shared Structural Event Grammar remains responsible for the portable runtime objects exchanged across the analytical pipeline.
+
+Canonical runtime lineage:
+
+**`tf.resource-transition/v0.1`**
+
+↓
+
+**`tf.structural-pattern/v0.1`**
+
+↓
+
+**`tf.containment-decision/v0.1`**
+
+↓
+
+**`tf.response-outcome/v0.1`**
+
+↓
+
+**`tf.verification/v0.1`**
+
+with:
+
+**`tf.platform-capabilities/v0.1`**
+
+declaring the capabilities available to the concrete adapter environment.
+
+The architectural rule is:
+
+> **Windows provides the environment. The adapter configuration declares the implementation. The shared grammar carries the evidence. The detector interprets the structure. Policy determines authority. Outcome records execution. Verification determines resulting state.**
 
 ## macOS
 
-`macos.md`
+macOS adapter artifact:
 
-Defines the macOS-specific boundary.
+- `macos.md` — human-readable platform specification defining the macOS observation, normalization, capability, containment, recovery, privacy, and verification boundaries.
+
+The macOS adapter follows the same architectural separation used throughout the adapter family:
+
+**`macos.md` → semantic specification**
+
+**Adapter configuration → concrete implementation declaration**
+
+**Shared Structural Event Grammar → runtime interchange contracts**
+
+The macOS specification intentionally does not treat the existence of a platform mechanism as proof that a particular adapter implementation possesses or is authorized to use that capability.
+
+A concrete implementation must provide evidence-backed declarations appropriate to its actual deployment, observation sources, authorization, and scope.
+
+In particular:
+
+- platform capability does not automatically establish adapter capability;
+- adapter capability does not establish authority to act;
+- notification and authorization opportunities have different structural meanings;
+- observation does not establish ransomware;
+- actor identity or trust does not establish benign intent;
+- a requested containment response does not establish execution;
+- successful execution does not establish resolution;
+- recovery capability does not establish successful restoration;
+- bounded local observation must not be promoted into claims about unobserved local, remote, or synchronized state.
+
+The macOS adapter may accommodate different deployment profiles, ranging from bounded application or resource observation to appropriately configured endpoint-security implementations. Those profiles describe possible architectural positions rather than guaranteed capabilities.
+
+The concrete capability declaration remains authoritative for what the deployed adapter can actually:
+
+- observe;
+- identify;
+- correlate;
+- deny or restrict;
+- isolate;
+- recover;
+- rescan;
+- verify.
+
+Canonical runtime lineage:
+
+**`tf.resource-transition/v0.1`**
+
+↓
+
+**`tf.structural-pattern/v0.1`**
+
+↓
+
+**`tf.containment-decision/v0.1`**
+
+↓
+
+**`tf.response-outcome/v0.1`**
+
+↓
+
+**`tf.verification/v0.1`**
+
+with:
+
+**`tf.platform-capabilities/v0.1`**
+
+declaring the capabilities available to the concrete adapter environment.
+
+The macOS-specific architectural boundary is:
+
+> **A native event reports evidence available through the deployed observation mechanism. An authorization opportunity provides a bounded point at which a supported operation may potentially be allowed or denied. Neither determines the structural interpretation or policy decision by itself.**
+
+This preserves four separate questions:
+
+**What did macOS expose?**
+
+↓
+
+**What structural transition does that evidence support?**
+
+↓
+
+**What response, if any, is authorized?**
+
+↓
+
+**What state exists after the response?**
+
+The architectural rule is:
+
+> **macOS provides the environment and possible platform mechanisms. The adapter declares its actual implementation capabilities. The shared grammar carries the evidence. The detector interprets the structure. Policy determines authority. Outcome records execution. Verification determines resulting state.**
 
 ## Linux
 
-`linux.md`
+Linux adapter artifacts:
 
-Defines the Linux-specific boundary while accounting for variation among distributions and deployment environments.
+- `linux.md` — human-readable platform specification defining the Linux observation, normalization, capability, containment, recovery, privacy, mount, namespace, container, and verification boundaries.
+- `linux.schema.json` — machine-readable JSON Schema for validating concrete Linux adapter configurations.
+- `linux.example.json` — synthetic example configuration demonstrating a conservative bounded user-space observer profile.
+
+The Linux adapter follows the same architectural separation used throughout the adapter family:
+
+**`linux.md` → semantic specification**
+
+**`linux.schema.json` → adapter configuration contract**
+
+**`linux.example.json` → synthetic conforming instance**
+
+**Shared Structural Event Grammar → runtime interchange contracts**
+
+The example configuration is intentionally illustrative rather than a declaration of Linux platform capability.
+
+A concrete implementation must replace example and `unknown` capability states with evidence-backed declarations appropriate to its actual deployment, observation sources, privilege boundary, authorization, mount topology, namespace context, container context, and resource scope.
+
+In particular:
+
+- Linux platform capability does not automatically establish adapter capability;
+- adapter capability does not establish authority to act;
+- privilege does not establish authority;
+- observation of one mount does not establish observation of all mounts;
+- observation inside a namespace or container does not establish host-wide visibility;
+- host-side and container-side observations may describe the same underlying transition;
+- multiple telemetry sources do not automatically constitute independent evidence;
+- observation does not establish ransomware;
+- a requested containment response does not establish execution;
+- successful execution does not establish resolution;
+- recovery capability does not establish successful restoration;
+- an observation gap does not establish absence of activity;
+- bounded local observation must not be promoted into claims about unobserved local, remote, containerized, network-backed, or synchronized state.
+
+The Linux configuration layer describes **what a particular adapter deployment claims it can observe, normalize, enforce, recover, and verify**.
+
+Linux-specific configuration also preserves structural context that may materially affect those claims, including:
+
+- mount awareness;
+- namespace awareness;
+- container awareness;
+- host visibility;
+- remote-storage awareness;
+- privilege context;
+- observation continuity;
+- cross-mount verification;
+- cross-namespace verification;
+- cross-environment verification.
+
+These fields describe deployment boundaries.
+
+They do not establish ransomware, authority, or successful containment by themselves.
+
+Canonical runtime lineage:
+
+**`tf.resource-transition/v0.1`**
+
+↓
+
+**`tf.structural-pattern/v0.1`**
+
+↓
+
+**`tf.containment-decision/v0.1`**
+
+↓
+
+**`tf.response-outcome/v0.1`**
+
+↓
+
+**`tf.verification/v0.1`**
+
+with:
+
+**`tf.platform-capabilities/v0.1`**
+
+declaring the capabilities available to the concrete adapter environment.
+
+The Linux-specific architectural boundary can therefore be expressed as:
+
+**Linux environment**
+
+↓
+
+**Mount / namespace / container / privilege boundary**
+
+↓
+
+**Configured observation source**
+
+↓
+
+**Linux adapter**
+
+↓
+
+**`tf.resource-transition/v0.1`**
+
+↓
+
+**Ransomware Structural Pattern Detector**
+
+The reverse response path remains separately bounded:
+
+**Structural pattern**
+
+↓
+
+**Containment decision**
+
+↓
+
+**Capability check**
+
+↓
+
+**Authority check**
+
+↓
+
+**Linux adapter**
+
+↓
+
+**Supported native mechanism**
+
+↓
+
+**Response outcome**
+
+↓
+
+**Verification**
+
+This preserves several separate questions:
+
+**What did the configured Linux observer actually see?**
+
+↓
+
+**Within which mount, namespace, container, host, or resource boundary was it observed?**
+
+↓
+
+**What structural transition does that evidence support?**
+
+↓
+
+**What interpretation does the detector support?**
+
+↓
+
+**What response, if any, is authorized and technically available?**
+
+↓
+
+**What actually executed?**
+
+↓
+
+**What state can be verified afterward?**
+
+The distinction is especially important for Linux because a single platform label can describe substantially different adapter environments.
+
+A bounded user-space observer, privileged host observer, container-scoped observer, and host-side container observer may all participate in the same structural grammar while exposing materially different observation and enforcement capabilities.
+
+The shared semantics remain stable.
+
+The capability declaration changes with the deployment.
+
+The architectural rule is:
+
+> **Linux provides the environment family. The adapter configuration declares the concrete implementation and its boundaries. The shared grammar carries the evidence. The detector interprets the structure. Policy determines authority. The outcome records execution. Verification determines resulting state.**
 
 ## Android
 
-`android.md`
+Android adapter artifact:
 
-Defines the Android-specific boundary, including constraints imposed by the mobile application and permission model.
+- `android.md` — human-readable platform specification defining the Android observation, normalization, capability, containment, recovery, privacy, synchronization, and verification boundaries.
+
+The Android adapter follows the same architectural separation used throughout the adapter family:
+
+**`android.md` → semantic specification**
+
+**Adapter configuration → concrete implementation declaration**
+
+**Shared Structural Event Grammar → runtime interchange contracts**
+
+The Android specification is intentionally capability-bounded.
+
+A concrete implementation must declare what it can actually observe, normalize, enforce, recover, and verify within its authorized application and resource scope rather than treating the Android platform as a device-wide observation surface.
+
+In particular:
+
+- application-visible state does not establish device-wide state;
+- permission to access one resource surface does not imply access to unrelated resources;
+- a resource reference does not necessarily correspond to a conventional filesystem path;
+- observation does not establish ransomware;
+- actor identity does not establish origin or intent;
+- a locally visible transition may have originated in another environment;
+- synchronized observations do not automatically constitute independent evidence;
+- capability does not establish authority;
+- a user-mediated response request does not establish execution;
+- successful execution does not establish resolution;
+- recovery capability does not establish verified restoration;
+- inability to observe a surface does not establish that destructive activity is absent.
+
+The Android adapter therefore treats **scope and visibility as part of the evidence model**.
+
+Conceptually:
+
+**Android security and authorization boundary**
+
+↓
+
+**Authorized observation surface**
+
+↓
+
+**Android adapter**
+
+↓
+
+**`tf.resource-transition/v0.1`**
+
+↓
+
+**Ransomware Structural Pattern Detector**
+
+The reverse response path remains separately bounded:
+
+**Structural pattern**
+
+↓
+
+**Containment decision**
+
+↓
+
+**Capability check**
+
+↓
+
+**Authority check**
+
+↓
+
+**Android adapter**
+
+↓
+
+**Supported native or user-mediated response**
+
+↓
+
+**Response outcome**
+
+↓
+
+**Verification**
+
+This preserves several separate questions:
+
+**What could the authorized Android adapter actually observe?**
+
+↓
+
+**What structural transition does that evidence support?**
+
+↓
+
+**Did the transition originate locally or arrive through another actor or environment?**
+
+↓
+
+**What interpretation does the detector support?**
+
+↓
+
+**What response, if any, is both supported and authorized?**
+
+↓
+
+**What actually happened?**
+
+↓
+
+**What resulting state can the adapter verify?**
+
+The distinction is especially important for synchronized and provider-backed resources.
+
+The Android adapter may establish that a transition became visible within its authorized scope without being able to establish where the transition originated.
+
+Where cross-environment evidence exists, the Android adapter should cooperate with the Cloud / Synchronization adapter rather than manufacturing an origin locally.
+
+Canonical runtime lineage:
+
+**`tf.resource-transition/v0.1`**
+
+↓
+
+**`tf.structural-pattern/v0.1`**
+
+↓
+
+**`tf.containment-decision/v0.1`**
+
+↓
+
+**`tf.response-outcome/v0.1`**
+
+↓
+
+**`tf.verification/v0.1`**
+
+with:
+
+**`tf.platform-capabilities/v0.1`**
+
+declaring the capabilities available to the concrete Android adapter environment.
+
+The Android adapter also preserves an important privacy boundary.
+
+Where structural information is sufficient, the shared analytical layer should receive:
+
+- privacy-preserving resource identity;
+- resource type and class;
+- transition type;
+- timing;
+- preservation and recovery state;
+- actor relationship;
+- synchronization context;
+- baseline relationship;
+- provenance.
+
+Raw resource contents, unnecessary identifying information, authentication material, and unrelated application data remain outside the shared analytical representation.
+
+The architectural rule is:
+
+> **Android provides the constrained execution environment. The adapter declares what the concrete implementation can actually observe and do. The shared grammar carries the evidence. The detector interprets the structure. Policy determines authority. The outcome records execution. Verification determines the resulting observable state.**
 
 ## iOS / iPadOS
 
-`ios-ipados.md`
+iOS / iPadOS adapter artifact:
 
-Defines the iOS and iPadOS boundary and explicitly records capabilities unavailable to the adapter.
+- `ios-ipados.md` — human-readable platform specification defining the iOS and iPadOS observation, normalization, capability, containment, recovery, privacy, synchronization, and verification boundaries.
+
+The iOS / iPadOS adapter follows the same architectural separation used throughout the adapter family:
+
+**`ios-ipados.md` → semantic specification**
+
+**Adapter configuration → concrete implementation declaration**
+
+**Shared Structural Event Grammar → runtime interchange contracts**
+
+The iOS / iPadOS specification is intentionally capability-conservative.
+
+A concrete implementation must declare what it can actually observe, normalize, enforce, recover, and verify within its authorized application and resource scope rather than treating the platform as a device-wide observation surface.
+
+In particular:
+
+- application-visible state does not establish device-wide state;
+- unobserved activity does not establish absence of activity;
+- state differences derived from repeated observations must remain distinguishable from directly observed native events;
+- observation does not establish ransomware;
+- actor identity does not establish origin or intent;
+- a locally visible transition may have originated in another environment;
+- synchronized observations do not automatically constitute independent evidence;
+- capability does not establish authority;
+- a user-mediated response request does not establish execution;
+- successful execution does not establish resolution;
+- recovery capability does not establish verified restoration;
+- a clean bounded rescan does not establish that unobserved device or remote state is clean.
+
+The iOS / iPadOS adapter therefore treats **bounded visibility as part of the evidence model**.
+
+Conceptually:
+
+**iOS / iPadOS security and authorization boundary**
+
+↓
+
+**Authorized application-visible surface**
+
+↓
+
+**iOS / iPadOS adapter**
+
+↓
+
+**`tf.resource-transition/v0.1`**
+
+↓
+
+**Ransomware Structural Pattern Detector**
+
+Where continuous native observation is unavailable but repeated inspection of an authorized resource is possible, a concrete implementation may represent a bounded state comparison:
+
+**State at T1**
+
+↓
+
+**Authorized observation interval**
+
+↓
+
+**State at T2**
+
+↓
+
+**Derived resource transition**
+
+Such a transition may establish that state changed without establishing every intermediate operation, actor, or causal step.
+
+That distinction must survive normalization.
+
+The reverse response path remains separately bounded:
+
+**Structural pattern**
+
+↓
+
+**Containment decision**
+
+↓
+
+**Capability check**
+
+↓
+
+**Authority check**
+
+↓
+
+**iOS / iPadOS adapter**
+
+↓
+
+**Supported native or user-mediated response**
+
+↓
+
+**Response outcome**
+
+↓
+
+**Verification**
+
+This preserves several separate questions:
+
+**What could the authorized adapter actually observe?**
+
+↓
+
+**Was the transition observed directly or derived through state comparison?**
+
+↓
+
+**What structural transition does that evidence support?**
+
+↓
+
+**Did the transition originate locally or arrive through another environment?**
+
+↓
+
+**What interpretation does the detector support?**
+
+↓
+
+**What response, if any, is both supported and authorized?**
+
+↓
+
+**What actually happened?**
+
+↓
+
+**What resulting state can be verified?**
+
+For synchronized and cloud-backed resources, the iOS / iPadOS adapter should cooperate with the Cloud / Synchronization adapter rather than manufacturing remote origin from local evidence.
+
+The device-side adapter may establish:
+
+> **This transition became observable within the authorized iOS or iPadOS resource scope.**
+
+The Cloud / Synchronization adapter may separately contribute evidence about:
+
+- origin;
+- transport;
+- propagation;
+- replication;
+- version relationships;
+- cross-environment recovery.
+
+Those observations may be correlated while preserving their dependency.
+
+Canonical runtime lineage:
+
+**`tf.resource-transition/v0.1`**
+
+↓
+
+**`tf.structural-pattern/v0.1`**
+
+↓
+
+**`tf.containment-decision/v0.1`**
+
+↓
+
+**`tf.response-outcome/v0.1`**
+
+↓
+
+**`tf.verification/v0.1`**
+
+with:
+
+**`tf.platform-capabilities/v0.1`**
+
+declaring the capabilities available to the concrete iOS / iPadOS adapter environment.
+
+The capability declaration should begin from evidence rather than assumption.
+
+A generic platform specification does not establish that a particular implementation possesses:
+
+- event observation;
+- actor identity;
+- actor lineage;
+- write denial;
+- actor containment;
+- resource isolation;
+- network isolation;
+- quarantine;
+- rollback;
+- recovery;
+- post-action observation;
+- recovery verification.
+
+Where a capability has not been established, `unknown` is preferable to an optimistic declaration.
+
+The iOS / iPadOS adapter also preserves a strong privacy boundary.
+
+Where structural information is sufficient, the shared analytical layer should receive:
+
+- privacy-preserving resource identity;
+- resource type and class;
+- transition type;
+- timing;
+- preservation state;
+- recovery state;
+- actor category;
+- origin/transport relationship;
+- synchronization context;
+- baseline relationship;
+- provenance.
+
+Raw resource contents, unnecessary identifiers, authentication material, account secrets, and unrelated application data remain outside the shared analytical representation.
+
+The architectural rule is:
+
+> **iOS and iPadOS provide the constrained execution environment. The adapter declares what the concrete implementation can actually observe and do. The shared grammar carries the evidence. The detector interprets the structure. Policy determines authority. The outcome records execution. Verification determines the resulting observable state.**
 
 ## Cloud / Synchronization
 
-`cloud-sync.md`
+Cloud / Synchronization adapter artifact:
 
-Defines cross-environment and synchronization-specific mappings, especially the distinction between origin and transport actors.
+- `cloud-sync.md` — human-readable cross-environment specification defining synchronization observation, normalization, origin and transport lineage, propagation, evidence independence, capability, containment, recovery, privacy, and verification boundaries.
+
+The Cloud / Synchronization adapter follows the same architectural separation used throughout the adapter family:
+
+**`cloud-sync.md` → semantic specification**
+
+**Adapter configuration → concrete provider or synchronization implementation declaration**
+
+**Shared Structural Event Grammar → runtime interchange contracts**
+
+Unlike the operating-system adapters, the Cloud / Synchronization adapter is not defined primarily by a single device boundary.
+
+Its purpose is to preserve structural lineage when resource transitions cross:
+
+- devices;
+- accounts;
+- synchronization clients;
+- cloud-backed resources;
+- shared resource spaces;
+- mirrored environments;
+- remote storage;
+- provider-mediated resource histories.
+
+Its central distinction is:
+
+> **Origin, transport, observation, replication, and propagation are different structural roles.**
+
+A transition may be observed locally without having originated locally.
+
+Likewise, the same originating transition may become visible through several synchronized environments without becoming several independent originating events.
+
+In particular:
+
+- local observation does not establish local origin;
+- a synchronization service transporting a transition does not automatically become its origin;
+- a trusted synchronization mechanism does not establish that transported state is benign;
+- observation count does not establish origin count;
+- multiple synchronized observations do not automatically constitute independent evidence;
+- replication does not automatically establish a new originating transition;
+- visibility does not establish ownership or authority;
+- local containment does not establish global containment;
+- successful provider execution does not establish cross-environment resolution;
+- recovery capability or version history does not establish verified restoration;
+- unobserved remote state does not establish safe remote state;
+- reappearance may reflect delayed or propagated prior state rather than a new independent origin.
+
+The Cloud / Synchronization adapter therefore treats **lineage across boundaries** as part of the evidence model.
+
+Conceptually:
+
+**Origin actor**
+
+↓
+
+**Origin environment**
+
+↓
+
+**Resource transition**
+
+↓
+
+**Transport actor / synchronization mechanism**
+
+↓
+
+**Cloud or synchronization boundary**
+
+↓
+
+**Recipient environment**
+
+↓
+
+**Observed resource transition**
+
+The adapter should preserve as much of this lineage as the available evidence supports.
+
+Where origin, transport, dependency, or propagation cannot be established, those relationships remain unresolved.
+
+They must not be filled through assumption.
+
+---
+
+### Cross-Environment Correlation
+
+The Cloud / Synchronization adapter may correlate evidence from device-specific adapters.
+
+Conceptually:
+
+**Windows / macOS / Linux / Android / iOS-iPadOS observation**
+
+↓
+
+**Local normalized transition**
+
+↕ correlation
+
+**Cloud / synchronization observation**
+
+↓
+
+**Cross-environment structural lineage**
+
+↓
+
+**Ransomware Structural Pattern Detector**
+
+This allows the detector to distinguish, where evidence permits:
+
+**one transition observed in several places**
+
+from:
+
+**several distinct transitions**
+
+and:
+
+**local materialization**
+
+from:
+
+**local origin**.
+
+The distinction is especially important for downstream calculations involving:
+
+- event count;
+- activity rate;
+- acceleration;
+- affected-resource scope;
+- propagation;
+- evidence independence;
+- confidence.
+
+Correlation must preserve dependency rather than manufacture corroboration.
+
+---
+
+### Evidence Independence
+
+Synchronization can produce many valid observations of the same underlying event.
+
+For example:
+
+**Originating transition**
+
+↓
+
+**Cloud observation**
+
+↓
+
+**Desktop observation**
+
+↓
+
+**Mobile observation**
+
+↓
+
+**Second synchronized endpoint observation**
+
+These observations may strongly support the conclusion that a transition propagated.
+
+They do not automatically provide independent evidence about where or why it originated.
+
+The architectural rule is:
+
+> **Multiple synchronized observations may corroborate propagation without independently corroborating origin or intent.**
+
+Known dependencies should therefore remain visible through shared event and pattern lineage.
+
+---
+
+### Propagation
+
+Propagation is a first-class structural concern for this adapter.
+
+A concrete implementation may contribute evidence about:
+
+- first observable environment;
+- subsequent environments;
+- transport relationships;
+- resource lineage;
+- transition timing;
+- dependency relationships;
+- replication;
+- synchronization state;
+- recovery relationships.
+
+The adapter supplies the cross-environment evidence.
+
+The detector determines whether that evidence supports a structural state such as expanding or active propagation.
+
+---
+
+### Containment Scope
+
+Containment in synchronized environments must remain explicitly scoped.
+
+Conceptually:
+
+**Local containment**
+
+does not necessarily imply:
+
+**Cloud containment**
+
+and:
+
+**Cloud containment**
+
+does not necessarily imply:
+
+**Every synchronized endpoint is contained**.
+
+A transition may already have:
+
+- propagated;
+- been queued;
+- materialized elsewhere;
+- altered remote state;
+- affected another shared resource;
+- produced dependent state outside the response boundary.
+
+The response outcome must therefore record the environment, resources, actors, accounts, or synchronization relationships actually affected by the executed response.
+
+> **Containment at one boundary is evidence about that boundary, not proof of containment across the topology.**
+
+---
+
+### Reappearance
+
+Synchronization also makes reappearance structurally significant.
+
+A condition that appears to stop locally may later return through:
+
+- another synchronized device;
+- delayed synchronization;
+- remote state;
+- another synchronized actor;
+- restoration of affected state;
+- unresolved propagation.
+
+Where evidence permits, reappearance should retain lineage to the earlier transition.
+
+It must not automatically be treated as a new independent origin.
+
+---
+
+### Recovery
+
+Cloud and synchronization environments may expose evidence concerning:
+
+- historical versions;
+- preserved prior state;
+- deleted-resource state;
+- backup state;
+- recovery objects;
+- rollback mechanisms;
+- restoration operations.
+
+These states must remain separate:
+
+**Recovery mechanism exists**
+
+↓
+
+**Recovery artifact or prior state exists**
+
+↓
+
+**Recovery is requested**
+
+↓
+
+**Recovery is attempted**
+
+↓
+
+**Recovery completes**
+
+↓
+
+**Restored state is verified**
+
+Availability of one stage does not establish the next.
+
+---
+
+### Capability Declaration
+
+The generic Cloud / Synchronization specification does not claim universal provider capability.
+
+A concrete implementation must provide an evidence-backed:
+
+**`tf.platform-capabilities/v0.1`**
+
+declaration describing what its environment actually supports.
+
+Where support has not been established, `unknown` is the correct default.
+
+This is particularly important because observation and response capabilities may differ according to:
+
+- provider;
+- account;
+- resource;
+- resource ownership;
+- authorization;
+- shared-resource relationship;
+- deployment;
+- synchronization client;
+- available interface;
+- recovery configuration.
+
+A provider category alone does not establish capability.
+
+---
+
+### Privacy Boundary
+
+Cloud and synchronization observations may expose identities and relationships spanning several environments.
+
+Where structural references are sufficient, the shared analytical layer should prefer:
+
+- pseudonymous resource references;
+- environment references;
+- actor categories;
+- origin and transport relationships;
+- synchronization state;
+- transition type;
+- version relationships;
+- recovery relationships;
+- propagation relationships;
+- provenance.
+
+The shared detector does not require:
+
+- passwords;
+- access tokens;
+- refresh tokens;
+- session secrets;
+- provider credentials;
+- recovery secrets;
+- unnecessary account identities;
+- unnecessary resource contents.
+
+The governing privacy rule is:
+
+> **Normalize relationships before exporting identities, credentials, or content.**
+
+---
+
+### Verification
+
+Cross-environment verification must remain bounded to the environments actually observed.
+
+For example:
+
+**Environment A: no continuation observed**
+
++
+
+**Environment B: not observed**
+
++
+
+**Cloud state: partially observed**
+
+does not support:
+
+**Globally resolved**
+
+The resulting verification may instead remain:
+
+- `partially_contained`;
+- `partially_resolved`;
+- `mixed`;
+- `persistent`;
+- `reappeared`;
+- `unable_to_verify`.
+
+A clean result in one environment must not erase uncertainty elsewhere.
+
+Canonical runtime lineage:
+
+**`tf.resource-transition/v0.1`**
+
+↓
+
+**`tf.structural-pattern/v0.1`**
+
+↓
+
+**`tf.containment-decision/v0.1`**
+
+↓
+
+**`tf.response-outcome/v0.1`**
+
+↓
+
+**`tf.verification/v0.1`**
+
+with:
+
+**`tf.platform-capabilities/v0.1`**
+
+declaring the capabilities available to each concrete cloud or synchronization adapter environment.
+
+The architectural rule is:
+
+> **The Cloud / Synchronization adapter follows the transition across boundaries without confusing the actor that originated it, the mechanism that transported it, the environments that observed it, or the copies through which it propagated. The shared grammar preserves that lineage. The detector interprets the resulting structure. Policy determines authority. The outcome records what actually happened. Verification determines what state can actually be established afterward.**
 
 ---
 
