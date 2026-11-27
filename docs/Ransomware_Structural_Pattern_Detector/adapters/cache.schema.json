@@ -1,1 +1,875 @@
-
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://triadicframeworks.org/schemas/ransomware-structural-pattern-detector/adapters/cache.schema.json",
+  "title": "Ransomware Structural Pattern Detector - Cache Adapter",
+  "description": "Machine-readable configuration and conformance schema for a cache adapter. The schema preserves distinctions among cached state, authoritative source state, expiration, eviction, invalidation, persistence, replication, recovery, containment, and verification.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "adapter",
+    "environment",
+    "scope",
+    "observation",
+    "normalization",
+    "cache_context",
+    "capabilities",
+    "containment",
+    "recovery",
+    "verification",
+    "privacy",
+    "provenance"
+  ],
+  "properties": {
+    "schema": {
+      "const": "tf.rspd-adapter.cache/v0.1"
+    },
+    "adapter": {
+      "$ref": "#/$defs/adapter"
+    },
+    "environment": {
+      "$ref": "#/$defs/environment"
+    },
+    "scope": {
+      "$ref": "#/$defs/scope"
+    },
+    "observation": {
+      "$ref": "#/$defs/observation"
+    },
+    "normalization": {
+      "$ref": "#/$defs/normalization"
+    },
+    "cache_context": {
+      "$ref": "#/$defs/cacheContext"
+    },
+    "capabilities": {
+      "$ref": "#/$defs/capabilities"
+    },
+    "containment": {
+      "$ref": "#/$defs/containment"
+    },
+    "recovery": {
+      "$ref": "#/$defs/recovery"
+    },
+    "verification": {
+      "$ref": "#/$defs/verification"
+    },
+    "privacy": {
+      "$ref": "#/$defs/privacy"
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/limitation"
+      },
+      "default": []
+    },
+    "provenance": {
+      "$ref": "#/$defs/provenance"
+    },
+    "extensions": {
+      "type": "object",
+      "description": "Implementation-specific extension data. Extensions must not redefine canonical adapter semantics.",
+      "additionalProperties": true
+    }
+  },
+  "$defs": {
+    "supportLevel": {
+      "type": "string",
+      "enum": [
+        "supported",
+        "partial",
+        "unsupported",
+        "unknown"
+      ]
+    },
+    "action": {
+      "type": "string",
+      "enum": [
+        "increase_observation",
+        "notify_authorized_operator",
+        "deny_resource_writes",
+        "contain_actor",
+        "isolate_resource_set",
+        "suspend_replication",
+        "invalidate_bounded_cache",
+        "flush_bounded_cache",
+        "preserve_evidence",
+        "prepare_recovery",
+        "initiate_recovery",
+        "request_manual_review"
+      ]
+    },
+    "adapter": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "version",
+        "status",
+        "profile"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "experimental",
+            "development",
+            "validation",
+            "stable",
+            "deprecated"
+          ]
+        },
+        "profile": {
+          "type": "string",
+          "enum": [
+            "local_cache_observer",
+            "distributed_cache_observer",
+            "persistent_cache_observer",
+            "replication_aware",
+            "recovery_aware",
+            "hybrid",
+            "custom"
+          ]
+        },
+        "implementation_ref": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "environment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "class",
+        "engine"
+      ],
+      "properties": {
+        "class": {
+          "type": "string",
+          "enum": [
+            "local",
+            "distributed",
+            "in_memory",
+            "persistent",
+            "application",
+            "edge",
+            "hybrid",
+            "other"
+          ]
+        },
+        "engine": {
+          "type": "string",
+          "minLength": 1
+        },
+        "engine_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "deployment": {
+          "type": "string",
+          "enum": [
+            "process",
+            "host",
+            "server",
+            "cluster",
+            "containerized",
+            "cloud_managed",
+            "edge",
+            "hybrid",
+            "other",
+            "unknown"
+          ]
+        }
+      }
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mode"
+      ],
+      "properties": {
+        "mode": {
+          "type": "string",
+          "enum": [
+            "cache",
+            "cache_set",
+            "namespace",
+            "resource_set",
+            "node",
+            "cluster",
+            "replication_group",
+            "custom"
+          ]
+        },
+        "scope_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "includes_replication": {
+          "type": "boolean",
+          "default": false
+        },
+        "includes_persistent_state": {
+          "type": "boolean",
+          "default": false
+        },
+        "includes_source_relationships": {
+          "type": "boolean",
+          "default": false
+        }
+      }
+    },
+    "observation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sources",
+        "continuity"
+      ],
+      "properties": {
+        "sources": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/observationSource"
+          }
+        },
+        "continuity": {
+          "type": "string",
+          "enum": [
+            "continuous",
+            "polling",
+            "snapshot",
+            "resumed",
+            "gapped",
+            "unknown"
+          ]
+        },
+        "actor_context_collection": {
+          "type": "boolean"
+        },
+        "source_relationship_collection": {
+          "type": "boolean"
+        },
+        "expiration_context_collection": {
+          "type": "boolean"
+        },
+        "eviction_context_collection": {
+          "type": "boolean"
+        },
+        "replication_context_collection": {
+          "type": "boolean"
+        },
+        "persistence_state_collection": {
+          "type": "boolean"
+        },
+        "deduplication": {
+          "type": "boolean"
+        },
+        "deduplication_method_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "event_loss_detectable": {
+          "type": "boolean"
+        }
+      }
+    },
+    "observationSource": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "class",
+        "support"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "class": {
+          "type": "string",
+          "enum": [
+            "cache_operation",
+            "entry_state",
+            "actor_context",
+            "expiration",
+            "eviction",
+            "replication",
+            "persistence",
+            "recovery",
+            "source_adapter",
+            "user_supplied",
+            "custom"
+          ]
+        },
+        "support": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "native_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scope_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "direct_or_derived": {
+          "type": "string",
+          "enum": [
+            "direct",
+            "derived",
+            "mixed",
+            "unknown"
+          ]
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "normalization": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "output_schema",
+        "preserve_provenance",
+        "preserve_unknowns",
+        "preserve_source_dependencies"
+      ],
+      "properties": {
+        "output_schema": {
+          "const": "tf.resource-transition/v0.1"
+        },
+        "preserve_provenance": {
+          "const": true
+        },
+        "preserve_unknowns": {
+          "const": true
+        },
+        "preserve_source_dependencies": {
+          "const": true
+        },
+        "preserve_authority_relationship": {
+          "type": "boolean"
+        },
+        "preserve_expiration_context": {
+          "type": "boolean"
+        },
+        "preserve_eviction_context": {
+          "type": "boolean"
+        },
+        "preserve_replication_relationships": {
+          "type": "boolean"
+        },
+        "preserve_persistence_relationships": {
+          "type": "boolean"
+        },
+        "redaction_enabled": {
+          "type": "boolean"
+        }
+      }
+    },
+    "cacheContext": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "authority_state",
+        "reconstructability",
+        "persistence_awareness",
+        "replication_awareness"
+      ],
+      "properties": {
+        "authority_state": {
+          "type": "string",
+          "enum": [
+            "derived",
+            "bounded_authoritative",
+            "independently_authoritative",
+            "mixed",
+            "unknown"
+          ]
+        },
+        "reconstructability": {
+          "type": "string",
+          "enum": [
+            "fully_reconstructable",
+            "partially_reconstructable",
+            "not_reconstructable",
+            "unknown"
+          ]
+        },
+        "source_relationship_awareness": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "expiration_awareness": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "eviction_awareness": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "persistence_awareness": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "replication_awareness": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "actor_origin_awareness": {
+          "$ref": "#/$defs/supportLevel"
+        }
+      }
+    },
+    "capabilities": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema",
+        "declaration_ref",
+        "observation",
+        "enforcement",
+        "recovery",
+        "verification"
+      ],
+      "properties": {
+        "schema": {
+          "const": "tf.platform-capabilities/v0.1"
+        },
+        "declaration_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "observation": {
+          "$ref": "#/$defs/observationCapabilities"
+        },
+        "enforcement": {
+          "$ref": "#/$defs/enforcementCapabilities"
+        },
+        "recovery": {
+          "$ref": "#/$defs/recoveryCapabilities"
+        },
+        "verification": {
+          "$ref": "#/$defs/verificationCapabilities"
+        }
+      }
+    },
+    "observationCapabilities": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "event_observation": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "actor_identity": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "actor_lineage": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "resource_classification": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "baseline_access": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "source_state_observation": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "persistence_state_observation": {
+          "$ref": "#/$defs/supportLevel"
+        }
+      }
+    },
+    "enforcementCapabilities": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "write_denial": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "actor_containment": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "resource_isolation": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "replication_suspension": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "bounded_invalidation": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "bounded_flush": {
+          "$ref": "#/$defs/supportLevel"
+        }
+      }
+    },
+    "recoveryCapabilities": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "recovery": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "rebuild": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "snapshot_restore": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "persistent_state_restore": {
+          "$ref": "#/$defs/supportLevel"
+        }
+      }
+    },
+    "verificationCapabilities": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "post_action_observation": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "cache_state_comparison": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "source_state_comparison": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "persistence_detection": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "reappearance_detection": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "rebuild_verification": {
+          "$ref": "#/$defs/supportLevel"
+        }
+      }
+    },
+    "containment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "decision_schema",
+        "default_authority",
+        "authorization_required",
+        "fallback_allowed"
+      ],
+      "properties": {
+        "decision_schema": {
+          "const": "tf.containment-decision/v0.1"
+        },
+        "default_authority": {
+          "type": "string",
+          "enum": [
+            "recommend_only",
+            "human_approved",
+            "policy_authorized",
+            "preauthorized_bounded",
+            "automatic_bounded"
+          ]
+        },
+        "authorization_required": {
+          "type": "boolean"
+        },
+        "fallback_allowed": {
+          "type": "boolean"
+        },
+        "mappings": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/responseMapping"
+          },
+          "default": []
+        }
+      }
+    },
+    "responseMapping": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "requested_action",
+        "capability",
+        "support"
+      ],
+      "properties": {
+        "requested_action": {
+          "$ref": "#/$defs/action"
+        },
+        "capability": {
+          "type": "string",
+          "minLength": 1
+        },
+        "support": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "native_mechanism_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "response_scope": {
+          "type": "string",
+          "enum": [
+            "entry",
+            "resource_set",
+            "namespace",
+            "node",
+            "cluster",
+            "replication_group",
+            "custom",
+            "unknown"
+          ]
+        },
+        "reversibility": {
+          "type": "string",
+          "enum": [
+            "fully_reversible",
+            "partially_reversible",
+            "irreversible",
+            "unknown"
+          ]
+        },
+        "requires_additional_authorization": {
+          "type": "boolean"
+        },
+        "fallback_action": {
+          "$ref": "#/$defs/action"
+        }
+      }
+    },
+    "recovery": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "reconstructable_state_observed"
+      ],
+      "properties": {
+        "reconstructable_state_observed": {
+          "type": "boolean"
+        },
+        "source_state_observed": {
+          "type": "boolean"
+        },
+        "persistent_state_observed": {
+          "type": "boolean"
+        },
+        "snapshot_state_observed": {
+          "type": "boolean"
+        },
+        "mechanisms": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/recoveryMechanism"
+          },
+          "default": []
+        }
+      }
+    },
+    "recoveryMechanism": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "class",
+        "support",
+        "verification_supported"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "class": {
+          "type": "string",
+          "enum": [
+            "rebuild_from_source",
+            "snapshot",
+            "persistent_state",
+            "replica",
+            "backup",
+            "custom"
+          ]
+        },
+        "support": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "verification_supported": {
+          "$ref": "#/$defs/supportLevel"
+        }
+      }
+    },
+    "verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "output_schema",
+        "rescan_supported",
+        "cache_state_comparison",
+        "preserve_limitations"
+      ],
+      "properties": {
+        "output_schema": {
+          "const": "tf.verification/v0.1"
+        },
+        "rescan_supported": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "cache_state_comparison": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "source_state_comparison": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "cross_node_comparison": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "rebuild_verification": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "preserve_limitations": {
+          "const": true
+        }
+      }
+    },
+    "privacy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "data_minimization",
+        "local_processing_preferred",
+        "plaintext_credentials_allowed",
+        "cached_contents_exported"
+      ],
+      "properties": {
+        "data_minimization": {
+          "const": true
+        },
+        "local_processing_preferred": {
+          "const": true
+        },
+        "plaintext_credentials_allowed": {
+          "const": false
+        },
+        "cached_contents_exported": {
+          "const": false
+        },
+        "raw_keys_exported": {
+          "type": "boolean",
+          "default": false
+        },
+        "connection_secrets_exported": {
+          "type": "boolean",
+          "default": false
+        },
+        "pseudonymous_resource_ids": {
+          "type": "boolean"
+        },
+        "redaction_classes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        }
+      }
+    },
+    "limitation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "code",
+        "description",
+        "severity"
+      ],
+      "properties": {
+        "code": {
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "severity": {
+          "type": "string",
+          "enum": [
+            "informational",
+            "minor",
+            "material",
+            "blocking"
+          ]
+        },
+        "affects": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "producer",
+        "created_at"
+      ],
+      "properties": {
+        "producer": {
+          "type": "string",
+          "minLength": 1
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "specification_ref": {
+          "type": "string",
+          "default": "cache.md"
+        },
+        "detector_ref": {
+          "type": "string",
+          "default": "../detector.json"
+        },
+        "capabilities_schema_ref": {
+          "type": "string",
+          "default": "../../Shared_Structural_Event_Grammar/platform-capabilities.schema.json"
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        }
+      }
+    }
+  }
+}
