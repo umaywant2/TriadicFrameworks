@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Ransomware_Structural_Pattern_Detector_adapters_macos normalized event_" src="https://github.com/user-attachments/assets/52939203-4ebd-444e-a673-ad176857d269" />
+
 # macOS Normalized Event Example
 
 > **Worked example showing how a macOS-native observation becomes a platform-neutral `tf.resource-transition/v0.1` event without becoming a ransomware verdict.**
