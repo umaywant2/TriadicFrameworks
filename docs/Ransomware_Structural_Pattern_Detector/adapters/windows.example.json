@@ -1,0 +1,321 @@
+{
+  "schema": "tf.rspd-adapter.windows/v0.1",
+
+  "adapter": {
+    "id": "rspd-windows-example",
+    "name": "RSPD Windows Example Adapter",
+    "version": "0.1.0",
+    "status": "experimental",
+    "profile": "endpoint_observation",
+    "implementation_ref": "example://rspd-windows-adapter"
+  },
+
+  "environment": {
+    "platform": "windows",
+    "platform_version": "example",
+    "edition": "example",
+    "architecture": "x64",
+    "deployment": "workstation"
+  },
+
+  "scope": {
+    "mode": "resource_set",
+    "scope_ref": "scope://protected-user-resources",
+    "resource_classes": [
+      "user_document",
+      "photo",
+      "video",
+      "audio",
+      "database",
+      "archive",
+      "project_file",
+      "backup",
+      "recovery_resource",
+      "canary"
+    ],
+    "includes_network_resources": false,
+    "includes_cloud_resources": false,
+    "includes_recovery_resources": true,
+    "includes_canaries": true
+  },
+
+  "observation": {
+    "sources": [
+      {
+        "id": "windows-event-source",
+        "class": "event_tracing",
+        "support": "partial",
+        "native_name": "example-event-source",
+        "scope_ref": "scope://protected-user-resources",
+        "direct_or_derived": "mixed",
+        "notes": "Synthetic example observation source. Concrete implementations must replace this declaration with an evidence-backed native source."
+      },
+      {
+        "id": "windows-resource-state",
+        "class": "resource_state",
+        "support": "partial",
+        "native_name": "example-resource-state-observer",
+        "scope_ref": "scope://protected-user-resources",
+        "direct_or_derived": "mixed",
+        "notes": "Example state-comparison source for protected resources."
+      },
+      {
+        "id": "windows-recovery-state",
+        "class": "recovery",
+        "support": "unknown",
+        "native_name": "example-recovery-observer",
+        "scope_ref": "scope://protected-user-resources",
+        "direct_or_derived": "unknown",
+        "notes": "Recovery observation remains unknown until established by the concrete implementation."
+      }
+    ],
+
+    "continuity": "continuous",
+    "deduplication": true,
+    "deduplication_method_ref": "method://windows-example-event-correlation/v0.1",
+    "actor_lineage_collection": true,
+    "recovery_state_collection": false,
+    "network_context_collection": false,
+    "synchronization_context_collection": false,
+    "event_loss_detectable": true
+  },
+
+  "normalization": {
+    "output_schema": "tf.resource-transition/v0.1",
+    "preserve_native_operation": true,
+    "preserve_provenance": true,
+    "preserve_unknowns": true,
+    "preserve_origin_transport_distinction": true,
+    "preserve_source_dependencies": true,
+    "derive_resource_class": true,
+    "derive_baseline_state": true,
+    "redaction_enabled": true
+  },
+
+  "capabilities": {
+    "schema": "tf.platform-capabilities/v0.1",
+    "declaration_ref": "capabilities://rspd-windows-example/v0.1",
+
+    "observation": {
+      "event_observation": "partial",
+      "actor_identity": "partial",
+      "actor_lineage": "partial",
+      "resource_classification": "partial",
+      "network_context": "unknown",
+      "origin_transport_distinction": "partial",
+      "baseline_access": "partial",
+      "recovery_state_observation": "unknown"
+    },
+
+    "enforcement": {
+      "write_denial": "unknown",
+      "actor_containment": "unknown",
+      "resource_isolation": "unknown",
+      "network_isolation": "unknown",
+      "quarantine": "unknown",
+      "permission_restriction": "unknown",
+      "actor_disablement": "unknown",
+      "session_termination": "unknown"
+    },
+
+    "recovery": {
+      "recovery": "unknown",
+      "rollback": "unknown",
+      "snapshot_restore": "unknown",
+      "resource_restore": "unknown",
+      "configuration_restore": "unknown"
+    },
+
+    "verification": {
+      "post_action_observation": "partial",
+      "state_comparison": "partial",
+      "persistence_detection": "partial",
+      "reappearance_detection": "partial",
+      "recovery_verification": "unknown"
+    }
+  },
+
+  "containment": {
+    "decision_schema": "tf.containment-decision/v0.1",
+    "default_authority": "recommend_only",
+    "authorization_required": true,
+    "fallback_allowed": true,
+
+    "mappings": [
+      {
+        "requested_action": "increase_observation",
+        "capability": "event_observation",
+        "support": "partial",
+        "native_mechanism_ref": "mechanism://windows-example/increase-observation",
+        "reversibility": "fully_reversible",
+        "requires_additional_authorization": false,
+        "fallback_action": "notify_authorized_operator"
+      },
+      {
+        "requested_action": "notify_authorized_operator",
+        "capability": "operator_notification",
+        "support": "supported",
+        "native_mechanism_ref": "mechanism://windows-example/operator-notification",
+        "reversibility": "fully_reversible",
+        "requires_additional_authorization": false,
+        "fallback_action": "request_manual_review"
+      },
+      {
+        "requested_action": "deny_resource_writes",
+        "capability": "write_denial",
+        "support": "unknown",
+        "native_mechanism_ref": "mechanism://windows-example/write-denial-unconfigured",
+        "reversibility": "unknown",
+        "requires_additional_authorization": true,
+        "fallback_action": "notify_authorized_operator"
+      },
+      {
+        "requested_action": "contain_actor",
+        "capability": "actor_containment",
+        "support": "unknown",
+        "native_mechanism_ref": "mechanism://windows-example/actor-containment-unconfigured",
+        "reversibility": "unknown",
+        "requires_additional_authorization": true,
+        "fallback_action": "notify_authorized_operator"
+      },
+      {
+        "requested_action": "preserve_evidence",
+        "capability": "event_observation",
+        "support": "partial",
+        "native_mechanism_ref": "mechanism://windows-example/preserve-structural-evidence",
+        "reversibility": "fully_reversible",
+        "requires_additional_authorization": false,
+        "fallback_action": "request_manual_review"
+      },
+      {
+        "requested_action": "prepare_recovery",
+        "capability": "recovery",
+        "support": "unknown",
+        "native_mechanism_ref": "mechanism://windows-example/recovery-unconfigured",
+        "reversibility": "unknown",
+        "requires_additional_authorization": true,
+        "fallback_action": "request_manual_review"
+      },
+      {
+        "requested_action": "request_manual_review",
+        "capability": "manual_review",
+        "support": "supported",
+        "native_mechanism_ref": "mechanism://windows-example/manual-review",
+        "reversibility": "fully_reversible",
+        "requires_additional_authorization": false
+      }
+    ]
+  },
+
+  "recovery": {
+    "recovery_state_observed": false,
+    "protected_resource_classes": [
+      "backup",
+      "recovery_resource"
+    ],
+    "mechanisms": [
+      {
+        "id": "windows-example-recovery",
+        "class": "snapshot",
+        "support": "unknown",
+        "verification_supported": "unknown"
+      }
+    ],
+    "recovery_interference_observable": false
+  },
+
+  "verification": {
+    "output_schema": "tf.verification/v0.1",
+    "rescan_supported": "partial",
+    "same_scope_comparison": "partial",
+    "cross_environment_comparison": "unknown",
+    "recovery_verification": "unknown",
+    "preserve_limitations": true
+  },
+
+  "privacy": {
+    "data_minimization": true,
+    "local_processing_preferred": true,
+    "plaintext_credentials_allowed": false,
+    "raw_resource_content_required": false,
+    "raw_paths_exported": false,
+    "sensitive_process_arguments_exported": false,
+    "pseudonymous_resource_ids": true,
+    "redaction_classes": [
+      "raw_path",
+      "user_identity",
+      "resource_name",
+      "process_arguments",
+      "authentication_material"
+    ]
+  },
+
+  "limitations": [
+    {
+      "code": "EXAMPLE-CONFIG",
+      "description": "This is a synthetic conformance example and does not describe the capabilities of any deployed Windows adapter.",
+      "severity": "informational",
+      "affects": [
+        "all_capability_claims"
+      ]
+    },
+    {
+      "code": "OBSERVATION-SCOPE-BOUNDED",
+      "description": "Observation is limited to the configured protected resource scope.",
+      "severity": "material",
+      "affects": [
+        "event_observation",
+        "verification"
+      ]
+    },
+    {
+      "code": "ENFORCEMENT-UNESTABLISHED",
+      "description": "Endpoint enforcement mechanisms have not been established by this example configuration.",
+      "severity": "material",
+      "affects": [
+        "write_denial",
+        "actor_containment",
+        "resource_isolation",
+        "network_isolation",
+        "quarantine",
+        "permission_restriction",
+        "actor_disablement",
+        "session_termination"
+      ]
+    },
+    {
+      "code": "RECOVERY-UNESTABLISHED",
+      "description": "Recovery availability and recovery verification have not been established by this example configuration.",
+      "severity": "material",
+      "affects": [
+        "recovery",
+        "snapshot_restore",
+        "resource_restore",
+        "recovery_verification"
+      ]
+    },
+    {
+      "code": "CROSS-ENVIRONMENT-UNRESOLVED",
+      "description": "This example does not establish visibility into remote or synchronized environments.",
+      "severity": "material",
+      "affects": [
+        "origin_transport_distinction",
+        "cross_environment_verification"
+      ]
+    }
+  ],
+
+  "provenance": {
+    "producer": "TriadicFrameworks example configuration",
+    "created_at": "2026-11-26T00:00:00Z",
+    "specification_ref": "windows.md",
+    "detector_ref": "../detector.json",
+    "capabilities_schema_ref": "../../Shared_Structural_Event_Grammar/platform-capabilities.schema.json",
+    "source_refs": [
+      "windows.schema.json",
+      "windows.md",
+      "../detector.json",
+      "../../Shared_Structural_Event_Grammar/README.md"
+    ]
+  }
+}
