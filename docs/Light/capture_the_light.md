@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Light_capture_the_light_" src="https://github.com/user-attachments/assets/8adda992-45d2-48c7-aa72-8f818f329adb" />
 
 # ⭐ Why Light ~Is~ Was the Final Module
 
