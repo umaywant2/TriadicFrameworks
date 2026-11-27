@@ -2,7 +2,7 @@
 
 # Privacy
 
-> **Learning does not grant us permission to observe the learner***
+> **Learning does not grant us permission to observe the learner**
 
 Privacy in 5Guides is not an optional feature added after the learning experience is built.
 
