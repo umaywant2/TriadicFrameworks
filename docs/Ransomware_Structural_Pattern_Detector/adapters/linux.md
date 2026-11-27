@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Ransomware_Structural_Pattern_Detector_adapters_linux_" src="https://github.com/user-attachments/assets/3990e64d-a418-4d5f-af29-6fdd24f2758d" />
+
 # Linux Adapter
 
 > **Platform adapter specification for mapping authorized Linux observations and response capabilities into the Ransomware Structural Pattern Detector while preserving distribution, filesystem, namespace, privilege, and deployment boundaries.**
