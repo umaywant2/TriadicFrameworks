@@ -1,7 +1,3 @@
-Building from the concrete macOS Endpoint Security deployment example, this is what a single normalized observation could look like after the adapter has translated native evidence into tf.resource-transition/v0.1.
-
-The important feature is that it records **what was observed**, while leaving ransomware classification, intent, and containment downstream.
-```json
 {
   "schema": "tf.resource-transition/v0.1",
 
@@ -128,24 +124,3 @@ The important feature is that it records **what was observed**, while leaving ra
     ]
   }
 }
-```
-Notice what this event **doesn't** say:
-- "ransomware": true
-- "malicious": true
-- "intent": "harmful"
-- "severity": "critical"
-- "contain": true
-
-Instead, it establishes something much narrower:
-
-**known process → protected user document → atypical write → resource changed → rate outside baseline → intent unknown → destructiveness unresolved**
-
-That object can then join other normalized events in the next layer:
-
-**tf.resource-transition/v0.1 × N**
- → correlation
- → counter-evidence
- → competing explanations
- → **tf.structural-pattern/v0.1**
-
-That is where the architecture gets interesting, because 500 individually boring normalized events can collectively reveal a very non-boring structural trajectory.
