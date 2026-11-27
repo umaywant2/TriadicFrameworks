@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Profile_Rectification_" src="https://github.com/user-attachments/assets/f09c9bea-52c2-4801-bb01-198e9cdd2177" />
+
 # Profile Rectification
 
 > **A consent-bound structural hygiene module for detecting exposure, manipulation, exploitation, identity drift, and context contamination across authorized digital surfaces.**
