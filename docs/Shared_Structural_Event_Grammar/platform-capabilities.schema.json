@@ -1,1 +1,505 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://triadicframeworks.org/schemas/shared-structural-event-grammar/platform-capabilities.schema.json",
+  "title": "Platform Capabilities",
+  "description": "A declaration of the observation, enforcement, recovery, and verification capabilities available to a platform adapter or execution environment. Capability declaration records what an environment can support; it does not authorize an action or assert that an action was executed.",
+  "type": "object",
+  "additionalProperties": false,
 
+  "required": [
+    "schema",
+    "capabilities_id",
+    "adapter",
+    "environment",
+    "observation",
+    "enforcement",
+    "recovery",
+    "verification",
+    "provenance"
+  ],
+
+  "properties": {
+    "schema": {
+      "const": "tf.platform-capabilities/v0.1",
+      "description": "Canonical schema-family identifier and version."
+    },
+
+    "capabilities_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Unique identifier for this capability declaration."
+    },
+
+    "adapter": {
+      "$ref": "#/$defs/adapter"
+    },
+
+    "environment": {
+      "$ref": "#/$defs/environment"
+    },
+
+    "observation": {
+      "$ref": "#/$defs/observationCapabilities"
+    },
+
+    "enforcement": {
+      "$ref": "#/$defs/enforcementCapabilities"
+    },
+
+    "recovery": {
+      "$ref": "#/$defs/recoveryCapabilities"
+    },
+
+    "verification": {
+      "$ref": "#/$defs/verificationCapabilities"
+    },
+
+    "limitations": {
+      "type": "array",
+      "description": "Known limitations affecting observation, enforcement, recovery, or verification.",
+      "items": {
+        "$ref": "#/$defs/limitation"
+      },
+      "default": []
+    },
+
+    "provenance": {
+      "$ref": "#/$defs/provenance"
+    },
+
+    "extensions": {
+      "type": "object",
+      "description": "Platform-specific or domain-specific capability data. Extensions must not redefine the semantics of canonical fields.",
+      "additionalProperties": true
+    }
+  },
+
+  "$defs": {
+    "supportLevel": {
+      "type": "string",
+      "enum": [
+        "supported",
+        "partial",
+        "unsupported",
+        "unknown"
+      ],
+      "description": "Declared support level for a capability."
+    },
+
+    "adapter": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "version"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Stable identifier for the platform adapter."
+        },
+
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Human-readable adapter name."
+        },
+
+        "version": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Adapter version associated with this capability declaration."
+        },
+
+        "implementation_ref": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional reference to the adapter implementation, specification, or documentation."
+        }
+      }
+    },
+
+    "environment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "class"
+      ],
+      "properties": {
+        "class": {
+          "type": "string",
+          "enum": [
+            "desktop",
+            "server",
+            "mobile",
+            "cloud",
+            "browser",
+            "container",
+            "network",
+            "ai_context",
+            "hybrid",
+            "other"
+          ],
+          "description": "General class of execution environment."
+        },
+
+        "platform": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Platform or operating environment represented by this declaration."
+        },
+
+        "platform_version": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional platform or environment version."
+        },
+
+        "scope": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional description of the environment scope to which this declaration applies."
+        }
+      }
+    },
+
+    "observationCapabilities": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "event_observation",
+        "actor_identity",
+        "actor_lineage",
+        "resource_classification",
+        "network_context"
+      ],
+      "properties": {
+        "event_observation": {
+          "$ref": "#/$defs/capability"
+        },
+
+        "actor_identity": {
+          "$ref": "#/$defs/capability"
+        },
+
+        "actor_lineage": {
+          "$ref": "#/$defs/capability"
+        },
+
+        "resource_classification": {
+          "$ref": "#/$defs/capability"
+        },
+
+        "network_context": {
+          "$ref": "#/$defs/capability"
+        },
+
+        "origin_transport_distinction": {
+          "$ref": "#/$defs/capability"
+        },
+
+        "baseline_access": {
+          "$ref": "#/$defs/capability"
+        },
+
+        "resource_metadata": {
+          "$ref": "#/$defs/capability"
+        },
+
+        "recovery_state_observation": {
+          "$ref": "#/$defs/capability"
+        },
+
+        "custom": {
+          "type": "array",
+          "description": "Additional observation capabilities not represented by canonical fields.",
+          "items": {
+            "$ref": "#/$defs/namedCapability"
+          },
+          "default": []
+        }
+      }
+    },
+
+    "enforcementCapabilities": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "write_denial",
+        "actor_containment",
+        "resource_isolation",
+        "network_isolation",
+        "quarantine"
+      ],
+      "properties": {
+        "write_denial": {
+          "$ref": "#/$defs/capability"
+        },
+
+        "actor_containment": {
+          "$ref": "#/$defs/capability"
+        },
+
+        "resource_isolation": {
+          "$ref": "#/$defs/capability"
+        },
+
+        "network_isolation": {
+          "$ref": "#/$defs/capability"
+        },
+
+        "quarantine": {
+          "$ref": "#/$defs/capability"
+        },
+
+        "permission_restriction": {
+          "$ref": "#/$defs/capability"
+        },
+
+        "actor_disablement": {
+          "$ref": "#/$defs/capability"
+        },
+
+        "session_termination": {
+          "$ref": "#/$defs/capability"
+        },
+
+        "custom": {
+          "type": "array",
+          "description": "Additional enforcement capabilities not represented by canonical fields.",
+          "items": {
+            "$ref": "#/$defs/namedCapability"
+          },
+          "default": []
+        }
+      }
+    },
+
+    "recoveryCapabilities": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "recovery"
+      ],
+      "properties": {
+        "recovery": {
+          "$ref": "#/$defs/capability"
+        },
+
+        "rollback": {
+          "$ref": "#/$defs/capability"
+        },
+
+        "snapshot_restore": {
+          "$ref": "#/$defs/capability"
+        },
+
+        "resource_restore": {
+          "$ref": "#/$defs/capability"
+        },
+
+        "configuration_restore": {
+          "$ref": "#/$defs/capability"
+        },
+
+        "custom": {
+          "type": "array",
+          "description": "Additional recovery capabilities not represented by canonical fields.",
+          "items": {
+            "$ref": "#/$defs/namedCapability"
+          },
+          "default": []
+        }
+      }
+    },
+
+    "verificationCapabilities": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "post_action_observation"
+      ],
+      "properties": {
+        "post_action_observation": {
+          "$ref": "#/$defs/capability"
+        },
+
+        "state_comparison": {
+          "$ref": "#/$defs/capability"
+        },
+
+        "persistence_detection": {
+          "$ref": "#/$defs/capability"
+        },
+
+        "reappearance_detection": {
+          "$ref": "#/$defs/capability"
+        },
+
+        "recovery_verification": {
+          "$ref": "#/$defs/capability"
+        },
+
+        "custom": {
+          "type": "array",
+          "description": "Additional verification capabilities not represented by canonical fields.",
+          "items": {
+            "$ref": "#/$defs/namedCapability"
+          },
+          "default": []
+        }
+      }
+    },
+
+    "capability": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "support"
+      ],
+      "properties": {
+        "support": {
+          "$ref": "#/$defs/supportLevel"
+        },
+
+        "mode": {
+          "type": "string",
+          "enum": [
+            "native",
+            "derived",
+            "delegated",
+            "external",
+            "manual",
+            "mixed",
+            "unknown"
+          ],
+          "description": "How the capability is provided when available."
+        },
+
+        "requires_privilege": {
+          "type": "boolean",
+          "description": "Whether elevated, special, or additional platform authority is required to use this capability."
+        },
+
+        "requires_user_interaction": {
+          "type": "boolean",
+          "description": "Whether use of this capability requires an interactive user step."
+        },
+
+        "conditions": {
+          "type": "array",
+          "description": "Conditions that constrain availability of this capability.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        },
+
+        "notes": {
+          "type": "string",
+          "description": "Optional bounded explanation of capability behavior or limitations."
+        }
+      }
+    },
+
+    "namedCapability": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "capability"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Stable name for an additional capability."
+        },
+
+        "capability": {
+          "$ref": "#/$defs/capability"
+        }
+      }
+    },
+
+    "limitation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "code",
+        "description"
+      ],
+      "properties": {
+        "code": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Machine-readable identifier for the limitation."
+        },
+
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Human-readable description of the limitation."
+        },
+
+        "affects": {
+          "type": "array",
+          "description": "Capability names or capability groups affected by the limitation.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        },
+
+        "severity": {
+          "type": "string",
+          "enum": [
+            "informational",
+            "minor",
+            "material",
+            "blocking"
+          ],
+          "description": "Degree to which the limitation affects reliable use of the declared capabilities."
+        }
+      }
+    },
+
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "producer",
+        "created_at"
+      ],
+      "properties": {
+        "producer": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Adapter, platform component, configuration process, or other producer responsible for this declaration."
+        },
+
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+
+        "source_refs": {
+          "type": "array",
+          "description": "References to documentation, discovery results, configuration state, or other sources supporting the declaration.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        }
+      }
+    }
+  }
+}
