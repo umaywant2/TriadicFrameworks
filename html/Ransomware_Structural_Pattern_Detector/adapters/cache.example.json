@@ -1,0 +1,238 @@
+{
+  "schema": "tf.rspd-adapter.cache/v0.1",
+  "adapter": {
+    "id": "rspd-cache-example",
+    "name": "RSPD Cache Example Adapter",
+    "version": "0.1.0",
+    "status": "experimental",
+    "profile": "distributed_cache_observer",
+    "implementation_ref": "example://rspd-cache-adapter"
+  },
+  "environment": {
+    "class": "distributed",
+    "engine": "synthetic-example-cache",
+    "engine_version": "example",
+    "deployment": "cluster"
+  },
+  "scope": {
+    "mode": "cache",
+    "scope_ref": "scope://example-protected-cache",
+    "includes_replication": true,
+    "includes_persistent_state": false,
+    "includes_source_relationships": true
+  },
+  "observation": {
+    "sources": [
+      {
+        "id": "example-cache-operations",
+        "class": "cache_operation",
+        "support": "partial",
+        "native_name": "synthetic-cache-operation-source",
+        "direct_or_derived": "mixed"
+      },
+      {
+        "id": "example-expiration-state",
+        "class": "expiration",
+        "support": "partial",
+        "native_name": "synthetic-expiration-source",
+        "direct_or_derived": "mixed"
+      },
+      {
+        "id": "example-replication-state",
+        "class": "replication",
+        "support": "partial",
+        "native_name": "synthetic-replication-source",
+        "direct_or_derived": "mixed"
+      },
+      {
+        "id": "example-source-relationship",
+        "class": "source_adapter",
+        "support": "partial",
+        "native_name": "synthetic-source-reference",
+        "direct_or_derived": "derived"
+      }
+    ],
+    "continuity": "continuous",
+    "actor_context_collection": true,
+    "source_relationship_collection": true,
+    "expiration_context_collection": true,
+    "eviction_context_collection": true,
+    "replication_context_collection": true,
+    "persistence_state_collection": false,
+    "deduplication": true,
+    "event_loss_detectable": true
+  },
+  "normalization": {
+    "output_schema": "tf.resource-transition/v0.1",
+    "preserve_provenance": true,
+    "preserve_unknowns": true,
+    "preserve_source_dependencies": true,
+    "preserve_authority_relationship": true,
+    "preserve_expiration_context": true,
+    "preserve_eviction_context": true,
+    "preserve_replication_relationships": true,
+    "preserve_persistence_relationships": true,
+    "redaction_enabled": true
+  },
+  "cache_context": {
+    "authority_state": "derived",
+    "reconstructability": "unknown",
+    "source_relationship_awareness": "partial",
+    "expiration_awareness": "partial",
+    "eviction_awareness": "partial",
+    "persistence_awareness": "unknown",
+    "replication_awareness": "partial",
+    "actor_origin_awareness": "partial"
+  },
+  "capabilities": {
+    "schema": "tf.platform-capabilities/v0.1",
+    "declaration_ref": "capabilities://rspd-cache-example/v0.1",
+    "observation": {
+      "event_observation": "partial",
+      "actor_identity": "partial",
+      "actor_lineage": "unknown",
+      "resource_classification": "partial",
+      "baseline_access": "partial",
+      "source_state_observation": "partial",
+      "persistence_state_observation": "unknown"
+    },
+    "enforcement": {
+      "write_denial": "unknown",
+      "actor_containment": "unknown",
+      "resource_isolation": "unknown",
+      "replication_suspension": "unknown",
+      "bounded_invalidation": "unknown",
+      "bounded_flush": "unknown"
+    },
+    "recovery": {
+      "recovery": "unknown",
+      "rebuild": "unknown",
+      "snapshot_restore": "unknown",
+      "persistent_state_restore": "unknown"
+    },
+    "verification": {
+      "post_action_observation": "partial",
+      "cache_state_comparison": "partial",
+      "source_state_comparison": "partial",
+      "persistence_detection": "unknown",
+      "reappearance_detection": "partial",
+      "rebuild_verification": "unknown"
+    }
+  },
+  "containment": {
+    "decision_schema": "tf.containment-decision/v0.1",
+    "default_authority": "recommend_only",
+    "authorization_required": true,
+    "fallback_allowed": true
+  },
+  "recovery": {
+    "reconstructable_state_observed": false,
+    "source_state_observed": true,
+    "persistent_state_observed": false,
+    "snapshot_state_observed": false
+  },
+  "verification": {
+    "output_schema": "tf.verification/v0.1",
+    "rescan_supported": "partial",
+    "cache_state_comparison": "partial",
+    "source_state_comparison": "partial",
+    "cross_node_comparison": "partial",
+    "rebuild_verification": "unknown",
+    "preserve_limitations": true
+  },
+  "privacy": {
+    "data_minimization": true,
+    "local_processing_preferred": true,
+    "plaintext_credentials_allowed": false,
+    "cached_contents_exported": false,
+    "raw_keys_exported": false,
+    "connection_secrets_exported": false,
+    "pseudonymous_resource_ids": true
+  },
+  "limitations": [
+    {
+      "code": "EXAMPLE-CONFIG",
+      "description": "This synthetic example does not describe the capabilities of a deployed cache adapter.",
+      "severity": "informational",
+      "affects": [
+        "all_capability_claims"
+      ]
+    },
+    {
+      "code": "SOURCE-STATE-PARTIAL",
+      "description": "The relationship between cached state and authoritative source state is only partially observable.",
+      "severity": "material",
+      "affects": [
+        "source_state_observation",
+        "source_state_comparison",
+        "reconstructability"
+      ]
+    },
+    {
+      "code": "PERSISTENCE-UNESTABLISHED",
+      "description": "Persistent cache state and persistent-state recovery have not been established.",
+      "severity": "material",
+      "affects": [
+        "persistence_awareness",
+        "persistence_state_observation",
+        "persistent_state_restore"
+      ]
+    },
+    {
+      "code": "ACTOR-ORIGIN-PARTIAL",
+      "description": "The cache executor may be observable without establishing the actor that originated the request.",
+      "severity": "material",
+      "affects": [
+        "actor_lineage",
+        "actor_origin_awareness"
+      ]
+    },
+    {
+      "code": "REPLICATION-DEPENDENT",
+      "description": "Observations on multiple cache nodes may represent replicated instances of one originating transition.",
+      "severity": "material",
+      "affects": [
+        "replication_awareness",
+        "event_count",
+        "evidence_independence"
+      ]
+    },
+    {
+      "code": "ENFORCEMENT-UNESTABLISHED",
+      "description": "Write restriction, actor containment, cache isolation, replication suspension, invalidation, and flush capabilities have not been established.",
+      "severity": "material",
+      "affects": [
+        "write_denial",
+        "actor_containment",
+        "resource_isolation",
+        "replication_suspension",
+        "bounded_invalidation",
+        "bounded_flush"
+      ]
+    },
+    {
+      "code": "REBUILD-UNESTABLISHED",
+      "description": "Cache rebuild and rebuild verification have not been established.",
+      "severity": "material",
+      "affects": [
+        "rebuild",
+        "rebuild_verification"
+      ]
+    }
+  ],
+  "provenance": {
+    "producer": "TriadicFrameworks example configuration",
+    "created_at": "2026-11-26T00:00:00Z",
+    "specification_ref": "cache.md",
+    "detector_ref": "../detector.json",
+    "capabilities_schema_ref": "../../Shared_Structural_Event_Grammar/platform-capabilities.schema.json",
+    "source_refs": [
+      "cache.schema.json",
+      "cache.md",
+      "../detector.json",
+      "../../Shared_Structural_Event_Grammar/README.md",
+      "../../Shared_Structural_Event_Grammar/resource-transition.schema.json",
+      "../../Shared_Structural_Event_Grammar/platform-capabilities.schema.json"
+    ]
+  }
+}

@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Ransomware_Structural_Pattern_Detector/adapters/cache.md">
+  <title>Cache Adapter</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Ransomware_Structural_Pattern_Detector/adapters/cache.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Ransomware_Structural_Pattern_Detector/adapters/cache.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="cache-adapter">Cache Adapter</h1>
+<blockquote>
+<p><strong>Adapter specification for representing authorized cache-resource transitions within the Ransomware Structural Pattern Detector without confusing cached state, source-of-truth state, eviction, expiration, invalidation, persistence, or replication.</strong></p>
+</blockquote>
+<p>The Cache adapter connects cache-visible structural transitions to the Shared Structural Event Grammar.</p>
+<p>Its governing rule is:</p>
+<blockquote>
+<p><strong>Observe cache state as cache state. Do not silently promote mutation of a derived or temporary representation into mutation of its authoritative source.</strong></p>
+</blockquote>
+<hr>
+<h2 id="status">Status</h2>
+<ul>
+<li><strong>Adapter ID:</strong> <code>rspd-cache</code></li>
+<li><strong>Environment:</strong> Cache systems</li>
+<li><strong>Status:</strong> Experimental</li>
+<li><strong>Role:</strong> Cache observation, normalization, capability declaration, bounded response mapping, persistence/recovery representation, and verification support</li>
+<li><strong>Normalized observation:</strong> <code>tf.resource-transition/v0.1</code></li>
+<li><strong>Capability declaration:</strong> <code>tf.platform-capabilities/v0.1</code></li>
+<li><strong>Decision input:</strong> <code>tf.containment-decision/v0.1</code></li>
+<li><strong>Execution output:</strong> <code>tf.response-outcome/v0.1</code></li>
+<li><strong>Verification output:</strong> <code>tf.verification/v0.1</code></li>
+</ul>
+<hr>
+<h1 id="architectural-boundary">Architectural Boundary</h1>
+<p>A cache may sit between a consumer and an authoritative resource:</p>
+<p><strong>Application / Service Actor</strong></p>
+<p>↓</p>
+<p><strong>Cache Operation</strong></p>
+<p>↓</p>
+<p><strong>Cached Resource</strong></p>
+<p>↓</p>
+<p><strong>Backing or Authoritative Resource</strong></p>
+<p>A cache transition does not automatically imply a transition in the authoritative resource.</p>
+<p>Likewise, a change in the authoritative resource may not immediately establish the state of every cache derived from it.</p>
+<p>The adapter therefore preserves the distinction among:</p>
+<ul>
+<li>authoritative state;</li>
+<li>cached state;</li>
+<li>derived state;</li>
+<li>persistent cache state;</li>
+<li>replicated cache state;</li>
+<li>unknown source relationship.</li>
+</ul>
+<hr>
+<h1 id="cache-resources">Cache Resources</h1>
+<p>Candidate cache resources include:</p>
+<ul>
+<li>cached object;</li>
+<li>key/value entry;</li>
+<li>cached document representation;</li>
+<li>cached query result;</li>
+<li>cached application state;</li>
+<li>metadata cache;</li>
+<li>index cache;</li>
+<li>session cache;</li>
+<li>local cache;</li>
+<li>distributed cache;</li>
+<li>persistent cache;</li>
+<li>cache snapshot;</li>
+<li>replication state;</li>
+<li>domain-defined cache resource.</li>
+</ul>
+<p>The adapter should represent structural identity without unnecessarily exporting cached contents.</p>
+<hr>
+<h1 id="transition-classes">Transition Classes</h1>
+<p>Cache transitions may include:</p>
+<ul>
+<li>create;</li>
+<li>read;</li>
+<li>write;</li>
+<li>modify;</li>
+<li>replace;</li>
+<li>invalidate;</li>
+<li>evict;</li>
+<li>expire;</li>
+<li>delete;</li>
+<li>flush;</li>
+<li>replicate;</li>
+<li>restore;</li>
+<li>rebuild;</li>
+<li>persist;</li>
+<li>reload.</li>
+</ul>
+<p>These operations do not all have the same structural meaning.</p>
+<p>In particular:</p>
+<blockquote>
+<p><strong>Eviction ≠ destructive source deletion</strong></p>
+<p><strong>Expiration ≠ malicious destruction</strong></p>
+<p><strong>Invalidation ≠ source corruption</strong></p>
+<p><strong>Cache flush ≠ necessarily permanent data loss</strong></p>
+</blockquote>
+<p>Their meaning depends on the cache's relationship to authoritative and persistent state.</p>
+<hr>
+<h1 id="authority-relationship">Authority Relationship</h1>
+<p>A concrete adapter should preserve whether cached state is:</p>
+<ul>
+<li>derived from an authoritative source;</li>
+<li>authoritative for some bounded purpose;</li>
+<li>independently persistent;</li>
+<li>reconstructable;</li>
+<li>replicated;</li>
+<li>ephemeral;</li>
+<li>of unknown authority.</li>
+</ul>
+<p>This relationship materially affects structural interpretation.</p>
+<p>Loss of a reconstructable cache entry may have very different consequences from loss of the only persistent copy of a resource.</p>
+<hr>
+<h1 id="actor-semantics">Actor Semantics</h1>
+<p>Candidate cache actors include:</p>
+<ul>
+<li>application;</li>
+<li>service;</li>
+<li>process;</li>
+<li>script;</li>
+<li>user;</li>
+<li>system;</li>
+<li>cache service;</li>
+<li>replication service;</li>
+<li>remote actor;</li>
+<li>synchronization service;</li>
+<li>unknown actor.</li>
+</ul>
+<p>The cache service executing a mutation may be the local operational actor without being the origin of the request.</p>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Cache executor ≠ necessarily origin actor</strong></p>
+</blockquote>
+<p>and:</p>
+<blockquote>
+<p><strong>Transport or replication actor ≠ necessarily origin actor</strong></p>
+</blockquote>
+<hr>
+<h1 id="observation-layers">Observation Layers</h1>
+<p>A concrete adapter may observe one or more layers.</p>
+<h2 id="cache-operation">Cache Operation</h2>
+<p>Native evidence concerning reads, writes, invalidations, expiration, eviction, flushes, or related operations.</p>
+<h2 id="entry-state">Entry State</h2>
+<p>Evidence about the state of a particular cache resource.</p>
+<h2 id="actor-context">Actor Context</h2>
+<p>Evidence about the application, service, session, process, account, or remote actor associated with an operation.</p>
+<h2 id="authority-relationship_1">Authority Relationship</h2>
+<p>Evidence connecting cached state to a backing or authoritative resource.</p>
+<h2 id="persistence-state">Persistence State</h2>
+<p>Evidence concerning persistent cache state, snapshots, journals, or another durable representation.</p>
+<h2 id="replication-state">Replication State</h2>
+<p>Evidence concerning transitions transported among cache nodes or environments.</p>
+<p>Each observation retains its own provenance.</p>
+<hr>
+<h1 id="correlation">Correlation</h1>
+<p>Several cache observations may describe one underlying structural event.</p>
+<p>For example:</p>
+<p><strong>Application request</strong></p>
+<p>↓</p>
+<p><strong>Cache write</strong></p>
+<p>↓</p>
+<p><strong>Replication</strong></p>
+<p>↓</p>
+<p><strong>Secondary-node observation</strong></p>
+<p>This must not automatically become several independent originating transitions.</p>
+<p>Likewise:</p>
+<p><strong>Authoritative resource changed</strong></p>
+<p>↓</p>
+<p><strong>Cache invalidated</strong></p>
+<p>may represent a coherent update path rather than destructive activity.</p>
+<p>Dependencies must remain visible.</p>
+<hr>
+<h1 id="baseline">Baseline</h1>
+<p>A cache-specific baseline may describe:</p>
+<ul>
+<li>known actors;</li>
+<li>expected operation classes;</li>
+<li>typical write rate;</li>
+<li>common invalidation activity;</li>
+<li>normal eviction patterns;</li>
+<li>ordinary expiration behavior;</li>
+<li>expected replication;</li>
+<li>expected rebuilds;</li>
+<li>established flush operations;</li>
+<li>normal persistence behavior.</li>
+</ul>
+<p>Deviation provides evidence for analysis.</p>
+<p>It is not proof of ransomware.</p>
+<hr>
+<h1 id="competing-explanations">Competing Explanations</h1>
+<p>Legitimate cache activity may be broad, rapid, and destructive-looking.</p>
+<p>Competing explanations may include:</p>
+<ul>
+<li>ordinary eviction;</li>
+<li>TTL expiration;</li>
+<li>application invalidation;</li>
+<li>deployment;</li>
+<li>cache warming;</li>
+<li>cache rebuilding;</li>
+<li>scaling;</li>
+<li>maintenance;</li>
+<li>failover;</li>
+<li>replication;</li>
+<li>schema or application changes;</li>
+<li>administrative flush;</li>
+<li>recovery;</li>
+<li>configuration changes.</li>
+</ul>
+<p>These explanations should remain visible when supported by evidence.</p>
+<hr>
+<h1 id="persistence-and-recovery">Persistence and Recovery</h1>
+<p>A cache may be:</p>
+<ul>
+<li>entirely ephemeral;</li>
+<li>reconstructable from authoritative state;</li>
+<li>partially persistent;</li>
+<li>independently durable;</li>
+<li>backed by snapshots or another recovery mechanism.</li>
+</ul>
+<p>The adapter must preserve that distinction.</p>
+<p>Recovery semantics therefore remain:</p>
+<p><strong>Recovery or rebuild mechanism exists</strong></p>
+<p>↓</p>
+<p><strong>Usable source or recovery state exists</strong></p>
+<p>↓</p>
+<p><strong>Rebuild or recovery requested</strong></p>
+<p>↓</p>
+<p><strong>Recovery attempted</strong></p>
+<p>↓</p>
+<p><strong>Recovery completed</strong></p>
+<p>↓</p>
+<p><strong>Resulting cache state verified</strong></p>
+<p>A cache being rebuildable does not establish that its backing source is healthy.</p>
+<p>Likewise, a healthy cache does not establish that the authoritative source is healthy.</p>
+<hr>
+<h1 id="replication">Replication</h1>
+<p>Distributed caches may replicate transitions among nodes.</p>
+<p>The adapter should preserve:</p>
+<ul>
+<li>origin candidate;</li>
+<li>transport actor;</li>
+<li>source node/environment;</li>
+<li>recipient node/environment;</li>
+<li>replication relationship;</li>
+<li>timing;</li>
+<li>source dependencies.</li>
+</ul>
+<p>A replicated cache mutation does not become a new independent origin merely because it appears on another node.</p>
+<hr>
+<h1 id="containment">Containment</h1>
+<p>Potential response classes include:</p>
+<ul>
+<li>increase observation;</li>
+<li>notify an authorized operator;</li>
+<li>deny cache writes;</li>
+<li>isolate a cache resource;</li>
+<li>restrict an actor;</li>
+<li>suspend replication;</li>
+<li>preserve evidence;</li>
+<li>invalidate bounded cached state;</li>
+<li>prepare recovery or rebuild;</li>
+<li>initiate recovery or rebuild;</li>
+<li>request manual review.</li>
+</ul>
+<p>Availability and safety of these responses are implementation-specific.</p>
+<p>The generic adapter does not declare them automatically supported.</p>
+<hr>
+<h1 id="verification">Verification</h1>
+<p>Post-response verification may evaluate:</p>
+<ul>
+<li>whether unexpected mutations continue;</li>
+<li>whether another actor continues the pattern;</li>
+<li>whether corrupted or destructive state reappears;</li>
+<li>whether replication reintroduces it;</li>
+<li>whether the authoritative source remains coherent;</li>
+<li>whether cached state can be safely reconstructed;</li>
+<li>whether persistent cache state remains usable;</li>
+<li>whether the adapter can observe enough of the environment to support the conclusion.</li>
+</ul>
+<p>Verification remains bounded to observed cache and source relationships.</p>
+<hr>
+<h1 id="core-invariants">Core Invariants</h1>
+<h2 id="cache-inv-01-cache-state-source-state">CACHE-INV-01 — Cache State ≠ Source State</h2>
+<p>A cache mutation does not independently establish mutation of the authoritative resource.</p>
+<h2 id="cache-inv-02-eviction-destructive-deletion">CACHE-INV-02 — Eviction ≠ Destructive Deletion</h2>
+<p>Normal eviction must remain distinguishable from destructive resource loss.</p>
+<h2 id="cache-inv-03-expiration-malice">CACHE-INV-03 — Expiration ≠ Malice</h2>
+<p>TTL or policy expiration does not independently establish harmful intent.</p>
+<h2 id="cache-inv-04-invalidation-corruption">CACHE-INV-04 — Invalidation ≠ Corruption</h2>
+<p>Invalidation may be an expected coherence operation.</p>
+<h2 id="cache-inv-05-executor-origin">CACHE-INV-05 — Executor ≠ Origin</h2>
+<p>The cache service performing a mutation may not be the actor that originated it.</p>
+<h2 id="cache-inv-06-replication-independent-origin">CACHE-INV-06 — Replication ≠ Independent Origin</h2>
+<p>Replicated transitions must retain dependency on their originating transition where known.</p>
+<h2 id="cache-inv-07-rebuildable-harmless">CACHE-INV-07 — Rebuildable ≠ Harmless</h2>
+<p>A reconstructable cache may still produce material availability or propagation effects.</p>
+<h2 id="cache-inv-08-healthy-cache-healthy-source">CACHE-INV-08 — Healthy Cache ≠ Healthy Source</h2>
+<p>Verification of cached state does not establish correctness of an unverified authoritative source.</p>
+<h2 id="cache-inv-09-capability-authority">CACHE-INV-09 — Capability ≠ Authority</h2>
+<p>Technical ability to flush, isolate, restrict, or rebuild cache state does not authorize the action.</p>
+<h2 id="cache-inv-10-execution-resolution">CACHE-INV-10 — Execution ≠ Resolution</h2>
+<p>A successfully executed cache response does not prove the broader structural condition has resolved.</p>
+<h2 id="cache-inv-11-observation-gap-no-activity">CACHE-INV-11 — Observation Gap ≠ No Activity</h2>
+<p>Unavailable cache telemetry cannot establish absence of transitions.</p>
+<h2 id="cache-inv-12-provenance-survives-derivation">CACHE-INV-12 — Provenance Survives Derivation</h2>
+<p>Cache-to-source relationships and replicated observations must preserve sufficient lineage for reconstruction.</p>
+<hr>
+<h1 id="shared-contracts">Shared Contracts</h1>
+<p>The Cache adapter participates in:</p>
+<ul>
+<li><code>tf.resource-transition/v0.1</code></li>
+<li><code>tf.platform-capabilities/v0.1</code></li>
+<li><code>tf.containment-decision/v0.1</code></li>
+<li><code>tf.response-outcome/v0.1</code></li>
+<li><code>tf.verification/v0.1</code></li>
+</ul>
+<p>The detector may produce:</p>
+<ul>
+<li><code>tf.structural-pattern/v0.1</code></li>
+</ul>
+<hr>
+<h1 id="canonical-summary">Canonical Summary</h1>
+<blockquote>
+<p><strong>The Cache adapter represents authorized cache transitions while preserving the distinction between cached state, authoritative state, expiration, eviction, invalidation, persistence, replication, recovery, and verified resulting state.</strong></p>
+</blockquote>
+<p>Its central rule is:</p>
+<blockquote>
+<p><strong>A transition in a derived representation is evidence about that representation until lineage establishes what it means for the underlying source.</strong></p>
+</blockquote>
+  </main>
+</body>
+</html>

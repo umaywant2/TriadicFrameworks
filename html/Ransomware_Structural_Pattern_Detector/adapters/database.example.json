@@ -1,0 +1,202 @@
+{
+  "schema": "tf.rspd-adapter.database/v0.1",
+  "adapter": {
+    "id": "rspd-database-example",
+    "name": "RSPD Database Example Adapter",
+    "version": "0.1.0",
+    "status": "experimental",
+    "profile": "hybrid",
+    "implementation_ref": "example://rspd-database-adapter"
+  },
+  "environment": {
+    "class": "relational",
+    "engine": "synthetic-example-database",
+    "engine_version": "example",
+    "deployment": "server"
+  },
+  "scope": {
+    "mode": "database",
+    "scope_ref": "scope://example-protected-database",
+    "includes_replication": false,
+    "includes_recovery_resources": true,
+    "includes_storage_context": false
+  },
+  "observation": {
+    "sources": [
+      {
+        "id": "example-logical-change",
+        "class": "logical_change",
+        "support": "partial",
+        "native_name": "synthetic-logical-change-source",
+        "direct_or_derived": "mixed"
+      },
+      {
+        "id": "example-transaction-context",
+        "class": "transaction",
+        "support": "partial",
+        "native_name": "synthetic-transaction-source",
+        "direct_or_derived": "mixed"
+      },
+      {
+        "id": "example-recovery-state",
+        "class": "recovery",
+        "support": "unknown",
+        "native_name": "synthetic-recovery-source",
+        "direct_or_derived": "unknown"
+      }
+    ],
+    "continuity": "continuous",
+    "transaction_context_collection": true,
+    "actor_context_collection": true,
+    "replication_context_collection": false,
+    "recovery_state_collection": false,
+    "storage_context_collection": false,
+    "deduplication": true,
+    "event_loss_detectable": true
+  },
+  "normalization": {
+    "output_schema": "tf.resource-transition/v0.1",
+    "preserve_provenance": true,
+    "preserve_unknowns": true,
+    "preserve_layer": true,
+    "preserve_transaction_relationships": true,
+    "preserve_replication_relationships": true,
+    "preserve_source_dependencies": true,
+    "redaction_enabled": true
+  },
+  "database_context": {
+    "logical_awareness": "partial",
+    "transaction_awareness": "partial",
+    "storage_awareness": "unknown",
+    "replication_awareness": "unknown",
+    "recovery_awareness": "unknown",
+    "actor_origin_awareness": "partial"
+  },
+  "capabilities": {
+    "schema": "tf.platform-capabilities/v0.1",
+    "declaration_ref": "capabilities://rspd-database-example/v0.1",
+    "observation": {
+      "event_observation": "partial",
+      "actor_identity": "partial",
+      "actor_lineage": "partial",
+      "resource_classification": "partial",
+      "baseline_access": "partial",
+      "recovery_state_observation": "unknown"
+    },
+    "enforcement": {
+      "write_denial": "unknown",
+      "actor_containment": "unknown",
+      "resource_isolation": "unknown",
+      "permission_restriction": "unknown",
+      "replication_suspension": "unknown"
+    },
+    "recovery": {
+      "recovery": "unknown",
+      "rollback": "unknown",
+      "snapshot_restore": "unknown",
+      "resource_restore": "unknown"
+    },
+    "verification": {
+      "post_action_observation": "partial",
+      "state_comparison": "partial",
+      "persistence_detection": "partial",
+      "reappearance_detection": "partial",
+      "recovery_verification": "unknown"
+    }
+  },
+  "containment": {
+    "decision_schema": "tf.containment-decision/v0.1",
+    "default_authority": "recommend_only",
+    "authorization_required": true,
+    "fallback_allowed": true
+  },
+  "recovery": {
+    "recovery_state_observed": false,
+    "backup_state_observed": false,
+    "snapshot_state_observed": false,
+    "recovery_interference_observable": false
+  },
+  "verification": {
+    "output_schema": "tf.verification/v0.1",
+    "rescan_supported": "partial",
+    "logical_state_comparison": "partial",
+    "cross_replica_comparison": "unknown",
+    "recovery_verification": "unknown",
+    "preserve_limitations": true
+  },
+  "privacy": {
+    "data_minimization": true,
+    "local_processing_preferred": true,
+    "plaintext_credentials_allowed": false,
+    "query_contents_exported": false,
+    "raw_record_contents_exported": false,
+    "connection_secrets_exported": false,
+    "pseudonymous_resource_ids": true
+  },
+  "limitations": [
+    {
+      "code": "EXAMPLE-CONFIG",
+      "description": "This synthetic example does not describe the capabilities of a deployed database adapter.",
+      "severity": "informational",
+      "affects": [
+        "all_capability_claims"
+      ]
+    },
+    {
+      "code": "STORAGE-LAYER-UNOBSERVED",
+      "description": "This example does not establish visibility into the database engine's underlying storage transitions.",
+      "severity": "material",
+      "affects": [
+        "storage_awareness"
+      ]
+    },
+    {
+      "code": "REPLICATION-UNOBSERVED",
+      "description": "This example does not establish cross-replica observation or origin lineage.",
+      "severity": "material",
+      "affects": [
+        "replication_awareness",
+        "cross_replica_comparison"
+      ]
+    },
+    {
+      "code": "ENFORCEMENT-UNESTABLISHED",
+      "description": "Database write restriction, actor containment, resource isolation, permission restriction, and replication suspension have not been established.",
+      "severity": "material",
+      "affects": [
+        "write_denial",
+        "actor_containment",
+        "resource_isolation",
+        "permission_restriction",
+        "replication_suspension"
+      ]
+    },
+    {
+      "code": "RECOVERY-UNESTABLISHED",
+      "description": "Backup, snapshot, rollback, restoration, and recovery verification capabilities have not been established.",
+      "severity": "material",
+      "affects": [
+        "recovery",
+        "rollback",
+        "snapshot_restore",
+        "resource_restore",
+        "recovery_verification"
+      ]
+    }
+  ],
+  "provenance": {
+    "producer": "TriadicFrameworks example configuration",
+    "created_at": "2026-11-26T00:00:00Z",
+    "specification_ref": "database.md",
+    "detector_ref": "../detector.json",
+    "capabilities_schema_ref": "../../Shared_Structural_Event_Grammar/platform-capabilities.schema.json",
+    "source_refs": [
+      "database.schema.json",
+      "database.md",
+      "../detector.json",
+      "../../Shared_Structural_Event_Grammar/README.md",
+      "../../Shared_Structural_Event_Grammar/resource-transition.schema.json",
+      "../../Shared_Structural_Event_Grammar/platform-capabilities.schema.json"
+    ]
+  }
+}

@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Ransomware_Structural_Pattern_Detector/adapters/database.md">
+  <title>Database Adapter</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Ransomware_Structural_Pattern_Detector/adapters/database.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Ransomware_Structural_Pattern_Detector/adapters/database.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<h1 id="database-adapter">Database Adapter</h1>
+<blockquote>
+<p><strong>Adapter specification for representing authorized database resource transitions within the Ransomware Structural Pattern Detector without confusing logical data mutation, storage mutation, transaction activity, recovery state, or database availability.</strong></p>
+</blockquote>
+<p>The Database adapter connects database-visible structural transitions to the Shared Structural Event Grammar.</p>
+<p>Its governing rule is:</p>
+<blockquote>
+<p><strong>Observe database structure at the layer where evidence exists. Do not silently translate a logical database event into a filesystem event, or a storage event into a logical database conclusion.</strong></p>
+</blockquote>
+<hr>
+<h2 id="status">Status</h2>
+<ul>
+<li><strong>Adapter ID:</strong> <code>rspd-database</code></li>
+<li><strong>Environment:</strong> Database systems</li>
+<li><strong>Status:</strong> Experimental</li>
+<li><strong>Role:</strong> Database observation, normalization, capability declaration, bounded response mapping, recovery-state representation, and verification support</li>
+<li><strong>Normalized observation:</strong> <code>tf.resource-transition/v0.1</code></li>
+<li><strong>Capability declaration:</strong> <code>tf.platform-capabilities/v0.1</code></li>
+<li><strong>Decision input:</strong> <code>tf.containment-decision/v0.1</code></li>
+<li><strong>Execution output:</strong> <code>tf.response-outcome/v0.1</code></li>
+<li><strong>Verification output:</strong> <code>tf.verification/v0.1</code></li>
+</ul>
+<hr>
+<h1 id="architectural-boundary">Architectural Boundary</h1>
+<p>A database may expose several distinct structural layers:</p>
+<p><strong>Application / User / Service Actor</strong></p>
+<p>↓</p>
+<p><strong>Database Operation</strong></p>
+<p>↓</p>
+<p><strong>Transaction</strong></p>
+<p>↓</p>
+<p><strong>Logical Database Resource</strong></p>
+<p>↓</p>
+<p><strong>Database Engine</strong></p>
+<p>↓</p>
+<p><strong>Underlying Storage</strong></p>
+<p>A transition observed at one layer must not automatically become an observation at another.</p>
+<p>For example:</p>
+<p><strong>logical records changed</strong></p>
+<p>does not by itself establish:</p>
+<p><strong>database storage files were destructively rewritten</strong></p>
+<p>Likewise:</p>
+<p><strong>database storage files changed</strong></p>
+<p>does not by itself establish:</p>
+<p><strong>logical records were maliciously modified</strong></p>
+<p>The adapter preserves the layer from which evidence originated.</p>
+<hr>
+<h1 id="database-resources">Database Resources</h1>
+<p>Candidate shared resources include:</p>
+<ul>
+<li>database;</li>
+<li>schema;</li>
+<li>table or collection;</li>
+<li>record set;</li>
+<li>configuration;</li>
+<li>transaction state;</li>
+<li>backup;</li>
+<li>snapshot;</li>
+<li>recovery resource;</li>
+<li>replication state;</li>
+<li>database storage;</li>
+<li>audit or history resource;</li>
+<li>domain-defined database resource.</li>
+</ul>
+<p>Where the shared resource vocabulary is less specific than the native database model, database-specific detail should remain in adapter configuration, provenance, or extensions rather than redefining the shared grammar.</p>
+<hr>
+<h1 id="actor-semantics">Actor Semantics</h1>
+<p>Candidate actors include:</p>
+<ul>
+<li>user;</li>
+<li>application;</li>
+<li>service;</li>
+<li>script;</li>
+<li>administrative process;</li>
+<li>database engine;</li>
+<li>replication service;</li>
+<li>backup service;</li>
+<li>remote actor;</li>
+<li>system;</li>
+<li>unknown actor.</li>
+</ul>
+<p>The database engine may be the locally observable actor performing a storage mutation while another application, account, transaction, or remote system originated the logical request.</p>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Database engine ≠ necessarily origin actor</strong></p>
+</blockquote>
+<p>and:</p>
+<blockquote>
+<p><strong>Execution account ≠ human intent</strong></p>
+</blockquote>
+<hr>
+<h1 id="observation-layers">Observation Layers</h1>
+<p>A concrete adapter may observe one or more layers.</p>
+<h2 id="logical-observation">Logical Observation</h2>
+<p>Database-native evidence concerning logical resources or operations.</p>
+<h2 id="transaction-observation">Transaction Observation</h2>
+<p>Evidence concerning transaction boundaries, transaction behavior, or resulting state.</p>
+<h2 id="actor-observation">Actor Observation</h2>
+<p>Evidence associating database activity with an application, service, session, account, or other actor.</p>
+<h2 id="storage-observation">Storage Observation</h2>
+<p>Evidence concerning underlying storage obtained through another authorized observation source.</p>
+<h2 id="recovery-observation">Recovery Observation</h2>
+<p>Evidence concerning backups, snapshots, history, replicas, or other recoverability structures.</p>
+<h2 id="replication-observation">Replication Observation</h2>
+<p>Evidence concerning transitions transported between database environments.</p>
+<p>Each layer retains its own provenance.</p>
+<hr>
+<h1 id="normalization">Normalization</h1>
+<p>Database observations normalize into:</p>
+<p><strong><code>tf.resource-transition/v0.1</code></strong></p>
+<p>Normalization should preserve:</p>
+<ul>
+<li>observed layer;</li>
+<li>actor;</li>
+<li>resource;</li>
+<li>operation;</li>
+<li>structural action;</li>
+<li>transaction or correlation context where available;</li>
+<li>baseline state;</li>
+<li>direct consequence;</li>
+<li>recovery relationship;</li>
+<li>replication relationship;</li>
+<li>provenance.</li>
+</ul>
+<p>The adapter must preserve unknown values rather than filling gaps through assumption.</p>
+<hr>
+<h1 id="correlation">Correlation</h1>
+<p>Multiple database observations may describe one underlying transition.</p>
+<p>For example:</p>
+<p><strong>Application request</strong></p>
+<p>↓</p>
+<p><strong>Transaction</strong></p>
+<p>↓</p>
+<p><strong>Logical mutation</strong></p>
+<p>↓</p>
+<p><strong>Database-engine storage mutation</strong></p>
+<p>These observations may provide useful lineage without representing four independent destructive events.</p>
+<p>The adapter should preserve dependencies so the detector can avoid:</p>
+<ul>
+<li>duplicate event inflation;</li>
+<li>false acceleration;</li>
+<li>exaggerated scope;</li>
+<li>false evidence independence.</li>
+</ul>
+<hr>
+<h1 id="baseline">Baseline</h1>
+<p>A database-specific baseline may describe:</p>
+<ul>
+<li>known actors;</li>
+<li>expected application roles;</li>
+<li>typical operation classes;</li>
+<li>ordinary transaction rate;</li>
+<li>normal affected-resource scope;</li>
+<li>normal maintenance activity;</li>
+<li>expected backup activity;</li>
+<li>expected replication behavior;</li>
+<li>established batch workloads.</li>
+</ul>
+<p>Deviation from this baseline is evidence to evaluate.</p>
+<p>It is not proof of ransomware.</p>
+<hr>
+<h1 id="competing-explanations">Competing Explanations</h1>
+<p>Legitimate database activity may produce broad or rapid structural transitions.</p>
+<p>Relevant competing explanations can include:</p>
+<ul>
+<li>backup;</li>
+<li>restore;</li>
+<li>migration;</li>
+<li>maintenance;</li>
+<li>archival;</li>
+<li>batch processing;</li>
+<li>application deployment;</li>
+<li>synchronization;</li>
+<li>replication;</li>
+<li>administrative change;</li>
+<li>data transformation;</li>
+<li>testing;</li>
+<li>other authorized bulk activity.</li>
+</ul>
+<p>Counter-evidence must remain present when a destructive-pattern hypothesis is assessed.</p>
+<hr>
+<h1 id="recovery-structure">Recovery Structure</h1>
+<p>Database recovery requires particularly careful state separation:</p>
+<p><strong>Recovery mechanism exists</strong></p>
+<p>↓</p>
+<p><strong>Usable recovery state is observed</strong></p>
+<p>↓</p>
+<p><strong>Recovery is requested</strong></p>
+<p>↓</p>
+<p><strong>Recovery is attempted</strong></p>
+<p>↓</p>
+<p><strong>Recovery completes</strong></p>
+<p>↓</p>
+<p><strong>Logical database state is verified</strong></p>
+<p>Availability of a backup or recovery mechanism is not proof that restoration will succeed.</p>
+<p>Likewise, successful restoration execution is not proof that the resulting logical data state is correct.</p>
+<hr>
+<h1 id="replication">Replication</h1>
+<p>A database transition may propagate across:</p>
+<ul>
+<li>replicas;</li>
+<li>clusters;</li>
+<li>synchronized instances;</li>
+<li>remote services;</li>
+<li>cloud environments;</li>
+<li>other database nodes.</li>
+</ul>
+<p>The adapter should preserve:</p>
+<ul>
+<li>origin candidate;</li>
+<li>transport actor;</li>
+<li>source environment;</li>
+<li>recipient environment;</li>
+<li>replication relationship;</li>
+<li>timing;</li>
+<li>evidence dependency.</li>
+</ul>
+<p>A replicated transition does not become an independent origin merely because it appears on another database node.</p>
+<hr>
+<h1 id="containment">Containment</h1>
+<p>Potential structural response classes include:</p>
+<ul>
+<li>increase observation;</li>
+<li>notify an authorized operator;</li>
+<li>restrict writes;</li>
+<li>isolate a database resource;</li>
+<li>restrict an actor;</li>
+<li>suspend replication;</li>
+<li>preserve evidence;</li>
+<li>prepare recovery;</li>
+<li>initiate recovery;</li>
+<li>request manual review.</li>
+</ul>
+<p>Availability of these actions is implementation-specific.</p>
+<p>The generic adapter does not claim that a database system supports any particular enforcement mechanism.</p>
+<hr>
+<h1 id="verification">Verification</h1>
+<p>Post-response verification may evaluate:</p>
+<ul>
+<li>whether destructive logical transitions continue;</li>
+<li>whether another actor continues the pattern;</li>
+<li>whether affected-resource scope expands;</li>
+<li>whether replication reintroduces the condition;</li>
+<li>whether recovery state remains usable;</li>
+<li>whether restored logical state matches the intended bounded baseline;</li>
+<li>whether the adapter possesses sufficient visibility to support the conclusion.</li>
+</ul>
+<p>Verification remains bounded to the database resources and environments actually observed.</p>
+<hr>
+<h1 id="core-invariants">Core Invariants</h1>
+<h2 id="database-inv-01-logical-transition-storage-transition">DATABASE-INV-01 — Logical Transition ≠ Storage Transition</h2>
+<p>A logical database mutation and its underlying storage representation are distinct observations.</p>
+<h2 id="database-inv-02-database-engine-origin">DATABASE-INV-02 — Database Engine ≠ Origin</h2>
+<p>The engine executing a mutation may not be the actor that originated it.</p>
+<h2 id="database-inv-03-transaction-intent">DATABASE-INV-03 — Transaction ≠ Intent</h2>
+<p>A valid transaction does not establish benign intent.</p>
+<h2 id="database-inv-04-bulk-mutation-ransomware">DATABASE-INV-04 — Bulk Mutation ≠ Ransomware</h2>
+<p>High-volume database activity requires structural interpretation and competing explanations.</p>
+<h2 id="database-inv-05-replication-independent-origin">DATABASE-INV-05 — Replication ≠ Independent Origin</h2>
+<p>Replicated state must not automatically become independent evidence of multiple originating transitions.</p>
+<h2 id="database-inv-06-capability-authority">DATABASE-INV-06 — Capability ≠ Authority</h2>
+<p>Technical ability to restrict or restore database state does not authorize the action.</p>
+<h2 id="database-inv-07-execution-resolution">DATABASE-INV-07 — Execution ≠ Resolution</h2>
+<p>A successfully executed containment operation does not prove the structural condition has resolved.</p>
+<h2 id="database-inv-08-backup-exists-recovery-verified">DATABASE-INV-08 — Backup Exists ≠ Recovery Verified</h2>
+<p>Recovery availability, execution, and verified logical restoration are separate states.</p>
+<h2 id="database-inv-09-observation-gap-no-activity">DATABASE-INV-09 — Observation Gap ≠ No Activity</h2>
+<p>Unavailable history or telemetry cannot establish absence of transitions.</p>
+<h2 id="database-inv-10-provenance-survives-layer-changes">DATABASE-INV-10 — Provenance Survives Layer Changes</h2>
+<p>Correlation across application, transaction, logical, storage, replication, and recovery layers must preserve evidentiary lineage.</p>
+<hr>
+<h1 id="shared-contracts">Shared Contracts</h1>
+<p>The Database adapter participates in:</p>
+<ul>
+<li><code>tf.resource-transition/v0.1</code></li>
+<li><code>tf.platform-capabilities/v0.1</code></li>
+<li><code>tf.containment-decision/v0.1</code></li>
+<li><code>tf.response-outcome/v0.1</code></li>
+<li><code>tf.verification/v0.1</code></li>
+</ul>
+<p>The Ransomware Structural Pattern Detector may produce:</p>
+<ul>
+<li><code>tf.structural-pattern/v0.1</code></li>
+</ul>
+<hr>
+<h1 id="canonical-summary">Canonical Summary</h1>
+<blockquote>
+<p><strong>The Database adapter represents authorized database transitions while preserving the distinction between logical mutation, transaction activity, actors, underlying storage, replication, recovery, execution, and verified resulting state.</strong></p>
+</blockquote>
+<p>Its core rule is:</p>
+<blockquote>
+<p><strong>Preserve the layer where the evidence was observed. Correlate across layers without collapsing them.</strong></p>
+</blockquote>
+  </main>
+</body>
+</html>
