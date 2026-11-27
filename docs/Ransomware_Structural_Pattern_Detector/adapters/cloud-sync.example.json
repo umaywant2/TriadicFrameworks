@@ -1,0 +1,374 @@
+{
+  "schema": "tf.rspd-adapter.cloud-sync/v0.1",
+  "adapter": {
+    "id": "rspd-cloud-sync-example",
+    "name": "RSPD Cloud Sync Example Adapter",
+    "version": "0.1.0",
+    "status": "experimental",
+    "profile": "cross_environment",
+    "implementation_ref": "example://rspd-cloud-sync-adapter"
+  },
+  "environment": {
+    "class": "cloud_and_synchronization",
+    "provider": "synthetic-example-provider",
+    "provider_version": "example",
+    "deployment": "multi_environment",
+    "region_ref": "region://example"
+  },
+  "scope": {
+    "mode": "synchronization_relationship",
+    "scope_ref": "scope://example-synchronized-resources",
+    "resource_classes": [
+      "user_document",
+      "photo",
+      "video",
+      "audio",
+      "database",
+      "archive",
+      "project_file",
+      "backup",
+      "recovery_resource",
+      "cloud_resource"
+    ],
+    "environment_refs": [
+      "environment://example-endpoint-a",
+      "environment://example-cloud",
+      "environment://example-endpoint-b"
+    ],
+    "includes_shared_resources": true,
+    "includes_historical_versions": true,
+    "includes_recovery_resources": true,
+    "includes_remote_state": true
+  },
+  "observation": {
+    "sources": [
+      {
+        "id": "example-provider-changes",
+        "class": "provider_change_record",
+        "support": "partial",
+        "native_name": "synthetic-provider-change-source",
+        "scope_ref": "scope://example-synchronized-resources",
+        "direct_or_derived": "mixed",
+        "delay_state": "unknown",
+        "notes": "Synthetic provider-side change source. A concrete adapter must replace this with an evidence-backed declaration."
+      },
+      {
+        "id": "example-client-observations",
+        "class": "synchronization_client",
+        "support": "partial",
+        "native_name": "synthetic-sync-client-source",
+        "scope_ref": "scope://example-synchronized-resources",
+        "direct_or_derived": "mixed",
+        "delay_state": "unknown",
+        "notes": "Synthetic client-side observation source used to demonstrate dependent cross-environment evidence."
+      },
+      {
+        "id": "example-version-history",
+        "class": "version_history",
+        "support": "unknown",
+        "native_name": "synthetic-version-history-source",
+        "scope_ref": "scope://example-synchronized-resources",
+        "direct_or_derived": "unknown",
+        "delay_state": "not_applicable",
+        "notes": "Version-history visibility remains unknown until established by a concrete provider implementation."
+      }
+    ],
+    "continuity": "delayed",
+    "deduplication": true,
+    "deduplication_method_ref": "method://cloud-sync-example-correlation/v0.1",
+    "origin_collection": true,
+    "transport_collection": true,
+    "propagation_collection": true,
+    "version_lineage_collection": false,
+    "recovery_state_collection": false,
+    "event_loss_detectable": false,
+    "observation_delay_detectable": true
+  },
+  "normalization": {
+    "output_schema": "tf.resource-transition/v0.1",
+    "preserve_native_operation": true,
+    "preserve_provenance": true,
+    "preserve_unknowns": true,
+    "preserve_source_dependencies": true,
+    "preserve_origin_transport_distinction": true,
+    "preserve_replication_relationships": true,
+    "preserve_propagation_relationships": true,
+    "preserve_version_lineage": true,
+    "derive_resource_class": true,
+    "derive_baseline_state": true,
+    "redaction_enabled": true
+  },
+  "lineage": {
+    "origin_state": "candidate",
+    "transport_state": "directly_observed",
+    "replication_state": "observed",
+    "propagation_state": "observed",
+    "evidence_independence": "not_established",
+    "resource_identity_continuity": "partial",
+    "cross_environment_correlation": "partial",
+    "requirements": [
+      "Do not interpret the synchronization service as the origin actor without supporting evidence.",
+      "Do not count replicated observations as independent originating transitions.",
+      "Preserve the distinction between local materialization and local origin.",
+      "Preserve dependencies among provider, client, and device observations.",
+      "Do not promote bounded observation into a global-resolution claim."
+    ]
+  },
+  "capabilities": {
+    "schema": "tf.platform-capabilities/v0.1",
+    "declaration_ref": "capabilities://rspd-cloud-sync-example/v0.1",
+    "observation": {
+      "event_observation": "partial",
+      "actor_identity": "partial",
+      "actor_lineage": "unknown",
+      "resource_classification": "partial",
+      "network_context": "unknown",
+      "origin_transport_distinction": "partial",
+      "baseline_access": "partial",
+      "resource_history": "unknown",
+      "recovery_state_observation": "unknown"
+    },
+    "enforcement": {
+      "write_denial": "unknown",
+      "propagation_containment": "unknown",
+      "resource_isolation": "unknown",
+      "account_scope_isolation": "unknown",
+      "permission_restriction": "unknown",
+      "synchronization_suspension": "unknown",
+      "session_termination": "unknown"
+    },
+    "recovery": {
+      "recovery": "unknown",
+      "rollback": "unknown",
+      "version_restore": "unknown",
+      "resource_restore": "unknown",
+      "deleted_resource_restore": "unknown"
+    },
+    "verification": {
+      "post_action_observation": "partial",
+      "state_comparison": "partial",
+      "cross_environment_comparison": "partial",
+      "persistence_detection": "partial",
+      "reappearance_detection": "partial",
+      "recovery_verification": "unknown"
+    }
+  },
+  "containment": {
+    "decision_schema": "tf.containment-decision/v0.1",
+    "default_authority": "recommend_only",
+    "authorization_required": true,
+    "fallback_allowed": true,
+    "mappings": [
+      {
+        "requested_action": "increase_observation",
+        "capability": "event_observation",
+        "support": "partial",
+        "native_mechanism_ref": "mechanism://cloud-sync-example/increase-observation",
+        "response_scope": "synchronization_relationship",
+        "reversibility": "fully_reversible",
+        "requires_additional_authorization": false,
+        "fallback_action": "notify_authorized_operator"
+      },
+      {
+        "requested_action": "notify_authorized_operator",
+        "capability": "operator_notification",
+        "support": "supported",
+        "native_mechanism_ref": "mechanism://cloud-sync-example/operator-notification",
+        "response_scope": "account",
+        "reversibility": "fully_reversible",
+        "requires_additional_authorization": false,
+        "fallback_action": "request_manual_review"
+      },
+      {
+        "requested_action": "contain_propagation",
+        "capability": "propagation_containment",
+        "support": "unknown",
+        "native_mechanism_ref": "mechanism://cloud-sync-example/propagation-containment-unconfigured",
+        "response_scope": "cross_environment",
+        "reversibility": "unknown",
+        "requires_additional_authorization": true,
+        "fallback_action": "notify_authorized_operator"
+      },
+      {
+        "requested_action": "isolate_resource_set",
+        "capability": "resource_isolation",
+        "support": "unknown",
+        "native_mechanism_ref": "mechanism://cloud-sync-example/resource-isolation-unconfigured",
+        "response_scope": "resource_set",
+        "reversibility": "unknown",
+        "requires_additional_authorization": true,
+        "fallback_action": "notify_authorized_operator"
+      },
+      {
+        "requested_action": "suspend_synchronization",
+        "capability": "synchronization_suspension",
+        "support": "unknown",
+        "native_mechanism_ref": "mechanism://cloud-sync-example/synchronization-suspension-unconfigured",
+        "response_scope": "synchronization_relationship",
+        "reversibility": "unknown",
+        "requires_additional_authorization": true,
+        "fallback_action": "request_manual_review"
+      },
+      {
+        "requested_action": "preserve_evidence",
+        "capability": "event_observation",
+        "support": "partial",
+        "native_mechanism_ref": "mechanism://cloud-sync-example/preserve-structural-evidence",
+        "response_scope": "resource_set",
+        "reversibility": "fully_reversible",
+        "requires_additional_authorization": false,
+        "fallback_action": "request_manual_review"
+      },
+      {
+        "requested_action": "prepare_recovery",
+        "capability": "recovery",
+        "support": "unknown",
+        "native_mechanism_ref": "mechanism://cloud-sync-example/recovery-unconfigured",
+        "response_scope": "resource_set",
+        "reversibility": "unknown",
+        "requires_additional_authorization": true,
+        "fallback_action": "request_manual_review"
+      },
+      {
+        "requested_action": "request_manual_review",
+        "capability": "manual_review",
+        "support": "supported",
+        "native_mechanism_ref": "mechanism://cloud-sync-example/manual-review",
+        "response_scope": "synchronization_relationship",
+        "reversibility": "fully_reversible",
+        "requires_additional_authorization": false
+      }
+    ]
+  },
+  "recovery": {
+    "recovery_state_observed": false,
+    "historical_versions_observed": false,
+    "deleted_resource_state_observed": false,
+    "mechanisms": [
+      {
+        "id": "example-version-restore",
+        "class": "version_history",
+        "support": "unknown",
+        "verification_supported": "unknown"
+      },
+      {
+        "id": "example-deleted-resource-restore",
+        "class": "deleted_resource_restore",
+        "support": "unknown",
+        "verification_supported": "unknown"
+      }
+    ],
+    "recovery_interference_observable": false
+  },
+  "verification": {
+    "output_schema": "tf.verification/v0.1",
+    "rescan_supported": "partial",
+    "same_scope_comparison": "partial",
+    "cross_environment_comparison": "partial",
+    "propagation_verification": "partial",
+    "reappearance_detection": "partial",
+    "recovery_verification": "unknown",
+    "global_resolution_claim_allowed": false,
+    "preserve_limitations": true
+  },
+  "privacy": {
+    "data_minimization": true,
+    "local_processing_preferred": true,
+    "plaintext_credentials_allowed": false,
+    "provider_tokens_exported": false,
+    "raw_resource_content_required": false,
+    "raw_provider_identifiers_exported": false,
+    "account_identifiers_exported": false,
+    "device_names_exported": false,
+    "pseudonymous_resource_ids": true,
+    "pseudonymous_environment_ids": true,
+    "redaction_classes": [
+      "raw_provider_identifier",
+      "resource_name",
+      "account_identity",
+      "device_identity",
+      "recipient_identity",
+      "authentication_material",
+      "resource_content"
+    ]
+  },
+  "limitations": [
+    {
+      "code": "EXAMPLE-CONFIG",
+      "description": "This synthetic configuration does not describe the capabilities of any deployed provider or synchronization adapter.",
+      "severity": "informational",
+      "affects": [
+        "all_capability_claims"
+      ]
+    },
+    {
+      "code": "ORIGIN-CANDIDATE-ONLY",
+      "description": "The example can identify an origin candidate but does not establish the originating actor or environment conclusively.",
+      "severity": "material",
+      "affects": [
+        "origin_state",
+        "actor_lineage",
+        "attribution"
+      ]
+    },
+    {
+      "code": "DEPENDENT-OBSERVATIONS",
+      "description": "Provider and client observations may describe the same propagated transition and are not established as independent evidence.",
+      "severity": "material",
+      "affects": [
+        "evidence_independence",
+        "event_count",
+        "rate",
+        "acceleration"
+      ]
+    },
+    {
+      "code": "ENFORCEMENT-UNESTABLISHED",
+      "description": "Propagation containment, synchronization suspension, isolation, and permission-changing mechanisms have not been established.",
+      "severity": "material",
+      "affects": [
+        "propagation_containment",
+        "synchronization_suspension",
+        "resource_isolation",
+        "account_scope_isolation",
+        "permission_restriction"
+      ]
+    },
+    {
+      "code": "RECOVERY-UNESTABLISHED",
+      "description": "Version history, deleted-resource restoration, rollback, and recovery verification have not been established.",
+      "severity": "material",
+      "affects": [
+        "recovery",
+        "rollback",
+        "version_restore",
+        "deleted_resource_restore",
+        "recovery_verification"
+      ]
+    },
+    {
+      "code": "GLOBAL-STATE-UNVERIFIABLE",
+      "description": "The example cannot establish complete state across all synchronized environments.",
+      "severity": "material",
+      "affects": [
+        "cross_environment_comparison",
+        "global_resolution"
+      ]
+    }
+  ],
+  "provenance": {
+    "producer": "TriadicFrameworks example configuration",
+    "created_at": "2026-11-26T00:00:00Z",
+    "specification_ref": "cloud-sync.md",
+    "detector_ref": "../detector.json",
+    "capabilities_schema_ref": "../../Shared_Structural_Event_Grammar/platform-capabilities.schema.json",
+    "source_refs": [
+      "cloud-sync.schema.json",
+      "cloud-sync.md",
+      "../detector.json",
+      "../../Shared_Structural_Event_Grammar/README.md",
+      "../../Shared_Structural_Event_Grammar/resource-transition.schema.json",
+      "../../Shared_Structural_Event_Grammar/platform-capabilities.schema.json"
+    ]
+  }
+}
