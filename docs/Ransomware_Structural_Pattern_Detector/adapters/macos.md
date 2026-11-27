@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Ransomware_Structural_Pattern_Detector_adapters_macos_" src="https://github.com/user-attachments/assets/e16ebd2c-1779-4496-8bee-67ffc822ce4a" />
+
 # macOS Adapter
 
 > **Platform adapter specification for mapping authorized macOS resource and system observations into the Ransomware Structural Pattern Detector while preserving observation scope, system-extension, authorization, privacy, recovery, and capability boundaries.**
