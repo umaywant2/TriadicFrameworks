@@ -39,7 +39,8 @@
   <meta name="ai.edition" content="AI Edition">
   <meta name="ai.framework" content="AACCC">
   <meta name="ai.format" content="JSON">
-  <meta name="ai.audience" content="AI systems, students, educators, developers, researchers">
+  <meta name="ai.audience"
+        content="AI systems, students, educators, developers, researchers">
   <meta name="ai.entry" content="index.json">
 
   <title>5Guides — AI Edition | TriadicFrameworks</title>
@@ -96,9 +97,22 @@
       margin: 0;
       min-height: 100vh;
       background:
-        radial-gradient(circle at 5% 0%, rgba(87, 227, 255, 0.09), transparent 27rem),
-        radial-gradient(circle at 95% 10%, rgba(184, 156, 255, 0.08), transparent 30rem),
-        linear-gradient(180deg, #061018 0%, #07131d 52%, #061018 100%);
+        radial-gradient(
+          circle at 5% 0%,
+          rgba(87, 227, 255, 0.09),
+          transparent 27rem
+        ),
+        radial-gradient(
+          circle at 95% 10%,
+          rgba(184, 156, 255, 0.08),
+          transparent 30rem
+        ),
+        linear-gradient(
+          180deg,
+          #061018 0%,
+          #07131d 52%,
+          #061018 100%
+        );
       color: var(--text);
       font-family:
         Inter,
@@ -124,6 +138,10 @@
       border: 0;
     }
 
+    [hidden] {
+      display: none !important;
+    }
+
     .skip-link {
       position: fixed;
       left: 12px;
@@ -140,6 +158,10 @@
     .skip-link:focus {
       top: 12px;
     }
+
+    /* ──────────────────────────────────────────────────────────
+       Top bar
+       ────────────────────────────────────────────────────────── */
 
     .topbar {
       position: sticky;
@@ -172,8 +194,13 @@
       border: 1px solid var(--line-bright);
       border-radius: 13px;
       background:
-        linear-gradient(145deg, rgba(87, 227, 255, 0.16), rgba(184, 156, 255, 0.09));
-      box-shadow: inset 0 0 18px rgba(87, 227, 255, 0.06);
+        linear-gradient(
+          145deg,
+          rgba(87, 227, 255, 0.16),
+          rgba(184, 156, 255, 0.09)
+        );
+      box-shadow:
+        inset 0 0 18px rgba(87, 227, 255, 0.06);
       font-size: 22px;
     }
 
@@ -221,7 +248,12 @@
     }
 
     .button.primary {
-      background: linear-gradient(135deg, #36cceb, #78e8fb);
+      background:
+        linear-gradient(
+          135deg,
+          #36cceb,
+          #78e8fb
+        );
       border-color: transparent;
       color: #05202a;
       font-weight: 800;
@@ -231,21 +263,34 @@
       display: none;
     }
 
+    /* ──────────────────────────────────────────────────────────
+       Main layout
+       ────────────────────────────────────────────────────────── */
+
     .layout {
       display: grid;
-      grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
-      min-height: calc(100vh - var(--header-height));
+      grid-template-columns:
+        var(--sidebar-width)
+        minmax(0, 1fr);
+      min-height:
+        calc(100vh - var(--header-height));
     }
+
+    /* ──────────────────────────────────────────────────────────
+       Sidebar
+       ────────────────────────────────────────────────────────── */
 
     .sidebar {
       position: sticky;
       top: var(--header-height);
       align-self: start;
-      height: calc(100vh - var(--header-height));
+      height:
+        calc(100vh - var(--header-height));
       overflow-y: auto;
       padding: 18px;
       border-right: 1px solid var(--line);
-      background: rgba(7, 19, 29, 0.66);
+      background:
+        rgba(7, 19, 29, 0.66);
     }
 
     .search-wrap {
@@ -275,7 +320,8 @@
 
     #navSearch:focus {
       border-color: var(--cyan);
-      box-shadow: 0 0 0 3px rgba(87, 227, 255, 0.08);
+      box-shadow:
+        0 0 0 3px rgba(87, 227, 255, 0.08);
     }
 
     .nav-group {
@@ -285,7 +331,8 @@
     }
 
     .nav-group[open] {
-      background: rgba(255, 255, 255, 0.015);
+      background:
+        rgba(255, 255, 255, 0.015);
       border-color: var(--line);
     }
 
@@ -343,13 +390,16 @@
 
     .nav-link:hover {
       color: var(--text);
-      background: rgba(87, 227, 255, 0.07);
+      background:
+        rgba(87, 227, 255, 0.07);
     }
 
     .nav-link.active {
       color: #dffbff;
-      background: rgba(87, 227, 255, 0.12);
-      box-shadow: inset 3px 0 0 var(--cyan);
+      background:
+        rgba(87, 227, 255, 0.12);
+      box-shadow:
+        inset 3px 0 0 var(--cyan);
     }
 
     .nav-link .icon {
@@ -358,6 +408,17 @@
       font-size: 15px;
     }
 
+    .sidebar-empty {
+      padding: 15px;
+      color: var(--faint);
+      text-align: center;
+      font-size: 12px;
+    }
+
+    /* ──────────────────────────────────────────────────────────
+       Hero
+       ────────────────────────────────────────────────────────── */
+
     .main {
       min-width: 0;
     }
@@ -365,7 +426,10 @@
     .hero {
       position: relative;
       overflow: hidden;
-      padding: 62px clamp(24px, 6vw, 90px) 46px;
+      padding:
+        62px
+        clamp(24px, 6vw, 90px)
+        46px;
       border-bottom: 1px solid var(--line);
     }
 
@@ -376,11 +440,14 @@
       height: 580px;
       right: -250px;
       top: -330px;
-      border: 1px solid rgba(87, 227, 255, 0.11);
+      border:
+        1px solid rgba(87, 227, 255, 0.11);
       border-radius: 50%;
       box-shadow:
-        0 0 0 70px rgba(87, 227, 255, 0.018),
-        0 0 0 140px rgba(184, 156, 255, 0.015);
+        0 0 0 70px
+          rgba(87, 227, 255, 0.018),
+        0 0 0 140px
+          rgba(184, 156, 255, 0.015);
       pointer-events: none;
     }
 
@@ -396,7 +463,8 @@
     .hero h1 {
       max-width: 950px;
       margin: 0;
-      font-size: clamp(38px, 6vw, 76px);
+      font-size:
+        clamp(38px, 6vw, 76px);
       line-height: 0.98;
       letter-spacing: -0.055em;
     }
@@ -405,7 +473,13 @@
       display: block;
       margin-top: 8px;
       color: transparent;
-      background: linear-gradient(90deg, var(--cyan), #99f1ff 42%, var(--violet));
+      background:
+        linear-gradient(
+          90deg,
+          var(--cyan),
+          #99f1ff 42%,
+          var(--violet)
+        );
       background-clip: text;
       -webkit-background-clip: text;
     }
@@ -414,7 +488,8 @@
       max-width: 810px;
       margin: 22px 0 0;
       color: #aac3ce;
-      font-size: clamp(16px, 2vw, 19px);
+      font-size:
+        clamp(16px, 2vw, 19px);
     }
 
     .flow {
@@ -429,7 +504,8 @@
       padding: 8px 11px;
       border: 1px solid var(--line);
       border-radius: 999px;
-      background: rgba(13, 30, 42, 0.72);
+      background:
+        rgba(13, 30, 42, 0.72);
       color: #d9edf4;
       font-size: 12px;
       font-weight: 700;
@@ -446,13 +522,38 @@
       margin-top: 28px;
     }
 
+    .corpus-stats {
+      display: flex;
+      gap: 9px;
+      flex-wrap: wrap;
+      margin-top: 22px;
+    }
+
+    .stat {
+      padding: 7px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background:
+        rgba(255, 255, 255, 0.02);
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    /* ──────────────────────────────────────────────────────────
+       Guide cards
+       ────────────────────────────────────────────────────────── */
+
     .aaccc-grid {
       display: grid;
-      grid-template-columns: repeat(5, minmax(0, 1fr));
+      grid-template-columns:
+        repeat(5, minmax(0, 1fr));
       gap: 10px;
-      padding: 19px clamp(24px, 6vw, 90px);
+      padding:
+        19px
+        clamp(24px, 6vw, 90px);
       border-bottom: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.012);
+      background:
+        rgba(255, 255, 255, 0.012);
     }
 
     .guide-card {
@@ -460,7 +561,8 @@
       padding: 14px;
       border: 1px solid var(--line);
       border-radius: 13px;
-      background: rgba(13, 30, 42, 0.65);
+      background:
+        rgba(13, 30, 42, 0.65);
       text-decoration: none;
       transition:
         transform 140ms ease,
@@ -471,7 +573,8 @@
     .guide-card:hover {
       transform: translateY(-2px);
       border-color: var(--line-bright);
-      background: rgba(16, 38, 54, 0.9);
+      background:
+        rgba(16, 38, 54, 0.9);
     }
 
     .guide-number {
@@ -494,8 +597,15 @@
       line-height: 1.35;
     }
 
+    /* ──────────────────────────────────────────────────────────
+       Document workspace
+       ────────────────────────────────────────────────────────── */
+
     .workspace {
-      padding: 34px clamp(24px, 6vw, 90px) 90px;
+      padding:
+        34px
+        clamp(24px, 6vw, 90px)
+        90px;
     }
 
     .document-shell {
@@ -504,7 +614,8 @@
       margin: 0 auto;
       border: 1px solid var(--line);
       border-radius: var(--radius-lg);
-      background: rgba(13, 30, 42, 0.72);
+      background:
+        rgba(13, 30, 42, 0.72);
       box-shadow: var(--shadow);
     }
 
@@ -515,7 +626,8 @@
       gap: 20px;
       padding: 24px 26px;
       border-bottom: 1px solid var(--line);
-      background: rgba(16, 38, 54, 0.58);
+      background:
+        rgba(16, 38, 54, 0.58);
     }
 
     .doc-label {
@@ -528,7 +640,8 @@
 
     .doc-title {
       margin: 6px 0 0;
-      font-size: clamp(22px, 3vw, 32px);
+      font-size:
+        clamp(22px, 3vw, 32px);
       line-height: 1.15;
       letter-spacing: -0.025em;
     }
@@ -536,7 +649,12 @@
     .doc-path {
       margin-top: 7px;
       color: var(--faint);
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-family:
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Consolas,
+        monospace;
       font-size: 11px;
       overflow-wrap: anywhere;
     }
@@ -549,18 +667,39 @@
     }
 
     .view-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 35px;
       padding: 7px 10px;
       border: 1px solid var(--line);
       border-radius: 9px;
       background: var(--bg-soft);
       color: var(--muted);
+      text-decoration: none;
       cursor: pointer;
+      transition:
+        color 120ms ease,
+        background 120ms ease,
+        border-color 120ms ease;
     }
 
     .view-button:hover,
     .view-button.active {
       color: var(--text);
       border-color: var(--line-bright);
+      background: var(--cyan-soft);
+    }
+
+    #expandAllButton,
+    #collapseAllButton {
+      color: var(--faint);
+      background: transparent;
+    }
+
+    #expandAllButton:hover,
+    #collapseAllButton:hover {
+      color: var(--cyan);
       background: var(--cyan-soft);
     }
 
@@ -595,6 +734,10 @@
       color: #ffc0c9;
     }
 
+    /* ──────────────────────────────────────────────────────────
+       Top-level JSON sections
+       ────────────────────────────────────────────────────────── */
+
     .json-tree {
       display: grid;
       gap: 11px;
@@ -604,7 +747,8 @@
       overflow: hidden;
       border: 1px solid var(--line);
       border-radius: 13px;
-      background: rgba(6, 16, 24, 0.52);
+      background:
+        rgba(6, 16, 24, 0.52);
     }
 
     .json-section > summary {
@@ -643,19 +787,47 @@
       padding: 4px 14px 15px 45px;
     }
 
+    /* ──────────────────────────────────────────────────────────
+       JSON object rows
+       ────────────────────────────────────────────────────────── */
+
     .json-row {
       display: grid;
-      grid-template-columns: minmax(130px, 0.36fr) minmax(0, 1fr);
+      grid-template-columns:
+        minmax(130px, 0.36fr)
+        minmax(0, 1fr);
       gap: 16px;
       padding: 8px 0;
-      border-top: 1px solid rgba(125, 211, 252, 0.07);
+      border-top:
+        1px solid rgba(125, 211, 252, 0.07);
+    }
+
+    .json-row:first-child {
+      border-top: 0;
     }
 
     .json-key {
       color: #7dd3fc;
       overflow-wrap: anywhere;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-family:
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Consolas,
+        monospace;
       font-size: 12px;
+    }
+
+    .json-content {
+      min-width: 0;
+    }
+
+    .complex-row {
+      align-items: start;
+    }
+
+    .complex-row > .json-key {
+      padding-top: 5px;
     }
 
     .json-value {
@@ -683,200 +855,160 @@
       font-style: italic;
     }
 
-.json-content {
-  min-width: 0;
-}
-
-.empty-value {
-  color: var(--faint);
-  font-style: italic;
-}
-
-/* ─────────────────────────────────────────────────────────────
-   Arrays
-   ───────────────────────────────────────────────────────────── */
-
-.json-array {
-  display: grid;
-  gap: 7px;
-  min-width: 0;
-}
-
-/*
- * Primitive arrays remain lightweight, but each value gets a
- * visible position. This is much easier to scan than a normal
- * browser <ol> once arrays become deeply nested.
- */
-.json-array-primitive {
-  padding: 4px 0;
-}
-
-.array-primitive-item {
-  display: grid;
-  grid-template-columns: 28px minmax(0, 1fr);
-  gap: 8px;
-  align-items: start;
-  min-width: 0;
-}
-
-.array-index {
-  display: inline-grid;
-  place-items: center;
-  min-width: 23px;
-  height: 23px;
-  padding: 0 5px;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  background: rgba(87, 227, 255, 0.055);
-  color: var(--faint);
-  font-family:
-    ui-monospace,
-    SFMono-Regular,
-    Menlo,
-    Consolas,
-    monospace;
-  font-size: 10px;
-  font-weight: 800;
-}
-
-.array-value {
-  min-width: 0;
-  padding-top: 2px;
-}
-
-/*
- * Arrays containing objects or other arrays become a set of
- * independently expandable cards.
- */
-.json-array-complex {
-  gap: 9px;
-}
-
-.array-item {
-  overflow: hidden;
-  min-width: 0;
-  border: 1px solid rgba(125, 211, 252, 0.11);
-  border-radius: 10px;
-  background: rgba(9, 23, 33, 0.54);
-}
-
-.array-item > summary {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  min-height: 39px;
-  padding: 7px 10px;
-  list-style: none;
-  cursor: pointer;
-}
-
-.array-item > summary::-webkit-details-marker {
-  display: none;
-}
-
-.array-item > summary::after {
-  content: "›";
-  margin-left: auto;
-  color: var(--faint);
-  font-size: 16px;
-  transform: rotate(0deg);
-  transition: transform 120ms ease;
-}
-
-.array-item[open] > summary::after {
-  transform: rotate(90deg);
-}
-
-.array-item > summary:hover {
-  background: rgba(87, 227, 255, 0.035);
-}
-
-.array-item-type {
-  flex: 0 0 auto;
-  color: var(--violet);
-  font-family:
-    ui-monospace,
-    SFMono-Regular,
-    Menlo,
-    Consolas,
-    monospace;
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.array-item-preview {
-  min-width: 0;
-  overflow: hidden;
-  color: #bad0d9;
-  font-size: 12px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.array-item-content {
-  min-width: 0;
-  padding: 4px 11px 11px 41px;
-  border-top: 1px solid rgba(125, 211, 252, 0.07);
-}
-
-/* ─────────────────────────────────────────────────────────────
-   Objects
-   ───────────────────────────────────────────────────────────── */
-
-.object-block {
-  display: grid;
-  gap: 3px;
-  min-width: 0;
-  padding-left: 12px;
-  border-left: 2px solid rgba(87, 227, 255, 0.13);
-}
-
-.complex-row {
-  align-items: start;
-}
-
-.complex-row > .json-key {
-  padding-top: 5px;
-}
-
-/*
- * Deeper structures get subtly different guide colors so the
- * nesting remains visible without turning into a rainbow.
- */
-.object-block .object-block {
-  border-left-color: rgba(184, 156, 255, 0.17);
-}
-
-.object-block .object-block .object-block {
-  border-left-color: rgba(110, 231, 183, 0.17);
-}
-
-/* ─────────────────────────────────────────────────────────────
-   Small screens
-   ───────────────────────────────────────────────────────────── */
-
-@media (max-width: 820px) {
-  .array-item-content {
-    padding-left: 13px;
-  }
-
-  .array-item-preview {
-    white-space: normal;
-  }
-
-  .object-block {
-    padding-left: 8px;
-  }
-}
+    .empty-value {
+      color: var(--faint);
+      font-style: italic;
+    }
 
     .object-block {
       display: grid;
       gap: 3px;
-      border-left: 2px solid rgba(87, 227, 255, 0.13);
+      min-width: 0;
       padding-left: 12px;
+      border-left:
+        2px solid rgba(87, 227, 255, 0.13);
     }
+
+    .object-block .object-block {
+      border-left-color:
+        rgba(184, 156, 255, 0.17);
+    }
+
+    .object-block .object-block .object-block {
+      border-left-color:
+        rgba(110, 231, 183, 0.17);
+    }
+
+    /* ──────────────────────────────────────────────────────────
+       Nested JSON arrays
+       ────────────────────────────────────────────────────────── */
+
+    .json-array {
+      display: grid;
+      gap: 7px;
+      min-width: 0;
+    }
+
+    .json-array-primitive {
+      padding: 4px 0;
+    }
+
+    .array-primitive-item {
+      display: grid;
+      grid-template-columns:
+        28px
+        minmax(0, 1fr);
+      gap: 8px;
+      align-items: start;
+      min-width: 0;
+    }
+
+    .array-index {
+      display: inline-grid;
+      place-items: center;
+      min-width: 23px;
+      height: 23px;
+      padding: 0 5px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background:
+        rgba(87, 227, 255, 0.055);
+      color: var(--faint);
+      font-family:
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Consolas,
+        monospace;
+      font-size: 10px;
+      font-weight: 800;
+    }
+
+    .array-value {
+      min-width: 0;
+      padding-top: 2px;
+    }
+
+    .json-array-complex {
+      gap: 9px;
+    }
+
+    .array-item {
+      overflow: hidden;
+      min-width: 0;
+      border:
+        1px solid rgba(125, 211, 252, 0.11);
+      border-radius: 10px;
+      background:
+        rgba(9, 23, 33, 0.54);
+    }
+
+    .array-item > summary {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      min-height: 39px;
+      padding: 7px 10px;
+      list-style: none;
+      cursor: pointer;
+    }
+
+    .array-item > summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .array-item > summary::after {
+      content: "›";
+      margin-left: auto;
+      color: var(--faint);
+      font-size: 16px;
+      transform: rotate(0deg);
+      transition: transform 120ms ease;
+    }
+
+    .array-item[open] > summary::after {
+      transform: rotate(90deg);
+    }
+
+    .array-item > summary:hover {
+      background:
+        rgba(87, 227, 255, 0.035);
+    }
+
+    .array-item-type {
+      flex: 0 0 auto;
+      color: var(--violet);
+      font-family:
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Consolas,
+        monospace;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .array-item-preview {
+      min-width: 0;
+      overflow: hidden;
+      color: #bad0d9;
+      font-size: 12px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .array-item-content {
+      min-width: 0;
+      padding: 4px 11px 11px 41px;
+      border-top:
+        1px solid rgba(125, 211, 252, 0.07);
+    }
+
+    /* ──────────────────────────────────────────────────────────
+       Raw JSON
+       ────────────────────────────────────────────────────────── */
 
     .raw-view {
       margin: 0;
@@ -886,12 +1018,21 @@
       border-radius: 12px;
       background: #041019;
       color: #d8e8ee;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-family:
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Consolas,
+        monospace;
       font-size: 12px;
       line-height: 1.7;
       tab-size: 2;
       white-space: pre;
     }
+
+    /* ──────────────────────────────────────────────────────────
+       README Markdown rendering
+       ────────────────────────────────────────────────────────── */
 
     .markdown-view {
       color: #c9dbe3;
@@ -924,7 +1065,12 @@
       border-radius: 5px;
       background: var(--bg-soft);
       color: var(--green);
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-family:
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Consolas,
+        monospace;
     }
 
     .markdown-view pre {
@@ -947,21 +1093,9 @@
       color: #a9c6d2;
     }
 
-    .corpus-stats {
-      display: flex;
-      gap: 9px;
-      flex-wrap: wrap;
-      margin-top: 22px;
-    }
-
-    .stat {
-      padding: 7px 10px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.02);
-      color: var(--muted);
-      font-size: 11px;
-    }
+    /* ──────────────────────────────────────────────────────────
+       Footer
+       ────────────────────────────────────────────────────────── */
 
     .footer {
       max-width: 1180px;
@@ -975,16 +1109,14 @@
       color: var(--muted);
     }
 
-    .sidebar-empty {
-      padding: 15px;
-      color: var(--faint);
-      text-align: center;
-      font-size: 12px;
-    }
+    /* ──────────────────────────────────────────────────────────
+       Responsive
+       ────────────────────────────────────────────────────────── */
 
     @media (max-width: 1080px) {
       .aaccc-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns:
+          repeat(2, minmax(0, 1fr));
       }
     }
 
@@ -1003,7 +1135,8 @@
         top: var(--header-height);
         left: 0;
         bottom: 0;
-        width: min(88vw, var(--sidebar-width));
+        width:
+          min(88vw, var(--sidebar-width));
         height: auto;
         transform: translateX(-105%);
         transition: transform 170ms ease;
@@ -1030,6 +1163,18 @@
       .json-row {
         grid-template-columns: 1fr;
         gap: 3px;
+      }
+
+      .array-item-content {
+        padding-left: 13px;
+      }
+
+      .array-item-preview {
+        white-space: normal;
+      }
+
+      .object-block {
+        padding-left: 8px;
       }
     }
 
@@ -1058,6 +1203,14 @@
       .document-header {
         padding: 18px;
       }
+
+      .doc-actions {
+        width: 100%;
+      }
+
+      .view-button {
+        flex: 1 1 auto;
+      }
     }
   </style>
 </head>
@@ -1068,21 +1221,32 @@
   <header class="topbar">
     <div class="brand">
       <div class="brand-mark" aria-hidden="true">🔱</div>
+
       <div>
-        <div class="brand-title">5Guides · AI Edition</div>
-        <div class="brand-subtitle">TriadicFrameworks · AACCC Structural Learning Corpus</div>
+        <div class="brand-title">
+          5Guides · AI Edition
+        </div>
+
+        <div class="brand-subtitle">
+          TriadicFrameworks · AACCC Structural Learning Corpus
+        </div>
       </div>
     </div>
 
     <div class="top-actions">
-      <button class="button mobile-menu" id="menuButton" type="button" aria-label="Toggle navigation">
+      <button
+        class="button mobile-menu"
+        id="menuButton"
+        type="button"
+        aria-label="Toggle navigation">
         ☰
       </button>
 
-      <a class="button github-button"
-         href="https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/book/AI_Edition/5Guides"
-         target="_blank"
-         rel="noopener noreferrer">
+      <a
+        class="button github-button"
+        href="https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/book/AI_Edition/5Guides"
+        target="_blank"
+        rel="noopener noreferrer">
         GitHub ↗
       </a>
 
@@ -1093,9 +1257,18 @@
   </header>
 
   <div class="layout">
-    <aside class="sidebar" id="sidebar" aria-label="AI Edition navigation">
+    <aside
+      class="sidebar"
+      id="sidebar"
+      aria-label="AI Edition navigation">
+
       <div class="search-wrap">
-        <span class="search-icon" aria-hidden="true">⌕</span>
+        <span
+          class="search-icon"
+          aria-hidden="true">
+          ⌕
+        </span>
+
         <input
           id="navSearch"
           type="search"
@@ -1108,8 +1281,15 @@
     </aside>
 
     <main class="main" id="main">
+
+      <!-- ──────────────────────────────────────────────────────
+           Hero
+           ────────────────────────────────────────────────────── -->
+
       <section class="hero">
-        <p class="eyebrow">TriadicFrameworks · Machine-Oriented Edition</p>
+        <p class="eyebrow">
+          TriadicFrameworks · Machine-Oriented Edition
+        </p>
 
         <h1>
           Five questions.
@@ -1117,31 +1297,61 @@
         </h1>
 
         <p class="hero-copy">
-          A structured AI-facing corpus for Awareness, Alignment, Coherence,
-          Clarity, and Continuity. Human learning materials are transformed
-          into explicit JSON objects while preserving uncertainty,
-          provenance, formalization boundaries, and learner judgment.
+          A structured AI-facing corpus for Awareness, Alignment,
+          Coherence, Clarity, and Continuity. Human learning materials
+          are transformed into explicit JSON objects while preserving
+          uncertainty, provenance, formalization boundaries, and
+          learner judgment.
         </p>
 
-        <div class="flow" aria-label="AACCC sequence">
+        <div
+          class="flow"
+          aria-label="AACCC sequence">
+
           <span class="flow-step">👀 Awareness</span>
           <span class="flow-arrow">→</span>
+
           <span class="flow-step">🔗 Alignment</span>
           <span class="flow-arrow">→</span>
+
           <span class="flow-step">🧩 Coherence</span>
           <span class="flow-arrow">→</span>
+
           <span class="flow-step">🔎 Clarity</span>
           <span class="flow-arrow">→</span>
+
           <span class="flow-step">🔄 Continuity</span>
           <span class="flow-arrow">→</span>
-          <span class="flow-step">Independent Application</span>
+
+          <span class="flow-step">
+            Independent Application
+          </span>
         </div>
 
         <div class="hero-actions">
-          <a class="button primary" href="#guides_awareness">Begin with Awareness</a>
-          <a class="button" href="#module">Module Contract</a>
-          <a class="button" href="#lean_index">Lean 4 Lab</a>
-          <a class="button" href="#origins_index">Origins &amp; Lineage</a>
+          <a
+            class="button primary"
+            href="#guides_awareness">
+            Begin with Awareness
+          </a>
+
+          <a
+            class="button"
+            href="#module">
+            Module Contract
+          </a>
+
+          <a
+            class="button"
+            href="#lean_index">
+            Lean 4 Lab
+          </a>
+
+          <a
+            class="button"
+            href="#origins_index">
+            Origins &amp; Lineage
+          </a>
         </div>
 
         <div class="corpus-stats">
@@ -1150,88 +1360,193 @@
           <span class="stat">5 Origins artifacts</span>
           <span class="stat">12 Lean artifacts</span>
           <span class="stat">JSON-first corpus</span>
-          <span class="stat">AI optional · Lean optional</span>
+          <span class="stat">
+            AI optional · Lean optional
+          </span>
         </div>
       </section>
 
-      <section class="aaccc-grid" aria-label="Five Guides">
-        <a class="guide-card" href="#guides_awareness">
+      <!-- ──────────────────────────────────────────────────────
+           AACCC guide cards
+           ────────────────────────────────────────────────────── -->
+
+      <section
+        class="aaccc-grid"
+        aria-label="Five Guides">
+
+        <a
+          class="guide-card"
+          href="#guides_awareness">
+
           <div class="guide-number">01</div>
           <div class="guide-name">👀 Awareness</div>
-          <div class="guide-question">What am I observing?</div>
+          <div class="guide-question">
+            What am I observing?
+          </div>
         </a>
 
-        <a class="guide-card" href="#guides_alignment">
+        <a
+          class="guide-card"
+          href="#guides_alignment">
+
           <div class="guide-number">02</div>
           <div class="guide-name">🔗 Alignment</div>
-          <div class="guide-question">What corresponds?</div>
+          <div class="guide-question">
+            What corresponds?
+          </div>
         </a>
 
-        <a class="guide-card" href="#guides_coherence">
+        <a
+          class="guide-card"
+          href="#guides_coherence">
+
           <div class="guide-number">03</div>
           <div class="guide-name">🧩 Coherence</div>
-          <div class="guide-question">Does this hold together?</div>
+          <div class="guide-question">
+            Does this hold together?
+          </div>
         </a>
 
-        <a class="guide-card" href="#guides_clarity">
+        <a
+          class="guide-card"
+          href="#guides_clarity">
+
           <div class="guide-number">04</div>
           <div class="guide-name">🔎 Clarity</div>
-          <div class="guide-question">Can this be understood and inspected?</div>
+          <div class="guide-question">
+            Can this be understood and inspected?
+          </div>
         </a>
 
-        <a class="guide-card" href="#guides_continuity">
+        <a
+          class="guide-card"
+          href="#guides_continuity">
+
           <div class="guide-number">05</div>
           <div class="guide-name">🔄 Continuity</div>
-          <div class="guide-question">What persists through change?</div>
+          <div class="guide-question">
+            What persists through change?
+          </div>
         </a>
       </section>
 
+      <!-- ──────────────────────────────────────────────────────
+           Corpus viewer
+           ────────────────────────────────────────────────────── -->
+
       <section class="workspace">
+
         <article class="document-shell">
+
           <header class="document-header">
+
             <div>
-              <div class="doc-label" id="documentType">AI Edition Front Door</div>
-              <h2 class="doc-title" id="documentTitle">5Guides — AI Edition</h2>
-              <div class="doc-path" id="documentPath">Select a corpus artifact from the navigation.</div>
+              <div
+                class="doc-label"
+                id="documentType">
+                AI Edition Front Door
+              </div>
+
+              <h2
+                class="doc-title"
+                id="documentTitle">
+                5Guides — AI Edition
+              </h2>
+
+              <div
+                class="doc-path"
+                id="documentPath">
+                Select a corpus artifact from the navigation.
+              </div>
             </div>
 
-            <div class="doc-actions" id="documentActions" hidden>
-              <button class="view-button active" id="structuredButton" type="button">
+            <div
+              class="doc-actions"
+              id="documentActions"
+              hidden>
+
+              <button
+                class="view-button"
+                id="expandAllButton"
+                type="button">
+                Expand all
+              </button>
+
+              <button
+                class="view-button"
+                id="collapseAllButton"
+                type="button">
+                Collapse all
+              </button>
+
+              <button
+                class="view-button active"
+                id="structuredButton"
+                type="button">
                 Structured
               </button>
-              <button class="view-button" id="rawButton" type="button">
+
+              <button
+                class="view-button"
+                id="rawButton"
+                type="button">
                 Raw
               </button>
-              <a class="view-button" id="sourceButton" href="#" target="_blank" rel="noopener noreferrer">
+
+              <a
+                class="view-button"
+                id="sourceButton"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer">
                 Source ↗
               </a>
             </div>
           </header>
 
-          <div class="document-body" id="documentBody">
+          <div
+            class="document-body"
+            id="documentBody">
+
             <div class="welcome">
               <div class="welcome-icon">◈</div>
-              <h2>Structure before formatting.</h2>
+
+              <h2>
+                Structure before formatting.
+              </h2>
+
               <p>
-                Choose an artifact from the corpus navigation, or begin with
-                Awareness. JSON documents are rendered into inspectable
-                sections while the original source remains one click away.
+                Choose an artifact from the corpus navigation,
+                or begin with Awareness. JSON documents are
+                rendered into inspectable sections while the
+                original source remains one click away.
               </p>
             </div>
           </div>
         </article>
 
         <footer class="footer">
-          <strong>5Guides AI Edition</strong><br>
-          Observe carefully · Map honestly · Test the structure · Make it inspectable · Follow what changes
+          <strong>5Guides AI Edition</strong>
+          <br>
+          Observe carefully · Map honestly · Test the structure ·
+          Make it inspectable · Follow what changes
         </footer>
       </section>
     </main>
   </div>
 
   <script>
+    /* ═══════════════════════════════════════════════════════════
+       Repository
+       ═══════════════════════════════════════════════════════════ */
+
     const REPO_BASE =
-      "https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/book/AI_Edition/5Guides/";
+      "https://github.com/umaywant2/TriadicFrameworks/blob/main/" +
+      "docs/book/AI_Edition/5Guides/";
+
+    /* ═══════════════════════════════════════════════════════════
+       Corpus registry
+       ═══════════════════════════════════════════════════════════ */
 
     const DOC_MAP = {
       index: "index.json",
@@ -1244,31 +1559,76 @@
       guides_clarity: "guides/clarity.json",
       guides_continuity: "guides/continuity.json",
 
-      shared_ai_companion: "shared/ai_companion.json",
-      shared_assessment: "shared/assessment.json",
-      shared_badges: "shared/badges.json",
-      shared_privacy: "shared/privacy.json",
-      shared_student_footprint: "shared/student_footprint.json",
+      shared_ai_companion:
+        "shared/ai_companion.json",
 
-      origins_index: "origins/index.json",
-      origins_tft: "origins/tft.json",
-      origins_theorems: "origins/theorems.json",
-      origins_rtt: "origins/rtt.json",
-      origins_formalization: "origins/formalization.json",
+      shared_assessment:
+        "shared/assessment.json",
 
-      lean_index: "lean/index.json",
-      lean_01_awareness: "lean/01_awareness.json",
-      lean_02_alignment: "lean/02_alignment.json",
-      lean_03_coherence: "lean/03_coherence.json",
-      lean_04_clarity: "lean/04_clarity.json",
-      lean_05_continuity: "lean/05_continuity.json",
-      lean_06_tft_origin: "lean/06_tft_origin.json",
-      lean_07_nawderian_theorem: "lean/07_nawderian_theorem.json",
-      lean_08_nawderian_set_theorem: "lean/08_nawderian_set_theorem.json",
-      lean_09_temperature_engine_theorem: "lean/09_temperature_engine_theorem.json",
-      lean_10_unified_resonance_theorem: "lean/10_unified_resonance_theorem.json",
-      lean_11_rtt_origin: "lean/11_rtt_origin.json"
+      shared_badges:
+        "shared/badges.json",
+
+      shared_privacy:
+        "shared/privacy.json",
+
+      shared_student_footprint:
+        "shared/student_footprint.json",
+
+      origins_index:
+        "origins/index.json",
+
+      origins_tft:
+        "origins/tft.json",
+
+      origins_theorems:
+        "origins/theorems.json",
+
+      origins_rtt:
+        "origins/rtt.json",
+
+      origins_formalization:
+        "origins/formalization.json",
+
+      lean_index:
+        "lean/index.json",
+
+      lean_01_awareness:
+        "lean/01_awareness.json",
+
+      lean_02_alignment:
+        "lean/02_alignment.json",
+
+      lean_03_coherence:
+        "lean/03_coherence.json",
+
+      lean_04_clarity:
+        "lean/04_clarity.json",
+
+      lean_05_continuity:
+        "lean/05_continuity.json",
+
+      lean_06_tft_origin:
+        "lean/06_tft_origin.json",
+
+      lean_07_nawderian_theorem:
+        "lean/07_nawderian_theorem.json",
+
+      lean_08_nawderian_set_theorem:
+        "lean/08_nawderian_set_theorem.json",
+
+      lean_09_temperature_engine_theorem:
+        "lean/09_temperature_engine_theorem.json",
+
+      lean_10_unified_resonance_theorem:
+        "lean/10_unified_resonance_theorem.json",
+
+      lean_11_rtt_origin:
+        "lean/11_rtt_origin.json"
     };
+
+    /* ═══════════════════════════════════════════════════════════
+       Navigation groups
+       ═══════════════════════════════════════════════════════════ */
 
     const NAV_GROUPS = [
       {
@@ -1276,67 +1636,195 @@
         icon: "◈",
         open: true,
         items: [
-          ["index", "🏠", "AI Edition Index"],
-          ["module", "🧭", "Module Contract"],
-          ["README", "📘", "README"]
+          [
+            "index",
+            "🏠",
+            "AI Edition Index"
+          ],
+          [
+            "module",
+            "🧭",
+            "Module Contract"
+          ],
+          [
+            "README",
+            "📘",
+            "README"
+          ]
         ]
       },
+
       {
         title: "Five Guides",
         icon: "🔱",
         open: true,
         items: [
-          ["guides_awareness", "👀", "Awareness"],
-          ["guides_alignment", "🔗", "Alignment"],
-          ["guides_coherence", "🧩", "Coherence"],
-          ["guides_clarity", "🔎", "Clarity"],
-          ["guides_continuity", "🔄", "Continuity"]
+          [
+            "guides_awareness",
+            "👀",
+            "Awareness"
+          ],
+          [
+            "guides_alignment",
+            "🔗",
+            "Alignment"
+          ],
+          [
+            "guides_coherence",
+            "🧩",
+            "Coherence"
+          ],
+          [
+            "guides_clarity",
+            "🔎",
+            "Clarity"
+          ],
+          [
+            "guides_continuity",
+            "🔄",
+            "Continuity"
+          ]
         ]
       },
+
       {
         title: "Shared Contracts",
         icon: "🎓",
         open: false,
         items: [
-          ["shared_ai_companion", "🤖", "AI Companion"],
-          ["shared_assessment", "📋", "Assessment"],
-          ["shared_badges", "🏅", "Badges"],
-          ["shared_privacy", "🔐", "Privacy"],
-          ["shared_student_footprint", "👣", "Student Footprint"]
+          [
+            "shared_ai_companion",
+            "🤖",
+            "AI Companion"
+          ],
+          [
+            "shared_assessment",
+            "📋",
+            "Assessment"
+          ],
+          [
+            "shared_badges",
+            "🏅",
+            "Badges"
+          ],
+          [
+            "shared_privacy",
+            "🔐",
+            "Privacy"
+          ],
+          [
+            "shared_student_footprint",
+            "👣",
+            "Student Footprint"
+          ]
         ]
       },
+
       {
         title: "Origins & Lineage",
         icon: "🌱",
         open: false,
         items: [
-          ["origins_index", "🗺️", "Origins Index"],
-          ["origins_tft", "🔺", "TFT"],
-          ["origins_theorems", "📐", "Theorems"],
-          ["origins_rtt", "⏱️", "RTT"],
-          ["origins_formalization", "✅", "Formalization"]
+          [
+            "origins_index",
+            "🗺️",
+            "Origins Index"
+          ],
+          [
+            "origins_tft",
+            "🔺",
+            "TFT"
+          ],
+          [
+            "origins_theorems",
+            "📐",
+            "Theorems"
+          ],
+          [
+            "origins_rtt",
+            "⏱️",
+            "RTT"
+          ],
+          [
+            "origins_formalization",
+            "✅",
+            "Formalization"
+          ]
         ]
       },
+
       {
         title: "Lean 4 Lab",
         icon: "🧠",
         open: false,
         items: [
-          ["lean_index", "📘", "Lean Lab Index"],
-          ["lean_01_awareness", "👀", "01 · Awareness"],
-          ["lean_02_alignment", "🔗", "02 · Alignment"],
-          ["lean_03_coherence", "🧩", "03 · Coherence"],
-          ["lean_04_clarity", "🔎", "04 · Clarity"],
-          ["lean_05_continuity", "🔄", "05 · Continuity"],
-          ["lean_06_tft_origin", "🔺", "06 · TFT Origin"],
-          ["lean_07_nawderian_theorem", "📐", "07 · Nawderian Theorem"],
-          ["lean_08_nawderian_set_theorem", "🧮", "08 · Nawderian SET"],
-          ["lean_09_temperature_engine_theorem", "🌡️", "09 · Temperature Engine"],
-          ["lean_10_unified_resonance_theorem", "〰️", "10 · Unified Resonance"],
-          ["lean_11_rtt_origin", "⏱️", "11 · RTT Origin"]
+          [
+            "lean_index",
+            "📘",
+            "Lean Lab Index"
+          ],
+          [
+            "lean_01_awareness",
+            "👀",
+            "01 · Awareness"
+          ],
+          [
+            "lean_02_alignment",
+            "🔗",
+            "02 · Alignment"
+          ],
+          [
+            "lean_03_coherence",
+            "🧩",
+            "03 · Coherence"
+          ],
+          [
+            "lean_04_clarity",
+            "🔎",
+            "04 · Clarity"
+          ],
+          [
+            "lean_05_continuity",
+            "🔄",
+            "05 · Continuity"
+          ],
+          [
+            "lean_06_tft_origin",
+            "🔺",
+            "06 · TFT Origin"
+          ],
+          [
+            "lean_07_nawderian_theorem",
+            "📐",
+            "07 · Nawderian Theorem"
+          ],
+          [
+            "lean_08_nawderian_set_theorem",
+            "🧮",
+            "08 · Nawderian SET"
+          ],
+          [
+            "lean_09_temperature_engine_theorem",
+            "🌡️",
+            "09 · Temperature Engine"
+          ],
+          [
+            "lean_10_unified_resonance_theorem",
+            "〰️",
+            "10 · Unified Resonance"
+          ],
+          [
+            "lean_11_rtt_origin",
+            "⏱️",
+            "11 · RTT Origin"
+          ]
         ]
       }
     ];
+
+    /* ═══════════════════════════════════════════════════════════
+       Application state
+       ═══════════════════════════════════════════════════════════ */
 
     const state = {
       id: null,
@@ -1346,17 +1834,52 @@
       view: "structured"
     };
 
-    const navigation = document.getElementById("navigation");
-    const documentTitle = document.getElementById("documentTitle");
-    const documentType = document.getElementById("documentType");
-    const documentPath = document.getElementById("documentPath");
-    const documentBody = document.getElementById("documentBody");
-    const documentActions = document.getElementById("documentActions");
-    const structuredButton = document.getElementById("structuredButton");
-    const rawButton = document.getElementById("rawButton");
-    const sourceButton = document.getElementById("sourceButton");
-    const navSearch = document.getElementById("navSearch");
-    const menuButton = document.getElementById("menuButton");
+    /* ═══════════════════════════════════════════════════════════
+       DOM references
+       ═══════════════════════════════════════════════════════════ */
+
+    const navigation =
+      document.getElementById("navigation");
+
+    const documentTitle =
+      document.getElementById("documentTitle");
+
+    const documentType =
+      document.getElementById("documentType");
+
+    const documentPath =
+      document.getElementById("documentPath");
+
+    const documentBody =
+      document.getElementById("documentBody");
+
+    const documentActions =
+      document.getElementById("documentActions");
+
+    const expandAllButton =
+      document.getElementById("expandAllButton");
+
+    const collapseAllButton =
+      document.getElementById("collapseAllButton");
+
+    const structuredButton =
+      document.getElementById("structuredButton");
+
+    const rawButton =
+      document.getElementById("rawButton");
+
+    const sourceButton =
+      document.getElementById("sourceButton");
+
+    const navSearch =
+      document.getElementById("navSearch");
+
+    const menuButton =
+      document.getElementById("menuButton");
+
+    /* ═══════════════════════════════════════════════════════════
+       Helpers
+       ═══════════════════════════════════════════════════════════ */
 
     function escapeHTML(value) {
       return String(value)
@@ -1370,49 +1893,106 @@
     function titleCase(value) {
       return String(value)
         .replaceAll("_", " ")
-        .replace(/\b\w/g, char => char.toUpperCase());
+        .replace(/\b\w/g, char =>
+          char.toUpperCase()
+        );
     }
 
+    function isPrimitive(value) {
+      return (
+        value === null ||
+        typeof value === "string" ||
+        typeof value === "number" ||
+        typeof value === "boolean"
+      );
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       Navigation
+       ═══════════════════════════════════════════════════════════ */
+
     function buildNavigation(filter = "") {
-      const search = filter.trim().toLowerCase();
+      const search =
+        filter.trim().toLowerCase();
+
       navigation.innerHTML = "";
+
       let visibleCount = 0;
 
       for (const group of NAV_GROUPS) {
-        const matchingItems = group.items.filter(([id, , label]) => {
-          const path = DOC_MAP[id] || "";
-          return !search ||
-            label.toLowerCase().includes(search) ||
-            path.toLowerCase().includes(search) ||
-            id.toLowerCase().includes(search);
-        });
+        const matchingItems =
+          group.items.filter(
+            ([id, , label]) => {
+              const path =
+                DOC_MAP[id] || "";
 
-        if (!matchingItems.length) continue;
+              return (
+                !search ||
+                label
+                  .toLowerCase()
+                  .includes(search) ||
+                path
+                  .toLowerCase()
+                  .includes(search) ||
+                id
+                  .toLowerCase()
+                  .includes(search)
+              );
+            }
+          );
 
-        visibleCount += matchingItems.length;
+        if (!matchingItems.length) {
+          continue;
+        }
 
-        const details = document.createElement("details");
+        visibleCount +=
+          matchingItems.length;
+
+        const details =
+          document.createElement("details");
+
         details.className = "nav-group";
-        details.open = search ? true : group.open;
+        details.open =
+          search ? true : group.open;
 
-        const summary = document.createElement("summary");
+        const summary =
+          document.createElement("summary");
+
         summary.innerHTML =
-          `<span aria-hidden="true">${group.icon}</span>` +
-          `<span>${escapeHTML(group.title)}</span>`;
+          `<span aria-hidden="true">` +
+          `${group.icon}</span>` +
+          `<span>` +
+          `${escapeHTML(group.title)}` +
+          `</span>`;
 
-        const list = document.createElement("div");
+        const list =
+          document.createElement("div");
+
         list.className = "nav-list";
 
-        for (const [id, icon, label] of matchingItems) {
-          const link = document.createElement("a");
+        for (
+          const [id, icon, label]
+          of matchingItems
+        ) {
+          const link =
+            document.createElement("a");
+
           link.className = "nav-link";
           link.href = `#${id}`;
           link.dataset.id = id;
-          link.innerHTML =
-            `<span class="icon" aria-hidden="true">${icon}</span>` +
-            `<span>${escapeHTML(label)}</span>`;
 
-          if (state.id === id) link.classList.add("active");
+          link.innerHTML =
+            `<span class="icon" ` +
+            `aria-hidden="true">` +
+            `${icon}</span>` +
+            `<span>` +
+            `${escapeHTML(label)}` +
+            `</span>`;
+
+          if (state.id === id) {
+            link.classList.add("active");
+          }
+
           list.appendChild(link);
         }
 
@@ -1423,211 +2003,378 @@
 
       if (!visibleCount) {
         navigation.innerHTML =
-          `<div class="sidebar-empty">No matching corpus artifact.</div>`;
+          `<div class="sidebar-empty">` +
+          `No matching corpus artifact.` +
+          `</div>`;
       }
     }
 
     function findLabel(id) {
       for (const group of NAV_GROUPS) {
-        const match = group.items.find(item => item[0] === id);
-        if (match) return match[2];
+        const match =
+          group.items.find(
+            item => item[0] === id
+          );
+
+        if (match) {
+          return match[2];
+        }
       }
+
       return id;
     }
 
-function valueToHTML(value, depth = 0) {
-  if (value === null) {
-    return `<span class="json-value null">null</span>`;
-  }
+    /* ═══════════════════════════════════════════════════════════
+       Nested JSON renderer
+       ═══════════════════════════════════════════════════════════ */
 
-  if (typeof value === "string") {
-    return `<span class="json-value string">${escapeHTML(value)}</span>`;
-  }
+    function valueToHTML(value, depth = 0) {
+      if (value === null) {
+        return (
+          `<span class="json-value null">` +
+          `null` +
+          `</span>`
+        );
+      }
 
-  if (typeof value === "number") {
-    return `<span class="json-value number">${escapeHTML(value)}</span>`;
-  }
+      if (typeof value === "string") {
+        return (
+          `<span class="json-value string">` +
+          `${escapeHTML(value)}` +
+          `</span>`
+        );
+      }
 
-  if (typeof value === "boolean") {
-    return `<span class="json-value boolean">${value}</span>`;
-  }
+      if (typeof value === "number") {
+        return (
+          `<span class="json-value number">` +
+          `${escapeHTML(value)}` +
+          `</span>`
+        );
+      }
 
-  if (Array.isArray(value)) {
-    return renderArray(value, depth);
-  }
+      if (typeof value === "boolean") {
+        return (
+          `<span class="json-value boolean">` +
+          `${value}` +
+          `</span>`
+        );
+      }
 
-  if (typeof value === "object") {
-    return renderObject(value, depth);
-  }
+      if (Array.isArray(value)) {
+        return renderArray(value, depth);
+      }
 
-  return `<span class="json-value">${escapeHTML(String(value))}</span>`;
-}
+      if (typeof value === "object") {
+        return renderObject(value, depth);
+      }
 
-function isPrimitive(value) {
-  return (
-    value === null ||
-    typeof value === "string" ||
-    typeof value === "number" ||
-    typeof value === "boolean"
-  );
-}
+      return (
+        `<span class="json-value">` +
+        `${escapeHTML(String(value))}` +
+        `</span>`
+      );
+    }
 
-function renderArray(array, depth = 0) {
-  if (array.length === 0) {
-    return `<span class="json-value empty-value">[]</span>`;
-  }
+    function renderArray(array, depth = 0) {
+      if (array.length === 0) {
+        return (
+          `<span class="json-value empty-value">` +
+          `[]` +
+          `</span>`
+        );
+      }
 
-  const primitivesOnly = array.every(isPrimitive);
+      const primitivesOnly =
+        array.every(isPrimitive);
 
-  /*
-   * Keep short primitive arrays compact.
-   * These occur frequently in the corpus for things such as:
-   *
-   *   "preserve": ["meaning", "history", "evidence"]
-   */
-  if (primitivesOnly) {
-    return `
-      <div class="json-array json-array-primitive">
-        ${array.map((item, index) => `
-          <div class="array-primitive-item">
-            <span class="array-index">${index + 1}</span>
-            <div class="array-value">
-              ${valueToHTML(item, depth + 1)}
-            </div>
-          </div>
-        `).join("")}
-      </div>
-    `;
-  }
-
-  /*
-   * Complex arrays get independently inspectable entries.
-   *
-   * This works especially well for corpus structures such as:
-   *
-   *   "sequence": [
-   *     { ... },
-   *     { ... },
-   *     { ... }
-   *   ]
-   */
-  return `
-    <div class="json-array json-array-complex">
-      ${array.map((item, index) => {
-        const itemType = Array.isArray(item)
-          ? "Array"
-          : item === null
-            ? "Null"
-            : typeof item === "object"
-              ? "Object"
-              : titleCase(typeof item);
-
+      /*
+       * Primitive arrays stay lightweight,
+       * but each value retains a visible
+       * array position.
+       */
+      if (primitivesOnly) {
         return `
-          <details class="array-item" ${depth < 2 ? "open" : ""}>
-            <summary>
-              <span class="array-index">${index + 1}</span>
-              <span class="array-item-type">${itemType}</span>
-              ${arrayItemPreview(item)}
-            </summary>
+          <div class="json-array json-array-primitive">
+            ${array.map(
+              (item, index) => `
+                <div class="array-primitive-item">
+                  <span class="array-index">
+                    ${index + 1}
+                  </span>
 
-            <div class="array-item-content">
-              ${valueToHTML(item, depth + 1)}
-            </div>
-          </details>
-        `;
-      }).join("")}
-    </div>
-  `;
-}
-
-function renderObject(object, depth = 0) {
-  const entries = Object.entries(object);
-
-  if (entries.length === 0) {
-    return `<span class="json-value empty-value">{}</span>`;
-  }
-
-  return `
-    <div class="object-block">
-      ${entries.map(([key, child]) => {
-        const complex =
-          child !== null &&
-          typeof child === "object";
-
-        return `
-          <div class="json-row ${complex ? "complex-row" : ""}">
-            <div class="json-key">
-              ${escapeHTML(key)}
-            </div>
-
-            <div class="json-content">
-              ${valueToHTML(child, depth + 1)}
-            </div>
+                  <div class="array-value">
+                    ${valueToHTML(
+                      item,
+                      depth + 1
+                    )}
+                  </div>
+                </div>
+              `
+            ).join("")}
           </div>
         `;
-      }).join("")}
-    </div>
-  `;
-}
+      }
 
-/*
- * Give complex array items a useful human-readable hint.
- *
- * Many AI Edition objects expose fields such as:
- *
- *   name
- *   title
- *   id
- *   question
- *   claim
- *
- * We can surface one of those without changing the JSON itself.
- */
-function arrayItemPreview(item) {
-  if (
-    item === null ||
-    Array.isArray(item) ||
-    typeof item !== "object"
-  ) {
-    return "";
-  }
-
-  const previewKeys = [
-    "name",
-    "title",
-    "id",
-    "question",
-    "claim",
-    "guide",
-    "role"
-  ];
-
-  for (const key of previewKeys) {
-    if (
-      Object.prototype.hasOwnProperty.call(item, key) &&
-      isPrimitive(item[key]) &&
-      item[key] !== null
-    ) {
+      /*
+       * Complex arrays become independently
+       * expandable entries.
+       *
+       * This handles:
+       *   array -> object
+       *   array -> array
+       *   array -> object -> array
+       *   deeper recursive combinations
+       */
       return `
-        <span class="array-item-preview">
-          ${escapeHTML(item[key])}
-        </span>
+        <div class="json-array json-array-complex">
+          ${array.map(
+            (item, index) => {
+              const itemType =
+                Array.isArray(item)
+                  ? "Array"
+                  : item === null
+                    ? "Null"
+                    : typeof item === "object"
+                      ? "Object"
+                      : titleCase(
+                          typeof item
+                        );
+
+              return `
+                <details
+                  class="array-item"
+                  ${depth < 2 ? "open" : ""}>
+
+                  <summary>
+                    <span class="array-index">
+                      ${index + 1}
+                    </span>
+
+                    <span class="array-item-type">
+                      ${itemType}
+                    </span>
+
+                    ${arrayItemPreview(item)}
+                  </summary>
+
+                  <div class="array-item-content">
+                    ${valueToHTML(
+                      item,
+                      depth + 1
+                    )}
+                  </div>
+                </details>
+              `;
+            }
+          ).join("")}
+        </div>
       `;
     }
-  }
 
-  return "";
-}
+    function renderObject(object, depth = 0) {
+      const entries =
+        Object.entries(object);
+
+      if (entries.length === 0) {
+        return (
+          `<span class="json-value empty-value">` +
+          `{}` +
+          `</span>`
+        );
+      }
+
+      return `
+        <div class="object-block">
+          ${entries.map(
+            ([key, child]) => {
+              const complex =
+                child !== null &&
+                typeof child === "object";
+
+              return `
+                <div class="json-row
+                  ${complex
+                    ? "complex-row"
+                    : ""}">
+
+                  <div class="json-key">
+                    ${escapeHTML(key)}
+                  </div>
+
+                  <div class="json-content">
+                    ${valueToHTML(
+                      child,
+                      depth + 1
+                    )}
+                  </div>
+                </div>
+              `;
+            }
+          ).join("")}
+        </div>
+      `;
+    }
+
+    /*
+     * Give objects inside arrays a useful
+     * collapsed preview without modifying
+     * or interpreting the source JSON.
+     */
+    function arrayItemPreview(item) {
+      if (
+        item === null ||
+        Array.isArray(item) ||
+        typeof item !== "object"
+      ) {
+        return "";
+      }
+
+      const previewKeys = [
+        "name",
+        "title",
+        "id",
+        "question",
+        "claim",
+        "guide",
+        "role"
+      ];
+
+      for (const key of previewKeys) {
+        if (
+          Object.prototype.hasOwnProperty.call(
+            item,
+            key
+          ) &&
+          isPrimitive(item[key]) &&
+          item[key] !== null
+        ) {
+          return (
+            `<span class="array-item-preview">` +
+            `${escapeHTML(item[key])}` +
+            `</span>`
+          );
+        }
+      }
+
+      return "";
+    }
+
+    function renderJSON(data) {
+      if (
+        !data ||
+        typeof data !== "object"
+      ) {
+        documentBody.innerHTML =
+          valueToHTML(data);
+
+        return;
+      }
+
+      const entries =
+        Object.entries(data);
+
+      documentBody.innerHTML = `
+        <div class="json-tree">
+          ${entries.map(
+            ([key, value], index) => `
+              <details
+                class="json-section"
+                ${index < 4 ? "open" : ""}>
+
+                <summary>
+                  ${escapeHTML(
+                    titleCase(key)
+                  )}
+                </summary>
+
+                <div class="json-section-content">
+                  ${valueToHTML(value)}
+                </div>
+              </details>
+            `
+          ).join("")}
+        </div>
+      `;
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       Expand / Collapse controls
+       ═══════════════════════════════════════════════════════════ */
+
+    function getExpandableJSONNodes() {
+      return documentBody.querySelectorAll(
+        "details.json-section, " +
+        "details.array-item"
+      );
+    }
+
+    function expandAllJSON() {
+      if (
+        state.view !== "structured" ||
+        state.type !== "json"
+      ) {
+        return;
+      }
+
+      getExpandableJSONNodes()
+        .forEach(node => {
+          node.open = true;
+        });
+    }
+
+    function collapseAllJSON() {
+      if (
+        state.view !== "structured" ||
+        state.type !== "json"
+      ) {
+        return;
+      }
+
+      getExpandableJSONNodes()
+        .forEach(node => {
+          node.open = false;
+        });
+    }
+
+    function updateDocumentControls() {
+      const canExpand =
+        state.type === "json" &&
+        state.view === "structured";
+
+      expandAllButton.hidden =
+        !canExpand;
+
+      collapseAllButton.hidden =
+        !canExpand;
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       Minimal README Markdown renderer
+       ═══════════════════════════════════════════════════════════ */
 
     function inlineMarkdown(text) {
       return escapeHTML(text)
-        .replace(/`([^`]+)`/g, "<code>$1</code>")
-        .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
-        .replace(/\*([^*]+)\*/g, "<em>$1</em>");
+        .replace(
+          /`([^`]+)`/g,
+          "<code>$1</code>"
+        )
+        .replace(
+          /\*\*([^*]+)\*\*/g,
+          "<strong>$1</strong>"
+        )
+        .replace(
+          /\*([^*]+)\*/g,
+          "<em>$1</em>"
+        );
     }
 
     function renderMarkdown(markdown) {
-      const lines = markdown.replace(/\r/g, "").split("\n");
+      const lines =
+        markdown
+          .replace(/\r/g, "")
+          .split("\n");
+
       let html = "";
       let inCode = false;
       let codeBuffer = [];
@@ -1645,12 +2392,19 @@ function arrayItemPreview(item) {
           closeList();
 
           if (inCode) {
-            html += `<pre><code>${escapeHTML(codeBuffer.join("\n"))}</code></pre>`;
+            html +=
+              `<pre><code>` +
+              `${escapeHTML(
+                codeBuffer.join("\n")
+              )}` +
+              `</code></pre>`;
+
             codeBuffer = [];
             inCode = false;
           } else {
             inCode = true;
           }
+
           continue;
         }
 
@@ -1661,49 +2415,110 @@ function arrayItemPreview(item) {
 
         if (/^### /.test(line)) {
           closeList();
-          html += `<h3>${inlineMarkdown(line.slice(4))}</h3>`;
+
+          html +=
+            `<h3>` +
+            `${inlineMarkdown(
+              line.slice(4)
+            )}` +
+            `</h3>`;
         } else if (/^## /.test(line)) {
           closeList();
-          html += `<h2>${inlineMarkdown(line.slice(3))}</h2>`;
+
+          html +=
+            `<h2>` +
+            `${inlineMarkdown(
+              line.slice(3)
+            )}` +
+            `</h2>`;
         } else if (/^# /.test(line)) {
           closeList();
-          html += `<h1>${inlineMarkdown(line.slice(2))}</h1>`;
+
+          html +=
+            `<h1>` +
+            `${inlineMarkdown(
+              line.slice(2)
+            )}` +
+            `</h1>`;
         } else if (/^> /.test(line)) {
           closeList();
-          html += `<blockquote>${inlineMarkdown(line.slice(2))}</blockquote>`;
+
+          html +=
+            `<blockquote>` +
+            `${inlineMarkdown(
+              line.slice(2)
+            )}` +
+            `</blockquote>`;
         } else if (/^- /.test(line)) {
           if (!inList) {
             html += "<ul>";
             inList = true;
           }
-          html += `<li>${inlineMarkdown(line.slice(2))}</li>`;
+
+          html +=
+            `<li>` +
+            `${inlineMarkdown(
+              line.slice(2)
+            )}` +
+            `</li>`;
         } else if (!line.trim()) {
           closeList();
         } else {
           closeList();
-          html += `<p>${inlineMarkdown(line)}</p>`;
+
+          html +=
+            `<p>` +
+            `${inlineMarkdown(line)}` +
+            `</p>`;
         }
       }
 
       closeList();
 
       if (inCode) {
-        html += `<pre><code>${escapeHTML(codeBuffer.join("\n"))}</code></pre>`;
+        html +=
+          `<pre><code>` +
+          `${escapeHTML(
+            codeBuffer.join("\n")
+          )}` +
+          `</code></pre>`;
       }
 
-      documentBody.innerHTML = `<div class="markdown-view">${html}</div>`;
+      documentBody.innerHTML =
+        `<div class="markdown-view">` +
+        `${html}` +
+        `</div>`;
     }
+
+    /* ═══════════════════════════════════════════════════════════
+       Raw view
+       ═══════════════════════════════════════════════════════════ */
 
     function renderRaw() {
       documentBody.innerHTML =
-        `<pre class="raw-view">${escapeHTML(state.raw)}</pre>`;
+        `<pre class="raw-view">` +
+        `${escapeHTML(state.raw)}` +
+        `</pre>`;
     }
+
+    /* ═══════════════════════════════════════════════════════════
+       View switching
+       ═══════════════════════════════════════════════════════════ */
 
     function setView(view) {
       state.view = view;
 
-      structuredButton.classList.toggle("active", view === "structured");
-      rawButton.classList.toggle("active", view === "raw");
+      structuredButton.classList.toggle(
+        "active",
+        view === "structured"
+      );
+
+      rawButton.classList.toggle(
+        "active",
+        view === "raw"
+      );
+
+      updateDocumentControls();
 
       if (view === "raw") {
         renderRaw();
@@ -1717,43 +2532,87 @@ function arrayItemPreview(item) {
       }
     }
 
+    /* ═══════════════════════════════════════════════════════════
+       Load corpus artifact
+       ═══════════════════════════════════════════════════════════ */
+
     async function loadDocument(id) {
       const path = DOC_MAP[id];
-      if (!path) return;
+
+      if (!path) {
+        return;
+      }
 
       state.id = id;
       state.data = null;
       state.raw = "";
-      state.type = path.endsWith(".json") ? "json" : "markdown";
+
+      state.type =
+        path.endsWith(".json")
+          ? "json"
+          : "markdown";
+
       state.view = "structured";
 
-      buildNavigation(navSearch.value);
+      buildNavigation(
+        navSearch.value
+      );
 
       documentType.textContent =
-        state.type === "json" ? "Structured AI Artifact" : "Edition Documentation";
-      documentTitle.textContent = findLabel(id);
-      documentPath.textContent = path;
+        state.type === "json"
+          ? "Structured AI Artifact"
+          : "Edition Documentation";
 
-      documentActions.hidden = false;
-      structuredButton.classList.add("active");
-      rawButton.classList.remove("active");
+      documentTitle.textContent =
+        findLabel(id);
 
-      sourceButton.href = REPO_BASE + path;
+      documentPath.textContent =
+        path;
+
+      documentActions.hidden =
+        false;
+
+      structuredButton.classList.add(
+        "active"
+      );
+
+      rawButton.classList.remove(
+        "active"
+      );
+
+      updateDocumentControls();
+
+      sourceButton.href =
+        REPO_BASE + path;
 
       documentBody.innerHTML =
-        `<div class="loading">Loading <strong>${escapeHTML(path)}</strong>…</div>`;
+        `<div class="loading">` +
+        `Loading <strong>` +
+        `${escapeHTML(path)}` +
+        `</strong>…` +
+        `</div>`;
 
       try {
-        const response = await fetch(path, { cache: "no-store" });
+        const response =
+          await fetch(
+            path,
+            {
+              cache: "no-store"
+            }
+          );
 
         if (!response.ok) {
-          throw new Error(`HTTP ${response.status}`);
+          throw new Error(
+            `HTTP ${response.status}`
+          );
         }
 
-        state.raw = await response.text();
+        state.raw =
+          await response.text();
 
         if (state.type === "json") {
-          state.data = JSON.parse(state.raw);
+          state.data =
+            JSON.parse(state.raw);
 
           documentTitle.textContent =
             state.data?.document?.title ||
@@ -1769,67 +2628,160 @@ function arrayItemPreview(item) {
         } else {
           renderMarkdown(state.raw);
         }
+
+        updateDocumentControls();
+
       } catch (error) {
         documentBody.innerHTML = `
           <div class="error">
-            <strong>Unable to load this artifact.</strong><br>
-            ${escapeHTML(path)}<br><br>
-            <span>${escapeHTML(error.message)}</span>
+            <strong>
+              Unable to load this artifact.
+            </strong>
+
+            <br>
+
+            ${escapeHTML(path)}
+
             <br><br>
-            <a class="button" href="${escapeHTML(REPO_BASE + path)}"
-               target="_blank" rel="noopener noreferrer">
+
+            <span>
+              ${escapeHTML(error.message)}
+            </span>
+
+            <br><br>
+
+            <a
+              class="button"
+              href="${escapeHTML(
+                REPO_BASE + path
+              )}"
+              target="_blank"
+              rel="noopener noreferrer">
               Open source on GitHub ↗
             </a>
           </div>
         `;
       }
 
-      document.getElementById("main").scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-      });
+      document.getElementById("main")
+        .scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
 
-      document.body.classList.remove("sidebar-open");
+      document.body.classList.remove(
+        "sidebar-open"
+      );
     }
 
-    function handleHash() {
-      const id = decodeURIComponent(location.hash.slice(1));
+    /* ═══════════════════════════════════════════════════════════
+       Hash routing
+       ═══════════════════════════════════════════════════════════ */
 
-      if (!id || !DOC_MAP[id]) {
+    function handleHash() {
+      const id =
+        decodeURIComponent(
+          location.hash.slice(1)
+        );
+
+      if (
+        !id ||
+        !DOC_MAP[id]
+      ) {
         if (location.hash) {
-          history.replaceState(null, "", location.pathname + location.search);
+          history.replaceState(
+            null,
+            "",
+            location.pathname +
+            location.search
+          );
         }
-        buildNavigation(navSearch.value);
+
+        buildNavigation(
+          navSearch.value
+        );
+
         return;
       }
 
       loadDocument(id);
     }
 
-    structuredButton.addEventListener("click", () => setView("structured"));
-    rawButton.addEventListener("click", () => setView("raw"));
+    /* ═══════════════════════════════════════════════════════════
+       Events
+       ═══════════════════════════════════════════════════════════ */
 
-    navSearch.addEventListener("input", event => {
-      buildNavigation(event.target.value);
-    });
+    expandAllButton.addEventListener(
+      "click",
+      expandAllJSON
+    );
 
-    menuButton.addEventListener("click", () => {
-      document.body.classList.toggle("sidebar-open");
-    });
+    collapseAllButton.addEventListener(
+      "click",
+      collapseAllJSON
+    );
 
-    document.addEventListener("click", event => {
-      if (
-        document.body.classList.contains("sidebar-open") &&
-        !event.target.closest("#sidebar") &&
-        !event.target.closest("#menuButton")
-      ) {
-        document.body.classList.remove("sidebar-open");
+    structuredButton.addEventListener(
+      "click",
+      () => setView("structured")
+    );
+
+    rawButton.addEventListener(
+      "click",
+      () => setView("raw")
+    );
+
+    navSearch.addEventListener(
+      "input",
+      event => {
+        buildNavigation(
+          event.target.value
+        );
       }
-    });
+    );
 
-    window.addEventListener("hashchange", handleHash);
+    menuButton.addEventListener(
+      "click",
+      () => {
+        document.body.classList.toggle(
+          "sidebar-open"
+        );
+      }
+    );
+
+    document.addEventListener(
+      "click",
+      event => {
+        if (
+          document.body.classList.contains(
+            "sidebar-open"
+          ) &&
+          !event.target.closest(
+            "#sidebar"
+          ) &&
+          !event.target.closest(
+            "#menuButton"
+          )
+        ) {
+          document.body.classList.remove(
+            "sidebar-open"
+          );
+        }
+      }
+    );
+
+    window.addEventListener(
+      "hashchange",
+      handleHash
+    );
+
+    /* ═══════════════════════════════════════════════════════════
+       Startup
+       ═══════════════════════════════════════════════════════════ */
 
     buildNavigation();
+
+    updateDocumentControls();
 
     if (location.hash) {
       handleHash();
