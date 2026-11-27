@@ -2,7 +2,7 @@
 
 # Badges
 
-> **A small marker for a skill you prac**ced and demonstrated***
+> **A small marker for a skill you practiced and demonstrated**
 
 5Guides uses badges to recognize learning milestones.
 
