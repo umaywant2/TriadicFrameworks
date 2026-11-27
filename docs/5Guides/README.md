@@ -1,5 +1,7 @@
 <img width="1194" height="672" alt="5Guides_" src="https://github.com/user-attachments/assets/c6cb8a28-46a6-4fd1-b224-9cd1e63d64dc" />
 
+- [`5G_module.json`](5G_module.json) — Agentic module schema role assignments
+
 # 5Guides
 
 > **Awareness → Alignment → Coherenc**→ Clarity → Continu**y**
