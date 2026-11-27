@@ -12,7 +12,7 @@ And choosing not to leave feedback does not change what you accomplished.
 
 The Student Footprint exists for one simple reason:
 
-> **Some learners may want to quietly**ay, "I was here, and this was my experience."**
+> **Some learners may want to quietly say, "I was here, and this was my experience."**
 
 ---
 
@@ -664,7 +664,7 @@ Instead, we can say:
 
 and:
 
-> **If you'd like to let us**now that you were here, you can c**ose to leave a tiny Footprint.**
+> **If you'd like to let us know that you were here, you can choose to leave a tiny Footprint.**
 
 That preserves the difference between:
 
