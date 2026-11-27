@@ -351,7 +351,8 @@
       "models",
       "AI explanations"
     ],
-    "learning_style": "ordinary examples and games before formal terminology",
+    "activities": [],
+    "learning_mode": "ordinary examples and games before formal terminology",
     "primary_habit": "Locate before repairing."
   },
   "explore_examples": [
@@ -445,30 +446,30 @@
       "What Should Be Observed Next"
     ],
     "all_fields_required": false,
+    "judgment_states": [
+      {
+        "id": "coherent",
+        "meaning": "The important pieces and relationships hold together within the selected boundary and conditions."
+      },
+      {
+        "id": "partly_coherent",
+        "meaning": "Important relationships hold while meaningful tensions or gaps remain."
+      },
+      {
+        "id": "conditional",
+        "meaning": "The structure holds under specified conditions."
+      },
+      {
+        "id": "uncertain",
+        "meaning": "Available information is insufficient to determine whether the structure holds."
+      },
+      {
+        "id": "incoherent",
+        "meaning": "Important represented relationships cannot jointly hold under the selected boundary and conditions."
+      }
+    ],
     "principle": "Use enough structure to reveal why the current judgment was reached."
   },
-  "judgment_states": [
-    {
-      "id": "coherent",
-      "meaning": "The important pieces and relationships hold together within the selected boundary and conditions."
-    },
-    {
-      "id": "partly_coherent",
-      "meaning": "Important relationships hold while meaningful tensions or gaps remain."
-    },
-    {
-      "id": "conditional",
-      "meaning": "The structure holds under specified conditions."
-    },
-    {
-      "id": "uncertain",
-      "meaning": "Available information is insufficient to determine whether the structure holds."
-    },
-    {
-      "id": "incoherent",
-      "meaning": "Important represented relationships cannot jointly hold under the selected boundary and conditions."
-    }
-  ],
   "mastery": {
     "phase": "demonstration",
     "fresh_problem": true,

@@ -456,6 +456,7 @@
   "explore": {
     "phase": "experience",
     "purpose": "Let learners experience how quickly interpretation, prediction, memory, imagination, and stored categories become mixed with observation.",
+    "topics": [],
     "activities": [
       "ordinary object observation",
       "mug-on-desk scene",
@@ -566,6 +567,7 @@
       "Revision After Another Look"
     ],
     "all_fields_required": false,
+    "judgment_states": [],
     "principle": "The record is a thinking tool rather than mandatory paperwork."
   },
   "mastery": {

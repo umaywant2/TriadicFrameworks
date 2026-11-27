@@ -162,7 +162,7 @@
       "not_currently_comparing": "buildings, elevation, vegetation"
     }
   },
-  "purpose": {
+  "comparison_purpose": {
     "question": "What is this comparison for?",
     "principle": "A representation may align strongly for one purpose and poorly for another.",
     "example": {
@@ -502,6 +502,7 @@
   "explore": {
     "phase": "experience",
     "purpose": "Move from noticing resemblance to identifying specific, bounded, evidence-supported correspondence.",
+    "topics": [],
     "activities": [
       "matching objects",
       "key and lock",

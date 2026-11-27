@@ -124,27 +124,60 @@
     ]
   },
   "guide_object_contract": {
-    "recommended_fields": [
-      "id",
-      "name",
-      "order",
-      "core_question",
+    "shape": "nested",
+    "do_not_flatten": true,
+    "required_sections": [
+      "document",
+      "source",
+      "identity",
       "purpose",
-      "learning_objectives",
+      "position_in_aaccc",
       "key_distinctions",
       "explore",
       "practice",
-      "mastery",
       "student_record",
+      "mastery",
+      "mastery_criteria",
+      "retry",
       "assessment",
       "badge",
       "ai_companion",
       "formal_companion",
       "boundaries",
       "provenance",
-      "next_guide"
+      "ai_behavior",
+      "related",
+      "machine_context"
     ],
-    "student_record_fields_may_vary_by_guide": true,
+    "notes": {
+      "identity_fields": "id, name, order, core_question, student_artifact, badge, previous_guide, and next_guide live under identity, not at the Guide root. previous_guide and next_guide are file links. The opening Guide (Awareness) uses previous_guide: null. The terminal Guide (Continuity) uses next_guide: null and identity.destination: \"Independent Application\". Do not store the post-sequence destination in next or next_guide.",
+      "purpose": "The Guide-level purpose object uses primary, learning_goal, and principle. Guides use singular learning_goal rather than learning_objectives. On Alignment, a separate comparison_purpose object records the purpose of a given comparison (question, principle, example) and must not reuse the top-level purpose key.",
+      "retry": "Awareness, Alignment, Coherence, and Clarity have a top-level retry object. Continuity currently records retryability only as assessment.mastery.retryable and has no top-level retry section. Do not invent Continuity retry guidance solely to satisfy required_sections.",
+      "provenance": "The provenance section is artifact-lineage metadata across the set. Continuity also has a conceptual provenance_as_continuity section (relationship, continuity_question, principle). Those keys must remain distinct.",
+      "related_navigation": "related uses the same previous_guide / next_guide file-link shape as identity, including next_guide: null on Continuity."
+    },
+    "guide_specific_sections": {
+      "comparison_purpose": "Required on Alignment only.",
+      "provenance_as_continuity": "Required on Continuity only."
+    },
+    "explore": {
+      "stable_keys": [
+        "phase",
+        "purpose",
+        "topics",
+        "activities",
+        "learning_mode",
+        "primary_habit"
+      ],
+      "topics_and_activities": "Both keys are present. A Guide may have content in one list and an empty array in the other. Do not invent educational items to fill an empty list.",
+      "learning_mode": "Optional. Use only when a pedagogical mode is already stated. Coherence previously used learning_style for the same idea Continuity recorded as learning_mode (ordinary examples before formal abstraction). The common key is learning_mode; treat learning_style as a retired alias of learning_mode, not a second concept.",
+      "primary_habit": "Optional. Include when already stated; do not invent a habit.",
+      "additional_fields_allowed": "Uniquely meaningful fields may be retained, such as Continuity explore.ai_role."
+    },
+    "student_record": {
+      "fields_may_vary_by_guide": true,
+      "judgment_states": "Always placed inside student_record. Use an empty array when a Guide has no controlled judgment vocabulary. When states are structured objects with meanings, preserve that structure; do not flatten them to labels."
+    },
     "mastery_must_use_fresh_problem": true,
     "retry_supported": true,
     "uncertainty_may_be_valid_outcome": true
