@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Ransomware_Structural_Pattern_Detector_adapters_cache_" src="https://github.com/user-attachments/assets/d23d3c8c-21af-4e7d-93fa-c216956df24d" />
+
 # Cache Adapter
 
 > **Adapter specification for representing authorized cache-resource transitions within the Ransomware Structural Pattern Detector without confusing cached state, source-of-truth state, eviction, expiration, invalidation, persistence, or replication.**
