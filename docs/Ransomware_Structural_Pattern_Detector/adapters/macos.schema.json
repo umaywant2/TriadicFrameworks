@@ -1,0 +1,955 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://triadicframeworks.org/schemas/ransomware-structural-pattern-detector/adapters/macos.schema.json",
+  "title": "Ransomware Structural Pattern Detector - macOS Adapter",
+  "description": "Machine-readable configuration and conformance schema for a macOS adapter. The schema preserves observation scope, notification-versus-authorization semantics, actor lineage, synchronization context, capability boundaries, recovery, privacy, containment, and verification without treating platform capability as implementation capability or execution as resolution.",
+  "type": "object",
+  "additionalProperties": false,
+
+  "required": [
+    "schema",
+    "adapter",
+    "environment",
+    "scope",
+    "observation",
+    "normalization",
+    "macos_context",
+    "capabilities",
+    "containment",
+    "recovery",
+    "verification",
+    "privacy",
+    "provenance"
+  ],
+
+  "properties": {
+    "schema": {
+      "const": "tf.rspd-adapter.macos/v0.1"
+    },
+    "adapter": {
+      "$ref": "#/$defs/adapter"
+    },
+    "environment": {
+      "$ref": "#/$defs/environment"
+    },
+    "scope": {
+      "$ref": "#/$defs/scope"
+    },
+    "observation": {
+      "$ref": "#/$defs/observation"
+    },
+    "normalization": {
+      "$ref": "#/$defs/normalization"
+    },
+    "macos_context": {
+      "$ref": "#/$defs/macosContext"
+    },
+    "capabilities": {
+      "$ref": "#/$defs/capabilities"
+    },
+    "containment": {
+      "$ref": "#/$defs/containment"
+    },
+    "recovery": {
+      "$ref": "#/$defs/recovery"
+    },
+    "verification": {
+      "$ref": "#/$defs/verification"
+    },
+    "privacy": {
+      "$ref": "#/$defs/privacy"
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/limitation"
+      },
+      "default": []
+    },
+    "provenance": {
+      "$ref": "#/$defs/provenance"
+    },
+    "extensions": {
+      "type": "object",
+      "description": "Implementation-specific extension data. Extensions must not redefine canonical adapter semantics.",
+      "additionalProperties": true
+    }
+  },
+
+  "$defs": {
+    "supportLevel": {
+      "type": "string",
+      "enum": [
+        "supported",
+        "partial",
+        "unsupported",
+        "unknown"
+      ]
+    },
+
+    "action": {
+      "type": "string",
+      "enum": [
+        "increase_observation",
+        "notify_authorized_operator",
+        "deny_resource_writes",
+        "contain_actor",
+        "isolate_resource_set",
+        "isolate_network_scope",
+        "quarantine_affected_resources",
+        "restrict_actor_permissions",
+        "disable_actor",
+        "preserve_evidence",
+        "prepare_recovery",
+        "initiate_recovery",
+        "request_manual_review"
+      ]
+    },
+
+    "adapter": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "version",
+        "status",
+        "profile"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "experimental",
+            "development",
+            "validation",
+            "stable",
+            "deprecated"
+          ]
+        },
+        "profile": {
+          "type": "string",
+          "enum": [
+            "application_scoped_observer",
+            "resource_scoped_observer",
+            "endpoint_observation",
+            "endpoint_authorization",
+            "hybrid",
+            "custom"
+          ],
+          "description": "Declared deployment profile. Profile selection does not independently establish capability."
+        },
+        "implementation_ref": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+
+    "environment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "platform"
+      ],
+      "properties": {
+        "platform": {
+          "const": "macos"
+        },
+        "platform_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "architecture": {
+          "type": "string",
+          "enum": [
+            "x86_64",
+            "arm64",
+            "other",
+            "unknown"
+          ]
+        },
+        "deployment": {
+          "type": "string",
+          "enum": [
+            "personal",
+            "workstation",
+            "managed",
+            "development",
+            "testing",
+            "server_like",
+            "other",
+            "unknown"
+          ]
+        }
+      }
+    },
+
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mode"
+      ],
+      "properties": {
+        "mode": {
+          "type": "string",
+          "enum": [
+            "application",
+            "resource_set",
+            "directory_set",
+            "volume_set",
+            "endpoint",
+            "custom"
+          ]
+        },
+        "scope_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "resource_classes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        },
+        "includes_mounted_resources": {
+          "type": "boolean",
+          "default": false
+        },
+        "includes_network_resources": {
+          "type": "boolean",
+          "default": false
+        },
+        "includes_synchronized_resources": {
+          "type": "boolean",
+          "default": false
+        },
+        "includes_recovery_resources": {
+          "type": "boolean",
+          "default": false
+        },
+        "includes_canaries": {
+          "type": "boolean",
+          "default": false
+        }
+      }
+    },
+
+    "observation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sources",
+        "continuity"
+      ],
+      "properties": {
+        "sources": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/observationSource"
+          }
+        },
+        "continuity": {
+          "type": "string",
+          "enum": [
+            "continuous",
+            "polling",
+            "snapshot",
+            "resumed",
+            "gapped",
+            "unknown"
+          ]
+        },
+        "deduplication": {
+          "type": "boolean"
+        },
+        "deduplication_method_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "actor_lineage_collection": {
+          "type": "boolean"
+        },
+        "trust_context_collection": {
+          "type": "boolean"
+        },
+        "network_context_collection": {
+          "type": "boolean"
+        },
+        "synchronization_context_collection": {
+          "type": "boolean"
+        },
+        "recovery_state_collection": {
+          "type": "boolean"
+        },
+        "event_loss_detectable": {
+          "type": "boolean"
+        }
+      }
+    },
+
+    "observationSource": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "class",
+        "support"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "class": {
+          "type": "string",
+          "enum": [
+            "endpoint_notification",
+            "endpoint_authorization",
+            "filesystem",
+            "resource_state",
+            "process",
+            "application",
+            "network",
+            "synchronization",
+            "recovery",
+            "user_supplied",
+            "custom"
+          ]
+        },
+        "support": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "native_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scope_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "direct_or_derived": {
+          "type": "string",
+          "enum": [
+            "direct",
+            "derived",
+            "mixed",
+            "unknown"
+          ]
+        },
+        "event_semantics": {
+          "type": "string",
+          "enum": [
+            "notification",
+            "authorization",
+            "state",
+            "mixed",
+            "not_applicable",
+            "unknown"
+          ],
+          "description": "Preserves whether the observation represents completed-event notification, pre-operation authorization opportunity, state evidence, or another bounded semantic."
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+
+    "normalization": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "output_schema",
+        "preserve_native_operation",
+        "preserve_provenance",
+        "preserve_unknowns",
+        "preserve_event_semantics"
+      ],
+      "properties": {
+        "output_schema": {
+          "const": "tf.resource-transition/v0.1"
+        },
+        "preserve_native_operation": {
+          "const": true
+        },
+        "preserve_provenance": {
+          "const": true
+        },
+        "preserve_unknowns": {
+          "const": true
+        },
+        "preserve_event_semantics": {
+          "const": true,
+          "description": "Notification evidence and authorization opportunities must remain structurally distinguishable."
+        },
+        "preserve_origin_transport_distinction": {
+          "type": "boolean"
+        },
+        "preserve_source_dependencies": {
+          "type": "boolean"
+        },
+        "preserve_synchronization_context": {
+          "type": "boolean"
+        },
+        "preserve_trust_context": {
+          "type": "boolean"
+        },
+        "derive_resource_class": {
+          "type": "boolean"
+        },
+        "derive_baseline_state": {
+          "type": "boolean"
+        },
+        "redaction_enabled": {
+          "type": "boolean"
+        }
+      }
+    },
+
+    "macosContext": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "application_scope_awareness",
+        "endpoint_observation_awareness",
+        "endpoint_authorization_awareness",
+        "host_visibility",
+        "authorization_boundary_awareness"
+      ],
+      "properties": {
+        "application_scope_awareness": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "endpoint_observation_awareness": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "endpoint_authorization_awareness": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "host_visibility": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "actor_lineage_awareness": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "trust_context_awareness": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "synchronization_awareness": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "recovery_awareness": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "authorization_boundary_awareness": {
+          "$ref": "#/$defs/supportLevel"
+        }
+      }
+    },
+
+    "capabilities": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema",
+        "declaration_ref",
+        "observation",
+        "enforcement",
+        "recovery",
+        "verification"
+      ],
+      "properties": {
+        "schema": {
+          "const": "tf.platform-capabilities/v0.1"
+        },
+        "declaration_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "observation": {
+          "$ref": "#/$defs/observationCapabilities"
+        },
+        "enforcement": {
+          "$ref": "#/$defs/enforcementCapabilities"
+        },
+        "recovery": {
+          "$ref": "#/$defs/recoveryCapabilities"
+        },
+        "verification": {
+          "$ref": "#/$defs/verificationCapabilities"
+        }
+      }
+    },
+
+    "observationCapabilities": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "event_observation": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "authorization_event_observation": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "actor_identity": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "actor_lineage": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "trust_context": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "resource_classification": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "network_context": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "origin_transport_distinction": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "baseline_access": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "recovery_state_observation": {
+          "$ref": "#/$defs/supportLevel"
+        }
+      }
+    },
+
+    "enforcementCapabilities": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "operation_denial": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "write_denial": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "actor_containment": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "resource_isolation": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "network_isolation": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "quarantine": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "permission_restriction": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "actor_disablement": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "session_termination": {
+          "$ref": "#/$defs/supportLevel"
+        }
+      }
+    },
+
+    "recoveryCapabilities": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "recovery": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "rollback": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "snapshot_restore": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "resource_restore": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "configuration_restore": {
+          "$ref": "#/$defs/supportLevel"
+        }
+      }
+    },
+
+    "verificationCapabilities": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "post_action_observation": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "state_comparison": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "persistence_detection": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "reappearance_detection": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "recovery_verification": {
+          "$ref": "#/$defs/supportLevel"
+        }
+      }
+    },
+
+    "containment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "decision_schema",
+        "default_authority",
+        "authorization_required",
+        "fallback_allowed"
+      ],
+      "properties": {
+        "decision_schema": {
+          "const": "tf.containment-decision/v0.1"
+        },
+        "default_authority": {
+          "type": "string",
+          "enum": [
+            "recommend_only",
+            "human_approved",
+            "policy_authorized",
+            "preauthorized_bounded",
+            "automatic_bounded"
+          ]
+        },
+        "authorization_required": {
+          "type": "boolean"
+        },
+        "fallback_allowed": {
+          "type": "boolean"
+        },
+        "mappings": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/responseMapping"
+          },
+          "default": []
+        }
+      }
+    },
+
+    "responseMapping": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "requested_action",
+        "capability",
+        "support"
+      ],
+      "properties": {
+        "requested_action": {
+          "$ref": "#/$defs/action"
+        },
+        "capability": {
+          "type": "string",
+          "minLength": 1
+        },
+        "support": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "native_mechanism_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "response_scope": {
+          "type": "string",
+          "enum": [
+            "resource",
+            "resource_set",
+            "actor",
+            "process_tree",
+            "application",
+            "session",
+            "volume",
+            "endpoint",
+            "network",
+            "synchronization_relationship",
+            "custom",
+            "unknown"
+          ]
+        },
+        "reversibility": {
+          "type": "string",
+          "enum": [
+            "fully_reversible",
+            "partially_reversible",
+            "irreversible",
+            "unknown"
+          ]
+        },
+        "requires_additional_authorization": {
+          "type": "boolean"
+        },
+        "fallback_action": {
+          "$ref": "#/$defs/action"
+        }
+      }
+    },
+
+    "recovery": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "recovery_state_observed"
+      ],
+      "properties": {
+        "recovery_state_observed": {
+          "type": "boolean"
+        },
+        "prior_state_observed": {
+          "type": "boolean"
+        },
+        "backup_state_observed": {
+          "type": "boolean"
+        },
+        "snapshot_state_observed": {
+          "type": "boolean"
+        },
+        "synchronized_recovery_observed": {
+          "type": "boolean"
+        },
+        "mechanisms": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/recoveryMechanism"
+          },
+          "default": []
+        }
+      }
+    },
+
+    "recoveryMechanism": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "class",
+        "support",
+        "verification_supported"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "class": {
+          "type": "string",
+          "enum": [
+            "preserved_original",
+            "backup",
+            "snapshot",
+            "version_history",
+            "resource_restore",
+            "configuration_restore",
+            "synchronized_recovery",
+            "custom"
+          ]
+        },
+        "support": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "verification_supported": {
+          "$ref": "#/$defs/supportLevel"
+        }
+      }
+    },
+
+    "verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "output_schema",
+        "rescan_supported",
+        "same_scope_comparison",
+        "host_wide_resolution_claim_allowed",
+        "preserve_limitations"
+      ],
+      "properties": {
+        "output_schema": {
+          "const": "tf.verification/v0.1"
+        },
+        "rescan_supported": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "same_scope_comparison": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "actor_state_comparison": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "cross_environment_comparison": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "recovery_verification": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "host_wide_resolution_claim_allowed": {
+          "type": "boolean",
+          "description": "Whether the concrete implementation has sufficient evidence to permit a host-wide verification claim. Generic configurations should normally set this to false."
+        },
+        "preserve_limitations": {
+          "const": true
+        }
+      }
+    },
+
+    "privacy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "data_minimization",
+        "local_processing_preferred",
+        "plaintext_credentials_allowed",
+        "authentication_material_exported"
+      ],
+      "properties": {
+        "data_minimization": {
+          "const": true
+        },
+        "local_processing_preferred": {
+          "const": true
+        },
+        "plaintext_credentials_allowed": {
+          "const": false
+        },
+        "authentication_material_exported": {
+          "const": false
+        },
+        "raw_resource_content_required": {
+          "type": "boolean",
+          "default": false
+        },
+        "raw_paths_exported": {
+          "type": "boolean",
+          "default": false
+        },
+        "sensitive_process_arguments_exported": {
+          "type": "boolean",
+          "default": false
+        },
+        "account_identifiers_exported": {
+          "type": "boolean",
+          "default": false
+        },
+        "pseudonymous_resource_ids": {
+          "type": "boolean"
+        },
+        "redaction_classes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        }
+      }
+    },
+
+    "limitation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "code",
+        "description",
+        "severity"
+      ],
+      "properties": {
+        "code": {
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "severity": {
+          "type": "string",
+          "enum": [
+            "informational",
+            "minor",
+            "material",
+            "blocking"
+          ]
+        },
+        "affects": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        }
+      }
+    },
+
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "producer",
+        "created_at"
+      ],
+      "properties": {
+        "producer": {
+          "type": "string",
+          "minLength": 1
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "specification_ref": {
+          "type": "string",
+          "default": "macos.md"
+        },
+        "detector_ref": {
+          "type": "string",
+          "default": "../detector.json"
+        },
+        "capabilities_schema_ref": {
+          "type": "string",
+          "default": "../../Shared_Structural_Event_Grammar/platform-capabilities.schema.json"
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        }
+      }
+    }
+  }
+}
