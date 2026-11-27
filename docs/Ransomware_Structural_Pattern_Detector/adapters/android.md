@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Ransomware_Structural_Pattern_Detector_adapters_android_" src="https://github.com/user-attachments/assets/3dc2266f-f01e-49ea-b30c-849307389fe7" />
+
 # Android Adapter
 
 > **Platform adapter specification for mapping authorized Android observations and response capabilities into the Ransomware Structural Pattern Detector architecture.**
