@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Shared_Structural_Event_Grammar_" src="https://github.com/user-attachments/assets/ea9d7b46-6516-4408-b26e-66b27165804a" />
+
 # Shared Structural Event Grammar
 
 > **A platform-neutral lineage model for representing resource transitions, structural patterns, bounded decisions, actual responses, and verified outcomes without collapsing observation into interpretation.**
