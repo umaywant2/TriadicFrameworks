@@ -1,1 +1,1053 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://triadicframeworks.org/schemas/shared-structural-event-grammar/structural-pattern.schema.json",
+  "title": "Structural Pattern",
+  "description": "A platform-neutral analytical object representing a structural pattern inferred from one or more normalized resource transitions. The pattern preserves supporting evidence, counter-evidence, unresolved questions, baseline comparison, uncertainty, and provenance without asserting intent, attribution, or response beyond what the evidence supports.",
+  "type": "object",
+  "additionalProperties": false,
 
+  "required": [
+    "schema",
+    "pattern",
+    "scope",
+    "evidence",
+    "assessment",
+    "provenance"
+  ],
+
+  "properties": {
+    "schema": {
+      "const": "tf.structural-pattern/v0.1",
+      "description": "Canonical schema-family identifier and version."
+    },
+
+    "pattern": {
+      "$ref": "#/$defs/pattern"
+    },
+
+    "scope": {
+      "$ref": "#/$defs/scope"
+    },
+
+    "actors": {
+      "type": "array",
+      "description": "Actors structurally associated with the pattern. Association does not independently establish origin, intent, or attribution.",
+      "items": {
+        "$ref": "#/$defs/actorReference"
+      },
+      "uniqueItems": true,
+      "default": []
+    },
+
+    "resources": {
+      "type": "array",
+      "description": "Resources or resource groups associated with the pattern.",
+      "items": {
+        "$ref": "#/$defs/resourceReference"
+      },
+      "uniqueItems": true,
+      "default": []
+    },
+
+    "evidence": {
+      "$ref": "#/$defs/evidence"
+    },
+
+    "baseline": {
+      "$ref": "#/$defs/baseline"
+    },
+
+    "trajectory": {
+      "$ref": "#/$defs/trajectory"
+    },
+
+    "assessment": {
+      "$ref": "#/$defs/assessment"
+    },
+
+    "damage_boundary": {
+      "$ref": "#/$defs/damageBoundary"
+    },
+
+    "competing_explanations": {
+      "type": "array",
+      "description": "Alternative interpretations that remain plausible under the available evidence.",
+      "items": {
+        "$ref": "#/$defs/competingExplanation"
+      },
+      "default": []
+    },
+
+    "related_pattern_refs": {
+      "type": "array",
+      "description": "References to related structural patterns. Relationship semantics may be supplied through extensions or separate lineage records.",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true,
+      "default": []
+    },
+
+    "provenance": {
+      "$ref": "#/$defs/provenance"
+    },
+
+    "extensions": {
+      "type": "object",
+      "description": "Domain-specific analytical data. Extensions must not redefine canonical fields, erase counter-evidence, or silently convert a structural assessment into an assertion of intent or attribution.",
+      "additionalProperties": true
+    }
+  },
+
+  "$defs": {
+    "pattern": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "type",
+        "state",
+        "first_seen",
+        "last_seen"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Unique identifier for this structural pattern."
+        },
+
+        "type": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Domain-neutral or domain-defined pattern classification, such as accelerating_resource_transformation, authority_inversion, scope_expansion, or context_contamination."
+        },
+
+        "state": {
+          "type": "string",
+          "enum": [
+            "candidate",
+            "emerging",
+            "established",
+            "escalating",
+            "stabilizing",
+            "diminishing",
+            "inactive",
+            "superseded",
+            "unresolved"
+          ],
+          "description": "Current analytical lifecycle state of the pattern."
+        },
+
+        "first_seen": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Earliest observation time currently associated with the pattern."
+        },
+
+        "last_seen": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Most recent observation time currently associated with the pattern."
+        },
+
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional concise human-readable pattern label."
+        },
+
+        "summary": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional bounded description of the interpreted structure."
+        },
+
+        "domain": {
+          "type": "string",
+          "enum": [
+            "system_security",
+            "profile_safety",
+            "identity",
+            "governance",
+            "media",
+            "ai_context",
+            "cloud",
+            "cross_domain",
+            "domain_defined",
+            "unknown"
+          ],
+          "description": "Primary analytical domain in which the pattern is being interpreted."
+        }
+      }
+    },
+
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "event_count"
+      ],
+      "properties": {
+        "event_count": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Number of normalized transition events currently associated with the pattern."
+        },
+
+        "actor_count": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of distinct actor references currently associated with the pattern."
+        },
+
+        "resource_count": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of distinct resource references currently associated with the pattern."
+        },
+
+        "resource_classes": {
+          "type": "array",
+          "description": "Resource classes represented within the pattern.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        },
+
+        "environments": {
+          "type": "array",
+          "description": "Environments, devices, accounts, contexts, or other structural boundaries represented within the pattern.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        },
+
+        "authorized_scope_ref": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional reference to the consent or observation boundary under which the pattern was derived."
+        }
+      }
+    },
+
+    "actorReference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "actor_ref",
+        "relationship"
+      ],
+      "properties": {
+        "actor_ref": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Reference to an actor represented in one or more source transition events."
+        },
+
+        "relationship": {
+          "type": "string",
+          "enum": [
+            "observed_actor",
+            "origin_candidate",
+            "transport_actor",
+            "affected_actor",
+            "associated_actor",
+            "unknown"
+          ],
+          "description": "Observed or assessed relationship between the actor and the pattern."
+        },
+
+        "confidence": {
+          "$ref": "#/$defs/confidence"
+        },
+
+        "evidence_refs": {
+          "type": "array",
+          "description": "References supporting the stated actor relationship.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        }
+      }
+    },
+
+    "resourceReference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "resource_ref",
+        "relationship"
+      ],
+      "properties": {
+        "resource_ref": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Reference to a resource represented in one or more source transition events."
+        },
+
+        "relationship": {
+          "type": "string",
+          "enum": [
+            "primary",
+            "affected",
+            "targeted",
+            "propagation_path",
+            "recovery",
+            "protected",
+            "canary",
+            "associated",
+            "unknown"
+          ],
+          "description": "Structural relationship between the resource and the pattern."
+        },
+
+        "evidence_refs": {
+          "type": "array",
+          "description": "References supporting the stated resource relationship.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        }
+      }
+    },
+
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "event_refs",
+        "supporting",
+        "counter",
+        "unresolved"
+      ],
+      "properties": {
+        "event_refs": {
+          "type": "array",
+          "minItems": 1,
+          "description": "References to the normalized transition events from which the pattern was derived.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+
+        "supporting": {
+          "type": "array",
+          "description": "Evidence that strengthens the proposed structural interpretation.",
+          "items": {
+            "$ref": "#/$defs/signal"
+          }
+        },
+
+        "counter": {
+          "type": "array",
+          "description": "Evidence supporting a competing, benign, mitigating, or less severe interpretation.",
+          "items": {
+            "$ref": "#/$defs/signal"
+          }
+        },
+
+        "unresolved": {
+          "type": "array",
+          "description": "Questions or evidence gaps that prevent a more complete interpretation.",
+          "items": {
+            "$ref": "#/$defs/unresolvedEvidence"
+          }
+        },
+
+        "independence": {
+          "$ref": "#/$defs/evidenceIndependence"
+        }
+      }
+    },
+
+    "signal": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "signal",
+        "strength",
+        "source"
+      ],
+      "properties": {
+        "signal": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Machine-readable signal identifier."
+        },
+
+        "strength": {
+          "type": "string",
+          "enum": [
+            "minimal",
+            "low",
+            "moderate",
+            "high",
+            "decisive",
+            "unknown"
+          ],
+          "description": "Bounded analytical strength assigned to the signal."
+        },
+
+        "source": {
+          "type": "string",
+          "enum": [
+            "observed",
+            "normalized",
+            "derived",
+            "correlated",
+            "external",
+            "user_supplied",
+            "domain_defined",
+            "unknown"
+          ],
+          "description": "Processing or evidentiary origin of the signal."
+        },
+
+        "source_refs": {
+          "type": "array",
+          "description": "References to events, calculations, histories, reports, or other objects supporting the signal.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        },
+
+        "description": {
+          "type": "string",
+          "description": "Optional bounded explanation of the signal."
+        }
+      }
+    },
+
+    "unresolvedEvidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "question",
+        "state"
+      ],
+      "properties": {
+        "question": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Question that remains unresolved."
+        },
+
+        "state": {
+          "type": "string",
+          "enum": [
+            "unknown",
+            "insufficient_evidence",
+            "conflicting_evidence",
+            "unavailable",
+            "not_observed",
+            "pending"
+          ],
+          "description": "Reason or state under which the question remains unresolved."
+        },
+
+        "materiality": {
+          "type": "string",
+          "enum": [
+            "informational",
+            "minor",
+            "material",
+            "critical",
+            "unknown"
+          ],
+          "description": "Degree to which resolving the question could affect the assessment."
+        },
+
+        "source_refs": {
+          "type": "array",
+          "description": "References relevant to the unresolved question.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        }
+      }
+    },
+
+    "evidenceIndependence": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "independent_signal_count": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of signals currently assessed as independent."
+        },
+
+        "dependent_signal_count": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of signals known or suspected to share an origin."
+        },
+
+        "state": {
+          "type": "string",
+          "enum": [
+            "established",
+            "partial",
+            "not_established",
+            "unknown"
+          ],
+          "description": "Overall state of evidence-source independence."
+        },
+
+        "dependency_refs": {
+          "type": "array",
+          "description": "References describing shared sources, synchronization relationships, copied evidence, or other dependencies.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        }
+      }
+    },
+
+    "baseline": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "available"
+      ],
+      "properties": {
+        "available": {
+          "type": "boolean",
+          "description": "Whether a relevant historical or expected-state baseline was available."
+        },
+
+        "baseline_refs": {
+          "type": "array",
+          "description": "References to baselines or historical evidence used in the comparison.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        },
+
+        "deviation": {
+          "type": "string",
+          "enum": [
+            "none",
+            "minimal",
+            "low",
+            "moderate",
+            "high",
+            "extreme",
+            "unknown"
+          ],
+          "description": "Overall structural deviation from available baseline."
+        },
+
+        "role_deviation": {
+          "type": "string",
+          "enum": [
+            "none",
+            "minimal",
+            "low",
+            "moderate",
+            "high",
+            "extreme",
+            "unknown"
+          ],
+          "description": "Deviation from the actor's established structural role."
+        },
+
+        "rate_deviation": {
+          "type": "string",
+          "enum": [
+            "none",
+            "minimal",
+            "low",
+            "moderate",
+            "high",
+            "extreme",
+            "unknown"
+          ],
+          "description": "Deviation from the expected rate of activity."
+        },
+
+        "scope_deviation": {
+          "type": "string",
+          "enum": [
+            "none",
+            "minimal",
+            "low",
+            "moderate",
+            "high",
+            "extreme",
+            "unknown"
+          ],
+          "description": "Deviation from expected resource or environmental scope."
+        },
+
+        "coherence": {
+          "type": "string",
+          "enum": [
+            "coherent",
+            "mostly_coherent",
+            "mixed",
+            "weakly_coherent",
+            "incoherent",
+            "unknown"
+          ],
+          "description": "Degree to which the observed structure remains coherent with the established baseline."
+        }
+      }
+    },
+
+    "trajectory": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "direction": {
+          "type": "string",
+          "enum": [
+            "stable",
+            "accelerating",
+            "decelerating",
+            "expanding",
+            "contracting",
+            "oscillating",
+            "propagating",
+            "ceased",
+            "unknown"
+          ],
+          "description": "Current direction of pattern development."
+        },
+
+        "rate_state": {
+          "type": "string",
+          "enum": [
+            "within_baseline",
+            "elevated",
+            "high",
+            "extreme",
+            "unknown"
+          ],
+          "description": "Categorical rate state without imposing one universal scoring algorithm."
+        },
+
+        "scope_state": {
+          "type": "string",
+          "enum": [
+            "contained",
+            "localized",
+            "expanding",
+            "cross_boundary",
+            "widespread",
+            "unknown"
+          ],
+          "description": "Current structural scope of the pattern."
+        },
+
+        "propagation": {
+          "type": "string",
+          "enum": [
+            "not_observed",
+            "possible",
+            "observed",
+            "active",
+            "ceased",
+            "unknown"
+          ],
+          "description": "Observed or assessed propagation state."
+        },
+
+        "window_start": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Optional beginning of the analytical window used to assess trajectory."
+        },
+
+        "window_end": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Optional end of the analytical window used to assess trajectory."
+        },
+
+        "derivation_refs": {
+          "type": "array",
+          "description": "References to calculations, correlations, or evidence supporting trajectory fields.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        }
+      }
+    },
+
+    "assessment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "structural_state",
+        "severity",
+        "confidence",
+        "intent",
+        "attribution"
+      ],
+      "properties": {
+        "structural_state": {
+          "type": "string",
+          "enum": [
+            "coherent",
+            "benign_deviation",
+            "unusual",
+            "anomalous",
+            "concerning",
+            "destructive_transition",
+            "harmful_effect",
+            "contaminated_context",
+            "authority_conflict",
+            "unresolved"
+          ],
+          "description": "Bounded structural interpretation supported by the current evidence."
+        },
+
+        "severity": {
+          "type": "string",
+          "enum": [
+            "informational",
+            "low",
+            "moderate",
+            "elevated",
+            "high",
+            "critical",
+            "unknown"
+          ],
+          "description": "Assessed structural severity. Severity does not establish intent or attribution."
+        },
+
+        "confidence": {
+          "$ref": "#/$defs/confidence"
+        },
+
+        "intent": {
+          "type": "string",
+          "enum": [
+            "benign",
+            "authorized",
+            "mixed",
+            "harmful",
+            "unknown",
+            "not_assessed"
+          ],
+          "description": "Bounded intent assessment. This field must remain independent from structural confidence."
+        },
+
+        "intent_confidence": {
+          "$ref": "#/$defs/confidence"
+        },
+
+        "attribution": {
+          "type": "string",
+          "enum": [
+            "resolved",
+            "partially_resolved",
+            "candidate",
+            "conflicting",
+            "unresolved",
+            "not_assessed"
+          ],
+          "description": "State of attribution. Pattern recognition does not independently resolve attribution."
+        },
+
+        "attribution_confidence": {
+          "$ref": "#/$defs/confidence"
+        },
+
+        "summary": {
+          "type": "string",
+          "description": "Optional human-readable statement of the bounded assessment."
+        },
+
+        "assessment_refs": {
+          "type": "array",
+          "description": "References to analytical calculations, model outputs, rules, or prior assessments supporting this assessment.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        }
+      }
+    },
+
+    "confidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "level"
+      ],
+      "properties": {
+        "level": {
+          "type": "string",
+          "enum": [
+            "insufficient",
+            "low",
+            "moderate",
+            "high",
+            "very_high",
+            "unknown"
+          ],
+          "description": "Categorical confidence level."
+        },
+
+        "score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Optional normalized confidence score from 0 to 1."
+        },
+
+        "basis": {
+          "type": "string",
+          "description": "Optional bounded explanation of the confidence basis."
+        },
+
+        "method_ref": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional reference to the method, model, rule set, or calibration used to produce confidence."
+        }
+      }
+    },
+
+    "damageBoundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "state": {
+          "type": "string",
+          "enum": [
+            "within_limit",
+            "approaching_limit",
+            "limit_reached",
+            "limit_exceeded",
+            "not_applicable",
+            "unknown"
+          ],
+          "description": "Current state relative to a domain-defined bounded-damage policy."
+        },
+
+        "resource_sensitivity": {
+          "type": "string",
+          "enum": [
+            "low",
+            "moderate",
+            "high",
+            "critical",
+            "mixed",
+            "unknown"
+          ]
+        },
+
+        "reversibility": {
+          "type": "string",
+          "enum": [
+            "full",
+            "partial",
+            "none",
+            "mixed",
+            "unknown"
+          ]
+        },
+
+        "propagation_risk": {
+          "type": "string",
+          "enum": [
+            "none",
+            "low",
+            "moderate",
+            "elevated",
+            "high",
+            "unknown"
+          ]
+        },
+
+        "recovery_impact": {
+          "type": "string",
+          "enum": [
+            "none",
+            "limited",
+            "material",
+            "severe",
+            "unknown"
+          ]
+        },
+
+        "policy_ref": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional reference to the domain-specific damage-boundary policy or method."
+        },
+
+        "derivation_refs": {
+          "type": "array",
+          "description": "References supporting the declared damage-boundary state.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        }
+      }
+    },
+
+    "competingExplanation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "description",
+        "status"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Stable local identifier for the competing explanation."
+        },
+
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Bounded description of the alternative interpretation."
+        },
+
+        "status": {
+          "type": "string",
+          "enum": [
+            "plausible",
+            "partially_supported",
+            "supported",
+            "weakened",
+            "not_supported",
+            "unresolved"
+          ],
+          "description": "Current evidentiary status of the competing explanation."
+        },
+
+        "confidence": {
+          "$ref": "#/$defs/confidence"
+        },
+
+        "supporting_refs": {
+          "type": "array",
+          "description": "References supporting the alternative interpretation.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        },
+
+        "counter_refs": {
+          "type": "array",
+          "description": "References weakening the alternative interpretation.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        }
+      }
+    },
+
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "producer",
+        "created_at"
+      ],
+      "properties": {
+        "producer": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Analyzer, correlation engine, human analyst, or orchestration component that produced the pattern."
+        },
+
+        "producer_version": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional version of the producing analyzer or rule set."
+        },
+
+        "created_at": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Time at which this pattern object was created."
+        },
+
+        "updated_at": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Optional time at which this pattern object was last updated."
+        },
+
+        "method_refs": {
+          "type": "array",
+          "description": "References to the analytical methods, models, rules, or policies used to derive the pattern.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        },
+
+        "source_refs": {
+          "type": "array",
+          "description": "References to source events, baselines, evidence objects, or other lineage material used to produce the pattern.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        },
+
+        "supersedes_ref": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional reference to an earlier pattern record superseded by this version."
+        }
+      }
+    }
+  }
+}
