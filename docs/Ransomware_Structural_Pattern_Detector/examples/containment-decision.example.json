@@ -1,1 +1,181 @@
+{
+  "schema": "tf.containment-decision/v0.1",
+
+  "decision_id": "decision://rspd-example/000001",
+
+  "pattern_ref": "pattern://rspd-example/000001",
+
+  "decision": {
+    "state": "approved",
+    "action": "deny_resource_writes",
+    "priority": "high",
+    "scope": "resource_set",
+
+    "target_refs": [
+      "actor://rspd-example/process-3817",
+      "scope://protected-user-resources"
+    ],
+
+    "reason_codes": [
+      "accelerating_transition_rate",
+      "expanding_resource_scope",
+      "destructive_transition_observed",
+      "damage_boundary_approaching"
+    ],
+
+    "summary": "Authorize a bounded write-denial response for the observed actor within the protected resource scope. The decision is based on the accelerating destructive structural pattern and approaching damage boundary, not on a claim of harmful intent or resolved attribution."
+  },
+
+  "authority": {
+    "mode": "policy_authorized",
+    "authorization_required": true,
+    "authorized": true,
+    "authorization_ref": "authorization://rspd-example/containment-000001",
+    "authorized_scope_ref": "scope://protected-user-resources",
+    "authorized_by_ref": "authority://rspd-example/bounded-containment-policy"
+  },
+
+  "requested_response": {
+    "action": "deny_resource_writes",
+    "target_ref": "actor://rspd-example/process-3817",
+    "scope": "resource_set",
+    "priority": "high"
+  },
+
+  "capability_requirements": {
+    "capabilities_ref": "capabilities://rspd-macos-endpoint-security-example/v0.1",
+
+    "required": [
+      "write_denial",
+      "post_action_observation"
+    ],
+
+    "preferred": [
+      "state_comparison",
+      "reappearance_detection"
+    ],
+
+    "unavailable_or_unestablished": [
+      "cross_environment_verification",
+      "recovery_verification"
+    ]
+  },
+
+  "constraints": {
+    "bounded": true,
+    "reversible_preferred": true,
+    "destructive_response_allowed": false,
+    "scope_expansion_allowed": false,
+    "fallback_allowed": true,
+    "manual_review_on_scope_change": true,
+    "verification_required": true,
+
+    "maximum_scope_ref": "scope://protected-user-resources",
+
+    "notes": "The response must remain bounded to the authorized protected-resource scope. Expansion beyond that scope requires a new decision or additional authorization."
+  },
+
+  "fallback": {
+    "allowed": true,
+
+    "ordered_actions": [
+      "increase_observation",
+      "notify_authorized_operator",
+      "preserve_evidence",
+      "request_manual_review"
+    ],
+
+    "requirements": [
+      "Fallback must remain inside the authorized scope.",
+      "Fallback must not be reported as equivalent to the requested response unless equivalent structural effect is established.",
+      "Unavailable write denial must remain explicit in the response outcome.",
+      "Fallback execution does not waive post-response verification."
+    ]
+  },
+
+  "evidence": {
+    "supporting_refs": [
+      "pattern://rspd-example/000001",
+      "assessment://rspd-example/rate-0001",
+      "assessment://rspd-example/destructiveness-0001",
+      "assessment://rspd-example/scope-0001",
+      "derivation://rspd-example/damage-boundary-0001"
+    ],
+
+    "counter_evidence_refs": [
+      "baseline://rspd-example/v0.1"
+    ],
+
+    "unresolved_refs": [
+      "question://rspd-example/user-authorization",
+      "question://rspd-example/origin-actor",
+      "question://rspd-example/recovery-state",
+      "question://rspd-example/remote-state"
+    ],
+
+    "decision_basis": "The observed structural trajectory presents sufficient bounded damage risk to justify reversible containment within the authorized resource scope despite unresolved intent, attribution, recovery state, and remote-origin state."
+  },
+
+  "risk": {
+    "damage_boundary_state": "approaching_limit",
+    "structural_severity": "high",
+    "structural_confidence": "high",
+    "reversibility": "unknown",
+    "propagation_risk": "moderate",
+    "recovery_impact": "unknown",
+    "collateral_impact": "moderate"
+  },
+
+  "uncertainty": {
+    "intent": "unknown",
+    "attribution": "unresolved",
+    "origin": "unresolved",
+    "recovery_state": "unknown",
+    "remote_state": "unknown",
+
+    "notes": "These unresolved states constrain interpretation but do not erase the observed destructive trajectory or the bounded need to prevent additional resource modification."
+  },
+
+  "verification": {
+    "required": true,
+    "requested_scope": "resource_set",
+    "scope_ref": "scope://protected-user-resources",
+
+    "required_checks": [
+      "destructive_activity_continuation",
+      "target_actor_write_activity",
+      "affected_resource_scope",
+      "reappearance"
+    ],
+
+    "desired_checks": [
+      "remote_origin_state",
+      "recovery_state"
+    ],
+
+    "limitations": [
+      "Cross-environment verification capability is not established.",
+      "Recovery verification capability is not established."
+    ]
+  },
+
+  "provenance": {
+    "producer": "rspd-example-policy-engine",
+    "producer_version": "0.1.0",
+    "created_at": "2026-11-27T08:45:36Z",
+
+    "policy_refs": [
+      "policy://rspd-example/bounded-damage/v0.1",
+      "policy://rspd-example/bounded-containment/v0.1"
+    ],
+
+    "source_refs": [
+      "pattern://rspd-example/000001",
+      "event://rspd-example/000001",
+      "event://rspd-example/000002",
+      "event://rspd-example/000003",
+      "capabilities://rspd-macos-endpoint-security-example/v0.1"
+    ]
+  }
+}
 
