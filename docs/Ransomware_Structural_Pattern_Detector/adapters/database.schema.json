@@ -483,4 +483,207 @@
         "state_comparison": {
           "$ref": "#/$defs/supportLevel"
         },
-        "
+        "persistence_detection": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "reappearance_detection": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "recovery_verification": {
+          "$ref": "#/$defs/supportLevel"
+        }
+      }
+    },
+    "containment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "decision_schema",
+        "default_authority",
+        "authorization_required",
+        "fallback_allowed"
+      ],
+      "properties": {
+        "decision_schema": {
+          "const": "tf.containment-decision/v0.1"
+        },
+        "default_authority": {
+          "type": "string",
+          "enum": [
+            "recommend_only",
+            "human_approved",
+            "policy_authorized",
+            "preauthorized_bounded",
+            "automatic_bounded"
+          ]
+        },
+        "authorization_required": {
+          "type": "boolean"
+        },
+        "fallback_allowed": {
+          "type": "boolean"
+        }
+      }
+    },
+    "recovery": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "recovery_state_observed"
+      ],
+      "properties": {
+        "recovery_state_observed": {
+          "type": "boolean"
+        },
+        "backup_state_observed": {
+          "type": "boolean"
+        },
+        "snapshot_state_observed": {
+          "type": "boolean"
+        },
+        "recovery_interference_observable": {
+          "type": "boolean"
+        }
+      }
+    },
+    "verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "output_schema",
+        "rescan_supported",
+        "logical_state_comparison",
+        "preserve_limitations"
+      ],
+      "properties": {
+        "output_schema": {
+          "const": "tf.verification/v0.1"
+        },
+        "rescan_supported": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "logical_state_comparison": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "cross_replica_comparison": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "recovery_verification": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "preserve_limitations": {
+          "const": true
+        }
+      }
+    },
+    "privacy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "data_minimization",
+        "local_processing_preferred",
+        "plaintext_credentials_allowed",
+        "query_contents_exported"
+      ],
+      "properties": {
+        "data_minimization": {
+          "const": true
+        },
+        "local_processing_preferred": {
+          "const": true
+        },
+        "plaintext_credentials_allowed": {
+          "const": false
+        },
+        "query_contents_exported": {
+          "const": false
+        },
+        "raw_record_contents_exported": {
+          "type": "boolean",
+          "default": false
+        },
+        "connection_secrets_exported": {
+          "type": "boolean",
+          "default": false
+        },
+        "pseudonymous_resource_ids": {
+          "type": "boolean"
+        }
+      }
+    },
+    "limitation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "code",
+        "description",
+        "severity"
+      ],
+      "properties": {
+        "code": {
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "severity": {
+          "type": "string",
+          "enum": [
+            "informational",
+            "minor",
+            "material",
+            "blocking"
+          ]
+        },
+        "affects": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "producer",
+        "created_at"
+      ],
+      "properties": {
+        "producer": {
+          "type": "string",
+          "minLength": 1
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "specification_ref": {
+          "type": "string",
+          "default": "database.md"
+        },
+        "detector_ref": {
+          "type": "string",
+          "default": "../detector.json"
+        },
+        "capabilities_schema_ref": {
+          "type": "string",
+          "default": "../../Shared_Structural_Event_Grammar/platform-capabilities.schema.json"
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        }
+      }
+    }
+  }
+}
