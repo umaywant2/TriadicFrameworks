@@ -1,5 +1,7 @@
 <img width="1194" height="672" alt="Ransomware_Structural_Pattern_Detector_adapters_" src="https://github.com/user-attachments/assets/4a84e91f-6cf3-4340-9975-1a34002126f8" />
 
+- [`adapters.json`](adapters.json) — Agentic module schema role assignments
+
 # Ransomware Structural Pattern Detector — Adapters
 
 > **Adapters translate native platform, environment, service, and resource observations into the platform-neutral structural contracts used by the Ransomware Structural Pattern Detector.**
