@@ -1,1 +1,392 @@
+{
+  "schema": "tf.structural-pattern/v0.1",
 
+  "pattern": {
+    "id": "pattern://rspd-example/000001",
+    "type": "accelerating_destructive_resource_transformation",
+    "state": "escalating",
+    "first_seen": "2026-11-27T08:44:58Z",
+    "last_seen": "2026-11-27T08:45:32Z",
+    "title": "Accelerating modification of protected user resources",
+    "summary": "A correlated sequence of atypical resource modifications is accelerating across protected user documents. Available evidence supports a concerning destructive structural pattern while user intent and ultimate origin remain unresolved.",
+    "domain": "system_security"
+  },
+
+  "scope": {
+    "event_count": 3,
+    "actor_count": 1,
+    "resource_count": 3,
+
+    "resource_classes": [
+      "user_document"
+    ],
+
+    "environments": [
+      "environment://rspd-example/local-macos"
+    ],
+
+    "authorized_scope_ref": "scope://protected-user-resources"
+  },
+
+  "actors": [
+    {
+      "actor_ref": "actor://rspd-example/process-3817",
+      "relationship": "observed_actor",
+
+      "confidence": {
+        "level": "high",
+        "score": 0.93,
+        "basis": "The same normalized actor reference is associated with the correlated resource transitions.",
+        "method_ref": "method://rspd-example/actor-correlation/v0.1"
+      },
+
+      "evidence_refs": [
+        "event://rspd-example/000001",
+        "event://rspd-example/000002",
+        "event://rspd-example/000003"
+      ]
+    }
+  ],
+
+  "resources": [
+    {
+      "resource_ref": "resource://pseudonymous/document-0087",
+      "relationship": "affected",
+      "evidence_refs": [
+        "event://rspd-example/000001"
+      ]
+    },
+    {
+      "resource_ref": "resource://pseudonymous/document-0091",
+      "relationship": "affected",
+      "evidence_refs": [
+        "event://rspd-example/000002"
+      ]
+    },
+    {
+      "resource_ref": "resource://pseudonymous/document-0094",
+      "relationship": "affected",
+      "evidence_refs": [
+        "event://rspd-example/000003"
+      ]
+    }
+  ],
+
+  "evidence": {
+    "event_refs": [
+      "event://rspd-example/000001",
+      "event://rspd-example/000002",
+      "event://rspd-example/000003"
+    ],
+
+    "supporting": [
+      {
+        "signal": "rate_deviation",
+        "strength": "high",
+        "source": "derived",
+
+        "source_refs": [
+          "event://rspd-example/000001",
+          "event://rspd-example/000002",
+          "event://rspd-example/000003",
+          "baseline://rspd-example/v0.1"
+        ],
+
+        "description": "The observed resource-transition rate materially exceeds the available baseline for the correlated actor and resource class."
+      },
+      {
+        "signal": "rate_acceleration",
+        "strength": "high",
+        "source": "derived",
+
+        "source_refs": [
+          "derivation://rspd-example/rate-window-0001",
+          "derivation://rspd-example/rate-window-0002"
+        ],
+
+        "description": "The relevant transition rate increases across comparable analytical windows."
+      },
+      {
+        "signal": "destructive_transition",
+        "strength": "high",
+        "source": "correlated",
+
+        "source_refs": [
+          "event://rspd-example/000002",
+          "event://rspd-example/000003"
+        ],
+
+        "description": "Correlated observations indicate loss or replacement of prior usable state for part of the affected resource set."
+      },
+      {
+        "signal": "scope_expansion",
+        "strength": "moderate",
+        "source": "correlated",
+
+        "source_refs": [
+          "event://rspd-example/000001",
+          "event://rspd-example/000002",
+          "event://rspd-example/000003"
+        ],
+
+        "description": "The activity expands from one protected resource to multiple resources within the authorized observation scope."
+      },
+      {
+        "signal": "actor_role_deviation",
+        "strength": "moderate",
+        "source": "derived",
+
+        "source_refs": [
+          "baseline://rspd-example/v0.1",
+          "derivation://rspd-example/actor-role-comparison-0001"
+        ],
+
+        "description": "The current rate and operation pattern are not fully coherent with the actor's available historical baseline."
+      }
+    ],
+
+    "counter": [
+      {
+        "signal": "known_actor",
+        "strength": "low",
+        "source": "normalized",
+
+        "source_refs": [
+          "event://rspd-example/000001",
+          "event://rspd-example/000002",
+          "event://rspd-example/000003"
+        ],
+
+        "description": "The observed actor is known within the available baseline and is not inherently anomalous by identity."
+      },
+      {
+        "signal": "resource_class_within_baseline",
+        "strength": "low",
+        "source": "derived",
+
+        "source_refs": [
+          "baseline://rspd-example/v0.1"
+        ],
+
+        "description": "The affected user-document resource class is not itself outside the actor's established historical scope."
+      },
+      {
+        "signal": "propagation_not_observed",
+        "strength": "low",
+        "source": "normalized",
+
+        "source_refs": [
+          "event://rspd-example/000001",
+          "event://rspd-example/000002",
+          "event://rspd-example/000003"
+        ],
+
+        "description": "No propagation beyond the currently observed local resource scope has been established."
+      }
+    ],
+
+    "unresolved": [
+      {
+        "question": "Was the observed activity explicitly authorized by the user?",
+        "state": "unknown",
+        "materiality": "material",
+
+        "source_refs": [
+          "event://rspd-example/000001",
+          "event://rspd-example/000002",
+          "event://rspd-example/000003"
+        ]
+      },
+      {
+        "question": "Did the locally observed actor originate the destructive transition?",
+        "state": "insufficient_evidence",
+        "materiality": "material",
+
+        "source_refs": [
+          "event://rspd-example/000001",
+          "event://rspd-example/000002",
+          "event://rspd-example/000003"
+        ]
+      },
+      {
+        "question": "Can every affected resource be restored to a known usable prior state?",
+        "state": "insufficient_evidence",
+        "materiality": "critical",
+
+        "source_refs": [
+          "event://rspd-example/000002",
+          "event://rspd-example/000003"
+        ]
+      },
+      {
+        "question": "Does related destructive state exist outside the authorized local observation scope?",
+        "state": "unavailable",
+        "materiality": "material",
+
+        "source_refs": [
+          "scope://protected-user-resources"
+        ]
+      }
+    ],
+
+    "independence": {
+      "independent_signal_count": 3,
+      "dependent_signal_count": 2,
+      "state": "partial",
+
+      "dependency_refs": [
+        "dependency://rspd-example/shared-actor-0001",
+        "dependency://rspd-example/shared-resource-transition-sequence-0001"
+      ]
+    }
+  },
+
+  "baseline": {
+    "available": true,
+
+    "baseline_refs": [
+      "baseline://rspd-example/v0.1"
+    ],
+
+    "deviation": "high",
+    "role_deviation": "moderate",
+    "rate_deviation": "high",
+    "scope_deviation": "moderate",
+    "coherence": "weakly_coherent"
+  },
+
+  "trajectory": {
+    "direction": "accelerating",
+    "rate_state": "high",
+    "scope_state": "expanding",
+    "propagation": "not_observed",
+    "window_start": "2026-11-27T08:44:58Z",
+    "window_end": "2026-11-27T08:45:32Z",
+
+    "derivation_refs": [
+      "derivation://rspd-example/rate-window-0001",
+      "derivation://rspd-example/rate-window-0002",
+      "derivation://rspd-example/scope-expansion-0001"
+    ]
+  },
+
+  "assessment": {
+    "structural_state": "destructive_transition",
+    "severity": "high",
+
+    "confidence": {
+      "level": "high",
+      "score": 0.88,
+      "basis": "Multiple correlated resource transitions show atypical rate, acceleration, scope expansion, and destructive state change while counter-evidence remains insufficient to explain the full pattern.",
+      "method_ref": "method://rspd-example/structural-assessment/v0.1"
+    },
+
+    "intent": "unknown",
+
+    "intent_confidence": {
+      "level": "insufficient",
+      "score": 0.18,
+      "basis": "The current evidence does not establish whether the destructive behavior was authorized, accidental, defective, or deliberately harmful.",
+      "method_ref": "method://rspd-example/intent-assessment/v0.1"
+    },
+
+    "attribution": "unresolved",
+
+    "attribution_confidence": {
+      "level": "low",
+      "score": 0.27,
+      "basis": "The locally observed process is associated with the transitions, but the evidence does not establish ultimate origin beyond that observation boundary.",
+      "method_ref": "method://rspd-example/attribution-assessment/v0.1"
+    },
+
+    "summary": "The available evidence supports a high-confidence destructive and accelerating resource-transition pattern. Intent remains unknown and attribution remains unresolved.",
+
+    "assessment_refs": [
+      "assessment://rspd-example/rate-0001",
+      "assessment://rspd-example/destructiveness-0001",
+      "assessment://rspd-example/scope-0001",
+      "assessment://rspd-example/baseline-0001"
+    ]
+  },
+
+  "damage_boundary": {
+    "state": "approaching_limit",
+    "resource_sensitivity": "moderate",
+    "reversibility": "unknown",
+    "propagation_risk": "moderate",
+    "recovery_impact": "unknown",
+    "policy_ref": "policy://rspd-example/bounded-damage/v0.1",
+
+    "derivation_refs": [
+      "derivation://rspd-example/damage-boundary-0001",
+      "event://rspd-example/000001",
+      "event://rspd-example/000002",
+      "event://rspd-example/000003"
+    ]
+  },
+
+  "competing_explanations": [
+    {
+      "id": "authorized-bulk-transformation",
+      "description": "The activity may represent an authorized bulk transformation performed by a known application or process.",
+      "status": "plausible",
+
+      "confidence": {
+        "level": "low",
+        "score": 0.31,
+        "basis": "The actor and resource class are known, but explicit authorization and a coherent expected bulk workflow have not been established.",
+        "method_ref": "method://rspd-example/competing-explanation/v0.1"
+      },
+
+      "supporting_refs": [
+        "baseline://rspd-example/v0.1"
+      ],
+
+      "counter_refs": [
+        "derivation://rspd-example/rate-window-0002",
+        "derivation://rspd-example/actor-role-comparison-0001",
+        "event://rspd-example/000003"
+      ]
+    },
+    {
+      "id": "software-defect",
+      "description": "A defective or misconfigured application may be producing destructive resource effects without established harmful intent.",
+      "status": "unresolved",
+
+      "confidence": {
+        "level": "low",
+        "score": 0.24,
+        "basis": "The structural evidence is compatible with unintended destructive behavior, but no direct defect evidence is currently available.",
+        "method_ref": "method://rspd-example/competing-explanation/v0.1"
+      },
+
+      "supporting_refs": [],
+
+      "counter_refs": []
+    }
+  ],
+
+  "related_pattern_refs": [],
+
+  "provenance": {
+    "producer": "rspd-example-analyzer",
+    "producer_version": "0.1.0",
+    "created_at": "2026-11-27T08:45:34Z",
+    "updated_at": "2026-11-27T08:45:34Z",
+
+    "method_refs": [
+      "method://rspd-example/event-correlation/v0.1",
+      "method://rspd-example/rate-analysis/v0.1",
+      "method://rspd-example/baseline-comparison/v0.1",
+      "method://rspd-example/structural-assessment/v0.1",
+      "method://rspd-example/damage-boundary/v0.1"
+    ],
+
+    "source_refs": [
+      "event://rspd-example/000001",
+      "event://rspd-example/000002",
+      "event://rspd-example/000003",
+      "baseline://rspd-example/v0.1"
+    ]
+  }
+}
