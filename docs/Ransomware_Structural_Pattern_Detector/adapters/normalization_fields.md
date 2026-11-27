@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Ransomware_Structural_Pattern_Detector_adapters_normalization_fields_" src="https://github.com/user-attachments/assets/0c60df95-7ef4-4720-8102-44a10df4bde2" />
+
 # Normalization Fields
 
 > **Reference guide for translating native platform, service, resource, and cross-environment observations into the Shared Structural Event Grammar without collapsing observation into interpretation.**
