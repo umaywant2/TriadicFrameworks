@@ -1,0 +1,198 @@
+{
+  "schema": "tf.verification/v0.1",
+
+  "verification_id": "verification://rspd-example/000001",
+
+  "subject": {
+    "outcome_ref": "outcome://rspd-example/000001",
+    "decision_ref": "decision://rspd-example/000001",
+    "pattern_ref": "pattern://rspd-example/000001",
+
+    "target_refs": [
+      "actor://rspd-example/process-3817",
+      "resource://pseudonymous/document-0087",
+      "resource://pseudonymous/document-0091",
+      "resource://pseudonymous/document-0094"
+    ]
+  },
+
+  "observation": {
+    "started_at": "2026-11-27T08:45:45Z",
+    "completed_at": "2026-11-27T08:46:15Z",
+    "scope": "resource_set",
+    "scope_ref": "scope://protected-user-resources",
+    "capabilities_ref": "capabilities://rspd-macos-endpoint-security-example/v0.1",
+
+    "method_refs": [
+      "method://rspd-example/post-response-observation/v0.1",
+      "method://rspd-example/state-comparison/v0.1",
+      "method://rspd-example/persistence-check/v0.1"
+    ],
+
+    "evidence_refs": [
+      "evidence://rspd-example/post-response-observation-0001",
+      "evidence://rspd-example/post-response-observation-0002",
+      "evidence://rspd-example/post-response-state-0001"
+    ]
+  },
+
+  "comparison": {
+    "pre_response_refs": [
+      "event://rspd-example/000001",
+      "event://rspd-example/000002",
+      "event://rspd-example/000003",
+      "pattern://rspd-example/000001"
+    ],
+
+    "post_response_refs": [
+      "event://rspd-example/post-response-000001",
+      "event://rspd-example/post-response-000002"
+    ],
+
+    "baseline_ref": "baseline://rspd-example/v0.1",
+    "comparison_state": "comparable",
+    "structural_change": "improved"
+  },
+
+  "findings": {
+    "resolved": [
+      {
+        "subject_ref": "condition://rspd-example/accelerating-resource-modification",
+        "state": "resolved",
+
+        "confidence": {
+          "level": "high",
+          "score": 0.87,
+          "basis": "No continuation of the previously observed accelerating resource-modification sequence was detected within the verification scope.",
+          "method_ref": "method://rspd-example/state-comparison/v0.1"
+        },
+
+        "evidence_refs": [
+          "evidence://rspd-example/post-response-observation-0001",
+          "evidence://rspd-example/post-response-state-0001"
+        ],
+
+        "description": "The previously observed accelerating modification sequence is no longer observable within the protected resource set."
+      }
+    ],
+
+    "persistent": [],
+
+    "reappeared": [],
+
+    "new": [],
+
+    "unverifiable": [
+      {
+        "subject_ref": "condition://rspd-example/remote-origin-state",
+        "state": "unverifiable",
+
+        "confidence": {
+          "level": "high",
+          "basis": "The verification adapter does not possess sufficient cross-environment visibility to establish remote origin state.",
+          "method_ref": "method://rspd-example/post-response-observation/v0.1"
+        },
+
+        "evidence_refs": [
+          "evidence://rspd-example/post-response-observation-0002"
+        ],
+
+        "description": "Remote or synchronized origin state could not be verified from the bounded local observation scope."
+      },
+      {
+        "subject_ref": "condition://rspd-example/recovery-state",
+        "state": "unverifiable",
+
+        "confidence": {
+          "level": "moderate",
+          "basis": "Recovery verification capability was not established for this verification cycle.",
+          "method_ref": "method://rspd-example/post-response-observation/v0.1"
+        },
+
+        "evidence_refs": [
+          "evidence://rspd-example/post-response-state-0001"
+        ],
+
+        "description": "The verification pass did not establish whether all affected resources possess a usable and verified recovery path."
+      }
+    ]
+  },
+
+  "result": {
+    "state": "contained",
+
+    "confidence": {
+      "level": "high",
+      "score": 0.84,
+      "basis": "Previously observed destructive resource-transition activity did not continue within the verified resource scope, while remote-origin and recovery state remain outside the established verification boundary.",
+      "method_ref": "method://rspd-example/post-response-observation/v0.1"
+    },
+
+    "summary": "The previously observed destructive transition pattern is contained within the verified protected-resource scope. Complete resolution is not claimed because remote-origin and recovery state remain unresolved.",
+
+    "resolution_basis": "state_comparison"
+  },
+
+  "limitations": [
+    {
+      "code": "VERIFICATION-SCOPE-BOUNDED",
+      "description": "Verification covers the configured protected resource set rather than all local or remote state.",
+      "affects": [
+        "resolution_scope",
+        "remote_state"
+      ],
+      "severity": "material"
+    },
+    {
+      "code": "REMOTE-ORIGIN-UNVERIFIED",
+      "description": "The verification cycle cannot establish whether an originating condition remains active in another environment.",
+      "affects": [
+        "origin_state",
+        "cross_environment_resolution"
+      ],
+      "severity": "material"
+    },
+    {
+      "code": "RECOVERY-VERIFICATION-UNAVAILABLE",
+      "description": "Recovery verification capability was not established for the affected resource set.",
+      "affects": [
+        "recovery_state",
+        "restoration_state"
+      ],
+      "severity": "material"
+    }
+  ],
+
+  "follow_up": {
+    "required": true,
+
+    "reason_codes": [
+      "remote_origin_unverified",
+      "recovery_state_unverified"
+    ],
+
+    "pattern_reassessment_required": false,
+    "new_decision_required": false,
+    "recommended_scope": "cross_environment",
+
+    "notes": "Additional authorized cross-environment observation would be required to determine whether an originating condition remains active outside the verified local scope. Recovery verification would require a separately established recovery-observation capability."
+  },
+
+  "provenance": {
+    "producer": "rspd-verification-example",
+    "producer_version": "0.1.0",
+    "created_at": "2026-11-27T08:46:15Z",
+    "platform": "macos",
+
+    "source_refs": [
+      "outcome://rspd-example/000001",
+      "decision://rspd-example/000001",
+      "pattern://rspd-example/000001",
+      "event://rspd-example/post-response-000001",
+      "event://rspd-example/post-response-000002",
+      "evidence://rspd-example/post-response-observation-0001",
+      "evidence://rspd-example/post-response-observation-0002",
+      "evidence://rspd-example/post-response-state-0001"
+    ]
+  }
+}

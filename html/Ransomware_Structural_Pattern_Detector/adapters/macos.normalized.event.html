@@ -1,0 +1,734 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Ransomware_Structural_Pattern_Detector/adapters/macos.normalized.event.md">
+  <title>macOS Normalized Event Example</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Ransomware_Structural_Pattern_Detector/adapters/macos.normalized.event.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Ransomware_Structural_Pattern_Detector/adapters/macos.normalized.event.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="Ransomware_Structural_Pattern_Detector_adapters_macos normalized event_" src="https://github.com/user-attachments/assets/52939203-4ebd-444e-a673-ad176857d269" /></p>
+<h1 id="macos-normalized-event-example">macOS Normalized Event Example</h1>
+<blockquote>
+<p><strong>Worked example showing how a macOS-native observation becomes a platform-neutral <code>tf.resource-transition/v0.1</code> event without becoming a ransomware verdict.</strong></p>
+</blockquote>
+<p>This document demonstrates the normalization boundary used by the macOS adapter.</p>
+<p>The example is <strong>synthetic</strong>. It illustrates structure and lineage only. It does not represent an event captured from a real device.</p>
+<p>The central rule is:</p>
+<blockquote>
+<p><strong>Normalization describes what was observed in shared structural vocabulary. Interpretation remains downstream.</strong></p>
+</blockquote>
+<hr>
+<h2 id="position-in-the-pipeline">Position in the Pipeline</h2>
+<p>The example occupies this part of the Ransomware Structural Pattern Detector pipeline:</p>
+<p><strong>Native macOS observation</strong></p>
+<p>↓</p>
+<p><strong>macOS adapter</strong></p>
+<p>↓</p>
+<p><strong>Normalization</strong></p>
+<p>↓</p>
+<p><strong><code>tf.resource-transition/v0.1</code></strong></p>
+<p>↓</p>
+<p><strong>Correlation</strong></p>
+<p>↓</p>
+<p><strong><code>tf.structural-pattern/v0.1</code></strong></p>
+<p>The normalized event is therefore an <strong>observation-layer object</strong>.</p>
+<p>It is not:</p>
+<ul>
+<li>a ransomware classification;</li>
+<li>an intent assessment;</li>
+<li>an attribution;</li>
+<li>a severity verdict;</li>
+<li>a containment decision;</li>
+<li>an execution outcome;</li>
+<li>a verification result.</li>
+</ul>
+<hr>
+<h1 id="example-scenario">Example Scenario</h1>
+<p>Assume the configured macOS adapter observes a write affecting a protected user document.</p>
+<p>The adapter can establish that:</p>
+<ul>
+<li>a file resource changed;</li>
+<li>the observed actor is a known process;</li>
+<li>the operation maps to a write;</li>
+<li>the structural action maps to a modification;</li>
+<li>the resource is inside the configured protected scope;</li>
+<li>the operation is unusual relative to the available baseline;</li>
+<li>the observed activity rate is unusual relative to the available baseline.</li>
+</ul>
+<p>The adapter cannot yet establish:</p>
+<ul>
+<li>whether the modification is destructive;</li>
+<li>whether the original resource state remains recoverable;</li>
+<li>whether the actor's broader behavior is coherent with its established role;</li>
+<li>whether the user intended the transition;</li>
+<li>whether another actor ultimately originated the activity;</li>
+<li>whether the transition belongs to a ransomware-like pattern.</li>
+</ul>
+<p>Those unknowns remain unknown.</p>
+<hr>
+<h1 id="normalized-event">Normalized Event</h1>
+<p>The resulting normalized event may take the following form:</p>
+<p><strong>Schema:</strong> <code>tf.resource-transition/v0.1</code></p>
+<p><strong>Event identity:</strong> <code>event://macos-example/000001</code></p>
+<p><strong>Source:</strong> filesystem</p>
+<p><strong>Normalized operation:</strong> write</p>
+<p><strong>Structural transition:</strong> modify</p>
+<p><strong>Resource:</strong> protected user document</p>
+<p><strong>Observed actor:</strong> known process</p>
+<p><strong>Intent:</strong> unknown</p>
+<p><strong>Destructiveness:</strong> unresolved</p>
+<p><strong>Recoverability:</strong> unresolved</p>
+<p><strong>Baseline operation:</strong> atypical</p>
+<p><strong>Baseline rate:</strong> atypical</p>
+<p><strong>Propagation:</strong> not observed</p>
+<p><strong>Recovery impact:</strong> unknown</p>
+<p>This compact view is useful for humans, but the full normalized object retains the detailed lineage described below.</p>
+<hr>
+<h1 id="event">Event</h1>
+<p>The event section establishes the identity, timing, source domain, and normalized operation.</p>
+<p>Conceptually:</p>
+<p><strong>native observation</strong></p>
+<p>↓</p>
+<p><strong>normalized event identity</strong></p>
+<p>The event records:</p>
+<ul>
+<li>event identifier;</li>
+<li>event time;</li>
+<li>source domain;</li>
+<li>normalized operation;</li>
+<li>native operation when retained;</li>
+<li>processing phase;</li>
+<li>optional correlation identifier.</li>
+</ul>
+<p>The important distinction is:</p>
+<blockquote>
+<p><strong>Native operation and normalized operation may coexist.</strong></p>
+</blockquote>
+<p>The native operation preserves diagnostic lineage.</p>
+<p>The normalized operation provides a portable structural vocabulary.</p>
+<p>For example:</p>
+<p><strong>native macOS operation</strong></p>
+<p>↓</p>
+<p><strong><code>write</code></strong></p>
+<p>The normalization step does not infer why the write occurred.</p>
+<hr>
+<h1 id="processing-phase">Processing Phase</h1>
+<p>The event uses:</p>
+<p><code>phase = normalized</code></p>
+<p>This identifies the object as the normalized representation emitted by the adapter.</p>
+<p>It distinguishes the shared event from:</p>
+<ul>
+<li>raw platform evidence;</li>
+<li>downstream derived signals;</li>
+<li>correlated patterns;</li>
+<li>assessments;</li>
+<li>actions;</li>
+<li>outcomes;</li>
+<li>verification.</li>
+</ul>
+<p>The processing boundary remains explicit.</p>
+<hr>
+<h1 id="actor">Actor</h1>
+<p>The actor section describes the actor visible at the observation point.</p>
+<p>In the example, the actor is represented as a known process.</p>
+<p>Possible actor information includes:</p>
+<ul>
+<li>structural actor ID;</li>
+<li>actor type;</li>
+<li>bounded human-readable name;</li>
+<li>parent reference;</li>
+<li>instance reference;</li>
+<li>account reference;</li>
+<li>role;</li>
+<li>trust context.</li>
+</ul>
+<p>The normalized actor is evidence about the actor visible to the adapter.</p>
+<p>It is not automatically the ultimate origin of the transition.</p>
+<hr>
+<h1 id="actor-identity">Actor Identity</h1>
+<p>The example may establish:</p>
+<p><strong>Identity state:</strong> known</p>
+<p>while leaving other questions unresolved.</p>
+<p>A known actor does not establish:</p>
+<ul>
+<li>benign behavior;</li>
+<li>harmful behavior;</li>
+<li>user intent;</li>
+<li>originating intent;</li>
+<li>attribution beyond the observed actor.</li>
+</ul>
+<p>The invariant is:</p>
+<blockquote>
+<p><strong>Actor identity ≠ intent</strong></p>
+</blockquote>
+<hr>
+<h1 id="trust-context">Trust Context</h1>
+<p>Where the adapter has authorized access to relevant trust information, it may preserve that context.</p>
+<p>For example, the normalized event may record that the actor carries known identity or signing context.</p>
+<p>That evidence must not suppress contradictory behavioral evidence.</p>
+<p>The detector therefore preserves:</p>
+<blockquote>
+<p><strong>Trusted actor ≠ safe transition</strong></p>
+</blockquote>
+<p>A previously familiar actor may still produce an anomalous resource transition.</p>
+<hr>
+<h1 id="origin-and-transport">Origin and Transport</h1>
+<p>The actor visible on the Mac may not be the actor that originated a transition.</p>
+<p>This is particularly important for:</p>
+<ul>
+<li>synchronization;</li>
+<li>cloud-backed resources;</li>
+<li>remote resources;</li>
+<li>intermediary services;</li>
+<li>delegated operations.</li>
+</ul>
+<p>The normalized event may therefore preserve:</p>
+<ul>
+<li>observed actor;</li>
+<li>origin actor reference;</li>
+<li>transport actor reference;</li>
+<li>origin environment reference;</li>
+<li>synchronization context.</li>
+</ul>
+<p>If origin is not established, it remains unresolved.</p>
+<blockquote>
+<p><strong>Local observation ≠ local origin</strong></p>
+</blockquote>
+<hr>
+<h1 id="resource">Resource</h1>
+<p>The resource section describes the affected structural resource.</p>
+<p>In this example:</p>
+<p><strong>Type:</strong> <code>file</code></p>
+<p><strong>Class:</strong> <code>user_document</code></p>
+<p><strong>Scope:</strong> <code>local</code></p>
+<p><strong>Protected:</strong> <code>true</code></p>
+<p><strong>Canary:</strong> <code>false</code></p>
+<p><strong>Recoverable:</strong> unresolved</p>
+<p><strong>Sensitivity:</strong> moderate</p>
+<p>The shared event does not require the actual filename or raw filesystem path when those details are unnecessary for structural analysis.</p>
+<p>Instead, it may use a pseudonymous identifier such as:</p>
+<p><code>resource://pseudonymous/document-0087</code></p>
+<p>This supports correlation without unnecessarily exposing personal information.</p>
+<hr>
+<h1 id="resource-identity">Resource Identity</h1>
+<p>The adapter may retain a native resource reference locally while exposing only the privacy-preserving structural identifier to the detector.</p>
+<p>Conceptually:</p>
+<p><strong>native path</strong></p>
+<p>↓</p>
+<p><strong>local adapter mapping</strong></p>
+<p>↓</p>
+<p><strong>pseudonymous resource ID</strong></p>
+<p>The detector can then determine that several transitions affect the same resource without needing the user's filename.</p>
+<p>This is an example of:</p>
+<blockquote>
+<p><strong>Traceable abstraction rather than destructive abstraction.</strong></p>
+</blockquote>
+<hr>
+<h1 id="transition">Transition</h1>
+<p>The transition section describes what structurally happened to the resource.</p>
+<p>In the example:</p>
+<p><strong>Native/normalized operation:</strong> write</p>
+<p>↓</p>
+<p><strong>Structural action:</strong> modify</p>
+<p>The adapter can establish modification.</p>
+<p>It cannot yet establish destructiveness.</p>
+<p>Therefore:</p>
+<p><strong>Destructive:</strong> unresolved</p>
+<p><strong>Original preserved:</strong> unresolved</p>
+<p><strong>Reversibility:</strong> unknown</p>
+<p>This is intentional.</p>
+<p>A write operation does not automatically mean destructive rewriting.</p>
+<hr>
+<h1 id="transition-characteristics">Transition Characteristics</h1>
+<p>The normalized event may retain directly observable or explicitly derived characteristics.</p>
+<p>The example records:</p>
+<ul>
+<li>size changed;</li>
+<li>content changed;</li>
+<li>extension did not change;</li>
+<li>ownership did not change;</li>
+<li>permissions did not change;</li>
+<li>authority did not change;</li>
+<li>resource scope did not change.</li>
+</ul>
+<p>Other characteristics remain unresolved.</p>
+<p>For example:</p>
+<ul>
+<li>structural change;</li>
+<li>entropy shift;</li>
+<li>recovery-state change.</li>
+</ul>
+<p>These values may later become evidence in a structural pattern.</p>
+<p>They are not themselves the pattern.</p>
+<hr>
+<h1 id="unknown-false-and-unresolved">Unknown, False, and Unresolved</h1>
+<p>Normalization depends heavily on distinguishing three different meanings.</p>
+<h2 id="false">False</h2>
+<p>The adapter has evidence supporting a negative state.</p>
+<p>Example:</p>
+<p><code>extension_changed = false</code></p>
+<p>The adapter established that the extension did not change.</p>
+<h2 id="unknown-or-null">Unknown or Null</h2>
+<p>The adapter cannot establish the state.</p>
+<p>Example:</p>
+<p><code>recoverable = null</code></p>
+<p>This means:</p>
+<blockquote>
+<p>Recoverability was not established.</p>
+</blockquote>
+<p>It does not mean:</p>
+<blockquote>
+<p>The resource is unrecoverable.</p>
+</blockquote>
+<h2 id="unresolved-classification">Unresolved Classification</h2>
+<p>Some shared fields use an explicit categorical state such as:</p>
+<p><code>reversibility = unknown</code></p>
+<p>This preserves uncertainty in the vocabulary appropriate to that field.</p>
+<p>The general invariant is:</p>
+<blockquote>
+<p><strong>Unknown ≠ false</strong></p>
+</blockquote>
+<hr>
+<h1 id="context">Context</h1>
+<p>The context section records structural circumstances surrounding the transition.</p>
+<p>Candidate fields include:</p>
+<ul>
+<li>user intent;</li>
+<li>interactive-session state;</li>
+<li>bulk-operation state;</li>
+<li>network-origin state;</li>
+<li>synchronization-transport state;</li>
+<li>origin environment;</li>
+<li>session reference;</li>
+<li>authorized observation scope.</li>
+</ul>
+<p>In the example:</p>
+<p><strong>User intent:</strong> unknown</p>
+<p><strong>Synchronization transport:</strong> false</p>
+<p>Other context may remain unresolved.</p>
+<p>Again, absence of evidence does not become a convenient negative answer.</p>
+<hr>
+<h1 id="user-intent">User Intent</h1>
+<p>The normalized event may record whether direct evidence exists that the user initiated or authorized the operation.</p>
+<p>Possible states include:</p>
+<ul>
+<li>explicit;</li>
+<li>inferred;</li>
+<li>absent;</li>
+<li>unknown;</li>
+<li>not applicable.</li>
+</ul>
+<p>This field remains distinct from broader actor intent.</p>
+<p>For example:</p>
+<p><strong>User intent:</strong> unknown</p>
+<p>does not imply:</p>
+<p><strong>Actor intent:</strong> harmful.</p>
+<p>Intent assessment belongs downstream.</p>
+<hr>
+<h1 id="baseline">Baseline</h1>
+<p>The baseline section compares the current observation with available historical or expected structural state.</p>
+<p>The example establishes:</p>
+<ul>
+<li>baseline available;</li>
+<li>actor known;</li>
+<li>operation atypical;</li>
+<li>scope typical;</li>
+<li>rate atypical;</li>
+<li>resource type typical;</li>
+<li>overall role coherence unresolved.</li>
+</ul>
+<p>This produces a deliberately mixed structural picture.</p>
+<p>Conceptually:</p>
+<p><strong>Known actor</strong></p>
+<p>+</p>
+<p><strong>Expected resource class</strong></p>
+<p>+</p>
+<p><strong>Expected scope</strong></p>
+<p>+</p>
+<p><strong>Atypical operation</strong></p>
+<p>+</p>
+<p><strong>Atypical rate</strong></p>
+<p>+</p>
+<p><strong>Unresolved role coherence</strong></p>
+<p>That is much more informative than reducing the entire observation to:</p>
+<p><strong>suspicious = true</strong></p>
+<hr>
+<h1 id="baseline-is-context-not-trust">Baseline Is Context, Not Trust</h1>
+<p>Historical normality does not grant permanent trust.</p>
+<p>Likewise, unfamiliarity does not establish hostility.</p>
+<p>The baseline answers:</p>
+<blockquote>
+<p><strong>How does this observation compare with what has previously been established?</strong></p>
+</blockquote>
+<p>It does not answer:</p>
+<blockquote>
+<p><strong>Is the actor malicious?</strong></p>
+</blockquote>
+<p>The downstream detector considers baseline deviation together with other supporting, counter, and unresolved evidence.</p>
+<hr>
+<h1 id="consequence">Consequence</h1>
+<p>The consequence section records directly observable effects.</p>
+<p>In the example:</p>
+<p><strong>State:</strong> resource changed</p>
+<p><strong>Propagation observed:</strong> false</p>
+<p><strong>Recovery impact:</strong> unknown</p>
+<p>This means the adapter can establish that the resource changed and did not observe propagation within the available evidence.</p>
+<p>It cannot establish the consequence for recovery.</p>
+<p>The consequence remains bounded to what was actually observed.</p>
+<hr>
+<h1 id="provenance">Provenance</h1>
+<p>Provenance connects the normalized object back to its source evidence.</p>
+<p>The example preserves:</p>
+<ul>
+<li>platform;</li>
+<li>adapter;</li>
+<li>adapter version;</li>
+<li>capability declaration;</li>
+<li>observation time;</li>
+<li>normalization time;</li>
+<li>native-event reference;</li>
+<li>raw-event retention state;</li>
+<li>derivation references;</li>
+<li>redaction classes.</li>
+</ul>
+<p>Conceptually:</p>
+<p><strong>native observation</strong></p>
+<p>↓</p>
+<p><strong>observation timestamp</strong></p>
+<p>↓</p>
+<p><strong>macOS adapter</strong></p>
+<p>↓</p>
+<p><strong>normalization method</strong></p>
+<p>↓</p>
+<p><strong>redaction</strong></p>
+<p>↓</p>
+<p><strong><code>tf.resource-transition/v0.1</code></strong></p>
+<p>while:</p>
+<p><strong>native-event reference</strong></p>
+<p>points back toward the original evidence retained inside its authorized boundary.</p>
+<p>This is the foundation of reconstructable analysis.</p>
+<hr>
+<h1 id="redaction">Redaction</h1>
+<p>The example may remove or generalize fields such as:</p>
+<ul>
+<li>raw path;</li>
+<li>resource name;</li>
+<li>user identity;</li>
+<li>process arguments.</li>
+</ul>
+<p>Those redactions are recorded in provenance.</p>
+<p>The central detector therefore knows that information was deliberately withheld or generalized rather than assuming the information never existed.</p>
+<p>This distinction supports both privacy and evidentiary honesty.</p>
+<hr>
+<h1 id="what-normalization-may-derive">What Normalization May Derive</h1>
+<p>The adapter may perform bounded derivation where the method is explicit.</p>
+<p>Examples include:</p>
+<ul>
+<li>mapping a native resource to <code>user_document</code>;</li>
+<li>mapping a native operation to <code>write</code>;</li>
+<li>mapping the resulting structural action to <code>modify</code>;</li>
+<li>comparing the operation with an established baseline;</li>
+<li>determining that the observed transition lies within an authorized scope;</li>
+<li>pseudonymizing the resource identifier.</li>
+</ul>
+<p>Derived information should preserve method or source lineage where material.</p>
+<hr>
+<h1 id="what-normalization-must-not-derive">What Normalization Must Not Derive</h1>
+<p>The normalization layer must not silently produce claims such as:</p>
+<ul>
+<li>ransomware confirmed;</li>
+<li>malicious actor;</li>
+<li>harmful intent;</li>
+<li>attacker identity;</li>
+<li>critical severity;</li>
+<li>containment required;</li>
+<li>resource unrecoverable;</li>
+<li>incident resolved.</li>
+</ul>
+<p>Those statements belong to later analytical or response stages and require additional evidence.</p>
+<p>The normalization boundary is:</p>
+<blockquote>
+<p><strong>Represent evidence faithfully before interpreting it aggressively.</strong></p>
+</blockquote>
+<hr>
+<h1 id="from-one-event-to-a-pattern">From One Event to a Pattern</h1>
+<p>One normalized event is usually not very interesting.</p>
+<p>The detector becomes useful when many events can be correlated.</p>
+<p>For example:</p>
+<p><strong>Event 1</strong></p>
+<p>Known process modifies protected document.</p>
+<p>↓</p>
+<p><strong>Event 2</strong></p>
+<p>Same actor modifies another protected document.</p>
+<p>↓</p>
+<p><strong>Event 3</strong></p>
+<p>Transition rate increases.</p>
+<p>↓</p>
+<p><strong>Event 4</strong></p>
+<p>Affected resource scope expands.</p>
+<p>↓</p>
+<p><strong>Event 5</strong></p>
+<p>Prior usable state is no longer preserved.</p>
+<p>↓</p>
+<p><strong>Event 6</strong></p>
+<p>Recovery-related resources change.</p>
+<p>Only after correlation, baseline comparison, counter-evidence evaluation, and uncertainty preservation does the detector have enough structure to consider a ransomware-like pattern.</p>
+<p>Conceptually:</p>
+<p><strong><code>tf.resource-transition/v0.1</code> × N</strong></p>
+<p>↓</p>
+<p><strong>CORRELATE</strong></p>
+<p>↓</p>
+<p><strong>derive structural signals</strong></p>
+<p>↓</p>
+<p><strong>CONTRADICT</strong></p>
+<p>↓</p>
+<p><strong>preserve competing explanations</strong></p>
+<p>↓</p>
+<p><strong>ASSESS</strong></p>
+<p>↓</p>
+<p><strong><code>tf.structural-pattern/v0.1</code></strong></p>
+<hr>
+<h1 id="counter-evidence-still-matters">Counter-Evidence Still Matters</h1>
+<p>Suppose the same event sequence also includes evidence that:</p>
+<ul>
+<li>the user explicitly initiated an authorized bulk transformation;</li>
+<li>the application routinely performs this operation;</li>
+<li>originals are preserved;</li>
+<li>recovery remains available;</li>
+<li>activity remains within the expected scope.</li>
+</ul>
+<p>Those observations must survive correlation.</p>
+<p>The detector does not simply count concerning events.</p>
+<p>It evaluates:</p>
+<blockquote>
+<p><strong>Destructive deviation against available structural coherence.</strong></p>
+</blockquote>
+<hr>
+<h1 id="why-this-event-does-not-say-ransomware">Why This Event Does Not Say "Ransomware"</h1>
+<p>The normalized event deliberately does not contain:</p>
+<ul>
+<li><code>ransomware = true</code>;</li>
+<li><code>malicious = true</code>;</li>
+<li><code>intent = harmful</code>;</li>
+<li><code>severity = critical</code>;</li>
+<li><code>contain = true</code>.</li>
+</ul>
+<p>Instead, it establishes a bounded statement:</p>
+<blockquote>
+<p><strong>A known process performed an atypical write affecting a protected user document within the authorized observation scope. The resource changed, the observed rate was atypical, and destructiveness, recoverability, intent, and broader role coherence remain unresolved.</strong></p>
+</blockquote>
+<p>That statement is less dramatic.</p>
+<p>It is also much more useful structurally.</p>
+<p>It can be:</p>
+<ul>
+<li>correlated;</li>
+<li>contradicted;</li>
+<li>reproduced;</li>
+<li>reinterpreted;</li>
+<li>compared against future events;</li>
+<li>inspected by humans;</li>
+<li>inspected by AI systems;</li>
+<li>traced back to its source.</li>
+</ul>
+<hr>
+<h1 id="relationship-to-the-macos-adapter-configuration">Relationship to the macOS Adapter Configuration</h1>
+<p><code>macos.schema.json</code> validates the configuration of a macOS adapter.</p>
+<p><code>macos.example.json</code> demonstrates a synthetic generic adapter configuration.</p>
+<p><code>macos.endpoint-security.example.json</code> demonstrates a stronger illustrative deployment profile.</p>
+<p>This document demonstrates what a normalized observation produced by such an adapter may look like conceptually.</p>
+<p>The roles remain separate:</p>
+<p><strong><code>macos.md</code></strong></p>
+<p>Defines macOS adapter semantics.</p>
+<p>↓</p>
+<p><strong><code>macos.schema.json</code></strong></p>
+<p>Defines the adapter configuration contract.</p>
+<p>↓</p>
+<p><strong>macOS adapter configuration</strong></p>
+<p>Declares concrete observation and response capabilities.</p>
+<p>↓</p>
+<p><strong>Native observation</strong></p>
+<p>Provides platform evidence.</p>
+<p>↓</p>
+<p><strong><code>tf.resource-transition/v0.1</code></strong></p>
+<p>Carries normalized structural evidence.</p>
+<p>↓</p>
+<p><strong>Ransomware Structural Pattern Detector</strong></p>
+<p>Interprets correlated structure.</p>
+<hr>
+<h1 id="relationship-to-the-shared-structural-event-grammar">Relationship to the Shared Structural Event Grammar</h1>
+<p>The canonical machine-readable contract for this event is:</p>
+<p><code>../../Shared_Structural_Event_Grammar/resource-transition.schema.json</code></p>
+<p>The macOS adapter does not redefine that schema.</p>
+<p>Instead, it maps macOS evidence into it.</p>
+<p>That is the portability boundary:</p>
+<p><strong>Windows observation</strong></p>
+<p><strong>Linux observation</strong></p>
+<p><strong>macOS observation</strong></p>
+<p><strong>Android observation</strong></p>
+<p><strong>iOS / iPadOS observation</strong></p>
+<p><strong>Cloud / synchronization observation</strong></p>
+<p><strong>Database observation</strong></p>
+<p><strong>Cache observation</strong></p>
+<p>↓</p>
+<p><strong>Shared Structural Event Grammar</strong></p>
+<p>The native evidence differs.</p>
+<p>The normalized structural semantics remain comparable.</p>
+<hr>
+<h1 id="canonical-normalization-rule">Canonical Normalization Rule</h1>
+<p>The complete normalization path is:</p>
+<p><strong>Native evidence</strong></p>
+<p>↓</p>
+<p><strong>identify observation source</strong></p>
+<p>↓</p>
+<p><strong>establish authorized scope</strong></p>
+<p>↓</p>
+<p><strong>map actor</strong></p>
+<p>↓</p>
+<p><strong>map resource</strong></p>
+<p>↓</p>
+<p><strong>map operation</strong></p>
+<p>↓</p>
+<p><strong>describe transition</strong></p>
+<p>↓</p>
+<p><strong>preserve unknowns</strong></p>
+<p>↓</p>
+<p><strong>preserve source dependencies</strong></p>
+<p>↓</p>
+<p><strong>compare with available baseline</strong></p>
+<p>↓</p>
+<p><strong>record direct consequence</strong></p>
+<p>↓</p>
+<p><strong>minimize sensitive data</strong></p>
+<p>↓</p>
+<p><strong>retain provenance</strong></p>
+<p>↓</p>
+<p><strong>emit <code>tf.resource-transition/v0.1</code></strong></p>
+<p>Then normalization stops.</p>
+<p>The downstream path begins separately:</p>
+<p><strong>Normalized transitions</strong></p>
+<p>↓</p>
+<p><strong>correlation</strong></p>
+<p>↓</p>
+<p><strong>derived signals</strong></p>
+<p>↓</p>
+<p><strong>supporting evidence</strong></p>
+<p>+</p>
+<p><strong>counter-evidence</strong></p>
+<p>+</p>
+<p><strong>unresolved evidence</strong></p>
+<p>↓</p>
+<p><strong>competing explanations</strong></p>
+<p>↓</p>
+<p><strong>structural assessment</strong></p>
+<p>↓</p>
+<p><strong><code>tf.structural-pattern/v0.1</code></strong></p>
+<hr>
+<h1 id="canonical-summary">Canonical Summary</h1>
+<blockquote>
+<p><strong>A normalized macOS event is a privacy-conscious, provenance-preserving structural representation of what an authorized macOS adapter observed. It is evidence for analysis, not the conclusion of that analysis.</strong></p>
+</blockquote>
+<p>Its evidence rule is:</p>
+<blockquote>
+<p><strong>Record what is known, preserve what is unknown, and do not manufacture the missing bridge between observation and intent.</strong></p>
+</blockquote>
+<p>Its portability rule is:</p>
+<blockquote>
+<p><strong>Keep native detail available through lineage while expressing the structural event through shared vocabulary.</strong></p>
+</blockquote>
+<p>Its privacy rule is:</p>
+<blockquote>
+<p><strong>The detector should receive the structure it needs without receiving sensitive native detail it does not need.</strong></p>
+</blockquote>
+<p>Its analytical boundary is:</p>
+<blockquote>
+<p><strong>Normalization ends at <code>tf.resource-transition/v0.1</code>. Ransomware interpretation begins downstream.</strong></p>
+</blockquote>
+  </main>
+</body>
+</html>

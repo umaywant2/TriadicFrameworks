@@ -1,0 +1,519 @@
+{
+  "schema": "tf.rspd-adapter.macos/v0.1",
+
+  "adapter": {
+    "id": "rspd-macos-example",
+    "name": "RSPD macOS Example Adapter",
+    "version": "0.1.0",
+    "status": "experimental",
+    "profile": "hybrid",
+    "implementation_ref": "example://rspd-macos-adapter"
+  },
+
+  "environment": {
+    "platform": "macos",
+    "platform_version": "example",
+    "architecture": "arm64",
+    "deployment": "testing"
+  },
+
+  "scope": {
+    "mode": "resource_set",
+    "scope_ref": "scope://example-protected-macos-resources",
+    "resource_classes": [
+      "user_document",
+      "photo",
+      "video",
+      "audio",
+      "database",
+      "archive",
+      "project_file",
+      "application_data",
+      "configuration",
+      "backup",
+      "recovery_resource",
+      "cloud_resource",
+      "canary"
+    ],
+    "includes_mounted_resources": false,
+    "includes_network_resources": false,
+    "includes_synchronized_resources": true,
+    "includes_recovery_resources": true,
+    "includes_canaries": true
+  },
+
+  "observation": {
+    "sources": [
+      {
+        "id": "example-endpoint-notification",
+        "class": "endpoint_notification",
+        "support": "partial",
+        "native_name": "synthetic-endpoint-notification-source",
+        "scope_ref": "scope://example-protected-macos-resources",
+        "direct_or_derived": "direct",
+        "event_semantics": "notification",
+        "notes": "Synthetic completed-event observation source. It does not establish that a concrete deployed adapter possesses endpoint-wide notification coverage."
+      },
+      {
+        "id": "example-endpoint-authorization",
+        "class": "endpoint_authorization",
+        "support": "partial",
+        "native_name": "synthetic-endpoint-authorization-source",
+        "scope_ref": "scope://example-protected-macos-resources",
+        "direct_or_derived": "direct",
+        "event_semantics": "authorization",
+        "notes": "Synthetic authorization-opportunity source. Technical authorization opportunity remains distinct from policy authority to deny an operation."
+      },
+      {
+        "id": "example-resource-state",
+        "class": "resource_state",
+        "support": "partial",
+        "native_name": "synthetic-resource-state-source",
+        "scope_ref": "scope://example-protected-macos-resources",
+        "direct_or_derived": "mixed",
+        "event_semantics": "state",
+        "notes": "Synthetic bounded resource-state observation used for comparison and verification."
+      },
+      {
+        "id": "example-process-context",
+        "class": "process",
+        "support": "partial",
+        "native_name": "synthetic-process-context-source",
+        "scope_ref": "scope://example-protected-macos-resources",
+        "direct_or_derived": "mixed",
+        "event_semantics": "not_applicable",
+        "notes": "Synthetic bounded actor-context source. It does not imply complete process lineage."
+      },
+      {
+        "id": "example-synchronization",
+        "class": "synchronization",
+        "support": "partial",
+        "native_name": "synthetic-synchronization-source",
+        "scope_ref": "scope://example-protected-macos-resources",
+        "direct_or_derived": "mixed",
+        "event_semantics": "state",
+        "notes": "Synthetic synchronization evidence. Local materialization does not establish local origin."
+      },
+      {
+        "id": "example-recovery-state",
+        "class": "recovery",
+        "support": "unknown",
+        "native_name": "synthetic-recovery-state-source",
+        "scope_ref": "scope://example-protected-macos-resources",
+        "direct_or_derived": "unknown",
+        "event_semantics": "unknown",
+        "notes": "Recovery-state visibility has not been established by this synthetic example."
+      }
+    ],
+
+    "continuity": "continuous",
+    "deduplication": true,
+    "deduplication_method_ref": "method://macos-example-event-correlation/v0.1",
+    "actor_lineage_collection": true,
+    "trust_context_collection": true,
+    "network_context_collection": false,
+    "synchronization_context_collection": true,
+    "recovery_state_collection": false,
+    "event_loss_detectable": true
+  },
+
+  "normalization": {
+    "output_schema": "tf.resource-transition/v0.1",
+    "preserve_native_operation": true,
+    "preserve_provenance": true,
+    "preserve_unknowns": true,
+    "preserve_event_semantics": true,
+    "preserve_origin_transport_distinction": true,
+    "preserve_source_dependencies": true,
+    "preserve_synchronization_context": true,
+    "preserve_trust_context": true,
+    "derive_resource_class": true,
+    "derive_baseline_state": true,
+    "redaction_enabled": true
+  },
+
+  "macos_context": {
+    "application_scope_awareness": "partial",
+    "endpoint_observation_awareness": "partial",
+    "endpoint_authorization_awareness": "partial",
+    "host_visibility": "partial",
+    "actor_lineage_awareness": "partial",
+    "trust_context_awareness": "partial",
+    "synchronization_awareness": "partial",
+    "recovery_awareness": "unknown",
+    "authorization_boundary_awareness": "supported"
+  },
+
+  "capabilities": {
+    "schema": "tf.platform-capabilities/v0.1",
+    "declaration_ref": "capabilities://rspd-macos-example/v0.1",
+
+    "observation": {
+      "event_observation": "partial",
+      "authorization_event_observation": "partial",
+      "actor_identity": "partial",
+      "actor_lineage": "partial",
+      "trust_context": "partial",
+      "resource_classification": "partial",
+      "network_context": "unknown",
+      "origin_transport_distinction": "partial",
+      "baseline_access": "partial",
+      "recovery_state_observation": "unknown"
+    },
+
+    "enforcement": {
+      "operation_denial": "partial",
+      "write_denial": "unknown",
+      "actor_containment": "unknown",
+      "resource_isolation": "unknown",
+      "network_isolation": "unknown",
+      "quarantine": "unknown",
+      "permission_restriction": "unknown",
+      "actor_disablement": "unknown",
+      "session_termination": "unknown"
+    },
+
+    "recovery": {
+      "recovery": "unknown",
+      "rollback": "unknown",
+      "snapshot_restore": "unknown",
+      "resource_restore": "unknown",
+      "configuration_restore": "unknown"
+    },
+
+    "verification": {
+      "post_action_observation": "partial",
+      "state_comparison": "partial",
+      "persistence_detection": "partial",
+      "reappearance_detection": "partial",
+      "recovery_verification": "unknown"
+    }
+  },
+
+  "containment": {
+    "decision_schema": "tf.containment-decision/v0.1",
+    "default_authority": "recommend_only",
+    "authorization_required": true,
+    "fallback_allowed": true,
+
+    "mappings": [
+      {
+        "requested_action": "increase_observation",
+        "capability": "event_observation",
+        "support": "partial",
+        "native_mechanism_ref": "mechanism://macos-example/increase-observation",
+        "response_scope": "resource_set",
+        "reversibility": "fully_reversible",
+        "requires_additional_authorization": false,
+        "fallback_action": "notify_authorized_operator"
+      },
+      {
+        "requested_action": "notify_authorized_operator",
+        "capability": "operator_notification",
+        "support": "supported",
+        "native_mechanism_ref": "mechanism://macos-example/operator-notification",
+        "response_scope": "application",
+        "reversibility": "fully_reversible",
+        "requires_additional_authorization": false,
+        "fallback_action": "request_manual_review"
+      },
+      {
+        "requested_action": "deny_resource_writes",
+        "capability": "write_denial",
+        "support": "unknown",
+        "native_mechanism_ref": "mechanism://macos-example/write-denial-unconfigured",
+        "response_scope": "resource_set",
+        "reversibility": "unknown",
+        "requires_additional_authorization": true,
+        "fallback_action": "notify_authorized_operator"
+      },
+      {
+        "requested_action": "contain_actor",
+        "capability": "actor_containment",
+        "support": "unknown",
+        "native_mechanism_ref": "mechanism://macos-example/actor-containment-unconfigured",
+        "response_scope": "actor",
+        "reversibility": "unknown",
+        "requires_additional_authorization": true,
+        "fallback_action": "notify_authorized_operator"
+      },
+      {
+        "requested_action": "isolate_resource_set",
+        "capability": "resource_isolation",
+        "support": "unknown",
+        "native_mechanism_ref": "mechanism://macos-example/resource-isolation-unconfigured",
+        "response_scope": "resource_set",
+        "reversibility": "unknown",
+        "requires_additional_authorization": true,
+        "fallback_action": "request_manual_review"
+      },
+      {
+        "requested_action": "isolate_network_scope",
+        "capability": "network_isolation",
+        "support": "unknown",
+        "native_mechanism_ref": "mechanism://macos-example/network-isolation-unconfigured",
+        "response_scope": "network",
+        "reversibility": "unknown",
+        "requires_additional_authorization": true,
+        "fallback_action": "request_manual_review"
+      },
+      {
+        "requested_action": "quarantine_affected_resources",
+        "capability": "quarantine",
+        "support": "unknown",
+        "native_mechanism_ref": "mechanism://macos-example/quarantine-unconfigured",
+        "response_scope": "resource_set",
+        "reversibility": "unknown",
+        "requires_additional_authorization": true,
+        "fallback_action": "request_manual_review"
+      },
+      {
+        "requested_action": "preserve_evidence",
+        "capability": "event_observation",
+        "support": "partial",
+        "native_mechanism_ref": "mechanism://macos-example/preserve-structural-evidence",
+        "response_scope": "resource_set",
+        "reversibility": "fully_reversible",
+        "requires_additional_authorization": false,
+        "fallback_action": "request_manual_review"
+      },
+      {
+        "requested_action": "prepare_recovery",
+        "capability": "recovery",
+        "support": "unknown",
+        "native_mechanism_ref": "mechanism://macos-example/recovery-unconfigured",
+        "response_scope": "resource_set",
+        "reversibility": "unknown",
+        "requires_additional_authorization": true,
+        "fallback_action": "request_manual_review"
+      },
+      {
+        "requested_action": "initiate_recovery",
+        "capability": "resource_restore",
+        "support": "unknown",
+        "native_mechanism_ref": "mechanism://macos-example/resource-restore-unconfigured",
+        "response_scope": "resource_set",
+        "reversibility": "unknown",
+        "requires_additional_authorization": true,
+        "fallback_action": "request_manual_review"
+      },
+      {
+        "requested_action": "request_manual_review",
+        "capability": "manual_review",
+        "support": "supported",
+        "native_mechanism_ref": "mechanism://macos-example/manual-review",
+        "response_scope": "application",
+        "reversibility": "fully_reversible",
+        "requires_additional_authorization": false
+      }
+    ]
+  },
+
+  "recovery": {
+    "recovery_state_observed": false,
+    "prior_state_observed": false,
+    "backup_state_observed": false,
+    "snapshot_state_observed": false,
+    "synchronized_recovery_observed": false,
+
+    "mechanisms": [
+      {
+        "id": "example-preserved-original",
+        "class": "preserved_original",
+        "support": "unknown",
+        "verification_supported": "unknown"
+      },
+      {
+        "id": "example-backup-recovery",
+        "class": "backup",
+        "support": "unknown",
+        "verification_supported": "unknown"
+      },
+      {
+        "id": "example-snapshot-recovery",
+        "class": "snapshot",
+        "support": "unknown",
+        "verification_supported": "unknown"
+      },
+      {
+        "id": "example-resource-restore",
+        "class": "resource_restore",
+        "support": "unknown",
+        "verification_supported": "unknown"
+      },
+      {
+        "id": "example-synchronized-recovery",
+        "class": "synchronized_recovery",
+        "support": "unknown",
+        "verification_supported": "unknown"
+      }
+    ]
+  },
+
+  "verification": {
+    "output_schema": "tf.verification/v0.1",
+    "rescan_supported": "partial",
+    "same_scope_comparison": "partial",
+    "actor_state_comparison": "partial",
+    "cross_environment_comparison": "unknown",
+    "recovery_verification": "unknown",
+    "host_wide_resolution_claim_allowed": false,
+    "preserve_limitations": true
+  },
+
+  "privacy": {
+    "data_minimization": true,
+    "local_processing_preferred": true,
+    "plaintext_credentials_allowed": false,
+    "authentication_material_exported": false,
+    "raw_resource_content_required": false,
+    "raw_paths_exported": false,
+    "sensitive_process_arguments_exported": false,
+    "account_identifiers_exported": false,
+    "pseudonymous_resource_ids": true,
+
+    "redaction_classes": [
+      "raw_path",
+      "resource_name",
+      "user_identity",
+      "account_identity",
+      "process_arguments",
+      "authentication_material",
+      "resource_content"
+    ]
+  },
+
+  "limitations": [
+    {
+      "code": "EXAMPLE-CONFIG",
+      "description": "This synthetic example does not describe the capabilities of any deployed macOS adapter.",
+      "severity": "informational",
+      "affects": [
+        "all_capability_claims"
+      ]
+    },
+    {
+      "code": "ENDPOINT-OBSERVATION-PARTIAL",
+      "description": "Endpoint-oriented observation is represented only as a partial synthetic capability and does not establish complete host visibility.",
+      "severity": "material",
+      "affects": [
+        "event_observation",
+        "endpoint_observation_awareness",
+        "host_visibility"
+      ]
+    },
+    {
+      "code": "AUTHORIZATION-OPPORTUNITY-PARTIAL",
+      "description": "The example represents a partial authorization-event capability but does not establish that every relevant operation can be intercepted or denied.",
+      "severity": "material",
+      "affects": [
+        "authorization_event_observation",
+        "endpoint_authorization_awareness",
+        "operation_denial"
+      ]
+    },
+    {
+      "code": "AUTHORIZATION-OPPORTUNITY-NOT-POLICY",
+      "description": "A native authorization opportunity does not itself grant policy authority to deny an operation.",
+      "severity": "material",
+      "affects": [
+        "operation_denial",
+        "authorization_boundary_awareness",
+        "containment"
+      ]
+    },
+    {
+      "code": "ACTOR-LINEAGE-PARTIAL",
+      "description": "Actor and process lineage are only partially established by this example configuration.",
+      "severity": "material",
+      "affects": [
+        "actor_identity",
+        "actor_lineage",
+        "actor_lineage_awareness"
+      ]
+    },
+    {
+      "code": "TRUST-CONTEXT-NONDECISIVE",
+      "description": "Available trust context must not override contradictory current structural behavior.",
+      "severity": "material",
+      "affects": [
+        "trust_context",
+        "trust_context_awareness",
+        "structural_interpretation"
+      ]
+    },
+    {
+      "code": "SYNCHRONIZATION-ORIGIN-PARTIAL",
+      "description": "A synchronized transition may be observable locally without establishing its remote origin.",
+      "severity": "material",
+      "affects": [
+        "origin_transport_distinction",
+        "synchronization_awareness",
+        "cross_environment_comparison"
+      ]
+    },
+    {
+      "code": "ENFORCEMENT-UNESTABLISHED",
+      "description": "Write denial, actor containment, resource isolation, network isolation, quarantine, permission restriction, actor disablement, and session termination have not been established.",
+      "severity": "material",
+      "affects": [
+        "write_denial",
+        "actor_containment",
+        "resource_isolation",
+        "network_isolation",
+        "quarantine",
+        "permission_restriction",
+        "actor_disablement",
+        "session_termination"
+      ]
+    },
+    {
+      "code": "RECOVERY-UNESTABLISHED",
+      "description": "Recovery availability, execution, and restoration verification have not been established.",
+      "severity": "material",
+      "affects": [
+        "recovery",
+        "rollback",
+        "snapshot_restore",
+        "resource_restore",
+        "configuration_restore",
+        "recovery_verification"
+      ]
+    },
+    {
+      "code": "HOST-WIDE-RESOLUTION-NOT-ESTABLISHED",
+      "description": "This example does not possess sufficient evidence to make host-wide resolution claims.",
+      "severity": "material",
+      "affects": [
+        "host_visibility",
+        "host_wide_resolution"
+      ]
+    },
+    {
+      "code": "CROSS-ENVIRONMENT-UNRESOLVED",
+      "description": "Complete state across cloud-backed or synchronized environments cannot be established by this example.",
+      "severity": "material",
+      "affects": [
+        "cross_environment_comparison",
+        "origin_transport_distinction"
+      ]
+    }
+  ],
+
+  "provenance": {
+    "producer": "TriadicFrameworks example configuration",
+    "created_at": "2026-11-26T00:00:00Z",
+    "specification_ref": "macos.md",
+    "detector_ref": "../detector.json",
+    "capabilities_schema_ref": "../../Shared_Structural_Event_Grammar/platform-capabilities.schema.json",
+
+    "source_refs": [
+      "macos.schema.json",
+      "macos.md",
+      "../detector.json",
+      "../../Shared_Structural_Event_Grammar/README.md",
+      "../../Shared_Structural_Event_Grammar/resource-transition.schema.json",
+      "../../Shared_Structural_Event_Grammar/platform-capabilities.schema.json"
+    ]
+  }
+}

@@ -1,0 +1,618 @@
+{
+  "manifest": {
+    "id": "rspd-validation-manifest",
+    "name": "Ransomware Structural Pattern Detector Validation Manifest",
+    "version": "0.1.0",
+    "status": "experimental",
+    "type": "validation-manifest",
+    "description": "Machine-readable validation plan for RSPD schemas, adapter configurations, runtime examples, lineage relationships, and cross-artifact invariants."
+  },
+
+  "validation_model": {
+    "schema_draft": "https://json-schema.org/draft/2020-12/schema",
+    "fail_closed": true,
+    "silent_repair": false,
+
+    "result_states": [
+      "pass",
+      "fail",
+      "error",
+      "skip"
+    ],
+
+    "layers": [
+      {
+        "id": "syntax",
+        "order": 1,
+        "description": "Confirm that JSON artifacts parse successfully."
+      },
+      {
+        "id": "schema",
+        "order": 2,
+        "description": "Validate instances against their declared JSON Schema contracts."
+      },
+      {
+        "id": "relationship",
+        "order": 3,
+        "description": "Check repository-level relationships among specifications, schemas, examples, registries, and shared contracts."
+      },
+      {
+        "id": "lineage",
+        "order": 4,
+        "description": "Check cross-object references in the canonical runtime example lineage."
+      },
+      {
+        "id": "invariant",
+        "order": 5,
+        "description": "Check architectural rules that span individual schemas or artifacts."
+      }
+    ]
+  },
+
+  "paths": {
+    "module_root": "..",
+    "adapters": "../adapters",
+    "examples": "../examples",
+    "validation": ".",
+    "shared_grammar": "../../Shared_Structural_Event_Grammar"
+  },
+
+  "shared_schemas": {
+    "resource_transition": {
+      "schema_id": "tf.resource-transition/v0.1",
+      "path": "../../Shared_Structural_Event_Grammar/resource-transition.schema.json"
+    },
+    "structural_pattern": {
+      "schema_id": "tf.structural-pattern/v0.1",
+      "path": "../../Shared_Structural_Event_Grammar/structural-pattern.schema.json"
+    },
+    "platform_capabilities": {
+      "schema_id": "tf.platform-capabilities/v0.1",
+      "path": "../../Shared_Structural_Event_Grammar/platform-capabilities.schema.json"
+    },
+    "containment_decision": {
+      "schema_id": "tf.containment-decision/v0.1",
+      "path": "../../Shared_Structural_Event_Grammar/containment-decision.schema.json"
+    },
+    "response_outcome": {
+      "schema_id": "tf.response-outcome/v0.1",
+      "path": "../../Shared_Structural_Event_Grammar/response-outcome.schema.json"
+    },
+    "verification": {
+      "schema_id": "tf.verification/v0.1",
+      "path": "../../Shared_Structural_Event_Grammar/verification.schema.json"
+    }
+  },
+
+  "adapter_schemas": [
+    {
+      "adapter": "windows",
+      "schema_id": "tf.rspd-adapter.windows/v0.1",
+      "schema": "../adapters/windows.schema.json",
+      "specification": "../adapters/windows.md"
+    },
+    {
+      "adapter": "linux",
+      "schema_id": "tf.rspd-adapter.linux/v0.1",
+      "schema": "../adapters/linux.schema.json",
+      "specification": "../adapters/linux.md"
+    },
+    {
+      "adapter": "macos",
+      "schema_id": "tf.rspd-adapter.macos/v0.1",
+      "schema": "../adapters/macos.schema.json",
+      "specification": "../adapters/macos.md"
+    },
+    {
+      "adapter": "android",
+      "schema_id": "tf.rspd-adapter.android/v0.1",
+      "schema": "../adapters/android.schema.json",
+      "specification": "../adapters/android.md"
+    },
+    {
+      "adapter": "ios-ipados",
+      "schema_id": "tf.rspd-adapter.ios-ipados/v0.1",
+      "schema": "../adapters/ios-ipados.schema.json",
+      "specification": "../adapters/ios-ipados.md"
+    },
+    {
+      "adapter": "cloud-sync",
+      "schema_id": "tf.rspd-adapter.cloud-sync/v0.1",
+      "schema": "../adapters/cloud-sync.schema.json",
+      "specification": "../adapters/cloud-sync.md"
+    },
+    {
+      "adapter": "database",
+      "schema_id": "tf.rspd-adapter.database/v0.1",
+      "schema": "../adapters/database.schema.json",
+      "specification": "../adapters/database.md"
+    },
+    {
+      "adapter": "cache",
+      "schema_id": "tf.rspd-adapter.cache/v0.1",
+      "schema": "../adapters/cache.schema.json",
+      "specification": "../adapters/cache.md"
+    }
+  ],
+
+  "positive_fixtures": [
+    {
+      "id": "adapter-windows-example",
+      "class": "adapter_configuration",
+      "instance": "../adapters/windows.example.json",
+      "schema": "../adapters/windows.schema.json",
+      "expected": "pass"
+    },
+    {
+      "id": "adapter-linux-example",
+      "class": "adapter_configuration",
+      "instance": "../adapters/linux.example.json",
+      "schema": "../adapters/linux.schema.json",
+      "expected": "pass"
+    },
+    {
+      "id": "adapter-macos-example",
+      "class": "adapter_configuration",
+      "instance": "../adapters/macos.example.json",
+      "schema": "../adapters/macos.schema.json",
+      "expected": "pass"
+    },
+    {
+      "id": "adapter-macos-endpoint-security-example",
+      "class": "adapter_configuration",
+      "instance": "../adapters/macos.endpoint-security.example.json",
+      "schema": "../adapters/macos.schema.json",
+      "expected": "pass"
+    },
+    {
+      "id": "adapter-android-example",
+      "class": "adapter_configuration",
+      "instance": "../adapters/android.example.json",
+      "schema": "../adapters/android.schema.json",
+      "expected": "pass"
+    },
+    {
+      "id": "adapter-ios-ipados-example",
+      "class": "adapter_configuration",
+      "instance": "../adapters/ios-ipados.example.json",
+      "schema": "../adapters/ios-ipados.schema.json",
+      "expected": "pass"
+    },
+    {
+      "id": "adapter-cloud-sync-example",
+      "class": "adapter_configuration",
+      "instance": "../adapters/cloud-sync.example.json",
+      "schema": "../adapters/cloud-sync.schema.json",
+      "expected": "pass"
+    },
+    {
+      "id": "adapter-database-example",
+      "class": "adapter_configuration",
+      "instance": "../adapters/database.example.json",
+      "schema": "../adapters/database.schema.json",
+      "expected": "pass"
+    },
+    {
+      "id": "adapter-cache-example",
+      "class": "adapter_configuration",
+      "instance": "../adapters/cache.example.json",
+      "schema": "../adapters/cache.schema.json",
+      "expected": "pass"
+    },
+    {
+      "id": "macos-normalized-event-example",
+      "class": "runtime_event",
+      "instance": "../adapters/macos.normalized.event.example.json",
+      "schema": "../../Shared_Structural_Event_Grammar/resource-transition.schema.json",
+      "expected": "pass"
+    },
+    {
+      "id": "runtime-resource-transition-example",
+      "class": "runtime_lineage",
+      "instance": "../examples/resource-transition.example.json",
+      "schema": "../../Shared_Structural_Event_Grammar/resource-transition.schema.json",
+      "expected": "pass"
+    },
+    {
+      "id": "runtime-structural-pattern-example",
+      "class": "runtime_lineage",
+      "instance": "../examples/structural-pattern.example.json",
+      "schema": "../../Shared_Structural_Event_Grammar/structural-pattern.schema.json",
+      "expected": "pass"
+    },
+    {
+      "id": "runtime-containment-decision-example",
+      "class": "runtime_lineage",
+      "instance": "../examples/containment-decision.example.json",
+      "schema": "../../Shared_Structural_Event_Grammar/containment-decision.schema.json",
+      "expected": "pass"
+    },
+    {
+      "id": "runtime-response-outcome-example",
+      "class": "runtime_lineage",
+      "instance": "../examples/response-outcome.example.json",
+      "schema": "../../Shared_Structural_Event_Grammar/response-outcome.schema.json",
+      "expected": "pass"
+    },
+    {
+      "id": "runtime-verification-example",
+      "class": "runtime_lineage",
+      "instance": "../examples/verification.example.json",
+      "schema": "../../Shared_Structural_Event_Grammar/verification.schema.json",
+      "expected": "pass"
+    }
+  ],
+
+  "relationship_checks": [
+    {
+      "id": "REL-001",
+      "type": "artifact_exists",
+      "subject": "../detector.json",
+      "expected": true,
+      "description": "The root detector contract exists."
+    },
+    {
+      "id": "REL-002",
+      "type": "artifact_exists",
+      "subject": "../adapters/detector.json",
+      "expected": true,
+      "description": "The machine-readable adapter registry exists."
+    },
+    {
+      "id": "REL-003",
+      "type": "adapter_artifact_trios",
+      "registry": "../adapters/detector.json",
+      "expected": true,
+      "description": "Registered canonical adapters provide specification, schema, and example artifacts."
+    },
+    {
+      "id": "REL-004",
+      "type": "adapter_schema_family_match",
+      "registry": "../adapters/detector.json",
+      "expected": true,
+      "description": "Adapter examples declare the schema family registered for their adapter."
+    },
+    {
+      "id": "REL-005",
+      "type": "runtime_schema_family_match",
+      "expected": true,
+      "description": "Runtime examples declare the Shared Structural Event Grammar schema family appropriate to their lineage stage."
+    },
+    {
+      "id": "REL-006",
+      "type": "normalized_event_schema_boundary",
+      "instance": "../adapters/macos.normalized.event.example.json",
+      "expected_schema_id": "tf.resource-transition/v0.1",
+      "expected": true,
+      "description": "The normalized macOS event uses the shared runtime schema rather than the macOS adapter configuration schema."
+    }
+  ],
+
+  "lineage": {
+    "id": "rspd-canonical-example-lineage",
+
+    "ordered_stages": [
+      {
+        "order": 1,
+        "role": "observation",
+        "artifact": "../examples/resource-transition.example.json",
+        "object_id": "event://rspd-example/000001",
+        "schema_id": "tf.resource-transition/v0.1"
+      },
+      {
+        "order": 2,
+        "role": "interpretation",
+        "artifact": "../examples/structural-pattern.example.json",
+        "object_id": "pattern://rspd-example/000001",
+        "schema_id": "tf.structural-pattern/v0.1"
+      },
+      {
+        "order": 3,
+        "role": "decision",
+        "artifact": "../examples/containment-decision.example.json",
+        "object_id": "decision://rspd-example/000001",
+        "schema_id": "tf.containment-decision/v0.1"
+      },
+      {
+        "order": 4,
+        "role": "execution",
+        "artifact": "../examples/response-outcome.example.json",
+        "object_id": "outcome://rspd-example/000001",
+        "schema_id": "tf.response-outcome/v0.1"
+      },
+      {
+        "order": 5,
+        "role": "verification",
+        "artifact": "../examples/verification.example.json",
+        "object_id": "verification://rspd-example/000001",
+        "schema_id": "tf.verification/v0.1"
+      }
+    ],
+
+    "reference_checks": [
+      {
+        "id": "LINEAGE-001",
+        "from": "../examples/structural-pattern.example.json",
+        "from_pointer": "/evidence/event_refs",
+        "contains": "event://rspd-example/000001",
+        "expected": true
+      },
+      {
+        "id": "LINEAGE-002",
+        "from": "../examples/containment-decision.example.json",
+        "from_pointer": "/pattern_ref",
+        "equals": "pattern://rspd-example/000001",
+        "expected": true
+      },
+      {
+        "id": "LINEAGE-003",
+        "from": "../examples/response-outcome.example.json",
+        "from_pointer": "/decision_ref",
+        "equals": "decision://rspd-example/000001",
+        "expected": true
+      },
+      {
+        "id": "LINEAGE-004",
+        "from": "../examples/response-outcome.example.json",
+        "from_pointer": "/pattern_ref",
+        "equals": "pattern://rspd-example/000001",
+        "expected": true
+      },
+      {
+        "id": "LINEAGE-005",
+        "from": "../examples/verification.example.json",
+        "from_pointer": "/subject/outcome_ref",
+        "equals": "outcome://rspd-example/000001",
+        "expected": true
+      },
+      {
+        "id": "LINEAGE-006",
+        "from": "../examples/verification.example.json",
+        "from_pointer": "/subject/decision_ref",
+        "equals": "decision://rspd-example/000001",
+        "expected": true
+      },
+      {
+        "id": "LINEAGE-007",
+        "from": "../examples/verification.example.json",
+        "from_pointer": "/subject/pattern_ref",
+        "equals": "pattern://rspd-example/000001",
+        "expected": true
+      }
+    ]
+  },
+
+  "invariant_checks": [
+    {
+      "id": "VALIDATION-INV-01",
+      "class": "meta",
+      "statement": "Valid JSON does not imply schema conformance."
+    },
+    {
+      "id": "VALIDATION-INV-02",
+      "class": "meta",
+      "statement": "Schema conformance does not establish factual truth."
+    },
+    {
+      "id": "VALIDATION-INV-03",
+      "class": "meta",
+      "statement": "Schema conformance does not establish empirical detector validity."
+    },
+    {
+      "id": "RUNTIME-INV-01",
+      "class": "observation_boundary",
+      "artifact": "../examples/resource-transition.example.json",
+      "rule": "must_not_assert_domain_verdict",
+      "forbidden_fields": [
+        "ransomware",
+        "malicious",
+        "containment_required",
+        "incident_resolved"
+      ],
+      "expected": true
+    },
+    {
+      "id": "RUNTIME-INV-02",
+      "class": "uncertainty",
+      "artifact": "../examples/resource-transition.example.json",
+      "rule": "preserve_unresolved_destructiveness",
+      "pointer": "/transition/destructive",
+      "expected_value": null
+    },
+    {
+      "id": "RUNTIME-INV-03",
+      "class": "interpretation_boundary",
+      "artifact": "../examples/structural-pattern.example.json",
+      "rule": "high_structural_confidence_allows_unknown_intent",
+      "structural_confidence_pointer": "/assessment/confidence/level",
+      "intent_pointer": "/assessment/intent",
+      "expected_structural_confidence": "high",
+      "expected_intent": "unknown"
+    },
+    {
+      "id": "RUNTIME-INV-04",
+      "class": "attribution_boundary",
+      "artifact": "../examples/structural-pattern.example.json",
+      "rule": "high_structural_confidence_allows_unresolved_attribution",
+      "structural_confidence_pointer": "/assessment/confidence/level",
+      "attribution_pointer": "/assessment/attribution",
+      "expected_structural_confidence": "high",
+      "expected_attribution": "unresolved"
+    },
+    {
+      "id": "RUNTIME-INV-05",
+      "class": "authority_boundary",
+      "artifact": "../examples/containment-decision.example.json",
+      "rule": "decision_requires_explicit_authority",
+      "pointer": "/authority/authorized",
+      "expected_value": true
+    },
+    {
+      "id": "RUNTIME-INV-06",
+      "class": "execution_boundary",
+      "artifact": "../examples/response-outcome.example.json",
+      "rule": "executed_response_remains_bounded",
+      "pointer": "/executed_response/scope",
+      "expected_value": "resource_set"
+    },
+    {
+      "id": "RUNTIME-INV-07",
+      "class": "execution_resolution_boundary",
+      "artifact": "../examples/response-outcome.example.json",
+      "rule": "successful_execution_requires_verification",
+      "execution_pointer": "/execution/status",
+      "verification_pointer": "/verification_required",
+      "expected_execution": "executed",
+      "expected_verification_required": true
+    },
+    {
+      "id": "RUNTIME-INV-08",
+      "class": "verification_boundary",
+      "artifact": "../examples/verification.example.json",
+      "rule": "contained_does_not_require_resolved",
+      "pointer": "/result/state",
+      "expected_value": "contained"
+    },
+    {
+      "id": "RUNTIME-INV-09",
+      "class": "verification_uncertainty",
+      "artifact": "../examples/verification.example.json",
+      "rule": "unverifiable_conditions_survive_verification",
+      "pointer": "/findings/unverifiable",
+      "minimum_items": 1
+    },
+    {
+      "id": "RUNTIME-INV-10",
+      "class": "bounded_verification",
+      "artifact": "../examples/verification.example.json",
+      "rule": "verification_scope_remains_explicit",
+      "pointer": "/observation/scope",
+      "expected_value": "resource_set"
+    },
+    {
+      "id": "ADAPTER-INV-01",
+      "class": "mobile_scope",
+      "artifact": "../adapters/android.example.json",
+      "rule": "device_wide_resolution_forbidden",
+      "pointer": "/verification/device_wide_resolution_claim_allowed",
+      "expected_value": false
+    },
+    {
+      "id": "ADAPTER-INV-02",
+      "class": "mobile_scope",
+      "artifact": "../adapters/ios-ipados.example.json",
+      "rule": "device_wide_resolution_forbidden",
+      "pointer": "/verification/device_wide_resolution_claim_allowed",
+      "expected_value": false
+    },
+    {
+      "id": "ADAPTER-INV-03",
+      "class": "cloud_scope",
+      "artifact": "../adapters/cloud-sync.example.json",
+      "rule": "global_resolution_forbidden",
+      "pointer": "/verification/global_resolution_claim_allowed",
+      "expected_value": false
+    },
+    {
+      "id": "ADAPTER-INV-04",
+      "class": "macos_event_semantics",
+      "artifact": "../adapters/macos.endpoint-security.example.json",
+      "rule": "authorization_opportunity_separate_from_policy_authority",
+      "expected": true
+    },
+    {
+      "id": "ADAPTER-INV-05",
+      "class": "cache_authority",
+      "artifact": "../adapters/cache.example.json",
+      "rule": "cache_state_separate_from_source_state",
+      "pointer": "/cache_context/authority_state",
+      "expected_value": "derived"
+    },
+    {
+      "id": "ADAPTER-INV-06",
+      "class": "database_layer",
+      "artifact": "../adapters/database.example.json",
+      "rule": "logical_and_storage_awareness_remain_distinct",
+      "logical_pointer": "/database_context/logical_awareness",
+      "storage_pointer": "/database_context/storage_awareness",
+      "expected": true
+    }
+  ],
+
+  "negative_fixture_policy": {
+    "enabled": false,
+    "directory": "negative",
+    "description": "Reserved for intentionally invalid fixtures. Enable when negative fixtures are added.",
+    "required_fields": [
+      "id",
+      "instance",
+      "schema",
+      "expected",
+      "expected_error_class"
+    ]
+  },
+
+  "future_semantic_fixture_policy": {
+    "enabled": false,
+    "directory": "semantic",
+    "description": "Reserved for fixtures testing architectural invariants that cannot be expressed completely through JSON Schema."
+  },
+
+  "execution": {
+    "validator_independent": true,
+    "mutation_allowed": false,
+    "repair_allowed_during_validation": false,
+    "stop_on_syntax_error": true,
+    "stop_instance_on_schema_error": true,
+    "continue_independent_checks": true,
+
+    "recommended_order": [
+      "syntax",
+      "schema",
+      "relationship",
+      "lineage",
+      "invariant"
+    ]
+  },
+
+  "reporting": {
+    "required_result_fields": [
+      "check_id",
+      "result",
+      "artifact"
+    ],
+
+    "recommended_result_fields": [
+      "schema",
+      "expected",
+      "actual",
+      "validator",
+      "validator_version",
+      "timestamp",
+      "errors",
+      "warnings",
+      "invariant_refs"
+    ],
+
+    "result_semantics": {
+      "pass": "The requested validation check completed and its expectation was satisfied.",
+      "fail": "The requested validation check completed and its expectation was not satisfied.",
+      "error": "The validation check could not complete reliably.",
+      "skip": "The validation check was intentionally not performed."
+    }
+  },
+
+  "provenance": {
+    "producer": "TriadicFrameworks",
+    "created_at": "2026-11-27T08:47:00-05:00",
+
+    "source_refs": [
+      "README.md",
+      "../README.md",
+      "../detector.json",
+      "../adapters/README.md",
+      "../adapters/detector.json",
+      "../../Shared_Structural_Event_Grammar/README.md"
+    ]
+  }
+}

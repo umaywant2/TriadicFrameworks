@@ -1,0 +1,564 @@
+{
+  "schema": "tf.rspd-adapter.android/v0.1",
+
+  "adapter": {
+    "id": "rspd-android-example",
+    "name": "RSPD Android Example Adapter",
+    "version": "0.1.0",
+    "status": "experimental",
+    "profile": "hybrid",
+    "implementation_ref": "example://rspd-android-adapter"
+  },
+
+  "environment": {
+    "platform": "android",
+    "platform_version": "example",
+    "device_class": "phone",
+    "deployment": "testing"
+  },
+
+  "scope": {
+    "mode": "user_selected_resources",
+    "scope_ref": "scope://example-authorized-android-resources",
+    "resource_classes": [
+      "user_document",
+      "photo",
+      "video",
+      "audio",
+      "database",
+      "archive",
+      "project_file",
+      "application_data",
+      "cloud_resource",
+      "recovery_resource",
+      "canary"
+    ],
+    "includes_application_storage": true,
+    "includes_user_selected_resources": true,
+    "includes_shared_resources": true,
+    "includes_provider_backed_resources": true,
+    "includes_synchronized_resources": true,
+    "includes_recovery_resources": false,
+    "includes_canaries": true
+  },
+
+  "observation": {
+    "sources": [
+      {
+        "id": "example-application-storage",
+        "class": "application_storage",
+        "support": "supported",
+        "native_name": "synthetic-application-storage-observer",
+        "scope_ref": "scope://example-authorized-android-resources",
+        "direct_or_derived": "direct",
+        "notes": "Synthetic observation of adapter-owned application storage. This does not imply visibility into other applications."
+      },
+      {
+        "id": "example-user-selected-resources",
+        "class": "user_selected_resource",
+        "support": "partial",
+        "native_name": "synthetic-user-selected-resource-observer",
+        "scope_ref": "scope://example-authorized-android-resources",
+        "direct_or_derived": "mixed",
+        "notes": "Synthetic observation of resources explicitly made available inside the configured user-authorized scope."
+      },
+      {
+        "id": "example-shared-resources",
+        "class": "shared_resource",
+        "support": "partial",
+        "native_name": "synthetic-shared-resource-observer",
+        "scope_ref": "scope://example-authorized-android-resources",
+        "direct_or_derived": "mixed",
+        "notes": "Synthetic bounded observation of shared resources available to the adapter."
+      },
+      {
+        "id": "example-provider-resources",
+        "class": "provider_backed_resource",
+        "support": "partial",
+        "native_name": "synthetic-provider-resource-observer",
+        "scope_ref": "scope://example-authorized-android-resources",
+        "direct_or_derived": "mixed",
+        "notes": "Provider-backed resource state does not independently establish underlying storage location or transition origin."
+      },
+      {
+        "id": "example-state-comparison",
+        "class": "state_comparison",
+        "support": "partial",
+        "native_name": "synthetic-state-comparison-observer",
+        "scope_ref": "scope://example-authorized-android-resources",
+        "direct_or_derived": "derived",
+        "notes": "Transitions derived from before-and-after resource state remain distinguishable from directly observed operations."
+      },
+      {
+        "id": "example-synchronization",
+        "class": "synchronization",
+        "support": "partial",
+        "native_name": "synthetic-synchronization-observer",
+        "scope_ref": "scope://example-authorized-android-resources",
+        "direct_or_derived": "mixed",
+        "notes": "Synchronization evidence may establish transport without establishing where the transition originated."
+      },
+      {
+        "id": "example-recovery-state",
+        "class": "recovery",
+        "support": "unknown",
+        "native_name": "synthetic-recovery-observer",
+        "scope_ref": "scope://example-authorized-android-resources",
+        "direct_or_derived": "unknown",
+        "notes": "Recovery-state visibility has not been established by this synthetic example."
+      }
+    ],
+
+    "continuity": "state_comparison",
+    "actor_context_collection": false,
+    "provider_context_collection": true,
+    "synchronization_context_collection": true,
+    "recovery_state_collection": false,
+    "state_comparison_enabled": true,
+    "deduplication": true,
+    "deduplication_method_ref": "method://android-example-correlation/v0.1",
+    "event_loss_detectable": false
+  },
+
+  "normalization": {
+    "output_schema": "tf.resource-transition/v0.1",
+    "preserve_native_operation": true,
+    "preserve_provenance": true,
+    "preserve_unknowns": true,
+    "preserve_observation_mode": true,
+    "preserve_origin_transport_distinction": true,
+    "preserve_source_dependencies": true,
+    "preserve_provider_context": true,
+    "preserve_synchronization_context": true,
+    "derive_resource_class": true,
+    "derive_baseline_state": true,
+    "redaction_enabled": true
+  },
+
+  "android_context": {
+    "application_scope_awareness": "supported",
+    "resource_authorization_awareness": "partial",
+    "device_wide_visibility": "unsupported",
+    "provider_resource_awareness": "partial",
+    "state_comparison_awareness": "partial",
+    "synchronization_awareness": "partial",
+    "recovery_awareness": "unknown",
+    "actor_origin_awareness": "unknown",
+    "user_mediated_response_awareness": "partial"
+  },
+
+  "capabilities": {
+    "schema": "tf.platform-capabilities/v0.1",
+    "declaration_ref": "capabilities://rspd-android-example/v0.1",
+
+    "observation": {
+      "event_observation": "partial",
+      "actor_identity": "unknown",
+      "actor_lineage": "unknown",
+      "resource_classification": "partial",
+      "provider_context": "partial",
+      "network_context": "unknown",
+      "origin_transport_distinction": "partial",
+      "baseline_access": "partial",
+      "recovery_state_observation": "unknown"
+    },
+
+    "enforcement": {
+      "write_denial": "unknown",
+      "actor_containment": "unknown",
+      "resource_isolation": "unknown",
+      "network_isolation": "unknown",
+      "quarantine": "unknown",
+      "permission_restriction": "unknown",
+      "actor_disablement": "unknown",
+      "session_termination": "unknown"
+    },
+
+    "recovery": {
+      "recovery": "unknown",
+      "rollback": "unknown",
+      "snapshot_restore": "unknown",
+      "resource_restore": "unknown",
+      "configuration_restore": "unknown"
+    },
+
+    "verification": {
+      "post_action_observation": "partial",
+      "state_comparison": "partial",
+      "persistence_detection": "unknown",
+      "reappearance_detection": "partial",
+      "recovery_verification": "unknown"
+    }
+  },
+
+  "containment": {
+    "decision_schema": "tf.containment-decision/v0.1",
+    "default_authority": "recommend_only",
+    "authorization_required": true,
+    "fallback_allowed": true,
+
+    "mappings": [
+      {
+        "requested_action": "increase_observation",
+        "capability": "event_observation",
+        "support": "partial",
+        "native_mechanism_ref": "mechanism://android-example/increase-observation",
+        "response_scope": "resource_set",
+        "reversibility": "fully_reversible",
+        "requires_additional_authorization": false,
+        "requires_user_interaction": false,
+        "fallback_action": "notify_authorized_operator"
+      },
+      {
+        "requested_action": "notify_authorized_operator",
+        "capability": "operator_notification",
+        "support": "supported",
+        "native_mechanism_ref": "mechanism://android-example/operator-notification",
+        "response_scope": "application",
+        "reversibility": "fully_reversible",
+        "requires_additional_authorization": false,
+        "requires_user_interaction": false,
+        "fallback_action": "request_manual_review"
+      },
+      {
+        "requested_action": "deny_resource_writes",
+        "capability": "write_denial",
+        "support": "unknown",
+        "native_mechanism_ref": "mechanism://android-example/write-denial-unconfigured",
+        "response_scope": "resource_set",
+        "reversibility": "unknown",
+        "requires_additional_authorization": true,
+        "requires_user_interaction": true,
+        "fallback_action": "request_user_intervention"
+      },
+      {
+        "requested_action": "contain_actor",
+        "capability": "actor_containment",
+        "support": "unknown",
+        "native_mechanism_ref": "mechanism://android-example/actor-containment-unconfigured",
+        "response_scope": "application",
+        "reversibility": "unknown",
+        "requires_additional_authorization": true,
+        "requires_user_interaction": true,
+        "fallback_action": "request_user_intervention"
+      },
+      {
+        "requested_action": "isolate_resource_set",
+        "capability": "resource_isolation",
+        "support": "unknown",
+        "native_mechanism_ref": "mechanism://android-example/resource-isolation-unconfigured",
+        "response_scope": "resource_set",
+        "reversibility": "unknown",
+        "requires_additional_authorization": true,
+        "requires_user_interaction": true,
+        "fallback_action": "request_user_intervention"
+      },
+      {
+        "requested_action": "isolate_network_scope",
+        "capability": "network_isolation",
+        "support": "unknown",
+        "native_mechanism_ref": "mechanism://android-example/network-isolation-unconfigured",
+        "response_scope": "device_visible_scope",
+        "reversibility": "unknown",
+        "requires_additional_authorization": true,
+        "requires_user_interaction": true,
+        "fallback_action": "request_user_intervention"
+      },
+      {
+        "requested_action": "quarantine_affected_resources",
+        "capability": "quarantine",
+        "support": "unknown",
+        "native_mechanism_ref": "mechanism://android-example/quarantine-unconfigured",
+        "response_scope": "resource_set",
+        "reversibility": "unknown",
+        "requires_additional_authorization": true,
+        "requires_user_interaction": true,
+        "fallback_action": "request_user_intervention"
+      },
+      {
+        "requested_action": "restrict_actor_permissions",
+        "capability": "permission_restriction",
+        "support": "unknown",
+        "native_mechanism_ref": "mechanism://android-example/permission-restriction-unconfigured",
+        "response_scope": "application",
+        "reversibility": "unknown",
+        "requires_additional_authorization": true,
+        "requires_user_interaction": true,
+        "fallback_action": "request_user_intervention"
+      },
+      {
+        "requested_action": "disable_actor",
+        "capability": "actor_disablement",
+        "support": "unknown",
+        "native_mechanism_ref": "mechanism://android-example/actor-disablement-unconfigured",
+        "response_scope": "application",
+        "reversibility": "unknown",
+        "requires_additional_authorization": true,
+        "requires_user_interaction": true,
+        "fallback_action": "request_user_intervention"
+      },
+      {
+        "requested_action": "preserve_evidence",
+        "capability": "event_observation",
+        "support": "partial",
+        "native_mechanism_ref": "mechanism://android-example/preserve-structural-evidence",
+        "response_scope": "resource_set",
+        "reversibility": "fully_reversible",
+        "requires_additional_authorization": false,
+        "requires_user_interaction": false,
+        "fallback_action": "request_manual_review"
+      },
+      {
+        "requested_action": "prepare_recovery",
+        "capability": "recovery",
+        "support": "unknown",
+        "native_mechanism_ref": "mechanism://android-example/recovery-unconfigured",
+        "response_scope": "resource_set",
+        "reversibility": "unknown",
+        "requires_additional_authorization": true,
+        "requires_user_interaction": true,
+        "fallback_action": "request_user_intervention"
+      },
+      {
+        "requested_action": "initiate_recovery",
+        "capability": "resource_restore",
+        "support": "unknown",
+        "native_mechanism_ref": "mechanism://android-example/resource-restore-unconfigured",
+        "response_scope": "resource_set",
+        "reversibility": "unknown",
+        "requires_additional_authorization": true,
+        "requires_user_interaction": true,
+        "fallback_action": "request_user_intervention"
+      },
+      {
+        "requested_action": "request_user_intervention",
+        "capability": "user_mediated_response",
+        "support": "partial",
+        "native_mechanism_ref": "mechanism://android-example/user-intervention",
+        "response_scope": "application",
+        "reversibility": "fully_reversible",
+        "requires_additional_authorization": false,
+        "requires_user_interaction": true,
+        "fallback_action": "request_manual_review"
+      },
+      {
+        "requested_action": "request_manual_review",
+        "capability": "manual_review",
+        "support": "supported",
+        "native_mechanism_ref": "mechanism://android-example/manual-review",
+        "response_scope": "application",
+        "reversibility": "fully_reversible",
+        "requires_additional_authorization": false,
+        "requires_user_interaction": true
+      }
+    ]
+  },
+
+  "recovery": {
+    "recovery_state_observed": false,
+    "prior_state_observed": false,
+    "provider_recovery_observed": false,
+    "synchronized_recovery_observed": false,
+
+    "mechanisms": [
+      {
+        "id": "example-preserved-original",
+        "class": "preserved_original",
+        "support": "unknown",
+        "verification_supported": "unknown"
+      },
+      {
+        "id": "example-resource-restore",
+        "class": "resource_restore",
+        "support": "unknown",
+        "verification_supported": "unknown"
+      },
+      {
+        "id": "example-provider-restore",
+        "class": "provider_restore",
+        "support": "unknown",
+        "verification_supported": "unknown"
+      },
+      {
+        "id": "example-version-history",
+        "class": "version_history",
+        "support": "unknown",
+        "verification_supported": "unknown"
+      },
+      {
+        "id": "example-synchronized-recovery",
+        "class": "synchronized_recovery",
+        "support": "unknown",
+        "verification_supported": "unknown"
+      }
+    ]
+  },
+
+  "verification": {
+    "output_schema": "tf.verification/v0.1",
+    "rescan_supported": "partial",
+    "same_scope_comparison": "partial",
+    "state_comparison": "partial",
+    "provider_state_comparison": "partial",
+    "cross_environment_comparison": "unknown",
+    "recovery_verification": "unknown",
+    "device_wide_resolution_claim_allowed": false,
+    "preserve_limitations": true
+  },
+
+  "privacy": {
+    "data_minimization": true,
+    "local_processing_preferred": true,
+    "plaintext_credentials_allowed": false,
+    "authentication_material_exported": false,
+    "raw_resource_content_required": false,
+    "raw_resource_identifiers_exported": false,
+    "raw_provider_identifiers_exported": false,
+    "account_identifiers_exported": false,
+    "pseudonymous_resource_ids": true,
+
+    "redaction_classes": [
+      "raw_resource_identifier",
+      "raw_provider_identifier",
+      "resource_name",
+      "user_identity",
+      "account_identity",
+      "authentication_material",
+      "resource_content"
+    ]
+  },
+
+  "limitations": [
+    {
+      "code": "EXAMPLE-CONFIG",
+      "description": "This synthetic example does not describe the capabilities of any deployed Android adapter.",
+      "severity": "informational",
+      "affects": [
+        "all_capability_claims"
+      ]
+    },
+    {
+      "code": "APPLICATION-SCOPE-BOUNDED",
+      "description": "Observation outside the adapter's authorized application and resource surfaces has not been established.",
+      "severity": "material",
+      "affects": [
+        "event_observation",
+        "resource_classification",
+        "verification"
+      ]
+    },
+    {
+      "code": "DEVICE-WIDE-VISIBILITY-UNAVAILABLE",
+      "description": "This example does not provide device-wide observation and cannot produce device-wide clean or resolution claims.",
+      "severity": "material",
+      "affects": [
+        "device_wide_visibility",
+        "device_wide_resolution"
+      ]
+    },
+    {
+      "code": "STATE-COMPARISON-DERIVED",
+      "description": "Some transitions are derived from before-and-after state rather than directly observed as native operations.",
+      "severity": "material",
+      "affects": [
+        "event_observation",
+        "actor_identity",
+        "actor_lineage",
+        "transition_timing"
+      ]
+    },
+    {
+      "code": "PROVIDER-ABSTRACTION-PARTIAL",
+      "description": "Provider-backed resources may expose structural state without exposing their full underlying storage or actor lineage.",
+      "severity": "material",
+      "affects": [
+        "provider_context",
+        "provider_resource_awareness",
+        "actor_origin_awareness"
+      ]
+    },
+    {
+      "code": "ACTOR-ORIGIN-UNRESOLVED",
+      "description": "The example does not reliably establish the actor that originated an observed transition.",
+      "severity": "material",
+      "affects": [
+        "actor_identity",
+        "actor_lineage",
+        "actor_origin_awareness"
+      ]
+    },
+    {
+      "code": "SYNCHRONIZATION-ORIGIN-PARTIAL",
+      "description": "Synchronization may be observable as transport without establishing remote transition origin.",
+      "severity": "material",
+      "affects": [
+        "origin_transport_distinction",
+        "synchronization_awareness",
+        "cross_environment_comparison"
+      ]
+    },
+    {
+      "code": "ENFORCEMENT-UNESTABLISHED",
+      "description": "Automatic write denial, actor containment, resource isolation, network isolation, quarantine, permission restriction, actor disablement, and session termination have not been established.",
+      "severity": "material",
+      "affects": [
+        "write_denial",
+        "actor_containment",
+        "resource_isolation",
+        "network_isolation",
+        "quarantine",
+        "permission_restriction",
+        "actor_disablement",
+        "session_termination"
+      ]
+    },
+    {
+      "code": "USER-MEDIATED-RESPONSE-PARTIAL",
+      "description": "Some response paths may require user participation, and requesting intervention does not establish that the requested operation completed.",
+      "severity": "material",
+      "affects": [
+        "user_mediated_response_awareness",
+        "response_outcome"
+      ]
+    },
+    {
+      "code": "RECOVERY-UNESTABLISHED",
+      "description": "Recovery availability, execution, and restoration verification have not been established.",
+      "severity": "material",
+      "affects": [
+        "recovery",
+        "rollback",
+        "snapshot_restore",
+        "resource_restore",
+        "configuration_restore",
+        "recovery_verification"
+      ]
+    },
+    {
+      "code": "CROSS-ENVIRONMENT-UNRESOLVED",
+      "description": "The example cannot establish complete state across synchronized or remote environments.",
+      "severity": "material",
+      "affects": [
+        "cross_environment_comparison",
+        "origin_transport_distinction"
+      ]
+    }
+  ],
+
+  "provenance": {
+    "producer": "TriadicFrameworks example configuration",
+    "created_at": "2026-11-27T00:00:00Z",
+    "specification_ref": "android.md",
+    "detector_ref": "../detector.json",
+    "capabilities_schema_ref": "../../Shared_Structural_Event_Grammar/platform-capabilities.schema.json",
+
+    "source_refs": [
+      "android.schema.json",
+      "android.md",
+      "../detector.json",
+      "../../Shared_Structural_Event_Grammar/README.md",
+      "../../Shared_Structural_Event_Grammar/resource-transition.schema.json",
+      "../../Shared_Structural_Event_Grammar/platform-capabilities.schema.json"
+    ]
+  }
+}

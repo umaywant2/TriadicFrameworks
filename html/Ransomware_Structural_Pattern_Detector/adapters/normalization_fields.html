@@ -1,0 +1,1137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Ransomware_Structural_Pattern_Detector/adapters/normalization_fields.md">
+  <title>Normalization Fields</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Ransomware_Structural_Pattern_Detector/adapters/normalization_fields.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Ransomware_Structural_Pattern_Detector/adapters/normalization_fields.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="Ransomware_Structural_Pattern_Detector_adapters_normalization_fields_" src="https://github.com/user-attachments/assets/0c60df95-7ef4-4720-8102-44a10df4bde2" /></p>
+<h1 id="normalization-fields">Normalization Fields</h1>
+<blockquote>
+<p><strong>Reference guide for translating native platform, service, resource, and cross-environment observations into the Shared Structural Event Grammar without collapsing observation into interpretation.</strong></p>
+</blockquote>
+<p>Normalization is the boundary between native evidence and portable structural evidence.</p>
+<p>Its purpose is to answer:</p>
+<blockquote>
+<p><strong>How can an observation be represented consistently enough for structural analysis while preserving what was observed, what was derived, what remains unknown, and where the evidence came from?</strong></p>
+</blockquote>
+<p>Normalization does <strong>not</strong> answer:</p>
+<blockquote>
+<p><strong>What does this activity ultimately mean?</strong></p>
+</blockquote>
+<p>That distinction is fundamental to the Ransomware Structural Pattern Detector.</p>
+<hr>
+<h1 id="position-in-the-architecture">Position in the Architecture</h1>
+<p>The normalization boundary is:</p>
+<p><strong>Native observation</strong></p>
+<p>↓</p>
+<p><strong>Adapter</strong></p>
+<p>↓</p>
+<p><strong>Normalization</strong></p>
+<p>↓</p>
+<p><strong><code>tf.resource-transition/v0.1</code></strong></p>
+<p>Then normalization stops.</p>
+<p>Downstream analysis begins separately:</p>
+<p><strong>Normalized resource transitions</strong></p>
+<p>↓</p>
+<p><strong>Correlation</strong></p>
+<p>↓</p>
+<p><strong>Derived structural signals</strong></p>
+<p>↓</p>
+<p><strong>Supporting evidence</strong></p>
+<p>+</p>
+<p><strong>Counter-evidence</strong></p>
+<p>+</p>
+<p><strong>Unresolved evidence</strong></p>
+<p>↓</p>
+<p><strong>Competing explanations</strong></p>
+<p>↓</p>
+<p><strong>Structural assessment</strong></p>
+<p>↓</p>
+<p><strong><code>tf.structural-pattern/v0.1</code></strong></p>
+<p>A normalized transition is therefore evidence for interpretation.</p>
+<p>It is not the interpretation itself.</p>
+<hr>
+<h1 id="adapter-neutral-principle">Adapter-Neutral Principle</h1>
+<p>All adapters may emit the same shared transition family while observing very different native environments.</p>
+<p>Current adapter classes include:</p>
+<h2 id="platform-adapters">Platform Adapters</h2>
+<ul>
+<li>Windows</li>
+<li>Linux</li>
+<li>macOS</li>
+<li>Android</li>
+<li>iOS / iPadOS</li>
+</ul>
+<h2 id="cross-environment-adapters">Cross-Environment Adapters</h2>
+<ul>
+<li>Cloud / Synchronization</li>
+</ul>
+<h2 id="resource-service-adapters">Resource / Service Adapters</h2>
+<ul>
+<li>Database</li>
+<li>Cache</li>
+</ul>
+<p>The native evidence differs.</p>
+<p>The shared structural representation remains comparable.</p>
+<p>This is the normalization contract.</p>
+<hr>
+<h1 id="core-normalization-fields">Core Normalization Fields</h1>
+<p>The exact adapter configuration varies by environment, but the following fields express the common normalization responsibilities.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>output_schema</code></td>
+<td>Declares the canonical normalized object produced by the adapter.</td>
+</tr>
+<tr>
+<td><code>preserve_native_operation</code></td>
+<td>Retains the platform- or service-native operation where available and useful.</td>
+</tr>
+<tr>
+<td><code>preserve_provenance</code></td>
+<td>Requires lineage showing where the normalized observation originated.</td>
+</tr>
+<tr>
+<td><code>preserve_unknowns</code></td>
+<td>Prevents missing evidence from silently becoming <code>false</code>, <code>safe</code>, <code>absent</code>, or another definite state.</td>
+</tr>
+<tr>
+<td><code>preserve_source_dependencies</code></td>
+<td>Retains relationships among observations that may share the same originating event.</td>
+</tr>
+<tr>
+<td><code>preserve_origin_transport_distinction</code></td>
+<td>Prevents the locally visible actor from automatically becoming the presumed originating actor.</td>
+</tr>
+<tr>
+<td><code>derive_resource_class</code></td>
+<td>Allows native resources to map into portable structural classes.</td>
+</tr>
+<tr>
+<td><code>derive_baseline_state</code></td>
+<td>Allows explicitly derived comparisons with established historical or expected state.</td>
+</tr>
+<tr>
+<td><code>redaction_enabled</code></td>
+<td>Allows sensitive native detail to be minimized before normalized evidence leaves the adapter boundary.</td>
+</tr>
+</tbody>
+</table>
+<p>Adapter families may add additional preservation fields for structural distinctions specific to their environment.</p>
+<hr>
+<h1 id="output_schema"><code>output_schema</code></h1>
+<p>The canonical output for normalized observations is:</p>
+<p><code>tf.resource-transition/v0.1</code></p>
+<p>The authoritative schema is:</p>
+<p><code>../../Shared_Structural_Event_Grammar/resource-transition.schema.json</code></p>
+<p>This establishes the shared portable envelope.</p>
+<p>An adapter-specific configuration schema does not redefine <code>tf.resource-transition/v0.1</code>.</p>
+<p>Instead:</p>
+<p><strong>Adapter schema</strong></p>
+<p>defines how a concrete adapter is configured.</p>
+<p><strong>Resource Transition schema</strong></p>
+<p>defines the normalized event it may emit.</p>
+<hr>
+<h1 id="native-operation-vs-normalized-operation">Native Operation vs. Normalized Operation</h1>
+<p>A native environment may describe an operation using platform-specific terminology.</p>
+<p>Normalization may map that operation into a shared vocabulary while preserving the native value.</p>
+<p>Conceptually:</p>
+<p><strong>Native operation</strong></p>
+<p>↓</p>
+<p><strong>adapter mapping</strong></p>
+<p>↓</p>
+<p><strong>normalized operation</strong></p>
+<p>For example:</p>
+<p><strong>native filesystem operation</strong></p>
+<p>↓</p>
+<p><code>write</code></p>
+<p>or:</p>
+<p><strong>native database operation</strong></p>
+<p>↓</p>
+<p><code>state_change</code></p>
+<p>or:</p>
+<p><strong>native synchronization operation</strong></p>
+<p>↓</p>
+<p><code>sync</code></p>
+<p>The shared operation enables cross-adapter structural comparison.</p>
+<p>The native operation preserves diagnostic lineage.</p>
+<p>Neither establishes domain interpretation.</p>
+<hr>
+<h1 id="observation-vs-derivation">Observation vs. Derivation</h1>
+<p>Normalization may contain both direct observations and bounded derivations.</p>
+<p>These must remain distinguishable.</p>
+<h2 id="observed">Observed</h2>
+<p>Evidence supplied directly by the underlying observation source.</p>
+<p>Examples:</p>
+<ul>
+<li>a resource changed;</li>
+<li>an operation was reported;</li>
+<li>a synchronization service transported an update;</li>
+<li>an actor identifier was supplied;</li>
+<li>a database transaction completed;</li>
+<li>a cache entry expired.</li>
+</ul>
+<h2 id="derived">Derived</h2>
+<p>A value calculated or classified from observations.</p>
+<p>Examples:</p>
+<ul>
+<li>native resource mapped to <code>user_document</code>;</li>
+<li>event mapped to <code>write</code>;</li>
+<li>resource determined to fall inside protected scope;</li>
+<li>operation compared with baseline;</li>
+<li>resource identifier pseudonymized;</li>
+<li>two observations correlated as representations of the same transition.</li>
+</ul>
+<h2 id="interpreted">Interpreted</h2>
+<p>A domain-level conclusion.</p>
+<p>Examples:</p>
+<ul>
+<li>ransomware-like structural pattern;</li>
+<li>harmful behavior;</li>
+<li>malicious intent;</li>
+<li>attribution;</li>
+<li>containment threshold crossed.</li>
+</ul>
+<p>Interpretation does <strong>not</strong> belong in normalization.</p>
+<p>The boundary is:</p>
+<blockquote>
+<p><strong>Observed and explicitly derived structure may enter the normalized event. Domain conclusions do not.</strong></p>
+</blockquote>
+<hr>
+<h1 id="preserve_native_operation"><code>preserve_native_operation</code></h1>
+<p>A normalized operation may simplify platform-specific evidence.</p>
+<p>The original operation should remain available when useful for:</p>
+<ul>
+<li>diagnostics;</li>
+<li>reconstruction;</li>
+<li>comparison;</li>
+<li>validator testing;</li>
+<li>future remapping;</li>
+<li>platform-specific investigation.</li>
+</ul>
+<p>Conceptually:</p>
+<p><strong>Native operation</strong></p>
+<p>↓</p>
+<p><strong>shared operation</strong></p>
+<p>without destroying the native lineage.</p>
+<p>This allows the shared grammar to remain stable even if native event vocabularies differ substantially.</p>
+<hr>
+<h1 id="preserve_provenance"><code>preserve_provenance</code></h1>
+<p>Every normalized event should retain sufficient lineage to answer:</p>
+<ul>
+<li>Where was this observed?</li>
+<li>Which adapter observed or normalized it?</li>
+<li>When was it observed?</li>
+<li>When was it normalized?</li>
+<li>Which capability declaration applied?</li>
+<li>Which native evidence supported it?</li>
+<li>Which derivation method produced bounded derived values?</li>
+<li>What information was removed or generalized?</li>
+</ul>
+<p>A typical provenance object may preserve:</p>
+<ul>
+<li><code>platform</code></li>
+<li><code>adapter</code></li>
+<li><code>adapter_version</code></li>
+<li><code>capabilities_ref</code></li>
+<li><code>observed_at</code></li>
+<li><code>normalized_at</code></li>
+<li><code>native_event_ref</code></li>
+<li><code>raw_event_retained</code></li>
+<li><code>derivation_refs</code></li>
+<li><code>redactions</code></li>
+</ul>
+<p>Normalization should therefore be <strong>traceable abstraction</strong>, not evidence destruction.</p>
+<hr>
+<h1 id="preserve_unknowns"><code>preserve_unknowns</code></h1>
+<p>Unknown state is first-class.</p>
+<p>Normalization must distinguish:</p>
+<p><strong>false</strong></p>
+<p>from:</p>
+<p><strong>unknown</strong></p>
+<p>from:</p>
+<p><strong>not applicable</strong></p>
+<p>from:</p>
+<p><strong>not observed</strong></p>
+<p>from:</p>
+<p><strong>unavailable</strong></p>
+<p>where the relevant schema supports those distinctions.</p>
+<p>For example:</p>
+<p><code>recoverable = false</code></p>
+<p>means evidence establishes that the resource is not recoverable.</p>
+<p>Whereas:</p>
+<p><code>recoverable = null</code></p>
+<p>means recoverability was not established.</p>
+<p>These statements are not interchangeable.</p>
+<p>The core invariant is:</p>
+<blockquote>
+<p><strong>Unknown ≠ false</strong></p>
+</blockquote>
+<hr>
+<h1 id="null-vs-false">Null vs. False</h1>
+<p>Boolean observations frequently need three-valued reasoning.</p>
+<p>Consider:</p>
+<p><code>propagation_observed = false</code></p>
+<p>This means the available observation supports the statement that propagation was not observed within the applicable scope.</p>
+<p>By contrast:</p>
+<p><code>network_origin = null</code></p>
+<p>means network origin could not be established.</p>
+<p>A missing answer is not a negative answer.</p>
+<p>Normalization must preserve that distinction.</p>
+<hr>
+<h1 id="preserve_source_dependencies"><code>preserve_source_dependencies</code></h1>
+<p>Several observations may refer to the same underlying transition.</p>
+<p>Examples include:</p>
+<ul>
+<li>multiple telemetry sources observing one filesystem operation;</li>
+<li>host and container observers reporting one resource change;</li>
+<li>cloud and endpoint observers seeing one synchronized transition;</li>
+<li>database logical and storage layers representing one operation chain;</li>
+<li>replicated cache nodes seeing the same propagated mutation.</li>
+</ul>
+<p>Normalization and correlation must preserve these dependencies.</p>
+<p>Otherwise:</p>
+<p><strong>one underlying transition</strong></p>
+<p>could become:</p>
+<p><strong>several supposedly independent events</strong></p>
+<p>which could distort:</p>
+<ul>
+<li>event count;</li>
+<li>rate;</li>
+<li>acceleration;</li>
+<li>scope;</li>
+<li>propagation;</li>
+<li>confidence;</li>
+<li>evidence independence.</li>
+</ul>
+<p>The invariant is:</p>
+<blockquote>
+<p><strong>Multiple observations ≠ multiple independent originating transitions.</strong></p>
+</blockquote>
+<hr>
+<h1 id="preserve_origin_transport_distinction"><code>preserve_origin_transport_distinction</code></h1>
+<p>The actor visible at the point of observation may not be the actor that originated the transition.</p>
+<p>This occurs frequently with:</p>
+<ul>
+<li>synchronization systems;</li>
+<li>cloud providers;</li>
+<li>databases;</li>
+<li>caches;</li>
+<li>services;</li>
+<li>remote resources;</li>
+<li>delegated operations.</li>
+</ul>
+<p>The shared model may therefore preserve:</p>
+<ul>
+<li>observed actor;</li>
+<li>origin actor reference;</li>
+<li>transport actor reference;</li>
+<li>origin environment;</li>
+<li>synchronization or replication context.</li>
+</ul>
+<p>The invariant is:</p>
+<blockquote>
+<p><strong>Observed actor ≠ proven origin actor</strong></p>
+</blockquote>
+<hr>
+<h1 id="resource-normalization">Resource Normalization</h1>
+<p>Native resources map into shared structural types and classes.</p>
+<p>Examples include:</p>
+<ul>
+<li>file → <code>user_document</code></li>
+<li>file → <code>photo</code></li>
+<li>dataset → <code>database</code></li>
+<li>cloud object → <code>cloud_resource</code></li>
+<li>backup object → <code>backup</code></li>
+<li>recovery object → <code>recovery_resource</code></li>
+<li>adapter-controlled resource → <code>canary</code></li>
+<li>AI context → <code>context_resource</code></li>
+</ul>
+<p>The purpose is structural classification.</p>
+<p>It is not to expose unnecessary native identity.</p>
+<hr>
+<h1 id="privacy-preserving-resource-identity">Privacy-Preserving Resource Identity</h1>
+<p>A normalized event may use a pseudonymous structural identifier such as:</p>
+<p><code>resource://pseudonymous/document-0087</code></p>
+<p>rather than exposing:</p>
+<ul>
+<li>full filesystem path;</li>
+<li>user-visible document name;</li>
+<li>account identity;</li>
+<li>provider-native identifier;</li>
+<li>database record contents;</li>
+<li>cache key;</li>
+<li>resource contents.</li>
+</ul>
+<p>The adapter may retain native identity locally when required for authorized correlation, response, verification, or recovery.</p>
+<p>The central detector usually needs continuity of structural identity, not raw presentation detail.</p>
+<hr>
+<h1 id="resource-type-vs-resource-class">Resource Type vs. Resource Class</h1>
+<p>The shared model distinguishes general structural type from analytical class.</p>
+<p>For example:</p>
+<p><strong>Type:</strong> <code>file</code></p>
+<p><strong>Class:</strong> <code>user_document</code></p>
+<p>or:</p>
+<p><strong>Type:</strong> <code>cloud_object</code></p>
+<p><strong>Class:</strong> <code>backup</code></p>
+<p>or:</p>
+<p><strong>Type:</strong> <code>dataset</code></p>
+<p><strong>Class:</strong> <code>database</code></p>
+<p>The type describes what kind of structural resource is represented.</p>
+<p>The class describes the role that resource plays in analysis.</p>
+<hr>
+<h1 id="transition-normalization">Transition Normalization</h1>
+<p>Native operations map into structural transitions.</p>
+<p>Examples may include:</p>
+<table>
+<thead>
+<tr>
+<th>Native behavior</th>
+<th>Shared operation</th>
+<th>Structural action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>resource write</td>
+<td><code>write</code></td>
+<td><code>modify</code></td>
+</tr>
+<tr>
+<td>creation</td>
+<td><code>create</code></td>
+<td><code>create</code></td>
+</tr>
+<tr>
+<td>deletion</td>
+<td><code>delete</code></td>
+<td><code>remove</code></td>
+</tr>
+<tr>
+<td>replacement</td>
+<td><code>replace</code></td>
+<td><code>replace</code></td>
+</tr>
+<tr>
+<td>permission modification</td>
+<td><code>permission_change</code></td>
+<td><code>restrict</code>, <code>grant</code>, or <code>revoke</code></td>
+</tr>
+<tr>
+<td>synchronization</td>
+<td><code>sync</code></td>
+<td><code>propagate</code> or another supported structural action</td>
+</tr>
+<tr>
+<td>state mutation</td>
+<td><code>state_change</code></td>
+<td><code>transform</code> or another bounded mapping</td>
+</tr>
+</tbody>
+</table>
+<p>The mapping should remain conservative.</p>
+<p>If the native event does not support a precise structural action, the adapter should preserve uncertainty rather than force an overly specific classification.</p>
+<hr>
+<h1 id="transition-characteristics">Transition Characteristics</h1>
+<p>Normalization may preserve characteristics such as:</p>
+<ul>
+<li>size change;</li>
+<li>content change;</li>
+<li>structural change;</li>
+<li>entropy shift;</li>
+<li>representation or extension change;</li>
+<li>ownership change;</li>
+<li>permission change;</li>
+<li>authority change;</li>
+<li>scope change;</li>
+<li>recovery-state change;</li>
+<li>prior-state preservation;</li>
+<li>reversibility.</li>
+</ul>
+<p>These characteristics become potential evidence.</p>
+<p>They do not independently establish ransomware.</p>
+<hr>
+<h1 id="context-normalization">Context Normalization</h1>
+<p>Context describes circumstances surrounding the transition.</p>
+<p>Candidate fields include:</p>
+<ul>
+<li>user intent;</li>
+<li>interactive-session state;</li>
+<li>bulk-operation state;</li>
+<li>network origin;</li>
+<li>synchronization transport;</li>
+<li>origin environment;</li>
+<li>session reference;</li>
+<li>authorized observation scope.</li>
+</ul>
+<p>These fields help downstream analysis evaluate competing explanations.</p>
+<p>They must not be converted into unsupported conclusions.</p>
+<hr>
+<h1 id="user-intent">User Intent</h1>
+<p>Where evidence allows, the shared event may distinguish:</p>
+<ul>
+<li>explicit;</li>
+<li>inferred;</li>
+<li>absent;</li>
+<li>unknown;</li>
+<li>not applicable.</li>
+</ul>
+<p>This is <strong>user-intent evidence</strong>, not a general statement about actor motive.</p>
+<p>For example:</p>
+<p><strong>User intent:</strong> unknown</p>
+<p>does not mean:</p>
+<p><strong>Actor intent:</strong> harmful.</p>
+<p>Broader intent assessment belongs downstream.</p>
+<hr>
+<h1 id="baseline-derivation">Baseline Derivation</h1>
+<p>Where an appropriate baseline exists, normalization or a bounded derived stage may compare the current transition against established history.</p>
+<p>Possible fields include:</p>
+<ul>
+<li>known actor;</li>
+<li>operation typical;</li>
+<li>scope typical;</li>
+<li>rate typical;</li>
+<li>resource typical;</li>
+<li>role coherent.</li>
+</ul>
+<p>A baseline may produce a mixed result:</p>
+<p><strong>known actor</strong></p>
+<p>+</p>
+<p><strong>expected resource</strong></p>
+<p>+</p>
+<p><strong>expected scope</strong></p>
+<p>+</p>
+<p><strong>atypical operation</strong></p>
+<p>+</p>
+<p><strong>atypical rate</strong></p>
+<p>+</p>
+<p><strong>role coherence unresolved</strong></p>
+<p>That mixed state should survive.</p>
+<p>Do not collapse it into:</p>
+<p><code>suspicious = true</code></p>
+<hr>
+<h1 id="consequence">Consequence</h1>
+<p>The consequence object records observable effects of the transition.</p>
+<p>Examples include:</p>
+<ul>
+<li>resource changed;</li>
+<li>resource unavailable;</li>
+<li>resource exposed;</li>
+<li>resource restricted;</li>
+<li>resource propagated;</li>
+<li>recovery affected;</li>
+<li>authority changed;</li>
+<li>context changed.</li>
+</ul>
+<p>Consequences should remain bounded to directly supported evidence.</p>
+<p>A changed resource does not automatically mean destructive loss.</p>
+<p>A recovery-related change does not automatically mean recovery interference.</p>
+<p>A propagated transition does not automatically establish independent origin at each destination.</p>
+<hr>
+<h1 id="adapter-specific-preservation-fields">Adapter-Specific Preservation Fields</h1>
+<p>The common normalization contract is extended by adapter-specific structural distinctions.</p>
+<p>These fields preserve evidence boundaries. They do not create new domain verdicts.</p>
+<hr>
+<h1 id="macos">macOS</h1>
+<p>macOS may use:</p>
+<ul>
+<li><code>preserve_event_semantics</code></li>
+<li><code>preserve_trust_context</code></li>
+<li><code>preserve_synchronization_context</code></li>
+</ul>
+<p>The critical distinction is:</p>
+<p><strong>notification</strong></p>
+<p>≠</p>
+<p><strong>authorization opportunity</strong></p>
+<p>≠</p>
+<p><strong>policy authority</strong></p>
+<p>A notification describes evidence.</p>
+<p>An authorization event may provide a pre-operation decision opportunity.</p>
+<p>Neither determines the RSPD policy decision by itself.</p>
+<hr>
+<h1 id="windows">Windows</h1>
+<p>Windows may preserve:</p>
+<ul>
+<li>native operation identity;</li>
+<li>multi-source event dependencies;</li>
+<li>process lineage;</li>
+<li>recovery-state context;</li>
+<li>synchronization relationships.</li>
+</ul>
+<p>The adapter must maintain:</p>
+<p><strong>platform mechanism</strong></p>
+<p>≠</p>
+<p><strong>adapter capability</strong></p>
+<p>≠</p>
+<p><strong>policy authority</strong></p>
+<hr>
+<h1 id="linux">Linux</h1>
+<p>Linux may use:</p>
+<ul>
+<li><code>preserve_namespace_context</code></li>
+<li><code>preserve_mount_context</code></li>
+<li>source dependency preservation;</li>
+<li>continuity information.</li>
+</ul>
+<p>Important Linux boundaries include:</p>
+<p><strong>mount observation ≠ all mounts</strong></p>
+<p><strong>container observation ≠ host observation</strong></p>
+<p><strong>namespace observation ≠ global host state</strong></p>
+<p><strong>privilege ≠ authority</strong></p>
+<hr>
+<h1 id="android">Android</h1>
+<p>Android may use:</p>
+<ul>
+<li><code>preserve_observation_mode</code></li>
+<li><code>preserve_provider_context</code></li>
+<li><code>preserve_synchronization_context</code></li>
+<li><code>preserve_origin_transport_distinction</code></li>
+</ul>
+<p>Important Android distinctions include:</p>
+<p><strong>application-visible state ≠ device-wide state</strong></p>
+<p><strong>provider-backed resource ≠ conventional local path</strong></p>
+<p><strong>state comparison ≠ directly observed operation</strong></p>
+<p><strong>user-intervention request ≠ completed response</strong></p>
+<hr>
+<h1 id="ios-ipados">iOS / iPadOS</h1>
+<p>iOS / iPadOS may use:</p>
+<ul>
+<li><code>preserve_observation_mode</code></li>
+<li><code>preserve_synchronization_context</code></li>
+<li><code>preserve_origin_transport_distinction</code></li>
+<li>source dependency preservation.</li>
+</ul>
+<p>A particularly important distinction is:</p>
+<p><strong>State at T1</strong></p>
+<p>↓</p>
+<p><strong>State at T2</strong></p>
+<p>↓</p>
+<p><strong>Derived transition</strong></p>
+<p>A derived state change may establish that a transition occurred without establishing:</p>
+<ul>
+<li>every intermediate operation;</li>
+<li>exact transition time;</li>
+<li>responsible actor;</li>
+<li>causal chain.</li>
+</ul>
+<p>Those uncertainties must survive normalization.</p>
+<hr>
+<h1 id="cloud-synchronization">Cloud / Synchronization</h1>
+<p>Cloud-sync normalization may preserve:</p>
+<ul>
+<li>origin/transport distinction;</li>
+<li>source dependencies;</li>
+<li>replication relationships;</li>
+<li>propagation relationships;</li>
+<li>version lineage.</li>
+</ul>
+<p>Its central boundary is:</p>
+<p><strong>origin</strong></p>
+<p>≠</p>
+<p><strong>transport</strong></p>
+<p>≠</p>
+<p><strong>observation</strong></p>
+<p>≠</p>
+<p><strong>replication</strong></p>
+<p>≠</p>
+<p><strong>propagation</strong></p>
+<p>A transition observed on several synchronized endpoints may still have one originating transition.</p>
+<hr>
+<h1 id="database">Database</h1>
+<p>Database normalization must preserve the observation layer.</p>
+<p>Possible layers include:</p>
+<ul>
+<li>application request;</li>
+<li>transaction;</li>
+<li>logical database mutation;</li>
+<li>database-engine activity;</li>
+<li>underlying storage;</li>
+<li>replication;</li>
+<li>recovery.</li>
+</ul>
+<p>The central distinction is:</p>
+<blockquote>
+<p><strong>Logical database transition ≠ storage transition</strong></p>
+</blockquote>
+<p>A logical database mutation must not silently become a filesystem observation.</p>
+<p>Likewise, a storage mutation must not automatically become a claim about logical database state.</p>
+<hr>
+<h1 id="cache">Cache</h1>
+<p>Cache normalization preserves the relationship between cached state and authoritative state.</p>
+<p>Important distinctions include:</p>
+<p><strong>cache state ≠ source state</strong></p>
+<p><strong>eviction ≠ destructive deletion</strong></p>
+<p><strong>expiration ≠ malice</strong></p>
+<p><strong>invalidation ≠ corruption</strong></p>
+<p><strong>replication ≠ independent origin</strong></p>
+<p>Cache normalization may also preserve:</p>
+<ul>
+<li>authority relationship;</li>
+<li>expiration context;</li>
+<li>eviction context;</li>
+<li>persistence relationships;</li>
+<li>replication relationships.</li>
+</ul>
+<p>A cache transition remains evidence about the cache unless source lineage establishes a broader effect.</p>
+<hr>
+<h1 id="redaction">Redaction</h1>
+<p>Normalization may deliberately remove or generalize sensitive information before emitting shared evidence.</p>
+<p>Examples include:</p>
+<ul>
+<li>raw filesystem path;</li>
+<li>filename;</li>
+<li>user identity;</li>
+<li>account identity;</li>
+<li>provider-native identifier;</li>
+<li>process arguments;</li>
+<li>database query contents;</li>
+<li>database record contents;</li>
+<li>cache keys;</li>
+<li>cache contents;</li>
+<li>device identity;</li>
+<li>authentication material;</li>
+<li>environment secrets.</li>
+</ul>
+<p>The provenance object should record relevant redaction classes.</p>
+<p>This distinguishes:</p>
+<p><strong>information deliberately withheld</strong></p>
+<p>from:</p>
+<p><strong>information never observed</strong>.</p>
+<hr>
+<h1 id="credential-boundary">Credential Boundary</h1>
+<p>Normalized events and adapter configurations must not require secrets merely for structural analysis.</p>
+<p>Shared evidence should not expose:</p>
+<ul>
+<li>passwords;</li>
+<li>API secrets;</li>
+<li>access tokens;</li>
+<li>refresh tokens;</li>
+<li>session secrets;</li>
+<li>private keys;</li>
+<li>provider credentials;</li>
+<li>database connection secrets;</li>
+<li>recovery secrets.</li>
+</ul>
+<p>Where identity context is structurally relevant, use a bounded reference rather than authentication material.</p>
+<hr>
+<h1 id="correlation-ids">Correlation IDs</h1>
+<p>A correlation identifier may link observations believed to participate in a broader activity.</p>
+<p>This can support:</p>
+<ul>
+<li>activity windows;</li>
+<li>transaction relationships;</li>
+<li>cross-adapter correlation;</li>
+<li>process lineage;</li>
+<li>synchronization chains;</li>
+<li>database operations;</li>
+<li>cache replication;</li>
+<li>verification.</li>
+</ul>
+<p>A correlation identifier is a relationship aid.</p>
+<p>It does not establish that every correlated observation has the same origin or meaning.</p>
+<hr>
+<h1 id="native-event-references">Native Event References</h1>
+<p><code>native_event_ref</code> provides a bridge back toward adapter-local evidence.</p>
+<p>The reference may identify:</p>
+<ul>
+<li>platform event;</li>
+<li>provider observation;</li>
+<li>database event;</li>
+<li>cache event;</li>
+<li>local state comparison;</li>
+<li>other retained evidence.</li>
+</ul>
+<p>The actual raw evidence may remain within the native privacy and security boundary.</p>
+<p>This supports reconstructability without requiring central storage of sensitive native telemetry.</p>
+<hr>
+<h1 id="derivation-references">Derivation References</h1>
+<p><code>derivation_refs</code> identify the methods or intermediate objects used to produce derived structural values.</p>
+<p>Examples include:</p>
+<ul>
+<li>resource-classification method;</li>
+<li>baseline-comparison method;</li>
+<li>pseudonymization method;</li>
+<li>event-deduplication method;</li>
+<li>state-comparison method;</li>
+<li>cross-environment correlation method.</li>
+</ul>
+<p>Derived values should be reconstructable when they materially affect downstream analysis.</p>
+<hr>
+<h1 id="observation-time-vs-normalization-time">Observation Time vs. Normalization Time</h1>
+<p>Two times may matter:</p>
+<p><strong><code>observed_at</code></strong></p>
+<p>When the underlying evidence was recorded.</p>
+<p><strong><code>normalized_at</code></strong></p>
+<p>When the adapter produced the shared representation.</p>
+<p>They may differ.</p>
+<p>This becomes important with:</p>
+<ul>
+<li>delayed collection;</li>
+<li>polling;</li>
+<li>synchronization;</li>
+<li>provider events;</li>
+<li>resumed observation;</li>
+<li>offline processing;</li>
+<li>state comparison.</li>
+</ul>
+<p>Normalization must not silently replace observation time with processing time.</p>
+<hr>
+<h1 id="observation-continuity">Observation Continuity</h1>
+<p>Adapters may operate under different continuity states, such as:</p>
+<ul>
+<li>continuous;</li>
+<li>polling;</li>
+<li>snapshot;</li>
+<li>state comparison;</li>
+<li>resumed;</li>
+<li>delayed;</li>
+<li>gapped;</li>
+<li>unknown.</li>
+</ul>
+<p>Continuity affects what downstream analysis may safely infer about:</p>
+<ul>
+<li>rate;</li>
+<li>acceleration;</li>
+<li>persistence;</li>
+<li>reappearance;</li>
+<li>absence of activity.</li>
+</ul>
+<p>The invariant is:</p>
+<blockquote>
+<p><strong>Observation gap ≠ no activity</strong></p>
+</blockquote>
+<hr>
+<h1 id="evidence-independence">Evidence Independence</h1>
+<p>Normalization preserves enough lineage for downstream analysis to evaluate whether evidence is genuinely independent.</p>
+<p>Examples of dependent observations include:</p>
+<ul>
+<li>one transition seen by multiple endpoint telemetry sources;</li>
+<li>one synchronized transition observed by several devices;</li>
+<li>one database operation represented at logical and storage layers;</li>
+<li>one cache mutation replicated across nodes;</li>
+<li>host and container observations of one underlying resource transition.</li>
+</ul>
+<p>Dependency does not make evidence useless.</p>
+<p>It changes what the evidence corroborates.</p>
+<p>Several dependent observations may strongly corroborate that a transition propagated while providing only one originating event.</p>
+<hr>
+<h1 id="normalization-must-remain-reversible-in-reasoning">Normalization Must Remain Reversible in Reasoning</h1>
+<p>Normalization does not have to preserve every native field centrally.</p>
+<p>It should preserve enough lineage to answer:</p>
+<ul>
+<li>What native evidence produced this shared field?</li>
+<li>Was the field observed or derived?</li>
+<li>Which adapter produced it?</li>
+<li>Which scope applied?</li>
+<li>Which capability declaration applied?</li>
+<li>What information was redacted?</li>
+<li>What remains unresolved?</li>
+</ul>
+<p>That is sufficient for analytical reconstruction without demanding unnecessary raw-data centralization.</p>
+<hr>
+<h1 id="what-normalization-must-never-assert-automatically">What Normalization Must Never Assert Automatically</h1>
+<p>Normalization must not automatically produce:</p>
+<ul>
+<li><code>ransomware = true</code></li>
+<li><code>malicious = true</code></li>
+<li><code>intent = harmful</code></li>
+<li><code>attribution = resolved</code></li>
+<li><code>severity = critical</code></li>
+<li><code>containment_required = true</code></li>
+<li><code>recovery_failed = true</code></li>
+<li><code>incident_resolved = true</code></li>
+</ul>
+<p>Those claims belong downstream and require the relevant evidence.</p>
+<p>A normalized event may contain strong evidence.</p>
+<p>It remains an event.</p>
+<hr>
+<h1 id="normalization-and-structural-patterns">Normalization and Structural Patterns</h1>
+<p>The handoff is explicit:</p>
+<p><strong><code>tf.resource-transition/v0.1</code></strong></p>
+<p>records normalized structural evidence.</p>
+<p><strong><code>tf.structural-pattern/v0.1</code></strong></p>
+<p>records what an analyzer thinks a collection of evidence may mean.</p>
+<p>This allows:</p>
+<p><strong>Event A</strong></p>
+<p>+</p>
+<p><strong>Event B</strong></p>
+<p>+</p>
+<p><strong>Event C</strong></p>
+<p>+</p>
+<p><strong>counter-evidence</strong></p>
+<p>+</p>
+<p><strong>unresolved observations</strong></p>
+<p>+</p>
+<p><strong>baseline</strong></p>
+<p>↓</p>
+<p><strong>bounded structural assessment</strong></p>
+<p>without rewriting the original events.</p>
+<p>The original evidence remains independently inspectable.</p>
+<hr>
+<h1 id="normalization-and-containment">Normalization and Containment</h1>
+<p>Normalization does not authorize containment.</p>
+<p>The chain remains:</p>
+<p><strong>Observation</strong></p>
+<p>↓</p>
+<p><strong>Normalization</strong></p>
+<p>↓</p>
+<p><strong>Pattern</strong></p>
+<p>↓</p>
+<p><strong>Assessment</strong></p>
+<p>↓</p>
+<p><strong>Containment Decision</strong></p>
+<p>↓</p>
+<p><strong>Platform / Service Action</strong></p>
+<p>↓</p>
+<p><strong>Response Outcome</strong></p>
+<p>↓</p>
+<p><strong>Verification</strong></p>
+<p>This preserves another core boundary:</p>
+<blockquote>
+<p><strong>Evidence ≠ authority</strong></p>
+</blockquote>
+<hr>
+<h1 id="normalization-and-verification">Normalization and Verification</h1>
+<p>Verification may produce new normalized observations.</p>
+<p>That means the architecture is cyclic rather than terminal:</p>
+<p><strong>Initial normalized events</strong></p>
+<p>↓</p>
+<p><strong>pattern</strong></p>
+<p>↓</p>
+<p><strong>decision</strong></p>
+<p>↓</p>
+<p><strong>outcome</strong></p>
+<p>↓</p>
+<p><strong>post-response observations</strong></p>
+<p>↓</p>
+<p><strong>normalized events</strong></p>
+<p>↓</p>
+<p><strong>verification</strong></p>
+<p>A verifier therefore relies on the same evidence discipline as the initial detector.</p>
+<p>Post-response silence is not automatically resolution.</p>
+<p>The observation scope and capability still matter.</p>
+<hr>
+<h1 id="canonical-invariants">Canonical Invariants</h1>
+<h2 id="norm-inv-01-native-observation-normalized-interpretation">NORM-INV-01 — Native Observation ≠ Normalized Interpretation</h2>
+<p>Normalization maps evidence into shared structure without assigning a domain verdict.</p>
+<h2 id="norm-inv-02-unknown-false">NORM-INV-02 — Unknown ≠ False</h2>
+<p>Unavailable evidence remains explicitly unresolved.</p>
+<h2 id="norm-inv-03-observed-actor-proven-origin">NORM-INV-03 — Observed Actor ≠ Proven Origin</h2>
+<p>The locally visible actor may be an origin, intermediary, executor, or transport.</p>
+<h2 id="norm-inv-04-multiple-observations-independent-events">NORM-INV-04 — Multiple Observations ≠ Independent Events</h2>
+<p>Source dependencies must remain available for downstream evidence analysis.</p>
+<h2 id="norm-inv-05-derived-observed">NORM-INV-05 — Derived ≠ Observed</h2>
+<p>Derived structural properties retain their derivation boundary.</p>
+<h2 id="norm-inv-06-baseline-deviation-malice">NORM-INV-06 — Baseline Deviation ≠ Malice</h2>
+<p>Historical deviation remains evidence rather than intent.</p>
+<h2 id="norm-inv-07-resource-identity-raw-native-identity">NORM-INV-07 — Resource Identity ≠ Raw Native Identity</h2>
+<p>Privacy-preserving structural identity may replace unnecessary native identifying detail.</p>
+<h2 id="norm-inv-08-redacted-unobserved">NORM-INV-08 — Redacted ≠ Unobserved</h2>
+<p>Deliberate minimization should remain distinguishable from unavailable evidence.</p>
+<h2 id="norm-inv-09-platform-capability-adapter-capability">NORM-INV-09 — Platform Capability ≠ Adapter Capability</h2>
+<p>Native platform possibilities do not establish deployment capability.</p>
+<h2 id="norm-inv-10-capability-authority">NORM-INV-10 — Capability ≠ Authority</h2>
+<p>Normalization and capability recording do not authorize response.</p>
+<h2 id="norm-inv-11-execution-resolution">NORM-INV-11 — Execution ≠ Resolution</h2>
+<p>A response outcome requires subsequent verification.</p>
+<h2 id="norm-inv-12-provenance-survives-normalization">NORM-INV-12 — Provenance Survives Normalization</h2>
+<p>Enough lineage must remain to reconstruct the evidence path.</p>
+<hr>
+<h1 id="canonical-normalization-path">Canonical Normalization Path</h1>
+<p>The complete normalization path is:</p>
+<p><strong>Native evidence</strong></p>
+<p>↓</p>
+<p><strong>identify observation source</strong></p>
+<p>↓</p>
+<p><strong>establish authorized scope</strong></p>
+<p>↓</p>
+<p><strong>preserve observation mode</strong></p>
+<p>↓</p>
+<p><strong>map actor</strong></p>
+<p>↓</p>
+<p><strong>map resource</strong></p>
+<p>↓</p>
+<p><strong>map operation</strong></p>
+<p>↓</p>
+<p><strong>describe transition</strong></p>
+<p>↓</p>
+<p><strong>preserve unknowns</strong></p>
+<p>↓</p>
+<p><strong>preserve origin / transport</strong></p>
+<p>↓</p>
+<p><strong>preserve source dependencies</strong></p>
+<p>↓</p>
+<p><strong>derive bounded structural fields</strong></p>
+<p>↓</p>
+<p><strong>compare with available baseline</strong></p>
+<p>↓</p>
+<p><strong>record direct consequence</strong></p>
+<p>↓</p>
+<p><strong>minimize sensitive data</strong></p>
+<p>↓</p>
+<p><strong>record redaction</strong></p>
+<p>↓</p>
+<p><strong>retain provenance</strong></p>
+<p>↓</p>
+<p><strong>emit <code>tf.resource-transition/v0.1</code></strong></p>
+<p>Then normalization stops.</p>
+<hr>
+<h1 id="downstream-analytical-path">Downstream Analytical Path</h1>
+<p>The next path is separate:</p>
+<p><strong>Normalized transitions</strong></p>
+<p>↓</p>
+<p><strong>CORRELATE</strong></p>
+<p>↓</p>
+<p><strong>DERIVE</strong></p>
+<p>↓</p>
+<p><strong>CONTRADICT</strong></p>
+<p>↓</p>
+<p><strong>ASSESS</strong></p>
+<p>↓</p>
+<p><strong>BOUND</strong></p>
+<p>↓</p>
+<p><strong><code>tf.structural-pattern/v0.1</code></strong></p>
+<p>If response is justified and authorized:</p>
+<p><strong><code>tf.structural-pattern/v0.1</code></strong></p>
+<p>↓</p>
+<p><strong><code>tf.containment-decision/v0.1</code></strong></p>
+<p>↓</p>
+<p><strong>adapter capability + authority boundary</strong></p>
+<p>↓</p>
+<p><strong>native action</strong></p>
+<p>↓</p>
+<p><strong><code>tf.response-outcome/v0.1</code></strong></p>
+<p>↓</p>
+<p><strong>post-response observation</strong></p>
+<p>↓</p>
+<p><strong><code>tf.verification/v0.1</code></strong></p>
+<hr>
+<h1 id="canonical-summary">Canonical Summary</h1>
+<blockquote>
+<p><strong>Normalization converts heterogeneous native observations into portable, privacy-conscious, provenance-preserving structural evidence without prejudging what that evidence ultimately means.</strong></p>
+</blockquote>
+<p>Its representation rule is:</p>
+<blockquote>
+<p><strong>Map native evidence into shared vocabulary while preserving enough native lineage to reconstruct the mapping.</strong></p>
+</blockquote>
+<p>Its uncertainty rule is:</p>
+<blockquote>
+<p><strong>Unknown remains unknown.</strong></p>
+</blockquote>
+<p>Its actor rule is:</p>
+<blockquote>
+<p><strong>Observed actor and originating actor remain separate unless evidence connects them.</strong></p>
+</blockquote>
+<p>Its dependency rule is:</p>
+<blockquote>
+<p><strong>Multiple observations remain dependent when they share an originating transition.</strong></p>
+</blockquote>
+<p>Its privacy rule is:</p>
+<blockquote>
+<p><strong>Export structural identity and relationships before exporting native identity or content.</strong></p>
+</blockquote>
+<p>Its evidence rule is:</p>
+<blockquote>
+<p><strong>Derived structure is allowed when derivation is explicit. Domain verdicts are not.</strong></p>
+</blockquote>
+<p>Its architectural boundary is:</p>
+<blockquote>
+<p><strong>Normalization ends at <code>tf.resource-transition/v0.1</code>. Interpretation begins downstream.</strong></p>
+</blockquote>
+  </main>
+</body>
+</html>

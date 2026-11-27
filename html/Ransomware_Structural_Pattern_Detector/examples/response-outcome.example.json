@@ -1,0 +1,159 @@
+{
+  "schema": "tf.response-outcome/v0.1",
+
+  "outcome_id": "outcome://rspd-example/000001",
+
+  "decision_ref": "decision://rspd-example/000001",
+
+  "pattern_ref": "pattern://rspd-example/000001",
+
+  "requested_response": {
+    "action": "deny_resource_writes",
+    "target_ref": "actor://rspd-example/process-3817",
+    "scope": "resource_set",
+    "priority": "high"
+  },
+
+  "execution": {
+    "status": "executed",
+    "attempted": true,
+    "started_at": "2026-11-27T08:45:38Z",
+    "completed_at": "2026-11-27T08:45:39Z",
+    "executor_ref": "adapter://rspd-example/macos-endpoint-security",
+    "authorization_ref": "authorization://rspd-example/containment-000001",
+    "reason": "The authorized adapter executed the bounded write-denial response for the protected resource set."
+  },
+
+  "executed_response": {
+    "action": "deny_resource_writes",
+    "target_ref": "actor://rspd-example/process-3817",
+    "scope": "resource_set",
+    "priority": "high"
+  },
+
+  "fallback": {
+    "used": false
+  },
+
+  "capability_context": {
+    "capabilities_ref": "capabilities://rspd-macos-endpoint-security-example/v0.1",
+
+    "required_capabilities": [
+      "write_denial",
+      "post_action_observation"
+    ],
+
+    "available_capabilities": [
+      "write_denial",
+      "event_observation",
+      "post_action_observation"
+    ],
+
+    "unavailable_capabilities": [
+      "recovery_verification",
+      "cross_environment_verification"
+    ],
+
+    "limitations": [
+      "Write denial is bounded to supported authorization opportunities and the configured protected-resource scope.",
+      "Cross-environment origin state cannot be established by this execution outcome.",
+      "Recovery state cannot be verified by this execution outcome."
+    ]
+  },
+
+  "effects": [
+    {
+      "type": "write_denial_applied",
+      "state": "observed",
+      "target_ref": "actor://rspd-example/process-3817",
+      "description": "A subsequent write attempt by the targeted actor against the protected resource scope was denied.",
+
+      "evidence_refs": [
+        "evidence://rspd-example/execution-000001",
+        "evidence://rspd-example/denied-write-000001"
+      ]
+    },
+    {
+      "type": "protected_scope_no_longer_writable_by_target",
+      "state": "observed",
+      "target_ref": "scope://protected-user-resources",
+      "description": "The targeted actor was prevented from completing the observed bounded write operation within the protected resource scope.",
+
+      "evidence_refs": [
+        "evidence://rspd-example/denied-write-000001"
+      ]
+    }
+  ],
+
+  "side_effects": [
+    {
+      "type": "actor_operation_interrupted",
+      "state": "observed",
+      "target_ref": "actor://rspd-example/process-3817",
+      "description": "The targeted actor's attempted operation against the protected resource scope did not complete.",
+
+      "evidence_refs": [
+        "evidence://rspd-example/denied-write-000001"
+      ]
+    }
+  ],
+
+  "errors": [],
+
+  "warnings": [
+    {
+      "code": "BOUND-SCOPE-ONLY",
+      "message": "Execution applies only to the configured protected resource scope and must not be interpreted as actor-wide, host-wide, or cross-environment containment.",
+      "source": "rspd-macos-endpoint-security-example",
+      "retryable": null
+    },
+    {
+      "code": "REMOTE-ORIGIN-UNVERIFIED",
+      "message": "The execution outcome does not establish whether an originating condition remains active outside the local observation boundary.",
+      "source": "rspd-macos-endpoint-security-example",
+      "retryable": null
+    },
+    {
+      "code": "RECOVERY-STATE-UNVERIFIED",
+      "message": "The execution outcome does not establish whether affected resources possess a usable and verified recovery path.",
+      "source": "rspd-macos-endpoint-security-example",
+      "retryable": null
+    }
+  ],
+
+  "rollback": {
+    "available": true,
+    "performed": false,
+    "rollback_ref": "rollback://rspd-example/write-denial-000001",
+    "status": "not_requested"
+  },
+
+  "verification_required": true,
+
+  "verification_ref": "verification://rspd-example/000001",
+
+  "provenance": {
+    "producer": "rspd-macos-endpoint-security-example",
+    "created_at": "2026-11-27T08:45:40Z",
+    "platform": "macos",
+    "adapter": "rspd-macos-endpoint-security-example",
+    "adapter_version": "0.1.0",
+
+    "source_refs": [
+      "decision://rspd-example/000001",
+      "pattern://rspd-example/000001",
+      "authorization://rspd-example/containment-000001",
+      "evidence://rspd-example/execution-000001",
+      "evidence://rspd-example/denied-write-000001",
+      "capabilities://rspd-macos-endpoint-security-example/v0.1"
+    ]
+  },
+
+  "extensions": {
+    "rspd": {
+      "example": true,
+      "execution_boundary": "protected_resource_set",
+      "resolution_claimed": false
+    }
+  }
+}

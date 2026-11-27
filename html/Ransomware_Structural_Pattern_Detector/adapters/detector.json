@@ -1,0 +1,576 @@
+{
+  "registry": {
+    "id": "rspd-adapter-registry",
+    "name": "Ransomware Structural Pattern Detector Adapter Registry",
+    "version": "0.1.0",
+    "status": "experimental",
+    "type": "adapter-registry",
+    "summary": "Machine-readable registry for platform, cross-environment, and resource/service adapters participating in the Ransomware Structural Pattern Detector architecture."
+  },
+
+  "purpose": {
+    "primary": "Declare the adapter family, artifact relationships, structural roles, shared contracts, and routing boundaries without redefining adapter-specific semantics or the Shared Structural Event Grammar.",
+    "principle": "Standardize adapter discovery and lineage without pretending that platforms, environments, or resource systems expose equivalent capabilities.",
+    "non_goals": [
+      "Define ransomware detection logic",
+      "Replace adapter-specific configuration schemas",
+      "Replace the Shared Structural Event Grammar",
+      "Declare runtime platform capability",
+      "Authorize containment actions",
+      "Record response execution",
+      "Assert verification or resolution"
+    ]
+  },
+
+  "categories": {
+    "platform": {
+      "description": "Adapters associated primarily with an operating-system or device execution boundary.",
+      "members": [
+        "windows",
+        "linux",
+        "macos",
+        "android",
+        "ios-ipados"
+      ]
+    },
+
+    "cross_environment": {
+      "description": "Adapters whose primary purpose is preserving structural lineage across environment boundaries.",
+      "members": [
+        "cloud-sync"
+      ]
+    },
+
+    "resource_service": {
+      "description": "Adapters associated primarily with a resource layer or service abstraction rather than an operating-system boundary.",
+      "members": [
+        "database",
+        "cache"
+      ]
+    }
+  },
+
+  "shared_contracts": {
+    "resource_transition": {
+      "schema": "tf.resource-transition/v0.1",
+      "ref": "../../Shared_Structural_Event_Grammar/resource-transition.schema.json",
+      "role": "normalized_observation"
+    },
+
+    "structural_pattern": {
+      "schema": "tf.structural-pattern/v0.1",
+      "ref": "../../Shared_Structural_Event_Grammar/structural-pattern.schema.json",
+      "role": "detector_output"
+    },
+
+    "platform_capabilities": {
+      "schema": "tf.platform-capabilities/v0.1",
+      "ref": "../../Shared_Structural_Event_Grammar/platform-capabilities.schema.json",
+      "role": "capability_declaration"
+    },
+
+    "containment_decision": {
+      "schema": "tf.containment-decision/v0.1",
+      "ref": "../../Shared_Structural_Event_Grammar/containment-decision.schema.json",
+      "role": "bounded_response_request"
+    },
+
+    "response_outcome": {
+      "schema": "tf.response-outcome/v0.1",
+      "ref": "../../Shared_Structural_Event_Grammar/response-outcome.schema.json",
+      "role": "execution_truth"
+    },
+
+    "verification": {
+      "schema": "tf.verification/v0.1",
+      "ref": "../../Shared_Structural_Event_Grammar/verification.schema.json",
+      "role": "post_response_state"
+    }
+  },
+
+  "detector": {
+    "ref": "../detector.json",
+    "input_schema": "tf.resource-transition/v0.1",
+    "output_schema": "tf.structural-pattern/v0.1",
+    "relationship": "Adapters normalize observations for the detector and execute separately authorized responses. The detector interprets structural behavior but does not own native platform mechanisms."
+  },
+
+  "adapter_contract": {
+    "artifact_pattern": {
+      "specification": "<adapter>.md",
+      "schema": "<adapter>.schema.json",
+      "example": "<adapter>.example.json"
+    },
+
+    "required_roles": [
+      "declare_scope",
+      "observe",
+      "normalize",
+      "declare_capabilities",
+      "preserve_provenance",
+      "preserve_unknowns",
+      "respect_authority",
+      "record_actual_outcome",
+      "support_bounded_verification"
+    ],
+
+    "semantic_boundaries": [
+      "native_observation != domain_verdict",
+      "observation != interpretation",
+      "actor != origin",
+      "capability != authority",
+      "decision != execution",
+      "requested_response != executed_response",
+      "execution != resolution",
+      "recovery_capability != verified_restoration",
+      "unknown != false"
+    ]
+  },
+
+  "adapters": [
+    {
+      "id": "windows",
+      "name": "Windows Adapter",
+      "category": "platform",
+      "status": "experimental",
+
+      "artifacts": {
+        "specification": "windows.md",
+        "schema": "windows.schema.json",
+        "example": "windows.example.json"
+      },
+
+      "configuration_schema": "tf.rspd-adapter.windows/v0.1",
+
+      "roles": [
+        "resource_observation",
+        "actor_observation",
+        "recovery_context",
+        "normalization",
+        "capability_declaration",
+        "response_mapping",
+        "verification"
+      ],
+
+      "special_boundaries": [
+        "platform_capability_vs_adapter_capability",
+        "actor_identity_vs_intent",
+        "recovery_activity_vs_ransomware",
+        "local_observation_vs_remote_origin"
+      ]
+    },
+
+    {
+      "id": "linux",
+      "name": "Linux Adapter",
+      "category": "platform",
+      "status": "experimental",
+
+      "artifacts": {
+        "specification": "linux.md",
+        "schema": "linux.schema.json",
+        "example": "linux.example.json"
+      },
+
+      "configuration_schema": "tf.rspd-adapter.linux/v0.1",
+
+      "roles": [
+        "resource_observation",
+        "actor_observation",
+        "mount_context",
+        "namespace_context",
+        "container_context",
+        "normalization",
+        "capability_declaration",
+        "response_mapping",
+        "verification"
+      ],
+
+      "special_boundaries": [
+        "mount_scope",
+        "namespace_scope",
+        "container_vs_host",
+        "privilege_vs_authority",
+        "observation_continuity"
+      ]
+    },
+
+    {
+      "id": "macos",
+      "name": "macOS Adapter",
+      "category": "platform",
+      "status": "experimental",
+
+      "artifacts": {
+        "specification": "macos.md",
+        "schema": "macos.schema.json",
+        "example": "macos.example.json",
+        "deployment_examples": [
+          "macos.endpoint-security.example.json"
+        ],
+        "normalized_event_documentation": "macos.normalized.event.json.md"
+      },
+
+      "configuration_schema": "tf.rspd-adapter.macos/v0.1",
+
+      "roles": [
+        "resource_observation",
+        "actor_observation",
+        "notification_observation",
+        "authorization_observation",
+        "normalization",
+        "capability_declaration",
+        "response_mapping",
+        "verification"
+      ],
+
+      "special_boundaries": [
+        "notification_vs_authorization",
+        "authorization_opportunity_vs_policy_authority",
+        "platform_capability_vs_adapter_capability",
+        "trusted_actor_vs_safe_transition",
+        "local_observation_vs_remote_origin"
+      ]
+    },
+
+    {
+      "id": "android",
+      "name": "Android Adapter",
+      "category": "platform",
+      "status": "experimental",
+
+      "artifacts": {
+        "specification": "android.md",
+        "schema": "android.schema.json",
+        "example": "android.example.json"
+      },
+
+      "configuration_schema": "tf.rspd-adapter.android/v0.1",
+
+      "roles": [
+        "application_resource_observation",
+        "user_authorized_resource_observation",
+        "provider_resource_observation",
+        "state_comparison",
+        "synchronization_context",
+        "normalization",
+        "capability_declaration",
+        "user_mediated_response",
+        "verification"
+      ],
+
+      "special_boundaries": [
+        "application_scope_vs_device_scope",
+        "provider_resource_vs_storage_origin",
+        "direct_observation_vs_state_comparison",
+        "user_intervention_request_vs_execution",
+        "local_observation_vs_remote_origin"
+      ]
+    },
+
+    {
+      "id": "ios-ipados",
+      "name": "iOS / iPadOS Adapter",
+      "category": "platform",
+      "status": "experimental",
+
+      "artifacts": {
+        "specification": "ios-ipados.md",
+        "schema": "ios-ipados.schema.json",
+        "example": "ios-ipados.example.json"
+      },
+
+      "configuration_schema": "tf.rspd-adapter.ios-ipados/v0.1",
+
+      "roles": [
+        "application_resource_observation",
+        "user_authorized_resource_observation",
+        "provider_resource_observation",
+        "state_comparison",
+        "synchronization_context",
+        "normalization",
+        "capability_declaration",
+        "user_mediated_response",
+        "verification"
+      ],
+
+      "special_boundaries": [
+        "application_scope_vs_device_scope",
+        "direct_observation_vs_state_comparison",
+        "user_intervention_request_vs_execution",
+        "local_verification_vs_device_wide_verification",
+        "local_observation_vs_remote_origin"
+      ]
+    },
+
+    {
+      "id": "cloud-sync",
+      "name": "Cloud / Synchronization Adapter",
+      "category": "cross_environment",
+      "status": "experimental",
+
+      "artifacts": {
+        "specification": "cloud-sync.md",
+        "schema": "cloud-sync.schema.json",
+        "example": "cloud-sync.example.json"
+      },
+
+      "configuration_schema": "tf.rspd-adapter.cloud-sync/v0.1",
+
+      "roles": [
+        "cross_environment_observation",
+        "origin_lineage",
+        "transport_lineage",
+        "replication_lineage",
+        "propagation_lineage",
+        "evidence_dependency",
+        "normalization",
+        "capability_declaration",
+        "response_mapping",
+        "cross_environment_verification"
+      ],
+
+      "special_boundaries": [
+        "origin_vs_transport",
+        "observation_vs_origin",
+        "replication_vs_new_origin",
+        "propagation_vs_independent_event",
+        "local_containment_vs_global_containment",
+        "bounded_verification_vs_global_resolution"
+      ]
+    },
+
+    {
+      "id": "database",
+      "name": "Database Adapter",
+      "category": "resource_service",
+      "status": "experimental",
+
+      "artifacts": {
+        "specification": "database.md",
+        "schema": "database.schema.json",
+        "example": "database.example.json"
+      },
+
+      "configuration_schema": "tf.rspd-adapter.database/v0.1",
+
+      "roles": [
+        "logical_transition_observation",
+        "transaction_context",
+        "actor_context",
+        "replication_context",
+        "recovery_context",
+        "storage_relationship",
+        "normalization",
+        "capability_declaration",
+        "response_mapping",
+        "verification"
+      ],
+
+      "special_boundaries": [
+        "logical_transition_vs_storage_transition",
+        "database_engine_vs_origin_actor",
+        "transaction_vs_intent",
+        "replication_vs_independent_origin",
+        "recovery_execution_vs_verified_logical_state"
+      ]
+    },
+
+    {
+      "id": "cache",
+      "name": "Cache Adapter",
+      "category": "resource_service",
+      "status": "experimental",
+
+      "artifacts": {
+        "specification": "cache.md",
+        "schema": "cache.schema.json",
+        "example": "cache.example.json"
+      },
+
+      "configuration_schema": "tf.rspd-adapter.cache/v0.1",
+
+      "roles": [
+        "cache_transition_observation",
+        "authority_relationship",
+        "expiration_context",
+        "eviction_context",
+        "replication_context",
+        "persistence_context",
+        "normalization",
+        "capability_declaration",
+        "response_mapping",
+        "verification"
+      ],
+
+      "special_boundaries": [
+        "cache_state_vs_source_state",
+        "eviction_vs_destructive_deletion",
+        "expiration_vs_malice",
+        "invalidation_vs_corruption",
+        "replication_vs_independent_origin",
+        "healthy_cache_vs_healthy_source"
+      ]
+    }
+  ],
+
+  "routing": {
+    "observation_path": [
+      "native_or_service_observation",
+      "adapter",
+      "tf.resource-transition/v0.1",
+      "ransomware-structural-pattern-detector",
+      "tf.structural-pattern/v0.1"
+    ],
+
+    "response_path": [
+      "tf.structural-pattern/v0.1",
+      "tf.containment-decision/v0.1",
+      "adapter",
+      "native_or_service_mechanism",
+      "tf.response-outcome/v0.1",
+      "tf.verification/v0.1"
+    ],
+
+    "cross_adapter_correlation": {
+      "allowed": true,
+      "requirements": [
+        "preserve_source_adapter",
+        "preserve_source_dependencies",
+        "preserve_origin_transport_relationships",
+        "avoid_duplicate_event_inflation",
+        "avoid_false_evidence_independence",
+        "preserve_observation_scope",
+        "preserve_capability_boundaries"
+      ]
+    }
+  },
+
+  "discovery": {
+    "selection_principle": "Select adapters according to the evidence source and structural boundary actually being observed rather than choosing one adapter to represent an entire multi-layer environment.",
+
+    "multi_adapter_examples": [
+      {
+        "scenario": "synchronized_windows_resource",
+        "adapters": [
+          "windows",
+          "cloud-sync"
+        ],
+        "reason": "Preserve local Windows observation separately from cross-environment origin, transport, replication, and propagation evidence."
+      },
+      {
+        "scenario": "synchronized_macos_resource",
+        "adapters": [
+          "macos",
+          "cloud-sync"
+        ],
+        "reason": "Preserve local macOS observation separately from synchronization lineage."
+      },
+      {
+        "scenario": "android_provider_resource",
+        "adapters": [
+          "android",
+          "cloud-sync"
+        ],
+        "reason": "Preserve Android-visible resource state separately from remote origin and synchronization evidence when available."
+      },
+      {
+        "scenario": "ios_ipados_provider_resource",
+        "adapters": [
+          "ios-ipados",
+          "cloud-sync"
+        ],
+        "reason": "Preserve bounded device-side evidence separately from cross-environment synchronization lineage."
+      },
+      {
+        "scenario": "database_on_linux",
+        "adapters": [
+          "database",
+          "linux"
+        ],
+        "reason": "Keep logical database transitions distinct from underlying Linux resource transitions while permitting correlation."
+      },
+      {
+        "scenario": "database_on_windows",
+        "adapters": [
+          "database",
+          "windows"
+        ],
+        "reason": "Keep database-layer evidence distinct from underlying Windows resource and actor observations."
+      },
+      {
+        "scenario": "distributed_cache_with_database_source",
+        "adapters": [
+          "cache",
+          "database"
+        ],
+        "reason": "Preserve cached state separately from authoritative database state."
+      },
+      {
+        "scenario": "cloud_synchronized_database",
+        "adapters": [
+          "database",
+          "cloud-sync"
+        ],
+        "reason": "Preserve logical database behavior separately from cross-environment transport and propagation."
+      }
+    ]
+  },
+
+  "invariants": [
+    {
+      "id": "REGISTRY-INV-01",
+      "statement": "Adapter discovery does not establish adapter capability."
+    },
+    {
+      "id": "REGISTRY-INV-02",
+      "statement": "Adapter capability does not establish authority to act."
+    },
+    {
+      "id": "REGISTRY-INV-03",
+      "statement": "A native or service observation does not independently establish a ransomware verdict."
+    },
+    {
+      "id": "REGISTRY-INV-04",
+      "statement": "The actor visible in one adapter boundary may not be the originating actor."
+    },
+    {
+      "id": "REGISTRY-INV-05",
+      "statement": "Multiple adapters observing the same underlying transition must not automatically create independent evidence."
+    },
+    {
+      "id": "REGISTRY-INV-06",
+      "statement": "Cross-adapter correlation must preserve source provenance and dependency."
+    },
+    {
+      "id": "REGISTRY-INV-07",
+      "statement": "Requested response and executed response remain separate structural facts."
+    },
+    {
+      "id": "REGISTRY-INV-08",
+      "statement": "Execution does not establish resolution."
+    },
+    {
+      "id": "REGISTRY-INV-09",
+      "statement": "Recovery capability does not establish verified restoration."
+    },
+    {
+      "id": "REGISTRY-INV-10",
+      "statement": "Verification claims remain bounded to the environments and resources actually observed."
+    },
+    {
+      "id": "REGISTRY-INV-11",
+      "statement": "Unknown capability or state must not be silently interpreted as unsupported, false, absent, safe, or resolved."
+    },
+    {
+      "id": "REGISTRY-INV-12",
+      "statement": "Adapter-specific semantics must not redefine the canonical meanings of Shared Structural Event Grammar objects."
+    }
+  ],
+
+  "documentation": {
+    "adapter_readme": "README.md",
+    "normalization_guide": "normalization_fields.md",
+    "macos_normalized_event_documentation": "macos.normalized.event.json.md"
+  }
+}

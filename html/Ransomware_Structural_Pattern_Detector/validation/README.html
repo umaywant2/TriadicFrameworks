@@ -1,0 +1,936 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Ransomware_Structural_Pattern_Detector/validation/README.md">
+  <title>Ransomware Structural Pattern Detector — Validation</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Ransomware_Structural_Pattern_Detector/validation/README.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Ransomware_Structural_Pattern_Detector/validation/README.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="Ransomware_Structural_Pattern_Detector_validation_" src="https://github.com/user-attachments/assets/f69be591-023b-4daf-8b7e-2cf4babf94c0" /></p>
+<h1 id="ransomware-structural-pattern-detector-validation">Ransomware Structural Pattern Detector — Validation</h1>
+<blockquote>
+<p><strong>Validation infrastructure for checking schema conformance, artifact relationships, lineage integrity, and structural invariants across the Ransomware Structural Pattern Detector.</strong></p>
+</blockquote>
+<p>The validation layer provides reproducible checks over the machine-readable artifacts used by the Ransomware Structural Pattern Detector.</p>
+<p>Its purpose is to answer questions such as:</p>
+<ul>
+<li>Does a JSON example conform to its declared schema?</li>
+<li>Does an adapter configuration use the expected adapter contract?</li>
+<li>Are required fields present?</li>
+<li>Are controlled vocabulary values valid?</li>
+<li>Do referenced example objects form a coherent lineage?</li>
+<li>Are identifiers and schema-family declarations internally consistent?</li>
+<li>Are structural boundaries preserved across example artifacts?</li>
+<li>Are known-invalid fixtures rejected for the intended reason?</li>
+</ul>
+<p>Validation does <strong>not</strong> establish that a detector correctly identifies ransomware in the real world.</p>
+<p>The governing rule is:</p>
+<blockquote>
+<p><strong>Conformance establishes structural consistency. It does not establish empirical truth.</strong></p>
+</blockquote>
+<hr>
+<h1 id="position-in-the-architecture">Position in the Architecture</h1>
+<p>Validation sits beside the runtime architecture rather than inside the analytical decision path.</p>
+<p>Conceptually:</p>
+<p><strong>Specifications</strong></p>
+<p>↓</p>
+<p><strong>Schemas</strong></p>
+<p>↓</p>
+<p><strong>Examples</strong></p>
+<p>↓</p>
+<p><strong>Validation</strong></p>
+<p>while runtime behavior remains:</p>
+<p><strong>Observation</strong></p>
+<p>↓</p>
+<p><strong>Normalization</strong></p>
+<p>↓</p>
+<p><strong>Pattern</strong></p>
+<p>↓</p>
+<p><strong>Decision</strong></p>
+<p>↓</p>
+<p><strong>Outcome</strong></p>
+<p>↓</p>
+<p><strong>Verification</strong></p>
+<p>Validation checks whether the artifacts representing that architecture are structurally coherent.</p>
+<p>It does not replace any runtime stage.</p>
+<hr>
+<h1 id="validation-targets">Validation Targets</h1>
+<p>The validation layer may operate over several artifact families.</p>
+<h2 id="shared-structural-event-grammar">Shared Structural Event Grammar</h2>
+<p>Canonical runtime schemas include:</p>
+<ul>
+<li><code>tf.resource-transition/v0.1</code></li>
+<li><code>tf.structural-pattern/v0.1</code></li>
+<li><code>tf.platform-capabilities/v0.1</code></li>
+<li><code>tf.containment-decision/v0.1</code></li>
+<li><code>tf.response-outcome/v0.1</code></li>
+<li><code>tf.verification/v0.1</code></li>
+</ul>
+<p>These schemas live in:</p>
+<p><code>../../Shared_Structural_Event_Grammar/</code></p>
+<p>They define the portable runtime contracts used across adapters and detector stages.</p>
+<hr>
+<h1 id="detector-contract">Detector Contract</h1>
+<p>The detector's machine-readable analytical definition is:</p>
+<p><code>../detector.json</code></p>
+<p>Validation may check structural assumptions involving:</p>
+<ul>
+<li>supported input schema;</li>
+<li>supported output schema;</li>
+<li>operator chain;</li>
+<li>signal vocabulary;</li>
+<li>evidence-policy vocabulary;</li>
+<li>damage-boundary vocabulary;</li>
+<li>decision-candidate vocabulary;</li>
+<li>adapter relationships;</li>
+<li>declared invariants.</li>
+</ul>
+<p>Validation of <code>detector.json</code> establishes internal contract consistency only.</p>
+<p>It does not establish the empirical quality of the detector's analytical conclusions.</p>
+<hr>
+<h1 id="adapter-registry">Adapter Registry</h1>
+<p>The adapter-layer machine-readable registry is:</p>
+<p><code>../adapters/detector.json</code></p>
+<p>Validation may check that registered adapter artifacts exist and that declared relationships remain coherent.</p>
+<p>The registry may reference:</p>
+<ul>
+<li>adapter semantic specifications;</li>
+<li>adapter configuration schemas;</li>
+<li>synthetic configuration examples;</li>
+<li>specialized deployment examples;</li>
+<li>normalization documentation;</li>
+<li>shared runtime contracts.</li>
+</ul>
+<p>The adapter registry does not itself establish runtime capability.</p>
+<hr>
+<h1 id="adapter-configuration-schemas">Adapter Configuration Schemas</h1>
+<p>Current adapter configuration schemas include:</p>
+<ul>
+<li><code>../adapters/windows.schema.json</code></li>
+<li><code>../adapters/linux.schema.json</code></li>
+<li><code>../adapters/macos.schema.json</code></li>
+<li><code>../adapters/android.schema.json</code></li>
+<li><code>../adapters/ios-ipados.schema.json</code></li>
+<li><code>../adapters/cloud-sync.schema.json</code></li>
+<li><code>../adapters/database.schema.json</code></li>
+<li><code>../adapters/cache.schema.json</code></li>
+</ul>
+<p>These schemas validate adapter configuration objects.</p>
+<p>They do not validate runtime resource-transition objects.</p>
+<hr>
+<h1 id="adapter-configuration-examples">Adapter Configuration Examples</h1>
+<p>Synthetic adapter examples include:</p>
+<ul>
+<li><code>../adapters/windows.example.json</code></li>
+<li><code>../adapters/linux.example.json</code></li>
+<li><code>../adapters/macos.example.json</code></li>
+<li><code>../adapters/android.example.json</code></li>
+<li><code>../adapters/ios-ipados.example.json</code></li>
+<li><code>../adapters/cloud-sync.example.json</code></li>
+<li><code>../adapters/database.example.json</code></li>
+<li><code>../adapters/cache.example.json</code></li>
+</ul>
+<p>Specialized deployment examples may also exist, such as:</p>
+<ul>
+<li><code>../adapters/macos.endpoint-security.example.json</code></li>
+</ul>
+<p>These examples demonstrate configuration structure.</p>
+<p>They must not be interpreted as capability claims about real deployed environments.</p>
+<hr>
+<h1 id="normalized-event-examples">Normalized Event Examples</h1>
+<p>A normalized runtime example may be provided independently of adapter configuration.</p>
+<p>For example:</p>
+<p><code>../adapters/macos.normalized.event.example.json</code></p>
+<p>should validate against:</p>
+<p><code>../../Shared_Structural_Event_Grammar/resource-transition.schema.json</code></p>
+<p>not against:</p>
+<p><code>../adapters/macos.schema.json</code></p>
+<p>This distinction is fundamental.</p>
+<p><strong>Adapter configuration schema</strong></p>
+<p>answers:</p>
+<blockquote>
+<p><strong>Is this a structurally valid adapter declaration?</strong></p>
+</blockquote>
+<p><strong>Shared runtime schema</strong></p>
+<p>answers:</p>
+<blockquote>
+<p><strong>Is this a structurally valid normalized event?</strong></p>
+</blockquote>
+<p>The two validation layers must remain separate.</p>
+<hr>
+<h1 id="end-to-end-example-lineage">End-to-End Example Lineage</h1>
+<p>The module provides an example runtime lineage under:</p>
+<p><code>../examples/</code></p>
+<p>The intended sequence is:</p>
+<p><strong><code>resource-transition.example.json</code></strong></p>
+<p>↓</p>
+<p><strong><code>structural-pattern.example.json</code></strong></p>
+<p>↓</p>
+<p><strong><code>containment-decision.example.json</code></strong></p>
+<p>↓</p>
+<p><strong><code>response-outcome.example.json</code></strong></p>
+<p>↓</p>
+<p><strong><code>verification.example.json</code></strong></p>
+<p>Each object validates against a different Shared Structural Event Grammar schema.</p>
+<p>The lineage as a whole demonstrates the architectural separation among:</p>
+<ul>
+<li>observation;</li>
+<li>interpretation;</li>
+<li>policy decision;</li>
+<li>execution truth;</li>
+<li>post-response state.</li>
+</ul>
+<hr>
+<h1 id="example-validation-matrix">Example Validation Matrix</h1>
+<p>The intended schema relationships are:</p>
+<table>
+<thead>
+<tr>
+<th>Example</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>resource-transition.example.json</code></td>
+<td><code>resource-transition.schema.json</code></td>
+</tr>
+<tr>
+<td><code>structural-pattern.example.json</code></td>
+<td><code>structural-pattern.schema.json</code></td>
+</tr>
+<tr>
+<td><code>containment-decision.example.json</code></td>
+<td><code>containment-decision.schema.json</code></td>
+</tr>
+<tr>
+<td><code>response-outcome.example.json</code></td>
+<td><code>response-outcome.schema.json</code></td>
+</tr>
+<tr>
+<td><code>verification.example.json</code></td>
+<td><code>verification.schema.json</code></td>
+</tr>
+<tr>
+<td><code>windows.example.json</code></td>
+<td><code>windows.schema.json</code></td>
+</tr>
+<tr>
+<td><code>linux.example.json</code></td>
+<td><code>linux.schema.json</code></td>
+</tr>
+<tr>
+<td><code>macos.example.json</code></td>
+<td><code>macos.schema.json</code></td>
+</tr>
+<tr>
+<td><code>macos.endpoint-security.example.json</code></td>
+<td><code>macos.schema.json</code></td>
+</tr>
+<tr>
+<td><code>android.example.json</code></td>
+<td><code>android.schema.json</code></td>
+</tr>
+<tr>
+<td><code>ios-ipados.example.json</code></td>
+<td><code>ios-ipados.schema.json</code></td>
+</tr>
+<tr>
+<td><code>cloud-sync.example.json</code></td>
+<td><code>cloud-sync.schema.json</code></td>
+</tr>
+<tr>
+<td><code>database.example.json</code></td>
+<td><code>database.schema.json</code></td>
+</tr>
+<tr>
+<td><code>cache.example.json</code></td>
+<td><code>cache.schema.json</code></td>
+</tr>
+</tbody>
+</table>
+<p>This matrix is descriptive.</p>
+<p>A machine-readable validation manifest may separately encode the same relationships for automated checking.</p>
+<hr>
+<h1 id="validation-layers">Validation Layers</h1>
+<p>Validation should distinguish several different layers.</p>
+<h2 id="layer-1-json-syntax">Layer 1 — JSON Syntax</h2>
+<p>Question:</p>
+<blockquote>
+<p><strong>Is the artifact syntactically valid JSON?</strong></p>
+</blockquote>
+<p>This catches malformed JSON before schema validation begins.</p>
+<p>Examples include:</p>
+<ul>
+<li>missing commas;</li>
+<li>unbalanced braces;</li>
+<li>malformed strings;</li>
+<li>duplicate-generation errors that corrupt JSON syntax.</li>
+</ul>
+<p>Passing syntax validation means only that the document is valid JSON.</p>
+<hr>
+<h2 id="layer-2-json-schema-conformance">Layer 2 — JSON Schema Conformance</h2>
+<p>Question:</p>
+<blockquote>
+<p><strong>Does an instance conform to its declared JSON Schema?</strong></p>
+</blockquote>
+<p>This may validate:</p>
+<ul>
+<li>required fields;</li>
+<li>property types;</li>
+<li>constant schema identifiers;</li>
+<li>enumerations;</li>
+<li>nested object structure;</li>
+<li>array structure;</li>
+<li>numeric bounds;</li>
+<li>date-time format where the validator supports it;</li>
+<li><code>additionalProperties</code> restrictions.</li>
+</ul>
+<p>Passing schema validation establishes structural conformance.</p>
+<p>It does not establish semantic truth.</p>
+<hr>
+<h2 id="layer-3-artifact-relationship-validation">Layer 3 — Artifact Relationship Validation</h2>
+<p>Question:</p>
+<blockquote>
+<p><strong>Do related files point to the expected contracts and artifacts?</strong></p>
+</blockquote>
+<p>Examples include checking whether:</p>
+<ul>
+<li>an adapter example declares the expected adapter schema family;</li>
+<li>an adapter registry references the expected schema;</li>
+<li>a normalized event declares <code>tf.resource-transition/v0.1</code>;</li>
+<li>provenance references use the intended artifact family;</li>
+<li>runtime examples identify the correct next-stage objects.</li>
+</ul>
+<p>This layer tests repository architecture rather than individual JSON structure alone.</p>
+<hr>
+<h2 id="layer-4-lineage-validation">Layer 4 — Lineage Validation</h2>
+<p>Question:</p>
+<blockquote>
+<p><strong>Do references across the example chain form a coherent structural lineage?</strong></p>
+</blockquote>
+<p>For example:</p>
+<p><strong>resource transition</strong></p>
+<p>should be referenced by:</p>
+<p><strong>structural pattern</strong></p>
+<p>which should be referenced by:</p>
+<p><strong>containment decision</strong></p>
+<p>which should be referenced by:</p>
+<p><strong>response outcome</strong></p>
+<p>which should be referenced by:</p>
+<p><strong>verification</strong>.</p>
+<p>Lineage validation may inspect:</p>
+<ul>
+<li>event references;</li>
+<li>pattern references;</li>
+<li>decision references;</li>
+<li>outcome references;</li>
+<li>verification references;</li>
+<li>capability references;</li>
+<li>scope references;</li>
+<li>evidence references;</li>
+<li>provenance references.</li>
+</ul>
+<p>A referenced identifier does not automatically imply the referenced object is semantically correct.</p>
+<p>The check establishes relationship consistency.</p>
+<hr>
+<h1 id="cross-artifact-invariants">Cross-Artifact Invariants</h1>
+<p>Some important rules cannot be expressed completely through one JSON Schema.</p>
+<p>Validation may therefore check architectural invariants across files.</p>
+<p>Examples include:</p>
+<h2 id="observation-interpretation">Observation ≠ Interpretation</h2>
+<p>A <code>tf.resource-transition/v0.1</code> example should not contain detector-level ransomware conclusions.</p>
+<h2 id="pattern-intent">Pattern ≠ Intent</h2>
+<p>A structural pattern may report strong destructive-pattern confidence while intent remains unknown.</p>
+<h2 id="pattern-attribution">Pattern ≠ Attribution</h2>
+<p>Strong structural evidence does not require resolved attribution.</p>
+<h2 id="capability-authority">Capability ≠ Authority</h2>
+<p>An adapter capability declaration must not be interpreted as containment authorization.</p>
+<h2 id="decision-execution">Decision ≠ Execution</h2>
+<p>A containment decision does not establish that its requested response occurred.</p>
+<h2 id="requested-response-executed-response">Requested Response ≠ Executed Response</h2>
+<p>Fallback or partial execution remains distinguishable.</p>
+<h2 id="execution-resolution">Execution ≠ Resolution</h2>
+<p>A successful response outcome must not automatically imply a resolved verification result.</p>
+<h2 id="recovery-capability-verified-restoration">Recovery Capability ≠ Verified Restoration</h2>
+<p>Recovery availability, recovery execution, and verified restoration remain separate.</p>
+<h2 id="bounded-verification-global-resolution">Bounded Verification ≠ Global Resolution</h2>
+<p>A verification result must remain scoped to the environments and resources actually observed.</p>
+<hr>
+<h1 id="unknown-state-validation">Unknown-State Validation</h1>
+<p>The architecture intentionally preserves uncertainty.</p>
+<p>Validation should therefore reject transformations that improperly collapse:</p>
+<p><strong>unknown</strong></p>
+<p>into:</p>
+<p><strong>false</strong></p>
+<p>or:</p>
+<p><strong>unsupported</strong></p>
+<p>or:</p>
+<p><strong>safe</strong></p>
+<p>or:</p>
+<p><strong>resolved</strong></p>
+<p>where the source evidence does not establish that conclusion.</p>
+<p>Examples may use:</p>
+<ul>
+<li><code>null</code>;</li>
+<li><code>unknown</code>;</li>
+<li><code>unresolved</code>;</li>
+<li><code>unavailable</code>;</li>
+<li><code>not_assessed</code>;</li>
+<li><code>unable_to_verify</code>;</li>
+</ul>
+<p>according to the relevant schema.</p>
+<p>These states are meaningful.</p>
+<p>They should not be normalized away merely to simplify consuming code.</p>
+<hr>
+<h1 id="source-dependency-validation">Source Dependency Validation</h1>
+<p>Where example evidence is explicitly dependent, validation should preserve that relationship.</p>
+<p>Potential dependent evidence includes:</p>
+<ul>
+<li>multiple observations of one filesystem transition;</li>
+<li>host and container views of one resource change;</li>
+<li>synchronized observations on multiple devices;</li>
+<li>logical and storage views of one database operation;</li>
+<li>replicated cache observations;</li>
+<li>direct and derived representations of one transition.</li>
+</ul>
+<p>The invariant is:</p>
+<blockquote>
+<p><strong>Observation count ≠ independent evidence count</strong></p>
+</blockquote>
+<p>A future validator may check that dependency references remain present where the example architecture declares them.</p>
+<hr>
+<h1 id="adapter-specific-validation">Adapter-Specific Validation</h1>
+<p>Adapter configuration validation should preserve environment-specific structural boundaries.</p>
+<h2 id="windows">Windows</h2>
+<p>Potential checks include:</p>
+<ul>
+<li>platform fixed to Windows;</li>
+<li>configuration schema family is correct;</li>
+<li>capability declarations use permitted support states;</li>
+<li>bounded observation is not represented as automatic endpoint-wide certainty.</li>
+</ul>
+<h2 id="linux">Linux</h2>
+<p>Potential checks include:</p>
+<ul>
+<li>Linux platform declaration;</li>
+<li>mount-awareness fields;</li>
+<li>namespace-awareness fields;</li>
+<li>container-awareness fields;</li>
+<li>privilege context;</li>
+<li>cross-mount and cross-namespace verification declarations.</li>
+</ul>
+<h2 id="macos">macOS</h2>
+<p>Potential checks include:</p>
+<ul>
+<li>macOS platform declaration;</li>
+<li>notification vs. authorization event semantics;</li>
+<li>authorization opportunity remains separate from policy authority;</li>
+<li>specialized Endpoint Security examples still conform to the same macOS adapter schema.</li>
+</ul>
+<h2 id="android">Android</h2>
+<p>Potential checks include:</p>
+<ul>
+<li>Android platform declaration;</li>
+<li>application-scope awareness;</li>
+<li>provider-backed resource context;</li>
+<li>state-comparison preservation;</li>
+<li>device-wide resolution claim remains prohibited.</li>
+</ul>
+<h2 id="ios-ipados">iOS / iPadOS</h2>
+<p>Potential checks include:</p>
+<ul>
+<li>iOS or iPadOS platform declaration;</li>
+<li>bounded application visibility;</li>
+<li>direct vs. derived observation preservation;</li>
+<li>device-wide resolution claim remains prohibited.</li>
+</ul>
+<h2 id="cloud-synchronization">Cloud / Synchronization</h2>
+<p>Potential checks include:</p>
+<ul>
+<li>origin vs. transport preservation;</li>
+<li>replication relationships;</li>
+<li>propagation relationships;</li>
+<li>evidence independence;</li>
+<li>bounded cross-environment verification.</li>
+</ul>
+<h2 id="database">Database</h2>
+<p>Potential checks include:</p>
+<ul>
+<li>logical vs. storage observation layer;</li>
+<li>transaction context;</li>
+<li>replication context;</li>
+<li>recovery context;</li>
+<li>source dependencies across layers.</li>
+</ul>
+<h2 id="cache">Cache</h2>
+<p>Potential checks include:</p>
+<ul>
+<li>cache vs. authoritative-source state;</li>
+<li>expiration context;</li>
+<li>eviction context;</li>
+<li>persistence relationships;</li>
+<li>replication relationships;</li>
+<li>rebuild and recovery boundaries.</li>
+</ul>
+<hr>
+<h1 id="positive-fixtures">Positive Fixtures</h1>
+<p>A positive fixture is expected to validate successfully.</p>
+<p>Examples include the canonical:</p>
+<p><code>*.example.json</code></p>
+<p>files.</p>
+<p>Positive fixtures demonstrate:</p>
+<ul>
+<li>expected structure;</li>
+<li>valid schema identifiers;</li>
+<li>valid controlled vocabulary;</li>
+<li>valid nested object layout;</li>
+<li>representative unknown states;</li>
+<li>representative provenance;</li>
+<li>representative limitation declarations.</li>
+</ul>
+<p>Passing positive fixtures confirms that the schema accepts intended examples.</p>
+<hr>
+<h1 id="negative-fixtures">Negative Fixtures</h1>
+<p>A future validation suite may also include intentionally invalid examples.</p>
+<p>Possible categories include:</p>
+<ul>
+<li>missing required field;</li>
+<li>unknown schema identifier;</li>
+<li>invalid enum;</li>
+<li>unexpected property;</li>
+<li>incorrect data type;</li>
+<li>forbidden global-resolution claim;</li>
+<li>invalid platform declaration;</li>
+<li>unsupported adapter profile;</li>
+<li>malformed date-time;</li>
+<li>missing provenance;</li>
+<li>invalid containment action;</li>
+<li>incorrect runtime/configuration schema pairing.</li>
+</ul>
+<p>Negative fixtures should document the reason they are expected to fail.</p>
+<p>The objective is not merely to prove that valid objects pass.</p>
+<p>It is also to prove that important invalid structures are rejected.</p>
+<hr>
+<h1 id="semantic-fixtures">Semantic Fixtures</h1>
+<p>Not every architectural invariant belongs inside JSON Schema.</p>
+<p>A future validation suite may therefore contain semantic fixtures testing conditions such as:</p>
+<ul>
+<li>high structural confidence with unknown intent is permitted;</li>
+<li>high structural confidence with unresolved attribution is permitted;</li>
+<li>successful execution with non-resolved verification is permitted;</li>
+<li>dependent evidence is not counted as independent;</li>
+<li>unknown recovery state remains unknown;</li>
+<li>local containment does not imply remote containment;</li>
+<li>state-comparison-derived transitions remain distinguishable from direct observations.</li>
+</ul>
+<p>These fixtures test the conceptual contract.</p>
+<hr>
+<h1 id="validation-manifest">Validation Manifest</h1>
+<p>A machine-readable manifest may be stored as:</p>
+<p><code>manifest.json</code></p>
+<p>Its purpose is to declare validation relationships without hard-coding them into one programming-language implementation.</p>
+<p>A manifest may describe:</p>
+<ul>
+<li>artifact ID;</li>
+<li>instance path;</li>
+<li>schema path;</li>
+<li>expected result;</li>
+<li>validation class;</li>
+<li>lineage relationships;</li>
+<li>invariant identifiers;</li>
+<li>notes.</li>
+</ul>
+<p>Conceptually:</p>
+<p><strong>manifest</strong></p>
+<p>↓</p>
+<p><strong>instance</strong></p>
+<p>+</p>
+<p><strong>schema</strong></p>
+<p>↓</p>
+<p><strong>expected validation result</strong></p>
+<p>This allows validators in different languages or environments to consume the same validation plan.</p>
+<hr>
+<h1 id="validator-independence">Validator Independence</h1>
+<p>The validation architecture should not depend on one programming language or validator implementation.</p>
+<p>The canonical contracts are:</p>
+<ul>
+<li>JSON;</li>
+<li>JSON Schema;</li>
+<li>machine-readable manifests;</li>
+<li>explicit expected results.</li>
+</ul>
+<p>A validator might eventually be implemented using:</p>
+<ul>
+<li>Python;</li>
+<li>JavaScript;</li>
+<li>another language;</li>
+<li>CI tooling;</li>
+<li>an AI-assisted validation workflow.</li>
+</ul>
+<p>Those implementations should consume the same canonical fixtures and schemas.</p>
+<p>The validation contract belongs to the repository.</p>
+<p>The validator implementation is replaceable.</p>
+<hr>
+<h1 id="validation-output">Validation Output</h1>
+<p>A validator should distinguish at least:</p>
+<p><strong>PASS</strong></p>
+<p>The artifact satisfied the validation rule.</p>
+<p><strong>FAIL</strong></p>
+<p>The artifact violated the validation rule.</p>
+<p><strong>ERROR</strong></p>
+<p>The validation process itself could not complete.</p>
+<p><strong>SKIP</strong></p>
+<p>The check was intentionally not performed.</p>
+<p>These states should not be collapsed.</p>
+<p>For example:</p>
+<p><strong>ERROR</strong></p>
+<p>does not imply:</p>
+<p><strong>FAIL</strong></p>
+<p>and:</p>
+<p><strong>SKIP</strong></p>
+<p>does not imply:</p>
+<p><strong>PASS</strong>.</p>
+<hr>
+<h1 id="suggested-validation-record">Suggested Validation Record</h1>
+<p>A validation result may eventually preserve:</p>
+<ul>
+<li>check ID;</li>
+<li>artifact;</li>
+<li>schema;</li>
+<li>expected result;</li>
+<li>actual result;</li>
+<li>validator;</li>
+<li>validator version;</li>
+<li>timestamp;</li>
+<li>errors;</li>
+<li>warnings;</li>
+<li>invariant references.</li>
+</ul>
+<p>Validation output should itself be reproducible and inspectable.</p>
+<hr>
+<h1 id="validation-and-provenance">Validation and Provenance</h1>
+<p>Validation should preserve enough provenance to establish:</p>
+<ul>
+<li>which artifact was validated;</li>
+<li>which version or commit was validated;</li>
+<li>which schema was used;</li>
+<li>which validator was used;</li>
+<li>what result was produced;</li>
+<li>what errors occurred.</li>
+</ul>
+<p>A successful validation result without artifact/schema identity is weak evidence.</p>
+<hr>
+<h1 id="validation-and-repository-evolution">Validation and Repository Evolution</h1>
+<p>Schemas and examples will evolve.</p>
+<p>Validation should therefore pay attention to explicit schema families and versions.</p>
+<p>For example:</p>
+<p><code>tf.resource-transition/v0.1</code></p>
+<p>and a future:</p>
+<p><code>tf.resource-transition/v0.2</code></p>
+<p>must not be assumed equivalent simply because both represent resource transitions.</p>
+<p>Version changes may alter:</p>
+<ul>
+<li>required fields;</li>
+<li>optional fields;</li>
+<li>enum vocabularies;</li>
+<li>semantic constraints;</li>
+<li>compatibility expectations.</li>
+</ul>
+<p>Validation should track the declared contract rather than infer compatibility from filenames.</p>
+<hr>
+<h1 id="what-schema-validation-proves">What Schema Validation Proves</h1>
+<p>If:</p>
+<p><code>resource-transition.example.json</code></p>
+<p>validates successfully against:</p>
+<p><code>resource-transition.schema.json</code></p>
+<p>the valid conclusion is:</p>
+<blockquote>
+<p><strong>The example conforms to the structural constraints expressed by that schema.</strong></p>
+</blockquote>
+<p>Likewise, if:</p>
+<p><code>android.example.json</code></p>
+<p>validates against:</p>
+<p><code>android.schema.json</code></p>
+<p>the valid conclusion is:</p>
+<blockquote>
+<p><strong>The example conforms to the Android adapter configuration contract represented by that schema.</strong></p>
+</blockquote>
+<p>Nothing stronger follows automatically.</p>
+<hr>
+<h1 id="what-schema-validation-does-not-prove">What Schema Validation Does Not Prove</h1>
+<p>Schema validation does <strong>not</strong> establish that:</p>
+<ul>
+<li>the event actually occurred;</li>
+<li>the event's values are factually correct;</li>
+<li>the actor identity is correct;</li>
+<li>a baseline is empirically representative;</li>
+<li>the detector correctly identifies ransomware;</li>
+<li>a confidence score is calibrated;</li>
+<li>a containment decision is safe;</li>
+<li>a native response mechanism works;</li>
+<li>recovery will succeed;</li>
+<li>verification is complete;</li>
+<li>the system is secure.</li>
+</ul>
+<p>These require different forms of evidence.</p>
+<hr>
+<h1 id="what-example-lineage-validation-proves">What Example-Lineage Validation Proves</h1>
+<p>If the example chain is internally coherent:</p>
+<p><strong>transition → pattern → decision → outcome → verification</strong></p>
+<p>the valid conclusion is:</p>
+<blockquote>
+<p><strong>The example objects demonstrate an internally consistent use of the repository's structural contracts.</strong></p>
+</blockquote>
+<p>It does not establish that the illustrated scenario occurred or that the corresponding analytical policy is empirically validated.</p>
+<hr>
+<h1 id="validation-vs-evaluation">Validation vs. Evaluation</h1>
+<p>The repository should preserve a strong distinction between:</p>
+<h2 id="validation">Validation</h2>
+<blockquote>
+<p><strong>Does the artifact satisfy its declared structural contract?</strong></p>
+</blockquote>
+<p>and:</p>
+<h2 id="evaluation">Evaluation</h2>
+<blockquote>
+<p><strong>Does the detector behave effectively on representative real or experimental data?</strong></p>
+</blockquote>
+<p>These are different activities.</p>
+<p>A detector may be perfectly schema-valid and analytically poor.</p>
+<p>Conversely, a useful experimental detector may expose schema defects that need correction.</p>
+<p>Neither result should be hidden.</p>
+<hr>
+<h1 id="validation-vs-verification">Validation vs. Verification</h1>
+<p>The word <strong>validation</strong> in this directory refers to artifact and contract checking.</p>
+<p>The runtime object:</p>
+<p><code>tf.verification/v0.1</code></p>
+<p>has a different role.</p>
+<p>Runtime verification asks:</p>
+<blockquote>
+<p><strong>What state exists after a response?</strong></p>
+</blockquote>
+<p>Repository validation asks:</p>
+<blockquote>
+<p><strong>Does this artifact conform to its declared contract and architectural relationships?</strong></p>
+</blockquote>
+<p>These terms must remain distinct.</p>
+<hr>
+<h1 id="recommended-validation-order">Recommended Validation Order</h1>
+<p>A validation implementation should conceptually proceed from simpler to more relational checks.</p>
+<h2 id="stage-1-parse">Stage 1 — Parse</h2>
+<p>Confirm JSON syntax.</p>
+<h2 id="stage-2-schema">Stage 2 — Schema</h2>
+<p>Validate individual objects against their schemas.</p>
+<h2 id="stage-3-references">Stage 3 — References</h2>
+<p>Check declared local artifact relationships.</p>
+<h2 id="stage-4-lineage">Stage 4 — Lineage</h2>
+<p>Check cross-object example lineage.</p>
+<h2 id="stage-5-invariants">Stage 5 — Invariants</h2>
+<p>Check semantic invariants that span schemas or files.</p>
+<h2 id="stage-6-report">Stage 6 — Report</h2>
+<p>Produce reproducible validation results.</p>
+<p>This ordering prevents later semantic checks from obscuring basic syntax or schema failures.</p>
+<hr>
+<h1 id="failure-discipline">Failure Discipline</h1>
+<p>Validation failures should remain specific.</p>
+<p>Prefer:</p>
+<blockquote>
+<p><code>verification.device_wide_resolution_claim_allowed</code> violates required constant <code>false</code>.</p>
+</blockquote>
+<p>over:</p>
+<blockquote>
+<p>Validation failed.</p>
+</blockquote>
+<p>Likewise, prefer:</p>
+<blockquote>
+<p><code>pattern_ref</code> does not match the pattern ID declared by the example lineage.</p>
+</blockquote>
+<p>over:</p>
+<blockquote>
+<p>Invalid lineage.</p>
+</blockquote>
+<p>Specific failures make both human and AI-assisted repair substantially easier.</p>
+<hr>
+<h1 id="no-silent-repair">No Silent Repair</h1>
+<p>Validation should not silently modify an artifact to make it pass.</p>
+<p>If a validator supports repair, repair must be a separate explicit operation.</p>
+<p>The validation result should describe the original failure before any transformation occurs.</p>
+<p>This preserves reproducibility.</p>
+<hr>
+<h1 id="privacy">Privacy</h1>
+<p>Validation should operate primarily on repository artifacts and normalized structural fixtures.</p>
+<p>It should not require:</p>
+<ul>
+<li>real user documents;</li>
+<li>real credentials;</li>
+<li>personal filenames;</li>
+<li>production database contents;</li>
+<li>real cache contents;</li>
+<li>provider tokens;</li>
+<li>private keys;</li>
+<li>sensitive endpoint telemetry.</li>
+</ul>
+<p>Synthetic examples should be sufficient for structural conformance testing.</p>
+<p>Real-world detector evaluation belongs under a separately governed evidence process.</p>
+<hr>
+<h1 id="validation-invariants">Validation Invariants</h1>
+<h2 id="validation-inv-01-valid-json-valid-schema">VALIDATION-INV-01 — Valid JSON ≠ Valid Schema</h2>
+<p>Syntactic correctness and schema conformance are separate checks.</p>
+<h2 id="validation-inv-02-schema-valid-factually-true">VALIDATION-INV-02 — Schema Valid ≠ Factually True</h2>
+<p>A schema-valid object may still contain incorrect data.</p>
+<h2 id="validation-inv-03-schema-valid-empirically-validated">VALIDATION-INV-03 — Schema Valid ≠ Empirically Validated</h2>
+<p>Structural conformance does not establish detector effectiveness.</p>
+<h2 id="validation-inv-04-configuration-valid-capability-proven">VALIDATION-INV-04 — Configuration Valid ≠ Capability Proven</h2>
+<p>An adapter configuration may be structurally valid without proving its declared capabilities exist in a real environment.</p>
+<h2 id="validation-inv-05-capability-valid-authority-granted">VALIDATION-INV-05 — Capability Valid ≠ Authority Granted</h2>
+<p>Validation of a capability declaration does not authorize response.</p>
+<h2 id="validation-inv-06-decision-valid-response-executed">VALIDATION-INV-06 — Decision Valid ≠ Response Executed</h2>
+<p>A valid containment decision object does not establish execution.</p>
+<h2 id="validation-inv-07-outcome-valid-resolution-proven">VALIDATION-INV-07 — Outcome Valid ≠ Resolution Proven</h2>
+<p>A valid response outcome does not establish successful resolution.</p>
+<h2 id="validation-inv-08-verification-valid-globally-resolved">VALIDATION-INV-08 — Verification Valid ≠ Globally Resolved</h2>
+<p>A schema-valid verification object remains bounded to its declared observational scope.</p>
+<h2 id="validation-inv-09-example-lineage-historical-event">VALIDATION-INV-09 — Example Lineage ≠ Historical Event</h2>
+<p>Synthetic example coherence does not establish that the illustrated events actually occurred.</p>
+<h2 id="validation-inv-10-error-fail">VALIDATION-INV-10 — ERROR ≠ FAIL</h2>
+<p>Validator failure and artifact failure remain separate states.</p>
+<h2 id="validation-inv-11-skip-pass">VALIDATION-INV-11 — SKIP ≠ PASS</h2>
+<p>An unperformed validation check cannot be reported as successful.</p>
+<h2 id="validation-inv-12-validation-must-preserve-evidence-boundaries">VALIDATION-INV-12 — Validation Must Preserve Evidence Boundaries</h2>
+<p>Validation must not repair uncertainty by converting unknown state into definitive claims.</p>
+<hr>
+<h1 id="initial-validation-scope">Initial Validation Scope</h1>
+<p>The first useful validation surface is deliberately small:</p>
+<ol>
+<li>Validate canonical example JSON syntax.</li>
+<li>Validate each example against its corresponding schema.</li>
+<li>Validate adapter examples against adapter schemas.</li>
+<li>Validate specialized adapter examples against their parent adapter schema.</li>
+<li>Validate the end-to-end example lineage.</li>
+<li>Check a small set of cross-artifact invariants.</li>
+<li>Report explicit pass, fail, error, and skip states.</li>
+</ol>
+<p>That is enough to establish a reproducible structural test layer.</p>
+<p>More elaborate detector evaluation can remain separate.</p>
+<hr>
+<h1 id="canonical-summary">Canonical Summary</h1>
+<blockquote>
+<p><strong>The Ransomware Structural Pattern Detector validation layer tests whether schemas, configurations, examples, lineage, and architectural invariants are represented consistently and reproducibly.</strong></p>
+</blockquote>
+<p>Its syntax rule is:</p>
+<blockquote>
+<p><strong>Valid JSON is necessary but not sufficient.</strong></p>
+</blockquote>
+<p>Its schema rule is:</p>
+<blockquote>
+<p><strong>Schema conformance establishes structural validity, not factual truth.</strong></p>
+</blockquote>
+<p>Its lineage rule is:</p>
+<blockquote>
+<p><strong>Related example objects should form reconstructable references without collapsing their distinct semantic stages.</strong></p>
+</blockquote>
+<p>Its uncertainty rule is:</p>
+<blockquote>
+<p><strong>Validation preserves unknown and unresolved state rather than repairing it into certainty.</strong></p>
+</blockquote>
+<p>Its capability rule is:</p>
+<blockquote>
+<p><strong>A valid capability declaration is not proof that the capability exists in a real deployment.</strong></p>
+</blockquote>
+<p>Its runtime rule is:</p>
+<blockquote>
+<p><strong>Decision, execution, recovery, and verification remain distinct even when every object is schema-valid.</strong></p>
+</blockquote>
+<p>Its scientific boundary is:</p>
+<blockquote>
+<p><strong>Repository validation checks whether the model is represented correctly. Empirical evaluation asks whether the model works. Those are different questions.</strong></p>
+</blockquote>
+  </main>
+</body>
+</html>
