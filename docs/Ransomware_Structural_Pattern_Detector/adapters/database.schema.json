@@ -1,0 +1,486 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://triadicframeworks.org/schemas/ransomware-structural-pattern-detector/adapters/database.schema.json",
+  "title": "Ransomware Structural Pattern Detector - Database Adapter",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "adapter",
+    "environment",
+    "scope",
+    "observation",
+    "normalization",
+    "database_context",
+    "capabilities",
+    "containment",
+    "recovery",
+    "verification",
+    "privacy",
+    "provenance"
+  ],
+  "properties": {
+    "schema": {
+      "const": "tf.rspd-adapter.database/v0.1"
+    },
+    "adapter": {
+      "$ref": "#/$defs/adapter"
+    },
+    "environment": {
+      "$ref": "#/$defs/environment"
+    },
+    "scope": {
+      "$ref": "#/$defs/scope"
+    },
+    "observation": {
+      "$ref": "#/$defs/observation"
+    },
+    "normalization": {
+      "$ref": "#/$defs/normalization"
+    },
+    "database_context": {
+      "$ref": "#/$defs/databaseContext"
+    },
+    "capabilities": {
+      "$ref": "#/$defs/capabilities"
+    },
+    "containment": {
+      "$ref": "#/$defs/containment"
+    },
+    "recovery": {
+      "$ref": "#/$defs/recovery"
+    },
+    "verification": {
+      "$ref": "#/$defs/verification"
+    },
+    "privacy": {
+      "$ref": "#/$defs/privacy"
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/limitation"
+      },
+      "default": []
+    },
+    "provenance": {
+      "$ref": "#/$defs/provenance"
+    },
+    "extensions": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "$defs": {
+    "supportLevel": {
+      "type": "string",
+      "enum": [
+        "supported",
+        "partial",
+        "unsupported",
+        "unknown"
+      ]
+    },
+    "adapter": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "version",
+        "status",
+        "profile"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "experimental",
+            "development",
+            "validation",
+            "stable",
+            "deprecated"
+          ]
+        },
+        "profile": {
+          "type": "string",
+          "enum": [
+            "logical_observer",
+            "transaction_observer",
+            "recovery_aware",
+            "replication_aware",
+            "database_security_integration",
+            "hybrid",
+            "custom"
+          ]
+        },
+        "implementation_ref": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "environment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "class",
+        "engine"
+      ],
+      "properties": {
+        "class": {
+          "type": "string",
+          "enum": [
+            "relational",
+            "document",
+            "key_value",
+            "graph",
+            "time_series",
+            "object",
+            "distributed",
+            "multi_model",
+            "other"
+          ]
+        },
+        "engine": {
+          "type": "string",
+          "minLength": 1
+        },
+        "engine_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "deployment": {
+          "type": "string",
+          "enum": [
+            "local",
+            "server",
+            "cluster",
+            "containerized",
+            "cloud_managed",
+            "embedded",
+            "hybrid",
+            "other",
+            "unknown"
+          ]
+        }
+      }
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mode"
+      ],
+      "properties": {
+        "mode": {
+          "type": "string",
+          "enum": [
+            "database",
+            "database_set",
+            "schema",
+            "resource_set",
+            "cluster",
+            "replication_group",
+            "custom"
+          ]
+        },
+        "scope_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "includes_replication": {
+          "type": "boolean",
+          "default": false
+        },
+        "includes_recovery_resources": {
+          "type": "boolean",
+          "default": false
+        },
+        "includes_storage_context": {
+          "type": "boolean",
+          "default": false
+        }
+      }
+    },
+    "observation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sources",
+        "continuity"
+      ],
+      "properties": {
+        "sources": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/observationSource"
+          }
+        },
+        "continuity": {
+          "type": "string",
+          "enum": [
+            "continuous",
+            "polling",
+            "snapshot",
+            "resumed",
+            "gapped",
+            "unknown"
+          ]
+        },
+        "transaction_context_collection": {
+          "type": "boolean"
+        },
+        "actor_context_collection": {
+          "type": "boolean"
+        },
+        "replication_context_collection": {
+          "type": "boolean"
+        },
+        "recovery_state_collection": {
+          "type": "boolean"
+        },
+        "storage_context_collection": {
+          "type": "boolean"
+        },
+        "deduplication": {
+          "type": "boolean"
+        },
+        "event_loss_detectable": {
+          "type": "boolean"
+        }
+      }
+    },
+    "observationSource": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "class",
+        "support"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "class": {
+          "type": "string",
+          "enum": [
+            "logical_change",
+            "transaction",
+            "audit",
+            "query_activity",
+            "replication",
+            "recovery",
+            "resource_state",
+            "storage_adapter",
+            "application",
+            "user_supplied",
+            "custom"
+          ]
+        },
+        "support": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "native_name": {
+          "type": "string"
+        },
+        "direct_or_derived": {
+          "type": "string",
+          "enum": [
+            "direct",
+            "derived",
+            "mixed",
+            "unknown"
+          ]
+        }
+      }
+    },
+    "normalization": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "output_schema",
+        "preserve_provenance",
+        "preserve_unknowns",
+        "preserve_layer"
+      ],
+      "properties": {
+        "output_schema": {
+          "const": "tf.resource-transition/v0.1"
+        },
+        "preserve_provenance": {
+          "const": true
+        },
+        "preserve_unknowns": {
+          "const": true
+        },
+        "preserve_layer": {
+          "const": true
+        },
+        "preserve_transaction_relationships": {
+          "type": "boolean"
+        },
+        "preserve_replication_relationships": {
+          "type": "boolean"
+        },
+        "preserve_source_dependencies": {
+          "type": "boolean"
+        },
+        "redaction_enabled": {
+          "type": "boolean"
+        }
+      }
+    },
+    "databaseContext": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "logical_awareness",
+        "transaction_awareness",
+        "storage_awareness",
+        "replication_awareness",
+        "recovery_awareness"
+      ],
+      "properties": {
+        "logical_awareness": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "transaction_awareness": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "storage_awareness": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "replication_awareness": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "recovery_awareness": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "actor_origin_awareness": {
+          "$ref": "#/$defs/supportLevel"
+        }
+      }
+    },
+    "capabilities": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema",
+        "declaration_ref",
+        "observation",
+        "enforcement",
+        "recovery",
+        "verification"
+      ],
+      "properties": {
+        "schema": {
+          "const": "tf.platform-capabilities/v0.1"
+        },
+        "declaration_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "observation": {
+          "$ref": "#/$defs/observationCapabilities"
+        },
+        "enforcement": {
+          "$ref": "#/$defs/enforcementCapabilities"
+        },
+        "recovery": {
+          "$ref": "#/$defs/recoveryCapabilities"
+        },
+        "verification": {
+          "$ref": "#/$defs/verificationCapabilities"
+        }
+      }
+    },
+    "observationCapabilities": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "event_observation": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "actor_identity": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "actor_lineage": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "resource_classification": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "baseline_access": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "recovery_state_observation": {
+          "$ref": "#/$defs/supportLevel"
+        }
+      }
+    },
+    "enforcementCapabilities": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "write_denial": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "actor_containment": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "resource_isolation": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "permission_restriction": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "replication_suspension": {
+          "$ref": "#/$defs/supportLevel"
+        }
+      }
+    },
+    "recoveryCapabilities": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "recovery": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "rollback": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "snapshot_restore": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "resource_restore": {
+          "$ref": "#/$defs/supportLevel"
+        }
+      }
+    },
+    "verificationCapabilities": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "post_action_observation": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "state_comparison": {
+          "$ref": "#/$defs/supportLevel"
+        },
+        "
