@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Ransomware_Structural_Pattern_Detector_adapters_ios_ipados_" src="https://github.com/user-attachments/assets/058cbdc2-fbb4-421e-9fba-5974b56f61d2" />
+
 # iOS / iPadOS Adapter
 
 > **Platform adapter specification for mapping authorized iOS and iPadOS observations into the Ransomware Structural Pattern Detector while preserving Apple's application, data-access, and platform-security boundaries.**
