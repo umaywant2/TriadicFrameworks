@@ -1,0 +1,151 @@
+Building from the concrete macOS Endpoint Security deployment example, this is what a single normalized observation could look like after the adapter has translated native evidence into tf.resource-transition/v0.1.
+
+The important feature is that it records **what was observed**, while leaving ransomware classification, intent, and containment downstream.
+```json
+{
+  "schema": "tf.resource-transition/v0.1",
+
+  "event": {
+    "id": "event://macos-example/000001",
+    "time": "2026-11-26T20:15:32Z",
+    "sequence": 18421,
+    "source": "filesystem",
+    "operation": "write",
+    "native_operation": "example-write-notification",
+    "phase": "normalized",
+    "correlation_id": "correlation://macos-example/activity-0042"
+  },
+
+  "actor": {
+    "id": "actor://macos-example/process-3817",
+    "type": "process",
+    "name": "example-process",
+    "parent_ref": "actor://macos-example/process-1024",
+    "role": "unknown",
+
+    "identity": {
+      "state": "known",
+      "publisher": "example-publisher",
+      "instance_ref": "instance://macos-example/process-3817",
+      "account_ref": "account://pseudonymous/local-user"
+    },
+
+    "trust": {
+      "state": "known",
+      "signed": true,
+      "reputation": "unknown",
+      "basis_refs": [
+        "evidence://macos-example/actor-identity-0001"
+      ]
+    }
+  },
+
+  "resource": {
+    "id": "resource://pseudonymous/document-0087",
+    "type": "file",
+    "class": "user_document",
+    "scope": "local",
+    "protected": true,
+    "canary": false,
+    "recoverable": null,
+    "sensitivity": "moderate"
+  },
+
+  "transition": {
+    "action": "modify",
+    "destructive": null,
+    "original_preserved": null,
+    "prior_state_ref": "state://document-0087/before-18421",
+    "resulting_state_ref": "state://document-0087/after-18421",
+    "reversibility": "unknown",
+
+    "characteristics": {
+      "size_changed": true,
+      "content_changed": true,
+      "structure_changed": null,
+      "entropy_shift": null,
+      "extension_changed": false,
+      "ownership_changed": false,
+      "permissions_changed": false,
+      "authority_changed": false,
+      "scope_changed": false,
+      "recovery_state_changed": null
+    }
+  },
+
+  "context": {
+    "user_intent": "unknown",
+    "interactive_session": null,
+    "bulk_operation": null,
+    "network_origin": null,
+    "sync_transport": false,
+    "session_ref": "session://macos-example/0042",
+    "scope_ref": "scope://protected-user-resources"
+  },
+
+  "baseline": {
+    "available": true,
+    "baseline_ref": "baseline://macos-example/v0.1",
+    "known_actor": true,
+    "operation_typical": false,
+    "scope_typical": true,
+    "rate_typical": false,
+    "resource_typical": true,
+    "role_coherent": null,
+    "comparison_refs": [
+      "baseline-observation://actor-3817/history",
+      "baseline-observation://resource-class/user-document"
+    ]
+  },
+
+  "consequence": {
+    "state": "resource_changed",
+    "affected_resource_refs": [
+      "resource://pseudonymous/document-0087"
+    ],
+    "propagation_observed": false,
+    "recovery_impact": "unknown",
+    "notes": "The protected resource changed. Destructiveness and recoverability have not yet been established."
+  },
+
+  "provenance": {
+    "platform": "macos",
+    "adapter": "rspd-macos-endpoint-security-example",
+    "adapter_version": "0.1.0",
+    "capabilities_ref": "capabilities://rspd-macos-endpoint-security-example/v0.1",
+    "observed_at": "2026-11-26T20:15:32Z",
+    "normalized_at": "2026-11-26T20:15:32Z",
+    "native_event_ref": "native-event://macos-example/18421",
+    "raw_event_retained": true,
+    "derivation_refs": [
+      "method://macos-es-resource-normalization/v0.1"
+    ],
+    "redactions": [
+      "raw_path",
+      "resource_name",
+      "user_identity",
+      "process_arguments"
+    ]
+  }
+}
+```
+Notice what this event **doesn't** say:
+- "ransomware": true
+- "malicious": true
+- "intent": "harmful"
+- "severity": "critical"
+- "contain": true
+
+Instead, it establishes something much narrower:
+
+**known process → protected user document → atypical write → resource changed → rate outside baseline → intent unknown → destructiveness unresolved**
+
+That object can then join other normalized events in the next layer:
+
+**tf.resource-transition/v0.1 × N**
+ → correlation
+ → counter-evidence
+ → competing explanations
+ → **tf.structural-pattern/v0.1**
+
+That is where the architecture gets interesting, because 500 individually boring normalized events can collectively reveal a very non-boring structural trajectory.
