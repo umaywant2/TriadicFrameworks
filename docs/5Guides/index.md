@@ -2,7 +2,7 @@
 
 # 5Guides
 
-> **Five questions for learning how**o inspect what you see, how thing**connect**whether they hold together, how**learly they can be understood, an**what happens when they change.**
+> **Five questions for learning how to inspect what you see, how things connect, whether they hold together, how clearly they can be understood, and what happens when they change.**
 
 # Awareness → Alignment → Coherence → Clarity → Continuity
 
@@ -393,13 +393,7 @@ It can be wrong.
 
 You still make the final judgment.
 
----
-
-# Want to Go Deeper? — Lean 4
-
-There's an optional formal path too.
-
-The Guides include small examples written in **Lean 4**, a formal proof environment.
+--ritten in **Lean 4**, a formal proof environment.
 
 The first five correspond directly to the Guides:
 
@@ -443,7 +437,7 @@ and:
 
 > **Did we formalize what we actually intended to claim?**
 
-[Explore the Lean examples](./lean/)
+./lean/
 
 ---
 
@@ -475,7 +469,7 @@ You don't need to study that history before starting.
 
 But if you're curious:
 
-[Explore the origins](./origins/)
+./origins/
 
 ---
 
@@ -517,7 +511,9 @@ If you choose not to leave anything behind, that changes nothing about what you 
 
 # Badges
 
-Each Guide can award a small learning nal certifications.
+Each Guide can award a small learning milestone.
+
+They aren't professional certifications.
 
 They aren't accreditation.
 
