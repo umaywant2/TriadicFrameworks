@@ -1,0 +1,651 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Shared_Structural_Event_Grammar/README.md">
+  <title>Shared Structural Event Grammar</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Shared_Structural_Event_Grammar/README.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Shared_Structural_Event_Grammar/README.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="Shared_Structural_Event_Grammar_" src="https://github.com/user-attachments/assets/ea9d7b46-6516-4408-b26e-66b27165804a" /></p>
+<h1 id="shared-structural-event-grammar">Shared Structural Event Grammar</h1>
+<blockquote>
+<p><strong>A platform-neutral lineage model for representing resource transitions, structural patterns, bounded decisions, actual responses, and verified outcomes without collapsing observation into interpretation.</strong></p>
+</blockquote>
+<p>The Shared Structural Event Grammar provides a common structural language for TriadicFrameworks analyzers.</p>
+<p>It allows platform-specific sensors, domain analyzers, orchestration modules, and response mechanisms to exchange structural observations without requiring the shared layer to decide what those observations ultimately mean.</p>
+<p>The grammar is deliberately domain-neutral.</p>
+<p>A filesystem modification, account-permission change, browser-profile mutation, cloud-resource transition, governance change, AI-memory mutation, or context injection may all be represented using the same underlying structural primitive:</p>
+<blockquote>
+<p><strong>Actor A caused transition T to resource R under context C, relative to baseline B, producing consequence K.</strong></p>
+</blockquote>
+<p>Domain-specific analyzers determine what that transition may mean.</p>
+<hr>
+<h2 id="status">Status</h2>
+<ul>
+<li><strong>Name:</strong> Shared Structural Event Grammar</li>
+<li><strong>Status:</strong> Experimental</li>
+<li><strong>Role:</strong> Shared structural infrastructure</li>
+<li><strong>Primary event family:</strong> <code>tf.resource-transition/v0.1</code></li>
+<li><strong>Design origin:</strong> Profile Rectification design capture</li>
+<li><strong>Primary consumers:</strong> Structural analyzers, Profile Rectification, system-security analyzers, and future domain adapters</li>
+</ul>
+<hr>
+<h1 id="purpose">Purpose</h1>
+<p>The grammar exists to preserve a clean distinction between:</p>
+<ul>
+<li>what happened;</li>
+<li>what was derived from what happened;</li>
+<li>what patterns emerged;</li>
+<li>what those patterns may mean;</li>
+<li>what response was recommended;</li>
+<li>what response was actually executed;</li>
+<li>what happened afterward.</li>
+</ul>
+<p>Its central concern is <strong>lineage</strong>.</p>
+<p>The shared layer should make it possible to reconstruct the analytical path from original observation through final verification without turning an inference into a fact merely because it passed through several processing stages.</p>
+<hr>
+<h1 id="core-principle">Core Principle</h1>
+<p>The grammar follows this conceptual progression:</p>
+<p><strong>Observation → Transition → Pattern → Assessment → Decision → Action → Outcome → Verification</strong></p>
+<p>At the processing level:</p>
+<p><strong>OBSERVE → NORMALIZE → CORRELATE → CONTRADICT → ASSESS → BOUND → ACT → VERIFY</strong></p>
+<p>Each stage has a distinct responsibility.</p>
+<p>Information may move forward through the chain, but the distinctions between stages must survive.</p>
+<hr>
+<h1 id="the-structural-primitive">The Structural Primitive</h1>
+<p>The foundational object is a <strong>resource transition</strong>.</p>
+<p>Conceptually:</p>
+<p><strong>Actor + Resource + Transition + Context + Baseline + Consequence</strong></p>
+<p>The primitive does not assume that the resource is a file or that the actor is a conventional executable.</p>
+<p>Possible actors include:</p>
+<ul>
+<li>process;</li>
+<li>application;</li>
+<li>service;</li>
+<li>script;</li>
+<li>container;</li>
+<li>remote actor;</li>
+<li>synchronization service;</li>
+<li>system;</li>
+<li>user;</li>
+<li>unknown actor.</li>
+</ul>
+<p>Possible resources include:</p>
+<ul>
+<li>user documents;</li>
+<li>media;</li>
+<li>databases;</li>
+<li>archives;</li>
+<li>project files;</li>
+<li>application data;</li>
+<li>configuration;</li>
+<li>credentials;</li>
+<li>backups;</li>
+<li>recovery resources;</li>
+<li>network resources;</li>
+<li>cloud resources;</li>
+<li>temporary resources;</li>
+<li>canaries;</li>
+<li>domain-specific resources.</li>
+</ul>
+<p>The grammar therefore describes <strong>structural change</strong>, not one particular security event.</p>
+<hr>
+<h1 id="shared-event-family">Shared Event Family</h1>
+<p>The initial grammar is divided into a small family of schemas rather than one overloaded object.</p>
+<h2 id="tfresource-transitionv01"><code>tf.resource-transition/v0.1</code></h2>
+<p>Schema:</p>
+<p><code>resource-transition.schema.json</code></p>
+<p>Represents a normalized transition affecting a resource.</p>
+<p>This is the observational foundation of the grammar.</p>
+<p>It may describe:</p>
+<ul>
+<li>an actor;</li>
+<li>a resource;</li>
+<li>an operation;</li>
+<li>transition characteristics;</li>
+<li>relevant context;</li>
+<li>baseline information;</li>
+<li>provenance.</li>
+</ul>
+<p>The transition object should describe what was observed or normalized without prematurely assigning domain-specific meaning.</p>
+<hr>
+<h2 id="tfstructural-patternv01"><code>tf.structural-pattern/v0.1</code></h2>
+<p>Schema:</p>
+<p><code>structural-pattern.schema.json</code></p>
+<p>Represents a pattern inferred from one or more transitions.</p>
+<p>A pattern may include:</p>
+<ul>
+<li>referenced events;</li>
+<li>supporting signals;</li>
+<li>counter-signals;</li>
+<li>unresolved questions;</li>
+<li>baseline deviation;</li>
+<li>severity;</li>
+<li>confidence;</li>
+<li>intent uncertainty;</li>
+<li>attribution uncertainty.</li>
+</ul>
+<p>The fundamental distinction is:</p>
+<blockquote>
+<p><strong>Events describe what happened. Patterns describe what an analyzer thinks those events may mean.</strong></p>
+</blockquote>
+<p>Those layers must never be collapsed.</p>
+<hr>
+<h2 id="tfcontainment-decisionv01"><code>tf.containment-decision/v0.1</code></h2>
+<p>Schema:</p>
+<p><code>containment-decision.schema.json</code></p>
+<p>Represents a bounded response decision associated with an identified structural pattern.</p>
+<p>It records the decision itself rather than pretending that the requested action has already occurred.</p>
+<p>A containment decision may preserve:</p>
+<ul>
+<li>the relevant pattern;</li>
+<li>requested response;</li>
+<li>reason codes;</li>
+<li>whether the response is automatic;</li>
+<li>whether the response is reversible;</li>
+<li>available platform context.</li>
+</ul>
+<p>This creates another important distinction:</p>
+<blockquote>
+<p><strong>Recommendation is not execution.</strong></p>
+</blockquote>
+<hr>
+<h2 id="tfresponse-outcomev01"><code>tf.response-outcome/v0.1</code></h2>
+<p>Schema:</p>
+<p><code>response-outcome.schema.json</code></p>
+<p>Represents what actually happened after a response was requested.</p>
+<p>For example, a structural engine might recommend one action while a platform adapter performs a weaker supported fallback.</p>
+<p>The outcome object records the execution result rather than merely repeating the recommendation.</p>
+<p>This preserves:</p>
+<p><strong>requested response ≠ executed response</strong></p>
+<p>and allows the analytical system to reason about the state that actually exists.</p>
+<hr>
+<h2 id="tfverificationv01"><code>tf.verification/v0.1</code></h2>
+<p>Schema:</p>
+<p><code>verification.schema.json</code></p>
+<p>Represents observations made after intervention.</p>
+<p>Possible verification states may include:</p>
+<ul>
+<li>contained;</li>
+<li>persistent;</li>
+<li>reappeared;</li>
+<li>resolved;</li>
+<li>partially resolved;</li>
+<li>unable to verify.</li>
+</ul>
+<p>The governing distinction is:</p>
+<blockquote>
+<p><strong>Containment is an action. Resolution is an observed state.</strong></p>
+</blockquote>
+<p>A successful action is therefore not sufficient evidence of successful resolution.</p>
+<p>Verification closes the analytical loop.</p>
+<hr>
+<h2 id="tfplatform-capabilitiesv01"><code>tf.platform-capabilities/v0.1</code></h2>
+<p>Schema:</p>
+<p><code>platform-capabilities.schema.json</code></p>
+<p>Declares what a particular adapter or execution environment can actually observe, enforce, or restore.</p>
+<p>This object exists so the structural engine does not assume that every environment supports the same operations.</p>
+<p>Capabilities may describe areas such as:</p>
+<ul>
+<li>event observation;</li>
+<li>actor identity;</li>
+<li>actor lineage;</li>
+<li>resource classification;</li>
+<li>network context;</li>
+<li>write denial;</li>
+<li>actor containment;</li>
+<li>resource isolation;</li>
+<li>network isolation;</li>
+<li>quarantine;</li>
+<li>recovery.</li>
+</ul>
+<p>A structural analyzer may recommend a response that an adapter cannot perform.</p>
+<p>The adapter must be able to report that limitation rather than silently implying success.</p>
+<hr>
+<h1 id="lineage-model">Lineage Model</h1>
+<p>The complete lineage is:</p>
+<p><strong>Native Observation</strong></p>
+<p>↓</p>
+<p><strong>Normalized Resource Transition</strong></p>
+<p>↓</p>
+<p><strong>Structural Pattern</strong></p>
+<p>↓</p>
+<p><strong>Assessment</strong></p>
+<p>↓</p>
+<p><strong>Bounded Decision</strong></p>
+<p>↓</p>
+<p><strong>Platform Action</strong></p>
+<p>↓</p>
+<p><strong>Response Outcome</strong></p>
+<p>↓</p>
+<p><strong>Verification</strong></p>
+<p>Baseline history, supporting evidence, counter-evidence, provenance, capability declarations, and unresolved contradictions accompany this chain rather than being erased as conclusions become more abstract.</p>
+<p>The objective is not merely to produce a verdict.</p>
+<p>The objective is to preserve enough structure to answer:</p>
+<ul>
+<li>What happened?</li>
+<li>Where was it observed?</li>
+<li>What transformation occurred?</li>
+<li>What did the analyzer infer?</li>
+<li>What evidence supported that inference?</li>
+<li>What evidence contradicted it?</li>
+<li>What remained unresolved?</li>
+<li>What response was recommended?</li>
+<li>What response could the platform actually perform?</li>
+<li>What response was executed?</li>
+<li>What was observed afterward?</li>
+</ul>
+<hr>
+<h1 id="observation-inference-and-action">Observation, Inference, and Action</h1>
+<p>The grammar explicitly separates analytical stages:</p>
+<p><strong>OBSERVED</strong></p>
+<p>Raw or platform-derived evidence.</p>
+<p>↓</p>
+<p><strong>NORMALIZED</strong></p>
+<p>Platform-specific observations expressed through the shared vocabulary.</p>
+<p>↓</p>
+<p><strong>DERIVED</strong></p>
+<p>Properties calculated from observations.</p>
+<p>↓</p>
+<p><strong>CORRELATED</strong></p>
+<p>Relationships established across observations, history, resources, or baselines.</p>
+<p>↓</p>
+<p><strong>ASSESSED</strong></p>
+<p>Domain-specific structural interpretation.</p>
+<p>↓</p>
+<p><strong>ACTIONED</strong></p>
+<p>A response requested or performed through an authorized mechanism.</p>
+<p>An adapter must not convert an observation directly into a domain verdict merely because the native event appears suspicious.</p>
+<p>For example, rapid modification of many resources may be observed.</p>
+<p>Whether that represents:</p>
+<ul>
+<li>legitimate batch processing;</li>
+<li>backup activity;</li>
+<li>migration;</li>
+<li>synchronization;</li>
+<li>destructive transformation;</li>
+<li>malicious behavior;</li>
+<li>an unresolved anomaly</li>
+</ul>
+<p>belongs to later analytical stages.</p>
+<hr>
+<h1 id="evidence-model">Evidence Model</h1>
+<p>The grammar treats evidence as more than a list of signals supporting a hypothesis.</p>
+<p>A structural pattern may carry three evidence classes.</p>
+<h2 id="supporting-evidence">Supporting Evidence</h2>
+<p>Observations or derived signals that strengthen a proposed interpretation.</p>
+<p>Examples might include:</p>
+<ul>
+<li>rate deviation;</li>
+<li>expanding scope;</li>
+<li>role deviation;</li>
+<li>destructive resource transition.</li>
+</ul>
+<h2 id="counter-evidence">Counter-Evidence</h2>
+<p>Observations that support a competing or benign explanation.</p>
+<p>Examples might include:</p>
+<ul>
+<li>explicit user initiation;</li>
+<li>established actor role;</li>
+<li>expected destination;</li>
+<li>originals preserved;</li>
+<li>recovery available.</li>
+</ul>
+<h2 id="unresolved-evidence">Unresolved Evidence</h2>
+<p>Questions whose answers are not currently known.</p>
+<p>Examples might include:</p>
+<ul>
+<li>whether a transformation is reversible;</li>
+<li>whether the apparent actor is the origin or merely a transport;</li>
+<li>whether independent observations share a common source.</li>
+</ul>
+<p>The grammar therefore evaluates:</p>
+<blockquote>
+<p><strong>structural deviation against structural coherence</strong></p>
+</blockquote>
+<p>rather than merely accumulating suspicious signals until a threshold is crossed.</p>
+<hr>
+<h1 id="confidence-intent-and-attribution">Confidence, Intent, and Attribution</h1>
+<p>These concepts must remain separate.</p>
+<p>A structural analyzer may reach high confidence that a destructive transition is occurring while retaining:</p>
+<p><strong>Intent:</strong> unknown</p>
+<p><strong>Attribution:</strong> unresolved</p>
+<p>This allows a system to make strong claims about directly supported structure without making unsupported claims about motives or responsible actors.</p>
+<p>Therefore:</p>
+<p><strong>Structural confidence ≠ Intent confidence ≠ Attribution confidence</strong></p>
+<hr>
+<h1 id="baselines">Baselines</h1>
+<p>A transition can be interpreted relative to an established baseline.</p>
+<p>Useful baseline questions include:</p>
+<ul>
+<li>Is this a known actor?</li>
+<li>Is this operation typical for the actor?</li>
+<li>Is this resource scope typical?</li>
+<li>Is the activity rate typical?</li>
+<li>Is the present behavior coherent with the actor's established role?</li>
+</ul>
+<p>A baseline provides context.</p>
+<p>It does not provide permanent trust.</p>
+<p>An actor that historically performed benign activity may still produce an anomalous transition.</p>
+<p>Likewise, activity from an unfamiliar actor is not automatically malicious.</p>
+<hr>
+<h1 id="origin-and-transport-actors">Origin and Transport Actors</h1>
+<p>The grammar must support cases in which the actor visible at the point of observation is not the actor that originated the transition.</p>
+<p>Synchronized and distributed systems make this distinction especially important.</p>
+<p>A synchronization service may transport a remote destructive change without originating it.</p>
+<p>Structural analysis should therefore preserve enough context to distinguish, when evidence allows:</p>
+<ul>
+<li>origin actor;</li>
+<li>transport actor;</li>
+<li>affected resource;</li>
+<li>originating environment;</li>
+<li>propagation state.</li>
+</ul>
+<p>A trusted transport must not automatically make the transported transition trustworthy.</p>
+<hr>
+<h1 id="data-minimization">Data Minimization</h1>
+<p>The grammar is designed to support structural analysis without requiring unnecessary disclosure of sensitive content.</p>
+<p>A central analyzer may need to know that a resource is:</p>
+<ul>
+<li>a user document;</li>
+<li>protected;</li>
+<li>locally scoped;</li>
+<li>recoverable;</li>
+<li>not a canary.</li>
+</ul>
+<p>It may not need the user's full local pathname, document title, account name, or raw contents.</p>
+<p>The governing privacy principle is:</p>
+<blockquote>
+<p><strong>Central structural analysis should consume the minimum information necessary to classify the transition.</strong></p>
+</blockquote>
+<p>Platform-specific raw evidence may remain local when broader disclosure is unnecessary.</p>
+<hr>
+<h1 id="platform-independence">Platform Independence</h1>
+<p>The shared grammar defines structural meaning.</p>
+<p>It does <strong>not</strong> define platform mechanisms.</p>
+<p>Platform adapters are responsible for mapping native events into the shared representation and declaring the capabilities actually available in their environment.</p>
+<p>Conceptually:</p>
+<p><strong>Platform Event Source</strong></p>
+<p>↓</p>
+<p><strong>Platform Normalizer</strong></p>
+<p>↓</p>
+<p><strong>Shared Structural Event Grammar</strong></p>
+<p>↓</p>
+<p><strong>Domain Analyzer</strong></p>
+<p>↓</p>
+<p><strong>Bounded Decision</strong></p>
+<p>↓</p>
+<p><strong>Platform Adapter</strong></p>
+<p>↓</p>
+<p><strong>Outcome</strong></p>
+<p>↓</p>
+<p><strong>Verification</strong></p>
+<p>This keeps policy separate from mechanism.</p>
+<p>The structural engine can reason about what response is appropriate without falsely assuming that every operating system, device class, security product, cloud service, or AI environment exposes identical controls.</p>
+<hr>
+<h1 id="domain-independence">Domain Independence</h1>
+<p>The grammar originated while reasoning about destructive filesystem transitions, but the underlying primitive is intentionally broader.</p>
+<p>A resource transition could represent:</p>
+<ul>
+<li>filesystem modification;</li>
+<li>account-permission change;</li>
+<li>browser-profile modification;</li>
+<li>credential exposure;</li>
+<li>cloud-resource mutation;</li>
+<li>governance transition;</li>
+<li>AI-memory mutation;</li>
+<li>AI-context injection;</li>
+<li>retrieval-source contamination;</li>
+<li>model-behavior transition.</li>
+</ul>
+<p>The grammar itself does not decide which domain interpretation is correct.</p>
+<p>That belongs to analyzers layered above it.</p>
+<p>Conceptually:</p>
+<p><strong>ResourceTransitionEvent</strong></p>
+<p>↓</p>
+<p><strong>Structural Pattern Engine</strong></p>
+<p>↓</p>
+<ul>
+<li>Ransomware Analyzer</li>
+<li>Profile Exploitation Analyzer</li>
+<li>Identity Drift Analyzer</li>
+<li>Governance Analyzer</li>
+<li>Media Manipulation Analyzer</li>
+<li>AI Context Rectification Analyzer</li>
+<li>Future domain analyzers</li>
+</ul>
+<p>This allows analyzers to share structural infrastructure without being forced into a single domain ontology.</p>
+<hr>
+<h1 id="relationship-to-profile-rectification">Relationship to Profile Rectification</h1>
+<p>Profile Rectification is an orchestration and structural-hygiene layer.</p>
+<p>The Shared Structural Event Grammar provides infrastructure that Profile Rectification may consume when observations can be represented as resource transitions and structural patterns.</p>
+<p>The separation is intentional.</p>
+<p>Profile Rectification owns concerns such as:</p>
+<ul>
+<li>consent;</li>
+<li>authorized scope;</li>
+<li>user-facing evaluation;</li>
+<li>proportional rectification;</li>
+<li>privacy boundaries;</li>
+<li>verification orchestration.</li>
+</ul>
+<p>The Shared Structural Event Grammar owns the portable lineage connecting:</p>
+<ul>
+<li>observations;</li>
+<li>transitions;</li>
+<li>patterns;</li>
+<li>decisions;</li>
+<li>outcomes;</li>
+<li>verification.</li>
+</ul>
+<p>This prevents the orchestration module from redefining structural-event semantics for every domain it encounters.</p>
+<hr>
+<h1 id="relationship-to-ransomware-structural-pattern-detection">Relationship to Ransomware Structural Pattern Detection</h1>
+<p>The Ransomware Structural Pattern Detector is a specialized consumer of this grammar.</p>
+<p>It may interpret transitions such as:</p>
+<ul>
+<li>unusual resource modifications;</li>
+<li>expanding scope;</li>
+<li>destructive rewrites;</li>
+<li>recovery interference;</li>
+<li>unexpected bulk transformation;</li>
+<li>propagation.</li>
+</ul>
+<p>The shared grammar does not label those transitions as ransomware.</p>
+<p>The ransomware analyzer is responsible for domain-specific correlation and interpretation.</p>
+<p>This distinction is fundamental:</p>
+<blockquote>
+<p><strong>The grammar represents the structure. The analyzer assigns bounded domain meaning.</strong></p>
+</blockquote>
+<hr>
+<h1 id="damage-budgets">Damage Budgets</h1>
+<p>Some consumers may use a bounded-damage model when deciding whether intervention is justified.</p>
+<p>The shared grammar may represent relevant state such as:</p>
+<ul>
+<li>resource sensitivity;</li>
+<li>reversibility;</li>
+<li>propagation risk;</li>
+<li>recovery impact;</li>
+<li>recommended response.</li>
+</ul>
+<p>The exact scoring algorithm does <strong>not</strong> belong in the shared grammar.</p>
+<p>Different analyzers and platforms may calculate risk differently while continuing to exchange compatible structural objects.</p>
+<p>This keeps the interchange model stable without prematurely canonizing one scoring system.</p>
+<hr>
+<h1 id="core-invariants">Core Invariants</h1>
+<h2 id="inv-01-observation-interpretation">INV-01 — Observation ≠ Interpretation</h2>
+<p>Raw observations must remain distinguishable from derived conclusions.</p>
+<h2 id="inv-02-anomaly-malice">INV-02 — Anomaly ≠ Malice</h2>
+<p>Deviation from baseline must never independently establish harmful intent.</p>
+<h2 id="inv-03-pattern-attribution">INV-03 — Pattern ≠ Attribution</h2>
+<p>A structural pattern may be identified without identifying the responsible human, process, service, or malicious actor.</p>
+<h2 id="inv-04-recommendation-execution">INV-04 — Recommendation ≠ Execution</h2>
+<p>A requested response must remain distinguishable from what the platform actually executed.</p>
+<h2 id="inv-05-containment-resolution">INV-05 — Containment ≠ Resolution</h2>
+<p>Successful intervention must be followed by verification.</p>
+<h2 id="inv-06-positive-evidence-complete-evidence">INV-06 — Positive Evidence ≠ Complete Evidence</h2>
+<p>Counter-signals and unresolved contradictions must survive the analytical pipeline.</p>
+<h2 id="inv-07-platform-capability-must-be-declared">INV-07 — Platform Capability Must Be Declared</h2>
+<p>The structural engine must never assume observation or enforcement capabilities that an adapter has not declared.</p>
+<h2 id="inv-08-sensitive-data-minimization">INV-08 — Sensitive Data Minimization</h2>
+<p>Normalization should expose the smallest amount of personal or resource-identifying information necessary for structural analysis.</p>
+<h2 id="inv-09-provenance-must-survive-transformation">INV-09 — Provenance Must Survive Transformation</h2>
+<p>Normalized objects must retain sufficient lineage to determine where observations and subsequent conclusions originated.</p>
+<h2 id="inv-10-reversibility-is-first-class">INV-10 — Reversibility Is First-Class</h2>
+<p>Response decisions must preserve whether the intervention is reversible.</p>
+<hr>
+<h1 id="non-goals">Non-Goals</h1>
+<p>The Shared Structural Event Grammar is not:</p>
+<ul>
+<li>a malware signature database;</li>
+<li>a ransomware classifier;</li>
+<li>an endpoint-security product;</li>
+<li>a behavioral scoring algorithm;</li>
+<li>a platform-specific event API;</li>
+<li>a universal enforcement mechanism;</li>
+<li>an attribution engine;</li>
+<li>a replacement for domain analyzers;</li>
+<li>a declaration that anomalous behavior is malicious.</li>
+</ul>
+<p>It is a <strong>structural interchange and lineage grammar</strong>.</p>
+<hr>
+<h1 id="schema-files">Schema Files</h1>
+<p>The initial schema family is:</p>
+<ul>
+<li><code>resource-transition.schema.json</code></li>
+<li><code>structural-pattern.schema.json</code></li>
+<li><code>containment-decision.schema.json</code></li>
+<li><code>response-outcome.schema.json</code></li>
+<li><code>verification.schema.json</code></li>
+<li><code>platform-capabilities.schema.json</code></li>
+</ul>
+<p>Together they represent the current canonical chain:</p>
+<p><strong>Transition → Pattern → Decision → Outcome → Verification</strong></p>
+<p>with platform capability declaration supporting the response path.</p>
+<p>The schemas should remain small and composable rather than converging into a single monolithic event structure.</p>
+<hr>
+<h1 id="extension-model">Extension Model</h1>
+<p>The grammar is expected to evolve through additional schema families and controlled vocabularies as concrete analyzers expose genuinely shared needs.</p>
+<p>Candidate supporting structures include:</p>
+<ul>
+<li>actor baseline;</li>
+<li>resource profile;</li>
+<li>evidence vocabulary;</li>
+<li>provenance references;</li>
+<li>domain extensions.</li>
+</ul>
+<p>Extensions should satisfy three tests:</p>
+<ol>
+<li><strong>Is the concept structurally reusable across domains?</strong></li>
+<li><strong>Does it preserve rather than erase analytical lineage?</strong></li>
+<li><strong>Would placing it in the shared layer reduce duplication without forcing domain-specific meaning into the grammar?</strong></li>
+</ol>
+<p>If not, the concept belongs in a consuming analyzer rather than here.</p>
+<hr>
+<h1 id="canonical-summary">Canonical Summary</h1>
+<blockquote>
+<p><strong>The Shared Structural Event Grammar defines a platform-neutral lineage model for observing resource transitions, deriving structural patterns, bounding uncertainty, recommending proportional responses, recording actual platform outcomes, and verifying resulting state.</strong></p>
+</blockquote>
+<p>Its central rule is:</p>
+<blockquote>
+<p><strong>Observe what happened.<br>
+Infer what it may mean.<br>
+Preserve what contradicts the inference.<br>
+Act only as strongly as the evidence and boundary justify.<br>
+Then verify.</strong></p>
+</blockquote>
+<p>Its operator form is:</p>
+<p><strong>OBSERVE → NORMALIZE → CORRELATE → CONTRADICT → ASSESS → BOUND → ACT → VERIFY</strong></p>
+<p>And its architectural boundary is:</p>
+<blockquote>
+<p><strong>The grammar represents structure. Domain analyzers interpret structure. Platform adapters observe and act within their declared capabilities.</strong></p>
+</blockquote>
+  </main>
+</body>
+</html>

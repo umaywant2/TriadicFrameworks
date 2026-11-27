@@ -1,0 +1,818 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Ransomware_Structural_Pattern_Detector/adapters/README.md">
+  <title>Ransomware Structural Pattern Detector — Platform Adapters</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Ransomware_Structural_Pattern_Detector/adapters/README.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Ransomware_Structural_Pattern_Detector/adapters/README.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="Ransomware_Structural_Pattern_Detector_adapters_" src="https://github.com/user-attachments/assets/4a84e91f-6cf3-4340-9975-1a34002126f8" /></p>
+<h1 id="ransomware-structural-pattern-detector-platform-adapters">Ransomware Structural Pattern Detector — Platform Adapters</h1>
+<blockquote>
+<p><strong>Platform adapters translate native observations and enforcement mechanisms into the platform-neutral structural contracts used by the Ransomware Structural Pattern Detector.</strong></p>
+</blockquote>
+<p>Adapters form the boundary between operating environments and the detector.</p>
+<p>Their purpose is not to decide whether activity is ransomware.</p>
+<p>Their purpose is to:</p>
+<ol>
+<li>observe what the platform can actually expose;</li>
+<li>normalize relevant observations into the Shared Structural Event Grammar;</li>
+<li>declare what the platform can and cannot observe or enforce;</li>
+<li>receive separately authorized response requests;</li>
+<li>execute only supported and authorized actions;</li>
+<li>record what actually happened;</li>
+<li>support post-response verification.</li>
+</ol>
+<p>The governing rule is:</p>
+<blockquote>
+<p><strong>Adapters provide mechanism and evidence. The detector provides bounded interpretation. Policy provides authority.</strong></p>
+</blockquote>
+<hr>
+<h2 id="directory-role">Directory Role</h2>
+<p>This directory contains platform-specific adapter specifications for the Ransomware Structural Pattern Detector.</p>
+<p>Current scaffold:</p>
+<ul>
+<li><code>windows.md</code></li>
+<li><code>macos.md</code></li>
+<li><code>linux.md</code></li>
+<li><code>android.md</code></li>
+<li><code>ios-ipados.md</code></li>
+<li><code>cloud-sync.md</code></li>
+</ul>
+<p>Each adapter documents how a particular environment maps native observations and available mechanisms into the shared structural model.</p>
+<p>The adapter specifications are intentionally separated from <code>detector.json</code>.</p>
+<p><code>detector.json</code> defines ransomware-relevant analytical semantics.</p>
+<p>The files in this directory define platform-specific observation and response boundaries.</p>
+<hr>
+<h1 id="architectural-position">Architectural Position</h1>
+<p>The adapter participates at both ends of the structural pipeline.</p>
+<h2 id="observation-path">Observation Path</h2>
+<p><strong>Native Platform Event</strong></p>
+<p>↓</p>
+<p><strong>Platform Adapter</strong></p>
+<p>↓</p>
+<p><strong>Normalize</strong></p>
+<p>↓</p>
+<p><strong><code>tf.resource-transition/v0.1</code></strong></p>
+<p>↓</p>
+<p><strong>Ransomware Structural Pattern Detector</strong></p>
+<p>↓</p>
+<p><strong><code>tf.structural-pattern/v0.1</code></strong></p>
+<h2 id="response-path">Response Path</h2>
+<p><strong><code>tf.structural-pattern/v0.1</code></strong></p>
+<p>↓</p>
+<p><strong><code>tf.containment-decision/v0.1</code></strong></p>
+<p>↓</p>
+<p><strong>Platform Adapter</strong></p>
+<p>↓</p>
+<p><strong>Native Platform Mechanism</strong></p>
+<p>↓</p>
+<p><strong><code>tf.response-outcome/v0.1</code></strong></p>
+<p>↓</p>
+<p><strong>Post-Response Observation</strong></p>
+<p>↓</p>
+<p><strong><code>tf.verification/v0.1</code></strong></p>
+<p>The adapter therefore translates in both directions without owning the analytical policy between them.</p>
+<hr>
+<h1 id="adapter-responsibilities">Adapter Responsibilities</h1>
+<p>Every adapter should address seven responsibilities.</p>
+<h2 id="1-observe">1. Observe</h2>
+<p>Identify the native event sources available in the environment.</p>
+<p>An adapter should document what it can observe about:</p>
+<ul>
+<li>resource transitions;</li>
+<li>actors;</li>
+<li>actor lineage;</li>
+<li>resource classes;</li>
+<li>transition timing;</li>
+<li>permissions;</li>
+<li>recovery state;</li>
+<li>network context;</li>
+<li>synchronization context;</li>
+<li>relevant platform state.</li>
+</ul>
+<p>An adapter must also document what it <strong>cannot</strong> observe reliably.</p>
+<p>Missing observability must remain missing observability.</p>
+<p>It must not be filled with assumptions.</p>
+<hr>
+<h2 id="2-normalize">2. Normalize</h2>
+<p>Convert relevant native observations into:</p>
+<p><code>tf.resource-transition/v0.1</code></p>
+<p>Normalization should preserve enough information to reconstruct how the shared event was produced without requiring the detector to understand every native platform API or telemetry format.</p>
+<p>The normalized object may include:</p>
+<ul>
+<li>event identity and time;</li>
+<li>normalized operation;</li>
+<li>actor identity;</li>
+<li>actor role;</li>
+<li>resource identity;</li>
+<li>resource class;</li>
+<li>resource scope;</li>
+<li>structural transition;</li>
+<li>transition characteristics;</li>
+<li>context;</li>
+<li>baseline information;</li>
+<li>direct consequence;</li>
+<li>provenance.</li>
+</ul>
+<p>Normalization must preserve the distinction between:</p>
+<p><strong>native observation</strong></p>
+<p>and</p>
+<p><strong>derived structural property</strong></p>
+<p>and</p>
+<p><strong>domain interpretation</strong></p>
+<p>The adapter owns the first two only where derivation is explicitly documented.</p>
+<p>It must not silently produce a ransomware verdict.</p>
+<hr>
+<h1 id="native-event-preservation">Native Event Preservation</h1>
+<p>Where feasible and permitted, the adapter should retain a reference to the native observation from which a normalized event was produced.</p>
+<p>The shared event should preserve:</p>
+<ul>
+<li>source platform;</li>
+<li>adapter identity;</li>
+<li>adapter version;</li>
+<li>observation time;</li>
+<li>normalization time;</li>
+<li>native-event reference when available;</li>
+<li>derivation references;</li>
+<li>redactions;</li>
+<li>relevant platform-capability declaration.</li>
+</ul>
+<p>Raw evidence may remain within the native platform's security and privacy boundary.</p>
+<p>A centralized detector does not inherently require the native event itself when its normalized structural representation is sufficient.</p>
+<hr>
+<h1 id="actor-mapping">Actor Mapping</h1>
+<p>Adapters should represent the actor visible at the observation point without assuming that the visible actor originated the transition.</p>
+<p>Relevant mappings may include:</p>
+<ul>
+<li>process;</li>
+<li>application;</li>
+<li>service;</li>
+<li>script;</li>
+<li>container;</li>
+<li>remote actor;</li>
+<li>synchronization service;</li>
+<li>system;</li>
+<li>user;</li>
+<li>agent;</li>
+<li>unknown actor.</li>
+</ul>
+<p>Where available, an adapter should preserve:</p>
+<ul>
+<li>parent or invoking actor;</li>
+<li>instance identity;</li>
+<li>execution account;</li>
+<li>origin actor;</li>
+<li>transport actor;</li>
+<li>actor lineage.</li>
+</ul>
+<p>The central rule is:</p>
+<blockquote>
+<p><strong>Observed actor ≠ proven origin actor</strong></p>
+</blockquote>
+<p>This is particularly important for distributed, synchronized, remote, automated, and intermediary services.</p>
+<hr>
+<h1 id="origin-and-transport">Origin and Transport</h1>
+<p>An adapter should preserve the distinction between <strong>origin</strong> and <strong>transport</strong> whenever the platform provides sufficient evidence.</p>
+<p>For example, an adapter may observe that a synchronization service performed a local resource modification.</p>
+<p>That observation establishes the local transport mechanism.</p>
+<p>It does not automatically establish where the destructive transition originated.</p>
+<p>When origin cannot be established, the adapter should represent it as unresolved.</p>
+<p>It should not substitute the transport actor for the origin merely because the transport actor is locally observable.</p>
+<hr>
+<h1 id="resource-mapping">Resource Mapping</h1>
+<p>Platform-native resources should be normalized into reusable structural categories where possible.</p>
+<p>Examples include:</p>
+<ul>
+<li>user documents;</li>
+<li>photos;</li>
+<li>video;</li>
+<li>audio;</li>
+<li>databases;</li>
+<li>archives;</li>
+<li>project files;</li>
+<li>application data;</li>
+<li>configuration;</li>
+<li>credential stores;</li>
+<li>backups;</li>
+<li>recovery resources;</li>
+<li>network resources;</li>
+<li>cloud resources;</li>
+<li>temporary resources;</li>
+<li>canaries;</li>
+<li>domain-defined resources.</li>
+</ul>
+<p>The normalized representation should expose the minimum information required for structural analysis.</p>
+<p>A detector may need to know that a resource is:</p>
+<p><strong>a protected user document</strong></p>
+<p>rather than:</p>
+<p><strong>the exact full pathname and personally identifying filename of that document</strong></p>
+<p>when the latter contributes nothing to the analysis.</p>
+<hr>
+<h1 id="transition-mapping">Transition Mapping</h1>
+<p>Adapters normalize native operations into structural transitions.</p>
+<p>The native mechanism may report operations such as:</p>
+<ul>
+<li>read;</li>
+<li>write;</li>
+<li>create;</li>
+<li>delete;</li>
+<li>rename;</li>
+<li>move;</li>
+<li>truncate;</li>
+<li>copy;</li>
+<li>replace;</li>
+<li>permission change;</li>
+<li>metadata change;</li>
+<li>recovery change;</li>
+<li>synchronization.</li>
+</ul>
+<p>The shared representation describes their structural consequence where evidence permits.</p>
+<p>Examples include:</p>
+<ul>
+<li>access;</li>
+<li>modify;</li>
+<li>create;</li>
+<li>remove;</li>
+<li>replace;</li>
+<li>relocate;</li>
+<li>duplicate;</li>
+<li>restrict;</li>
+<li>grant;</li>
+<li>revoke;</li>
+<li>expose;</li>
+<li>conceal;</li>
+<li>restore;</li>
+<li>propagate;</li>
+<li>transform.</li>
+</ul>
+<p>Adapters should preserve the native operation when useful for diagnostic lineage.</p>
+<hr>
+<h1 id="observed-vs-derived-fields">Observed vs. Derived Fields</h1>
+<p>An adapter may derive structural properties from native evidence when the derivation is deterministic or otherwise explicitly documented.</p>
+<p>Examples might include:</p>
+<ul>
+<li>classifying a native resource into a shared resource class;</li>
+<li>determining whether a pathname falls inside an authorized observation scope;</li>
+<li>mapping a native operation to a shared transition;</li>
+<li>correlating a native process identifier with available parent-process information.</li>
+</ul>
+<p>Derived fields must retain their derivation lineage where practical.</p>
+<p>An adapter must not disguise a domain inference as a native observation.</p>
+<p>In particular, the adapter should not turn:</p>
+<p><strong>rapid resource modification</strong></p>
+<p>into:</p>
+<p><strong>ransomware</strong></p>
+<p>during normalization.</p>
+<p>That determination belongs to the detector.</p>
+<hr>
+<h1 id="capability-declaration">Capability Declaration</h1>
+<p>Every adapter should provide or generate a declaration conforming to:</p>
+<p><code>tf.platform-capabilities/v0.1</code></p>
+<p>The declaration describes what the current adapter/environment can support.</p>
+<p>Capability families include:</p>
+<h2 id="observation">Observation</h2>
+<ul>
+<li>event observation;</li>
+<li>actor identity;</li>
+<li>actor lineage;</li>
+<li>resource classification;</li>
+<li>network context;</li>
+<li>origin/transport distinction;</li>
+<li>baseline access;</li>
+<li>recovery-state observation.</li>
+</ul>
+<h2 id="enforcement">Enforcement</h2>
+<ul>
+<li>write denial;</li>
+<li>actor containment;</li>
+<li>resource isolation;</li>
+<li>network isolation;</li>
+<li>quarantine;</li>
+<li>permission restriction;</li>
+<li>actor disablement;</li>
+<li>session termination.</li>
+</ul>
+<h2 id="recovery">Recovery</h2>
+<ul>
+<li>rollback;</li>
+<li>snapshot restoration;</li>
+<li>resource restoration;</li>
+<li>configuration restoration.</li>
+</ul>
+<h2 id="verification">Verification</h2>
+<ul>
+<li>post-action observation;</li>
+<li>state comparison;</li>
+<li>persistence detection;</li>
+<li>reappearance detection;</li>
+<li>recovery verification.</li>
+</ul>
+<p>Each capability should be represented honestly as:</p>
+<ul>
+<li><code>supported</code></li>
+<li><code>partial</code></li>
+<li><code>unsupported</code></li>
+<li><code>unknown</code></li>
+</ul>
+<p>The distinction between <code>unsupported</code> and <code>unknown</code> matters.</p>
+<p>An adapter must not advertise a capability simply because the underlying platform may expose some mechanism that appears related.</p>
+<hr>
+<h1 id="capability-is-not-authority">Capability Is Not Authority</h1>
+<p>A platform may be technically capable of performing an action without the detector or adapter being authorized to perform it.</p>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Capability ≠ Authority</strong></p>
+</blockquote>
+<p>The capability declaration answers:</p>
+<blockquote>
+<p><strong>Can this adapter/environment support the mechanism?</strong></p>
+</blockquote>
+<p>The containment decision answers:</p>
+<blockquote>
+<p><strong>Is the response requested, and under what authority?</strong></p>
+</blockquote>
+<p>The response outcome answers:</p>
+<blockquote>
+<p><strong>What did the adapter actually do?</strong></p>
+</blockquote>
+<p>These questions must remain separate.</p>
+<hr>
+<h1 id="receiving-containment-decisions">Receiving Containment Decisions</h1>
+<p>An adapter may receive a:</p>
+<p><code>tf.containment-decision/v0.1</code></p>
+<p>The adapter should evaluate:</p>
+<ul>
+<li>requested action;</li>
+<li>target;</li>
+<li>scope;</li>
+<li>required capability;</li>
+<li>declared platform capability;</li>
+<li>authorization;</li>
+<li>constraints;</li>
+<li>reversibility expectations;</li>
+<li>whether fallback is permitted.</li>
+</ul>
+<p>The adapter must not treat receipt of a decision object as sufficient authority when that decision explicitly requires additional authorization.</p>
+<hr>
+<h1 id="response-selection">Response Selection</h1>
+<p>When the requested response is supported and authorized, an adapter may map the shared response onto an appropriate native mechanism.</p>
+<p>When the exact response is unavailable, the adapter must not pretend otherwise.</p>
+<p>If fallback is allowed, it may select a bounded supported alternative and record the difference.</p>
+<p>Conceptually:</p>
+<p><strong>Requested response</strong></p>
+<p>↓</p>
+<p><strong>Capability check</strong></p>
+<p>↓</p>
+<p><strong>Authority check</strong></p>
+<p>↓</p>
+<p><strong>Native response mapping</strong></p>
+<p>↓</p>
+<p><strong>Execution attempt</strong></p>
+<p>↓</p>
+<p><strong>Actual outcome</strong></p>
+<p>The adapter should prefer the smallest mechanism sufficient to implement the authorized structural response.</p>
+<hr>
+<h1 id="fallback">Fallback</h1>
+<p>Platform differences make fallback a first-class part of the adapter contract.</p>
+<p>A requested response may be:</p>
+<ul>
+<li>fully supported;</li>
+<li>partially supported;</li>
+<li>unsupported;</li>
+<li>blocked by authorization;</li>
+<li>constrained by platform policy;</li>
+<li>replaced with a weaker supported action;</li>
+<li>referred for manual intervention.</li>
+</ul>
+<p>If fallback occurs, the adapter should preserve:</p>
+<ul>
+<li>requested action;</li>
+<li>executed or attempted fallback;</li>
+<li>reason for fallback;</li>
+<li>degree of degradation;</li>
+<li>capability limitation.</li>
+</ul>
+<p>A weaker response must never be recorded as though the original stronger response was performed.</p>
+<hr>
+<h1 id="recording-execution">Recording Execution</h1>
+<p>After attempting a response, the adapter should produce or contribute to:</p>
+<p><code>tf.response-outcome/v0.1</code></p>
+<p>The outcome records execution truth.</p>
+<p>It may preserve:</p>
+<ul>
+<li>requested response;</li>
+<li>whether execution was attempted;</li>
+<li>execution status;</li>
+<li>executed response;</li>
+<li>fallback;</li>
+<li>relevant capability context;</li>
+<li>direct effects;</li>
+<li>side effects;</li>
+<li>errors;</li>
+<li>warnings;</li>
+<li>rollback availability;</li>
+<li>rollback status;</li>
+<li>provenance.</li>
+</ul>
+<p>The adapter must report failure, partial execution, unsupported behavior, and authorization boundaries honestly.</p>
+<hr>
+<h1 id="execution-does-not-mean-resolution">Execution Does Not Mean Resolution</h1>
+<p>A successfully invoked platform mechanism does not prove that the destructive condition has stopped.</p>
+<p>For example:</p>
+<p><strong>Native mechanism returned success</strong></p>
+<p>does not imply:</p>
+<p><strong>Structural pattern resolved</strong></p>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Execution ≠ Resolution</strong></p>
+</blockquote>
+<p>The adapter reports execution through <code>tf.response-outcome/v0.1</code>.</p>
+<p>Resolution belongs to post-response verification.</p>
+<hr>
+<h1 id="verification-support">Verification Support</h1>
+<p>After a response, the adapter should support another bounded observation cycle where its declared capabilities allow.</p>
+<p>That may include observing whether:</p>
+<ul>
+<li>destructive transitions continue;</li>
+<li>the affected actor remains active;</li>
+<li>writes resume;</li>
+<li>propagation continues;</li>
+<li>the pattern reappears;</li>
+<li>new resources become affected;</li>
+<li>recovery state changes;</li>
+<li>restoration is observable.</li>
+</ul>
+<p>Verification results belong in:</p>
+<p><code>tf.verification/v0.1</code></p>
+<p>Possible resulting states include:</p>
+<ul>
+<li>contained;</li>
+<li>partially contained;</li>
+<li>persistent;</li>
+<li>reappeared;</li>
+<li>resolved;</li>
+<li>partially resolved;</li>
+<li>new condition detected;</li>
+<li>mixed;</li>
+<li>unable to verify.</li>
+</ul>
+<p>If the adapter cannot observe enough of the resulting state, it must preserve that limitation.</p>
+<hr>
+<h1 id="recovery_1">Recovery</h1>
+<p>Recovery mechanisms are platform-specific.</p>
+<p>An adapter may expose capabilities related to:</p>
+<ul>
+<li>rollback;</li>
+<li>snapshots;</li>
+<li>version history;</li>
+<li>preserved originals;</li>
+<li>backup restoration;</li>
+<li>resource restoration;</li>
+<li>configuration restoration;</li>
+<li>other native recovery facilities.</li>
+</ul>
+<p>A recovery capability means only that a mechanism is available.</p>
+<p>It does not prove:</p>
+<ul>
+<li>that a valid recovery point exists;</li>
+<li>that the recovery point is unaffected;</li>
+<li>that restoration was attempted;</li>
+<li>that restoration succeeded;</li>
+<li>that the resulting resource is correct.</li>
+</ul>
+<p>Those distinctions belong in outcome and verification records.</p>
+<hr>
+<h1 id="data-minimization">Data Minimization</h1>
+<p>Adapters sit closest to potentially sensitive native data and therefore carry an important privacy responsibility.</p>
+<p>The default rule is:</p>
+<blockquote>
+<p><strong>Normalize structure before exporting content.</strong></p>
+</blockquote>
+<p>Where sufficient for analysis, export:</p>
+<ul>
+<li>privacy-preserving resource identifiers;</li>
+<li>resource classes;</li>
+<li>structural scopes;</li>
+<li>transition types;</li>
+<li>timing;</li>
+<li>actor relationships;</li>
+<li>preservation state;</li>
+<li>recovery state;</li>
+<li>baseline relationships;</li>
+<li>platform provenance.</li>
+</ul>
+<p>Avoid exporting unnecessary:</p>
+<ul>
+<li>document contents;</li>
+<li>plaintext credentials;</li>
+<li>personally identifying filenames;</li>
+<li>full local paths;</li>
+<li>unrelated account information;</li>
+<li>unrelated process arguments;</li>
+<li>user content.</li>
+</ul>
+<p>If sensitive information is removed or generalized during normalization, the event provenance should record the relevant redaction class.</p>
+<hr>
+<h1 id="local-processing">Local Processing</h1>
+<p>Some adapter operations may be best performed locally.</p>
+<p>Examples include:</p>
+<ul>
+<li>native-event collection;</li>
+<li>sensitive path handling;</li>
+<li>resource classification;</li>
+<li>identifier pseudonymization;</li>
+<li>deduplication;</li>
+<li>redaction;</li>
+<li>mapping native operations into shared transitions.</li>
+</ul>
+<p>The objective is not to centralize every piece of telemetry.</p>
+<p>The objective is to provide enough normalized structure for the detector to reason reliably while preserving platform and privacy boundaries.</p>
+<hr>
+<h1 id="event-deduplication">Event Deduplication</h1>
+<p>Adapters should minimize duplicate representations of the same native transition.</p>
+<p>Duplicate observations can otherwise distort:</p>
+<ul>
+<li>event counts;</li>
+<li>activity rates;</li>
+<li>acceleration;</li>
+<li>affected-resource scope;</li>
+<li>evidence independence.</li>
+</ul>
+<p>Where multiple telemetry sources observe the same underlying transition, the adapter should preserve their provenance without automatically presenting them as separate independent transitions.</p>
+<hr>
+<h1 id="synchronized-environments">Synchronized Environments</h1>
+<p>Synchronization requires special care.</p>
+<p>A local adapter may observe real destructive resource changes that originated somewhere else.</p>
+<p>The adapter should preserve, where available:</p>
+<ul>
+<li>synchronization state;</li>
+<li>transport actor;</li>
+<li>origin-environment reference;</li>
+<li>resource lineage;</li>
+<li>propagation context.</li>
+</ul>
+<p>It should not assume:</p>
+<p><strong>local modification = local origin</strong></p>
+<p>Nor should it assume:</p>
+<p><strong>trusted synchronization mechanism = benign transported transition</strong></p>
+<p>The <code>cloud-sync.md</code> adapter specification exists specifically to document these cross-environment concerns.</p>
+<hr>
+<h1 id="errors-and-uncertainty">Errors and Uncertainty</h1>
+<p>Adapters should fail transparently.</p>
+<p>Relevant uncertainty states include:</p>
+<ul>
+<li>native source unavailable;</li>
+<li>event loss possible;</li>
+<li>actor identity incomplete;</li>
+<li>actor lineage unavailable;</li>
+<li>resource classification incomplete;</li>
+<li>origin unresolved;</li>
+<li>recovery state unknown;</li>
+<li>enforcement capability partial;</li>
+<li>authorization unavailable;</li>
+<li>verification incomplete.</li>
+</ul>
+<p>The correct representation of unavailable evidence is usually:</p>
+<p><strong>unknown</strong></p>
+<p>not:</p>
+<p><strong>false</strong></p>
+<p>and not:</p>
+<p><strong>safe</strong></p>
+<hr>
+<h1 id="adapter-specification-template">Adapter Specification Template</h1>
+<p>Each platform adapter document should cover the same conceptual areas.</p>
+<h2 id="1-scope">1. Scope</h2>
+<p>Define the environment and adapter boundary.</p>
+<h2 id="2-native-observation-sources">2. Native Observation Sources</h2>
+<p>Describe the classes of platform evidence available to the adapter.</p>
+<h2 id="3-resource-mapping">3. Resource Mapping</h2>
+<p>Map platform-native resources into shared resource types and classes.</p>
+<h2 id="4-actor-mapping">4. Actor Mapping</h2>
+<p>Describe actor identity, lineage, origin, and transport semantics.</p>
+<h2 id="5-transition-mapping">5. Transition Mapping</h2>
+<p>Map native operations into <code>tf.resource-transition/v0.1</code>.</p>
+<h2 id="6-capability-declaration">6. Capability Declaration</h2>
+<p>Document supported, partial, unsupported, and unknown capabilities.</p>
+<h2 id="7-containment-mapping">7. Containment Mapping</h2>
+<p>Describe how authorized structural responses map onto supported native mechanisms.</p>
+<h2 id="8-fallback-behavior">8. Fallback Behavior</h2>
+<p>Describe bounded alternatives when the preferred response is unavailable.</p>
+<h2 id="9-outcome-reporting">9. Outcome Reporting</h2>
+<p>Define how execution results map into <code>tf.response-outcome/v0.1</code>.</p>
+<h2 id="10-verification">10. Verification</h2>
+<p>Describe which resulting states can be observed after intervention.</p>
+<h2 id="11-recovery">11. Recovery</h2>
+<p>Describe available recovery mechanisms and their evidentiary limits.</p>
+<h2 id="12-privacy-and-redaction">12. Privacy and Redaction</h2>
+<p>Document what remains local, what is normalized, and what may be removed or generalized.</p>
+<h2 id="13-known-limitations">13. Known Limitations</h2>
+<p>Explicitly record observational, enforcement, recovery, and verification gaps.</p>
+<hr>
+<h1 id="adapter-conformance">Adapter Conformance</h1>
+<p>An adapter conforms to this architecture when it:</p>
+<ul>
+<li>emits structurally valid normalized observations;</li>
+<li>preserves observation provenance;</li>
+<li>separates observation from inference;</li>
+<li>declares actual capabilities;</li>
+<li>preserves unknown states;</li>
+<li>distinguishes origin from transport when evidence allows;</li>
+<li>respects authorization boundaries;</li>
+<li>does not execute unsupported actions;</li>
+<li>records requested versus executed responses;</li>
+<li>records fallback honestly;</li>
+<li>distinguishes execution from resolution;</li>
+<li>supports verification where possible;</li>
+<li>states verification limitations where not possible;</li>
+<li>minimizes unnecessary sensitive data exposure.</li>
+</ul>
+<p>Conformance does <strong>not</strong> require every platform to provide every capability.</p>
+<p>Honest limitation is preferable to false portability.</p>
+<hr>
+<h1 id="core-adapter-invariants">Core Adapter Invariants</h1>
+<h2 id="adapter-inv-01-native-observation-domain-verdict">ADAPTER-INV-01 — Native Observation ≠ Domain Verdict</h2>
+<p>An adapter does not label activity as ransomware merely because it appears suspicious.</p>
+<h2 id="adapter-inv-02-actor-origin">ADAPTER-INV-02 — Actor ≠ Origin</h2>
+<p>The actor visible in the local event may be a transport or intermediary.</p>
+<h2 id="adapter-inv-03-unknown-false">ADAPTER-INV-03 — Unknown ≠ False</h2>
+<p>Unavailable evidence remains unresolved.</p>
+<h2 id="adapter-inv-04-capability-authority">ADAPTER-INV-04 — Capability ≠ Authority</h2>
+<p>Technical ability to perform an action does not authorize its use.</p>
+<h2 id="adapter-inv-05-decision-execution">ADAPTER-INV-05 — Decision ≠ Execution</h2>
+<p>Receiving a containment decision does not prove that its requested response was performed.</p>
+<h2 id="adapter-inv-06-requested-response-executed-response">ADAPTER-INV-06 — Requested Response ≠ Executed Response</h2>
+<p>Fallback or partial execution must remain visible.</p>
+<h2 id="adapter-inv-07-execution-resolution">ADAPTER-INV-07 — Execution ≠ Resolution</h2>
+<p>A successful native operation does not prove that the structural condition has been resolved.</p>
+<h2 id="adapter-inv-08-recovery-capability-recovery-success">ADAPTER-INV-08 — Recovery Capability ≠ Recovery Success</h2>
+<p>Availability of a recovery mechanism does not establish successful restoration.</p>
+<h2 id="adapter-inv-09-correlation-independence">ADAPTER-INV-09 — Correlation ≠ Independence</h2>
+<p>Multiple observations of the same originating transition must not silently become independent evidence.</p>
+<h2 id="adapter-inv-10-provenance-survives-normalization">ADAPTER-INV-10 — Provenance Survives Normalization</h2>
+<p>Enough lineage must remain to reconstruct how the normalized observation was produced.</p>
+<h2 id="adapter-inv-11-privacy-survives-portability">ADAPTER-INV-11 — Privacy Survives Portability</h2>
+<p>Normalization should expose only the information required for structural analysis.</p>
+<h2 id="adapter-inv-12-limitation-is-valid-output">ADAPTER-INV-12 — Limitation Is Valid Output</h2>
+<p>An adapter may explicitly state that an observation, action, or verification result cannot be produced reliably.</p>
+<hr>
+<h1 id="platform-adapter-files">Platform Adapter Files</h1>
+<h2 id="windows">Windows</h2>
+<p><code>windows.md</code></p>
+<p>Defines the Windows-specific observation, normalization, capability, containment, recovery, and verification boundary.</p>
+<h2 id="macos">macOS</h2>
+<p><code>macos.md</code></p>
+<p>Defines the macOS-specific boundary.</p>
+<h2 id="linux">Linux</h2>
+<p><code>linux.md</code></p>
+<p>Defines the Linux-specific boundary while accounting for variation among distributions and deployment environments.</p>
+<h2 id="android">Android</h2>
+<p><code>android.md</code></p>
+<p>Defines the Android-specific boundary, including constraints imposed by the mobile application and permission model.</p>
+<h2 id="ios-ipados">iOS / iPadOS</h2>
+<p><code>ios-ipados.md</code></p>
+<p>Defines the iOS and iPadOS boundary and explicitly records capabilities unavailable to the adapter.</p>
+<h2 id="cloud-synchronization">Cloud / Synchronization</h2>
+<p><code>cloud-sync.md</code></p>
+<p>Defines cross-environment and synchronization-specific mappings, especially the distinction between origin and transport actors.</p>
+<hr>
+<h1 id="shared-contracts">Shared Contracts</h1>
+<p>Adapters operate against the following Shared Structural Event Grammar contracts:</p>
+<ul>
+<li><code>tf.resource-transition/v0.1</code></li>
+<li><code>tf.platform-capabilities/v0.1</code></li>
+<li><code>tf.containment-decision/v0.1</code></li>
+<li><code>tf.response-outcome/v0.1</code></li>
+<li><code>tf.verification/v0.1</code></li>
+</ul>
+<p>The detector additionally produces:</p>
+<ul>
+<li><code>tf.structural-pattern/v0.1</code></li>
+</ul>
+<p>Adapters should consume the shared contracts rather than inventing platform-specific replacements for their semantics.</p>
+<p>Native platform details remain local to the adapter layer.</p>
+<hr>
+<h1 id="non-goals">Non-Goals</h1>
+<p>The adapter layer is not:</p>
+<ul>
+<li>the ransomware detector;</li>
+<li>a malware classifier;</li>
+<li>an attribution system;</li>
+<li>a threat-intelligence service;</li>
+<li>an independent authorization engine;</li>
+<li>a universal platform abstraction that hides real capability differences;</li>
+<li>proof that every platform supports equivalent containment;</li>
+<li>proof that an executed action resolved an incident.</li>
+</ul>
+<p>Its role is narrower:</p>
+<blockquote>
+<p><strong>Observe faithfully, normalize minimally, declare capabilities honestly, act only within authority, report what actually occurred, and support verification.</strong></p>
+</blockquote>
+<hr>
+<h1 id="canonical-summary">Canonical Summary</h1>
+<blockquote>
+<p><strong>A Ransomware Structural Pattern Detector adapter translates between native platform observations and mechanisms and the platform-neutral Shared Structural Event Grammar without taking ownership of ransomware interpretation or response policy.</strong></p>
+</blockquote>
+<p>Its observation path is:</p>
+<p><strong>OBSERVE → NORMALIZE → PRESERVE LINEAGE → EMIT</strong></p>
+<p>Its response path is:</p>
+<p><strong>RECEIVE → CHECK CAPABILITY → CHECK AUTHORITY → MAP → ACT → RECORD</strong></p>
+<p>Its verification path is:</p>
+<p><strong>RESCAN → COMPARE → REPORT</strong></p>
+<p>And its architectural boundary is:</p>
+<blockquote>
+<p><strong>The adapter knows how the platform works.<br>
+The detector interprets structural behavior.<br>
+Policy determines what is authorized.<br>
+The outcome records what actually happened.<br>
+Verification determines what state exists afterward.</strong></p>
+</blockquote>
+  </main>
+</body>
+</html>

@@ -1,0 +1,917 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://triadicframeworks.org/schemas/shared-structural-event-grammar/resource-transition.schema.json",
+  "title": "Resource Transition",
+  "description": "A platform-neutral normalized observation describing an actor causing or transporting a transition affecting a resource under a particular context, relative to available baseline information. This object records observed and normalized structure; it does not assign domain-specific intent, attribution, severity, or response.",
+  "type": "object",
+  "additionalProperties": false,
+
+  "required": [
+    "schema",
+    "event",
+    "actor",
+    "resource",
+    "transition",
+    "context",
+    "provenance"
+  ],
+
+  "properties": {
+    "schema": {
+      "const": "tf.resource-transition/v0.1",
+      "description": "Canonical schema-family identifier and version."
+    },
+
+    "event": {
+      "$ref": "#/$defs/event"
+    },
+
+    "actor": {
+      "$ref": "#/$defs/actor"
+    },
+
+    "resource": {
+      "$ref": "#/$defs/resource"
+    },
+
+    "transition": {
+      "$ref": "#/$defs/transition"
+    },
+
+    "context": {
+      "$ref": "#/$defs/context"
+    },
+
+    "baseline": {
+      "$ref": "#/$defs/baseline"
+    },
+
+    "consequence": {
+      "$ref": "#/$defs/consequence"
+    },
+
+    "provenance": {
+      "$ref": "#/$defs/provenance"
+    },
+
+    "extensions": {
+      "type": "object",
+      "description": "Domain-specific or platform-specific extension data. Extensions must not redefine the semantics of canonical fields or introduce an unqualified domain verdict.",
+      "additionalProperties": true
+    }
+  },
+
+  "$defs": {
+    "event": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "time",
+        "source",
+        "operation",
+        "phase"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Unique identifier for this normalized transition event."
+        },
+
+        "time": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Time at which the underlying transition was observed or reported."
+        },
+
+        "sequence": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Optional monotonic sequence value supplied by the source or normalizer."
+        },
+
+        "source": {
+          "type": "string",
+          "enum": [
+            "filesystem",
+            "account",
+            "browser",
+            "credential",
+            "network",
+            "cloud",
+            "governance",
+            "media",
+            "ai_memory",
+            "ai_context",
+            "retrieval",
+            "model_behavior",
+            "application",
+            "system",
+            "user_report",
+            "other"
+          ],
+          "description": "General source domain from which the transition was observed."
+        },
+
+        "operation": {
+          "type": "string",
+          "enum": [
+            "read",
+            "write",
+            "create",
+            "delete",
+            "rename",
+            "move",
+            "truncate",
+            "copy",
+            "replace",
+            "open",
+            "close",
+            "permission_change",
+            "metadata_change",
+            "recovery_change",
+            "state_change",
+            "scope_change",
+            "authority_change",
+            "inject",
+            "remove",
+            "sync",
+            "execute",
+            "other"
+          ],
+          "description": "Normalized operation associated with the transition."
+        },
+
+        "native_operation": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional platform-native operation name retained for diagnostic lineage."
+        },
+
+        "phase": {
+          "type": "string",
+          "enum": [
+            "observed",
+            "normalized"
+          ],
+          "description": "Processing phase represented by this event. Assessment and action phases belong to later schema-family objects."
+        },
+
+        "correlation_id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional identifier used to associate this event with a broader activity, session, trace, or transaction."
+        }
+      }
+    },
+
+    "actor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "type"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Stable or locally stable identifier for the actor visible at the point of observation."
+        },
+
+        "type": {
+          "type": "string",
+          "enum": [
+            "process",
+            "application",
+            "service",
+            "script",
+            "container",
+            "remote_actor",
+            "sync_service",
+            "system",
+            "user",
+            "agent",
+            "model",
+            "unknown"
+          ],
+          "description": "Normalized actor category."
+        },
+
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional human-readable or platform-derived actor name."
+        },
+
+        "parent_ref": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional reference to the parent or invoking actor."
+        },
+
+        "role": {
+          "type": "string",
+          "enum": [
+            "origin",
+            "transport",
+            "origin_and_transport",
+            "observer",
+            "unknown"
+          ],
+          "description": "Actor role relative to the transition. A transport actor may carry a change without originating it."
+        },
+
+        "origin_actor_ref": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional reference to a distinct actor believed or observed to have originated the transition. This reference does not independently establish attribution."
+        },
+
+        "transport_actor_ref": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional reference to a distinct actor that transported or propagated the transition."
+        },
+
+        "identity": {
+          "$ref": "#/$defs/actorIdentity"
+        },
+
+        "trust": {
+          "$ref": "#/$defs/trust"
+        }
+      }
+    },
+
+    "actorIdentity": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "state": {
+          "type": "string",
+          "enum": [
+            "known",
+            "partially_known",
+            "unknown",
+            "conflicting"
+          ],
+          "description": "Degree to which the actor identity is established."
+        },
+
+        "publisher": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional publisher, signer, owner, or responsible namespace associated with the actor."
+        },
+
+        "instance_ref": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional reference to the specific actor instance, process, session, application instance, model run, or equivalent."
+        },
+
+        "account_ref": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional privacy-preserving reference to the account or identity under which the actor operated."
+        }
+      }
+    },
+
+    "trust": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "state": {
+          "type": "string",
+          "enum": [
+            "trusted",
+            "known",
+            "untrusted",
+            "unknown",
+            "conflicting"
+          ],
+          "description": "Observed or externally supplied trust state. Trust does not establish that the current behavior is benign."
+        },
+
+        "signed": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Whether the actor carries a recognized signature when that concept applies."
+        },
+
+        "reputation": {
+          "type": "string",
+          "enum": [
+            "positive",
+            "neutral",
+            "negative",
+            "unknown",
+            "not_applicable"
+          ],
+          "description": "Available actor-reputation state."
+        },
+
+        "basis_refs": {
+          "type": "array",
+          "description": "References supporting the declared trust or reputation state.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        }
+      }
+    },
+
+    "resource": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "type",
+        "class",
+        "scope"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Privacy-preserving identifier for the affected resource."
+        },
+
+        "type": {
+          "type": "string",
+          "enum": [
+            "file",
+            "directory",
+            "record",
+            "dataset",
+            "account",
+            "permission",
+            "credential",
+            "browser_profile",
+            "configuration",
+            "network_object",
+            "cloud_object",
+            "governance_object",
+            "media_object",
+            "ai_memory",
+            "ai_context",
+            "retrieval_source",
+            "model_state",
+            "service",
+            "other"
+          ],
+          "description": "Structural type of the affected resource."
+        },
+
+        "class": {
+          "type": "string",
+          "enum": [
+            "user_document",
+            "photo",
+            "video",
+            "audio",
+            "database",
+            "archive",
+            "project_file",
+            "application_data",
+            "configuration",
+            "credential_store",
+            "backup",
+            "recovery_resource",
+            "network_resource",
+            "cloud_resource",
+            "identity_resource",
+            "permission_resource",
+            "governance_resource",
+            "media_resource",
+            "memory_resource",
+            "context_resource",
+            "retrieval_resource",
+            "model_resource",
+            "temporary",
+            "canary",
+            "domain_defined",
+            "unknown"
+          ],
+          "description": "Limited shared classification of the resource. More specific classifications belong in extensions."
+        },
+
+        "scope": {
+          "type": "string",
+          "enum": [
+            "local",
+            "remote",
+            "shared",
+            "network",
+            "cloud",
+            "synchronized",
+            "session",
+            "account",
+            "device",
+            "environment",
+            "global",
+            "unknown"
+          ],
+          "description": "Structural boundary within which the resource exists or is controlled."
+        },
+
+        "protected": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Whether the resource is subject to an established protection boundary. Null indicates that protection state is unknown."
+        },
+
+        "canary": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Whether the resource is intentionally used as a monitored decoy or early-warning resource. Null indicates that canary state is unknown."
+        },
+
+        "recoverable": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Whether a known recovery path exists for the resource. Null indicates that recoverability is unknown."
+        },
+
+        "sensitivity": {
+          "type": "string",
+          "enum": [
+            "low",
+            "moderate",
+            "high",
+            "critical",
+            "unknown"
+          ],
+          "description": "Structural sensitivity of the resource without exposing unnecessary identifying content."
+        },
+
+        "location_ref": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional local or privacy-preserving reference to the resource location. Raw sensitive paths should remain local when not required."
+        }
+      }
+    },
+
+    "transition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "action"
+      ],
+      "properties": {
+        "action": {
+          "type": "string",
+          "enum": [
+            "access",
+            "modify",
+            "create",
+            "remove",
+            "replace",
+            "relocate",
+            "duplicate",
+            "restrict",
+            "grant",
+            "revoke",
+            "expose",
+            "conceal",
+            "inject",
+            "quarantine",
+            "restore",
+            "propagate",
+            "transform",
+            "other"
+          ],
+          "description": "Normalized structural transition applied to the resource."
+        },
+
+        "destructive": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Whether the transition was directly observed to destroy or remove prior usable state. Null indicates that destructiveness is unresolved."
+        },
+
+        "original_preserved": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Whether the resource's prior state was preserved. Null indicates that preservation state is unresolved."
+        },
+
+        "prior_state_ref": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional reference to a recorded prior state."
+        },
+
+        "resulting_state_ref": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional reference to the resulting state."
+        },
+
+        "reversibility": {
+          "type": "string",
+          "enum": [
+            "fully_reversible",
+            "partially_reversible",
+            "irreversible",
+            "unknown"
+          ],
+          "description": "Observed or currently available reversibility of the transition. This field does not recommend a response."
+        },
+
+        "characteristics": {
+          "$ref": "#/$defs/transitionCharacteristics"
+        }
+      }
+    },
+
+    "transitionCharacteristics": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "size_changed": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+
+        "content_changed": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+
+        "structure_changed": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+
+        "entropy_shift": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "Observed or derived entropy change when applicable. Interpretation belongs to a downstream analyzer."
+        },
+
+        "extension_changed": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+
+        "ownership_changed": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+
+        "permissions_changed": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+
+        "authority_changed": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+
+        "scope_changed": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+
+        "recovery_state_changed": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      }
+    },
+
+    "context": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "user_intent"
+      ],
+      "properties": {
+        "user_intent": {
+          "type": "string",
+          "enum": [
+            "explicit",
+            "inferred",
+            "absent",
+            "unknown",
+            "not_applicable"
+          ],
+          "description": "Available evidence regarding user initiation or authorization. This field does not establish broader actor intent."
+        },
+
+        "user_intent_ref": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional reference to consent, interaction, command, workflow, or other evidence supporting the user-intent state."
+        },
+
+        "interactive_session": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Whether the transition occurred within an interactive session. Null indicates that session state is unknown."
+        },
+
+        "bulk_operation": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Whether the source or normalizer identified the activity as part of a bulk operation. Interpretation remains downstream."
+        },
+
+        "network_origin": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Whether the transition originated through a network boundary. Null indicates that origin is unresolved."
+        },
+
+        "sync_transport": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Whether synchronization infrastructure transported the transition."
+        },
+
+        "origin_environment_ref": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional reference to the environment in which the transition originated."
+        },
+
+        "session_ref": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional reference to the relevant user, application, agent, model, or system session."
+        },
+
+        "scope_ref": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional reference to the authorized observation scope under which the event was collected."
+        }
+      }
+    },
+
+    "baseline": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "available"
+      ],
+      "properties": {
+        "available": {
+          "type": "boolean",
+          "description": "Whether relevant historical or expected-state information was available."
+        },
+
+        "baseline_ref": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional reference to the baseline object or history used for comparison."
+        },
+
+        "known_actor": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+
+        "operation_typical": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+
+        "scope_typical": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+
+        "rate_typical": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+
+        "resource_typical": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+
+        "role_coherent": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Whether the observed transition is coherent with the actor's established structural role. Null indicates that this could not be determined."
+        },
+
+        "comparison_refs": {
+          "type": "array",
+          "description": "References to observations or histories supporting the baseline comparison.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        }
+      }
+    },
+
+    "consequence": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "state": {
+          "type": "string",
+          "enum": [
+            "none_observed",
+            "resource_changed",
+            "resource_unavailable",
+            "resource_exposed",
+            "resource_restricted",
+            "resource_propagated",
+            "recovery_affected",
+            "authority_changed",
+            "context_changed",
+            "unknown",
+            "domain_defined"
+          ],
+          "description": "Directly observed consequence of the transition. Domain interpretation belongs downstream."
+        },
+
+        "affected_resource_refs": {
+          "type": "array",
+          "description": "References to additional resources directly affected by this transition.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        },
+
+        "propagation_observed": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Whether propagation beyond the primary resource was observed. Null indicates that propagation could not be determined."
+        },
+
+        "recovery_impact": {
+          "type": "string",
+          "enum": [
+            "none_observed",
+            "limited",
+            "material",
+            "severe",
+            "unknown"
+          ],
+          "description": "Observed effect on recovery state without assigning a broader risk score."
+        },
+
+        "notes": {
+          "type": "string",
+          "description": "Optional bounded description of directly observed consequences."
+        }
+      }
+    },
+
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "platform",
+        "adapter",
+        "observed_at",
+        "normalized_at",
+        "raw_event_retained"
+      ],
+      "properties": {
+        "platform": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Platform or source environment from which the observation originated."
+        },
+
+        "adapter": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Identifier for the adapter or normalizer that produced this event."
+        },
+
+        "adapter_version": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional adapter version associated with normalization."
+        },
+
+        "capabilities_ref": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional reference to the applicable tf.platform-capabilities declaration."
+        },
+
+        "observed_at": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Time at which the native observation was recorded."
+        },
+
+        "normalized_at": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Time at which the native observation was normalized into this schema."
+        },
+
+        "native_event_ref": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional local or privacy-preserving reference to the native event."
+        },
+
+        "raw_event_retained": {
+          "type": "boolean",
+          "description": "Whether the raw platform-native observation remains available under its original retention and privacy boundary."
+        },
+
+        "derivation_refs": {
+          "type": "array",
+          "description": "References to source objects or transformations used to produce this normalized event.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        },
+
+        "redactions": {
+          "type": "array",
+          "description": "Classes of information removed or generalized during normalization.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        }
+      }
+    }
+  }
+}

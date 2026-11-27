@@ -1,0 +1,1190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Ransomware_Structural_Pattern_Detector/adapters/cloud-sync.md">
+  <title>Cloud / Synchronization Adapter</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Ransomware_Structural_Pattern_Detector/adapters/cloud-sync.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Ransomware_Structural_Pattern_Detector/adapters/cloud-sync.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="Ransomware_Structural_Pattern_Detector_adapters_cloud_sync_" src="https://github.com/user-attachments/assets/0c33db21-0ea5-45d1-8b63-36272efa1983" /></p>
+<h1 id="cloud-synchronization-adapter">Cloud / Synchronization Adapter</h1>
+<blockquote>
+<p><strong>Cross-environment adapter specification for representing synchronized resource transitions without confusing origin, transport, replication, observation, or propagation.</strong></p>
+</blockquote>
+<p>The Cloud / Synchronization adapter provides the structural boundary between synchronized resource environments and the Ransomware Structural Pattern Detector.</p>
+<p>Unlike an operating-system adapter, this adapter is not defined by one device or kernel boundary.</p>
+<p>Its concern is the movement of structural transitions across:</p>
+<ul>
+<li>devices;</li>
+<li>accounts;</li>
+<li>synchronization clients;</li>
+<li>cloud-backed resources;</li>
+<li>shared resource spaces;</li>
+<li>mirrored environments;</li>
+<li>remote storage;</li>
+<li>provider-mediated resource histories.</li>
+</ul>
+<p>Its governing rule is:</p>
+<blockquote>
+<p><strong>A synchronized transition may be locally real without being locally originated. Preserve the lineage of the change before assigning meaning to the actor that transported it.</strong></p>
+</blockquote>
+<hr>
+<h2 id="status">Status</h2>
+<ul>
+<li><strong>Adapter ID:</strong> <code>rspd-cloud-sync</code></li>
+<li><strong>Environment:</strong> Cloud and synchronized resource systems</li>
+<li><strong>Status:</strong> Experimental</li>
+<li><strong>Role:</strong> Cross-environment observation, normalization, lineage preservation, propagation mapping, capability declaration, bounded response mapping, and verification support</li>
+<li><strong>Normalized observation:</strong> <code>tf.resource-transition/v0.1</code></li>
+<li><strong>Capability declaration:</strong> <code>tf.platform-capabilities/v0.1</code></li>
+<li><strong>Decision input:</strong> <code>tf.containment-decision/v0.1</code></li>
+<li><strong>Execution output:</strong> <code>tf.response-outcome/v0.1</code></li>
+<li><strong>Verification output:</strong> <code>tf.verification/v0.1</code></li>
+</ul>
+<hr>
+<h1 id="1-scope">1. Scope</h1>
+<p>The Cloud / Synchronization adapter represents resource transitions that cross or depend upon synchronization boundaries.</p>
+<p>Its potential scope includes:</p>
+<ul>
+<li>cloud-backed resources;</li>
+<li>synchronized user resources;</li>
+<li>shared resource spaces;</li>
+<li>mirrored resource collections;</li>
+<li>provider-mediated transitions;</li>
+<li>replicated changes;</li>
+<li>synchronization metadata;</li>
+<li>resource history;</li>
+<li>recovery-visible state;</li>
+<li>remote-to-local transitions;</li>
+<li>local-to-remote transitions;</li>
+<li>remote-to-remote transitions where observable;</li>
+<li>multi-device propagation.</li>
+</ul>
+<p>The exact scope depends on the provider, account, deployment, permissions, and interfaces available to the implementation.</p>
+<p>The adapter must declare the scope it can actually observe.</p>
+<p>It must not imply visibility across an entire synchronization topology when only one segment is observable.</p>
+<hr>
+<h1 id="2-structural-problem">2. Structural Problem</h1>
+<p>Synchronization creates an attribution problem that does not exist in the same form for purely local observations.</p>
+<p>Consider:</p>
+<p><strong>Remote transition</strong></p>
+<p>↓</p>
+<p><strong>Synchronization transport</strong></p>
+<p>↓</p>
+<p><strong>Cloud-backed state</strong></p>
+<p>↓</p>
+<p><strong>Local synchronization client</strong></p>
+<p>↓</p>
+<p><strong>Local resource transition</strong></p>
+<p>A local operating-system adapter may truthfully observe that a synchronization process modified a resource.</p>
+<p>A cloud adapter may truthfully observe that a cloud object changed.</p>
+<p>Another device may observe the same transition arriving locally.</p>
+<p>All three observations can be valid.</p>
+<p>They are not necessarily three independent destructive events.</p>
+<p>They may be three observations of one originating structural transition.</p>
+<p>The adapter therefore preserves:</p>
+<blockquote>
+<p><strong>Observation count ≠ origin count ≠ independent evidence count</strong></p>
+</blockquote>
+<hr>
+<h1 id="3-structural-roles">3. Structural Roles</h1>
+<p>Synchronization analysis should distinguish several roles.</p>
+<h2 id="origin">Origin</h2>
+<p>The environment or actor where the relevant transition originated, when evidence establishes it.</p>
+<h2 id="transport">Transport</h2>
+<p>The actor, service, client, or mechanism that carried the transition between environments.</p>
+<h2 id="provider">Provider</h2>
+<p>The infrastructure or service through which synchronized state is represented or propagated.</p>
+<h2 id="observer">Observer</h2>
+<p>The adapter or environment from which evidence about the transition was collected.</p>
+<h2 id="recipient">Recipient</h2>
+<p>An environment or resource that received the synchronized transition.</p>
+<h2 id="propagation-target">Propagation Target</h2>
+<p>An additional environment or resource to which the transition subsequently spread.</p>
+<p>These roles may overlap.</p>
+<p>They must not be assumed to be identical.</p>
+<hr>
+<h1 id="4-origin-is-not-always-observable">4. Origin Is Not Always Observable</h1>
+<p>A synchronization provider may reveal that a transition occurred without exposing enough information to establish its true origin.</p>
+<p>Possible states include:</p>
+<ul>
+<li>origin directly observed;</li>
+<li>origin inferred with supporting lineage;</li>
+<li>origin candidate identified;</li>
+<li>multiple origin candidates;</li>
+<li>origin conflicting;</li>
+<li>origin unknown.</li>
+</ul>
+<p>The adapter should preserve the strongest state actually supported by evidence.</p>
+<p>It must not assign the synchronization service itself as the origin merely because that service is observable.</p>
+<hr>
+<h1 id="5-native-observation-sources">5. Native Observation Sources</h1>
+<p>A Cloud / Synchronization implementation may consume authorized observations from sources such as:</p>
+<ul>
+<li>provider-visible change records;</li>
+<li>synchronization state;</li>
+<li>client-visible synchronization events;</li>
+<li>resource metadata;</li>
+<li>resource history;</li>
+<li>version or recovery state;</li>
+<li>account-visible activity;</li>
+<li>shared-resource activity;</li>
+<li>authorized platform-adapter observations;</li>
+<li>explicit user-supplied evidence;</li>
+<li>adapter-maintained baseline history.</li>
+</ul>
+<p>The exact mechanisms are provider-specific and must be documented by concrete implementations.</p>
+<p>This specification does not assume that every synchronization provider exposes equivalent telemetry.</p>
+<hr>
+<h1 id="6-observation-boundary">6. Observation Boundary</h1>
+<p>The adapter should explicitly declare:</p>
+<ul>
+<li>which provider or synchronization environment is represented;</li>
+<li>which account or authorized scope is visible;</li>
+<li>which resource classes are observable;</li>
+<li>whether historical observations are available;</li>
+<li>whether origin information is available;</li>
+<li>whether transport identity is available;</li>
+<li>whether receiving environments are visible;</li>
+<li>whether resource history is visible;</li>
+<li>whether recovery state is visible;</li>
+<li>whether enforcement is supported;</li>
+<li>whether post-response verification is supported.</li>
+</ul>
+<p>Missing visibility remains missing visibility.</p>
+<blockquote>
+<p><strong>Unobserved remote state must not become presumed safe state.</strong></p>
+</blockquote>
+<hr>
+<h1 id="7-resource-mapping">7. Resource Mapping</h1>
+<p>Provider-native resources should map into the Shared Structural Event Grammar according to structural role.</p>
+<p>Candidate mappings include:</p>
+<table>
+<thead>
+<tr>
+<th>Synchronized resource</th>
+<th>Shared resource type/class</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cloud-hosted document</td>
+<td><code>cloud_object</code> / <code>user_document</code></td>
+</tr>
+<tr>
+<td>Cloud photo</td>
+<td><code>cloud_object</code> / <code>photo</code></td>
+</tr>
+<tr>
+<td>Cloud video</td>
+<td><code>cloud_object</code> / <code>video</code></td>
+</tr>
+<tr>
+<td>Cloud audio</td>
+<td><code>cloud_object</code> / <code>audio</code></td>
+</tr>
+<tr>
+<td>Archive</td>
+<td><code>cloud_object</code> / <code>archive</code></td>
+</tr>
+<tr>
+<td>Project resource</td>
+<td><code>cloud_object</code> / <code>project_file</code></td>
+</tr>
+<tr>
+<td>Application data</td>
+<td><code>cloud_object</code> / <code>application_data</code></td>
+</tr>
+<tr>
+<td>Configuration</td>
+<td><code>cloud_object</code> / <code>configuration</code></td>
+</tr>
+<tr>
+<td>Shared resource</td>
+<td>appropriate type / domain-appropriate class</td>
+</tr>
+<tr>
+<td>Backup</td>
+<td><code>cloud_object</code> / <code>backup</code></td>
+</tr>
+<tr>
+<td>Recovery object</td>
+<td><code>cloud_object</code> / <code>recovery_resource</code></td>
+</tr>
+<tr>
+<td>Cloud canary</td>
+<td><code>cloud_object</code> / <code>canary</code></td>
+</tr>
+<tr>
+<td>Provider metadata object</td>
+<td><code>cloud_object</code> / <code>domain_defined</code></td>
+</tr>
+</tbody>
+</table>
+<p>The adapter should classify structure without unnecessarily exporting provider-native names or user content.</p>
+<hr>
+<h1 id="8-stable-resource-identity">8. Stable Resource Identity</h1>
+<p>A synchronized resource may appear differently on different devices or through different interfaces.</p>
+<p>For example, one structural resource may have:</p>
+<ul>
+<li>a cloud-side identifier;</li>
+<li>a desktop-local representation;</li>
+<li>a mobile-provider reference;</li>
+<li>a synchronized working copy;</li>
+<li>a historical version;</li>
+<li>a shared-resource representation.</li>
+</ul>
+<p>The adapter should preserve a stable privacy-conscious resource identity where evidence allows.</p>
+<p>A key objective is to distinguish:</p>
+<p><strong>same structural resource observed in multiple environments</strong></p>
+<p>from:</p>
+<p><strong>multiple genuinely distinct resources</strong></p>
+<p>without forcing raw provider identifiers into the central analytical layer when they are unnecessary.</p>
+<hr>
+<h1 id="9-resource-lineage">9. Resource Lineage</h1>
+<p>Where observable, the adapter should preserve relationships among:</p>
+<ul>
+<li>current resource;</li>
+<li>prior resource state;</li>
+<li>synchronized representation;</li>
+<li>local representation;</li>
+<li>remote representation;</li>
+<li>historical version;</li>
+<li>restored version;</li>
+<li>copied resource;</li>
+<li>moved resource;</li>
+<li>replaced resource.</li>
+</ul>
+<p>This lineage is particularly important when destructive transitions propagate through synchronization.</p>
+<p>A local replacement and a remote replacement may be manifestations of the same upstream transition.</p>
+<hr>
+<h1 id="10-actor-mapping">10. Actor Mapping</h1>
+<p>Candidate actor categories include:</p>
+<ul>
+<li><code>user</code></li>
+<li><code>application</code></li>
+<li><code>service</code></li>
+<li><code>remote_actor</code></li>
+<li><code>sync_service</code></li>
+<li><code>system</code></li>
+<li><code>agent</code></li>
+<li><code>unknown</code></li>
+</ul>
+<p>An adapter should not interpret service identity as originating intent.</p>
+<p>For example:</p>
+<p><code>actor.type = "sync_service"</code></p>
+<p>may accurately describe a transport actor.</p>
+<p>It does not establish that the service originated the destructive transformation.</p>
+<hr>
+<h1 id="11-origin-and-transport-mapping">11. Origin and Transport Mapping</h1>
+<p>When evidence permits, normalized transitions should preserve:</p>
+<ul>
+<li>observed actor;</li>
+<li>origin actor reference;</li>
+<li>transport actor reference;</li>
+<li>origin environment reference;</li>
+<li>synchronization context;</li>
+<li>correlation identifier;</li>
+<li>provider provenance.</li>
+</ul>
+<p>Conceptually:</p>
+<p><strong>Origin Actor</strong></p>
+<p>↓</p>
+<p><strong>Origin Environment</strong></p>
+<p>↓</p>
+<p><strong>Transition</strong></p>
+<p>↓</p>
+<p><strong>Transport Actor</strong></p>
+<p>↓</p>
+<p><strong>Synchronization Boundary</strong></p>
+<p>↓</p>
+<p><strong>Recipient Environment</strong></p>
+<p>↓</p>
+<p><strong>Observed Resource Transition</strong></p>
+<p>When any stage is unknown, that uncertainty should be retained.</p>
+<hr>
+<h1 id="12-transition-mapping">12. Transition Mapping</h1>
+<p>Relevant normalized operations may include:</p>
+<ul>
+<li><code>write</code></li>
+<li><code>create</code></li>
+<li><code>delete</code></li>
+<li><code>rename</code></li>
+<li><code>move</code></li>
+<li><code>copy</code></li>
+<li><code>replace</code></li>
+<li><code>permission_change</code></li>
+<li><code>metadata_change</code></li>
+<li><code>recovery_change</code></li>
+<li><code>state_change</code></li>
+<li><code>scope_change</code></li>
+<li><code>sync</code></li>
+<li><code>other</code></li>
+</ul>
+<p>Corresponding structural actions may include:</p>
+<ul>
+<li><code>modify</code></li>
+<li><code>create</code></li>
+<li><code>remove</code></li>
+<li><code>replace</code></li>
+<li><code>relocate</code></li>
+<li><code>duplicate</code></li>
+<li><code>restrict</code></li>
+<li><code>grant</code></li>
+<li><code>revoke</code></li>
+<li><code>expose</code></li>
+<li><code>conceal</code></li>
+<li><code>restore</code></li>
+<li><code>propagate</code></li>
+<li><code>transform</code></li>
+<li><code>other</code></li>
+</ul>
+<p>Synchronization itself may be a transport operation rather than the underlying structural cause.</p>
+<p>The adapter should therefore distinguish:</p>
+<p><strong>transition being transported</strong></p>
+<p>from:</p>
+<p><strong>transport operation</strong></p>
+<p>where the evidence supports that distinction.</p>
+<hr>
+<h1 id="13-propagation">13. Propagation</h1>
+<p>Propagation is a first-class concern for this adapter.</p>
+<p>A destructive transition may move through a topology such as:</p>
+<p><strong>Origin environment</strong></p>
+<p>↓</p>
+<p><strong>Cloud/synchronization layer</strong></p>
+<p>↓</p>
+<p><strong>Device A</strong></p>
+<p>↓</p>
+<p><strong>Device B</strong></p>
+<p>↓</p>
+<p><strong>Shared resource consumer</strong></p>
+<p>The adapter should preserve evidence of:</p>
+<ul>
+<li>first observable environment;</li>
+<li>subsequent observed environments;</li>
+<li>transport relationships;</li>
+<li>resource lineage;</li>
+<li>transition timing;</li>
+<li>dependency relationships;</li>
+<li>propagation state.</li>
+</ul>
+<p>The detector may then classify the resulting structural pattern as:</p>
+<ul>
+<li>possible propagation;</li>
+<li>observed propagation;</li>
+<li>active propagation;</li>
+<li>ceased propagation;</li>
+<li>unknown propagation state.</li>
+</ul>
+<p>The adapter supplies the evidence.</p>
+<p>The detector supplies the bounded interpretation.</p>
+<hr>
+<h1 id="14-evidence-independence">14. Evidence Independence</h1>
+<p>Synchronization makes evidence-independence analysis essential.</p>
+<p>Suppose the same destructive transition is observed by:</p>
+<ul>
+<li>a cloud event source;</li>
+<li>a desktop synchronization client;</li>
+<li>a mobile client;</li>
+<li>a second cloud interface.</li>
+</ul>
+<p>Those observations may strengthen confidence that the transition occurred.</p>
+<p>They do not automatically provide independent evidence about its origin or cause.</p>
+<p>The adapter should preserve known dependencies among observations.</p>
+<p>Conceptually:</p>
+<p><strong>One source transition</strong></p>
+<p>↓</p>
+<p><strong>multiple synchronized observations</strong></p>
+<p>must not silently become:</p>
+<p><strong>multiple independent source transitions</strong></p>
+<p>This distinction protects rate, acceleration, scope, and confidence calculations from synchronization-induced inflation.</p>
+<hr>
+<h1 id="15-deduplication">15. Deduplication</h1>
+<p>Concrete implementations should support a bounded deduplication strategy where sufficient evidence is available.</p>
+<p>Candidate correlation dimensions include:</p>
+<ul>
+<li>resource identity;</li>
+<li>version or state identity;</li>
+<li>transition timing;</li>
+<li>origin reference;</li>
+<li>transport reference;</li>
+<li>correlation identifier;</li>
+<li>provider event reference;</li>
+<li>prior-state reference;</li>
+<li>resulting-state reference;</li>
+<li>environment relationship.</li>
+</ul>
+<p>Deduplication should preserve the original observation records.</p>
+<p>Its purpose is not to discard evidence.</p>
+<p>Its purpose is to distinguish:</p>
+<p><strong>multiple observations of one transition</strong></p>
+<p>from:</p>
+<p><strong>multiple distinct transitions</strong></p>
+<p>The derivation method should remain reconstructable.</p>
+<hr>
+<h1 id="16-mirrored-state">16. Mirrored State</h1>
+<p>Mirroring can create apparently independent resource changes that are structurally dependent.</p>
+<p>The adapter should therefore preserve whether an observed state is:</p>
+<ul>
+<li>original;</li>
+<li>synchronized;</li>
+<li>mirrored;</li>
+<li>replicated;</li>
+<li>restored;</li>
+<li>copied;</li>
+<li>unresolved.</li>
+</ul>
+<p>Where the precise relationship cannot be established, it should remain unresolved rather than being assigned independent status.</p>
+<hr>
+<h1 id="17-baseline-support">17. Baseline Support</h1>
+<p>A synchronization baseline may include:</p>
+<ul>
+<li>expected synchronization direction;</li>
+<li>expected devices or environments;</li>
+<li>known transport services;</li>
+<li>expected resource classes;</li>
+<li>typical transition rate;</li>
+<li>normal propagation delay;</li>
+<li>known shared-resource relationships;</li>
+<li>normal bulk synchronization behavior;</li>
+<li>established recovery behavior.</li>
+</ul>
+<p>The baseline should help distinguish ordinary synchronization from structurally abnormal propagation.</p>
+<p>It must not convert deviation directly into malicious intent.</p>
+<hr>
+<h1 id="18-expected-synchronization-as-counter-evidence">18. Expected Synchronization as Counter-Evidence</h1>
+<p>Broad or rapid resource transition is not automatically suspicious in a synchronized environment.</p>
+<p>Potential competing explanations include:</p>
+<ul>
+<li>initial synchronization;</li>
+<li>authorized bulk migration;</li>
+<li>restoration;</li>
+<li>provider-side reindexing reflected as changes;</li>
+<li>expected bulk transformation;</li>
+<li>user-authorized relocation;</li>
+<li>synchronization after extended disconnection;</li>
+<li>legitimate application workflow.</li>
+</ul>
+<p>Where supported, these should remain visible as counter-evidence or competing explanations.</p>
+<p>The existence of a synchronization explanation does not automatically make destructive effects benign.</p>
+<p>Likewise, destructive appearance does not automatically make synchronization malicious.</p>
+<p>Both sides of the evidence boundary must survive.</p>
+<hr>
+<h1 id="19-recovery-state">19. Recovery State</h1>
+<p>Cloud-backed systems may expose structural evidence related to:</p>
+<ul>
+<li>historical versions;</li>
+<li>preserved prior state;</li>
+<li>deleted-resource state;</li>
+<li>backup state;</li>
+<li>recovery objects;</li>
+<li>rollback mechanisms;</li>
+<li>restoration operations.</li>
+</ul>
+<p>The adapter should distinguish:</p>
+<p><strong>recovery mechanism exists</strong></p>
+<p>from:</p>
+<p><strong>recovery state is available</strong></p>
+<p>from:</p>
+<p><strong>recovery artifact exists</strong></p>
+<p>from:</p>
+<p><strong>recovery was attempted</strong></p>
+<p>from:</p>
+<p><strong>recovery succeeded</strong></p>
+<p>from:</p>
+<p><strong>restored state was verified</strong></p>
+<p>These stages must not collapse into one recovery flag.</p>
+<hr>
+<h1 id="20-capability-declaration">20. Capability Declaration</h1>
+<p>The adapter should provide a declaration conforming to:</p>
+<p><code>tf.platform-capabilities/v0.1</code></p>
+<p>Capability values must describe the actual synchronization environment represented by the implementation.</p>
+<p>Possible observation capabilities include:</p>
+<ul>
+<li>event observation;</li>
+<li>actor identity;</li>
+<li>actor lineage;</li>
+<li>resource classification;</li>
+<li>network context;</li>
+<li>origin/transport distinction;</li>
+<li>baseline access;</li>
+<li>resource metadata;</li>
+<li>recovery-state observation.</li>
+</ul>
+<p>Possible enforcement capabilities include:</p>
+<ul>
+<li>write denial;</li>
+<li>actor containment;</li>
+<li>resource isolation;</li>
+<li>network isolation;</li>
+<li>quarantine;</li>
+<li>permission restriction;</li>
+<li>actor disablement;</li>
+<li>session termination.</li>
+</ul>
+<p>Possible recovery capabilities include:</p>
+<ul>
+<li>rollback;</li>
+<li>snapshot or version restoration;</li>
+<li>resource restoration;</li>
+<li>configuration restoration.</li>
+</ul>
+<p>Possible verification capabilities include:</p>
+<ul>
+<li>post-action observation;</li>
+<li>state comparison;</li>
+<li>persistence detection;</li>
+<li>reappearance detection;</li>
+<li>recovery verification.</li>
+</ul>
+<p>Each must be declared as:</p>
+<ul>
+<li><code>supported</code></li>
+<li><code>partial</code></li>
+<li><code>unsupported</code></li>
+<li><code>unknown</code></li>
+</ul>
+<p>A concrete provider implementation determines the correct value.</p>
+<hr>
+<h1 id="21-capability-is-provider-specific">21. Capability Is Provider-Specific</h1>
+<p>This specification must not imply that all synchronization providers expose equivalent capabilities.</p>
+<p>A capability available in one deployment may be unavailable in another.</p>
+<p>Likewise, capability may vary by:</p>
+<ul>
+<li>authorization;</li>
+<li>account type;</li>
+<li>resource type;</li>
+<li>resource ownership;</li>
+<li>shared-resource relationship;</li>
+<li>deployment configuration;</li>
+<li>provider interface;</li>
+<li>client environment.</li>
+</ul>
+<p>The correct declaration is the one established for the current adapter environment.</p>
+<blockquote>
+<p><strong>Provider category does not establish capability.</strong></p>
+</blockquote>
+<hr>
+<h1 id="22-containment-mapping">22. Containment Mapping</h1>
+<p>An authorized containment decision may request structural responses such as:</p>
+<ul>
+<li>increase observation;</li>
+<li>notify an authorized operator;</li>
+<li>deny resource writes;</li>
+<li>isolate affected resources;</li>
+<li>restrict permissions;</li>
+<li>contain propagation;</li>
+<li>preserve evidence;</li>
+<li>prepare recovery;</li>
+<li>initiate recovery;</li>
+<li>request manual review.</li>
+</ul>
+<p>A cloud-sync implementation may execute only responses supported by its declared capabilities and governing authorization.</p>
+<p>The shared action name describes structural intent.</p>
+<p>The concrete provider implementation determines the native mechanism, if one exists.</p>
+<hr>
+<h1 id="23-local-vs-remote-containment">23. Local vs. Remote Containment</h1>
+<p>Cross-environment incidents may require containment at more than one boundary.</p>
+<p>For example:</p>
+<p><strong>Local containment</strong></p>
+<p>may stop one device from continuing an originating transition.</p>
+<p>But:</p>
+<p><strong>remote synchronized state</strong></p>
+<p>may already contain the destructive transition.</p>
+<p>Likewise:</p>
+<p><strong>remote containment</strong></p>
+<p>may stop further synchronization.</p>
+<p>But:</p>
+<p><strong>another endpoint</strong></p>
+<p>may already hold a pending or locally materialized destructive state.</p>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Containment at one synchronization boundary does not establish containment across the topology.</strong></p>
+</blockquote>
+<p>The outcome must identify the actual scope of the action performed.</p>
+<hr>
+<h1 id="24-propagation-containment">24. Propagation Containment</h1>
+<p>When authorized and supported, the adapter may participate in attempts to bound propagation.</p>
+<p>The structural response may target:</p>
+<ul>
+<li>a resource;</li>
+<li>a resource set;</li>
+<li>an account;</li>
+<li>a session;</li>
+<li>an environment;</li>
+<li>a shared scope;</li>
+<li>a synchronization relationship.</li>
+</ul>
+<p>The adapter must not claim broader containment than the mechanism's actual scope.</p>
+<p>A response affecting one account or resource set does not automatically establish that another environment is protected.</p>
+<hr>
+<h1 id="25-authority-boundaries">25. Authority Boundaries</h1>
+<p>Cloud and synchronization systems may involve several distinct authority domains.</p>
+<p>Examples include:</p>
+<ul>
+<li>resource owner;</li>
+<li>account owner;</li>
+<li>shared-resource participant;</li>
+<li>device owner;</li>
+<li>organization;</li>
+<li>provider;</li>
+<li>local platform;</li>
+<li>external synchronized participant.</li>
+</ul>
+<p>The adapter must operate only within explicitly established authority.</p>
+<p>Visibility into a resource does not automatically authorize:</p>
+<ul>
+<li>deletion;</li>
+<li>quarantine;</li>
+<li>permission changes;</li>
+<li>synchronization suspension;</li>
+<li>rollback;</li>
+<li>restoration;</li>
+<li>account modification.</li>
+</ul>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Visibility ≠ ownership ≠ authority</strong></p>
+</blockquote>
+<hr>
+<h1 id="26-fallback-behavior">26. Fallback Behavior</h1>
+<p>If a requested response cannot be executed as requested, and fallback is allowed, the adapter may choose a bounded alternative.</p>
+<p>The outcome should preserve:</p>
+<ul>
+<li>requested response;</li>
+<li>required capabilities;</li>
+<li>unavailable capabilities;</li>
+<li>fallback action;</li>
+<li>fallback reason;</li>
+<li>actual scope;</li>
+<li>degradation relationship.</li>
+</ul>
+<p>Potential structural fallback classes include:</p>
+<ul>
+<li>increased observation;</li>
+<li>notification;</li>
+<li>narrower resource isolation;</li>
+<li>narrower permission restriction;</li>
+<li>evidence preservation;</li>
+<li>recovery preparation;</li>
+<li>manual intervention request.</li>
+</ul>
+<p>A fallback must not be recorded as equivalent unless it truly provides equivalent structural effect.</p>
+<hr>
+<h1 id="27-outcome-reporting">27. Outcome Reporting</h1>
+<p>Execution results should map into:</p>
+<p><code>tf.response-outcome/v0.1</code></p>
+<p>The record should distinguish:</p>
+<ul>
+<li>response requested;</li>
+<li>execution attempted;</li>
+<li>response actually executed;</li>
+<li>fallback;</li>
+<li>actual scope;</li>
+<li>capability constraints;</li>
+<li>direct effects;</li>
+<li>side effects;</li>
+<li>errors;</li>
+<li>warnings;</li>
+<li>rollback state;</li>
+<li>execution provenance.</li>
+</ul>
+<p>For synchronized environments, provenance should retain enough information to identify the environment and adapter that performed or observed the response.</p>
+<hr>
+<h1 id="28-verification">28. Verification</h1>
+<p>Verification must examine resulting synchronized state rather than trusting execution success.</p>
+<p>Relevant questions include:</p>
+<ul>
+<li>Did destructive transitions cease?</li>
+<li>Did synchronization continue transporting them?</li>
+<li>Did the pattern reappear?</li>
+<li>Did another environment propagate the transition again?</li>
+<li>Are additional resources now affected?</li>
+<li>Has the remote state stabilized?</li>
+<li>Has the local state stabilized?</li>
+<li>Are historical or recovery states still available?</li>
+<li>Did a supposedly isolated resource change again?</li>
+<li>Can all relevant environments actually be observed?</li>
+</ul>
+<p>Possible verification results include:</p>
+<ul>
+<li><code>contained</code></li>
+<li><code>partially_contained</code></li>
+<li><code>persistent</code></li>
+<li><code>reappeared</code></li>
+<li><code>resolved</code></li>
+<li><code>partially_resolved</code></li>
+<li><code>new_condition_detected</code></li>
+<li><code>mixed</code></li>
+<li><code>unable_to_verify</code></li>
+</ul>
+<hr>
+<h1 id="29-cross-environment-verification">29. Cross-Environment Verification</h1>
+<p>A pattern should not be declared globally resolved solely because one environment appears clean.</p>
+<p>Conceptually:</p>
+<p><strong>Environment A: no continuation observed</strong></p>
+<p>+</p>
+<p><strong>Environment B: unobserved</strong></p>
+<p>+</p>
+<p><strong>Cloud state: partially observed</strong></p>
+<p>does not imply:</p>
+<p><strong>globally resolved</strong></p>
+<p>The correct result may instead be:</p>
+<ul>
+<li>partially contained;</li>
+<li>mixed;</li>
+<li>partially resolved;</li>
+<li>unable to verify.</li>
+</ul>
+<p>The verification scope must remain explicit.</p>
+<hr>
+<h1 id="30-reappearance">30. Reappearance</h1>
+<p>Synchronization can make reappearance structurally important.</p>
+<p>A destructive transition may appear to stop locally and then return through:</p>
+<ul>
+<li>another device;</li>
+<li>remote state;</li>
+<li>delayed synchronization;</li>
+<li>a different synchronized actor;</li>
+<li>restoration of contaminated state;</li>
+<li>unresolved propagation.</li>
+</ul>
+<p>The adapter should preserve the lineage of the reappearing transition where possible.</p>
+<p>A reappeared condition should not automatically be treated as a wholly new independent event.</p>
+<hr>
+<h1 id="31-loops-and-echoes">31. Loops and Echoes</h1>
+<p>Synchronized systems may produce observations that appear cyclic.</p>
+<p>Conceptually:</p>
+<p><strong>Environment A</strong></p>
+<p>↓</p>
+<p><strong>Provider</strong></p>
+<p>↓</p>
+<p><strong>Environment B</strong></p>
+<p>↓</p>
+<p><strong>new synchronized state</strong></p>
+<p>↓</p>
+<p><strong>Provider</strong></p>
+<p>↓</p>
+<p><strong>Environment A</strong></p>
+<p>An implementation should preserve enough lineage to distinguish repeated independent transitions from synchronization echoes where evidence permits.</p>
+<p>Otherwise, the detector could incorrectly inflate:</p>
+<ul>
+<li>event count;</li>
+<li>rate;</li>
+<li>acceleration;</li>
+<li>affected scope;</li>
+<li>evidence independence.</li>
+</ul>
+<p>Unresolved loops should remain explicitly unresolved.</p>
+<hr>
+<h1 id="32-conflict-state">32. Conflict State</h1>
+<p>Some synchronized environments may expose multiple competing versions or states of a resource.</p>
+<p>Where the adapter can observe such a condition, it should preserve it structurally rather than arbitrarily selecting one state as canonical.</p>
+<p>A conflict may affect:</p>
+<ul>
+<li>current-resource identity;</li>
+<li>prior-state comparison;</li>
+<li>recoverability;</li>
+<li>propagation analysis;</li>
+<li>verification.</li>
+</ul>
+<p>Conflict does not itself establish ransomware.</p>
+<p>It may, however, materially affect what the detector can conclude.</p>
+<hr>
+<h1 id="33-privacy-and-redaction">33. Privacy and Redaction</h1>
+<p>Synchronization environments may expose identifiers spanning accounts, devices, recipients, shared resources, and providers.</p>
+<p>The adapter should minimize exported identity information.</p>
+<p>Preferred structural representations include:</p>
+<ul>
+<li>pseudonymous resource reference;</li>
+<li>environment reference;</li>
+<li>actor category;</li>
+<li>transport relationship;</li>
+<li>origin relationship;</li>
+<li>synchronization state;</li>
+<li>transition type;</li>
+<li>version relationship;</li>
+<li>recovery relationship;</li>
+<li>propagation relationship;</li>
+<li>provenance.</li>
+</ul>
+<p>Avoid exporting unnecessary:</p>
+<ul>
+<li>document contents;</li>
+<li>plaintext credentials;</li>
+<li>personal filenames;</li>
+<li>account email addresses;</li>
+<li>recipient identities;</li>
+<li>provider tokens;</li>
+<li>device names;</li>
+<li>full provider-native paths;</li>
+<li>unrelated activity.</li>
+</ul>
+<p>Raw identifiers may remain local when structural references are sufficient.</p>
+<hr>
+<h1 id="34-credential-boundary">34. Credential Boundary</h1>
+<p>The shared detector does not require provider credentials.</p>
+<p>Credential handling belongs entirely outside the normalized analytical objects except for bounded references indicating authorization or account context where necessary.</p>
+<p>The adapter must not place into shared detector output:</p>
+<ul>
+<li>passwords;</li>
+<li>access tokens;</li>
+<li>refresh tokens;</li>
+<li>session secrets;</li>
+<li>API secrets;</li>
+<li>recovery secrets.</li>
+</ul>
+<p>Authentication material must remain inside the provider-specific security boundary.</p>
+<hr>
+<h1 id="35-data-minimization">35. Data Minimization</h1>
+<p>The adapter should export only what the detector needs to reason about destructive structure.</p>
+<p>For example, the detector may need:</p>
+<ul>
+<li>a stable resource reference;</li>
+<li>resource class;</li>
+<li>resource sensitivity;</li>
+<li>transition type;</li>
+<li>timing;</li>
+<li>origin/transport state;</li>
+<li>propagation relationship;</li>
+<li>preservation state;</li>
+<li>recovery state;</li>
+<li>baseline deviation;</li>
+<li>evidence dependency.</li>
+</ul>
+<p>It usually does not need the underlying resource content.</p>
+<p>The governing rule remains:</p>
+<blockquote>
+<p><strong>Normalize relationships before exporting identities or content.</strong></p>
+</blockquote>
+<hr>
+<h1 id="36-known-limitations">36. Known Limitations</h1>
+<p>Concrete cloud-sync implementations should explicitly document limitations such as:</p>
+<ul>
+<li>incomplete event history;</li>
+<li>delayed observation;</li>
+<li>incomplete origin information;</li>
+<li>transport identity without origin identity;</li>
+<li>inaccessible remote environments;</li>
+<li>incomplete resource lineage;</li>
+<li>unreliable cross-device timing;</li>
+<li>missing historical versions;</li>
+<li>incomplete recovery visibility;</li>
+<li>ambiguous shared-resource authority;</li>
+<li>partial enforcement capability;</li>
+<li>provider-specific response limitations;</li>
+<li>incomplete post-response verification;</li>
+<li>inability to determine evidence independence;</li>
+<li>inability to distinguish propagation from repeated independent transitions.</li>
+</ul>
+<p>These are legitimate analytical states.</p>
+<p>They must not be hidden behind optimistic defaults.</p>
+<hr>
+<h1 id="37-capability-posture">37. Capability Posture</h1>
+<p>This generic adapter does not declare universal capability support.</p>
+<p>Its default posture is:</p>
+<table>
+<thead>
+<tr>
+<th>Capability</th>
+<th>Generic cloud-sync posture</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Event observation</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Actor identity</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Actor lineage</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Resource classification</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Network context</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Origin / transport distinction</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Baseline access</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Recovery-state observation</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Write denial</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Actor containment</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Resource isolation</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Network isolation</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Quarantine</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Permission restriction</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Actor disablement</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Session termination</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Recovery</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Rollback</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Post-action observation</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>State comparison</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Persistence detection</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Reappearance detection</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Recovery verification</td>
+<td><code>unknown</code></td>
+</tr>
+</tbody>
+</table>
+<p>This is intentional.</p>
+<p><code>cloud-sync</code> represents a <strong>class of environments</strong>, not one provider implementation.</p>
+<p>Concrete provider adapters replace <code>unknown</code> with evidence-backed capability declarations.</p>
+<hr>
+<h1 id="38-cloud-synchronization-adapter-invariants">38. Cloud / Synchronization Adapter Invariants</h1>
+<h2 id="cloud-sync-inv-01-local-observation-local-origin">CLOUD-SYNC-INV-01 — Local Observation ≠ Local Origin</h2>
+<p>A transition observed locally may have originated elsewhere.</p>
+<h2 id="cloud-sync-inv-02-transport-origin">CLOUD-SYNC-INV-02 — Transport ≠ Origin</h2>
+<p>A synchronization client or provider carrying a transition must not automatically be identified as its origin.</p>
+<h2 id="cloud-sync-inv-03-trusted-transport-benign-transition">CLOUD-SYNC-INV-03 — Trusted Transport ≠ Benign Transition</h2>
+<p>Trust in the synchronization mechanism does not establish that the transported change is safe.</p>
+<h2 id="cloud-sync-inv-04-observation-count-event-independence">CLOUD-SYNC-INV-04 — Observation Count ≠ Event Independence</h2>
+<p>Multiple observations of the same propagated transition must not automatically become independent evidence.</p>
+<h2 id="cloud-sync-inv-05-replication-new-origin">CLOUD-SYNC-INV-05 — Replication ≠ New Origin</h2>
+<p>A replicated destructive state does not establish a new originating transition at every recipient.</p>
+<h2 id="cloud-sync-inv-06-visibility-authority">CLOUD-SYNC-INV-06 — Visibility ≠ Authority</h2>
+<p>The ability to observe synchronized state does not authorize its modification.</p>
+<h2 id="cloud-sync-inv-07-local-containment-global-containment">CLOUD-SYNC-INV-07 — Local Containment ≠ Global Containment</h2>
+<p>Containment in one environment does not establish containment elsewhere.</p>
+<h2 id="cloud-sync-inv-08-execution-resolution">CLOUD-SYNC-INV-08 — Execution ≠ Resolution</h2>
+<p>A successfully executed provider action does not prove that destructive state no longer exists elsewhere in the synchronization topology.</p>
+<h2 id="cloud-sync-inv-09-recovery-mechanism-verified-recovery">CLOUD-SYNC-INV-09 — Recovery Mechanism ≠ Verified Recovery</h2>
+<p>Available history or rollback capability does not establish successful restoration.</p>
+<h2 id="cloud-sync-inv-10-unknown-remote-state-safe-remote-state">CLOUD-SYNC-INV-10 — Unknown Remote State ≠ Safe Remote State</h2>
+<p>An environment that cannot be observed remains unresolved.</p>
+<h2 id="cloud-sync-inv-11-reappearance-necessarily-new-event">CLOUD-SYNC-INV-11 — Reappearance ≠ Necessarily New Event</h2>
+<p>A condition that returns after apparent containment may be propagated or delayed state from an earlier transition.</p>
+<h2 id="cloud-sync-inv-12-provenance-must-cross-boundaries">CLOUD-SYNC-INV-12 — Provenance Must Cross Boundaries</h2>
+<p>Cross-environment normalization must preserve enough lineage to reconstruct the relationship among origin candidates, transports, observers, recipients, and resources.</p>
+<hr>
+<h1 id="39-non-goals">39. Non-Goals</h1>
+<p>The Cloud / Synchronization adapter is not:</p>
+<ul>
+<li>a universal cloud-provider API;</li>
+<li>a provider-specific implementation;</li>
+<li>a ransomware classifier;</li>
+<li>an attribution engine;</li>
+<li>a synchronization trust engine;</li>
+<li>proof that cloud-backed resources are recoverable;</li>
+<li>proof that a synchronization service caused a transported transition;</li>
+<li>a guarantee of cross-device visibility;</li>
+<li>a guarantee of global containment;</li>
+<li>a mechanism for bypassing provider authorization;</li>
+<li>a reason to centralize user content or credentials.</li>
+</ul>
+<p>Its role is narrower:</p>
+<blockquote>
+<p><strong>Represent cross-environment transitions faithfully enough to distinguish origin, transport, propagation, replication, evidence dependency, response scope, and verification boundaries.</strong></p>
+</blockquote>
+<hr>
+<h1 id="40-shared-contracts">40. Shared Contracts</h1>
+<p>The Cloud / Synchronization adapter participates in:</p>
+<ul>
+<li><code>tf.resource-transition/v0.1</code></li>
+<li><code>tf.platform-capabilities/v0.1</code></li>
+<li><code>tf.containment-decision/v0.1</code></li>
+<li><code>tf.response-outcome/v0.1</code></li>
+<li><code>tf.verification/v0.1</code></li>
+</ul>
+<p>The Ransomware Structural Pattern Detector consumes the resulting normalized observations and may produce:</p>
+<ul>
+<li><code>tf.structural-pattern/v0.1</code></li>
+</ul>
+<p>A concrete provider adapter should reuse these contracts rather than redefining their semantics.</p>
+<hr>
+<h1 id="41-relationship-to-platform-adapters">41. Relationship to Platform Adapters</h1>
+<p>The cloud-sync adapter complements rather than replaces device-specific adapters.</p>
+<p>A device adapter may observe:</p>
+<blockquote>
+<p><strong>A synchronization process modified this local resource.</strong></p>
+</blockquote>
+<p>The cloud-sync adapter may observe:</p>
+<blockquote>
+<p><strong>A related transition crossed a synchronization boundary.</strong></p>
+</blockquote>
+<p>The detector may then correlate those observations while preserving their dependency.</p>
+<p>Conceptually:</p>
+<p><strong>Windows / macOS / Linux / Android / iOS observation</strong></p>
+<p>↓</p>
+<p><strong>local normalized transition</strong></p>
+<p>↕ correlation</p>
+<p><strong>cloud-sync normalized transition</strong></p>
+<p>↓</p>
+<p><strong>shared structural pattern</strong></p>
+<p>This allows a cross-environment pattern to be reconstructed without pretending every observation originated independently.</p>
+<hr>
+<h1 id="canonical-summary">Canonical Summary</h1>
+<blockquote>
+<p><strong>The Cloud / Synchronization adapter represents destructive resource transitions across synchronization boundaries while preserving the distinction between origin, transport, observation, replication, propagation, execution scope, and verified state.</strong></p>
+</blockquote>
+<p>Its lineage rule is:</p>
+<blockquote>
+<p><strong>Follow the transition, not merely the process that delivered it.</strong></p>
+</blockquote>
+<p>Its evidence rule is:</p>
+<blockquote>
+<p><strong>Multiple synchronized observations may confirm that a transition propagated without independently confirming where or why it originated.</strong></p>
+</blockquote>
+<p>Its containment rule is:</p>
+<blockquote>
+<p><strong>Containment is scoped to the environments and resources actually affected by the executed response.</strong></p>
+</blockquote>
+<p>Its privacy rule is:</p>
+<blockquote>
+<p><strong>Normalize relationships before exporting identities, credentials, or content.</strong></p>
+</blockquote>
+<p>Its verification rule is:</p>
+<blockquote>
+<p><strong>A clean observation in one environment cannot establish resolution in another environment that was not observed.</strong></p>
+</blockquote>
+<p>And its architectural rule is:</p>
+<blockquote>
+<p><strong>Origin, transport, propagation, and observation are different structural roles. Preserve those distinctions all the way through the lineage.</strong></p>
+</blockquote>
+  </main>
+</body>
+</html>

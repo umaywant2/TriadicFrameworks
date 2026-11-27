@@ -1,0 +1,896 @@
+{
+  "detector": {
+    "id": "ransomware-structural-pattern-detector",
+    "name": "Ransomware Structural Pattern Detector",
+    "version": "0.1.0",
+    "status": "experimental",
+    "type": "structural-behavioral-analyzer",
+    "domain": "system_security",
+    "summary": "A platform-neutral analyzer that detects accelerating destructive resource-transition patterns, preserves supporting and contradictory evidence, bounds uncertainty, and produces structural assessments suitable for proportionate containment decisions."
+  },
+
+  "purpose": {
+    "primary_question": "Are observed resource transitions forming an accelerating destructive pattern that exceeds an acceptable damage boundary?",
+    "governing_principle": "Detect destructive structure early enough to limit damage, but never convert anomaly into attribution or intent without evidence.",
+    "analytical_boundary": "The detector interprets normalized resource-transition patterns. It does not collect native platform events, execute containment, claim successful recovery, or verify post-response state.",
+    "non_goals": [
+      "malware_signature_matching",
+      "threat_intelligence_lookup",
+      "automatic_actor_attribution",
+      "automatic_intent_assignment",
+      "universal_ransomware_classification",
+      "platform_specific_enforcement",
+      "automatic_destructive_remediation",
+      "guaranteed_detection",
+      "guaranteed_containment",
+      "guaranteed_recovery"
+    ]
+  },
+
+  "interfaces": {
+    "input": {
+      "primary": "tf.resource-transition/v0.1",
+      "platform_capabilities": "tf.platform-capabilities/v0.1"
+    },
+    "output": {
+      "pattern": "tf.structural-pattern/v0.1",
+      "decision_candidate": "tf.containment-decision/v0.1"
+    },
+    "downstream": {
+      "execution_outcome": "tf.response-outcome/v0.1",
+      "verification": "tf.verification/v0.1"
+    },
+    "schema_base": "../Shared_Structural_Event_Grammar/"
+  },
+
+  "operator_chain": [
+    "select",
+    "normalize",
+    "correlate",
+    "derive",
+    "contradict",
+    "assess",
+    "bound",
+    "emit"
+  ],
+
+  "operators": {
+    "select": {
+      "purpose": "Accept normalized resource-transition events relevant to destructive system-resource behavior.",
+      "requirements": [
+        "preserve_event_lineage",
+        "preserve_unknown_values",
+        "respect_authorized_scope",
+        "reject_unqualified_domain_verdicts_as_observations"
+      ]
+    },
+
+    "normalize": {
+      "purpose": "Confirm that detector inputs use the shared structural vocabulary without replacing platform provenance.",
+      "requirements": [
+        "retain_native_event_reference_when_available",
+        "retain_adapter_identity",
+        "retain_observation_time",
+        "retain_normalization_time",
+        "retain_redaction_record"
+      ]
+    },
+
+    "correlate": {
+      "purpose": "Associate events across bounded time, actors, resources, environments, and baselines.",
+      "correlation_keys": [
+        "event.correlation_id",
+        "actor.id",
+        "actor.parent_ref",
+        "actor.origin_actor_ref",
+        "actor.transport_actor_ref",
+        "resource.id",
+        "resource.class",
+        "resource.scope",
+        "context.session_ref",
+        "context.origin_environment_ref",
+        "provenance.platform",
+        "provenance.adapter"
+      ],
+      "requirements": [
+        "preserve_source_dependencies",
+        "distinguish_origin_from_transport",
+        "avoid_double_counting_mirrored_events",
+        "avoid_treating_synchronized_observations_as_independent",
+        "retain_cross_environment_lineage"
+      ]
+    },
+
+    "derive": {
+      "purpose": "Calculate bounded structural features from correlated observations.",
+      "requirements": [
+        "reference_source_events",
+        "identify_derivation_method",
+        "separate_derived_values_from_observed_values",
+        "do_not_assign_intent",
+        "do_not_assign_attribution"
+      ]
+    },
+
+    "contradict": {
+      "purpose": "Search for counter-evidence, benign coherence, and unresolved questions before producing an assessment.",
+      "requirements": [
+        "preserve_supporting_evidence",
+        "preserve_counter_evidence",
+        "preserve_unresolved_evidence",
+        "preserve_competing_explanations",
+        "state_evidence_independence"
+      ]
+    },
+
+    "assess": {
+      "purpose": "Produce a bounded ransomware-relevant structural interpretation.",
+      "requirements": [
+        "separate_structural_confidence_from_intent_confidence",
+        "separate_structural_confidence_from_attribution_confidence",
+        "permit_high_structural_confidence_with_unknown_intent",
+        "permit_high_structural_confidence_with_unresolved_attribution",
+        "avoid_binary_ransomware_verdicts"
+      ]
+    },
+
+    "bound": {
+      "purpose": "Evaluate the observed pattern relative to a domain-defined damage boundary and available response authority.",
+      "requirements": [
+        "consider_resource_sensitivity",
+        "consider_reversibility",
+        "consider_recovery_impact",
+        "consider_propagation_risk",
+        "consider_scope_expansion",
+        "avoid_universal_fixed_thresholds",
+        "avoid_implicit_authorization"
+      ]
+    },
+
+    "emit": {
+      "purpose": "Emit a structural-pattern object and, when policy permits, sufficient rationale for a separate containment decision.",
+      "requirements": [
+        "emit_schema_conformant_pattern",
+        "retain_event_references",
+        "retain_method_references",
+        "retain_counter_evidence",
+        "retain_unresolved_questions",
+        "do_not_claim_action_execution",
+        "do_not_claim_resolution"
+      ]
+    }
+  },
+
+  "event_selection": {
+    "accepted_sources": [
+      "filesystem",
+      "account",
+      "credential",
+      "network",
+      "cloud",
+      "application",
+      "system",
+      "user_report",
+      "other"
+    ],
+
+    "relevant_operations": [
+      "write",
+      "create",
+      "delete",
+      "rename",
+      "move",
+      "truncate",
+      "copy",
+      "replace",
+      "permission_change",
+      "metadata_change",
+      "recovery_change",
+      "state_change",
+      "scope_change",
+      "sync",
+      "execute",
+      "other"
+    ],
+
+    "relevant_transition_actions": [
+      "modify",
+      "create",
+      "remove",
+      "replace",
+      "relocate",
+      "duplicate",
+      "restrict",
+      "revoke",
+      "expose",
+      "conceal",
+      "propagate",
+      "transform",
+      "other"
+    ],
+
+    "resource_classes_of_interest": [
+      "user_document",
+      "photo",
+      "video",
+      "audio",
+      "database",
+      "archive",
+      "project_file",
+      "application_data",
+      "configuration",
+      "credential_store",
+      "backup",
+      "recovery_resource",
+      "network_resource",
+      "cloud_resource",
+      "identity_resource",
+      "permission_resource",
+      "temporary",
+      "canary",
+      "domain_defined",
+      "unknown"
+    ],
+
+    "exclusion_rule": "An event is not excluded merely because its actor is known, signed, trusted, reputable, or historically benign."
+  },
+
+  "pattern_vocabulary": {
+    "primary_pattern_type": "accelerating_destructive_resource_transformation",
+
+    "candidate_pattern_types": [
+      "unusual_resource_transition_activity",
+      "correlated_resource_transition_deviation",
+      "accelerating_destructive_resource_transformation",
+      "expanding_destructive_scope",
+      "recovery_interference",
+      "cross_boundary_propagation",
+      "destructive_sync_transport",
+      "ransomware_like_structural_pattern"
+    ],
+
+    "pattern_progression": [
+      "normal_activity",
+      "unusual_transition_activity",
+      "correlated_deviation",
+      "accelerating_destructive_transformation",
+      "expanding_damage_boundary",
+      "containment_threshold"
+    ],
+
+    "lifecycle_mapping": {
+      "normal_activity": "inactive",
+      "unusual_transition_activity": "candidate",
+      "correlated_deviation": "emerging",
+      "accelerating_destructive_transformation": "established",
+      "expanding_damage_boundary": "escalating",
+      "containment_threshold": "escalating"
+    }
+  },
+
+  "signal_catalog": {
+    "supporting": [
+      {
+        "id": "rate_deviation",
+        "description": "Transition activity materially deviates from the relevant historical or expected rate.",
+        "source_class": "derived"
+      },
+      {
+        "id": "rate_acceleration",
+        "description": "The transition rate increases across successive analytical windows.",
+        "source_class": "derived"
+      },
+      {
+        "id": "scope_expansion",
+        "description": "The number, class, sensitivity, or environmental spread of affected resources increases.",
+        "source_class": "correlated"
+      },
+      {
+        "id": "destructive_transition",
+        "description": "Observed transitions destroy, remove, replace, or make prior usable resource state unavailable.",
+        "source_class": "observed"
+      },
+      {
+        "id": "original_not_preserved",
+        "description": "The prior usable resource state is observed not to have been preserved.",
+        "source_class": "observed"
+      },
+      {
+        "id": "protected_resource_transformation",
+        "description": "Protected or sensitive resources undergo unexpected structural transformation.",
+        "source_class": "correlated"
+      },
+      {
+        "id": "actor_role_deviation",
+        "description": "Observed behavior is incoherent with the actor's established structural role.",
+        "source_class": "derived"
+      },
+      {
+        "id": "resource_class_deviation",
+        "description": "The actor affects resource classes outside its established activity profile.",
+        "source_class": "derived"
+      },
+      {
+        "id": "recovery_interference",
+        "description": "Recovery resources, recovery configuration, version history, snapshots, or equivalent recovery state are adversely affected.",
+        "source_class": "correlated"
+      },
+      {
+        "id": "cross_boundary_propagation",
+        "description": "The pattern expands across devices, accounts, shares, networks, cloud scopes, or synchronized environments.",
+        "source_class": "correlated"
+      },
+      {
+        "id": "canary_transition",
+        "description": "A monitored canary resource undergoes an unexpected transition.",
+        "source_class": "observed"
+      },
+      {
+        "id": "repetition_inconsistent_with_baseline",
+        "description": "Repeated transitions remain materially inconsistent with the available baseline.",
+        "source_class": "correlated"
+      }
+    ],
+
+    "counter": [
+      {
+        "id": "explicit_user_initiation",
+        "description": "Available evidence directly associates the activity with an explicit user-authorized operation."
+      },
+      {
+        "id": "expected_bulk_workflow",
+        "description": "The activity is structurally coherent with an established backup, migration, synchronization, media-processing, encryption, development, or management workflow."
+      },
+      {
+        "id": "established_actor_role",
+        "description": "The actor, operation, resource class, scope, and rate remain coherent with an established role."
+      },
+      {
+        "id": "known_transformation_destination",
+        "description": "The transformation has an expected destination or result consistent with the authorized workflow."
+      },
+      {
+        "id": "originals_preserved",
+        "description": "Prior usable resource states are preserved."
+      },
+      {
+        "id": "recovery_available",
+        "description": "A relevant recovery path is observed to remain available."
+      },
+      {
+        "id": "scope_within_baseline",
+        "description": "Affected resources and environments remain within the expected activity boundary."
+      },
+      {
+        "id": "rate_within_baseline",
+        "description": "The observed transition rate remains within the expected activity range."
+      }
+    ],
+
+    "unresolved": [
+      {
+        "id": "origin_actor_unresolved",
+        "question": "Did the observed actor originate the transition or transport it?"
+      },
+      {
+        "id": "user_authorization_unresolved",
+        "question": "Was the activity explicitly authorized by the user or governing policy?"
+      },
+      {
+        "id": "reversibility_unresolved",
+        "question": "Can the affected resource state be reliably reversed?"
+      },
+      {
+        "id": "recovery_state_unresolved",
+        "question": "Does a usable and verified recovery path remain available?"
+      },
+      {
+        "id": "evidence_independence_unresolved",
+        "question": "Are the supporting observations independent rather than synchronized, mirrored, copied, or derived from a shared source?"
+      },
+      {
+        "id": "propagation_origin_unresolved",
+        "question": "Where did cross-environment propagation originate?"
+      },
+      {
+        "id": "intent_unresolved",
+        "question": "Does the available evidence support a bounded intent assessment?"
+      },
+      {
+        "id": "attribution_unresolved",
+        "question": "Does the available evidence support attribution beyond the observed actor?"
+      }
+    ]
+  },
+
+  "derived_features": {
+    "rate": {
+      "id": "transition_rate",
+      "description": "Count of relevant normalized transitions within a declared analytical window.",
+      "required_lineage": [
+        "event_refs",
+        "window_start",
+        "window_end",
+        "method_ref"
+      ]
+    },
+
+    "acceleration": {
+      "id": "transition_rate_acceleration",
+      "description": "Change in transition rate across comparable analytical windows.",
+      "required_lineage": [
+        "event_refs",
+        "window_refs",
+        "method_ref"
+      ]
+    },
+
+    "scope": {
+      "id": "affected_scope",
+      "description": "Distinct affected resources, resource classes, actors, and environments within the analytical window.",
+      "required_lineage": [
+        "event_refs",
+        "deduplication_method_ref"
+      ]
+    },
+
+    "destructiveness": {
+      "id": "destructive_transition_state",
+      "description": "Observed and unresolved state concerning loss, replacement, or unavailability of prior usable resource state.",
+      "required_lineage": [
+        "event_refs",
+        "preservation_evidence_refs"
+      ]
+    },
+
+    "role_coherence": {
+      "id": "actor_role_coherence",
+      "description": "Relationship between current behavior and the actor's established structural role.",
+      "required_lineage": [
+        "event_refs",
+        "baseline_refs",
+        "method_ref"
+      ]
+    },
+
+    "recovery_impact": {
+      "id": "recovery_impact",
+      "description": "Observed effect on backups, snapshots, version history, recovery stores, or equivalent recovery resources.",
+      "required_lineage": [
+        "event_refs",
+        "recovery_state_refs"
+      ]
+    },
+
+    "propagation": {
+      "id": "propagation_state",
+      "description": "Observed or assessed expansion of the pattern beyond its initial resource or environment boundary.",
+      "required_lineage": [
+        "event_refs",
+        "environment_refs",
+        "dependency_refs"
+      ]
+    }
+  },
+
+  "correlation_policy": {
+    "minimum_event_rule": "A structural pattern requires one or more normalized event references, but a single event must not independently establish a ransomware-like pattern.",
+    "window_policy": "Analytical windows are implementation-defined, explicitly declared, and calibrated to the platform, resource class, and available baseline.",
+    "deduplication_policy": "Events representing the same native transition, synchronized copy, mirrored observation, or shared upstream source must not be counted as independent evidence.",
+    "baseline_policy": "Absence of a baseline must be represented as unavailable or unknown rather than converted into maximal deviation.",
+    "transport_policy": "A synchronization service or other transport actor must not be treated as the origin actor without supporting evidence.",
+    "trust_policy": "Actor trust, signature, reputation, or historical familiarity may be retained as context but must not suppress contradictory current behavior."
+  },
+
+  "evidence_policy": {
+    "required_categories": [
+      "supporting",
+      "counter",
+      "unresolved"
+    ],
+
+    "source_classes": [
+      "observed",
+      "normalized",
+      "derived",
+      "correlated",
+      "external",
+      "user_supplied",
+      "domain_defined",
+      "unknown"
+    ],
+
+    "requirements": [
+      "Every emitted pattern must reference its contributing normalized events.",
+      "Every derived signal must retain source or method references.",
+      "Counter-evidence must remain visible in the emitted pattern.",
+      "Material unresolved questions must remain visible in the emitted pattern.",
+      "Evidence independence must be stated when it materially affects confidence.",
+      "Missing evidence must not be interpreted as negative evidence.",
+      "Competing explanations must not be removed solely because a concerning pattern is present."
+    ],
+
+    "prohibited_collapses": [
+      "observation_to_intent",
+      "anomaly_to_malice",
+      "pattern_to_attribution",
+      "correlation_to_independence",
+      "unknown_to_false",
+      "decision_to_execution",
+      "execution_to_resolution"
+    ]
+  },
+
+  "competing_explanations": [
+    {
+      "id": "authorized_backup",
+      "description": "An authorized backup workflow is producing broad or rapid resource transitions."
+    },
+    {
+      "id": "authorized_migration",
+      "description": "An authorized migration or restoration workflow is producing broad resource transitions."
+    },
+    {
+      "id": "authorized_encryption",
+      "description": "An authorized encryption or protection workflow is transforming resources."
+    },
+    {
+      "id": "media_or_data_processing",
+      "description": "A legitimate media, archive, database, build, conversion, or data-processing workflow is transforming resources."
+    },
+    {
+      "id": "synchronization_propagation",
+      "description": "A synchronization service is transporting transitions originating elsewhere."
+    },
+    {
+      "id": "administrative_bulk_change",
+      "description": "An authorized administrative or management operation is changing resources at scale."
+    },
+    {
+      "id": "software_defect",
+      "description": "A defective or misconfigured application is causing destructive effects without established harmful intent."
+    },
+    {
+      "id": "unresolved_structural_anomaly",
+      "description": "The observed structure is anomalous, but currently available evidence does not support a narrower explanation."
+    }
+  ],
+
+  "assessment_policy": {
+    "structural_states": [
+      "coherent",
+      "benign_deviation",
+      "unusual",
+      "anomalous",
+      "concerning",
+      "destructive_transition",
+      "harmful_effect",
+      "unresolved"
+    ],
+
+    "severity_states": [
+      "informational",
+      "low",
+      "moderate",
+      "elevated",
+      "high",
+      "critical",
+      "unknown"
+    ],
+
+    "confidence_states": [
+      "insufficient",
+      "low",
+      "moderate",
+      "high",
+      "very_high",
+      "unknown"
+    ],
+
+    "intent_states": [
+      "benign",
+      "authorized",
+      "mixed",
+      "harmful",
+      "unknown",
+      "not_assessed"
+    ],
+
+    "attribution_states": [
+      "resolved",
+      "partially_resolved",
+      "candidate",
+      "conflicting",
+      "unresolved",
+      "not_assessed"
+    ],
+
+    "requirements": [
+      "Structural confidence must be assessed separately from intent confidence.",
+      "Structural confidence must be assessed separately from attribution confidence.",
+      "Severity must describe observed or inferred structural impact rather than moral judgment.",
+      "The label ransomware_like_structural_pattern must remain a bounded pattern classification rather than a claim of confirmed malware identity.",
+      "Assessment must preserve the evidence and method references supporting it."
+    ]
+  },
+
+  "damage_boundary_policy": {
+    "model": "domain_defined_bounded_damage",
+    "universal_numeric_threshold": false,
+
+    "dimensions": [
+      "resource_sensitivity",
+      "affected_resource_scope",
+      "transition_rate",
+      "transition_rate_acceleration",
+      "reversibility",
+      "recovery_availability",
+      "recovery_impact",
+      "propagation_risk",
+      "cross_environment_scope"
+    ],
+
+    "states": [
+      "within_limit",
+      "approaching_limit",
+      "limit_reached",
+      "limit_exceeded",
+      "not_applicable",
+      "unknown"
+    ],
+
+    "requirements": [
+      "The active damage-boundary policy must be referenced in the emitted structural pattern.",
+      "Thresholds must be calibrated outside this detector contract.",
+      "Unknown recoverability must not be treated as full recoverability.",
+      "Unknown propagation state must not be treated as no propagation.",
+      "Sensitive-resource effects may justify stronger urgency without establishing intent.",
+      "Damage-boundary state may inform a later containment decision but does not itself authorize action."
+    ]
+  },
+
+  "decision_candidate_policy": {
+    "enabled": true,
+    "output_schema": "tf.containment-decision/v0.1",
+    "role": "supply_bounded_rationale_only",
+
+    "eligible_decisions": [
+      "no_action",
+      "observe",
+      "inform",
+      "contain",
+      "isolate",
+      "quarantine",
+      "restrict",
+      "disable",
+      "recover",
+      "escalate",
+      "defer"
+    ],
+
+    "requested_actions": [
+      "increase_observation",
+      "notify_authorized_operator",
+      "deny_resource_writes",
+      "contain_actor",
+      "isolate_resource_set",
+      "isolate_network_scope",
+      "quarantine_affected_resources",
+      "restrict_actor_permissions",
+      "disable_actor",
+      "preserve_evidence",
+      "prepare_recovery",
+      "initiate_recovery",
+      "request_manual_review"
+    ],
+
+    "reason_codes": [
+      "accelerating_transition_rate",
+      "expanding_resource_scope",
+      "destructive_transition_observed",
+      "original_state_not_preserved",
+      "protected_resource_affected",
+      "recovery_interference_observed",
+      "cross_boundary_propagation_observed",
+      "damage_boundary_approaching",
+      "damage_boundary_reached",
+      "damage_boundary_exceeded",
+      "counter_evidence_material",
+      "evidence_insufficient",
+      "authorization_required",
+      "capability_unavailable",
+      "manual_review_required"
+    ],
+
+    "default_authority": {
+      "mode": "recommend_only",
+      "authorization_required": true
+    },
+
+    "selection_principles": [
+      "Prefer the smallest proportionate response capable of bounding the observed damage trajectory.",
+      "Prefer reversible responses when they can adequately bound the observed risk.",
+      "Do not infer execution capability from analytical need.",
+      "Do not infer authorization from platform capability.",
+      "Do not request destructive remediation without explicit governing authority.",
+      "Allow containment rationale to remain strong when structural confidence is high but intent or attribution remains unresolved."
+    ]
+  },
+
+  "platform_integration": {
+    "adapter_directory": "adapters/",
+    "capability_schema": "../Shared_Structural_Event_Grammar/platform-capabilities.schema.json",
+
+    "adapter_responsibilities": [
+      "observe_native_events",
+      "normalize_resource_transitions",
+      "declare_platform_capabilities",
+      "preserve_platform_provenance",
+      "receive_authorized_response_requests",
+      "execute_supported_actions",
+      "record_actual_outcomes",
+      "support_post_action_verification"
+    ],
+
+    "detector_prohibitions": [
+      "assume_write_denial_support",
+      "assume_actor_containment_support",
+      "assume_resource_isolation_support",
+      "assume_network_isolation_support",
+      "assume_quarantine_support",
+      "assume_recovery_support",
+      "assume_verification_support"
+    ]
+  },
+
+  "privacy": {
+    "data_minimization": true,
+    "local_processing_preferred": true,
+    "raw_resource_content_required": false,
+    "full_resource_path_required": false,
+    "plaintext_credentials_allowed": false,
+
+    "preferred_inputs": [
+      "privacy_preserving_resource_id",
+      "resource_type",
+      "resource_class",
+      "resource_scope",
+      "resource_sensitivity",
+      "transition_action",
+      "preservation_state",
+      "reversibility_state",
+      "recoverability_state",
+      "actor_relationship",
+      "baseline_comparison",
+      "transition_timing",
+      "platform_provenance"
+    ],
+
+    "requirements": [
+      "Retain only the identifying detail required for structural correlation.",
+      "Keep raw resource contents local unless separately authorized and analytically necessary.",
+      "Record redactions performed during normalization.",
+      "Do not transmit credentials or unrelated personal content through detector outputs."
+    ]
+  },
+
+  "output_contract": {
+    "primary": {
+      "schema": "tf.structural-pattern/v0.1",
+      "pattern_domain": "system_security",
+      "required_pattern_content": [
+        "pattern",
+        "scope",
+        "evidence.event_refs",
+        "evidence.supporting",
+        "evidence.counter",
+        "evidence.unresolved",
+        "assessment",
+        "provenance"
+      ],
+
+      "recommended_pattern_content": [
+        "actors",
+        "resources",
+        "evidence.independence",
+        "baseline",
+        "trajectory",
+        "damage_boundary",
+        "competing_explanations",
+        "related_pattern_refs"
+      ]
+    },
+
+    "secondary": {
+      "schema": "tf.containment-decision/v0.1",
+      "condition": "A separate governing policy or authorized orchestration layer determines that the emitted pattern warrants a bounded response decision.",
+      "detector_role": "Provide pattern references, reason codes, evidence lineage, reversibility context, and capability requirements without claiming execution."
+    },
+
+    "prohibited_output_claims": [
+      "confirmed_malicious_intent_without_evidence",
+      "resolved_attribution_without_evidence",
+      "containment_executed",
+      "containment_succeeded",
+      "resources_recovered",
+      "condition_resolved"
+    ]
+  },
+
+  "verification_contract": {
+    "schema": "tf.verification/v0.1",
+    "detector_role": "Consume subsequent normalized observations when requested by an authorized verification cycle and support reassessment of the structural pattern.",
+    "requirements": [
+      "Do not interpret a successful response outcome as proof of resolution.",
+      "Distinguish contained from resolved.",
+      "Distinguish persistent from reappeared.",
+      "Preserve newly detected conditions.",
+      "Preserve unverifiable conditions.",
+      "Require post-response observational lineage."
+    ]
+  },
+
+  "invariants": [
+    {
+      "id": "RSPD-INV-01",
+      "statement": "A destructive transition does not independently establish malicious intent."
+    },
+    {
+      "id": "RSPD-INV-02",
+      "statement": "The actor visible at the observation point may be transporting rather than originating the transition."
+    },
+    {
+      "id": "RSPD-INV-03",
+      "statement": "A trusted, signed, or previously benign actor may still participate in a destructive transition."
+    },
+    {
+      "id": "RSPD-INV-04",
+      "statement": "Baseline deviation alone does not establish a ransomware pattern."
+    },
+    {
+      "id": "RSPD-INV-05",
+      "statement": "Detection of a ransomware-like pattern does not independently identify the responsible actor."
+    },
+    {
+      "id": "RSPD-INV-06",
+      "statement": "Multiple observations derived from the same originating event do not constitute independent corroboration."
+    },
+    {
+      "id": "RSPD-INV-07",
+      "statement": "Unavailable evidence must remain unresolved rather than being silently interpreted as negative evidence."
+    },
+    {
+      "id": "RSPD-INV-08",
+      "statement": "A containment request does not prove that the platform performed it."
+    },
+    {
+      "id": "RSPD-INV-09",
+      "statement": "A successfully executed response does not prove that destructive activity has been resolved."
+    },
+    {
+      "id": "RSPD-INV-10",
+      "statement": "A platform capability does not itself authorize use of that capability."
+    },
+    {
+      "id": "RSPD-INV-11",
+      "statement": "The existence of a recovery mechanism does not prove that affected resources have been restored."
+    },
+    {
+      "id": "RSPD-INV-12",
+      "statement": "Observations, derivations, decisions, outcomes, and verification must retain sufficient provenance for reconstruction."
+    }
+  ],
+
+  "lineage": {
+    "conceptual_source": "../Profile_Rectification/pr_capture.md",
+    "module_readme": "README.md",
+    "shared_grammar": "../Shared_Structural_Event_Grammar/README.md",
+    "preserve_event_lineage": true,
+    "preserve_derivation_lineage": true,
+    "preserve_counter_evidence": true,
+    "preserve_unresolved_evidence": true,
+    "preserve_decision_lineage": true,
+    "preserve_outcome_lineage": true,
+    "preserve_verification_lineage": true
+  }
+}

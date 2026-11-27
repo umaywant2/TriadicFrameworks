@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
   <meta name="source" content="/docs/Profile_Rectification/README.md">
-  <title>README</title>
+  <title>Profile Rectification</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -92,7 +92,414 @@
   </aside>
 
   <main>
-
+<p><img width="1194" height="672" alt="Profile_Rectification_" src="https://github.com/user-attachments/assets/f09c9bea-52c2-4801-bb01-198e9cdd2177" /></p>
+<h1 id="profile-rectification">Profile Rectification</h1>
+<blockquote>
+<p><strong>A consent-bound structural hygiene module for detecting exposure, manipulation, exploitation, identity drift, and context contamination across authorized digital surfaces.</strong></p>
+</blockquote>
+<p>Profile Rectification is a cross-cutting TriadicFrameworks orchestration module for examining the structure surrounding a human digital profile or an AI context.</p>
+<p>Its purpose is not to decide guilt, infer malicious intent from isolated artifacts, or provide unrestricted surveillance. It separates <strong>observation from interpretation</strong>, preserves uncertainty and competing explanations, and recommends the smallest proportionate corrective pathway supported by available evidence.</p>
+<p>The governing principle is:</p>
+<blockquote>
+<p><strong>Inspect structure before content, ask before crossing privacy boundaries, and repair coherence without erasing lineage.</strong></p>
+</blockquote>
+<hr>
+<h2 id="status">Status</h2>
+<ul>
+<li><strong>Module ID:</strong> <code>profile-rectification</code></li>
+<li><strong>Version:</strong> <code>0.1.0</code></li>
+<li><strong>Status:</strong> Experimental</li>
+<li><strong>Type:</strong> Cross-cutting orchestration</li>
+<li><strong>Domains:</strong> Personal safety, digital hygiene, identity, structural analysis, AI context</li>
+<li><strong>Machine-readable descriptor:</strong> <a href="./pr_module.json"><code>pr_module.json</code></a></li>
+<li><strong>Design and provenance capture:</strong> <a href="./pr_capture.html"><code>pr_capture.md</code></a></li>
+</ul>
+<hr>
+<h2 id="core-operator-chain">Core Operator Chain</h2>
+<p>Profile Rectification follows a bounded six-stage cycle:</p>
+<p><strong>Consent → Observe → Detect → Evaluate → Rectify → Verify</strong></p>
+<h3 id="1-consent">1. Consent</h3>
+<p>Establish the analytical and privacy boundary before inspection.</p>
+<p>The module should determine:</p>
+<ul>
+<li>what may be examined;</li>
+<li>what must remain local;</li>
+<li>what may be queried externally;</li>
+<li>what must never appear in the resulting report.</li>
+</ul>
+<p>Consent is part of the analytical structure, not merely an interface step.</p>
+<h3 id="2-observe">2. Observe</h3>
+<p>Acquire only the observations authorized for the current scan.</p>
+<p>Candidate surfaces include:</p>
+<ul>
+<li>browser metadata;</li>
+<li>site and notification permissions;</li>
+<li>installed extensions;</li>
+<li>download metadata;</li>
+<li>redirect chains;</li>
+<li>account identifiers;</li>
+<li>security posture;</li>
+<li>user-supplied artifacts;</li>
+<li>AI context.</li>
+</ul>
+<p>Observation should minimize unnecessary exposure of raw content.</p>
+<h3 id="3-detect">3. Detect</h3>
+<p>Look for structural patterns rather than prematurely assigning causes.</p>
+<p>Examples include:</p>
+<ul>
+<li>exposure;</li>
+<li>impersonation;</li>
+<li>coercion;</li>
+<li>deception;</li>
+<li>extraction;</li>
+<li>persistence;</li>
+<li>isolation;</li>
+<li>amplification;</li>
+<li>obfuscation;</li>
+<li>identity drift;</li>
+<li>authority inversion;</li>
+<li>AI-context contamination.</li>
+</ul>
+<p>Detection identifies a structure worthy of evaluation. It does not establish intent or attribution.</p>
+<h3 id="4-evaluate">4. Evaluate</h3>
+<p>Bound what the observations actually support.</p>
+<p>Relevant dimensions include:</p>
+<ul>
+<li>evidence strength;</li>
+<li>recurrence;</li>
+<li>source independence;</li>
+<li>recency;</li>
+<li>potential impact;</li>
+<li>alternative explanations;</li>
+<li>confidence;</li>
+<li>intent uncertainty;</li>
+<li>attribution uncertainty.</li>
+</ul>
+<p>The module preserves counter-evidence and unresolved contradictions rather than forcing them into a binary conclusion.</p>
+<h3 id="5-rectify">5. Rectify</h3>
+<p>Recommend the smallest proportionate corrective pathway supported by the evidence.</p>
+<p>Actions may be classified as:</p>
+<ul>
+<li>informational;</li>
+<li>reversible;</li>
+<li>disruptive;</li>
+<li>destructive;</li>
+<li>external escalation.</li>
+</ul>
+<p>The default authority is <strong>recommend only</strong>.</p>
+<p>Destructive mutations require explicit user authorization.</p>
+<h3 id="6-verify">6. Verify</h3>
+<p>After an authorized rectification, examine the same bounded scope again.</p>
+<p>Verification should:</p>
+<ul>
+<li>preserve lineage;</li>
+<li>compare before and after states;</li>
+<li>identify resolved findings;</li>
+<li>identify persistent findings;</li>
+<li>identify newly introduced findings;</li>
+<li>state what could not be verified.</li>
+</ul>
+<p>A corrective action is not itself proof that the underlying condition has been resolved.</p>
+<hr>
+<h1 id="operating-depths">Operating Depths</h1>
+<p>Profile Rectification supports three progressively deeper operating modes.</p>
+<h2 id="depth-1-clean-check">Depth 1: Clean Check</h2>
+<p>A fast, low-intrusion review of technical posture and obvious structural anomalies.</p>
+<p>This mode deliberately avoids psychological or relational interpretation.</p>
+<p>Possible outcomes include:</p>
+<ul>
+<li>no material pattern detected;</li>
+<li>minor hygiene items;</li>
+<li>review recommended;</li>
+<li>immediate attention recommended.</li>
+</ul>
+<p>A bounded clean result should be expressed as:</p>
+<blockquote>
+<p><strong>No material pattern detected within the authorized scan scope.</strong></p>
+</blockquote>
+<p>This is preferable to an unconditional "all clear" because the module cannot make claims about surfaces it did not inspect.</p>
+<hr>
+<h2 id="depth-2-structural-review">Depth 2: Structural Review</h2>
+<p>A broader review that correlates evidence across multiple authorized surfaces.</p>
+<p>The purpose is to determine whether apparently isolated observations form a recurring structural pattern while preserving:</p>
+<ul>
+<li>competing explanations;</li>
+<li>counter-evidence;</li>
+<li>confidence boundaries;</li>
+<li>provenance;</li>
+<li>source independence.</li>
+</ul>
+<p>The result should be a structured pattern analysis rather than an accusation.</p>
+<hr>
+<h2 id="depth-3-full-rectification">Depth 3: Full Rectification</h2>
+<p>A deliberately authorized inspection and rectification cycle.</p>
+<p>Conceptually:</p>
+<p><strong>Inspect → Classify → Rectify → Establish Baseline → Rescan → Verify</strong></p>
+<p>This may include recommendations to revoke permissions, isolate compromised contexts, review accounts, change credentials, preserve evidence, or establish a cleaner operating baseline.</p>
+<p>Profile Rectification does not automatically perform destructive remediation.</p>
+<hr>
+<h1 id="human-edition">Human Edition</h1>
+<p>The Human Edition examines authorized digital-profile and environmental signals for structural indicators of:</p>
+<ul>
+<li>exposure;</li>
+<li>manipulation;</li>
+<li>exploitation;</li>
+<li>identity misuse;</li>
+<li>deceptive interaction;</li>
+<li>persistence;</li>
+<li>security-posture problems;</li>
+<li>identity drift.</li>
+</ul>
+<p>The default operating mode is <strong>Clean Check</strong>.</p>
+<p>A human-facing result remains an analytical aid. The user remains the final interpreter of findings.</p>
+<p>The module should never convert a technical artifact directly into an accusation about another person.</p>
+<hr>
+<h1 id="ai-edition">AI Edition</h1>
+<p>The AI Edition applies the same structural hygiene principles to AI context.</p>
+<p>Its purpose is to identify contaminated, incoherent, untrusted, or improperly authoritative context while preserving provenance and unresolved evidence.</p>
+<p>Candidate inspection surfaces include:</p>
+<ul>
+<li>instruction hierarchy;</li>
+<li>imported memory;</li>
+<li>retrieval sources;</li>
+<li>tool results;</li>
+<li>user-supplied claims;</li>
+<li>model inference;</li>
+<li>unresolved contradictions;</li>
+<li>unsupported claims;</li>
+<li>prompt-injection residue;</li>
+<li>role confusion;</li>
+<li>authority inversion;</li>
+<li>temporal drift;</li>
+<li>citation drift;</li>
+<li>persuasive amplification;</li>
+<li>cross-session contamination.</li>
+</ul>
+<p>The AI rectification sequence is:</p>
+<p><strong>Freeze → Inventory → Separate → Validate → Quarantine → Reconstruct → Rescan</strong></p>
+<h3 id="freeze">Freeze</h3>
+<p>Stop propagating suspect context.</p>
+<h3 id="inventory">Inventory</h3>
+<p>Identify the active instructions, sources, memories, retrieved evidence, assumptions, and unresolved claims relevant to the task.</p>
+<h3 id="separate">Separate</h3>
+<p>Keep distinct:</p>
+<ul>
+<li>canonical instruction;</li>
+<li>user declaration;</li>
+<li>retrieved evidence;</li>
+<li>model inference;</li>
+<li>unresolved claim;</li>
+<li>untrusted external instruction.</li>
+</ul>
+<h3 id="validate">Validate</h3>
+<p>Evaluate the separated context using the appropriate structural analyzers and evidence rules.</p>
+<h3 id="quarantine">Quarantine</h3>
+<p>Remove questionable material from operative authority when justified without unnecessarily destroying its provenance.</p>
+<h3 id="reconstruct">Reconstruct</h3>
+<p>Build the smallest coherent context sufficient for the current task.</p>
+<h3 id="rescan">Rescan</h3>
+<p>Verify that the reconstructed context does not reproduce the identified drift or authority problem.</p>
+<p>The aim is <strong>context rectification with lineage preservation</strong>, not artificial amnesia.</p>
+<hr>
+<h1 id="evidence-discipline">Evidence Discipline</h1>
+<p>Profile Rectification treats evidence boundaries as first-class structure.</p>
+<p>Five distinctions are especially important:</p>
+<p><strong>Observation ≠ Interpretation</strong></p>
+<p>What was observed must remain distinguishable from what the analyzer inferred.</p>
+<p><strong>Anomaly ≠ Malice</strong></p>
+<p>Deviation from a baseline does not independently establish harmful intent.</p>
+<p><strong>Pattern ≠ Attribution</strong></p>
+<p>A structural pattern may be detected without identifying the person, process, or actor responsible for producing it.</p>
+<p><strong>Confidence ≠ Intent</strong></p>
+<p>The module may have high confidence that a condition exists while remaining unable to determine why it exists.</p>
+<p><strong>Rectification ≠ Resolution</strong></p>
+<p>A corrective action requires a verification pass before the resulting state can be characterized.</p>
+<hr>
+<h1 id="report-model">Report Model</h1>
+<p>A Profile Rectification report has six conceptual layers.</p>
+<h2 id="1-status">1. Status</h2>
+<p>Plain-language structural status, such as:</p>
+<ul>
+<li>Clean</li>
+<li>Clean with hygiene notes</li>
+<li>Unresolved signals</li>
+<li>Pattern detected</li>
+<li>Elevated concern</li>
+<li>Critical technical exposure</li>
+</ul>
+<h2 id="2-scope">2. Scope</h2>
+<p>Explicitly records what was and was not examined.</p>
+<p>A conclusion is bounded by this scope.</p>
+<h2 id="3-findings">3. Findings</h2>
+<p>Each finding should preserve:</p>
+<ul>
+<li>observation;</li>
+<li>evidence source;</li>
+<li>pattern family;</li>
+<li>recurrence;</li>
+<li>potential impact;</li>
+<li>confidence;</li>
+<li>alternative explanation;</li>
+<li>recommended response.</li>
+</ul>
+<h2 id="4-pattern-map">4. Pattern Map</h2>
+<p>Groups individual findings into broader structural relationships without erasing their individual provenance.</p>
+<h2 id="5-rectification-plan">5. Rectification Plan</h2>
+<p>Defines proportionate candidate responses and their reversibility or disruption characteristics.</p>
+<h2 id="6-verification">6. Verification</h2>
+<p>Records the post-rectification state and distinguishes resolved, persistent, new, and unverifiable findings.</p>
+<hr>
+<h1 id="privacy-and-agency">Privacy and Agency</h1>
+<p>Profile Rectification is explicitly consent-bound.</p>
+<p>Its default posture is:</p>
+<ul>
+<li>minimize collected data;</li>
+<li>prefer local processing;</li>
+<li>require authorization for external queries;</li>
+<li>do not access plaintext passwords;</li>
+<li>do not assume unrestricted browser-cache access;</li>
+<li>exclude raw sensitive content by default;</li>
+<li>do not automatically report findings to third parties.</li>
+</ul>
+<p>Sensitive content should only cross a privacy boundary when it is necessary, authorized, and proportionate to the analytical purpose.</p>
+<p>Where a structural classification is sufficient, raw content should remain local.</p>
+<hr>
+<h1 id="core-invariants">Core Invariants</h1>
+<p>The module currently defines the following invariants:</p>
+<h3 id="pr-inv-01">PR-INV-01</h3>
+<p>A technical artifact is not proof of intent.</p>
+<h3 id="pr-inv-02">PR-INV-02</h3>
+<p>A single observation does not establish a pattern.</p>
+<h3 id="pr-inv-03">PR-INV-03</h3>
+<p>Correlation across synchronized surfaces is not necessarily independent corroboration.</p>
+<h3 id="pr-inv-04">PR-INV-04</h3>
+<p>Absence of evidence is not proof of safety.</p>
+<h3 id="pr-inv-05">PR-INV-05</h3>
+<p>Exposure is not equivalent to active compromise.</p>
+<h3 id="pr-inv-06">PR-INV-06</h3>
+<p>Benign and competing explanations must remain visible.</p>
+<h3 id="pr-inv-07">PR-INV-07</h3>
+<p>Safety escalation must remain proportionate to available evidence.</p>
+<h3 id="pr-inv-08">PR-INV-08</h3>
+<p>Sensitive or identifying material must not be repeated unnecessarily.</p>
+<h3 id="pr-inv-09">PR-INV-09</h3>
+<p>No automatic reporting to employers, platforms, family members, authorities, or other third parties.</p>
+<h3 id="pr-inv-10">PR-INV-10</h3>
+<p>The user remains the final interpreter of human-facing findings.</p>
+<h3 id="pr-inv-11">PR-INV-11</h3>
+<p>Rectification must preserve sufficient provenance to reconstruct how a conclusion or change was produced.</p>
+<h3 id="pr-inv-12">PR-INV-12</h3>
+<p>Destructive mutations require explicit user authorization.</p>
+<hr>
+<h1 id="relationship-to-the-shared-structural-event-grammar">Relationship to the Shared Structural Event Grammar</h1>
+<p>Profile Rectification does <strong>not</strong> own the generic structural-event model.</p>
+<p>That infrastructure is separated into:</p>
+<p><code>/docs/Shared_Structural_Event_Grammar/</code></p>
+<p>The shared grammar provides the normalized lineage family used to represent:</p>
+<p><strong>Observation → Transition → Pattern → Assessment → Decision → Action → Outcome → Verification</strong></p>
+<p>Its event family includes:</p>
+<ul>
+<li><code>tf.resource-transition/v0.1</code></li>
+<li><code>tf.structural-pattern/v0.1</code></li>
+<li><code>tf.containment-decision/v0.1</code></li>
+<li><code>tf.response-outcome/v0.1</code></li>
+<li><code>tf.verification/v0.1</code></li>
+<li><code>tf.platform-capabilities/v0.1</code></li>
+</ul>
+<p>Profile Rectification acts as a <strong>consumer and orchestrator</strong> of normalized structural observations and patterns rather than redefining that grammar within this module.</p>
+<p>This separation allows the same structural primitive to support human-profile, system-security, media, governance, identity, and AI-context analysis.</p>
+<hr>
+<h1 id="relationship-to-ransomware-structural-pattern-detection">Relationship to Ransomware Structural Pattern Detection</h1>
+<p>The ransomware work developed during Profile Rectification's design is maintained separately at:</p>
+<p><code>/docs/Ransomware_Structural_Pattern_Detector/</code></p>
+<p>The separation is intentional.</p>
+<p>Profile Rectification asks broadly:</p>
+<blockquote>
+<p><strong>Is the authorized environment exhibiting a structurally significant condition that warrants bounded rectification?</strong></p>
+</blockquote>
+<p>The ransomware analyzer asks a specialized system-security question:</p>
+<blockquote>
+<p><strong>Are resource transitions forming an accelerating destructive pattern that warrants bounded containment?</strong></p>
+</blockquote>
+<p>Both may consume the Shared Structural Event Grammar, but ransomware-specific platform adapters, behavioral detection, containment, and recovery logic do not belong inside Profile Rectification itself.</p>
+<p>This keeps Profile Rectification model-independent and prevents a general structural-hygiene module from becoming coupled to one security application.</p>
+<hr>
+<h1 id="analytical-relationships">Analytical Relationships</h1>
+<p>Profile Rectification is designed to orchestrate relevant TriadicFrameworks analytical capabilities, including:</p>
+<ul>
+<li>C.O.D.E.;</li>
+<li>Structural Detection;</li>
+<li>Media Substrate Model;</li>
+<li>Governance Alignment Analyzer;</li>
+<li>Resonance Truth;</li>
+<li>Paradox Gradient Analyzer.</li>
+</ul>
+<p>These remain analytical dependencies rather than being reimplemented inside Profile Rectification.</p>
+<p>The module provides the consent, orchestration, evidence, rectification, and verification envelope around their use.</p>
+<hr>
+<h1 id="structural-position">Structural Position</h1>
+<p>The resulting architecture has three distinct layers:</p>
+<pre><code class="language-text">                    Profile Rectification
+                 [orchestration / hygiene]
+                           │
+                           │ consumes
+                           ▼
+              Shared Structural Event Grammar
+                [portable infrastructure]
+                           │
+              ┌────────────┼────────────┐
+              │            │            │
+              ▼            ▼            ▼
+          Profile       Identity     AI Context
+          Analysis       Drift      Rectification
+                           │
+                           │
+                           ▼
+              Ransomware Structural
+                Pattern Detector
+              [specialized analyzer]
+</code></pre>
+<p>The exact analyzer graph may expand over time, but the architectural boundary is stable:</p>
+<blockquote>
+<p><strong>Generic observations belong in the shared grammar. Domain meaning belongs in analyzers. Consent-bound orchestration and rectification belong here.</strong></p>
+</blockquote>
+<hr>
+<h1 id="non-goals">Non-Goals</h1>
+<p>Profile Rectification is not intended to:</p>
+<ul>
+<li>determine guilt from isolated technical evidence;</li>
+<li>establish malicious intent without sufficient evidence;</li>
+<li>provide unrestricted browser, device, or account surveillance;</li>
+<li>silently transmit discovered identifiers to external services;</li>
+<li>replace operating-system or endpoint security mechanisms;</li>
+<li>automatically perform destructive remediation;</li>
+<li>automatically report findings to third parties;</li>
+<li>erase uncomfortable or contradictory evidence merely to produce a cleaner conclusion.</li>
+</ul>
+<p>Ambiguity is allowed to remain ambiguity.</p>
+<hr>
+<h1 id="canonical-summary">Canonical Summary</h1>
+<blockquote>
+<p><strong>Profile Rectification is a consent-bound structural hygiene module that detects exposure, manipulation, exploitation, identity drift, and context contamination across authorized digital surfaces, then produces reversible, evidence-separated rectification pathways for humans and AI systems.</strong></p>
+</blockquote>
+<p>Its compact operating rule is:</p>
+<p><strong>Consent → Observe → Detect → Evaluate → Rectify → Verify</strong></p>
+<p>Its evidence rule is:</p>
+<blockquote>
+<p><strong>Preserve what happened separately from what it may mean.</strong></p>
+</blockquote>
+<p>Its privacy rule is:</p>
+<blockquote>
+<p><strong>Inspect only what has been authorized, and expose only what the analysis requires.</strong></p>
+</blockquote>
+<p>Its rectification rule is:</p>
+<blockquote>
+<p><strong>Use the smallest proportionate intervention supported by the evidence.</strong></p>
+</blockquote>
+<p>Its lineage rule is:</p>
+<blockquote>
+<p><strong>Repair coherence without erasing how the resulting state was produced.</strong></p>
+</blockquote>
   </main>
 </body>
 </html>

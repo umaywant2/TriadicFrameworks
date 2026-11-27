@@ -1,0 +1,1279 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Ransomware_Structural_Pattern_Detector/adapters/macos.md">
+  <title>macOS Adapter</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Ransomware_Structural_Pattern_Detector/adapters/macos.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Ransomware_Structural_Pattern_Detector/adapters/macos.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="Ransomware_Structural_Pattern_Detector_adapters_macos_" src="https://github.com/user-attachments/assets/e16ebd2c-1779-4496-8bee-67ffc822ce4a" /></p>
+<h1 id="macos-adapter">macOS Adapter</h1>
+<blockquote>
+<p><strong>Platform adapter specification for mapping authorized macOS resource and system observations into the Ransomware Structural Pattern Detector while preserving observation scope, system-extension, authorization, privacy, recovery, and capability boundaries.</strong></p>
+</blockquote>
+<p>The macOS adapter connects macOS-observable resource transitions and actor relationships to the platform-neutral Shared Structural Event Grammar.</p>
+<p>macOS can support substantially different adapter profiles.</p>
+<p>A concrete implementation may be:</p>
+<ul>
+<li>an application-scoped observer;</li>
+<li>a user-authorized resource observer;</li>
+<li>a system-extension-based security component;</li>
+<li>an endpoint-oriented observer with broader system visibility;</li>
+<li>a narrowly configured research or educational implementation;</li>
+<li>another explicitly bounded deployment.</li>
+</ul>
+<p>These profiles must not be treated as equivalent.</p>
+<p>The governing rule is:</p>
+<blockquote>
+<p><strong>Declare what the deployed macOS adapter can actually observe and enforce. Do not promote platform capability into implementation capability, authority, or successful execution.</strong></p>
+</blockquote>
+<hr>
+<h2 id="status">Status</h2>
+<ul>
+<li><strong>Adapter ID:</strong> <code>rspd-macos</code></li>
+<li><strong>Platform:</strong> macOS</li>
+<li><strong>Status:</strong> Experimental</li>
+<li><strong>Role:</strong> Observation, normalization, capability declaration, bounded response mapping, and verification support</li>
+<li><strong>Normalized observation:</strong> <code>tf.resource-transition/v0.1</code></li>
+<li><strong>Capability declaration:</strong> <code>tf.platform-capabilities/v0.1</code></li>
+<li><strong>Decision input:</strong> <code>tf.containment-decision/v0.1</code></li>
+<li><strong>Execution output:</strong> <code>tf.response-outcome/v0.1</code></li>
+<li><strong>Verification output:</strong> <code>tf.verification/v0.1</code></li>
+</ul>
+<hr>
+<h1 id="1-scope">1. Scope</h1>
+<p>The macOS adapter operates within explicitly established application, filesystem, system-extension, authorization, privacy, account, and execution boundaries.</p>
+<p>Its potential observation scope may include:</p>
+<ul>
+<li>selected user resources;</li>
+<li>user documents;</li>
+<li>application data;</li>
+<li>project resources;</li>
+<li>configuration;</li>
+<li>archives;</li>
+<li>databases;</li>
+<li>backup-visible resources;</li>
+<li>recovery-visible resources;</li>
+<li>synchronized resources;</li>
+<li>mounted resources;</li>
+<li>adapter-controlled canaries;</li>
+<li>relevant actor activity where exposed;</li>
+<li>relevant system events where exposed;</li>
+<li>other explicitly configured macOS resources.</li>
+</ul>
+<p>The implementation must state its actual observation boundary.</p>
+<p>Running on macOS does not by itself establish system-wide visibility.</p>
+<hr>
+<h1 id="2-adapter-profiles">2. Adapter Profiles</h1>
+<p>The architecture recognizes several possible macOS adapter profiles.</p>
+<h2 id="application-scoped-observer">Application-Scoped Observer</h2>
+<p>Observes resources and state available to an ordinary authorized application.</p>
+<p>This profile may provide useful structural evidence while possessing limited system-wide actor or enforcement visibility.</p>
+<h2 id="resource-scoped-observer">Resource-Scoped Observer</h2>
+<p>Observes explicitly configured or authorized resource sets.</p>
+<p>Its conclusions remain bounded to those resources.</p>
+<h2 id="endpoint-security-observer">Endpoint Security Observer</h2>
+<p>Uses an appropriately provisioned and authorized Endpoint Security client to receive supported macOS system-event information.</p>
+<p>This profile may provide stronger actor and event lineage than a purely application-scoped observer.</p>
+<h2 id="endpoint-security-authorization-profile">Endpoint Security Authorization Profile</h2>
+<p>Where supported by the concrete implementation and applicable event type, the adapter may participate in authorization handling before a monitored operation completes.</p>
+<p>This is a materially different capability from receiving an event notification after an operation.</p>
+<h2 id="hybrid-observer">Hybrid Observer</h2>
+<p>Correlates multiple authorized evidence sources while preserving their individual provenance and dependency.</p>
+<p>These profiles are descriptive.</p>
+<p>A concrete implementation must declare which capabilities it actually possesses.</p>
+<hr>
+<h1 id="3-endpoint-security-boundary">3. Endpoint Security Boundary</h1>
+<p>macOS provides an Endpoint Security framework through which appropriately configured clients can monitor supported system events.</p>
+<p>At the structural level:</p>
+<p><strong>Endpoint Security event</strong></p>
+<p>↓</p>
+<p><strong>macOS adapter</strong></p>
+<p>↓</p>
+<p><strong>normalized observation</strong></p>
+<p>↓</p>
+<p><strong><code>tf.resource-transition/v0.1</code></strong></p>
+<p>↓</p>
+<p><strong>Ransomware Structural Pattern Detector</strong></p>
+<p>The adapter must preserve the fact that Endpoint Security is an observation and authorization source.</p>
+<p>It must not turn a native event directly into a ransomware verdict.</p>
+<hr>
+<h1 id="4-notification-vs-authorization">4. Notification vs. Authorization</h1>
+<p>The adapter must preserve an important distinction between:</p>
+<p><strong>notification</strong></p>
+<p>and:</p>
+<p><strong>authorization</strong></p>
+<p>A notification describes a monitored action that occurred.</p>
+<p>An authorization event represents an operation for which an Endpoint Security client may be asked to participate in an allow-or-deny decision before completion.</p>
+<p>These have different structural meanings.</p>
+<p>A notification can contribute evidence.</p>
+<p>An authorization path may also provide an enforcement opportunity.</p>
+<p>The adapter must not represent one as the other.</p>
+<hr>
+<h1 id="5-entitlement-and-deployment">5. Entitlement and Deployment</h1>
+<p>Availability of Endpoint Security as a macOS technology does not establish that a particular adapter can use it.</p>
+<p>A concrete implementation must separately establish the conditions required for its chosen deployment.</p>
+<p>The capability declaration should therefore represent the implementation actually running rather than theoretical framework availability.</p>
+<p>If an Endpoint Security client is not available to the implementation, its capabilities must not be advertised merely because macOS provides the framework.</p>
+<hr>
+<h1 id="6-observation-sources">6. Observation Sources</h1>
+<p>A macOS implementation may consume one or more authorized evidence sources.</p>
+<p>Candidate source classes include:</p>
+<ul>
+<li>Endpoint Security events where available;</li>
+<li>user-authorized resource observations;</li>
+<li>direct application resource activity;</li>
+<li>adapter-maintained state comparisons;</li>
+<li>resource metadata;</li>
+<li>actor/process evidence exposed to the implementation;</li>
+<li>mounted-resource observations;</li>
+<li>synchronization state;</li>
+<li>recovery-state observations;</li>
+<li>user-supplied evidence;</li>
+<li>adapter-maintained baselines.</li>
+</ul>
+<p>The normalized event should preserve which source produced the evidence.</p>
+<hr>
+<h1 id="7-multiple-observation-sources">7. Multiple Observation Sources</h1>
+<p>A stronger implementation may correlate more than one native observation source.</p>
+<p>Conceptually:</p>
+<p><strong>system-event evidence</strong></p>
+<p>+</p>
+<p><strong>resource evidence</strong></p>
+<p>+</p>
+<p><strong>actor lineage</strong></p>
+<p>+</p>
+<p><strong>baseline state</strong></p>
+<p>↓</p>
+<p><strong>normalized structural evidence</strong></p>
+<p>Multiple evidence sources may improve confidence and lineage.</p>
+<p>They must not automatically inflate event count.</p>
+<p>If two sources describe the same underlying transition, their dependency should remain visible.</p>
+<blockquote>
+<p><strong>Multiple observations ≠ multiple independent transitions</strong></p>
+</blockquote>
+<hr>
+<h1 id="8-native-observation-preservation">8. Native Observation Preservation</h1>
+<p>Where feasible and authorized, the adapter should retain a local reference to the native evidence used during normalization.</p>
+<p>Useful provenance includes:</p>
+<ul>
+<li>native observation source;</li>
+<li>event reference;</li>
+<li>observation time;</li>
+<li>adapter identity;</li>
+<li>adapter version;</li>
+<li>normalization time;</li>
+<li>relevant capability declaration;</li>
+<li>derivation references;</li>
+<li>redaction classes.</li>
+</ul>
+<p>Native evidence may remain local.</p>
+<p>The detector requires sufficient structural lineage, not unrestricted raw endpoint telemetry.</p>
+<hr>
+<h1 id="9-resource-mapping">9. Resource Mapping</h1>
+<p>macOS-visible resources should map into shared structural categories according to role.</p>
+<p>Candidate mappings include:</p>
+<table>
+<thead>
+<tr>
+<th>macOS-visible resource</th>
+<th>Shared resource type/class</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>User document</td>
+<td><code>file</code> / <code>user_document</code></td>
+</tr>
+<tr>
+<td>Photo</td>
+<td><code>file</code> / <code>photo</code></td>
+</tr>
+<tr>
+<td>Video</td>
+<td><code>file</code> / <code>video</code></td>
+</tr>
+<tr>
+<td>Audio</td>
+<td><code>file</code> / <code>audio</code></td>
+</tr>
+<tr>
+<td>Database</td>
+<td><code>file</code> or <code>dataset</code> / <code>database</code></td>
+</tr>
+<tr>
+<td>Archive</td>
+<td><code>file</code> / <code>archive</code></td>
+</tr>
+<tr>
+<td>Project resource</td>
+<td><code>file</code> / <code>project_file</code></td>
+</tr>
+<tr>
+<td>Application data</td>
+<td><code>file</code> or <code>dataset</code> / <code>application_data</code></td>
+</tr>
+<tr>
+<td>Configuration</td>
+<td><code>configuration</code> / <code>configuration</code></td>
+</tr>
+<tr>
+<td>Credential-related store</td>
+<td>appropriate type / <code>credential_store</code></td>
+</tr>
+<tr>
+<td>Backup</td>
+<td>appropriate type / <code>backup</code></td>
+</tr>
+<tr>
+<td>Recovery resource</td>
+<td>appropriate type / <code>recovery_resource</code></td>
+</tr>
+<tr>
+<td>Mounted network resource</td>
+<td>appropriate type / <code>network_resource</code></td>
+</tr>
+<tr>
+<td>Cloud-backed resource</td>
+<td>appropriate type / <code>cloud_resource</code></td>
+</tr>
+<tr>
+<td>Temporary resource</td>
+<td>appropriate type / <code>temporary</code></td>
+</tr>
+<tr>
+<td>Canary</td>
+<td>appropriate type / <code>canary</code></td>
+</tr>
+<tr>
+<td>Other structural resource</td>
+<td>appropriate type / <code>domain_defined</code></td>
+</tr>
+</tbody>
+</table>
+<p>The normalized representation should expose structural meaning without unnecessarily exporting user-identifying resource information.</p>
+<hr>
+<h1 id="10-resource-identity">10. Resource Identity</h1>
+<p>Raw resource paths may expose personal or sensitive information.</p>
+<p>The adapter should prefer a stable privacy-preserving resource reference when that is sufficient for structural correlation.</p>
+<p>A native resource reference may remain local for:</p>
+<ul>
+<li>correlation;</li>
+<li>enforcement;</li>
+<li>recovery;</li>
+<li>verification;</li>
+<li>authorized investigation.</li>
+</ul>
+<p>The shared event may instead carry:</p>
+<ul>
+<li>resource ID;</li>
+<li>resource type;</li>
+<li>resource class;</li>
+<li>scope;</li>
+<li>sensitivity;</li>
+<li>protection state;</li>
+<li>canary state;</li>
+<li>recoverability;</li>
+<li>bounded location reference when structurally necessary.</li>
+</ul>
+<hr>
+<h1 id="11-actor-mapping">11. Actor Mapping</h1>
+<p>Candidate macOS actor mappings include:</p>
+<ul>
+<li><code>process</code></li>
+<li><code>application</code></li>
+<li><code>service</code></li>
+<li><code>script</code></li>
+<li><code>remote_actor</code></li>
+<li><code>sync_service</code></li>
+<li><code>system</code></li>
+<li><code>user</code></li>
+<li><code>agent</code></li>
+<li><code>unknown</code></li>
+</ul>
+<p>Where evidence supports it, the adapter may preserve:</p>
+<ul>
+<li>actor ID;</li>
+<li>actor name;</li>
+<li>actor instance;</li>
+<li>parent reference;</li>
+<li>account reference;</li>
+<li>origin relationship;</li>
+<li>transport relationship.</li>
+</ul>
+<p>The evidence source must determine how strongly actor identity can be stated.</p>
+<hr>
+<h1 id="12-actor-lineage">12. Actor Lineage</h1>
+<p>Where reliable actor relationships are exposed, the adapter should preserve them.</p>
+<p>Conceptually:</p>
+<p><strong>invoking actor</strong></p>
+<p>↓</p>
+<p><strong>observed actor</strong></p>
+<p>↓</p>
+<p><strong>resource transition</strong></p>
+<p>Actor lineage can strengthen structural reasoning about whether an operation is coherent with the actor's established role.</p>
+<p>It does not establish intent.</p>
+<p>A familiar or signed actor can still participate in a destructive structural transition.</p>
+<hr>
+<h1 id="13-trust-and-signing-context">13. Trust and Signing Context</h1>
+<p>Where the implementation obtains bounded trust or signing information, it may preserve that context in the shared actor representation.</p>
+<p>Such information may help describe:</p>
+<ul>
+<li>whether an actor is known;</li>
+<li>whether available identity evidence is consistent;</li>
+<li>whether a recognized signing or publisher relationship exists.</li>
+</ul>
+<p>It must not suppress contradictory behavioral evidence.</p>
+<p>The detector follows:</p>
+<blockquote>
+<p><strong>Trusted actor ≠ safe transition</strong></p>
+</blockquote>
+<p>and:</p>
+<blockquote>
+<p><strong>known identity ≠ benign intent</strong></p>
+</blockquote>
+<hr>
+<h1 id="14-origin-vs-transport">14. Origin vs. Transport</h1>
+<p>Synchronization, remote resources, services, and intermediary applications can separate observed actor from ultimate origin.</p>
+<p>A locally visible actor may:</p>
+<ul>
+<li>originate a transition;</li>
+<li>transport a remote transition;</li>
+<li>materialize synchronized state;</li>
+<li>operate on behalf of another process or service;</li>
+<li>reflect state originating elsewhere.</li>
+</ul>
+<p>Where sufficient evidence exists, the adapter should preserve:</p>
+<ul>
+<li>origin actor;</li>
+<li>transport actor;</li>
+<li>origin environment;</li>
+<li>observed actor;</li>
+<li>synchronization context.</li>
+</ul>
+<p>Otherwise, origin remains unresolved.</p>
+<hr>
+<h1 id="15-transition-mapping">15. Transition Mapping</h1>
+<p>Candidate normalized operations include:</p>
+<ul>
+<li><code>read</code></li>
+<li><code>write</code></li>
+<li><code>create</code></li>
+<li><code>delete</code></li>
+<li><code>rename</code></li>
+<li><code>move</code></li>
+<li><code>truncate</code></li>
+<li><code>copy</code></li>
+<li><code>replace</code></li>
+<li><code>open</code></li>
+<li><code>close</code></li>
+<li><code>permission_change</code></li>
+<li><code>metadata_change</code></li>
+<li><code>recovery_change</code></li>
+<li><code>state_change</code></li>
+<li><code>scope_change</code></li>
+<li><code>execute</code></li>
+<li><code>sync</code></li>
+<li><code>other</code></li>
+</ul>
+<p>Candidate structural actions include:</p>
+<ul>
+<li><code>access</code></li>
+<li><code>modify</code></li>
+<li><code>create</code></li>
+<li><code>remove</code></li>
+<li><code>replace</code></li>
+<li><code>relocate</code></li>
+<li><code>duplicate</code></li>
+<li><code>restrict</code></li>
+<li><code>grant</code></li>
+<li><code>revoke</code></li>
+<li><code>expose</code></li>
+<li><code>conceal</code></li>
+<li><code>restore</code></li>
+<li><code>propagate</code></li>
+<li><code>transform</code></li>
+<li><code>other</code></li>
+</ul>
+<p>A native operation should be retained where forcing it into the shared vocabulary would lose relevant lineage.</p>
+<hr>
+<h1 id="16-transition-characteristics">16. Transition Characteristics</h1>
+<p>Where observable or explicitly derived, the adapter may normalize characteristics such as:</p>
+<ul>
+<li>content-change indication;</li>
+<li>structural change;</li>
+<li>size change;</li>
+<li>representation change;</li>
+<li>ownership or authority change;</li>
+<li>permission change;</li>
+<li>recovery-state change;</li>
+<li>prior-state preservation;</li>
+<li>recoverability;</li>
+<li>repeated mutation;</li>
+<li>transition timing;</li>
+<li>synchronization transport.</li>
+</ul>
+<p>These are structural observations or derivations.</p>
+<p>They are not ransomware classifications.</p>
+<hr>
+<h1 id="17-baseline-support">17. Baseline Support</h1>
+<p>A concrete implementation may maintain a structural baseline for its authorized scope.</p>
+<p>Candidate baseline dimensions include:</p>
+<ul>
+<li>known actors;</li>
+<li>expected actor roles;</li>
+<li>typical operations;</li>
+<li>expected resource classes;</li>
+<li>typical transition rate;</li>
+<li>common resource scope;</li>
+<li>established applications;</li>
+<li>backup behavior;</li>
+<li>synchronization behavior;</li>
+<li>known bulk workflows.</li>
+</ul>
+<p>Baseline comparison may help distinguish destructive deviation from ordinary system activity.</p>
+<p>An unfamiliar actor or unusual transition remains evidence to evaluate, not proof of malicious intent.</p>
+<hr>
+<h1 id="18-legitimate-bulk-activity">18. Legitimate Bulk Activity</h1>
+<p>macOS may host workflows capable of changing many resources legitimately.</p>
+<p>Potential competing explanations include:</p>
+<ul>
+<li>backups;</li>
+<li>restores;</li>
+<li>synchronization;</li>
+<li>migrations;</li>
+<li>development builds;</li>
+<li>media processing;</li>
+<li>archival operations;</li>
+<li>authorized encryption;</li>
+<li>application-managed transformation;</li>
+<li>user-directed bulk activity.</li>
+</ul>
+<p>Where observable, evidence supporting those explanations should remain visible.</p>
+<p>The detector evaluates whether the current behavior remains coherent with the claimed workflow.</p>
+<hr>
+<h1 id="19-canary-resources">19. Canary Resources</h1>
+<p>A concrete implementation may use adapter-controlled canary resources where appropriate and authorized.</p>
+<p>A canary transition may provide strong evidence that unexpected mutation reached a monitored surface.</p>
+<p>It does not independently establish:</p>
+<ul>
+<li>ransomware;</li>
+<li>malicious intent;</li>
+<li>actor attribution;</li>
+<li>scope outside the canary's observation boundary.</li>
+</ul>
+<p>Canaries should contain no sensitive user information.</p>
+<hr>
+<h1 id="20-capability-declaration">20. Capability Declaration</h1>
+<p>Every concrete macOS adapter should provide:</p>
+<p><code>tf.platform-capabilities/v0.1</code></p>
+<p>The declaration describes the implementation actually deployed.</p>
+<p>Possible observation capabilities include:</p>
+<ul>
+<li>event observation;</li>
+<li>actor identity;</li>
+<li>actor lineage;</li>
+<li>resource classification;</li>
+<li>network context;</li>
+<li>origin/transport distinction;</li>
+<li>baseline access;</li>
+<li>resource metadata;</li>
+<li>recovery-state observation.</li>
+</ul>
+<p>Possible enforcement capabilities include:</p>
+<ul>
+<li>write denial;</li>
+<li>actor containment;</li>
+<li>resource isolation;</li>
+<li>network isolation;</li>
+<li>quarantine;</li>
+<li>permission restriction;</li>
+<li>actor disablement;</li>
+<li>session termination.</li>
+</ul>
+<p>Possible recovery capabilities include:</p>
+<ul>
+<li>recovery;</li>
+<li>rollback;</li>
+<li>snapshot restoration;</li>
+<li>resource restoration;</li>
+<li>configuration restoration.</li>
+</ul>
+<p>Possible verification capabilities include:</p>
+<ul>
+<li>post-action observation;</li>
+<li>state comparison;</li>
+<li>persistence detection;</li>
+<li>reappearance detection;</li>
+<li>recovery verification.</li>
+</ul>
+<p>Each capability must be declared as:</p>
+<ul>
+<li><code>supported</code></li>
+<li><code>partial</code></li>
+<li><code>unsupported</code></li>
+<li><code>unknown</code></li>
+</ul>
+<hr>
+<h1 id="21-capability-profiles">21. Capability Profiles</h1>
+<p>A macOS implementation may expose substantially different profiles.</p>
+<h2 id="application-profile">Application Profile</h2>
+<p>Useful resource-level observation with limited endpoint-wide visibility or enforcement.</p>
+<h2 id="endpoint-observation-profile">Endpoint Observation Profile</h2>
+<p>Broader system-event evidence where an appropriately configured Endpoint Security implementation is available.</p>
+<h2 id="endpoint-authorization-profile">Endpoint Authorization Profile</h2>
+<p>A profile in which applicable native operations can participate in authorization decisions.</p>
+<h2 id="hybrid-profile">Hybrid Profile</h2>
+<p>Multiple authorized event and resource sources correlated through the adapter.</p>
+<p>The profile name does not determine capability by itself.</p>
+<p>The actual <code>tf.platform-capabilities/v0.1</code> declaration remains authoritative.</p>
+<hr>
+<h1 id="22-capability-is-not-authority">22. Capability Is Not Authority</h1>
+<p>Availability of a native macOS mechanism does not authorize its use.</p>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Framework capability ≠ adapter capability</strong></p>
+<p><strong>Adapter capability ≠ authority</strong></p>
+<p><strong>Authority ≠ execution</strong></p>
+</blockquote>
+<p>The containment decision must establish the governing response boundary independently of technical support.</p>
+<hr>
+<h1 id="23-authorization-event-handling">23. Authorization-Event Handling</h1>
+<p>Where a concrete implementation legitimately supports Endpoint Security authorization events, it may map an authorized structural response onto a supported allow-or-deny decision.</p>
+<p>This is a pre-execution intervention opportunity.</p>
+<p>The adapter must still preserve:</p>
+<ul>
+<li>requested action;</li>
+<li>relevant native event;</li>
+<li>decision authority;</li>
+<li>actual native response;</li>
+<li>execution result;</li>
+<li>resulting structural state.</li>
+</ul>
+<p>A native denial does not establish that the wider destructive pattern is resolved.</p>
+<p>It establishes that the bounded operation was denied.</p>
+<hr>
+<h1 id="24-notification-event-handling">24. Notification-Event Handling</h1>
+<p>Notification events provide post-event evidence.</p>
+<p>They may contribute to:</p>
+<ul>
+<li>transition reconstruction;</li>
+<li>actor lineage;</li>
+<li>baseline assessment;</li>
+<li>pattern correlation;</li>
+<li>verification.</li>
+</ul>
+<p>They must not be represented as pre-execution control.</p>
+<p>The adapter should preserve whether evidence came from:</p>
+<p><strong>notification</strong></p>
+<p>or:</p>
+<p><strong>authorization</strong></p>
+<p>when that distinction materially affects interpretation.</p>
+<hr>
+<h1 id="25-containment-mapping">25. Containment Mapping</h1>
+<p>An authorized containment decision may request responses such as:</p>
+<ul>
+<li>increase observation;</li>
+<li>notify an authorized operator;</li>
+<li>deny resource writes;</li>
+<li>contain an actor;</li>
+<li>isolate a resource set;</li>
+<li>isolate a network scope;</li>
+<li>quarantine affected resources;</li>
+<li>restrict actor permissions;</li>
+<li>disable an actor;</li>
+<li>preserve evidence;</li>
+<li>prepare recovery;</li>
+<li>initiate recovery;</li>
+<li>request manual review.</li>
+</ul>
+<p>A concrete macOS adapter maps only supported and authorized actions onto native mechanisms.</p>
+<p>This generic specification intentionally does not mandate one implementation for each structural response.</p>
+<hr>
+<h1 id="26-write-denial">26. Write Denial</h1>
+<p>Where the concrete implementation possesses an appropriate authorized mechanism for denying an applicable write operation, it may map:</p>
+<p><code>deny_resource_writes</code></p>
+<p>onto that mechanism.</p>
+<p>The adapter must preserve the actual scope.</p>
+<p>A denied operation on one resource or bounded target does not establish:</p>
+<ul>
+<li>actor-wide containment;</li>
+<li>filesystem-wide containment;</li>
+<li>host-wide containment;</li>
+<li>cross-environment containment.</li>
+</ul>
+<p>The outcome records what was actually denied.</p>
+<hr>
+<h1 id="27-actor-containment">27. Actor Containment</h1>
+<p>Where supported and authorized, an adapter may attempt an action intended to contain a relevant actor.</p>
+<p>The exact native mechanism remains implementation-specific.</p>
+<p>The outcome should preserve:</p>
+<ul>
+<li>actor target;</li>
+<li>containment scope;</li>
+<li>whether execution was attempted;</li>
+<li>what actually executed;</li>
+<li>direct effects;</li>
+<li>errors;</li>
+<li>limitations.</li>
+</ul>
+<p>Containing a local actor does not establish that a remote or synchronized origin has been resolved.</p>
+<hr>
+<h1 id="28-resource-isolation">28. Resource Isolation</h1>
+<p>Where a concrete implementation can isolate or restrict an affected resource set, it should preserve:</p>
+<ul>
+<li>resource scope;</li>
+<li>access boundary;</li>
+<li>reversibility;</li>
+<li>rollback availability;</li>
+<li>actual resulting state.</li>
+</ul>
+<p>Resource isolation is distinct from:</p>
+<ul>
+<li>actor containment;</li>
+<li>network isolation;</li>
+<li>recovery;</li>
+<li>resolution.</li>
+</ul>
+<hr>
+<h1 id="29-network-isolation">29. Network Isolation</h1>
+<p>Some concrete deployments may have a supported mechanism for limiting network communication.</p>
+<p>This generic adapter does not assume such capability.</p>
+<p>Where available, the adapter must describe its actual scope and limitations.</p>
+<p>Network isolation of a local execution context does not automatically establish containment of:</p>
+<ul>
+<li>remote state;</li>
+<li>cloud-backed state;</li>
+<li>already propagated resources;</li>
+<li>another device.</li>
+</ul>
+<hr>
+<h1 id="30-fallback">30. Fallback</h1>
+<p>If a requested response cannot be executed and fallback is permitted, the adapter may select a bounded alternative.</p>
+<p>Conceptually:</p>
+<p><strong>Requested</strong></p>
+<p><code>deny_resource_writes</code></p>
+<p>↓</p>
+<p><strong>native capability unavailable for requested scope</strong></p>
+<p>↓</p>
+<p><strong>Fallback</strong></p>
+<p><code>contain_actor</code></p>
+<p>or:</p>
+<p><strong>Requested</strong></p>
+<p><code>contain_actor</code></p>
+<p>↓</p>
+<p><strong>authorization unavailable</strong></p>
+<p>↓</p>
+<p><strong>Fallback</strong></p>
+<p><code>notify_authorized_operator</code></p>
+<p>The actual fallback is policy-driven.</p>
+<p>The adapter records the degradation honestly.</p>
+<hr>
+<h1 id="31-outcome-reporting">31. Outcome Reporting</h1>
+<p>Every attempted response should produce or contribute to:</p>
+<p><code>tf.response-outcome/v0.1</code></p>
+<p>Relevant execution states include:</p>
+<ul>
+<li><code>not_attempted</code></li>
+<li><code>blocked</code></li>
+<li><code>unsupported</code></li>
+<li><code>authorization_required</code></li>
+<li><code>attempted</code></li>
+<li><code>partially_executed</code></li>
+<li><code>executed</code></li>
+<li><code>failed</code></li>
+<li><code>unknown</code></li>
+</ul>
+<p>The outcome should preserve:</p>
+<ul>
+<li>requested response;</li>
+<li>execution attempt;</li>
+<li>executed response;</li>
+<li>fallback;</li>
+<li>capability context;</li>
+<li>actual scope;</li>
+<li>direct effects;</li>
+<li>side effects;</li>
+<li>errors;</li>
+<li>warnings;</li>
+<li>rollback state;</li>
+<li>execution provenance.</li>
+</ul>
+<hr>
+<h1 id="32-native-success-is-not-structural-resolution">32. Native Success Is Not Structural Resolution</h1>
+<p>A macOS mechanism may report that its bounded operation succeeded.</p>
+<p>That means only that the operation completed as reported within its native boundary.</p>
+<p>It does not establish:</p>
+<ul>
+<li>that the destructive pattern stopped everywhere;</li>
+<li>that another actor did not continue it;</li>
+<li>that synchronized state did not reintroduce it;</li>
+<li>that affected resources were recovered;</li>
+<li>that the originating condition disappeared.</li>
+</ul>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Execution success ≠ verification success</strong></p>
+</blockquote>
+<hr>
+<h1 id="33-verification">33. Verification</h1>
+<p>Post-response verification should rescan the authorized environment with the capabilities actually available.</p>
+<p>Relevant questions include:</p>
+<ul>
+<li>Are destructive transitions continuing?</li>
+<li>Is the relevant actor still active?</li>
+<li>Did another actor continue the same pattern?</li>
+<li>Did resource scope continue to expand?</li>
+<li>Did synchronization reintroduce the transition?</li>
+<li>Did the condition reappear?</li>
+<li>Did recovery state change?</li>
+<li>Are protected resources now stable?</li>
+<li>Did the containment action produce material side effects?</li>
+<li>Is the observation scope sufficient to make the intended claim?</li>
+</ul>
+<p>Verification may produce:</p>
+<ul>
+<li><code>contained</code></li>
+<li><code>partially_contained</code></li>
+<li><code>persistent</code></li>
+<li><code>reappeared</code></li>
+<li><code>resolved</code></li>
+<li><code>partially_resolved</code></li>
+<li><code>new_condition_detected</code></li>
+<li><code>mixed</code></li>
+<li><code>unable_to_verify</code></li>
+</ul>
+<hr>
+<h1 id="34-verification-scope">34. Verification Scope</h1>
+<p>Verification conclusions must remain bounded.</p>
+<p>For example:</p>
+<p><strong>No further destructive transition observed in the protected resource set</strong></p>
+<p>does not imply:</p>
+<p><strong>The entire Mac is clean</strong></p>
+<p>Likewise:</p>
+<p><strong>Local actor no longer observed</strong></p>
+<p>does not imply:</p>
+<p><strong>Remote origin resolved</strong></p>
+<p>The verification object's observation scope and limitations determine the strength of the conclusion.</p>
+<hr>
+<h1 id="35-recovery">35. Recovery</h1>
+<p>Recovery capability depends on the concrete resource and deployment.</p>
+<p>An implementation may have visibility into or support for:</p>
+<ul>
+<li>preserved originals;</li>
+<li>backup state;</li>
+<li>historical versions;</li>
+<li>snapshots;</li>
+<li>synchronized history;</li>
+<li>recovery resources;</li>
+<li>other configured restoration mechanisms.</li>
+</ul>
+<p>The adapter should distinguish:</p>
+<p><strong>mechanism exists</strong></p>
+<p>from:</p>
+<p><strong>usable recovery state exists</strong></p>
+<p>from:</p>
+<p><strong>recovery requested</strong></p>
+<p>from:</p>
+<p><strong>recovery attempted</strong></p>
+<p>from:</p>
+<p><strong>recovery completed</strong></p>
+<p>from:</p>
+<p><strong>restored state verified</strong></p>
+<hr>
+<h1 id="36-synchronization">36. Synchronization</h1>
+<p>For synchronized resources, the macOS adapter should cooperate with the Cloud / Synchronization adapter.</p>
+<p>The macOS side may establish:</p>
+<blockquote>
+<p><strong>This local actor or synchronization client materialized this transition.</strong></p>
+</blockquote>
+<p>The cloud-sync side may establish:</p>
+<blockquote>
+<p><strong>This transition originated elsewhere or propagated across an environment boundary.</strong></p>
+</blockquote>
+<p>The combined lineage should preserve dependency rather than turning each observation into a separate independent origin.</p>
+<hr>
+<h1 id="37-mounted-and-remote-resources">37. Mounted and Remote Resources</h1>
+<p>A macOS adapter may observe transitions affecting resources whose storage origin lies elsewhere.</p>
+<p>For such resources:</p>
+<p><strong>local observation</strong></p>
+<p>does not automatically establish:</p>
+<p><strong>local origin</strong></p>
+<p>or:</p>
+<p><strong>local recovery authority</strong>.</p>
+<p>The adapter should preserve resource scope, transport relationships, environment relationships, and available recovery context where known.</p>
+<hr>
+<h1 id="38-privacy-and-redaction">38. Privacy and Redaction</h1>
+<p>macOS endpoint observations may expose sensitive resource and actor information.</p>
+<p>The adapter should minimize what leaves the local environment.</p>
+<p>Preferred shared information includes:</p>
+<ul>
+<li>privacy-preserving resource ID;</li>
+<li>resource class;</li>
+<li>resource scope;</li>
+<li>sensitivity;</li>
+<li>transition type;</li>
+<li>transition timing;</li>
+<li>actor category;</li>
+<li>actor relationship;</li>
+<li>baseline state;</li>
+<li>preservation state;</li>
+<li>recovery state;</li>
+<li>synchronization context;</li>
+<li>platform provenance.</li>
+</ul>
+<p>Avoid exporting unnecessary:</p>
+<ul>
+<li>document contents;</li>
+<li>personal filenames;</li>
+<li>raw absolute paths;</li>
+<li>credentials;</li>
+<li>authentication tokens;</li>
+<li>private keys;</li>
+<li>sensitive process arguments;</li>
+<li>unrelated application data;</li>
+<li>unrelated account information.</li>
+</ul>
+<hr>
+<h1 id="39-credential-boundary">39. Credential Boundary</h1>
+<p>The shared detector does not require authentication secrets.</p>
+<p>The macOS adapter must not emit:</p>
+<ul>
+<li>plaintext passwords;</li>
+<li>private keys;</li>
+<li>session secrets;</li>
+<li>authentication tokens;</li>
+<li>cloud credentials;</li>
+<li>recovery secrets.</li>
+</ul>
+<p>Where identity context is structurally relevant, a bounded account or authority reference should be used instead.</p>
+<hr>
+<h1 id="40-local-processing-preference">40. Local Processing Preference</h1>
+<p>Sensitive native operations should remain local when normalized structure is sufficient.</p>
+<p>Candidate local operations include:</p>
+<ul>
+<li>native-event handling;</li>
+<li>actor correlation;</li>
+<li>resource classification;</li>
+<li>path handling;</li>
+<li>identifier pseudonymization;</li>
+<li>baseline comparison;</li>
+<li>source deduplication;</li>
+<li>state comparison;</li>
+<li>redaction;</li>
+<li>native-to-shared transition mapping.</li>
+</ul>
+<p>The objective is not to centralize raw endpoint activity.</p>
+<p>It is to expose enough structural evidence for reliable analysis.</p>
+<hr>
+<h1 id="41-event-loss-and-observation-gaps">41. Event Loss and Observation Gaps</h1>
+<p>A concrete adapter should preserve known gaps in event coverage.</p>
+<p>Examples include:</p>
+<ul>
+<li>observer initialization gaps;</li>
+<li>event-stream disruption;</li>
+<li>unavailable native source;</li>
+<li>adapter restart;</li>
+<li>temporary loss of authorization;</li>
+<li>lost or incomplete telemetry;</li>
+<li>unobserved resource scope.</li>
+</ul>
+<p>An observation gap must remain a gap.</p>
+<p>Silence during the gap is not evidence that no transition occurred.</p>
+<hr>
+<h1 id="42-restart-and-continuity">42. Restart and Continuity</h1>
+<p>The adapter should preserve enough state to distinguish:</p>
+<ul>
+<li>uninterrupted observation;</li>
+<li>resumed observation;</li>
+<li>known observation gap;</li>
+<li>baseline reset;</li>
+<li>unknown continuity.</li>
+</ul>
+<p>This is particularly important when downstream analysis derives:</p>
+<ul>
+<li>activity rate;</li>
+<li>acceleration;</li>
+<li>persistence;</li>
+<li>reappearance;</li>
+<li>scope expansion.</li>
+</ul>
+<p>A restarted observer must not silently imply continuous evidence.</p>
+<hr>
+<h1 id="43-temporal-ordering">43. Temporal Ordering</h1>
+<p>When multiple observation sources are correlated, ordering should follow the best available source evidence.</p>
+<p>The adapter should preserve:</p>
+<ul>
+<li>native event time;</li>
+<li>normalization time;</li>
+<li>sequence context where available;</li>
+<li>ordering uncertainty.</li>
+</ul>
+<p>The detector should not infer causal order merely from the order in which normalized events arrived.</p>
+<hr>
+<h1 id="44-known-limitations">44. Known Limitations</h1>
+<p>Concrete macOS adapters should document implementation-specific limitations such as:</p>
+<ul>
+<li>unavailable Endpoint Security capability;</li>
+<li>entitlement or deployment constraints;</li>
+<li>application-only visibility;</li>
+<li>incomplete filesystem scope;</li>
+<li>inaccessible resources;</li>
+<li>incomplete actor identity;</li>
+<li>incomplete actor lineage;</li>
+<li>mounted-resource ambiguity;</li>
+<li>synchronization ambiguity;</li>
+<li>incomplete network context;</li>
+<li>incomplete recovery state;</li>
+<li>unsupported enforcement actions;</li>
+<li>authorization restrictions;</li>
+<li>event gaps;</li>
+<li>incomplete post-response verification.</li>
+</ul>
+<p>Limitations belong in the structural record.</p>
+<hr>
+<h1 id="45-capability-posture">45. Capability Posture</h1>
+<p>The generic macOS adapter begins from:</p>
+<table>
+<thead>
+<tr>
+<th>Capability</th>
+<th>Generic posture</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Event observation</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Actor identity</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Actor lineage</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Resource classification</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Network context</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Origin / transport distinction</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Baseline access</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Recovery-state observation</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Write denial</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Actor containment</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Resource isolation</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Network isolation</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Quarantine</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Permission restriction</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Actor disablement</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Session termination</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Recovery</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Rollback</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Snapshot restore</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Post-action observation</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>State comparison</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Persistence detection</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Reappearance detection</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Recovery verification</td>
+<td><code>unknown</code></td>
+</tr>
+</tbody>
+</table>
+<p>This does not mean macOS lacks these capabilities.</p>
+<p>It means the generic specification does not claim that a particular implementation possesses them.</p>
+<hr>
+<h1 id="46-why-the-generic-posture-is-unknown">46. Why the Generic Posture Is Unknown</h1>
+<p>Apple documents Endpoint Security as a macOS facility for monitoring system events, with support for notification and authorization handling for supported monitored operations.</p>
+<p>That establishes platform capability.</p>
+<p>It does not establish that:</p>
+<ul>
+<li>a given adapter uses Endpoint Security;</li>
+<li>the adapter has the required deployment conditions;</li>
+<li>the relevant event is exposed;</li>
+<li>the requested resource is within scope;</li>
+<li>the required authorization exists;</li>
+<li>another response mechanism is available.</li>
+</ul>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Platform capability is evidence about the platform. Adapter capability is evidence about the implementation.</strong></p>
+</blockquote>
+<p>The latter belongs in <code>tf.platform-capabilities/v0.1</code>.</p>
+<hr>
+<h1 id="47-macos-adapter-invariants">47. macOS Adapter Invariants</h1>
+<h2 id="macos-inv-01-platform-capability-adapter-capability">MACOS-INV-01 — Platform Capability ≠ Adapter Capability</h2>
+<p>The existence of a macOS framework does not establish that a concrete adapter can use it.</p>
+<h2 id="macos-inv-02-notification-authorization">MACOS-INV-02 — Notification ≠ Authorization</h2>
+<p>An event notification and an authorization opportunity have different structural semantics.</p>
+<h2 id="macos-inv-03-observation-boundary-host-boundary">MACOS-INV-03 — Observation Boundary ≠ Host Boundary</h2>
+<p>A bounded observer must not imply visibility across the entire Mac.</p>
+<h2 id="macos-inv-04-native-event-ransomware-verdict">MACOS-INV-04 — Native Event ≠ Ransomware Verdict</h2>
+<p>A system or filesystem event is evidence, not a domain conclusion.</p>
+<h2 id="macos-inv-05-actor-identity-intent">MACOS-INV-05 — Actor Identity ≠ Intent</h2>
+<p>A process, application, service, script, system component, or user identity does not establish motive.</p>
+<h2 id="macos-inv-06-trusted-actor-safe-transition">MACOS-INV-06 — Trusted Actor ≠ Safe Transition</h2>
+<p>Known identity or trust context must not suppress contradictory destructive behavior.</p>
+<h2 id="macos-inv-07-actor-origin">MACOS-INV-07 — Actor ≠ Origin</h2>
+<p>A local actor may transport or materialize a transition originating elsewhere.</p>
+<h2 id="macos-inv-08-multiple-sources-independent-transitions">MACOS-INV-08 — Multiple Sources ≠ Independent Transitions</h2>
+<p>Several native observations may describe one underlying structural change.</p>
+<h2 id="macos-inv-09-capability-authority">MACOS-INV-09 — Capability ≠ Authority</h2>
+<p>Technical support for an action does not authorize its use.</p>
+<h2 id="macos-inv-10-authorization-opportunity-policy-authorization">MACOS-INV-10 — Authorization Opportunity ≠ Policy Authorization</h2>
+<p>A native event that can technically be allowed or denied does not itself establish the policy decision to deny it.</p>
+<h2 id="macos-inv-11-requested-response-executed-response">MACOS-INV-11 — Requested Response ≠ Executed Response</h2>
+<p>Unsupported, blocked, partial, failed, and fallback outcomes remain explicit.</p>
+<h2 id="macos-inv-12-execution-resolution">MACOS-INV-12 — Execution ≠ Resolution</h2>
+<p>A successful native response does not prove that the broader destructive pattern has resolved.</p>
+<h2 id="macos-inv-13-local-containment-remote-containment">MACOS-INV-13 — Local Containment ≠ Remote Containment</h2>
+<p>Local intervention does not establish that synchronized, cloud, or other remote origin state is resolved.</p>
+<h2 id="macos-inv-14-recovery-capability-verified-restoration">MACOS-INV-14 — Recovery Capability ≠ Verified Restoration</h2>
+<p>Availability of a recovery mechanism does not establish successful resource recovery.</p>
+<h2 id="macos-inv-15-observation-gap-no-activity">MACOS-INV-15 — Observation Gap ≠ No Activity</h2>
+<p>Unavailable telemetry cannot be interpreted as proof that no transition occurred.</p>
+<h2 id="macos-inv-16-privacy-survives-normalization">MACOS-INV-16 — Privacy Survives Normalization</h2>
+<p>Raw content, resource paths, credentials, and unrelated endpoint telemetry should remain local when structural references are sufficient.</p>
+<hr>
+<h1 id="48-non-goals">48. Non-Goals</h1>
+<p>The macOS adapter is not:</p>
+<ul>
+<li>a malware-signature engine;</li>
+<li>a ransomware classifier;</li>
+<li>an attribution system;</li>
+<li>a guarantee of endpoint-wide visibility;</li>
+<li>a guarantee that Endpoint Security is available to every implementation;</li>
+<li>a guarantee of process attribution;</li>
+<li>a guarantee of containment;</li>
+<li>a guarantee of recovery;</li>
+<li>an authorization engine;</li>
+<li>a mechanism for bypassing macOS security controls;</li>
+<li>a reason to centralize raw user content or credentials.</li>
+</ul>
+<p>Its role is narrower:</p>
+<blockquote>
+<p><strong>Observe authorized macOS structural evidence, normalize it faithfully, declare actual capabilities and limitations, map separately authorized responses onto supported mechanisms, record what actually happened, and support bounded verification.</strong></p>
+</blockquote>
+<hr>
+<h1 id="49-shared-contracts">49. Shared Contracts</h1>
+<p>The macOS adapter participates in:</p>
+<ul>
+<li><code>tf.resource-transition/v0.1</code></li>
+<li><code>tf.platform-capabilities/v0.1</code></li>
+<li><code>tf.containment-decision/v0.1</code></li>
+<li><code>tf.response-outcome/v0.1</code></li>
+<li><code>tf.verification/v0.1</code></li>
+</ul>
+<p>The Ransomware Structural Pattern Detector consumes its normalized observations and may produce:</p>
+<ul>
+<li><code>tf.structural-pattern/v0.1</code></li>
+</ul>
+<p>The macOS adapter does not redefine those contracts.</p>
+<hr>
+<h1 id="50-relationship-to-cloud-synchronization">50. Relationship to Cloud / Synchronization</h1>
+<p>For synchronized resources, the macOS adapter should cooperate with the Cloud / Synchronization adapter.</p>
+<p>The local adapter may establish:</p>
+<blockquote>
+<p><strong>This actor or synchronization component materialized the transition on this Mac.</strong></p>
+</blockquote>
+<p>The cloud-sync adapter may establish:</p>
+<blockquote>
+<p><strong>The transition originated or propagated through another environment.</strong></p>
+</blockquote>
+<p>The detector may correlate both pieces of evidence while preserving their dependency.</p>
+<hr>
+<h1 id="51-relationship-to-ios-ipados">51. Relationship to iOS / iPadOS</h1>
+<p>The macOS and iOS / iPadOS adapters share the same structural grammar but intentionally do not assume equal capability.</p>
+<p>The macOS adapter may be able to consume system-level observation sources unavailable to a conventional application-scoped mobile adapter.</p>
+<p>The exact capability of either adapter remains deployment-specific.</p>
+<p>The grammar stays stable while the capability declaration changes.</p>
+<p>This is the intended architecture:</p>
+<blockquote>
+<p><strong>Portable semantics, explicit platform variance.</strong></p>
+</blockquote>
+<hr>
+<h1 id="canonical-summary">Canonical Summary</h1>
+<blockquote>
+<p><strong>The macOS adapter maps authorized macOS resource, actor, and supported system-event observations into the Shared Structural Event Grammar while preserving the distinction between platform capability, adapter capability, policy authority, execution, and verified state.</strong></p>
+</blockquote>
+<p>Its platform rule is:</p>
+<blockquote>
+<p><strong>A macOS API establishes a possible platform mechanism, not an automatic adapter capability.</strong></p>
+</blockquote>
+<p>Its observation rule is:</p>
+<blockquote>
+<p><strong>Normalize what the deployed observer actually sees and preserve the source of that evidence.</strong></p>
+</blockquote>
+<p>Its Endpoint Security rule is:</p>
+<blockquote>
+<p><strong>Notification describes evidence of a monitored action. Authorization provides a bounded opportunity to allow or deny a supported action. Neither independently establishes ransomware.</strong></p>
+</blockquote>
+<p>Its actor rule is:</p>
+<blockquote>
+<p><strong>Known or trusted identity does not override contradictory destructive behavior, and the locally visible actor may not be the ultimate origin.</strong></p>
+</blockquote>
+<p>Its response rule is:</p>
+<blockquote>
+<p><strong>A native control may implement an authorized structural response only within its actual supported scope.</strong></p>
+</blockquote>
+<p>Its continuity rule is:</p>
+<blockquote>
+<p><strong>Observation gaps remain evidence gaps.</strong></p>
+</blockquote>
+<p>Its privacy rule is:</p>
+<blockquote>
+<p><strong>Keep raw endpoint detail local whenever privacy-preserving structural representation is sufficient.</strong></p>
+</blockquote>
+<p>Its verification rule is:</p>
+<blockquote>
+<p><strong>A successfully denied or contained operation is evidence about that operation, not proof that the entire destructive pattern has resolved.</strong></p>
+</blockquote>
+  </main>
+</body>
+</html>

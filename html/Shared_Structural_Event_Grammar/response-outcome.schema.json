@@ -1,0 +1,529 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://triadicframeworks.org/schemas/shared-structural-event-grammar/response-outcome.schema.json",
+  "title": "Response Outcome",
+  "description": "A platform-neutral record of what actually occurred after a bounded response decision was submitted for execution. The outcome preserves requested-versus-executed response, capability limitations, fallback behavior, execution status, side effects, and provenance without asserting that the underlying structural condition was resolved.",
+  "type": "object",
+  "additionalProperties": false,
+
+  "required": [
+    "schema",
+    "outcome_id",
+    "decision_ref",
+    "requested_response",
+    "execution",
+    "executed_response",
+    "verification_required",
+    "provenance"
+  ],
+
+  "properties": {
+    "schema": {
+      "const": "tf.response-outcome/v0.1",
+      "description": "Canonical schema-family identifier and version."
+    },
+
+    "outcome_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Unique identifier for this response outcome."
+    },
+
+    "decision_ref": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Reference to the tf.containment-decision object that requested or authorized the response."
+    },
+
+    "pattern_ref": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Optional direct reference to the structural pattern associated with the originating decision."
+    },
+
+    "requested_response": {
+      "$ref": "#/$defs/response"
+    },
+
+    "execution": {
+      "$ref": "#/$defs/execution"
+    },
+
+    "executed_response": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/response"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Response actually executed by the platform or adapter. Null means no response action was executed."
+    },
+
+    "fallback": {
+      "$ref": "#/$defs/fallback"
+    },
+
+    "capability_context": {
+      "$ref": "#/$defs/capabilityContext"
+    },
+
+    "effects": {
+      "type": "array",
+      "description": "Directly observed execution effects. These describe consequences of the response operation, not verification of the underlying structural condition.",
+      "items": {
+        "$ref": "#/$defs/effect"
+      },
+      "default": []
+    },
+
+    "side_effects": {
+      "type": "array",
+      "description": "Observed or reported secondary effects associated with execution.",
+      "items": {
+        "$ref": "#/$defs/effect"
+      },
+      "default": []
+    },
+
+    "errors": {
+      "type": "array",
+      "description": "Errors encountered while attempting the response.",
+      "items": {
+        "$ref": "#/$defs/executionMessage"
+      },
+      "default": []
+    },
+
+    "warnings": {
+      "type": "array",
+      "description": "Non-fatal conditions or limitations relevant to interpretation of the outcome.",
+      "items": {
+        "$ref": "#/$defs/executionMessage"
+      },
+      "default": []
+    },
+
+    "rollback": {
+      "$ref": "#/$defs/rollback"
+    },
+
+    "verification_required": {
+      "type": "boolean",
+      "description": "Whether a subsequent verification pass is required. Successful execution must not by itself be interpreted as proof that the underlying condition was resolved."
+    },
+
+    "verification_ref": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Optional reference to the tf.verification object produced after this outcome."
+    },
+
+    "provenance": {
+      "$ref": "#/$defs/provenance"
+    },
+
+    "extensions": {
+      "type": "object",
+      "description": "Domain-specific or platform-specific execution data. Extensions must not redefine canonical outcome semantics or convert execution success into an implicit resolution claim.",
+      "additionalProperties": true
+    }
+  },
+
+  "$defs": {
+    "response": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "action"
+      ],
+      "properties": {
+        "action": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Response operation requested or executed. Domain-specific controlled vocabularies may be used."
+        },
+
+        "target_ref": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Reference to the actor, resource, scope, or structural target of the response."
+        },
+
+        "scope": {
+          "type": "string",
+          "enum": [
+            "single_resource",
+            "resource_set",
+            "actor",
+            "process_tree",
+            "session",
+            "account",
+            "device",
+            "network",
+            "environment",
+            "context",
+            "domain_defined"
+          ],
+          "description": "Structural scope of the response."
+        },
+
+        "priority": {
+          "type": "string",
+          "enum": [
+            "informational",
+            "low",
+            "moderate",
+            "high",
+            "critical"
+          ],
+          "description": "Priority associated with the response."
+        }
+      }
+    },
+
+    "execution": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "attempted"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "not_attempted",
+            "blocked",
+            "unsupported",
+            "authorization_required",
+            "attempted",
+            "partially_executed",
+            "executed",
+            "failed",
+            "unknown"
+          ],
+          "description": "Execution state of the requested response. This field describes action execution, not resolution of the underlying structural condition."
+        },
+
+        "attempted": {
+          "type": "boolean",
+          "description": "Whether execution of a response was actually attempted."
+        },
+
+        "started_at": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Optional time at which execution began."
+        },
+
+        "completed_at": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Optional time at which the execution attempt ended."
+        },
+
+        "executor_ref": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Reference to the adapter, system component, human operator, or execution mechanism responsible for the attempt."
+        },
+
+        "authorization_ref": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional reference to the authorization under which execution occurred."
+        },
+
+        "reason": {
+          "type": "string",
+          "description": "Optional bounded explanation of the execution status."
+        }
+      }
+    },
+
+    "fallback": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "used"
+      ],
+      "properties": {
+        "used": {
+          "type": "boolean",
+          "description": "Whether the executed response differed from the requested response because a fallback path was used."
+        },
+
+        "reason": {
+          "type": "string",
+          "enum": [
+            "capability_unavailable",
+            "capability_partial",
+            "authorization_boundary",
+            "platform_constraint",
+            "safety_boundary",
+            "execution_failure",
+            "policy_constraint",
+            "other"
+          ],
+          "description": "Reason a fallback response was selected."
+        },
+
+        "requested_action": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Original requested action when useful for explicit comparison."
+        },
+
+        "fallback_action": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Alternative action executed or attempted."
+        },
+
+        "degradation": {
+          "type": "string",
+          "enum": [
+            "none",
+            "equivalent",
+            "weaker",
+            "different_scope",
+            "manual_required",
+            "unknown"
+          ],
+          "description": "Relationship between the requested response and the fallback response."
+        }
+      }
+    },
+
+    "capabilityContext": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "capabilities_ref": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Reference to the tf.platform-capabilities declaration applicable at execution time."
+        },
+
+        "required_capabilities": {
+          "type": "array",
+          "description": "Capabilities required by the requested response.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        },
+
+        "available_capabilities": {
+          "type": "array",
+          "description": "Relevant capabilities actually available to the executing adapter.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        },
+
+        "unavailable_capabilities": {
+          "type": "array",
+          "description": "Required or relevant capabilities unavailable at execution time.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        },
+
+        "limitations": {
+          "type": "array",
+          "description": "Capability limitations encountered during execution.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        }
+      }
+    },
+
+    "effect": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "state"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Category of directly observed execution effect."
+        },
+
+        "state": {
+          "type": "string",
+          "enum": [
+            "observed",
+            "reported",
+            "inferred",
+            "unknown"
+          ],
+          "description": "Evidence state associated with the effect."
+        },
+
+        "target_ref": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional reference to the affected actor, resource, session, environment, or context."
+        },
+
+        "description": {
+          "type": "string",
+          "description": "Optional bounded description of the effect."
+        },
+
+        "evidence_refs": {
+          "type": "array",
+          "description": "References supporting the reported effect.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        }
+      }
+    },
+
+    "executionMessage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "code"
+      ],
+      "properties": {
+        "code": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Machine-readable execution condition identifier."
+        },
+
+        "message": {
+          "type": "string",
+          "description": "Optional human-readable execution condition."
+        },
+
+        "source": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional component or adapter reporting the condition."
+        },
+
+        "retryable": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Whether another execution attempt may be appropriate. Null indicates that retryability is unknown."
+        }
+      }
+    },
+
+    "rollback": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "available": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Whether a rollback path is available after execution. Null indicates that availability is unknown."
+        },
+
+        "performed": {
+          "type": "boolean",
+          "description": "Whether rollback was actually performed."
+        },
+
+        "rollback_ref": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional reference to the rollback procedure, recovery object, snapshot, or resulting rollback record."
+        },
+
+        "status": {
+          "type": "string",
+          "enum": [
+            "not_requested",
+            "not_attempted",
+            "attempted",
+            "partial",
+            "completed",
+            "failed",
+            "unknown"
+          ],
+          "description": "Execution state of rollback when applicable."
+        }
+      }
+    },
+
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "producer",
+        "created_at"
+      ],
+      "properties": {
+        "producer": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Adapter, execution system, human operator, orchestration component, or other producer responsible for recording this outcome."
+        },
+
+        "created_at": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Time at which this outcome record was created."
+        },
+
+        "platform": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional platform or execution environment in which the response was attempted."
+        },
+
+        "adapter": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional adapter responsible for executing or reporting the response."
+        },
+
+        "adapter_version": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional version of the executing or reporting adapter."
+        },
+
+        "source_refs": {
+          "type": "array",
+          "description": "References to execution logs, platform responses, decision objects, or other lineage objects supporting this outcome.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        }
+      }
+    }
+  }
+}

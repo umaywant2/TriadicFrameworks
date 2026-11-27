@@ -1,1 +1,341 @@
+{
+  "module": {
+    "id": "profile-rectification",
+    "name": "Profile Rectification",
+    "version": "0.1.0",
+    "status": "experimental",
+    "type": "cross-cutting-orchestration",
+    "domain": [
+      "personal-safety",
+      "digital-hygiene",
+      "identity",
+      "structural-analysis",
+      "ai-context"
+    ],
+    "summary": "A consent-bound structural hygiene module that detects exposure, manipulation, exploitation, identity drift, and context contamination across authorized digital surfaces, then produces reversible, evidence-separated rectification pathways for humans and AI systems."
+  },
 
+  "purpose": {
+    "primary": "Inspect authorized digital or AI-context surfaces for structurally significant patterns while preserving consent, uncertainty, provenance, competing explanations, and user agency.",
+    "principle": "Inspect structure before content, ask before crossing privacy boundaries, and repair coherence without erasing lineage.",
+    "non_goals": [
+      "Determine guilt or malicious intent from isolated artifacts",
+      "Attribute harmful activity without sufficient evidence",
+      "Provide unrestricted surveillance of browser, account, or device data",
+      "Automatically perform destructive remediation",
+      "Automatically report findings to third parties",
+      "Replace platform-native security systems or specialized analyzers"
+    ]
+  },
+
+  "operator_chain": [
+    "consent",
+    "observe",
+    "detect",
+    "evaluate",
+    "rectify",
+    "verify"
+  ],
+
+  "operators": {
+    "consent": {
+      "purpose": "Establish explicit analytical and privacy boundaries before inspection.",
+      "questions": [
+        "What may be examined?",
+        "What must remain local?",
+        "What may be queried externally?",
+        "What must never appear in the report?"
+      ]
+    },
+
+    "observe": {
+      "purpose": "Acquire authorized observations while minimizing unnecessary content exposure.",
+      "candidate_surfaces": [
+        "browser_metadata",
+        "site_permissions",
+        "installed_extensions",
+        "download_metadata",
+        "redirect_chains",
+        "notification_permissions",
+        "account_identifiers",
+        "security_posture",
+        "user_supplied_artifacts",
+        "ai_context"
+      ]
+    },
+
+    "detect": {
+      "purpose": "Identify structural patterns, transition anomalies, coherence breaks, drift, authority inversions, and other relevant signatures without collapsing observation into interpretation."
+    },
+
+    "evaluate": {
+      "purpose": "Bound the meaning and significance of detected patterns.",
+      "dimensions": [
+        "evidence_strength",
+        "pattern_recurrence",
+        "source_independence",
+        "recency",
+        "potential_impact",
+        "alternative_explanations",
+        "confidence",
+        "intent_uncertainty",
+        "attribution_uncertainty"
+      ]
+    },
+
+    "rectify": {
+      "purpose": "Recommend the smallest proportionate corrective pathway supported by the evidence.",
+      "action_classes": [
+        "informational",
+        "reversible",
+        "disruptive",
+        "destructive",
+        "external_escalation"
+      ],
+      "default_authority": "recommend_only",
+      "explicit_authorization_required": true
+    },
+
+    "verify": {
+      "purpose": "Rescan the authorized scope after rectification and compare the resulting structural state against the prior baseline.",
+      "requirements": [
+        "preserve_lineage",
+        "compare_before_after",
+        "identify_persistent_findings",
+        "identify_resolved_findings",
+        "identify_new_findings",
+        "state_verification_limits"
+      ]
+    }
+  },
+
+  "operating_depths": {
+    "clean_check": {
+      "depth": 1,
+      "intrusiveness": "low",
+      "purpose": "Fast technical posture and structural anomaly review.",
+      "interpretive_boundary": "Avoid psychological or relational interpretation.",
+      "possible_status": [
+        "no_material_pattern_detected",
+        "minor_hygiene_items",
+        "review_recommended",
+        "immediate_attention_recommended"
+      ]
+    },
+
+    "structural_review": {
+      "depth": 2,
+      "intrusiveness": "moderate",
+      "purpose": "Correlate multiple authorized surfaces and evaluate recurring structural patterns with competing explanations."
+    },
+
+    "full_rectification": {
+      "depth": 3,
+      "intrusiveness": "explicitly_authorized",
+      "purpose": "Inspect, classify, rectify, establish a clean baseline, rescan, and record the resulting state.",
+      "automatic_destructive_actions": false
+    }
+  },
+
+  "editions": {
+    "human": {
+      "purpose": "Evaluate authorized digital-profile and environment signals for exposure, manipulation, exploitation, identity drift, and related structural anomalies.",
+      "default_mode": "clean_check"
+    },
+
+    "ai": {
+      "purpose": "Rectify contaminated or incoherent AI context while preserving source lineage and unresolved evidence.",
+      "sequence": [
+        "freeze",
+        "inventory",
+        "separate",
+        "validate",
+        "quarantine",
+        "reconstruct",
+        "rescan"
+      ],
+      "inspection_surfaces": [
+        "instruction_hierarchy",
+        "imported_memory",
+        "retrieval_sources",
+        "tool_results",
+        "user_supplied_claims",
+        "model_inference",
+        "unresolved_contradictions",
+        "unsupported_claims",
+        "prompt_injection_residue",
+        "role_confusion",
+        "authority_inversion",
+        "temporal_drift",
+        "citation_drift",
+        "persuasive_amplification",
+        "cross_session_contamination"
+      ]
+    }
+  },
+
+  "pattern_families": [
+    "exposure",
+    "impersonation",
+    "coercion",
+    "deception",
+    "extraction",
+    "persistence",
+    "isolation",
+    "amplification",
+    "obfuscation",
+    "identity_drift",
+    "authority_inversion",
+    "ai_context_contamination"
+  ],
+
+  "report": {
+    "layers": [
+      "status",
+      "scope",
+      "findings",
+      "pattern_map",
+      "rectification_plan",
+      "verification"
+    ],
+
+    "status_states": [
+      "clean",
+      "clean_with_hygiene_notes",
+      "unresolved_signals",
+      "pattern_detected",
+      "elevated_concern",
+      "critical_technical_exposure"
+    ],
+
+    "bounded_clean_statement": "No material pattern detected within the authorized scan scope.",
+
+    "finding_fields": [
+      "observation",
+      "evidence_source",
+      "pattern_family",
+      "recurrence",
+      "impact",
+      "confidence",
+      "alternative_explanation",
+      "recommended_response"
+    ]
+  },
+
+  "evidence_model": {
+    "separate_observation_from_interpretation": true,
+    "preserve_counter_evidence": true,
+    "preserve_unresolved_contradictions": true,
+    "intent_is_separate_from_confidence": true,
+    "attribution_is_separate_from_pattern_detection": true
+  },
+
+  "privacy": {
+    "consent_required": true,
+    "data_minimization": true,
+    "local_processing_preferred": true,
+    "external_queries_require_authorization": true,
+    "plaintext_password_access": false,
+    "unrestricted_browser_cache_access": false,
+    "raw_sensitive_content_default": "exclude",
+    "third_party_reporting": "never_automatic"
+  },
+
+  "invariants": [
+    {
+      "id": "PR-INV-01",
+      "statement": "A technical artifact is not proof of intent."
+    },
+    {
+      "id": "PR-INV-02",
+      "statement": "A single observation does not establish a pattern."
+    },
+    {
+      "id": "PR-INV-03",
+      "statement": "Correlation across synchronized surfaces is not necessarily independent corroboration."
+    },
+    {
+      "id": "PR-INV-04",
+      "statement": "Absence of evidence is not proof of safety."
+    },
+    {
+      "id": "PR-INV-05",
+      "statement": "Exposure is not equivalent to active compromise."
+    },
+    {
+      "id": "PR-INV-06",
+      "statement": "Benign and competing explanations must remain visible."
+    },
+    {
+      "id": "PR-INV-07",
+      "statement": "Safety escalation must remain proportionate to available evidence."
+    },
+    {
+      "id": "PR-INV-08",
+      "statement": "Sensitive or identifying material must not be repeated unnecessarily."
+    },
+    {
+      "id": "PR-INV-09",
+      "statement": "No automatic reporting to employers, platforms, family members, authorities, or other third parties."
+    },
+    {
+      "id": "PR-INV-10",
+      "statement": "The user remains the final interpreter of human-facing findings."
+    },
+    {
+      "id": "PR-INV-11",
+      "statement": "Rectification must preserve sufficient provenance to reconstruct how a conclusion or change was produced."
+    },
+    {
+      "id": "PR-INV-12",
+      "statement": "Destructive mutations require explicit user authorization."
+    }
+  ],
+
+  "dependencies": {
+    "analytical": [
+      "C.O.D.E.",
+      "Structural Detection",
+      "Media Substrate Model",
+      "Governance Alignment Analyzer",
+      "Resonance Truth",
+      "Paradox Gradient Analyzer"
+    ],
+
+    "infrastructure": [
+      "Shared Structural Event Grammar"
+    ],
+
+    "consumers_and_related_analyzers": [
+      "Ransomware Structural Pattern Detector"
+    ]
+  },
+
+  "structural_event_integration": {
+    "role": "consumer_and_orchestrator",
+    "principle": "Profile Rectification consumes normalized structural observations and patterns rather than owning the generic event grammar.",
+    "expected_family": [
+      "tf.resource-transition/v0.1",
+      "tf.structural-pattern/v0.1",
+      "tf.containment-decision/v0.1",
+      "tf.response-outcome/v0.1",
+      "tf.verification/v0.1",
+      "tf.platform-capabilities/v0.1"
+    ]
+  },
+
+  "lineage": {
+    "design_capture": "pr_capture.md",
+    "preserve_source_lineage": true,
+    "preserve_observation_lineage": true,
+    "preserve_rectification_lineage": true,
+    "preserve_verification_lineage": true
+  },
+
+  "context": {
+    "rtt": 1,
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  }
+}

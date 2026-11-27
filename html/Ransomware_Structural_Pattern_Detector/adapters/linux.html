@@ -1,0 +1,1347 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Ransomware_Structural_Pattern_Detector/adapters/linux.md">
+  <title>Linux Adapter</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Ransomware_Structural_Pattern_Detector/adapters/linux.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Ransomware_Structural_Pattern_Detector/adapters/linux.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="Ransomware_Structural_Pattern_Detector_adapters_linux_" src="https://github.com/user-attachments/assets/3990e64d-a418-4d5f-af29-6fdd24f2758d" /></p>
+<h1 id="linux-adapter">Linux Adapter</h1>
+<blockquote>
+<p><strong>Platform adapter specification for mapping authorized Linux observations and response capabilities into the Ransomware Structural Pattern Detector while preserving distribution, filesystem, namespace, privilege, and deployment boundaries.</strong></p>
+</blockquote>
+<p>The Linux adapter connects Linux-observable resource transitions to the platform-neutral Shared Structural Event Grammar.</p>
+<p>Linux must not be treated as one uniform deployment environment.</p>
+<p>A concrete adapter may operate on:</p>
+<ul>
+<li>a personal workstation;</li>
+<li>a server;</li>
+<li>a virtual machine;</li>
+<li>a container host;</li>
+<li>a containerized workload;</li>
+<li>a development system;</li>
+<li>a storage server;</li>
+<li>a cloud-hosted Linux instance;</li>
+<li>another specialized Linux environment.</li>
+</ul>
+<p>Observation and enforcement capabilities may vary substantially among those deployments.</p>
+<p>The governing rule is:</p>
+<blockquote>
+<p><strong>Declare the capabilities of the deployed Linux adapter, not the theoretical capabilities of Linux as a whole.</strong></p>
+</blockquote>
+<hr>
+<h2 id="status">Status</h2>
+<ul>
+<li><strong>Adapter ID:</strong> <code>rspd-linux</code></li>
+<li><strong>Platform:</strong> Linux</li>
+<li><strong>Status:</strong> Experimental</li>
+<li><strong>Role:</strong> Observation, normalization, capability declaration, bounded response mapping, and verification support</li>
+<li><strong>Normalized observation:</strong> <code>tf.resource-transition/v0.1</code></li>
+<li><strong>Capability declaration:</strong> <code>tf.platform-capabilities/v0.1</code></li>
+<li><strong>Decision input:</strong> <code>tf.containment-decision/v0.1</code></li>
+<li><strong>Execution output:</strong> <code>tf.response-outcome/v0.1</code></li>
+<li><strong>Verification output:</strong> <code>tf.verification/v0.1</code></li>
+</ul>
+<hr>
+<h1 id="1-scope">1. Scope</h1>
+<p>The Linux adapter operates within explicitly configured filesystem, process, account, namespace, network, storage, and privilege boundaries.</p>
+<p>Its potential observation scope may include:</p>
+<ul>
+<li>selected files;</li>
+<li>selected directories;</li>
+<li>user home resources;</li>
+<li>mounted filesystems;</li>
+<li>application data;</li>
+<li>configuration;</li>
+<li>databases;</li>
+<li>archives;</li>
+<li>project files;</li>
+<li>backup resources;</li>
+<li>recovery resources;</li>
+<li>shared storage;</li>
+<li>mounted network resources;</li>
+<li>synchronized resources;</li>
+<li>container-visible resources;</li>
+<li>host-visible container storage;</li>
+<li>adapter-controlled canaries;</li>
+<li>other explicitly configured Linux resources.</li>
+</ul>
+<p>An implementation must state its actual observation boundary.</p>
+<p>It must not infer machine-wide visibility merely because it runs on Linux.</p>
+<hr>
+<h1 id="2-deployment-variability">2. Deployment Variability</h1>
+<p>The Linux adapter specification describes an architectural class rather than one implementation.</p>
+<p>Capability can depend upon:</p>
+<ul>
+<li>kernel facilities available to the implementation;</li>
+<li>granted privileges;</li>
+<li>filesystem characteristics;</li>
+<li>mount topology;</li>
+<li>namespace boundaries;</li>
+<li>containerization;</li>
+<li>storage architecture;</li>
+<li>application configuration;</li>
+<li>security policy;</li>
+<li>network topology;</li>
+<li>user authorization;</li>
+<li>deployment-specific observation sources.</li>
+</ul>
+<p>A feature available in one Linux environment is not automatically available in another.</p>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Linux platform capability must be discovered or configured, then declared. It must not be assumed.</strong></p>
+</blockquote>
+<hr>
+<h1 id="3-observation-model">3. Observation Model</h1>
+<p>A Linux implementation may use one or more authorized observation mechanisms.</p>
+<p>At the structural level, the adapter requires only that the implementation be able to identify and preserve the provenance of relevant observations.</p>
+<p>Conceptually:</p>
+<p><strong>Linux observation source</strong></p>
+<p>↓</p>
+<p><strong>Adapter-local interpretation</strong></p>
+<p>↓</p>
+<p><strong>Normalization</strong></p>
+<p>↓</p>
+<p><strong><code>tf.resource-transition/v0.1</code></strong></p>
+<p>↓</p>
+<p><strong>Ransomware Structural Pattern Detector</strong></p>
+<p>The adapter must preserve which source produced the observation.</p>
+<p>Multiple Linux observation sources describing the same transition must not automatically become independent evidence.</p>
+<hr>
+<h1 id="4-filesystem-event-observation">4. Filesystem Event Observation</h1>
+<p>A Linux implementation may receive event-driven observations about resource activity where the deployed environment supports them.</p>
+<p>Candidate observation classes include:</p>
+<ul>
+<li>creation;</li>
+<li>modification;</li>
+<li>deletion;</li>
+<li>rename;</li>
+<li>move;</li>
+<li>access;</li>
+<li>open or close activity where observable;</li>
+<li>metadata change;</li>
+<li>permission change;</li>
+<li>execution-related resource activity where observable.</li>
+</ul>
+<p>The concrete implementation determines which events are actually available.</p>
+<p>A normalized event must not claim observations that its native source did not provide.</p>
+<hr>
+<h1 id="5-inotify-observation-profile">5. <code>inotify</code> Observation Profile</h1>
+<p>A Linux implementation may use <code>inotify</code>-based observation for explicitly watched filesystem resources.</p>
+<p>At the adapter level, this profile should be understood as a <strong>bounded watch-based observation source</strong>.</p>
+<p>Its structural use may include observing transitions such as:</p>
+<ul>
+<li>create;</li>
+<li>modify;</li>
+<li>delete;</li>
+<li>move;</li>
+<li>related filesystem changes exposed by the implementation.</li>
+</ul>
+<p>An <code>inotify</code> observation should retain enough provenance to establish which watch or configured observation surface produced it.</p>
+<p>The adapter must not turn:</p>
+<p><strong>not observed by the configured watches</strong></p>
+<p>into:</p>
+<p><strong>did not occur elsewhere</strong>.</p>
+<hr>
+<h1 id="6-fanotify-observation-profile">6. <code>fanotify</code> Observation Profile</h1>
+<p>A Linux implementation may use <code>fanotify</code> where supported and appropriately authorized.</p>
+<p>At the structural level, a <code>fanotify</code>-based implementation may provide a different observation scope from a watch-oriented implementation and may support access-control behavior in appropriate configurations.</p>
+<p>This does not make <code>fanotify</code> support universal.</p>
+<p>A concrete adapter must declare:</p>
+<ul>
+<li>whether the facility is available;</li>
+<li>what scope is actually monitored;</li>
+<li>what event classes are available;</li>
+<li>what actor information is available;</li>
+<li>whether permission-related control is available;</li>
+<li>what privilege is required;</li>
+<li>what limitations remain.</li>
+</ul>
+<p>The shared detector sees normalized capability, not an assumption about the underlying Linux interface.</p>
+<hr>
+<h1 id="7-multiple-observation-sources">7. Multiple Observation Sources</h1>
+<p>A stronger Linux implementation may combine multiple observation sources.</p>
+<p>Conceptually:</p>
+<p><strong>Filesystem observation</strong></p>
+<p>+</p>
+<p><strong>actor/process evidence</strong></p>
+<p>+</p>
+<p><strong>baseline state</strong></p>
+<p>+</p>
+<p><strong>recovery state</strong></p>
+<p>↓</p>
+<p><strong>normalized structural events</strong></p>
+<p>This may improve lineage or contextual information.</p>
+<p>However:</p>
+<blockquote>
+<p><strong>Multiple telemetry sources ≠ multiple independent transitions</strong></p>
+</blockquote>
+<p>If two observation mechanisms describe the same underlying resource transition, their relationship should remain visible.</p>
+<p>The adapter should preserve corroborating provenance without inflating event counts.</p>
+<hr>
+<h1 id="8-native-observation-preservation">8. Native Observation Preservation</h1>
+<p>Where feasible and authorized, the adapter should retain a local reference to the native evidence used during normalization.</p>
+<p>Relevant provenance may include:</p>
+<ul>
+<li>observation source;</li>
+<li>platform environment;</li>
+<li>adapter identity;</li>
+<li>adapter version;</li>
+<li>observation time;</li>
+<li>normalization time;</li>
+<li>native-event reference;</li>
+<li>relevant capability declaration;</li>
+<li>derivation references;</li>
+<li>redaction classes.</li>
+</ul>
+<p>Raw native evidence may remain local.</p>
+<p>The detector requires structural lineage, not unrestricted Linux telemetry.</p>
+<hr>
+<h1 id="9-resource-mapping">9. Resource Mapping</h1>
+<p>Linux resources should map into shared structural categories according to their role.</p>
+<p>Candidate mappings include:</p>
+<table>
+<thead>
+<tr>
+<th>Linux-visible resource</th>
+<th>Shared resource type/class</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>User document</td>
+<td><code>file</code> / <code>user_document</code></td>
+</tr>
+<tr>
+<td>Photo</td>
+<td><code>file</code> / <code>photo</code></td>
+</tr>
+<tr>
+<td>Video</td>
+<td><code>file</code> / <code>video</code></td>
+</tr>
+<tr>
+<td>Audio</td>
+<td><code>file</code> / <code>audio</code></td>
+</tr>
+<tr>
+<td>Database</td>
+<td><code>file</code> or <code>dataset</code> / <code>database</code></td>
+</tr>
+<tr>
+<td>Archive</td>
+<td><code>file</code> / <code>archive</code></td>
+</tr>
+<tr>
+<td>Source/project resource</td>
+<td><code>file</code> / <code>project_file</code></td>
+</tr>
+<tr>
+<td>Application data</td>
+<td><code>file</code> or <code>dataset</code> / <code>application_data</code></td>
+</tr>
+<tr>
+<td>Configuration</td>
+<td><code>configuration</code> / <code>configuration</code></td>
+</tr>
+<tr>
+<td>Credential-related store</td>
+<td>appropriate type / <code>credential_store</code></td>
+</tr>
+<tr>
+<td>Backup</td>
+<td>appropriate type / <code>backup</code></td>
+</tr>
+<tr>
+<td>Recovery resource</td>
+<td>appropriate type / <code>recovery_resource</code></td>
+</tr>
+<tr>
+<td>Mounted network resource</td>
+<td>appropriate type / <code>network_resource</code></td>
+</tr>
+<tr>
+<td>Cloud-backed resource</td>
+<td>appropriate type / <code>cloud_resource</code></td>
+</tr>
+<tr>
+<td>Temporary resource</td>
+<td>appropriate type / <code>temporary</code></td>
+</tr>
+<tr>
+<td>Canary</td>
+<td>appropriate type / <code>canary</code></td>
+</tr>
+<tr>
+<td>Other domain resource</td>
+<td>appropriate type / <code>domain_defined</code></td>
+</tr>
+</tbody>
+</table>
+<p>The adapter should classify structure without unnecessarily exposing private resource names or contents.</p>
+<hr>
+<h1 id="10-resource-identity">10. Resource Identity</h1>
+<p>Linux filesystem paths can expose substantial user and system information.</p>
+<p>The central detector does not inherently require raw absolute paths.</p>
+<p>A concrete adapter should prefer a stable privacy-preserving resource reference when that is sufficient for correlation.</p>
+<p>The adapter may retain native paths locally for:</p>
+<ul>
+<li>correlation;</li>
+<li>enforcement;</li>
+<li>verification;</li>
+<li>recovery;</li>
+<li>authorized investigation.</li>
+</ul>
+<p>The shared event may instead expose:</p>
+<ul>
+<li>structural resource ID;</li>
+<li>type;</li>
+<li>class;</li>
+<li>scope;</li>
+<li>sensitivity;</li>
+<li>protection state;</li>
+<li>canary state;</li>
+<li>recoverability;</li>
+<li>bounded location reference when necessary.</li>
+</ul>
+<hr>
+<h1 id="11-mount-boundaries">11. Mount Boundaries</h1>
+<p>Linux resource topology may span multiple filesystems and mounts.</p>
+<p>The adapter should preserve the observation boundary represented by its configured sources.</p>
+<p>For each relevant resource, the implementation may need to distinguish structurally among:</p>
+<ul>
+<li>locally hosted resources;</li>
+<li>separately mounted resources;</li>
+<li>network-backed resources;</li>
+<li>synchronized resources;</li>
+<li>other deployment-specific storage boundaries.</li>
+</ul>
+<p>A detector must not assume that an event stream covering one observation boundary covers every mounted resource visible elsewhere in the environment.</p>
+<hr>
+<h1 id="12-actor-mapping">12. Actor Mapping</h1>
+<p>Candidate Linux actors include:</p>
+<ul>
+<li><code>process</code></li>
+<li><code>application</code></li>
+<li><code>service</code></li>
+<li><code>script</code></li>
+<li><code>container</code></li>
+<li><code>remote_actor</code></li>
+<li><code>sync_service</code></li>
+<li><code>system</code></li>
+<li><code>user</code></li>
+<li><code>agent</code></li>
+<li><code>unknown</code></li>
+</ul>
+<p>Where available, the adapter should preserve:</p>
+<ul>
+<li>actor ID;</li>
+<li>actor type;</li>
+<li>actor name;</li>
+<li>parent reference;</li>
+<li>instance reference;</li>
+<li>account reference;</li>
+<li>origin role;</li>
+<li>transport role.</li>
+</ul>
+<p>Actor identity should reflect actual evidence.</p>
+<p>If the observation source does not reliably establish an actor, the adapter should not invent one.</p>
+<hr>
+<h1 id="13-process-lineage">13. Process Lineage</h1>
+<p>Where the concrete observation environment exposes reliable process relationships, the adapter may preserve actor lineage.</p>
+<p>Conceptually:</p>
+<p><strong>Parent actor</strong></p>
+<p>↓</p>
+<p><strong>Child actor</strong></p>
+<p>↓</p>
+<p><strong>resource transition</strong></p>
+<p>Such lineage can materially improve structural interpretation.</p>
+<p>It may help distinguish an established application workflow from unexpected behavior originating deeper in an invocation chain.</p>
+<p>Process lineage still does not establish malicious intent.</p>
+<hr>
+<h1 id="14-user-and-service-context">14. User and Service Context</h1>
+<p>A Linux transition may occur under:</p>
+<ul>
+<li>an interactive user context;</li>
+<li>a service context;</li>
+<li>an automated job;</li>
+<li>an application context;</li>
+<li>a remote session;</li>
+<li>a containerized workload;</li>
+<li>another system context.</li>
+</ul>
+<p>Where observable and relevant, those relationships may be represented through actor and context references.</p>
+<p>The detector may use them when evaluating actor-role coherence.</p>
+<p>The adapter must not infer human intent solely from the account under which an operation occurred.</p>
+<blockquote>
+<p><strong>Execution identity ≠ human intent</strong></p>
+</blockquote>
+<hr>
+<h1 id="15-origin-vs-transport">15. Origin vs. Transport</h1>
+<p>Network storage, synchronization, containerization, and remote services can separate the locally visible actor from the originating actor.</p>
+<p>A local process may:</p>
+<ul>
+<li>originate a transition;</li>
+<li>transport a remote transition;</li>
+<li>materialize synchronized state;</li>
+<li>execute on behalf of another service;</li>
+<li>reflect a change produced in another namespace or environment.</li>
+</ul>
+<p>Where sufficient evidence exists, the adapter should preserve:</p>
+<ul>
+<li>origin actor;</li>
+<li>transport actor;</li>
+<li>origin environment;</li>
+<li>local observer;</li>
+<li>propagation context.</li>
+</ul>
+<p>Where origin cannot be established, it remains unresolved.</p>
+<hr>
+<h1 id="16-transition-mapping">16. Transition Mapping</h1>
+<p>Relevant Linux operations may map into shared operations such as:</p>
+<ul>
+<li><code>read</code></li>
+<li><code>write</code></li>
+<li><code>create</code></li>
+<li><code>delete</code></li>
+<li><code>rename</code></li>
+<li><code>move</code></li>
+<li><code>truncate</code></li>
+<li><code>copy</code></li>
+<li><code>replace</code></li>
+<li><code>open</code></li>
+<li><code>close</code></li>
+<li><code>permission_change</code></li>
+<li><code>metadata_change</code></li>
+<li><code>recovery_change</code></li>
+<li><code>state_change</code></li>
+<li><code>scope_change</code></li>
+<li><code>execute</code></li>
+<li><code>sync</code></li>
+<li><code>other</code></li>
+</ul>
+<p>Corresponding structural actions may include:</p>
+<ul>
+<li><code>access</code></li>
+<li><code>modify</code></li>
+<li><code>create</code></li>
+<li><code>remove</code></li>
+<li><code>replace</code></li>
+<li><code>relocate</code></li>
+<li><code>duplicate</code></li>
+<li><code>restrict</code></li>
+<li><code>grant</code></li>
+<li><code>revoke</code></li>
+<li><code>expose</code></li>
+<li><code>conceal</code></li>
+<li><code>restore</code></li>
+<li><code>propagate</code></li>
+<li><code>transform</code></li>
+<li><code>other</code></li>
+</ul>
+<p>The adapter should preserve a native operation name when the shared mapping would otherwise lose useful lineage.</p>
+<hr>
+<h1 id="17-transition-characteristics">17. Transition Characteristics</h1>
+<p>Where directly observable or explicitly derived, a Linux implementation may normalize characteristics such as:</p>
+<ul>
+<li>size change;</li>
+<li>content-change indication;</li>
+<li>structural change;</li>
+<li>representation or extension change;</li>
+<li>ownership change;</li>
+<li>permission change;</li>
+<li>scope change;</li>
+<li>recovery-state change;</li>
+<li>prior-state preservation;</li>
+<li>recoverability;</li>
+<li>repeated mutation;</li>
+<li>transition timing.</li>
+</ul>
+<p>These characteristics provide evidence for later structural analysis.</p>
+<p>They do not independently constitute a ransomware verdict.</p>
+<hr>
+<h1 id="18-baseline-support">18. Baseline Support</h1>
+<p>A Linux implementation may maintain structural baselines within its authorized scope.</p>
+<p>Candidate dimensions include:</p>
+<ul>
+<li>known actors;</li>
+<li>expected actor roles;</li>
+<li>typical operations;</li>
+<li>normal resource classes;</li>
+<li>ordinary scope;</li>
+<li>transition frequency;</li>
+<li>established services;</li>
+<li>expected batch workflows;</li>
+<li>normal backup activity;</li>
+<li>ordinary synchronization behavior.</li>
+</ul>
+<p>A baseline improves context.</p>
+<p>It does not create permanent trust.</p>
+<p>A historically benign actor may produce anomalous current behavior.</p>
+<p>Likewise, an unfamiliar actor is not automatically hostile.</p>
+<hr>
+<h1 id="19-bulk-operations">19. Bulk Operations</h1>
+<p>Linux systems commonly perform legitimate high-volume resource operations.</p>
+<p>Potential competing explanations may include:</p>
+<ul>
+<li>backups;</li>
+<li>restores;</li>
+<li>builds;</li>
+<li>package operations;</li>
+<li>deployments;</li>
+<li>database maintenance;</li>
+<li>migrations;</li>
+<li>media conversion;</li>
+<li>synchronization;</li>
+<li>archival operations;</li>
+<li>administrative batch jobs.</li>
+</ul>
+<p>The adapter should preserve evidence supporting these contexts when observable.</p>
+<p>The detector remains responsible for determining whether current transitions remain coherent with the expected workflow.</p>
+<hr>
+<h1 id="20-canary-resources">20. Canary Resources</h1>
+<p>A concrete implementation may use adapter-controlled canary resources where appropriate and authorized.</p>
+<p>A canary transition can provide strong evidence that unexpected mutation reached a monitored resource.</p>
+<p>It does not independently establish:</p>
+<ul>
+<li>ransomware;</li>
+<li>intent;</li>
+<li>attribution;</li>
+<li>scope outside the observed resource boundary.</li>
+</ul>
+<p>Canaries should contain no sensitive user information.</p>
+<p>Their placement and visibility should remain part of adapter-local configuration.</p>
+<hr>
+<h1 id="21-containers-and-namespaces">21. Containers and Namespaces</h1>
+<p>Containerized Linux environments require explicit boundary handling.</p>
+<p>A transition may be visible:</p>
+<ul>
+<li>inside a container;</li>
+<li>from the host;</li>
+<li>through a mounted volume;</li>
+<li>through shared storage;</li>
+<li>through more than one observation source.</li>
+</ul>
+<p>The adapter should preserve enough context to distinguish:</p>
+<ul>
+<li>host environment;</li>
+<li>container environment;</li>
+<li>resource ownership boundary;</li>
+<li>actor environment;</li>
+<li>shared resource relationship.</li>
+</ul>
+<p>It must not double-count one underlying transition solely because both a container-side and host-side observer report it.</p>
+<hr>
+<h1 id="22-container-actor-semantics">22. Container Actor Semantics</h1>
+<p>A process observed within a container may be represented as a <code>process</code>, while the containing workload or execution boundary may also be relevant.</p>
+<p>Where evidence allows, the adapter may preserve:</p>
+<ul>
+<li>process actor;</li>
+<li>parent actor;</li>
+<li>container reference;</li>
+<li>host reference;</li>
+<li>account or identity context;</li>
+<li>resource relation.</li>
+</ul>
+<p>The detector should then reason over the structural lineage rather than flattening the container boundary.</p>
+<hr>
+<h1 id="23-network-backed-resources">23. Network-Backed Resources</h1>
+<p>A Linux system may expose resources backed by another environment.</p>
+<p>For such resources:</p>
+<p><strong>local filesystem visibility</strong></p>
+<p>does not necessarily imply:</p>
+<p><strong>local resource origin</strong></p>
+<p>or:</p>
+<p><strong>local recovery authority</strong>.</p>
+<p>Where network-backed storage is observable, the adapter should retain:</p>
+<ul>
+<li>resource scope;</li>
+<li>relevant remote/environment reference;</li>
+<li>local actor;</li>
+<li>transport relationship;</li>
+<li>available recovery state;</li>
+<li>authority limitations.</li>
+</ul>
+<p>Cross-environment reasoning may then be correlated with the Cloud / Synchronization adapter where appropriate.</p>
+<hr>
+<h1 id="24-capability-declaration">24. Capability Declaration</h1>
+<p>Every concrete Linux adapter should provide:</p>
+<p><code>tf.platform-capabilities/v0.1</code></p>
+<p>The capability declaration must describe the implementation that is actually running.</p>
+<p>Possible observation capabilities include:</p>
+<ul>
+<li>event observation;</li>
+<li>actor identity;</li>
+<li>actor lineage;</li>
+<li>resource classification;</li>
+<li>network context;</li>
+<li>origin/transport distinction;</li>
+<li>baseline access;</li>
+<li>resource metadata;</li>
+<li>recovery-state observation.</li>
+</ul>
+<p>Possible enforcement capabilities include:</p>
+<ul>
+<li>write denial;</li>
+<li>actor containment;</li>
+<li>resource isolation;</li>
+<li>network isolation;</li>
+<li>quarantine;</li>
+<li>permission restriction;</li>
+<li>actor disablement;</li>
+<li>session termination.</li>
+</ul>
+<p>Possible recovery capabilities include:</p>
+<ul>
+<li>recovery;</li>
+<li>rollback;</li>
+<li>snapshot restoration;</li>
+<li>resource restoration;</li>
+<li>configuration restoration.</li>
+</ul>
+<p>Possible verification capabilities include:</p>
+<ul>
+<li>post-action observation;</li>
+<li>state comparison;</li>
+<li>persistence detection;</li>
+<li>reappearance detection;</li>
+<li>recovery verification.</li>
+</ul>
+<p>Each capability is declared as:</p>
+<ul>
+<li><code>supported</code></li>
+<li><code>partial</code></li>
+<li><code>unsupported</code></li>
+<li><code>unknown</code></li>
+</ul>
+<hr>
+<h1 id="25-capability-profiles">25. Capability Profiles</h1>
+<p>A Linux adapter may expose different capability profiles according to deployment.</p>
+<p>For example:</p>
+<h2 id="bounded-user-space-observer">Bounded User-Space Observer</h2>
+<p>A narrowly authorized adapter monitoring selected resources may possess useful observation capability but limited enforcement authority.</p>
+<h2 id="privileged-host-observer">Privileged Host Observer</h2>
+<p>An appropriately authorized host-level implementation may have broader observation and response capabilities.</p>
+<h2 id="container-scoped-observer">Container-Scoped Observer</h2>
+<p>An adapter operating inside a container may have useful workload visibility while lacking host-wide context.</p>
+<h2 id="host-side-container-observer">Host-Side Container Observer</h2>
+<p>An implementation running on the host may observe resources used by containers while requiring separate correlation to establish workload-level actor semantics.</p>
+<p>These are architectural profiles, not fixed product definitions.</p>
+<p>A concrete implementation declares its actual capabilities.</p>
+<hr>
+<h1 id="26-capability-is-not-authority">26. Capability Is Not Authority</h1>
+<p>Linux may provide a mechanism capable of a powerful response.</p>
+<p>That does not authorize its use.</p>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Privilege ≠ Authority</strong></p>
+</blockquote>
+<p>and:</p>
+<blockquote>
+<p><strong>Capability ≠ Authority</strong></p>
+</blockquote>
+<p>The adapter must separately establish:</p>
+<ol>
+<li>that a mechanism is technically available;</li>
+<li>that the requested operation is inside the adapter's authority;</li>
+<li>that the specific containment decision permits execution;</li>
+<li>that relevant constraints are satisfied.</li>
+</ol>
+<hr>
+<h1 id="27-containment-mapping">27. Containment Mapping</h1>
+<p>An authorized containment decision may request responses such as:</p>
+<ul>
+<li>increase observation;</li>
+<li>notify an authorized operator;</li>
+<li>deny resource writes;</li>
+<li>contain an actor;</li>
+<li>isolate a resource set;</li>
+<li>isolate a network scope;</li>
+<li>quarantine affected resources;</li>
+<li>restrict actor permissions;</li>
+<li>disable an actor;</li>
+<li>preserve evidence;</li>
+<li>prepare recovery;</li>
+<li>initiate recovery;</li>
+<li>request manual review.</li>
+</ul>
+<p>A concrete Linux adapter maps these structural requests onto supported mechanisms.</p>
+<p>The shared specification does not mandate one native implementation.</p>
+<hr>
+<h1 id="28-write-containment">28. Write Containment</h1>
+<p>Where a deployment supplies an authorized mechanism capable of restricting relevant resource writes, the adapter may map:</p>
+<p><code>deny_resource_writes</code></p>
+<p>onto that mechanism.</p>
+<p>The outcome must preserve:</p>
+<ul>
+<li>target;</li>
+<li>scope;</li>
+<li>requested response;</li>
+<li>actual response;</li>
+<li>whether execution was attempted;</li>
+<li>actual execution status;</li>
+<li>relevant capability;</li>
+<li>errors or limitations.</li>
+</ul>
+<p>A write restriction affecting one filesystem, mount, resource set, or actor must not be represented as broader containment than actually occurred.</p>
+<hr>
+<h1 id="29-actor-containment">29. Actor Containment</h1>
+<p>Where supported and authorized, a Linux adapter may attempt to contain an actor associated with destructive transitions.</p>
+<p>The adapter must preserve the actual containment scope.</p>
+<p>For example, containment of:</p>
+<ul>
+<li>one process;</li>
+<li>a process group;</li>
+<li>a service;</li>
+<li>a container;</li>
+<li>another bounded execution context</li>
+</ul>
+<p>must not silently become a claim that every related actor or remote origin was contained.</p>
+<p>The exact native mechanism remains implementation-specific.</p>
+<hr>
+<h1 id="30-resource-isolation">30. Resource Isolation</h1>
+<p>Resource isolation may be available in some deployments.</p>
+<p>The adapter should record:</p>
+<ul>
+<li>which resource or resource set was affected;</li>
+<li>which access boundary changed;</li>
+<li>whether the action was reversible;</li>
+<li>whether rollback is available;</li>
+<li>whether the intended scope was achieved.</li>
+</ul>
+<p>Resource isolation is not automatically actor containment.</p>
+<p>Likewise, actor containment is not automatically resource recovery.</p>
+<hr>
+<h1 id="31-network-isolation">31. Network Isolation</h1>
+<p>Some deployments may provide a mechanism for restricting relevant network communication.</p>
+<p>Where used, the adapter must preserve its actual boundary.</p>
+<p>Network isolation may apply to:</p>
+<ul>
+<li>an actor;</li>
+<li>workload;</li>
+<li>service;</li>
+<li>container;</li>
+<li>host;</li>
+<li>network context;</li>
+<li>another supported scope.</li>
+</ul>
+<p>It must not be represented as universal network isolation unless that is what actually occurred.</p>
+<hr>
+<h1 id="32-fallback">32. Fallback</h1>
+<p>If the preferred response is unavailable and the containment decision permits fallback, the adapter may select a weaker supported response.</p>
+<p>Conceptually:</p>
+<p><strong>Requested</strong></p>
+<p><code>deny_resource_writes</code></p>
+<p>↓</p>
+<p><strong>required capability unavailable</strong></p>
+<p>↓</p>
+<p><strong>Fallback</strong></p>
+<p><code>contain_actor</code></p>
+<p>or:</p>
+<p><strong>Requested</strong></p>
+<p><code>contain_actor</code></p>
+<p>↓</p>
+<p><strong>authority unavailable</strong></p>
+<p>↓</p>
+<p><strong>Fallback</strong></p>
+<p><code>notify_authorized_operator</code></p>
+<p>The exact fallback must be policy-driven.</p>
+<p>The adapter records:</p>
+<ul>
+<li>requested response;</li>
+<li>unavailable capability or authority;</li>
+<li>fallback response;</li>
+<li>degradation state;</li>
+<li>actual execution result.</li>
+</ul>
+<hr>
+<h1 id="33-outcome-reporting">33. Outcome Reporting</h1>
+<p>Every response attempt should produce or contribute to:</p>
+<p><code>tf.response-outcome/v0.1</code></p>
+<p>Relevant execution states include:</p>
+<ul>
+<li><code>not_attempted</code></li>
+<li><code>blocked</code></li>
+<li><code>unsupported</code></li>
+<li><code>authorization_required</code></li>
+<li><code>attempted</code></li>
+<li><code>partially_executed</code></li>
+<li><code>executed</code></li>
+<li><code>failed</code></li>
+<li><code>unknown</code></li>
+</ul>
+<p>The outcome should preserve:</p>
+<ul>
+<li>requested response;</li>
+<li>actual executed response;</li>
+<li>fallback;</li>
+<li>capability context;</li>
+<li>direct effects;</li>
+<li>side effects;</li>
+<li>errors;</li>
+<li>warnings;</li>
+<li>rollback state;</li>
+<li>execution provenance.</li>
+</ul>
+<hr>
+<h1 id="34-execution-is-not-verification">34. Execution Is Not Verification</h1>
+<p>A Linux system call, service operation, policy change, or other mechanism may report successful execution while the larger destructive condition persists.</p>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Native success ≠ structural resolution</strong></p>
+</blockquote>
+<p>The adapter reports execution truth first.</p>
+<p>A new observation cycle determines resulting state.</p>
+<hr>
+<h1 id="35-verification">35. Verification</h1>
+<p>Post-response verification should rescan the bounded environment using available observation capabilities.</p>
+<p>Relevant questions include:</p>
+<ul>
+<li>Are destructive transitions still occurring?</li>
+<li>Is the associated actor still producing them?</li>
+<li>Did another actor continue the pattern?</li>
+<li>Did resource scope continue expanding?</li>
+<li>Did activity cross another mount, namespace, device, or synchronized boundary?</li>
+<li>Did the condition reappear?</li>
+<li>Did recovery state change?</li>
+<li>Are protected resources stable?</li>
+<li>Did containment introduce significant side effects?</li>
+</ul>
+<p>Verification may produce:</p>
+<ul>
+<li><code>contained</code></li>
+<li><code>partially_contained</code></li>
+<li><code>persistent</code></li>
+<li><code>reappeared</code></li>
+<li><code>resolved</code></li>
+<li><code>partially_resolved</code></li>
+<li><code>new_condition_detected</code></li>
+<li><code>mixed</code></li>
+<li><code>unable_to_verify</code></li>
+</ul>
+<hr>
+<h1 id="36-verification-scope">36. Verification Scope</h1>
+<p>A verification claim must be bounded to what was actually observed.</p>
+<p>For example:</p>
+<p><strong>No further destructive transition observed in the protected home-directory scope</strong></p>
+<p>does not imply:</p>
+<p><strong>No destructive activity exists elsewhere on the host</strong></p>
+<p>Similarly:</p>
+<p><strong>Host process stopped</strong></p>
+<p>does not imply:</p>
+<p><strong>Remote origin resolved</strong></p>
+<p>The verification object should preserve scope and limitations.</p>
+<hr>
+<h1 id="37-recovery">37. Recovery</h1>
+<p>Linux recovery mechanisms vary widely by deployment and storage architecture.</p>
+<p>A concrete adapter may be able to observe or interact with:</p>
+<ul>
+<li>preserved originals;</li>
+<li>backup state;</li>
+<li>snapshots;</li>
+<li>versioned resources;</li>
+<li>recovery stores;</li>
+<li>provider-backed recovery;</li>
+<li>other configured recovery mechanisms.</li>
+</ul>
+<p>The adapter should distinguish:</p>
+<p><strong>recovery mechanism available</strong></p>
+<p>from:</p>
+<p><strong>usable recovery state observed</strong></p>
+<p>from:</p>
+<p><strong>recovery attempted</strong></p>
+<p>from:</p>
+<p><strong>recovery completed</strong></p>
+<p>from:</p>
+<p><strong>restored state verified</strong></p>
+<p>These stages must remain separate.</p>
+<hr>
+<h1 id="38-backup-coherence">38. Backup Coherence</h1>
+<p>Backup activity is structurally significant in two different directions.</p>
+<p>First, legitimate backup operation may explain broad resource access or transition patterns.</p>
+<p>Second, damage to backup or recovery resources may strengthen a destructive-pattern assessment.</p>
+<p>Therefore, backup evidence may appear as:</p>
+<ul>
+<li>competing explanation;</li>
+<li>counter-evidence;</li>
+<li>affected resource;</li>
+<li>recovery capability;</li>
+<li>recovery impact.</li>
+</ul>
+<p>Its meaning depends on the structural context.</p>
+<hr>
+<h1 id="39-privacy-and-redaction">39. Privacy and Redaction</h1>
+<p>Linux telemetry can expose sensitive detail.</p>
+<p>The adapter should minimize what leaves the local environment.</p>
+<p>Preferred normalized information includes:</p>
+<ul>
+<li>privacy-preserving resource ID;</li>
+<li>resource type;</li>
+<li>resource class;</li>
+<li>structural scope;</li>
+<li>sensitivity;</li>
+<li>transition type;</li>
+<li>transition timing;</li>
+<li>actor class;</li>
+<li>actor relationship;</li>
+<li>baseline state;</li>
+<li>preservation state;</li>
+<li>recovery state;</li>
+<li>environment relationship;</li>
+<li>provenance.</li>
+</ul>
+<p>Avoid exporting unnecessary:</p>
+<ul>
+<li>document contents;</li>
+<li>plaintext credentials;</li>
+<li>personal filenames;</li>
+<li>raw absolute paths;</li>
+<li>process arguments containing sensitive data;</li>
+<li>environment secrets;</li>
+<li>authentication material;</li>
+<li>unrelated account information;</li>
+<li>unrelated network data.</li>
+</ul>
+<hr>
+<h1 id="40-credential-boundary">40. Credential Boundary</h1>
+<p>The shared detector does not require Linux authentication material.</p>
+<p>The adapter must not emit:</p>
+<ul>
+<li>plaintext passwords;</li>
+<li>private keys;</li>
+<li>session secrets;</li>
+<li>authentication tokens;</li>
+<li>cloud credentials;</li>
+<li>recovery secrets;</li>
+<li>unrelated environment secrets.</li>
+</ul>
+<p>A structural reference to an account or authority context is preferable when identity context is required.</p>
+<hr>
+<h1 id="41-local-processing-preference">41. Local Processing Preference</h1>
+<p>Sensitive platform-native operations should remain local when the detector needs only their normalized structural result.</p>
+<p>Candidate local operations include:</p>
+<ul>
+<li>native-event processing;</li>
+<li>resource classification;</li>
+<li>path handling;</li>
+<li>identifier pseudonymization;</li>
+<li>actor correlation;</li>
+<li>baseline comparison;</li>
+<li>telemetry deduplication;</li>
+<li>redaction;</li>
+<li>mapping native events into shared transitions.</li>
+</ul>
+<p>The central detector should receive structural evidence rather than an unnecessarily complete replica of Linux telemetry.</p>
+<hr>
+<h1 id="42-event-loss-and-observation-gaps">42. Event Loss and Observation Gaps</h1>
+<p>A robust Linux adapter must account for the possibility that its observation stream is incomplete.</p>
+<p>If an implementation detects:</p>
+<ul>
+<li>an event-stream gap;</li>
+<li>an overflow condition;</li>
+<li>lost telemetry;</li>
+<li>delayed collection;</li>
+<li>incomplete initialization;</li>
+<li>unknown observation coverage;</li>
+</ul>
+<p>that limitation should be preserved.</p>
+<p>Subsequent absence of events must not be interpreted as proof that no transitions occurred during the gap.</p>
+<hr>
+<h1 id="43-restart-and-continuity">43. Restart and Continuity</h1>
+<p>If the adapter restarts, it should preserve enough state to distinguish:</p>
+<ul>
+<li>continuous observation;</li>
+<li>resumed observation;</li>
+<li>a known observation gap;</li>
+<li>baseline reset;</li>
+<li>unknown continuity.</li>
+</ul>
+<p>A restarted observer should not silently imply uninterrupted evidence.</p>
+<p>This is particularly important when rate, acceleration, or persistence are derived from event history.</p>
+<hr>
+<h1 id="44-temporal-ordering">44. Temporal Ordering</h1>
+<p>Where multiple Linux observation sources are correlated, their ordering may require normalization.</p>
+<p>The adapter should preserve:</p>
+<ul>
+<li>source timestamps;</li>
+<li>normalization timestamps;</li>
+<li>sequence information when available;</li>
+<li>uncertainty where precise ordering cannot be established.</li>
+</ul>
+<p>The detector should not infer causal order solely from normalized arrival order when the original timing evidence does not establish it.</p>
+<hr>
+<h1 id="45-known-limitations">45. Known Limitations</h1>
+<p>Concrete Linux adapters should explicitly document implementation-specific limitations such as:</p>
+<ul>
+<li>watch coverage;</li>
+<li>mount coverage;</li>
+<li>missing event classes;</li>
+<li>insufficient privilege;</li>
+<li>incomplete actor identity;</li>
+<li>incomplete process lineage;</li>
+<li>namespace visibility;</li>
+<li>container boundaries;</li>
+<li>network-storage ambiguity;</li>
+<li>synchronization ambiguity;</li>
+<li>event loss;</li>
+<li>recovery-state limitations;</li>
+<li>unsupported enforcement mechanisms;</li>
+<li>authorization restrictions;</li>
+<li>incomplete verification.</li>
+</ul>
+<p>These limitations are analytical evidence.</p>
+<p>They should not be hidden.</p>
+<hr>
+<h1 id="46-capability-posture">46. Capability Posture</h1>
+<p>The generic Linux adapter begins from:</p>
+<table>
+<thead>
+<tr>
+<th>Capability</th>
+<th>Generic posture</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Event observation</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Actor identity</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Actor lineage</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Resource classification</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Network context</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Origin / transport distinction</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Baseline access</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Recovery-state observation</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Write denial</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Actor containment</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Resource isolation</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Network isolation</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Quarantine</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Permission restriction</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Actor disablement</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Session termination</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Recovery</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Rollback</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Post-action observation</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>State comparison</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Persistence detection</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Reappearance detection</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Recovery verification</td>
+<td><code>unknown</code></td>
+</tr>
+</tbody>
+</table>
+<p>This does <strong>not</strong> mean Linux lacks these capabilities.</p>
+<p>It means this generic specification does not claim that any particular implementation possesses them.</p>
+<p>A concrete deployment replaces <code>unknown</code> with an evidence-backed declaration.</p>
+<hr>
+<h1 id="47-why-the-generic-posture-is-unknown">47. Why the Generic Posture Is Unknown</h1>
+<p>Linux provides a broad implementation space.</p>
+<p>An architectural specification cannot safely infer the capabilities of:</p>
+<ul>
+<li>a user-space process;</li>
+<li>a privileged daemon;</li>
+<li>a container;</li>
+<li>a host-side agent;</li>
+<li>a constrained appliance;</li>
+<li>a server deployment;</li>
+<li>a workstation deployment;</li>
+</ul>
+<p>from the word <strong>Linux</strong> alone.</p>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Capability follows implementation and authority, not platform name.</strong></p>
+</blockquote>
+<hr>
+<h1 id="48-linux-adapter-invariants">48. Linux Adapter Invariants</h1>
+<h2 id="linux-inv-01-linux-one-capability-profile">LINUX-INV-01 — Linux ≠ One Capability Profile</h2>
+<p>Different deployments may expose materially different observation and enforcement capabilities.</p>
+<h2 id="linux-inv-02-observation-boundary-host-boundary">LINUX-INV-02 — Observation Boundary ≠ Host Boundary</h2>
+<p>A configured observer may see only part of the resources visible on the system.</p>
+<h2 id="linux-inv-03-native-event-domain-verdict">LINUX-INV-03 — Native Event ≠ Domain Verdict</h2>
+<p>A filesystem or actor event does not independently establish ransomware.</p>
+<h2 id="linux-inv-04-actor-identity-intent">LINUX-INV-04 — Actor Identity ≠ Intent</h2>
+<p>A process, service, script, container, or user identity does not establish motive.</p>
+<h2 id="linux-inv-05-actor-origin">LINUX-INV-05 — Actor ≠ Origin</h2>
+<p>The locally visible actor may transport or materialize a change originating elsewhere.</p>
+<h2 id="linux-inv-06-multiple-telemetry-sources-independent-events">LINUX-INV-06 — Multiple Telemetry Sources ≠ Independent Events</h2>
+<p>Several observers may report the same underlying resource transition.</p>
+<h2 id="linux-inv-07-container-observation-host-wide-observation">LINUX-INV-07 — Container Observation ≠ Host-Wide Observation</h2>
+<p>Visibility inside a namespace or container must not be generalized to the rest of the host.</p>
+<h2 id="linux-inv-08-privilege-authority">LINUX-INV-08 — Privilege ≠ Authority</h2>
+<p>The technical ability to perform a privileged response does not authorize its use.</p>
+<h2 id="linux-inv-09-capability-authority">LINUX-INV-09 — Capability ≠ Authority</h2>
+<p>Declared platform support and response authorization are separate structural facts.</p>
+<h2 id="linux-inv-10-requested-response-executed-response">LINUX-INV-10 — Requested Response ≠ Executed Response</h2>
+<p>Unsupported, blocked, partial, and fallback outcomes remain explicit.</p>
+<h2 id="linux-inv-11-execution-resolution">LINUX-INV-11 — Execution ≠ Resolution</h2>
+<p>A successfully executed Linux mechanism does not prove that destructive activity has ended.</p>
+<h2 id="linux-inv-12-local-containment-remote-containment">LINUX-INV-12 — Local Containment ≠ Remote Containment</h2>
+<p>Stopping a local actor does not establish that a remote or synchronized origin has been resolved.</p>
+<h2 id="linux-inv-13-recovery-capability-verified-restoration">LINUX-INV-13 — Recovery Capability ≠ Verified Restoration</h2>
+<p>Availability of backups, snapshots, or other recovery mechanisms does not establish successful restoration.</p>
+<h2 id="linux-inv-14-observation-gap-no-activity">LINUX-INV-14 — Observation Gap ≠ No Activity</h2>
+<p>Missing telemetry cannot be interpreted as evidence that no transition occurred.</p>
+<h2 id="linux-inv-15-raw-path-required-shared-identity">LINUX-INV-15 — Raw Path ≠ Required Shared Identity</h2>
+<p>Sensitive filesystem paths should remain local when a privacy-preserving structural reference is sufficient.</p>
+<h2 id="linux-inv-16-provenance-survives-normalization">LINUX-INV-16 — Provenance Survives Normalization</h2>
+<p>Enough lineage must remain to reconstruct the origin and limitations of each normalized observation.</p>
+<hr>
+<h1 id="49-non-goals">49. Non-Goals</h1>
+<p>The Linux adapter is not:</p>
+<ul>
+<li>a universal Linux endpoint product;</li>
+<li>a malware-signature scanner;</li>
+<li>a ransomware classifier;</li>
+<li>an attribution engine;</li>
+<li>a guarantee of filesystem-wide visibility;</li>
+<li>a guarantee of process attribution;</li>
+<li>a guarantee of host-wide containment;</li>
+<li>a guarantee of network isolation;</li>
+<li>a guarantee of recovery;</li>
+<li>a mechanism for obtaining unauthorized privilege;</li>
+<li>a justification for bypassing Linux security controls;</li>
+<li>an authorization engine.</li>
+</ul>
+<p>Its role is narrower:</p>
+<blockquote>
+<p><strong>Observe the authorized Linux environment, normalize structural transitions, preserve actor and resource lineage, declare capabilities honestly, map authorized responses onto supported mechanisms, record actual outcomes, and support bounded verification.</strong></p>
+</blockquote>
+<hr>
+<h1 id="50-shared-contracts">50. Shared Contracts</h1>
+<p>The Linux adapter participates in:</p>
+<ul>
+<li><code>tf.resource-transition/v0.1</code></li>
+<li><code>tf.platform-capabilities/v0.1</code></li>
+<li><code>tf.containment-decision/v0.1</code></li>
+<li><code>tf.response-outcome/v0.1</code></li>
+<li><code>tf.verification/v0.1</code></li>
+</ul>
+<p>The Ransomware Structural Pattern Detector consumes its normalized observations and may produce:</p>
+<ul>
+<li><code>tf.structural-pattern/v0.1</code></li>
+</ul>
+<p>The Linux adapter does not redefine those contracts.</p>
+<hr>
+<h1 id="51-relationship-to-cloud-synchronization">51. Relationship to Cloud / Synchronization</h1>
+<p>For synchronized or remotely backed resources, the Linux adapter should cooperate with the Cloud / Synchronization adapter.</p>
+<p>The Linux side may establish:</p>
+<blockquote>
+<p><strong>This local actor performed or materialized this resource transition.</strong></p>
+</blockquote>
+<p>The cloud-sync side may establish:</p>
+<blockquote>
+<p><strong>This transition originated elsewhere or propagated across a synchronization boundary.</strong></p>
+</blockquote>
+<p>Those observations can be correlated while preserving their dependency.</p>
+<p>Neither should be forced to answer questions outside its available evidence.</p>
+<hr>
+<h1 id="52-relationship-to-container-environments">52. Relationship to Container Environments</h1>
+<p>A Linux host may contain several distinct execution boundaries.</p>
+<p>The adapter should preserve those boundaries rather than flattening them into a single actor space.</p>
+<p>Conceptually:</p>
+<p><strong>Host</strong></p>
+<p>↓</p>
+<p><strong>container / workload boundary</strong></p>
+<p>↓</p>
+<p><strong>actor</strong></p>
+<p>↓</p>
+<p><strong>resource transition</strong></p>
+<p>A host observation and a workload observation may describe the same event from different structural positions.</p>
+<p>The detector should be able to correlate them without automatically treating them as independent evidence.</p>
+<hr>
+<h1 id="canonical-summary">Canonical Summary</h1>
+<blockquote>
+<p><strong>The Linux adapter maps authorized Linux resource and actor observations into the Shared Structural Event Grammar while preserving deployment, privilege, mount, namespace, container, remote-resource, and observation boundaries.</strong></p>
+</blockquote>
+<p>Its platform rule is:</p>
+<blockquote>
+<p><strong>Linux describes the environment family. The concrete adapter declaration describes the capability.</strong></p>
+</blockquote>
+<p>Its observation rule is:</p>
+<blockquote>
+<p><strong>An observation source establishes only what that source actually exposed within its configured scope.</strong></p>
+</blockquote>
+<p>Its actor rule is:</p>
+<blockquote>
+<p><strong>A process identity may establish where a transition became observable without establishing intent or ultimate origin.</strong></p>
+</blockquote>
+<p>Its container rule is:</p>
+<blockquote>
+<p><strong>Host and container observations may describe the same structural event from different boundaries. Preserve that relationship rather than double-counting it.</strong></p>
+</blockquote>
+<p>Its authority rule is:</p>
+<blockquote>
+<p><strong>Privilege is a capability condition, not permission to act.</strong></p>
+</blockquote>
+<p>Its response rule is:</p>
+<blockquote>
+<p><strong>Execute only supported, authorized, bounded responses and record the exact scope that actually changed.</strong></p>
+</blockquote>
+<p>Its continuity rule is:</p>
+<blockquote>
+<p><strong>An observation gap remains a gap. Silence during that interval is not evidence of safety.</strong></p>
+</blockquote>
+<p>Its privacy rule is:</p>
+<blockquote>
+<p><strong>Normalize structural identity before exporting raw paths, content, credentials, or unrelated telemetry.</strong></p>
+</blockquote>
+<p>Its verification rule is:</p>
+<blockquote>
+<p><strong>Verify the resulting state across the scope actually observed. Do not promote bounded containment into a host-wide or cross-environment resolution claim.</strong></p>
+</blockquote>
+  </main>
+</body>
+</html>

@@ -1,0 +1,1480 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Ransomware_Structural_Pattern_Detector/adapters/windows.md">
+  <title>Windows Adapter</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Ransomware_Structural_Pattern_Detector/adapters/windows.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Ransomware_Structural_Pattern_Detector/adapters/windows.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="Ransomware_Structural_Pattern_Detector_adapters_windows_" src="https://github.com/user-attachments/assets/49142836-4fd1-44a2-8d92-8ac0283710be" /></p>
+<h1 id="windows-adapter">Windows Adapter</h1>
+<blockquote>
+<p><strong>Platform adapter specification for mapping authorized Windows resource and system observations into the Ransomware Structural Pattern Detector while preserving observation scope, actor lineage, filesystem, recovery, privilege, synchronization, and capability boundaries.</strong></p>
+</blockquote>
+<p>The Windows adapter connects Windows-observable resource transitions and actor relationships to the platform-neutral Shared Structural Event Grammar.</p>
+<p>Windows can support substantially different adapter profiles.</p>
+<p>A concrete implementation may be:</p>
+<ul>
+<li>an application-scoped observer;</li>
+<li>a resource-scoped observer;</li>
+<li>an event-driven endpoint observer;</li>
+<li>a filesystem-oriented security component;</li>
+<li>an endpoint-security integration;</li>
+<li>a narrowly configured research or educational implementation;</li>
+<li>another explicitly bounded deployment.</li>
+</ul>
+<p>These profiles must not be treated as equivalent.</p>
+<p>The governing rule is:</p>
+<blockquote>
+<p><strong>Declare what the deployed Windows adapter can actually observe and enforce. Do not promote Windows platform capability into adapter capability, policy authority, execution success, or verified resolution.</strong></p>
+</blockquote>
+<hr>
+<h2 id="status">Status</h2>
+<ul>
+<li><strong>Adapter ID:</strong> <code>rspd-windows</code></li>
+<li><strong>Platform:</strong> Windows</li>
+<li><strong>Status:</strong> Experimental</li>
+<li><strong>Role:</strong> Observation, normalization, capability declaration, bounded response mapping, and verification support</li>
+<li><strong>Normalized observation:</strong> <code>tf.resource-transition/v0.1</code></li>
+<li><strong>Capability declaration:</strong> <code>tf.platform-capabilities/v0.1</code></li>
+<li><strong>Decision input:</strong> <code>tf.containment-decision/v0.1</code></li>
+<li><strong>Execution output:</strong> <code>tf.response-outcome/v0.1</code></li>
+<li><strong>Verification output:</strong> <code>tf.verification/v0.1</code></li>
+</ul>
+<hr>
+<h1 id="1-scope">1. Scope</h1>
+<p>The Windows adapter operates within explicitly established application, filesystem, account, endpoint, authorization, security, storage, and execution boundaries.</p>
+<p>Its potential observation scope may include:</p>
+<ul>
+<li>user documents;</li>
+<li>selected directories;</li>
+<li>application data;</li>
+<li>configuration;</li>
+<li>databases;</li>
+<li>archives;</li>
+<li>project files;</li>
+<li>shared resources;</li>
+<li>mounted or mapped resources;</li>
+<li>backup resources;</li>
+<li>recovery resources;</li>
+<li>synchronized resources;</li>
+<li>protected resource sets;</li>
+<li>adapter-controlled canaries;</li>
+<li>relevant actor activity where observable;</li>
+<li>relevant Windows system activity where observable;</li>
+<li>other explicitly configured resources.</li>
+</ul>
+<p>A concrete implementation must state its actual observation boundary.</p>
+<p>Running on Windows does not by itself establish endpoint-wide visibility.</p>
+<hr>
+<h1 id="2-deployment-variability">2. Deployment Variability</h1>
+<p>The generic Windows adapter describes an architectural class rather than one installed endpoint product.</p>
+<p>Capability may vary according to:</p>
+<ul>
+<li>Windows edition and deployment;</li>
+<li>implementation architecture;</li>
+<li>observation mechanism;</li>
+<li>execution privileges;</li>
+<li>security policy;</li>
+<li>configured resource scope;</li>
+<li>account context;</li>
+<li>storage topology;</li>
+<li>network topology;</li>
+<li>synchronization environment;</li>
+<li>endpoint-security integration;</li>
+<li>recovery configuration;</li>
+<li>authorization.</li>
+</ul>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Windows describes the platform family. The concrete capability declaration describes the adapter.</strong></p>
+</blockquote>
+<hr>
+<h1 id="3-observation-model">3. Observation Model</h1>
+<p>A Windows implementation may combine one or more authorized sources of structural evidence.</p>
+<p>Conceptually:</p>
+<p><strong>Windows observation source</strong></p>
+<p>↓</p>
+<p><strong>adapter-local mapping</strong></p>
+<p>↓</p>
+<p><strong>normalization</strong></p>
+<p>↓</p>
+<p><strong><code>tf.resource-transition/v0.1</code></strong></p>
+<p>↓</p>
+<p><strong>Ransomware Structural Pattern Detector</strong></p>
+<p>The adapter should preserve which observation source produced each item of evidence.</p>
+<p>It must not turn a Windows event directly into a ransomware verdict.</p>
+<hr>
+<h1 id="4-event-driven-observation">4. Event-Driven Observation</h1>
+<p>A concrete implementation may consume event-driven observations exposed through its authorized Windows environment.</p>
+<p>Potential structural evidence may concern:</p>
+<ul>
+<li>resource creation;</li>
+<li>resource modification;</li>
+<li>deletion;</li>
+<li>rename;</li>
+<li>relocation;</li>
+<li>replacement;</li>
+<li>access;</li>
+<li>process activity;</li>
+<li>service activity;</li>
+<li>permission or authority changes;</li>
+<li>recovery-state changes;</li>
+<li>network context;</li>
+<li>synchronization behavior;</li>
+<li>other implementation-visible state.</li>
+</ul>
+<p>Only fields actually supported by the observation source should be populated.</p>
+<p>Unavailable information remains unresolved.</p>
+<hr>
+<h1 id="5-event-tracing">5. Event Tracing</h1>
+<p>A Windows implementation may use Event Tracing for Windows or another authorized event source as part of its observation strategy.</p>
+<p>At the architecture level, such telemetry may contribute evidence about relationships among:</p>
+<ul>
+<li>processes;</li>
+<li>resource activity;</li>
+<li>configuration state;</li>
+<li>network activity;</li>
+<li>execution sequences;</li>
+<li>other observable system behavior.</li>
+</ul>
+<p>The adapter must preserve which observations were actually collected.</p>
+<p>The existence of a Windows telemetry facility does not establish that a particular implementation subscribes to every relevant source or receives every relevant event.</p>
+<hr>
+<h1 id="6-filesystem-observation">6. Filesystem Observation</h1>
+<p>A Windows adapter may observe filesystem transitions through an implementation-specific mechanism.</p>
+<p>The generic architecture is concerned with the normalized structural result:</p>
+<ul>
+<li>actor;</li>
+<li>resource;</li>
+<li>operation;</li>
+<li>transition;</li>
+<li>context;</li>
+<li>baseline;</li>
+<li>consequence;</li>
+<li>provenance.</li>
+</ul>
+<p>The adapter may retain native filesystem evidence locally when needed for:</p>
+<ul>
+<li>correlation;</li>
+<li>containment;</li>
+<li>recovery;</li>
+<li>verification;</li>
+<li>authorized investigation.</li>
+</ul>
+<p>The shared detector does not require unrestricted raw filesystem telemetry.</p>
+<hr>
+<h1 id="7-filesystem-filtering-profile">7. Filesystem Filtering Profile</h1>
+<p>A concrete Windows security implementation may use a filesystem filtering architecture when appropriately implemented and authorized.</p>
+<p>Such a profile may provide an observation or intervention point closer to filesystem activity than a purely post-event observer.</p>
+<p>The adapter must still distinguish:</p>
+<p><strong>observation</strong></p>
+<p>from:</p>
+<p><strong>pre-operation intervention</strong></p>
+<p>from:</p>
+<p><strong>completed response</strong></p>
+<p>from:</p>
+<p><strong>verified resulting state</strong>.</p>
+<p>A mechanism capable of intercepting an operation does not by itself authorize the adapter to block it.</p>
+<hr>
+<h1 id="8-multiple-observation-sources">8. Multiple Observation Sources</h1>
+<p>A stronger Windows implementation may correlate several evidence sources.</p>
+<p>Conceptually:</p>
+<p><strong>filesystem evidence</strong></p>
+<p>+</p>
+<p><strong>process evidence</strong></p>
+<p>+</p>
+<p><strong>system-event evidence</strong></p>
+<p>+</p>
+<p><strong>network context</strong></p>
+<p>+</p>
+<p><strong>recovery context</strong></p>
+<p>↓</p>
+<p><strong>normalized structural evidence</strong></p>
+<p>Multiple evidence streams may strengthen structural reconstruction.</p>
+<p>They must not automatically inflate event count or evidence independence.</p>
+<blockquote>
+<p><strong>Multiple telemetry sources may describe one underlying transition.</strong></p>
+</blockquote>
+<hr>
+<h1 id="9-observation-provenance">9. Observation Provenance</h1>
+<p>Normalized observations should retain sufficient provenance to reconstruct their source.</p>
+<p>Relevant provenance may include:</p>
+<ul>
+<li>Windows environment;</li>
+<li>adapter identity;</li>
+<li>adapter version;</li>
+<li>observation source;</li>
+<li>native-event reference;</li>
+<li>observation time;</li>
+<li>normalization time;</li>
+<li>capability declaration;</li>
+<li>derivation references;</li>
+<li>redaction classes.</li>
+</ul>
+<p>Native logs or event payloads may remain local.</p>
+<hr>
+<h1 id="10-resource-mapping">10. Resource Mapping</h1>
+<p>Windows-visible resources should map into shared categories according to structural role.</p>
+<table>
+<thead>
+<tr>
+<th>Windows-visible resource</th>
+<th>Shared resource type/class</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>User document</td>
+<td><code>file</code> / <code>user_document</code></td>
+</tr>
+<tr>
+<td>Photo</td>
+<td><code>file</code> / <code>photo</code></td>
+</tr>
+<tr>
+<td>Video</td>
+<td><code>file</code> / <code>video</code></td>
+</tr>
+<tr>
+<td>Audio</td>
+<td><code>file</code> / <code>audio</code></td>
+</tr>
+<tr>
+<td>Database</td>
+<td><code>file</code> or <code>dataset</code> / <code>database</code></td>
+</tr>
+<tr>
+<td>Archive</td>
+<td><code>file</code> / <code>archive</code></td>
+</tr>
+<tr>
+<td>Project resource</td>
+<td><code>file</code> / <code>project_file</code></td>
+</tr>
+<tr>
+<td>Application data</td>
+<td><code>file</code> or <code>dataset</code> / <code>application_data</code></td>
+</tr>
+<tr>
+<td>Configuration</td>
+<td><code>configuration</code> / <code>configuration</code></td>
+</tr>
+<tr>
+<td>Credential-related store</td>
+<td>appropriate type / <code>credential_store</code></td>
+</tr>
+<tr>
+<td>Backup</td>
+<td>appropriate type / <code>backup</code></td>
+</tr>
+<tr>
+<td>Recovery resource</td>
+<td>appropriate type / <code>recovery_resource</code></td>
+</tr>
+<tr>
+<td>Network-backed resource</td>
+<td>appropriate type / <code>network_resource</code></td>
+</tr>
+<tr>
+<td>Cloud-backed resource</td>
+<td>appropriate type / <code>cloud_resource</code></td>
+</tr>
+<tr>
+<td>Temporary resource</td>
+<td>appropriate type / <code>temporary</code></td>
+</tr>
+<tr>
+<td>Canary</td>
+<td>appropriate type / <code>canary</code></td>
+</tr>
+<tr>
+<td>Other resource</td>
+<td>appropriate type / <code>domain_defined</code></td>
+</tr>
+</tbody>
+</table>
+<p>The normalized representation should expose structural meaning without unnecessarily exporting user-identifying information.</p>
+<hr>
+<h1 id="11-resource-identity">11. Resource Identity</h1>
+<p>Windows resource paths can contain sensitive user, organization, project, or system information.</p>
+<p>The central analyzer does not inherently require raw paths.</p>
+<p>A concrete adapter should prefer privacy-preserving stable identifiers where sufficient.</p>
+<p>Native resource identifiers may remain local for:</p>
+<ul>
+<li>correlation;</li>
+<li>enforcement;</li>
+<li>recovery;</li>
+<li>verification;</li>
+<li>authorized investigation.</li>
+</ul>
+<p>The shared event may instead carry structural resource identity and classification.</p>
+<hr>
+<h1 id="12-volume-and-storage-boundaries">12. Volume and Storage Boundaries</h1>
+<p>A Windows environment may contain resources spanning different storage boundaries.</p>
+<p>A concrete implementation should preserve relevant distinctions among:</p>
+<ul>
+<li>local resources;</li>
+<li>separate volumes;</li>
+<li>removable storage where applicable;</li>
+<li>network-backed resources;</li>
+<li>mapped resources;</li>
+<li>synchronized resources;</li>
+<li>cloud-backed resources;</li>
+<li>recovery resources;</li>
+<li>other configured storage boundaries.</li>
+</ul>
+<p>Observation of one boundary must not be generalized to another without evidence.</p>
+<hr>
+<h1 id="13-actor-mapping">13. Actor Mapping</h1>
+<p>Candidate Windows actors include:</p>
+<ul>
+<li><code>process</code></li>
+<li><code>application</code></li>
+<li><code>service</code></li>
+<li><code>script</code></li>
+<li><code>remote_actor</code></li>
+<li><code>sync_service</code></li>
+<li><code>system</code></li>
+<li><code>user</code></li>
+<li><code>agent</code></li>
+<li><code>unknown</code></li>
+</ul>
+<p>Where available, the adapter should preserve:</p>
+<ul>
+<li>actor ID;</li>
+<li>actor type;</li>
+<li>actor name;</li>
+<li>parent reference;</li>
+<li>instance reference;</li>
+<li>account reference;</li>
+<li>origin role;</li>
+<li>transport role.</li>
+</ul>
+<p>If the observation source cannot reliably establish an actor, the adapter must not invent one.</p>
+<hr>
+<h1 id="14-process-lineage">14. Process Lineage</h1>
+<p>Reliable process lineage can materially improve structural analysis.</p>
+<p>Conceptually:</p>
+<p><strong>parent actor</strong></p>
+<p>↓</p>
+<p><strong>child actor</strong></p>
+<p>↓</p>
+<p><strong>resource transition</strong></p>
+<p>Where available, the adapter should preserve such relationships.</p>
+<p>They may support questions such as:</p>
+<ul>
+<li>Is this operation coherent with the actor's established role?</li>
+<li>Is a familiar application acting through an unexpected child?</li>
+<li>Did several resource transitions share the same actor lineage?</li>
+<li>Is a locally visible process the origin or merely one part of a longer chain?</li>
+</ul>
+<p>Process lineage remains evidence.</p>
+<p>It does not establish malicious intent.</p>
+<hr>
+<h1 id="15-user-service-and-automation-context">15. User, Service, and Automation Context</h1>
+<p>Windows resource transitions may occur in:</p>
+<ul>
+<li>interactive user sessions;</li>
+<li>service contexts;</li>
+<li>automated tasks;</li>
+<li>application contexts;</li>
+<li>administrative contexts;</li>
+<li>remote contexts;</li>
+<li>synchronization contexts;</li>
+<li>other execution environments.</li>
+</ul>
+<p>Where observable, context should be preserved structurally.</p>
+<p>The adapter must not equate:</p>
+<p><strong>account under which activity occurred</strong></p>
+<p>with:</p>
+<p><strong>human intent</strong>.</p>
+<blockquote>
+<p><strong>Execution identity ≠ human intent.</strong></p>
+</blockquote>
+<hr>
+<h1 id="16-trust-and-identity-context">16. Trust and Identity Context</h1>
+<p>Where legitimate evidence exists, an implementation may preserve actor trust or identity context.</p>
+<p>Examples may include whether an actor is:</p>
+<ul>
+<li>known;</li>
+<li>unknown;</li>
+<li>partially identified;</li>
+<li>conflicting in identity;</li>
+<li>trusted under an established policy;</li>
+<li>associated with available publisher or signing information.</li>
+</ul>
+<p>This context must not override observed destructive behavior.</p>
+<blockquote>
+<p><strong>Trusted actor ≠ safe transition.</strong></p>
+</blockquote>
+<hr>
+<h1 id="17-origin-vs-transport">17. Origin vs. Transport</h1>
+<p>Synchronization, remote resources, services, management tools, and intermediary processes can separate the locally observed actor from the originating actor.</p>
+<p>A Windows actor may:</p>
+<ul>
+<li>originate a transition;</li>
+<li>transport a remote transition;</li>
+<li>materialize synchronized state;</li>
+<li>operate on behalf of another component;</li>
+<li>reflect activity originating elsewhere.</li>
+</ul>
+<p>Where evidence permits, preserve:</p>
+<ul>
+<li>origin actor;</li>
+<li>transport actor;</li>
+<li>observed actor;</li>
+<li>origin environment;</li>
+<li>synchronization context.</li>
+</ul>
+<p>Otherwise, origin remains unresolved.</p>
+<hr>
+<h1 id="18-transition-mapping">18. Transition Mapping</h1>
+<p>Candidate normalized operations include:</p>
+<ul>
+<li><code>read</code></li>
+<li><code>write</code></li>
+<li><code>create</code></li>
+<li><code>delete</code></li>
+<li><code>rename</code></li>
+<li><code>move</code></li>
+<li><code>truncate</code></li>
+<li><code>copy</code></li>
+<li><code>replace</code></li>
+<li><code>open</code></li>
+<li><code>close</code></li>
+<li><code>permission_change</code></li>
+<li><code>metadata_change</code></li>
+<li><code>recovery_change</code></li>
+<li><code>state_change</code></li>
+<li><code>scope_change</code></li>
+<li><code>authority_change</code></li>
+<li><code>execute</code></li>
+<li><code>sync</code></li>
+<li><code>other</code></li>
+</ul>
+<p>Candidate structural actions include:</p>
+<ul>
+<li><code>access</code></li>
+<li><code>modify</code></li>
+<li><code>create</code></li>
+<li><code>remove</code></li>
+<li><code>replace</code></li>
+<li><code>relocate</code></li>
+<li><code>duplicate</code></li>
+<li><code>restrict</code></li>
+<li><code>grant</code></li>
+<li><code>revoke</code></li>
+<li><code>expose</code></li>
+<li><code>conceal</code></li>
+<li><code>restore</code></li>
+<li><code>propagate</code></li>
+<li><code>transform</code></li>
+<li><code>other</code></li>
+</ul>
+<p>The adapter should retain a native operation when useful for diagnostic lineage.</p>
+<hr>
+<h1 id="19-transition-characteristics">19. Transition Characteristics</h1>
+<p>Where directly observable or explicitly derived, a Windows implementation may normalize characteristics such as:</p>
+<ul>
+<li>content-change indication;</li>
+<li>structural change;</li>
+<li>size change;</li>
+<li>representation or extension change;</li>
+<li>ownership change;</li>
+<li>permission change;</li>
+<li>authority change;</li>
+<li>scope change;</li>
+<li>recovery-state change;</li>
+<li>prior-state preservation;</li>
+<li>recoverability;</li>
+<li>transition timing;</li>
+<li>synchronization transport;</li>
+<li>repeated mutation.</li>
+</ul>
+<p>These fields provide evidence for downstream correlation.</p>
+<p>They do not independently establish ransomware.</p>
+<hr>
+<h1 id="20-baseline-support">20. Baseline Support</h1>
+<p>A concrete implementation may maintain a baseline for its authorized Windows scope.</p>
+<p>Candidate dimensions include:</p>
+<ul>
+<li>known actors;</li>
+<li>expected actor roles;</li>
+<li>typical operations;</li>
+<li>expected resource classes;</li>
+<li>typical transition rate;</li>
+<li>normal resource scope;</li>
+<li>established services;</li>
+<li>known administrative workflows;</li>
+<li>backup behavior;</li>
+<li>synchronization behavior;</li>
+<li>expected high-volume operations.</li>
+</ul>
+<p>Baseline deviation strengthens or weakens structural hypotheses.</p>
+<p>It does not establish intent.</p>
+<hr>
+<h1 id="21-legitimate-bulk-activity">21. Legitimate Bulk Activity</h1>
+<p>Windows systems may perform broad resource transitions for legitimate reasons.</p>
+<p>Potential competing explanations include:</p>
+<ul>
+<li>backup;</li>
+<li>restoration;</li>
+<li>synchronization;</li>
+<li>migration;</li>
+<li>software deployment;</li>
+<li>development or build activity;</li>
+<li>archive operations;</li>
+<li>media processing;</li>
+<li>authorized encryption;</li>
+<li>administrative automation;</li>
+<li>other established bulk workflows.</li>
+</ul>
+<p>Evidence supporting a legitimate workflow should remain visible as counter-evidence.</p>
+<p>Likewise, the presence of a legitimate-looking actor must not erase destructive effects that contradict the expected workflow.</p>
+<hr>
+<h1 id="22-canary-resources">22. Canary Resources</h1>
+<p>A concrete Windows implementation may maintain adapter-controlled canary resources inside authorized observation boundaries.</p>
+<p>Unexpected transition of a canary may provide strong evidence that destructive activity reached the monitored scope.</p>
+<p>It does not independently establish:</p>
+<ul>
+<li>ransomware;</li>
+<li>intent;</li>
+<li>attribution;</li>
+<li>host-wide impact.</li>
+</ul>
+<p>Canaries should contain no sensitive user information.</p>
+<hr>
+<h1 id="23-recovery-state-observation">23. Recovery-State Observation</h1>
+<p>Recovery state is particularly important to ransomware-oriented structural analysis.</p>
+<p>A Windows adapter may, where its concrete environment provides the evidence, observe structural state concerning:</p>
+<ul>
+<li>backup resources;</li>
+<li>historical resource state;</li>
+<li>snapshots;</li>
+<li>recovery configuration;</li>
+<li>recovery-resource availability;</li>
+<li>changes affecting recoverability.</li>
+</ul>
+<p>Such observations should be represented as resource and transition evidence.</p>
+<p>They should not automatically be labeled malicious.</p>
+<p>A recovery-resource transition may have legitimate administrative or backup explanations.</p>
+<hr>
+<h1 id="24-volume-shadow-copy-service">24. Volume Shadow Copy Service</h1>
+<p>Where relevant to the concrete environment, Volume Shadow Copy Service state may contribute recovery-context evidence.</p>
+<p>The adapter should treat VSS-related state as <strong>recovery structure</strong>, not a standalone ransomware verdict.</p>
+<p>A transition affecting shadow-copy or related recovery state may strengthen a destructive-pattern assessment when correlated with other evidence.</p>
+<p>But:</p>
+<blockquote>
+<p><strong>VSS activity ≠ ransomware.</strong></p>
+</blockquote>
+<p>Legitimate backup and administrative workflows may also interact with recovery state.</p>
+<p>The detector must evaluate the surrounding structure.</p>
+<hr>
+<h1 id="25-recovery-interference">25. Recovery Interference</h1>
+<p>The detector's <code>recovery_interference</code> signal may be supported when normalized Windows evidence establishes material adverse changes to relevant recovery resources or configuration.</p>
+<p>The adapter supplies the evidence.</p>
+<p>The detector determines whether that evidence contributes to a ransomware-like pattern.</p>
+<p>This preserves:</p>
+<p><strong>recovery observation</strong></p>
+<p>↓</p>
+<p><strong>structural correlation</strong></p>
+<p>↓</p>
+<p><strong>bounded assessment</strong></p>
+<p>rather than:</p>
+<p><strong>recovery event</strong></p>
+<p>↓</p>
+<p><strong>automatic ransomware verdict</strong>.</p>
+<hr>
+<h1 id="26-capability-declaration">26. Capability Declaration</h1>
+<p>Every concrete Windows adapter should provide:</p>
+<p><code>tf.platform-capabilities/v0.1</code></p>
+<p>The declaration describes the implementation actually deployed.</p>
+<p>Possible observation capabilities include:</p>
+<ul>
+<li>event observation;</li>
+<li>actor identity;</li>
+<li>actor lineage;</li>
+<li>resource classification;</li>
+<li>network context;</li>
+<li>origin/transport distinction;</li>
+<li>baseline access;</li>
+<li>resource metadata;</li>
+<li>recovery-state observation.</li>
+</ul>
+<p>Possible enforcement capabilities include:</p>
+<ul>
+<li>write denial;</li>
+<li>actor containment;</li>
+<li>resource isolation;</li>
+<li>network isolation;</li>
+<li>quarantine;</li>
+<li>permission restriction;</li>
+<li>actor disablement;</li>
+<li>session termination.</li>
+</ul>
+<p>Possible recovery capabilities include:</p>
+<ul>
+<li>recovery;</li>
+<li>rollback;</li>
+<li>snapshot restoration;</li>
+<li>resource restoration;</li>
+<li>configuration restoration.</li>
+</ul>
+<p>Possible verification capabilities include:</p>
+<ul>
+<li>post-action observation;</li>
+<li>state comparison;</li>
+<li>persistence detection;</li>
+<li>reappearance detection;</li>
+<li>recovery verification.</li>
+</ul>
+<p>Each capability is declared as:</p>
+<ul>
+<li><code>supported</code></li>
+<li><code>partial</code></li>
+<li><code>unsupported</code></li>
+<li><code>unknown</code></li>
+</ul>
+<hr>
+<h1 id="27-capability-profiles">27. Capability Profiles</h1>
+<p>A Windows adapter may expose different profiles.</p>
+<h2 id="application-profile">Application Profile</h2>
+<p>Narrow resource visibility and limited endpoint-level enforcement.</p>
+<h2 id="endpoint-observation-profile">Endpoint Observation Profile</h2>
+<p>Broader system and resource observations where supported by the implementation.</p>
+<h2 id="filesystem-intervention-profile">Filesystem Intervention Profile</h2>
+<p>An appropriately implemented and authorized profile with a filesystem-level intervention opportunity.</p>
+<h2 id="security-integration-profile">Security Integration Profile</h2>
+<p>An adapter obtaining structural evidence or response capability through another authorized endpoint-security mechanism.</p>
+<h2 id="hybrid-profile">Hybrid Profile</h2>
+<p>Multiple authorized observation sources correlated while retaining their provenance and dependency.</p>
+<p>These profiles describe architecture, not promised capabilities.</p>
+<hr>
+<h1 id="28-capability-is-not-authority">28. Capability Is Not Authority</h1>
+<p>Windows may expose powerful mechanisms.</p>
+<p>That does not authorize their use.</p>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Platform mechanism ≠ adapter capability</strong></p>
+<p><strong>Adapter capability ≠ policy authority</strong></p>
+<p><strong>Policy authority ≠ successful execution</strong></p>
+</blockquote>
+<p>A containment decision must establish the response boundary separately.</p>
+<hr>
+<h1 id="29-intervention-opportunity-vs-decision-authority">29. Intervention Opportunity vs. Decision Authority</h1>
+<p>A native mechanism may expose an opportunity to allow, deny, restrict, suspend, isolate, or otherwise alter an operation.</p>
+<p>That technical opportunity does not determine whether the adapter should do so.</p>
+<p>The adapter must still evaluate:</p>
+<ul>
+<li>containment decision;</li>
+<li>authorization;</li>
+<li>target;</li>
+<li>scope;</li>
+<li>constraints;</li>
+<li>reversibility;</li>
+<li>declared platform capability.</li>
+</ul>
+<p>The structural policy remains outside the native mechanism.</p>
+<hr>
+<h1 id="30-containment-mapping">30. Containment Mapping</h1>
+<p>An authorized containment decision may request:</p>
+<ul>
+<li>increased observation;</li>
+<li>operator notification;</li>
+<li>resource-write denial;</li>
+<li>actor containment;</li>
+<li>resource isolation;</li>
+<li>network isolation;</li>
+<li>quarantine;</li>
+<li>permission restriction;</li>
+<li>actor disablement;</li>
+<li>evidence preservation;</li>
+<li>recovery preparation;</li>
+<li>recovery initiation;</li>
+<li>manual review.</li>
+</ul>
+<p>A concrete Windows implementation maps only supported and authorized requests onto appropriate native mechanisms.</p>
+<p>This generic specification intentionally does not mandate one implementation strategy.</p>
+<hr>
+<h1 id="31-write-containment">31. Write Containment</h1>
+<p>Where the concrete adapter possesses an authorized mechanism capable of preventing applicable resource writes, it may map:</p>
+<p><code>deny_resource_writes</code></p>
+<p>onto that mechanism.</p>
+<p>The outcome must preserve actual scope.</p>
+<p>Blocking one operation, actor, directory, resource set, or volume must not silently become a claim of endpoint-wide write containment.</p>
+<blockquote>
+<p><strong>Bounded denial remains bounded denial.</strong></p>
+</blockquote>
+<hr>
+<h1 id="32-actor-containment">32. Actor Containment</h1>
+<p>Where supported and authorized, the adapter may attempt to contain an actor associated with destructive transitions.</p>
+<p>The concrete implementation determines the native mechanism.</p>
+<p>The outcome should preserve:</p>
+<ul>
+<li>target actor;</li>
+<li>containment scope;</li>
+<li>authorization;</li>
+<li>attempted action;</li>
+<li>executed action;</li>
+<li>direct effects;</li>
+<li>limitations;</li>
+<li>errors.</li>
+</ul>
+<p>Local actor containment does not establish that a synchronized or remote origin has disappeared.</p>
+<hr>
+<h1 id="33-resource-isolation">33. Resource Isolation</h1>
+<p>Where supported, resource isolation may restrict continued access to an affected resource or resource set.</p>
+<p>The adapter should record:</p>
+<ul>
+<li>target;</li>
+<li>scope;</li>
+<li>access boundary affected;</li>
+<li>reversibility;</li>
+<li>rollback availability;</li>
+<li>actual outcome.</li>
+</ul>
+<p>Resource isolation remains distinct from:</p>
+<ul>
+<li>actor containment;</li>
+<li>network containment;</li>
+<li>quarantine;</li>
+<li>recovery;</li>
+<li>verified resolution.</li>
+</ul>
+<hr>
+<h1 id="34-network-isolation">34. Network Isolation</h1>
+<p>Some concrete Windows deployments may provide a mechanism capable of restricting relevant network communication.</p>
+<p>This generic specification does not assume such support.</p>
+<p>Where available, the outcome must preserve actual scope.</p>
+<p>Network isolation of a local endpoint or actor does not establish:</p>
+<ul>
+<li>remote-state containment;</li>
+<li>cloud-state containment;</li>
+<li>resource recovery;</li>
+<li>removal of already propagated state.</li>
+</ul>
+<hr>
+<h1 id="35-quarantine">35. Quarantine</h1>
+<p>Where a concrete implementation supports quarantine, the adapter should represent what actually happened structurally.</p>
+<p>Relevant questions include:</p>
+<ul>
+<li>What was quarantined?</li>
+<li>Was the target an actor, resource, or resource set?</li>
+<li>Was access restricted?</li>
+<li>Was the action reversible?</li>
+<li>Was prior state preserved?</li>
+<li>Did quarantine succeed within the requested scope?</li>
+</ul>
+<p>Quarantine is an action.</p>
+<p>It is not verification that the underlying pattern resolved.</p>
+<hr>
+<h1 id="36-fallback">36. Fallback</h1>
+<p>If a requested action cannot be performed and fallback is allowed, the adapter may execute a weaker supported alternative.</p>
+<p>Conceptually:</p>
+<p><strong>Requested</strong></p>
+<p><code>deny_resource_writes</code></p>
+<p>↓</p>
+<p><strong>requested capability unavailable</strong></p>
+<p>↓</p>
+<p><strong>Fallback</strong></p>
+<p><code>contain_actor</code></p>
+<p>or:</p>
+<p><strong>Requested</strong></p>
+<p><code>contain_actor</code></p>
+<p>↓</p>
+<p><strong>authorization unavailable</strong></p>
+<p>↓</p>
+<p><strong>Fallback</strong></p>
+<p><code>notify_authorized_operator</code></p>
+<p>The actual fallback is policy-driven.</p>
+<p>The adapter records:</p>
+<ul>
+<li>requested response;</li>
+<li>unavailable capability or authority;</li>
+<li>fallback response;</li>
+<li>degradation;</li>
+<li>actual scope;</li>
+<li>execution result.</li>
+</ul>
+<hr>
+<h1 id="37-outcome-reporting">37. Outcome Reporting</h1>
+<p>Every response attempt should produce or contribute to:</p>
+<p><code>tf.response-outcome/v0.1</code></p>
+<p>Possible execution states include:</p>
+<ul>
+<li><code>not_attempted</code></li>
+<li><code>blocked</code></li>
+<li><code>unsupported</code></li>
+<li><code>authorization_required</code></li>
+<li><code>attempted</code></li>
+<li><code>partially_executed</code></li>
+<li><code>executed</code></li>
+<li><code>failed</code></li>
+<li><code>unknown</code></li>
+</ul>
+<p>The outcome should preserve:</p>
+<ul>
+<li>requested response;</li>
+<li>actual response;</li>
+<li>fallback;</li>
+<li>capability context;</li>
+<li>scope;</li>
+<li>direct effects;</li>
+<li>side effects;</li>
+<li>errors;</li>
+<li>warnings;</li>
+<li>rollback state;</li>
+<li>execution provenance.</li>
+</ul>
+<hr>
+<h1 id="38-native-success-is-not-resolution">38. Native Success Is Not Resolution</h1>
+<p>A Windows mechanism may report successful execution.</p>
+<p>That establishes evidence about the bounded operation.</p>
+<p>It does not independently establish that:</p>
+<ul>
+<li>destructive transitions ceased;</li>
+<li>another actor did not continue the pattern;</li>
+<li>synchronized state did not reintroduce the condition;</li>
+<li>affected resources were restored;</li>
+<li>recovery remained intact;</li>
+<li>remote origin disappeared.</li>
+</ul>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Execution success ≠ structural resolution.</strong></p>
+</blockquote>
+<hr>
+<h1 id="39-verification">39. Verification</h1>
+<p>After an authorized response, the adapter should rescan the relevant observation scope where its capabilities allow.</p>
+<p>Verification may ask:</p>
+<ul>
+<li>Are destructive resource transitions continuing?</li>
+<li>Is the relevant actor still producing them?</li>
+<li>Did another actor continue the structural pattern?</li>
+<li>Is affected-resource scope still expanding?</li>
+<li>Did the condition reappear?</li>
+<li>Did synchronized state reintroduce it?</li>
+<li>Did recovery state change?</li>
+<li>Are protected resources stable?</li>
+<li>Did the response create additional disruption?</li>
+<li>Can sufficient state be observed to support the intended conclusion?</li>
+</ul>
+<p>Possible results include:</p>
+<ul>
+<li><code>contained</code></li>
+<li><code>partially_contained</code></li>
+<li><code>persistent</code></li>
+<li><code>reappeared</code></li>
+<li><code>resolved</code></li>
+<li><code>partially_resolved</code></li>
+<li><code>new_condition_detected</code></li>
+<li><code>mixed</code></li>
+<li><code>unable_to_verify</code></li>
+</ul>
+<hr>
+<h1 id="40-verification-scope">40. Verification Scope</h1>
+<p>Verification conclusions must remain bounded to what was actually observed.</p>
+<p>For example:</p>
+<p><strong>No further destructive transitions observed in the protected resource set</strong></p>
+<p>does not imply:</p>
+<p><strong>The entire Windows endpoint is clean</strong></p>
+<p>unless the deployment truly provides the evidence needed for that broader claim.</p>
+<p>Likewise:</p>
+<p><strong>local actor contained</strong></p>
+<p>does not imply:</p>
+<p><strong>synchronized or remote origin resolved</strong>.</p>
+<hr>
+<h1 id="41-recovery">41. Recovery</h1>
+<p>Windows recovery capability varies by deployment and resource.</p>
+<p>A concrete implementation may have visibility into or support for:</p>
+<ul>
+<li>preserved originals;</li>
+<li>backup state;</li>
+<li>snapshots;</li>
+<li>recovery services;</li>
+<li>historical versions;</li>
+<li>synchronized recovery;</li>
+<li>resource restoration;</li>
+<li>configuration restoration;</li>
+<li>other explicitly configured recovery mechanisms.</li>
+</ul>
+<p>The adapter must distinguish:</p>
+<p><strong>recovery capability</strong></p>
+<p>from:</p>
+<p><strong>recovery state available</strong></p>
+<p>from:</p>
+<p><strong>recovery requested</strong></p>
+<p>from:</p>
+<p><strong>recovery attempted</strong></p>
+<p>from:</p>
+<p><strong>recovery completed</strong></p>
+<p>from:</p>
+<p><strong>restored state verified</strong>.</p>
+<hr>
+<h1 id="42-recovery-resources-as-protected-resources">42. Recovery Resources as Protected Resources</h1>
+<p>Recovery resources may themselves be important protected resources.</p>
+<p>The detector may therefore treat adverse transitions affecting them as structurally significant.</p>
+<p>The adapter should normalize recovery-resource activity without assuming its meaning.</p>
+<p>For example:</p>
+<p><strong>recovery resource changed</strong></p>
+<p>is an observation.</p>
+<p>Whether the transition represents:</p>
+<ul>
+<li>legitimate maintenance;</li>
+<li>scheduled cleanup;</li>
+<li>backup management;</li>
+<li>administrative change;</li>
+<li>harmful recovery interference;</li>
+<li>an unresolved condition</li>
+</ul>
+<p>belongs to downstream analysis.</p>
+<hr>
+<h1 id="43-synchronization">43. Synchronization</h1>
+<p>For synchronized resources, the Windows adapter should cooperate with the Cloud / Synchronization adapter.</p>
+<p>The Windows side may establish:</p>
+<blockquote>
+<p><strong>This local process or synchronization service materialized the transition on this endpoint.</strong></p>
+</blockquote>
+<p>The cloud-sync side may establish:</p>
+<blockquote>
+<p><strong>This transition originated elsewhere or propagated across an environment boundary.</strong></p>
+</blockquote>
+<p>The resulting observations should be correlated without automatically becoming independent-origin evidence.</p>
+<hr>
+<h1 id="44-network-backed-resources">44. Network-Backed Resources</h1>
+<p>A Windows endpoint may observe transitions affecting resources whose storage authority lies elsewhere.</p>
+<p>For such resources:</p>
+<p><strong>local visibility ≠ local origin</strong></p>
+<p>and:</p>
+<p><strong>local access ≠ recovery authority</strong>.</p>
+<p>The adapter should preserve resource scope, transport relationships, environment relationships, and available recovery context.</p>
+<hr>
+<h1 id="45-evidence-independence">45. Evidence Independence</h1>
+<p>Windows deployments may expose the same transition through several telemetry paths.</p>
+<p>Those observations may corroborate that an event occurred while remaining dependent evidence about its cause.</p>
+<p>The adapter should preserve dependency when known.</p>
+<p>This protects downstream calculations from:</p>
+<ul>
+<li>duplicate event inflation;</li>
+<li>false acceleration;</li>
+<li>exaggerated scope;</li>
+<li>false corroboration.</li>
+</ul>
+<hr>
+<h1 id="46-event-deduplication">46. Event Deduplication</h1>
+<p>A concrete adapter should have a bounded strategy for recognizing duplicate representations of the same underlying transition where sufficient evidence permits.</p>
+<p>Candidate correlation dimensions include:</p>
+<ul>
+<li>native event identity;</li>
+<li>resource identity;</li>
+<li>actor identity;</li>
+<li>transition time;</li>
+<li>prior-state reference;</li>
+<li>resulting-state reference;</li>
+<li>correlation identifier;</li>
+<li>observation source.</li>
+</ul>
+<p>Deduplication should preserve provenance.</p>
+<p>It should distinguish observations, not erase them.</p>
+<hr>
+<h1 id="47-observation-gaps">47. Observation Gaps</h1>
+<p>A robust Windows implementation should preserve known gaps in telemetry.</p>
+<p>Possible reasons include:</p>
+<ul>
+<li>observer initialization;</li>
+<li>adapter restart;</li>
+<li>source disruption;</li>
+<li>configuration changes;</li>
+<li>authorization loss;</li>
+<li>collection failure;</li>
+<li>event loss;</li>
+<li>resource scope changes;</li>
+<li>unknown continuity.</li>
+</ul>
+<p>The correct structural result is:</p>
+<p><strong>observation gap</strong></p>
+<p>not:</p>
+<p><strong>no activity</strong>.</p>
+<hr>
+<h1 id="48-restart-and-continuity">48. Restart and Continuity</h1>
+<p>The adapter should distinguish:</p>
+<ul>
+<li>uninterrupted observation;</li>
+<li>resumed observation;</li>
+<li>known observation gap;</li>
+<li>baseline reset;</li>
+<li>unknown continuity.</li>
+</ul>
+<p>This is important because downstream analysis may derive:</p>
+<ul>
+<li>rate;</li>
+<li>acceleration;</li>
+<li>persistence;</li>
+<li>reappearance;</li>
+<li>scope expansion.</li>
+</ul>
+<p>A restart must not make discontinuous evidence appear continuous.</p>
+<hr>
+<h1 id="49-temporal-ordering">49. Temporal Ordering</h1>
+<p>Where several Windows observation sources are correlated, the adapter should preserve:</p>
+<ul>
+<li>source timestamps;</li>
+<li>normalization timestamps;</li>
+<li>event ordering information when available;</li>
+<li>ordering uncertainty.</li>
+</ul>
+<p>The detector should not infer causal sequence solely from the order in which normalized events were received.</p>
+<hr>
+<h1 id="50-privacy-and-redaction">50. Privacy and Redaction</h1>
+<p>Windows endpoint evidence can expose highly sensitive user and system information.</p>
+<p>The adapter should minimize what crosses into the shared analytical layer.</p>
+<p>Preferred normalized information includes:</p>
+<ul>
+<li>privacy-preserving resource ID;</li>
+<li>resource type;</li>
+<li>resource class;</li>
+<li>scope;</li>
+<li>sensitivity;</li>
+<li>transition type;</li>
+<li>transition timing;</li>
+<li>actor category;</li>
+<li>actor relationship;</li>
+<li>baseline state;</li>
+<li>preservation state;</li>
+<li>recovery state;</li>
+<li>environment relationship;</li>
+<li>provenance.</li>
+</ul>
+<p>Avoid exporting unnecessary:</p>
+<ul>
+<li>document contents;</li>
+<li>personal filenames;</li>
+<li>raw filesystem paths;</li>
+<li>plaintext credentials;</li>
+<li>authentication tokens;</li>
+<li>private keys;</li>
+<li>sensitive command-line content;</li>
+<li>unrelated registry or configuration data;</li>
+<li>unrelated network data;</li>
+<li>unrelated account information.</li>
+</ul>
+<hr>
+<h1 id="51-credential-boundary">51. Credential Boundary</h1>
+<p>The shared detector does not require Windows authentication secrets.</p>
+<p>The adapter must not emit:</p>
+<ul>
+<li>passwords;</li>
+<li>access tokens;</li>
+<li>refresh tokens;</li>
+<li>session secrets;</li>
+<li>private keys;</li>
+<li>recovery secrets;</li>
+<li>unrelated credentials.</li>
+</ul>
+<p>Where structural identity context is required, use a bounded reference rather than the authentication material itself.</p>
+<hr>
+<h1 id="52-local-processing-preference">52. Local Processing Preference</h1>
+<p>Sensitive Windows-native operations should remain local when normalized structure is sufficient.</p>
+<p>Candidate local operations include:</p>
+<ul>
+<li>native-event handling;</li>
+<li>filesystem-path handling;</li>
+<li>actor correlation;</li>
+<li>resource classification;</li>
+<li>identifier pseudonymization;</li>
+<li>baseline comparison;</li>
+<li>telemetry deduplication;</li>
+<li>state comparison;</li>
+<li>redaction;</li>
+<li>mapping native operations into shared transitions.</li>
+</ul>
+<p>The detector should receive evidence sufficient for structural reasoning rather than a wholesale copy of endpoint telemetry.</p>
+<hr>
+<h1 id="53-known-limitations">53. Known Limitations</h1>
+<p>Concrete Windows adapters should document implementation-specific limitations such as:</p>
+<ul>
+<li>incomplete filesystem scope;</li>
+<li>incomplete telemetry sources;</li>
+<li>event loss;</li>
+<li>insufficient privilege;</li>
+<li>incomplete actor identity;</li>
+<li>incomplete process lineage;</li>
+<li>remote-resource ambiguity;</li>
+<li>synchronization ambiguity;</li>
+<li>incomplete network context;</li>
+<li>incomplete recovery visibility;</li>
+<li>unsupported enforcement actions;</li>
+<li>authorization restrictions;</li>
+<li>inability to observe post-response state;</li>
+<li>incomplete cross-environment verification.</li>
+</ul>
+<p>These limitations are analytical evidence.</p>
+<p>They should not be hidden.</p>
+<hr>
+<h1 id="54-capability-posture">54. Capability Posture</h1>
+<p>The generic Windows adapter begins from:</p>
+<table>
+<thead>
+<tr>
+<th>Capability</th>
+<th>Generic posture</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Event observation</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Actor identity</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Actor lineage</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Resource classification</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Network context</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Origin / transport distinction</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Baseline access</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Recovery-state observation</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Write denial</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Actor containment</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Resource isolation</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Network isolation</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Quarantine</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Permission restriction</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Actor disablement</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Session termination</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Recovery</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Rollback</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Snapshot restore</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Resource restore</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Configuration restore</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Post-action observation</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>State comparison</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Persistence detection</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Reappearance detection</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Recovery verification</td>
+<td><code>unknown</code></td>
+</tr>
+</tbody>
+</table>
+<p>This does not mean Windows lacks these capabilities.</p>
+<p>It means the generic specification does not claim that a particular Windows adapter possesses them.</p>
+<p>A concrete deployment replaces <code>unknown</code> with evidence-backed declarations.</p>
+<hr>
+<h1 id="55-why-the-generic-posture-is-unknown">55. Why the Generic Posture Is Unknown</h1>
+<p>A Windows platform feature establishes only that a mechanism exists somewhere in the platform architecture.</p>
+<p>It does not establish that:</p>
+<ul>
+<li>this adapter implements it;</li>
+<li>the implementation is appropriately configured;</li>
+<li>the implementation has the required authority;</li>
+<li>the relevant resource lies within scope;</li>
+<li>the mechanism applies to the requested action;</li>
+<li>the current deployment exposes the necessary evidence.</li>
+</ul>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Capability is established by the deployed adapter, not inferred from the operating-system name.</strong></p>
+</blockquote>
+<hr>
+<h1 id="56-windows-adapter-invariants">56. Windows Adapter Invariants</h1>
+<h2 id="windows-inv-01-platform-capability-adapter-capability">WINDOWS-INV-01 — Platform Capability ≠ Adapter Capability</h2>
+<p>The existence of a Windows mechanism does not establish that a concrete adapter implements or can use it.</p>
+<h2 id="windows-inv-02-observation-boundary-endpoint-boundary">WINDOWS-INV-02 — Observation Boundary ≠ Endpoint Boundary</h2>
+<p>A bounded observer must not imply endpoint-wide visibility.</p>
+<h2 id="windows-inv-03-native-event-domain-verdict">WINDOWS-INV-03 — Native Event ≠ Domain Verdict</h2>
+<p>A Windows event is evidence, not a ransomware conclusion.</p>
+<h2 id="windows-inv-04-actor-identity-intent">WINDOWS-INV-04 — Actor Identity ≠ Intent</h2>
+<p>A process, application, service, script, system component, account, or user identity does not establish motive.</p>
+<h2 id="windows-inv-05-trusted-actor-safe-transition">WINDOWS-INV-05 — Trusted Actor ≠ Safe Transition</h2>
+<p>Known or trusted identity context must not suppress contradictory destructive behavior.</p>
+<h2 id="windows-inv-06-actor-origin">WINDOWS-INV-06 — Actor ≠ Origin</h2>
+<p>A locally visible actor may transport or materialize a transition originating elsewhere.</p>
+<h2 id="windows-inv-07-multiple-sources-independent-transitions">WINDOWS-INV-07 — Multiple Sources ≠ Independent Transitions</h2>
+<p>Several Windows telemetry sources may describe the same underlying resource transition.</p>
+<h2 id="windows-inv-08-recovery-event-ransomware">WINDOWS-INV-08 — Recovery Event ≠ Ransomware</h2>
+<p>A transition affecting recovery state does not independently establish ransomware.</p>
+<h2 id="windows-inv-09-privilege-authority">WINDOWS-INV-09 — Privilege ≠ Authority</h2>
+<p>Technical privilege does not provide policy authorization for containment.</p>
+<h2 id="windows-inv-10-capability-authority">WINDOWS-INV-10 — Capability ≠ Authority</h2>
+<p>A supported platform action must still be separately authorized.</p>
+<h2 id="windows-inv-11-intervention-opportunity-containment-decision">WINDOWS-INV-11 — Intervention Opportunity ≠ Containment Decision</h2>
+<p>The ability to intercept an operation does not itself establish that the operation should be denied.</p>
+<h2 id="windows-inv-12-requested-response-executed-response">WINDOWS-INV-12 — Requested Response ≠ Executed Response</h2>
+<p>Blocked, unsupported, partial, failed, and fallback outcomes remain explicit.</p>
+<h2 id="windows-inv-13-execution-resolution">WINDOWS-INV-13 — Execution ≠ Resolution</h2>
+<p>A successful Windows response does not prove that the destructive structural pattern has resolved.</p>
+<h2 id="windows-inv-14-local-containment-remote-containment">WINDOWS-INV-14 — Local Containment ≠ Remote Containment</h2>
+<p>Local intervention does not establish that synchronized or remote destructive state is resolved.</p>
+<h2 id="windows-inv-15-recovery-capability-verified-restoration">WINDOWS-INV-15 — Recovery Capability ≠ Verified Restoration</h2>
+<p>Availability of a recovery mechanism does not establish successful restoration.</p>
+<h2 id="windows-inv-16-observation-gap-no-activity">WINDOWS-INV-16 — Observation Gap ≠ No Activity</h2>
+<p>Unavailable telemetry cannot be treated as evidence that no transition occurred.</p>
+<h2 id="windows-inv-17-privacy-survives-normalization">WINDOWS-INV-17 — Privacy Survives Normalization</h2>
+<p>Raw content, paths, credentials, and unrelated endpoint telemetry should remain local when structural references are sufficient.</p>
+<h2 id="windows-inv-18-provenance-survives-correlation">WINDOWS-INV-18 — Provenance Survives Correlation</h2>
+<p>Multi-source correlation must retain enough lineage to reconstruct the observations used to produce the shared event.</p>
+<hr>
+<h1 id="57-non-goals">57. Non-Goals</h1>
+<p>The Windows adapter is not:</p>
+<ul>
+<li>a malware-signature engine;</li>
+<li>a ransomware classifier;</li>
+<li>an attribution system;</li>
+<li>a universal EDR implementation;</li>
+<li>a guarantee of endpoint-wide visibility;</li>
+<li>a guarantee of process attribution;</li>
+<li>a guarantee of write containment;</li>
+<li>a guarantee of network isolation;</li>
+<li>a guarantee of recovery;</li>
+<li>an authorization engine;</li>
+<li>a mechanism for bypassing Windows security controls;</li>
+<li>a justification for centralizing raw endpoint telemetry.</li>
+</ul>
+<p>Its role is narrower:</p>
+<blockquote>
+<p><strong>Observe authorized Windows structural evidence, normalize it faithfully, declare actual capabilities and limitations, map separately authorized responses onto supported mechanisms, record what really happened, and support bounded verification.</strong></p>
+</blockquote>
+<hr>
+<h1 id="58-shared-contracts">58. Shared Contracts</h1>
+<p>The Windows adapter participates in:</p>
+<ul>
+<li><code>tf.resource-transition/v0.1</code></li>
+<li><code>tf.platform-capabilities/v0.1</code></li>
+<li><code>tf.containment-decision/v0.1</code></li>
+<li><code>tf.response-outcome/v0.1</code></li>
+<li><code>tf.verification/v0.1</code></li>
+</ul>
+<p>The Ransomware Structural Pattern Detector consumes its normalized observations and may produce:</p>
+<ul>
+<li><code>tf.structural-pattern/v0.1</code></li>
+</ul>
+<p>The Windows adapter does not redefine those contracts.</p>
+<hr>
+<h1 id="59-relationship-to-cloud-synchronization">59. Relationship to Cloud / Synchronization</h1>
+<p>For synchronized resources, the Windows adapter should cooperate with the Cloud / Synchronization adapter.</p>
+<p>Conceptually:</p>
+<p><strong>Windows-local observation</strong></p>
+<p>↓</p>
+<p><strong>local normalized transition</strong></p>
+<p>↕ correlation</p>
+<p><strong>cloud / synchronization observation</strong></p>
+<p>↓</p>
+<p><strong>cross-environment lineage</strong></p>
+<p>The Windows adapter may establish where a transition became visible locally.</p>
+<p>The cloud-sync adapter may contribute evidence about origin, transport, replication, or propagation.</p>
+<p>Neither layer should invent evidence the other does not possess.</p>
+<hr>
+<h1 id="60-relationship-to-other-platform-adapters">60. Relationship to Other Platform Adapters</h1>
+<p>The Windows, macOS, Linux, Android, iOS/iPadOS, and Cloud / Synchronization adapters all share the same structural grammar.</p>
+<p>Their capabilities are intentionally not assumed to be equal.</p>
+<p>This is the key portability rule:</p>
+<blockquote>
+<p><strong>Standardize semantics without pretending mechanisms are identical.</strong></p>
+</blockquote>
+<p>A <code>tf.resource-transition/v0.1</code> object should remain structurally intelligible regardless of whether its observation originated from Windows, Linux, macOS, Android, iOS/iPadOS, or a synchronization environment.</p>
+<hr>
+<h1 id="canonical-summary">Canonical Summary</h1>
+<blockquote>
+<p><strong>The Windows adapter maps authorized Windows resource, actor, recovery, and system observations into the Shared Structural Event Grammar while preserving the distinction between platform capability, adapter capability, response authority, actual execution, and verified resulting state.</strong></p>
+</blockquote>
+<p>Its platform rule is:</p>
+<blockquote>
+<p><strong>Windows may provide the mechanism. The deployed adapter must prove that it possesses the capability.</strong></p>
+</blockquote>
+<p>Its observation rule is:</p>
+<blockquote>
+<p><strong>Normalize what the configured observer actually saw and retain enough provenance to reconstruct how it was observed.</strong></p>
+</blockquote>
+<p>Its filesystem rule is:</p>
+<blockquote>
+<p><strong>An opportunity to observe or intercept a resource operation remains distinct from the structural decision to contain it.</strong></p>
+</blockquote>
+<p>Its actor rule is:</p>
+<blockquote>
+<p><strong>A known process can behave anomalously, and a locally visible process may not be the ultimate origin.</strong></p>
+</blockquote>
+<p>Its recovery rule is:</p>
+<blockquote>
+<p><strong>Recovery-state changes are evidence to correlate, not automatic ransomware verdicts.</strong></p>
+</blockquote>
+<p>Its authority rule is:</p>
+<blockquote>
+<p><strong>Privilege and technical capability do not grant permission to act.</strong></p>
+</blockquote>
+<p>Its response rule is:</p>
+<blockquote>
+<p><strong>Record the exact response and scope that actually executed, including partial and fallback behavior.</strong></p>
+</blockquote>
+<p>Its continuity rule is:</p>
+<blockquote>
+<p><strong>Telemetry gaps remain gaps rather than becoming evidence of inactivity.</strong></p>
+</blockquote>
+<p>Its privacy rule is:</p>
+<blockquote>
+<p><strong>Keep raw endpoint detail local when privacy-preserving structural evidence is sufficient.</strong></p>
+</blockquote>
+<p>Its verification rule is:</p>
+<blockquote>
+<p><strong>A blocked operation or contained actor is evidence of intervention, not proof that the overall destructive condition has resolved.</strong></p>
+</blockquote>
+  </main>
+</body>
+</html>

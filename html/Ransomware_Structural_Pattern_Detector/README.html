@@ -1,0 +1,665 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Ransomware_Structural_Pattern_Detector/README.md">
+  <title>Ransomware Structural Pattern Detector</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Ransomware_Structural_Pattern_Detector/README.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Ransomware_Structural_Pattern_Detector/README.md</code>
+    &middot;
+    <a href="../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="Ransomware_Structural_Pattern_Detector_" src="https://github.com/user-attachments/assets/32009e0c-cd0d-45e8-b871-e0f91f96f90f" /></p>
+<h1 id="ransomware-structural-pattern-detector">Ransomware Structural Pattern Detector</h1>
+<blockquote>
+<p><strong>A platform-neutral structural analyzer for detecting accelerating destructive resource-transition patterns and producing bounded, evidence-preserving containment decisions.</strong></p>
+</blockquote>
+<p>The Ransomware Structural Pattern Detector is a specialized TriadicFrameworks system-security analyzer.</p>
+<p>Its purpose is to identify structural behavior consistent with ransomware-like destructive activity without requiring the shared event layer to label individual observations as malicious.</p>
+<p>The detector consumes normalized structural observations, correlates them across time, actors, resources, and baselines, preserves counter-evidence and uncertainty, and produces bounded assessments suitable for downstream containment decisions.</p>
+<p>Its governing principle is:</p>
+<blockquote>
+<p><strong>Detect destructive structure early enough to limit damage, but never convert anomaly into attribution or intent without evidence.</strong></p>
+</blockquote>
+<hr>
+<h2 id="status">Status</h2>
+<ul>
+<li><strong>Name:</strong> Ransomware Structural Pattern Detector</li>
+<li><strong>Status:</strong> Experimental</li>
+<li><strong>Role:</strong> Specialized system-security analyzer</li>
+<li><strong>Input grammar:</strong> Shared Structural Event Grammar</li>
+<li><strong>Primary event:</strong> <code>tf.resource-transition/v0.1</code></li>
+<li><strong>Primary analytical output:</strong> <code>tf.structural-pattern/v0.1</code></li>
+<li><strong>Decision interface:</strong> <code>tf.containment-decision/v0.1</code></li>
+<li><strong>Outcome interface:</strong> <code>tf.response-outcome/v0.1</code></li>
+<li><strong>Verification interface:</strong> <code>tf.verification/v0.1</code></li>
+<li><strong>Machine-readable detector definition:</strong> <code>detector.json</code></li>
+<li><strong>Platform adaptation:</strong> <code>adapters/</code></li>
+</ul>
+<hr>
+<h1 id="purpose">Purpose</h1>
+<p>Traditional ransomware indicators may focus on recognizable artifacts such as signatures, process names, file extensions, ransom notes, or known malicious identities.</p>
+<p>This detector operates at a different layer.</p>
+<p>It asks:</p>
+<blockquote>
+<p><strong>Are observed resource transitions forming an accelerating destructive pattern that exceeds an acceptable damage boundary?</strong></p>
+</blockquote>
+<p>The distinction matters because the actor visible during destructive activity may be:</p>
+<ul>
+<li>previously known;</li>
+<li>signed or trusted;</li>
+<li>a legitimate application being abused;</li>
+<li>an automation tool;</li>
+<li>a synchronization service transporting remote changes;</li>
+<li>an unidentified process;</li>
+<li>only one component in a longer actor chain.</li>
+</ul>
+<p>The detector therefore evaluates <strong>behavioral structure rather than reputation alone</strong>.</p>
+<hr>
+<h1 id="architectural-position">Architectural Position</h1>
+<p>The detector sits above normalized observations and below platform-specific intervention.</p>
+<p>Conceptually:</p>
+<p><strong>Native Platform Observation</strong></p>
+<p>↓</p>
+<p><strong>Platform Adapter / Normalizer</strong></p>
+<p>↓</p>
+<p><strong><code>tf.resource-transition/v0.1</code></strong></p>
+<p>↓</p>
+<p><strong>Ransomware Structural Pattern Detector</strong></p>
+<p>↓</p>
+<p><strong><code>tf.structural-pattern/v0.1</code></strong></p>
+<p>↓</p>
+<p><strong>Bounded Containment Decision</strong></p>
+<p>↓</p>
+<p><strong>Platform Adapter</strong></p>
+<p>↓</p>
+<p><strong>Response Outcome</strong></p>
+<p>↓</p>
+<p><strong>Verification</strong></p>
+<p>This separation keeps:</p>
+<ul>
+<li>observation distinct from interpretation;</li>
+<li>interpretation distinct from decision;</li>
+<li>decision distinct from execution;</li>
+<li>execution distinct from verification.</li>
+</ul>
+<hr>
+<h1 id="what-the-detector-looks-for">What the Detector Looks For</h1>
+<p>The detector is concerned with <strong>patterns of resource transition</strong>, not isolated suspicious-looking events.</p>
+<p>Candidate structural signals include:</p>
+<ul>
+<li>unusual transition rate;</li>
+<li>accelerating modification rate;</li>
+<li>expanding resource scope;</li>
+<li>destructive or replacement transitions;</li>
+<li>originals not being preserved;</li>
+<li>unexpected transformation of user resources;</li>
+<li>deviation from an actor's established role;</li>
+<li>deviation from historical activity;</li>
+<li>recovery-resource interference;</li>
+<li>propagation across resources or environments;</li>
+<li>repeated transition behavior inconsistent with baseline.</li>
+</ul>
+<p>No single signal is sufficient to establish ransomware.</p>
+<p>The detector correlates multiple observations and continually tests the proposed interpretation against available counter-evidence.</p>
+<hr>
+<h1 id="structural-progression">Structural Progression</h1>
+<p>A ransomware-like pattern may emerge progressively.</p>
+<p>Conceptually:</p>
+<p><strong>Normal activity</strong></p>
+<p>↓</p>
+<p><strong>Unusual transition activity</strong></p>
+<p>↓</p>
+<p><strong>Correlated deviation</strong></p>
+<p>↓</p>
+<p><strong>Accelerating destructive transformation</strong></p>
+<p>↓</p>
+<p><strong>Expanding damage boundary</strong></p>
+<p>↓</p>
+<p><strong>Containment threshold</strong></p>
+<p>This is deliberately not a fixed universal scoring formula.</p>
+<p>Different systems, resource classes, and environments may require different thresholds.</p>
+<p>The portable detector model should preserve the structural dimensions while allowing appropriate calibration by implementations and adapters.</p>
+<hr>
+<h1 id="resource-transitions">Resource Transitions</h1>
+<p>The detector consumes normalized <code>tf.resource-transition/v0.1</code> objects.</p>
+<p>A transition may describe:</p>
+<ul>
+<li>an actor;</li>
+<li>an affected resource;</li>
+<li>the observed operation;</li>
+<li>the resulting structural transition;</li>
+<li>execution context;</li>
+<li>baseline information;</li>
+<li>direct consequences;</li>
+<li>provenance.</li>
+</ul>
+<p>The detector does not require raw platform-native events once sufficient normalized structure is available.</p>
+<p>Platform-specific evidence should remain local when the normalized representation is sufficient for analysis.</p>
+<hr>
+<h1 id="actor-semantics">Actor Semantics</h1>
+<p>An observed actor is not automatically the origin of a destructive transition.</p>
+<p>This distinction is particularly important in synchronized or distributed environments.</p>
+<p>The detector should preserve, where evidence permits:</p>
+<ul>
+<li>observed actor;</li>
+<li>origin candidate;</li>
+<li>transport actor;</li>
+<li>parent or invoking actor;</li>
+<li>actor lineage;</li>
+<li>originating environment.</li>
+</ul>
+<p>For example, a trusted synchronization service may transport destructive changes created elsewhere.</p>
+<p>Its trusted status does not make the transition benign, and its presence does not prove that the synchronization service originated the destructive activity.</p>
+<p>The detector therefore follows:</p>
+<blockquote>
+<p><strong>Trust in an actor does not imply trust in every transition carried by that actor.</strong></p>
+</blockquote>
+<hr>
+<h1 id="baseline-and-role-deviation">Baseline and Role Deviation</h1>
+<p>A baseline helps answer questions such as:</p>
+<ul>
+<li>Is this actor known?</li>
+<li>Is this operation typical?</li>
+<li>Is this transition rate typical?</li>
+<li>Is this resource scope typical?</li>
+<li>Is the resource class typical for this actor?</li>
+<li>Is the behavior coherent with the actor's established role?</li>
+</ul>
+<p>Baseline deviation is useful evidence, but it is not proof of malice.</p>
+<p>A legitimate backup, migration, media-processing, synchronization, encryption, development, or bulk-management workflow may produce substantial resource transitions.</p>
+<p>The detector therefore treats deviation as something to explain, not something to condemn.</p>
+<hr>
+<h1 id="supporting-evidence">Supporting Evidence</h1>
+<p>Supporting evidence strengthens the ransomware-like structural interpretation.</p>
+<p>Candidate examples include:</p>
+<ul>
+<li>accelerating transition rate;</li>
+<li>expanding scope;</li>
+<li>destructive rewriting;</li>
+<li>loss of prior usable state;</li>
+<li>unexpected transformation of protected resources;</li>
+<li>recovery interference;</li>
+<li>actor-role deviation;</li>
+<li>cross-boundary propagation.</li>
+</ul>
+<p>Supporting evidence should retain references to the observations or derivations from which it was produced.</p>
+<hr>
+<h1 id="counter-evidence">Counter-Evidence</h1>
+<p>Counter-evidence is equally important.</p>
+<p>Candidate examples include:</p>
+<ul>
+<li>explicit user initiation;</li>
+<li>expected bulk workflow;</li>
+<li>established actor role;</li>
+<li>known destination or transformation;</li>
+<li>preservation of originals;</li>
+<li>available recovery state;</li>
+<li>operation consistent with established baseline.</li>
+</ul>
+<p>Counter-evidence must not disappear merely because several suspicious signals have accumulated.</p>
+<p>The detector evaluates:</p>
+<blockquote>
+<p><strong>destructive deviation against available structural coherence</strong></p>
+</blockquote>
+<p>rather than counting only evidence that supports an alarm.</p>
+<hr>
+<h1 id="unresolved-evidence">Unresolved Evidence</h1>
+<p>Some important questions may remain unanswered.</p>
+<p>Examples include:</p>
+<ul>
+<li>whether the apparent actor originated or transported the transition;</li>
+<li>whether the transformation is reversible;</li>
+<li>whether separate observations are genuinely independent;</li>
+<li>whether recovery remains available;</li>
+<li>whether the activity was explicitly authorized.</li>
+</ul>
+<p>These conditions should remain <code>unknown</code>, unresolved, or otherwise bounded.</p>
+<p>The detector must not convert missing evidence into negative evidence.</p>
+<hr>
+<h1 id="evidence-independence">Evidence Independence</h1>
+<p>Multiple observations do not necessarily constitute independent corroboration.</p>
+<p>This is especially important when events originate from:</p>
+<ul>
+<li>synchronized devices;</li>
+<li>mirrored storage;</li>
+<li>duplicated telemetry;</li>
+<li>copied reports;</li>
+<li>shared upstream event sources.</li>
+</ul>
+<p>Several downstream observations may all reflect one originating transition.</p>
+<p>The detector should therefore preserve source dependencies where they are known.</p>
+<blockquote>
+<p><strong>Correlation is not automatically independent corroboration.</strong></p>
+</blockquote>
+<hr>
+<h1 id="structural-assessment">Structural Assessment</h1>
+<p>The detector produces a structural assessment rather than an accusation.</p>
+<p>Relevant dimensions may include:</p>
+<ul>
+<li>pattern state;</li>
+<li>baseline deviation;</li>
+<li>trajectory;</li>
+<li>resource scope;</li>
+<li>destructiveness;</li>
+<li>propagation;</li>
+<li>severity;</li>
+<li>confidence;</li>
+<li>reversibility;</li>
+<li>recovery impact;</li>
+<li>competing explanations;</li>
+<li>intent uncertainty;</li>
+<li>attribution uncertainty.</li>
+</ul>
+<p>A detector may have high confidence that destructive resource transformation is occurring while reporting:</p>
+<p><strong>Intent:</strong> Unknown</p>
+<p><strong>Attribution:</strong> Unresolved</p>
+<p>Those conclusions are compatible.</p>
+<hr>
+<h1 id="intent-and-attribution">Intent and Attribution</h1>
+<p>Ransomware-like structure, hostile intent, and actor attribution are different questions.</p>
+<p>The detector may establish:</p>
+<blockquote>
+<p><strong>A rapidly accelerating destructive resource-transition pattern is occurring.</strong></p>
+</blockquote>
+<p>without establishing:</p>
+<blockquote>
+<p><strong>This specific human, application, organization, or remote actor maliciously caused it.</strong></p>
+</blockquote>
+<p>Therefore:</p>
+<p><strong>Structural confidence ≠ Intent confidence ≠ Attribution confidence</strong></p>
+<p>Containment may sometimes be justified by the observable damage trajectory even when intent and attribution remain uncertain.</p>
+<hr>
+<h1 id="damage-boundary">Damage Boundary</h1>
+<p>The detector supports the concept of a bounded damage budget.</p>
+<p>Relevant dimensions may include:</p>
+<ul>
+<li>resource sensitivity;</li>
+<li>number or scope of affected resources;</li>
+<li>transition rate;</li>
+<li>acceleration;</li>
+<li>reversibility;</li>
+<li>recovery availability;</li>
+<li>propagation risk;</li>
+<li>recovery impact.</li>
+</ul>
+<p>The detector does not define one universal numerical formula.</p>
+<p>Instead, it provides structural evidence that a domain-specific policy can use to determine whether activity remains:</p>
+<ul>
+<li>within limit;</li>
+<li>approaching limit;</li>
+<li>at the limit;</li>
+<li>beyond the limit;</li>
+<li>unresolved.</li>
+</ul>
+<p>The principle is:</p>
+<blockquote>
+<p><strong>Intervene according to observed structural risk and bounded authority, not according to certainty about motive.</strong></p>
+</blockquote>
+<hr>
+<h1 id="containment">Containment</h1>
+<p>Containment is downstream from detection.</p>
+<p>When the analytical state justifies intervention, the detector may support creation of a <code>tf.containment-decision/v0.1</code> object.</p>
+<p>Possible response classes may include:</p>
+<ul>
+<li>observe;</li>
+<li>inform;</li>
+<li>contain;</li>
+<li>isolate;</li>
+<li>quarantine;</li>
+<li>restrict;</li>
+<li>disable;</li>
+<li>recover;</li>
+<li>escalate;</li>
+<li>defer.</li>
+</ul>
+<p>The exact executable mechanism depends on platform capabilities.</p>
+<p>The detector itself should not assume that a particular operating environment can:</p>
+<ul>
+<li>deny writes;</li>
+<li>terminate an actor;</li>
+<li>isolate resources;</li>
+<li>isolate a network;</li>
+<li>quarantine data;</li>
+<li>restrict permissions;</li>
+<li>restore prior state.</li>
+</ul>
+<p>Those capabilities belong to the relevant platform declaration and adapter.</p>
+<hr>
+<h1 id="proportional-response">Proportional Response</h1>
+<p>A response should be bounded by:</p>
+<ul>
+<li>evidence strength;</li>
+<li>damage trajectory;</li>
+<li>affected-resource sensitivity;</li>
+<li>reversibility;</li>
+<li>available platform capability;</li>
+<li>authorization;</li>
+<li>collateral impact;</li>
+<li>recovery state.</li>
+</ul>
+<p>A weaker reversible response may be preferable to a stronger destructive one when both adequately bound the immediate risk.</p>
+<p>Conversely, a rapidly expanding destructive pattern may justify containment before intent or attribution can be resolved.</p>
+<p>The detector therefore separates:</p>
+<p><strong>What is happening?</strong></p>
+<p>from:</p>
+<p><strong>Why is it happening?</strong></p>
+<p>and from:</p>
+<p><strong>What intervention is justified?</strong></p>
+<hr>
+<h1 id="platform-capabilities">Platform Capabilities</h1>
+<p>Platform capabilities are declared using:</p>
+<p><code>tf.platform-capabilities/v0.1</code></p>
+<p>A platform declaration tells the analytical system what its adapter can observe, enforce, recover, and verify.</p>
+<p>Capabilities may include:</p>
+<ul>
+<li>event observation;</li>
+<li>actor identity;</li>
+<li>actor lineage;</li>
+<li>resource classification;</li>
+<li>network context;</li>
+<li>write denial;</li>
+<li>actor containment;</li>
+<li>resource isolation;</li>
+<li>network isolation;</li>
+<li>quarantine;</li>
+<li>recovery;</li>
+<li>rollback;</li>
+<li>post-action observation.</li>
+</ul>
+<p>A missing capability must not be silently treated as available.</p>
+<p>Likewise, lack of a capability must not be disguised as successful containment.</p>
+<hr>
+<h1 id="platform-adapters">Platform Adapters</h1>
+<p>Platform-specific implementation belongs under:</p>
+<p><code>adapters/</code></p>
+<p>Adapters translate between native environments and the Shared Structural Event Grammar.</p>
+<p>Their responsibilities may include:</p>
+<ol>
+<li>observing native events;</li>
+<li>normalizing relevant structure;</li>
+<li>declaring available capabilities;</li>
+<li>receiving authorized response requests;</li>
+<li>executing supported mechanisms;</li>
+<li>reporting what actually occurred;</li>
+<li>supporting post-action verification.</li>
+</ol>
+<p>Platform policy and platform mechanism should remain separate.</p>
+<p>A detector can decide that resource writes should be contained without knowing whether the current platform implements that decision through filesystem controls, process containment, account restriction, isolation, or another supported mechanism.</p>
+<hr>
+<h1 id="requested-response-vs-executed-response">Requested Response vs. Executed Response</h1>
+<p>The response requested by the structural system may differ from what a platform can actually execute.</p>
+<p>For example:</p>
+<p><strong>Requested response</strong></p>
+<p>↓</p>
+<p>platform capability evaluated</p>
+<p>↓</p>
+<p><strong>supported response or bounded fallback</strong></p>
+<p>↓</p>
+<p><strong>actual execution outcome</strong></p>
+<p>This distinction is represented through <code>tf.response-outcome/v0.1</code>.</p>
+<p>The outcome should preserve:</p>
+<ul>
+<li>requested response;</li>
+<li>execution status;</li>
+<li>executed response;</li>
+<li>fallback behavior;</li>
+<li>capability constraints;</li>
+<li>direct effects;</li>
+<li>side effects;</li>
+<li>errors and warnings;</li>
+<li>rollback state.</li>
+</ul>
+<p>A fallback must not masquerade as the originally requested action.</p>
+<hr>
+<h1 id="verification">Verification</h1>
+<p>Containment does not complete the analytical cycle.</p>
+<p>After a response, the environment must be observed again.</p>
+<p>Verification asks:</p>
+<ul>
+<li>Did the destructive activity stop?</li>
+<li>Does the pattern persist?</li>
+<li>Did it reappear?</li>
+<li>Did new conditions emerge?</li>
+<li>Is the affected state recoverable?</li>
+<li>Are some areas impossible to verify?</li>
+<li>Did the response create additional structural problems?</li>
+</ul>
+<p>Possible high-level states include:</p>
+<ul>
+<li>contained;</li>
+<li>partially contained;</li>
+<li>persistent;</li>
+<li>reappeared;</li>
+<li>resolved;</li>
+<li>partially resolved;</li>
+<li>new condition detected;</li>
+<li>mixed;</li>
+<li>unable to verify.</li>
+</ul>
+<p>The central rule is:</p>
+<blockquote>
+<p><strong>Containment is an action. Resolution is an observed state.</strong></p>
+</blockquote>
+<hr>
+<h1 id="recovery">Recovery</h1>
+<p>Recovery should follow structural containment rather than being used as evidence that containment succeeded.</p>
+<p>A platform may support restoration from:</p>
+<ul>
+<li>snapshots;</li>
+<li>backups;</li>
+<li>preserved originals;</li>
+<li>version history;</li>
+<li>recovery stores;</li>
+<li>other platform-specific recovery mechanisms.</li>
+</ul>
+<p>Recovery availability should be treated as an observed capability or state.</p>
+<p>A claimed recovery path that has not been verified must not be represented as proven recovery.</p>
+<hr>
+<h1 id="data-minimization">Data Minimization</h1>
+<p>Ransomware detection does not inherently require central access to the user's raw documents.</p>
+<p>The detector may need structural facts such as:</p>
+<ul>
+<li>resource class;</li>
+<li>transition type;</li>
+<li>preservation state;</li>
+<li>recoverability;</li>
+<li>rate;</li>
+<li>actor relationship;</li>
+<li>scope;</li>
+<li>baseline deviation.</li>
+</ul>
+<p>It may not need:</p>
+<ul>
+<li>document contents;</li>
+<li>full filenames;</li>
+<li>personal directory names;</li>
+<li>credentials;</li>
+<li>unrelated account information.</li>
+</ul>
+<p>Platform adapters should therefore normalize and redact information whenever the structural representation is sufficient.</p>
+<blockquote>
+<p><strong>Detect the transition without unnecessarily exposing the resource.</strong></p>
+</blockquote>
+<hr>
+<h1 id="core-invariants">Core Invariants</h1>
+<h2 id="rspd-inv-01-transition-intent">RSPD-INV-01 — Transition ≠ Intent</h2>
+<p>A destructive transition does not independently establish malicious intent.</p>
+<h2 id="rspd-inv-02-actor-origin">RSPD-INV-02 — Actor ≠ Origin</h2>
+<p>The actor visible at the observation point may be transporting rather than originating the transition.</p>
+<h2 id="rspd-inv-03-trust-behavioral-safety">RSPD-INV-03 — Trust ≠ Behavioral Safety</h2>
+<p>A trusted, signed, or previously benign actor may still participate in a destructive transition.</p>
+<h2 id="rspd-inv-04-anomaly-ransomware">RSPD-INV-04 — Anomaly ≠ Ransomware</h2>
+<p>Baseline deviation alone does not establish a ransomware pattern.</p>
+<h2 id="rspd-inv-05-pattern-attribution">RSPD-INV-05 — Pattern ≠ Attribution</h2>
+<p>Detection of a ransomware-like pattern does not independently identify the responsible actor.</p>
+<h2 id="rspd-inv-06-correlation-independence">RSPD-INV-06 — Correlation ≠ Independence</h2>
+<p>Multiple observations derived from the same originating event do not constitute independent corroboration.</p>
+<h2 id="rspd-inv-07-unknown-false">RSPD-INV-07 — Unknown ≠ False</h2>
+<p>Unavailable evidence must remain unresolved rather than being silently interpreted as negative evidence.</p>
+<h2 id="rspd-inv-08-decision-execution">RSPD-INV-08 — Decision ≠ Execution</h2>
+<p>A containment request does not prove that the platform performed it.</p>
+<h2 id="rspd-inv-09-execution-resolution">RSPD-INV-09 — Execution ≠ Resolution</h2>
+<p>A successfully executed response does not prove that destructive activity has been resolved.</p>
+<h2 id="rspd-inv-10-capability-authority">RSPD-INV-10 — Capability ≠ Authority</h2>
+<p>A platform's ability to perform an action does not itself authorize that action.</p>
+<h2 id="rspd-inv-11-recovery-capability-recovery-success">RSPD-INV-11 — Recovery Capability ≠ Recovery Success</h2>
+<p>The existence of a recovery mechanism does not prove that affected resources have been restored.</p>
+<h2 id="rspd-inv-12-evidence-lineage-must-survive">RSPD-INV-12 — Evidence Lineage Must Survive</h2>
+<p>Observations, derivations, decisions, outcomes, and verification must retain sufficient provenance for reconstruction.</p>
+<hr>
+<h1 id="non-goals">Non-Goals</h1>
+<p>The Ransomware Structural Pattern Detector is not:</p>
+<ul>
+<li>a malware-signature database;</li>
+<li>a threat-intelligence feed;</li>
+<li>an attribution engine;</li>
+<li>a universal ransomware classifier;</li>
+<li>a replacement for endpoint security;</li>
+<li>a guarantee that ransomware will be detected;</li>
+<li>a guarantee that containment will succeed;</li>
+<li>a license to destroy or quarantine data without appropriate authority;</li>
+<li>a system for automatically assigning hostile intent to anomalous activity.</li>
+</ul>
+<p>It is a <strong>structural behavioral analyzer</strong>.</p>
+<hr>
+<h1 id="relationship-to-the-shared-structural-event-grammar">Relationship to the Shared Structural Event Grammar</h1>
+<p>The detector consumes the shared grammar rather than defining its own event lineage.</p>
+<p>The relevant schema family is:</p>
+<ul>
+<li><code>tf.resource-transition/v0.1</code></li>
+<li><code>tf.structural-pattern/v0.1</code></li>
+<li><code>tf.containment-decision/v0.1</code></li>
+<li><code>tf.response-outcome/v0.1</code></li>
+<li><code>tf.verification/v0.1</code></li>
+<li><code>tf.platform-capabilities/v0.1</code></li>
+</ul>
+<p>This allows ransomware-specific reasoning to remain specialized while the underlying event, lineage, outcome, capability, and verification structures remain reusable by other TriadicFrameworks analyzers.</p>
+<p>The architectural rule is:</p>
+<blockquote>
+<p><strong>The shared grammar represents structure. The ransomware detector interprets ransomware-relevant structure. Platform adapters observe and act.</strong></p>
+</blockquote>
+<hr>
+<h1 id="relationship-to-profile-rectification">Relationship to Profile Rectification</h1>
+<p>The Ransomware Structural Pattern Detector emerged as a specialized system-security analyzer alongside Profile Rectification, but it is not embedded inside Profile Rectification.</p>
+<p>The distinction is intentional.</p>
+<p><strong>Profile Rectification</strong> provides consent-bound orchestration and structural hygiene across authorized human and AI-context surfaces.</p>
+<p><strong>The Ransomware Structural Pattern Detector</strong> evaluates destructive system-resource transition patterns.</p>
+<p>Both may consume the Shared Structural Event Grammar.</p>
+<p>Neither needs to own it.</p>
+<hr>
+<h1 id="machine-readable-detector-definition">Machine-Readable Detector Definition</h1>
+<p>The detector's machine-facing configuration and analytical contract belong in:</p>
+<p><code>detector.json</code></p>
+<p>That file should define the detector-specific vocabulary and operating contract without duplicating the generic schemas supplied by the Shared Structural Event Grammar.</p>
+<p>The README establishes conceptual behavior.</p>
+<p>The shared schemas establish portable structural contracts.</p>
+<p><code>detector.json</code> establishes detector-specific machine-readable semantics.</p>
+<p>Platform-specific mechanisms remain under <code>adapters/</code>.</p>
+<hr>
+<h1 id="canonical-summary">Canonical Summary</h1>
+<blockquote>
+<p><strong>The Ransomware Structural Pattern Detector is a platform-neutral structural analyzer that detects accelerating destructive resource-transition patterns, preserves supporting and contradictory evidence, bounds uncertainty, and provides sufficient structure for proportionate containment and subsequent verification.</strong></p>
+</blockquote>
+<p>Its analytical path is:</p>
+<p><strong>OBSERVE → NORMALIZE → CORRELATE → CONTRADICT → ASSESS → BOUND</strong></p>
+<p>Its response path is:</p>
+<p><strong>DECIDE → ADAPT → ACT → RECORD → VERIFY</strong></p>
+<p>Its evidence rule is:</p>
+<blockquote>
+<p><strong>Detect the destructive structure without pretending to know more than the evidence establishes.</strong></p>
+</blockquote>
+<p>Its containment rule is:</p>
+<blockquote>
+<p><strong>Intervene proportionately to observable damage and available authority, not merely to certainty about motive.</strong></p>
+</blockquote>
+<p>Its verification rule is:</p>
+<blockquote>
+<p><strong>Execution is not resolution. Observe the resulting state.</strong></p>
+</blockquote>
+  </main>
+</body>
+</html>

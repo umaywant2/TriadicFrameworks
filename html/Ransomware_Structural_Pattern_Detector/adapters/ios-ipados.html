@@ -1,0 +1,1088 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Ransomware_Structural_Pattern_Detector/adapters/ios-ipados.md">
+  <title>iOS / iPadOS Adapter</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Ransomware_Structural_Pattern_Detector/adapters/ios-ipados.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Ransomware_Structural_Pattern_Detector/adapters/ios-ipados.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="Ransomware_Structural_Pattern_Detector_adapters_ios_ipados_" src="https://github.com/user-attachments/assets/058cbdc2-fbb4-421e-9fba-5974b56f61d2" /></p>
+<h1 id="ios-ipados-adapter">iOS / iPadOS Adapter</h1>
+<blockquote>
+<p><strong>Platform adapter specification for mapping authorized iOS and iPadOS observations into the Ransomware Structural Pattern Detector while preserving Apple's application, data-access, and platform-security boundaries.</strong></p>
+</blockquote>
+<p>The iOS / iPadOS adapter connects resource observations available within an authorized application context to the platform-neutral Shared Structural Event Grammar.</p>
+<p>This adapter is intentionally <strong>capability-conservative</strong>.</p>
+<p>It must not assume desktop-style filesystem monitoring, unrestricted observation of other applications, arbitrary process inspection, system-wide actor containment, or universal access to user resources.</p>
+<p>Its governing rule is:</p>
+<blockquote>
+<p><strong>Represent only what the authorized iOS or iPadOS environment can actually expose. Restricted visibility is a structural limitation, not evidence that destructive activity is absent.</strong></p>
+</blockquote>
+<hr>
+<h2 id="status">Status</h2>
+<ul>
+<li><strong>Adapter ID:</strong> <code>rspd-ios-ipados</code></li>
+<li><strong>Platforms:</strong> iOS, iPadOS</li>
+<li><strong>Status:</strong> Experimental</li>
+<li><strong>Role:</strong> Authorized observation, normalization, capability declaration, bounded response mapping, and verification support</li>
+<li><strong>Normalized observation:</strong> <code>tf.resource-transition/v0.1</code></li>
+<li><strong>Capability declaration:</strong> <code>tf.platform-capabilities/v0.1</code></li>
+<li><strong>Decision input:</strong> <code>tf.containment-decision/v0.1</code></li>
+<li><strong>Execution output:</strong> <code>tf.response-outcome/v0.1</code></li>
+<li><strong>Verification output:</strong> <code>tf.verification/v0.1</code></li>
+</ul>
+<hr>
+<h1 id="1-scope">1. Scope</h1>
+<p>The iOS / iPadOS adapter operates entirely within the data-access, application, authorization, and service boundaries available to its implementation.</p>
+<p>Its potential observation scope may include:</p>
+<ul>
+<li>adapter-owned resources;</li>
+<li>resources explicitly made available to the adapter;</li>
+<li>user-selected resources;</li>
+<li>application-visible metadata;</li>
+<li>resources returned by authorized platform interfaces;</li>
+<li>adapter-generated test or canary resources where appropriate;</li>
+<li>user-supplied evidence;</li>
+<li>authorized cloud or synchronization state exposed through another integration;</li>
+<li>adapter-maintained structural baselines.</li>
+</ul>
+<p>The precise scope depends on the implementation and authority available during execution.</p>
+<p>The adapter must describe its actual observation surface rather than imply device-wide visibility.</p>
+<hr>
+<h1 id="2-platform-security-boundary">2. Platform Security Boundary</h1>
+<p>iOS and iPadOS enforce platform security boundaries intended to constrain applications and mediate access to user data.</p>
+<p>The adapter treats those boundaries as part of its architecture.</p>
+<p>Conceptually:</p>
+<p><strong>Platform security boundary</strong></p>
+<p>↓</p>
+<p><strong>Authorized application surface</strong></p>
+<p>↓</p>
+<p><strong>iOS / iPadOS adapter</strong></p>
+<p>↓</p>
+<p><strong>Normalized resource transition</strong></p>
+<p>The adapter must not attempt to weaken platform security controls in order to obtain broader observation or enforcement capability.</p>
+<p>If the operating environment does not expose a required observation, the corresponding structural state remains unresolved.</p>
+<hr>
+<h1 id="3-detection-model">3. Detection Model</h1>
+<p>The iOS / iPadOS adapter is <strong>not</strong> a device-wide ransomware scanner.</p>
+<p>It provides bounded structural evidence from surfaces available to the adapter.</p>
+<p>Its role is:</p>
+<p><strong>Observe</strong></p>
+<p>↓</p>
+<p><strong>Normalize</strong></p>
+<p>↓</p>
+<p><strong>Preserve lineage</strong></p>
+<p>↓</p>
+<p><strong>Declare limitations</strong></p>
+<p>↓</p>
+<p><strong>Emit structural events</strong></p>
+<p>The Ransomware Structural Pattern Detector evaluates those events together with any other authorized evidence.</p>
+<p>This distinction is fundamental:</p>
+<blockquote>
+<p><strong>Limited platform visibility can support bounded detection, but it cannot support claims about unobserved device-wide state.</strong></p>
+</blockquote>
+<hr>
+<h1 id="4-observation-sources">4. Observation Sources</h1>
+<p>A concrete implementation may normalize authorized observations from sources such as:</p>
+<ul>
+<li>adapter-owned resource operations;</li>
+<li>application-visible file or document state;</li>
+<li>user-selected resources;</li>
+<li>resource metadata exposed to the application;</li>
+<li>explicit application events;</li>
+<li>user-supplied observations;</li>
+<li>synchronization state exposed through an authorized integration;</li>
+<li>locally maintained baseline observations;</li>
+<li>post-response resource state visible to the adapter.</li>
+</ul>
+<p>Every normalized event should identify the source from which its evidence originated.</p>
+<p>The adapter must not imply visibility into another application or system surface unless the implementation actually possesses that visibility.</p>
+<hr>
+<h1 id="5-observation-limitations">5. Observation Limitations</h1>
+<p>The adapter should assume that important state may remain outside its visibility.</p>
+<p>Potentially unresolved information may include:</p>
+<ul>
+<li>resource transitions occurring exclusively within another application's protected environment;</li>
+<li>device-wide resource-transition history;</li>
+<li>complete actor lineage;</li>
+<li>full system process activity;</li>
+<li>origin of remotely synchronized transitions;</li>
+<li>resources never made available to the adapter;</li>
+<li>historical transitions that occurred before observation began;</li>
+<li>provider-internal operations;</li>
+<li>recovery state unavailable through the current resource interface;</li>
+<li>device-wide post-response state.</li>
+</ul>
+<p>These limitations must survive normalization.</p>
+<p>The correct representation is often:</p>
+<p><strong>unknown</strong></p>
+<p>rather than:</p>
+<p><strong>false</strong></p>
+<p>and never automatically:</p>
+<p><strong>safe</strong>.</p>
+<hr>
+<h1 id="6-resource-mapping">6. Resource Mapping</h1>
+<p>Resources visible to the adapter should map into the shared vocabulary by structural role.</p>
+<p>Candidate mappings include:</p>
+<table>
+<thead>
+<tr>
+<th>Visible resource</th>
+<th>Shared resource type/class</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>User document</td>
+<td><code>file</code> / <code>user_document</code></td>
+</tr>
+<tr>
+<td>Photo</td>
+<td><code>file</code> / <code>photo</code></td>
+</tr>
+<tr>
+<td>Video</td>
+<td><code>file</code> / <code>video</code></td>
+</tr>
+<tr>
+<td>Audio</td>
+<td><code>file</code> / <code>audio</code></td>
+</tr>
+<tr>
+<td>Database</td>
+<td><code>dataset</code> / <code>database</code></td>
+</tr>
+<tr>
+<td>Archive</td>
+<td><code>file</code> / <code>archive</code></td>
+</tr>
+<tr>
+<td>Project resource</td>
+<td><code>file</code> / <code>project_file</code></td>
+</tr>
+<tr>
+<td>Application-owned data</td>
+<td><code>file</code> or <code>dataset</code> / <code>application_data</code></td>
+</tr>
+<tr>
+<td>Configuration</td>
+<td><code>configuration</code> / <code>configuration</code></td>
+</tr>
+<tr>
+<td>Backup-visible resource</td>
+<td>appropriate type / <code>backup</code></td>
+</tr>
+<tr>
+<td>Recovery-visible resource</td>
+<td>appropriate type / <code>recovery_resource</code></td>
+</tr>
+<tr>
+<td>Adapter canary</td>
+<td>appropriate type / <code>canary</code></td>
+</tr>
+<tr>
+<td>Cloud-backed object</td>
+<td><code>cloud_object</code> / <code>cloud_resource</code></td>
+</tr>
+<tr>
+<td>Unclassified visible resource</td>
+<td>appropriate type / <code>domain_defined</code></td>
+</tr>
+</tbody>
+</table>
+<p>Resource classification should avoid exposing unnecessary user-identifying information.</p>
+<hr>
+<h1 id="7-resource-identity">7. Resource Identity</h1>
+<p>A resource does not need a raw pathname or user-visible filename to participate in structural analysis.</p>
+<p>The adapter should prefer a stable privacy-preserving reference where possible.</p>
+<p>A normalized resource identity may represent:</p>
+<ul>
+<li>an application-local resource;</li>
+<li>a user-authorized resource;</li>
+<li>a provider-backed resource;</li>
+<li>a synchronized object;</li>
+<li>an adapter-maintained pseudonymous reference.</li>
+</ul>
+<p>The detector generally needs structural identity and continuity, not unnecessary presentation metadata.</p>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Stable structural identity is preferred over raw identifying resource detail.</strong></p>
+</blockquote>
+<hr>
+<h1 id="8-actor-mapping">8. Actor Mapping</h1>
+<p>Actor visibility may be incomplete.</p>
+<p>Candidate mappings include:</p>
+<ul>
+<li><code>application</code></li>
+<li><code>service</code></li>
+<li><code>system</code></li>
+<li><code>user</code></li>
+<li><code>remote_actor</code></li>
+<li><code>sync_service</code></li>
+<li><code>agent</code></li>
+<li><code>unknown</code></li>
+</ul>
+<p>When an application can directly establish that it produced a transition, it may identify itself as the observed actor.</p>
+<p>When the visible resource simply appears in a changed state and reliable origin information is unavailable, the actor should remain unresolved.</p>
+<p>The adapter must not fabricate process or application attribution merely because a resource changed.</p>
+<hr>
+<h1 id="9-actor-identity">9. Actor Identity</h1>
+<p>Actor identity should represent only what the evidence establishes.</p>
+<p>Possible states include:</p>
+<ul>
+<li>known;</li>
+<li>partially known;</li>
+<li>unknown;</li>
+<li>conflicting.</li>
+</ul>
+<p>A recognized application, provider, synchronization service, or system component may be a valid observed actor.</p>
+<p>That identity does not establish:</p>
+<ul>
+<li>origin;</li>
+<li>malicious intent;</li>
+<li>ransomware;</li>
+<li>responsibility for an upstream transition.</li>
+</ul>
+<p>The adapter therefore preserves:</p>
+<blockquote>
+<p><strong>Actor identity ≠ actor intent</strong></p>
+</blockquote>
+<p>and:</p>
+<blockquote>
+<p><strong>observed actor ≠ proven origin</strong></p>
+</blockquote>
+<hr>
+<h1 id="10-origin-vs-transport">10. Origin vs. Transport</h1>
+<p>This distinction is especially important for cloud-backed and synchronized resources.</p>
+<p>A locally visible change may have been:</p>
+<ul>
+<li>originated locally;</li>
+<li>originated remotely;</li>
+<li>transported through synchronization;</li>
+<li>reflected through a provider;</li>
+<li>materialized from previously pending synchronized state;</li>
+<li>produced by an unknown source.</li>
+</ul>
+<p>Where evidence establishes the relationship, the adapter may populate:</p>
+<ul>
+<li><code>actor.role</code></li>
+<li><code>origin_actor_ref</code></li>
+<li><code>transport_actor_ref</code></li>
+<li><code>context.sync_transport</code></li>
+<li><code>context.origin_environment_ref</code></li>
+</ul>
+<p>Where it does not, origin remains unresolved.</p>
+<blockquote>
+<p><strong>Local manifestation does not establish local origin.</strong></p>
+</blockquote>
+<hr>
+<h1 id="11-transition-mapping">11. Transition Mapping</h1>
+<p>Platform-visible operations should be normalized according to their observable structural effect.</p>
+<p>Possible normalized operations include:</p>
+<ul>
+<li><code>read</code></li>
+<li><code>write</code></li>
+<li><code>create</code></li>
+<li><code>delete</code></li>
+<li><code>rename</code></li>
+<li><code>move</code></li>
+<li><code>copy</code></li>
+<li><code>replace</code></li>
+<li><code>permission_change</code></li>
+<li><code>metadata_change</code></li>
+<li><code>recovery_change</code></li>
+<li><code>state_change</code></li>
+<li><code>scope_change</code></li>
+<li><code>sync</code></li>
+<li><code>other</code></li>
+</ul>
+<p>Corresponding structural transitions may include:</p>
+<ul>
+<li><code>access</code></li>
+<li><code>modify</code></li>
+<li><code>create</code></li>
+<li><code>remove</code></li>
+<li><code>replace</code></li>
+<li><code>relocate</code></li>
+<li><code>duplicate</code></li>
+<li><code>restrict</code></li>
+<li><code>grant</code></li>
+<li><code>revoke</code></li>
+<li><code>expose</code></li>
+<li><code>conceal</code></li>
+<li><code>restore</code></li>
+<li><code>propagate</code></li>
+<li><code>transform</code></li>
+<li><code>other</code></li>
+</ul>
+<p>Where the native operation is observable but does not map precisely, the adapter should preserve it as a native operation rather than force a misleading shared classification.</p>
+<hr>
+<h1 id="12-observed-vs-derived-state">12. Observed vs. Derived State</h1>
+<p>The adapter must preserve the distinction between native observation and adapter derivation.</p>
+<p>For example:</p>
+<p><strong>Observed</strong></p>
+<p>A visible resource changed between two bounded observations.</p>
+<p><strong>Derived</strong></p>
+<p>The resource's structural state differs from its previous baseline.</p>
+<p><strong>Not appropriate at the adapter layer</strong></p>
+<p>The resource was changed by ransomware.</p>
+<p>The first two may belong in normalized evidence when their lineage is retained.</p>
+<p>The last belongs to downstream structural analysis.</p>
+<hr>
+<h1 id="13-transition-characteristics">13. Transition Characteristics</h1>
+<p>Where observable without unnecessary content exposure, the adapter may normalize characteristics such as:</p>
+<ul>
+<li>resource size change;</li>
+<li>content-change indication;</li>
+<li>structural change;</li>
+<li>representation or extension change;</li>
+<li>permission change;</li>
+<li>scope change;</li>
+<li>prior-state preservation;</li>
+<li>recoverability;</li>
+<li>repeated mutation;</li>
+<li>transition timing;</li>
+<li>synchronization transport;</li>
+<li>recovery-state change.</li>
+</ul>
+<p>Unavailable characteristics should remain unknown.</p>
+<hr>
+<h1 id="14-baseline-support">14. Baseline Support</h1>
+<p>A concrete implementation may maintain a baseline for resources within its authorized scope.</p>
+<p>Relevant baseline dimensions may include:</p>
+<ul>
+<li>known resource identities;</li>
+<li>expected resource classes;</li>
+<li>expected operations;</li>
+<li>ordinary transition frequency;</li>
+<li>known actor relationships;</li>
+<li>normal synchronization behavior;</li>
+<li>expected resource scope;</li>
+<li>established transformation workflows.</li>
+</ul>
+<p>Baseline comparison may strengthen structural analysis.</p>
+<p>It does not establish malicious intent.</p>
+<p>When insufficient history exists:</p>
+<p><code>baseline.available = false</code></p>
+<p>is the correct representation.</p>
+<hr>
+<h1 id="15-snapshot-style-observation">15. Snapshot-Style Observation</h1>
+<p>Where continuous event observation is unavailable but repeated state inspection is possible, an implementation may derive a bounded transition from comparison of authorized states.</p>
+<p>Conceptually:</p>
+<p><strong>State at T1</strong></p>
+<p>↓</p>
+<p><strong>authorized interval</strong></p>
+<p>↓</p>
+<p><strong>State at T2</strong></p>
+<p>↓</p>
+<p><strong>derived transition</strong></p>
+<p>Such a transition must preserve the fact that it was derived from state comparison rather than directly observed as a native operation.</p>
+<p>It may establish that state changed.</p>
+<p>It may not establish exactly:</p>
+<ul>
+<li>when the change occurred;</li>
+<li>which actor performed it;</li>
+<li>which intermediate transitions occurred;</li>
+<li>whether several transformations preceded the final state.</li>
+</ul>
+<p>Those uncertainties must remain explicit.</p>
+<hr>
+<h1 id="16-canary-resources">16. Canary Resources</h1>
+<p>An implementation may optionally maintain adapter-controlled canary resources inside a scope it is authorized to observe.</p>
+<p>Canaries may help determine that unexpected mutation occurred within that scope.</p>
+<p>A canary transition can provide structurally significant evidence.</p>
+<p>It does not independently establish:</p>
+<ul>
+<li>ransomware;</li>
+<li>malicious intent;</li>
+<li>actor origin;</li>
+<li>actor attribution;</li>
+<li>device-wide compromise.</li>
+</ul>
+<p>Canaries should contain no sensitive user information.</p>
+<hr>
+<h1 id="17-capability-declaration">17. Capability Declaration</h1>
+<p>The adapter should provide a declaration conforming to:</p>
+<p><code>tf.platform-capabilities/v0.1</code></p>
+<p>The declaration describes what the <strong>specific implementation and environment</strong> can actually support.</p>
+<p>Capability states are:</p>
+<ul>
+<li><code>supported</code></li>
+<li><code>partial</code></li>
+<li><code>unsupported</code></li>
+<li><code>unknown</code></li>
+</ul>
+<p>These values are evidence statements.</p>
+<p>They are not aspirations.</p>
+<hr>
+<h1 id="18-observation-capabilities">18. Observation Capabilities</h1>
+<p>A concrete adapter should evaluate questions such as:</p>
+<h3 id="event-observation">Event Observation</h3>
+<p>Can relevant transitions be directly observed, or only inferred from state comparison?</p>
+<h3 id="actor-identity">Actor Identity</h3>
+<p>Can the responsible actor be established?</p>
+<h3 id="actor-lineage">Actor Lineage</h3>
+<p>Can parentage, invocation lineage, or upstream origin be established?</p>
+<h3 id="resource-classification">Resource Classification</h3>
+<p>Can visible resources be classified without exposing unnecessary content?</p>
+<h3 id="network-context">Network Context</h3>
+<p>Is relevant network context available inside the authorized adapter boundary?</p>
+<h3 id="origin-transport-distinction">Origin / Transport Distinction</h3>
+<p>Can locally originated changes be distinguished from synchronized or provider-transported changes?</p>
+<h3 id="baseline-access">Baseline Access</h3>
+<p>Is sufficient historical state available for meaningful baseline comparison?</p>
+<h3 id="recovery-state-observation">Recovery-State Observation</h3>
+<p>Can availability or existence of a prior usable state be observed?</p>
+<p>Each answer must describe actual capability rather than presumed platform behavior.</p>
+<hr>
+<h1 id="19-enforcement-capabilities">19. Enforcement Capabilities</h1>
+<p>The adapter must not assume endpoint-style containment powers.</p>
+<p>A concrete implementation should independently establish whether it can support:</p>
+<ul>
+<li>write denial;</li>
+<li>actor containment;</li>
+<li>resource isolation;</li>
+<li>network isolation;</li>
+<li>quarantine;</li>
+<li>permission restriction;</li>
+<li>actor disablement;</li>
+<li>session termination.</li>
+</ul>
+<p>An implementation may legitimately declare most or all of these:</p>
+<p><code>unsupported</code></p>
+<p>or:</p>
+<p><code>unknown</code></p>
+<p>That is valid conformance.</p>
+<blockquote>
+<p><strong>Honest lack of capability is preferable to false containment.</strong></p>
+</blockquote>
+<hr>
+<h1 id="20-capability-is-not-authority">20. Capability Is Not Authority</h1>
+<p>Even where the adapter can technically perform a change, that does not establish permission to perform it.</p>
+<p>Therefore:</p>
+<p><strong>Capability</strong></p>
+<p>answers:</p>
+<blockquote>
+<p>Can the adapter support this mechanism?</p>
+</blockquote>
+<p><strong>Authority</strong></p>
+<p>answers:</p>
+<blockquote>
+<p>Is the mechanism permitted in this case?</p>
+</blockquote>
+<p><strong>Outcome</strong></p>
+<p>answers:</p>
+<blockquote>
+<p>What actually happened when execution was attempted?</p>
+</blockquote>
+<p>These stages remain separate.</p>
+<hr>
+<h1 id="21-receiving-a-containment-decision">21. Receiving a Containment Decision</h1>
+<p>The adapter may receive a:</p>
+<p><code>tf.containment-decision/v0.1</code></p>
+<p>Before executing anything, it should evaluate:</p>
+<ul>
+<li>requested action;</li>
+<li>target;</li>
+<li>scope;</li>
+<li>required capability;</li>
+<li>declared capability;</li>
+<li>authorization;</li>
+<li>constraints;</li>
+<li>reversibility expectations;</li>
+<li>whether fallback is permitted.</li>
+</ul>
+<p>A decision requiring additional authorization must not be treated as authorization merely because the adapter received it.</p>
+<hr>
+<h1 id="22-containment-mapping">22. Containment Mapping</h1>
+<p>Potential structural response requests include:</p>
+<ul>
+<li>increased observation;</li>
+<li>notification;</li>
+<li>write restriction;</li>
+<li>resource isolation;</li>
+<li>actor containment;</li>
+<li>network isolation;</li>
+<li>quarantine;</li>
+<li>permission restriction;</li>
+<li>evidence preservation;</li>
+<li>recovery preparation;</li>
+<li>recovery initiation;</li>
+<li>manual review.</li>
+</ul>
+<p>The iOS / iPadOS adapter must map only those requests that its concrete environment actually supports.</p>
+<p>A structural request with no supported native mechanism should remain unsupported.</p>
+<hr>
+<h1 id="23-user-mediated-intervention">23. User-Mediated Intervention</h1>
+<p>Some responses may require visible user participation or another authorized control surface.</p>
+<p>When that occurs, the adapter should distinguish:</p>
+<p><strong>response requested</strong></p>
+<p>↓</p>
+<p><strong>user intervention requested</strong></p>
+<p>↓</p>
+<p><strong>user interaction observed</strong></p>
+<p>↓</p>
+<p><strong>resulting state observed</strong></p>
+<p>These are separate events.</p>
+<p>A prompt or instruction shown to a user is not proof that the requested operation was performed.</p>
+<p>Likewise, user confirmation is not necessarily proof that the resulting structural condition was resolved.</p>
+<hr>
+<h1 id="24-manual-response">24. Manual Response</h1>
+<p>Where automatic enforcement is unavailable, a valid fallback may be a bounded manual-response request.</p>
+<p>For example:</p>
+<p><strong>Requested</strong></p>
+<p><code>contain_actor</code></p>
+<p>↓</p>
+<p><strong>native capability unavailable</strong></p>
+<p>↓</p>
+<p><strong>Fallback</strong></p>
+<p><code>request_manual_review</code></p>
+<p>This preserves the analytical recommendation without pretending the adapter has enforcement authority it does not possess.</p>
+<p>Manual intervention should still produce an outcome record when its result becomes observable.</p>
+<hr>
+<h1 id="25-fallback-behavior">25. Fallback Behavior</h1>
+<p>When a requested response cannot be executed and fallback is permitted, the adapter may select a weaker supported action.</p>
+<p>Fallback should preserve:</p>
+<ul>
+<li>requested action;</li>
+<li>required capability;</li>
+<li>unavailable capability;</li>
+<li>fallback action;</li>
+<li>fallback reason;</li>
+<li>executed scope;</li>
+<li>degradation relationship.</li>
+</ul>
+<p>A fallback must never be reported as the original action.</p>
+<hr>
+<h1 id="26-outcome-reporting">26. Outcome Reporting</h1>
+<p>Every attempted response should produce or contribute to:</p>
+<p><code>tf.response-outcome/v0.1</code></p>
+<p>Relevant states include:</p>
+<ul>
+<li><code>not_attempted</code></li>
+<li><code>blocked</code></li>
+<li><code>unsupported</code></li>
+<li><code>authorization_required</code></li>
+<li><code>attempted</code></li>
+<li><code>partially_executed</code></li>
+<li><code>executed</code></li>
+<li><code>failed</code></li>
+<li><code>unknown</code></li>
+</ul>
+<p>The outcome should preserve:</p>
+<ul>
+<li>requested response;</li>
+<li>actual execution status;</li>
+<li>executed response;</li>
+<li>fallback behavior;</li>
+<li>capability limitations;</li>
+<li>direct effects;</li>
+<li>errors and warnings;</li>
+<li>rollback state where applicable;</li>
+<li>provenance.</li>
+</ul>
+<hr>
+<h1 id="27-execution-does-not-establish-resolution">27. Execution Does Not Establish Resolution</h1>
+<p>A successful platform-visible operation does not prove that the destructive structural condition has ended.</p>
+<p>Therefore:</p>
+<blockquote>
+<p><strong>Execution ≠ Resolution</strong></p>
+</blockquote>
+<p>The response outcome records what was attempted or executed.</p>
+<p>Verification records what state exists afterward.</p>
+<hr>
+<h1 id="28-verification">28. Verification</h1>
+<p>Where the adapter can observe post-response state, it should perform another bounded observation cycle.</p>
+<p>Verification may ask:</p>
+<ul>
+<li>Does the visible destructive transition continue?</li>
+<li>Did the affected resource change again?</li>
+<li>Did the condition reappear?</li>
+<li>Did another visible resource become affected?</li>
+<li>Did synchronized state reintroduce the transition?</li>
+<li>Is prior usable state still available?</li>
+<li>Can the adapter observe enough of the relevant surface to make a reliable comparison?</li>
+</ul>
+<p>Possible results include:</p>
+<ul>
+<li><code>contained</code></li>
+<li><code>partially_contained</code></li>
+<li><code>persistent</code></li>
+<li><code>reappeared</code></li>
+<li><code>resolved</code></li>
+<li><code>partially_resolved</code></li>
+<li><code>new_condition_detected</code></li>
+<li><code>mixed</code></li>
+<li><code>unable_to_verify</code></li>
+</ul>
+<hr>
+<h1 id="29-bounded-verification">29. Bounded Verification</h1>
+<p>Verification claims must remain limited to the inspected scope.</p>
+<p>For example:</p>
+<p><strong>No further transition observed in the adapter-authorized resource set</strong></p>
+<p>does not establish:</p>
+<p><strong>No destructive transition exists anywhere on the device</strong></p>
+<p>or:</p>
+<p><strong>No synchronized destructive state exists remotely</strong></p>
+<p>The verification scope is part of the conclusion.</p>
+<p>A clean bounded rescan must never silently become a device-wide clean claim.</p>
+<hr>
+<h1 id="30-recovery">30. Recovery</h1>
+<p>Recovery depends on the resource, provider, application, synchronization environment, and mechanisms available to the concrete implementation.</p>
+<p>The adapter should preserve separate states for:</p>
+<ul>
+<li>recovery capability;</li>
+<li>recovery-state visibility;</li>
+<li>recovery artifact availability;</li>
+<li>recovery request;</li>
+<li>recovery attempt;</li>
+<li>recovery outcome;</li>
+<li>verification of restored state.</li>
+</ul>
+<p>These must not collapse.</p>
+<blockquote>
+<p><strong>Recovery capability ≠ successful restoration</strong></p>
+</blockquote>
+<hr>
+<h1 id="31-synchronization">31. Synchronization</h1>
+<p>For synchronized resources, this adapter should cooperate with the Cloud / Synchronization adapter rather than attempting to solve cross-environment origin locally.</p>
+<p>Relevant normalized evidence may include:</p>
+<ul>
+<li>transport actor;</li>
+<li>synchronization state;</li>
+<li>origin candidate;</li>
+<li>origin environment;</li>
+<li>resource lineage;</li>
+<li>propagation timing;</li>
+<li>provider relationship.</li>
+</ul>
+<p>The device-side adapter represents what became visible on the iOS or iPadOS side.</p>
+<p>The cloud-sync layer represents what can be established across environments.</p>
+<hr>
+<h1 id="32-evidence-independence">32. Evidence Independence</h1>
+<p>Multiple observations of one synchronized transition must not automatically become independent evidence.</p>
+<p>For example:</p>
+<p><strong>cloud observation</strong></p>
+<p>+</p>
+<p><strong>iPad observation</strong></p>
+<p>+</p>
+<p><strong>iPhone observation</strong></p>
+<p>may represent one transition propagated through synchronization.</p>
+<p>Those observations may strongly establish propagation while remaining dependent evidence about the transition's origin.</p>
+<p>The adapter should preserve dependency references where known.</p>
+<hr>
+<h1 id="33-reappearance">33. Reappearance</h1>
+<p>A condition may appear to stop within the local observation scope and later return through:</p>
+<ul>
+<li>synchronization;</li>
+<li>provider state;</li>
+<li>remote modification;</li>
+<li>delayed materialization;</li>
+<li>restoration of affected state;</li>
+<li>another authorized resource path.</li>
+</ul>
+<p>Reappearance should preserve lineage where evidence permits.</p>
+<p>A returning state is not automatically a new independent origin event.</p>
+<hr>
+<h1 id="34-privacy-and-redaction">34. Privacy and Redaction</h1>
+<p>The adapter should minimize exported information.</p>
+<p>Preferred shared fields include:</p>
+<ul>
+<li>privacy-preserving resource ID;</li>
+<li>resource type;</li>
+<li>resource class;</li>
+<li>resource scope;</li>
+<li>structural transition;</li>
+<li>timing;</li>
+<li>preservation state;</li>
+<li>recovery state;</li>
+<li>actor category;</li>
+<li>origin/transport relationship;</li>
+<li>baseline relationship;</li>
+<li>synchronization context;</li>
+<li>provenance.</li>
+</ul>
+<p>Avoid exporting unnecessary:</p>
+<ul>
+<li>file contents;</li>
+<li>media contents;</li>
+<li>personal filenames;</li>
+<li>raw provider identifiers;</li>
+<li>account identifiers;</li>
+<li>unrelated application data;</li>
+<li>authentication material;</li>
+<li>unrelated user metadata.</li>
+</ul>
+<hr>
+<h1 id="35-authentication-material">35. Authentication Material</h1>
+<p>The Ransomware Structural Pattern Detector does not require authentication secrets.</p>
+<p>The adapter must not emit:</p>
+<ul>
+<li>passwords;</li>
+<li>access tokens;</li>
+<li>refresh tokens;</li>
+<li>session secrets;</li>
+<li>private keys;</li>
+<li>provider credentials;</li>
+<li>recovery secrets.</li>
+</ul>
+<p>Authentication remains inside the platform or provider-specific security boundary.</p>
+<p>Shared objects may contain bounded references to authorization context where needed, but never the credential itself.</p>
+<hr>
+<h1 id="36-local-processing-preference">36. Local Processing Preference</h1>
+<p>Sensitive platform-native operations should remain local when the central detector needs only their structural result.</p>
+<p>Candidate local operations include:</p>
+<ul>
+<li>resource-reference handling;</li>
+<li>identifier pseudonymization;</li>
+<li>resource classification;</li>
+<li>baseline comparison;</li>
+<li>deduplication;</li>
+<li>state comparison;</li>
+<li>redaction;</li>
+<li>mapping platform-visible observations into shared transitions.</li>
+</ul>
+<p>The design objective is:</p>
+<blockquote>
+<p><strong>Export structural evidence, not unnecessary user data.</strong></p>
+</blockquote>
+<hr>
+<h1 id="37-known-limitations">37. Known Limitations</h1>
+<p>A concrete iOS / iPadOS adapter should explicitly document limitations such as:</p>
+<ul>
+<li>restricted observation scope;</li>
+<li>incomplete visibility into other applications;</li>
+<li>incomplete device-wide resource visibility;</li>
+<li>limited native event history;</li>
+<li>incomplete actor identity;</li>
+<li>incomplete actor lineage;</li>
+<li>unresolved synchronized origin;</li>
+<li>provider-mediated resource abstraction;</li>
+<li>limited enforcement capability;</li>
+<li>user-mediated response requirements;</li>
+<li>incomplete recovery visibility;</li>
+<li>incomplete post-response verification;</li>
+<li>inability to determine device-wide resolution.</li>
+</ul>
+<p>These are part of the adapter contract.</p>
+<p>They should not be hidden.</p>
+<hr>
+<h1 id="38-capability-posture">38. Capability Posture</h1>
+<p>The generic iOS / iPadOS adapter begins from an intentionally conservative posture:</p>
+<table>
+<thead>
+<tr>
+<th>Capability</th>
+<th>Generic posture</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Event observation</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Actor identity</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Actor lineage</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Resource classification</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Network context</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Origin / transport distinction</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Baseline access</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Recovery-state observation</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Write denial</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Actor containment</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Resource isolation</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Network isolation</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Quarantine</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Permission restriction</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Actor disablement</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Session termination</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Recovery</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Rollback</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Post-action observation</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>State comparison</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Persistence detection</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Reappearance detection</td>
+<td><code>unknown</code></td>
+</tr>
+<tr>
+<td>Recovery verification</td>
+<td><code>unknown</code></td>
+</tr>
+</tbody>
+</table>
+<p>This table intentionally makes <strong>no universal implementation-capability claim</strong>.</p>
+<p>A concrete adapter should replace <code>unknown</code> only when actual support, partial support, or non-support has been established for its deployment.</p>
+<hr>
+<h1 id="39-why-the-default-is-unknown">39. Why the Default Is Unknown</h1>
+<p>The generic adapter specification describes an architectural class, not one installed application with one entitlement, one authorization state, one resource scope, and one deployment configuration.</p>
+<p>Therefore:</p>
+<p><code>unknown</code></p>
+<p>is the honest default.</p>
+<p>It does not mean the platform necessarily lacks a capability.</p>
+<p>It means:</p>
+<blockquote>
+<p><strong>This generic specification does not claim that the capability has been established.</strong></p>
+</blockquote>
+<p>The concrete capability declaration provides the evidence-backed answer.</p>
+<hr>
+<h1 id="40-ios-ipados-adapter-invariants">40. iOS / iPadOS Adapter Invariants</h1>
+<h2 id="ios-ipados-inv-01-observation-boundary-is-real">IOS-IPADOS-INV-01 — Observation Boundary Is Real</h2>
+<p>The adapter must not imply visibility beyond the resources and state actually exposed to the authorized implementation.</p>
+<h2 id="ios-ipados-inv-02-unobserved-absent">IOS-IPADOS-INV-02 — Unobserved ≠ Absent</h2>
+<p>Inability to observe a transition does not establish that the transition did not occur.</p>
+<h2 id="ios-ipados-inv-03-adapter-device-wide-scanner">IOS-IPADOS-INV-03 — Adapter ≠ Device-Wide Scanner</h2>
+<p>A bounded application observation must not become a claim about complete device state.</p>
+<h2 id="ios-ipados-inv-04-state-difference-native-event">IOS-IPADOS-INV-04 — State Difference ≠ Native Event</h2>
+<p>A transition derived from before/after state comparison must remain distinguishable from a directly observed native operation.</p>
+<h2 id="ios-ipados-inv-05-actor-origin">IOS-IPADOS-INV-05 — Actor ≠ Origin</h2>
+<p>The locally visible actor may transport or materialize a change originating elsewhere.</p>
+<h2 id="ios-ipados-inv-06-trusted-transport-benign-transition">IOS-IPADOS-INV-06 — Trusted Transport ≠ Benign Transition</h2>
+<p>Trust in a provider or synchronization mechanism does not establish the safety of the transition it carries.</p>
+<h2 id="ios-ipados-inv-07-adapter-detector">IOS-IPADOS-INV-07 — Adapter ≠ Detector</h2>
+<p>The adapter reports structural evidence. It does not independently establish ransomware.</p>
+<h2 id="ios-ipados-inv-08-capability-authority">IOS-IPADOS-INV-08 — Capability ≠ Authority</h2>
+<p>Technical ability to perform an action does not authorize its use.</p>
+<h2 id="ios-ipados-inv-09-user-prompt-executed-response">IOS-IPADOS-INV-09 — User Prompt ≠ Executed Response</h2>
+<p>Requesting user intervention does not establish that the requested action occurred.</p>
+<h2 id="ios-ipados-inv-10-execution-resolution">IOS-IPADOS-INV-10 — Execution ≠ Resolution</h2>
+<p>A successfully completed platform operation does not prove that the structural condition has resolved.</p>
+<h2 id="ios-ipados-inv-11-local-verification-device-wide-verification">IOS-IPADOS-INV-11 — Local Verification ≠ Device-Wide Verification</h2>
+<p>A clean bounded rescan cannot establish that unobserved device or remote state is clean.</p>
+<h2 id="ios-ipados-inv-12-recovery-capability-verified-restoration">IOS-IPADOS-INV-12 — Recovery Capability ≠ Verified Restoration</h2>
+<p>Availability of recovery does not establish successful restoration.</p>
+<h2 id="ios-ipados-inv-13-synchronized-observation-independent-origin">IOS-IPADOS-INV-13 — Synchronized Observation ≠ Independent Origin</h2>
+<p>The same transition observed across multiple synchronized devices may remain one originating event.</p>
+<h2 id="ios-ipados-inv-14-privacy-boundary-survives-normalization">IOS-IPADOS-INV-14 — Privacy Boundary Survives Normalization</h2>
+<p>Raw identifiers, contents, and credentials should remain local when structural references are sufficient.</p>
+<hr>
+<h1 id="41-non-goals">41. Non-Goals</h1>
+<p>The iOS / iPadOS adapter is not:</p>
+<ul>
+<li>a device-wide surveillance mechanism;</li>
+<li>a mechanism for bypassing application isolation;</li>
+<li>a mechanism for weakening platform security controls;</li>
+<li>a malware-signature scanner;</li>
+<li>a ransomware attribution engine;</li>
+<li>a guarantee of complete resource visibility;</li>
+<li>a guarantee of process-level visibility;</li>
+<li>a guarantee of endpoint-level containment;</li>
+<li>a guarantee of resource recovery;</li>
+<li>proof that unobserved activity is absent;</li>
+<li>an authorization engine.</li>
+</ul>
+<p>Its role is narrower:</p>
+<blockquote>
+<p><strong>Represent authorized iOS and iPadOS observations faithfully, normalize only the structure the platform exposes, declare limitations honestly, map authorized responses only where genuinely supported, and keep verification bounded to observable state.</strong></p>
+</blockquote>
+<hr>
+<h1 id="42-shared-contracts">42. Shared Contracts</h1>
+<p>The iOS / iPadOS adapter participates in:</p>
+<ul>
+<li><code>tf.resource-transition/v0.1</code></li>
+<li><code>tf.platform-capabilities/v0.1</code></li>
+<li><code>tf.containment-decision/v0.1</code></li>
+<li><code>tf.response-outcome/v0.1</code></li>
+<li><code>tf.verification/v0.1</code></li>
+</ul>
+<p>The Ransomware Structural Pattern Detector consumes its normalized observations and may produce:</p>
+<ul>
+<li><code>tf.structural-pattern/v0.1</code></li>
+</ul>
+<p>This adapter does not redefine those contracts.</p>
+<hr>
+<h1 id="43-relationship-to-cloud-synchronization">43. Relationship to Cloud / Synchronization</h1>
+<p>The Cloud / Synchronization adapter complements this device-side adapter.</p>
+<p>Conceptually:</p>
+<p><strong>iOS / iPadOS-visible state</strong></p>
+<p>↓</p>
+<p><strong>device-side normalized transition</strong></p>
+<p>↕ correlation</p>
+<p><strong>cloud / synchronization evidence</strong></p>
+<p>↓</p>
+<p><strong>cross-environment structural lineage</strong></p>
+<p>The iOS / iPadOS adapter should make only claims justified by device-side evidence.</p>
+<p>The Cloud / Synchronization adapter may contribute evidence about remote origin, transport, propagation, version relationships, and cross-environment recovery.</p>
+<p>Neither layer should invent evidence missing from the other.</p>
+<hr>
+<h1 id="canonical-summary">Canonical Summary</h1>
+<blockquote>
+<p><strong>The iOS / iPadOS adapter provides a conservative, privacy-preserving bridge between authorized application-visible resource state and the Shared Structural Event Grammar without pretending to possess device-wide observation or enforcement authority.</strong></p>
+</blockquote>
+<p>Its observation rule is:</p>
+<blockquote>
+<p><strong>Describe only what the authorized environment exposes. Treat everything else as unresolved.</strong></p>
+</blockquote>
+<p>Its derivation rule is:</p>
+<blockquote>
+<p><strong>A before/after state difference may establish a transition without establishing the intermediate mechanism or actor.</strong></p>
+</blockquote>
+<p>Its actor rule is:</p>
+<blockquote>
+<p><strong>The actor visible where a transition materializes may not be the actor that originated it.</strong></p>
+</blockquote>
+<p>Its capability rule is:</p>
+<blockquote>
+<p><strong>Begin from unknown and promote a capability only when the concrete implementation establishes it.</strong></p>
+</blockquote>
+<p>Its response rule is:</p>
+<blockquote>
+<p><strong>A requested action with no supported and authorized native mechanism remains unexecuted.</strong></p>
+</blockquote>
+<p>Its privacy rule is:</p>
+<blockquote>
+<p><strong>Export structural relationships rather than unnecessary user content, identifiers, or credentials.</strong></p>
+</blockquote>
+<p>Its verification rule is:</p>
+<blockquote>
+<p><strong>A clean result inside the observable scope says nothing definitive about state outside that scope.</strong></p>
+</blockquote>
+  </main>
+</body>
+</html>

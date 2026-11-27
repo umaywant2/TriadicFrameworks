@@ -1,0 +1,574 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://triadicframeworks.org/schemas/shared-structural-event-grammar/verification.schema.json",
+  "title": "Verification",
+  "description": "A platform-neutral post-response observation describing the structural state found after an intervention, attempted intervention, or verification request. Verification compares observed state against relevant prior state and records resolved, persistent, reappeared, new, and unverifiable conditions without treating execution success as proof of resolution.",
+  "type": "object",
+  "additionalProperties": false,
+
+  "required": [
+    "schema",
+    "verification_id",
+    "subject",
+    "observation",
+    "result",
+    "provenance"
+  ],
+
+  "properties": {
+    "schema": {
+      "const": "tf.verification/v0.1",
+      "description": "Canonical schema-family identifier and version."
+    },
+
+    "verification_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Unique identifier for this verification record."
+    },
+
+    "subject": {
+      "$ref": "#/$defs/subject"
+    },
+
+    "observation": {
+      "$ref": "#/$defs/observation"
+    },
+
+    "comparison": {
+      "$ref": "#/$defs/comparison"
+    },
+
+    "findings": {
+      "$ref": "#/$defs/findings"
+    },
+
+    "result": {
+      "$ref": "#/$defs/result"
+    },
+
+    "limitations": {
+      "type": "array",
+      "description": "Known limitations affecting the completeness or reliability of verification.",
+      "items": {
+        "$ref": "#/$defs/limitation"
+      },
+      "default": []
+    },
+
+    "follow_up": {
+      "$ref": "#/$defs/followUp"
+    },
+
+    "provenance": {
+      "$ref": "#/$defs/provenance"
+    },
+
+    "extensions": {
+      "type": "object",
+      "description": "Domain-specific or platform-specific verification data. Extensions must not redefine canonical verification semantics or erase unresolved conditions.",
+      "additionalProperties": true
+    }
+  },
+
+  "$defs": {
+    "subject": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "outcome_ref"
+      ],
+      "properties": {
+        "outcome_ref": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Reference to the tf.response-outcome object whose resulting state is being verified."
+        },
+
+        "decision_ref": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional reference to the originating tf.containment-decision."
+        },
+
+        "pattern_ref": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional reference to the structural pattern associated with the response."
+        },
+
+        "target_refs": {
+          "type": "array",
+          "description": "Actors, resources, sessions, accounts, environments, contexts, or other targets included in verification.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        }
+      }
+    },
+
+    "observation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "started_at",
+        "completed_at",
+        "scope"
+      ],
+      "properties": {
+        "started_at": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Time at which the verification observation began."
+        },
+
+        "completed_at": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Time at which the verification observation ended."
+        },
+
+        "scope": {
+          "type": "string",
+          "enum": [
+            "single_resource",
+            "resource_set",
+            "actor",
+            "process_tree",
+            "session",
+            "account",
+            "device",
+            "network",
+            "environment",
+            "context",
+            "cross_environment",
+            "domain_defined"
+          ],
+          "description": "Structural scope examined during verification."
+        },
+
+        "scope_ref": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional reference to an explicit observation, consent, or authorization boundary."
+        },
+
+        "capabilities_ref": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional reference to the tf.platform-capabilities declaration applicable during verification."
+        },
+
+        "method_refs": {
+          "type": "array",
+          "description": "References to scanners, probes, rules, comparison methods, or other mechanisms used during verification.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        },
+
+        "evidence_refs": {
+          "type": "array",
+          "description": "References to observations or evidence generated during the verification pass.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        }
+      }
+    },
+
+    "comparison": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "pre_response_refs": {
+          "type": "array",
+          "description": "References to pre-response events, patterns, baselines, or state records used for comparison.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        },
+
+        "post_response_refs": {
+          "type": "array",
+          "description": "References to post-response events or state records used for comparison.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        },
+
+        "baseline_ref": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional reference to an established baseline used in verification."
+        },
+
+        "comparison_state": {
+          "type": "string",
+          "enum": [
+            "comparable",
+            "partially_comparable",
+            "not_comparable",
+            "baseline_unavailable",
+            "unknown"
+          ],
+          "description": "Degree to which pre-response and post-response state can be meaningfully compared."
+        },
+
+        "structural_change": {
+          "type": "string",
+          "enum": [
+            "improved",
+            "unchanged",
+            "mixed",
+            "degraded",
+            "not_determined"
+          ],
+          "description": "Observed structural relationship between the relevant prior and current states."
+        }
+      }
+    },
+
+    "findings": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "resolved": {
+          "type": "array",
+          "description": "Previously identified conditions that are no longer observed within the verification scope.",
+          "items": {
+            "$ref": "#/$defs/finding"
+          },
+          "default": []
+        },
+
+        "persistent": {
+          "type": "array",
+          "description": "Previously identified conditions that remain observable after the response.",
+          "items": {
+            "$ref": "#/$defs/finding"
+          },
+          "default": []
+        },
+
+        "reappeared": {
+          "type": "array",
+          "description": "Conditions that ceased or appeared absent but became observable again.",
+          "items": {
+            "$ref": "#/$defs/finding"
+          },
+          "default": []
+        },
+
+        "new": {
+          "type": "array",
+          "description": "Previously unrecorded conditions observed during verification.",
+          "items": {
+            "$ref": "#/$defs/finding"
+          },
+          "default": []
+        },
+
+        "unverifiable": {
+          "type": "array",
+          "description": "Conditions whose current state could not be established within the available scope or capabilities.",
+          "items": {
+            "$ref": "#/$defs/finding"
+          },
+          "default": []
+        }
+      }
+    },
+
+    "finding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "subject_ref",
+        "state"
+      ],
+      "properties": {
+        "subject_ref": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Reference to the pattern, event, resource, actor, condition, or other subject being verified."
+        },
+
+        "state": {
+          "type": "string",
+          "enum": [
+            "resolved",
+            "persistent",
+            "reappeared",
+            "new",
+            "unverifiable"
+          ],
+          "description": "Observed verification state for this subject."
+        },
+
+        "confidence": {
+          "$ref": "#/$defs/confidence"
+        },
+
+        "evidence_refs": {
+          "type": "array",
+          "description": "References supporting the verification finding.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        },
+
+        "description": {
+          "type": "string",
+          "description": "Optional bounded explanation of the finding."
+        }
+      }
+    },
+
+    "result": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "state",
+        "confidence"
+      ],
+      "properties": {
+        "state": {
+          "type": "string",
+          "enum": [
+            "contained",
+            "partially_contained",
+            "persistent",
+            "reappeared",
+            "resolved",
+            "partially_resolved",
+            "new_condition_detected",
+            "mixed",
+            "unable_to_verify"
+          ],
+          "description": "Overall structural state observed during verification."
+        },
+
+        "confidence": {
+          "$ref": "#/$defs/confidence"
+        },
+
+        "summary": {
+          "type": "string",
+          "description": "Optional human-readable summary of the bounded verification result."
+        },
+
+        "resolution_basis": {
+          "type": "string",
+          "enum": [
+            "direct_observation",
+            "state_comparison",
+            "repeated_observation",
+            "recovery_validation",
+            "mixed_evidence",
+            "insufficient_evidence",
+            "not_applicable"
+          ],
+          "description": "Primary evidentiary basis for the overall verification state."
+        }
+      }
+    },
+
+    "confidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "level"
+      ],
+      "properties": {
+        "level": {
+          "type": "string",
+          "enum": [
+            "insufficient",
+            "low",
+            "moderate",
+            "high",
+            "very_high",
+            "unknown"
+          ],
+          "description": "Categorical confidence in the verification finding or result."
+        },
+
+        "score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Optional normalized confidence score from 0 to 1."
+        },
+
+        "basis": {
+          "type": "string",
+          "description": "Optional bounded explanation of the confidence basis."
+        },
+
+        "method_ref": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional reference to the method or calibration used to produce confidence."
+        }
+      }
+    },
+
+    "limitation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "code",
+        "description"
+      ],
+      "properties": {
+        "code": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Machine-readable identifier for the verification limitation."
+        },
+
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Human-readable description of the limitation."
+        },
+
+        "affects": {
+          "type": "array",
+          "description": "Subjects, scopes, capabilities, or verification claims affected by the limitation.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        },
+
+        "severity": {
+          "type": "string",
+          "enum": [
+            "informational",
+            "minor",
+            "material",
+            "blocking"
+          ],
+          "description": "Degree to which the limitation constrains interpretation of the verification result."
+        }
+      }
+    },
+
+    "followUp": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "required": {
+          "type": "boolean",
+          "description": "Whether the verification result indicates that another analytical or response cycle is required."
+        },
+
+        "reason_codes": {
+          "type": "array",
+          "description": "Machine-readable reasons supporting additional review or action.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        },
+
+        "pattern_reassessment_required": {
+          "type": "boolean",
+          "description": "Whether the current evidence warrants reassessment of the associated structural pattern."
+        },
+
+        "new_decision_required": {
+          "type": "boolean",
+          "description": "Whether another bounded decision is required before further intervention."
+        },
+
+        "recommended_scope": {
+          "type": "string",
+          "enum": [
+            "same",
+            "narrower",
+            "broader",
+            "cross_environment",
+            "domain_defined",
+            "not_applicable"
+          ],
+          "description": "Suggested scope relationship for a subsequent verification cycle. This is not authorization to expand scope."
+        },
+
+        "notes": {
+          "type": "string",
+          "description": "Optional bounded explanation of follow-up needs."
+        }
+      }
+    },
+
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "producer",
+        "created_at"
+      ],
+      "properties": {
+        "producer": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Verifier, adapter, analyzer, human operator, or orchestration component that produced this record."
+        },
+
+        "producer_version": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional version of the producing component or method."
+        },
+
+        "created_at": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Time at which this verification record was created."
+        },
+
+        "platform": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional platform or environment in which verification occurred."
+        },
+
+        "source_refs": {
+          "type": "array",
+          "description": "References to outcomes, observations, comparison states, logs, or other lineage material supporting verification.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "default": []
+        }
+      }
+    }
+  }
+}

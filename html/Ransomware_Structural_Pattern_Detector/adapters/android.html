@@ -1,0 +1,880 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="TriadicFrameworks build_html_mirror.py">
+  <meta name="source" content="/docs/Ransomware_Structural_Pattern_Detector/adapters/android.md">
+  <title>Android Adapter</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --content-width: 960px;
+    }
+
+    html {
+      line-height: 1.5;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      max-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #8888;
+      padding: 0.45rem 0.65rem;
+      text-align: left;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #8882;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      border-left: 4px solid #8888;
+    }
+
+    .generated-notice {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #8886;
+      border-radius: 0.4rem;
+      background: #8881;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    GENERATED FILE
+    Source: /docs/Ransomware_Structural_Pattern_Detector/adapters/android.md
+    Do not edit directly.
+    Regenerate from canonical source.
+  -->
+
+  <aside class="generated-notice">
+    <strong>Generated mirror.</strong>
+    Canonical source:
+    <code>/docs/Ransomware_Structural_Pattern_Detector/adapters/android.md</code>
+    &middot;
+    <a href="../../sitemap.html">Sitemap</a>
+  </aside>
+
+  <main>
+<p><img width="1194" height="672" alt="Ransomware_Structural_Pattern_Detector_adapters_android_" src="https://github.com/user-attachments/assets/3dc2266f-f01e-49ea-b30c-849307389fe7" /></p>
+<h1 id="android-adapter">Android Adapter</h1>
+<blockquote>
+<p><strong>Platform adapter specification for mapping authorized Android observations and response capabilities into the Ransomware Structural Pattern Detector architecture.</strong></p>
+</blockquote>
+<p>The Android adapter connects Android-accessible resource observations to the platform-neutral Shared Structural Event Grammar.</p>
+<p>Android is intentionally treated as a <strong>capability-bounded environment</strong>.</p>
+<p>The adapter must not assume desktop-style filesystem visibility, unrestricted observation of other applications, arbitrary process control, or universal access to user resources.</p>
+<p>Its governing rule is:</p>
+<blockquote>
+<p><strong>Observe only what the Android execution context is permitted to observe, declare unavailable capabilities honestly, and never convert platform restrictions into false confidence.</strong></p>
+</blockquote>
+<hr>
+<h2 id="status">Status</h2>
+<ul>
+<li><strong>Adapter ID:</strong> <code>rspd-android</code></li>
+<li><strong>Platform:</strong> Android</li>
+<li><strong>Status:</strong> Experimental</li>
+<li><strong>Role:</strong> Observation, normalization, capability declaration, bounded response mapping, and verification support</li>
+<li><strong>Input environment:</strong> Android-authorized application and resource surfaces</li>
+<li><strong>Normalized observation:</strong> <code>tf.resource-transition/v0.1</code></li>
+<li><strong>Capability declaration:</strong> <code>tf.platform-capabilities/v0.1</code></li>
+<li><strong>Decision input:</strong> <code>tf.containment-decision/v0.1</code></li>
+<li><strong>Execution output:</strong> <code>tf.response-outcome/v0.1</code></li>
+<li><strong>Verification output:</strong> <code>tf.verification/v0.1</code></li>
+</ul>
+<hr>
+<h1 id="1-scope">1. Scope</h1>
+<p>The Android adapter operates within Android's application, permission, storage, and user-authorization boundaries.</p>
+<p>It may normalize observations available through authorized Android application surfaces into shared structural events.</p>
+<p>Its potential scope includes:</p>
+<ul>
+<li>adapter-owned app-specific storage;</li>
+<li>user-authorized documents and directories;</li>
+<li>shared-storage resources exposed through permitted interfaces;</li>
+<li>media accessible to the adapter;</li>
+<li>adapter-generated canary or test resources where appropriate;</li>
+<li>application-visible metadata;</li>
+<li>resources explicitly supplied by the user;</li>
+<li>authorized cloud or synchronization state exposed through another provider or adapter;</li>
+<li>response and verification state visible to the adapter.</li>
+</ul>
+<p>Its scope does <strong>not</strong> imply device-wide visibility.</p>
+<p>The adapter must describe the actual observation boundary represented by each deployment.</p>
+<hr>
+<h1 id="2-android-security-boundary">2. Android Security Boundary</h1>
+<p>Android isolates applications through an application sandbox and uses permissions to restrict access to system features and user data.</p>
+<p>The adapter therefore treats isolation and access control as structural facts rather than obstacles to be bypassed.</p>
+<p>Conceptually:</p>
+<p><strong>Android security boundary</strong></p>
+<p>↓</p>
+<p><strong>Authorized observation surface</strong></p>
+<p>↓</p>
+<p><strong>Android adapter</strong></p>
+<p>↓</p>
+<p><strong>Normalized structural event</strong></p>
+<p>The adapter must not attempt to weaken Android's security model in order to obtain broader telemetry.</p>
+<p>If information is unavailable inside the authorized execution boundary, that limitation should remain explicit.</p>
+<hr>
+<h1 id="3-storage-surfaces">3. Storage Surfaces</h1>
+<p>Android exposes several structurally different storage surfaces.</p>
+<p>The adapter should preserve those distinctions because they affect observation scope, persistence, actor interpretation, and recovery.</p>
+<p>Relevant categories include:</p>
+<h2 id="app-specific-storage">App-Specific Storage</h2>
+<p>Resources intended for the adapter application's own use.</p>
+<p>These may provide useful local structural observations, but they must not be treated as evidence of device-wide state.</p>
+<h2 id="shared-storage">Shared Storage</h2>
+<p>User resources intended to be accessible beyond one application under Android's applicable access rules.</p>
+<p>These may include media, documents, and other shared resources.</p>
+<p>Visibility depends on the platform access model and authorization available to the adapter.</p>
+<h2 id="user-selected-documents-and-directories">User-Selected Documents and Directories</h2>
+<p>Android may expose documents or directory trees selected by the user through platform-supported document access.</p>
+<p>These resources form an explicitly bounded observation scope.</p>
+<p>The adapter should preserve evidence that the resource was user-selected or belongs to an authorized selection boundary.</p>
+<h2 id="provider-backed-resources">Provider-Backed Resources</h2>
+<p>A resource exposed through a document or content provider may not correspond to a conventional local filesystem path.</p>
+<p>The adapter should therefore prefer stable structural references over assumptions about physical path layout.</p>
+<hr>
+<h1 id="4-native-observation-sources">4. Native Observation Sources</h1>
+<p>The Android adapter may normalize observations derived from authorized sources available to its implementation.</p>
+<p>Possible source classes include:</p>
+<ul>
+<li>adapter-owned resource activity;</li>
+<li>authorized document operations;</li>
+<li>shared-resource metadata;</li>
+<li>application-visible resource state;</li>
+<li>user-supplied observations;</li>
+<li>explicit application events;</li>
+<li>provider-mediated resource transitions;</li>
+<li>synchronization state exposed through an authorized integration;</li>
+<li>adapter-maintained baseline observations.</li>
+</ul>
+<p>The adapter specification must identify which source produced each normalized observation.</p>
+<p>It must not imply access to events outside its actual visibility.</p>
+<hr>
+<h1 id="5-observation-limitations">5. Observation Limitations</h1>
+<p>An ordinary Android adapter must be prepared to operate with incomplete system visibility.</p>
+<p>Examples of potentially unavailable information include:</p>
+<ul>
+<li>transitions occurring exclusively inside another application's private storage;</li>
+<li>complete filesystem-wide transition history;</li>
+<li>complete system process lineage;</li>
+<li>arbitrary actor containment;</li>
+<li>complete origin information for synchronized resources;</li>
+<li>device-wide recovery state;</li>
+<li>transitions that occurred before observation began;</li>
+<li>provider-internal operations not exposed to the adapter.</li>
+</ul>
+<p>These conditions should be represented through capability declarations and verification limitations.</p>
+<p>The correct result may be:</p>
+<p><strong>unknown</strong></p>
+<p>or:</p>
+<p><strong>unable to verify</strong></p>
+<p>rather than:</p>
+<p><strong>not occurring</strong></p>
+<hr>
+<h1 id="6-resource-mapping">6. Resource Mapping</h1>
+<p>Android-accessible resources should map into the shared resource vocabulary according to structural role rather than native storage implementation.</p>
+<p>Candidate mappings include:</p>
+<table>
+<thead>
+<tr>
+<th>Android-visible resource</th>
+<th>Shared resource type/class</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>User document</td>
+<td><code>file</code> / <code>user_document</code></td>
+</tr>
+<tr>
+<td>Photo</td>
+<td><code>file</code> / <code>photo</code></td>
+</tr>
+<tr>
+<td>Video</td>
+<td><code>file</code> / <code>video</code></td>
+</tr>
+<tr>
+<td>Audio</td>
+<td><code>file</code> / <code>audio</code></td>
+</tr>
+<tr>
+<td>Archive</td>
+<td><code>file</code> / <code>archive</code></td>
+</tr>
+<tr>
+<td>Application data</td>
+<td><code>file</code> or <code>dataset</code> / <code>application_data</code></td>
+</tr>
+<tr>
+<td>Configuration</td>
+<td><code>configuration</code> / <code>configuration</code></td>
+</tr>
+<tr>
+<td>Database</td>
+<td><code>dataset</code> / <code>database</code></td>
+</tr>
+<tr>
+<td>Backup-visible resource</td>
+<td>appropriate type / <code>backup</code></td>
+</tr>
+<tr>
+<td>Recovery-visible resource</td>
+<td>appropriate type / <code>recovery_resource</code></td>
+</tr>
+<tr>
+<td>Adapter canary</td>
+<td>appropriate type / <code>canary</code></td>
+</tr>
+<tr>
+<td>Cloud-backed object</td>
+<td><code>cloud_object</code> / <code>cloud_resource</code></td>
+</tr>
+</tbody>
+</table>
+<p>The normalized resource identifier should be privacy-preserving whenever the raw resource name or URI is unnecessary for analysis.</p>
+<hr>
+<h1 id="7-resource-identity">7. Resource Identity</h1>
+<p>Android resources may be represented by abstractions other than conventional filesystem paths.</p>
+<p>The adapter should therefore use a stable adapter-level resource identifier where possible.</p>
+<p>A resource reference may be derived from:</p>
+<ul>
+<li>an authorized document reference;</li>
+<li>an application-local identifier;</li>
+<li>a provider-backed resource identifier;</li>
+<li>a privacy-preserving transformation of a native reference;</li>
+<li>another stable mapping maintained locally by the adapter.</li>
+</ul>
+<p>The central analyzer should not require the raw native resource reference when a structural identifier is sufficient.</p>
+<hr>
+<h1 id="8-actor-mapping">8. Actor Mapping</h1>
+<p>Android actor visibility may vary substantially according to the observation source.</p>
+<p>Candidate shared actor mappings include:</p>
+<ul>
+<li><code>application</code></li>
+<li><code>service</code></li>
+<li><code>system</code></li>
+<li><code>user</code></li>
+<li><code>remote_actor</code></li>
+<li><code>sync_service</code></li>
+<li><code>unknown</code></li>
+</ul>
+<p>An adapter should distinguish what is directly observed from what is inferred.</p>
+<p>For example, if an application can establish that a transition occurred through its own operation, it may identify itself as the observed actor.</p>
+<p>If a provider reports changed state without exposing the responsible origin, the adapter should preserve:</p>
+<p><code>actor.type = "unknown"</code></p>
+<p>rather than inventing an actor.</p>
+<hr>
+<h1 id="9-origin-vs-transport">9. Origin vs. Transport</h1>
+<p>Remote and synchronized resources require special care.</p>
+<p>A locally observed resource transition may have been:</p>
+<ul>
+<li>originated locally;</li>
+<li>originated remotely;</li>
+<li>transported through synchronization;</li>
+<li>reflected through a provider;</li>
+<li>produced by an unknown upstream actor.</li>
+</ul>
+<p>Where sufficient evidence exists, the adapter should distinguish:</p>
+<ul>
+<li>origin actor;</li>
+<li>transport actor;</li>
+<li>local observer;</li>
+<li>origin environment.</li>
+</ul>
+<p>Where the distinction cannot be established, origin remains unresolved.</p>
+<p>The adapter must follow:</p>
+<blockquote>
+<p><strong>Locally visible change ≠ locally originated change</strong></p>
+</blockquote>
+<p>and:</p>
+<blockquote>
+<p><strong>Trusted synchronization transport ≠ trusted transition</strong></p>
+</blockquote>
+<hr>
+<h1 id="10-transition-mapping">10. Transition Mapping</h1>
+<p>Android-visible operations should be normalized according to their structural effect.</p>
+<p>Possible shared operations include:</p>
+<ul>
+<li><code>read</code></li>
+<li><code>write</code></li>
+<li><code>create</code></li>
+<li><code>delete</code></li>
+<li><code>rename</code></li>
+<li><code>move</code></li>
+<li><code>truncate</code></li>
+<li><code>copy</code></li>
+<li><code>replace</code></li>
+<li><code>permission_change</code></li>
+<li><code>metadata_change</code></li>
+<li><code>recovery_change</code></li>
+<li><code>state_change</code></li>
+<li><code>scope_change</code></li>
+<li><code>sync</code></li>
+<li><code>other</code></li>
+</ul>
+<p>Possible structural actions include:</p>
+<ul>
+<li><code>access</code></li>
+<li><code>modify</code></li>
+<li><code>create</code></li>
+<li><code>remove</code></li>
+<li><code>replace</code></li>
+<li><code>relocate</code></li>
+<li><code>duplicate</code></li>
+<li><code>restrict</code></li>
+<li><code>grant</code></li>
+<li><code>revoke</code></li>
+<li><code>expose</code></li>
+<li><code>conceal</code></li>
+<li><code>restore</code></li>
+<li><code>propagate</code></li>
+<li><code>transform</code></li>
+<li><code>other</code></li>
+</ul>
+<p>Where Android exposes a platform-native operation that does not map cleanly onto the shared vocabulary, the adapter should preserve the native term in event provenance or <code>native_operation</code>.</p>
+<hr>
+<h1 id="11-detection-relevant-characteristics">11. Detection-Relevant Characteristics</h1>
+<p>When observable without unnecessary content inspection, the adapter may normalize characteristics such as:</p>
+<ul>
+<li>size change;</li>
+<li>content-change indication;</li>
+<li>structural change;</li>
+<li>extension or representation change;</li>
+<li>permission change;</li>
+<li>ownership or authority change where meaningful;</li>
+<li>scope change;</li>
+<li>recovery-state change;</li>
+<li>preservation of prior state;</li>
+<li>resource recoverability;</li>
+<li>synchronization transport;</li>
+<li>repeated mutation;</li>
+<li>transition timing.</li>
+</ul>
+<p>These remain observations or bounded derivations.</p>
+<p>They are not ransomware verdicts.</p>
+<hr>
+<h1 id="12-baseline-support">12. Baseline Support</h1>
+<p>An Android implementation may maintain a local structural baseline for resources within its authorized scope.</p>
+<p>Candidate baseline dimensions include:</p>
+<ul>
+<li>known actors;</li>
+<li>expected resource classes;</li>
+<li>typical operations;</li>
+<li>expected resource scope;</li>
+<li>transition frequency;</li>
+<li>established transformation workflows;</li>
+<li>normal synchronization behavior.</li>
+</ul>
+<p>A baseline may improve structural interpretation but cannot convert unfamiliar activity directly into malicious activity.</p>
+<p>If no adequate baseline exists:</p>
+<p><code>baseline.available = false</code></p>
+<p>is preferable to fabricating expected behavior.</p>
+<hr>
+<h1 id="13-canary-resources">13. Canary Resources</h1>
+<p>An Android implementation may optionally maintain adapter-controlled canary resources where doing so is appropriate and authorized.</p>
+<p>A canary is useful only inside a scope the adapter can actually observe.</p>
+<p>A canary transition may provide strong structural evidence that unexpected modification occurred.</p>
+<p>It does not independently establish:</p>
+<ul>
+<li>ransomware;</li>
+<li>malicious intent;</li>
+<li>actor identity;</li>
+<li>attribution.</li>
+</ul>
+<p>Canary resources should not contain sensitive user information.</p>
+<hr>
+<h1 id="14-capability-declaration">14. Capability Declaration</h1>
+<p>The Android adapter should publish a declaration conforming to:</p>
+<p><code>tf.platform-capabilities/v0.1</code></p>
+<p>Capability values must reflect the actual implementation and deployed Android environment.</p>
+<p>The adapter must not assume that a capability supported in one Android deployment is universally available.</p>
+<hr>
+<h1 id="15-observation-capabilities">15. Observation Capabilities</h1>
+<p>Typical capability questions include:</p>
+<h3 id="event-observation">Event Observation</h3>
+<p>Can the adapter observe relevant transition events for the resource scope being protected?</p>
+<h3 id="actor-identity">Actor Identity</h3>
+<p>Can the adapter establish the actor responsible for the visible transition?</p>
+<h3 id="actor-lineage">Actor Lineage</h3>
+<p>Can it determine parentage, invocation lineage, or upstream origin?</p>
+<h3 id="resource-classification">Resource Classification</h3>
+<p>Can it classify the resource without unnecessarily extracting its contents?</p>
+<h3 id="network-context">Network Context</h3>
+<p>Can relevant network context be observed within the authorized application boundary?</p>
+<h3 id="origin-transport-distinction">Origin / Transport Distinction</h3>
+<p>Can the adapter distinguish locally originated transitions from provider- or synchronization-transported changes?</p>
+<h3 id="baseline-access">Baseline Access</h3>
+<p>Does the adapter possess sufficient history to evaluate current behavior against a meaningful baseline?</p>
+<h3 id="recovery-state-observation">Recovery-State Observation</h3>
+<p>Can it determine whether a usable recovery mechanism or prior version exists?</p>
+<p>Every answer should be expressed through the shared capability vocabulary:</p>
+<ul>
+<li><code>supported</code></li>
+<li><code>partial</code></li>
+<li><code>unsupported</code></li>
+<li><code>unknown</code></li>
+</ul>
+<hr>
+<h1 id="16-enforcement-capabilities">16. Enforcement Capabilities</h1>
+<p>The adapter must not infer desktop-style containment capabilities.</p>
+<p>Candidate enforcement questions include:</p>
+<ul>
+<li>Can writes be denied within the actual protected scope?</li>
+<li>Can an actor be contained within the adapter's authority?</li>
+<li>Can affected resources be isolated?</li>
+<li>Can relevant network activity be restricted?</li>
+<li>Can a resource be quarantined?</li>
+<li>Can permissions be reduced?</li>
+<li>Can a session be terminated?</li>
+<li>Is user interaction required?</li>
+</ul>
+<p>The answer may legitimately be <code>partial</code>, <code>unsupported</code>, or <code>unknown</code>.</p>
+<p>That is valid structural output.</p>
+<hr>
+<h1 id="17-containment-mapping">17. Containment Mapping</h1>
+<p>An authorized <code>tf.containment-decision/v0.1</code> may request actions such as:</p>
+<ul>
+<li>increase observation;</li>
+<li>notify the authorized operator;</li>
+<li>deny resource writes;</li>
+<li>contain an actor;</li>
+<li>isolate a resource set;</li>
+<li>isolate network scope;</li>
+<li>quarantine resources;</li>
+<li>restrict actor permissions;</li>
+<li>disable an actor;</li>
+<li>preserve evidence;</li>
+<li>prepare recovery;</li>
+<li>initiate recovery;</li>
+<li>request manual review.</li>
+</ul>
+<p>The Android adapter may execute only actions that:</p>
+<ol>
+<li>fall inside its declared capabilities;</li>
+<li>fall inside its current authorization;</li>
+<li>respect Android platform boundaries;</li>
+<li>respect the decision's stated constraints.</li>
+</ol>
+<p>Unsupported actions must remain unsupported.</p>
+<hr>
+<h1 id="18-user-mediated-actions">18. User-Mediated Actions</h1>
+<p>Some Android responses may require a user-visible platform interaction rather than silent adapter execution.</p>
+<p>When this occurs, the adapter should distinguish:</p>
+<p><strong>response requested</strong></p>
+<p>from:</p>
+<p><strong>user interaction requested</strong></p>
+<p>from:</p>
+<p><strong>action actually completed</strong></p>
+<p>A user prompt is not an executed containment action.</p>
+<p>If the adapter cannot observe whether the requested user-mediated change completed successfully, the outcome must preserve that limitation.</p>
+<hr>
+<h1 id="19-fallback-behavior">19. Fallback Behavior</h1>
+<p>Android platform restrictions may make the preferred containment action unavailable.</p>
+<p>If the containment decision permits fallback, the adapter may choose a weaker supported response.</p>
+<p>Examples at the structural level include:</p>
+<p><strong>requested</strong></p>
+<p><code>contain_actor</code></p>
+<p>↓</p>
+<p><strong>not supported in current scope</strong></p>
+<p>↓</p>
+<p><strong>fallback</strong></p>
+<p><code>notify_authorized_operator</code></p>
+<p>or:</p>
+<p><strong>requested</strong></p>
+<p><code>deny_resource_writes</code></p>
+<p>↓</p>
+<p><strong>only limited resource authority available</strong></p>
+<p>↓</p>
+<p><strong>fallback</strong></p>
+<p><code>restrict_available_scope</code></p>
+<p>The exact native mechanism depends on implementation.</p>
+<p>Fallback must always preserve:</p>
+<ul>
+<li>original requested action;</li>
+<li>fallback action;</li>
+<li>reason;</li>
+<li>capability limitation;</li>
+<li>degradation relationship.</li>
+</ul>
+<hr>
+<h1 id="20-outcome-reporting">20. Outcome Reporting</h1>
+<p>Every attempted response should produce or contribute to:</p>
+<p><code>tf.response-outcome/v0.1</code></p>
+<p>Relevant execution states include:</p>
+<ul>
+<li><code>not_attempted</code></li>
+<li><code>blocked</code></li>
+<li><code>unsupported</code></li>
+<li><code>authorization_required</code></li>
+<li><code>attempted</code></li>
+<li><code>partially_executed</code></li>
+<li><code>executed</code></li>
+<li><code>failed</code></li>
+<li><code>unknown</code></li>
+</ul>
+<p>The adapter must distinguish:</p>
+<p><strong>requested response</strong></p>
+<p>from:</p>
+<p><strong>executed response</strong></p>
+<p>and both from:</p>
+<p><strong>verified resulting state</strong></p>
+<hr>
+<h1 id="21-verification">21. Verification</h1>
+<p>After an authorized response, the Android adapter should rescan the same authorized surface when possible.</p>
+<p>Verification may ask:</p>
+<ul>
+<li>Are destructive resource transitions continuing?</li>
+<li>Did the affected resource state change?</li>
+<li>Did activity reappear?</li>
+<li>Are additional resources now affected?</li>
+<li>Has synchronization propagated additional transitions?</li>
+<li>Does recovery state remain available?</li>
+<li>Can the adapter observe enough of the environment to reach a conclusion?</li>
+</ul>
+<p>The resulting verification may be:</p>
+<ul>
+<li><code>contained</code></li>
+<li><code>partially_contained</code></li>
+<li><code>persistent</code></li>
+<li><code>reappeared</code></li>
+<li><code>resolved</code></li>
+<li><code>partially_resolved</code></li>
+<li><code>new_condition_detected</code></li>
+<li><code>mixed</code></li>
+<li><code>unable_to_verify</code></li>
+</ul>
+<p>If Android visibility prevents meaningful verification, the adapter should report:</p>
+<p><code>unable_to_verify</code></p>
+<p>rather than infer resolution from the absence of locally visible events.</p>
+<hr>
+<h1 id="22-recovery">22. Recovery</h1>
+<p>Recovery is bounded by what the Android environment, resource provider, synchronization system, or other authorized service actually makes available.</p>
+<p>The adapter may be able to observe or request recovery for some resources while having no direct recovery capability for others.</p>
+<p>Recovery state must therefore distinguish:</p>
+<ul>
+<li>recovery mechanism exists;</li>
+<li>recovery artifact exists;</li>
+<li>recovery requested;</li>
+<li>recovery attempted;</li>
+<li>recovery completed;</li>
+<li>resulting resource verified.</li>
+</ul>
+<p>These states must not be collapsed.</p>
+<blockquote>
+<p><strong>Recovery capability ≠ recovery availability ≠ recovery execution ≠ verified restoration</strong></p>
+</blockquote>
+<hr>
+<h1 id="23-synchronization">23. Synchronization</h1>
+<p>Android resources may participate in synchronization systems whose true origin is outside the device.</p>
+<p>When synchronization is involved, the Android adapter should record available structural evidence and defer cross-environment reasoning to the shared event lineage and, where appropriate, the cloud-sync adapter.</p>
+<p>Relevant fields may include:</p>
+<ul>
+<li><code>actor.role = "transport"</code></li>
+<li><code>transport_actor_ref</code></li>
+<li><code>origin_actor_ref</code></li>
+<li><code>context.sync_transport</code></li>
+<li><code>context.origin_environment_ref</code></li>
+<li>propagation evidence</li>
+<li>synchronization-related provenance</li>
+</ul>
+<p>The Android adapter should not attempt to solve an unobservable remote origin locally.</p>
+<hr>
+<h1 id="24-privacy-and-redaction">24. Privacy and Redaction</h1>
+<p>The Android adapter should minimize exported information.</p>
+<p>Preferred shared fields include:</p>
+<ul>
+<li>privacy-preserving resource ID;</li>
+<li>resource type;</li>
+<li>resource class;</li>
+<li>resource scope;</li>
+<li>sensitivity;</li>
+<li>transition type;</li>
+<li>preservation state;</li>
+<li>recoverability;</li>
+<li>actor category;</li>
+<li>actor relationship;</li>
+<li>transition timing;</li>
+<li>baseline relationship;</li>
+<li>synchronization context;</li>
+<li>provenance.</li>
+</ul>
+<p>Avoid exporting unnecessary:</p>
+<ul>
+<li>document contents;</li>
+<li>plaintext credentials;</li>
+<li>personal filenames;</li>
+<li>full provider URIs;</li>
+<li>unrelated application data;</li>
+<li>account identifiers;</li>
+<li>media contents;</li>
+<li>unrelated metadata.</li>
+</ul>
+<p>Where identifying information is removed or generalized, normalization provenance should record the redaction class.</p>
+<hr>
+<h1 id="25-local-processing-preference">25. Local Processing Preference</h1>
+<p>Operations involving sensitive Android-native information should remain local when the structural result is sufficient.</p>
+<p>Candidate local operations include:</p>
+<ul>
+<li>resource classification;</li>
+<li>identifier pseudonymization;</li>
+<li>URI handling;</li>
+<li>provider interaction;</li>
+<li>deduplication;</li>
+<li>baseline comparison;</li>
+<li>redaction;</li>
+<li>mapping native operations into shared transitions.</li>
+</ul>
+<p>The detector should receive the minimum structural representation necessary for reliable analysis.</p>
+<hr>
+<h1 id="26-known-limitations">26. Known Limitations</h1>
+<p>An Android adapter should explicitly expect capability limitations arising from its deployment context.</p>
+<p>Potential limitation classes include:</p>
+<ul>
+<li>incomplete observation outside authorized resources;</li>
+<li>incomplete visibility into other applications;</li>
+<li>incomplete actor lineage;</li>
+<li>unresolved upstream origin;</li>
+<li>provider-mediated resource abstraction;</li>
+<li>limited containment authority;</li>
+<li>user-mediated response requirements;</li>
+<li>incomplete recovery visibility;</li>
+<li>synchronization ambiguity;</li>
+<li>incomplete post-response verification;</li>
+<li>behavior varying with platform version, provider, permissions, and deployment model.</li>
+</ul>
+<p>These limitations are part of the analytical result.</p>
+<p>They are not implementation embarrassment to be hidden.</p>
+<hr>
+<h1 id="27-capability-posture">27. Capability Posture</h1>
+<p>The Android adapter begins from a conservative capability posture:</p>
+<table>
+<thead>
+<tr>
+<th>Capability</th>
+<th>Default posture</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Event observation</td>
+<td><code>partial</code></td>
+</tr>
+<tr>
+<td>Actor identity</td>
+<td><code>partial</code></td>
+</tr>
+<tr>
+<td>Actor lineage</td>
+<td><code>partial</code></td>
+</tr>
+<tr>
+<td>Resource classification</td>
+<td><code>partial</code></td>
+</tr>
+<tr>
+<td>Network context</td>
+<td><code>partial</code></td>
+</tr>
+<tr>
+<td>Origin / transport distinction</td>
+<td><code>partial</code></td>
+</tr>
+<tr>
+<td>Baseline access</td>
+<td><code>partial</code></td>
+</tr>
+<tr>
+<td>Recovery-state observation</td>
+<td><code>partial</code></td>
+</tr>
+<tr>
+<td>Write denial</td>
+<td><code>partial</code></td>
+</tr>
+<tr>
+<td>Actor containment</td>
+<td><code>partial</code></td>
+</tr>
+<tr>
+<td>Resource isolation</td>
+<td><code>partial</code></td>
+</tr>
+<tr>
+<td>Network isolation</td>
+<td><code>partial</code></td>
+</tr>
+<tr>
+<td>Quarantine</td>
+<td><code>partial</code></td>
+</tr>
+<tr>
+<td>Permission restriction</td>
+<td><code>partial</code></td>
+</tr>
+<tr>
+<td>Actor disablement</td>
+<td><code>partial</code></td>
+</tr>
+<tr>
+<td>Session termination</td>
+<td><code>partial</code></td>
+</tr>
+<tr>
+<td>Recovery</td>
+<td><code>partial</code></td>
+</tr>
+<tr>
+<td>Rollback</td>
+<td><code>partial</code></td>
+</tr>
+<tr>
+<td>Post-action observation</td>
+<td><code>partial</code></td>
+</tr>
+<tr>
+<td>State comparison</td>
+<td><code>partial</code></td>
+</tr>
+<tr>
+<td>Persistence detection</td>
+<td><code>partial</code></td>
+</tr>
+<tr>
+<td>Reappearance detection</td>
+<td><code>partial</code></td>
+</tr>
+<tr>
+<td>Recovery verification</td>
+<td><code>partial</code></td>
+</tr>
+</tbody>
+</table>
+<p>These values are <strong>initial conservative declarations</strong>, not claims that every Android implementation provides partial support for every capability.</p>
+<p>A concrete implementation must replace them with evidence-backed declarations appropriate to its actual environment.</p>
+<p>Where support has not been established, <code>unknown</code> is preferable to an optimistic declaration.</p>
+<hr>
+<h1 id="28-android-adapter-invariants">28. Android Adapter Invariants</h1>
+<h2 id="android-inv-01-sandbox-boundary-is-real">ANDROID-INV-01 — Sandbox Boundary Is Real</h2>
+<p>The adapter must not imply observation beyond its actual Android execution boundary.</p>
+<h2 id="android-inv-02-permission-visibility-everywhere">ANDROID-INV-02 — Permission ≠ Visibility Everywhere</h2>
+<p>Authorization to access one Android surface does not imply access to unrelated application or user resources.</p>
+<h2 id="android-inv-03-resource-reference-filesystem-path">ANDROID-INV-03 — Resource Reference ≠ Filesystem Path</h2>
+<p>Provider-backed and user-selected resources may not map cleanly to conventional local paths.</p>
+<h2 id="android-inv-04-actor-origin">ANDROID-INV-04 — Actor ≠ Origin</h2>
+<p>The locally visible actor may transport a transition originating elsewhere.</p>
+<h2 id="android-inv-05-unknown-safe">ANDROID-INV-05 — Unknown ≠ Safe</h2>
+<p>Inability to observe activity does not establish that the activity is absent.</p>
+<h2 id="android-inv-06-adapter-detector">ANDROID-INV-06 — Adapter ≠ Detector</h2>
+<p>The adapter normalizes evidence. It does not independently declare ransomware.</p>
+<h2 id="android-inv-07-capability-authority">ANDROID-INV-07 — Capability ≠ Authority</h2>
+<p>Technical ability to perform an Android operation does not authorize its use.</p>
+<h2 id="android-inv-08-user-prompt-completed-action">ANDROID-INV-08 — User Prompt ≠ Completed Action</h2>
+<p>Requesting user-mediated intervention does not establish successful execution.</p>
+<h2 id="android-inv-09-execution-resolution">ANDROID-INV-09 — Execution ≠ Resolution</h2>
+<p>A successful Android operation does not establish that the destructive structural pattern has resolved.</p>
+<h2 id="android-inv-10-synchronization-local-origin">ANDROID-INV-10 — Synchronization ≠ Local Origin</h2>
+<p>A locally observed synchronized change may originate outside the Android device.</p>
+<h2 id="android-inv-11-recovery-capability-verified-restoration">ANDROID-INV-11 — Recovery Capability ≠ Verified Restoration</h2>
+<p>Availability of a recovery path does not establish that an affected resource has been successfully restored.</p>
+<h2 id="android-inv-12-privacy-boundary-survives-normalization">ANDROID-INV-12 — Privacy Boundary Survives Normalization</h2>
+<p>Raw resource identities and contents should remain local when shared structural information is sufficient.</p>
+<hr>
+<h1 id="29-non-goals">29. Non-Goals</h1>
+<p>The Android adapter is not:</p>
+<ul>
+<li>a device-wide surveillance mechanism;</li>
+<li>a mechanism for bypassing the Android application sandbox;</li>
+<li>a malware signature scanner;</li>
+<li>a ransomware classifier;</li>
+<li>an attribution system;</li>
+<li>a guarantee of device-wide event visibility;</li>
+<li>a guarantee of process-level containment;</li>
+<li>a guarantee of resource recovery;</li>
+<li>a substitute for Android security controls;</li>
+<li>an authorization mechanism.</li>
+</ul>
+<p>Its role is narrower:</p>
+<blockquote>
+<p><strong>Observe authorized Android surfaces, normalize their structural transitions, declare capabilities and limitations honestly, map authorized responses where supported, and report what can actually be verified.</strong></p>
+</blockquote>
+<hr>
+<h1 id="30-shared-contracts">30. Shared Contracts</h1>
+<p>The Android adapter participates in the following Shared Structural Event Grammar contracts:</p>
+<ul>
+<li><code>tf.resource-transition/v0.1</code></li>
+<li><code>tf.platform-capabilities/v0.1</code></li>
+<li><code>tf.containment-decision/v0.1</code></li>
+<li><code>tf.response-outcome/v0.1</code></li>
+<li><code>tf.verification/v0.1</code></li>
+</ul>
+<p>The Ransomware Structural Pattern Detector consumes the normalized observations and produces:</p>
+<ul>
+<li><code>tf.structural-pattern/v0.1</code></li>
+</ul>
+<p>The Android adapter does not redefine these schemas.</p>
+<hr>
+<h1 id="canonical-summary">Canonical Summary</h1>
+<blockquote>
+<p><strong>The Android adapter maps observations available within Android's authorized application and resource boundaries into the Shared Structural Event Grammar while explicitly preserving the platform's visibility, authority, and enforcement limitations.</strong></p>
+</blockquote>
+<p>Its observation rule is:</p>
+<blockquote>
+<p><strong>If Android does not expose it to the authorized adapter, represent it as unknown rather than absent.</strong></p>
+</blockquote>
+<p>Its resource rule is:</p>
+<blockquote>
+<p><strong>Normalize structural identity without unnecessarily exporting user content or native resource identifiers.</strong></p>
+</blockquote>
+<p>Its actor rule is:</p>
+<blockquote>
+<p><strong>A locally visible actor may be an origin, a transport, or merely the point at which a transition became observable.</strong></p>
+</blockquote>
+<p>Its response rule is:</p>
+<blockquote>
+<p><strong>Execute only what the platform supports and the governing decision authorizes.</strong></p>
+</blockquote>
+<p>Its verification rule is:</p>
+<blockquote>
+<p><strong>Absence of locally observable continuation is not proof of device-wide resolution.</strong></p>
+</blockquote>
+  </main>
+</body>
+</html>
