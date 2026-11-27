@@ -1,6 +1,6 @@
 <img width="1194" height="672" alt="Ransomware_Structural_Pattern_Detector_" src="https://github.com/user-attachments/assets/32009e0c-cd0d-45e8-b871-e0f91f96f90f" />
 
-<img width="1194" height="672" alt="Ransomware_Structural_Pattern_Detector_" src="https://github.com/user-attachments/assets/32009e0c-cd0d-45e8-b871-e0f91f96f90f" />
+- [`detector.json`](detector.json) — Agentic module schema role assignments
 
 # Ransomware Structural Pattern Detector
 
