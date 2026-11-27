@@ -2,27 +2,27 @@
   "schema": "tf.resource-transition/v0.1",
 
   "event": {
-    "id": "event://macos-example/000001",
-    "time": "2026-11-26T20:15:32Z",
+    "id": "event://macos-endpoint-security-example/000001",
+    "time": "2026-11-27T08:45:32Z",
     "sequence": 18421,
     "source": "filesystem",
     "operation": "write",
     "native_operation": "example-write-notification",
     "phase": "normalized",
-    "correlation_id": "correlation://macos-example/activity-0042"
+    "correlation_id": "correlation://macos-endpoint-security-example/activity-0042"
   },
 
   "actor": {
-    "id": "actor://macos-example/process-3817",
+    "id": "actor://macos-endpoint-security-example/process-3817",
     "type": "process",
     "name": "example-process",
-    "parent_ref": "actor://macos-example/process-1024",
+    "parent_ref": "actor://macos-endpoint-security-example/process-1024",
     "role": "unknown",
 
     "identity": {
       "state": "known",
       "publisher": "example-publisher",
-      "instance_ref": "instance://macos-example/process-3817",
+      "instance_ref": "instance://macos-endpoint-security-example/process-3817",
       "account_ref": "account://pseudonymous/local-user"
     },
 
@@ -31,7 +31,7 @@
       "signed": true,
       "reputation": "unknown",
       "basis_refs": [
-        "evidence://macos-example/actor-identity-0001"
+        "evidence://macos-endpoint-security-example/actor-identity-0001"
       ]
     }
   },
@@ -75,13 +75,13 @@
     "bulk_operation": null,
     "network_origin": null,
     "sync_transport": false,
-    "session_ref": "session://macos-example/0042",
+    "session_ref": "session://macos-endpoint-security-example/0042",
     "scope_ref": "scope://protected-user-resources"
   },
 
   "baseline": {
     "available": true,
-    "baseline_ref": "baseline://macos-example/v0.1",
+    "baseline_ref": "baseline://macos-endpoint-security-example/v0.1",
     "known_actor": true,
     "operation_typical": false,
     "scope_typical": true,
@@ -109,12 +109,14 @@
     "adapter": "rspd-macos-endpoint-security-example",
     "adapter_version": "0.1.0",
     "capabilities_ref": "capabilities://rspd-macos-endpoint-security-example/v0.1",
-    "observed_at": "2026-11-26T20:15:32Z",
-    "normalized_at": "2026-11-26T20:15:32Z",
-    "native_event_ref": "native-event://macos-example/18421",
+    "observed_at": "2026-11-27T08:45:32Z",
+    "normalized_at": "2026-11-27T08:45:32Z",
+    "native_event_ref": "native-event://macos-endpoint-security-example/18421",
     "raw_event_retained": true,
     "derivation_refs": [
-      "method://macos-es-resource-normalization/v0.1"
+      "method://macos-endpoint-security/resource-normalization/v0.1",
+      "method://macos-endpoint-security/resource-classification/v0.1",
+      "method://macos-endpoint-security/baseline-comparison/v0.1"
     ],
     "redactions": [
       "raw_path",
