@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Light_index_" src="https://github.com/user-attachments/assets/17471fec-ed8f-4b31-b979-9c4103789a59" />
+
 # Light Module
 ### TriadicFrameworks Canon · Capstone Field Module
 
