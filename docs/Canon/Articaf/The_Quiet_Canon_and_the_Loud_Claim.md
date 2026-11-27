@@ -120,4 +120,4 @@ The quiet canon continues to accumulate.
 
 No conflict has been declared.
 
-**The work simply proceeds under its own rules.**
+**The work simply [proceeds](https://www.triadicframeworks.org/5Guides/) under its own rules.**
