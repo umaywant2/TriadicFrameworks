@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Light_05_light_substrate_engineering_" src="https://github.com/user-attachments/assets/cd4af74f-c97f-4a84-a4c5-05e175cf9715" />
+
 # Section 5 — Light Substrate Engineering
 
 ### TriadicFrameworks · /docs/Light/05\_light\_substrate\_engineering.md
