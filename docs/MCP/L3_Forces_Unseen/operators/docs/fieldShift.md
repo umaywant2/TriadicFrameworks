@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="MCP_L3_Forces_Unseen_operators_docs_fieldShift_" src="https://github.com/user-attachments/assets/6584a6cd-cb48-4a20-98e0-a39227d766e5" />
+
 # Operator: fieldShift — TriadicFrameworks MCP (R5)
 
 **Layer:** L3_Forces_Unseen  
