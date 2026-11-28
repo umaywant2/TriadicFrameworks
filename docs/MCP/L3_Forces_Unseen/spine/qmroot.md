@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="MCP_L3_Forces_Unseen_spine_qmroot_" src="https://github.com/user-attachments/assets/48a46821-98cd-4f01-a77f-b3dcdd513113" />
+
 # ⚡ S3 Spine — QMROOT Interpretation (R5 Canon)  
 ### Origin-State Layer of the Unseen Force‑Regime Structural Graph  
 **Layer:** L3 Forces Unseen  
