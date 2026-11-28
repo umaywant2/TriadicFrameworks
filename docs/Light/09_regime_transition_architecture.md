@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Light_09_regime_transition_architecture_" src="https://github.com/user-attachments/assets/0d999168-3437-40b6-b71c-994f2cde62c9" />
+
 # Section 9 — Regime Transition Architecture
 
 ### TriadicFrameworks · /docs/Light/09\_regime\_transition\_architecture.md
