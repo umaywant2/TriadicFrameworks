@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Low_Dimensional_Structures_controls_and_validation_" src="https://github.com/user-attachments/assets/2ca0134d-2459-4b13-a8b1-bf203ff2721c" />
+
 # Controls and Validation
 
 This document defines the control structures and validation requirements used when identifying and representing low‑dimensional structures within the RTT/vST framework.
