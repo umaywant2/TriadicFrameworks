@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Light_02_spectral_fingerprint_theory_" src="https://github.com/user-attachments/assets/e9312d28-8f4d-405e-9a79-1808a2b50b53" />
+
 # Section 2 — Spectral Fingerprint Theory
 
 ### TriadicFrameworks · /docs/Light/02\_spectral\_fingerprint\_theory.md
