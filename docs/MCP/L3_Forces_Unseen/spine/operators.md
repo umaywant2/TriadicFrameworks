@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="MCP_L3_Forces_Unseen_spine_operators_" src="https://github.com/user-attachments/assets/eca14a20-fa8e-4087-8a27-1e9eab075928" />
+
 # ⚡ S3 Spine — Operators (R5 Canon)
 ### Operational Reference for Unseen Force‑Regime Mechanics  
 **Layer:** L3_Forces_Unseen  
