@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="MCP_L3_Forces_Unseen_operators_docs_pull_" src="https://github.com/user-attachments/assets/9ecf7406-6433-4472-b9d7-8a8bd11b7609" />
+
 # Operator: pull — TriadicFrameworks MCP (R5)
 
 **Layer:** L3_Forces_Unseen  
