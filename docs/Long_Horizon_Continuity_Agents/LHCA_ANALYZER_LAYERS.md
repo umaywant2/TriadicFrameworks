@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Long_Horizon_Continuity_Agents_LHCA_ANALYZER_LAYERS_" src="https://github.com/user-attachments/assets/1c412b2b-d59d-4a5b-9ff5-7a123109f9c4" />
+
 # ANALYZER_LAYERS — Long_Horizon_Continuity_Agents
 
 > Six-Layer Analysis Stack · Module `lhca-rtt-001`
