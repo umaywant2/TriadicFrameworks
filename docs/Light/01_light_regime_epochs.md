@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Light_01_light_regime_epochs_" src="https://github.com/user-attachments/assets/82c66c86-05d6-4af3-b2bc-c89f609b560f" />
+
 # Section 1 — Light Regime Epochs: The Spectral History of Life
 
 ### TriadicFrameworks · /docs/Light/01\_light\_regime\_epochs.md
