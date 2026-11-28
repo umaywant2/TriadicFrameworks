@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="MCP_L3_Forces_Unseen_spine_examples_docs_canonical_" src="https://github.com/user-attachments/assets/773be972-b706-42cd-bcce-b05f8e7b9613" />
+
 # ⚡ S3 Spine — Canonical Example Interpretation (R5 Canon)  
 ### Example Layer: Canonical Envelope  
 **Layer:** L3 Forces Unseen  
