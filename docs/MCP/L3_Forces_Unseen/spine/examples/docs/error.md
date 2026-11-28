@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="MCP_L3_Forces_Unseen_spine_examples_docs_error_" src="https://github.com/user-attachments/assets/1392b9cc-d900-4a3b-99ce-a462bd7e518d" />
+
 # ⚡ S3 Spine — Error Example Interpretation (R5 Canon)  
 ### Example Layer: Error Envelope  
 **Layer:** L3 Forces Unseen  
