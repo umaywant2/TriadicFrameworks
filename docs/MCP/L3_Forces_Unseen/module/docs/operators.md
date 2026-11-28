@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="MCP_L3_Forces_Unseen_module_docs_operators_" src="https://github.com/user-attachments/assets/5d67be99-a377-4382-8726-e995aac212c7" />
+
 # Module: operators — TriadicFrameworks MCP (R5)
 
 **Layer:** L3_Forces_Unseen  
