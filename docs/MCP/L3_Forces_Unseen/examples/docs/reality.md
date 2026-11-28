@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="MCP_L3_Forces_Unseen_examples_docs_reality_" src="https://github.com/user-attachments/assets/c3962763-dcca-4b0d-8f7b-e7ab5798f80c" />
+
 # Reality Example — TriadicFrameworks MCP (R5)
 
 **Layer:** L3_Forces_Unseen  
