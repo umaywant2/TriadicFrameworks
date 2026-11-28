@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="MCP_coherence_" src="https://github.com/user-attachments/assets/05acf256-02ec-400c-9823-bbe8978f57a1" />
+
 # ⚡ **TriadicFrameworks MCP — Coherence (R5 Canon)**  
 ### *Cross‑Layer Cosmology, Structural Alignment, and Regime Continuity*
 
