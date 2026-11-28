@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="MCP_L3_Forces_Unseen_spine_information_" src="https://github.com/user-attachments/assets/232056ec-5e90-4122-b73e-45cdf327dc83" />
+
 # ⚡ S3 Spine — Information Interpretation (R5 Canon)  
 ### Information Layer of the Unseen Force‑Regime Structural Graph  
 **Layer:** L3 Forces Unseen  
