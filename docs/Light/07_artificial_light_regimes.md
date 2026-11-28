@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Light_07_artificial_light_regimes_" src="https://github.com/user-attachments/assets/cb19f85a-4625-4632-b803-8849dd647a6e" />
+
 # Section 7 — Artificial Light Regimes
 
 ### TriadicFrameworks · /docs/Light/07\_artificial\_light\_regimes.md
