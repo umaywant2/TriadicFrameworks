@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="MCP_L3_Forces_Unseen_examples_docs_error_" src="https://github.com/user-attachments/assets/27e475a7-ee0b-4e01-a324-35a698ec285c" />
 
 # Error Example — TriadicFrameworks MCP (R5)
 
