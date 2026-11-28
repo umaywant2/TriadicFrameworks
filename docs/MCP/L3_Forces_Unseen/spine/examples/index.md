@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="MCP_L3_Forces_Unseen_spine_examples_index_" src="https://github.com/user-attachments/assets/0342dca0-af50-4109-b1c1-04f10bd98fb6" />
+
 # ⚡ **S3 Spine — Example Index (R5 Canon)**  
 ### Docsbook Navigation • Six‑Envelope Example System • Cosmology‑Aligned  
 **Layer:** L3_Forces_Unseen  
