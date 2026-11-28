@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="MCP_L3_Forces_Unseen_module_docs_registry_" src="https://github.com/user-attachments/assets/383e8b11-81a1-449c-8f9f-5f77e069bf93" />
+
 # Module: registry — TriadicFrameworks MCP (R5)
 
 **Layer:** L3_Forces_Unseen  
