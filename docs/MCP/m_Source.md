@@ -1,4 +1,4 @@
-<img width="1168" height="784" alt="MCP_module_hero_image" src="https://github.com/user-attachments/assets/77b797fb-454f-40a8-b1fb-84035ab6b29c" />
+<img width="1194" height="672" alt="MCP_m_Source_" src="https://github.com/user-attachments/assets/144158bb-bab3-406f-a3f3-657fb4e5c8f5" />
 
 # m_Source.md
 
@@ -12717,7 +12717,4 @@ The draft succeeds as lineage-shaped documentation of a tool surface. It does no
 
 The essence of the ~200 examples belongs in a resource registry with a shared JSON envelope, addressed by a few tools — not copied into four layer trees as stubs.
 
-If you want a next pass, I can draft either (a) the canonical tools.catalog.json for the 10-tool v0 surface, or (b) the example envelope schema plus a mapping plan from existing *_module.json files into listExamples.
-
----
-
+<img width="1168" height="784" alt="MCP_module_hero_image" src="https://github.com/user-attachments/assets/77b797fb-454f-40a8-b1fb-84035ab6b29c" />
