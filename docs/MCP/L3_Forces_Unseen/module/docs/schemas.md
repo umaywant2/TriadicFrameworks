@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="MCP_L3_Forces_Unseen_module_docs_schemas_" src="https://github.com/user-attachments/assets/c28b2629-a8f9-4000-b3fb-864e37156bca" />
+
 # Module: schemas — TriadicFrameworks MCP (R5)
 
 **Layer:** L3_Forces_Unseen  
