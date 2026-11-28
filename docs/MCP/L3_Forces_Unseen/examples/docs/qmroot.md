@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="MCP_L3_Forces_Unseen_examples_docs_qmroot_" src="https://github.com/user-attachments/assets/10eb8212-a86b-4660-86b7-05241f9eb307" />
+
 # QMROOT Example — TriadicFrameworks MCP (R5)
 
 **Layer:** L3_Forces_Unseen  
