@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="MCP_L3_Forces_Unseen_spine_examples_docs_information_" src="https://github.com/user-attachments/assets/75cb48b3-9a44-4ba4-9974-2e595699d0f6" />
+
 # ⚡ S3 Spine — Information Example Interpretation (R5 Canon)  
 ### Example Layer: Information Envelope  
 **Layer:** L3 Forces Unseen  
