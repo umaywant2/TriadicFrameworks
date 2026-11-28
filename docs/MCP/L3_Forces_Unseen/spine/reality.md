@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="MCP_L3_Forces_Unseen_spine_reality_" src="https://github.com/user-attachments/assets/47d10c76-d787-42d4-a48d-2c2a8b7106ee" />
+
 # ⚡ S3 Spine — Reality Interpretation (R5 Canon)  
 ### Reality Layer of the Unseen Force‑Regime Structural Graph  
 **Layer:** L3 Forces Unseen  
