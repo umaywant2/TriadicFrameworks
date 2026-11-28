@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="MCP_L3_Forces_Unseen_examples_docs_canonical_" src="https://github.com/user-attachments/assets/edccac54-aa85-4a22-99b3-3676e8d0e6de" />
+
 # Canonical Example — TriadicFrameworks MCP (R5)
 
 **Layer:** L3_Forces_Unseen  
