@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="MCP_L3_Forces_Unseen_module_docs_spine_" src="https://github.com/user-attachments/assets/34862801-44a9-470e-adbb-8321ecc5324a" />
+
 # Module: spine (S3) — TriadicFrameworks MCP (R5)
 
 **Layer:** L3_Forces_Unseen  
