@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Low_Dimensional_Structures_doi_minimal_low_dimensional_structures_" src="https://github.com/user-attachments/assets/02241014-fde4-4701-b4eb-e4c2b5136e46" />
+
 # DOI‑Minimal: Low‑Dimensional Structures
 
 ## Abstract
