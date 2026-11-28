@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Light_04_gradient_light_coupling_" src="https://github.com/user-attachments/assets/af39256d-1709-4d08-84b4-08c3c543e810" />
+
 # Section 4 — Gradient–Light Coupling
 
 ### TriadicFrameworks · /docs/Light/04\_gradient\_light\_coupling.md
