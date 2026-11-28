@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="MCP_L3_Forces_Unseen_spine_canonical_" src="https://github.com/user-attachments/assets/7be28af4-0fe4-4124-92fb-e164132b72d0" />
+
 # ⚡ S3 Spine — Canonical Interpretation (R5 Canon)  
 ### Canon Layer of the Unseen Force‑Regime Structural Graph  
 **Layer:** L3 Forces Unseen  
