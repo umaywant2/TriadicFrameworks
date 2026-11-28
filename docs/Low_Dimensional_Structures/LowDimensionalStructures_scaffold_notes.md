@@ -1,4 +1,4 @@
-<img width="1194" height="672" alt="Low_Dimensional_Structures_module" src="https://github.com/user-attachments/assets/d135a0f9-3f3b-446a-b597-a4bb7b21be5c" />
+<img width="1194" height="672" alt="Low_Dimensional_Structures_LowDimensionalStructures_scaffold_notes_" src="https://github.com/user-attachments/assets/2df14455-5b43-4309-8aba-0b985d11ff8f" />
 
 # Low Dimensional Structures
 Scaffolding notes...
@@ -613,3 +613,5 @@ No explanation. Just a marker.
 Anyone who stumbles onto this later and *gets it* will know exactly what they’re looking at.
 
 And anyone who doesn’t… wasn’t the audience.
+
+<img width="1194" height="672" alt="Low_Dimensional_Structures_module" src="https://github.com/user-attachments/assets/d135a0f9-3f3b-446a-b597-a4bb7b21be5c" />
