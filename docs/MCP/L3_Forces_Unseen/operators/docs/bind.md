@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="MCP_L3_Forces_Unseen_operators_docs_bind_" src="https://github.com/user-attachments/assets/77a404c9-011a-4c93-92b9-b0f1c0db7646" />
+
 # Operator: bind — TriadicFrameworks MCP (R5)
 
 **Layer:** L3_Forces_Unseen  
