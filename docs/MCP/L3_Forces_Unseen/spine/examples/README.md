@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="MCP_L3_Forces_Unseen_spine_examples_" src="https://github.com/user-attachments/assets/b6a740cd-fc6c-4980-afa5-8128cd8545b6" />
+
 # S3 Spine — Example Set (R5 Canon)
 ### L3 Forces Unseen — TriadicFrameworks Cosmology
 
