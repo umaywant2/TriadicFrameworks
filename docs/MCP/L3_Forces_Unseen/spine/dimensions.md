@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="MCP_L3_Forces_Unseen_spine_dimensions_" src="https://github.com/user-attachments/assets/ff56dfa8-6606-4bda-9fa7-5eda20c09fc7" />
+
 # ⚡ **S3 Spine — Dimensional Subsystem (R5 Canon)**  
 ### Dimensional Axes for Unseen Force‑Regime Mechanics  
 **Layer:** L3_Forces_Unseen  
