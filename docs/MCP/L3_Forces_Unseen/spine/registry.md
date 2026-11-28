@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="MCP_L3_Forces_Unseen_spine_registry_" src="https://github.com/user-attachments/assets/ed3947eb-edfa-453d-bdd5-9c061ee6f699" />
+
 # ⚡ S3 Spine — Registry (R5 Canon)  
 ### Unified Registry for the Unseen Force‑Regime Structural Graph  
 **Layer:** L3_Forces_Unseen  
