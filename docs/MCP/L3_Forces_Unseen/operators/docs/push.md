@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="MCP_L3_Forces_Unseen_operators_docs_push_" src="https://github.com/user-attachments/assets/afccc233-73e2-485f-b83c-97636abef460" />
+
 # Operator: push — TriadicFrameworks MCP (R5)
 
 **Layer:** L3_Forces_Unseen  
