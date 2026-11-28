@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Long_Horizon_Continuity_Agents_LHCA_EXAMPLES_" src="https://github.com/user-attachments/assets/7421cffc-26e9-4ebc-b9f6-a9b3076686d0" />
+
 # EXAMPLES — Long_Horizon_Continuity_Agents
 
 > Worked Scenarios with Full Trace Payloads · Module `lhca-rtt-001`
