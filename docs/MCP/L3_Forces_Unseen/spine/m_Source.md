@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="MCP_L3_Forces_Unseen_spine_m_Source_" src="https://github.com/user-attachments/assets/516cf6a8-a7bb-4379-9072-733b6713f3ad" />
+
 # ⚡ **S3 Spine — m_Source.md (R5 Canon)**  
 ### Source‑of‑Truth for the Unseen Force‑Regime Structural Graph  
 **Layer:** L3_Forces_Unseen  
