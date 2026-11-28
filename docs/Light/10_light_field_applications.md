@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Light_10_light_field_applications_" src="https://github.com/user-attachments/assets/8b3bd86a-ffc6-4e5a-8b22-856e0d2b34d6" />
+
 # Section 10 — Light Field Applications
 ### TriadicFrameworks · /docs/Light/10_light_field_applications.md
 
