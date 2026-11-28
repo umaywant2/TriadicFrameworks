@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Light_08_substrate_safety_protocols_" src="https://github.com/user-attachments/assets/aa05456d-01cb-4f87-90fb-3c46b7d3821e" />
+
 # Section 8 — Substrate Safety Protocols
 
 ### TriadicFrameworks · /docs/Light/08\_substrate\_safety\_protocols.md
