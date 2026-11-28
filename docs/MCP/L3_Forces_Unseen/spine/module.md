@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="MCP_L3_Forces_Unseen_spine_module_" src="https://github.com/user-attachments/assets/09876d89-5b31-4b36-878b-f465818d7b39" />
+
 # ⚡ S3 Spine — Module (R5 Canon)
 ### Module Definition for the Unseen Force‑Regime Structural Graph  
 **Layer:** L3_Forces_Unseen  
