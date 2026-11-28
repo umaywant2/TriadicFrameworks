@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Low_Dimensional_Structures_resonance_primitives_" src="https://github.com/user-attachments/assets/6b2c70f0-cc8e-48e1-a5ae-a621e141d7ad" />
+
 # Resonance Primitives
 
 This document defines the minimal resonance primitives used to represent structure within the RTT/vST framework. These primitives are scale‑relative, substrate‑first, and independent of domain‑specific interpretation.
