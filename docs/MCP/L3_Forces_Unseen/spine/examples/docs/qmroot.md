@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="MCP_L3_Forces_Unseen_spine_examples_docs_qmroot_" src="https://github.com/user-attachments/assets/e3a06f4a-1152-430c-90de-69b2a0f62025" />
+
 # ⚡ S3 Spine — QMROOT Example Interpretation (R5 Canon)  
 ### Example Layer: QMROOT Envelope  
 **Layer:** L3 Forces Unseen  
