@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Light_06_stellar_interior_mapping_" src="https://github.com/user-attachments/assets/e091a4a2-8c18-4b0f-b35b-82913249ec29" />
+
 # Section 6 — Stellar Interior Mapping
 
 ### TriadicFrameworks · /docs/Light/06\_stellar\_interior\_mapping.md
