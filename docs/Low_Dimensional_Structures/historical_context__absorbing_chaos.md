@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Low_Dimensional_Structures_historical_context__absorbing_chaos_" src="https://github.com/user-attachments/assets/57d6e18d-6d8c-451a-944e-3e027fe04c44" />
+
 # Historical Context: Absorbing Chaos
 
 This document provides historical context for how concepts commonly grouped under “chaos theory” are treated within the RTT/vST framework. The intent is not to refute prior work, but to absorb its useful components into a substrate‑first, scale‑relative model.
