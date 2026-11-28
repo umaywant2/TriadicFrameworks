@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="MCP_L3_Forces_Unseen_spine_imagination_" src="https://github.com/user-attachments/assets/43a3f323-215e-46ea-a6be-cf5a102479d8" />
+
 # ⚡ S3 Spine — Imagination Interpretation (R5 Canon)  
 ### Imagination Layer of the Unseen Force‑Regime Structural Graph  
 **Layer:** L3 Forces Unseen  
