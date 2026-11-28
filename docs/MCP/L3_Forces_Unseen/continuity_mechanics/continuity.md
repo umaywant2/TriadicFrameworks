@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="MCP_L3_Forces_Unseen_continuity_mechanics_continuity_" src="https://github.com/user-attachments/assets/87a49882-5a72-4dc1-b6ec-56722eb78dc4" />
+
 # **continuity.md**  
 ### *TriadicFrameworks — Continuity Mechanics (L3 Subsystem, R5 Canon)*
 
