@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="MCP_L3_Forces_Unseen_operators_docs_gradient_" src="https://github.com/user-attachments/assets/7e5754e2-13f6-4417-ac86-49c50027c22f" />
+
 # Operator: gradient — TriadicFrameworks MCP (R5)
 
 **Layer:** L3_Forces_Unseen  
