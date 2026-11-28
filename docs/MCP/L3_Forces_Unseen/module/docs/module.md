@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="MCP_L3_Forces_Unseen_module_docs_module_" src="https://github.com/user-attachments/assets/754ef349-b92a-4c7c-907f-2eed20e6bb72" />
+
 # Module: module.json — TriadicFrameworks MCP (R5)
 
 **Layer:** L3_Forces_Unseen  
