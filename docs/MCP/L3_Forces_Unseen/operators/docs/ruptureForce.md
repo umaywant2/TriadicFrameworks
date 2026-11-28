@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="MCP_L3_Forces_Unseen_operators_docs_ruptureForce_" src="https://github.com/user-attachments/assets/683fbe66-c7dd-4124-8f90-025475baa388" />
+
 # Operator: ruptureForce — TriadicFrameworks MCP (R5)
 
 **Layer:** L3_Forces_Unseen  
