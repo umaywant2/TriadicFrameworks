@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="MCP_L3_Forces_Unseen_spine_examples_docs_imagination_" src="https://github.com/user-attachments/assets/ce6f20f2-0cc5-43a1-a973-740a2baa0a26" />
+
 # ⚡ S3 Spine — Imagination Example Interpretation (R5 Canon)  
 ### Example Layer: Imagination Envelope  
 **Layer:** L3 Forces Unseen  
