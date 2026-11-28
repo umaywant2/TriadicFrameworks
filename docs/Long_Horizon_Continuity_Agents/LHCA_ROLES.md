@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Long_Horizon_Continuity_Agents_LHCA_ROLES_" src="https://github.com/user-attachments/assets/c85f1c7e-92f2-40da-8c4c-f985f12ad302" />
+
 # ROLES — Long_Horizon_Continuity_Agents
 
 > Role Enum Definitions · Module `lhca-rtt-001`
