@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="MCP_L3_Forces_Unseen_spine_examples_docs_reality_" src="https://github.com/user-attachments/assets/795736dc-e337-435c-9068-c2c8cab52dec" />
+
 # ⚡ S3 Spine — Reality Example Interpretation (R5 Canon)  
 ### Example Layer: Reality Envelope  
 **Layer:** L3 Forces Unseen  
