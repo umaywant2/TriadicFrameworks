@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Light_03_biospheric_scaling_law_" src="https://github.com/user-attachments/assets/bf2b6770-699e-410c-bd94-fbdc023bfcfb" />
+
 # Section 3 — Biospheric Scaling Law
 
 ### TriadicFrameworks · /docs/Light/03\_biospheric\_scaling\_law.md
