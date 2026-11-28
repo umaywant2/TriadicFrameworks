@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="MCP_L3_Forces_Unseen_continuity_mechanics_resonance_" src="https://github.com/user-attachments/assets/321861ec-c10e-4efc-9819-89d70c6113fa" />
+
 # **resonance.md**  
 ### *TriadicFrameworks — Continuity Mechanics Resonance Model (L3 Subsystem, R5 Canon)*
 
