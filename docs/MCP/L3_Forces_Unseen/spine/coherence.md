@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="MCP_L3_Forces_Unseen_spine_coherence_" src="https://github.com/user-attachments/assets/b3f0d71f-50dd-4ea2-ab1b-00c98a023c3e" />
+
 # ⚡ **S3 Spine — Coherence (R5 Canon)**  
 ### Coherence Model for the Unseen Force‑Regime Structural Graph  
 **Layer:** L3_Forces_Unseen  
