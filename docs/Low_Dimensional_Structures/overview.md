@@ -1,4 +1,6 @@
----
+<img width="1194" height="672" alt="Low_Dimensional_Structures_overview_" src="https://github.com/user-attachments/assets/5933ebdc-67af-48b6-a16f-514962e884e5" />
+
+<!-- ---
 title: "Low Dimensional Structures"
 description: "Scale-relative resonance projections — minimal primitives for representing low-dimensional structure within the RTT/vST framework. Clean. Calm. Canonical."
 stability: stable
@@ -8,7 +10,7 @@ rtt:
   coherence: declared
   drift: bounded
   paradox: structural
----
+--- -->
 
 > ```
 > rtt=1 | coherence=declared | drift=bounded | paradox=structural
