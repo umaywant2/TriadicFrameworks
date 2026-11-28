@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="MCP_L3_Forces_Unseen_spine_deep_" src="https://github.com/user-attachments/assets/c88db44c-62f5-4003-8725-8a71d555414e" />
+
 # ⚡ S3 Spine — Deep Documentation (R5 Canon)  
 ### L3 Forces Unseen — TriadicFrameworks Cosmology  
 **Triad:** forces  
