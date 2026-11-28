@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="MCP_L3_Forces_Unseen_spine_error_" src="https://github.com/user-attachments/assets/29bbf84e-0bb6-4de2-b002-1bc609359fde" />
+
 # ⚡ S3 Spine — Error Interpretation (R5 Canon)  
 ### Error Layer of the Unseen Force‑Regime Structural Graph  
 **Layer:** L3 Forces Unseen  
