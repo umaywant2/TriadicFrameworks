@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Long_Horizon_Continuity_Agents_LHCA_VALIDATORS_" src="https://github.com/user-attachments/assets/5480257e-4bda-4934-957b-cbb7ce06bc3d" />
+
 # VALIDATORS — Long_Horizon_Continuity_Agents
 
 > Validator Stubs with Python Skeletons · Module `lhca-rtt-001`
