@@ -120,7 +120,7 @@ LIGHT SUBSTRATE (LSE)
                           UNIFIED FIELD (𝕃 field vector)
                                     │
                                     ▼
-                                RTT (forthcoming)
+                               RTT/RSM/vST
 ```
 
 ---
@@ -147,4 +147,4 @@ The Light module is complete. Across ten sections it has:
 
 *TriadicFrameworks Canon · Light Module · Section 10 of 10*
 *← [09_regime_transition_architecture.md](09_regime_transition_architecture.md) · [index.md →](index.md)*
-*Forward: [/docs/UnifiedField/index.md](../UnifiedField/index.md) · `/docs/RTT/index.md` (forthcoming)*
+*Forward: [/docs/UnifiedField/index.md](../UnifiedField/index.md) · [`/docs/RTT/README_Doc_Index.md`](/docs/RTT/README_Doc_Index.md) 
