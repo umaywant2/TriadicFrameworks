@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="MCP_L3_Forces_Unseen_spine_schemas_" src="https://github.com/user-attachments/assets/335880ee-7079-40e5-ad47-4e0eb5335535" />
+
 # ⚡ S3 Spine — Schemas (R5 Canon)  
 ### Schema Reference for the Unseen Force‑Regime Structural Graph  
 **Layer:** L3_Forces_Unseen  
