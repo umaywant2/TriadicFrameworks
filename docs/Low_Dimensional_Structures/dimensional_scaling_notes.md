@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Low_Dimensional_Structures_dimensional_scaling_notes_" src="https://github.com/user-attachments/assets/047b0862-5844-4a92-b3d2-0772de25a936" />
+
 # Dimensional Scaling Notes
 
 This document outlines how dimensionality is treated within the RTT/vST framework when describing low‑dimensional structures. Dimensionality is handled as a scale‑relative, observer‑dependent property rather than as an intrinsic feature of physical systems.
