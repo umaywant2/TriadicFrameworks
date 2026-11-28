@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Long_Horizon_Continuity_Agents_LHCA_OPERATORS_" src="https://github.com/user-attachments/assets/45a670a3-4db4-40f6-8750-91c4eb3c5864" />
+
 # OPERATORS — Long_Horizon_Continuity_Agents
 
 > RTT Operator Grammar · Module `lhca-rtt-001` · Layer: `operator` (precedence 1)
