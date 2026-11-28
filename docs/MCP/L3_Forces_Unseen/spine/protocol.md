@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="MCP_L3_Forces_Unseen_spine_protocol_" src="https://github.com/user-attachments/assets/6d22c5b8-6cc0-4281-9cfe-cd31ea9ccbca" />
+
 # ⚡ S3 Spine Protocol (R5 Canon)
 ### Operational Protocol for the Unseen Force‑Regime Structural Graph  
 **Layer:** L3_Forces_Unseen  
